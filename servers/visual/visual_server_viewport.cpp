@@ -52,7 +52,7 @@ void VisualServerViewport::_draw_viewport(Viewport *p_viewport, ARVRInterface::E
 		}
 	}
 
-	bool can_draw_3d = !p_viewport->disable_3d && !p_viewport->disable_3d_by_usage && VSG::scene->camera_owner.owns(p_viewport->camera);
+	bool can_draw_3d = !p_viewport->disable_3d && !p_viewport->disable_3d_by_usage && VSG::scene->owns_camera(p_viewport->camera);
 
 	if (p_viewport->clear_mode != VS::VIEWPORT_CLEAR_NEVER) {
 		VSG::rasterizer->clear_render_target(p_viewport->transparent_bg ? Color(0, 0, 0, 0) : clear_color);
@@ -243,6 +243,7 @@ void VisualServerViewport::_draw_viewport(Viewport *p_viewport, ARVRInterface::E
 }
 
 void VisualServerViewport::draw_viewports() {
+	AUTO_PROFILE;
 	// get our arvr interface in case we need it
 	Ref<ARVRInterface> arvr_interface = ARVRServer::get_singleton()->get_primary_interface();
 

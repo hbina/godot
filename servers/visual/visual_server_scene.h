@@ -40,7 +40,10 @@
 #include "core/os/thread.h"
 #include "core/self_list.h"
 #include "servers/arvr/arvr_interface.h"
+#include <vector>
+#include "thirdparty/entt/entt.hpp"
 
+class NewOctree{};
 class VisualServerScene {
 public:
 	enum {
@@ -102,7 +105,7 @@ public:
 		}
 	};
 
-	mutable RID_Owner<Camera> camera_owner;
+	//mutable RID_Owner<Camera> camera_owner;
 
 	virtual RID camera_create();
 	virtual void camera_set_perspective(RID p_camera, float p_fovy_degrees, float p_z_near, float p_z_far);
@@ -111,7 +114,7 @@ public:
 	virtual void camera_set_cull_mask(RID p_camera, uint32_t p_layers);
 	virtual void camera_set_environment(RID p_camera, RID p_env);
 	virtual void camera_set_use_vertical_aspect(RID p_camera, bool p_enable);
-
+	bool owns_camera(RID p_camera);
 	/* SCENARIO API */
 
 	struct Instance;
@@ -124,7 +127,10 @@ public:
 
 		Octree<Instance, true> octree;
 
-		List<Instance *> directional_lights;
+		NewOctree *geometry_octree;
+		NewOctree *other_octree;
+
+		//List<Instance *> directional_lights;
 		RID environment;
 		RID fallback_environment;
 		RID reflection_probe_shadow_atlas;
@@ -132,7 +138,15 @@ public:
 
 		SelfList<Instance>::List instances;
 
-		Scenario() { debug = VS::SCENARIO_DEBUG_DISABLED; }
+		entt::registry entity_list;
+
+		void insert_instance(RID instance);
+		void remove_instance(RID instance);
+
+		Scenario() {
+			debug = VS::SCENARIO_DEBUG_DISABLED;
+			//mesh_octree = nullptr;
+		}
 	};
 
 	mutable RID_Owner<Scenario> scenario_owner;
@@ -159,19 +173,17 @@ public:
 		RID self;
 		//scenario stuff
 		OctreeElementID octree_id;
+		uint32_t octree_index;
 		Scenario *scenario;
-		SelfList<Instance> scenario_item;
+		//SelfList<Instance> scenario_item;
 
-		//aabb stuff
-		bool update_aabb;
-		bool update_materials;
+		////aabb stuff
+		//bool update_aabb;
+		//bool update_materials;
 
-		SelfList<Instance> update_item;
+		//SelfList<Instance> update_item;
 
-		AABB aabb;
-		AABB transformed_aabb;
-		AABB *custom_aabb; // <Zylann> would using aabb directly with a bool be better?
-		float extra_margin;
+		
 		uint32_t object_ID;
 
 		float lod_begin;
@@ -197,20 +209,20 @@ public:
 			singleton->_instance_queue_update(this, p_aabb, p_materials);
 		}
 
-		Instance() :
-				scenario_item(this),
-				update_item(this) {
+		Instance()// :
+			//	scenario_item(this)
+				{
 
 			octree_id = 0;
 			scenario = NULL;
 
-			update_aabb = false;
-			update_materials = false;
+			//update_aabb = false;
+			//update_materials = false;
 
-			extra_margin = 0;
+			//extra_margin = 0;
 
 			object_ID = 0;
-			visible = true;
+			//visible = true;
 
 			lod_begin = 0;
 			lod_end = 0;
@@ -222,97 +234,43 @@ public:
 			version = 1;
 			base_data = NULL;
 
-			custom_aabb = NULL;
+			//custom_aabb = NULL;
 		}
 
 		~Instance() {
 
 			if (base_data)
 				memdelete(base_data);
-			if (custom_aabb)
-				memdelete(custom_aabb);
+			
 		}
 	};
 
-	SelfList<Instance>::List _instance_update_list;
+	//SelfList<Instance>::List _instance_update_list;
 	void _instance_queue_update(Instance *p_instance, bool p_update_aabb, bool p_update_materials = false);
 
 	struct InstanceGeometryData : public InstanceBaseData {
-
-		List<Instance *> lighting;
-		bool lighting_dirty;
-		bool can_cast_shadows;
-		bool material_is_animated;
-
-		List<Instance *> reflection_probes;
-		bool reflection_dirty;
+	
+		List<Instance *> reflection_probes;		
 
 		List<Instance *> gi_probes;
-		bool gi_probes_dirty;
 
 		List<Instance *> lightmap_captures;
-
-		InstanceGeometryData() {
-
-			lighting_dirty = false;
-			reflection_dirty = true;
-			can_cast_shadows = true;
-			material_is_animated = true;
-			gi_probes_dirty = true;
-		}
 	};
 
-	struct InstanceReflectionProbeData : public InstanceBaseData {
-
-		Instance *owner;
+	struct InstanceReflectionProbeData : public InstanceBaseData {		
 
 		struct PairInfo {
-			List<Instance *>::Element *L; //reflection iterator in geometry
+			List<Instance *>::Element *L; 
 			Instance *geometry;
 		};
-		List<PairInfo> geometries;
+		List<PairInfo> geometries;		
 
-		RID instance;
-		bool reflection_dirty;
-		SelfList<InstanceReflectionProbeData> update_list;
+		VisualServerScene::Instance *owner;
 
-		int render_step;
-
-		InstanceReflectionProbeData() :
-				update_list(this) {
-
-			reflection_dirty = true;
-			render_step = -1;
+		InstanceReflectionProbeData(){				
 		}
 	};
 
-	SelfList<InstanceReflectionProbeData>::List reflection_probe_render_list;
-
-	struct InstanceLightData : public InstanceBaseData {
-
-		struct PairInfo {
-			List<Instance *>::Element *L; //light iterator in geometry
-			Instance *geometry;
-		};
-
-		RID instance;
-		uint64_t last_version;
-		List<Instance *>::Element *D; // directional light in scenario
-
-		bool shadow_dirty;
-
-		List<PairInfo> geometries;
-
-		Instance *baked_light;
-
-		InstanceLightData() {
-
-			shadow_dirty = true;
-			D = NULL;
-			last_version = 0;
-			baked_light = NULL;
-		}
-	};
 
 	struct InstanceGIProbeData : public InstanceBaseData {
 
@@ -410,17 +368,17 @@ public:
 		bool invalid;
 		uint32_t base_version;
 
-		SelfList<InstanceGIProbeData> update_element;
+		//SelfList<InstanceGIProbeData> update_element;
 
-		InstanceGIProbeData() :
-				update_element(this) {
+		InstanceGIProbeData(){// :
+				//update_element(this) {{
 			invalid = true;
 			base_version = 0;
 			dynamic.updating_stage = GI_UPDATE_STAGE_CHECK;
 		}
 	};
 
-	SelfList<InstanceGIProbeData>::List gi_probe_update_list;
+	//SelfList<InstanceGIProbeData>::List gi_probe_update_list;
 
 	struct InstanceLightmapCaptureData : public InstanceBaseData {
 
@@ -483,6 +441,7 @@ public:
 	_FORCE_INLINE_ void _update_instance(Instance *p_instance);
 	_FORCE_INLINE_ void _update_instance_aabb(Instance *p_instance);
 	_FORCE_INLINE_ void _update_dirty_instance(Instance *p_instance);
+	_FORCE_INLINE_ void _update_instance_material(Instance *p_instance);
 	_FORCE_INLINE_ void _update_instance_lightmap_captures(Instance *p_instance);
 
 	_FORCE_INLINE_ bool _light_instance_update_shadow(Instance *p_instance, const Transform p_cam_transform, const CameraMatrix &p_cam_projection, bool p_cam_orthogonal, RID p_shadow_atlas, Scenario *p_scenario);

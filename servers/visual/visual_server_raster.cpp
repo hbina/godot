@@ -37,7 +37,9 @@
 #include "visual_server_canvas.h"
 #include "visual_server_global.h"
 #include "visual_server_scene.h"
+#include "core/ecs_registry.h"
 
+#include "main/profiler.h"
 // careful, these may run in different threads than the visual server
 
 int VisualServerRaster::changes = 0;
@@ -61,7 +63,7 @@ void VisualServerRaster::black_bars_set_images(RID p_left, RID p_top, RID p_righ
 }
 
 void VisualServerRaster::_draw_margins() {
-
+	AUTO_PROFILE;
 	VSG::canvas_render->draw_window_margins(black_margin, black_image);
 };
 
@@ -93,19 +95,23 @@ void VisualServerRaster::request_frame_drawn_callback(Object *p_where, const Str
 }
 
 void VisualServerRaster::draw(bool p_swap_buffers, double frame_step) {
-
+	AUTO_PROFILE;
 	//needs to be done before changes is reset to 0, to not force the editor to redraw
 	VS::get_singleton()->emit_signal("frame_pre_draw");
 
 	changes = 0;
 
 	VSG::rasterizer->begin_frame(frame_step);
-
+	
+	PROFILER_STARTFRAME("viewport");
 	VSG::scene->update_dirty_instances(); //update scene stuff
 
+	
 	VSG::viewport->draw_viewports();
+	
 	VSG::scene->render_probes();
 	_draw_margins();
+	PROFILER_ENDFRAME("viewport");
 	VSG::rasterizer->end_frame(p_swap_buffers);
 
 	while (frame_drawn_callbacks.front()) {
@@ -123,7 +129,7 @@ void VisualServerRaster::draw(bool p_swap_buffers, double frame_step) {
 
 		frame_drawn_callbacks.pop_front();
 	}
-
+	
 	VS::get_singleton()->emit_signal("frame_post_draw");
 }
 void VisualServerRaster::sync() {
@@ -201,6 +207,7 @@ VisualServerRaster::VisualServerRaster() {
 	VSG::storage = VSG::rasterizer->get_storage();
 	VSG::canvas_render = VSG::rasterizer->get_canvas();
 	VSG::scene_render = VSG::rasterizer->get_scene();
+	VSG::ecs = memnew(ECS_Registry);
 
 	for (int i = 0; i < 4; i++)
 		black_margin[i] = 0;
@@ -212,4 +219,5 @@ VisualServerRaster::~VisualServerRaster() {
 	memdelete(VSG::viewport);
 	memdelete(VSG::rasterizer);
 	memdelete(VSG::scene);
+	memdelete(VSG::ecs);
 }
