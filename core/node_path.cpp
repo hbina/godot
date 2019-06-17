@@ -441,6 +441,15 @@ bool NodePath::is_empty() const {
 
 	return !data;
 }
+
+bool NodePath::isPwd() const {
+	return operator String() == "..";
+}
+
+bool NodePath::isCwd() const {
+	return operator String() == ".";
+}
+
 NodePath::NodePath() {
 
 	data = NULL;

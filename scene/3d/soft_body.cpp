@@ -270,7 +270,7 @@ void SoftBody::_notification(int p_what) {
 			update_physics_server();
 		} break;
 		case NOTIFICATION_READY: {
-			if (!parent_collision_ignore.is_empty())
+			if (!parent_collision_ignore.is_empty() && !parent_collision_ignore.isCwd() && !parent_collision_ignore.isPwd())
 				add_collision_exception_with(get_node(parent_collision_ignore));
 
 		} break;

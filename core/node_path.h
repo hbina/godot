@@ -94,6 +94,8 @@ public:
 
 	operator String() const;
 	bool is_empty() const;
+	bool isPwd() const;
+	bool isCwd() const;
 
 	bool operator==(const NodePath &p_path) const;
 	bool operator!=(const NodePath &p_path) const;
