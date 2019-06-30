@@ -51,7 +51,7 @@ public:
 	void set(int p_idx, const Variant &p_value);
 	const Variant &get(int p_idx) const;
 
-	int size() const;
+	unsigned int size() const;
 	bool empty() const;
 	void clear();
 
@@ -62,7 +62,7 @@ public:
 
 	void push_back(const Variant &p_value);
 	_FORCE_INLINE_ void append(const Variant &p_value) { push_back(p_value); } //for python compatibility
-	Error resize(int p_new_size);
+	void resize(int p_new_size);
 
 	void insert(int p_pos, const Variant &p_value);
 	void remove(int p_pos);

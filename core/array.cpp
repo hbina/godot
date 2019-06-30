@@ -80,7 +80,7 @@ const Variant &Array::operator[](int p_idx) const {
 	return _p->array[p_idx];
 }
 
-int Array::size() const {
+unsigned int Array::size() const {
 
 	return _p->array.size();
 }
@@ -117,9 +117,9 @@ void Array::push_back(const Variant &p_value) {
 	_p->array.push_back(p_value);
 }
 
-Error Array::resize(int p_new_size) {
+void Array::resize(int p_new_size) {
 
-	return _p->array.resize(p_new_size);
+	_p->array.resize(p_new_size);
 }
 
 void Array::insert(int p_pos, const Variant &p_value) {

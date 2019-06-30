@@ -3968,8 +3968,8 @@ AABB RasterizerStorageGLES3::mesh_get_aabb(RID p_mesh, RID p_skeleton) const {
 			if ((mesh->surfaces[i]->format & VS::ARRAY_FORMAT_BONES) && mesh->surfaces[i]->skeleton_bone_aabb.size()) {
 
 				int bs = mesh->surfaces[i]->skeleton_bone_aabb.size();
-				const AABB *skbones = mesh->surfaces[i]->skeleton_bone_aabb.ptr();
-				const bool *skused = mesh->surfaces[i]->skeleton_bone_used.ptr();
+				const Vector<AABB> &skbones = mesh->surfaces[i]->skeleton_bone_aabb;
+				const Vector<bool> &skused = mesh->surfaces[i]->skeleton_bone_used;
 
 				int sbs = sk->size;
 				ERR_CONTINUE(bs > sbs);

@@ -890,13 +890,13 @@ public:
 
 	static bool is_polygon_clockwise(const Vector<Vector2> &p_polygon) {
 		int c = p_polygon.size();
-		if (c < 3)
+		if (c < 3) {
 			return false;
-		const Vector2 *p = p_polygon.ptr();
+		}
 		real_t sum = 0;
 		for (int i = 0; i < c; i++) {
-			const Vector2 &v1 = p[i];
-			const Vector2 &v2 = p[(i + 1) % c];
+			const Vector2 &v1 = p_polygon[i];
+			const Vector2 &v2 = p_polygon[(i + 1) % c];
 			sum += (v2.x - v1.x) * (v2.y + v1.y);
 		}
 
@@ -908,23 +908,22 @@ public:
 		int c = p_polygon.size();
 		if (c < 3)
 			return false;
-		const Vector2 *p = p_polygon.ptr();
 		Vector2 further_away(-1e20, -1e20);
 		Vector2 further_away_opposite(1e20, 1e20);
 
 		for (int i = 0; i < c; i++) {
-			further_away.x = MAX(p[i].x, further_away.x);
-			further_away.y = MAX(p[i].y, further_away.y);
-			further_away_opposite.x = MIN(p[i].x, further_away_opposite.x);
-			further_away_opposite.y = MIN(p[i].y, further_away_opposite.y);
+			further_away.x = MAX(p_polygon[i].x, further_away.x);
+			further_away.y = MAX(p_polygon[i].y, further_away.y);
+			further_away_opposite.x = MIN(p_polygon[i].x, further_away_opposite.x);
+			further_away_opposite.y = MIN(p_polygon[i].y, further_away_opposite.y);
 		}
 
 		further_away += (further_away - further_away_opposite) * Vector2(1.221313, 1.512312); // make point outside that won't intersect with points in segment from p_point
 
 		int intersections = 0;
 		for (int i = 0; i < c; i++) {
-			const Vector2 &v1 = p[i];
-			const Vector2 &v2 = p[(i + 1) % c];
+			const Vector2 &v1 = p_polygon[i];
+			const Vector2 &v2 = p_polygon[(i + 1) % c];
 			if (segment_intersects_segment_2d(v1, v2, p_point, further_away, NULL)) {
 				intersections++;
 			}

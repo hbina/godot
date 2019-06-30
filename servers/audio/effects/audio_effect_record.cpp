@@ -239,11 +239,11 @@ Ref<AudioStreamSample> AudioEffectRecord::get_recording() const {
 		Vector<float> left;
 		Vector<float> right;
 
-		int tframes = current_instance->recording_data.size() / 2;
+		unsigned int tframes = current_instance->recording_data.size() / 2;
 		left.resize(tframes);
 		right.resize(tframes);
 
-		for (int i = 0; i < tframes; i++) {
+		for (unsigned int i = 0; i < tframes; i++) {
 			left.set(i, current_instance->recording_data[i * 2 + 0]);
 			right.set(i, current_instance->recording_data[i * 2 + 1]);
 		}
