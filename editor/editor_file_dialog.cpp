@@ -663,7 +663,7 @@ bool EditorFileDialog::_is_open_should_be_disabled() {
 
 	for (int i = 0; i < items.size(); i++) {
 
-		Dictionary d = item_list->get_item_metadata(items.get(i));
+		Dictionary d = item_list->get_item_metadata(items[i]);
 
 		if (((mode == MODE_OPEN_FILE || mode == MODE_OPEN_FILES) && d["dir"]) || (mode == MODE_OPEN_DIR && !d["dir"]))
 			return true;
@@ -1151,7 +1151,7 @@ void EditorFileDialog::_favorite_move_up() {
 
 		if (a_idx == -1 || b_idx == -1)
 			return;
-		SWAP(favorited.write[a_idx], favorited.write[b_idx]);
+		SWAP(favorited[a_idx], favorited[b_idx]);
 
 		EditorSettings::get_singleton()->set_favorites(favorited);
 
@@ -1171,7 +1171,7 @@ void EditorFileDialog::_favorite_move_down() {
 
 		if (a_idx == -1 || b_idx == -1)
 			return;
-		SWAP(favorited.write[a_idx], favorited.write[b_idx]);
+		SWAP(favorited[a_idx], favorited[b_idx]);
 
 		EditorSettings::get_singleton()->set_favorites(favorited);
 

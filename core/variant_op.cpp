@@ -1721,10 +1721,10 @@ Variant Variant::get_named(const StringName &p_index, bool *r_valid) const {
 	} break;
 
 #define DEFAULT_OP_DVECTOR_SET(m_name, dv_type, skip_cond) \
-	DEFAULT_OP_ARRAY_CMD(m_name, PoolVector<dv_type>, if (skip_cond) return;, arr->set(index, p_value); return )
+	DEFAULT_OP_ARRAY_CMD(m_name, PoolVector<dv_type>, if (skip_cond) return;, arr[index] = p_value; return )
 
 #define DEFAULT_OP_DVECTOR_GET(m_name, dv_type) \
-	DEFAULT_OP_ARRAY_CMD(m_name, const PoolVector<dv_type>, ;, return arr->get(index))
+	DEFAULT_OP_ARRAY_CMD(m_name, const PoolVector<dv_type>, ;, return arr[index])
 
 void Variant::set(const Variant &p_index, const Variant &p_value, bool *r_valid) {
 
@@ -3329,7 +3329,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		case POOL_BYTE_ARRAY: {
 			const PoolVector<uint8_t> *arr = reinterpret_cast<const PoolVector<uint8_t> *>(_data._mem);
@@ -3340,7 +3340,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		case POOL_INT_ARRAY: {
 			const PoolVector<int> *arr = reinterpret_cast<const PoolVector<int> *>(_data._mem);
@@ -3351,7 +3351,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		case POOL_REAL_ARRAY: {
 			const PoolVector<real_t> *arr = reinterpret_cast<const PoolVector<real_t> *>(_data._mem);
@@ -3362,7 +3362,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		case POOL_STRING_ARRAY: {
 			const PoolVector<String> *arr = reinterpret_cast<const PoolVector<String> *>(_data._mem);
@@ -3373,7 +3373,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		case POOL_VECTOR2_ARRAY: {
 
@@ -3385,7 +3385,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		case POOL_VECTOR3_ARRAY: {
 
@@ -3397,7 +3397,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		case POOL_COLOR_ARRAY: {
 
@@ -3409,7 +3409,7 @@ Variant Variant::iter_get(const Variant &r_iter, bool &r_valid) const {
 				return Variant();
 			}
 #endif
-			return arr->get(idx);
+			return arr[idx];
 		} break;
 		default: {
 		}

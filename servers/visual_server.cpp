@@ -31,6 +31,7 @@
 #include "visual_server.h"
 
 #include "core/method_bind_ext.gen.inc"
+#include "core/os/copymem.h"
 #include "core/project_settings.h"
 
 VisualServer *VisualServer::singleton = NULL;
@@ -244,7 +245,7 @@ RID VisualServer::_make_test_cube() {
 	PoolVector<int> indices;
 	indices.resize(vertices.size());
 	for (int i = 0; i < vertices.size(); i++)
-		indices.set(i, i);
+		indices[i] = i;
 	d[VisualServer::ARRAY_INDEX] = indices;
 
 	mesh_add_surface_from_arrays(test_cube, PRIMITIVE_TRIANGLES, d);
@@ -746,7 +747,7 @@ Error VisualServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint32_
 
 		if (first) {
 			for (int i = 0; i < total_bones; i++) {
-				r_bone_aabb.write[i].size = Vector3(-1, -1, -1); //negative means unused
+				r_bone_aabb[i].size = Vector3(-1, -1, -1); //negative means unused
 			}
 		}
 

@@ -30,6 +30,7 @@
 
 #include "marshalls.h"
 
+#include "core/os/copymem.h"
 #include "core/os/keyboard.h"
 #include "core/print_string.h"
 #include "core/reference.h"

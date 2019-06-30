@@ -450,7 +450,7 @@ void EditorNode::_resources_changed(const PoolVector<String> &p_resources) {
 	int rc = p_resources.size();
 	for (int i = 0; i < rc; i++) {
 
-		Ref<Resource> res(ResourceCache::get(p_resources.get(i)));
+		Ref<Resource> res(ResourceCache::get(p_resources[i]));
 		if (res.is_null()) {
 			continue;
 		}
@@ -2823,7 +2823,7 @@ void EditorNode::set_addon_plugin_enabled(const String &p_addon, bool p_enabled,
 		ProjectSettings *ps = ProjectSettings::get_singleton();
 		PoolStringArray enabled_plugins = ps->get("editor_plugins/enabled");
 		for (int i = 0; i < enabled_plugins.size(); ++i) {
-			if (enabled_plugins.get(i) == p_addon) {
+			if (enabled_plugins[i] == p_addon) {
 				enabled_plugins.remove(i);
 				break;
 			}
@@ -4480,7 +4480,7 @@ void EditorNode::raise_bottom_panel_item(Control *p_item) {
 
 		if (bottom_panel_items[i].control == p_item) {
 			bottom_panel_items[i].button->raise();
-			SWAP(bottom_panel_items.write[i], bottom_panel_items.write[bottom_panel_items.size() - 1]);
+			SWAP(bottom_panel_items[i], bottom_panel_items[bottom_panel_items.size() - 1]);
 			break;
 		}
 	}

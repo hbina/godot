@@ -78,7 +78,7 @@ Error ImageLoaderBMP::convert_to_image(Ref<Image> p_image,
 				data_len = width * height * 4;
 			}
 			ERR_FAIL_COND_V(data_len == 0, ERR_BUG);
-			err = data.resize(data_len);
+			data.resize(data_len);
 
 			PoolVector<uint8_t>::Write data_w = data.write();
 			uint8_t *write_buffer = data_w.ptr();
@@ -272,7 +272,7 @@ Error ImageLoaderBMP::load_image(Ref<Image> p_image, FileAccess *f,
 										bmp_header.bmp_file_header.bmp_file_offset);
 
 			PoolVector<uint8_t> bmp_buffer;
-			err = bmp_buffer.resize(bmp_buffer_size);
+			bmp_buffer.resize(bmp_buffer_size);
 			if (err == OK) {
 				PoolVector<uint8_t>::Write bmp_buffer_w = bmp_buffer.write();
 				f->get_buffer(bmp_buffer_w.ptr(), bmp_buffer_size);

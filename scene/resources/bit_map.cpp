@@ -31,6 +31,7 @@
 #include "bit_map.h"
 
 #include "core/io/image_loader.h"
+#include "core/os/copymem.h"
 
 void BitMap::create(const Size2 &p_size) {
 
@@ -132,7 +133,7 @@ void BitMap::set_bit(const Point2 &p_pos, bool p_value) {
 	else
 		b &= ~(1 << bbit);
 
-	bitmask.write[bbyte] = b;
+	bitmask[bbyte] = b;
 }
 
 bool BitMap::get_bit(const Point2 &p_pos) const {
@@ -323,8 +324,8 @@ Vector<Vector2> BitMap::_march_square(const Rect2i &rect, const Point2i &start) 
 		curx += stepx;
 		cury += stepy;
 		if (stepx == prevx && stepy == prevy) {
-			_points.write[_points.size() - 1].x = (float)(curx - rect.position.x);
-			_points.write[_points.size() - 1].y = (float)(cury + rect.position.y);
+			_points[_points.size() - 1].x = (float)(curx - rect.position.x);
+			_points[_points.size() - 1].y = (float)(cury + rect.position.y);
 		} else {
 			_points.push_back(Vector2((float)(curx - rect.position.x), (float)(cury + rect.position.y)));
 		}
@@ -374,11 +375,11 @@ static Vector<Vector2> rdp(const Vector<Vector2> &v, float optimization) {
 		Vector<Vector2> left, right;
 		left.resize(index);
 		for (int i = 0; i < index; i++) {
-			left.write[i] = v[i];
+			left[i] = v[i];
 		}
 		right.resize(v.size() - index);
 		for (int i = 0; i < right.size(); i++) {
-			right.write[i] = v[index + i];
+			right[i] = v[index + i];
 		}
 		Vector<Vector2> r1 = rdp(left, optimization);
 		Vector<Vector2> r2 = rdp(right, optimization);
@@ -386,7 +387,7 @@ static Vector<Vector2> rdp(const Vector<Vector2> &v, float optimization) {
 		int middle = r1.size();
 		r1.resize(r1.size() + r2.size());
 		for (int i = 0; i < r2.size(); i++) {
-			r1.write[middle + i] = r2[i];
+			r1[middle + i] = r2[i];
 		}
 		return r1;
 	} else {
@@ -413,7 +414,7 @@ static Vector<Vector2> reduce(const Vector<Vector2> &points, const Rect2i &rect,
 	Vector2 last = result[result.size() - 1];
 
 	if (last.y > result[0].y && last.distance_to(result[0]) < ep * 0.5f) {
-		result.write[0].y = last.y;
+		result[0].y = last.y;
 		result.resize(result.size() - 1);
 	}
 	return result;
@@ -468,7 +469,7 @@ static void fill_bits(const BitMap *p_src, Ref<BitMap> &p_map, const Point2i &p_
 
 					FillBitsStackEntry se = { pos, i, j };
 					stack.resize(MAX(stack_size + 1, stack.size()));
-					stack.set(stack_size, se);
+					stack[stack_size] = se;
 					stack_size++;
 
 					pos = Point2i(i, j);
@@ -482,7 +483,7 @@ static void fill_bits(const BitMap *p_src, Ref<BitMap> &p_map, const Point2i &p_
 		}
 		if (!reenter) {
 			if (stack_size) {
-				FillBitsStackEntry se = stack.get(stack_size - 1);
+				FillBitsStackEntry se = stack[stack_size - 1];
 				stack_size--;
 				pos = se.pos;
 				next_i = se.i;

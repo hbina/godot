@@ -64,7 +64,7 @@ void GDAPI godot_pool_byte_array_new_with_array(godot_pool_byte_array *r_dest, c
 
 	dest->resize(a->size());
 	for (int i = 0; i < a->size(); i++) {
-		dest->set(i, (*a)[i]);
+		dest->operator[](i) = (*a)[i];
 	}
 }
 
@@ -116,12 +116,12 @@ godot_pool_byte_array_write_access GDAPI *godot_pool_byte_array_write(godot_pool
 
 void GDAPI godot_pool_byte_array_set(godot_pool_byte_array *p_self, const godot_int p_idx, const uint8_t p_data) {
 	PoolVector<uint8_t> *self = (PoolVector<uint8_t> *)p_self;
-	self->set(p_idx, p_data);
+	self->operator[](p_idx) = p_data;
 }
 
 uint8_t GDAPI godot_pool_byte_array_get(const godot_pool_byte_array *p_self, const godot_int p_idx) {
 	const PoolVector<uint8_t> *self = (const PoolVector<uint8_t> *)p_self;
-	return self->get(p_idx);
+	return self->operator[](p_idx);
 }
 
 godot_int GDAPI godot_pool_byte_array_size(const godot_pool_byte_array *p_self) {
@@ -153,7 +153,7 @@ void GDAPI godot_pool_int_array_new_with_array(godot_pool_int_array *r_dest, con
 
 	dest->resize(a->size());
 	for (int i = 0; i < a->size(); i++) {
-		dest->set(i, (*a)[i]);
+		dest->operator[](i) = (*a)[i];
 	}
 }
 
@@ -205,12 +205,12 @@ godot_pool_int_array_write_access GDAPI *godot_pool_int_array_write(godot_pool_i
 
 void GDAPI godot_pool_int_array_set(godot_pool_int_array *p_self, const godot_int p_idx, const godot_int p_data) {
 	PoolVector<godot_int> *self = (PoolVector<godot_int> *)p_self;
-	self->set(p_idx, p_data);
+	self->operator[](p_idx) = p_data;
 }
 
 godot_int GDAPI godot_pool_int_array_get(const godot_pool_int_array *p_self, const godot_int p_idx) {
 	const PoolVector<godot_int> *self = (const PoolVector<godot_int> *)p_self;
-	return self->get(p_idx);
+	return self->operator[](p_idx);
 }
 
 godot_int GDAPI godot_pool_int_array_size(const godot_pool_int_array *p_self) {
@@ -242,7 +242,7 @@ void GDAPI godot_pool_real_array_new_with_array(godot_pool_real_array *r_dest, c
 
 	dest->resize(a->size());
 	for (int i = 0; i < a->size(); i++) {
-		dest->set(i, (*a)[i]);
+		dest->operator[](i) = (*a)[i];
 	}
 }
 
@@ -294,12 +294,12 @@ godot_pool_int_array_write_access GDAPI *godot_pool_real_array_write(godot_pool_
 
 void GDAPI godot_pool_real_array_set(godot_pool_real_array *p_self, const godot_int p_idx, const godot_real p_data) {
 	PoolVector<godot_real> *self = (PoolVector<godot_real> *)p_self;
-	self->set(p_idx, p_data);
+	self->operator[](p_idx) = p_data;
 }
 
 godot_real GDAPI godot_pool_real_array_get(const godot_pool_real_array *p_self, const godot_int p_idx) {
 	const PoolVector<godot_real> *self = (const PoolVector<godot_real> *)p_self;
-	return self->get(p_idx);
+	return self->operator[](p_idx);
 }
 
 godot_int GDAPI godot_pool_real_array_size(const godot_pool_real_array *p_self) {
@@ -331,7 +331,7 @@ void GDAPI godot_pool_string_array_new_with_array(godot_pool_string_array *r_des
 
 	dest->resize(a->size());
 	for (int i = 0; i < a->size(); i++) {
-		dest->set(i, (*a)[i]);
+		dest->operator[](i) = (*a)[i];
 	}
 }
 
@@ -387,7 +387,7 @@ godot_pool_string_array_write_access GDAPI *godot_pool_string_array_write(godot_
 void GDAPI godot_pool_string_array_set(godot_pool_string_array *p_self, const godot_int p_idx, const godot_string *p_data) {
 	PoolVector<String> *self = (PoolVector<String> *)p_self;
 	String &s = *(String *)p_data;
-	self->set(p_idx, s);
+	self->operator[](p_idx) = s;
 }
 
 godot_string GDAPI godot_pool_string_array_get(const godot_pool_string_array *p_self, const godot_int p_idx) {
@@ -395,7 +395,7 @@ godot_string GDAPI godot_pool_string_array_get(const godot_pool_string_array *p_
 	godot_string str;
 	String *s = (String *)&str;
 	memnew_placement(s, String);
-	*s = self->get(p_idx);
+	*s = self->operator[](p_idx);
 	return str;
 }
 
@@ -428,7 +428,7 @@ void GDAPI godot_pool_vector2_array_new_with_array(godot_pool_vector2_array *r_d
 
 	dest->resize(a->size());
 	for (int i = 0; i < a->size(); i++) {
-		dest->set(i, (*a)[i]);
+		dest->operator[](i) = (*a)[i];
 	}
 }
 
@@ -484,14 +484,14 @@ godot_pool_vector2_array_write_access GDAPI *godot_pool_vector2_array_write(godo
 void GDAPI godot_pool_vector2_array_set(godot_pool_vector2_array *p_self, const godot_int p_idx, const godot_vector2 *p_data) {
 	PoolVector<Vector2> *self = (PoolVector<Vector2> *)p_self;
 	Vector2 &s = *(Vector2 *)p_data;
-	self->set(p_idx, s);
+	self->operator[](p_idx) = s;
 }
 
 godot_vector2 GDAPI godot_pool_vector2_array_get(const godot_pool_vector2_array *p_self, const godot_int p_idx) {
 	const PoolVector<Vector2> *self = (const PoolVector<Vector2> *)p_self;
 	godot_vector2 v;
 	Vector2 *s = (Vector2 *)&v;
-	*s = self->get(p_idx);
+	*s = self->operator[](p_idx);
 	return v;
 }
 
@@ -524,7 +524,7 @@ void GDAPI godot_pool_vector3_array_new_with_array(godot_pool_vector3_array *r_d
 
 	dest->resize(a->size());
 	for (int i = 0; i < a->size(); i++) {
-		dest->set(i, (*a)[i]);
+		dest->operator[](i) = (*a)[i];
 	}
 }
 
@@ -580,14 +580,14 @@ godot_pool_vector3_array_write_access GDAPI *godot_pool_vector3_array_write(godo
 void GDAPI godot_pool_vector3_array_set(godot_pool_vector3_array *p_self, const godot_int p_idx, const godot_vector3 *p_data) {
 	PoolVector<Vector3> *self = (PoolVector<Vector3> *)p_self;
 	Vector3 &s = *(Vector3 *)p_data;
-	self->set(p_idx, s);
+	self->operator[](p_idx) = s;
 }
 
 godot_vector3 GDAPI godot_pool_vector3_array_get(const godot_pool_vector3_array *p_self, const godot_int p_idx) {
 	const PoolVector<Vector3> *self = (const PoolVector<Vector3> *)p_self;
 	godot_vector3 v;
 	Vector3 *s = (Vector3 *)&v;
-	*s = self->get(p_idx);
+	*s = self->operator[](p_idx);
 	return v;
 }
 
@@ -620,7 +620,7 @@ void GDAPI godot_pool_color_array_new_with_array(godot_pool_color_array *r_dest,
 
 	dest->resize(a->size());
 	for (int i = 0; i < a->size(); i++) {
-		dest->set(i, (*a)[i]);
+		dest->operator[](i) = (*a)[i];
 	}
 }
 
@@ -676,14 +676,14 @@ godot_pool_color_array_write_access GDAPI *godot_pool_color_array_write(godot_po
 void GDAPI godot_pool_color_array_set(godot_pool_color_array *p_self, const godot_int p_idx, const godot_color *p_data) {
 	PoolVector<Color> *self = (PoolVector<Color> *)p_self;
 	Color &s = *(Color *)p_data;
-	self->set(p_idx, s);
+	self->operator[](p_idx) = s;
 }
 
 godot_color GDAPI godot_pool_color_array_get(const godot_pool_color_array *p_self, const godot_int p_idx) {
 	const PoolVector<Color> *self = (const PoolVector<Color> *)p_self;
 	godot_color v;
 	Color *s = (Color *)&v;
-	*s = self->get(p_idx);
+	*s = self->operator[](p_idx);
 	return v;
 }
 

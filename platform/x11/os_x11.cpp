@@ -2505,7 +2505,7 @@ void OS_X11::process_xevents() {
 
 					Vector<String> files = String((char *)p.data).split("\n", false);
 					for (int i = 0; i < files.size(); i++) {
-						files.write[i] = files[i].replace("file://", "").http_unescape().strip_edges();
+						files[i] = files[i].replace("file://", "").http_unescape().strip_edges();
 					}
 					main_loop->drop_files(files);
 
@@ -3100,12 +3100,12 @@ void OS_X11::set_icon(const Ref<Image> &p_icon) {
 
 			pd.resize(2 + w * h);
 
-			pd.write[0] = w;
-			pd.write[1] = h;
+			pd[0] = w;
+			pd[1] = h;
 
 			PoolVector<uint8_t>::Read r = img->get_data().read();
 
-			long *wr = &pd.write[2];
+			long *wr = &pd[2];
 			uint8_t const *pr = r.ptr();
 
 			for (int i = 0; i < w * h; i++) {
@@ -3116,7 +3116,7 @@ void OS_X11::set_icon(const Ref<Image> &p_icon) {
 				pr += 4;
 			}
 
-			XChangeProperty(x11_display, x11_window, net_wm_icon, XA_CARDINAL, 32, PropModeReplace, (unsigned char *)pd.ptr(), pd.size());
+			XChangeProperty(x11_display, x11_window, net_wm_icon, XA_CARDINAL, 32, PropModeReplace, (unsigned char *)pd.data(), pd.size());
 
 			if (!g_set_icon_error)
 				break;

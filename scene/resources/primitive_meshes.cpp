@@ -1381,12 +1381,12 @@ void QuadMesh::_create_mesh_array(Array &p_arr) const {
 	for (int i = 0; i < 6; i++) {
 
 		int j = indices[i];
-		faces.set(i, quad_faces[j]);
-		normals.set(i, Vector3(0, 0, 1));
-		tangents.set(i * 4 + 0, 1.0);
-		tangents.set(i * 4 + 1, 0.0);
-		tangents.set(i * 4 + 2, 0.0);
-		tangents.set(i * 4 + 3, 1.0);
+		faces[i] = quad_faces[j];
+		normals[i] = Vector3(0, 0, 1);
+		tangents[i * 4 + 0] = 1.0;
+		tangents[i * 4 + 1] = 0.0;
+		tangents[i * 4 + 2] = 0.0;
+		tangents[i * 4 + 3] = 1.0;
 
 		static const Vector2 quad_uv[4] = {
 			Vector2(0, 1),
@@ -1395,7 +1395,7 @@ void QuadMesh::_create_mesh_array(Array &p_arr) const {
 			Vector2(1, 1),
 		};
 
-		uvs.set(i, quad_uv[j]);
+		uvs[i] = quad_uv[j];
 	}
 
 	p_arr[VS::ARRAY_VERTEX] = faces;

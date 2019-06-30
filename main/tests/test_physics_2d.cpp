@@ -78,8 +78,8 @@ class TestPhysics2DMainLoop : public MainLoop {
 
 				for (int j = 0; j < 32; j++) {
 
-					pixels.set(i * 32 * 2 + j * 2 + 0, (j == 0) ? 255 : 0);
-					pixels.set(i * 32 * 2 + j * 2 + 1, 255);
+					pixels[i * 32 * 2 + j * 2 + 0] = (j == 0) ? 255 : 0;
+					pixels[i * 32 * 2 + j * 2 + 1] = 255;
 				}
 			}
 
@@ -105,8 +105,8 @@ class TestPhysics2DMainLoop : public MainLoop {
 
 					bool black = Vector2(i - 16, j - 16).length_squared() < 16 * 16;
 
-					pixels.set(i * 32 * 2 + j * 2 + 0, (i == 16 || j == 16) ? 255 : 0);
-					pixels.set(i * 32 * 2 + j * 2 + 1, black ? 255 : 0);
+					pixels[i * 32 * 2 + j * 2 + 0] = (i == 16 || j == 16) ? 255 : 0;
+					pixels[i * 32 * 2 + j * 2 + 1] = black ? 255 : 0;
 				}
 			}
 
@@ -132,8 +132,8 @@ class TestPhysics2DMainLoop : public MainLoop {
 
 					bool black = i > 0 && i < 31 && j > 0 && j < 31;
 
-					pixels.set(i * 32 * 2 + j * 2 + 0, black ? 0 : 255);
-					pixels.set(i * 32 * 2 + j * 2 + 1, 255);
+					pixels[i * 32 * 2 + j * 2 + 0] = black ? 0 : 255;
+					pixels[i * 32 * 2 + j * 2 + 1] = 255;
 				}
 			}
 
@@ -160,8 +160,8 @@ class TestPhysics2DMainLoop : public MainLoop {
 					int si = i > 48 ? i - 32 : (i < 16 ? i : 16);
 					bool black = Vector2(si - 16, j - 16).length_squared() < 16 * 16;
 
-					pixels.set(i * 32 * 2 + j * 2 + 0, (i == 16 || j == 16 || i == 48) ? 255 : 0);
-					pixels.set(i * 32 * 2 + j * 2 + 1, black ? 255 : 0);
+					pixels[i * 32 * 2 + j * 2 + 0] = (i == 16 || j == 16 || i == 48) ? 255 : 0;
+					pixels[i * 32 * 2 + j * 2 + 1] = black ? 255 : 0;
 				}
 			}
 

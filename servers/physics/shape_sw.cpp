@@ -1123,11 +1123,11 @@ PoolVector<Vector3> ConcavePolygonShapeSW::get_faces() const {
 
 	for (int i = 0; i < faces.size(); i++) {
 
-		Face f = faces.get(i);
+		Face f = faces[i];
 
 		for (int j = 0; j < 3; j++) {
 
-			rfaces.set(i * 3 + j, vertices.get(f.indices[j]));
+			rfaces[i * 3 + j] = vertices[f.indices[j]];
 		}
 	}
 

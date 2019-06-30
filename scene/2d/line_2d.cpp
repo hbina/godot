@@ -99,13 +99,13 @@ PoolVector<Vector2> Line2D::get_points() const {
 }
 
 void Line2D::set_point_position(int i, Vector2 pos) {
-	_points.set(i, pos);
+	_points[i] = pos;
 	update();
 }
 
 Vector2 Line2D::get_point_position(int i) const {
 	ERR_FAIL_INDEX_V(i, _points.size(), Vector2());
-	return _points.get(i);
+	return _points[i];
 }
 
 int Line2D::get_point_count() const {
@@ -251,7 +251,7 @@ void Line2D::_draw() {
 	{
 		PoolVector<Vector2>::Read points_read = _points.read();
 		for (int i = 0; i < len; ++i) {
-			points.write[i] = points_read[i];
+			points[i] = points_read[i];
 		}
 	}
 

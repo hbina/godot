@@ -61,14 +61,14 @@ public:
 		/**
 		 * Get NEXT Element iterator, for constant lists.
 		 */
-		_FORCE_INLINE_ const Element *next() const {
+		const Element *next() const {
 
 			return next_ptr;
 		};
 		/**
 		 * Get NEXT Element iterator,
 		 */
-		_FORCE_INLINE_ Element *next() {
+		Element *next() {
 
 			return next_ptr;
 		};
@@ -76,14 +76,14 @@ public:
 		/**
 		 * Get PREV Element iterator, for constant lists.
 		 */
-		_FORCE_INLINE_ const Element *prev() const {
+		const Element *prev() const {
 
 			return prev_ptr;
 		};
 		/**
 		 * Get PREV Element iterator,
 		 */
-		_FORCE_INLINE_ Element *prev() {
+		Element *prev() {
 
 			return prev_ptr;
 		};
@@ -91,45 +91,45 @@ public:
 		/**
 		 * * operator, for using as *iterator, when iterators are defined on stack.
 		 */
-		_FORCE_INLINE_ const T &operator*() const {
+		const T &operator*() const {
 			return value;
 		};
 		/**
 		 * operator->, for using as iterator->, when iterators are defined on stack, for constant lists.
 		 */
-		_FORCE_INLINE_ const T *operator->() const {
+		const T *operator->() const {
 
 			return &value;
 		};
 		/**
 		 * * operator, for using as *iterator, when iterators are defined on stack,
 		 */
-		_FORCE_INLINE_ T &operator*() {
+		T &operator*() {
 			return value;
 		};
 		/**
 		 * operator->, for using as iterator->, when iterators are defined on stack, for constant lists.
 		 */
-		_FORCE_INLINE_ T *operator->() {
+		T *operator->() {
 			return &value;
 		};
 
 		/**
 		 * get the value stored in this element.
 		 */
-		_FORCE_INLINE_ T &get() {
+		T &get() {
 			return value;
 		};
 		/**
 		 * get the value stored in this element, for constant lists
 		 */
-		_FORCE_INLINE_ const T &get() const {
+		const T &get() const {
 			return value;
 		};
 		/**
 		 * set the value stored in this element.
 		 */
-		_FORCE_INLINE_ void set(const T &p_value) {
+		void set(const T &p_value) {
 			value = (T &)p_value;
 		};
 
@@ -138,10 +138,10 @@ public:
 			data->erase(this);
 		}
 
-		_FORCE_INLINE_ Element() {
-			next_ptr = 0;
-			prev_ptr = 0;
-			data = NULL;
+		Element() {
+			next_ptr = nullptr;
+			prev_ptr = nullptr;
+			data = nullptr;
 		};
 	};
 
@@ -183,32 +183,32 @@ public:
 	/**
 	* return a const iterator to the beginning of the list.
 	*/
-	_FORCE_INLINE_ const Element *front() const {
+	const Element *front() const {
 
-		return _data ? _data->first : 0;
+		return _data ? _data->first : nullptr;
 	};
 
 	/**
 	* return an iterator to the beginning of the list.
 	*/
-	_FORCE_INLINE_ Element *front() {
-		return _data ? _data->first : 0;
+	Element *front() {
+		return _data ? _data->first : nullptr;
 	};
 
 	/**
  	* return a const iterator to the last member of the list.
 	*/
-	_FORCE_INLINE_ const Element *back() const {
+	const Element *back() const {
 
-		return _data ? _data->last : 0;
+		return _data ? _data->last : nullptr;
 	};
 
 	/**
  	* return an iterator to the last member of the list.
 	*/
-	_FORCE_INLINE_ Element *back() {
+	Element *back() {
 
-		return _data ? _data->last : 0;
+		return _data ? _data->last : nullptr;
 	};
 
 	/**
@@ -219,8 +219,8 @@ public:
 		if (!_data) {
 
 			_data = memnew_allocator(_Data, A);
-			_data->first = NULL;
-			_data->last = NULL;
+			_data->first = nullptr;
+			_data->last = nullptr;
 			_data->size_cache = 0;
 		}
 
@@ -228,7 +228,7 @@ public:
 		n->value = (T &)value;
 
 		n->prev_ptr = _data->last;
-		n->next_ptr = 0;
+		n->next_ptr = nullptr;
 		n->data = _data;
 
 		if (_data->last) {
@@ -260,14 +260,14 @@ public:
 		if (!_data) {
 
 			_data = memnew_allocator(_Data, A);
-			_data->first = NULL;
-			_data->last = NULL;
+			_data->first = nullptr;
+			_data->last = nullptr;
 			_data->size_cache = 0;
 		}
 
 		Element *n = memnew_allocator(Element, A);
 		n->value = (T &)value;
-		n->prev_ptr = 0;
+		n->prev_ptr = nullptr;
 		n->next_ptr = _data->first;
 		n->data = _data;
 
@@ -356,7 +356,7 @@ public:
 			it = it->next();
 		};
 
-		return NULL;
+		return nullptr;
 	};
 
 	/**
@@ -369,7 +369,7 @@ public:
 
 			if (_data->size_cache == 0) {
 				memdelete_allocator<_Data, A>(_data);
-				_data = NULL;
+				_data = nullptr;
 			}
 
 			return ret;
@@ -390,7 +390,7 @@ public:
 	/**
 	 * return whether the list is empty
 	 */
-	_FORCE_INLINE_ bool empty() const {
+	bool empty() const {
 
 		return (!_data || !_data->size_cache);
 	}
@@ -405,7 +405,7 @@ public:
 		};
 	};
 
-	_FORCE_INLINE_ int size() const {
+	int size() const {
 
 		return _data ? _data->size_cache : 0;
 	}
@@ -507,7 +507,7 @@ public:
 
 		_data->last->next_ptr = p_I;
 		p_I->prev_ptr = _data->last;
-		p_I->next_ptr = NULL;
+		p_I->next_ptr = nullptr;
 		_data->last = p_I;
 	}
 
@@ -544,7 +544,7 @@ public:
 
 		_data->first->prev_ptr = p_I;
 		p_I->next_ptr = _data->first;
-		p_I->prev_ptr = NULL;
+		p_I->prev_ptr = nullptr;
 		_data->first = p_I;
 	}
 
@@ -604,7 +604,7 @@ public:
 
 			if (from != current) {
 
-				current->prev_ptr = NULL;
+				current->prev_ptr = nullptr;
 				current->next_ptr = from;
 
 				Element *find = from;
@@ -627,8 +627,8 @@ public:
 					to = current;
 			} else {
 
-				current->prev_ptr = NULL;
-				current->next_ptr = NULL;
+				current->prev_ptr = nullptr;
+				current->next_ptr = nullptr;
 			}
 
 			current = next;
@@ -641,7 +641,7 @@ public:
 	struct AuxiliaryComparator {
 
 		C compare;
-		_FORCE_INLINE_ bool operator()(const Element *a, const Element *b) const {
+		bool operator()(const Element *a, const Element *b) const {
 
 			return compare(a->value, b->value);
 		}
@@ -670,12 +670,12 @@ public:
 		sort.sort(aux_buffer, s);
 
 		_data->first = aux_buffer[0];
-		aux_buffer[0]->prev_ptr = NULL;
+		aux_buffer[0]->prev_ptr = nullptr;
 		aux_buffer[0]->next_ptr = aux_buffer[1];
 
 		_data->last = aux_buffer[s - 1];
 		aux_buffer[s - 1]->prev_ptr = aux_buffer[s - 2];
-		aux_buffer[s - 1]->next_ptr = NULL;
+		aux_buffer[s - 1]->next_ptr = nullptr;
 
 		for (int i = 1; i < s - 1; i++) {
 
@@ -695,7 +695,7 @@ public:
 	 */
 	List(const List &p_list) {
 
-		_data = NULL;
+		_data = nullptr;
 		const Element *it = p_list.front();
 		while (it) {
 
@@ -705,7 +705,7 @@ public:
 	}
 
 	List() {
-		_data = NULL;
+		_data = nullptr;
 	};
 	~List() {
 		clear();

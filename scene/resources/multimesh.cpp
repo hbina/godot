@@ -154,7 +154,7 @@ PoolVector<Color> MultiMesh::_get_color_array() const {
 
 	for (int i = 0; i < instance_count; i++) {
 
-		colors.set(i, get_instance_color(i));
+		colors[i] = get_instance_color(i);
 	}
 
 	return colors;
@@ -186,7 +186,7 @@ PoolVector<Color> MultiMesh::_get_custom_data_array() const {
 
 	for (int i = 0; i < instance_count; i++) {
 
-		custom_datas.set(i, get_instance_custom_data(i));
+		custom_datas[i] = get_instance_custom_data(i);
 	}
 
 	return custom_datas;

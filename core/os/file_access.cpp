@@ -283,16 +283,12 @@ class CharBuffer {
 
 	bool grow() {
 
-		if (vector.resize(next_power_of_2(1 + written)) != OK) {
-
-			return false;
-		}
+		vector.resize(next_power_of_2(1 + written));
 
 		if (buffer == stack_buffer) { // first chunk?
-
 			for (int i = 0; i < written; i++) {
 
-				vector.write[i] = stack_buffer[i];
+				vector[i] = stack_buffer[i];
 			}
 		}
 

@@ -1525,7 +1525,7 @@ void TileSetEditor::_on_workspace_input(const Ref<InputEvent> &p_ie) {
 							}
 						} else if (mm.is_valid()) {
 							if (dragging_point >= 0) {
-								current_shape.set(dragging_point, snap_point(mm->get_position()));
+								current_shape[dragging_point] = snap_point(mm->get_position());
 								workspace->update();
 							}
 						}
@@ -1588,10 +1588,10 @@ void TileSetEditor::_on_workspace_input(const Ref<InputEvent> &p_ie) {
 							} else if (!mb->is_pressed() && mb->get_button_index() == BUTTON_LEFT) {
 								if (creating_shape) {
 									if ((current_shape[0] - current_shape[1]).length_squared() <= grab_threshold) {
-										current_shape.set(0, snap_point(shape_anchor));
-										current_shape.set(1, snap_point(shape_anchor + Vector2(current_tile_region.size.x, 0)));
-										current_shape.set(2, snap_point(shape_anchor + current_tile_region.size));
-										current_shape.set(3, snap_point(shape_anchor + Vector2(0, current_tile_region.size.y)));
+										current_shape[0] = snap_point(shape_anchor);
+										current_shape[1] = snap_point(shape_anchor + Vector2(current_tile_region.size.x, 0));
+										current_shape[2] = snap_point(shape_anchor + current_tile_region.size);
+										current_shape[3] = snap_point(shape_anchor + Vector2(0, current_tile_region.size.y));
 									}
 									close_shape(shape_anchor);
 									workspace->update();
@@ -1603,9 +1603,9 @@ void TileSetEditor::_on_workspace_input(const Ref<InputEvent> &p_ie) {
 								Vector2 pos = mm->get_position();
 								pos = snap_point(pos);
 								Vector2 p = current_shape[2];
-								current_shape.set(3, snap_point(Vector2(pos.x, p.y)));
-								current_shape.set(0, snap_point(pos));
-								current_shape.set(1, snap_point(Vector2(p.x, pos.y)));
+								current_shape[3] = snap_point(Vector2(pos.x, p.y));
+								current_shape[0] = snap_point(pos);
+								current_shape[1] = snap_point(Vector2(p.x, pos.y));
 								workspace->update();
 							}
 						}

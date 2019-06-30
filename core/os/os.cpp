@@ -410,7 +410,7 @@ uint64_t OS::get_static_memory_usage() const {
 }
 uint64_t OS::get_dynamic_memory_usage() const {
 
-	return MemoryPool::total_memory;
+	return 0L;
 }
 
 uint64_t OS::get_static_memory_peak_usage() const {

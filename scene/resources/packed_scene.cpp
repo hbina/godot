@@ -329,7 +329,7 @@ Node *SceneState::instance(GenEditState p_edit_state) const {
 		if (c.binds.size()) {
 			binds.resize(c.binds.size());
 			for (int j = 0; j < c.binds.size(); j++)
-				binds.write[j] = props[c.binds[j]];
+				binds[j] = props[c.binds[j]];
 		}
 
 		cfrom->connect(snames[c.signal], cto, snames[c.method], binds, CONNECT_PERSIST | c.flags);
@@ -890,7 +890,7 @@ Error SceneState::pack(Node *p_scene) {
 
 	for (Map<StringName, int>::Element *E = name_map.front(); E; E = E->next()) {
 
-		names.write[E->get()] = E->key();
+		names[E->get()] = E->key();
 	}
 
 	variants.resize(variant_map.size());
@@ -898,13 +898,13 @@ Error SceneState::pack(Node *p_scene) {
 	while ((K = variant_map.next(K))) {
 
 		int idx = variant_map[*K];
-		variants.write[idx] = *K;
+		variants[idx] = *K;
 	}
 
 	node_paths.resize(nodepath_map.size());
 	for (Map<Node *, int>::Element *E = nodepath_map.front(); E; E = E->next()) {
 
-		node_paths.write[E->get()] = scene->get_path_to(E->key());
+		node_paths[E->get()] = scene->get_path_to(E->key());
 	}
 
 	return OK;
@@ -1105,7 +1105,7 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 		names.resize(namecount);
 		PoolVector<String>::Read r = snames.read();
 		for (int i = 0; i < names.size(); i++)
-			names.write[i] = r[i];
+			names[i] = r[i];
 	}
 
 	Array svariants = p_dictionary["variants"];
@@ -1115,7 +1115,7 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 		variants.resize(varcount);
 		for (int i = 0; i < varcount; i++) {
 
-			variants.write[i] = svariants[i];
+			variants[i] = svariants[i];
 		}
 
 	} else {
@@ -1129,7 +1129,7 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 		PoolVector<int>::Read r = snodes.read();
 		int idx = 0;
 		for (int i = 0; i < nc; i++) {
-			NodeData &nd = nodes.write[i];
+			NodeData &nd = nodes[i];
 			nd.parent = r[idx++];
 			nd.owner = r[idx++];
 			nd.type = r[idx++];
@@ -1141,13 +1141,13 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 			nd.properties.resize(r[idx++]);
 			for (int j = 0; j < nd.properties.size(); j++) {
 
-				nd.properties.write[j].name = r[idx++];
-				nd.properties.write[j].value = r[idx++];
+				nd.properties[j].name = r[idx++];
+				nd.properties[j].value = r[idx++];
 			}
 			nd.groups.resize(r[idx++]);
 			for (int j = 0; j < nd.groups.size(); j++) {
 
-				nd.groups.write[j] = r[idx++];
+				nd.groups[j] = r[idx++];
 			}
 		}
 	}
@@ -1161,7 +1161,7 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 		PoolVector<int>::Read r = sconns.read();
 		int idx = 0;
 		for (int i = 0; i < cc; i++) {
-			ConnectionData &cd = connections.write[i];
+			ConnectionData &cd = connections[i];
 			cd.from = r[idx++];
 			cd.to = r[idx++];
 			cd.signal = r[idx++];
@@ -1171,7 +1171,7 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 
 			for (int j = 0; j < cd.binds.size(); j++) {
 
-				cd.binds.write[j] = r[idx++];
+				cd.binds[j] = r[idx++];
 			}
 		}
 	}
@@ -1182,7 +1182,7 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 	}
 	node_paths.resize(np.size());
 	for (int i = 0; i < np.size(); i++) {
-		node_paths.write[i] = np[i];
+		node_paths[i] = np[i];
 	}
 
 	Array ei;
@@ -1196,7 +1196,7 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 
 	editable_instances.resize(ei.size());
 	for (int i = 0; i < editable_instances.size(); i++) {
-		editable_instances.write[i] = ei[i];
+		editable_instances[i] = ei[i];
 	}
 
 	//path=p_dictionary["path"];
@@ -1578,13 +1578,13 @@ void SceneState::add_node_property(int p_node, int p_name, int p_value) {
 	NodeData::Property prop;
 	prop.name = p_name;
 	prop.value = p_value;
-	nodes.write[p_node].properties.push_back(prop);
+	nodes[p_node].properties.push_back(prop);
 }
 void SceneState::add_node_group(int p_node, int p_group) {
 
 	ERR_FAIL_INDEX(p_node, nodes.size());
 	ERR_FAIL_INDEX(p_group, names.size());
-	nodes.write[p_node].groups.push_back(p_group);
+	nodes[p_node].groups.push_back(p_group);
 }
 void SceneState::set_base_scene(int p_idx) {
 

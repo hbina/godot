@@ -33,6 +33,9 @@
 
 #include "core/os/thread.h"
 #include "core/resource.h"
+
+#include <memory>
+
 /**
 	@author Juan Linietsky <reduzio@gmail.com>
 */

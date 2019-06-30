@@ -241,10 +241,10 @@ public:
 							if (Variant::can_convert(args[idx].get_type(), t)) {
 								Variant old = args[idx];
 								Variant *ptrs[1] = { &old };
-								args.write[idx] = Variant::construct(t, (const Variant **)ptrs, 1, err);
+								args[idx] = Variant::construct(t, (const Variant **)ptrs, 1, err);
 							} else {
 
-								args.write[idx] = Variant::construct(t, NULL, 0, err);
+								args[idx] = Variant::construct(t, NULL, 0, err);
 							}
 							change_notify_deserved = true;
 							d_new["args"] = args;
@@ -258,7 +258,7 @@ public:
 							_fix_node_path(value);
 						}
 
-						args.write[idx] = value;
+						args[idx] = value;
 						d_new["args"] = args;
 						mergeable = true;
 					}
@@ -3441,7 +3441,7 @@ void AnimationTrackEditor::_update_tracks() {
 					}
 
 					for (int j = 0; j < track_edit_plugins.size(); j++) {
-						track_edit = track_edit_plugins.write[j]->create_value_track_edit(object, pinfo.type, pinfo.name, pinfo.hint, pinfo.hint_string, pinfo.usage);
+						track_edit = track_edit_plugins[j]->create_value_track_edit(object, pinfo.type, pinfo.name, pinfo.hint, pinfo.hint_string, pinfo.usage);
 						if (track_edit) {
 							break;
 						}
@@ -3452,7 +3452,7 @@ void AnimationTrackEditor::_update_tracks() {
 		if (animation->track_get_type(i) == Animation::TYPE_AUDIO) {
 
 			for (int j = 0; j < track_edit_plugins.size(); j++) {
-				track_edit = track_edit_plugins.write[j]->create_audio_track_edit();
+				track_edit = track_edit_plugins[j]->create_audio_track_edit();
 				if (track_edit) {
 					break;
 				}
@@ -3469,7 +3469,7 @@ void AnimationTrackEditor::_update_tracks() {
 
 			if (node && Object::cast_to<AnimationPlayer>(node)) {
 				for (int j = 0; j < track_edit_plugins.size(); j++) {
-					track_edit = track_edit_plugins.write[j]->create_animation_track_edit(node);
+					track_edit = track_edit_plugins[j]->create_animation_track_edit(node);
 					if (track_edit) {
 						break;
 					}

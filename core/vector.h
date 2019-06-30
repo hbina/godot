@@ -32,128 +32,215 @@
 #define VECTOR_H
 
 /**
- * @class Vector
+ * @class VectorImpl
  * @author Juan Linietsky
- * Vector container. Regular Vector Container. Use with care and for smaller arrays when possible. Use PoolVector for large arrays.
+ * VectorImpl container. Regular VectorImpl Container. Use with care and for smaller arrays when possible. Use PoolVector for large arrays.
 */
 
-#include "core/cowdata.h"
-#include "core/error_macros.h"
-#include "core/os/memory.h"
-#include "core/sort_array.h"
+#include <algorithm>
+#include <cassert>
+#include <iostream>
+#include <limits>
+#include <memory>
+#include <type_traits>
+#include <vector>
 
 template <class T>
-class VectorWriteProxy {
-public:
-	_FORCE_INLINE_ T &operator[](int p_index) {
-		CRASH_BAD_INDEX(p_index, ((Vector<T> *)(this))->_cowdata.size());
+class VectorImpl {
 
-		return ((Vector<T> *)(this))->_cowdata.ptrw()[p_index];
-	}
-};
-
-template <class T>
-class Vector {
-	friend class VectorWriteProxy<T>;
+	std::vector<T> __inner__;
 
 public:
-	VectorWriteProxy<T> write;
-
-private:
-	CowData<T> _cowdata;
-
-public:
-	bool push_back(const T &p_elem);
-
-	void remove(int p_index) { _cowdata.remove(p_index); }
-	void erase(const T &p_val) {
-		int idx = find(p_val);
-		if (idx >= 0) remove(idx);
-	};
+	void remove(int);
+	void erase(const T &);
 	void invert();
-
-	_FORCE_INLINE_ T *ptrw() { return _cowdata.ptrw(); }
-	_FORCE_INLINE_ const T *ptr() const { return _cowdata.ptr(); }
-	_FORCE_INLINE_ void clear() { resize(0); }
-	_FORCE_INLINE_ bool empty() const { return _cowdata.empty(); }
-
-	_FORCE_INLINE_ T get(int p_index) { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ const T get(int p_index) const { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ void set(int p_index, const T &p_elem) { _cowdata.set(p_index, p_elem); }
-	_FORCE_INLINE_ int size() const { return _cowdata.size(); }
-	Error resize(int p_size) { return _cowdata.resize(p_size); }
-	_FORCE_INLINE_ const T &operator[](int p_index) const { return _cowdata.get(p_index); }
-	Error insert(int p_pos, const T &p_val) { return _cowdata.insert(p_pos, p_val); }
-	int find(const T &p_val, int p_from = 0) const { return _cowdata.find(p_val, p_from); }
-
-	void append_array(const Vector<T> &p_other);
-
+	void resize(int);
+	int size() const noexcept;
+	T *ptrw() noexcept;
+	const T *ptr() const noexcept;
+	void insert(int, const T &);
+	int find(const T &, int p_from = 0) const;
+	void append_array(const VectorImpl<T> &);
+	void sort();
 	template <class C>
-	void sort_custom() {
+	void sort_custom();
+	void ordered_insert(const T &);
 
-		int len = _cowdata.size();
-		if (len == 0)
-			return;
+	// STL interfaces
+	T &operator[](int) noexcept;
+	const T &operator[](int) const noexcept;
+	bool empty() const noexcept;
 
-		T *data = ptrw();
-		SortArray<T, C> sorter;
-		sorter.sort(data, len);
-	}
+	void push_back(const T &);
+	void push_back(const T &&);
 
-	void sort() {
+	void clear() noexcept;
 
-		sort_custom<_DefaultComparator<T> >();
-	}
+	T *data() noexcept;
+	const T *data() const noexcept;
+	typename std::vector<T>::iterator begin() noexcept;
+	typename std::vector<T>::iterator end() noexcept;
+	typename std::vector<T>::const_iterator begin() const noexcept;
+	typename std::vector<T>::const_iterator end() const noexcept;
 
-	void ordered_insert(const T &p_val) {
-		int i;
-		for (i = 0; i < _cowdata.size(); i++) {
-
-			if (p_val < operator[](i)) {
-				break;
-			};
-		};
-		insert(i, p_val);
-	}
-
-	_FORCE_INLINE_ Vector() {}
-	_FORCE_INLINE_ Vector(const Vector &p_from) { _cowdata._ref(p_from._cowdata); }
-	inline Vector &operator=(const Vector &p_from) {
-		_cowdata._ref(p_from._cowdata);
-		return *this;
-	}
-
-	_FORCE_INLINE_ ~Vector() {}
+	// Hanif's additions
+	const T &back() const noexcept;
 };
 
-template <class T>
-void Vector<T>::invert() {
+template <typename T>
+T *VectorImpl<T>::data() noexcept {
+	return __inner__.data();
+}
 
-	for (int i = 0; i < size() / 2; i++) {
-		T *p = ptrw();
-		SWAP(p[i], p[size() - i - 1]);
+template <typename T>
+typename std::vector<T>::iterator VectorImpl<T>::begin() noexcept {
+	return __inner__.begin();
+}
+
+template <typename T>
+typename std::vector<T>::iterator VectorImpl<T>::end() noexcept {
+	return __inner__.end();
+}
+
+template <typename T>
+typename std::vector<T>::const_iterator VectorImpl<T>::begin() const noexcept {
+	return __inner__.begin();
+}
+
+template <typename T>
+typename std::vector<T>::const_iterator VectorImpl<T>::end() const noexcept {
+	return __inner__.end();
+}
+
+template <typename T>
+const T *VectorImpl<T>::data() const noexcept {
+	return __inner__.data();
+}
+
+template <typename T>
+void VectorImpl<T>::clear() noexcept {
+	__inner__.clear();
+}
+
+template <typename T>
+void VectorImpl<T>::remove(int p_index) {
+	__inner__.erase(__inner__.begin() + p_index);
+}
+
+template <typename T>
+void VectorImpl<T>::push_back(const T &p_val) {
+	__inner__.push_back(p_val);
+}
+
+template <typename T>
+void VectorImpl<T>::push_back(const T &&p_val) {
+	__inner__.push_back(p_val);
+}
+
+template <typename T>
+bool VectorImpl<T>::empty() const noexcept {
+	return __inner__.empty();
+}
+
+template <typename T>
+void VectorImpl<T>::resize(int p_size) {
+	__inner__.resize(p_size);
+}
+
+template <typename T>
+int VectorImpl<T>::size() const noexcept {
+	assert(std::numeric_limits<int>::max() > size());
+	return size();
+}
+
+template <typename T>
+void VectorImpl<T>::erase(const T &p_val) {
+	int index = find(p_val);
+	if (index >= 0) {
+		remove(index);
 	}
 }
 
-template <class T>
-void Vector<T>::append_array(const Vector<T> &p_other) {
-	const int ds = p_other.size();
-	if (ds == 0)
-		return;
-	const int bs = size();
-	resize(bs + ds);
-	for (int i = 0; i < ds; ++i)
-		ptrw()[bs + i] = p_other[i];
+template <typename T>
+T *VectorImpl<T>::ptrw() noexcept {
+	return __inner__.data();
+}
+
+template <typename T>
+const T *VectorImpl<T>::ptr() const noexcept {
+	return __inner__.data();
+}
+
+template <typename T>
+T &VectorImpl<T>::operator[](int p_index) noexcept {
+	return __inner__.operator[](p_index);
+}
+
+template <typename T>
+const T &VectorImpl<T>::operator[](int p_index) const noexcept {
+	return __inner__.operator[](p_index);
+}
+
+template <typename T>
+void VectorImpl<T>::insert(int p_pos, const T &p_val) {
+	__inner__.insert(__inner__.begin() + p_pos, p_val);
+}
+
+template <typename T>
+int VectorImpl<T>::find(const T &p_val, int p_from) const {
+	for (int a = 0; a < static_cast<int>(size()); a++) {
+		if (p_val == __inner__.operator[](a)) {
+			return a;
+		}
+	}
+	return -1;
+}
+
+template <typename T>
+void VectorImpl<T>::sort() {
+	std::sort(__inner__.begin(), __inner__.end());
+}
+
+template <typename T>
+template <typename C>
+void VectorImpl<T>::sort_custom() {
+	C comparator;
+	std::sort(__inner__.begin(), __inner__.end(), comparator);
+}
+
+template <typename T>
+void VectorImpl<T>::ordered_insert(const T &p_val) {
+	int i = 0;
+	for (; i < size(); i++) {
+
+		if (p_val < __inner__.operator[](i)) {
+			break;
+		};
+	};
+	insert(i, p_val);
 }
 
 template <class T>
-bool Vector<T>::push_back(const T &p_elem) {
-
-	Error err = resize(size() + 1);
-	ERR_FAIL_COND_V(err, true);
-	set(size() - 1, p_elem);
-
-	return false;
+void VectorImpl<T>::invert() {
+	std::reverse(__inner__.begin(), __inner__.end());
 }
+
+template <class T>
+void VectorImpl<T>::append_array(const VectorImpl<T> &p_other) {
+	for (const T &a : p_other) {
+		__inner__.push_back(a);
+	}
+}
+
+template <typename T>
+const T &VectorImpl<T>::back() const noexcept {
+	return __inner__.operator[](size());
+}
+
+template <typename T>
+class Vector : public VectorImpl<T> {};
+
+template <>
+class Vector<bool> : public VectorImpl<char> {};
 
 #endif

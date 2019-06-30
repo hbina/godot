@@ -220,7 +220,7 @@ Vector<int> TileMapEditor::get_selected_tiles() const {
 	}
 
 	for (int i = items.size() - 1; i >= 0; i--) {
-		items.write[i] = palette->get_item_metadata(items[i]);
+		items[i] = palette->get_item_metadata(items[i]);
 	}
 	return items;
 }
@@ -503,10 +503,10 @@ void TileMapEditor::_update_palette() {
 		palette->set_item_metadata(palette->get_item_count() - 1, entries[i].id);
 	}
 
-	int sel_tile = selected.get(0);
-	if (selected.get(0) != TileMap::INVALID_CELL) {
+	int sel_tile = selected[0];
+	if (selected[0] != TileMap::INVALID_CELL) {
 		set_selected_tiles(selected);
-		sel_tile = selected.get(Math::rand() % selected.size());
+		sel_tile = selected[Math::rand() % selected.size()];
 	} else if (palette->get_item_count() > 0) {
 		palette->select(0);
 	}
@@ -1041,7 +1041,7 @@ bool TileMapEditor::forward_gui_input(const Ref<InputEvent> &p_event) {
 						ids.push_back(0);
 						for (List<TileData>::Element *E = copydata.front(); E; E = E->next()) {
 
-							ids.write[0] = E->get().cell;
+							ids[0] = E->get().cell;
 							_set_cell(E->get().pos + ofs, ids, E->get().flip_h, E->get().flip_v, E->get().transpose, E->get().autotile_coord);
 						}
 						_finish_undo();
@@ -1255,7 +1255,7 @@ bool TileMapEditor::forward_gui_input(const Ref<InputEvent> &p_event) {
 
 				for (Map<Point2i, CellOp>::Element *E = paint_undo.front(); E; E = E->next()) {
 
-					tmp_cell.write[0] = E->get().idx;
+					tmp_cell[0] = E->get().idx;
 					_set_cell(E->key(), tmp_cell, E->get().xf, E->get().yf, E->get().tr);
 				}
 			}
@@ -1292,7 +1292,7 @@ bool TileMapEditor::forward_gui_input(const Ref<InputEvent> &p_event) {
 
 					for (Map<Point2i, CellOp>::Element *E = paint_undo.front(); E; E = E->next()) {
 
-						tmp_cell.write[0] = E->get().idx;
+						tmp_cell[0] = E->get().idx;
 						_set_cell(E->key(), tmp_cell, E->get().xf, E->get().yf, E->get().tr);
 					}
 				}
@@ -1863,7 +1863,7 @@ TileMapEditor::TileMapEditor(EditorNode *p_editor) {
 	bucket_cache_visited = 0;
 
 	invalid_cell.resize(1);
-	invalid_cell.write[0] = TileMap::INVALID_CELL;
+	invalid_cell[0] = TileMap::INVALID_CELL;
 
 	ED_SHORTCUT("tile_map_editor/erase_selection", TTR("Erase Selection"), KEY_DELETE);
 	ED_SHORTCUT("tile_map_editor/find_tile", TTR("Find Tile"), KEY_MASK_CMD + KEY_F);
