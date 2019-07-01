@@ -132,15 +132,14 @@ Error OS_X11::initialize(const VideoMode &p_desired, int p_video_driver, int p_a
 	XAutoRepeatOn(x11_display);
 	xkb_dar = XkbSetDetectableAutoRepeat(x11_display, True, NULL);
 
+#ifdef X_HAVE_UTF8_STRING
 	// Try to support IME if detectable auto-repeat is supported
 	if (xkb_dar == True) {
-
-#ifdef X_HAVE_UTF8_STRING
 		// Xutf8LookupString will be used later instead of XmbLookupString before
 		// the multibyte sequences can be converted to unicode string.
 		modifiers = XSetLocaleModifiers("");
-#endif
 	}
+#endif
 
 	if (modifiers == NULL) {
 		if (is_stdout_verbose()) {
