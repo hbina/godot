@@ -51,7 +51,7 @@ public:
 	void set(int p_idx, const Variant &p_value);
 	const Variant &get(int p_idx) const;
 
-	unsigned int size() const;
+	int size() const;
 	bool empty() const;
 	void clear();
 

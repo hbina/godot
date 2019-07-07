@@ -31,14 +31,11 @@
 #ifndef POOL_VECTOR_H
 #define POOL_VECTOR_H
 
-#include "core/os/copymem.h"
-#include "core/os/memory.h"
-#include "core/os/rw_lock.h"
-#include "core/pool_allocator.h"
-#include "core/safe_refcount.h"
 #include "core/ustring.h"
 
 #include <algorithm>
+#include <cassert>
+#include <limits>
 #include <memory>
 #include <vector>
 
@@ -63,7 +60,7 @@ public:
 			access_alloc = p_alloc;
 		}
 
-		const T &operator[](unsigned int p_index) const { return access_alloc->operator[](p_index); }
+		const T &operator[](int p_index) const { return access_alloc->operator[](p_index); }
 		const T *ptr() const { return access_alloc->data(); }
 
 		void operator=(const Read &p_read) {
@@ -89,7 +86,7 @@ public:
 			access_alloc = p_alloc;
 		}
 
-		T &operator[](unsigned int p_index) const { return access_alloc->operator[](p_index); }
+		T &operator[](int p_index) const { return access_alloc->operator[](p_index); }
 		T *ptr() const { return access_alloc->data(); }
 
 		void operator=(const Write &p_read) {
@@ -134,14 +131,14 @@ public:
 		}
 	}
 
-	void remove(unsigned int p_index) {
+	void remove(int p_index) {
 
 		alloc->erase(alloc->begin() + p_index);
 	}
 
-	unsigned int size() const;
-	T get(unsigned int p_index) const;
-	void set(unsigned int p_index, const T &p_val);
+	int size() const;
+	T get(int p_index) const;
+	void set(int p_index, const T &p_val);
 	void push_back(const T &p_val);
 	void append(const T &p_val) { push_back(p_val); }
 	void append_array(const PoolVectorImpl<T> &p_arr) {
@@ -156,7 +153,7 @@ public:
 			w[bs + i] = r[i];
 	}
 
-	Error insert(unsigned int p_pos, const T &p_val) {
+	Error insert(int p_pos, const T &p_val) {
 		alloc->insert(alloc->begin() + p_pos, p_val);
 		return OK;
 	}
@@ -174,9 +171,9 @@ public:
 
 	// bool is_locked() const { return alloc && alloc->lock > 0; }
 
-	const T operator[](unsigned int p_index) const;
+	const T operator[](int p_index) const;
 
-	Error resize(unsigned int p_size);
+	Error resize(int p_size);
 
 	void invert();
 
@@ -196,19 +193,19 @@ public:
 };
 
 template <class T>
-unsigned int PoolVectorImpl<T>::size() const {
-
+int PoolVectorImpl<T>::size() const {
+	assert(std::numeric_limits<int>::max() < alloc->size());
 	return alloc->size();
 }
 
 template <class T>
-T PoolVectorImpl<T>::get(unsigned int p_index) const {
+T PoolVectorImpl<T>::get(int p_index) const {
 
 	return operator[](p_index);
 }
 
 template <class T>
-void PoolVectorImpl<T>::set(unsigned int p_index, const T &p_val) {
+void PoolVectorImpl<T>::set(int p_index, const T &p_val) {
 
 	ERR_FAIL_COND(p_index < 0 || p_index >= size());
 
@@ -224,7 +221,7 @@ void PoolVectorImpl<T>::push_back(const T &p_val) {
 }
 
 template <class T>
-const T PoolVectorImpl<T>::operator[](unsigned int p_index) const {
+const T PoolVectorImpl<T>::operator[](int p_index) const {
 
 	CRASH_BAD_INDEX(p_index, size());
 
@@ -233,7 +230,7 @@ const T PoolVectorImpl<T>::operator[](unsigned int p_index) const {
 }
 
 template <class T>
-Error PoolVectorImpl<T>::resize(unsigned int p_size) {
+Error PoolVectorImpl<T>::resize(int p_size) {
 
 	alloc->resize(p_size);
 	return OK;

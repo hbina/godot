@@ -31,6 +31,7 @@
 #include "visual_server.h"
 
 #include "core/method_bind_ext.gen.inc"
+#include "core/os/copymem.h"
 #include "core/project_settings.h"
 
 VisualServer *VisualServer::singleton = NULL;

@@ -32,6 +32,7 @@
 
 #include "core/core_string_names.h"
 #include "core/io/marshalls.h"
+#include "core/os/copymem.h"
 
 Variant PackedDataContainer::getvar(const Variant &p_key, bool *r_valid) const {
 

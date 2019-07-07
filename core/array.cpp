@@ -80,7 +80,7 @@ const Variant &Array::operator[](int p_idx) const {
 	return _p->array[p_idx];
 }
 
-unsigned int Array::size() const {
+int Array::size() const {
 
 	return _p->array.size();
 }

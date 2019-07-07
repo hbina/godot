@@ -31,6 +31,7 @@
 #include "stream_peer.h"
 
 #include "core/io/marshalls.h"
+#include "core/os/copymem.h"
 
 Error StreamPeer::_put_data(const PoolVector<uint8_t> &p_data) {
 

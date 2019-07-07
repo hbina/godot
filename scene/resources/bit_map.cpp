@@ -31,6 +31,7 @@
 #include "bit_map.h"
 
 #include "core/io/image_loader.h"
+#include "core/os/copymem.h"
 
 void BitMap::create(const Size2 &p_size) {
 
