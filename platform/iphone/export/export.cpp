@@ -411,7 +411,7 @@ void EditorExportPlatformIOS::_fix_config_file(const Ref<EditorExportPreset> &p_
 	CharString cs = strnew.utf8();
 	pfile.resize(cs.size() - 1);
 	for (int i = 0; i < cs.size() - 1; i++) {
-		pfile.write[i] = cs[i];
+		pfile[i] = cs[i];
 	}
 }
 
@@ -624,7 +624,7 @@ private:
 		ret.resize(sizeof(num) * 2);
 		for (unsigned int i = 0; i < sizeof(num) * 2; ++i) {
 			uint8_t four_bits = (num >> (sizeof(num) * 8 - (i + 1) * 4)) & 0xF;
-			ret.write[i] = _hex_char(four_bits);
+			ret[i] = _hex_char(four_bits);
 		}
 		return String::utf8(ret.ptr(), ret.size());
 	}
@@ -726,7 +726,7 @@ void EditorExportPlatformIOS::_add_assets_to_project(Vector<uint8_t> &p_project_
 	CharString cs = str.utf8();
 	p_project_data.resize(cs.size() - 1);
 	for (int i = 0; i < cs.size() - 1; i++) {
-		p_project_data.write[i] = cs[i];
+		p_project_data[i] = cs[i];
 	}
 }
 

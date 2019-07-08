@@ -32,9 +32,9 @@
 #define VECTOR_H
 
 /**
- * @class Vector
+ * @class VectorImpl
  * @author Juan Linietsky
- * Vector container. Regular Vector Container. Use with care and for smaller arrays when possible. Use PoolVector for large arrays.
+ * VectorImpl container. Regular VectorImpl Container. Use with care and for smaller arrays when possible. Use PoolVector for large arrays.
 */
 
 #include "core/error_macros.h"
@@ -42,88 +42,114 @@
 #include "core/sort_array.h"
 
 #include <algorithm>
+#include <type_traits>
 #include <vector>
 
 template <class T>
-class Vector : public std::vector<std::conditional_t<std::is_same_v<T, bool>, char, T> > {
+class VectorImpl : public std::vector<T> {
 
 public:
-	void remove(int p_index) {
-		write.erase(write.begin() + p_index);
-	}
-	void erase(const T &p_val) {
-		int idx = find(p_val);
-		if (idx >= 0) remove(idx);
-	};
+	void remove(int);
+	void erase(const T &);
 	void invert();
-
-	T *ptrw() { return write.data(); }
-	const T *ptr() const { return write.data(); }
-
-	void clear() { write.clear(); }
-	bool empty() const { return write.empty(); }
-
-	T get(int p_index) { return write[p_index]; }
-	const T get(int p_index) const { return write[p_index]; }
-	void set(unsigned int p_index, const T &p_elem) {
-		CRASH_BAD_INDEX(p_index, write.size());
-		write[p_index] = p_elem;
-	}
-	int size() const { return write.size(); }
-	void resize(int p_size) {
-		write.resize(p_size);
-	}
-	const T &operator[](int p_index) const {
-		return write[p_index];
-	}
-
-	void insert(unsigned int p_pos, const T &p_val) {
-		write.insert(write.begin() + p_pos, p_val);
-	}
-
-	int find(const T &p_val, int p_from = 0) const {
-		for (signed int a = 0; a < static_cast<signed int>(write.size()); a++) {
-			if (p_val == write[a]) {
-				return a;
-			}
-		}
-		return -1;
-	}
-
-	void append_array(const Vector<T> &p_other);
-
-	void sort() {
-		std::sort(write.begin(), write.end());
-	}
-
+	T *ptrw();
+	const T *ptr() const;
+	T get(int);
+	const T get(int) const;
+	void set(int, const T &);
+	void insert(int, const T &);
+	int find(const T &, int p_from = 0) const;
+	void append_array(const VectorImpl<T> &);
+	void sort();
 	template <class C>
-	void sort_custom() {
-		C comparator;
-		std::sort(write.begin(), write.end(), comparator);
-	}
-
-	void ordered_insert(const T &p_val) {
-		unsigned int i = 0u;
-		for (; i < write.size(); i++) {
-
-			if (p_val < write[i]) {
-				break;
-			};
-		};
-		insert(i, p_val);
-	}
+	void sort_custom();
+	void ordered_insert(const T &);
 };
+template <typename T>
+void VectorImpl<T>::remove(int p_index) {
+	std::vector<T>::erase(std::vector<T>::begin() + p_index);
+}
 
-template <class T>
-void Vector<T>::invert() {
-	std::reverse(std::begin(write), std::end(write));
+template <typename T>
+T *VectorImpl<T>::ptrw() {
+	return std::vector<T>::data();
+}
+
+template <typename T>
+const T *VectorImpl<T>::ptr() const {
+	return std::vector<T>::data();
+}
+
+template <typename T>
+T VectorImpl<T>::get(int p_index) {
+	return std::vector<T>::operator[](p_index);
+}
+
+template <typename T>
+const T VectorImpl<T>::get(int p_index) const {
+	return std::vector<T>::operator[](p_index);
+}
+
+template <typename T>
+void VectorImpl<T>::set(int p_index, const T &p_elem) {
+	std::vector<T>::operator[](p_index) = p_elem;
+}
+
+template <typename T>
+void VectorImpl<T>::insert(int p_pos, const T &p_val) {
+	std::vector<T>::insert(std::vector<T>::begin() + p_pos, p_val);
+}
+
+template <typename T>
+int VectorImpl<T>::find(const T &p_val, int p_from) const {
+	for (int a = 0; a < static_cast<int>(std::vector<T>::size()); a++) {
+		if (p_val == std::vector<T>::operator[](a)) {
+			return a;
+		}
+	}
+	return -1;
+}
+
+template <typename T>
+void VectorImpl<T>::sort() {
+	std::sort(std::vector<T>::begin(), std::vector<T>::end());
+}
+
+template <typename T>
+template <typename C>
+void VectorImpl<T>::sort_custom() {
+	C comparator;
+	std::sort(std::vector<T>::begin(), std::vector<T>::end(), comparator);
+}
+
+template <typename T>
+void VectorImpl<T>::ordered_insert(const T &p_val) {
+	int i = 0;
+	for (; i < std::vector<T>::size(); i++) {
+
+		if (p_val < std::vector<T>::operator[](i)) {
+			break;
+		};
+	};
+	insert(i, p_val);
 }
 
 template <class T>
-void Vector<T>::append_array(const Vector<T> &p_other) {
-	for (const T &a : p_other.write) {
-		write.push_back(a);
+void VectorImpl<T>::invert() {
+	std::reverse(std::vector<T>::begin(), std::vector<T>::end());
+}
+
+template <class T>
+void VectorImpl<T>::append_array(const VectorImpl<T> &p_other) {
+	for (const T &a : p_other) {
+		std::vector<T>::push_back(a);
 	}
 }
+
+template <typename T>
+class Vector : public VectorImpl<T> {};
+
+template <>
+class Vector<bool> : public VectorImpl<char> {};
 
 #endif

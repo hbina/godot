@@ -340,7 +340,7 @@ String StreamPeer::get_string(int p_bytes) {
 	buf.resize(p_bytes + 1);
 	Error err = get_data((uint8_t *)&buf[0], p_bytes);
 	ERR_FAIL_COND_V(err != OK, String());
-	buf.write[p_bytes] = 0;
+	buf[p_bytes] = 0;
 	return buf.ptr();
 }
 String StreamPeer::get_utf8_string(int p_bytes) {

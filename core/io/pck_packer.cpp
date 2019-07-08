@@ -118,7 +118,7 @@ Error PCKPacker::flush(bool p_verbose) {
 	for (int i = 0; i < files.size(); i++) {
 
 		file->store_pascal_string(files[i].path);
-		files.write[i].offset_offset = file->get_position();
+		files[i].offset_offset = file->get_position();
 		file->store_64(0); // offset
 		file->store_64(files[i].size); // size
 
@@ -162,7 +162,7 @@ Error PCKPacker::flush(bool p_verbose) {
 		count += 1;
 		if (p_verbose) {
 			if (count % 100 == 0) {
-				printf("%i/%i (%.2f)\r", count, files.size(), float(count) / files.size() * 100);
+				printf("%i/%zu (%.2f)\r", count, files.size(), float(count) / files.size() * 100);
 				fflush(stdout);
 			};
 		};

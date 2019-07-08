@@ -2149,7 +2149,7 @@ bool ShaderLanguage::_validate_function_call(BlockNode *p_block, OperatorNode *p
 						conversion->values.resize(1);
 
 						convert_constant(constant, builtin_func_defs[idx].args[i], conversion->values.ptrw());
-						p_func->arguments.write[i + 1] = conversion;
+						p_func->arguments[i + 1] = conversion;
 					}
 
 					if (r_ret_type)
@@ -2242,7 +2242,7 @@ bool ShaderLanguage::_validate_function_call(BlockNode *p_block, OperatorNode *p
 				conversion->values.resize(1);
 
 				convert_constant(constant, pfunc->arguments[k].type, conversion->values.ptrw());
-				p_func->arguments.write[k + 1] = conversion;
+				p_func->arguments[k + 1] = conversion;
 			}
 
 			if (r_ret_type)
@@ -2871,7 +2871,7 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 						//add to current function as dependency
 						for (int j = 0; j < shader->functions.size(); j++) {
 							if (shader->functions[j].name == current_function) {
-								shader->functions.write[j].uses_function.insert(name);
+								shader->functions[j].uses_function.insert(name);
 								break;
 							}
 						}
@@ -3430,8 +3430,8 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 				}
 				op->arguments.push_back(expression[i + 1].node);
 
-				expression.write[i].is_op = false;
-				expression.write[i].node = op;
+				expression[i].is_op = false;
+				expression[i].node = op;
 
 				if (!_validate_operator(op, &op->return_cache)) {
 
@@ -3465,8 +3465,8 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 			op->arguments.push_back(expression[next_op + 1].node);
 			op->arguments.push_back(expression[next_op + 3].node);
 
-			expression.write[next_op - 1].is_op = false;
-			expression.write[next_op - 1].node = op;
+			expression[next_op - 1].is_op = false;
+			expression[next_op - 1].node = op;
 			if (!_validate_operator(op, &op->return_cache)) {
 
 				String at;
@@ -3520,7 +3520,7 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 
 			op->arguments.push_back(expression[next_op - 1].node); //expression goes as left
 			op->arguments.push_back(expression[next_op + 1].node); //next expression goes as right
-			expression.write[next_op - 1].node = op;
+			expression[next_op - 1].node = op;
 
 			//replace all 3 nodes by this operator and make it an expression
 
@@ -3564,7 +3564,7 @@ ShaderLanguage::Node *ShaderLanguage::_reduce_expression(BlockNode *p_block, Sha
 
 		for (int i = 1; i < op->arguments.size(); i++) {
 
-			op->arguments.write[i] = _reduce_expression(p_block, op->arguments[i]);
+			op->arguments[i] = _reduce_expression(p_block, op->arguments[i]);
 			if (op->arguments[i]->type == Node::TYPE_CONSTANT) {
 				ConstantNode *cn = static_cast<ConstantNode *>(op->arguments[i]);
 
@@ -3618,7 +3618,7 @@ ShaderLanguage::Node *ShaderLanguage::_reduce_expression(BlockNode *p_block, Sha
 		return cn;
 	} else if (op->op == OP_NEGATE) {
 
-		op->arguments.write[0] = _reduce_expression(p_block, op->arguments[0]);
+		op->arguments[0] = _reduce_expression(p_block, op->arguments[0]);
 		if (op->arguments[0]->type == Node::TYPE_CONSTANT) {
 
 			ConstantNode *cn = static_cast<ConstantNode *>(op->arguments[0]);

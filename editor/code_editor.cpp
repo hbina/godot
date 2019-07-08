@@ -738,7 +738,7 @@ void CodeTextEditor::_complete_request() {
 	int i = 0;
 	for (List<String>::Element *E = entries.front(); E; E = E->next()) {
 
-		strs.write[i++] = E->get();
+		strs[i++] = E->get();
 	}
 
 	text_editor->code_complete(strs, forced);

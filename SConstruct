@@ -354,39 +354,8 @@ if selected_platform in platform_list:
         # Force to use Unicode encoding
         env.Append(MSVC_FLAGS=['/utf8'])
     else:  # Rest of the world
-        env.Append(CCFLAGS=['-std=c++1z'])
-        shadow_local_warning = []
-        all_plus_warnings = ['-Wwrite-strings']
-
-        if methods.using_gcc(env):
-            version = methods.get_compiler_version(env)
-            if version != None and version[0] >= '7':
-                shadow_local_warning = ['-Wshadow-local']
-
-        if (env["warnings"] == 'extra'):
-            # Note: enable -Wimplicit-fallthrough for Clang (already part of -Wextra for GCC)
-            # once we switch to C++11 or later (necessary for our FALLTHROUGH macro).
-            env.Append(CCFLAGS=['-Wall', '-Wextra', '-Wno-unused-parameter']
-                       + all_plus_warnings + shadow_local_warning)
-            env.Append(CXXFLAGS=['-Wctor-dtor-privacy', '-Wnon-virtual-dtor'])
-            if methods.using_gcc(env):
-                env.Append(CCFLAGS=['-Walloc-zero',
-                                    '-Wduplicated-branches', '-Wduplicated-cond',
-                                    '-Wstringop-overflow=4', '-Wlogical-op'])
-                env.Append(CXXFLAGS=['-Wnoexcept', '-Wplacement-new=1'])
-                version = methods.get_compiler_version(env)
-                if version != None and version[0] >= '9':
-                    env.Append(CCFLAGS=['-Wattribute-alias=2'])
-        elif (env["warnings"] == 'all'):
-            env.Append(CCFLAGS=['-Wall'] + shadow_local_warning)
-        elif (env["warnings"] == 'moderate'):
-            env.Append(CCFLAGS=['-Wall', '-Wno-unused'] + shadow_local_warning)
-        else:  # 'no'
-            env.Append(CCFLAGS=['-w'])
-        if (env["werror"]):
-            env.Append(CCFLAGS=['-Werror'])
-        else:  # always enable those errors
-            env.Append(CCFLAGS=['-Werror=return-type'])
+        env.Append(CXXFLAGS=['-std=c++17'])
+        env.Append(CCFLAGS=['-Wall'])
 
     if (hasattr(detect, 'get_program_suffix')):
         suffix = "." + detect.get_program_suffix()

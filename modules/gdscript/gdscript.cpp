@@ -744,7 +744,7 @@ Error GDScript::load_byte_code(const String &p_path) {
 		Vector<uint8_t> key;
 		key.resize(32);
 		for (int i = 0; i < key.size(); i++) {
-			key.write[i] = script_encryption_key[i];
+			key[i] = script_encryption_key[i];
 		}
 
 		Error err = fae->open_and_parse(fa, key, FileAccessEncrypted::MODE_READ);
@@ -966,7 +966,7 @@ bool GDScriptInstance::set(const StringName &p_name, const Variant &p_value) {
 				if (!E->get().data_type.is_type(p_value)) {
 					return false; // Type mismatch
 				}
-				members.write[E->get().index] = p_value;
+				members[E->get().index] = p_value;
 			}
 			return true;
 		}
@@ -1316,7 +1316,7 @@ void GDScriptInstance::reload_members() {
 
 		if (member_indices_cache.has(E->key())) {
 			Variant value = members[member_indices_cache[E->key()]];
-			new_members.write[E->get().index] = value;
+			new_members[E->get().index] = value;
 		}
 	}
 
@@ -1366,7 +1366,7 @@ void GDScriptLanguage::_add_global(const StringName &p_name, const Variant &p_va
 
 	if (globals.has(p_name)) {
 		//overwrite existing
-		global_array.write[globals[p_name]] = p_value;
+		global_array[globals[p_name]] = p_value;
 		return;
 	}
 	globals[p_name] = global_array.size();
