@@ -288,7 +288,7 @@ _FORCE_INLINE_ int bisect(const Vector<Variant> &p_array, const Variant &p_value
 	if (p_before) {
 		while (lo < hi) {
 			const int mid = (lo + hi) / 2;
-			if (p_less(p_array.get(mid), p_value)) {
+			if (p_less(p_array[mid], p_value)) {
 				lo = mid + 1;
 			} else {
 				hi = mid;
@@ -297,7 +297,7 @@ _FORCE_INLINE_ int bisect(const Vector<Variant> &p_array, const Variant &p_value
 	} else {
 		while (lo < hi) {
 			const int mid = (lo + hi) / 2;
-			if (p_less(p_value, p_array.get(mid))) {
+			if (p_less(p_value, p_array[mid])) {
 				hi = mid;
 			} else {
 				lo = mid + 1;
@@ -338,7 +338,7 @@ Variant Array::pop_back() {
 
 	if (!_p->array.empty()) {
 		int n = _p->array.size() - 1;
-		Variant ret = _p->array.get(n);
+		Variant ret = _p->array[n];
 		_p->array.resize(n);
 		return ret;
 	}
@@ -348,7 +348,7 @@ Variant Array::pop_back() {
 Variant Array::pop_front() {
 
 	if (!_p->array.empty()) {
-		Variant ret = _p->array.get(0);
+		Variant ret = _p->array[0];
 		_p->array.remove(0);
 		return ret;
 	}

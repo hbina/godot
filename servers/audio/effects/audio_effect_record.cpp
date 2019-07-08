@@ -244,8 +244,8 @@ Ref<AudioStreamSample> AudioEffectRecord::get_recording() const {
 		right.resize(tframes);
 
 		for (unsigned int i = 0; i < tframes; i++) {
-			left.set(i, current_instance->recording_data[i * 2 + 0]);
-			right.set(i, current_instance->recording_data[i * 2 + 1]);
+			left[i] = current_instance->recording_data[i * 2 + 0];
+			right[i] = current_instance->recording_data[i * 2 + 1];
 		}
 
 		PoolVector<uint8_t> bleft;

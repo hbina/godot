@@ -1003,7 +1003,7 @@ Error DocData::save_classes(const String &p_default_path, const Map<String, Stri
 		_write_string(f, 1, "</description>");
 		_write_string(f, 1, "<tutorials>");
 		for (int i = 0; i < c.tutorials.size(); i++) {
-			_write_string(f, 2, "<link>" + c.tutorials.get(i).xml_escape() + "</link>");
+			_write_string(f, 2, "<link>" + c.tutorials[i].xml_escape() + "</link>");
 		}
 		_write_string(f, 1, "</tutorials>");
 		_write_string(f, 1, "<methods>");

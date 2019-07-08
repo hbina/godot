@@ -194,7 +194,7 @@ public:
 
 template <class T>
 int PoolVectorImpl<T>::size() const {
-	assert(std::numeric_limits<int>::max() < alloc->size());
+	assert(std::numeric_limits<int>::max() > alloc->size());
 	return alloc->size();
 }
 
