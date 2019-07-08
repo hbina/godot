@@ -31,6 +31,7 @@
 #ifndef RINGBUFFER_H
 #define RINGBUFFER_H
 
+#include "core/typedefs.h"
 #include "core/vector.h"
 
 template <typename T>

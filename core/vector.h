@@ -37,10 +37,6 @@
  * VectorImpl container. Regular VectorImpl Container. Use with care and for smaller arrays when possible. Use PoolVector for large arrays.
 */
 
-#include "core/error_macros.h"
-#include "core/os/memory.h"
-#include "core/sort_array.h"
-
 #include <algorithm>
 #include <type_traits>
 #include <vector>
@@ -65,9 +61,18 @@ public:
 	void sort_custom();
 	void ordered_insert(const T &);
 };
+
 template <typename T>
 void VectorImpl<T>::remove(int p_index) {
 	std::vector<T>::erase(std::vector<T>::begin() + p_index);
+}
+
+template <typename T>
+void VectorImpl<T>::erase(const T &p_val) {
+	int index = find(p_val);
+	if (index >= 0) {
+		remove(index);
+	}
 }
 
 template <typename T>
