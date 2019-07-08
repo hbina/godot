@@ -45,14 +45,9 @@
 #include <vector>
 
 template <class T>
-class VectorImpl {
+class Vector : public std::vector<std::conditional_t<std::is_same_v<T, bool>, char, T> > {
 
 public:
-	std::vector<T> write;
-
-public:
-	bool push_back(const T &p_elem);
-
 	void remove(int p_index) {
 		write.erase(write.begin() + p_index);
 	}
@@ -86,7 +81,7 @@ public:
 		write.insert(write.begin() + p_pos, p_val);
 	}
 
-	signed int find(const T &p_val, int p_from = 0) const {
+	int find(const T &p_val, int p_from = 0) const {
 		for (signed int a = 0; a < static_cast<signed int>(write.size()); a++) {
 			if (p_val == write[a]) {
 				return a;
@@ -95,7 +90,7 @@ public:
 		return -1;
 	}
 
-	void append_array(const VectorImpl<T> &p_other);
+	void append_array(const Vector<T> &p_other);
 
 	void sort() {
 		std::sort(write.begin(), write.end());
@@ -117,39 +112,18 @@ public:
 		};
 		insert(i, p_val);
 	}
-
-	VectorImpl() = default;
-	VectorImpl(const VectorImpl &p_from) :
-			write(p_from.write) {}
-	VectorImpl &operator=(const VectorImpl &p_from) {
-		write = p_from.write;
-		return *this;
-	}
-	~VectorImpl() = default;
 };
 
 template <class T>
-void VectorImpl<T>::invert() {
+void Vector<T>::invert() {
 	std::reverse(std::begin(write), std::end(write));
 }
 
 template <class T>
-void VectorImpl<T>::append_array(const VectorImpl<T> &p_other) {
+void Vector<T>::append_array(const Vector<T> &p_other) {
 	for (const T &a : p_other.write) {
 		write.push_back(a);
 	}
 }
-
-template <class T>
-bool VectorImpl<T>::push_back(const T &p_elem) {
-	write.push_back(p_elem);
-	return false;
-}
-
-template <typename T>
-class Vector : public VectorImpl<T> {};
-
-template <>
-class Vector<bool> : public VectorImpl<char> {};
 
 #endif
