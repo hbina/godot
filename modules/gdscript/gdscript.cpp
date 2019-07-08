@@ -806,7 +806,7 @@ Error GDScript::load_byte_code(const String &p_path) {
 
 Error GDScript::load_source_code(const String &p_path) {
 
-	PoolVector<uint8_t> sourcef;
+	Vector<uint8_t> sourcef;
 	Error err;
 	FileAccess *f = FileAccess::open(p_path, FileAccess::READ, &err);
 	if (err) {
@@ -816,7 +816,7 @@ Error GDScript::load_source_code(const String &p_path) {
 
 	int len = f->get_len();
 	sourcef.resize(len + 1);
-	PoolVector<uint8_t>::Write w = sourcef.write();
+	Vector<uint8_t>::Write w = sourcef.write();
 	int r = f->get_buffer(w.ptr(), len);
 	f->close();
 	memdelete(f);
@@ -1855,7 +1855,7 @@ bool GDScriptLanguage::handles_global_class_type(const String &p_type) const {
 
 String GDScriptLanguage::get_global_class_name(const String &p_path, String *r_base_type, String *r_icon_path) const {
 
-	PoolVector<uint8_t> sourcef;
+	Vector<uint8_t> sourcef;
 	Error err;
 	FileAccessRef f = FileAccess::open(p_path, FileAccess::READ, &err);
 	if (err) {

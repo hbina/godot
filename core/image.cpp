@@ -453,11 +453,8 @@ void Image::convert(Format p_new_format) {
 
 	Image new_img(width, height, 0, p_new_format);
 
-	PoolVector<uint8_t>::Read r = data.read();
-	PoolVector<uint8_t>::Write w = new_img.data.write();
-
-	const uint8_t *rptr = r.ptr();
-	uint8_t *wptr = w.ptr();
+	const uint8_t *rptr = data.ptr();
+	uint8_t *wptr = new_img.data.ptrw();
 
 	int conversion_type = format | p_new_format << 8;
 
@@ -494,9 +491,6 @@ void Image::convert(Format p_new_format) {
 		case FORMAT_RGBA8 | (FORMAT_RG8 << 8): _convert<3, true, 2, false, false, false>(width, height, rptr, wptr); break;
 		case FORMAT_RGBA8 | (FORMAT_RGB8 << 8): _convert<3, true, 3, false, false, false>(width, height, rptr, wptr); break;
 	}
-
-	r = PoolVector<uint8_t>::Read();
-	w = PoolVector<uint8_t>::Write();
 
 	bool gen_mipmaps = mipmaps;
 
@@ -934,10 +928,10 @@ void Image::resize(int p_width, int p_height, Interpolation p_interpolation) {
 	}
 	// --
 
-	PoolVector<uint8_t>::Read r = data.read();
+	Vector<uint8_t>::Read r = data.read();
 	const unsigned char *r_ptr = r.ptr();
 
-	PoolVector<uint8_t>::Write w = dst.data.write();
+	Vector<uint8_t>::Write w = dst.data.write();
 	unsigned char *w_ptr = w.ptr();
 
 	switch (p_interpolation) {
@@ -1091,8 +1085,8 @@ void Image::resize(int p_width, int p_height, Interpolation p_interpolation) {
 		} break;
 	}
 
-	r = PoolVector<uint8_t>::Read();
-	w = PoolVector<uint8_t>::Write();
+	r = Vector<uint8_t>::Read();
+	w = Vector<uint8_t>::Write();
 
 	if (interpolate_mipmaps) {
 		dst._copy_internals_from(dst2);
@@ -1130,8 +1124,8 @@ void Image::crop_from_point(int p_x, int p_y, int p_width, int p_height) {
 	Image dst(p_width, p_height, 0, format);
 
 	{
-		PoolVector<uint8_t>::Read r = data.read();
-		PoolVector<uint8_t>::Write w = dst.data.write();
+		Vector<uint8_t>::Read r = data.read();
+		Vector<uint8_t>::Write w = dst.data.write();
 
 		int m_h = p_y + p_height;
 		int m_w = p_x + p_width;
@@ -1174,7 +1168,7 @@ void Image::flip_y() {
 	}
 
 	{
-		PoolVector<uint8_t>::Write w = data.write();
+		Vector<uint8_t>::Write w = data.write();
 		uint8_t up[16];
 		uint8_t down[16];
 		uint32_t pixel_size = get_format_pixel_size(format);
@@ -1210,7 +1204,7 @@ void Image::flip_x() {
 	}
 
 	{
-		PoolVector<uint8_t>::Write w = data.write();
+		Vector<uint8_t>::Write w = data.write();
 		uint8_t up[16];
 		uint8_t down[16];
 		uint32_t pixel_size = get_format_pixel_size(format);
@@ -1335,12 +1329,12 @@ void Image::expand_x2_hq2x() {
 	if (current != FORMAT_RGBA8)
 		convert(FORMAT_RGBA8);
 
-	PoolVector<uint8_t> dest;
+	Vector<uint8_t> dest;
 	dest.resize(width * 2 * height * 2 * 4);
 
 	{
-		PoolVector<uint8_t>::Read r = data.read();
-		PoolVector<uint8_t>::Write w = dest.write();
+		Vector<uint8_t>::Read r = data.read();
+		Vector<uint8_t>::Write w = dest.write();
 
 		hq2x_resize((const uint32_t *)r.ptr(), width, height, (uint32_t *)w.ptr());
 	}
@@ -1366,7 +1360,7 @@ void Image::shrink_x2() {
 	if (mipmaps) {
 
 		//just use the lower mipmap as base and copy all
-		PoolVector<uint8_t> new_img;
+		Vector<uint8_t> new_img;
 
 		int ofs = get_mipmap_offset(1);
 
@@ -1374,8 +1368,8 @@ void Image::shrink_x2() {
 		new_img.resize(new_size);
 
 		{
-			PoolVector<uint8_t>::Write w = new_img.write();
-			PoolVector<uint8_t>::Read r = data.read();
+			Vector<uint8_t>::Write w = new_img.write();
+			Vector<uint8_t>::Read r = data.read();
 
 			copymem(w.ptr(), &r[ofs], new_size);
 		}
@@ -1386,15 +1380,15 @@ void Image::shrink_x2() {
 
 	} else {
 
-		PoolVector<uint8_t> new_img;
+		Vector<uint8_t> new_img;
 
 		ERR_FAIL_COND(!_can_modify(format));
 		int ps = get_format_pixel_size(format);
 		new_img.resize((width / 2) * (height / 2) * ps);
 
 		{
-			PoolVector<uint8_t>::Write w = new_img.write();
-			PoolVector<uint8_t>::Read r = data.read();
+			Vector<uint8_t>::Write w = new_img.write();
+			Vector<uint8_t>::Read r = data.read();
 
 			switch (format) {
 
@@ -1472,7 +1466,7 @@ Error Image::generate_mipmaps(bool p_renormalize) {
 
 	data.resize(size);
 
-	PoolVector<uint8_t>::Write wp = data.write();
+	Vector<uint8_t>::Write wp = data.write();
 
 	int prev_ofs = 0;
 	int prev_h = height;
@@ -1583,7 +1577,7 @@ bool Image::empty() const {
 	return (data.size() == 0);
 }
 
-PoolVector<uint8_t> Image::get_data() const {
+Vector<uint8_t> Image::get_data() const {
 
 	return data;
 }
@@ -1597,7 +1591,7 @@ void Image::create(int p_width, int p_height, bool p_use_mipmaps, Format p_forma
 	int size = _get_dst_image_size(p_width, p_height, p_format, mm, p_use_mipmaps ? -1 : 0);
 	data.resize(size);
 	{
-		PoolVector<uint8_t>::Write w = data.write();
+		Vector<uint8_t>::Write w = data.write();
 		zeromem(w.ptr(), size);
 	}
 
@@ -1607,7 +1601,7 @@ void Image::create(int p_width, int p_height, bool p_use_mipmaps, Format p_forma
 	format = p_format;
 }
 
-void Image::create(int p_width, int p_height, bool p_use_mipmaps, Format p_format, const PoolVector<uint8_t> &p_data) {
+void Image::create(int p_width, int p_height, bool p_use_mipmaps, Format p_format, const Vector<uint8_t> &p_data) {
 
 	ERR_FAIL_INDEX(p_width - 1, MAX_WIDTH);
 	ERR_FAIL_INDEX(p_height - 1, MAX_HEIGHT);
@@ -1648,7 +1642,7 @@ void Image::create(const char **p_xpm) {
 	HashMap<String, Color> colormap;
 	int colormap_size = 0;
 	uint32_t pixel_size = 0;
-	PoolVector<uint8_t>::Write w;
+	Vector<uint8_t>::Write w;
 
 	while (status != DONE) {
 
@@ -1810,7 +1804,7 @@ bool Image::is_invisible() const {
 	int w, h;
 	_get_mipmap_offset_and_size(1, len, w, h);
 
-	PoolVector<uint8_t>::Read r = data.read();
+	Vector<uint8_t>::Read r = data.read();
 	const unsigned char *data_ptr = r.ptr();
 
 	bool detected = false;
@@ -1855,7 +1849,7 @@ Image::AlphaMode Image::detect_alpha() const {
 	int w, h;
 	_get_mipmap_offset_and_size(1, len, w, h);
 
-	PoolVector<uint8_t>::Read r = data.read();
+	Vector<uint8_t>::Read r = data.read();
 	const unsigned char *data_ptr = r.ptr();
 
 	bool bit = false;
@@ -2014,7 +2008,7 @@ Image::Image(int p_width, int p_height, bool p_use_mipmaps, Format p_format) {
 	create(p_width, p_height, p_use_mipmaps, p_format);
 }
 
-Image::Image(int p_width, int p_height, bool p_mipmaps, Format p_format, const PoolVector<uint8_t> &p_data) {
+Image::Image(int p_width, int p_height, bool p_mipmaps, Format p_format, const Vector<uint8_t> &p_data) {
 
 	width = 0;
 	height = 0;
@@ -2091,10 +2085,10 @@ void Image::blit_rect(const Ref<Image> &p_src, const Rect2 &p_src_rect, const Po
 	Point2 src_underscan = Point2(MIN(0, p_src_rect.position.x), MIN(0, p_src_rect.position.y));
 	Rect2i dest_rect = Rect2i(0, 0, width, height).clip(Rect2i(p_dest - src_underscan, clipped_src_rect.size));
 
-	PoolVector<uint8_t>::Write wp = data.write();
+	Vector<uint8_t>::Write wp = data.write();
 	uint8_t *dst_data_ptr = wp.ptr();
 
-	PoolVector<uint8_t>::Read rp = p_src->data.read();
+	Vector<uint8_t>::Read rp = p_src->data.read();
 	const uint8_t *src_data_ptr = rp.ptr();
 
 	int pixel_size = get_format_pixel_size(format);
@@ -2146,10 +2140,10 @@ void Image::blit_rect_mask(const Ref<Image> &p_src, const Ref<Image> &p_mask, co
 	Point2 src_underscan = Point2(MIN(0, p_src_rect.position.x), MIN(0, p_src_rect.position.y));
 	Rect2i dest_rect = Rect2i(0, 0, width, height).clip(Rect2i(p_dest - src_underscan, clipped_src_rect.size));
 
-	PoolVector<uint8_t>::Write wp = data.write();
+	Vector<uint8_t>::Write wp = data.write();
 	uint8_t *dst_data_ptr = wp.ptr();
 
-	PoolVector<uint8_t>::Read rp = p_src->data.read();
+	Vector<uint8_t>::Read rp = p_src->data.read();
 	const uint8_t *src_data_ptr = rp.ptr();
 
 	int pixel_size = get_format_pixel_size(format);
@@ -2300,7 +2294,7 @@ void Image::fill(const Color &c) {
 
 	lock();
 
-	PoolVector<uint8_t>::Write wp = data.write();
+	Vector<uint8_t>::Write wp = data.write();
 	uint8_t *dst_data_ptr = wp.ptr();
 
 	int pixel_size = get_format_pixel_size(format);
@@ -2339,10 +2333,10 @@ void (*Image::_image_decompress_bptc)(Image *) = NULL;
 void (*Image::_image_decompress_etc1)(Image *) = NULL;
 void (*Image::_image_decompress_etc2)(Image *) = NULL;
 
-PoolVector<uint8_t> (*Image::lossy_packer)(const Ref<Image> &, float) = NULL;
-Ref<Image> (*Image::lossy_unpacker)(const PoolVector<uint8_t> &) = NULL;
-PoolVector<uint8_t> (*Image::lossless_packer)(const Ref<Image> &) = NULL;
-Ref<Image> (*Image::lossless_unpacker)(const PoolVector<uint8_t> &) = NULL;
+Vector<uint8_t> (*Image::lossy_packer)(const Ref<Image> &, float) = NULL;
+Ref<Image> (*Image::lossy_unpacker)(const Vector<uint8_t> &) = NULL;
+Vector<uint8_t> (*Image::lossless_packer)(const Ref<Image> &) = NULL;
+Ref<Image> (*Image::lossless_unpacker)(const Vector<uint8_t> &) = NULL;
 
 void Image::_set_data(const Dictionary &p_data) {
 
@@ -2356,7 +2350,7 @@ void Image::_set_data(const Dictionary &p_data) {
 	int dheight = p_data["height"];
 	String dformat = p_data["format"];
 	bool dmipmaps = p_data["mipmaps"];
-	PoolVector<uint8_t> ddata = p_data["data"];
+	Vector<uint8_t> ddata = p_data["data"];
 	Format ddformat = FORMAT_MAX;
 	for (int i = 0; i < FORMAT_MAX; i++) {
 		if (dformat == get_format_name(Format(i))) {
@@ -2389,7 +2383,7 @@ void Image::lock() {
 
 void Image::unlock() {
 
-	write_lock = PoolVector<uint8_t>::Write();
+	write_lock = Vector<uint8_t>::Write();
 }
 
 Color Image::get_pixelv(const Point2 &p_src) const {
@@ -2868,7 +2862,7 @@ void Image::normalmap_to_xy() {
 
 	{
 		int len = data.size() / 4;
-		PoolVector<uint8_t>::Write wp = data.write();
+		Vector<uint8_t>::Write wp = data.write();
 		unsigned char *data_ptr = wp.ptr();
 
 		for (int i = 0; i < len; i++) {
@@ -2917,12 +2911,12 @@ void Image::bumpmap_to_normalmap(float bump_scale) {
 	ERR_FAIL_COND(!_can_modify(format));
 	convert(Image::FORMAT_RF);
 
-	PoolVector<uint8_t> result_image; //rgba output
+	Vector<uint8_t> result_image; //rgba output
 	result_image.resize(width * height * 4);
 
 	{
-		PoolVector<uint8_t>::Read rp = data.read();
-		PoolVector<uint8_t>::Write wp = result_image.write();
+		Vector<uint8_t>::Read rp = data.read();
+		Vector<uint8_t>::Write wp = result_image.write();
 
 		unsigned char *write_ptr = wp.ptr();
 		float *read_ptr = (float *)rp.ptr();
@@ -2966,7 +2960,7 @@ void Image::srgb_to_linear() {
 	if (format == FORMAT_RGBA8) {
 
 		int len = data.size() / 4;
-		PoolVector<uint8_t>::Write wp = data.write();
+		Vector<uint8_t>::Write wp = data.write();
 		unsigned char *data_ptr = wp.ptr();
 
 		for (int i = 0; i < len; i++) {
@@ -2979,7 +2973,7 @@ void Image::srgb_to_linear() {
 	} else if (format == FORMAT_RGB8) {
 
 		int len = data.size() / 3;
-		PoolVector<uint8_t>::Write wp = data.write();
+		Vector<uint8_t>::Write wp = data.write();
 		unsigned char *data_ptr = wp.ptr();
 
 		for (int i = 0; i < len; i++) {
@@ -2999,7 +2993,7 @@ void Image::premultiply_alpha() {
 	if (format != FORMAT_RGBA8)
 		return; //not needed
 
-	PoolVector<uint8_t>::Write wp = data.write();
+	Vector<uint8_t>::Write wp = data.write();
 	unsigned char *data_ptr = wp.ptr();
 
 	for (int i = 0; i < height; i++) {
@@ -3022,11 +3016,11 @@ void Image::fix_alpha_edges() {
 	if (format != FORMAT_RGBA8)
 		return; //not needed
 
-	PoolVector<uint8_t> dcopy = data;
-	PoolVector<uint8_t>::Read rp = dcopy.read();
+	Vector<uint8_t> dcopy = data;
+	Vector<uint8_t>::Read rp = dcopy.read();
 	const uint8_t *srcptr = rp.ptr();
 
-	PoolVector<uint8_t>::Write wp = data.write();
+	Vector<uint8_t>::Write wp = data.write();
 	unsigned char *data_ptr = wp.ptr();
 
 	const int max_radius = 4;
@@ -3087,25 +3081,25 @@ String Image::get_format_name(Format p_format) {
 	return format_names[p_format];
 }
 
-Error Image::load_png_from_buffer(const PoolVector<uint8_t> &p_array) {
+Error Image::load_png_from_buffer(const Vector<uint8_t> &p_array) {
 	return _load_from_buffer(p_array, _png_mem_loader_func);
 }
 
-Error Image::load_jpg_from_buffer(const PoolVector<uint8_t> &p_array) {
+Error Image::load_jpg_from_buffer(const Vector<uint8_t> &p_array) {
 	return _load_from_buffer(p_array, _jpg_mem_loader_func);
 }
 
-Error Image::load_webp_from_buffer(const PoolVector<uint8_t> &p_array) {
+Error Image::load_webp_from_buffer(const Vector<uint8_t> &p_array) {
 	return _load_from_buffer(p_array, _webp_mem_loader_func);
 }
 
-Error Image::_load_from_buffer(const PoolVector<uint8_t> &p_array, ImageMemLoadFunc p_loader) {
+Error Image::_load_from_buffer(const Vector<uint8_t> &p_array, ImageMemLoadFunc p_loader) {
 	int buffer_size = p_array.size();
 
 	ERR_FAIL_COND_V(buffer_size == 0, ERR_INVALID_PARAMETER);
 	ERR_FAIL_COND_V(!p_loader, ERR_INVALID_PARAMETER);
 
-	PoolVector<uint8_t>::Read r = p_array.read();
+	Vector<uint8_t>::Read r = p_array.read();
 
 	Ref<Image> image = p_loader(r.ptr(), buffer_size);
 	ERR_FAIL_COND_V(!image.is_valid(), ERR_PARSE_ERROR);
@@ -3186,6 +3180,15 @@ Ref<Resource> Image::duplicate(bool p_subresources) const {
 	copy.instance();
 	copy->_copy_internals_from(*this);
 	return copy;
+}
+
+void Image::copy_internals_from(const Ref<Image> &p_image) {
+	ERR_FAIL_COND(p_image.is_null());
+	format = p_image->format;
+	width = p_image->width;
+	height = p_image->height;
+	mipmaps = p_image->mipmaps;
+	data = p_image->data;
 }
 
 Image::Image() {

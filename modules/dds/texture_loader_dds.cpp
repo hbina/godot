@@ -226,7 +226,7 @@ RES ResourceFormatDDS::load(const String &p_path, const String &p_original_path,
 	if (!(flags & DDSD_MIPMAPCOUNT))
 		mipmaps = 1;
 
-	PoolVector<uint8_t> src_data;
+	Vector<uint8_t> src_data;
 
 	const DDSFormatInfo &info = dds_format_info[dds_format];
 	uint32_t w = width;
@@ -249,9 +249,9 @@ RES ResourceFormatDDS::load(const String &p_path, const String &p_original_path,
 		}
 
 		src_data.resize(size);
-		PoolVector<uint8_t>::Write wb = src_data.write();
+		Vector<uint8_t>::Write wb = src_data.write();
 		f->get_buffer(wb.ptr(), size);
-		wb = PoolVector<uint8_t>::Write();
+		wb = Vector<uint8_t>::Write();
 
 	} else if (info.palette) {
 
@@ -283,7 +283,7 @@ RES ResourceFormatDDS::load(const String &p_path, const String &p_original_path,
 		}
 
 		src_data.resize(size + 256 * colsize);
-		PoolVector<uint8_t>::Write wb = src_data.write();
+		Vector<uint8_t>::Write wb = src_data.write();
 		f->get_buffer(wb.ptr(), size);
 
 		for (int i = 0; i < 256; i++) {
@@ -297,7 +297,7 @@ RES ResourceFormatDDS::load(const String &p_path, const String &p_original_path,
 				wb[dst_ofs + 3] = palette[src_ofs + 3];
 		}
 
-		wb = PoolVector<uint8_t>::Write();
+		wb = Vector<uint8_t>::Write();
 	} else {
 		//uncompressed generic...
 
@@ -316,7 +316,7 @@ RES ResourceFormatDDS::load(const String &p_path, const String &p_original_path,
 			size = size * 2;
 
 		src_data.resize(size);
-		PoolVector<uint8_t>::Write wb = src_data.write();
+		Vector<uint8_t>::Write wb = src_data.write();
 		f->get_buffer(wb.ptr(), size);
 
 		switch (dds_format) {
@@ -445,7 +445,7 @@ RES ResourceFormatDDS::load(const String &p_path, const String &p_original_path,
 			}
 		}
 
-		wb = PoolVector<uint8_t>::Write();
+		wb = Vector<uint8_t>::Write();
 	}
 
 	Ref<Image> img = memnew(Image(width, height, mipmaps - 1, info.format, src_data));

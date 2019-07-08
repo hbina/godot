@@ -1821,8 +1821,8 @@ void OS_OSX::set_custom_mouse_cursor(const RES &p_cursor, CursorShape p_shape, c
 		uint8_t *pixels = [imgrep bitmapData];
 
 		int len = int(texture_size.width * texture_size.height);
-		PoolVector<uint8_t> data = image->get_data();
-		PoolVector<uint8_t>::Read r = data.read();
+		Vector<uint8_t> data = image->get_data();
+		Vector<uint8_t>::Read r = data.read();
 
 		image->lock();
 
@@ -1976,8 +1976,8 @@ void OS_OSX::set_icon(const Ref<Image> &p_icon) {
 	uint8_t *pixels = [imgrep bitmapData];
 
 	int len = img->get_width() * img->get_height();
-	PoolVector<uint8_t> data = img->get_data();
-	PoolVector<uint8_t>::Read r = data.read();
+	Vector<uint8_t> data = img->get_data();
+	Vector<uint8_t>::Read r = data.read();
 
 	/* Premultiply the alpha channel */
 	for (int i = 0; i < len; i++) {

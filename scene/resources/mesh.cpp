@@ -63,9 +63,9 @@ Ref<TriangleMesh> Mesh::generate_triangle_mesh() const {
 	if (facecount == 0 || (facecount % 3) != 0)
 		return triangle_mesh;
 
-	PoolVector<Vector3> faces;
+	Vector<Vector3> faces;
 	faces.resize(facecount);
-	PoolVector<Vector3>::Write facesw = faces.write();
+	Vector<Vector3>::Write facesw = faces.write();
 
 	int widx = 0;
 
@@ -77,14 +77,14 @@ Ref<TriangleMesh> Mesh::generate_triangle_mesh() const {
 		Array a = surface_get_arrays(i);
 
 		int vc = surface_get_array_len(i);
-		PoolVector<Vector3> vertices = a[ARRAY_VERTEX];
-		PoolVector<Vector3>::Read vr = vertices.read();
+		Vector<Vector3> vertices = a[ARRAY_VERTEX];
+		Vector<Vector3>::Read vr = vertices.read();
 
 		if (surface_get_format(i) & ARRAY_FORMAT_INDEX) {
 
 			int ic = surface_get_array_index_len(i);
-			PoolVector<int> indices = a[ARRAY_INDEX];
-			PoolVector<int>::Read ir = indices.read();
+			Vector<int> indices = a[ARRAY_INDEX];
+			Vector<int>::Read ir = indices.read();
 
 			for (int j = 0; j < ic; j++) {
 				int index = ir[j];
@@ -98,7 +98,7 @@ Ref<TriangleMesh> Mesh::generate_triangle_mesh() const {
 		}
 	}
 
-	facesw = PoolVector<Vector3>::Write();
+	facesw = Vector<Vector3>::Write();
 
 	triangle_mesh = Ref<TriangleMesh>(memnew(TriangleMesh));
 	triangle_mesh->create(faces);
@@ -117,15 +117,15 @@ void Mesh::generate_debug_mesh_lines(Vector<Vector3> &r_lines) {
 	if (tm.is_null())
 		return;
 
-	PoolVector<int> triangle_indices;
+	Vector<int> triangle_indices;
 	tm->get_indices(&triangle_indices);
 	const int triangles_num = tm->get_triangles().size();
-	PoolVector<Vector3> vertices = tm->get_vertices();
+	Vector<Vector3> vertices = tm->get_vertices();
 
 	debug_lines.resize(tm->get_triangles().size() * 6); // 3 lines x 2 points each line
 
-	PoolVector<int>::Read ind_r = triangle_indices.read();
-	PoolVector<Vector3>::Read ver_r = vertices.read();
+	Vector<int>::Read ind_r = triangle_indices.read();
+	Vector<Vector3>::Read ver_r = vertices.read();
 	for (int j = 0, x = 0, i = 0; i < triangles_num; j += 6, x += 3, ++i) {
 		// Triangle line 1
 		debug_lines[j + 0] = ver_r[ind_r[x + 0]];
@@ -147,7 +147,7 @@ void Mesh::generate_debug_mesh_indices(Vector<Vector3> &r_points) {
 	if (tm.is_null())
 		return;
 
-	PoolVector<Vector3> vertices = tm->get_vertices();
+	Vector<Vector3> vertices = tm->get_vertices();
 
 	int vertices_size = vertices.size();
 	r_points.resize(vertices_size);
@@ -161,20 +161,20 @@ bool Mesh::surface_is_softbody_friendly(int p_idx) const {
 	return (surface_format & Mesh::ARRAY_FLAG_USE_DYNAMIC_UPDATE && (!(surface_format & Mesh::ARRAY_COMPRESS_VERTEX)) && (!(surface_format & Mesh::ARRAY_COMPRESS_NORMAL)));
 }
 
-PoolVector<Face3> Mesh::get_faces() const {
+Vector<Face3> Mesh::get_faces() const {
 
 	Ref<TriangleMesh> tm = generate_triangle_mesh();
 	if (tm.is_valid())
 		return tm->get_faces();
-	return PoolVector<Face3>();
+	return Vector<Face3>();
 	/*
 	for (int i=0;i<surfaces.size();i++) {
 
 		if (VisualServer::get_singleton()->mesh_surface_get_primitive_type( mesh, i ) != VisualServer::PRIMITIVE_TRIANGLES )
 			continue;
 
-		PoolVector<int> indices;
-		PoolVector<Vector3> vertices;
+		Vector<int> indices;
+		Vector<Vector3> vertices;
 
 		vertices=VisualServer::get_singleton()->mesh_surface_get_array(mesh, i,VisualServer::ARRAY_VERTEX);
 
@@ -195,10 +195,10 @@ PoolVector<Face3> Mesh::get_faces() const {
 		if (len<=0)
 			continue;
 
-		PoolVector<int>::Read indicesr = indices.read();
+		Vector<int>::Read indicesr = indices.read();
 		const int *indicesptr = indicesr.ptr();
 
-		PoolVector<Vector3>::Read verticesr = vertices.read();
+		Vector<Vector3>::Read verticesr = vertices.read();
 		const Vector3 *verticesptr = verticesr.ptr();
 
 		int old_faces=faces.size();
@@ -206,7 +206,7 @@ PoolVector<Face3> Mesh::get_faces() const {
 
 		faces.resize(new_faces);
 
-		PoolVector<Face3>::Write facesw = faces.write();
+		Vector<Face3>::Write facesw = faces.write();
 		Face3 *facesptr=facesw.ptr();
 
 
@@ -229,12 +229,12 @@ PoolVector<Face3> Mesh::get_faces() const {
 
 Ref<Shape> Mesh::create_convex_shape() const {
 
-	PoolVector<Vector3> vertices;
+	Vector<Vector3> vertices;
 
 	for (int i = 0; i < get_surface_count(); i++) {
 
 		Array a = surface_get_arrays(i);
-		PoolVector<Vector3> v = a[ARRAY_VERTEX];
+		Vector<Vector3> v = a[ARRAY_VERTEX];
 		vertices.append_array(v);
 	}
 
@@ -245,11 +245,11 @@ Ref<Shape> Mesh::create_convex_shape() const {
 
 Ref<Shape> Mesh::create_trimesh_shape() const {
 
-	PoolVector<Face3> faces = get_faces();
+	Vector<Face3> faces = get_faces();
 	if (faces.size() == 0)
 		return Ref<Shape>();
 
-	PoolVector<Vector3> face_points;
+	Vector<Vector3> face_points;
 	face_points.resize(faces.size() * 3);
 
 	for (int i = 0; i < face_points.size(); i++) {
@@ -276,7 +276,7 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 
 		if (i == 0) {
 			arrays = a;
-			PoolVector<Vector3> v = a[ARRAY_VERTEX];
+			Vector<Vector3> v = a[ARRAY_VERTEX];
 			index_accum += v.size();
 		} else {
 
@@ -294,8 +294,8 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 					case ARRAY_VERTEX:
 					case ARRAY_NORMAL: {
 
-						PoolVector<Vector3> dst = arrays[j];
-						PoolVector<Vector3> src = a[j];
+						Vector<Vector3> dst = arrays[j];
+						Vector<Vector3> src = a[j];
 						if (j == ARRAY_VERTEX)
 							vcount = src.size();
 						if (dst.size() == 0 || src.size() == 0) {
@@ -309,8 +309,8 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 					case ARRAY_BONES:
 					case ARRAY_WEIGHTS: {
 
-						PoolVector<real_t> dst = arrays[j];
-						PoolVector<real_t> src = a[j];
+						Vector<real_t> dst = arrays[j];
+						Vector<real_t> src = a[j];
 						if (dst.size() == 0 || src.size() == 0) {
 							arrays[j] = Variant();
 							continue;
@@ -320,8 +320,8 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 
 					} break;
 					case ARRAY_COLOR: {
-						PoolVector<Color> dst = arrays[j];
-						PoolVector<Color> src = a[j];
+						Vector<Color> dst = arrays[j];
+						Vector<Color> src = a[j];
 						if (dst.size() == 0 || src.size() == 0) {
 							arrays[j] = Variant();
 							continue;
@@ -332,8 +332,8 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 					} break;
 					case ARRAY_TEX_UV:
 					case ARRAY_TEX_UV2: {
-						PoolVector<Vector2> dst = arrays[j];
-						PoolVector<Vector2> src = a[j];
+						Vector<Vector2> dst = arrays[j];
+						Vector<Vector2> src = a[j];
 						if (dst.size() == 0 || src.size() == 0) {
 							arrays[j] = Variant();
 							continue;
@@ -343,15 +343,15 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 
 					} break;
 					case ARRAY_INDEX: {
-						PoolVector<int> dst = arrays[j];
-						PoolVector<int> src = a[j];
+						Vector<int> dst = arrays[j];
+						Vector<int> src = a[j];
 						if (dst.size() == 0 || src.size() == 0) {
 							arrays[j] = Variant();
 							continue;
 						}
 						{
 							int ss = src.size();
-							PoolVector<int>::Write w = src.write();
+							Vector<int>::Write w = src.write();
 							for (int k = 0; k < ss; k++) {
 								w[k] += index_accum;
 							}
@@ -369,13 +369,13 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 	ERR_FAIL_COND_V(arrays.size() != ARRAY_MAX, Ref<ArrayMesh>());
 
 	{
-		PoolVector<int>::Write ir;
-		PoolVector<int> indices = arrays[ARRAY_INDEX];
+		Vector<int>::Write ir;
+		Vector<int> indices = arrays[ARRAY_INDEX];
 		bool has_indices = false;
-		PoolVector<Vector3> vertices = arrays[ARRAY_VERTEX];
+		Vector<Vector3> vertices = arrays[ARRAY_VERTEX];
 		int vc = vertices.size();
 		ERR_FAIL_COND_V(!vc, Ref<ArrayMesh>());
-		PoolVector<Vector3>::Write r = vertices.write();
+		Vector<Vector3>::Write r = vertices.write();
 
 		if (indices.size()) {
 			vc = indices.size();
@@ -436,14 +436,14 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 			r[i] = t;
 		}
 
-		r = PoolVector<Vector3>::Write();
+		r = Vector<Vector3>::Write();
 		arrays[ARRAY_VERTEX] = vertices;
 
 		if (!has_indices) {
 
-			PoolVector<int> new_indices;
+			Vector<int> new_indices;
 			new_indices.resize(vertices.size());
-			PoolVector<int>::Write iw = new_indices.write();
+			Vector<int>::Write iw = new_indices.write();
 
 			for (int j = 0; j < vc2; j += 3) {
 
@@ -452,7 +452,7 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 				iw[j + 2] = j + 1;
 			}
 
-			iw = PoolVector<int>::Write();
+			iw = Vector<int>::Write();
 			arrays[ARRAY_INDEX] = new_indices;
 
 		} else {
@@ -461,7 +461,7 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 
 				SWAP(ir[j + 1], ir[j + 2]);
 			}
-			ir = PoolVector<int>::Write();
+			ir = Vector<int>::Write();
 			arrays[ARRAY_INDEX] = indices;
 		}
 	}
@@ -550,10 +550,10 @@ Vector<Ref<Shape> > Mesh::convex_decompose() const {
 
 	ERR_FAIL_COND_V(!convex_composition_function, Vector<Ref<Shape> >());
 
-	PoolVector<Face3> faces = get_faces();
+	Vector<Face3> faces = get_faces();
 	Vector<Face3> f3;
 	f3.resize(faces.size());
-	PoolVector<Face3>::Read f = faces.read();
+	Vector<Face3>::Read f = faces.read();
 	for (int i = 0; i < f3.size(); i++) {
 		f3[i] = f[i];
 	}
@@ -570,10 +570,10 @@ Vector<Ref<Shape> > Mesh::convex_decompose() const {
 			points.insert(decomposed[i][j].vertex[2]);
 		}
 
-		PoolVector<Vector3> convex_points;
+		Vector<Vector3> convex_points;
 		convex_points.resize(points.size());
 		{
-			PoolVector<Vector3>::Write w = convex_points.write();
+			Vector<Vector3>::Write w = convex_points.write();
 			int idx = 0;
 			for (Set<Vector3>::Element *E = points.front(); E; E = E->next()) {
 				w[idx++] = E->get();
@@ -598,9 +598,9 @@ bool ArrayMesh::_set(const StringName &p_name, const Variant &p_value) {
 
 	if (p_name == "blend_shape/names") {
 
-		PoolVector<String> sk = p_value;
+		Vector<String> sk = p_value;
 		int sz = sk.size();
-		PoolVector<String>::Read r = sk.read();
+		Vector<String>::Read r = sk.read();
 		for (int i = 0; i < sz; i++)
 			add_blend_shape(r[i]);
 		return true;
@@ -645,8 +645,8 @@ bool ArrayMesh::_set(const StringName &p_name, const Variant &p_value) {
 
 		} else if (d.has("array_data")) {
 
-			PoolVector<uint8_t> array_data = d["array_data"];
-			PoolVector<uint8_t> array_index_data;
+			Vector<uint8_t> array_data = d["array_data"];
+			Vector<uint8_t> array_index_data;
 			if (d.has("array_index_data"))
 				array_index_data = d["array_index_data"];
 
@@ -662,12 +662,12 @@ bool ArrayMesh::_set(const StringName &p_name, const Variant &p_value) {
 			if (d.has("index_count"))
 				index_count = d["index_count"];
 
-			Vector<PoolVector<uint8_t> > blend_shapes;
+			Vector<Vector<uint8_t> > blend_shapes;
 
 			if (d.has("blend_shape_data")) {
 				Array blend_shape_data = d["blend_shape_data"];
 				for (int i = 0; i < blend_shape_data.size(); i++) {
-					PoolVector<uint8_t> shape = blend_shape_data[i];
+					Vector<uint8_t> shape = blend_shape_data[i];
 					blend_shapes.push_back(shape);
 				}
 			}
@@ -713,7 +713,7 @@ bool ArrayMesh::_get(const StringName &p_name, Variant &r_ret) const {
 
 	if (p_name == "blend_shape/names") {
 
-		PoolVector<String> sk;
+		Vector<String> sk;
 		for (int i = 0; i < blend_shapes.size(); i++)
 			sk.push_back(blend_shapes[i]);
 		r_ret = sk;
@@ -758,7 +758,7 @@ bool ArrayMesh::_get(const StringName &p_name, Variant &r_ret) const {
 	}
 	d["skeleton_aabb"] = arr;
 
-	Vector<PoolVector<uint8_t> > blend_shape_data = VS::get_singleton()->mesh_surface_get_blend_shapes(mesh, idx);
+	Vector<Vector<uint8_t> > blend_shape_data = VS::get_singleton()->mesh_surface_get_blend_shapes(mesh, idx);
 
 	Array md;
 	for (int i = 0; i < blend_shape_data.size(); i++) {
@@ -815,7 +815,7 @@ void ArrayMesh::_recompute_aabb() {
 	}
 }
 
-void ArrayMesh::add_surface(uint32_t p_format, PrimitiveType p_primitive, const PoolVector<uint8_t> &p_array, int p_vertex_count, const PoolVector<uint8_t> &p_index_array, int p_index_count, const AABB &p_aabb, const Vector<PoolVector<uint8_t> > &p_blend_shapes, const Vector<AABB> &p_bone_aabbs) {
+void ArrayMesh::add_surface(uint32_t p_format, PrimitiveType p_primitive, const Vector<uint8_t> &p_array, int p_vertex_count, const Vector<uint8_t> &p_index_array, int p_index_count, const AABB &p_aabb, const Vector<Vector<uint8_t> > &p_blend_shapes, const Vector<AABB> &p_bone_aabbs) {
 
 	Surface s;
 	s.aabb = p_aabb;
@@ -837,10 +837,10 @@ void ArrayMesh::add_surface_from_arrays(PrimitiveType p_primitive, const Array &
 	/* make aABB? */ {
 
 		Variant arr = p_arrays[ARRAY_VERTEX];
-		PoolVector<Vector3> vertices = arr;
+		Vector<Vector3> vertices = arr;
 		int len = vertices.size();
 		ERR_FAIL_COND(len == 0);
-		PoolVector<Vector3>::Read r = vertices.read();
+		Vector<Vector3>::Read r = vertices.read();
 		const Vector3 *vtx = r.ptr();
 
 		// check AABB
@@ -1005,7 +1005,7 @@ String ArrayMesh::surface_get_name(int p_idx) const {
 	return surfaces[p_idx].name;
 }
 
-void ArrayMesh::surface_update_region(int p_surface, int p_offset, const PoolVector<uint8_t> &p_data) {
+void ArrayMesh::surface_update_region(int p_surface, int p_offset, const Vector<uint8_t> &p_data) {
 
 	ERR_FAIL_INDEX(p_surface, surfaces.size());
 	VS::get_singleton()->mesh_surface_update_region(mesh, p_surface, p_offset, p_data);
@@ -1138,12 +1138,12 @@ Error ArrayMesh::lightmap_unwrap(const Transform &p_base_transform, float p_texe
 		s.material = surface_get_material(i);
 		s.vertices = SurfaceTool::create_vertex_array_from_triangle_arrays(arrays);
 
-		PoolVector<Vector3> rvertices = arrays[Mesh::ARRAY_VERTEX];
+		Vector<Vector3> rvertices = arrays[Mesh::ARRAY_VERTEX];
 		int vc = rvertices.size();
-		PoolVector<Vector3>::Read r = rvertices.read();
+		Vector<Vector3>::Read r = rvertices.read();
 
-		PoolVector<Vector3> rnormals = arrays[Mesh::ARRAY_NORMAL];
-		PoolVector<Vector3>::Read rn = rnormals.read();
+		Vector<Vector3> rnormals = arrays[Mesh::ARRAY_NORMAL];
+		Vector<Vector3>::Read rn = rnormals.read();
 
 		int vertex_ofs = vertices.size() / 3;
 
@@ -1165,7 +1165,7 @@ Error ArrayMesh::lightmap_unwrap(const Transform &p_base_transform, float p_texe
 			uv_index[j + vertex_ofs] = Pair<int, int>(i, j);
 		}
 
-		PoolVector<int> rindices = arrays[Mesh::ARRAY_INDEX];
+		Vector<int> rindices = arrays[Mesh::ARRAY_INDEX];
 		int ic = rindices.size();
 
 		if (ic == 0) {
@@ -1181,7 +1181,7 @@ Error ArrayMesh::lightmap_unwrap(const Transform &p_base_transform, float p_texe
 			}
 
 		} else {
-			PoolVector<int>::Read ri = rindices.read();
+			Vector<int>::Read ri = rindices.read();
 
 			for (int j = 0; j < ic / 3; j++) {
 				if (Face3(r[ri[j * 3 + 0]], r[ri[j * 3 + 1]], r[ri[j * 3 + 2]]).is_degenerate())

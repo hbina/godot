@@ -36,7 +36,7 @@
 class ConvexPolygonShape : public Shape {
 
 	GDCLASS(ConvexPolygonShape, Shape);
-	PoolVector<Vector3> points;
+	Vector<Vector3> points;
 
 protected:
 	static void _bind_methods();
@@ -46,8 +46,8 @@ protected:
 	virtual Vector<Vector3> _gen_debug_mesh_lines();
 
 public:
-	void set_points(const PoolVector<Vector3> &p_points);
-	PoolVector<Vector3> get_points() const;
+	void set_points(const Vector<Vector3> &p_points);
+	Vector<Vector3> get_points() const;
 
 	ConvexPolygonShape();
 };

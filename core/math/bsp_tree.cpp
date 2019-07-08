@@ -457,7 +457,7 @@ BSP_Tree::operator Variant() const {
 
 	d["planes"] = plane_values;
 
-	PoolVector<int> dst_nodes;
+	Vector<int> dst_nodes;
 	dst_nodes.resize(nodes.size() * 3);
 
 	for (int i = 0; i < nodes.size(); i++) {
@@ -484,18 +484,18 @@ BSP_Tree::BSP_Tree(const Variant &p_variant) {
 	ERR_FAIL_COND(!d.has("aabb"));
 	ERR_FAIL_COND(!d.has("error_radius"));
 
-	PoolVector<int> src_nodes = d["nodes"];
+	Vector<int> src_nodes = d["nodes"];
 	ERR_FAIL_COND(src_nodes.size() % 3);
 
 	if (d["planes"].get_type() == Variant::POOL_REAL_ARRAY) {
 
-		PoolVector<real_t> src_planes = d["planes"];
+		Vector<real_t> src_planes = d["planes"];
 		int plane_count = src_planes.size();
 		ERR_FAIL_COND(plane_count % 4);
 		planes.resize(plane_count / 4);
 
 		if (plane_count) {
-			PoolVector<real_t>::Read r = src_planes.read();
+			Vector<real_t>::Read r = src_planes.read();
 			for (int i = 0; i < plane_count / 4; i++) {
 
 				planes[i].normal.x = r[i * 4 + 0];
@@ -516,7 +516,7 @@ BSP_Tree::BSP_Tree(const Variant &p_variant) {
 	//int node_count = src_nodes.size();
 	nodes.resize(src_nodes.size() / 3);
 
-	PoolVector<int>::Read r = src_nodes.read();
+	Vector<int>::Read r = src_nodes.read();
 
 	for (int i = 0; i < nodes.size(); i++) {
 
@@ -526,12 +526,12 @@ BSP_Tree::BSP_Tree(const Variant &p_variant) {
 	}
 }
 
-BSP_Tree::BSP_Tree(const PoolVector<Face3> &p_faces, real_t p_error_radius) {
+BSP_Tree::BSP_Tree(const Vector<Face3> &p_faces, real_t p_error_radius) {
 
 	// compute aabb
 
 	int face_count = p_faces.size();
-	PoolVector<Face3>::Read faces_r = p_faces.read();
+	Vector<Face3>::Read faces_r = p_faces.read();
 	const Face3 *facesptr = faces_r.ptr();
 
 	bool first = true;

@@ -1089,9 +1089,9 @@ Array Object::_get_method_list_bind() const {
 	return ret;
 }
 
-PoolVector<String> Object::_get_meta_list_bind() const {
+Vector<String> Object::_get_meta_list_bind() const {
 
-	PoolVector<String> _metaret;
+	Vector<String> _metaret;
 
 	List<Variant> keys;
 	metadata.get_key_list(&keys);

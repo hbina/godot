@@ -140,12 +140,10 @@ public:
 	static void (*_image_decompress_etc1)(Image *);
 	static void (*_image_decompress_etc2)(Image *);
 
-	static PoolVector<uint8_t> (*lossy_packer)(const Ref<Image> &p_image, float p_quality);
-	static Ref<Image> (*lossy_unpacker)(const PoolVector<uint8_t> &p_buffer);
-	static PoolVector<uint8_t> (*lossless_packer)(const Ref<Image> &p_image);
-	static Ref<Image> (*lossless_unpacker)(const PoolVector<uint8_t> &p_buffer);
-
-	PoolVector<uint8_t>::Write write_lock;
+	static Vector<uint8_t> (*lossy_packer)(const Ref<Image> &p_image, float p_quality);
+	static Ref<Image> (*lossy_unpacker)(const Vector<uint8_t> &p_buffer);
+	static Vector<uint8_t> (*lossless_packer)(const Ref<Image> &p_image);
+	static Ref<Image> (*lossless_unpacker)(const Vector<uint8_t> &p_buffer);
 
 protected:
 	static void _bind_methods();
@@ -155,12 +153,12 @@ private:
 		create(p_width, p_height, p_use_mipmaps, p_format);
 	}
 
-	void _create_from_data(int p_width, int p_height, bool p_use_mipmaps, Format p_format, const PoolVector<uint8_t> &p_data) {
+	void _create_from_data(int p_width, int p_height, bool p_use_mipmaps, Format p_format, const Vector<uint8_t> &p_data) {
 		create(p_width, p_height, p_use_mipmaps, p_format, p_data);
 	}
 
 	Format format;
-	PoolVector<uint8_t> data;
+	Vector<uint8_t> data;
 	int width, height;
 	bool mipmaps;
 
@@ -183,7 +181,7 @@ private:
 	void _set_data(const Dictionary &p_data);
 	Dictionary _get_data() const;
 
-	Error _load_from_buffer(const PoolVector<uint8_t> &p_array, ImageMemLoadFunc p_loader);
+	Error _load_from_buffer(const Vector<uint8_t> &p_array, ImageMemLoadFunc p_loader);
 
 	static void average_4_uint8(uint8_t &p_out, const uint8_t &p_a, const uint8_t &p_b, const uint8_t &p_c, const uint8_t &p_d);
 	static void average_4_float(float &p_out, const float &p_a, const float &p_b, const float &p_c, const float &p_d);
@@ -246,7 +244,7 @@ public:
 	 * Create a new image of a given size and format. Current image will be lost
 	 */
 	void create(int p_width, int p_height, bool p_use_mipmaps, Format p_format);
-	void create(int p_width, int p_height, bool p_use_mipmaps, Format p_format, const PoolVector<uint8_t> &p_data);
+	void create(int p_width, int p_height, bool p_use_mipmaps, Format p_format, const Vector<uint8_t> &p_data);
 
 	void create(const char **p_xpm);
 	/**
@@ -254,7 +252,7 @@ public:
 	 */
 	bool empty() const;
 
-	PoolVector<uint8_t> get_data() const;
+	Vector<uint8_t> get_data() const;
 
 	Error load(const String &p_path);
 	Error save_png(const String &p_path) const;
@@ -270,7 +268,7 @@ public:
 	/**
 	 * import an image of a specific size and format from a pointer
 	 */
-	Image(int p_width, int p_height, bool p_mipmaps, Format p_format, const PoolVector<uint8_t> &p_data);
+	Image(int p_width, int p_height, bool p_mipmaps, Format p_format, const Vector<uint8_t> &p_data);
 
 	enum AlphaMode {
 		ALPHA_NONE,
@@ -323,9 +321,9 @@ public:
 	static void set_compress_bptc_func(void (*p_compress_func)(Image *, float, CompressSource));
 	static String get_format_name(Format p_format);
 
-	Error load_png_from_buffer(const PoolVector<uint8_t> &p_array);
-	Error load_jpg_from_buffer(const PoolVector<uint8_t> &p_array);
-	Error load_webp_from_buffer(const PoolVector<uint8_t> &p_array);
+	Error load_png_from_buffer(const Vector<uint8_t> &p_array);
+	Error load_jpg_from_buffer(const Vector<uint8_t> &p_array);
+	Error load_webp_from_buffer(const Vector<uint8_t> &p_array);
 
 	Image(const uint8_t *p_mem_png_jpg, int p_len = -1);
 	Image(const char **p_xpm);
@@ -353,14 +351,7 @@ public:
 	void set_pixelv(const Point2 &p_dst, const Color &p_color);
 	void set_pixel(int p_x, int p_y, const Color &p_color);
 
-	void copy_internals_from(const Ref<Image> &p_image) {
-		ERR_FAIL_COND(p_image.is_null());
-		format = p_image->format;
-		width = p_image->width;
-		height = p_image->height;
-		mipmaps = p_image->mipmaps;
-		data = p_image->data;
-	}
+	void copy_internals_from(const Ref<Image> &);
 
 	~Image();
 };

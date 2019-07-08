@@ -53,7 +53,7 @@ void BitMap::create_from_image_alpha(const Ref<Image> &p_image, float p_threshol
 
 	create(Size2(img->get_width(), img->get_height()));
 
-	PoolVector<uint8_t>::Read r = img->get_data().read();
+	Vector<uint8_t>::Read r = img->get_data().read();
 	uint8_t *w = bitmask.ptrw();
 
 	for (int i = 0; i < width * height; i++) {
@@ -429,7 +429,7 @@ struct FillBitsStackEntry {
 static void fill_bits(const BitMap *p_src, Ref<BitMap> &p_map, const Point2i &p_pos, const Rect2i &rect) {
 
 	// Using a custom stack to work iteratively to avoid stack overflow on big bitmaps
-	PoolVector<FillBitsStackEntry> stack;
+	Vector<FillBitsStackEntry> stack;
 	// Tracking size since we won't be shrinking the stack vector
 	int stack_size = 0;
 

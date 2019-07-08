@@ -387,16 +387,16 @@ public:
 
 			Map<RID, LightCache> light_cache;
 			Map<RID, LightCache> light_cache_changes;
-			PoolVector<int> light_data;
-			PoolVector<LocalData> local_data;
+			Vector<int> light_data;
+			Vector<LocalData> local_data;
 			Vector<Vector<uint32_t> > level_cell_lists;
 			RID probe_data;
 			bool enabled;
 			int bake_dynamic_range;
 			RasterizerStorage::GIProbeCompression compression;
 
-			Vector<PoolVector<uint8_t> > mipmaps_3d;
-			Vector<PoolVector<CompBlockS3TC> > mipmaps_s3tc; //for s3tc
+			Vector<Vector<uint8_t> > mipmaps_3d;
+			Vector<Vector<CompBlockS3TC> > mipmaps_s3tc; //for s3tc
 
 			int updating_stage;
 			float propagate;

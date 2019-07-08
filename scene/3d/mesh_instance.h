@@ -89,7 +89,7 @@ public:
 	void create_debug_tangents();
 
 	virtual AABB get_aabb() const;
-	virtual PoolVector<Face3> get_faces(uint32_t p_usage_flags) const;
+	virtual Vector<Face3> get_faces(uint32_t p_usage_flags) const;
 
 	MeshInstance();
 	~MeshInstance();

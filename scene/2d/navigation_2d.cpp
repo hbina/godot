@@ -38,12 +38,12 @@ void Navigation2D::_navpoly_link(int p_id) {
 	NavMesh &nm = navpoly_map[p_id];
 	ERR_FAIL_COND(nm.linked);
 
-	PoolVector<Vector2> vertices = nm.navpoly->get_vertices();
+	Vector<Vector2> vertices = nm.navpoly->get_vertices();
 	int len = vertices.size();
 	if (len == 0)
 		return;
 
-	PoolVector<Vector2>::Read r = vertices.read();
+	Vector<Vector2>::Read r = vertices.read();
 
 	for (int i = 0; i < nm.navpoly->get_polygon_count(); i++) {
 

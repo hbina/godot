@@ -1346,9 +1346,9 @@ GridMapEditor::GridMapEditor(EditorNode *p_editor) {
 	{
 		//selection mesh create
 
-		PoolVector<Vector3> lines;
-		PoolVector<Vector3> triangles;
-		PoolVector<Vector3> square[3];
+		Vector<Vector3> lines;
+		Vector<Vector3> triangles;
+		Vector<Vector3> square[3];
 
 		for (int i = 0; i < 6; i++) {
 

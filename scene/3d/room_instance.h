@@ -57,7 +57,7 @@ private:
 	Ref<RoomBounds> room;
 
 	int level;
-	void _parse_node_faces(PoolVector<Face3> &all_faces, const Node *p_node) const;
+	void _parse_node_faces(Vector<Face3> &all_faces, const Node *p_node) const;
 
 	void _bounds_changed();
 
@@ -73,7 +73,7 @@ public:
 	};
 
 	virtual AABB get_aabb() const;
-	virtual PoolVector<Face3> get_faces(uint32_t p_usage_flags) const;
+	virtual Vector<Face3> get_faces(uint32_t p_usage_flags) const;
 
 	void set_room(const Ref<RoomBounds> &p_room);
 	Ref<RoomBounds> get_room() const;

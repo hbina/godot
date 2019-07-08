@@ -39,7 +39,7 @@ void CSGBrush::clear() {
 	faces.clear();
 }
 
-void CSGBrush::build_from_faces(const PoolVector<Vector3> &p_vertices, const PoolVector<Vector2> &p_uvs, const PoolVector<bool> &p_smooth, const PoolVector<Ref<Material> > &p_materials, const PoolVector<bool> &p_invert_faces) {
+void CSGBrush::build_from_faces(const Vector<Vector3> &p_vertices, const Vector<Vector2> &p_uvs, const Vector<bool> &p_smooth, const Vector<Ref<Material> > &p_materials, const Vector<bool> &p_invert_faces) {
 
 	clear();
 
@@ -47,15 +47,10 @@ void CSGBrush::build_from_faces(const PoolVector<Vector3> &p_vertices, const Poo
 
 	ERR_FAIL_COND((vc % 3) != 0);
 
-	PoolVector<Vector3>::Read rv = p_vertices.read();
 	int uvc = p_uvs.size();
-	PoolVector<Vector2>::Read ruv = p_uvs.read();
 	int sc = p_smooth.size();
-	PoolVector<bool>::Read rs = p_smooth.read();
 	int mc = p_materials.size();
-	PoolVector<Ref<Material> >::Read rm = p_materials.read();
 	int ic = p_invert_faces.size();
-	PoolVector<bool>::Read ri = p_invert_faces.read();
 
 	Map<Ref<Material>, int> material_map;
 
@@ -63,28 +58,28 @@ void CSGBrush::build_from_faces(const PoolVector<Vector3> &p_vertices, const Poo
 
 	for (int i = 0; i < faces.size(); i++) {
 		Face &f = faces[i];
-		f.vertices[0] = rv[i * 3 + 0];
-		f.vertices[1] = rv[i * 3 + 1];
-		f.vertices[2] = rv[i * 3 + 2];
+		f.vertices[0] = p_vertices[i * 3 + 0];
+		f.vertices[1] = p_vertices[i * 3 + 1];
+		f.vertices[2] = p_vertices[i * 3 + 2];
 		if (uvc == vc) {
-			f.uvs[0] = ruv[i * 3 + 0];
-			f.uvs[1] = ruv[i * 3 + 1];
-			f.uvs[2] = ruv[i * 3 + 2];
+			f.uvs[0] = p_uvs[i * 3 + 0];
+			f.uvs[1] = p_uvs[i * 3 + 1];
+			f.uvs[2] = p_uvs[i * 3 + 2];
 		}
 		if (sc == vc / 3) {
-			f.smooth = rs[i];
+			f.smooth = p_smooth[i];
 		} else {
 			f.smooth = false;
 		}
 
 		if (ic == vc / 3) {
-			f.invert = ri[i];
+			f.invert = p_invert_faces[i];
 		} else {
 			f.invert = false;
 		}
 
 		if (mc == vc / 3) {
-			Ref<Material> mat = rm[i];
+			Ref<Material> mat = p_materials[i];
 			if (mat.is_valid()) {
 				const Map<Ref<Material>, int>::Element *E = material_map.find(mat);
 				if (E) {

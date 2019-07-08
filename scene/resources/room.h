@@ -46,7 +46,7 @@ class RoomBounds : public Resource {
 	RES_BASE_EXTENSION("room");
 
 	RID area;
-	PoolVector<Face3> geometry_hint;
+	Vector<Face3> geometry_hint;
 
 protected:
 	static void _bind_methods();
@@ -54,8 +54,8 @@ protected:
 public:
 	virtual RID get_rid() const;
 
-	void set_geometry_hint(const PoolVector<Face3> &p_geometry_hint);
-	PoolVector<Face3> get_geometry_hint() const;
+	void set_geometry_hint(const Vector<Face3> &p_geometry_hint);
+	Vector<Face3> get_geometry_hint() const;
 
 	RoomBounds();
 	~RoomBounds();

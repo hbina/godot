@@ -317,7 +317,7 @@ struct _VariantCall {
 		retval.resize(len);
 		PoolByteArray::Write w = retval.write();
 		copymem(w.ptr(), charstr.ptr(), len);
-		w = PoolVector<uint8_t>::Write();
+		w = Vector<uint8_t>::Write();
 
 		r_ret = retval;
 	}
@@ -332,7 +332,7 @@ struct _VariantCall {
 		retval.resize(len);
 		PoolByteArray::Write w = retval.write();
 		copymem(w.ptr(), charstr.ptr(), len);
-		w = PoolVector<uint8_t>::Write();
+		w = Vector<uint8_t>::Write();
 
 		r_ret = retval;
 	}

@@ -33,16 +33,16 @@
 #include "core/io/marshalls.h"
 #include "core/os/copymem.h"
 
-Error StreamPeer::_put_data(const PoolVector<uint8_t> &p_data) {
+Error StreamPeer::_put_data(const Vector<uint8_t> &p_data) {
 
 	int len = p_data.size();
 	if (len == 0)
 		return OK;
-	PoolVector<uint8_t>::Read r = p_data.read();
+	Vector<uint8_t>::Read r = p_data.read();
 	return put_data(&r[0], len);
 }
 
-Array StreamPeer::_put_partial_data(const PoolVector<uint8_t> &p_data) {
+Array StreamPeer::_put_partial_data(const Vector<uint8_t> &p_data) {
 
 	Array ret;
 
@@ -53,7 +53,7 @@ Array StreamPeer::_put_partial_data(const PoolVector<uint8_t> &p_data) {
 		return ret;
 	}
 
-	PoolVector<uint8_t>::Read r = p_data.read();
+	Vector<uint8_t>::Read r = p_data.read();
 	int sent;
 	Error err = put_partial_data(&r[0], len, sent);
 
@@ -69,18 +69,18 @@ Array StreamPeer::_get_data(int p_bytes) {
 
 	Array ret;
 
-	PoolVector<uint8_t> data;
+	Vector<uint8_t> data;
 	data.resize(p_bytes);
 	if (data.size() != p_bytes) {
 
 		ret.push_back(ERR_OUT_OF_MEMORY);
-		ret.push_back(PoolVector<uint8_t>());
+		ret.push_back(Vector<uint8_t>());
 		return ret;
 	}
 
-	PoolVector<uint8_t>::Write w = data.write();
+	Vector<uint8_t>::Write w = data.write();
 	Error err = get_data(&w[0], p_bytes);
-	w = PoolVector<uint8_t>::Write();
+	w = Vector<uint8_t>::Write();
 	ret.push_back(err);
 	ret.push_back(data);
 	return ret;
@@ -90,19 +90,19 @@ Array StreamPeer::_get_partial_data(int p_bytes) {
 
 	Array ret;
 
-	PoolVector<uint8_t> data;
+	Vector<uint8_t> data;
 	data.resize(p_bytes);
 	if (data.size() != p_bytes) {
 
 		ret.push_back(ERR_OUT_OF_MEMORY);
-		ret.push_back(PoolVector<uint8_t>());
+		ret.push_back(Vector<uint8_t>());
 		return ret;
 	}
 
-	PoolVector<uint8_t>::Write w = data.write();
+	Vector<uint8_t>::Write w = data.write();
 	int received;
 	Error err = get_partial_data(&w[0], p_bytes, received);
-	w = PoolVector<uint8_t>::Write();
+	w = Vector<uint8_t>::Write();
 
 	if (err != OK) {
 		data.resize(0);
@@ -439,7 +439,7 @@ Error StreamPeerBuffer::put_data(const uint8_t *p_data, int p_bytes) {
 		data.resize(pointer + p_bytes);
 	}
 
-	PoolVector<uint8_t>::Write w = data.write();
+	Vector<uint8_t>::Write w = data.write();
 	copymem(&w[pointer], p_data, p_bytes);
 
 	pointer += p_bytes;
@@ -474,7 +474,7 @@ Error StreamPeerBuffer::get_partial_data(uint8_t *p_buffer, int p_bytes, int &r_
 		r_received = p_bytes;
 	}
 
-	PoolVector<uint8_t>::Read r = data.read();
+	Vector<uint8_t>::Read r = data.read();
 	copymem(p_buffer, r.ptr() + pointer, r_received);
 
 	pointer += r_received;
@@ -509,13 +509,13 @@ void StreamPeerBuffer::resize(int p_size) {
 	data.resize(p_size);
 }
 
-void StreamPeerBuffer::set_data_array(const PoolVector<uint8_t> &p_data) {
+void StreamPeerBuffer::set_data_array(const Vector<uint8_t> &p_data) {
 
 	data = p_data;
 	pointer = 0;
 }
 
-PoolVector<uint8_t> StreamPeerBuffer::get_data_array() const {
+Vector<uint8_t> StreamPeerBuffer::get_data_array() const {
 
 	return data;
 }

@@ -1065,11 +1065,11 @@ Error VariantParser::parse_value(Token &token, Variant &value, Stream *p_stream,
 			if (err)
 				return err;
 
-			PoolVector<uint8_t> arr;
+			Vector<uint8_t> arr;
 			{
 				int len = args.size();
 				arr.resize(len);
-				PoolVector<uint8_t>::Write w = arr.write();
+				Vector<uint8_t>::Write w = arr.write();
 				for (int i = 0; i < len; i++) {
 					w[i] = args[i];
 				}
@@ -1086,11 +1086,11 @@ Error VariantParser::parse_value(Token &token, Variant &value, Stream *p_stream,
 			if (err)
 				return err;
 
-			PoolVector<int> arr;
+			Vector<int> arr;
 			{
 				int len = args.size();
 				arr.resize(len);
-				PoolVector<int>::Write w = arr.write();
+				Vector<int>::Write w = arr.write();
 				for (int i = 0; i < len; i++) {
 					w[i] = int(args[i]);
 				}
@@ -1107,11 +1107,11 @@ Error VariantParser::parse_value(Token &token, Variant &value, Stream *p_stream,
 			if (err)
 				return err;
 
-			PoolVector<float> arr;
+			Vector<float> arr;
 			{
 				int len = args.size();
 				arr.resize(len);
-				PoolVector<float>::Write w = arr.write();
+				Vector<float>::Write w = arr.write();
 				for (int i = 0; i < len; i++) {
 					w[i] = args[i];
 				}
@@ -1157,11 +1157,11 @@ Error VariantParser::parse_value(Token &token, Variant &value, Stream *p_stream,
 				cs.push_back(token.value);
 			}
 
-			PoolVector<String> arr;
+			Vector<String> arr;
 			{
 				int len = cs.size();
 				arr.resize(len);
-				PoolVector<String>::Write w = arr.write();
+				Vector<String>::Write w = arr.write();
 				for (int i = 0; i < len; i++) {
 					w[i] = cs[i];
 				}
@@ -1178,11 +1178,11 @@ Error VariantParser::parse_value(Token &token, Variant &value, Stream *p_stream,
 			if (err)
 				return err;
 
-			PoolVector<Vector2> arr;
+			Vector<Vector2> arr;
 			{
 				int len = args.size() / 2;
 				arr.resize(len);
-				PoolVector<Vector2>::Write w = arr.write();
+				Vector<Vector2>::Write w = arr.write();
 				for (int i = 0; i < len; i++) {
 					w[i] = Vector2(args[i * 2 + 0], args[i * 2 + 1]);
 				}
@@ -1199,11 +1199,11 @@ Error VariantParser::parse_value(Token &token, Variant &value, Stream *p_stream,
 			if (err)
 				return err;
 
-			PoolVector<Vector3> arr;
+			Vector<Vector3> arr;
 			{
 				int len = args.size() / 3;
 				arr.resize(len);
-				PoolVector<Vector3>::Write w = arr.write();
+				Vector<Vector3>::Write w = arr.write();
 				for (int i = 0; i < len; i++) {
 					w[i] = Vector3(args[i * 3 + 0], args[i * 3 + 1], args[i * 3 + 2]);
 				}
@@ -1220,11 +1220,11 @@ Error VariantParser::parse_value(Token &token, Variant &value, Stream *p_stream,
 			if (err)
 				return err;
 
-			PoolVector<Color> arr;
+			Vector<Color> arr;
 			{
 				int len = args.size() / 4;
 				arr.resize(len);
-				PoolVector<Color>::Write w = arr.write();
+				Vector<Color>::Write w = arr.write();
 				for (int i = 0; i < len; i++) {
 					w[i] = Color(args[i * 4 + 0], args[i * 4 + 1], args[i * 4 + 2], args[i * 4 + 3]);
 				}
@@ -1823,9 +1823,9 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 			p_store_string_func(p_store_string_ud, "PoolByteArray( ");
 			String s;
-			PoolVector<uint8_t> data = p_variant;
+			Vector<uint8_t> data = p_variant;
 			int len = data.size();
-			PoolVector<uint8_t>::Read r = data.read();
+			Vector<uint8_t>::Read r = data.read();
 			const uint8_t *ptr = r.ptr();
 			for (int i = 0; i < len; i++) {
 
@@ -1841,9 +1841,9 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 		case Variant::POOL_INT_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolIntArray( ");
-			PoolVector<int> data = p_variant;
+			Vector<int> data = p_variant;
 			int len = data.size();
-			PoolVector<int>::Read r = data.read();
+			Vector<int>::Read r = data.read();
 			const int *ptr = r.ptr();
 
 			for (int i = 0; i < len; i++) {
@@ -1860,9 +1860,9 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 		case Variant::POOL_REAL_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolRealArray( ");
-			PoolVector<real_t> data = p_variant;
+			Vector<real_t> data = p_variant;
 			int len = data.size();
-			PoolVector<real_t>::Read r = data.read();
+			Vector<real_t>::Read r = data.read();
 			const real_t *ptr = r.ptr();
 
 			for (int i = 0; i < len; i++) {
@@ -1878,9 +1878,9 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 		case Variant::POOL_STRING_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolStringArray( ");
-			PoolVector<String> data = p_variant;
+			Vector<String> data = p_variant;
 			int len = data.size();
-			PoolVector<String>::Read r = data.read();
+			Vector<String>::Read r = data.read();
 			const String *ptr = r.ptr();
 			String s;
 			//write_string("\n");
@@ -1899,9 +1899,9 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 		case Variant::POOL_VECTOR2_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolVector2Array( ");
-			PoolVector<Vector2> data = p_variant;
+			Vector<Vector2> data = p_variant;
 			int len = data.size();
-			PoolVector<Vector2>::Read r = data.read();
+			Vector<Vector2>::Read r = data.read();
 			const Vector2 *ptr = r.ptr();
 
 			for (int i = 0; i < len; i++) {
@@ -1917,9 +1917,9 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 		case Variant::POOL_VECTOR3_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolVector3Array( ");
-			PoolVector<Vector3> data = p_variant;
+			Vector<Vector3> data = p_variant;
 			int len = data.size();
-			PoolVector<Vector3>::Read r = data.read();
+			Vector<Vector3>::Read r = data.read();
 			const Vector3 *ptr = r.ptr();
 
 			for (int i = 0; i < len; i++) {
@@ -1936,9 +1936,9 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 			p_store_string_func(p_store_string_ud, "PoolColorArray( ");
 
-			PoolVector<Color> data = p_variant;
+			Vector<Color> data = p_variant;
 			int len = data.size();
-			PoolVector<Color>::Read r = data.read();
+			Vector<Color>::Read r = data.read();
 			const Color *ptr = r.ptr();
 
 			for (int i = 0; i < len; i++) {

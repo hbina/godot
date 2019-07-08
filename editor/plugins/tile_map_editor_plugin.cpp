@@ -594,7 +594,7 @@ void TileMapEditor::_pick_tile(const Point2 &p_pos) {
 	CanvasItemEditor::get_singleton()->update_viewport();
 }
 
-PoolVector<Vector2> TileMapEditor::_bucket_fill(const Point2i &p_start, bool erase, bool preview) {
+Vector<Vector2> TileMapEditor::_bucket_fill(const Point2i &p_start, bool erase, bool preview) {
 
 	int prev_id = node->get_cell(p_start.x, p_start.y);
 	Vector<int> ids;
@@ -603,14 +603,14 @@ PoolVector<Vector2> TileMapEditor::_bucket_fill(const Point2i &p_start, bool era
 		ids = get_selected_tiles();
 
 		if (ids.size() == 0 || ids[0] == TileMap::INVALID_CELL)
-			return PoolVector<Vector2>();
+			return Vector<Vector2>();
 	} else if (prev_id == TileMap::INVALID_CELL) {
-		return PoolVector<Vector2>();
+		return Vector<Vector2>();
 	}
 
 	if (ids.size() == 1 && ids[0] == prev_id) {
 		// Same ID, nothing to change
-		return PoolVector<Vector2>();
+		return Vector<Vector2>();
 	}
 
 	Rect2i r = node->get_used_rect();
@@ -635,14 +635,14 @@ PoolVector<Vector2> TileMapEditor::_bucket_fill(const Point2i &p_start, bool era
 		if (invalidate_cache) {
 			for (int i = 0; i < area; ++i)
 				bucket_cache_visited[i] = false;
-			bucket_cache = PoolVector<Vector2>();
+			bucket_cache = Vector<Vector2>();
 			bucket_cache_tile = prev_id;
 			bucket_cache_rect = r;
 			bucket_queue.clear();
 		}
 	}
 
-	PoolVector<Vector2> points;
+	Vector<Vector2> points;
 	Vector<Vector2> non_preview_cache;
 	int count = 0;
 	int limit = 0;
@@ -693,10 +693,10 @@ PoolVector<Vector2> TileMapEditor::_bucket_fill(const Point2i &p_start, bool era
 	return preview ? bucket_cache : points;
 }
 
-void TileMapEditor::_fill_points(const PoolVector<Vector2> p_points, const Dictionary &p_op) {
+void TileMapEditor::_fill_points(const Vector<Vector2> p_points, const Dictionary &p_op) {
 
 	int len = p_points.size();
-	PoolVector<Vector2>::Read pr = p_points.read();
+	Vector<Vector2>::Read pr = p_points.read();
 
 	Vector<int> ids = p_op["id"];
 	bool xf = p_op["flip_h"];
@@ -711,10 +711,10 @@ void TileMapEditor::_fill_points(const PoolVector<Vector2> p_points, const Dicti
 		node->update_dirty_bitmask();
 }
 
-void TileMapEditor::_erase_points(const PoolVector<Vector2> p_points) {
+void TileMapEditor::_erase_points(const Vector<Vector2> p_points) {
 
 	int len = p_points.size();
-	PoolVector<Vector2>::Read pr = p_points.read();
+	Vector<Vector2>::Read pr = p_points.read();
 
 	for (int i = 0; i < len; i++) {
 
@@ -828,8 +828,8 @@ void TileMapEditor::_draw_cell(Control *p_viewport, int p_cell, const Point2i &p
 
 void TileMapEditor::_draw_fill_preview(Control *p_viewport, int p_cell, const Point2i &p_point, bool p_flip_h, bool p_flip_v, bool p_transpose, const Point2i p_autotile_coord, const Transform2D &p_xform) {
 
-	PoolVector<Vector2> points = _bucket_fill(p_point, false, true);
-	PoolVector<Vector2>::Read pr = points.read();
+	Vector<Vector2> points = _bucket_fill(p_point, false, true);
+	Vector<Vector2>::Read pr = points.read();
 	int len = points.size();
 
 	for (int i = 0; i < len; ++i) {
@@ -1055,7 +1055,7 @@ bool TileMapEditor::forward_gui_input(const Ref<InputEvent> &p_event) {
 
 					} else if (tool == TOOL_BUCKET) {
 
-						PoolVector<Vector2> points = _bucket_fill(over_tile);
+						Vector<Vector2> points = _bucket_fill(over_tile);
 
 						if (points.size() == 0)
 							return false;
@@ -1162,7 +1162,7 @@ bool TileMapEditor::forward_gui_input(const Ref<InputEvent> &p_event) {
 					pop["flip_v"] = node->is_cell_y_flipped(over_tile.x, over_tile.y);
 					pop["transpose"] = node->is_cell_transposed(over_tile.x, over_tile.y);
 
-					PoolVector<Vector2> points = _bucket_fill(over_tile, true);
+					Vector<Vector2> points = _bucket_fill(over_tile, true);
 
 					if (points.size() == 0)
 						return false;

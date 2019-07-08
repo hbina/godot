@@ -494,7 +494,7 @@ Vector<Color> VoxelLightBaker::_get_bake_texture(Ref<Image> p_image, const Color
 	p_image->convert(Image::FORMAT_RGBA8);
 	p_image->resize(bake_texture_size, bake_texture_size, Image::INTERPOLATE_CUBIC);
 
-	PoolVector<uint8_t>::Read r = p_image->get_data().read();
+	Vector<uint8_t>::Read r = p_image->get_data().read();
 	ret.resize(bake_texture_size * bake_texture_size);
 
 	for (int i = 0; i < bake_texture_size * bake_texture_size; i++) {
@@ -586,13 +586,13 @@ void VoxelLightBaker::plot_mesh(const Transform &p_xform, Ref<Mesh> &p_mesh, con
 
 		Array a = p_mesh->surface_get_arrays(i);
 
-		PoolVector<Vector3> vertices = a[Mesh::ARRAY_VERTEX];
-		PoolVector<Vector3>::Read vr = vertices.read();
-		PoolVector<Vector2> uv = a[Mesh::ARRAY_TEX_UV];
-		PoolVector<Vector2>::Read uvr;
-		PoolVector<Vector3> normals = a[Mesh::ARRAY_NORMAL];
-		PoolVector<Vector3>::Read nr;
-		PoolVector<int> index = a[Mesh::ARRAY_INDEX];
+		Vector<Vector3> vertices = a[Mesh::ARRAY_VERTEX];
+		Vector<Vector3>::Read vr = vertices.read();
+		Vector<Vector2> uv = a[Mesh::ARRAY_TEX_UV];
+		Vector<Vector2>::Read uvr;
+		Vector<Vector3> normals = a[Mesh::ARRAY_NORMAL];
+		Vector<Vector3>::Read nr;
+		Vector<int> index = a[Mesh::ARRAY_INDEX];
 
 		bool read_uv = false;
 		bool read_normals = false;
@@ -611,7 +611,7 @@ void VoxelLightBaker::plot_mesh(const Transform &p_xform, Ref<Mesh> &p_mesh, con
 		if (index.size()) {
 
 			int facecount = index.size() / 3;
-			PoolVector<int>::Read ir = index.read();
+			Vector<int>::Read ir = index.read();
 
 			for (int j = 0; j < facecount; j++) {
 
@@ -1809,20 +1809,20 @@ Error VoxelLightBaker::make_lightmap(const Transform &p_xform, Ref<Mesh> &p_mesh
 	//step 2 plot faces to lightmap
 	for (int i = 0; i < mesh->get_surface_count(); i++) {
 		Array arrays = mesh->surface_get_arrays(i);
-		PoolVector<Vector3> vertices = arrays[Mesh::ARRAY_VERTEX];
-		PoolVector<Vector3> normals = arrays[Mesh::ARRAY_NORMAL];
-		PoolVector<Vector2> uv2 = arrays[Mesh::ARRAY_TEX_UV2];
-		PoolVector<int> indices = arrays[Mesh::ARRAY_INDEX];
+		Vector<Vector3> vertices = arrays[Mesh::ARRAY_VERTEX];
+		Vector<Vector3> normals = arrays[Mesh::ARRAY_NORMAL];
+		Vector<Vector2> uv2 = arrays[Mesh::ARRAY_TEX_UV2];
+		Vector<int> indices = arrays[Mesh::ARRAY_INDEX];
 
 		ERR_FAIL_COND_V(vertices.size() == 0, ERR_INVALID_PARAMETER);
 		ERR_FAIL_COND_V(normals.size() == 0, ERR_INVALID_PARAMETER);
 		ERR_FAIL_COND_V(uv2.size() == 0, ERR_INVALID_PARAMETER);
 
 		int vc = vertices.size();
-		PoolVector<Vector3>::Read vr = vertices.read();
-		PoolVector<Vector3>::Read nr = normals.read();
-		PoolVector<Vector2>::Read u2r = uv2.read();
-		PoolVector<int>::Read ir;
+		Vector<Vector3>::Read vr = vertices.read();
+		Vector<Vector3>::Read nr = normals.read();
+		Vector<Vector2>::Read u2r = uv2.read();
+		Vector<int>::Read ir;
 		int ic = 0;
 
 		if (indices.size()) {
@@ -2047,7 +2047,7 @@ Error VoxelLightBaker::make_lightmap(const Transform &p_xform, Ref<Mesh> &p_mesh
 			r_lightmap.width = width;
 			r_lightmap.height = height;
 			r_lightmap.light.resize(lightmap.size() * 3);
-			PoolVector<float>::Write w = r_lightmap.light.write();
+			Vector<float>::Write w = r_lightmap.light.write();
 			for (int i = 0; i < lightmap.size(); i++) {
 				w[i * 3 + 0] = lightmap[i].light.x;
 				w[i * 3 + 1] = lightmap[i].light.y;
@@ -2058,11 +2058,11 @@ Error VoxelLightBaker::make_lightmap(const Transform &p_xform, Ref<Mesh> &p_mesh
 // Enable for debugging
 #if 0
 		{
-			PoolVector<uint8_t> img;
+			Vector<uint8_t> img;
 			int ls = lightmap.size();
 			img.resize(ls * 3);
 			{
-				PoolVector<uint8_t>::Write w = img.write();
+				Vector<uint8_t>::Write w = img.write();
 				for (int i = 0; i < ls; i++) {
 					w[i * 3 + 0] = CLAMP(lightmap_ptr[i].light.x * 255, 0, 255);
 					w[i * 3 + 1] = CLAMP(lightmap_ptr[i].light.y * 255, 0, 255);
@@ -2140,14 +2140,14 @@ void VoxelLightBaker::end_bake() {
 
 //create the data for visual server
 
-PoolVector<int> VoxelLightBaker::create_gi_probe_data() {
+Vector<int> VoxelLightBaker::create_gi_probe_data() {
 
-	PoolVector<int> data;
+	Vector<int> data;
 
 	data.resize(16 + (8 + 1 + 1 + 1 + 1) * bake_cells.size()); //4 for header, rest for rest.
 
 	{
-		PoolVector<int>::Write w = data.write();
+		Vector<int>::Write w = data.write();
 
 		uint32_t *w32 = (uint32_t *)w.ptr();
 
@@ -2286,8 +2286,8 @@ Ref<MultiMesh> VoxelLightBaker::create_debug_multimesh(DebugMode p_mode) {
 		Array arr;
 		arr.resize(Mesh::ARRAY_MAX);
 
-		PoolVector<Vector3> vertices;
-		PoolVector<Color> colors;
+		Vector<Vector3> vertices;
+		Vector<Color> colors;
 #define ADD_VTX(m_idx)                      \
 	;                                       \
 	vertices.push_back(face_points[m_idx]); \
@@ -2358,7 +2358,7 @@ struct VoxelLightBakerOctree {
 	uint32_t children[8];
 };
 
-PoolVector<uint8_t> VoxelLightBaker::create_capture_octree(int p_subdiv) {
+Vector<uint8_t> VoxelLightBaker::create_capture_octree(int p_subdiv) {
 
 	p_subdiv = MIN(p_subdiv, cell_subdiv); // use the smaller one
 
@@ -2397,11 +2397,11 @@ PoolVector<uint8_t> VoxelLightBaker::create_capture_octree(int p_subdiv) {
 		}
 	}
 
-	PoolVector<uint8_t> ret;
+	Vector<uint8_t> ret;
 	int ret_bytes = octree.size() * sizeof(VoxelLightBakerOctree);
 	ret.resize(ret_bytes);
 	{
-		PoolVector<uint8_t>::Write w = ret.write();
+		Vector<uint8_t>::Write w = ret.write();
 		copymem(w.ptr(), octree.ptr(), ret_bytes);
 	}
 

@@ -34,7 +34,7 @@
 /**
  * @class VectorImpl
  * @author Juan Linietsky
- * VectorImpl container. Regular VectorImpl Container. Use with care and for smaller arrays when possible. Use PoolVector for large arrays.
+ * VectorImpl container. Regular VectorImpl Container. Use with care and for smaller arrays when possible. Use Vector for large arrays.
 */
 
 #include <algorithm>

@@ -799,9 +799,9 @@ static String get_trimmed_locale(const String &p_locale) {
 
 ///////////////////////////////////////////////
 
-PoolVector<String> Translation::_get_messages() const {
+Vector<String> Translation::_get_messages() const {
 
-	PoolVector<String> msgs;
+	Vector<String> msgs;
 	msgs.resize(translation_map.size() * 2);
 	int idx = 0;
 	for (const Map<StringName, StringName>::Element *E = translation_map.front(); E; E = E->next()) {
@@ -814,9 +814,9 @@ PoolVector<String> Translation::_get_messages() const {
 	return msgs;
 }
 
-PoolVector<String> Translation::_get_message_list() const {
+Vector<String> Translation::_get_message_list() const {
 
-	PoolVector<String> msgs;
+	Vector<String> msgs;
 	msgs.resize(translation_map.size());
 	int idx = 0;
 	for (const Map<StringName, StringName>::Element *E = translation_map.front(); E; E = E->next()) {
@@ -828,12 +828,12 @@ PoolVector<String> Translation::_get_message_list() const {
 	return msgs;
 }
 
-void Translation::_set_messages(const PoolVector<String> &p_messages) {
+void Translation::_set_messages(const Vector<String> &p_messages) {
 
 	int msg_count = p_messages.size();
 	ERR_FAIL_COND(msg_count % 2);
 
-	PoolVector<String>::Read r = p_messages.read();
+	Vector<String>::Read r = p_messages.read();
 
 	for (int i = 0; i < msg_count; i += 2) {
 
@@ -1119,12 +1119,12 @@ TranslationServer *TranslationServer::singleton = NULL;
 bool TranslationServer::_load_translations(const String &p_from) {
 
 	if (ProjectSettings::get_singleton()->has_setting(p_from)) {
-		PoolVector<String> translations = ProjectSettings::get_singleton()->get(p_from);
+		Vector<String> translations = ProjectSettings::get_singleton()->get(p_from);
 
 		int tcount = translations.size();
 
 		if (tcount) {
-			PoolVector<String>::Read r = translations.read();
+			Vector<String>::Read r = translations.read();
 
 			for (int i = 0; i < tcount; i++) {
 

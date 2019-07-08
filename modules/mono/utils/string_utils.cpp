@@ -165,14 +165,14 @@ String escape_csharp_keyword(const String &p_name) {
 #endif
 
 Error read_all_file_utf8(const String &p_path, String &r_content) {
-	PoolVector<uint8_t> sourcef;
+	Vector<uint8_t> sourcef;
 	Error err;
 	FileAccess *f = FileAccess::open(p_path, FileAccess::READ, &err);
 	ERR_FAIL_COND_V(err != OK, err);
 
 	int len = f->get_len();
 	sourcef.resize(len + 1);
-	PoolVector<uint8_t>::Write w = sourcef.write();
+	Vector<uint8_t>::Write w = sourcef.write();
 	int r = f->get_buffer(w.ptr(), len);
 	f->close();
 	memdelete(f);

@@ -47,7 +47,7 @@ Error MeshDataTool::create_from_surface(const Ref<ArrayMesh> &p_mesh, int p_surf
 	Array arrays = p_mesh->surface_get_arrays(p_surface);
 	ERR_FAIL_COND_V(arrays.empty(), ERR_INVALID_PARAMETER);
 
-	PoolVector<Vector3> varray = arrays[Mesh::ARRAY_VERTEX];
+	Vector<Vector3> varray = arrays[Mesh::ARRAY_VERTEX];
 
 	int vcount = varray.size();
 	ERR_FAIL_COND_V(vcount == 0, ERR_INVALID_PARAMETER);
@@ -56,34 +56,34 @@ Error MeshDataTool::create_from_surface(const Ref<ArrayMesh> &p_mesh, int p_surf
 	format = p_mesh->surface_get_format(p_surface);
 	material = p_mesh->surface_get_material(p_surface);
 
-	PoolVector<Vector3>::Read vr = varray.read();
+	Vector<Vector3>::Read vr = varray.read();
 
-	PoolVector<Vector3>::Read nr;
+	Vector<Vector3>::Read nr;
 	if (arrays[Mesh::ARRAY_NORMAL].get_type() != Variant::NIL)
-		nr = arrays[Mesh::ARRAY_NORMAL].operator PoolVector<Vector3>().read();
+		nr = arrays[Mesh::ARRAY_NORMAL].operator Vector<Vector3>().read();
 
-	PoolVector<real_t>::Read ta;
+	Vector<real_t>::Read ta;
 	if (arrays[Mesh::ARRAY_TANGENT].get_type() != Variant::NIL)
-		ta = arrays[Mesh::ARRAY_TANGENT].operator PoolVector<real_t>().read();
+		ta = arrays[Mesh::ARRAY_TANGENT].operator Vector<real_t>().read();
 
-	PoolVector<Vector2>::Read uv;
+	Vector<Vector2>::Read uv;
 	if (arrays[Mesh::ARRAY_TEX_UV].get_type() != Variant::NIL)
-		uv = arrays[Mesh::ARRAY_TEX_UV].operator PoolVector<Vector2>().read();
-	PoolVector<Vector2>::Read uv2;
+		uv = arrays[Mesh::ARRAY_TEX_UV].operator Vector<Vector2>().read();
+	Vector<Vector2>::Read uv2;
 	if (arrays[Mesh::ARRAY_TEX_UV2].get_type() != Variant::NIL)
-		uv2 = arrays[Mesh::ARRAY_TEX_UV2].operator PoolVector<Vector2>().read();
+		uv2 = arrays[Mesh::ARRAY_TEX_UV2].operator Vector<Vector2>().read();
 
-	PoolVector<Color>::Read col;
+	Vector<Color>::Read col;
 	if (arrays[Mesh::ARRAY_COLOR].get_type() != Variant::NIL)
-		col = arrays[Mesh::ARRAY_COLOR].operator PoolVector<Color>().read();
+		col = arrays[Mesh::ARRAY_COLOR].operator Vector<Color>().read();
 
-	PoolVector<int>::Read bo;
+	Vector<int>::Read bo;
 	if (arrays[Mesh::ARRAY_BONES].get_type() != Variant::NIL)
-		bo = arrays[Mesh::ARRAY_BONES].operator PoolVector<int>().read();
+		bo = arrays[Mesh::ARRAY_BONES].operator Vector<int>().read();
 
-	PoolVector<real_t>::Read we;
+	Vector<real_t>::Read we;
 	if (arrays[Mesh::ARRAY_WEIGHTS].get_type() != Variant::NIL)
-		we = arrays[Mesh::ARRAY_WEIGHTS].operator PoolVector<real_t>().read();
+		we = arrays[Mesh::ARRAY_WEIGHTS].operator Vector<real_t>().read();
 
 	vertices.resize(vcount);
 
@@ -121,7 +121,7 @@ Error MeshDataTool::create_from_surface(const Ref<ArrayMesh> &p_mesh, int p_surf
 		vertices[i] = v;
 	}
 
-	PoolVector<int> indices;
+	Vector<int> indices;
 
 	if (arrays[Mesh::ARRAY_INDEX].get_type() != Variant::NIL) {
 
@@ -129,13 +129,13 @@ Error MeshDataTool::create_from_surface(const Ref<ArrayMesh> &p_mesh, int p_surf
 	} else {
 		//make code simpler
 		indices.resize(vcount);
-		PoolVector<int>::Write iw = indices.write();
+		Vector<int>::Write iw = indices.write();
 		for (int i = 0; i < vcount; i++)
 			iw[i] = i;
 	}
 
 	int icount = indices.size();
-	PoolVector<int>::Read r = indices.read();
+	Vector<int>::Read r = indices.read();
 
 	Map<Point2i, int> edge_indices;
 
@@ -186,58 +186,58 @@ Error MeshDataTool::commit_to_surface(const Ref<ArrayMesh> &p_mesh) {
 
 	int vcount = vertices.size();
 
-	PoolVector<Vector3> v;
-	PoolVector<Vector3> n;
-	PoolVector<real_t> t;
-	PoolVector<Vector2> u;
-	PoolVector<Vector2> u2;
-	PoolVector<Color> c;
-	PoolVector<int> b;
-	PoolVector<real_t> w;
-	PoolVector<int> in;
+	Vector<Vector3> v;
+	Vector<Vector3> n;
+	Vector<real_t> t;
+	Vector<Vector2> u;
+	Vector<Vector2> u2;
+	Vector<Color> c;
+	Vector<int> b;
+	Vector<real_t> w;
+	Vector<int> in;
 
 	{
 
 		v.resize(vcount);
-		PoolVector<Vector3>::Write vr = v.write();
+		Vector<Vector3>::Write vr = v.write();
 
-		PoolVector<Vector3>::Write nr;
+		Vector<Vector3>::Write nr;
 		if (format & Mesh::ARRAY_FORMAT_NORMAL) {
 			n.resize(vcount);
 			nr = n.write();
 		}
 
-		PoolVector<real_t>::Write ta;
+		Vector<real_t>::Write ta;
 		if (format & Mesh::ARRAY_FORMAT_TANGENT) {
 			t.resize(vcount * 4);
 			ta = t.write();
 		}
 
-		PoolVector<Vector2>::Write uv;
+		Vector<Vector2>::Write uv;
 		if (format & Mesh::ARRAY_FORMAT_TEX_UV) {
 			u.resize(vcount);
 			uv = u.write();
 		}
 
-		PoolVector<Vector2>::Write uv2;
+		Vector<Vector2>::Write uv2;
 		if (format & Mesh::ARRAY_FORMAT_TEX_UV2) {
 			u2.resize(vcount);
 			uv2 = u2.write();
 		}
 
-		PoolVector<Color>::Write col;
+		Vector<Color>::Write col;
 		if (format & Mesh::ARRAY_FORMAT_COLOR) {
 			c.resize(vcount);
 			col = c.write();
 		}
 
-		PoolVector<int>::Write bo;
+		Vector<int>::Write bo;
 		if (format & Mesh::ARRAY_FORMAT_BONES) {
 			b.resize(vcount * 4);
 			bo = b.write();
 		}
 
-		PoolVector<real_t>::Write we;
+		Vector<real_t>::Write we;
 		if (format & Mesh::ARRAY_FORMAT_WEIGHTS) {
 			w.resize(vcount * 4);
 			we = w.write();
@@ -282,7 +282,7 @@ Error MeshDataTool::commit_to_surface(const Ref<ArrayMesh> &p_mesh) {
 
 		int fc = faces.size();
 		in.resize(fc * 3);
-		PoolVector<int>::Write iw = in.write();
+		Vector<int>::Write iw = in.write();
 		for (int i = 0; i < fc; i++) {
 
 			iw[i * 3 + 0] = faces[i].v[0];

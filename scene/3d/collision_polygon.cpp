@@ -53,11 +53,11 @@ void CollisionPolygon::_build_polygon() {
 
 	for (int i = 0; i < decomp.size(); i++) {
 		Ref<ConvexPolygonShape> convex = memnew(ConvexPolygonShape);
-		PoolVector<Vector3> cp;
+		Vector<Vector3> cp;
 		int cs = decomp[i].size();
 		cp.resize(cs * 2);
 		{
-			PoolVector<Vector3>::Write w = cp.write();
+			Vector<Vector3>::Write w = cp.write();
 			int idx = 0;
 			for (int j = 0; j < cs; j++) {
 

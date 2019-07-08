@@ -1359,37 +1359,37 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 				} break;
 				case Variant::POOL_BYTE_ARRAY: {
 
-					PoolVector<uint8_t> d = *p_args[0];
+					Vector<uint8_t> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				case Variant::POOL_INT_ARRAY: {
 
-					PoolVector<int> d = *p_args[0];
+					Vector<int> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				case Variant::POOL_REAL_ARRAY: {
 
-					PoolVector<real_t> d = *p_args[0];
+					Vector<real_t> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				case Variant::POOL_STRING_ARRAY: {
 
-					PoolVector<String> d = *p_args[0];
+					Vector<String> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				case Variant::POOL_VECTOR2_ARRAY: {
 
-					PoolVector<Vector2> d = *p_args[0];
+					Vector<Vector2> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				case Variant::POOL_VECTOR3_ARRAY: {
 
-					PoolVector<Vector3> d = *p_args[0];
+					Vector<Vector3> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				case Variant::POOL_COLOR_ARRAY: {
 
-					PoolVector<Color> d = *p_args[0];
+					Vector<Color> d = *p_args[0];
 					r_ret = d.size();
 				} break;
 				default: {

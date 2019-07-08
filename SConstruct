@@ -355,7 +355,7 @@ if selected_platform in platform_list:
         env.Append(MSVC_FLAGS=['/utf8'])
     else:  # Rest of the world
         env.Append(CXXFLAGS=['-std=c++17'])
-        env.Append(CCFLAGS=['-w'])
+        env.Append(CCFLAGS=['-Wall'])
 
     if (hasattr(detect, 'get_program_suffix')):
         suffix = "." + detect.get_program_suffix()

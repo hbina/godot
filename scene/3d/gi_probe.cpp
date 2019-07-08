@@ -65,11 +65,11 @@ Transform GIProbeData::get_to_cell_xform() const {
 	return VS::get_singleton()->gi_probe_get_to_cell_xform(probe);
 }
 
-void GIProbeData::set_dynamic_data(const PoolVector<int> &p_data) {
+void GIProbeData::set_dynamic_data(const Vector<int> &p_data) {
 
 	VS::get_singleton()->gi_probe_set_dynamic_data(probe, p_data);
 }
-PoolVector<int> GIProbeData::get_dynamic_data() const {
+Vector<int> GIProbeData::get_dynamic_data() const {
 
 	return VS::get_singleton()->gi_probe_get_dynamic_data(probe);
 }
@@ -434,7 +434,7 @@ void GIProbe::bake(Node *p_from_node, bool p_create_visual_debug) {
 
 	//create the data for visual server
 
-	PoolVector<int> data = baker.create_gi_probe_data();
+	Vector<int> data = baker.create_gi_probe_data();
 
 	if (p_create_visual_debug) {
 		MultiMeshInstance *mmi = memnew(MultiMeshInstance);
@@ -487,9 +487,9 @@ AABB GIProbe::get_aabb() const {
 	return AABB(-extents, extents * 2);
 }
 
-PoolVector<Face3> GIProbe::get_faces(uint32_t p_usage_flags) const {
+Vector<Face3> GIProbe::get_faces(uint32_t p_usage_flags) const {
 
-	return PoolVector<Face3>();
+	return Vector<Face3>();
 }
 
 String GIProbe::get_configuration_warning() const {

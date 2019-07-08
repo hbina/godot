@@ -192,8 +192,8 @@ void Particles2DEditorPlugin::_generate_emission_mask() {
 	int vpc = 0;
 
 	{
-		PoolVector<uint8_t> data = img->get_data();
-		PoolVector<uint8_t>::Read r = data.read();
+		Vector<uint8_t> data = img->get_data();
+		Vector<uint8_t>::Read r = data.read();
 
 		for (int i = 0; i < s.width; i++) {
 			for (int j = 0; j < s.height; j++) {
@@ -272,7 +272,7 @@ void Particles2DEditorPlugin::_generate_emission_mask() {
 	ERR_EXPLAIN(TTR("No pixels with transparency > 128 in image..."));
 	ERR_FAIL_COND(valid_positions.size() == 0);
 
-	PoolVector<uint8_t> texdata;
+	Vector<uint8_t> texdata;
 
 	int w = 2048;
 	int h = (vpc / 2048) + 1;
@@ -280,7 +280,7 @@ void Particles2DEditorPlugin::_generate_emission_mask() {
 	texdata.resize(w * h * 2 * sizeof(float));
 
 	{
-		PoolVector<uint8_t>::Write tw = texdata.write();
+		Vector<uint8_t>::Write tw = texdata.write();
 		float *twf = (float *)tw.ptr();
 		for (int i = 0; i < vpc; i++) {
 
@@ -301,11 +301,11 @@ void Particles2DEditorPlugin::_generate_emission_mask() {
 
 	if (capture_colors) {
 
-		PoolVector<uint8_t> colordata;
+		Vector<uint8_t> colordata;
 		colordata.resize(w * h * 4); //use RG texture
 
 		{
-			PoolVector<uint8_t>::Write tw = colordata.write();
+			Vector<uint8_t>::Write tw = colordata.write();
 			for (int i = 0; i < vpc * 4; i++) {
 
 				tw[i] = valid_colors[i];
@@ -323,11 +323,11 @@ void Particles2DEditorPlugin::_generate_emission_mask() {
 	if (valid_normals.size()) {
 		pm->set_emission_shape(ParticlesMaterial::EMISSION_SHAPE_DIRECTED_POINTS);
 
-		PoolVector<uint8_t> normdata;
+		Vector<uint8_t> normdata;
 		normdata.resize(w * h * 2 * sizeof(float)); //use RG texture
 
 		{
-			PoolVector<uint8_t>::Write tw = normdata.write();
+			Vector<uint8_t>::Write tw = normdata.write();
 			float *twf = (float *)tw.ptr();
 			for (int i = 0; i < vpc; i++) {
 				twf[i * 2 + 0] = valid_normals[i].x;

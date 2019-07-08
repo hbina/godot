@@ -795,14 +795,14 @@ Ref<Texture> EditorSceneImporterAssimp::_load_texture(ImportState &state, String
 			PoolByteArray arr;
 			uint32_t size = tex->mWidth * tex->mHeight;
 			arr.resize(size);
-			memcpy(arr.write().ptr(), tex->pcData, size);
+			memcpy(arr.ptrw(), tex->pcData, size);
 			ERR_FAIL_COND_V(arr.size() % 4 != 0, Ref<Texture>());
 			//ARGB8888 to RGBA8888
 			for (int32_t i = 0; i < arr.size() / 4; i++) {
-				arr.write().ptr()[(4 * i) + 3] = arr[(4 * i) + 0];
-				arr.write().ptr()[(4 * i) + 0] = arr[(4 * i) + 1];
-				arr.write().ptr()[(4 * i) + 1] = arr[(4 * i) + 2];
-				arr.write().ptr()[(4 * i) + 2] = arr[(4 * i) + 3];
+				arr.ptrw()[(4 * i) + 3] = arr[(4 * i) + 0];
+				arr.ptrw()[(4 * i) + 0] = arr[(4 * i) + 1];
+				arr.ptrw()[(4 * i) + 1] = arr[(4 * i) + 2];
+				arr.ptrw()[(4 * i) + 2] = arr[(4 * i) + 3];
 			}
 			img->create(tex->mWidth, tex->mHeight, true, Image::FORMAT_RGBA8, arr);
 			ERR_FAIL_COND_V(img.is_null(), Ref<Texture>());
@@ -1363,13 +1363,12 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 				for (size_t l = 0; l < num_vertices; l++) {
 					const aiVector3D ai_pos = ai_mesh->mAnimMeshes[j]->mVertices[l];
 					Vector3 position = Vector3(ai_pos.x, ai_pos.y, ai_pos.z);
-					vertices.write()[l] = position;
+					vertices[l] = position;
 				}
 				PoolVector3Array new_vertices = array_copy[VisualServer::ARRAY_VERTEX].duplicate(true);
 
 				for (int32_t l = 0; l < vertices.size(); l++) {
-					PoolVector3Array::Write w = new_vertices.write();
-					w[l] = vertices[l];
+					new_vertices[l] = vertices[l];
 				}
 				ERR_CONTINUE(vertices.size() != new_vertices.size());
 				array_copy[VisualServer::ARRAY_VERTEX] = new_vertices;
@@ -1382,13 +1381,12 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 				for (size_t l = 0; l < num_vertices; l++) {
 					const aiColor4D ai_color = ai_mesh->mAnimMeshes[j]->mColors[color_set][l];
 					Color color = Color(ai_color.r, ai_color.g, ai_color.b, ai_color.a);
-					colors.write()[l] = color;
+					colors[l] = color;
 				}
 				PoolColorArray new_colors = array_copy[VisualServer::ARRAY_COLOR].duplicate(true);
 
 				for (int32_t l = 0; l < colors.size(); l++) {
-					PoolColorArray::Write w = new_colors.write();
-					w[l] = colors[l];
+					new_colors[l] = colors[l];
 				}
 				array_copy[VisualServer::ARRAY_COLOR] = new_colors;
 			}
@@ -1399,13 +1397,12 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 				for (size_t l = 0; l < num_vertices; l++) {
 					const aiVector3D ai_normal = ai_mesh->mAnimMeshes[i]->mNormals[l];
 					Vector3 normal = Vector3(ai_normal.x, ai_normal.y, ai_normal.z);
-					normals.write()[l] = normal;
+					normals[l] = normal;
 				}
 				PoolVector3Array new_normals = array_copy[VisualServer::ARRAY_NORMAL].duplicate(true);
 
 				for (int l = 0; l < normals.size(); l++) {
-					PoolVector3Array::Write w = new_normals.write();
-					w[l] = normals[l];
+					new_normals[l] = normals[l];
 				}
 				array_copy[VisualServer::ARRAY_NORMAL] = new_normals;
 			}
@@ -1413,17 +1410,16 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 			if (ai_mesh->mAnimMeshes[j]->HasTangentsAndBitangents()) {
 				PoolColorArray tangents;
 				tangents.resize(num_vertices);
-				PoolColorArray::Write w = tangents.write();
 				for (size_t l = 0; l < num_vertices; l++) {
-					_calc_tangent_from_mesh(ai_mesh, j, l, l, w);
+					_calc_tangent_from_mesh(ai_mesh, j, l, l, tangents);
 				}
 				PoolRealArray new_tangents = array_copy[VisualServer::ARRAY_TANGENT].duplicate(true);
 				ERR_CONTINUE(new_tangents.size() != tangents.size() * 4);
 				for (int32_t l = 0; l < tangents.size(); l++) {
-					new_tangents.write()[l + 0] = tangents[l].r;
-					new_tangents.write()[l + 1] = tangents[l].g;
-					new_tangents.write()[l + 2] = tangents[l].b;
-					new_tangents.write()[l + 3] = tangents[l].a;
+					new_tangents[l + 0] = tangents[l].r;
+					new_tangents[l + 1] = tangents[l].g;
+					new_tangents[l + 2] = tangents[l].b;
+					new_tangents[l + 3] = tangents[l].a;
 				}
 
 				array_copy[VisualServer::ARRAY_TANGENT] = new_tangents;
@@ -1619,7 +1615,7 @@ void EditorSceneImporterAssimp::_generate_node(ImportState &state, const aiNode 
 	}
 }
 
-void EditorSceneImporterAssimp::_calc_tangent_from_mesh(const aiMesh *ai_mesh, int i, int tri_index, int index, PoolColorArray::Write &w) {
+void EditorSceneImporterAssimp::_calc_tangent_from_mesh(const aiMesh *ai_mesh, int i, int tri_index, int index, PoolColorArray &w) {
 	const aiVector3D normals = ai_mesh->mAnimMeshes[i]->mNormals[tri_index];
 	const Vector3 godot_normal = Vector3(normals.x, normals.y, normals.z);
 	const aiVector3D tangent = ai_mesh->mAnimMeshes[i]->mTangents[tri_index];

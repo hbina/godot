@@ -38,7 +38,7 @@
 bool Portal::_set(const StringName &p_name, const Variant &p_value) {
 
 	if (p_name == "shape") {
-		PoolVector<float> src_coords = p_value;
+		Vector<float> src_coords = p_value;
 		Vector<Point2> points;
 		int src_coords_size = src_coords.size();
 		ERR_FAIL_COND_V(src_coords_size % 2, false);
@@ -67,7 +67,7 @@ bool Portal::_get(const StringName &p_name, Variant &r_ret) const {
 
 	if (p_name == "shape") {
 		Vector<Point2> points = get_shape();
-		PoolVector<float> dst_coords;
+		Vector<float> dst_coords;
 		dst_coords.resize(points.size() * 2);
 
 		for (int i = 0; i < points.size(); i++) {
@@ -103,14 +103,14 @@ AABB Portal::get_aabb() const {
 
 	return aabb;
 }
-PoolVector<Face3> Portal::get_faces(uint32_t p_usage_flags) const {
+Vector<Face3> Portal::get_faces(uint32_t p_usage_flags) const {
 
 	if (!(p_usage_flags & FACES_ENCLOSING))
-		return PoolVector<Face3>();
+		return Vector<Face3>();
 
 	Vector<Point2> shape = get_shape();
 	if (shape.size() == 0)
-		return PoolVector<Face3>();
+		return Vector<Face3>();
 
 	Vector2 center;
 	for (int i = 0; i < shape.size(); i++) {
@@ -118,7 +118,7 @@ PoolVector<Face3> Portal::get_faces(uint32_t p_usage_flags) const {
 		center += shape[i];
 	}
 
-	PoolVector<Face3> ret;
+	Vector<Face3> ret;
 	center /= shape.size();
 
 	for (int i = 0; i < shape.size(); i++) {

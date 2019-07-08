@@ -73,7 +73,7 @@ void SoftBodyVisualServerHandler::open() {
 }
 
 void SoftBodyVisualServerHandler::close() {
-	write_buffer = PoolVector<uint8_t>::Write();
+	write_buffer = Vector<uint8_t>::Write();
 }
 
 void SoftBodyVisualServerHandler::commit_changes() {
@@ -145,7 +145,7 @@ bool SoftBody::_get(const StringName &p_name, Variant &r_ret) const {
 	if ("pinned_points" == which) {
 		Array arr_ret;
 		const int pinned_points_indices_size = pinned_points.size();
-		PoolVector<PinnedPoint>::Read r = pinned_points.read();
+		Vector<PinnedPoint>::Read r = pinned_points.read();
 		arr_ret.resize(pinned_points_indices_size);
 
 		for (int i = 0; i < pinned_points_indices_size; ++i) {
@@ -184,7 +184,7 @@ bool SoftBody::_set_property_pinned_points_indices(const Array &p_indices) {
 	const int p_indices_size = p_indices.size();
 
 	{ // Remove the pined points on physics server that will be removed by resize
-		PoolVector<PinnedPoint>::Read r = pinned_points.read();
+		Vector<PinnedPoint>::Read r = pinned_points.read();
 		if (p_indices_size < pinned_points.size()) {
 			for (int i = pinned_points.size() - 1; i >= p_indices_size; --i) {
 				pin_point(r[i].point_index, false);
@@ -194,7 +194,7 @@ bool SoftBody::_set_property_pinned_points_indices(const Array &p_indices) {
 
 	pinned_points.resize(p_indices_size);
 
-	PoolVector<PinnedPoint>::Write w = pinned_points.write();
+	Vector<PinnedPoint>::Write w = pinned_points.write();
 	int point_index;
 	for (int i = 0; i < p_indices_size; ++i) {
 		point_index = p_indices.get(i);
@@ -214,11 +214,11 @@ bool SoftBody::_set_property_pinned_points_attachment(int p_item, const String &
 	}
 
 	if ("spatial_attachment_path" == p_what) {
-		PoolVector<PinnedPoint>::Write w = pinned_points.write();
+		Vector<PinnedPoint>::Write w = pinned_points.write();
 		pin_point(w[p_item].point_index, true, p_value);
 		_make_cache_dirty();
 	} else if ("offset" == p_what) {
-		PoolVector<PinnedPoint>::Write w = pinned_points.write();
+		Vector<PinnedPoint>::Write w = pinned_points.write();
 		w[p_item].offset = p_value;
 	} else {
 		return false;
@@ -231,7 +231,7 @@ bool SoftBody::_get_property_pinned_points(int p_item, const String &p_what, Var
 	if (pinned_points.size() <= p_item) {
 		return false;
 	}
-	PoolVector<PinnedPoint>::Read r = pinned_points.read();
+	Vector<PinnedPoint>::Read r = pinned_points.read();
 
 	if ("point_index" == p_what) {
 		r_ret = r[p_item].point_index;
@@ -298,7 +298,7 @@ void SoftBody::_notification(int p_what) {
 			_update_cache_pin_points_datas();
 			// Submit bone attachment
 			const int pinned_points_indices_size = pinned_points.size();
-			PoolVector<PinnedPoint>::Read r = pinned_points.read();
+			Vector<PinnedPoint>::Read r = pinned_points.read();
 			for (int i = 0; i < pinned_points_indices_size; ++i) {
 				if (r[i].spatial_attachment) {
 					PhysicsServer::get_singleton()->soft_body_move_point(physics_rid, r[i].point_index, r[i].spatial_attachment->get_global_transform().xform(r[i].offset));
@@ -548,15 +548,15 @@ const NodePath &SoftBody::get_parent_collision_ignore() const {
 	return parent_collision_ignore;
 }
 
-void SoftBody::set_pinned_points_indices(PoolVector<SoftBody::PinnedPoint> p_pinned_points_indices) {
+void SoftBody::set_pinned_points_indices(Vector<SoftBody::PinnedPoint> p_pinned_points_indices) {
 	pinned_points = p_pinned_points_indices;
-	PoolVector<PinnedPoint>::Read w = pinned_points.read();
+	Vector<PinnedPoint>::Read w = pinned_points.read();
 	for (int i = pinned_points.size() - 1; 0 <= i; --i) {
 		pin_point(p_pinned_points_indices[i].point_index, true);
 	}
 }
 
-PoolVector<SoftBody::PinnedPoint> SoftBody::get_pinned_points_indices() {
+Vector<SoftBody::PinnedPoint> SoftBody::get_pinned_points_indices() {
 	return pinned_points;
 }
 
@@ -716,7 +716,7 @@ SoftBody::~SoftBody() {
 
 void SoftBody::reset_softbody_pin() {
 	PhysicsServer::get_singleton()->soft_body_remove_all_pinned_points(physics_rid);
-	PoolVector<PinnedPoint>::Read pps = pinned_points.read();
+	Vector<PinnedPoint>::Read pps = pinned_points.read();
 	for (int i = pinned_points.size() - 1; 0 < i; --i) {
 		PhysicsServer::get_singleton()->soft_body_pin_point(physics_rid, pps[i].point_index, true);
 	}
@@ -732,7 +732,7 @@ void SoftBody::_update_cache_pin_points_datas() {
 
 	pinned_points_cache_dirty = false;
 
-	PoolVector<PinnedPoint>::Write w = pinned_points.write();
+	Vector<PinnedPoint>::Write w = pinned_points.write();
 	for (int i = pinned_points.size() - 1; 0 <= i; --i) {
 
 		if (!w[i].spatial_attachment_path.is_empty()) {
@@ -781,8 +781,8 @@ void SoftBody::_reset_points_offsets() {
 	if (!Engine::get_singleton()->is_editor_hint())
 		return;
 
-	PoolVector<PinnedPoint>::Read r = pinned_points.read();
-	PoolVector<PinnedPoint>::Write w = pinned_points.write();
+	Vector<PinnedPoint>::Read r = pinned_points.read();
+	Vector<PinnedPoint>::Write w = pinned_points.write();
 	for (int i = pinned_points.size() - 1; 0 <= i; --i) {
 
 		if (!r[i].spatial_attachment)
@@ -814,7 +814,7 @@ int SoftBody::_get_pinned_point(int p_point_index, SoftBody::PinnedPoint *&r_poi
 }
 
 int SoftBody::_has_pinned_point(int p_point_index) const {
-	PoolVector<PinnedPoint>::Read r = pinned_points.read();
+	Vector<PinnedPoint>::Read r = pinned_points.read();
 	for (int i = pinned_points.size() - 1; 0 <= i; --i) {
 		if (p_point_index == r[i].point_index) {
 			return i;

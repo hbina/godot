@@ -75,9 +75,9 @@ AABB Room::get_aabb() const {
 	return AABB();
 }
 
-PoolVector<Face3> Room::get_faces(uint32_t p_usage_flags) const {
+Vector<Face3> Room::get_faces(uint32_t p_usage_flags) const {
 
-	return PoolVector<Face3>();
+	return Vector<Face3>();
 }
 
 void Room::set_room(const Ref<RoomBounds> &p_room) {
@@ -104,21 +104,21 @@ Ref<RoomBounds> Room::get_room() const {
 	return room;
 }
 
-void Room::_parse_node_faces(PoolVector<Face3> &all_faces, const Node *p_node) const {
+void Room::_parse_node_faces(Vector<Face3> &all_faces, const Node *p_node) const {
 
 	const VisualInstance *vi = Object::cast_to<VisualInstance>(p_node);
 
 	if (vi) {
-		PoolVector<Face3> faces = vi->get_faces(FACES_ENCLOSING);
+		Vector<Face3> faces = vi->get_faces(FACES_ENCLOSING);
 
 		if (faces.size()) {
 			int old_len = all_faces.size();
 			all_faces.resize(all_faces.size() + faces.size());
 			int new_len = all_faces.size();
-			PoolVector<Face3>::Write all_facesw = all_faces.write();
+			Vector<Face3>::Write all_facesw = all_faces.write();
 			Face3 *all_facesptr = all_facesw.ptr();
 
-			PoolVector<Face3>::Read facesr = faces.read();
+			Vector<Face3>::Read facesr = faces.read();
 			const Face3 *facesptr = facesr.ptr();
 
 			Transform tr = vi->get_relative_transform(this);

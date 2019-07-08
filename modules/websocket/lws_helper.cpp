@@ -91,13 +91,13 @@ bool _lws_poll(struct lws_context *context, _LWSRef *ref) {
  * Prepare the protocol_structs to be fed to context.
  * Also prepare the protocol string used by the client.
  */
-void _lws_make_protocols(void *p_obj, lws_callback_function *p_callback, PoolVector<String> p_names, _LWSRef **r_lws_ref) {
+void _lws_make_protocols(void *p_obj, lws_callback_function *p_callback, Vector<String> p_names, _LWSRef **r_lws_ref) {
 	// The input strings might go away after this call, we need to copy them.
 	// We will clear them when destroying the context.
 	int i;
 	int len = p_names.size();
 	size_t data_size = sizeof(struct LWSPeer::PeerData);
-	PoolVector<String>::Read pnr = p_names.read();
+	Vector<String>::Read pnr = p_names.read();
 
 	// This is a reference connecting the object with lws keep track of status, mallocs, etc.
 	// Must survive as long the context.

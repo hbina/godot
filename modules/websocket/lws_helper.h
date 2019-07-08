@@ -54,7 +54,7 @@ _LWSRef *_lws_create_ref(void *obj);
 void _lws_free_ref(_LWSRef *ref);
 bool _lws_destroy(struct lws_context *context, _LWSRef *ref);
 bool _lws_poll(struct lws_context *context, _LWSRef *ref);
-void _lws_make_protocols(void *p_obj, lws_callback_function *p_callback, PoolVector<String> p_names, _LWSRef **r_lws_ref);
+void _lws_make_protocols(void *p_obj, lws_callback_function *p_callback, Vector<String> p_names, _LWSRef **r_lws_ref);
 
 /* clang-format off */
 #define LWS_HELPER(CNAME) \

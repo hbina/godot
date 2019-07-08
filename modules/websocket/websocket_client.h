@@ -47,13 +47,13 @@ protected:
 	static void _bind_methods();
 
 public:
-	Error connect_to_url(String p_url, PoolVector<String> p_protocols = PoolVector<String>(), bool gd_mp_api = false);
+	Error connect_to_url(String p_url, Vector<String> p_protocols = Vector<String>(), bool gd_mp_api = false);
 
 	void set_verify_ssl_enabled(bool p_verify_ssl);
 	bool is_verify_ssl_enabled() const;
 
 	virtual void poll() = 0;
-	virtual Error connect_to_host(String p_host, String p_path, uint16_t p_port, bool p_ssl, PoolVector<String> p_protocol = PoolVector<String>()) = 0;
+	virtual Error connect_to_host(String p_host, String p_path, uint16_t p_port, bool p_ssl, Vector<String> p_protocol = Vector<String>()) = 0;
 	virtual void disconnect_from_host(int p_code = 1000, String p_reason = "") = 0;
 	virtual IP_Address get_connected_host() const = 0;
 	virtual uint16_t get_connected_port() const = 0;

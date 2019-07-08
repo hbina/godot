@@ -297,8 +297,8 @@ struct ConcavePolygonShapeSW : public ConcaveShapeSW {
 		int indices[3];
 	};
 
-	PoolVector<Face> faces;
-	PoolVector<Vector3> vertices;
+	Vector<Face> faces;
+	Vector<Vector3> vertices;
 
 	struct BVH {
 
@@ -309,7 +309,7 @@ struct ConcavePolygonShapeSW : public ConcaveShapeSW {
 		int face_index;
 	};
 
-	PoolVector<BVH> bvh;
+	Vector<BVH> bvh;
 
 	struct _CullParams {
 
@@ -342,10 +342,10 @@ struct ConcavePolygonShapeSW : public ConcaveShapeSW {
 
 	void _fill_bvh(_VolumeSW_BVH *p_bvh_tree, BVH *p_bvh_array, int &p_idx);
 
-	void _setup(PoolVector<Vector3> p_faces);
+	void _setup(Vector<Vector3> p_faces);
 
 public:
-	PoolVector<Vector3> get_faces() const;
+	Vector<Vector3> get_faces() const;
 
 	virtual PhysicsServer::ShapeType get_type() const { return PhysicsServer::SHAPE_CONCAVE_POLYGON; }
 
@@ -368,7 +368,7 @@ public:
 
 struct HeightMapShapeSW : public ConcaveShapeSW {
 
-	PoolVector<real_t> heights;
+	Vector<real_t> heights;
 	int width;
 	int depth;
 	real_t cell_size;
@@ -376,10 +376,10 @@ struct HeightMapShapeSW : public ConcaveShapeSW {
 	//void _cull_segment(int p_idx,_SegmentCullParams *p_params) const;
 	//void _cull(int p_idx,_CullParams *p_params) const;
 
-	void _setup(PoolVector<real_t> p_heights, int p_width, int p_depth, real_t p_cell_size);
+	void _setup(Vector<real_t> p_heights, int p_width, int p_depth, real_t p_cell_size);
 
 public:
-	PoolVector<real_t> get_heights() const;
+	Vector<real_t> get_heights() const;
 	int get_width() const;
 	int get_depth() const;
 	real_t get_cell_size() const;
