@@ -647,7 +647,7 @@ void CPUParticles::_particles_process(float p_delta) {
 
 					int random_idx = Math::rand() % pc;
 
-					p.transform.origin = emission_points.get(random_idx);
+					p.transform.origin = emission_points[random_idx];
 
 					if (emission_shape == EMISSION_SHAPE_DIRECTED_POINTS && emission_normals.size() == pc) {
 						if (flags[FLAG_DISABLE_Z]) {
@@ -659,7 +659,7 @@ void CPUParticles::_particles_process(float p_delta) {
 							VELOCITY.xy = rotm * VELOCITY.xy;
 							*/
 						} else {
-							Vector3 normal = emission_normals.get(random_idx);
+							Vector3 normal = emission_normals[random_idx];
 							Vector3 v0 = Math::abs(normal.z) < 0.999 ? Vector3(0.0, 0.0, 1.0) : Vector3(0, 1.0, 0.0);
 							Vector3 tangent = v0.cross(normal).normalized();
 							Vector3 bitangent = tangent.cross(normal).normalized();
@@ -672,7 +672,7 @@ void CPUParticles::_particles_process(float p_delta) {
 					}
 
 					if (emission_colors.size() == pc) {
-						p.base_color = emission_colors.get(random_idx);
+						p.base_color = emission_colors[random_idx];
 					}
 				} break;
 			}

@@ -137,20 +137,22 @@ public:
 	}
 
 	int size() const;
-	T get(int p_index) const;
-	void set(int p_index, const T &p_val);
 	void push_back(const T &p_val);
 	void append(const T &p_val) { push_back(p_val); }
 	void append_array(const PoolVectorImpl<T> &p_arr) {
+
 		int ds = p_arr.size();
-		if (ds == 0)
+
+		if (ds == 0) {
 			return;
+		}
+
 		int bs = size();
 		resize(bs + ds);
-		Write w = write();
-		Read r = p_arr.read();
-		for (int i = 0; i < ds; i++)
-			w[bs + i] = r[i];
+
+		for (int i = 0; i < ds; i++) {
+			alloc->operator[](bs + i) = alloc->operator[](i);
+		}
 	}
 
 	Error insert(int p_pos, const T &p_val) {
@@ -159,19 +161,25 @@ public:
 	}
 
 	String join(String delimiter) {
+
 		String rs = "";
 		int s = size();
-		Read r = read();
+
 		for (int i = 0; i < s; i++) {
-			rs += r[i] + delimiter;
+			rs += alloc->operator[](i) + delimiter;
 		}
+
 		rs.erase(rs.length() - delimiter.length(), delimiter.length());
+
 		return rs;
 	}
 
-	// bool is_locked() const { return alloc && alloc->lock > 0; }
+	const T &operator[](int p_index) const;
+	T &operator[](int p_index);
 
-	const T operator[](int p_index) const;
+	T get(int) const;
+	T &get(int);
+	void set(int, const T &);
 
 	Error resize(int p_size);
 
@@ -194,39 +202,31 @@ public:
 
 template <class T>
 int PoolVectorImpl<T>::size() const {
+
 	assert(std::numeric_limits<int>::max() > alloc->size());
 	return alloc->size();
 }
 
 template <class T>
-T PoolVectorImpl<T>::get(int p_index) const {
-
-	return operator[](p_index);
-}
-
-template <class T>
-void PoolVectorImpl<T>::set(int p_index, const T &p_val) {
-
-	ERR_FAIL_COND(p_index < 0 || p_index >= size());
-
-	Write w = write();
-	w[p_index] = p_val;
-}
-
-template <class T>
 void PoolVectorImpl<T>::push_back(const T &p_val) {
 
-	resize(size() + 1);
-	set(size() - 1, p_val);
+	alloc->push_back(p_val);
 }
 
 template <class T>
-const T PoolVectorImpl<T>::operator[](int p_index) const {
+const T &PoolVectorImpl<T>::operator[](int p_index) const {
 
 	CRASH_BAD_INDEX(p_index, size());
 
-	Read r = read();
-	return r[p_index];
+	return alloc->operator[](p_index);
+}
+
+template <class T>
+T &PoolVectorImpl<T>::operator[](int p_index) {
+
+	CRASH_BAD_INDEX(p_index, size());
+
+	return alloc->operator[](p_index);
 }
 
 template <class T>
@@ -238,7 +238,29 @@ Error PoolVectorImpl<T>::resize(int p_size) {
 
 template <class T>
 void PoolVectorImpl<T>::invert() {
+
 	std::reverse(alloc->begin(), alloc->end());
+}
+
+template <class T>
+T &PoolVectorImpl<T>::get(int p_index) {
+
+	return operator[](p_index);
+}
+
+template <class T>
+T PoolVectorImpl<T>::get(int p_index) const {
+
+	return operator[](p_index);
+}
+
+template <class T>
+void PoolVectorImpl<T>::set(int p_index, const T &p_val) {
+
+	ERR_FAIL_INDEX(p_index, size());
+
+	Write w = write();
+	w[p_index] = p_val;
 }
 
 template <typename T>
@@ -256,10 +278,12 @@ struct PoolVector : public PoolVectorImpl<T> {
 		ERR_FAIL_INDEX_V(p_to, PoolVectorImpl<T>::size(), PoolVector<T>());
 
 		PoolVector<T> slice;
-		int span = 1 + p_to - p_from;
-		slice.resize(span);
-		typename PoolVectorImpl<T>::Read r = PoolVectorImpl<T>::read();
 		typename PoolVectorImpl<T>::Write w = slice.write();
+		typename PoolVectorImpl<T>::Read r = PoolVectorImpl<T>::read();
+
+		const int span = 1 + p_to - p_from;
+		slice.resize(span);
+
 		for (int i = 0; i < span; ++i) {
 			w[i] = r[p_from + i];
 		}
@@ -283,10 +307,12 @@ struct PoolVector<bool> : public PoolVectorImpl<char> {
 		ERR_FAIL_INDEX_V(p_to, PoolVectorImpl<char>::size(), PoolVector<char>());
 
 		PoolVector<char> slice;
-		int span = 1 + p_to - p_from;
-		slice.resize(span);
-		typename PoolVectorImpl<char>::Read r = PoolVectorImpl<char>::read();
 		typename PoolVectorImpl<char>::Write w = slice.write();
+		typename PoolVectorImpl<char>::Read r = PoolVectorImpl<char>::read();
+
+		const int span = 1 + p_to - p_from;
+		slice.resize(span);
+
 		for (int i = 0; i < span; ++i) {
 			w[i] = r[p_from + i];
 		}

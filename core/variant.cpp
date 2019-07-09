@@ -1815,7 +1815,7 @@ inline DA _convert_array(const SA &p_array) {
 
 	for (int i = 0; i < p_array.size(); i++) {
 
-		da.set(i, Variant(p_array.get(i)));
+		da[i] = Variant(p_array[i]);
 	}
 
 	return da;
@@ -2121,7 +2121,7 @@ Variant::operator IP_Address() const {
 
 		PoolVector<int> addr = operator PoolVector<int>();
 		if (addr.size() == 4) {
-			return IP_Address(addr.get(0), addr.get(1), addr.get(2), addr.get(3));
+			return IP_Address(addr[0], addr[1], addr[2], addr[3]);
 		}
 	}
 
@@ -2468,7 +2468,7 @@ Variant::Variant(const Vector<uint8_t> &p_array) {
 	int len = p_array.size();
 	v.resize(len);
 	for (int i = 0; i < len; i++)
-		v.set(i, p_array[i]);
+		v[i] = p_array[i];
 	*this = v;
 }
 
@@ -2479,7 +2479,7 @@ Variant::Variant(const Vector<int> &p_array) {
 	int len = p_array.size();
 	v.resize(len);
 	for (int i = 0; i < len; i++)
-		v.set(i, p_array[i]);
+		v[i] = p_array[i];
 	*this = v;
 }
 
@@ -2490,7 +2490,7 @@ Variant::Variant(const Vector<real_t> &p_array) {
 	int len = p_array.size();
 	v.resize(len);
 	for (int i = 0; i < len; i++)
-		v.set(i, p_array[i]);
+		v[i] = p_array[i];
 	*this = v;
 }
 
@@ -2501,7 +2501,7 @@ Variant::Variant(const Vector<String> &p_array) {
 	int len = p_array.size();
 	v.resize(len);
 	for (int i = 0; i < len; i++)
-		v.set(i, p_array[i]);
+		v[i] = p_array[i];
 	*this = v;
 }
 
@@ -2512,7 +2512,7 @@ Variant::Variant(const Vector<StringName> &p_array) {
 	int len = p_array.size();
 	v.resize(len);
 	for (int i = 0; i < len; i++)
-		v.set(i, p_array[i]);
+		v[i] = p_array[i];
 	*this = v;
 }
 
@@ -2539,7 +2539,7 @@ Variant::Variant(const Vector<Color> &p_array) {
 	int len = p_array.size();
 	v.resize(len);
 	for (int i = 0; i < len; i++)
-		v.set(i, p_array[i]);
+		v[i] = p_array[i];
 	*this = v;
 }
 

@@ -806,8 +806,8 @@ PoolVector<String> Translation::_get_messages() const {
 	int idx = 0;
 	for (const Map<StringName, StringName>::Element *E = translation_map.front(); E; E = E->next()) {
 
-		msgs.set(idx + 0, E->key());
-		msgs.set(idx + 1, E->get());
+		msgs[idx + 0] = E->key();
+		msgs[idx + 1] = E->get();
 		idx += 2;
 	}
 
@@ -821,7 +821,7 @@ PoolVector<String> Translation::_get_message_list() const {
 	int idx = 0;
 	for (const Map<StringName, StringName>::Element *E = translation_map.front(); E; E = E->next()) {
 
-		msgs.set(idx, E->key());
+		msgs[idx] = E->key();
 		idx += 1;
 	}
 

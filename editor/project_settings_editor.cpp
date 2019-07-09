@@ -1230,9 +1230,9 @@ void ProjectSettingsEditor::_translation_res_option_changed() {
 	PoolStringArray r = remaps[key];
 	ERR_FAIL_INDEX(idx, r.size());
 	if (translation_locales_idxs_remap.size() > 0) {
-		r.set(idx, path + ":" + langs[translation_locales_idxs_remap[which]]);
+		r[idx] = path + ":" + langs[translation_locales_idxs_remap[which]];
 	} else {
-		r.set(idx, path + ":" + langs[which]);
+		r[idx] = path + ":" + langs[which];
 	}
 	remaps[key] = r;
 

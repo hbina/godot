@@ -829,7 +829,7 @@ void Polygon2DEditor::_uv_input(const Ref<InputEvent> &p_input) {
 				case UV_MODE_EDIT_POINT: {
 
 					PoolVector<Vector2> uv_new = points_prev;
-					uv_new.set(point_drag_index, uv_new[point_drag_index] + drag);
+					uv_new[point_drag_index] = uv_new[point_drag_index] + drag;
 
 					if (uv_edit_mode[0]->is_pressed()) { //edit uv
 						node->set_uv(uv_new);
@@ -841,7 +841,7 @@ void Polygon2DEditor::_uv_input(const Ref<InputEvent> &p_input) {
 
 					PoolVector<Vector2> uv_new = points_prev;
 					for (int i = 0; i < uv_new.size(); i++)
-						uv_new.set(i, uv_new[i] + drag);
+						uv_new[i] = uv_new[i] + drag;
 
 					if (uv_edit_mode[0]->is_pressed()) { //edit uv
 						node->set_uv(uv_new);
@@ -863,7 +863,7 @@ void Polygon2DEditor::_uv_input(const Ref<InputEvent> &p_input) {
 					for (int i = 0; i < uv_new.size(); i++) {
 						Vector2 rel = points_prev[i] - center;
 						rel = rel.rotated(angle);
-						uv_new.set(i, center + rel);
+						uv_new[i] = center + rel;
 					}
 
 					if (uv_edit_mode[0]->is_pressed()) { //edit uv
@@ -891,7 +891,7 @@ void Polygon2DEditor::_uv_input(const Ref<InputEvent> &p_input) {
 					for (int i = 0; i < uv_new.size(); i++) {
 						Vector2 rel = points_prev[i] - center;
 						rel = rel * scale;
-						uv_new.set(i, center + rel);
+						uv_new[i] = center + rel;
 					}
 
 					if (uv_edit_mode[0]->is_pressed()) { //edit uv

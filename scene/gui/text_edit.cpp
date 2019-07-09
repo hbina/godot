@@ -4986,8 +4986,8 @@ PoolVector<int> TextEdit::_search_bind(const String &p_key, uint32_t p_search_fl
 	if (search(p_key, p_search_flags, p_from_line, p_from_column, col, line)) {
 		PoolVector<int> result;
 		result.resize(2);
-		result.set(0, line);
-		result.set(1, col);
+		result[0] = line;
+		result[1] = col;
 		return result;
 
 	} else {

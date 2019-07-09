@@ -666,14 +666,14 @@ void CPUParticles2D::_particles_process(float p_delta) {
 
 					int random_idx = Math::rand() % pc;
 
-					p.transform[2] = emission_points.get(random_idx);
+					p.transform[2] = emission_points[random_idx];
 
 					if (emission_shape == EMISSION_SHAPE_DIRECTED_POINTS && emission_normals.size() == pc) {
-						p.velocity = emission_normals.get(random_idx);
+						p.velocity = emission_normals[random_idx];
 					}
 
 					if (emission_colors.size() == pc) {
-						p.base_color = emission_colors.get(random_idx);
+						p.base_color = emission_colors[random_idx];
 					}
 				} break;
 			}

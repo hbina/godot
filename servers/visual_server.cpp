@@ -245,7 +245,7 @@ RID VisualServer::_make_test_cube() {
 	PoolVector<int> indices;
 	indices.resize(vertices.size());
 	for (int i = 0; i < vertices.size(); i++)
-		indices.set(i, i);
+		indices[i] = i;
 	d[VisualServer::ARRAY_INDEX] = indices;
 
 	mesh_add_surface_from_arrays(test_cube, PRIMITIVE_TRIANGLES, d);

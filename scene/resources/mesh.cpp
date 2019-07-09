@@ -254,8 +254,8 @@ Ref<Shape> Mesh::create_trimesh_shape() const {
 
 	for (int i = 0; i < face_points.size(); i++) {
 
-		Face3 f = faces.get(i / 3);
-		face_points.set(i, f.vertex[i % 3]);
+		Face3 f = faces[i / 3];
+		face_points[i] = f.vertex[i % 3];
 	}
 
 	Ref<ConcavePolygonShape> shape = memnew(ConcavePolygonShape);
