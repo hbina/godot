@@ -1441,7 +1441,7 @@ void RasterizerSceneGLES2::_setup_geometry(RenderList::Element *p_element, Raste
 					//use transform buffer workflow
 					ERR_FAIL_COND(p_skeleton->use_2d);
 
-					Vector<float> &transform_buffer = storage->resources.skeleton_transform_cpu_buffer;
+					PoolVector<float> &transform_buffer = storage->resources.skeleton_transform_cpu_buffer;
 
 					if (!s->attribs[VS::ARRAY_BONES].enabled || !s->attribs[VS::ARRAY_WEIGHTS].enabled) {
 						break; // the whole instance has a skeleton, but this surface is not affected by it.
@@ -1458,10 +1458,10 @@ void RasterizerSceneGLES2::_setup_geometry(RenderList::Element *p_element, Raste
 					const size_t bone_weight_stride = s->attribs[VS::ARRAY_WEIGHTS].stride;
 
 					{
-						Vector<float>::Write write = transform_buffer.write();
+						PoolVector<float>::Write write = transform_buffer.write();
 						float *buffer = write.ptr();
 
-						Vector<uint8_t>::Read vertex_array_read = s->data.read();
+						PoolVector<uint8_t>::Read vertex_array_read = s->data.read();
 						const uint8_t *vertex_data = vertex_array_read.ptr();
 
 						for (int i = 0; i < s->array_len; i++) {

@@ -475,7 +475,7 @@ float AudioStreamSample::get_length() const {
 	return float(len) / mix_rate;
 }
 
-void AudioStreamSample::set_data(const Vector<uint8_t> &p_data) {
+void AudioStreamSample::set_data(const PoolVector<uint8_t> &p_data) {
 
 	AudioServer::get_singleton()->lock();
 	if (data) {
@@ -487,7 +487,7 @@ void AudioStreamSample::set_data(const Vector<uint8_t> &p_data) {
 	int datalen = p_data.size();
 	if (datalen) {
 
-		Vector<uint8_t>::Read r = p_data.read();
+		PoolVector<uint8_t>::Read r = p_data.read();
 		int alloc_len = datalen + DATA_PAD * 2;
 		data = AudioServer::get_singleton()->audio_data_alloc(alloc_len); //alloc with some padding for interpolation
 		zeromem(data, alloc_len);
@@ -498,15 +498,15 @@ void AudioStreamSample::set_data(const Vector<uint8_t> &p_data) {
 
 	AudioServer::get_singleton()->unlock();
 }
-Vector<uint8_t> AudioStreamSample::get_data() const {
+PoolVector<uint8_t> AudioStreamSample::get_data() const {
 
-	Vector<uint8_t> pv;
+	PoolVector<uint8_t> pv;
 
 	if (data) {
 		pv.resize(data_bytes);
 		{
 
-			Vector<uint8_t>::Write w = pv.write();
+			PoolVector<uint8_t>::Write w = pv.write();
 			uint8_t *dataptr = (uint8_t *)data;
 			copymem(w.ptr(), dataptr + DATA_PAD, data_bytes);
 		}
@@ -564,7 +564,7 @@ Error AudioStreamSample::save_to_wav(const String &p_path) {
 	file->store_32(sub_chunk_2_size); //Subchunk2Size
 
 	// Add data
-	Vector<uint8_t>::Read read_data = get_data().read();
+	PoolVector<uint8_t>::Read read_data = get_data().read();
 	switch (format) {
 		case AudioStreamSample::FORMAT_8_BITS:
 			for (unsigned int i = 0; i < data_bytes; i++) {

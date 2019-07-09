@@ -53,8 +53,8 @@ public:
 	void set_to_cell_xform(const Transform &p_xform);
 	Transform get_to_cell_xform() const;
 
-	void set_dynamic_data(const Vector<int> &p_data);
-	Vector<int> get_dynamic_data() const;
+	void set_dynamic_data(const PoolVector<int> &p_data);
+	PoolVector<int> get_dynamic_data() const;
 
 	void set_dynamic_range(int p_range);
 	int get_dynamic_range() const;
@@ -166,7 +166,7 @@ public:
 	void bake(Node *p_from_node = NULL, bool p_create_visual_debug = false);
 
 	virtual AABB get_aabb() const;
-	virtual Vector<Face3> get_faces(uint32_t p_usage_flags) const;
+	virtual PoolVector<Face3> get_faces(uint32_t p_usage_flags) const;
 
 	virtual String get_configuration_warning() const;
 

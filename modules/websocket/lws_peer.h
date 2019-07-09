@@ -52,7 +52,7 @@ private:
 	PacketBuffer<uint8_t> _in_buffer;
 	PacketBuffer<uint8_t> _out_buffer;
 
-	Vector<uint8_t> _packet_buffer;
+	PoolVector<uint8_t> _packet_buffer;
 
 	struct lws *wsi;
 	WriteMode write_mode;

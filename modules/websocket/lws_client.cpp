@@ -38,7 +38,7 @@
 #include "tls/mbedtls/wrapper/include/openssl/ssl.h"
 #endif
 
-Error LWSClient::connect_to_host(String p_host, String p_path, uint16_t p_port, bool p_ssl, Vector<String> p_protocols) {
+Error LWSClient::connect_to_host(String p_host, String p_path, uint16_t p_port, bool p_ssl, PoolVector<String> p_protocols) {
 
 	ERR_FAIL_COND_V(context != NULL, FAILED);
 

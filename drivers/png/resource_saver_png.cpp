@@ -52,13 +52,13 @@ Error ResourceSaverPNG::save(const String &p_path, const RES &p_resource, uint32
 
 Error ResourceSaverPNG::save_image(const String &p_path, const Ref<Image> &p_img) {
 
-	Vector<uint8_t> buffer;
+	PoolVector<uint8_t> buffer;
 	Error err = PNGDriverCommon::image_to_png(p_img, buffer);
 	ERR_FAIL_COND_V(err, err);
 	FileAccess *file = FileAccess::open(p_path, FileAccess::WRITE, &err);
 	ERR_FAIL_COND_V(err, err);
 
-	Vector<uint8_t>::Read reader = buffer.read();
+	PoolVector<uint8_t>::Read reader = buffer.read();
 
 	file->store_buffer(reader.ptr(), buffer.size());
 	if (file->get_error() != OK && file->get_error() != ERR_FILE_EOF) {

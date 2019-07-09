@@ -1457,9 +1457,9 @@ void RasterizerSceneGLES3::_setup_geometry(RenderList::Element *e, const Transfo
 #ifndef __EMSCRIPTEN__
 				particle_array = static_cast<RasterizerGLES3Particle *>(glMapBufferRange(GL_ARRAY_BUFFER, 0, particles->amount * 24 * sizeof(float), GL_MAP_READ_BIT | GL_MAP_WRITE_BIT));
 #else
-				Vector<RasterizerGLES3Particle> particle_vector;
+				PoolVector<RasterizerGLES3Particle> particle_vector;
 				particle_vector.resize(particles->amount);
-				Vector<RasterizerGLES3Particle>::Write w = particle_vector.write();
+				PoolVector<RasterizerGLES3Particle>::Write w = particle_vector.write();
 				particle_array = w.ptr();
 				glGetBufferSubData(GL_ARRAY_BUFFER, 0, particles->amount * sizeof(RasterizerGLES3Particle), particle_array);
 #endif
@@ -1477,13 +1477,13 @@ void RasterizerSceneGLES3::_setup_geometry(RenderList::Element *e, const Transfo
 #ifndef __EMSCRIPTEN__
 				glUnmapBuffer(GL_ARRAY_BUFFER);
 #else
-				w = Vector<RasterizerGLES3Particle>::Write();
+				w = PoolVector<RasterizerGLES3Particle>::Write();
 				particle_array = NULL;
 				{
-					Vector<RasterizerGLES3Particle>::Read r = particle_vector.read();
+					PoolVector<RasterizerGLES3Particle>::Read r = particle_vector.read();
 					glBufferSubData(GL_ARRAY_BUFFER, 0, particles->amount * sizeof(RasterizerGLES3Particle), r.ptr());
 				}
-				particle_vector = Vector<RasterizerGLES3Particle>();
+				particle_vector = PoolVector<RasterizerGLES3Particle>();
 #endif
 #ifdef DEBUG_ENABLED
 				if (state.debug_draw == VS::VIEWPORT_DEBUG_DRAW_WIREFRAME && s->instancing_array_wireframe_id) {

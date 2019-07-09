@@ -428,7 +428,7 @@ private:
 
 	int _get_column_pos_of_word(const String &p_key, const String &p_search, uint32_t p_search_flags, int p_from_column);
 
-	Vector<int> _search_bind(const String &p_key, uint32_t p_search_flags, int p_from_line, int p_from_column) const;
+	PoolVector<int> _search_bind(const String &p_key, uint32_t p_search_flags, int p_from_line, int p_from_column) const;
 
 	PopupMenu *menu;
 

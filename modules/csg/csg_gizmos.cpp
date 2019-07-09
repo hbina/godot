@@ -300,12 +300,12 @@ void CSGShapeSpatialGizmoPlugin::redraw(EditorSpatialGizmo *p_gizmo) {
 	Ref<Material> material = get_material("shape_material", p_gizmo);
 	Ref<Material> handles_material = get_material("handles");
 
-	Vector<Vector3> faces = cs->get_brush_faces();
+	PoolVector<Vector3> faces = cs->get_brush_faces();
 
 	Vector<Vector3> lines;
 	lines.resize(faces.size() * 2);
 	{
-		Vector<Vector3>::Read r = faces.read();
+		PoolVector<Vector3>::Read r = faces.read();
 
 		for (int i = 0; i < lines.size(); i += 6) {
 			int f = i / 6;

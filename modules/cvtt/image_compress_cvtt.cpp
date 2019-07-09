@@ -179,7 +179,9 @@ void image_compress_cvtt(Image *p_image, float p_lossy_quality, Image::CompressS
 			p_image->convert(Image::FORMAT_RGBH);
 		}
 
-		const uint16_t *source_data = reinterpret_cast<const uint16_t *>(&p_image->get_data()[0]);
+		PoolVector<uint8_t>::Read rb = p_image->get_data().read();
+
+		const uint16_t *source_data = reinterpret_cast<const uint16_t *>(&rb[0]);
 		int pixel_element_count = w * h * 3;
 		for (int i = 0; i < pixel_element_count; i++) {
 			if ((source_data[i] & 0x8000) != 0 && (source_data[i] & 0x7fff) != 0) {
@@ -193,11 +195,15 @@ void image_compress_cvtt(Image *p_image, float p_lossy_quality, Image::CompressS
 		p_image->convert(Image::FORMAT_RGBA8); //still uses RGBA to convert
 	}
 
-	Vector<uint8_t> data;
+	PoolVector<uint8_t>::Read rb = p_image->get_data().read();
+
+	PoolVector<uint8_t> data;
 	int target_size = Image::get_image_data_size(w, h, target_format, p_image->has_mipmaps());
 	int mm_count = p_image->has_mipmaps() ? Image::get_image_required_mipmaps(w, h, target_format) : 0;
 	data.resize(target_size);
 	int shift = Image::get_format_pixel_rshift(target_format);
+
+	PoolVector<uint8_t>::Write wb = data.write();
 
 	int dst_ofs = 0;
 
@@ -213,7 +219,7 @@ void image_compress_cvtt(Image *p_image, float p_lossy_quality, Image::CompressS
 	int num_job_threads = OS::get_singleton()->can_use_threads() ? (OS::get_singleton()->get_processor_count() - 1) : 0;
 #endif
 
-	Vector<CVTTCompressionRowTask> tasks;
+	PoolVector<CVTTCompressionRowTask> tasks;
 
 	for (int i = 0; i <= mm_count; i++) {
 
@@ -222,8 +228,8 @@ void image_compress_cvtt(Image *p_image, float p_lossy_quality, Image::CompressS
 
 		int src_ofs = p_image->get_mipmap_offset(i);
 
-		const uint8_t *in_bytes = &p_image->get_data()[src_ofs];
-		uint8_t *out_bytes = &data[dst_ofs];
+		const uint8_t *in_bytes = &rb[src_ofs];
+		uint8_t *out_bytes = &wb[dst_ofs];
 
 		for (int y_start = 0; y_start < h; y_start += 4) {
 			CVTTCompressionRowTask row_task;
@@ -248,21 +254,25 @@ void image_compress_cvtt(Image *p_image, float p_lossy_quality, Image::CompressS
 	}
 
 	if (num_job_threads > 0) {
-		Vector<Thread *> threads;
+		PoolVector<Thread *> threads;
 		threads.resize(num_job_threads);
 
-		job_queue.job_tasks = &tasks[0];
+		PoolVector<Thread *>::Write threads_wb = threads.write();
+
+		PoolVector<CVTTCompressionRowTask>::Read tasks_rb = tasks.read();
+
+		job_queue.job_tasks = &tasks_rb[0];
 		job_queue.current_task = 0;
 		job_queue.num_tasks = static_cast<uint32_t>(tasks.size());
 
 		for (int i = 0; i < num_job_threads; i++) {
-			threads[i] = Thread::create(_digest_job_queue, &job_queue);
+			threads_wb[i] = Thread::create(_digest_job_queue, &job_queue);
 		}
 		_digest_job_queue(&job_queue);
 
 		for (int i = 0; i < num_job_threads; i++) {
-			Thread::wait_to_finish(threads[i]);
-			memdelete(threads[i]);
+			Thread::wait_to_finish(threads_wb[i]);
+			memdelete(threads_wb[i]);
 		}
 	}
 
@@ -294,10 +304,14 @@ void image_decompress_cvtt(Image *p_image) {
 	int w = p_image->get_width();
 	int h = p_image->get_height();
 
-	Vector<uint8_t> data;
+	PoolVector<uint8_t>::Read rb = p_image->get_data().read();
+
+	PoolVector<uint8_t> data;
 	int target_size = Image::get_image_data_size(w, h, target_format, p_image->has_mipmaps());
 	int mm_count = p_image->get_mipmap_count();
 	data.resize(target_size);
+
+	PoolVector<uint8_t>::Write wb = data.write();
 
 	int bytes_per_pixel = is_hdr ? 6 : 4;
 
@@ -307,8 +321,8 @@ void image_decompress_cvtt(Image *p_image) {
 
 		int src_ofs = p_image->get_mipmap_offset(i);
 
-		const uint8_t *in_bytes = &p_image->get_data()[src_ofs];
-		uint8_t *out_bytes = &data[dst_ofs];
+		const uint8_t *in_bytes = &rb[src_ofs];
+		uint8_t *out_bytes = &wb[dst_ofs];
 
 		cvtt::PixelBlockU8 output_blocks_ldr[cvtt::NumParallelBlocks];
 		cvtt::PixelBlockF16 output_blocks_hdr[cvtt::NumParallelBlocks];
@@ -373,6 +387,9 @@ void image_decompress_cvtt(Image *p_image) {
 		w >>= 1;
 		h >>= 1;
 	}
+
+	rb = PoolVector<uint8_t>::Read();
+	wb = PoolVector<uint8_t>::Write();
 
 	p_image->create(p_image->get_width(), p_image->get_height(), p_image->has_mipmaps(), target_format, data);
 }

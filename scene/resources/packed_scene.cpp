@@ -1098,12 +1098,12 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 		ERR_FAIL();
 	}
 
-	Vector<String> snames = p_dictionary["names"];
+	PoolVector<String> snames = p_dictionary["names"];
 	if (snames.size()) {
 
 		int namecount = snames.size();
 		names.resize(namecount);
-		Vector<String>::Read r = snames.read();
+		PoolVector<String>::Read r = snames.read();
 		for (int i = 0; i < names.size(); i++)
 			names[i] = r[i];
 	}
@@ -1125,8 +1125,8 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 	nodes.resize(p_dictionary["node_count"]);
 	int nc = nodes.size();
 	if (nc) {
-		Vector<int> snodes = p_dictionary["nodes"];
-		Vector<int>::Read r = snodes.read();
+		PoolVector<int> snodes = p_dictionary["nodes"];
+		PoolVector<int>::Read r = snodes.read();
 		int idx = 0;
 		for (int i = 0; i < nc; i++) {
 			NodeData &nd = nodes[i];
@@ -1157,8 +1157,8 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 
 	if (cc) {
 
-		Vector<int> sconns = p_dictionary["conns"];
-		Vector<int>::Read r = sconns.read();
+		PoolVector<int> sconns = p_dictionary["conns"];
+		PoolVector<int>::Read r = sconns.read();
 		int idx = 0;
 		for (int i = 0; i < cc; i++) {
 			ConnectionData &cd = connections[i];
@@ -1204,12 +1204,12 @@ void SceneState::set_bundled_scene(const Dictionary &p_dictionary) {
 
 Dictionary SceneState::get_bundled_scene() const {
 
-	Vector<String> rnames;
+	PoolVector<String> rnames;
 	rnames.resize(names.size());
 
 	if (names.size()) {
 
-		Vector<String>::Write r = rnames.write();
+		PoolVector<String>::Write r = rnames.write();
 
 		for (int i = 0; i < names.size(); i++)
 			r[i] = names[i];
@@ -1613,10 +1613,10 @@ void SceneState::add_editable_instance(const NodePath &p_path) {
 	editable_instances.push_back(p_path);
 }
 
-Vector<String> SceneState::_get_node_groups(int p_idx) const {
+PoolVector<String> SceneState::_get_node_groups(int p_idx) const {
 
 	Vector<StringName> groups = get_node_groups(p_idx);
-	Vector<String> ret;
+	PoolVector<String> ret;
 
 	for (int i = 0; i < groups.size(); i++)
 		ret.push_back(groups[i]);

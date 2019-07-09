@@ -55,10 +55,10 @@ void DynamicFontData::lock() {
 
 void DynamicFontData::unlock() {
 
-	fr = Vector<uint8_t>::Read();
+	fr = PoolVector<uint8_t>::Read();
 }
 
-void DynamicFontData::set_font_data(const Vector<uint8_t> &p_font) {
+void DynamicFontData::set_font_data(const PoolVector<uint8_t> &p_font) {
 	//clear caches and stuff
 	ERR_FAIL_COND(font_data.size());
 	font_data = p_font;
@@ -299,7 +299,7 @@ void DynamicFontAtSize::_update_char(CharType p_char) {
 
 		{
 			//zero texture
-			Vector<uint8_t>::Write w = tex.imgdata.write();
+			PoolVector<uint8_t>::Write w = tex.imgdata.write();
 			ERR_FAIL_COND(texsize * texsize * 2 > tex.imgdata.size());
 			for (int i = 0; i < texsize * texsize * 2; i++) {
 				w[i] = 0;
@@ -318,7 +318,7 @@ void DynamicFontAtSize::_update_char(CharType p_char) {
 	CharTexture &tex = textures[tex_index];
 
 	{
-		Vector<uint8_t>::Write wr = tex.imgdata.write();
+		PoolVector<uint8_t>::Write wr = tex.imgdata.write();
 
 		for (int i = 0; i < h; i++) {
 			for (int j = 0; j < w; j++) {
@@ -482,14 +482,14 @@ RES ResourceFormatLoaderDynamicFont::load(const String &p_path, const String &p_
 	FileAccess *f = FileAccess::open(p_path, FileAccess::READ);
 	ERR_FAIL_COND_V(!f, RES());
 
-	Vector<uint8_t> data;
+	PoolVector<uint8_t> data;
 
 	data.resize(f->get_len());
 
 	ERR_FAIL_COND_V(data.size() == 0, RES());
 
 	{
-		Vector<uint8_t>::Write w = data.write();
+		PoolVector<uint8_t>::Write w = data.write();
 		f->get_buffer(w.ptr(), data.size());
 	}
 

@@ -451,20 +451,23 @@ MainLoop *test() {
 		print_line("RGBE: " + Color(rd, gd, bd));
 	}
 
-	Vector<int> ints;
+	PoolVector<int> ints;
 	ints.resize(20);
 
 	{
+		PoolVector<int>::Write w;
+		w = ints.write();
 		for (int i = 0; i < ints.size(); i++) {
-			ints[i] = i;
+			w[i] = i;
 		}
 	}
 
-	Vector<int> posho = ints;
+	PoolVector<int> posho = ints;
 
 	{
+		PoolVector<int>::Read r = posho.read();
 		for (int i = 0; i < posho.size(); i++) {
-			print_line(itos(i) + " : " + itos(posho[i]));
+			print_line(itos(i) + " : " + itos(r[i]));
 		}
 	}
 

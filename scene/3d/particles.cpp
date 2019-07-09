@@ -39,9 +39,9 @@ AABB Particles::get_aabb() const {
 
 	return AABB();
 }
-Vector<Face3> Particles::get_faces(uint32_t p_usage_flags) const {
+PoolVector<Face3> Particles::get_faces(uint32_t p_usage_flags) const {
 
-	return Vector<Face3>();
+	return PoolVector<Face3>();
 }
 
 void Particles::set_emitting(bool p_emitting) {

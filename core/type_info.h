@@ -226,20 +226,21 @@ struct GetTypeInfo<const Variant &> {
 		}                                                                             \
 	};
 
-// MAKE_TEMPLATE_TYPE_INFO(Vector, int, Variant::POOL_INT_ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, float, Variant::POOL_REAL_ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, String, Variant::POOL_STRING_ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, Vector2, Variant::POOL_VECTOR2_ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, Vector3, Variant::POOL_VECTOR3_ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, Color, Variant::POOL_COLOR_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, uint8_t, Variant::POOL_BYTE_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, int, Variant::POOL_INT_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, float, Variant::POOL_REAL_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, String, Variant::POOL_STRING_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, Vector2, Variant::POOL_VECTOR2_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, Vector3, Variant::POOL_VECTOR3_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, Color, Variant::POOL_COLOR_ARRAY)
 
-// MAKE_TEMPLATE_TYPE_INFO(Vector, Variant, Variant::ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, RID, Variant::ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, Plane, Variant::ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, StringName, Variant::POOL_STRING_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, Variant, Variant::ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, RID, Variant::ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, Plane, Variant::ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(Vector, StringName, Variant::POOL_STRING_ARRAY)
 
-// MAKE_TEMPLATE_TYPE_INFO(Vector, Plane, Variant::ARRAY)
-// MAKE_TEMPLATE_TYPE_INFO(Vector, Face3, Variant::POOL_VECTOR3_ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(PoolVector, Plane, Variant::ARRAY)
+MAKE_TEMPLATE_TYPE_INFO(PoolVector, Face3, Variant::POOL_VECTOR3_ARRAY)
 
 template <typename T>
 struct GetTypeInfo<T *, typename EnableIf<TypeInherits<Object, T>::value>::type> {

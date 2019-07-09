@@ -169,95 +169,103 @@ struct PtrToArg<const T *> {
 
 //this is for the special cases used by Variant
 
-#define MAKE_VECARG(m_type)                                                              \
-	template <>                                                                          \
-	struct PtrToArg<Vector<m_type> > {                                                   \
-		_FORCE_INLINE_ static Vector<m_type> convert(const void *p_ptr) {                \
-			const Vector<m_type> *dvs = reinterpret_cast<const Vector<m_type> *>(p_ptr); \
-			Vector<m_type> ret;                                                          \
-			int len = dvs->size();                                                       \
-			ret.resize(len);                                                             \
-			{                                                                            \
-				Vector<m_type>::Read r = dvs->read();                                    \
-				for (int i = 0; i < len; i++) {                                          \
-					ret[i] = r[i];                                                       \
-				}                                                                        \
-			}                                                                            \
-			return ret;                                                                  \
-		}                                                                                \
-		_FORCE_INLINE_ static void encode(Vector<m_type> p_vec, void *p_ptr) {           \
-			Vector<m_type> *dv = reinterpret_cast<Vector<m_type> *>(p_ptr);              \
-			int len = p_vec.size();                                                      \
-			dv->resize(len);                                                             \
-			{                                                                            \
-				Vector<m_type>::Write w = dv->write();                                   \
-				for (int i = 0; i < len; i++) {                                          \
-					w[i] = p_vec[i];                                                     \
-				}                                                                        \
-			}                                                                            \
-		}                                                                                \
-	};                                                                                   \
-	template <>                                                                          \
-	struct PtrToArg<const Vector<m_type> &> {                                            \
-		_FORCE_INLINE_ static Vector<m_type> convert(const void *p_ptr) {                \
-			const Vector<m_type> *dvs = reinterpret_cast<const Vector<m_type> *>(p_ptr); \
-			Vector<m_type> ret;                                                          \
-			int len = dvs->size();                                                       \
-			ret.resize(len);                                                             \
-			{                                                                            \
-				Vector<m_type>::Read r = dvs->read();                                    \
-				for (int i = 0; i < len; i++) {                                          \
-					ret[i] = r[i];                                                       \
-				}                                                                        \
-			}                                                                            \
-			return ret;                                                                  \
-		}                                                                                \
+#define MAKE_VECARG(m_type)                                                                      \
+	template <>                                                                                  \
+	struct PtrToArg<Vector<m_type> > {                                                           \
+		_FORCE_INLINE_ static Vector<m_type> convert(const void *p_ptr) {                        \
+			const PoolVector<m_type> *dvs = reinterpret_cast<const PoolVector<m_type> *>(p_ptr); \
+			Vector<m_type> ret;                                                                  \
+			int len = dvs->size();                                                               \
+			ret.resize(len);                                                                     \
+			{                                                                                    \
+				PoolVector<m_type>::Read r = dvs->read();                                        \
+				for (int i = 0; i < len; i++) {                                                  \
+					ret[i] = r[i];                                                               \
+				}                                                                                \
+			}                                                                                    \
+			return ret;                                                                          \
+		}                                                                                        \
+		_FORCE_INLINE_ static void encode(Vector<m_type> p_vec, void *p_ptr) {                   \
+			PoolVector<m_type> *dv = reinterpret_cast<PoolVector<m_type> *>(p_ptr);              \
+			int len = p_vec.size();                                                              \
+			dv->resize(len);                                                                     \
+			{                                                                                    \
+				PoolVector<m_type>::Write w = dv->write();                                       \
+				for (int i = 0; i < len; i++) {                                                  \
+					w[i] = p_vec[i];                                                             \
+				}                                                                                \
+			}                                                                                    \
+		}                                                                                        \
+	};                                                                                           \
+	template <>                                                                                  \
+	struct PtrToArg<const Vector<m_type> &> {                                                    \
+		_FORCE_INLINE_ static Vector<m_type> convert(const void *p_ptr) {                        \
+			const PoolVector<m_type> *dvs = reinterpret_cast<const PoolVector<m_type> *>(p_ptr); \
+			Vector<m_type> ret;                                                                  \
+			int len = dvs->size();                                                               \
+			ret.resize(len);                                                                     \
+			{                                                                                    \
+				PoolVector<m_type>::Read r = dvs->read();                                        \
+				for (int i = 0; i < len; i++) {                                                  \
+					ret[i] = r[i];                                                               \
+				}                                                                                \
+			}                                                                                    \
+			return ret;                                                                          \
+		}                                                                                        \
 	}
 
-#define MAKE_VECARG_ALT(m_type, m_type_alt)                                              \
-	template <>                                                                          \
-	struct PtrToArg<Vector<m_type_alt> > {                                               \
-		_FORCE_INLINE_ static Vector<m_type_alt> convert(const void *p_ptr) {            \
-			const Vector<m_type> *dvs = reinterpret_cast<const Vector<m_type> *>(p_ptr); \
-			Vector<m_type_alt> ret;                                                      \
-			int len = dvs->size();                                                       \
-			ret.resize(len);                                                             \
-			{                                                                            \
-				Vector<m_type>::Read r = dvs->read();                                    \
-				for (int i = 0; i < len; i++) {                                          \
-					ret[i] = r[i];                                                       \
-				}                                                                        \
-			}                                                                            \
-			return ret;                                                                  \
-		}                                                                                \
-		_FORCE_INLINE_ static void encode(Vector<m_type_alt> p_vec, void *p_ptr) {       \
-			Vector<m_type> *dv = reinterpret_cast<Vector<m_type> *>(p_ptr);              \
-			int len = p_vec.size();                                                      \
-			dv->resize(len);                                                             \
-			{                                                                            \
-				Vector<m_type>::Write w = dv->write();                                   \
-				for (int i = 0; i < len; i++) {                                          \
-					w[i] = p_vec[i];                                                     \
-				}                                                                        \
-			}                                                                            \
-		}                                                                                \
-	};                                                                                   \
-	template <>                                                                          \
-	struct PtrToArg<const Vector<m_type_alt> &> {                                        \
-		_FORCE_INLINE_ static Vector<m_type_alt> convert(const void *p_ptr) {            \
-			const Vector<m_type> *dvs = reinterpret_cast<const Vector<m_type> *>(p_ptr); \
-			Vector<m_type_alt> ret;                                                      \
-			int len = dvs->size();                                                       \
-			ret.resize(len);                                                             \
-			{                                                                            \
-				Vector<m_type>::Read r = dvs->read();                                    \
-				for (int i = 0; i < len; i++) {                                          \
-					ret[i] = r[i];                                                       \
-				}                                                                        \
-			}                                                                            \
-			return ret;                                                                  \
-		}                                                                                \
+#define MAKE_VECARG_ALT(m_type, m_type_alt)                                                      \
+	template <>                                                                                  \
+	struct PtrToArg<Vector<m_type_alt> > {                                                       \
+		_FORCE_INLINE_ static Vector<m_type_alt> convert(const void *p_ptr) {                    \
+			const PoolVector<m_type> *dvs = reinterpret_cast<const PoolVector<m_type> *>(p_ptr); \
+			Vector<m_type_alt> ret;                                                              \
+			int len = dvs->size();                                                               \
+			ret.resize(len);                                                                     \
+			{                                                                                    \
+				PoolVector<m_type>::Read r = dvs->read();                                        \
+				for (int i = 0; i < len; i++) {                                                  \
+					ret[i] = r[i];                                                               \
+				}                                                                                \
+			}                                                                                    \
+			return ret;                                                                          \
+		}                                                                                        \
+		_FORCE_INLINE_ static void encode(Vector<m_type_alt> p_vec, void *p_ptr) {               \
+			PoolVector<m_type> *dv = reinterpret_cast<PoolVector<m_type> *>(p_ptr);              \
+			int len = p_vec.size();                                                              \
+			dv->resize(len);                                                                     \
+			{                                                                                    \
+				PoolVector<m_type>::Write w = dv->write();                                       \
+				for (int i = 0; i < len; i++) {                                                  \
+					w[i] = p_vec[i];                                                             \
+				}                                                                                \
+			}                                                                                    \
+		}                                                                                        \
+	};                                                                                           \
+	template <>                                                                                  \
+	struct PtrToArg<const Vector<m_type_alt> &> {                                                \
+		_FORCE_INLINE_ static Vector<m_type_alt> convert(const void *p_ptr) {                    \
+			const PoolVector<m_type> *dvs = reinterpret_cast<const PoolVector<m_type> *>(p_ptr); \
+			Vector<m_type_alt> ret;                                                              \
+			int len = dvs->size();                                                               \
+			ret.resize(len);                                                                     \
+			{                                                                                    \
+				PoolVector<m_type>::Read r = dvs->read();                                        \
+				for (int i = 0; i < len; i++) {                                                  \
+					ret[i] = r[i];                                                               \
+				}                                                                                \
+			}                                                                                    \
+			return ret;                                                                          \
+		}                                                                                        \
 	}
+MAKE_VECARG(String);
+MAKE_VECARG(uint8_t);
+MAKE_VECARG(int);
+MAKE_VECARG(float);
+MAKE_VECARG(Vector2);
+MAKE_VECARG(Vector3);
+MAKE_VECARG(Color);
+MAKE_VECARG_ALT(String, StringName);
 
 //for stuff that gets converted to Array vectors
 #define MAKE_VECARR(m_type)                                                    \
@@ -300,51 +308,52 @@ MAKE_VECARR(Variant);
 MAKE_VECARR(RID);
 MAKE_VECARR(Plane);
 
-#define MAKE_DVECARR(m_type)                                                   \
-	template <>                                                                \
-	struct PtrToArg<Vector<m_type> > {                                         \
-		_FORCE_INLINE_ static Vector<m_type> convert(const void *p_ptr) {      \
-			const Array *arr = reinterpret_cast<const Array *>(p_ptr);         \
-			Vector<m_type> ret;                                                \
-			int len = arr->size();                                             \
-			ret.resize(len);                                                   \
-			{                                                                  \
-				Vector<m_type>::Write w = ret.write();                         \
-				for (int i = 0; i < len; i++) {                                \
-					w[i] = (*arr)[i];                                          \
-				}                                                              \
-			}                                                                  \
-			return ret;                                                        \
-		}                                                                      \
-		_FORCE_INLINE_ static void encode(Vector<m_type> p_vec, void *p_ptr) { \
-			Array *arr = reinterpret_cast<Array *>(p_ptr);                     \
-			int len = p_vec.size();                                            \
-			arr->resize(len);                                                  \
-			{                                                                  \
-				Vector<m_type>::Read r = p_vec.read();                         \
-				for (int i = 0; i < len; i++) {                                \
-					(*arr)[i] = r[i];                                          \
-				}                                                              \
-			}                                                                  \
-		}                                                                      \
-	};                                                                         \
-	template <>                                                                \
-	struct PtrToArg<const Vector<m_type> &> {                                  \
-		_FORCE_INLINE_ static Vector<m_type> convert(const void *p_ptr) {      \
-			const Array *arr = reinterpret_cast<const Array *>(p_ptr);         \
-			Vector<m_type> ret;                                                \
-			int len = arr->size();                                             \
-			ret.resize(len);                                                   \
-			{                                                                  \
-				Vector<m_type>::Write w = ret.write();                         \
-				for (int i = 0; i < len; i++) {                                \
-					w[i] = (*arr)[i];                                          \
-				}                                                              \
-			}                                                                  \
-			return ret;                                                        \
-		}                                                                      \
+#define MAKE_DVECARR(m_type)                                                       \
+	template <>                                                                    \
+	struct PtrToArg<PoolVector<m_type> > {                                         \
+		_FORCE_INLINE_ static PoolVector<m_type> convert(const void *p_ptr) {      \
+			const Array *arr = reinterpret_cast<const Array *>(p_ptr);             \
+			PoolVector<m_type> ret;                                                \
+			int len = arr->size();                                                 \
+			ret.resize(len);                                                       \
+			{                                                                      \
+				PoolVector<m_type>::Write w = ret.write();                         \
+				for (int i = 0; i < len; i++) {                                    \
+					w[i] = (*arr)[i];                                              \
+				}                                                                  \
+			}                                                                      \
+			return ret;                                                            \
+		}                                                                          \
+		_FORCE_INLINE_ static void encode(PoolVector<m_type> p_vec, void *p_ptr) { \
+			Array *arr = reinterpret_cast<Array *>(p_ptr);                         \
+			int len = p_vec.size();                                                \
+			arr->resize(len);                                                      \
+			{                                                                      \
+				PoolVector<m_type>::Read r = p_vec.read();                         \
+				for (int i = 0; i < len; i++) {                                    \
+					(*arr)[i] = r[i];                                              \
+				}                                                                  \
+			}                                                                      \
+		}                                                                          \
+	};                                                                             \
+	template <>                                                                    \
+	struct PtrToArg<const PoolVector<m_type> &> {                                  \
+		_FORCE_INLINE_ static PoolVector<m_type> convert(const void *p_ptr) {      \
+			const Array *arr = reinterpret_cast<const Array *>(p_ptr);             \
+			PoolVector<m_type> ret;                                                \
+			int len = arr->size();                                                 \
+			ret.resize(len);                                                       \
+			{                                                                      \
+				PoolVector<m_type>::Write w = ret.write();                         \
+				for (int i = 0; i < len; i++) {                                    \
+					w[i] = (*arr)[i];                                              \
+				}                                                                  \
+			}                                                                      \
+			return ret;                                                            \
+		}                                                                          \
 	}
 
+MAKE_DVECARR(Plane);
 //for special case StringName
 
 #define MAKE_STRINGCONV(m_type)                                        \
@@ -393,46 +402,52 @@ MAKE_STRINGCONV(StringName);
 MAKE_STRINGCONV_BY_REFERENCE(IP_Address);
 
 template <>
-struct PtrToArg<Vector<Face3> > {
-	_FORCE_INLINE_ static Vector<Face3> convert(const void *p_ptr) {
-		const Vector<Vector3> *dvs = reinterpret_cast<const Vector<Vector3> *>(p_ptr);
-		Vector<Face3> ret;
+struct PtrToArg<PoolVector<Face3> > {
+	_FORCE_INLINE_ static PoolVector<Face3> convert(const void *p_ptr) {
+		const PoolVector<Vector3> *dvs = reinterpret_cast<const PoolVector<Vector3> *>(p_ptr);
+		PoolVector<Face3> ret;
 		int len = dvs->size() / 3;
 		ret.resize(len);
 		{
+			PoolVector<Vector3>::Read r = dvs->read();
+			PoolVector<Face3>::Write w = ret.write();
 			for (int i = 0; i < len; i++) {
-				ret[i].vertex[0] = dvs->operator[](i * 3 + 0);
-				ret[i].vertex[1] = dvs->operator[](i * 3 + 1);
-				ret[i].vertex[2] = dvs->operator[](i * 3 + 2);
+				w[i].vertex[0] = r[i * 3 + 0];
+				w[i].vertex[1] = r[i * 3 + 1];
+				w[i].vertex[2] = r[i * 3 + 2];
 			}
 		}
 		return ret;
 	}
-	_FORCE_INLINE_ static void encode(Vector<Face3> p_vec, void *p_ptr) {
-		Vector<Vector3> *arr = reinterpret_cast<Vector<Vector3> *>(p_ptr);
+	_FORCE_INLINE_ static void encode(PoolVector<Face3> p_vec, void *p_ptr) {
+		PoolVector<Vector3> *arr = reinterpret_cast<PoolVector<Vector3> *>(p_ptr);
 		int len = p_vec.size();
 		arr->resize(len * 3);
 		{
+			PoolVector<Face3>::Read r = p_vec.read();
+			PoolVector<Vector3>::Write w = arr->write();
 			for (int i = 0; i < len; i++) {
-				arr->operator[](i * 3 + 0) = p_vec[i].vertex[0];
-				arr->operator[](i * 3 + 1) = p_vec[i].vertex[1];
-				arr->operator[](i * 3 + 2) = p_vec[i].vertex[2];
+				w[i * 3 + 0] = r[i].vertex[0];
+				w[i * 3 + 1] = r[i].vertex[1];
+				w[i * 3 + 2] = r[i].vertex[2];
 			}
 		}
 	}
 };
 template <>
-struct PtrToArg<const Vector<Face3> &> {
-	_FORCE_INLINE_ static Vector<Face3> convert(const void *p_ptr) {
-		const Vector<Vector3> *dvs = reinterpret_cast<const Vector<Vector3> *>(p_ptr);
-		Vector<Face3> ret;
+struct PtrToArg<const PoolVector<Face3> &> {
+	_FORCE_INLINE_ static PoolVector<Face3> convert(const void *p_ptr) {
+		const PoolVector<Vector3> *dvs = reinterpret_cast<const PoolVector<Vector3> *>(p_ptr);
+		PoolVector<Face3> ret;
 		int len = dvs->size() / 3;
 		ret.resize(len);
 		{
+			PoolVector<Vector3>::Read r = dvs->read();
+			PoolVector<Face3>::Write w = ret.write();
 			for (int i = 0; i < len; i++) {
-				ret[i].vertex[0] = dvs->operator[](i * 3 + 0);
-				ret[i].vertex[1] = dvs->operator[](i * 3 + 1);
-				ret[i].vertex[2] = dvs->operator[](i * 3 + 2);
+				w[i].vertex[0] = r[i * 3 + 0];
+				w[i].vertex[1] = r[i * 3 + 1];
+				w[i].vertex[2] = r[i * 3 + 2];
 			}
 		}
 		return ret;

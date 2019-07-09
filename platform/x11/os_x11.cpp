@@ -3103,8 +3103,10 @@ void OS_X11::set_icon(const Ref<Image> &p_icon) {
 			pd[0] = w;
 			pd[1] = h;
 
+			PoolVector<uint8_t>::Read r = img->get_data().read();
+
 			long *wr = &pd[2];
-			uint8_t const *pr = img->get_data().ptr();
+			uint8_t const *pr = r.ptr();
 
 			for (int i = 0; i < w * h; i++) {
 				long v = 0;

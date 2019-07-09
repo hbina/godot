@@ -39,9 +39,9 @@ AABB CPUParticles::get_aabb() const {
 
 	return AABB();
 }
-Vector<Face3> CPUParticles::get_faces(uint32_t p_usage_flags) const {
+PoolVector<Face3> CPUParticles::get_faces(uint32_t p_usage_flags) const {
 
-	return Vector<Face3>();
+	return PoolVector<Face3>();
 }
 
 void CPUParticles::set_emitting(bool p_emitting) {
@@ -57,7 +57,7 @@ void CPUParticles::set_amount(int p_amount) {
 
 	particles.resize(p_amount);
 	{
-		Vector<Particle>::Write w = particles.write();
+		PoolVector<Particle>::Write w = particles.write();
 
 		for (int i = 0; i < p_amount; i++) {
 			w[i].active = false;
@@ -229,7 +229,7 @@ void CPUParticles::restart() {
 
 	{
 		int pc = particles.size();
-		Vector<Particle>::Write w = particles.write();
+		PoolVector<Particle>::Write w = particles.write();
 
 		for (int i = 0; i < pc; i++) {
 			w[i].active = false;
@@ -392,17 +392,17 @@ void CPUParticles::set_emission_box_extents(Vector3 p_extents) {
 	emission_box_extents = p_extents;
 }
 
-void CPUParticles::set_emission_points(const Vector<Vector3> &p_points) {
+void CPUParticles::set_emission_points(const PoolVector<Vector3> &p_points) {
 
 	emission_points = p_points;
 }
 
-void CPUParticles::set_emission_normals(const Vector<Vector3> &p_normals) {
+void CPUParticles::set_emission_normals(const PoolVector<Vector3> &p_normals) {
 
 	emission_normals = p_normals;
 }
 
-void CPUParticles::set_emission_colors(const Vector<Color> &p_colors) {
+void CPUParticles::set_emission_colors(const PoolVector<Color> &p_colors) {
 
 	emission_colors = p_colors;
 }
@@ -415,16 +415,16 @@ Vector3 CPUParticles::get_emission_box_extents() const {
 
 	return emission_box_extents;
 }
-Vector<Vector3> CPUParticles::get_emission_points() const {
+PoolVector<Vector3> CPUParticles::get_emission_points() const {
 
 	return emission_points;
 }
-Vector<Vector3> CPUParticles::get_emission_normals() const {
+PoolVector<Vector3> CPUParticles::get_emission_normals() const {
 
 	return emission_normals;
 }
 
-Vector<Color> CPUParticles::get_emission_colors() const {
+PoolVector<Color> CPUParticles::get_emission_colors() const {
 
 	return emission_colors;
 }
@@ -495,7 +495,7 @@ void CPUParticles::_particles_process(float p_delta) {
 	p_delta *= speed_scale;
 
 	int pcount = particles.size();
-	Vector<Particle>::Write w = particles.write();
+	PoolVector<Particle>::Write w = particles.write();
 
 	Particle *parray = w.ptr();
 
@@ -911,11 +911,11 @@ void CPUParticles::_update_particle_data_buffer() {
 
 		int pc = particles.size();
 
-		Vector<int>::Write ow;
+		PoolVector<int>::Write ow;
 		int *order = NULL;
 
-		Vector<float>::Write w = particle_data.write();
-		Vector<Particle>::Read r = particles.read();
+		PoolVector<float>::Write w = particle_data.write();
+		PoolVector<Particle>::Read r = particles.read();
 		float *ptr = w.ptr();
 
 		if (draw_order != DRAW_ORDER_INDEX) {
@@ -1133,8 +1133,8 @@ void CPUParticles::_notification(int p_what) {
 
 			int pc = particles.size();
 
-			Vector<float>::Write w = particle_data.write();
-			Vector<Particle>::Read r = particles.read();
+			PoolVector<float>::Write w = particle_data.write();
+			PoolVector<Particle>::Read r = particles.read();
 			float *ptr = w.ptr();
 
 			for (int i = 0; i < pc; i++) {

@@ -178,11 +178,11 @@ Array AStar::get_points() {
 	return point_list;
 }
 
-Vector<int> AStar::get_point_connections(int p_id) {
+PoolVector<int> AStar::get_point_connections(int p_id) {
 
-	ERR_FAIL_COND_V(!points.has(p_id), Vector<int>());
+	ERR_FAIL_COND_V(!points.has(p_id), PoolVector<int>());
 
-	Vector<int> point_list;
+	PoolVector<int> point_list;
 
 	Point *p = points[p_id];
 
@@ -336,16 +336,16 @@ float AStar::_compute_cost(int p_from_id, int p_to_id) {
 	return points[p_from_id]->pos.distance_to(points[p_to_id]->pos);
 }
 
-Vector<Vector3> AStar::get_point_path(int p_from_id, int p_to_id) {
+PoolVector<Vector3> AStar::get_point_path(int p_from_id, int p_to_id) {
 
-	ERR_FAIL_COND_V(!points.has(p_from_id), Vector<Vector3>());
-	ERR_FAIL_COND_V(!points.has(p_to_id), Vector<Vector3>());
+	ERR_FAIL_COND_V(!points.has(p_from_id), PoolVector<Vector3>());
+	ERR_FAIL_COND_V(!points.has(p_to_id), PoolVector<Vector3>());
 
 	Point *a = points[p_from_id];
 	Point *b = points[p_to_id];
 
 	if (a == b) {
-		Vector<Vector3> ret;
+		PoolVector<Vector3> ret;
 		ret.push_back(a->pos);
 		return ret;
 	}
@@ -356,7 +356,7 @@ Vector<Vector3> AStar::get_point_path(int p_from_id, int p_to_id) {
 	bool found_route = _solve(begin_point, end_point);
 
 	if (!found_route)
-		return Vector<Vector3>();
+		return PoolVector<Vector3>();
 
 	// Midpoints
 	Point *p = end_point;
@@ -366,11 +366,11 @@ Vector<Vector3> AStar::get_point_path(int p_from_id, int p_to_id) {
 		p = p->prev_point;
 	}
 
-	Vector<Vector3> path;
+	PoolVector<Vector3> path;
 	path.resize(pc);
 
 	{
-		Vector<Vector3>::Write w = path.write();
+		PoolVector<Vector3>::Write w = path.write();
 
 		Point *p2 = end_point;
 		int idx = pc - 1;
@@ -385,16 +385,16 @@ Vector<Vector3> AStar::get_point_path(int p_from_id, int p_to_id) {
 	return path;
 }
 
-Vector<int> AStar::get_id_path(int p_from_id, int p_to_id) {
+PoolVector<int> AStar::get_id_path(int p_from_id, int p_to_id) {
 
-	ERR_FAIL_COND_V(!points.has(p_from_id), Vector<int>());
-	ERR_FAIL_COND_V(!points.has(p_to_id), Vector<int>());
+	ERR_FAIL_COND_V(!points.has(p_from_id), PoolVector<int>());
+	ERR_FAIL_COND_V(!points.has(p_to_id), PoolVector<int>());
 
 	Point *a = points[p_from_id];
 	Point *b = points[p_to_id];
 
 	if (a == b) {
-		Vector<int> ret;
+		PoolVector<int> ret;
 		ret.push_back(a->id);
 		return ret;
 	}
@@ -405,7 +405,7 @@ Vector<int> AStar::get_id_path(int p_from_id, int p_to_id) {
 	bool found_route = _solve(begin_point, end_point);
 
 	if (!found_route)
-		return Vector<int>();
+		return PoolVector<int>();
 
 	// Midpoints
 	Point *p = end_point;
@@ -415,11 +415,11 @@ Vector<int> AStar::get_id_path(int p_from_id, int p_to_id) {
 		p = p->prev_point;
 	}
 
-	Vector<int> path;
+	PoolVector<int> path;
 	path.resize(pc);
 
 	{
-		Vector<int>::Write w = path.write();
+		PoolVector<int>::Write w = path.write();
 
 		p = end_point;
 		int idx = pc - 1;
@@ -526,7 +526,7 @@ bool AStar2D::has_point(int p_id) const {
 	return astar.has_point(p_id);
 }
 
-Vector<int> AStar2D::get_point_connections(int p_id) {
+PoolVector<int> AStar2D::get_point_connections(int p_id) {
 	return astar.get_point_connections(p_id);
 }
 
@@ -567,15 +567,15 @@ Vector2 AStar2D::get_closest_position_in_segment(const Vector2 &p_point) const {
 	return Vector2(p.x, p.y);
 }
 
-Vector<Vector2> AStar2D::get_point_path(int p_from_id, int p_to_id) {
+PoolVector<Vector2> AStar2D::get_point_path(int p_from_id, int p_to_id) {
 
 	PoolVector3Array pv = astar.get_point_path(p_from_id, p_to_id);
 	int size = pv.size();
 	PoolVector2Array path;
 	path.resize(size);
 	{
-		Vector<Vector3>::Read r = pv.read();
-		Vector<Vector2>::Write w = path.write();
+		PoolVector<Vector3>::Read r = pv.read();
+		PoolVector<Vector2>::Write w = path.write();
 		for (int i = 0; i < size; i++) {
 			Vector3 p = r[i];
 			w[i] = Vector2(p.x, p.y);
@@ -584,7 +584,7 @@ Vector<Vector2> AStar2D::get_point_path(int p_from_id, int p_to_id) {
 	return path;
 }
 
-Vector<int> AStar2D::get_id_path(int p_from_id, int p_to_id) {
+PoolVector<int> AStar2D::get_id_path(int p_from_id, int p_to_id) {
 	return astar.get_id_path(p_from_id, p_to_id);
 }
 

@@ -95,7 +95,7 @@ Error LWSPeer::write_wsi() {
 
 	ERR_FAIL_COND_V(!is_connected_to_host(), FAILED);
 
-	Vector<uint8_t> tmp;
+	PoolVector<uint8_t> tmp;
 	int count = _out_buffer.packets_left();
 
 	if (count == 0)
@@ -103,7 +103,7 @@ Error LWSPeer::write_wsi() {
 
 	int read = 0;
 	uint8_t is_string = 0;
-	Vector<uint8_t>::Write rw = _packet_buffer.write();
+	PoolVector<uint8_t>::Write rw = _packet_buffer.write();
 	_out_buffer.read_packet(&(rw[LWS_PRE]), _packet_buffer.size() - LWS_PRE, &is_string, read);
 
 	enum lws_write_protocol mode = is_string ? LWS_WRITE_TEXT : LWS_WRITE_BINARY;
@@ -135,7 +135,7 @@ Error LWSPeer::get_packet(const uint8_t **r_buffer, int &r_buffer_size) {
 		return ERR_UNAVAILABLE;
 
 	int read = 0;
-	Vector<uint8_t>::Write rw = _packet_buffer.write();
+	PoolVector<uint8_t>::Write rw = _packet_buffer.write();
 	_in_buffer.read_packet(rw.ptr(), _packet_buffer.size(), &_is_string, read);
 
 	*r_buffer = rw.ptr();

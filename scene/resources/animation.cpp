@@ -91,11 +91,11 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 			if (track_get_type(track) == TYPE_TRANSFORM) {
 
 				TransformTrack *tt = static_cast<TransformTrack *>(tracks[track]);
-				Vector<float> values = p_value;
+				PoolVector<float> values = p_value;
 				int vcount = values.size();
 				ERR_FAIL_COND_V(vcount % 12, false); // should be multiple of 11
 
-				Vector<float>::Read r = values.read();
+				PoolVector<float>::Read r = values.read();
 
 				tt->transforms.resize(vcount / 12);
 
@@ -140,7 +140,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 					vt->update_mode = UpdateMode(um);
 				}
 
-				Vector<float> times = d["times"];
+				PoolVector<float> times = d["times"];
 				Array values = d["values"];
 
 				ERR_FAIL_COND_V(times.size() != values.size(), false);
@@ -149,7 +149,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					int valcount = times.size();
 
-					Vector<float>::Read rt = times.read();
+					PoolVector<float>::Read rt = times.read();
 
 					vt->values.resize(valcount);
 
@@ -161,10 +161,10 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					if (d.has("transitions")) {
 
-						Vector<float> transitions = d["transitions"];
+						PoolVector<float> transitions = d["transitions"];
 						ERR_FAIL_COND_V(transitions.size() != valcount, false);
 
-						Vector<float>::Read rtr = transitions.read();
+						PoolVector<float>::Read rtr = transitions.read();
 
 						for (int i = 0; i < valcount; i++) {
 
@@ -184,7 +184,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 				ERR_FAIL_COND_V(!d.has("times"), false);
 				ERR_FAIL_COND_V(!d.has("values"), false);
 
-				Vector<float> times = d["times"];
+				PoolVector<float> times = d["times"];
 				Array values = d["values"];
 
 				ERR_FAIL_COND_V(times.size() != values.size(), false);
@@ -193,7 +193,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					int valcount = times.size();
 
-					Vector<float>::Read rt = times.read();
+					PoolVector<float>::Read rt = times.read();
 
 					for (int i = 0; i < valcount; i++) {
 
@@ -202,10 +202,10 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					if (d.has("transitions")) {
 
-						Vector<float> transitions = d["transitions"];
+						PoolVector<float> transitions = d["transitions"];
 						ERR_FAIL_COND_V(transitions.size() != valcount, false);
 
-						Vector<float>::Read rtr = transitions.read();
+						PoolVector<float>::Read rtr = transitions.read();
 
 						for (int i = 0; i < valcount; i++) {
 
@@ -220,7 +220,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 				ERR_FAIL_COND_V(!d.has("times"), false);
 				ERR_FAIL_COND_V(!d.has("points"), false);
 
-				Vector<float> times = d["times"];
+				PoolVector<float> times = d["times"];
 				PoolRealArray values = d["points"];
 
 				ERR_FAIL_COND_V(times.size() * 5 != values.size(), false);
@@ -229,8 +229,8 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					int valcount = times.size();
 
-					Vector<float>::Read rt = times.read();
-					Vector<float>::Read rv = values.read();
+					PoolVector<float>::Read rt = times.read();
+					PoolVector<float>::Read rv = values.read();
 
 					bt->values.resize(valcount);
 
@@ -254,7 +254,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 				ERR_FAIL_COND_V(!d.has("times"), false);
 				ERR_FAIL_COND_V(!d.has("clips"), false);
 
-				Vector<float> times = d["times"];
+				PoolVector<float> times = d["times"];
 				Array clips = d["clips"];
 
 				ERR_FAIL_COND_V(clips.size() != times.size(), false);
@@ -263,7 +263,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					int valcount = times.size();
 
-					Vector<float>::Read rt = times.read();
+					PoolVector<float>::Read rt = times.read();
 
 					ad->values.clear();
 
@@ -295,8 +295,8 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 				ERR_FAIL_COND_V(!d.has("times"), false);
 				ERR_FAIL_COND_V(!d.has("clips"), false);
 
-				Vector<float> times = d["times"];
-				Vector<String> clips = d["clips"];
+				PoolVector<float> times = d["times"];
+				PoolVector<String> clips = d["clips"];
 
 				ERR_FAIL_COND_V(clips.size() != times.size(), false);
 
@@ -304,8 +304,8 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					int valcount = times.size();
 
-					Vector<float>::Read rt = times.read();
-					Vector<String>::Read rc = clips.read();
+					PoolVector<float>::Read rt = times.read();
+					PoolVector<String>::Read rc = clips.read();
 
 					an->values.resize(valcount);
 
@@ -373,11 +373,11 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 
 			if (track_get_type(track) == TYPE_TRANSFORM) {
 
-				Vector<real_t> keys;
+				PoolVector<real_t> keys;
 				int kk = track_get_key_count(track);
 				keys.resize(kk * 12);
 
-				Vector<real_t>::Write w = keys.write();
+				PoolVector<real_t>::Write w = keys.write();
 
 				int idx = 0;
 				for (int i = 0; i < track_get_key_count(track); i++) {
@@ -403,7 +403,7 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					w[idx++] = scale.z;
 				}
 
-				w = Vector<real_t>::Write();
+				w = PoolVector<real_t>::Write();
 				r_ret = keys;
 				return true;
 
@@ -413,8 +413,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 
 				Dictionary d;
 
-				Vector<float> key_times;
-				Vector<float> key_transitions;
+				PoolVector<float> key_times;
+				PoolVector<float> key_transitions;
 				Array key_values;
 
 				int kk = vt->values.size();
@@ -423,8 +423,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 				key_transitions.resize(kk);
 				key_values.resize(kk);
 
-				Vector<float>::Write wti = key_times.write();
-				Vector<float>::Write wtr = key_transitions.write();
+				PoolVector<float>::Write wti = key_times.write();
+				PoolVector<float>::Write wtr = key_transitions.write();
 
 				int idx = 0;
 
@@ -438,8 +438,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					idx++;
 				}
 
-				wti = Vector<float>::Write();
-				wtr = Vector<float>::Write();
+				wti = PoolVector<float>::Write();
+				wtr = PoolVector<float>::Write();
 
 				d["times"] = key_times;
 				d["transitions"] = key_transitions;
@@ -456,8 +456,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 
 				Dictionary d;
 
-				Vector<float> key_times;
-				Vector<float> key_transitions;
+				PoolVector<float> key_times;
+				PoolVector<float> key_transitions;
 				Array key_values;
 
 				int kk = track_get_key_count(track);
@@ -466,8 +466,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 				key_transitions.resize(kk);
 				key_values.resize(kk);
 
-				Vector<float>::Write wti = key_times.write();
-				Vector<float>::Write wtr = key_transitions.write();
+				PoolVector<float>::Write wti = key_times.write();
+				PoolVector<float>::Write wtr = key_transitions.write();
 
 				int idx = 0;
 				for (int i = 0; i < track_get_key_count(track); i++) {
@@ -478,8 +478,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					idx++;
 				}
 
-				wti = Vector<float>::Write();
-				wtr = Vector<float>::Write();
+				wti = PoolVector<float>::Write();
+				wtr = PoolVector<float>::Write();
 
 				d["times"] = key_times;
 				d["transitions"] = key_transitions;
@@ -497,16 +497,16 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 
 				Dictionary d;
 
-				Vector<float> key_times;
-				Vector<float> key_points;
+				PoolVector<float> key_times;
+				PoolVector<float> key_points;
 
 				int kk = bt->values.size();
 
 				key_times.resize(kk);
 				key_points.resize(kk * 5);
 
-				Vector<float>::Write wti = key_times.write();
-				Vector<float>::Write wpo = key_points.write();
+				PoolVector<float>::Write wti = key_times.write();
+				PoolVector<float>::Write wpo = key_points.write();
 
 				int idx = 0;
 
@@ -523,8 +523,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					idx++;
 				}
 
-				wti = Vector<float>::Write();
-				wpo = Vector<float>::Write();
+				wti = PoolVector<float>::Write();
+				wpo = PoolVector<float>::Write();
 
 				d["times"] = key_times;
 				d["points"] = key_points;
@@ -538,14 +538,14 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 
 				Dictionary d;
 
-				Vector<float> key_times;
+				PoolVector<float> key_times;
 				Array clips;
 
 				int kk = ad->values.size();
 
 				key_times.resize(kk);
 
-				Vector<float>::Write wti = key_times.write();
+				PoolVector<float>::Write wti = key_times.write();
 
 				int idx = 0;
 
@@ -562,7 +562,7 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					idx++;
 				}
 
-				wti = Vector<float>::Write();
+				wti = PoolVector<float>::Write();
 
 				d["times"] = key_times;
 				d["clips"] = clips;
@@ -576,16 +576,16 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 
 				Dictionary d;
 
-				Vector<float> key_times;
-				Vector<String> clips;
+				PoolVector<float> key_times;
+				PoolVector<String> clips;
 
 				int kk = an->values.size();
 
 				key_times.resize(kk);
 				clips.resize(kk);
 
-				Vector<float>::Write wti = key_times.write();
-				Vector<String>::Write wcl = clips.write();
+				PoolVector<float>::Write wti = key_times.write();
+				PoolVector<String>::Write wcl = clips.write();
 
 				const TKey<StringName> *vls = an->values.ptr();
 
@@ -595,8 +595,8 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					wcl[i] = vls[i].value;
 				}
 
-				wti = Vector<float>::Write();
-				wcl = Vector<String>::Write();
+				wti = PoolVector<float>::Write();
+				wcl = PoolVector<String>::Write();
 
 				d["times"] = key_times;
 				d["clips"] = clips;

@@ -300,11 +300,11 @@ class EditorSceneImporterGLTF : public EditorSceneImporter {
 	Error _parse_accessors(GLTFState &state);
 	Error _decode_buffer_view(GLTFState &state, int p_buffer_view, double *dst, int skip_every, int skip_bytes, int element_size, int count, GLTFType type, int component_count, int component_type, int component_size, bool normalized, int byte_offset, bool for_vertex);
 	Vector<double> _decode_accessor(GLTFState &state, int p_accessor, bool p_for_vertex);
-	Vector<float> _decode_accessor_as_floats(GLTFState &state, int p_accessor, bool p_for_vertex);
-	Vector<int> _decode_accessor_as_ints(GLTFState &state, int p_accessor, bool p_for_vertex);
-	Vector<Vector2> _decode_accessor_as_vec2(GLTFState &state, int p_accessor, bool p_for_vertex);
-	Vector<Vector3> _decode_accessor_as_vec3(GLTFState &state, int p_accessor, bool p_for_vertex);
-	Vector<Color> _decode_accessor_as_color(GLTFState &state, int p_accessor, bool p_for_vertex);
+	PoolVector<float> _decode_accessor_as_floats(GLTFState &state, int p_accessor, bool p_for_vertex);
+	PoolVector<int> _decode_accessor_as_ints(GLTFState &state, int p_accessor, bool p_for_vertex);
+	PoolVector<Vector2> _decode_accessor_as_vec2(GLTFState &state, int p_accessor, bool p_for_vertex);
+	PoolVector<Vector3> _decode_accessor_as_vec3(GLTFState &state, int p_accessor, bool p_for_vertex);
+	PoolVector<Color> _decode_accessor_as_color(GLTFState &state, int p_accessor, bool p_for_vertex);
 	Vector<Quat> _decode_accessor_as_quat(GLTFState &state, int p_accessor, bool p_for_vertex);
 	Vector<Transform2D> _decode_accessor_as_xform2d(GLTFState &state, int p_accessor, bool p_for_vertex);
 	Vector<Basis> _decode_accessor_as_basis(GLTFState &state, int p_accessor, bool p_for_vertex);

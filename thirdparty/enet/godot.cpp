@@ -133,8 +133,8 @@ int enet_socket_send(ENetSocket socket, const ENetAddress *address, const ENetBu
 	dest.set_ipv6(address->host);
 
 	// Create a single packet.
-	Vector<uint8_t> out;
-	Vector<uint8_t>::Write w;
+	PoolVector<uint8_t> out;
+	PoolVector<uint8_t>::Write w;
 	int size = 0;
 	int pos = 0;
 	for (i = 0; i < bufferCount; i++) {

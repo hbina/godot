@@ -481,7 +481,7 @@ void TileMap::update_dirty_quadrants() {
 						vs->canvas_item_set_z_index(debug_navigation_item, VS::CANVAS_ITEM_Z_MAX - 2); // Display one below collision debug
 
 						if (debug_navigation_item.is_valid()) {
-							Vector<Vector2> navigation_polygon_vertices = navpoly->get_vertices();
+							PoolVector<Vector2> navigation_polygon_vertices = navpoly->get_vertices();
 							int vsize = navigation_polygon_vertices.size();
 
 							if (vsize > 2) {
@@ -490,7 +490,7 @@ void TileMap::update_dirty_quadrants() {
 								vertices.resize(vsize);
 								colors.resize(vsize);
 								{
-									Vector<Vector2>::Read vr = navigation_polygon_vertices.read();
+									PoolVector<Vector2>::Read vr = navigation_polygon_vertices.read();
 									for (int j = 0; j < vsize; j++) {
 										vertices[j] = vr[j];
 										colors[j] = debug_navigation_color;
@@ -1045,10 +1045,10 @@ void TileMap::clear() {
 	used_size_cache_dirty = true;
 }
 
-void TileMap::_set_tile_data(const Vector<int> &p_data) {
+void TileMap::_set_tile_data(const PoolVector<int> &p_data) {
 
 	int c = p_data.size();
-	Vector<int>::Read r = p_data.read();
+	PoolVector<int>::Read r = p_data.read();
 
 	int offset = (format == FORMAT_2) ? 3 : 2;
 
@@ -1096,11 +1096,11 @@ void TileMap::_set_tile_data(const Vector<int> &p_data) {
 	format = FORMAT_2;
 }
 
-Vector<int> TileMap::_get_tile_data() const {
+PoolVector<int> TileMap::_get_tile_data() const {
 
-	Vector<int> data;
+	PoolVector<int> data;
 	data.resize(tile_map.size() * 3);
-	Vector<int>::Write w = data.write();
+	PoolVector<int>::Write w = data.write();
 
 	format = FORMAT_2;
 
@@ -1122,7 +1122,7 @@ Vector<int> TileMap::_get_tile_data() const {
 		idx += 3;
 	}
 
-	w = Vector<int>::Write();
+	w = PoolVector<int>::Write();
 
 	return data;
 }

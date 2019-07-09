@@ -684,17 +684,17 @@ Vector<double> EditorSceneImporterGLTF::_decode_accessor(GLTFState &state, int p
 	return dst_buffer;
 }
 
-Vector<int> EditorSceneImporterGLTF::_decode_accessor_as_ints(GLTFState &state, int p_accessor, bool p_for_vertex) {
+PoolVector<int> EditorSceneImporterGLTF::_decode_accessor_as_ints(GLTFState &state, int p_accessor, bool p_for_vertex) {
 
 	Vector<double> attribs = _decode_accessor(state, p_accessor, p_for_vertex);
-	Vector<int> ret;
+	PoolVector<int> ret;
 	if (attribs.size() == 0)
 		return ret;
 	const double *attribs_ptr = attribs.ptr();
 	int ret_size = attribs.size();
 	ret.resize(ret_size);
 	{
-		Vector<int>::Write w = ret.write();
+		PoolVector<int>::Write w = ret.write();
 		for (int i = 0; i < ret_size; i++) {
 			w[i] = int(attribs_ptr[i]);
 		}
@@ -702,17 +702,17 @@ Vector<int> EditorSceneImporterGLTF::_decode_accessor_as_ints(GLTFState &state, 
 	return ret;
 }
 
-Vector<float> EditorSceneImporterGLTF::_decode_accessor_as_floats(GLTFState &state, int p_accessor, bool p_for_vertex) {
+PoolVector<float> EditorSceneImporterGLTF::_decode_accessor_as_floats(GLTFState &state, int p_accessor, bool p_for_vertex) {
 
 	Vector<double> attribs = _decode_accessor(state, p_accessor, p_for_vertex);
-	Vector<float> ret;
+	PoolVector<float> ret;
 	if (attribs.size() == 0)
 		return ret;
 	const double *attribs_ptr = attribs.ptr();
 	int ret_size = attribs.size();
 	ret.resize(ret_size);
 	{
-		Vector<float>::Write w = ret.write();
+		PoolVector<float>::Write w = ret.write();
 		for (int i = 0; i < ret_size; i++) {
 			w[i] = float(attribs_ptr[i]);
 		}
@@ -720,10 +720,10 @@ Vector<float> EditorSceneImporterGLTF::_decode_accessor_as_floats(GLTFState &sta
 	return ret;
 }
 
-Vector<Vector2> EditorSceneImporterGLTF::_decode_accessor_as_vec2(GLTFState &state, int p_accessor, bool p_for_vertex) {
+PoolVector<Vector2> EditorSceneImporterGLTF::_decode_accessor_as_vec2(GLTFState &state, int p_accessor, bool p_for_vertex) {
 
 	Vector<double> attribs = _decode_accessor(state, p_accessor, p_for_vertex);
-	Vector<Vector2> ret;
+	PoolVector<Vector2> ret;
 	if (attribs.size() == 0)
 		return ret;
 	ERR_FAIL_COND_V(attribs.size() % 2 != 0, ret);
@@ -731,7 +731,7 @@ Vector<Vector2> EditorSceneImporterGLTF::_decode_accessor_as_vec2(GLTFState &sta
 	int ret_size = attribs.size() / 2;
 	ret.resize(ret_size);
 	{
-		Vector<Vector2>::Write w = ret.write();
+		PoolVector<Vector2>::Write w = ret.write();
 		for (int i = 0; i < ret_size; i++) {
 			w[i] = Vector2(attribs_ptr[i * 2 + 0], attribs_ptr[i * 2 + 1]);
 		}
@@ -739,10 +739,10 @@ Vector<Vector2> EditorSceneImporterGLTF::_decode_accessor_as_vec2(GLTFState &sta
 	return ret;
 }
 
-Vector<Vector3> EditorSceneImporterGLTF::_decode_accessor_as_vec3(GLTFState &state, int p_accessor, bool p_for_vertex) {
+PoolVector<Vector3> EditorSceneImporterGLTF::_decode_accessor_as_vec3(GLTFState &state, int p_accessor, bool p_for_vertex) {
 
 	Vector<double> attribs = _decode_accessor(state, p_accessor, p_for_vertex);
-	Vector<Vector3> ret;
+	PoolVector<Vector3> ret;
 	if (attribs.size() == 0)
 		return ret;
 	ERR_FAIL_COND_V(attribs.size() % 3 != 0, ret);
@@ -750,17 +750,17 @@ Vector<Vector3> EditorSceneImporterGLTF::_decode_accessor_as_vec3(GLTFState &sta
 	int ret_size = attribs.size() / 3;
 	ret.resize(ret_size);
 	{
-		Vector<Vector3>::Write w = ret.write();
+		PoolVector<Vector3>::Write w = ret.write();
 		for (int i = 0; i < ret_size; i++) {
 			w[i] = Vector3(attribs_ptr[i * 3 + 0], attribs_ptr[i * 3 + 1], attribs_ptr[i * 3 + 2]);
 		}
 	}
 	return ret;
 }
-Vector<Color> EditorSceneImporterGLTF::_decode_accessor_as_color(GLTFState &state, int p_accessor, bool p_for_vertex) {
+PoolVector<Color> EditorSceneImporterGLTF::_decode_accessor_as_color(GLTFState &state, int p_accessor, bool p_for_vertex) {
 
 	Vector<double> attribs = _decode_accessor(state, p_accessor, p_for_vertex);
-	Vector<Color> ret;
+	PoolVector<Color> ret;
 	if (attribs.size() == 0)
 		return ret;
 	int type = state.accessors[p_accessor].type;
@@ -776,7 +776,7 @@ Vector<Color> EditorSceneImporterGLTF::_decode_accessor_as_color(GLTFState &stat
 	int ret_size = attribs.size() / components;
 	ret.resize(ret_size);
 	{
-		Vector<Color>::Write w = ret.write();
+		PoolVector<Color>::Write w = ret.write();
 		for (int i = 0; i < ret_size; i++) {
 			w[i] = Color(attribs_ptr[i * 4 + 0], attribs_ptr[i * 4 + 1], attribs_ptr[i * 4 + 2], components == 4 ? attribs_ptr[i * 4 + 3] : 1.0);
 		}
@@ -918,13 +918,13 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 				array[Mesh::ARRAY_BONES] = _decode_accessor_as_ints(state, a["JOINTS_0"], true);
 			}
 			if (a.has("WEIGHTS_0")) {
-				Vector<float> weights = _decode_accessor_as_floats(state, a["WEIGHTS_0"], true);
+				PoolVector<float> weights = _decode_accessor_as_floats(state, a["WEIGHTS_0"], true);
 				{ //gltf does not seem to normalize the weights for some reason..
 					int wc = weights.size();
-					Vector<float>::Write w = weights.write();
+					PoolVector<float>::Write w = weights.write();
 
-					//Vector<int> v = array[Mesh::ARRAY_BONES];
-					//Vector<int>::Read r = v.read();
+					//PoolVector<int> v = array[Mesh::ARRAY_BONES];
+					//PoolVector<int>::Read r = v.read();
 
 					for (int k = 0; k < wc; k += 4) {
 						float total = 0.0;
@@ -947,13 +947,13 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 
 			if (p.has("indices")) {
 
-				Vector<int> indices = _decode_accessor_as_ints(state, p["indices"], false);
+				PoolVector<int> indices = _decode_accessor_as_ints(state, p["indices"], false);
 
 				if (primitive == Mesh::PRIMITIVE_TRIANGLES) {
 					//swap around indices, convert ccw to cw for front face
 
 					int is = indices.size();
-					Vector<int>::Write w = indices.write();
+					PoolVector<int>::Write w = indices.write();
 					for (int k = 0; k < is; k += 3) {
 						SWAP(w[k + 1], w[k + 2]);
 					}
@@ -961,13 +961,13 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 				array[Mesh::ARRAY_INDEX] = indices;
 			} else if (primitive == Mesh::PRIMITIVE_TRIANGLES) {
 				//generate indices because they need to be swapped for CW/CCW
-				Vector<Vector3> vertices = array[Mesh::ARRAY_VERTEX];
+				PoolVector<Vector3> vertices = array[Mesh::ARRAY_VERTEX];
 				ERR_FAIL_COND_V(vertices.size() == 0, ERR_PARSE_ERROR);
-				Vector<int> indices;
+				PoolVector<int> indices;
 				int vs = vertices.size();
 				indices.resize(vs);
 				{
-					Vector<int>::Write w = indices.write();
+					PoolVector<int>::Write w = indices.write();
 					for (int k = 0; k < vs; k += 3) {
 						w[k] = k;
 						w[k + 1] = k + 2;
@@ -1029,8 +1029,8 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 					array_copy[Mesh::ARRAY_INDEX] = Variant();
 
 					if (t.has("POSITION")) {
-						Vector<Vector3> varr = _decode_accessor_as_vec3(state, t["POSITION"], true);
-						Vector<Vector3> src_varr = array[Mesh::ARRAY_VERTEX];
+						PoolVector<Vector3> varr = _decode_accessor_as_vec3(state, t["POSITION"], true);
+						PoolVector<Vector3> src_varr = array[Mesh::ARRAY_VERTEX];
 						int size = src_varr.size();
 						ERR_FAIL_COND_V(size == 0, ERR_PARSE_ERROR);
 						{
@@ -1038,9 +1038,9 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 							int max_idx = varr.size();
 							varr.resize(size);
 
-							Vector<Vector3>::Write w_varr = varr.write();
-							Vector<Vector3>::Read r_varr = varr.read();
-							Vector<Vector3>::Read r_src_varr = src_varr.read();
+							PoolVector<Vector3>::Write w_varr = varr.write();
+							PoolVector<Vector3>::Read r_varr = varr.read();
+							PoolVector<Vector3>::Read r_src_varr = src_varr.read();
 							for (int l = 0; l < size; l++) {
 								if (l < max_idx) {
 									w_varr[l] = r_varr[l] + r_src_varr[l];
@@ -1052,17 +1052,17 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 						array_copy[Mesh::ARRAY_VERTEX] = varr;
 					}
 					if (t.has("NORMAL")) {
-						Vector<Vector3> narr = _decode_accessor_as_vec3(state, t["NORMAL"], true);
-						Vector<Vector3> src_narr = array[Mesh::ARRAY_NORMAL];
+						PoolVector<Vector3> narr = _decode_accessor_as_vec3(state, t["NORMAL"], true);
+						PoolVector<Vector3> src_narr = array[Mesh::ARRAY_NORMAL];
 						int size = src_narr.size();
 						ERR_FAIL_COND_V(size == 0, ERR_PARSE_ERROR);
 						{
 							int max_idx = narr.size();
 							narr.resize(size);
 
-							Vector<Vector3>::Write w_narr = narr.write();
-							Vector<Vector3>::Read r_narr = narr.read();
-							Vector<Vector3>::Read r_src_narr = src_narr.read();
+							PoolVector<Vector3>::Write w_narr = narr.write();
+							PoolVector<Vector3>::Read r_narr = narr.read();
+							PoolVector<Vector3>::Read r_src_narr = src_narr.read();
 							for (int l = 0; l < size; l++) {
 								if (l < max_idx) {
 									w_narr[l] = r_narr[l] + r_src_narr[l];
@@ -1074,9 +1074,9 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 						array_copy[Mesh::ARRAY_NORMAL] = narr;
 					}
 					if (t.has("TANGENT")) {
-						Vector<Vector3> tangents_v3 = _decode_accessor_as_vec3(state, t["TANGENT"], true);
-						Vector<float> tangents_v4;
-						Vector<float> src_tangents = array[Mesh::ARRAY_TANGENT];
+						PoolVector<Vector3> tangents_v3 = _decode_accessor_as_vec3(state, t["TANGENT"], true);
+						PoolVector<float> tangents_v4;
+						PoolVector<float> src_tangents = array[Mesh::ARRAY_TANGENT];
 						ERR_FAIL_COND_V(src_tangents.size() == 0, ERR_PARSE_ERROR);
 
 						{
@@ -1085,10 +1085,10 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 
 							int size4 = src_tangents.size();
 							tangents_v4.resize(size4);
-							Vector<float>::Write w4 = tangents_v4.write();
+							PoolVector<float>::Write w4 = tangents_v4.write();
 
-							Vector<Vector3>::Read r3 = tangents_v3.read();
-							Vector<float>::Read r4 = src_tangents.read();
+							PoolVector<Vector3>::Read r3 = tangents_v3.read();
+							PoolVector<float>::Read r4 = src_tangents.read();
 
 							for (int l = 0; l < size4 / 4; l++) {
 
@@ -1625,9 +1625,9 @@ Error EditorSceneImporterGLTF::_parse_animations(GLTFState &state) {
 				}
 			}
 
-			Vector<float> times = _decode_accessor_as_floats(state, input, false);
+			PoolVector<float> times = _decode_accessor_as_floats(state, input, false);
 			if (path == "translation") {
-				Vector<Vector3> translations = _decode_accessor_as_vec3(state, output, false);
+				PoolVector<Vector3> translations = _decode_accessor_as_vec3(state, output, false);
 				track->translation_track.interpolation = interp;
 				track->translation_track.times = Variant(times); //convert via variant
 				track->translation_track.values = Variant(translations); //convert via variant
@@ -1637,12 +1637,12 @@ Error EditorSceneImporterGLTF::_parse_animations(GLTFState &state) {
 				track->rotation_track.times = Variant(times); //convert via variant
 				track->rotation_track.values = rotations; //convert via variant
 			} else if (path == "scale") {
-				Vector<Vector3> scales = _decode_accessor_as_vec3(state, output, false);
+				PoolVector<Vector3> scales = _decode_accessor_as_vec3(state, output, false);
 				track->scale_track.interpolation = interp;
 				track->scale_track.times = Variant(times); //convert via variant
 				track->scale_track.values = Variant(scales); //convert via variant
 			} else if (path == "weights") {
-				Vector<float> weights = _decode_accessor_as_floats(state, output, false);
+				PoolVector<float> weights = _decode_accessor_as_floats(state, output, false);
 
 				ERR_FAIL_INDEX_V(state.nodes[node]->mesh, state.meshes.size(), ERR_PARSE_ERROR);
 				const GLTFMesh *mesh = &state.meshes[state.nodes[node]->mesh];
@@ -1652,7 +1652,7 @@ Error EditorSceneImporterGLTF::_parse_animations(GLTFState &state) {
 				track->weight_tracks.resize(wc);
 
 				int wlen = weights.size() / wc;
-				Vector<float>::Read r = weights.read();
+				PoolVector<float>::Read r = weights.read();
 				for (int k = 0; k < wc; k++) { //separate tracks, having them together is not such a good idea
 					GLTFAnimation::Channel<float> cf;
 					cf.interpolation = interp;

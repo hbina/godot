@@ -124,7 +124,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 		} break;
 		case Variant::POOL_STRING_ARRAY: {
 
-			Vector<String> sarray = *p_arg;
+			PoolVector<String> sarray = *p_arg;
 			jobjectArray arr = env->NewObjectArray(sarray.size(), env->FindClass("java/lang/String"), env->NewStringUTF(""));
 
 			for (int j = 0; j < sarray.size(); j++) {
@@ -183,18 +183,18 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 
 		case Variant::POOL_INT_ARRAY: {
 
-			Vector<int> array = *p_arg;
+			PoolVector<int> array = *p_arg;
 			jintArray arr = env->NewIntArray(array.size());
-			Vector<int>::Read r = array.read();
+			PoolVector<int>::Read r = array.read();
 			env->SetIntArrayRegion(arr, 0, array.size(), r.ptr());
 			v.val.l = arr;
 			v.obj = arr;
 
 		} break;
 		case Variant::POOL_BYTE_ARRAY: {
-			Vector<uint8_t> array = *p_arg;
+			PoolVector<uint8_t> array = *p_arg;
 			jbyteArray arr = env->NewByteArray(array.size());
-			Vector<uint8_t>::Read r = array.read();
+			PoolVector<uint8_t>::Read r = array.read();
 			env->SetByteArrayRegion(arr, 0, array.size(), reinterpret_cast<const signed char *>(r.ptr()));
 			v.val.l = arr;
 			v.obj = arr;
@@ -202,9 +202,9 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 		} break;
 		case Variant::POOL_REAL_ARRAY: {
 
-			Vector<float> array = *p_arg;
+			PoolVector<float> array = *p_arg;
 			jfloatArray arr = env->NewFloatArray(array.size());
-			Vector<float>::Read r = array.read();
+			PoolVector<float>::Read r = array.read();
 			env->SetFloatArrayRegion(arr, 0, array.size(), r.ptr());
 			v.val.l = arr;
 			v.obj = arr;
@@ -254,7 +254,7 @@ Variant _jobject_to_variant(JNIEnv *env, jobject obj) {
 
 		jobjectArray arr = (jobjectArray)obj;
 		int stringCount = env->GetArrayLength(arr);
-		Vector<String> sarr;
+		PoolVector<String> sarr;
 
 		for (int i = 0; i < stringCount; i++) {
 			jstring string = (jstring)env->GetObjectArrayElement(arr, i);
@@ -284,12 +284,12 @@ Variant _jobject_to_variant(JNIEnv *env, jobject obj) {
 
 		jintArray arr = (jintArray)obj;
 		int fCount = env->GetArrayLength(arr);
-		Vector<int> sarr;
+		PoolVector<int> sarr;
 		sarr.resize(fCount);
 
-		Vector<int>::Write w = sarr.write();
+		PoolVector<int>::Write w = sarr.write();
 		env->GetIntArrayRegion(arr, 0, fCount, w.ptr());
-		w = Vector<int>::Write();
+		w = PoolVector<int>::Write();
 		return sarr;
 	};
 
@@ -297,12 +297,12 @@ Variant _jobject_to_variant(JNIEnv *env, jobject obj) {
 
 		jbyteArray arr = (jbyteArray)obj;
 		int fCount = env->GetArrayLength(arr);
-		Vector<uint8_t> sarr;
+		PoolVector<uint8_t> sarr;
 		sarr.resize(fCount);
 
-		Vector<uint8_t>::Write w = sarr.write();
+		PoolVector<uint8_t>::Write w = sarr.write();
 		env->GetByteArrayRegion(arr, 0, fCount, reinterpret_cast<signed char *>(w.ptr()));
-		w = Vector<uint8_t>::Write();
+		w = PoolVector<uint8_t>::Write();
 		return sarr;
 	};
 
@@ -509,12 +509,12 @@ public:
 				jintArray arr = (jintArray)env->CallObjectMethodA(instance, E->get().method, v);
 
 				int fCount = env->GetArrayLength(arr);
-				Vector<int> sarr;
+				PoolVector<int> sarr;
 				sarr.resize(fCount);
 
-				Vector<int>::Write w = sarr.write();
+				PoolVector<int>::Write w = sarr.write();
 				env->GetIntArrayRegion(arr, 0, fCount, w.ptr());
-				w = Vector<int>::Write();
+				w = PoolVector<int>::Write();
 				ret = sarr;
 				env->DeleteLocalRef(arr);
 			} break;
@@ -523,12 +523,12 @@ public:
 				jfloatArray arr = (jfloatArray)env->CallObjectMethodA(instance, E->get().method, v);
 
 				int fCount = env->GetArrayLength(arr);
-				Vector<float> sarr;
+				PoolVector<float> sarr;
 				sarr.resize(fCount);
 
-				Vector<float>::Write w = sarr.write();
+				PoolVector<float>::Write w = sarr.write();
 				env->GetFloatArrayRegion(arr, 0, fCount, w.ptr());
-				w = Vector<float>::Write();
+				w = PoolVector<float>::Write();
 				ret = sarr;
 				env->DeleteLocalRef(arr);
 			} break;

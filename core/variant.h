@@ -61,13 +61,13 @@ class Control; // helper
 struct PropertyInfo;
 struct MethodInfo;
 
-typedef Vector<uint8_t> PoolByteArray;
-typedef Vector<int> PoolIntArray;
-typedef Vector<real_t> PoolRealArray;
-typedef Vector<String> PoolStringArray;
-typedef Vector<Vector2> PoolVector2Array;
-typedef Vector<Vector3> PoolVector3Array;
-typedef Vector<Color> PoolColorArray;
+typedef PoolVector<uint8_t> PoolByteArray;
+typedef PoolVector<int> PoolIntArray;
+typedef PoolVector<real_t> PoolRealArray;
+typedef PoolVector<String> PoolStringArray;
+typedef PoolVector<Vector2> PoolVector2Array;
+typedef PoolVector<Vector3> PoolVector3Array;
+typedef PoolVector<Color> PoolColorArray;
 
 // Temporary workaround until c++11 alignas()
 #ifdef __GNUC__
@@ -208,6 +208,15 @@ public:
 	operator Dictionary() const;
 	operator Array() const;
 
+	operator PoolVector<uint8_t>() const;
+	operator PoolVector<int>() const;
+	operator PoolVector<real_t>() const;
+	operator PoolVector<String>() const;
+	operator PoolVector<Vector3>() const;
+	operator PoolVector<Color>() const;
+	operator PoolVector<Plane>() const;
+	operator PoolVector<Face3>() const;
+
 	operator Vector<Variant>() const;
 	operator Vector<uint8_t>() const;
 	operator Vector<int>() const;
@@ -218,6 +227,7 @@ public:
 	operator Vector<Color>() const;
 	operator Vector<RID>() const;
 	operator Vector<Vector2>() const;
+	operator PoolVector<Vector2>() const;
 	operator Vector<Plane>() const;
 
 	// some core type enums to convert to
@@ -263,6 +273,14 @@ public:
 	Variant(const Dictionary &p_dictionary);
 
 	Variant(const Array &p_array);
+	Variant(const PoolVector<Plane> &p_array); // helper
+	Variant(const PoolVector<uint8_t> &p_raw_array);
+	Variant(const PoolVector<int> &p_int_array);
+	Variant(const PoolVector<real_t> &p_real_array);
+	Variant(const PoolVector<String> &p_string_array);
+	Variant(const PoolVector<Vector3> &p_vector3_array);
+	Variant(const PoolVector<Color> &p_color_array);
+	Variant(const PoolVector<Face3> &p_face_array);
 
 	Variant(const Vector<Variant> &p_array);
 	Variant(const Vector<uint8_t> &p_array);
@@ -275,6 +293,7 @@ public:
 	Variant(const Vector<Plane> &p_array); // helper
 	Variant(const Vector<RID> &p_array); // helper
 	Variant(const Vector<Vector2> &p_array); // helper
+	Variant(const PoolVector<Vector2> &p_vector2_array); // helper
 
 	Variant(const IP_Address &p_address);
 

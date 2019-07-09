@@ -1644,11 +1644,11 @@ NodePath AnimationTreePlayer::get_master_player() const {
 	return master;
 }
 
-Vector<String> AnimationTreePlayer::_get_node_list() {
+PoolVector<String> AnimationTreePlayer::_get_node_list() {
 
 	List<StringName> nl;
 	get_node_list(&nl);
-	Vector<String> ret;
+	PoolVector<String> ret;
 	ret.resize(nl.size());
 	int idx = 0;
 	for (List<StringName>::Element *E = nl.front(); E; E = E->next()) {

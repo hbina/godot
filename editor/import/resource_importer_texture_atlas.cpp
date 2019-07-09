@@ -350,9 +350,9 @@ Error ResourceImporterTextureAtlas::import_group_file(const String &p_group_file
 
 			for (int i = 0; i < pack_data.chart_pieces.size(); i++) {
 				const EditorAtlasPacker::Chart &chart = charts[pack_data.chart_pieces[i]];
-				Vector<Vector2> vertices;
-				Vector<int> indices;
-				Vector<Vector2> uvs;
+				PoolVector<Vector2> vertices;
+				PoolVector<int> indices;
+				PoolVector<Vector2> uvs;
 				int vc = chart.vertices.size();
 				int fc = chart.faces.size();
 				vertices.resize(vc);
@@ -360,9 +360,9 @@ Error ResourceImporterTextureAtlas::import_group_file(const String &p_group_file
 				indices.resize(fc * 3);
 
 				{
-					Vector<Vector2>::Write vw = vertices.write();
-					Vector<int>::Write iw = indices.write();
-					Vector<Vector2>::Write uvw = uvs.write();
+					PoolVector<Vector2>::Write vw = vertices.write();
+					PoolVector<int>::Write iw = indices.write();
+					PoolVector<Vector2>::Write uvw = uvs.write();
 
 					for (int j = 0; j < vc; j++) {
 						vw[j] = chart.vertices[j];

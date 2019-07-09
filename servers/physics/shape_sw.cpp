@@ -1116,9 +1116,9 @@ FaceShapeSW::FaceShapeSW() {
 	configure(AABB());
 }
 
-Vector<Vector3> ConcavePolygonShapeSW::get_faces() const {
+PoolVector<Vector3> ConcavePolygonShapeSW::get_faces() const {
 
-	Vector<Vector3> rfaces;
+	PoolVector<Vector3> rfaces;
 	rfaces.resize(faces.size() * 3);
 
 	for (int i = 0; i < faces.size(); i++) {
@@ -1142,7 +1142,7 @@ void ConcavePolygonShapeSW::project_range(const Vector3 &p_normal, const Transfo
 		r_max = 0;
 		return;
 	}
-	Vector<Vector3>::Read r = vertices.read();
+	PoolVector<Vector3>::Read r = vertices.read();
 	const Vector3 *vptr = r.ptr();
 
 	for (int i = 0; i < count; i++) {
@@ -1162,7 +1162,7 @@ Vector3 ConcavePolygonShapeSW::get_support(const Vector3 &p_normal) const {
 	if (count == 0)
 		return Vector3();
 
-	Vector<Vector3>::Read r = vertices.read();
+	PoolVector<Vector3>::Read r = vertices.read();
 	const Vector3 *vptr = r.ptr();
 
 	Vector3 n = p_normal;
@@ -1241,9 +1241,9 @@ bool ConcavePolygonShapeSW::intersect_segment(const Vector3 &p_begin, const Vect
 		return false;
 
 	// unlock data
-	Vector<Face>::Read fr = faces.read();
-	Vector<Vector3>::Read vr = vertices.read();
-	Vector<BVH>::Read br = bvh.read();
+	PoolVector<Face>::Read fr = faces.read();
+	PoolVector<Vector3>::Read vr = vertices.read();
+	PoolVector<BVH>::Read br = bvh.read();
 
 	_SegmentCullParams params;
 	params.from = p_begin;
@@ -1320,9 +1320,9 @@ void ConcavePolygonShapeSW::cull(const AABB &p_local_aabb, Callback p_callback, 
 	AABB local_aabb = p_local_aabb;
 
 	// unlock data
-	Vector<Face>::Read fr = faces.read();
-	Vector<Vector3>::Read vr = vertices.read();
-	Vector<BVH>::Read br = bvh.read();
+	PoolVector<Face>::Read fr = faces.read();
+	PoolVector<Vector3>::Read vr = vertices.read();
+	PoolVector<BVH>::Read br = bvh.read();
 
 	FaceShapeSW face; // use this to send in the callback
 
@@ -1474,7 +1474,7 @@ void ConcavePolygonShapeSW::_fill_bvh(_VolumeSW_BVH *p_bvh_tree, BVH *p_bvh_arra
 	memdelete(p_bvh_tree);
 }
 
-void ConcavePolygonShapeSW::_setup(Vector<Vector3> p_faces) {
+void ConcavePolygonShapeSW::_setup(PoolVector<Vector3> p_faces) {
 
 	int src_face_count = p_faces.size();
 	if (src_face_count == 0) {
@@ -1484,22 +1484,22 @@ void ConcavePolygonShapeSW::_setup(Vector<Vector3> p_faces) {
 	ERR_FAIL_COND(src_face_count % 3);
 	src_face_count /= 3;
 
-	Vector<Vector3>::Read r = p_faces.read();
+	PoolVector<Vector3>::Read r = p_faces.read();
 	const Vector3 *facesr = r.ptr();
 
-	Vector<_VolumeSW_BVH_Element> bvh_array;
+	PoolVector<_VolumeSW_BVH_Element> bvh_array;
 	bvh_array.resize(src_face_count);
 
-	Vector<_VolumeSW_BVH_Element>::Write bvhw = bvh_array.write();
+	PoolVector<_VolumeSW_BVH_Element>::Write bvhw = bvh_array.write();
 	_VolumeSW_BVH_Element *bvh_arrayw = bvhw.ptr();
 
 	faces.resize(src_face_count);
-	Vector<Face>::Write w = faces.write();
+	PoolVector<Face>::Write w = faces.write();
 	Face *facesw = w.ptr();
 
 	vertices.resize(src_face_count * 3);
 
-	Vector<Vector3>::Write vw = vertices.write();
+	PoolVector<Vector3>::Write vw = vertices.write();
 	Vector3 *verticesw = vw.ptr();
 
 	AABB _aabb;
@@ -1524,15 +1524,15 @@ void ConcavePolygonShapeSW::_setup(Vector<Vector3> p_faces) {
 			_aabb.merge_with(bvh_arrayw[i].aabb);
 	}
 
-	w = Vector<Face>::Write();
-	vw = Vector<Vector3>::Write();
+	w = PoolVector<Face>::Write();
+	vw = PoolVector<Vector3>::Write();
 
 	int count = 0;
 	_VolumeSW_BVH *bvh_tree = _volume_sw_build_bvh(bvh_arrayw, src_face_count, count);
 
 	bvh.resize(count + 1);
 
-	Vector<BVH>::Write bvhw2 = bvh.write();
+	PoolVector<BVH>::Write bvhw2 = bvh.write();
 	BVH *bvh_arrayw2 = bvhw2.ptr();
 
 	int idx = 0;
@@ -1556,7 +1556,7 @@ ConcavePolygonShapeSW::ConcavePolygonShapeSW() {
 
 /* HEIGHT MAP SHAPE */
 
-Vector<real_t> HeightMapShapeSW::get_heights() const {
+PoolVector<real_t> HeightMapShapeSW::get_heights() const {
 
 	return heights;
 }
@@ -1613,14 +1613,14 @@ Vector3 HeightMapShapeSW::get_moment_of_inertia(real_t p_mass) const {
 			(p_mass / 3.0) * (extents.y * extents.y + extents.y * extents.y));
 }
 
-void HeightMapShapeSW::_setup(Vector<real_t> p_heights, int p_width, int p_depth, real_t p_cell_size) {
+void HeightMapShapeSW::_setup(PoolVector<real_t> p_heights, int p_width, int p_depth, real_t p_cell_size) {
 
 	heights = p_heights;
 	width = p_width;
 	depth = p_depth;
 	cell_size = p_cell_size;
 
-	Vector<real_t>::Read r = heights.read();
+	PoolVector<real_t>::Read r = heights.read();
 
 	AABB aabb;
 
@@ -1653,7 +1653,7 @@ void HeightMapShapeSW::set_data(const Variant &p_data) {
 	int width = d["width"];
 	int depth = d["depth"];
 	real_t cell_size = d["cell_size"];
-	Vector<real_t> heights = d["heights"];
+	PoolVector<real_t> heights = d["heights"];
 
 	ERR_FAIL_COND(width <= 0);
 	ERR_FAIL_COND(depth <= 0);

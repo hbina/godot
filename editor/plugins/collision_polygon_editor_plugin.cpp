@@ -470,11 +470,11 @@ void Polygon3DEditor::_polygon_draw() {
 
 	Array a;
 	a.resize(Mesh::ARRAY_MAX);
-	Vector<Vector3> va;
+	PoolVector<Vector3> va;
 	{
 
 		va.resize(poly.size());
-		Vector<Vector3>::Write w = va.write();
+		PoolVector<Vector3>::Write w = va.write();
 		for (int i = 0; i < poly.size(); i++) {
 
 			Vector2 p, p2;

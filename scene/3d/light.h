@@ -127,7 +127,7 @@ public:
 	BakeMode get_bake_mode() const;
 
 	virtual AABB get_aabb() const;
-	virtual Vector<Face3> get_faces(uint32_t p_usage_flags) const;
+	virtual PoolVector<Face3> get_faces(uint32_t p_usage_flags) const;
 
 	Light();
 	~Light();

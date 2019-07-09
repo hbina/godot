@@ -131,7 +131,7 @@ class DynamicFontAtSize : public Reference {
 
 	struct CharTexture {
 
-		Vector<uint8_t> imgdata;
+		PoolVector<uint8_t> imgdata;
 		int texture_size;
 		Vector<int> offsets;
 		Ref<ImageTexture> texture;

@@ -31,17 +31,17 @@
 #include "multimesh.h"
 #include "servers/visual_server.h"
 
-void MultiMesh::_set_transform_array(const Vector<Vector3> &p_array) {
+void MultiMesh::_set_transform_array(const PoolVector<Vector3> &p_array) {
 	if (transform_format != TRANSFORM_3D)
 		return;
 
-	const Vector<Vector3> &xforms = p_array;
+	const PoolVector<Vector3> &xforms = p_array;
 	int len = xforms.size();
 	ERR_FAIL_COND((len / 4) != instance_count);
 	if (len == 0)
 		return;
 
-	Vector<Vector3>::Read r = xforms.read();
+	PoolVector<Vector3>::Read r = xforms.read();
 
 	for (int i = 0; i < len / 4; i++) {
 
@@ -55,18 +55,18 @@ void MultiMesh::_set_transform_array(const Vector<Vector3> &p_array) {
 	}
 }
 
-Vector<Vector3> MultiMesh::_get_transform_array() const {
+PoolVector<Vector3> MultiMesh::_get_transform_array() const {
 
 	if (transform_format != TRANSFORM_3D)
-		return Vector<Vector3>();
+		return PoolVector<Vector3>();
 
 	if (instance_count == 0)
-		return Vector<Vector3>();
+		return PoolVector<Vector3>();
 
-	Vector<Vector3> xforms;
+	PoolVector<Vector3> xforms;
 	xforms.resize(instance_count * 4);
 
-	Vector<Vector3>::Write w = xforms.write();
+	PoolVector<Vector3>::Write w = xforms.write();
 
 	for (int i = 0; i < instance_count; i++) {
 
@@ -80,18 +80,18 @@ Vector<Vector3> MultiMesh::_get_transform_array() const {
 	return xforms;
 }
 
-void MultiMesh::_set_transform_2d_array(const Vector<Vector2> &p_array) {
+void MultiMesh::_set_transform_2d_array(const PoolVector<Vector2> &p_array) {
 
 	if (transform_format != TRANSFORM_2D)
 		return;
 
-	const Vector<Vector2> &xforms = p_array;
+	const PoolVector<Vector2> &xforms = p_array;
 	int len = xforms.size();
 	ERR_FAIL_COND((len / 3) != instance_count);
 	if (len == 0)
 		return;
 
-	Vector<Vector2>::Read r = xforms.read();
+	PoolVector<Vector2>::Read r = xforms.read();
 
 	for (int i = 0; i < len / 3; i++) {
 
@@ -104,18 +104,18 @@ void MultiMesh::_set_transform_2d_array(const Vector<Vector2> &p_array) {
 	}
 }
 
-Vector<Vector2> MultiMesh::_get_transform_2d_array() const {
+PoolVector<Vector2> MultiMesh::_get_transform_2d_array() const {
 
 	if (transform_format != TRANSFORM_2D)
-		return Vector<Vector2>();
+		return PoolVector<Vector2>();
 
 	if (instance_count == 0)
-		return Vector<Vector2>();
+		return PoolVector<Vector2>();
 
-	Vector<Vector2> xforms;
+	PoolVector<Vector2> xforms;
 	xforms.resize(instance_count * 3);
 
-	Vector<Vector2>::Write w = xforms.write();
+	PoolVector<Vector2>::Write w = xforms.write();
 
 	for (int i = 0; i < instance_count; i++) {
 
@@ -128,15 +128,15 @@ Vector<Vector2> MultiMesh::_get_transform_2d_array() const {
 	return xforms;
 }
 
-void MultiMesh::_set_color_array(const Vector<Color> &p_array) {
+void MultiMesh::_set_color_array(const PoolVector<Color> &p_array) {
 
-	const Vector<Color> &colors = p_array;
+	const PoolVector<Color> &colors = p_array;
 	int len = colors.size();
 	if (len == 0)
 		return;
 	ERR_FAIL_COND(len != instance_count);
 
-	Vector<Color>::Read r = colors.read();
+	PoolVector<Color>::Read r = colors.read();
 
 	for (int i = 0; i < len; i++) {
 
@@ -144,12 +144,12 @@ void MultiMesh::_set_color_array(const Vector<Color> &p_array) {
 	}
 }
 
-Vector<Color> MultiMesh::_get_color_array() const {
+PoolVector<Color> MultiMesh::_get_color_array() const {
 
 	if (instance_count == 0 || color_format == COLOR_NONE)
-		return Vector<Color>();
+		return PoolVector<Color>();
 
-	Vector<Color> colors;
+	PoolVector<Color> colors;
 	colors.resize(instance_count);
 
 	for (int i = 0; i < instance_count; i++) {
@@ -160,15 +160,15 @@ Vector<Color> MultiMesh::_get_color_array() const {
 	return colors;
 }
 
-void MultiMesh::_set_custom_data_array(const Vector<Color> &p_array) {
+void MultiMesh::_set_custom_data_array(const PoolVector<Color> &p_array) {
 
-	const Vector<Color> &custom_datas = p_array;
+	const PoolVector<Color> &custom_datas = p_array;
 	int len = custom_datas.size();
 	if (len == 0)
 		return;
 	ERR_FAIL_COND(len != instance_count);
 
-	Vector<Color>::Read r = custom_datas.read();
+	PoolVector<Color>::Read r = custom_datas.read();
 
 	for (int i = 0; i < len; i++) {
 
@@ -176,12 +176,12 @@ void MultiMesh::_set_custom_data_array(const Vector<Color> &p_array) {
 	}
 }
 
-Vector<Color> MultiMesh::_get_custom_data_array() const {
+PoolVector<Color> MultiMesh::_get_custom_data_array() const {
 
 	if (instance_count == 0 || custom_data_format == CUSTOM_DATA_NONE)
-		return Vector<Color>();
+		return PoolVector<Color>();
 
-	Vector<Color> custom_datas;
+	PoolVector<Color> custom_datas;
 	custom_datas.resize(instance_count);
 
 	for (int i = 0; i < instance_count; i++) {
@@ -263,7 +263,7 @@ Color MultiMesh::get_instance_custom_data(int p_instance) const {
 	return VisualServer::get_singleton()->multimesh_instance_get_custom_data(multimesh, p_instance);
 }
 
-void MultiMesh::set_as_bulk_array(const Vector<float> &p_array) {
+void MultiMesh::set_as_bulk_array(const PoolVector<float> &p_array) {
 
 	VisualServer::get_singleton()->multimesh_set_as_bulk_array(multimesh, p_array);
 }

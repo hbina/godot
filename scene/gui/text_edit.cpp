@@ -4980,11 +4980,11 @@ int TextEdit::_get_column_pos_of_word(const String &p_key, const String &p_searc
 	return col;
 }
 
-Vector<int> TextEdit::_search_bind(const String &p_key, uint32_t p_search_flags, int p_from_line, int p_from_column) const {
+PoolVector<int> TextEdit::_search_bind(const String &p_key, uint32_t p_search_flags, int p_from_line, int p_from_column) const {
 
 	int col, line;
 	if (search(p_key, p_search_flags, p_from_line, p_from_column, col, line)) {
-		Vector<int> result;
+		PoolVector<int> result;
 		result.resize(2);
 		result.set(0, line);
 		result.set(1, col);
@@ -4992,7 +4992,7 @@ Vector<int> TextEdit::_search_bind(const String &p_key, uint32_t p_search_flags,
 
 	} else {
 
-		return Vector<int>();
+		return PoolVector<int>();
 	}
 }
 

@@ -48,9 +48,9 @@ bool GridMap::_set(const StringName &p_name, const Variant &p_value) {
 
 		if (d.has("cells")) {
 
-			Vector<int> cells = d["cells"];
+			PoolVector<int> cells = d["cells"];
 			int amount = cells.size();
-			Vector<int>::Read r = cells.read();
+			PoolVector<int>::Read r = cells.read();
 			ERR_FAIL_COND_V(amount % 3, false); // not even
 			cell_map.clear();
 			for (int i = 0; i < amount / 3; i++) {
@@ -102,10 +102,10 @@ bool GridMap::_get(const StringName &p_name, Variant &r_ret) const {
 
 		Dictionary d;
 
-		Vector<int> cells;
+		PoolVector<int> cells;
 		cells.resize(cell_map.size() * 3);
 		{
-			Vector<int>::Write w = cells.write();
+			PoolVector<int>::Write w = cells.write();
 			int i = 0;
 			for (Map<IndexKey, Cell>::Element *E = cell_map.front(); E; E = E->next(), i++) {
 
@@ -458,7 +458,7 @@ bool GridMap::_octant_update(const OctantKey &p_key) {
 		return true;
 	}
 
-	Vector<Vector3> col_debug;
+	PoolVector<Vector3> col_debug;
 
 	/*
 	 * foreach item in this octant,

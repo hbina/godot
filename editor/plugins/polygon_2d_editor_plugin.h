@@ -90,7 +90,7 @@ class Polygon2DEditor : public AbstractPolygon2DEditor {
 	Label *bone_paint_radius_label;
 	bool bone_painting;
 	int bone_painting_bone;
-	Vector<float> prev_weights;
+	PoolVector<float> prev_weights;
 	Vector2 bone_paint_pos;
 	AcceptDialog *grid_settings;
 
@@ -99,10 +99,10 @@ class Polygon2DEditor : public AbstractPolygon2DEditor {
 
 	Vector2 uv_draw_ofs;
 	float uv_draw_zoom;
-	Vector<Vector2> points_prev;
-	Vector<Vector2> uv_create_uv_prev;
-	Vector<Vector2> uv_create_poly_prev;
-	Vector<Color> uv_create_colors_prev;
+	PoolVector<Vector2> points_prev;
+	PoolVector<Vector2> uv_create_uv_prev;
+	PoolVector<Vector2> uv_create_poly_prev;
+	PoolVector<Color> uv_create_colors_prev;
 	int uv_create_prev_internal_vertices;
 	Array uv_create_bones_prev;
 	Array polygons_prev;

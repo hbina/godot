@@ -81,7 +81,7 @@ public:
 		Vector<Vector3> vts;
 
 		/*
-		Vector<Plane> sp = Geometry::build_sphere_planes(2,5,5);
+		PoolVector<Plane> sp = Geometry::build_sphere_planes(2,5,5);
 		Geometry::MeshData md2 = Geometry::build_convex_mesh(sp);
 		vts=md2.vertices;
 */

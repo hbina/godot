@@ -121,7 +121,7 @@ public:
 	void set_point_weight_scale(int p_id, real_t p_weight_scale);
 	void remove_point(int p_id);
 	bool has_point(int p_id) const;
-	Vector<int> get_point_connections(int p_id);
+	PoolVector<int> get_point_connections(int p_id);
 	Array get_points();
 
 	void set_point_disabled(int p_id, bool p_disabled = true);
@@ -136,8 +136,8 @@ public:
 	int get_closest_point(const Vector3 &p_point) const;
 	Vector3 get_closest_position_in_segment(const Vector3 &p_point) const;
 
-	Vector<Vector3> get_point_path(int p_from_id, int p_to_id);
-	Vector<int> get_id_path(int p_from_id, int p_to_id);
+	PoolVector<Vector3> get_point_path(int p_from_id, int p_to_id);
+	PoolVector<int> get_id_path(int p_from_id, int p_to_id);
 
 	AStar();
 	~AStar();
@@ -160,7 +160,7 @@ public:
 	void set_point_weight_scale(int p_id, real_t p_weight_scale);
 	void remove_point(int p_id);
 	bool has_point(int p_id) const;
-	Vector<int> get_point_connections(int p_id);
+	PoolVector<int> get_point_connections(int p_id);
 	Array get_points();
 
 	void set_point_disabled(int p_id, bool p_disabled = true);
@@ -175,8 +175,8 @@ public:
 	int get_closest_point(const Vector2 &p_point) const;
 	Vector2 get_closest_position_in_segment(const Vector2 &p_point) const;
 
-	Vector<Vector2> get_point_path(int p_from_id, int p_to_id);
-	Vector<int> get_id_path(int p_from_id, int p_to_id);
+	PoolVector<Vector2> get_point_path(int p_from_id, int p_to_id);
+	PoolVector<int> get_id_path(int p_from_id, int p_to_id);
 
 	AStar2D();
 	~AStar2D();

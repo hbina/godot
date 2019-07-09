@@ -69,7 +69,7 @@ Error ImageLoaderBMP::convert_to_image(Ref<Image> p_image,
 		if (err == OK) {
 
 			// Image data (might be indexed)
-			Vector<uint8_t> data;
+			PoolVector<uint8_t> data;
 			int data_len = 0;
 
 			if (bits_per_pixel <= 8) { // indexed
@@ -80,7 +80,8 @@ Error ImageLoaderBMP::convert_to_image(Ref<Image> p_image,
 			ERR_FAIL_COND_V(data_len == 0, ERR_BUG);
 			data.resize(data_len);
 
-			uint8_t *write_buffer = data.ptrw();
+			PoolVector<uint8_t>::Write data_w = data.write();
+			uint8_t *write_buffer = data_w.ptr();
 
 			const uint32_t width_bytes = width * bits_per_pixel / 8;
 			const uint32_t line_width = (width_bytes + 3) & ~3;
@@ -161,10 +162,11 @@ Error ImageLoaderBMP::convert_to_image(Ref<Image> p_image,
 			} else { // data is in indexed format, extend it
 
 				// Palette data
-				Vector<uint8_t> palette_data;
+				PoolVector<uint8_t> palette_data;
 				palette_data.resize(color_table_size * 4);
 
-				uint8_t *pal = palette_data.ptrw();
+				PoolVector<uint8_t>::Write palette_data_w = palette_data.write();
+				uint8_t *pal = palette_data_w.ptr();
 
 				const uint8_t *cb = p_color_buffer;
 
@@ -179,10 +181,11 @@ Error ImageLoaderBMP::convert_to_image(Ref<Image> p_image,
 					cb += 4;
 				}
 				// Extend palette to image
-				Vector<uint8_t> extended_data;
+				PoolVector<uint8_t> extended_data;
 				extended_data.resize(data.size() * 4);
 
-				uint8_t *dest = extended_data.ptrw();
+				PoolVector<uint8_t>::Write ex_w = extended_data.write();
+				uint8_t *dest = ex_w.ptr();
 
 				const int num_pixels = width * height;
 
@@ -257,23 +260,27 @@ Error ImageLoaderBMP::load_image(Ref<Image> p_image, FileAccess *f,
 			}
 			ERR_FAIL_COND_V(color_table_size == 0, ERR_BUG);
 
-			Vector<uint8_t> bmp_color_table;
+			PoolVector<uint8_t> bmp_color_table;
 			// Color table is usually 4 bytes per color -> [B][G][R][0]
 			bmp_color_table.resize(color_table_size * 4);
-			f->get_buffer(bmp_color_table.ptrw(), color_table_size * 4);
+			PoolVector<uint8_t>::Write bmp_color_table_w = bmp_color_table.write();
+			f->get_buffer(bmp_color_table_w.ptr(), color_table_size * 4);
 
 			f->seek(bmp_header.bmp_file_header.bmp_file_offset);
 
 			uint32_t bmp_buffer_size = (bmp_header.bmp_file_header.bmp_file_size -
 										bmp_header.bmp_file_header.bmp_file_offset);
 
-			Vector<uint8_t> bmp_buffer;
+			PoolVector<uint8_t> bmp_buffer;
 			bmp_buffer.resize(bmp_buffer_size);
 			if (err == OK) {
-				f->get_buffer(bmp_buffer.ptrw(), bmp_buffer_size);
+				PoolVector<uint8_t>::Write bmp_buffer_w = bmp_buffer.write();
+				f->get_buffer(bmp_buffer_w.ptr(), bmp_buffer_size);
 
-				err = convert_to_image(p_image, bmp_buffer.ptr(),
-						bmp_color_table.ptr(), color_table_size, bmp_header);
+				PoolVector<uint8_t>::Read bmp_buffer_r = bmp_buffer.read();
+				PoolVector<uint8_t>::Read bmp_color_table_r = bmp_color_table.read();
+				err = convert_to_image(p_image, bmp_buffer_r.ptr(),
+						bmp_color_table_r.ptr(), color_table_size, bmp_header);
 			}
 			f->close();
 		}

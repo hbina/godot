@@ -145,9 +145,9 @@ AABB Light::get_aabb() const {
 	return AABB();
 }
 
-Vector<Face3> Light::get_faces(uint32_t p_usage_flags) const {
+PoolVector<Face3> Light::get_faces(uint32_t p_usage_flags) const {
 
-	return Vector<Face3>();
+	return PoolVector<Face3>();
 }
 
 void Light::set_bake_mode(BakeMode p_mode) {

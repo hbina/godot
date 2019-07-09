@@ -176,7 +176,7 @@ void EditorProfiler::_update_plot() {
 		graph_image.resize(desired_len);
 	}
 
-	Vector<uint8_t>::Write wr = graph_image.write();
+	PoolVector<uint8_t>::Write wr = graph_image.write();
 
 	//clear
 	for (int i = 0; i < desired_len; i += 4) {
@@ -340,7 +340,7 @@ void EditorProfiler::_update_plot() {
 		}
 	}
 
-	wr = Vector<uint8_t>::Write();
+	wr = PoolVector<uint8_t>::Write();
 
 	Ref<Image> img;
 	img.instance();

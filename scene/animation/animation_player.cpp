@@ -1133,8 +1133,8 @@ void AnimationPlayer::queue(const StringName &p_name) {
 		queued.push_back(p_name);
 }
 
-Vector<String> AnimationPlayer::get_queue() {
-	Vector<String> ret;
+PoolVector<String> AnimationPlayer::get_queue() {
+	PoolVector<String> ret;
 	for (List<StringName>::Element *E = queued.front(); E; E = E->next()) {
 		ret.push_back(E->get());
 	}

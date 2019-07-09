@@ -37,12 +37,12 @@
 
 Error ImageLoaderTinyEXR::load_image(Ref<Image> p_image, FileAccess *f, bool p_force_linear, float p_scale) {
 
-	Vector<uint8_t> src_image;
+	PoolVector<uint8_t> src_image;
 	int src_image_len = f->get_len();
 	ERR_FAIL_COND_V(src_image_len == 0, ERR_FILE_CORRUPT);
 	src_image.resize(src_image_len);
 
-	Vector<uint8_t>::Write w = src_image.write();
+	PoolVector<uint8_t>::Write w = src_image.write();
 
 	f->get_buffer(&w[0], src_image_len);
 
@@ -136,7 +136,7 @@ Error ImageLoaderTinyEXR::load_image(Ref<Image> p_image, FileAccess *f, bool p_f
 
 	// EXR image data loaded, now parse it into Godot-friendly image data
 
-	Vector<uint8_t> imgdata;
+	PoolVector<uint8_t> imgdata;
 	Image::Format format;
 	int output_channels = 0;
 
@@ -180,7 +180,7 @@ Error ImageLoaderTinyEXR::load_image(Ref<Image> p_image, FileAccess *f, bool p_f
 	}
 
 	{
-		Vector<uint8_t>::Write wd = imgdata.write();
+		PoolVector<uint8_t>::Write wd = imgdata.write();
 		uint16_t *iw = (uint16_t *)wd.ptr();
 
 		// Assume `out_rgba` have enough memory allocated.
@@ -235,7 +235,7 @@ Error ImageLoaderTinyEXR::load_image(Ref<Image> p_image, FileAccess *f, bool p_f
 
 	p_image->create(exr_image.width, exr_image.height, false, format, imgdata);
 
-	w = Vector<uint8_t>::Write();
+	w = PoolVector<uint8_t>::Write();
 
 	FreeEXRHeader(&exr_header);
 	FreeEXRImage(&exr_image);

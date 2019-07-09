@@ -87,7 +87,7 @@ void VideoStreamPlaybackTheora::video_write(void) {
 	int pitch = 4;
 	frame_data.resize(size.x * size.y * pitch);
 	{
-		Vector<uint8_t>::Write w = frame_data.write();
+		PoolVector<uint8_t>::Write w = frame_data.write();
 		char *dst = (char *)w.ptr();
 
 		//uv_offset=(ti.pic_x/2)+(yuv[1].stride)*(ti.pic_y/2);

@@ -34,7 +34,7 @@
 #include "core/os/os.h"
 #include "core/project_settings.h"
 
-Error LWSServer::listen(int p_port, Vector<String> p_protocols, bool gd_mp_api) {
+Error LWSServer::listen(int p_port, PoolVector<String> p_protocols, bool gd_mp_api) {
 
 	ERR_FAIL_COND_V(context != NULL, FAILED);
 

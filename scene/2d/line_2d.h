@@ -62,8 +62,8 @@ public:
 	virtual bool _edit_use_rect() const;
 	virtual bool _edit_is_selected_on_click(const Point2 &p_point, double p_tolerance) const;
 
-	void set_points(const Vector<Vector2> &p_points);
-	Vector<Vector2> get_points() const;
+	void set_points(const PoolVector<Vector2> &p_points);
+	PoolVector<Vector2> get_points() const;
 
 	void set_point_position(int i, Vector2 pos);
 	Vector2 get_point_position(int i) const;
@@ -115,7 +115,7 @@ private:
 	void _gradient_changed();
 
 private:
-	Vector<Vector2> _points;
+	PoolVector<Vector2> _points;
 	LineJointMode _joint_mode;
 	LineCapMode _begin_cap_mode;
 	LineCapMode _end_cap_mode;

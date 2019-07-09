@@ -34,12 +34,12 @@
 #include "editor_inspector.h"
 #include "editor_settings.h"
 
-Vector<String> EditorFolding::_get_unfolds(const Object *p_object) {
+PoolVector<String> EditorFolding::_get_unfolds(const Object *p_object) {
 
-	Vector<String> sections;
+	PoolVector<String> sections;
 	sections.resize(p_object->editor_get_section_folding().size());
 	if (sections.size()) {
-		Vector<String>::Write w = sections.write();
+		PoolVector<String>::Write w = sections.write();
 		int idx = 0;
 		for (const Set<String>::Element *E = p_object->editor_get_section_folding().front(); E; E = E->next()) {
 			w[idx++] = E->get();
@@ -52,7 +52,7 @@ Vector<String> EditorFolding::_get_unfolds(const Object *p_object) {
 void EditorFolding::save_resource_folding(const RES &p_resource, const String &p_path) {
 	Ref<ConfigFile> config;
 	config.instance();
-	Vector<String> unfolds = _get_unfolds(p_resource.ptr());
+	PoolVector<String> unfolds = _get_unfolds(p_resource.ptr());
 	config->set_value("folding", "sections_unfolded", unfolds);
 
 	String path = EditorSettings::get_singleton()->get_project_settings_dir();
@@ -61,10 +61,10 @@ void EditorFolding::save_resource_folding(const RES &p_resource, const String &p
 	config->save(file);
 }
 
-void EditorFolding::_set_unfolds(Object *p_object, const Vector<String> &p_unfolds) {
+void EditorFolding::_set_unfolds(Object *p_object, const PoolVector<String> &p_unfolds) {
 
 	int uc = p_unfolds.size();
-	Vector<String>::Read r = p_unfolds.read();
+	PoolVector<String>::Read r = p_unfolds.read();
 	p_object->editor_clear_section_folding();
 	for (int i = 0; i < uc; i++) {
 		p_object->editor_set_section_unfold(r[i], true);
@@ -84,7 +84,7 @@ void EditorFolding::load_resource_folding(RES p_resource, const String &p_path) 
 		return;
 	}
 
-	Vector<String> unfolds;
+	PoolVector<String> unfolds;
 
 	if (config->has_section_key("folding", "sections_unfolded")) {
 		unfolds = config->get_value("folding", "sections_unfolded");
@@ -105,7 +105,7 @@ void EditorFolding::_fill_folds(const Node *p_root, const Node *p_node, Array &p
 	if (p_node->is_displayed_folded()) {
 		nodes_folded.push_back(p_root->get_path_to(p_node));
 	}
-	Vector<String> unfolds = _get_unfolds(p_node);
+	PoolVector<String> unfolds = _get_unfolds(p_node);
 
 	if (unfolds.size()) {
 		p_folds.push_back(p_root->get_path_to(p_node));
@@ -120,7 +120,7 @@ void EditorFolding::_fill_folds(const Node *p_root, const Node *p_node, Array &p
 				RES res = p_node->get(E->get().name);
 				if (res.is_valid() && !resources.has(res) && res->get_path() != String() && !res->get_path().is_resource_file()) {
 
-					Vector<String> res_unfolds = _get_unfolds(res.ptr());
+					PoolVector<String> res_unfolds = _get_unfolds(res.ptr());
 					resource_folds.push_back(res->get_path());
 					resource_folds.push_back(res_unfolds);
 					resources.insert(res);
@@ -183,7 +183,7 @@ void EditorFolding::load_scene_folding(Node *p_scene, const String &p_path) {
 
 	for (int i = 0; i < unfolds.size(); i += 2) {
 		NodePath path2 = unfolds[i];
-		Vector<String> un = unfolds[i + 1];
+		PoolVector<String> un = unfolds[i + 1];
 		Node *node = p_scene->get_node_or_null(path2);
 		if (!node) {
 			continue;
@@ -201,7 +201,7 @@ void EditorFolding::load_scene_folding(Node *p_scene, const String &p_path) {
 			continue;
 		}
 
-		Vector<String> unfolds2 = res_unfolds[i + 1];
+		PoolVector<String> unfolds2 = res_unfolds[i + 1];
 		_set_unfolds(res.ptr(), unfolds2);
 	}
 

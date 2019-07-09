@@ -60,7 +60,7 @@ bool Polygon2D::_edit_use_pivot() const {
 Rect2 Polygon2D::_edit_get_rect() const {
 	if (rect_cache_dirty) {
 		int l = polygon.size();
-		Vector<Vector2>::Read r = polygon.read();
+		PoolVector<Vector2>::Read r = polygon.read();
 		item_rect = Rect2();
 		for (int i = 0; i < l; i++) {
 			Vector2 pos = r[i] + offset;
@@ -146,7 +146,7 @@ void Polygon2D::_notification(int p_what) {
 
 			{
 
-				Vector<Vector2>::Read polyr = polygon.read();
+				PoolVector<Vector2>::Read polyr = polygon.read();
 				for (int i = 0; i < len; i++) {
 					points[i] = polyr[i] + offset;
 				}
@@ -215,7 +215,7 @@ void Polygon2D::_notification(int p_what) {
 
 				if (points.size() == uv.size()) {
 
-					Vector<Vector2>::Read uvr = uv.read();
+					PoolVector<Vector2>::Read uvr = uv.read();
 
 					for (int i = 0; i < len; i++) {
 						uvs[i] = texmat.xform(uvr[i]) / tex_size;
@@ -255,7 +255,7 @@ void Polygon2D::_notification(int p_what) {
 					}
 
 					int bone_index = bone->get_index_in_skeleton();
-					Vector<float>::Read r = bone_weights[i].weights.read();
+					PoolVector<float>::Read r = bone_weights[i].weights.read();
 					for (int j = 0; j < vc; j++) {
 						if (r[j] == 0.0)
 							continue; //weight is unpainted, skip
@@ -294,7 +294,7 @@ void Polygon2D::_notification(int p_what) {
 			Vector<Color> colors;
 			if (vertex_colors.size() == points.size()) {
 				colors.resize(len);
-				Vector<Color>::Read color_r = vertex_colors.read();
+				PoolVector<Color>::Read color_r = vertex_colors.read();
 				for (int i = 0; i < len; i++) {
 					colors[i] = color_r[i];
 				}
@@ -314,11 +314,11 @@ void Polygon2D::_notification(int p_what) {
 				//draw individual polygons
 				Vector<int> total_indices;
 				for (int i = 0; i < polygons.size(); i++) {
-					Vector<int> src_indices = polygons[i];
+					PoolVector<int> src_indices = polygons[i];
 					int ic = src_indices.size();
 					if (ic < 3)
 						continue;
-					Vector<int>::Read r = src_indices.read();
+					PoolVector<int>::Read r = src_indices.read();
 
 					Vector<Vector2> tmp_points;
 					tmp_points.resize(ic);
@@ -349,7 +349,7 @@ void Polygon2D::_notification(int p_what) {
 				//use splits
 				Vector<int> loop;
 				int sc = splits.size();
-				Vector<int>::Read r = splits.read();
+				PoolVector<int>::Read r = splits.read();
 
 
 				print_line("has splits, amount " + itos(splits.size()));
@@ -539,13 +539,13 @@ void Polygon2D::_notification(int p_what) {
 	}
 }
 
-void Polygon2D::set_polygon(const Vector<Vector2> &p_polygon) {
+void Polygon2D::set_polygon(const PoolVector<Vector2> &p_polygon) {
 	polygon = p_polygon;
 	rect_cache_dirty = true;
 	update();
 }
 
-Vector<Vector2> Polygon2D::get_polygon() const {
+PoolVector<Vector2> Polygon2D::get_polygon() const {
 
 	return polygon;
 }
@@ -559,13 +559,13 @@ int Polygon2D::get_internal_vertex_count() const {
 	return internal_vertices;
 }
 
-void Polygon2D::set_uv(const Vector<Vector2> &p_uv) {
+void Polygon2D::set_uv(const PoolVector<Vector2> &p_uv) {
 
 	uv = p_uv;
 	update();
 }
 
-Vector<Vector2> Polygon2D::get_uv() const {
+PoolVector<Vector2> Polygon2D::get_uv() const {
 
 	return uv;
 }
@@ -591,12 +591,12 @@ Color Polygon2D::get_color() const {
 	return color;
 }
 
-void Polygon2D::set_vertex_colors(const Vector<Color> &p_colors) {
+void Polygon2D::set_vertex_colors(const PoolVector<Color> &p_colors) {
 
 	vertex_colors = p_colors;
 	update();
 }
-Vector<Color> Polygon2D::get_vertex_colors() const {
+PoolVector<Color> Polygon2D::get_vertex_colors() const {
 
 	return vertex_colors;
 }
@@ -702,7 +702,7 @@ Vector2 Polygon2D::get_offset() const {
 	return offset;
 }
 
-void Polygon2D::add_bone(const NodePath &p_path, const Vector<float> &p_weights) {
+void Polygon2D::add_bone(const NodePath &p_path, const PoolVector<float> &p_weights) {
 
 	Bone bone;
 	bone.path = p_path;
@@ -716,9 +716,9 @@ NodePath Polygon2D::get_bone_path(int p_index) const {
 	ERR_FAIL_INDEX_V(p_index, bone_weights.size(), NodePath());
 	return bone_weights[p_index].path;
 }
-Vector<float> Polygon2D::get_bone_weights(int p_index) const {
+PoolVector<float> Polygon2D::get_bone_weights(int p_index) const {
 
-	ERR_FAIL_INDEX_V(p_index, bone_weights.size(), Vector<float>());
+	ERR_FAIL_INDEX_V(p_index, bone_weights.size(), PoolVector<float>());
 	return bone_weights[p_index].weights;
 }
 void Polygon2D::erase_bone(int p_idx) {
@@ -731,7 +731,7 @@ void Polygon2D::clear_bones() {
 	bone_weights.clear();
 }
 
-void Polygon2D::set_bone_weights(int p_index, const Vector<float> &p_weights) {
+void Polygon2D::set_bone_weights(int p_index, const PoolVector<float> &p_weights) {
 	ERR_FAIL_INDEX(p_index, bone_weights.size());
 	bone_weights[p_index].weights = p_weights;
 	update();

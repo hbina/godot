@@ -130,7 +130,7 @@ Error WebSocketMultiplayerPeer::put_packet(const uint8_t *p_buffer, int p_buffer
 	ERR_EXPLAIN("Please use get_peer(ID).put_packet/var to communicate with peers when not using the MultiplayerAPI.");
 	ERR_FAIL_COND_V(!_is_multiplayer, ERR_UNCONFIGURED);
 
-	Vector<uint8_t> buffer = _make_pkt(SYS_NONE, get_unique_id(), _target_peer, p_buffer, p_buffer_size);
+	PoolVector<uint8_t> buffer = _make_pkt(SYS_NONE, get_unique_id(), _target_peer, p_buffer, p_buffer_size);
 
 	if (is_server()) {
 		return _server_relay(1, _target_peer, &(buffer.read()[0]), buffer.size());
@@ -187,16 +187,16 @@ void WebSocketMultiplayerPeer::_send_sys(Ref<WebSocketPeer> p_peer, uint8_t p_ty
 	ERR_FAIL_COND(!p_peer.is_valid());
 	ERR_FAIL_COND(!p_peer->is_connected_to_host());
 
-	Vector<uint8_t> message = _make_pkt(p_type, 1, 0, (uint8_t *)&p_peer_id, 4);
+	PoolVector<uint8_t> message = _make_pkt(p_type, 1, 0, (uint8_t *)&p_peer_id, 4);
 	p_peer->put_packet(&(message.read()[0]), message.size());
 }
 
-Vector<uint8_t> WebSocketMultiplayerPeer::_make_pkt(uint32_t p_type, int32_t p_from, int32_t p_to, const uint8_t *p_data, uint32_t p_data_size) {
+PoolVector<uint8_t> WebSocketMultiplayerPeer::_make_pkt(uint32_t p_type, int32_t p_from, int32_t p_to, const uint8_t *p_data, uint32_t p_data_size) {
 
-	Vector<uint8_t> out;
+	PoolVector<uint8_t> out;
 	out.resize(PROTO_SIZE + p_data_size);
 
-	Vector<uint8_t>::Write w = out.write();
+	PoolVector<uint8_t>::Write w = out.write();
 	copymem(&w[0], &p_type, 1);
 	copymem(&w[1], &p_from, 4);
 	copymem(&w[5], &p_to, 4);

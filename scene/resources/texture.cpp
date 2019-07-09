@@ -579,10 +579,10 @@ Error StreamTexture::_load_data(const String &p_path, int &tw, int &th, int &tw_
 				size = f->get_32();
 			}
 
-			Vector<uint8_t> pv;
+			PoolVector<uint8_t> pv;
 			pv.resize(size);
 			{
-				Vector<uint8_t>::Write w = pv.write();
+				PoolVector<uint8_t>::Write w = pv.write();
 				f->get_buffer(w.ptr(), size);
 			}
 
@@ -613,18 +613,18 @@ Error StreamTexture::_load_data(const String &p_path, int &tw, int &th, int &tw_
 			return OK;
 
 		} else {
-			Vector<uint8_t> img_data;
+			PoolVector<uint8_t> img_data;
 			img_data.resize(total_size);
 
 			{
-				Vector<uint8_t>::Write w = img_data.write();
+				PoolVector<uint8_t>::Write w = img_data.write();
 
 				int ofs = 0;
 				for (int i = 0; i < mipmap_images.size(); i++) {
 
-					Vector<uint8_t> id = mipmap_images[i]->get_data();
+					PoolVector<uint8_t> id = mipmap_images[i]->get_data();
 					int len = id.size();
-					Vector<uint8_t>::Read r = id.read();
+					PoolVector<uint8_t>::Read r = id.read();
 					copymem(&w[ofs], r.ptr(), len);
 					ofs += len;
 				}
@@ -643,11 +643,11 @@ Error StreamTexture::_load_data(const String &p_path, int &tw, int &th, int &tw_
 		if (!mipmaps) {
 			int size = Image::get_image_data_size(tw, th, format, false);
 
-			Vector<uint8_t> img_data;
+			PoolVector<uint8_t> img_data;
 			img_data.resize(size);
 
 			{
-				Vector<uint8_t>::Write w = img_data.write();
+				PoolVector<uint8_t>::Write w = img_data.write();
 				f->get_buffer(w.ptr(), size);
 			}
 
@@ -681,11 +681,11 @@ Error StreamTexture::_load_data(const String &p_path, int &tw, int &th, int &tw_
 
 			f->seek(f->get_position() + ofs);
 
-			Vector<uint8_t> img_data;
+			PoolVector<uint8_t> img_data;
 			img_data.resize(total_size - ofs);
 
 			{
-				Vector<uint8_t>::Write w = img_data.write();
+				PoolVector<uint8_t>::Write w = img_data.write();
 				int bytes = f->get_buffer(w.ptr(), total_size - ofs);
 				//print_line("requested read: " + itos(total_size - ofs) + " but got: " + itos(bytes));
 
@@ -1727,12 +1727,12 @@ void CurveTexture::set_curve(Ref<Curve> p_curve) {
 
 void CurveTexture::_update() {
 
-	Vector<uint8_t> data;
+	PoolVector<uint8_t> data;
 	data.resize(_width * sizeof(float));
 
 	// The array is locked in that scope
 	{
-		Vector<uint8_t>::Write wd8 = data.write();
+		PoolVector<uint8_t>::Write wd8 = data.write();
 		float *wd = (float *)wd8.ptr();
 
 		if (_curve.is_valid()) {
@@ -1841,10 +1841,10 @@ void GradientTexture::_update() {
 	if (gradient.is_null())
 		return;
 
-	Vector<uint8_t> data;
+	PoolVector<uint8_t> data;
 	data.resize(width * 4);
 	{
-		Vector<uint8_t>::Write wd8 = data.write();
+		PoolVector<uint8_t>::Write wd8 = data.write();
 		Gradient &g = **gradient;
 
 		for (int i = 0; i < width; i++) {
@@ -2398,10 +2398,10 @@ RES ResourceFormatLoaderTextureLayered::load(const String &p_path, const String 
 			for (int i = 0; i < mipmaps; i++) {
 				uint32_t size = f->get_32();
 
-				Vector<uint8_t> pv;
+				PoolVector<uint8_t> pv;
 				pv.resize(size);
 				{
-					Vector<uint8_t>::Write w = pv.write();
+					PoolVector<uint8_t>::Write w = pv.write();
 					f->get_buffer(w.ptr(), size);
 				}
 
@@ -2424,18 +2424,18 @@ RES ResourceFormatLoaderTextureLayered::load(const String &p_path, const String 
 
 			} else {
 				int total_size = Image::get_image_data_size(tw, th, format, true);
-				Vector<uint8_t> img_data;
+				PoolVector<uint8_t> img_data;
 				img_data.resize(total_size);
 
 				{
-					Vector<uint8_t>::Write w = img_data.write();
+					PoolVector<uint8_t>::Write w = img_data.write();
 
 					int ofs = 0;
 					for (int i = 0; i < mipmap_images.size(); i++) {
 
-						Vector<uint8_t> id = mipmap_images[i]->get_data();
+						PoolVector<uint8_t> id = mipmap_images[i]->get_data();
 						int len = id.size();
-						Vector<uint8_t>::Read r = id.read();
+						PoolVector<uint8_t>::Read r = id.read();
 						copymem(&w[ofs], r.ptr(), len);
 						ofs += len;
 					}
@@ -2457,11 +2457,11 @@ RES ResourceFormatLoaderTextureLayered::load(const String &p_path, const String 
 			bool mipmaps = (flags & Texture::FLAG_MIPMAPS);
 			int total_size = Image::get_image_data_size(tw, th, format, mipmaps);
 
-			Vector<uint8_t> img_data;
+			PoolVector<uint8_t> img_data;
 			img_data.resize(total_size);
 
 			{
-				Vector<uint8_t>::Write w = img_data.write();
+				PoolVector<uint8_t>::Write w = img_data.write();
 				int bytes = f->get_buffer(w.ptr(), total_size);
 				if (bytes != total_size) {
 					if (r_error) {

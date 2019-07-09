@@ -174,14 +174,14 @@ public:
 	struct LightMapData {
 		int width;
 		int height;
-		Vector<float> light;
+		PoolVector<float> light;
 	};
 
 	Error make_lightmap(const Transform &p_xform, Ref<Mesh> &p_mesh, LightMapData &r_lightmap, bool (*p_bake_time_func)(void *, float, float) = NULL, void *p_bake_time_ud = NULL);
 
-	Vector<int> create_gi_probe_data();
+	PoolVector<int> create_gi_probe_data();
 	Ref<MultiMesh> create_debug_multimesh(DebugMode p_mode = DEBUG_ALBEDO);
-	Vector<uint8_t> create_capture_octree(int p_subdiv);
+	PoolVector<uint8_t> create_capture_octree(int p_subdiv);
 
 	float get_cell_size() const;
 	Transform get_to_cell_space_xform() const;

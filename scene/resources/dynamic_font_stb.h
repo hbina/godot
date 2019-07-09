@@ -47,8 +47,8 @@ class DynamicFontData : public Resource {
 
 	bool valid;
 
-	Vector<uint8_t> font_data;
-	Vector<uint8_t>::Read fr;
+	PoolVector<uint8_t> font_data;
+	PoolVector<uint8_t>::Read fr;
 	const uint8_t *last_data_ptr;
 
 	struct KerningPairKey {
@@ -83,7 +83,7 @@ class DynamicFontData : public Resource {
 	Ref<DynamicFontAtSize> _get_dynamic_font_at_size(int p_size);
 
 public:
-	void set_font_data(const Vector<uint8_t> &p_font);
+	void set_font_data(const PoolVector<uint8_t> &p_font);
 	DynamicFontData();
 	~DynamicFontData();
 };
@@ -96,7 +96,7 @@ class DynamicFontAtSize : public Reference {
 
 	struct CharTexture {
 
-		Vector<uint8_t> imgdata;
+		PoolVector<uint8_t> imgdata;
 		int texture_size;
 		Vector<int> offsets;
 		Ref<ImageTexture> texture;

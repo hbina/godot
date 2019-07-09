@@ -64,7 +64,7 @@ EMSCRIPTEN_KEEPALIVE void _esws_on_close(void *obj, int code, char *reason, int 
 }
 }
 
-Error EMWSClient::connect_to_host(String p_host, String p_path, uint16_t p_port, bool p_ssl, Vector<String> p_protocols) {
+Error EMWSClient::connect_to_host(String p_host, String p_path, uint16_t p_port, bool p_ssl, PoolVector<String> p_protocols) {
 
 	String proto_string = p_protocols.join(",");
 	String str = "ws://";

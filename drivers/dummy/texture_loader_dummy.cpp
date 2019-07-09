@@ -43,7 +43,7 @@ RES ResourceFormatDummyTexture::load(const String &p_path, const String &p_origi
 	Image::Format fmt = Image::FORMAT_RGB8;
 	int rowsize = 3 * width;
 
-	Vector<uint8_t> dstbuff;
+	PoolVector<uint8_t> dstbuff;
 
 	dstbuff.resize(rowsize * height);
 

@@ -862,11 +862,11 @@ Ref<ArrayMesh> SceneTree::get_debug_contact_mesh() {
 	};
 	/* clang-format on */
 
-	Vector<int> indices;
+	PoolVector<int> indices;
 	for (int i = 0; i < 8 * 3; i++)
 		indices.push_back(diamond_faces[i]);
 
-	Vector<Vector3> vertices;
+	PoolVector<Vector3> vertices;
 	for (int i = 0; i < 6; i++)
 		vertices.push_back(diamond[i] * 0.1);
 

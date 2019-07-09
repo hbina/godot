@@ -66,7 +66,7 @@ public:
 
 bool test_abc() {
 	ABCX abcx;
-	Vector<int> path = abcx.get_id_path(ABCX::A, ABCX::C);
+	PoolVector<int> path = abcx.get_id_path(ABCX::A, ABCX::C);
 	bool ok = path.size() == 3;
 	int i = 0;
 	ok = ok && path[i++] == ABCX::A;
@@ -77,7 +77,7 @@ bool test_abc() {
 
 bool test_abcx() {
 	ABCX abcx;
-	Vector<int> path = abcx.get_id_path(ABCX::X, ABCX::C);
+	PoolVector<int> path = abcx.get_id_path(ABCX::X, ABCX::C);
 	bool ok = path.size() == 4;
 	int i = 0;
 	ok = ok && path[i++] == ABCX::X;
