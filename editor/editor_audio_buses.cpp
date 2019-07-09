@@ -76,9 +76,9 @@ void EditorAudioBus::_notification(int p_what) {
 
 			disabled_vu = get_icon("BusVuFrozen", "EditorIcons");
 
-			Color solo_color = Color::html(EditorSettings::get_singleton()->is_dark_theme() ? "#ffe337" : "#ffeb70");
-			Color mute_color = Color::html(EditorSettings::get_singleton()->is_dark_theme() ? "#ff2929" : "#ff7070");
-			Color bypass_color = Color::html(EditorSettings::get_singleton()->is_dark_theme() ? "#22ccff" : "#70deff");
+			Color solo_color = EditorSettings::get_singleton()->is_dark_theme() ? Color(1.0, 0.89, 0.22) : Color(1.0, 0.92, 0.44);
+			Color mute_color = EditorSettings::get_singleton()->is_dark_theme() ? Color(1.0, 0.16, 0.16) : Color(1.0, 0.44, 0.44);
+			Color bypass_color = EditorSettings::get_singleton()->is_dark_theme() ? Color(0.13, 0.8, 1.0) : Color(0.44, 0.87, 1.0);
 
 			solo->set_icon(get_icon("AudioBusSolo", "EditorIcons"));
 			solo->add_color_override("icon_color_pressed", solo_color);
@@ -1370,10 +1370,10 @@ EditorAudioBuses::EditorAudioBuses() {
 	edited_path = ProjectSettings::get_singleton()->get("audio/default_bus_layout");
 
 	file_dialog = memnew(EditorFileDialog);
-	Vector<String> ext;
-	ResourceLoader::get_recognized_extensions_for_type("AudioBusLayout", ext);
-	for (const auto &E : ext) {
-		file_dialog->add_filter("*." + E + "; Audio Bus Layout");
+	List<String> ext;
+	ResourceLoader::get_recognized_extensions_for_type("AudioBusLayout", &ext);
+	for (List<String>::Element *E = ext.front(); E; E = E->next()) {
+		file_dialog->add_filter("*." + E->get() + "; Audio Bus Layout");
 	}
 	add_child(file_dialog);
 	file_dialog->connect("file_selected", this, "_file_dialog_callback");
