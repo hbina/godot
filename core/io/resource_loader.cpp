@@ -63,16 +63,16 @@ bool ResourceFormatLoader::recognize_path(const String &p_path, const String &p_
 
 	String extension = p_path.get_extension();
 
-	List<String> extensions;
+	Vector<String> extensions;
 	if (p_for_type == String()) {
-		get_recognized_extensions(&extensions);
+		get_recognized_extensions(extensions);
 	} else {
-		get_recognized_extensions_for_type(p_for_type, &extensions);
+		get_recognized_extensions_for_type(p_for_type, extensions);
 	}
 
-	for (List<String>::Element *E = extensions.front(); E; E = E->next()) {
+	for (const auto &E : extensions) {
 
-		if (E->get().nocasecmp_to(extension) == 0)
+		if (E.nocasecmp_to(extension) == 0)
 			return true;
 	}
 
@@ -98,13 +98,13 @@ String ResourceFormatLoader::get_resource_type(const String &p_path) const {
 	return "";
 }
 
-void ResourceFormatLoader::get_recognized_extensions_for_type(const String &p_type, List<String> *p_extensions) const {
+void ResourceFormatLoader::get_recognized_extensions_for_type(const String &p_type, Vector<String> &p_extensions) const {
 
 	if (p_type == "" || handles_type(p_type))
 		get_recognized_extensions(p_extensions);
 }
 
-void ResourceLoader::get_recognized_extensions_for_type(const String &p_type, List<String> *p_extensions) {
+void ResourceLoader::get_recognized_extensions_for_type(const String &p_type, Vector<String> &p_extensions) {
 
 	for (int i = 0; i < loader_count; i++) {
 		loader[i]->get_recognized_extensions_for_type(p_type, p_extensions);
@@ -154,7 +154,7 @@ bool ResourceFormatLoader::exists(const String &p_path) const {
 	return FileAccess::exists(p_path); //by default just check file
 }
 
-void ResourceFormatLoader::get_recognized_extensions(List<String> *p_extensions) const {
+void ResourceFormatLoader::get_recognized_extensions(Vector<String> &p_extensions) const {
 
 	if (get_script_instance() && get_script_instance()->has_method("get_recognized_extensions")) {
 		PoolStringArray exts = get_script_instance()->call("get_recognized_extensions");
@@ -162,7 +162,7 @@ void ResourceFormatLoader::get_recognized_extensions(List<String> *p_extensions)
 		{
 			PoolStringArray::Read r = exts.read();
 			for (int i = 0; i < exts.size(); ++i) {
-				p_extensions->push_back(r[i]);
+				p_extensions.push_back(r[i]);
 			}
 		}
 	}

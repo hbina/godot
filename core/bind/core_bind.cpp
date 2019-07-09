@@ -83,12 +83,12 @@ RES _ResourceLoader::load(const String &p_path, const String &p_type_hint, bool 
 
 PoolVector<String> _ResourceLoader::get_recognized_extensions_for_type(const String &p_type) {
 
-	List<String> exts;
-	ResourceLoader::get_recognized_extensions_for_type(p_type, &exts);
+	Vector<String> exts;
+	ResourceLoader::get_recognized_extensions_for_type(p_type, exts);
 	PoolVector<String> ret;
-	for (List<String>::Element *E = exts.front(); E; E = E->next()) {
+	for (const auto &E : exts) {
 
-		ret.push_back(E->get());
+		ret.push_back(E);
 	}
 
 	return ret;
