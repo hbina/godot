@@ -67,7 +67,7 @@ class EditorAutoloadSettings : public VBoxContainer {
 		}
 	};
 
-	List<AutoLoadInfo> autoload_cache;
+	Vector<AutoLoadInfo> autoload_cache;
 
 	bool updating_autoload;
 	int number_of_autoloads;

@@ -66,6 +66,7 @@ public:
 	void sort_custom();
 	void ordered_insert(const T &);
 
+	// STL interfaces
 	T &operator[](int) noexcept;
 	const T &operator[](int) const noexcept;
 	bool empty() const noexcept;
@@ -81,6 +82,9 @@ public:
 	typename std::vector<T>::iterator end() noexcept;
 	typename std::vector<T>::const_iterator begin() const noexcept;
 	typename std::vector<T>::const_iterator end() const noexcept;
+
+	// Hanif's additions
+	const T &back() const noexcept;
 };
 
 template <typename T>
@@ -145,8 +149,8 @@ void VectorImpl<T>::resize(int p_size) {
 
 template <typename T>
 int VectorImpl<T>::size() const noexcept {
-	assert(std::numeric_limits<int>::max() > __inner__.size());
-	return __inner__.size();
+	assert(std::numeric_limits<int>::max() > size());
+	return size();
 }
 
 template <typename T>
@@ -184,7 +188,7 @@ void VectorImpl<T>::insert(int p_pos, const T &p_val) {
 
 template <typename T>
 int VectorImpl<T>::find(const T &p_val, int p_from) const {
-	for (int a = 0; a < static_cast<int>(__inner__.size()); a++) {
+	for (int a = 0; a < static_cast<int>(size()); a++) {
 		if (p_val == __inner__.operator[](a)) {
 			return a;
 		}
@@ -207,7 +211,7 @@ void VectorImpl<T>::sort_custom() {
 template <typename T>
 void VectorImpl<T>::ordered_insert(const T &p_val) {
 	int i = 0;
-	for (; i < __inner__.size(); i++) {
+	for (; i < size(); i++) {
 
 		if (p_val < __inner__.operator[](i)) {
 			break;
@@ -226,6 +230,11 @@ void VectorImpl<T>::append_array(const VectorImpl<T> &p_other) {
 	for (const T &a : p_other) {
 		__inner__.push_back(a);
 	}
+}
+
+template <typename T>
+const T &VectorImpl<T>::back() const noexcept {
+	return __inner__.operator[](size());
 }
 
 template <typename T>

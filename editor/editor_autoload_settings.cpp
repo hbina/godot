@@ -42,19 +42,18 @@ void EditorAutoloadSettings::_notification(int p_what) {
 
 	if (p_what == NOTIFICATION_ENTER_TREE) {
 
-		List<String> afn;
-		ResourceLoader::get_recognized_extensions_for_type("Script", &afn);
-		ResourceLoader::get_recognized_extensions_for_type("PackedScene", &afn);
+		Vector<String> afn;
+		ResourceLoader::get_recognized_extensions_for_type("Script", afn);
+		ResourceLoader::get_recognized_extensions_for_type("PackedScene", afn);
 
 		EditorFileDialog *file_dialog = autoload_add_path->get_file_dialog();
 
-		for (List<String>::Element *E = afn.front(); E; E = E->next()) {
+		for (const auto &E : afn) {
 
-			file_dialog->add_filter("*." + E->get());
+			file_dialog->add_filter("*." + E);
 		}
 
-		for (List<AutoLoadInfo>::Element *E = autoload_cache.front(); E; E = E->next()) {
-			AutoLoadInfo &info = E->get();
+		for (const auto &info : autoload_cache) {
 			if (info.node && info.in_editor) {
 				get_tree()->get_root()->call_deferred("add_child", info.node);
 			}
@@ -353,8 +352,7 @@ void EditorAutoloadSettings::update_autoload() {
 	Map<String, AutoLoadInfo> to_remove;
 	List<AutoLoadInfo *> to_add;
 
-	for (List<AutoLoadInfo>::Element *E = autoload_cache.front(); E; E = E->next()) {
-		AutoLoadInfo &info = E->get();
+	for (const auto &info : autoload_cache) {
 		to_remove.insert(info.name, info);
 	}
 
@@ -412,7 +410,7 @@ void EditorAutoloadSettings::update_autoload() {
 		autoload_cache.push_back(info);
 
 		if (need_to_add) {
-			to_add.push_back(&(autoload_cache.back()->get()));
+			to_add.push_back(&(autoload_cache.back()));
 		}
 
 		TreeItem *item = tree->create_item(root);

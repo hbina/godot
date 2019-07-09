@@ -55,10 +55,10 @@ void DependencyEditor::_load_pressed(Object *p_item, int p_cell, int p_button) {
 	search->set_title(TTR("Search Replacement For:") + " " + replacing.get_file());
 
 	search->clear_filters();
-	List<String> ext;
-	ResourceLoader::get_recognized_extensions_for_type(ti->get_metadata(0), &ext);
-	for (List<String>::Element *E = ext.front(); E; E = E->next()) {
-		search->add_filter("*" + E->get());
+	Vector<String> ext;
+	ResourceLoader::get_recognized_extensions_for_type(ti->get_metadata(0), ext);
+	for (const auto &E : ext) {
+		search->add_filter("*" + E);
 	}
 	search->popup_centered_ratio(0.65); // So it doesn't completely cover the dialog below it.
 }
