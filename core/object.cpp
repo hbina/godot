@@ -647,7 +647,7 @@ void Object::get_property_list(List<PropertyInfo> *p_list, bool p_reversed) cons
 void Object::_validate_property(PropertyInfo &property) const {
 }
 
-void Object::get_method_list(List<MethodInfo> *p_list) const {
+void Object::get_method_list(Vector<MethodInfo> &p_list) const {
 
 	ClassDB::get_method_list(get_class_name(), p_list);
 	if (script_instance) {
@@ -1075,14 +1075,13 @@ Array Object::_get_property_list_bind() const {
 
 Array Object::_get_method_list_bind() const {
 
-	List<MethodInfo> ml;
-	get_method_list(&ml);
+	Vector<MethodInfo> ml;
+	get_method_list(ml);
 	Array ret;
 
-	for (List<MethodInfo>::Element *E = ml.front(); E; E = E->next()) {
+	for (const auto &E : ml) {
 
-		Dictionary d = E->get();
-		//va.push_back(d);
+		Dictionary d = E;
 		ret.push_back(d);
 	}
 

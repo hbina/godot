@@ -124,8 +124,8 @@ void InspectorDock::_menu_option(int p_option) {
 
 				int idx = p_option - OBJECT_METHOD_BASE;
 
-				List<MethodInfo> methods;
-				current->get_method_list(&methods);
+				Vector<MethodInfo> methods;
+				current->get_method_list(methods);
 
 				ERR_FAIL_INDEX(idx, methods.size());
 				String name = methods[idx].name;
@@ -446,25 +446,23 @@ void InspectorDock::update(Object *p_object) {
 		p->add_icon_shortcut(get_icon("HelpSearch", "EditorIcons"), ED_SHORTCUT("property_editor/open_help", TTR("Open in Help")), OBJECT_REQUEST_HELP);
 	}
 
-	List<MethodInfo> methods;
-	p_object->get_method_list(&methods);
+	Vector<MethodInfo> methods;
+	p_object->get_method_list(methods);
 
 	if (!methods.empty()) {
 
 		bool found = false;
-		List<MethodInfo>::Element *I = methods.front();
 		int i = 0;
-		while (I) {
 
-			if (I->get().flags & METHOD_FLAG_EDITOR) {
+		for (const auto &I : methods) {
+			if (I.flags & METHOD_FLAG_EDITOR) {
 				if (!found) {
 					p->add_separator();
 					found = true;
 				}
-				p->add_item(I->get().name.capitalize(), OBJECT_METHOD_BASE + i);
+				p->add_item(I.name.capitalize(), OBJECT_METHOD_BASE + i);
 			}
-			i++;
-			I = I->next();
+			++i;
 		}
 	}
 }

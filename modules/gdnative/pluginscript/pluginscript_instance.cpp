@@ -71,7 +71,7 @@ void PluginScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 	_script->get_script_property_list(p_properties);
 }
 
-void PluginScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
+void PluginScriptInstance::get_method_list(Vector<MethodInfo> &p_list) const {
 	_script->get_script_method_list(p_list);
 }
 

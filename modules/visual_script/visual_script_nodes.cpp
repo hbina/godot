@@ -3702,28 +3702,28 @@ void register_visual_script_nodes() {
 
 	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
 
-		List<MethodInfo> constructors;
-		Variant::get_constructor_list(Variant::Type(i), &constructors);
+		Vector<MethodInfo> constructors;
+		Variant::get_constructor_list(Variant::Type(i), constructors);
 
-		for (List<MethodInfo>::Element *E = constructors.front(); E; E = E->next()) {
+		for (const auto &E : constructors) {
 
-			if (E->get().arguments.size() > 0) {
+			if (E.arguments.size() > 0) {
 				String name = "functions/constructors/" + Variant::get_type_name(Variant::Type(i)) + "(";
-				for (int j = 0; j < E->get().arguments.size(); j++) {
+				for (int j = 0; j < E.arguments.size(); j++) {
 					if (j > 0) {
 						name += ", ";
 					}
-					if (E->get().arguments.size() == 1) {
-						name += Variant::get_type_name(E->get().arguments[j].type);
+					if (E.arguments.size() == 1) {
+						name += Variant::get_type_name(E.arguments[j].type);
 					} else {
-						name += E->get().arguments[j].name;
+						name += E.arguments[j].name;
 					}
 				}
 				name += ")";
 				VisualScriptLanguage::singleton->add_register_func(name, create_constructor_node);
 				Pair<Variant::Type, MethodInfo> pair;
 				pair.first = Variant::Type(i);
-				pair.second = E->get();
+				pair.second = E;
 				constructor_map[name] = pair;
 			}
 		}

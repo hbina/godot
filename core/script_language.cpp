@@ -471,7 +471,7 @@ Variant::Type PlaceHolderScriptInstance::get_property_type(const StringName &p_n
 	return Variant::NIL;
 }
 
-void PlaceHolderScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
+void PlaceHolderScriptInstance::get_method_list(Vector<MethodInfo> &p_list) const {
 
 	if (script->is_placeholder_fallback_enabled())
 		return;

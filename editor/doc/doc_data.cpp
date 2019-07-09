@@ -292,53 +292,53 @@ void DocData::generate(bool p_basic_types) {
 			c.properties.push_back(prop);
 		}
 
-		List<MethodInfo> method_list;
-		ClassDB::get_method_list(name, &method_list, true);
+		Vector<MethodInfo> method_list;
+		ClassDB::get_method_list(name, method_list, true);
 		method_list.sort();
 
-		for (List<MethodInfo>::Element *E = method_list.front(); E; E = E->next()) {
+		for (const auto &E : method_list) {
 
-			if (E->get().name == "" || (E->get().name[0] == '_' && !(E->get().flags & METHOD_FLAG_VIRTUAL)))
+			if (E.name == "" || (E.name[0] == '_' && !(E.flags & METHOD_FLAG_VIRTUAL)))
 				continue; //hidden, don't count
 
-			if (skip_setter_getter_methods && setters_getters.has(E->get().name) && E->get().name.find("/") == -1)
+			if (skip_setter_getter_methods && setters_getters.has(E.name) && E.name.find("/") == -1)
 				continue;
 
 			MethodDoc method;
 
-			method.name = E->get().name;
+			method.name = E.name;
 
-			if (E->get().flags & METHOD_FLAG_VIRTUAL)
+			if (E.flags & METHOD_FLAG_VIRTUAL)
 				method.qualifiers = "virtual";
 
-			if (E->get().flags & METHOD_FLAG_CONST) {
+			if (E.flags & METHOD_FLAG_CONST) {
 				if (method.qualifiers != "")
 					method.qualifiers += " ";
 				method.qualifiers += "const";
-			} else if (E->get().flags & METHOD_FLAG_VARARG) {
+			} else if (E.flags & METHOD_FLAG_VARARG) {
 				if (method.qualifiers != "")
 					method.qualifiers += " ";
 				method.qualifiers += "vararg";
 			}
 
-			for (int i = -1; i < E->get().arguments.size(); i++) {
+			for (int i = -1; i < E.arguments.size(); i++) {
 
 				if (i == -1) {
 #ifdef DEBUG_METHODS_ENABLED
-					return_doc_from_retinfo(method, E->get().return_val);
+					return_doc_from_retinfo(method, E.return_val);
 #endif
 				} else {
 
-					const PropertyInfo &arginfo = E->get().arguments[i];
+					const PropertyInfo &arginfo = E.arguments[i];
 
 					ArgumentDoc argument;
 
 					argument_doc_from_arginfo(argument, arginfo);
 
-					int darg_idx = i - (E->get().arguments.size() - E->get().default_arguments.size());
+					int darg_idx = i - (E.arguments.size() - E.default_arguments.size());
 
 					if (darg_idx >= 0) {
-						Variant default_arg = E->get().default_arguments[darg_idx];
+						Variant default_arg = E.default_arguments[darg_idx];
 						argument.default_value = default_arg.get_construct_string();
 					}
 
@@ -481,14 +481,13 @@ void DocData::generate(bool p_basic_types) {
 		Variant::CallError cerror;
 		Variant v = Variant::construct(Variant::Type(i), NULL, 0, cerror);
 
-		List<MethodInfo> method_list;
-		v.get_method_list(&method_list);
+		Vector<MethodInfo> method_list;
+		v.get_method_list(method_list);
 		method_list.sort();
-		Variant::get_constructor_list(Variant::Type(i), &method_list);
+		Variant::get_constructor_list(Variant::Type(i), method_list);
 
-		for (List<MethodInfo>::Element *E = method_list.front(); E; E = E->next()) {
+		for (const auto &mi : method_list) {
 
-			MethodInfo &mi = E->get();
 			MethodDoc method;
 
 			method.name = mi.name;

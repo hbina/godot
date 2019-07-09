@@ -4014,25 +4014,25 @@ void AnimationTrackEditor::_add_method_key(const String &p_method) {
 	}
 	Node *base = root->get_node(animation->track_get_path(insert_key_from_track_call_track));
 
-	List<MethodInfo> minfo;
-	base->get_method_list(&minfo);
+	Vector<MethodInfo> minfo;
+	base->get_method_list(minfo);
 
-	for (List<MethodInfo>::Element *E = minfo.front(); E; E = E->next()) {
-		if (E->get().name == p_method) {
+	for (const auto &E : minfo) {
+		if (E.name == p_method) {
 
 			Dictionary d;
 			d["method"] = p_method;
 			Array params;
-			int first_defarg = E->get().arguments.size() - E->get().default_arguments.size();
+			int first_defarg = E.arguments.size() - E.default_arguments.size();
 
-			for (int i = 0; i < E->get().arguments.size(); i++) {
+			for (int i = 0; i < E.arguments.size(); i++) {
 
 				if (i >= first_defarg) {
-					Variant arg = E->get().default_arguments[i - first_defarg];
+					Variant arg = E.default_arguments[i - first_defarg];
 					params.push_back(arg);
 				} else {
 					Variant::CallError ce;
-					Variant arg = Variant::construct(E->get().arguments[i].type, NULL, 0, ce);
+					Variant arg = Variant::construct(E.arguments[i].type, NULL, 0, ce);
 					params.push_back(arg);
 				}
 			}

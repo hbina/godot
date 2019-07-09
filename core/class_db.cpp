@@ -572,7 +572,7 @@ void ClassDB::_add_class2(const StringName &p_class, const StringName &p_inherit
 	}
 }
 
-void ClassDB::get_method_list(StringName p_class, List<MethodInfo> *p_methods, bool p_no_inheritance, bool p_exclude_from_properties) {
+void ClassDB::get_method_list(StringName p_class, Vector<MethodInfo> &p_methods, bool p_no_inheritance, bool p_exclude_from_properties) {
 
 	OBJTYPE_RLOCK;
 
@@ -593,7 +593,7 @@ void ClassDB::get_method_list(StringName p_class, List<MethodInfo> *p_methods, b
 
 		for (List<MethodInfo>::Element *E = type->virtual_methods.front(); E; E = E->next()) {
 
-			p_methods->push_back(E->get());
+			p_methods.push_back(E->get());
 		}
 
 		for (List<StringName>::Element *E = type->method_order.front(); E; E = E->next()) {
@@ -621,7 +621,7 @@ void ClassDB::get_method_list(StringName p_class, List<MethodInfo> *p_methods, b
 					minfo.default_arguments.push_back(method->get_default_argument(i));
 			}
 
-			p_methods->push_back(minfo);
+			p_methods.push_back(minfo);
 		}
 
 #else
@@ -633,7 +633,7 @@ void ClassDB::get_method_list(StringName p_class, List<MethodInfo> *p_methods, b
 			MethodBind *m = type->method_map[*K];
 			MethodInfo mi;
 			mi.name = m->get_name();
-			p_methods->push_back(mi);
+			p_methods.push_back(mi);
 		}
 
 #endif
@@ -1289,7 +1289,7 @@ void ClassDB::add_virtual_method(const StringName &p_class, const MethodInfo &p_
 #endif
 }
 
-void ClassDB::get_virtual_methods(const StringName &p_class, List<MethodInfo> *p_methods, bool p_no_inheritance) {
+void ClassDB::get_virtual_methods(const StringName &p_class, Vector<MethodInfo> &p_methods, bool p_no_inheritance) {
 
 	ERR_FAIL_COND(!classes.has(p_class));
 
@@ -1300,7 +1300,7 @@ void ClassDB::get_virtual_methods(const StringName &p_class, List<MethodInfo> *p
 	while (check) {
 
 		for (List<MethodInfo>::Element *E = check->virtual_methods.front(); E; E = E->next()) {
-			p_methods->push_back(E->get());
+			p_methods.push_back(E->get());
 		}
 
 		if (p_no_inheritance)

@@ -2887,12 +2887,12 @@ void VisualScriptEditor::_selected_new_virtual_method(const String &p_text, cons
 
 	MethodInfo minfo;
 	{
-		List<MethodInfo> methods;
+		Vector<MethodInfo> methods;
 		bool found = false;
-		ClassDB::get_virtual_methods(script->get_instance_base_type(), &methods);
-		for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-			if (E->get().name == name) {
-				minfo = E->get();
+		ClassDB::get_virtual_methods(script->get_instance_base_type(), methods);
+		for (const auto &E : methods) {
+			if (E.name == name) {
+				minfo = E;
 				found = true;
 			}
 		}

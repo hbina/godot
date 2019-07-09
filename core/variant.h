@@ -371,7 +371,7 @@ public:
 
 	static Variant construct(const Variant::Type, const Variant **p_args, int p_argcount, CallError &r_error, bool p_strict = true);
 
-	void get_method_list(List<MethodInfo> *p_list) const;
+	void get_method_list(Vector<MethodInfo> &p_list) const;
 	bool has_method(const StringName &p_method) const;
 	static Vector<Variant::Type> get_method_argument_types(Variant::Type p_type, const StringName &p_method);
 	static Vector<Variant> get_method_default_arguments(Variant::Type p_type, const StringName &p_method);
@@ -404,7 +404,7 @@ public:
 	String stringify(List<const void *> &stack) const;
 
 	void static_assign(const Variant &p_variant);
-	static void get_constructor_list(Variant::Type p_type, List<MethodInfo> *p_list);
+	static void get_constructor_list(Variant::Type p_type, Vector<MethodInfo> &p_list);
 	static void get_constants_for_type(Variant::Type p_type, List<StringName> *p_constants);
 	static bool has_constant(Variant::Type p_type, const StringName &p_value);
 	static Variant get_constant_value(Variant::Type p_type, const StringName &p_value, bool *r_valid = NULL);

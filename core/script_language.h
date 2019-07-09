@@ -142,7 +142,7 @@ public:
 	virtual bool get_property_default_value(const StringName &p_property, Variant &r_value) const = 0;
 
 	virtual void update_exports() {} //editor tool
-	virtual void get_script_method_list(List<MethodInfo> *p_list) const = 0;
+	virtual void get_script_method_list(Vector<MethodInfo> &p_list) const = 0;
 	virtual void get_script_property_list(List<PropertyInfo> *p_list) const = 0;
 
 	virtual int get_member_line(const StringName &p_member) const { return -1; }
@@ -165,7 +165,7 @@ public:
 	virtual Object *get_owner() { return NULL; }
 	virtual void get_property_state(List<Pair<StringName, Variant> > &state);
 
-	virtual void get_method_list(List<MethodInfo> *p_list) const = 0;
+	virtual void get_method_list(Vector<MethodInfo> &p_list) const = 0;
 	virtual bool has_method(const StringName &p_method) const = 0;
 	virtual Variant call(const StringName &p_method, VARIANT_ARG_LIST);
 	virtual Variant call(const StringName &p_method, const Variant **p_args, int p_argcount, Variant::CallError &r_error) = 0;
@@ -354,7 +354,7 @@ public:
 	virtual void get_property_list(List<PropertyInfo> *p_properties) const;
 	virtual Variant::Type get_property_type(const StringName &p_name, bool *r_is_valid = NULL) const;
 
-	virtual void get_method_list(List<MethodInfo> *p_list) const;
+	virtual void get_method_list(Vector<MethodInfo> &p_list) const;
 	virtual bool has_method(const StringName &p_method) const;
 	virtual Variant call(const StringName &p_method, VARIANT_ARG_LIST) { return Variant(); }
 	virtual Variant call(const StringName &p_method, const Variant **p_args, int p_argcount, Variant::CallError &r_error) {

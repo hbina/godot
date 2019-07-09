@@ -223,7 +223,7 @@ void GDScript::_placeholder_erased(PlaceHolderScriptInstance *p_placeholder) {
 }
 #endif
 
-void GDScript::get_script_method_list(List<MethodInfo> *p_list) const {
+void GDScript::get_script_method_list(Vector<MethodInfo> &p_list) const {
 
 	const GDScript *current = this;
 	while (current) {
@@ -236,7 +236,7 @@ void GDScript::get_script_method_list(List<MethodInfo> *p_list) const {
 			}
 
 			mi.return_val = func->get_return_type();
-			p_list->push_back(mi);
+			p_list.push_back(mi);
 		}
 
 		current = current->_base;
@@ -1135,7 +1135,7 @@ void GDScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const
 	}
 }
 
-void GDScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
+void GDScriptInstance::get_method_list(Vector<MethodInfo> &p_list) const {
 
 	const GDScript *sptr = script.ptr();
 	while (sptr) {
@@ -1147,7 +1147,7 @@ void GDScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
 			mi.flags |= METHOD_FLAG_FROM_SCRIPT;
 			for (int i = 0; i < E->get()->get_argument_count(); i++)
 				mi.arguments.push_back(PropertyInfo(Variant::NIL, "arg" + itos(i)));
-			p_list->push_back(mi);
+			p_list.push_back(mi);
 		}
 		sptr = sptr->_base;
 	}

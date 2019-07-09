@@ -113,7 +113,7 @@ public:
 	virtual bool get_property_default_value(const StringName &p_property, Variant &r_value) const;
 
 	virtual void update_exports();
-	virtual void get_script_method_list(List<MethodInfo> *r_methods) const;
+	virtual void get_script_method_list(Vector<MethodInfo> &r_methods) const;
 	virtual void get_script_property_list(List<PropertyInfo> *r_properties) const;
 
 	virtual int get_member_line(const StringName &p_member) const;

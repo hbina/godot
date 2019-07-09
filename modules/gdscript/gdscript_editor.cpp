@@ -1288,13 +1288,12 @@ static bool _guess_identifier_type(GDScriptCompletionContext &p_context, const S
 					}
 				} break;
 				case GDScriptParser::DataType::NATIVE: {
-					List<MethodInfo> methods;
-					ClassDB::get_method_list(base_type.native_type, &methods);
-					ClassDB::get_virtual_methods(base_type.native_type, &methods);
+					Vector<MethodInfo> methods;
+					ClassDB::get_method_list(base_type.native_type, methods);
+					ClassDB::get_virtual_methods(base_type.native_type, methods);
 
-					for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-						if (E->get().name == p_context.function->name) {
-							MethodInfo &mi = E->get();
+					for (auto &mi : methods) {
+						if (mi.name == p_context.function->name) {
 							for (List<PropertyInfo>::Element *F = mi.arguments.front(); F; F = F->next()) {
 								if (F->get().name == p_identifier) {
 									r_type = _type_from_property(F->get());
@@ -1646,10 +1645,9 @@ static bool _guess_method_return_type_from_base(GDScriptCompletionContext &p_con
 			case GDScriptParser::DataType::SCRIPT: {
 				Ref<Script> scr = base_type.script_type;
 				if (scr.is_valid()) {
-					List<MethodInfo> methods;
-					scr->get_script_method_list(&methods);
-					for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-						MethodInfo &mi = E->get();
+					Vector<MethodInfo> methods;
+					scr->get_script_method_list(methods);
+					for (const auto &mi : methods) {
 						if (mi.name == p_method) {
 							r_type = _type_from_property(mi.return_val);
 							return true;
@@ -1688,11 +1686,10 @@ static bool _guess_method_return_type_from_base(GDScriptCompletionContext &p_con
 					return false;
 				}
 
-				List<MethodInfo> methods;
-				tmp.get_method_list(&methods);
+				Vector<MethodInfo> methods;
+				tmp.get_method_list(methods);
 
-				for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-					MethodInfo &mi = E->get();
+				for (const auto &mi : methods) {
 					if (mi.name == p_method) {
 						r_type = _type_from_property(mi.return_val);
 						return true;
@@ -1975,13 +1972,13 @@ static void _find_identifiers_in_base(const GDScriptCompletionContext &p_context
 						}
 					}
 
-					List<MethodInfo> methods;
-					scr->get_script_method_list(&methods);
-					for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-						if (E->get().arguments.size()) {
-							r_result.insert(E->get().name + "(");
+					Vector<MethodInfo> methods;
+					scr->get_script_method_list(methods);
+					for (const auto &E : methods) {
+						if (E.arguments.size()) {
+							r_result.insert(E.name + "(");
 						} else {
-							r_result.insert(E->get().name + "()");
+							r_result.insert(E.name + "()");
 						}
 					}
 
@@ -2028,17 +2025,17 @@ static void _find_identifiers_in_base(const GDScriptCompletionContext &p_context
 				}
 
 				if (!_static) {
-					List<MethodInfo> methods;
+					Vector<MethodInfo> methods;
 					bool is_autocompleting_getters = GLOBAL_GET("debug/gdscript/completion/autocomplete_setters_and_getters").booleanize();
-					ClassDB::get_method_list(type, &methods, false, !is_autocompleting_getters);
-					for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-						if (E->get().name.begins_with("_")) {
+					ClassDB::get_method_list(type, methods, false, !is_autocompleting_getters);
+					for (const auto &E : methods) {
+						if (E.name.begins_with("_")) {
 							continue;
 						}
-						if (E->get().arguments.size()) {
-							r_result.insert(E->get().name + "(");
+						if (E.arguments.size()) {
+							r_result.insert(E.name + "(");
 						} else {
-							r_result.insert(E->get().name + "()");
+							r_result.insert(E.name + "()");
 						}
 					}
 				}
@@ -2063,13 +2060,13 @@ static void _find_identifiers_in_base(const GDScriptCompletionContext &p_context
 					}
 				}
 
-				List<MethodInfo> methods;
-				tmp.get_method_list(&methods);
-				for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-					if (E->get().arguments.size()) {
-						r_result.insert(E->get().name + "(");
+				Vector<MethodInfo> methods;
+				tmp.get_method_list(methods);
+				for (const auto &E : methods) {
+					if (E.arguments.size()) {
+						r_result.insert(E.name + "(");
 					} else {
-						r_result.insert(E->get().name + "()");
+						r_result.insert(E.name + "()");
 					}
 				}
 
@@ -2236,14 +2233,14 @@ static void _find_call_arguments(const GDScriptCompletionContext &p_context, con
 					}
 				}
 
-				List<MethodInfo> methods;
-				ClassDB::get_method_list(class_name, &methods);
-				ClassDB::get_virtual_methods(class_name, &methods);
+				Vector<MethodInfo> methods;
+				ClassDB::get_method_list(class_name, methods);
+				ClassDB::get_virtual_methods(class_name, methods);
 				int method_args = 0;
 
-				for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-					if (E->get().name == p_method) {
-						method_args = E->get().arguments.size();
+				for (const auto &E : methods) {
+					if (E.name == p_method) {
+						method_args = E.arguments.size();
 						if (base.get_type() == Variant::OBJECT) {
 							Object *obj = base.operator Object *();
 							if (obj) {
@@ -2256,13 +2253,13 @@ static void _find_call_arguments(const GDScriptCompletionContext &p_context, con
 						}
 
 						if (p_argidx < method_args) {
-							PropertyInfo arg_info = E->get().arguments[p_argidx];
+							PropertyInfo arg_info = E.arguments[p_argidx];
 							if (arg_info.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 								_find_enumeration_candidates(arg_info.class_name, r_result);
 							}
 						}
 
-						r_arghint = _make_arguments_hint(E->get(), p_argidx);
+						r_arghint = _make_arguments_hint(E, p_argidx);
 						break;
 					}
 				}
@@ -2315,11 +2312,11 @@ static void _find_call_arguments(const GDScriptCompletionContext &p_context, con
 					}
 				}
 
-				List<MethodInfo> methods;
-				base.get_method_list(&methods);
-				for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-					if (E->get().name == p_method) {
-						r_arghint = _make_arguments_hint(E->get(), p_argidx);
+				Vector<MethodInfo> methods;
+				base.get_method_list(methods);
+				for (const auto &E : methods) {
+					if (E.name == p_method) {
+						r_arghint = _make_arguments_hint(E, p_argidx);
 						return;
 					}
 				}
@@ -2374,18 +2371,18 @@ static void _find_call_arguments(GDScriptCompletionContext &p_context, const GDS
 			// Complete constructor
 			const GDScriptParser::TypeNode *tn = static_cast<const GDScriptParser::TypeNode *>(op->arguments[0]);
 
-			List<MethodInfo> constructors;
-			Variant::get_constructor_list(tn->vtype, &constructors);
+			Vector<MethodInfo> constructors;
+			Variant::get_constructor_list(tn->vtype, constructors);
 
 			int i = 0;
-			for (List<MethodInfo>::Element *E = constructors.front(); E; E = E->next()) {
-				if (p_argidx >= E->get().arguments.size()) {
+			for (const auto &E : constructors) {
+				if (p_argidx >= E.arguments.size()) {
 					continue;
 				}
 				if (i > 0) {
 					r_arghint += "\n";
 				}
-				r_arghint += _make_arguments_hint(E->get(), p_argidx);
+				r_arghint += _make_arguments_hint(E, p_argidx);
 				i++;
 			}
 			return;
@@ -2609,11 +2606,9 @@ Error GDScriptLanguage::complete_code(const String &p_code, const String &p_path
 
 			bool use_type_hint = EditorSettings::get_singleton()->get_setting("text_editor/completion/add_type_hints").operator bool();
 
-			List<MethodInfo> virtual_methods;
-			ClassDB::get_virtual_methods(class_name, &virtual_methods);
-			for (List<MethodInfo>::Element *E = virtual_methods.front(); E; E = E->next()) {
-
-				MethodInfo &mi = E->get();
+			Vector<MethodInfo> virtual_methods;
+			ClassDB::get_virtual_methods(class_name, virtual_methods);
+			for (const auto &mi : virtual_methods) {
 				String method_hint = mi.name;
 				if (method_hint.find(":") != -1) {
 					method_hint = method_hint.get_slice(":", 0);
@@ -3055,10 +3050,10 @@ static Error _lookup_symbol_from_base(const GDScriptParser::DataType &p_base, co
 					return OK;
 				}
 
-				List<MethodInfo> virtual_methods;
-				ClassDB::get_virtual_methods(class_name, &virtual_methods, true);
-				for (List<MethodInfo>::Element *E = virtual_methods.front(); E; E = E->next()) {
-					if (E->get().name == p_symbol) {
+				Vector<MethodInfo> virtual_methods;
+				ClassDB::get_virtual_methods(class_name, virtual_methods, true);
+				for (const auto &E : virtual_methods) {
+					if (E.name == p_symbol) {
 						r_result.type = ScriptLanguage::LookupResult::RESULT_CLASS_METHOD;
 						r_result.class_name = base_type.native_type;
 						r_result.class_member = p_symbol;

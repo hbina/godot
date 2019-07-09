@@ -1313,7 +1313,7 @@ Vector<Variant> Variant::get_method_default_arguments(Variant::Type p_type, cons
 	return E->get().default_args;
 }
 
-void Variant::get_method_list(List<MethodInfo> *p_list) const {
+void Variant::get_method_list(Vector<MethodInfo> &p_list) const {
 
 	const _VariantCall::TypeFunc &tf = _VariantCall::type_funcs[type];
 
@@ -1347,11 +1347,11 @@ void Variant::get_method_list(List<MethodInfo> *p_list) const {
 		mi.return_val = ret;
 #endif
 
-		p_list->push_back(mi);
+		p_list.push_back(mi);
 	}
 }
 
-void Variant::get_constructor_list(Variant::Type p_type, List<MethodInfo> *p_list) {
+void Variant::get_constructor_list(Variant::Type p_type, Vector<MethodInfo> &p_list) {
 
 	ERR_FAIL_INDEX(p_type, VARIANT_MAX);
 
@@ -1369,7 +1369,7 @@ void Variant::get_constructor_list(Variant::Type p_type, List<MethodInfo> *p_lis
 			pi.type = cd.arg_types[i];
 			mi.arguments.push_back(pi);
 		}
-		p_list->push_back(mi);
+		p_list.push_back(mi);
 	}
 	//default constructors
 	for (int i = 0; i < VARIANT_MAX; i++) {
@@ -1385,7 +1385,7 @@ void Variant::get_constructor_list(Variant::Type p_type, List<MethodInfo> *p_lis
 		pi.type = Variant::Type(i);
 		mi.arguments.push_back(pi);
 		mi.return_val.type = p_type;
-		p_list->push_back(mi);
+		p_list.push_back(mi);
 	}
 }
 

@@ -303,14 +303,14 @@ List<ClassAPI> generate_c_api_classes() {
 
 		//methods
 		{
-			List<MethodInfo> methods;
-			ClassDB::get_method_list(class_name, &methods, true);
+			Vector<MethodInfo> methods;
+			ClassDB::get_method_list(class_name, methods, true);
 			methods.sort_custom<MethodInfoComparator>();
 
-			for (List<MethodInfo>::Element *m = methods.front(); m != NULL; m = m->next()) {
+			for (const auto &method_info : methods) {
 				MethodAPI method_api;
-				MethodBind *method_bind = ClassDB::get_method(class_name, m->get().name);
-				MethodInfo &method_info = m->get();
+				MethodBind *method_bind = ClassDB::get_method(class_name, method_info.name);
+				// MethodInfo &method_info = m->get();
 
 				//method name
 				method_api.method_name = method_info.name;
@@ -319,7 +319,7 @@ List<ClassAPI> generate_c_api_classes() {
 					method_api.return_type = method_api.method_name.get_slice(":", 1);
 					method_api.method_name = method_api.method_name.get_slice(":", 0);
 				} else {
-					method_api.return_type = get_type_name(m->get().return_val);
+					method_api.return_type = get_type_name(method_info.return_val);
 				}
 
 				method_api.argument_count = method_info.arguments.size();

@@ -6687,11 +6687,10 @@ bool GDScriptParser::_get_function_signature(DataType &p_base_type, const String
 
 	if (!method) {
 		// Try virtual methods
-		List<MethodInfo> virtuals;
-		ClassDB::get_virtual_methods(native, &virtuals);
+		Vector<MethodInfo> virtuals;
+		ClassDB::get_virtual_methods(native, virtuals);
 
-		for (const List<MethodInfo>::Element *E = virtuals.front(); E; E = E->next()) {
-			const MethodInfo &mi = E->get();
+		for (const auto &mi : virtuals) {
 			if (mi.name == p_function) {
 				r_default_arg_count = mi.default_arguments.size();
 				for (const List<PropertyInfo>::Element *pi = mi.arguments.front(); pi; pi = pi->next()) {
@@ -6712,9 +6711,8 @@ bool GDScriptParser::_get_function_signature(DataType &p_base_type, const String
 			} else {
 				// Try virtual methods of the script type
 				virtuals.clear();
-				ClassDB::get_virtual_methods(original_type.script_type->get_class_name(), &virtuals);
-				for (const List<MethodInfo>::Element *E = virtuals.front(); E; E = E->next()) {
-					const MethodInfo &mi = E->get();
+				ClassDB::get_virtual_methods(original_type.script_type->get_class_name(), virtuals);
+				for (const auto &mi : virtuals) {
 					if (mi.name == p_function) {
 						r_default_arg_count = mi.default_arguments.size();
 						for (const List<PropertyInfo>::Element *pi = mi.arguments.front(); pi; pi = pi->next()) {
@@ -6773,12 +6771,11 @@ GDScriptParser::DataType GDScriptParser::_reduce_function_call_type(const Operat
 			if (error_set) return DataType();
 
 			bool match = false;
-			List<MethodInfo> constructors;
-			Variant::get_constructor_list(tn->vtype, &constructors);
+			Vector<MethodInfo> constructors;
+			Variant::get_constructor_list(tn->vtype, constructors);
 			PropertyInfo return_type2;
 
-			for (List<MethodInfo>::Element *E = constructors.front(); E; E = E->next()) {
-				MethodInfo &mi = E->get();
+			for (const auto &mi : constructors) {
 
 				if (p_call->arguments.size() - 1 < mi.arguments.size() - mi.default_arguments.size()) {
 					continue;

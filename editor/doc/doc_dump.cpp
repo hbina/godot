@@ -105,29 +105,29 @@ void DocDump::dump(const String &p_file) {
 		_write_string(f, 1, "</description>");
 		_write_string(f, 1, "<methods>");
 
-		List<MethodInfo> method_list;
-		ClassDB::get_method_list(name, &method_list, true);
+		Vector<MethodInfo> method_list;
+		ClassDB::get_method_list(name, method_list, true);
 		method_list.sort();
 
-		for (List<MethodInfo>::Element *E = method_list.front(); E; E = E->next()) {
-			if (E->get().name == "" || E->get().name[0] == '_')
+		for (const auto &E : method_list) {
+			if (E.name == "" || E.name[0] == '_')
 				continue; //hidden
 
-			MethodBind *m = ClassDB::get_method(name, E->get().name);
+			MethodBind *m = ClassDB::get_method(name, E.name);
 
 			String qualifiers;
-			if (E->get().flags & METHOD_FLAG_CONST)
+			if (E.flags & METHOD_FLAG_CONST)
 				qualifiers += "qualifiers=\"const\"";
 
-			_write_string(f, 2, "<method name=\"" + _escape_string(E->get().name) + "\" " + qualifiers + " >");
+			_write_string(f, 2, "<method name=\"" + _escape_string(E.name) + "\" " + qualifiers + " >");
 
-			for (int i = -1; i < E->get().arguments.size(); i++) {
+			for (int i = -1; i < E.arguments.size(); i++) {
 
 				PropertyInfo arginfo;
 
 				if (i == -1) {
 
-					arginfo = E->get().return_val;
+					arginfo = E.return_val;
 					String type_name = (arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE) ? arginfo.hint_string : Variant::get_type_name(arginfo.type);
 
 					if (arginfo.type == Variant::NIL)
@@ -135,7 +135,7 @@ void DocDump::dump(const String &p_file) {
 					_write_string(f, 3, "<return type=\"" + type_name + "\">");
 				} else {
 
-					arginfo = E->get().arguments[i];
+					arginfo = E.arguments[i];
 
 					String type_name;
 

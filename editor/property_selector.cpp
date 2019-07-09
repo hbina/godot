@@ -196,26 +196,26 @@ void PropertySelector::_update_search() {
 		}
 	} else {
 
-		List<MethodInfo> methods;
+		Vector<MethodInfo> methods;
 
 		if (type != Variant::NIL) {
 			Variant v;
 			Variant::CallError ce;
 			v = Variant::construct(type, NULL, 0, ce);
-			v.get_method_list(&methods);
+			v.get_method_list(methods);
 		} else {
 
 			Object *obj = ObjectDB::get_instance(script);
 			if (Object::cast_to<Script>(obj)) {
 
 				methods.push_back(MethodInfo("*Script Methods"));
-				Object::cast_to<Script>(obj)->get_script_method_list(&methods);
+				Object::cast_to<Script>(obj)->get_script_method_list(methods);
 			}
 
 			StringName base = base_type;
 			while (base) {
 				methods.push_back(MethodInfo("*" + String(base)));
-				ClassDB::get_method_list(base, &methods, true, true);
+				ClassDB::get_method_list(base, methods, true, true);
 				base = ClassDB::get_parent_class(base);
 			}
 		}
@@ -225,19 +225,19 @@ void PropertySelector::_update_search() {
 		bool found = false;
 		bool script_methods = false;
 
-		for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-			if (E->get().name.begins_with("*")) {
+		for (const auto &E : methods) {
+			if (E.name.begins_with("*")) {
 				if (category && category->get_children() == NULL) {
 					memdelete(category); //old category was unused
 				}
 				category = search_options->create_item(root);
-				category->set_text(0, E->get().name.replace_first("*", ""));
+				category->set_text(0, E.name.replace_first("*", ""));
 				category->set_selectable(0, false);
 
 				Ref<Texture> icon;
 				script_methods = false;
-				String rep = E->get().name.replace("*", "");
-				if (E->get().name == "*Script Methods") {
+				String rep = E.name.replace("*", "");
+				if (E.name == "*Script Methods") {
 					icon = get_icon("Script", "EditorIcons");
 					script_methods = true;
 				} else {
@@ -248,14 +248,14 @@ void PropertySelector::_update_search() {
 				continue;
 			}
 
-			String name = E->get().name.get_slice(":", 0);
-			if (!script_methods && name.begins_with("_") && !(E->get().flags & METHOD_FLAG_VIRTUAL))
+			String name = E.name.get_slice(":", 0);
+			if (!script_methods && name.begins_with("_") && !(E.flags & METHOD_FLAG_VIRTUAL))
 				continue;
 
-			if (virtuals_only && !(E->get().flags & METHOD_FLAG_VIRTUAL))
+			if (virtuals_only && !(E.flags & METHOD_FLAG_VIRTUAL))
 				continue;
 
-			if (!virtuals_only && (E->get().flags & METHOD_FLAG_VIRTUAL))
+			if (!virtuals_only && (E.flags & METHOD_FLAG_VIRTUAL))
 				continue;
 
 			if (search_box->get_text() != String() && name.find(search_box->get_text()) == -1)
@@ -263,7 +263,7 @@ void PropertySelector::_update_search() {
 
 			TreeItem *item = search_options->create_item(category ? category : root);
 
-			MethodInfo mi = E->get();
+			MethodInfo mi = E;
 
 			String desc;
 			if (mi.name.find(":") != -1) {
@@ -294,10 +294,10 @@ void PropertySelector::_update_search() {
 
 			desc += " )";
 
-			if (E->get().flags & METHOD_FLAG_CONST)
+			if (E.flags & METHOD_FLAG_CONST)
 				desc += " const";
 
-			if (E->get().flags & METHOD_FLAG_VIRTUAL)
+			if (E.flags & METHOD_FLAG_VIRTUAL)
 				desc += " virtual";
 
 			item->set_text(0, desc);

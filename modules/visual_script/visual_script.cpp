@@ -1001,7 +1001,7 @@ bool VisualScript::get_property_default_value(const StringName &p_property, Vari
 	r_value = variables[p_property].default_value;
 	return true;
 }
-void VisualScript::get_script_method_list(List<MethodInfo> *p_list) const {
+void VisualScript::get_script_method_list(Vector<MethodInfo> &p_list) const {
 
 	for (Map<StringName, Function>::Element *E = functions.front(); E; E = E->next()) {
 
@@ -1021,7 +1021,7 @@ void VisualScript::get_script_method_list(List<MethodInfo> *p_list) const {
 			}
 		}
 
-		p_list->push_back(mi);
+		p_list.push_back(mi);
 	}
 }
 
@@ -1389,7 +1389,7 @@ Variant::Type VisualScriptInstance::get_property_type(const StringName &p_name, 
 	return E->get().info.type;
 }
 
-void VisualScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
+void VisualScriptInstance::get_method_list(Vector<MethodInfo> &p_list) const {
 
 	for (const Map<StringName, VisualScript::Function>::Element *E = script->functions.front(); E; E = E->next()) {
 
@@ -1416,7 +1416,7 @@ void VisualScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
 			}
 		}
 
-		p_list->push_back(mi);
+		p_list.push_back(mi);
 	}
 }
 bool VisualScriptInstance::has_method(const StringName &p_method) const {

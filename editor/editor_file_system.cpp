@@ -2096,7 +2096,8 @@ void EditorFileSystem::_update_extensions() {
 	import_extensions.clear();
 
 	List<String> extensionsl;
-	ResourceLoader::get_recognized_extensions_for_type("", &extensionsl);
+	ResourceLoader::get_recognized_extensions_for_type("", &extensionsl
+	);
 	for (List<String>::Element *E = extensionsl.front(); E; E = E->next()) {
 
 		valid_extensions.insert(E->get());

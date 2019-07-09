@@ -2500,11 +2500,11 @@ void register_visual_script_func_nodes() {
 		String type_name = Variant::get_type_name(t);
 		Variant::CallError ce;
 		Variant vt = Variant::construct(t, NULL, 0, ce);
-		List<MethodInfo> ml;
-		vt.get_method_list(&ml);
+		Vector<MethodInfo> ml;
+		vt.get_method_list(ml);
 
-		for (List<MethodInfo>::Element *E = ml.front(); E; E = E->next()) {
-			VisualScriptLanguage::singleton->add_register_func("functions/by_type/" + type_name + "/" + E->get().name, create_basic_type_call_node);
+		for (const auto &E : ml) {
+			VisualScriptLanguage::singleton->add_register_func("functions/by_type/" + type_name + "/" + E.name, create_basic_type_call_node);
 		}
 	}
 }

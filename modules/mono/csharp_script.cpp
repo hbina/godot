@@ -2742,7 +2742,7 @@ void CSharpScript::set_source_code(const String &p_code) {
 #endif
 }
 
-void CSharpScript::get_script_method_list(List<MethodInfo> *p_list) const {
+void CSharpScript::get_script_method_list(Vector<MethodInfo> &p_list) const {
 
 	if (!script_class)
 		return;

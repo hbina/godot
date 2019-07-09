@@ -2832,16 +2832,16 @@ bool _ClassDB::has_method(StringName p_class, StringName p_method, bool p_no_inh
 
 Array _ClassDB::get_method_list(StringName p_class, bool p_no_inheritance) const {
 
-	List<MethodInfo> methods;
-	ClassDB::get_method_list(p_class, &methods, p_no_inheritance);
+	Vector<MethodInfo> methods;
+	ClassDB::get_method_list(p_class, methods, p_no_inheritance);
 	Array ret;
 
-	for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
+	for (const auto &E : methods) {
 #ifdef DEBUG_METHODS_ENABLED
-		ret.push_back(E->get().operator Dictionary());
+		ret.push_back(E.operator Dictionary());
 #else
 		Dictionary dict;
-		dict["name"] = E->get().name;
+		dict["name"] = E.name;
 		ret.push_back(dict);
 #endif
 	}

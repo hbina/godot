@@ -95,7 +95,7 @@ void VisualScriptPropertySelector::_update_search() {
 	}
 
 	for (List<StringName>::Element *E = base_list.front(); E; E = E->next()) {
-		List<MethodInfo> methods;
+		Vector<MethodInfo> methods;
 		List<PropertyInfo> props;
 		TreeItem *category = NULL;
 		Ref<Texture> type_icons[Variant::VARIANT_MAX] = {
@@ -193,33 +193,33 @@ void VisualScriptPropertySelector::_update_search() {
 				Variant v;
 				Variant::CallError ce;
 				v = Variant::construct(type, NULL, 0, ce);
-				v.get_method_list(&methods);
+				v.get_method_list(methods);
 			} else {
 
 				Object *obj = ObjectDB::get_instance(script);
 				if (Object::cast_to<Script>(obj)) {
 					methods.push_back(MethodInfo("*Script Methods"));
-					Object::cast_to<Script>(obj)->get_script_method_list(&methods);
+					Object::cast_to<Script>(obj)->get_script_method_list(methods);
 
 				} else {
 					methods.push_back(MethodInfo("*" + String(E->get())));
-					ClassDB::get_method_list(E->get(), &methods, true, true);
+					ClassDB::get_method_list(E->get(), methods, true, true);
 				}
 			}
 		}
-		for (List<MethodInfo>::Element *M = methods.front(); M; M = M->next()) {
+		for (const auto &M : methods) {
 
-			String name = M->get().name.get_slice(":", 0);
-			if (name.begins_with("_") && !(M->get().flags & METHOD_FLAG_VIRTUAL))
+			const String name = M.name.get_slice(":", 0);
+			if (name.begins_with("_") && !(M.flags & METHOD_FLAG_VIRTUAL))
 				continue;
 
-			if (virtuals_only && !(M->get().flags & METHOD_FLAG_VIRTUAL))
+			if (virtuals_only && !(M.flags & METHOD_FLAG_VIRTUAL))
 				continue;
 
-			if (!virtuals_only && (M->get().flags & METHOD_FLAG_VIRTUAL))
+			if (!virtuals_only && (M.flags & METHOD_FLAG_VIRTUAL))
 				continue;
 
-			MethodInfo mi = M->get();
+			MethodInfo mi = M;
 			String desc_arguments;
 			if (mi.arguments.size() > 0) {
 				desc_arguments = "(";

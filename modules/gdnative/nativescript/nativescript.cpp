@@ -359,7 +359,7 @@ bool NativeScript::get_property_default_value(const StringName &p_property, Vari
 void NativeScript::update_exports() {
 }
 
-void NativeScript::get_script_method_list(List<MethodInfo> *p_list) const {
+void NativeScript::get_script_method_list(Vector<MethodInfo> &p_list) const {
 	NativeScriptDesc *script_data = get_script_desc();
 
 	if (!script_data)
@@ -377,7 +377,7 @@ void NativeScript::get_script_method_list(List<MethodInfo> *p_list) const {
 	}
 
 	for (Set<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
-		p_list->push_back(E->get());
+		p_list.push_back(E->get());
 	}
 }
 
@@ -713,7 +713,7 @@ Variant::Type NativeScriptInstance::get_property_type(const StringName &p_name, 
 	return Variant::NIL;
 }
 
-void NativeScriptInstance::get_method_list(List<MethodInfo> *p_list) const {
+void NativeScriptInstance::get_method_list(Vector<MethodInfo> &p_list) const {
 	script->get_script_method_list(p_list);
 }
 
