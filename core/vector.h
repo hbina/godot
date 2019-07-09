@@ -48,7 +48,7 @@
 template <class T>
 class VectorImpl {
 
-	std::vector<T> __inner__;
+	std::vector<T> _inner_;
 
 public:
 	void remove(int);
@@ -89,68 +89,68 @@ public:
 
 template <typename T>
 T *VectorImpl<T>::data() noexcept {
-	return __inner__.data();
+	return _inner_.data();
 }
 
 template <typename T>
 typename std::vector<T>::iterator VectorImpl<T>::begin() noexcept {
-	return __inner__.begin();
+	return _inner_.begin();
 }
 
 template <typename T>
 typename std::vector<T>::iterator VectorImpl<T>::end() noexcept {
-	return __inner__.end();
+	return _inner_.end();
 }
 
 template <typename T>
 typename std::vector<T>::const_iterator VectorImpl<T>::begin() const noexcept {
-	return __inner__.begin();
+	return _inner_.begin();
 }
 
 template <typename T>
 typename std::vector<T>::const_iterator VectorImpl<T>::end() const noexcept {
-	return __inner__.end();
+	return _inner_.end();
 }
 
 template <typename T>
 const T *VectorImpl<T>::data() const noexcept {
-	return __inner__.data();
+	return _inner_.data();
 }
 
 template <typename T>
 void VectorImpl<T>::clear() noexcept {
-	__inner__.clear();
+	_inner_.clear();
 }
 
 template <typename T>
 void VectorImpl<T>::remove(int p_index) {
-	__inner__.erase(__inner__.begin() + p_index);
+	_inner_.erase(_inner_.begin() + p_index);
 }
 
 template <typename T>
 void VectorImpl<T>::push_back(const T &p_val) {
-	__inner__.push_back(p_val);
+	_inner_.push_back(p_val);
 }
 
 template <typename T>
 void VectorImpl<T>::push_back(const T &&p_val) {
-	__inner__.push_back(p_val);
+	_inner_.push_back(p_val);
 }
 
 template <typename T>
 bool VectorImpl<T>::empty() const noexcept {
-	return __inner__.empty();
+	return _inner_.empty();
 }
 
 template <typename T>
 void VectorImpl<T>::resize(int p_size) {
-	__inner__.resize(p_size);
+	_inner_.resize(p_size);
 }
 
 template <typename T>
 int VectorImpl<T>::size() const noexcept {
-	assert(std::numeric_limits<int>::max() > __inner__.size());
-	return __inner__.size();
+	assert(std::numeric_limits<int>::max() > _inner_.size());
+	return _inner_.size();
 }
 
 template <typename T>
@@ -163,33 +163,33 @@ void VectorImpl<T>::erase(const T &p_val) {
 
 template <typename T>
 T *VectorImpl<T>::ptrw() noexcept {
-	return __inner__.data();
+	return _inner_.data();
 }
 
 template <typename T>
 const T *VectorImpl<T>::ptr() const noexcept {
-	return __inner__.data();
+	return _inner_.data();
 }
 
 template <typename T>
 T &VectorImpl<T>::operator[](int p_index) noexcept {
-	return __inner__.operator[](p_index);
+	return _inner_.operator[](p_index);
 }
 
 template <typename T>
 const T &VectorImpl<T>::operator[](int p_index) const noexcept {
-	return __inner__.operator[](p_index);
+	return _inner_.operator[](p_index);
 }
 
 template <typename T>
 void VectorImpl<T>::insert(int p_pos, const T &p_val) {
-	__inner__.insert(__inner__.begin() + p_pos, p_val);
+	_inner_.insert(_inner_.begin() + p_pos, p_val);
 }
 
 template <typename T>
 int VectorImpl<T>::find(const T &p_val, int p_from) const {
 	for (int a = 0; a < static_cast<int>(size()); a++) {
-		if (p_val == __inner__.operator[](a)) {
+		if (p_val == _inner_.operator[](a)) {
 			return a;
 		}
 	}
@@ -198,14 +198,14 @@ int VectorImpl<T>::find(const T &p_val, int p_from) const {
 
 template <typename T>
 void VectorImpl<T>::sort() {
-	std::sort(__inner__.begin(), __inner__.end());
+	std::sort(_inner_.begin(), _inner_.end());
 }
 
 template <typename T>
 template <typename C>
 void VectorImpl<T>::sort_custom() {
 	C comparator;
-	std::sort(__inner__.begin(), __inner__.end(), comparator);
+	std::sort(_inner_.begin(), _inner_.end(), comparator);
 }
 
 template <typename T>
@@ -213,7 +213,7 @@ void VectorImpl<T>::ordered_insert(const T &p_val) {
 	int i = 0;
 	for (; i < size(); i++) {
 
-		if (p_val < __inner__.operator[](i)) {
+		if (p_val < _inner_.operator[](i)) {
 			break;
 		};
 	};
@@ -222,19 +222,19 @@ void VectorImpl<T>::ordered_insert(const T &p_val) {
 
 template <class T>
 void VectorImpl<T>::invert() {
-	std::reverse(__inner__.begin(), __inner__.end());
+	std::reverse(_inner_.begin(), _inner_.end());
 }
 
 template <class T>
 void VectorImpl<T>::append_array(const VectorImpl<T> &p_other) {
 	for (const T &a : p_other) {
-		__inner__.push_back(a);
+		_inner_.push_back(a);
 	}
 }
 
 template <typename T>
 const T &VectorImpl<T>::back() const noexcept {
-	return __inner__.operator[](size());
+	return _inner_.operator[](size());
 }
 
 template <typename T>
