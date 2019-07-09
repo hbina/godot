@@ -161,6 +161,7 @@ opts.Add(BoolVariable('builtin_libtheora',
 opts.Add(BoolVariable('builtin_libvorbis',
                       "Use the built-in libvorbis library", True))
 opts.Add(BoolVariable('builtin_libvpx', "Use the built-in libvpx library", True))
+<<<<<<< HEAD
 opts.Add(BoolVariable('builtin_libwebp',
                       "Use the built-in libwebp library", True))
 opts.Add(BoolVariable('builtin_libwebsockets',
@@ -169,6 +170,12 @@ opts.Add(BoolVariable('builtin_mbedtls',
                       "Use the built-in mbedTLS library", True))
 opts.Add(BoolVariable('builtin_miniupnpc',
                       "Use the built-in miniupnpc library", True))
+=======
+opts.Add(BoolVariable('builtin_libwebp', "Use the built-in libwebp library", True))
+opts.Add(BoolVariable('builtin_wslay', "Use the built-in wslay library", True))
+opts.Add(BoolVariable('builtin_mbedtls', "Use the built-in mbedTLS library", True))
+opts.Add(BoolVariable('builtin_miniupnpc', "Use the built-in miniupnpc library", True))
+>>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 opts.Add(BoolVariable('builtin_opus', "Use the built-in Opus library", True))
 opts.Add(BoolVariable('builtin_pcre2', "Use the built-in PCRE2 library", True))
 opts.Add(BoolVariable('builtin_recast', "Use the built-in Recast library", True))
@@ -393,6 +400,7 @@ if selected_platform in platform_list:
     sys.modules.pop('detect')
 
     env.module_list = []
+    env.module_icons_paths = []
     env.doc_class_path = {}
 
     for x in module_list:
@@ -415,6 +423,8 @@ if selected_platform in platform_list:
         if (can_build):
             config.configure(env)
             env.module_list.append(x)
+            
+            # Get doc classes paths (if present)
             try:
                 doc_classes = config.get_doc_classes()
                 doc_path = config.get_doc_path()
@@ -422,6 +432,13 @@ if selected_platform in platform_list:
                     env.doc_class_path[c] = "modules/" + x + "/" + doc_path
             except:
                 pass
+            # Get icon paths (if present)
+            try:
+                icons_path = config.get_icons_path()
+                env.module_icons_paths.append("modules/" + x + "/" + icons_path)
+            except:
+                # Default path for module icons
+                env.module_icons_paths.append("modules/" + x + "/" + "icons")
 
         sys.path.remove(tmppath)
         sys.modules.pop('config')

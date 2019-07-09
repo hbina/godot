@@ -559,8 +559,6 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 
 					w[i] = buf[i];
 				}
-
-				w = PoolVector<uint8_t>::Write();
 			}
 
 			r_variant = data;
@@ -591,8 +589,6 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 
 					w[i] = decode_uint32(&buf[i * 4]);
 				}
-
-				w = PoolVector<int>::Write();
 			}
 			r_variant = Variant(data);
 			if (r_len) {
@@ -619,8 +615,6 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 
 					w[i] = decode_float(&buf[i * 4]);
 				}
-
-				w = PoolVector<float>::Write();
 			}
 			r_variant = data;
 
