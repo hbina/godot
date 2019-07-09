@@ -340,8 +340,6 @@ void EditorProfiler::_update_plot() {
 		}
 	}
 
-	wr.release();
-
 	Ref<Image> img;
 	img.instance();
 	img->create(w, h, 0, Image::FORMAT_RGBA8, graph_image);

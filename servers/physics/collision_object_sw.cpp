@@ -77,7 +77,7 @@ void CollisionObjectSW::set_shape_transform(int p_index, const Transform &p_tran
 }
 
 void CollisionObjectSW::set_shape_as_disabled(int p_idx, bool p_enable) {
-	shapes.write[p_idx].disabled = p_enable;
+	shapes[p_idx].disabled = p_enable;
 	if (!pending_shape_update_list.in_list()) {
 		PhysicsServerSW::singleton->pending_shape_update_list.add(&pending_shape_update_list);
 	}

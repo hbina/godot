@@ -436,17 +436,10 @@ void CSGShape::_update_shape() {
 		}
 
 		// unset write access
-<<<<<<< HEAD
 		surfaces[i].verticesw = PoolVector<Vector3>::Write();
 		surfaces[i].normalsw = PoolVector<Vector3>::Write();
 		surfaces[i].uvsw = PoolVector<Vector2>::Write();
 		surfaces[i].tansw = PoolVector<float>::Write();
-=======
-		surfaces.write[i].verticesw.release();
-		surfaces.write[i].normalsw.release();
-		surfaces.write[i].uvsw.release();
-		surfaces.write[i].tansw.release();
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 
 		if (surfaces[i].last_added == 0)
 			continue;

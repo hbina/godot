@@ -495,9 +495,6 @@ void Image::convert(Format p_new_format) {
 		case FORMAT_RGBA8 | (FORMAT_RGB8 << 8): _convert<3, true, 3, false, false, false>(width, height, rptr, wptr); break;
 	}
 
-	r.release();
-	w.release();
-
 	bool gen_mipmaps = mipmaps;
 
 	_copy_internals_from(new_img);
@@ -1091,9 +1088,7 @@ void Image::resize(int p_width, int p_height, Interpolation p_interpolation) {
 		} break;
 	}
 
-	r.release();
-	w.release();
-
+	
 	if (interpolate_mipmaps) {
 		dst._copy_internals_from(dst2);
 	}
@@ -2393,8 +2388,6 @@ void Image::lock() {
 }
 
 void Image::unlock() {
-
-	write_lock.release();
 }
 
 Color Image::get_pixelv(const Point2 &p_src) const {

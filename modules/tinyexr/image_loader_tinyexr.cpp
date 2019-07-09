@@ -235,8 +235,6 @@ Error ImageLoaderTinyEXR::load_image(Ref<Image> p_image, FileAccess *f, bool p_f
 
 	p_image->create(exr_image.width, exr_image.height, false, format, imgdata);
 
-	w.release();
-
 	FreeEXRHeader(&exr_header);
 	FreeEXRImage(&exr_image);
 

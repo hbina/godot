@@ -222,6 +222,14 @@ T &PoolVectorImpl<T>::operator[](int p_index) {
 }
 
 template <class T>
+const T &PoolVectorImpl<T>::operator[](int p_index) const {
+
+	CRASH_BAD_INDEX(p_index, size());
+
+	return alloc->operator[](p_index);
+}
+
+template <class T>
 Error PoolVectorImpl<T>::resize(int p_size) {
 
 	alloc->resize(p_size);

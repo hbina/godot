@@ -808,8 +808,6 @@ Ref<Image> RasterizerStorageGLES2::texture_get_data(RID p_texture, int p_layer) 
 		}
 	}
 
-	wb.release();
-
 	data.resize(data_size);
 
 	Image *img = memnew(Image(texture->alloc_width, texture->alloc_height, texture->mipmaps > 1, real_format, data));
@@ -2155,9 +2153,6 @@ static PoolVector<uint8_t> _unpack_half_floats(const PoolVector<uint8_t> &array,
 		src_offset += src_size[i];
 		dst_offset += dst_size[i];
 	}
-
-	r.release();
-	w.release();
 
 	return ret;
 }

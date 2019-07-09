@@ -327,11 +327,7 @@ Error EditorExportPlatform::_save_pack_file(void *p_userdata, const String &p_pa
 		CryptoCore::md5(p_data.ptr(), p_data.size(), hash);
 		sd.md5.resize(16);
 		for (int i = 0; i < 16; i++) {
-<<<<<<< HEAD
-			sd.md5[i] = ctx.digest[i];
-=======
-			sd.md5.write[i] = hash[i];
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
+			sd.md5[i] = hash[i];
 		}
 	}
 

@@ -2293,7 +2293,7 @@ Vector<uint8_t> String::sha1_buffer() const {
 	Vector<uint8_t> ret;
 	ret.resize(20);
 	for (int i = 0; i < 20; i++) {
-		ret.write[i] = hash[i];
+		ret[i] = hash[i];
 	}
 
 	return ret;

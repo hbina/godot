@@ -4970,8 +4970,8 @@ PoolVector<int> TextEdit::_search_bind(const String &p_key, uint32_t p_search_fl
 	if (search(p_key, p_search_flags, p_from_line, p_from_column, col, line)) {
 		PoolVector<int> result;
 		result.resize(2);
-		result[0] = line;
-		result[1] = col;
+		result.set(0, line);
+		result.set(1, col);
 		return result;
 
 	} else {
@@ -6051,23 +6051,13 @@ void TextEdit::_update_completion_candidates() {
 	for (List<ScriptCodeCompletionOption>::Element *E = completion_sources.front(); E; E = E->next()) {
 		ScriptCodeCompletionOption &option = E->get();
 
-<<<<<<< HEAD
-	for (int i = 0; i < completion_strings.size(); i++) {
-		if (single_quote && completion_strings[i].is_quoted()) {
-			completion_strings[i] = completion_strings[i].unquote().quote("'");
-=======
 		if (single_quote && option.display.is_quoted()) {
 			option.display = option.display.unquote().quote("'");
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 		}
 
 		if (inquote && restore_quotes == 1 && !option.display.is_quoted()) {
 			String quote = single_quote ? "'" : "\"";
-<<<<<<< HEAD
-			completion_strings[i] = completion_strings[i].quote(quote);
-=======
 			option.display = option.display.quote(quote);
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 		}
 
 		if (option.display.begins_with(s)) {

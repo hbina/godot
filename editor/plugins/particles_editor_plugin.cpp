@@ -196,9 +196,7 @@ void ParticlesEditorBase::_node_selected(const NodePath &p_path) {
 			w[i].vertex[j] = geom_xform.xform(w[i].vertex[j]);
 		}
 	}
-
-	w.release();
-
+	
 	emission_dialog->popup_centered(Size2(300, 130));
 }
 

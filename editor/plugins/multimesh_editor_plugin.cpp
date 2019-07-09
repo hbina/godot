@@ -144,8 +144,6 @@ void MultiMeshEditor::_populate() {
 		}
 	}
 
-	w.release();
-
 	PoolVector<Face3> faces = geometry;
 	ERR_EXPLAIN(TTR("Parent has no solid faces to populate."));
 	int facecount = faces.size();

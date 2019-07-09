@@ -1491,8 +1491,6 @@ void TileSetEditor::_on_workspace_input(const Ref<InputEvent> &p_ie) {
 											w[i] = current_shape[i] - shape_anchor;
 										}
 
-										w.release();
-
 										undo_redo->create_action(TTR("Edit Occlusion Polygon"));
 										undo_redo->add_do_method(edited_occlusion_shape.ptr(), "set_polygon", polygon);
 										undo_redo->add_undo_method(edited_occlusion_shape.ptr(), "set_polygon", edited_occlusion_shape->get_polygon());
@@ -1513,8 +1511,6 @@ void TileSetEditor::_on_workspace_input(const Ref<InputEvent> &p_ie) {
 											w[i] = current_shape[i] - shape_anchor;
 											indices.push_back(i);
 										}
-
-										w.release();
 
 										undo_redo->create_action(TTR("Edit Navigation Polygon"));
 										undo_redo->add_do_method(edited_navigation_shape.ptr(), "set_vertices", polygon);
@@ -2785,7 +2781,6 @@ void TileSetEditor::close_shape(const Vector2 &shape_anchor) {
 			w[i] = current_shape[i] - shape_anchor;
 		}
 
-		w.release();
 		shape->set_polygon(polygon);
 
 		undo_redo->create_action(TTR("Create Occlusion Polygon"));
@@ -2813,7 +2808,6 @@ void TileSetEditor::close_shape(const Vector2 &shape_anchor) {
 			indices.push_back(i);
 		}
 
-		w.release();
 		shape->set_vertices(polygon);
 		shape->add_polygon(indices);
 

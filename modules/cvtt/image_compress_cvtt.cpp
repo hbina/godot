@@ -388,8 +388,5 @@ void image_decompress_cvtt(Image *p_image) {
 		h >>= 1;
 	}
 
-	rb.release();
-	wb.release();
-
 	p_image->create(p_image->get_width(), p_image->get_height(), p_image->has_mipmaps(), target_format, data);
 }

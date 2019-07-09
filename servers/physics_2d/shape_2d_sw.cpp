@@ -986,7 +986,7 @@ Variant ConcavePolygonShape2DSW::get_data() const {
 		w[(i << 1) + 1] = points[segments[i].points[1]];
 	}
 
-	w.release();
+	
 
 	return rsegments;
 }

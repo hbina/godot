@@ -80,7 +80,6 @@ RES ResourceFormatPKM::load(const String &p_path, const String &p_original_path,
 	src_data.resize(size);
 	PoolVector<uint8_t>::Write wb = src_data.write();
 	f->get_buffer(wb.ptr(), size);
-	wb.release();
 
 	int mipmaps = h.format;
 	int width = h.origWidth;

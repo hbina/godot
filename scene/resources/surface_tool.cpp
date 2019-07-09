@@ -307,7 +307,6 @@ Array SurfaceTool::commit_to_arrays() {
 					}
 				}
 
-				w.release();
 				a[i] = array;
 
 			} break;
@@ -335,7 +334,7 @@ Array SurfaceTool::commit_to_arrays() {
 					}
 				}
 
-				w.release();
+				
 				a[i] = array;
 			} break;
 			case Mesh::ARRAY_TANGENT: {
@@ -358,7 +357,7 @@ Array SurfaceTool::commit_to_arrays() {
 					w[idx + 3] = d < 0 ? -1 : 1;
 				}
 
-				w.release();
+				
 				a[i] = array;
 
 			} break;
@@ -375,7 +374,7 @@ Array SurfaceTool::commit_to_arrays() {
 					w[idx] = v.color;
 				}
 
-				w.release();
+				
 				a[i] = array;
 			} break;
 			case Mesh::ARRAY_BONES: {
@@ -396,7 +395,7 @@ Array SurfaceTool::commit_to_arrays() {
 					}
 				}
 
-				w.release();
+				
 				a[i] = array;
 
 			} break;
@@ -418,7 +417,7 @@ Array SurfaceTool::commit_to_arrays() {
 					}
 				}
 
-				w.release();
+				
 				a[i] = array;
 
 			} break;
@@ -436,7 +435,7 @@ Array SurfaceTool::commit_to_arrays() {
 					w[idx] = E->get();
 				}
 
-				w.release();
+				
 
 				a[i] = array;
 			} break;

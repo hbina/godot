@@ -1275,8 +1275,6 @@ PoolVector<int> TileMap::_get_tile_data() const {
 		idx += 3;
 	}
 
-	w.release();
-
 	return data;
 }
 

@@ -98,8 +98,6 @@ Ref<TriangleMesh> Mesh::generate_triangle_mesh() const {
 		}
 	}
 
-	facesw.release();
-
 	triangle_mesh = Ref<TriangleMesh>(memnew(TriangleMesh));
 	triangle_mesh->create(faces);
 
@@ -436,7 +434,6 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 			r[i] = t;
 		}
 
-		r.release();
 		arrays[ARRAY_VERTEX] = vertices;
 
 		if (!has_indices) {
@@ -452,7 +449,6 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 				iw[j + 2] = j + 1;
 			}
 
-			iw.release();
 			arrays[ARRAY_INDEX] = new_indices;
 
 		} else {
@@ -461,7 +457,7 @@ Ref<Mesh> Mesh::create_outline(float p_margin) const {
 
 				SWAP(ir[j + 1], ir[j + 2]);
 			}
-			ir.release();
+			
 			arrays[ARRAY_INDEX] = indices;
 		}
 	}

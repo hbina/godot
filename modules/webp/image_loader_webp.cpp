@@ -71,7 +71,6 @@ static PoolVector<uint8_t> _webp_lossy_pack(const Ref<Image> &p_image, float p_q
 	w[3] = 'P';
 	copymem(&w[4], dst_buff, dst_size);
 	free(dst_buff);
-	w.release();
 	return dst;
 }
 
@@ -110,8 +109,6 @@ static Ref<Image> _webp_lossy_unpack(const PoolVector<uint8_t> &p_buffer) {
 	//ERR_EXPLAIN("Error decoding webp! - "+p_file);
 	ERR_FAIL_COND_V(errdec, Ref<Image>());
 
-	dst_w.release();
-
 	Ref<Image> img = memnew(Image(features.width, features.height, 0, features.has_alpha ? Image::FORMAT_RGBA8 : Image::FORMAT_RGB8, dst_image));
 	return img;
 }
@@ -137,7 +134,6 @@ Error webp_load_image_from_buffer(Image *p_image, const uint8_t *p_buffer, int p
 	} else {
 		errdec = WebPDecodeRGBInto(p_buffer, p_buffer_len, dst_w.ptr(), datasize, 3 * features.width) == NULL;
 	}
-	dst_w.release();
 
 	//ERR_EXPLAIN("Error decoding webp!");
 	ERR_FAIL_COND_V(errdec, ERR_FILE_CORRUPT);

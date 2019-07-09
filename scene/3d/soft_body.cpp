@@ -73,7 +73,6 @@ void SoftBodyVisualServerHandler::open() {
 }
 
 void SoftBodyVisualServerHandler::close() {
-	write_buffer.release();
 }
 
 void SoftBodyVisualServerHandler::commit_changes() {

@@ -96,7 +96,6 @@ Error jpeg_load_image_from_buffer(Image *p_image, const uint8_t *p_buffer, int p
 	else
 		fmt = Image::FORMAT_RGB8;
 
-	dw.release();
 	p_image->create(image_width, image_height, 0, fmt, data);
 
 	return OK;

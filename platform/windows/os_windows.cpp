@@ -2589,7 +2589,7 @@ Error OS_Windows::execute(const String &p_path, const List<String> &p_arguments,
 		modstr[i] = cmdline[i];
 	int ret = CreateProcessW(NULL, modstr.ptrw(), NULL, NULL, 0, NORMAL_PRIORITY_CLASS, NULL, NULL, si_w, &pi.pi);
 =======
-		modstr.write[i] = cmdline[i];
+		modstr[i] = cmdline[i];
 	int ret = CreateProcessW(NULL, modstr.ptrw(), NULL, NULL, 0, NORMAL_PRIORITY_CLASS & CREATE_NO_WINDOW, NULL, NULL, si_w, &pi.pi);
 >>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 	ERR_FAIL_COND_V(ret == 0, ERR_CANT_FORK);

@@ -594,7 +594,7 @@ void TreeItem::set_button_disabled(int p_column, int p_idx, bool p_disabled) {
 	ERR_FAIL_INDEX(p_column, cells.size());
 	ERR_FAIL_INDEX(p_idx, cells[p_column].buttons.size());
 
-	cells.write[p_column].buttons.write[p_idx].disabled = p_disabled;
+	cells[p_column].buttons[p_idx].disabled = p_disabled;
 	_changed_notify(p_column);
 }
 

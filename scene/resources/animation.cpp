@@ -403,7 +403,6 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					w[idx++] = scale.z;
 				}
 
-				w.release();
 				r_ret = keys;
 				return true;
 
@@ -437,9 +436,6 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					key_values[idx] = vls[i].value;
 					idx++;
 				}
-
-				wti.release();
-				wtr.release();
 
 				d["times"] = key_times;
 				d["transitions"] = key_transitions;
@@ -477,9 +473,6 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					key_values[idx] = track_get_key_value(track, i);
 					idx++;
 				}
-
-				wti.release();
-				wtr.release();
 
 				d["times"] = key_times;
 				d["transitions"] = key_transitions;
@@ -523,9 +516,6 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					idx++;
 				}
 
-				wti.release();
-				wpo.release();
-
 				d["times"] = key_times;
 				d["points"] = key_points;
 
@@ -562,8 +552,6 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					idx++;
 				}
 
-				wti.release();
-
 				d["times"] = key_times;
 				d["clips"] = clips;
 
@@ -594,9 +582,6 @@ bool Animation::_get(const StringName &p_name, Variant &r_ret) const {
 					wti[i] = vls[i].time;
 					wcl[i] = vls[i].value;
 				}
-
-				wti.release();
-				wcl.release();
 
 				d["times"] = key_times;
 				d["clips"] = clips;

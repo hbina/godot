@@ -153,8 +153,6 @@ RES ResourceFormatPVR::load(const String &p_path, const String &p_original_path,
 			ERR_FAIL_V(RES());
 	}
 
-	w.release();
-
 	int tex_flags = Texture::FLAG_FILTER | Texture::FLAG_REPEAT;
 
 	if (mipmaps)
@@ -654,9 +652,6 @@ static void _pvrtc_decompress(Image *p_img) {
 	PoolVector<uint8_t>::Write w = newdata.write();
 
 	decompress_pvrtc((PVRTCBlock *)r.ptr(), _2bit, p_img->get_width(), p_img->get_height(), 0, (unsigned char *)w.ptr());
-
-	w.release();
-	r.release();
 
 	bool make_mipmaps = p_img->has_mipmaps();
 	p_img->create(p_img->get_width(), p_img->get_height(), false, Image::FORMAT_RGBA8, newdata);
