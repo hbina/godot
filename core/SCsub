@@ -130,14 +130,8 @@ if env['builtin_zstd']:
     thirdparty_zstd_sources = [thirdparty_zstd_dir +
                                file for file in thirdparty_zstd_sources]
 
-<<<<<<< HEAD
-    env_thirdparty.Prepend(
-        CPPPATH=[thirdparty_zstd_dir, thirdparty_zstd_dir + "common"])
-    env_thirdparty.Append(CPPFLAGS="-DZSTD_STATIC_LINKING_ONLY")
-=======
     env_thirdparty.Prepend(CPPPATH=[thirdparty_zstd_dir, thirdparty_zstd_dir + "common"])
     env_thirdparty.Append(CPPDEFINES=["ZSTD_STATIC_LINKING_ONLY"])
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
     env.Prepend(CPPPATH=thirdparty_zstd_dir)
     # Also needed in main env includes will trigger warnings
     env.Append(CPPDEFINES=["ZSTD_STATIC_LINKING_ONLY"])

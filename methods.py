@@ -509,11 +509,7 @@ def find_visual_c_batch_file(env):
     from SCons.Tool.MSCommon.vc import get_default_version, get_host_target, find_batch_file
 
     version = get_default_version(env)
-<<<<<<< HEAD
-    (host_platform, target_platform, req_target_platform) = get_host_target(env)
-=======
     (host_platform, target_platform, _) = get_host_target(env)
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
     return find_batch_file(env, version, host_platform, target_platform)[0]
 
 
@@ -641,14 +637,8 @@ def detect_darwin_sdk_path(platform, env):
                 ['xcrun', '--sdk', sdk_name, '--show-sdk-path']).strip())
             if sdk_path:
                 env[var_name] = sdk_path
-<<<<<<< HEAD
-        except (subprocess.CalledProcessError, OSError) as e:
-            print(
-                "Failed to find SDK path while running xcrun --sdk {} --show-sdk-path.".format(sdk_name))
-=======
         except (subprocess.CalledProcessError, OSError):
             print("Failed to find SDK path while running xcrun --sdk {} --show-sdk-path.".format(sdk_name))
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
             raise
 
 

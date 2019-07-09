@@ -161,21 +161,10 @@ opts.Add(BoolVariable('builtin_libtheora',
 opts.Add(BoolVariable('builtin_libvorbis',
                       "Use the built-in libvorbis library", True))
 opts.Add(BoolVariable('builtin_libvpx', "Use the built-in libvpx library", True))
-<<<<<<< HEAD
-opts.Add(BoolVariable('builtin_libwebp',
-                      "Use the built-in libwebp library", True))
-opts.Add(BoolVariable('builtin_libwebsockets',
-                      "Use the built-in libwebsockets library", True))
-opts.Add(BoolVariable('builtin_mbedtls',
-                      "Use the built-in mbedTLS library", True))
-opts.Add(BoolVariable('builtin_miniupnpc',
-                      "Use the built-in miniupnpc library", True))
-=======
 opts.Add(BoolVariable('builtin_libwebp', "Use the built-in libwebp library", True))
 opts.Add(BoolVariable('builtin_wslay', "Use the built-in wslay library", True))
 opts.Add(BoolVariable('builtin_mbedtls', "Use the built-in mbedTLS library", True))
 opts.Add(BoolVariable('builtin_miniupnpc', "Use the built-in miniupnpc library", True))
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 opts.Add(BoolVariable('builtin_opus', "Use the built-in Opus library", True))
 opts.Add(BoolVariable('builtin_pcre2', "Use the built-in PCRE2 library", True))
 opts.Add(BoolVariable('builtin_recast', "Use the built-in Recast library", True))

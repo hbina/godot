@@ -777,12 +777,8 @@ void CodeTextEditor::_complete_request() {
 	if (entries.size() == 0)
 		return;
 
-<<<<<<< HEAD
-		strs[i++] = E->get();
-=======
 	for (List<ScriptCodeCompletionOption>::Element *E = entries.front(); E; E = E->next()) {
 		E->get().icon = _get_completion_icon(E->get());
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 	}
 	text_editor->code_complete(entries, forced);
 }

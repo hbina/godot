@@ -59,14 +59,6 @@ public:
 		void _ref(std::shared_ptr<std::vector<T> > p_alloc) {
 			access_alloc = p_alloc;
 		}
-<<<<<<< HEAD
-=======
-
-		void release() {
-			_unref();
-		}
-	};
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
 
 		const T &operator[](int p_index) const { return access_alloc->operator[](p_index); }
 		const T *ptr() const { return access_alloc->data(); }
@@ -218,22 +210,7 @@ int PoolVectorImpl<T>::size() const {
 template <class T>
 void PoolVectorImpl<T>::push_back(const T &p_val) {
 
-<<<<<<< HEAD
 	alloc->push_back(p_val);
-=======
-	ERR_FAIL_INDEX(p_index, size());
-
-	Write w = write();
-	w[p_index] = p_val;
->>>>>>> 5e495750a37e3314a8cd85cb3f7be9a676420c44
-}
-
-template <class T>
-const T &PoolVectorImpl<T>::operator[](int p_index) const {
-
-	CRASH_BAD_INDEX(p_index, size());
-
-	return alloc->operator[](p_index);
 }
 
 template <class T>
