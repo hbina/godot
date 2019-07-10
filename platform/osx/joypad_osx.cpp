@@ -71,9 +71,9 @@ void joypad::free() {
 	}
 }
 
-bool joypad::has_element(IOHIDElementCookie p_cookie, Vector<rec_element> *p_list) const {
+bool joypad::has_element(IOHIDElementCookie p_cookie, Vector<rec_element> &p_list) const {
 	for (int i = 0; i < p_list->size(); i++) {
-		if (p_cookie == p_list->get(i).cookie) {
+		if (p_cookie == p_list[i].cookie) {
 			return true;
 		}
 	}
