@@ -2464,7 +2464,7 @@ int String::find(const char *p_str, int p_from) const {
 }
 
 int String::find_char(const CharType &p_char, int p_from) const {
-	return _cowdata.find(p_char, p_from);
+	return _inner_.find(p_char, p_from);
 }
 
 int String::findmk(const Vector<String> &p_keys, int p_from, int *r_key) const {

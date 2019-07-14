@@ -51,6 +51,13 @@ class VectorImpl {
 	std::vector<T> _inner_;
 
 public:
+	VectorImpl() = default;
+	VectorImpl(const VectorImpl &p_vec) :
+			_inner_(p_vec._inner_) {}
+	VectorImpl &operator=(const VectorImpl &p_vec) {
+		_inner_ = p_vec._inner_;
+		return *this;
+	}
 	void remove(int);
 	void erase(const T &);
 	void invert();
