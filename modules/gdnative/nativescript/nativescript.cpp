@@ -73,13 +73,13 @@ void NativeScript::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_signal_documentation", "signal_name"), &NativeScript::get_signal_documentation);
 	ClassDB::bind_method(D_METHOD("get_property_documentation", "path"), &NativeScript::get_property_documentation);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "class_name"), "set_class_name", "get_class_name");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "library", PROPERTY_HINT_RESOURCE_TYPE, "GDNativeLibrary"), "set_library", "get_library");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "class_name"), "set_class_name", "get_class_name");
+	ADD_PROPERTY(PropertyInfo(VariantType::OBJECT, "library", PROPERTY_HINT_RESOURCE_TYPE, "GDNativeLibrary"), "set_library", "get_library");
 	ADD_GROUP("Script Class", "script_class_");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "script_class_name"), "set_script_class_name", "get_script_class_name");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "script_class_icon_path", PROPERTY_HINT_FILE), "set_script_class_icon_path", "get_script_class_icon_path");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "script_class_name"), "set_script_class_name", "get_script_class_name");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "script_class_icon_path", PROPERTY_HINT_FILE), "set_script_class_icon_path", "get_script_class_icon_path");
 
-	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "new", &NativeScript::_new, MethodInfo(Variant::OBJECT, "new"));
+	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "new", &NativeScript::_new, MethodInfo(VariantType::OBJECT, "new"));
 }
 
 #define NSL NativeScriptLanguage::get_singleton()
@@ -626,7 +626,7 @@ bool NativeScriptInstance::get(const StringName &p_name, Variant &r_ret) const {
 					(godot_variant **)args);
 			r_ret = *(Variant *)&result;
 			godot_variant_destroy(&result);
-			if (r_ret.get_type() != Variant::NIL) {
+			if (r_ret.get_type() != VariantType::NIL) {
 				return true;
 			}
 		}
@@ -655,7 +655,7 @@ void NativeScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 			Variant res = *(Variant *)&result;
 			godot_variant_destroy(&result);
 
-			if (res.get_type() != Variant::ARRAY) {
+			if (res.get_type() != VariantType::ARRAY) {
 				ERR_EXPLAIN("_get_property_list must return an array of dictionaries");
 				ERR_FAIL();
 			}
@@ -669,7 +669,7 @@ void NativeScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 
 				PropertyInfo info;
 
-				info.type = Variant::Type(d["type"].operator int64_t());
+				info.type = VariantType(d["type"].operator int64_t());
 				ERR_CONTINUE(info.type < 0 || info.type >= Variant::VARIANT_MAX);
 
 				info.name = d["name"];
@@ -696,7 +696,7 @@ void NativeScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 	return;
 }
 
-Variant::Type NativeScriptInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
+VariantType NativeScriptInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
 
 	NativeScriptDesc *script_data = GET_SCRIPT_DESC();
 
@@ -710,7 +710,7 @@ Variant::Type NativeScriptInstance::get_property_type(const StringName &p_name, 
 
 		script_data = script_data->base_data;
 	}
-	return Variant::NIL;
+	return VariantType::NIL;
 }
 
 void NativeScriptInstance::get_method_list(Vector<MethodInfo> &p_list) const {
@@ -777,7 +777,7 @@ String NativeScriptInstance::to_string(bool *r_valid) {
 		Variant::CallError ce;
 		Variant ret = call(CoreStringNames::get_singleton()->_to_string, NULL, 0, ce);
 		if (ce.error == Variant::CallError::CALL_OK) {
-			if (ret.get_type() != Variant::STRING) {
+			if (ret.get_type() != VariantType::STRING) {
 				if (r_valid)
 					*r_valid = false;
 				ERR_EXPLAIN("Wrong type for " + CoreStringNames::get_singleton()->_to_string + ", must be a String.");

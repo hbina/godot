@@ -35,7 +35,8 @@ def run_in_subprocess(builder_function):
 
         # Subprocess environment
         subprocess_env = os.environ.copy()
-        subprocess_env['PYTHONPATH'] = os.pathsep.join([os.getcwd()] + sys.path)
+        subprocess_env['PYTHONPATH'] = os.pathsep.join(
+            [os.getcwd()] + sys.path)
 
         # Keep only JSON serializable environment items
         filtered_env = dict(
@@ -54,9 +55,10 @@ def run_in_subprocess(builder_function):
 
         print('Executing builder function in subprocess: '
               'module_path=%r, parameter_file=%r, parameter_file_size=%r, target=%r, source=%r' % (
-               module_path, json_path, json_file_size, target, source))
+                  module_path, json_path, json_file_size, target, source))
         try:
-            exit_code = subprocess.call([sys.executable, module_path, json_path], env=subprocess_env)
+            exit_code = subprocess.call(
+                [sys.executable, module_path, json_path], env=subprocess_env)
         finally:
             try:
                 os.remove(json_path)

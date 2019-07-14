@@ -35,7 +35,7 @@
 #include "core/error_macros.h"
 #include "core/global_constants.h"
 #include "core/os/os.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #include "modules/gdnative/gdnative.h"
 

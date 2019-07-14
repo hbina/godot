@@ -154,15 +154,15 @@ void ConnectDialog::_add_bind() {
 
 	if (cdbinds->params.size() >= VARIANT_ARG_MAX)
 		return;
-	Variant::Type vt = (Variant::Type)type_list->get_item_id(type_list->get_selected());
+	VariantType vt = (VariantType)type_list->get_item_id(type_list->get_selected());
 
 	Variant value;
 
 	switch (vt) {
-		case Variant::BOOL: value = false; break;
-		case Variant::INT: value = 0; break;
-		case Variant::REAL: value = 0.0; break;
-		case Variant::STRING: value = ""; break;
+		case VariantType::BOOL: value = false; break;
+		case VariantType::INT: value = 0; break;
+		case VariantType::REAL: value = 0.0; break;
+		case VariantType::STRING: value = ""; break;
 		case Variant::VECTOR2: value = Vector2(); break;
 		case Variant::RECT2: value = Rect2(); break;
 		case Variant::VECTOR3: value = Vector3(); break;
@@ -177,7 +177,7 @@ void ConnectDialog::_add_bind() {
 		} break;
 	}
 
-	ERR_FAIL_COND(value.get_type() == Variant::NIL);
+	ERR_FAIL_COND(value.get_type() == VariantType::NIL);
 
 	cdbinds->params.push_back(value);
 	cdbinds->notify_changed();
@@ -381,10 +381,10 @@ ConnectDialog::ConnectDialog() {
 	type_list = memnew(OptionButton);
 	type_list->set_h_size_flags(SIZE_EXPAND_FILL);
 	add_bind_hb->add_child(type_list);
-	type_list->add_item("bool", Variant::BOOL);
-	type_list->add_item("int", Variant::INT);
-	type_list->add_item("real", Variant::REAL);
-	type_list->add_item("String", Variant::STRING);
+	type_list->add_item("bool", VariantType::BOOL);
+	type_list->add_item("int", VariantType::INT);
+	type_list->add_item("real", VariantType::REAL);
+	type_list->add_item("String", VariantType::STRING);
 	type_list->add_item("Vector2", Variant::VECTOR2);
 	type_list->add_item("Rect2", Variant::RECT2);
 	type_list->add_item("Vector3", Variant::VECTOR3);
@@ -904,9 +904,9 @@ void ConnectionsDock::update_tree() {
 					if (i > 0)
 						signaldesc += ", ";
 					String tname = "var";
-					if (pi.type == Variant::OBJECT && pi.class_name != StringName()) {
+					if (pi.type == VariantType::OBJECT && pi.class_name != StringName()) {
 						tname = pi.class_name.operator String();
-					} else if (pi.type != Variant::NIL) {
+					} else if (pi.type != VariantType::NIL) {
 						tname = Variant::get_type_name(pi.type);
 					}
 					signaldesc += tname + " " + (pi.name == "" ? String("arg " + itos(i)) : pi.name);

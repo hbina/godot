@@ -173,7 +173,7 @@ RES ResourceFormatLoader::load(const String &p_path, const String &p_original_pa
 	if (get_script_instance() && get_script_instance()->has_method("load")) {
 		Variant res = get_script_instance()->call("load", p_path, p_original_path);
 
-		if (res.get_type() == Variant::INT) {
+		if (res.get_type() == VariantType::INT) {
 
 			if (r_error)
 				*r_error = (Error)res.operator int64_t();
@@ -244,16 +244,16 @@ Error ResourceFormatLoader::rename_dependencies(const String &p_path, const Map<
 void ResourceFormatLoader::_bind_methods() {
 
 	{
-		MethodInfo info = MethodInfo(Variant::NIL, "load", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::STRING, "original_path"));
+		MethodInfo info = MethodInfo(VariantType::NIL, "load", PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::STRING, "original_path"));
 		info.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 		ClassDB::add_virtual_method(get_class_static(), info);
 	}
 
 	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::POOL_STRING_ARRAY, "get_recognized_extensions"));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::BOOL, "handles_type", PropertyInfo(Variant::STRING, "typename")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::STRING, "get_resource_type", PropertyInfo(Variant::STRING, "path")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo("get_dependencies", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::STRING, "add_types")));
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::INT, "rename_dependencies", PropertyInfo(Variant::STRING, "path"), PropertyInfo(Variant::STRING, "renames")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(VariantType::BOOL, "handles_type", PropertyInfo(VariantType::STRING, "typename")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(VariantType::STRING, "get_resource_type", PropertyInfo(VariantType::STRING, "path")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo("get_dependencies", PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::STRING, "add_types")));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(VariantType::INT, "rename_dependencies", PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::STRING, "renames")));
 }
 
 ///////////////////////////////////

@@ -52,9 +52,9 @@ struct _VariantCall {
 
 		int arg_count;
 		Vector<Variant> default_args;
-		Vector<Variant::Type> arg_types;
+		Vector<VariantType> arg_types;
 		Vector<StringName> arg_names;
-		Variant::Type return_type;
+		VariantType return_type;
 
 		bool _const;
 		bool returns;
@@ -66,7 +66,7 @@ struct _VariantCall {
 			if (arg_count == 0)
 				return true;
 
-			const Variant::Type *tptr = &arg_types[0];
+			const VariantType *tptr = &arg_types[0];
 
 			for (int i = 0; i < arg_count; i++) {
 
@@ -132,24 +132,24 @@ struct _VariantCall {
 
 	struct Arg {
 		StringName name;
-		Variant::Type type;
-		Arg() { type = Variant::NIL; }
-		Arg(Variant::Type p_type, const StringName &p_name) :
+		VariantType type;
+		Arg() { type = VariantType::NIL; }
+		Arg(VariantType p_type, const StringName &p_name) :
 				name(p_name),
 				type(p_type) {
 		}
 	};
 
-	//void addfunc(Variant::Type p_type, const StringName& p_name,VariantFunc p_func);
+	//void addfunc(VariantType p_type, const StringName& p_name,VariantFunc p_func);
 
-	static void make_func_return_variant(Variant::Type p_type, const StringName &p_name) {
+	static void make_func_return_variant(VariantType p_type, const StringName &p_name) {
 
 #ifdef DEBUG_ENABLED
 		type_funcs[p_type].functions[p_name].returns = true;
 #endif
 	}
 
-	static void addfunc(bool p_const, Variant::Type p_type, Variant::Type p_return, bool p_has_return, const StringName &p_name, VariantFunc p_func, const Vector<Variant> &p_defaultarg, const Arg &p_argtype1 = Arg(), const Arg &p_argtype2 = Arg(), const Arg &p_argtype3 = Arg(), const Arg &p_argtype4 = Arg(), const Arg &p_argtype5 = Arg()) {
+	static void addfunc(bool p_const, VariantType p_type, VariantType p_return, bool p_has_return, const StringName &p_name, VariantFunc p_func, const Vector<Variant> &p_defaultarg, const Arg &p_argtype1 = Arg(), const Arg &p_argtype2 = Arg(), const Arg &p_argtype3 = Arg(), const Arg &p_argtype4 = Arg(), const Arg &p_argtype5 = Arg()) {
 
 		FuncData funcdata;
 		funcdata.func = p_func;
@@ -840,7 +840,7 @@ struct _VariantCall {
 	struct ConstructData {
 
 		int arg_count;
-		Vector<Variant::Type> arg_types;
+		Vector<VariantType> arg_types;
 		Vector<String> arg_names;
 		VariantConstructFunc func;
 	};
@@ -975,11 +975,11 @@ struct _VariantCall {
 		r_ret = Transform(p_args[0]->operator Basis(), p_args[1]->operator Vector3());
 	}
 
-	static void add_constructor(VariantConstructFunc p_func, const Variant::Type p_type,
-			const String &p_name1 = "", const Variant::Type p_type1 = Variant::NIL,
-			const String &p_name2 = "", const Variant::Type p_type2 = Variant::NIL,
-			const String &p_name3 = "", const Variant::Type p_type3 = Variant::NIL,
-			const String &p_name4 = "", const Variant::Type p_type4 = Variant::NIL) {
+	static void add_constructor(VariantConstructFunc p_func, const VariantType p_type,
+			const String &p_name1 = "", const VariantType p_type1 = VariantType::NIL,
+			const String &p_name2 = "", const VariantType p_type2 = VariantType::NIL,
+			const String &p_name3 = "", const VariantType p_type3 = VariantType::NIL,
+			const String &p_name4 = "", const VariantType p_type4 = VariantType::NIL) {
 
 		ConstructData cd;
 		cd.func = p_func;
@@ -1053,7 +1053,7 @@ Variant Variant::call(const StringName &p_method, const Variant **p_args, int p_
 void Variant::call_ptr(const StringName &p_method, const Variant **p_args, int p_argcount, Variant *r_ret, CallError &r_error) {
 	Variant ret;
 
-	if (type == Variant::OBJECT) {
+	if (type == VariantType::OBJECT) {
 		//call object
 		Object *obj = _get_obj().obj;
 		if (!obj) {
@@ -1095,7 +1095,7 @@ void Variant::call_ptr(const StringName &p_method, const Variant **p_args, int p
 
 #define VCALL(m_type, m_method) _VariantCall::_call_##m_type##_##m_method
 
-Variant Variant::construct(const Variant::Type p_type, const Variant **p_args, int p_argcount, CallError &r_error, bool p_strict) {
+Variant Variant::construct(const VariantType p_type, const Variant **p_args, int p_argcount, CallError &r_error, bool p_strict) {
 
 	r_error.error = Variant::CallError::CALL_ERROR_INVALID_METHOD;
 	ERR_FAIL_INDEX_V(p_type, VARIANT_MAX, Variant());
@@ -1209,7 +1209,7 @@ Variant Variant::construct(const Variant::Type p_type, const Variant **p_args, i
 				return (Transform(p_args[0]->operator Transform()));
 
 			// misc types
-			case COLOR: return p_args[0]->type == Variant::STRING ? Color::html(*p_args[0]) : Color::hex(*p_args[0]);
+			case COLOR: return p_args[0]->type == VariantType::STRING ? Color::html(*p_args[0]) : Color::hex(*p_args[0]);
 			case NODE_PATH:
 				return (NodePath(p_args[0]->operator NodePath())); // 15
 			case _RID: return (RID(*p_args[0]));
@@ -1255,18 +1255,18 @@ bool Variant::has_method(const StringName &p_method) const {
 	return tf.functions.has(p_method);
 }
 
-Vector<Variant::Type> Variant::get_method_argument_types(Variant::Type p_type, const StringName &p_method) {
+Vector<VariantType> Variant::get_method_argument_types(VariantType p_type, const StringName &p_method) {
 
 	const _VariantCall::TypeFunc &tf = _VariantCall::type_funcs[p_type];
 
 	const Map<StringName, _VariantCall::FuncData>::Element *E = tf.functions.find(p_method);
 	if (!E)
-		return Vector<Variant::Type>();
+		return Vector<VariantType>();
 
 	return E->get().arg_types;
 }
 
-bool Variant::is_method_const(Variant::Type p_type, const StringName &p_method) {
+bool Variant::is_method_const(VariantType p_type, const StringName &p_method) {
 
 	const _VariantCall::TypeFunc &tf = _VariantCall::type_funcs[p_type];
 
@@ -1277,7 +1277,7 @@ bool Variant::is_method_const(Variant::Type p_type, const StringName &p_method) 
 	return E->get()._const;
 }
 
-Vector<StringName> Variant::get_method_argument_names(Variant::Type p_type, const StringName &p_method) {
+Vector<StringName> Variant::get_method_argument_names(VariantType p_type, const StringName &p_method) {
 
 	const _VariantCall::TypeFunc &tf = _VariantCall::type_funcs[p_type];
 
@@ -1288,13 +1288,13 @@ Vector<StringName> Variant::get_method_argument_names(Variant::Type p_type, cons
 	return E->get().arg_names;
 }
 
-Variant::Type Variant::get_method_return_type(Variant::Type p_type, const StringName &p_method, bool *r_has_return) {
+VariantType Variant::get_method_return_type(VariantType p_type, const StringName &p_method, bool *r_has_return) {
 
 	const _VariantCall::TypeFunc &tf = _VariantCall::type_funcs[p_type];
 
 	const Map<StringName, _VariantCall::FuncData>::Element *E = tf.functions.find(p_method);
 	if (!E)
-		return Variant::NIL;
+		return VariantType::NIL;
 
 	if (r_has_return)
 		*r_has_return = E->get().returns;
@@ -1302,7 +1302,7 @@ Variant::Type Variant::get_method_return_type(Variant::Type p_type, const String
 	return E->get().return_type;
 }
 
-Vector<Variant> Variant::get_method_default_arguments(Variant::Type p_type, const StringName &p_method) {
+Vector<Variant> Variant::get_method_default_arguments(VariantType p_type, const StringName &p_method) {
 
 	const _VariantCall::TypeFunc &tf = _VariantCall::type_funcs[p_type];
 
@@ -1351,7 +1351,7 @@ void Variant::get_method_list(Vector<MethodInfo> &p_list) const {
 	}
 }
 
-void Variant::get_constructor_list(Variant::Type p_type, Vector<MethodInfo> &p_list) {
+void Variant::get_constructor_list(VariantType p_type, Vector<MethodInfo> &p_list) {
 
 	ERR_FAIL_INDEX(p_type, VARIANT_MAX);
 
@@ -1375,21 +1375,21 @@ void Variant::get_constructor_list(Variant::Type p_type, Vector<MethodInfo> &p_l
 	for (int i = 0; i < VARIANT_MAX; i++) {
 		if (i == p_type)
 			continue;
-		if (!Variant::can_convert(Variant::Type(i), p_type))
+		if (!Variant::can_convert(VariantType(i), p_type))
 			continue;
 
 		MethodInfo mi;
 		mi.name = Variant::get_type_name(p_type);
 		PropertyInfo pi;
 		pi.name = "from";
-		pi.type = Variant::Type(i);
+		pi.type = VariantType(i);
 		mi.arguments.push_back(pi);
 		mi.return_val.type = p_type;
 		p_list.push_back(mi);
 	}
 }
 
-void Variant::get_constants_for_type(Variant::Type p_type, List<StringName> *p_constants) {
+void Variant::get_constants_for_type(VariantType p_type, List<StringName> *p_constants) {
 
 	ERR_FAIL_INDEX(p_type, Variant::VARIANT_MAX);
 
@@ -1412,14 +1412,14 @@ void Variant::get_constants_for_type(Variant::Type p_type, List<StringName> *p_c
 	}
 }
 
-bool Variant::has_constant(Variant::Type p_type, const StringName &p_value) {
+bool Variant::has_constant(VariantType p_type, const StringName &p_value) {
 
 	ERR_FAIL_INDEX_V(p_type, Variant::VARIANT_MAX, false);
 	_VariantCall::ConstantData &cd = _VariantCall::constant_data[p_type];
 	return cd.value.has(p_value) || cd.variant_value.has(p_value);
 }
 
-Variant Variant::get_constant_value(Variant::Type p_type, const StringName &p_value, bool *r_valid) {
+Variant Variant::get_constant_value(VariantType p_type, const StringName &p_value, bool *r_valid) {
 
 	if (r_valid)
 		*r_valid = false;
@@ -1891,31 +1891,31 @@ void register_variant_methods() {
 
 	/* REGISTER CONSTRUCTORS */
 
-	_VariantCall::add_constructor(_VariantCall::Vector2_init1, Variant::VECTOR2, "x", Variant::REAL, "y", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Vector2_init1, Variant::VECTOR2, "x", VariantType::REAL, "y", VariantType::REAL);
 
 	_VariantCall::add_constructor(_VariantCall::Rect2_init1, Variant::RECT2, "position", Variant::VECTOR2, "size", Variant::VECTOR2);
-	_VariantCall::add_constructor(_VariantCall::Rect2_init2, Variant::RECT2, "x", Variant::REAL, "y", Variant::REAL, "width", Variant::REAL, "height", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Rect2_init2, Variant::RECT2, "x", VariantType::REAL, "y", VariantType::REAL, "width", VariantType::REAL, "height", VariantType::REAL);
 
-	_VariantCall::add_constructor(_VariantCall::Transform2D_init2, Variant::TRANSFORM2D, "rotation", Variant::REAL, "position", Variant::VECTOR2);
+	_VariantCall::add_constructor(_VariantCall::Transform2D_init2, Variant::TRANSFORM2D, "rotation", VariantType::REAL, "position", Variant::VECTOR2);
 	_VariantCall::add_constructor(_VariantCall::Transform2D_init3, Variant::TRANSFORM2D, "x_axis", Variant::VECTOR2, "y_axis", Variant::VECTOR2, "origin", Variant::VECTOR2);
 
-	_VariantCall::add_constructor(_VariantCall::Vector3_init1, Variant::VECTOR3, "x", Variant::REAL, "y", Variant::REAL, "z", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Vector3_init1, Variant::VECTOR3, "x", VariantType::REAL, "y", VariantType::REAL, "z", VariantType::REAL);
 
-	_VariantCall::add_constructor(_VariantCall::Plane_init1, Variant::PLANE, "a", Variant::REAL, "b", Variant::REAL, "c", Variant::REAL, "d", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Plane_init1, Variant::PLANE, "a", VariantType::REAL, "b", VariantType::REAL, "c", VariantType::REAL, "d", VariantType::REAL);
 	_VariantCall::add_constructor(_VariantCall::Plane_init2, Variant::PLANE, "v1", Variant::VECTOR3, "v2", Variant::VECTOR3, "v3", Variant::VECTOR3);
-	_VariantCall::add_constructor(_VariantCall::Plane_init3, Variant::PLANE, "normal", Variant::VECTOR3, "d", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Plane_init3, Variant::PLANE, "normal", Variant::VECTOR3, "d", VariantType::REAL);
 
-	_VariantCall::add_constructor(_VariantCall::Quat_init1, Variant::QUAT, "x", Variant::REAL, "y", Variant::REAL, "z", Variant::REAL, "w", Variant::REAL);
-	_VariantCall::add_constructor(_VariantCall::Quat_init2, Variant::QUAT, "axis", Variant::VECTOR3, "angle", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Quat_init1, Variant::QUAT, "x", VariantType::REAL, "y", VariantType::REAL, "z", VariantType::REAL, "w", VariantType::REAL);
+	_VariantCall::add_constructor(_VariantCall::Quat_init2, Variant::QUAT, "axis", Variant::VECTOR3, "angle", VariantType::REAL);
 	_VariantCall::add_constructor(_VariantCall::Quat_init3, Variant::QUAT, "euler", Variant::VECTOR3);
 
-	_VariantCall::add_constructor(_VariantCall::Color_init1, Variant::COLOR, "r", Variant::REAL, "g", Variant::REAL, "b", Variant::REAL, "a", Variant::REAL);
-	_VariantCall::add_constructor(_VariantCall::Color_init2, Variant::COLOR, "r", Variant::REAL, "g", Variant::REAL, "b", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Color_init1, Variant::COLOR, "r", VariantType::REAL, "g", VariantType::REAL, "b", VariantType::REAL, "a", VariantType::REAL);
+	_VariantCall::add_constructor(_VariantCall::Color_init2, Variant::COLOR, "r", VariantType::REAL, "g", VariantType::REAL, "b", VariantType::REAL);
 
 	_VariantCall::add_constructor(_VariantCall::AABB_init1, Variant::AABB, "position", Variant::VECTOR3, "size", Variant::VECTOR3);
 
 	_VariantCall::add_constructor(_VariantCall::Basis_init1, Variant::BASIS, "x_axis", Variant::VECTOR3, "y_axis", Variant::VECTOR3, "z_axis", Variant::VECTOR3);
-	_VariantCall::add_constructor(_VariantCall::Basis_init2, Variant::BASIS, "axis", Variant::VECTOR3, "phi", Variant::REAL);
+	_VariantCall::add_constructor(_VariantCall::Basis_init2, Variant::BASIS, "axis", Variant::VECTOR3, "phi", VariantType::REAL);
 
 	_VariantCall::add_constructor(_VariantCall::Transform_init1, Variant::TRANSFORM, "x_axis", Variant::VECTOR3, "y_axis", Variant::VECTOR3, "z_axis", Variant::VECTOR3, "origin", Variant::VECTOR3);
 	_VariantCall::add_constructor(_VariantCall::Transform_init2, Variant::TRANSFORM, "basis", Variant::BASIS, "origin", Variant::VECTOR3);

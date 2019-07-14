@@ -8,18 +8,18 @@ public:
 
 	$ifret R$ $ifnoret void$ (T::*method)($arg, P@$) $ifconst const$;
 #ifdef DEBUG_METHODS_ENABLED
-	virtual Variant::Type _gen_argument_type(int p_arg) const { return _get_argument_type(p_arg); }
+	virtual VariantType _gen_argument_type(int p_arg) const { return _get_argument_type(p_arg); }
 	virtual GodotTypeInfo::Metadata get_argument_meta(int p_arg) const {
 		$ifret if (p_arg==-1) return GetTypeInfo<R>::METADATA;$
 		$arg if (p_arg==(@-1)) return GetTypeInfo<P@>::METADATA;
 		$
 		return GodotTypeInfo::METADATA_NONE;
 	}
-	Variant::Type _get_argument_type(int p_argument) const {
-		$ifret if (p_argument==-1) return (Variant::Type)GetTypeInfo<R>::VARIANT_TYPE;$
-		$arg if (p_argument==(@-1)) return (Variant::Type)GetTypeInfo<P@>::VARIANT_TYPE;
+	VariantType _get_argument_type(int p_argument) const {
+		$ifret if (p_argument==-1) return (VariantType)GetTypeInfo<R>::VARIANT_TYPE;$
+		$arg if (p_argument==(@-1)) return (VariantType)GetTypeInfo<P@>::VARIANT_TYPE;
 		$
-		return Variant::NIL;
+		return VariantType::NIL;
 	}
 	virtual PropertyInfo _gen_argument_type_info(int p_argument) const {
 		$ifret if (p_argument==-1) return GetTypeInfo<R>::get_class_info();$
@@ -99,7 +99,7 @@ public:
 	$ifret R$ $ifnoret void$ (__UnexistingClass::*method)($arg, P@$) $ifconst const$;
 
 #ifdef DEBUG_METHODS_ENABLED
-	virtual Variant::Type _gen_argument_type(int p_arg) const { return _get_argument_type(p_arg); }
+	virtual VariantType _gen_argument_type(int p_arg) const { return _get_argument_type(p_arg); }
 	virtual GodotTypeInfo::Metadata get_argument_meta(int p_arg) const {
 		$ifret if (p_arg==-1) return GetTypeInfo<R>::METADATA;$
 		$arg if (p_arg==(@-1)) return GetTypeInfo<P@>::METADATA;
@@ -107,11 +107,11 @@ public:
 		return GodotTypeInfo::METADATA_NONE;
 	}
 
-	Variant::Type _get_argument_type(int p_argument) const {
-		$ifret if (p_argument==-1) return (Variant::Type)GetTypeInfo<R>::VARIANT_TYPE;$
-		$arg if (p_argument==(@-1)) return (Variant::Type)GetTypeInfo<P@>::VARIANT_TYPE;
+	VariantType _get_argument_type(int p_argument) const {
+		$ifret if (p_argument==-1) return (VariantType)GetTypeInfo<R>::VARIANT_TYPE;$
+		$arg if (p_argument==(@-1)) return (VariantType)GetTypeInfo<P@>::VARIANT_TYPE;
 		$
-		return Variant::NIL;
+		return VariantType::NIL;
 	}
 
 	virtual PropertyInfo _gen_argument_type_info(int p_argument) const {

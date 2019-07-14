@@ -917,7 +917,7 @@ bool EditorNode::_find_and_save_edited_subresources(Object *obj, Map<RES, bool> 
 			continue;
 
 		switch (E->get().type) {
-			case Variant::OBJECT: {
+			case VariantType::OBJECT: {
 
 				RES res = obj->get(E->get().name);
 
@@ -925,7 +925,7 @@ bool EditorNode::_find_and_save_edited_subresources(Object *obj, Map<RES, bool> 
 					ret_changed = true;
 
 			} break;
-			case Variant::ARRAY: {
+			case VariantType::ARRAY: {
 
 				Array varray = obj->get(E->get().name);
 				int len = varray.size();
@@ -938,7 +938,7 @@ bool EditorNode::_find_and_save_edited_subresources(Object *obj, Map<RES, bool> 
 				}
 
 			} break;
-			case Variant::DICTIONARY: {
+			case VariantType::DICTIONARY: {
 
 				Dictionary d = obj->get(E->get().name);
 				List<Variant> keys;
@@ -1092,7 +1092,7 @@ static bool _find_edited_resources(const Ref<Resource> &p_resource, Set<Ref<Reso
 	p_resource->get_property_list(&plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
-		if (E->get().type == Variant::OBJECT && E->get().usage & PROPERTY_USAGE_STORAGE && !(E->get().usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT)) {
+		if (E->get().type == VariantType::OBJECT && E->get().usage & PROPERTY_USAGE_STORAGE && !(E->get().usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT)) {
 			RES res = p_resource->get(E->get().name);
 			if (res.is_null()) {
 				continue;
@@ -5164,8 +5164,8 @@ void EditorNode::_bind_methods() {
 	ADD_SIGNAL(MethodInfo("pause_pressed"));
 	ADD_SIGNAL(MethodInfo("stop_pressed"));
 	ADD_SIGNAL(MethodInfo("request_help_search"));
-	ADD_SIGNAL(MethodInfo("script_add_function_request", PropertyInfo(Variant::OBJECT, "obj"), PropertyInfo(Variant::STRING, "function"), PropertyInfo(Variant::POOL_STRING_ARRAY, "args")));
-	ADD_SIGNAL(MethodInfo("resource_saved", PropertyInfo(Variant::OBJECT, "obj")));
+	ADD_SIGNAL(MethodInfo("script_add_function_request", PropertyInfo(VariantType::OBJECT, "obj"), PropertyInfo(VariantType::STRING, "function"), PropertyInfo(Variant::POOL_STRING_ARRAY, "args")));
+	ADD_SIGNAL(MethodInfo("resource_saved", PropertyInfo(VariantType::OBJECT, "obj")));
 }
 
 static Node *_resource_get_edited_scene() {

@@ -369,10 +369,10 @@ void EditorPropertyMember::_property_select() {
 
 	if (hint == MEMBER_METHOD_OF_VARIANT_TYPE) {
 
-		Variant::Type type = Variant::NIL;
+		VariantType type = VariantType::NIL;
 		for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-			if (hint_text == Variant::get_type_name(Variant::Type(i))) {
-				type = Variant::Type(i);
+			if (hint_text == Variant::get_type_name(VariantType(i))) {
+				type = VariantType(i);
 			}
 		}
 		if (type)
@@ -397,17 +397,17 @@ void EditorPropertyMember::_property_select() {
 
 	} else if (hint == MEMBER_PROPERTY_OF_VARIANT_TYPE) {
 
-		Variant::Type type = Variant::NIL;
+		VariantType type = VariantType::NIL;
 		String tname = hint_text;
 		if (tname.find(".") != -1)
 			tname = tname.get_slice(".", 0);
 		for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-			if (tname == Variant::get_type_name(Variant::Type(i))) {
-				type = Variant::Type(Variant::Type(i));
+			if (tname == Variant::get_type_name(VariantType(i))) {
+				type = VariantType(VariantType(i));
 			}
 		}
 
-		if (type != Variant::NIL)
+		if (type != VariantType::NIL)
 			selector->select_property_from_basic_type(type, current);
 
 	} else if (hint == MEMBER_PROPERTY_OF_BASE_TYPE) {
@@ -683,7 +683,7 @@ public:
 	static void _bind_methods() {
 
 		ClassDB::bind_method(D_METHOD("_gui_input"), &EditorPropertyLayersGrid::_gui_input);
-		ADD_SIGNAL(MethodInfo("flag_changed", PropertyInfo(Variant::INT, "flag")));
+		ADD_SIGNAL(MethodInfo("flag_changed", PropertyInfo(VariantType::INT, "flag")));
 	}
 
 	EditorPropertyLayersGrid() {
@@ -2846,20 +2846,20 @@ void EditorInspectorDefaultPlugin::parse_begin(Object *p_object) {
 	//do none
 }
 
-bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Type p_type, const String &p_path, PropertyHint p_hint, const String &p_hint_text, int p_usage) {
+bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, VariantType p_type, const String &p_path, PropertyHint p_hint, const String &p_hint_text, int p_usage) {
 
 	switch (p_type) {
 
 		// atomic types
-		case Variant::NIL: {
+		case VariantType::NIL: {
 			EditorPropertyNil *editor = memnew(EditorPropertyNil);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::BOOL: {
+		case VariantType::BOOL: {
 			EditorPropertyCheck *editor = memnew(EditorPropertyCheck);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::INT: {
+		case VariantType::INT: {
 
 			if (p_hint == PROPERTY_HINT_ENUM) {
 				EditorPropertyEnum *editor = memnew(EditorPropertyEnum);
@@ -2932,7 +2932,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 				add_property_editor(p_path, editor);
 			}
 		} break;
-		case Variant::REAL: {
+		case VariantType::REAL: {
 
 			if (p_hint == PROPERTY_HINT_EXP_EASING) {
 				EditorPropertyEasing *editor = memnew(EditorPropertyEasing);
@@ -2985,7 +2985,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 				add_property_editor(p_path, editor);
 			}
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			if (p_hint == PROPERTY_HINT_ENUM) {
 				EditorPropertyTextEnum *editor = memnew(EditorPropertyTextEnum);
@@ -3213,7 +3213,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(p_hint != PROPERTY_HINT_COLOR_NO_ALPHA);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 
 			EditorPropertyNodePath *editor = memnew(EditorPropertyNodePath);
 			if (p_hint == PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE && p_hint_text != String()) {
@@ -3231,7 +3231,7 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			EditorPropertyRID *editor = memnew(EditorPropertyRID);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 			EditorPropertyResource *editor = memnew(EditorPropertyResource);
 			editor->setup(p_hint == PROPERTY_HINT_RESOURCE_TYPE ? p_hint_text : "Resource");
 
@@ -3252,13 +3252,13 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			add_property_editor(p_path, editor);
 
 		} break;
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 			EditorPropertyDictionary *editor = memnew(EditorPropertyDictionary);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::ARRAY, p_hint_text);
+			editor->setup(VariantType::ARRAY, p_hint_text);
 			add_property_editor(p_path, editor);
 		} break;
 		case Variant::POOL_BYTE_ARRAY: {
@@ -3271,9 +3271,9 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(Variant::POOL_INT_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::POOL_REAL_ARRAY);
+			editor->setup(VariantType::POOL_REAL_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
 		case Variant::POOL_STRING_ARRAY: {
@@ -3281,9 +3281,9 @@ bool EditorInspectorDefaultPlugin::parse_property(Object *p_object, Variant::Typ
 			editor->setup(Variant::POOL_STRING_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
-		case Variant::POOL_VECTOR2_ARRAY: {
+		case VariantType::POOL_VECTOR2_ARRAY: {
 			EditorPropertyArray *editor = memnew(EditorPropertyArray);
-			editor->setup(Variant::POOL_VECTOR2_ARRAY);
+			editor->setup(VariantType::POOL_VECTOR2_ARRAY);
 			add_property_editor(p_path, editor);
 		} break;
 		case Variant::POOL_VECTOR3_ARRAY: {

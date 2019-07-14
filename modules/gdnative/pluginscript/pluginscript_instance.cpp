@@ -30,7 +30,7 @@
 
 // Godot imports
 #include "core/os/os.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 // PluginScript imports
 #include "pluginscript_instance.h"
 #include "pluginscript_language.h"
@@ -54,12 +54,12 @@ ScriptLanguage *PluginScriptInstance::get_language() {
 	return _script->get_language();
 }
 
-Variant::Type PluginScriptInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
+VariantType PluginScriptInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
 	if (!_script->has_property(p_name)) {
 		if (r_is_valid) {
 			*r_is_valid = false;
 		}
-		return Variant::NIL;
+		return VariantType::NIL;
 	}
 	if (r_is_valid) {
 		*r_is_valid = true;

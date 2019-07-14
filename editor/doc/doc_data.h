@@ -33,7 +33,7 @@
 
 #include "core/io/xml_parser.h"
 #include "core/map.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 class DocData {
 public:

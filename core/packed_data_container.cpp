@@ -216,7 +216,7 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 
 	switch (p_data.get_type()) {
 
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			String s = p_data;
 			if (string_cache.has(s)) {
@@ -226,10 +226,10 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 			string_cache[s] = tmpdata.size();
 
 		}; //fallthrough
-		case Variant::NIL:
-		case Variant::BOOL:
-		case Variant::INT:
-		case Variant::REAL:
+		case VariantType::NIL:
+		case VariantType::BOOL:
+		case VariantType::INT:
+		case VariantType::REAL:
 		case Variant::VECTOR2:
 		case Variant::RECT2:
 		case Variant::VECTOR3:
@@ -241,12 +241,12 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 		case Variant::TRANSFORM:
 		case Variant::POOL_BYTE_ARRAY:
 		case Variant::POOL_INT_ARRAY:
-		case Variant::POOL_REAL_ARRAY:
+		case VariantType::POOL_REAL_ARRAY:
 		case Variant::POOL_STRING_ARRAY:
-		case Variant::POOL_VECTOR2_ARRAY:
+		case VariantType::POOL_VECTOR2_ARRAY:
 		case Variant::POOL_VECTOR3_ARRAY:
 		case Variant::POOL_COLOR_ARRAY:
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 
 			uint32_t pos = tmpdata.size();
 			int len;
@@ -258,11 +258,11 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 		} break;
 		// misc types
 		case Variant::_RID:
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			return _pack(Variant(), tmpdata, string_cache);
 		} break;
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 			Dictionary d = p_data;
 			//size is known, use sort
@@ -300,7 +300,7 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 			return pos;
 
 		} break;
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 
 			Array a = p_data;
 			//size is known, use sort

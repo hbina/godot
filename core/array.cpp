@@ -32,7 +32,7 @@
 
 #include "core/hashfuncs.h"
 #include "core/object.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/vector.h"
 
 class ArrayPrivate {
@@ -227,7 +227,7 @@ struct _ArrayVariantSort {
 	_FORCE_INLINE_ bool operator()(const Variant &p_l, const Variant &p_r) const {
 		bool valid = false;
 		Variant res;
-		Variant::evaluate(Variant::OP_LESS, p_l, p_r, res, valid);
+		Variant::evaluate(VariantType::OP_LESS, p_l, p_r, res, valid);
 		if (!valid)
 			res = false;
 		return res;
@@ -365,7 +365,7 @@ Variant Array::min() const {
 			bool valid;
 			Variant ret;
 			Variant test = get(i);
-			Variant::evaluate(Variant::OP_LESS, test, minval, ret, valid);
+			Variant::evaluate(VariantType::OP_LESS, test, minval, ret, valid);
 			if (!valid) {
 				return Variant(); //not a valid comparison
 			}

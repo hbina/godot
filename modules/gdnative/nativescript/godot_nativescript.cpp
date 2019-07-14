@@ -34,7 +34,7 @@
 #include "core/error_macros.h"
 #include "core/global_constants.h"
 #include "core/project_settings.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "gdnative/gdnative.h"
 
 #include "nativescript.h"
@@ -134,7 +134,7 @@ void GDAPI godot_nativescript_register_property(void *p_gdnative_handle, const c
 	property.getter = p_get_func;
 	property.rset_mode = p_attr->rset_type;
 	property.setter = p_set_func;
-	property.info = PropertyInfo((Variant::Type)p_attr->type,
+	property.info = PropertyInfo((VariantType)p_attr->type,
 			p_path,
 			(PropertyHint)p_attr->hint,
 			*(String *)&p_attr->hint_string,
@@ -165,7 +165,7 @@ void GDAPI godot_nativescript_register_signal(void *p_gdnative_handle, const cha
 		info.hint = (PropertyHint)arg.hint;
 		info.hint_string = *(String *)&arg.hint_string;
 		info.name = *(String *)&arg.name;
-		info.type = (Variant::Type)arg.type;
+		info.type = (VariantType)arg.type;
 		info.usage = (PropertyUsageFlags)arg.usage;
 
 		args.push_back(info);
@@ -234,7 +234,7 @@ void GDAPI godot_nativescript_set_method_argument_information(void *p_gdnative_h
 		String name = *(String *)&arg.name;
 		String hint_string = *(String *)&arg.hint_string;
 
-		Variant::Type type = (Variant::Type)arg.type;
+		VariantType type = (VariantType)arg.type;
 		PropertyHint hint = (PropertyHint)arg.hint;
 
 		args.push_back(PropertyInfo(type, p_name, hint, hint_string));

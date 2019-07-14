@@ -36,7 +36,7 @@
 #include "core/map.h"
 #include "core/os/rw_lock.h"
 #include "core/set.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/vmap.h"
 
 #define VARIANT_ARG_LIST const Variant &p_arg1 = Variant(), const Variant &p_arg2 = Variant(), const Variant &p_arg3 = Variant(), const Variant &p_arg4 = Variant(), const Variant &p_arg5 = Variant()
@@ -134,7 +134,7 @@ enum PropertyUsageFlags {
 
 struct PropertyInfo {
 
-	Variant::Type type;
+	VariantType type;
 	String name;
 	StringName class_name; //for classes
 	PropertyHint hint;
@@ -152,12 +152,12 @@ struct PropertyInfo {
 	static PropertyInfo from_dict(const Dictionary &p_dict);
 
 	PropertyInfo() :
-			type(Variant::NIL),
+			type(VariantType::NIL),
 			hint(PROPERTY_HINT_NONE),
 			usage(PROPERTY_USAGE_DEFAULT) {
 	}
 
-	PropertyInfo(Variant::Type p_type, const String p_name, PropertyHint p_hint = PROPERTY_HINT_NONE, const String &p_hint_string = "", uint32_t p_usage = PROPERTY_USAGE_DEFAULT, const StringName &p_class_name = StringName()) :
+	PropertyInfo(VariantType p_type, const String p_name, PropertyHint p_hint = PROPERTY_HINT_NONE, const String &p_hint_string = "", uint32_t p_usage = PROPERTY_USAGE_DEFAULT, const StringName &p_class_name = StringName()) :
 			type(p_type),
 			name(p_name),
 			hint(p_hint),
@@ -172,7 +172,7 @@ struct PropertyInfo {
 	}
 
 	PropertyInfo(const StringName &p_class_name) :
-			type(Variant::OBJECT),
+			type(VariantType::OBJECT),
 			class_name(p_class_name),
 			hint(PROPERTY_HINT_NONE),
 			usage(PROPERTY_USAGE_DEFAULT) {
@@ -207,13 +207,13 @@ struct MethodInfo {
 	MethodInfo(const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3);
 	MethodInfo(const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3, const PropertyInfo &p_param4);
 	MethodInfo(const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3, const PropertyInfo &p_param4, const PropertyInfo &p_param5);
-	MethodInfo(Variant::Type ret);
-	MethodInfo(Variant::Type ret, const String &p_name);
-	MethodInfo(Variant::Type ret, const String &p_name, const PropertyInfo &p_param1);
-	MethodInfo(Variant::Type ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2);
-	MethodInfo(Variant::Type ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3);
-	MethodInfo(Variant::Type ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3, const PropertyInfo &p_param4);
-	MethodInfo(Variant::Type ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3, const PropertyInfo &p_param4, const PropertyInfo &p_param5);
+	MethodInfo(VariantType ret);
+	MethodInfo(VariantType ret, const String &p_name);
+	MethodInfo(VariantType ret, const String &p_name, const PropertyInfo &p_param1);
+	MethodInfo(VariantType ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2);
+	MethodInfo(VariantType ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3);
+	MethodInfo(VariantType ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3, const PropertyInfo &p_param4);
+	MethodInfo(VariantType ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2, const PropertyInfo &p_param3, const PropertyInfo &p_param4, const PropertyInfo &p_param5);
 	MethodInfo(const PropertyInfo &p_ret, const String &p_name);
 	MethodInfo(const PropertyInfo &p_ret, const String &p_name, const PropertyInfo &p_param1);
 	MethodInfo(const PropertyInfo &p_ret, const String &p_name, const PropertyInfo &p_param1, const PropertyInfo &p_param2);
@@ -345,7 +345,7 @@ protected:                                                                      
 		if (!p_reversed) {                                                                                                              \
 			m_inherits::_get_property_listv(p_list, p_reversed);                                                                        \
 		}                                                                                                                               \
-		p_list->push_back(PropertyInfo(Variant::NIL, get_class_static(), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));       \
+		p_list->push_back(PropertyInfo(VariantType::NIL, get_class_static(), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));   \
 		if (!_is_gpl_reversed())                                                                                                        \
 			ClassDB::get_property_list(#m_class, p_list, true, this);                                                                   \
 		if (m_class::_get_get_property_list() != m_inherits::_get_get_property_list()) {                                                \
@@ -708,8 +708,8 @@ public:
 	void set_block_signals(bool p_block);
 	bool is_blocking_signals() const;
 
-	Variant::Type get_static_property_type(const StringName &p_property, bool *r_valid = NULL) const;
-	Variant::Type get_static_property_type_indexed(const Vector<StringName> &p_path, bool *r_valid = NULL) const;
+	VariantType get_static_property_type(const StringName &p_property, bool *r_valid = NULL) const;
+	VariantType get_static_property_type_indexed(const Vector<StringName> &p_path, bool *r_valid = NULL) const;
 
 	virtual void get_translatable_strings(List<String> *p_strings) const;
 

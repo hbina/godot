@@ -39,7 +39,7 @@ class VisualScriptFunction : public VisualScriptNode {
 
 	struct Argument {
 		String name;
-		Variant::Type type;
+		VariantType type;
 		PropertyHint hint;
 		String hint_string;
 	};
@@ -72,9 +72,9 @@ public:
 	virtual String get_text() const;
 	virtual String get_category() const { return "flow_control"; }
 
-	void add_argument(Variant::Type p_type, const String &p_name, int p_index = -1, const PropertyHint p_hint = PROPERTY_HINT_NONE, const String &p_hint_string = String(""));
-	void set_argument_type(int p_argidx, Variant::Type p_type);
-	Variant::Type get_argument_type(int p_argidx) const;
+	void add_argument(VariantType p_type, const String &p_name, int p_index = -1, const PropertyHint p_hint = PROPERTY_HINT_NONE, const String &p_hint_string = String(""));
+	void set_argument_type(int p_argidx, VariantType p_type);
+	VariantType get_argument_type(int p_argidx) const;
 	void set_argument_name(int p_argidx, const String &p_name);
 	String get_argument_name(int p_argidx) const;
 	void remove_argument(int p_argidx);
@@ -92,8 +92,8 @@ public:
 	void set_return_type_enabled(bool p_returns);
 	bool is_return_type_enabled() const;
 
-	void set_return_type(Variant::Type p_type);
-	Variant::Type get_return_type() const;
+	void set_return_type(VariantType p_type);
+	VariantType get_return_type() const;
 
 	void set_rpc_mode(MultiplayerAPI::RPCMode p_mode);
 	MultiplayerAPI::RPCMode get_rpc_mode() const;
@@ -107,7 +107,7 @@ class VisualScriptOperator : public VisualScriptNode {
 
 	GDCLASS(VisualScriptOperator, VisualScriptNode);
 
-	Variant::Type typed;
+	VariantType typed;
 	Variant::Operator op;
 
 protected:
@@ -131,8 +131,8 @@ public:
 	void set_operator(Variant::Operator p_op);
 	Variant::Operator get_operator() const;
 
-	void set_typed(Variant::Type p_op);
-	Variant::Type get_typed() const;
+	void set_typed(VariantType p_op);
+	VariantType get_typed() const;
 
 	virtual VisualScriptNodeInstance *instance(VisualScriptInstance *p_instance);
 
@@ -143,7 +143,7 @@ class VisualScriptSelect : public VisualScriptNode {
 
 	GDCLASS(VisualScriptSelect, VisualScriptNode);
 
-	Variant::Type typed;
+	VariantType typed;
 
 protected:
 	static void _bind_methods();
@@ -164,8 +164,8 @@ public:
 	virtual String get_text() const;
 	virtual String get_category() const { return "operators"; }
 
-	void set_typed(Variant::Type p_op);
-	Variant::Type get_typed() const;
+	void set_typed(VariantType p_op);
+	VariantType get_typed() const;
 
 	virtual VisualScriptNodeInstance *instance(VisualScriptInstance *p_instance);
 
@@ -242,7 +242,7 @@ class VisualScriptConstant : public VisualScriptNode {
 
 	GDCLASS(VisualScriptConstant, VisualScriptNode);
 
-	Variant::Type type;
+	VariantType type;
 	Variant value;
 
 protected:
@@ -264,8 +264,8 @@ public:
 	virtual String get_caption() const;
 	virtual String get_category() const { return "constants"; }
 
-	void set_constant_type(Variant::Type p_type);
-	Variant::Type get_constant_type() const;
+	void set_constant_type(VariantType p_type);
+	VariantType get_constant_type() const;
 
 	void set_constant_value(Variant p_value);
 	Variant get_constant_value() const;
@@ -427,7 +427,7 @@ class VisualScriptBasicTypeConstant : public VisualScriptNode {
 
 	GDCLASS(VisualScriptBasicTypeConstant, VisualScriptNode);
 
-	Variant::Type type;
+	VariantType type;
 	StringName name;
 
 protected:
@@ -453,8 +453,8 @@ public:
 	void set_basic_type_constant(const StringName &p_which);
 	StringName get_basic_type_constant() const;
 
-	void set_basic_type(Variant::Type p_which);
-	Variant::Type get_basic_type() const;
+	void set_basic_type(VariantType p_which);
+	VariantType get_basic_type() const;
 
 	virtual VisualScriptNodeInstance *instance(VisualScriptInstance *p_instance);
 
@@ -791,7 +791,7 @@ class VisualScriptConstructor : public VisualScriptNode {
 
 	GDCLASS(VisualScriptConstructor, VisualScriptNode);
 
-	Variant::Type type;
+	VariantType type;
 	MethodInfo constructor;
 
 protected:
@@ -812,8 +812,8 @@ public:
 	virtual String get_caption() const;
 	virtual String get_category() const;
 
-	void set_constructor_type(Variant::Type p_type);
-	Variant::Type get_constructor_type() const;
+	void set_constructor_type(VariantType p_type);
+	VariantType get_constructor_type() const;
 
 	void set_constructor(const Dictionary &p_info);
 	Dictionary get_constructor() const;
@@ -828,7 +828,7 @@ class VisualScriptLocalVar : public VisualScriptNode {
 	GDCLASS(VisualScriptLocalVar, VisualScriptNode);
 
 	StringName name;
-	Variant::Type type;
+	VariantType type;
 
 protected:
 	static void _bind_methods();
@@ -851,8 +851,8 @@ public:
 	void set_var_name(const StringName &p_name);
 	StringName get_var_name() const;
 
-	void set_var_type(Variant::Type p_type);
-	Variant::Type get_var_type() const;
+	void set_var_type(VariantType p_type);
+	VariantType get_var_type() const;
 
 	virtual VisualScriptNodeInstance *instance(VisualScriptInstance *p_instance);
 
@@ -864,7 +864,7 @@ class VisualScriptLocalVarSet : public VisualScriptNode {
 	GDCLASS(VisualScriptLocalVarSet, VisualScriptNode);
 
 	StringName name;
-	Variant::Type type;
+	VariantType type;
 
 protected:
 	static void _bind_methods();
@@ -888,8 +888,8 @@ public:
 	void set_var_name(const StringName &p_name);
 	StringName get_var_name() const;
 
-	void set_var_type(Variant::Type p_type);
-	Variant::Type get_var_type() const;
+	void set_var_type(VariantType p_type);
+	VariantType get_var_type() const;
 
 	virtual VisualScriptNodeInstance *instance(VisualScriptInstance *p_instance);
 
@@ -950,13 +950,13 @@ class VisualScriptDeconstruct : public VisualScriptNode {
 
 	struct Element {
 		StringName name;
-		Variant::Type type;
+		VariantType type;
 	};
 
 	Vector<Element> elements;
 
 	void _update_elements();
-	Variant::Type type;
+	VariantType type;
 
 	void _set_elem_cache(const Array &p_elements);
 	Array _get_elem_cache() const;
@@ -981,8 +981,8 @@ public:
 	virtual String get_caption() const;
 	virtual String get_category() const;
 
-	void set_deconstruct_type(Variant::Type p_type);
-	Variant::Type get_deconstruct_type() const;
+	void set_deconstruct_type(VariantType p_type);
+	VariantType get_deconstruct_type() const;
 
 	virtual VisualScriptNodeInstance *instance(VisualScriptInstance *p_instance);
 

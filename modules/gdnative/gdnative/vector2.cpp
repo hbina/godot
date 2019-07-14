@@ -31,7 +31,7 @@
 #include "gdnative/vector2.h"
 
 #include "core/math/vector2.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef __cplusplus
 extern "C" {

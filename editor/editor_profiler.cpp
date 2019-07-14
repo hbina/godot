@@ -608,7 +608,7 @@ void EditorProfiler::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_combo_changed"), &EditorProfiler::_combo_changed);
 
 	ClassDB::bind_method(D_METHOD("_item_edited"), &EditorProfiler::_item_edited);
-	ADD_SIGNAL(MethodInfo("enable_profiling", PropertyInfo(Variant::BOOL, "enable")));
+	ADD_SIGNAL(MethodInfo("enable_profiling", PropertyInfo(VariantType::BOOL, "enable")));
 	ADD_SIGNAL(MethodInfo("break_request"));
 }
 

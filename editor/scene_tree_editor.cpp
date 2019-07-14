@@ -1073,9 +1073,9 @@ void SceneTreeEditor::_bind_methods() {
 	ADD_SIGNAL(MethodInfo("node_prerename"));
 	ADD_SIGNAL(MethodInfo("node_changed"));
 	ADD_SIGNAL(MethodInfo("nodes_dragged"));
-	ADD_SIGNAL(MethodInfo("nodes_rearranged", PropertyInfo(Variant::ARRAY, "paths"), PropertyInfo(Variant::NODE_PATH, "to_path"), PropertyInfo(Variant::INT, "type")));
-	ADD_SIGNAL(MethodInfo("files_dropped", PropertyInfo(Variant::POOL_STRING_ARRAY, "files"), PropertyInfo(Variant::NODE_PATH, "to_path"), PropertyInfo(Variant::INT, "type")));
-	ADD_SIGNAL(MethodInfo("script_dropped", PropertyInfo(Variant::STRING, "file"), PropertyInfo(Variant::NODE_PATH, "to_path")));
+	ADD_SIGNAL(MethodInfo("nodes_rearranged", PropertyInfo(VariantType::ARRAY, "paths"), PropertyInfo(VariantType::NODE_PATH, "to_path"), PropertyInfo(VariantType::INT, "type")));
+	ADD_SIGNAL(MethodInfo("files_dropped", PropertyInfo(Variant::POOL_STRING_ARRAY, "files"), PropertyInfo(VariantType::NODE_PATH, "to_path"), PropertyInfo(VariantType::INT, "type")));
+	ADD_SIGNAL(MethodInfo("script_dropped", PropertyInfo(VariantType::STRING, "file"), PropertyInfo(VariantType::NODE_PATH, "to_path")));
 	ADD_SIGNAL(MethodInfo("rmb_pressed", PropertyInfo(Variant::VECTOR2, "position")));
 
 	ADD_SIGNAL(MethodInfo("open"));
@@ -1191,7 +1191,7 @@ void SceneTreeDialog::_bind_methods() {
 
 	ClassDB::bind_method("_select", &SceneTreeDialog::_select);
 	ClassDB::bind_method("_cancel", &SceneTreeDialog::_cancel);
-	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(Variant::NODE_PATH, "path")));
+	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(VariantType::NODE_PATH, "path")));
 }
 
 SceneTreeDialog::SceneTreeDialog() {

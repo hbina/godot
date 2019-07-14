@@ -79,10 +79,10 @@ void SpringArm::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_margin", "margin"), &SpringArm::set_margin);
 	ClassDB::bind_method(D_METHOD("get_margin"), &SpringArm::get_margin);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "collision_mask", PROPERTY_HINT_LAYERS_3D_PHYSICS), "set_collision_mask", "get_collision_mask");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "shape", PROPERTY_HINT_RESOURCE_TYPE, "Shape"), "set_shape", "get_shape");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "spring_length"), "set_length", "get_length");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "margin"), "set_margin", "get_margin");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "collision_mask", PROPERTY_HINT_LAYERS_3D_PHYSICS), "set_collision_mask", "get_collision_mask");
+	ADD_PROPERTY(PropertyInfo(VariantType::OBJECT, "shape", PROPERTY_HINT_RESOURCE_TYPE, "Shape"), "set_shape", "get_shape");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "spring_length"), "set_length", "get_length");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "margin"), "set_margin", "get_margin");
 }
 
 float SpringArm::get_length() const {

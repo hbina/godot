@@ -1591,25 +1591,25 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 	switch (p_variant.get_type()) {
 
-		case Variant::NIL: {
+		case VariantType::NIL: {
 			p_store_string_func(p_store_string_ud, "null");
 		} break;
-		case Variant::BOOL: {
+		case VariantType::BOOL: {
 
 			p_store_string_func(p_store_string_ud, p_variant.operator bool() ? "true" : "false");
 		} break;
-		case Variant::INT: {
+		case VariantType::INT: {
 
 			p_store_string_func(p_store_string_ud, itos(p_variant.operator int64_t()));
 		} break;
-		case Variant::REAL: {
+		case VariantType::REAL: {
 
 			String s = rtosfix(p_variant.operator real_t());
 			if (s.find(".") == -1 && s.find("e") == -1)
 				s += ".0";
 			p_store_string_func(p_store_string_ud, s);
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			String str = p_variant;
 
@@ -1708,7 +1708,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, "Color( " + rtosfix(c.r) + ", " + rtosfix(c.g) + ", " + rtosfix(c.b) + ", " + rtosfix(c.a) + " )");
 
 		} break;
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 
 			String str = p_variant;
 
@@ -1717,7 +1717,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 		} break;
 
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			Object *obj = p_variant;
 
@@ -1779,7 +1779,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 		} break;
 
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 			Dictionary dict = p_variant;
 
@@ -1804,7 +1804,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, "\n}");
 
 		} break;
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "[ ");
 			Array array = p_variant;
@@ -1857,7 +1857,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolRealArray( ");
 			PoolVector<real_t> data = p_variant;
@@ -1896,7 +1896,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::POOL_VECTOR2_ARRAY: {
+		case VariantType::POOL_VECTOR2_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolVector2Array( ");
 			PoolVector<Vector2> data = p_variant;

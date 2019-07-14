@@ -403,25 +403,25 @@ void GDScriptLanguage::get_public_functions(List<MethodInfo> *p_functions) const
 	{
 		MethodInfo mi;
 		mi.name = "preload";
-		mi.arguments.push_back(PropertyInfo(Variant::STRING, "path"));
-		mi.return_val = PropertyInfo(Variant::OBJECT, "", PROPERTY_HINT_RESOURCE_TYPE, "Resource");
+		mi.arguments.push_back(PropertyInfo(VariantType::STRING, "path"));
+		mi.return_val = PropertyInfo(VariantType::OBJECT, "", PROPERTY_HINT_RESOURCE_TYPE, "Resource");
 		p_functions->push_back(mi);
 	}
 	{
 		MethodInfo mi;
 		mi.name = "yield";
-		mi.arguments.push_back(PropertyInfo(Variant::OBJECT, "object"));
-		mi.arguments.push_back(PropertyInfo(Variant::STRING, "signal"));
+		mi.arguments.push_back(PropertyInfo(VariantType::OBJECT, "object"));
+		mi.arguments.push_back(PropertyInfo(VariantType::STRING, "signal"));
 		mi.default_arguments.push_back(Variant());
 		mi.default_arguments.push_back(String());
-		mi.return_val = PropertyInfo(Variant::OBJECT, "", PROPERTY_HINT_RESOURCE_TYPE, "GDScriptFunctionState");
+		mi.return_val = PropertyInfo(VariantType::OBJECT, "", PROPERTY_HINT_RESOURCE_TYPE, "GDScriptFunctionState");
 		p_functions->push_back(mi);
 	}
 	{
 		MethodInfo mi;
 		mi.name = "assert";
-		mi.return_val.type = Variant::NIL;
-		mi.arguments.push_back(PropertyInfo(Variant::BOOL, "condition"));
+		mi.return_val.type = VariantType::NIL;
+		mi.arguments.push_back(PropertyInfo(VariantType::BOOL, "condition"));
 		p_functions->push_back(mi);
 	}
 }
@@ -538,14 +538,14 @@ static String _get_visual_datatype(const PropertyInfo &p_info, bool p_isarg = tr
 		return n.substr(idx + 1, n.length());
 	}
 
-	if (p_info.type == Variant::OBJECT) {
+	if (p_info.type == VariantType::OBJECT) {
 		if (p_info.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 			return p_info.hint_string;
 		} else {
 			return p_info.class_name.operator String();
 		}
 	}
-	if (p_info.type == Variant::NIL) {
+	if (p_info.type == VariantType::NIL) {
 		if (p_isarg || (p_info.usage & PROPERTY_USAGE_NIL_IS_VARIANT)) {
 			return "var";
 		} else {
@@ -564,7 +564,7 @@ static GDScriptCompletionIdentifier _type_from_variant(const Variant &p_value) {
 	ci.type.kind = GDScriptParser::DataType::BUILTIN;
 	ci.type.builtin_type = p_value.get_type();
 
-	if (ci.type.builtin_type == Variant::OBJECT) {
+	if (ci.type.builtin_type == VariantType::OBJECT) {
 		Object *obj = p_value.operator Object *();
 		if (!obj) {
 			return ci;
@@ -597,7 +597,7 @@ static GDScriptCompletionIdentifier _type_from_variant(const Variant &p_value) {
 static GDScriptCompletionIdentifier _type_from_property(const PropertyInfo &p_property) {
 	GDScriptCompletionIdentifier ci;
 
-	if (p_property.type == Variant::NIL) {
+	if (p_property.type == VariantType::NIL) {
 		// Variant
 		return ci;
 	}
@@ -608,7 +608,7 @@ static GDScriptCompletionIdentifier _type_from_property(const PropertyInfo &p_pr
 
 	ci.type.has_type = true;
 	ci.type.builtin_type = p_property.type;
-	if (p_property.type == Variant::OBJECT) {
+	if (p_property.type == VariantType::OBJECT) {
 		ci.type.kind = GDScriptParser::DataType::NATIVE;
 		ci.type.native_type = p_property.class_name == StringName() ? "Object" : p_property.class_name;
 	} else {
@@ -711,7 +711,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 			}
 			r_type.type.has_type = true;
 			r_type.type.kind = GDScriptParser::DataType::BUILTIN;
-			r_type.type.builtin_type = Variant::DICTIONARY;
+			r_type.type.builtin_type = VariantType::DICTIONARY;
 		} break;
 		case GDScriptParser::Node::TYPE_ARRAY: {
 			// Try to recreate the array
@@ -734,7 +734,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 			}
 			r_type.type.has_type = true;
 			r_type.type.kind = GDScriptParser::DataType::BUILTIN;
-			r_type.type.builtin_type = Variant::ARRAY;
+			r_type.type.builtin_type = VariantType::ARRAY;
 		} break;
 		case GDScriptParser::Node::TYPE_OPERATOR: {
 			const GDScriptParser::OperatorNode *op = static_cast<const GDScriptParser::OperatorNode *>(p_expression);
@@ -766,7 +766,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 						}
 
 						// Try call if constant methods with constant arguments
-						if (base.type.is_constant && base.value.get_type() == Variant::OBJECT) {
+						if (base.type.is_constant && base.value.get_type() == VariantType::OBJECT) {
 							GDScriptParser::DataType native_type = base.type;
 
 							while (native_type.kind == GDScriptParser::DataType::CLASS) {
@@ -802,7 +802,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 										GDScriptCompletionIdentifier arg;
 
 										if (_guess_expression_type(c2, op->arguments[i], arg)) {
-											if (arg.type.has_type && arg.type.is_constant && arg.value.get_type() != Variant::OBJECT) {
+											if (arg.type.has_type && arg.type.is_constant && arg.value.get_type() != VariantType::OBJECT) {
 												args.push_back(arg.value);
 											} else {
 												all_is_const = false;
@@ -890,8 +890,8 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 										Variant::CallError ce;
 										Variant ret = mb->call(baseptr, (const Variant **)argptr.ptr(), argptr.size(), ce);
 
-										if (ce.error == Variant::CallError::CALL_OK && ret.get_type() != Variant::NIL) {
-											if (ret.get_type() != Variant::OBJECT || ret.operator Object *() != NULL) {
+										if (ce.error == Variant::CallError::CALL_OK && ret.get_type() != VariantType::NIL) {
+											if (ret.get_type() != VariantType::OBJECT || ret.operator Object *() != NULL) {
 												r_type = _type_from_variant(ret);
 												found = true;
 											}
@@ -938,7 +938,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 						break;
 					}
 
-					if (base.value.get_type() == Variant::DICTIONARY && base.value.operator Dictionary().has(String(id->name))) {
+					if (base.value.get_type() == VariantType::DICTIONARY && base.value.operator Dictionary().has(String(id->name))) {
 						Variant value = base.value.operator Dictionary()[String(id->name)];
 						r_type = _type_from_variant(value);
 						found = true;
@@ -1038,7 +1038,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 					}
 
 					// Look for valid indexing in other types
-					if (!found && (index.value.get_type() == Variant::STRING || index.value.get_type() == Variant::NODE_PATH)) {
+					if (!found && (index.value.get_type() == VariantType::STRING || index.value.get_type() == VariantType::NODE_PATH)) {
 						StringName id = index.value;
 						found = _guess_identifier_type_from_base(c, base, id, r_type);
 					} else if (!found && index.type.kind == GDScriptParser::DataType::BUILTIN) {
@@ -1097,16 +1097,16 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 					}
 
 					Variant::CallError ce;
-					bool v1_use_value = p1.value.get_type() != Variant::NIL && p1.value.get_type() != Variant::OBJECT;
+					bool v1_use_value = p1.value.get_type() != VariantType::NIL && p1.value.get_type() != VariantType::OBJECT;
 					Variant v1 = (v1_use_value) ? p1.value : Variant::construct(p1.type.builtin_type, NULL, 0, ce);
-					bool v2_use_value = p2.value.get_type() != Variant::NIL && p2.value.get_type() != Variant::OBJECT;
+					bool v2_use_value = p2.value.get_type() != VariantType::NIL && p2.value.get_type() != VariantType::OBJECT;
 					Variant v2 = (v2_use_value) ? p2.value : Variant::construct(p2.type.builtin_type, NULL, 0, ce);
 					// avoid potential invalid ops
-					if ((vop == Variant::OP_DIVIDE || vop == Variant::OP_MODULE) && v2.get_type() == Variant::INT) {
+					if ((vop == Variant::OP_DIVIDE || vop == Variant::OP_MODULE) && v2.get_type() == VariantType::INT) {
 						v2 = 1;
 						v2_use_value = false;
 					}
-					if (vop == Variant::OP_DIVIDE && v2.get_type() == Variant::REAL) {
+					if (vop == Variant::OP_DIVIDE && v2.get_type() == VariantType::REAL) {
 						v2 = 1.0;
 						v2_use_value = false;
 					}
@@ -1133,7 +1133,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 	}
 
 	// It may have found a null, but that's never useful
-	if (found && r_type.type.has_type && r_type.type.kind == GDScriptParser::DataType::BUILTIN && r_type.type.builtin_type == Variant::NIL) {
+	if (found && r_type.type.has_type && r_type.type.kind == GDScriptParser::DataType::BUILTIN && r_type.type.builtin_type == VariantType::NIL) {
 		found = false;
 	}
 
@@ -2241,7 +2241,7 @@ static void _find_call_arguments(const GDScriptCompletionContext &p_context, con
 				for (const auto &E : methods) {
 					if (E.name == p_method) {
 						method_args = E.arguments.size();
-						if (base.get_type() == Variant::OBJECT) {
+						if (base.get_type() == VariantType::OBJECT) {
 							Object *obj = base.operator Object *();
 							if (obj) {
 								List<String> options;
@@ -2304,7 +2304,7 @@ static void _find_call_arguments(const GDScriptCompletionContext &p_context, con
 				base_type.has_type = false;
 			} break;
 			case GDScriptParser::DataType::BUILTIN: {
-				if (base.get_type() == Variant::NIL) {
+				if (base.get_type() == VariantType::NIL) {
 					Variant::CallError err;
 					base = Variant::construct(base_type.builtin_type, NULL, 0, err);
 					if (err.error != Variant::CallError::CALL_OK) {
@@ -2553,7 +2553,7 @@ Error GDScriptLanguage::complete_code(const String &p_code, const String &p_path
 			GDScriptCompletionContext c = context;
 			c.function = NULL;
 			c.block = NULL;
-			c.base = base.value.get_type() == Variant::OBJECT ? base.value.operator Object *() : NULL;
+			c.base = base.value.get_type() == VariantType::OBJECT ? base.value.operator Object *() : NULL;
 			if (base.type.kind == GDScriptParser::DataType::CLASS) {
 				c._class = base.type.class_type;
 			} else {
@@ -2625,9 +2625,9 @@ Error GDScriptLanguage::complete_code(const String &p_code, const String &p_path
 							arg = arg.substr(0, arg.find(":"));
 						}
 						method_hint += arg;
-						if (use_type_hint && mi.arguments[i].type != Variant::NIL) {
+						if (use_type_hint && mi.arguments[i].type != VariantType::NIL) {
 							method_hint += ": ";
-							if (mi.arguments[i].type == Variant::OBJECT && mi.arguments[i].class_name != StringName()) {
+							if (mi.arguments[i].type == VariantType::OBJECT && mi.arguments[i].class_name != StringName()) {
 								method_hint += mi.arguments[i].class_name.operator String();
 							} else {
 								method_hint += Variant::get_type_name(mi.arguments[i].type);
@@ -2636,11 +2636,11 @@ Error GDScriptLanguage::complete_code(const String &p_code, const String &p_path
 					}
 				}
 				method_hint += ")";
-				if (use_type_hint && (mi.return_val.type != Variant::NIL || !(mi.return_val.usage & PROPERTY_USAGE_NIL_IS_VARIANT))) {
+				if (use_type_hint && (mi.return_val.type != VariantType::NIL || !(mi.return_val.usage & PROPERTY_USAGE_NIL_IS_VARIANT))) {
 					method_hint += " -> ";
-					if (mi.return_val.type == Variant::NIL) {
+					if (mi.return_val.type == VariantType::NIL) {
 						method_hint += "void";
-					} else if (mi.return_val.type == Variant::OBJECT && mi.return_val.class_name != StringName()) {
+					} else if (mi.return_val.type == VariantType::OBJECT && mi.return_val.class_name != StringName()) {
 						method_hint += mi.return_val.class_name.operator String();
 					} else {
 						method_hint += Variant::get_type_name(mi.return_val.type);
@@ -2752,7 +2752,7 @@ Error GDScriptLanguage::complete_code(const String &p_code, const String &p_path
 				}
 				clss = clss->owner;
 				for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-					options.insert(Variant::get_type_name((Variant::Type)i));
+					options.insert(Variant::get_type_name((VariantType)i));
 				}
 			}
 
@@ -3114,7 +3114,7 @@ static Error _lookup_symbol_from_base(const GDScriptParser::DataType &p_base, co
 
 				Variant v;
 				REF v_ref;
-				if (base_type.builtin_type == Variant::OBJECT) {
+				if (base_type.builtin_type == VariantType::OBJECT) {
 					v_ref.instance();
 					v = v_ref;
 				} else {
@@ -3167,7 +3167,7 @@ Error GDScriptLanguage::lookup_code(const String &p_code, const String &p_symbol
 	}
 
 	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-		Variant::Type t = Variant::Type(i);
+		VariantType t = VariantType(i);
 		if (Variant::get_type_name(t) == p_symbol) {
 			r_result.type = ScriptLanguage::LookupResult::RESULT_CLASS;
 			r_result.class_name = Variant::get_type_name(t);
@@ -3315,7 +3315,7 @@ Error GDScriptLanguage::lookup_code(const String &p_code, const String &p_symbol
 				Map<StringName, int> classes = GDScriptLanguage::get_singleton()->get_global_map();
 				if (classes.has(p_symbol)) {
 					Variant value = GDScriptLanguage::get_singleton()->get_global_array()[classes[p_symbol]];
-					if (value.get_type() == Variant::OBJECT) {
+					if (value.get_type() == VariantType::OBJECT) {
 						Object *obj = value;
 						if (obj) {
 							if (Object::cast_to<GDScriptNativeClass>(obj)) {

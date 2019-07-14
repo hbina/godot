@@ -36,7 +36,7 @@
 #include "core/io/marshalls.h"
 #include "core/os/os.h"
 #include "core/ustring.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/variant_parser.h"
 
 #include "../mono_gd/gd_mono_utils.h"
@@ -56,7 +56,7 @@ MonoObject *godot_icall_GD_convert(MonoObject *p_what, int32_t p_type) {
 	Variant what = GDMonoMarshal::mono_object_to_variant(p_what);
 	const Variant *args[1] = { &what };
 	Variant::CallError ce;
-	Variant ret = Variant::construct(Variant::Type(p_type), args, 1, ce);
+	Variant ret = Variant::construct(VariantType(p_type), args, 1, ce);
 	ERR_FAIL_COND_V(ce.error != Variant::CallError::CALL_OK, NULL);
 	return GDMonoMarshal::variant_to_mono_object(ret);
 }

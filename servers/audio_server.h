@@ -34,7 +34,7 @@
 #include "core/math/audio_frame.h"
 #include "core/object.h"
 #include "core/os/os.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "servers/audio/audio_effect.h"
 
 class AudioDriverDummy;

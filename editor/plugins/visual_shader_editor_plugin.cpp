@@ -52,7 +52,7 @@ Control *VisualShaderNodePlugin::create_editor(const Ref<VisualShaderNode> &p_no
 
 void VisualShaderNodePlugin::_bind_methods() {
 
-	BIND_VMETHOD(MethodInfo(Variant::OBJECT, "create_editor", PropertyInfo(Variant::OBJECT, "for_node", PROPERTY_HINT_RESOURCE_TYPE, "VisualShaderNode")));
+	BIND_VMETHOD(MethodInfo(VariantType::OBJECT, "create_editor", PropertyInfo(VariantType::OBJECT, "for_node", PROPERTY_HINT_RESOURCE_TYPE, "VisualShaderNode")));
 }
 
 ///////////////////
@@ -518,7 +518,7 @@ void VisualShaderEditor::_update_graph() {
 				default_value = vsnode->get_input_port_default_value(i);
 			}
 
-			if (default_value.get_type() != Variant::NIL) { // only a label
+			if (default_value.get_type() != VariantType::NIL) { // only a label
 				Button *button = memnew(Button);
 				hb->add_child(button);
 				button->connect("pressed", this, "_edit_port_default_input", varray(button, nodes[n_i], i));
@@ -529,8 +529,8 @@ void VisualShaderEditor::_update_graph() {
 						button->set_custom_minimum_size(Size2(30, 0) * EDSCALE);
 						button->connect("draw", this, "_draw_color_over_button", varray(button, default_value));
 					} break;
-					case Variant::INT:
-					case Variant::REAL: {
+					case VariantType::INT:
+					case VariantType::REAL: {
 						button->set_text(String::num(default_value, 4));
 					} break;
 					case Variant::VECTOR3: {
@@ -2662,9 +2662,9 @@ void EditorInspectorShaderModePlugin::parse_begin(Object *p_object) {
 	//do none
 }
 
-bool EditorInspectorShaderModePlugin::parse_property(Object *p_object, Variant::Type p_type, const String &p_path, PropertyHint p_hint, const String &p_hint_text, int p_usage) {
+bool EditorInspectorShaderModePlugin::parse_property(Object *p_object, VariantType p_type, const String &p_path, PropertyHint p_hint, const String &p_hint_text, int p_usage) {
 
-	if (p_path == "mode" && p_object->is_class("VisualShader") && p_type == Variant::INT) {
+	if (p_path == "mode" && p_object->is_class("VisualShader") && p_type == VariantType::INT) {
 
 		EditorPropertyShaderMode *editor = memnew(EditorPropertyShaderMode);
 		Vector<String> options = p_hint_text.split(",");

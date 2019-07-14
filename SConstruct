@@ -335,7 +335,7 @@ if selected_platform in platform_list:
 
     # Configure compiler warnings
     if env.msvc:
-        env.Append(CCFLAGS=['/std:c++17'])
+        env.Append(CXXFLAGS=['/std:c++17'])
         # Truncations, narrowing conversions, signed/unsigned comparisons...
         disable_nonessential_warnings = [
             '/wd4267', '/wd4244', '/wd4305', '/wd4018', '/wd4800']
@@ -354,8 +354,8 @@ if selected_platform in platform_list:
         # Force to use Unicode encoding
         env.Append(MSVC_FLAGS=['/utf8'])
     else:  # Rest of the world
-        env.Append(CXXFLAGS=['-std=c++17'])
-        env.Append(CCFLAGS=['-w'])
+        env.Append(CCFLAGS=['-std=gnu++17'])
+        env.Append(CCFLAGS=['-Wall'])
 
     if (hasattr(detect, 'get_program_suffix')):
         suffix = "." + detect.get_program_suffix()
@@ -611,7 +611,7 @@ if 'env' in locals():
 
         def get_size(self, start_path='.'):
             total_size = 0
-            for dirpath, dirnames, filenames in os.walk(start_path):
+            for dirpath, _, filenames in os.walk(start_path):
                 for f in filenames:
                     fp = os.path.join(dirpath, f)
                     total_size += os.path.getsize(fp)

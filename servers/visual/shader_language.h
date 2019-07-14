@@ -36,7 +36,7 @@
 #include "core/string_name.h"
 #include "core/typedefs.h"
 #include "core/ustring.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 class ShaderLanguage {
 

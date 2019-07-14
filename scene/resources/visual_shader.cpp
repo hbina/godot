@@ -106,8 +106,8 @@ void VisualShaderNode::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_default_input_values", "values"), &VisualShaderNode::_set_default_input_values);
 	ClassDB::bind_method(D_METHOD("_get_default_input_values"), &VisualShaderNode::_get_default_input_values);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "output_port_for_preview"), "set_output_port_for_preview", "get_output_port_for_preview");
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "default_input_values", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "_set_default_input_values", "_get_default_input_values");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "output_port_for_preview"), "set_output_port_for_preview", "get_output_port_for_preview");
+	ADD_PROPERTY(PropertyInfo(VariantType::ARRAY, "default_input_values", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR), "_set_default_input_values", "_get_default_input_values");
 	ADD_SIGNAL(MethodInfo("editor_refresh_request"));
 }
 
@@ -767,7 +767,7 @@ bool VisualShader::_get(const StringName &p_name, Variant &r_ret) const {
 void VisualShader::_get_property_list(List<PropertyInfo> *p_list) const {
 
 	//mode
-	p_list->push_back(PropertyInfo(Variant::INT, "mode", PROPERTY_HINT_ENUM, "Spatial,CanvasItem,Particles"));
+	p_list->push_back(PropertyInfo(VariantType::INT, "mode", PROPERTY_HINT_ENUM, "Spatial,CanvasItem,Particles"));
 	//render modes
 
 	Map<String, String> blend_mode_enums;
@@ -800,11 +800,11 @@ void VisualShader::_get_property_list(List<PropertyInfo> *p_list) const {
 
 	for (Map<String, String>::Element *E = blend_mode_enums.front(); E; E = E->next()) {
 
-		p_list->push_back(PropertyInfo(Variant::INT, "modes/" + E->key(), PROPERTY_HINT_ENUM, E->get()));
+		p_list->push_back(PropertyInfo(VariantType::INT, "modes/" + E->key(), PROPERTY_HINT_ENUM, E->get()));
 	}
 
 	for (Set<String>::Element *E = toggles.front(); E; E = E->next()) {
-		p_list->push_back(PropertyInfo(Variant::BOOL, "flags/" + E->get()));
+		p_list->push_back(PropertyInfo(VariantType::BOOL, "flags/" + E->get()));
 	}
 
 	for (int i = 0; i < TYPE_MAX; i++) {
@@ -816,17 +816,17 @@ void VisualShader::_get_property_list(List<PropertyInfo> *p_list) const {
 
 			if (E->key() != NODE_ID_OUTPUT) {
 
-				p_list->push_back(PropertyInfo(Variant::OBJECT, prop_name + "/node", PROPERTY_HINT_RESOURCE_TYPE, "VisualShaderNode", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE));
+				p_list->push_back(PropertyInfo(VariantType::OBJECT, prop_name + "/node", PROPERTY_HINT_RESOURCE_TYPE, "VisualShaderNode", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE));
 			}
 			p_list->push_back(PropertyInfo(Variant::VECTOR2, prop_name + "/position", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
 
 			if (Object::cast_to<VisualShaderNodeGroupBase>(E->get().node.ptr()) != NULL) {
 				p_list->push_back(PropertyInfo(Variant::VECTOR2, prop_name + "/size", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
-				p_list->push_back(PropertyInfo(Variant::STRING, prop_name + "/input_ports", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
-				p_list->push_back(PropertyInfo(Variant::STRING, prop_name + "/output_ports", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
+				p_list->push_back(PropertyInfo(VariantType::STRING, prop_name + "/input_ports", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
+				p_list->push_back(PropertyInfo(VariantType::STRING, prop_name + "/output_ports", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
 			}
 			if (Object::cast_to<VisualShaderNodeExpression>(E->get().node.ptr()) != NULL) {
-				p_list->push_back(PropertyInfo(Variant::STRING, prop_name + "/expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
+				p_list->push_back(PropertyInfo(VariantType::STRING, prop_name + "/expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
 			}
 		}
 		p_list->push_back(PropertyInfo(Variant::POOL_INT_ARRAY, "nodes/" + String(type_string[i]) + "/connections", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
@@ -897,11 +897,11 @@ Error VisualShader::_write_node(Type type, StringBuilder &global_code, StringBui
 		} else {
 
 			Variant defval = vsnode->get_input_port_default_value(i);
-			if (defval.get_type() == Variant::REAL || defval.get_type() == Variant::INT) {
+			if (defval.get_type() == VariantType::REAL || defval.get_type() == VariantType::INT) {
 				float val = defval;
 				inputs[i] = "n_in" + itos(node) + "p" + itos(i);
 				code += "\tfloat " + inputs[i] + " = " + vformat("%.5f", val) + ";\n";
-			} else if (defval.get_type() == Variant::BOOL) {
+			} else if (defval.get_type() == VariantType::BOOL) {
 				bool val = defval;
 				inputs[i] = "n_in" + itos(node) + "p" + itos(i);
 				code += "\nbool " + inputs[i] + " = " + (val ? "true" : "false") + ";\n";
@@ -1530,7 +1530,7 @@ void VisualShaderNodeInput::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_input_name", "name"), &VisualShaderNodeInput::set_input_name);
 	ClassDB::bind_method(D_METHOD("get_input_name"), &VisualShaderNodeInput::get_input_name);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "input_name", PROPERTY_HINT_ENUM, ""), "set_input_name", "get_input_name");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "input_name", PROPERTY_HINT_ENUM, ""), "set_input_name", "get_input_name");
 	ADD_SIGNAL(MethodInfo("input_type_changed"));
 }
 VisualShaderNodeInput::VisualShaderNodeInput() {
@@ -1730,7 +1730,7 @@ void VisualShaderNodeUniform::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_uniform_name", "name"), &VisualShaderNodeUniform::set_uniform_name);
 	ClassDB::bind_method(D_METHOD("get_uniform_name"), &VisualShaderNodeUniform::get_uniform_name);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "uniform_name"), "set_uniform_name", "get_uniform_name");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "uniform_name"), "set_uniform_name", "get_uniform_name");
 }
 
 VisualShaderNodeUniform::VisualShaderNodeUniform() {
@@ -2319,7 +2319,7 @@ void VisualShaderNodeExpression::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("build"), &VisualShaderNodeExpression::build);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "expression"), "set_expression", "get_expression");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "expression"), "set_expression", "get_expression");
 }
 
 VisualShaderNodeExpression::VisualShaderNodeExpression() {

@@ -56,7 +56,7 @@ bool EditorPropertyArrayObject::_get(const StringName &p_name, Variant &r_ret) c
 		int idx = pn.get_slicec('/', 1).to_int();
 		bool valid;
 		r_ret = array.get(idx, &valid);
-		if (r_ret.get_type() == Variant::OBJECT && Object::cast_to<EncodedObjectAsID>(r_ret)) {
+		if (r_ret.get_type() == VariantType::OBJECT && Object::cast_to<EncodedObjectAsID>(r_ret)) {
 			r_ret = Object::cast_to<EncodedObjectAsID>(r_ret)->get_object_id();
 		}
 
@@ -126,7 +126,7 @@ bool EditorPropertyDictionaryObject::_get(const StringName &p_name, Variant &r_r
 		int idx = pn.get_slicec('/', 1).to_int();
 		Variant key = dict.get_key_at_index(idx);
 		r_ret = dict[key];
-		if (r_ret.get_type() == Variant::OBJECT && Object::cast_to<EncodedObjectAsID>(r_ret)) {
+		if (r_ret.get_type() == VariantType::OBJECT && Object::cast_to<EncodedObjectAsID>(r_ret)) {
 			r_ret = Object::cast_to<EncodedObjectAsID>(r_ret)->get_object_id();
 		}
 
@@ -173,7 +173,7 @@ void EditorPropertyArray::_property_changed(const String &p_prop, Variant p_valu
 		array.set(idx, p_value);
 		emit_changed(get_edited_property(), array, "", true);
 
-		if (array.get_type() == Variant::ARRAY) {
+		if (array.get_type() == VariantType::ARRAY) {
 			array = array.call("duplicate"); //dupe, so undo/redo works better
 		}
 		object->set_array(array);
@@ -195,13 +195,13 @@ void EditorPropertyArray::_change_type_menu(int p_index) {
 
 	Variant value;
 	Variant::CallError ce;
-	value = Variant::construct(Variant::Type(p_index), NULL, 0, ce);
+	value = Variant::construct(VariantType(p_index), NULL, 0, ce);
 	Variant array = object->get_array();
 	array.set(changing_type_idx, value);
 
 	emit_changed(get_edited_property(), array, "", true);
 
-	if (array.get_type() == Variant::ARRAY) {
+	if (array.get_type() == VariantType::ARRAY) {
 		array = array.call("duplicate"); //dupe, so undo/redo works better
 	}
 	object->set_array(array);
@@ -218,7 +218,7 @@ void EditorPropertyArray::update_property() {
 
 	String arrtype = "";
 	switch (array_type) {
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 			arrtype = "Array";
 
 		} break;
@@ -232,7 +232,7 @@ void EditorPropertyArray::update_property() {
 			arrtype = "PoolIntArray";
 
 		} break;
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 
 			arrtype = "PoolFloatArray";
 		} break;
@@ -240,7 +240,7 @@ void EditorPropertyArray::update_property() {
 
 			arrtype = "PoolStringArray";
 		} break;
-		case Variant::POOL_VECTOR2_ARRAY: {
+		case VariantType::POOL_VECTOR2_ARRAY: {
 
 			arrtype = "PoolVector2Array";
 		} break;
@@ -255,7 +255,7 @@ void EditorPropertyArray::update_property() {
 		}
 	}
 
-	if (array.get_type() == Variant::NIL) {
+	if (array.get_type() == VariantType::NIL) {
 		edit->set_text(String("(Nil) ") + arrtype);
 		edit->set_pressed(false);
 		if (vbox) {
@@ -326,7 +326,7 @@ void EditorPropertyArray::update_property() {
 
 		int amount = MIN(len - offset, page_len);
 
-		if (array.get_type() == Variant::ARRAY) {
+		if (array.get_type() == VariantType::ARRAY) {
 			array = array.call("duplicate");
 		}
 
@@ -337,13 +337,13 @@ void EditorPropertyArray::update_property() {
 
 			EditorProperty *prop = NULL;
 			Variant value = array.get(i + offset);
-			Variant::Type value_type = value.get_type();
+			VariantType value_type = value.get_type();
 
-			if (value_type == Variant::NIL && subtype != Variant::NIL) {
+			if (value_type == VariantType::NIL && subtype != VariantType::NIL) {
 				value_type = subtype;
 			}
 
-			if (value_type == Variant::OBJECT && Object::cast_to<EncodedObjectAsID>(value)) {
+			if (value_type == VariantType::OBJECT && Object::cast_to<EncodedObjectAsID>(value)) {
 				EditorPropertyObjectID *editor = memnew(EditorPropertyObjectID);
 				editor->setup("Object");
 				prop = editor;
@@ -356,13 +356,13 @@ void EditorPropertyArray::update_property() {
 			prop->set_selectable(false);
 			prop->connect("property_changed", this, "_property_changed");
 			prop->connect("object_id_selected", this, "_object_id_selected");
-			if (array.get_type() == Variant::ARRAY) {
+			if (array.get_type() == VariantType::ARRAY) {
 				HBoxContainer *hb = memnew(HBoxContainer);
 				vbox->add_child(hb);
 				hb->add_child(prop);
 				prop->set_h_size_flags(SIZE_EXPAND_FILL);
 
-				if (subtype == Variant::NIL) {
+				if (subtype == VariantType::NIL) {
 					Button *edit = memnew(Button);
 					edit->set_icon(get_icon("Edit", "EditorIcons"));
 					hb->add_child(edit);
@@ -423,11 +423,11 @@ void EditorPropertyArray::_length_changed(double p_page) {
 
 	array.call("resize", int(p_page));
 
-	if (array.get_type() == Variant::ARRAY) {
-		if (subtype != Variant::NIL) {
+	if (array.get_type() == VariantType::ARRAY) {
+		if (subtype != VariantType::NIL) {
 			int size = array.call("size");
 			for (int i = previous_size; i < size; i++) {
-				if (array.get(i).get_type() == Variant::NIL) {
+				if (array.get(i).get_type() == VariantType::NIL) {
 					Variant::CallError ce;
 					array.set(i, Variant::construct(subtype, NULL, 0, ce));
 				}
@@ -448,11 +448,11 @@ void EditorPropertyArray::_length_changed(double p_page) {
 	update_property();
 }
 
-void EditorPropertyArray::setup(Variant::Type p_array_type, const String &p_hint_string) {
+void EditorPropertyArray::setup(VariantType p_array_type, const String &p_hint_string) {
 
 	array_type = p_array_type;
 
-	if (array_type == Variant::ARRAY && !p_hint_string.empty()) {
+	if (array_type == VariantType::ARRAY && !p_hint_string.empty()) {
 		int hint_subtype_seperator = p_hint_string.find(":");
 		if (hint_subtype_seperator >= 0) {
 			String subtype_string = p_hint_string.substr(0, hint_subtype_seperator);
@@ -463,7 +463,7 @@ void EditorPropertyArray::setup(Variant::Type p_array_type, const String &p_hint
 			}
 
 			subtype_hint_string = p_hint_string.substr(hint_subtype_seperator + 1, p_hint_string.size() - hint_subtype_seperator - 1);
-			subtype = Variant::Type(subtype_string.to_int());
+			subtype = VariantType(subtype_string.to_int());
 		}
 	}
 }
@@ -500,12 +500,12 @@ EditorPropertyArray::EditorPropertyArray() {
 	change_type->connect("id_pressed", this, "_change_type_menu");
 	changing_type_idx = -1;
 	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-		String type = Variant::get_type_name(Variant::Type(i));
+		String type = Variant::get_type_name(VariantType(i));
 		change_type->add_item(type, i);
 	}
 	changing_type_idx = -1;
 
-	subtype = Variant::NIL;
+	subtype = VariantType::NIL;
 	subtype_hint = PROPERTY_HINT_NONE;
 	subtype_hint_string = "";
 }
@@ -547,7 +547,7 @@ void EditorPropertyDictionary::_change_type(Object *p_button, int p_index) {
 void EditorPropertyDictionary::_add_key_value() {
 
 	// Do not allow nil as valid key. I experienced errors with this
-	if (object->get_new_item_key().get_type() == Variant::NIL) {
+	if (object->get_new_item_key().get_type() == VariantType::NIL) {
 		return;
 	}
 
@@ -569,7 +569,7 @@ void EditorPropertyDictionary::_change_type_menu(int p_index) {
 	if (changing_type_idx < 0) {
 		Variant value;
 		Variant::CallError ce;
-		value = Variant::construct(Variant::Type(p_index), NULL, 0, ce);
+		value = Variant::construct(VariantType(p_index), NULL, 0, ce);
 		if (changing_type_idx == -1) {
 			object->set_new_item_key(value);
 		} else {
@@ -585,7 +585,7 @@ void EditorPropertyDictionary::_change_type_menu(int p_index) {
 
 		Variant value;
 		Variant::CallError ce;
-		value = Variant::construct(Variant::Type(p_index), NULL, 0, ce);
+		value = Variant::construct(VariantType(p_index), NULL, 0, ce);
 		Variant key = dict.get_key_at_index(changing_type_idx);
 		dict[key] = value;
 	} else {
@@ -604,7 +604,7 @@ void EditorPropertyDictionary::update_property() {
 
 	Variant updated_val = get_edited_object()->get(get_edited_property());
 
-	if (updated_val.get_type() == Variant::NIL) {
+	if (updated_val.get_type() == VariantType::NIL) {
 		edit->set_text("Dictionary (Nil)"); //This provides symmetry with the array property.
 		edit->set_pressed(false);
 		if (vbox) {
@@ -689,30 +689,30 @@ void EditorPropertyDictionary::update_property() {
 			EditorProperty *prop = NULL;
 
 			switch (value.get_type()) {
-				case Variant::NIL: {
+				case VariantType::NIL: {
 					prop = memnew(EditorPropertyNil);
 
 				} break;
 
 				// atomic types
-				case Variant::BOOL: {
+				case VariantType::BOOL: {
 
 					prop = memnew(EditorPropertyCheck);
 
 				} break;
-				case Variant::INT: {
+				case VariantType::INT: {
 					EditorPropertyInteger *editor = memnew(EditorPropertyInteger);
 					editor->setup(-100000, 100000, 1, true, true);
 					prop = editor;
 
 				} break;
-				case Variant::REAL: {
+				case VariantType::REAL: {
 
 					EditorPropertyFloat *editor = memnew(EditorPropertyFloat);
 					editor->setup(-100000, 100000, 0.001, true, false, true, true);
 					prop = editor;
 				} break;
-				case Variant::STRING: {
+				case VariantType::STRING: {
 
 					prop = memnew(EditorPropertyText);
 
@@ -786,7 +786,7 @@ void EditorPropertyDictionary::update_property() {
 					prop = memnew(EditorPropertyColor);
 
 				} break;
-				case Variant::NODE_PATH: {
+				case VariantType::NODE_PATH: {
 					prop = memnew(EditorPropertyNodePath);
 
 				} break;
@@ -794,7 +794,7 @@ void EditorPropertyDictionary::update_property() {
 					prop = memnew(EditorPropertyRID);
 
 				} break;
-				case Variant::OBJECT: {
+				case VariantType::OBJECT: {
 
 					if (Object::cast_to<EncodedObjectAsID>(value)) {
 
@@ -810,13 +810,13 @@ void EditorPropertyDictionary::update_property() {
 					}
 
 				} break;
-				case Variant::DICTIONARY: {
+				case VariantType::DICTIONARY: {
 					prop = memnew(EditorPropertyDictionary);
 
 				} break;
-				case Variant::ARRAY: {
+				case VariantType::ARRAY: {
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::ARRAY);
+					editor->setup(VariantType::ARRAY);
 					prop = editor;
 				} break;
 
@@ -833,10 +833,10 @@ void EditorPropertyDictionary::update_property() {
 					editor->setup(Variant::POOL_INT_ARRAY);
 					prop = editor;
 				} break;
-				case Variant::POOL_REAL_ARRAY: {
+				case VariantType::POOL_REAL_ARRAY: {
 
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::POOL_REAL_ARRAY);
+					editor->setup(VariantType::POOL_REAL_ARRAY);
 					prop = editor;
 				} break;
 				case Variant::POOL_STRING_ARRAY: {
@@ -845,10 +845,10 @@ void EditorPropertyDictionary::update_property() {
 					editor->setup(Variant::POOL_STRING_ARRAY);
 					prop = editor;
 				} break;
-				case Variant::POOL_VECTOR2_ARRAY: {
+				case VariantType::POOL_VECTOR2_ARRAY: {
 
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::POOL_VECTOR2_ARRAY);
+					editor->setup(VariantType::POOL_VECTOR2_ARRAY);
 					prop = editor;
 				} break;
 				case Variant::POOL_VECTOR3_ARRAY: {
@@ -949,9 +949,9 @@ void EditorPropertyDictionary::_notification(int p_what) {
 void EditorPropertyDictionary::_edit_pressed() {
 
 	Variant prop_val = get_edited_object()->get(get_edited_property());
-	if (prop_val.get_type() == Variant::NIL) {
+	if (prop_val.get_type() == VariantType::NIL) {
 		Variant::CallError ce;
-		prop_val = Variant::construct(Variant::DICTIONARY, NULL, 0, ce);
+		prop_val = Variant::construct(VariantType::DICTIONARY, NULL, 0, ce);
 		get_edited_object()->set(get_edited_property(), prop_val);
 	}
 
@@ -997,7 +997,7 @@ EditorPropertyDictionary::EditorPropertyDictionary() {
 	change_type->connect("id_pressed", this, "_change_type_menu");
 	changing_type_idx = -1;
 	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-		String type = Variant::get_type_name(Variant::Type(i));
+		String type = Variant::get_type_name(VariantType(i));
 		change_type->add_item(type, i);
 	}
 	change_type->add_separator();

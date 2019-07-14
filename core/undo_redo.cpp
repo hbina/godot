@@ -282,7 +282,7 @@ void UndoRedo::_process_operation_list(List<Operation>::Element *E) {
 				int argc = 0;
 
 				for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-					if (op.args[i].get_type() == Variant::NIL) {
+					if (op.args[i].get_type() == VariantType::NIL) {
 						break;
 					}
 					argptrs[i] = &op.args[i];
@@ -439,17 +439,17 @@ Variant UndoRedo::_add_do_method(const Variant **p_args, int p_argcount, Variant
 		return Variant();
 	}
 
-	if (p_args[0]->get_type() != Variant::OBJECT) {
+	if (p_args[0]->get_type() != VariantType::OBJECT) {
 		r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 0;
-		r_error.expected = Variant::OBJECT;
+		r_error.expected = VariantType::OBJECT;
 		return Variant();
 	}
 
-	if (p_args[1]->get_type() != Variant::STRING) {
+	if (p_args[1]->get_type() != VariantType::STRING) {
 		r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 1;
-		r_error.expected = Variant::STRING;
+		r_error.expected = VariantType::STRING;
 		return Variant();
 	}
 
@@ -477,17 +477,17 @@ Variant UndoRedo::_add_undo_method(const Variant **p_args, int p_argcount, Varia
 		return Variant();
 	}
 
-	if (p_args[0]->get_type() != Variant::OBJECT) {
+	if (p_args[0]->get_type() != VariantType::OBJECT) {
 		r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 0;
-		r_error.expected = Variant::OBJECT;
+		r_error.expected = VariantType::OBJECT;
 		return Variant();
 	}
 
-	if (p_args[1]->get_type() != Variant::STRING) {
+	if (p_args[1]->get_type() != VariantType::STRING) {
 		r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = 1;
-		r_error.expected = Variant::STRING;
+		r_error.expected = VariantType::STRING;
 		return Variant();
 	}
 
@@ -517,8 +517,8 @@ void UndoRedo::_bind_methods() {
 	{
 		MethodInfo mi;
 		mi.name = "add_do_method";
-		mi.arguments.push_back(PropertyInfo(Variant::OBJECT, "object"));
-		mi.arguments.push_back(PropertyInfo(Variant::STRING, "method"));
+		mi.arguments.push_back(PropertyInfo(VariantType::OBJECT, "object"));
+		mi.arguments.push_back(PropertyInfo(VariantType::STRING, "method"));
 
 		ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "add_do_method", &UndoRedo::_add_do_method, mi);
 	}
@@ -526,8 +526,8 @@ void UndoRedo::_bind_methods() {
 	{
 		MethodInfo mi;
 		mi.name = "add_undo_method";
-		mi.arguments.push_back(PropertyInfo(Variant::OBJECT, "object"));
-		mi.arguments.push_back(PropertyInfo(Variant::STRING, "method"));
+		mi.arguments.push_back(PropertyInfo(VariantType::OBJECT, "object"));
+		mi.arguments.push_back(PropertyInfo(VariantType::STRING, "method"));
 
 		ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "add_undo_method", &UndoRedo::_add_undo_method, mi);
 	}

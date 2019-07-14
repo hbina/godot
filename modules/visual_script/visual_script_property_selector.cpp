@@ -189,7 +189,7 @@ void VisualScriptPropertySelector::_update_search() {
 			}
 		}
 		{
-			if (type != Variant::NIL) {
+			if (type != VariantType::NIL) {
 				Variant v;
 				Variant::CallError ce;
 				v = Variant::construct(type, NULL, 0, ce);
@@ -228,7 +228,7 @@ void VisualScriptPropertySelector::_update_search() {
 					if (i > 0) {
 						desc_arguments += ", ";
 					}
-					if (mi.arguments[i].type == Variant::NIL) {
+					if (mi.arguments[i].type == VariantType::NIL) {
 						desc_arguments += "var";
 					} else if (mi.arguments[i].name.find(":") != -1) {
 						desc_arguments += mi.arguments[i].name.get_slice(":", 1);
@@ -273,13 +273,13 @@ void VisualScriptPropertySelector::_update_search() {
 			get_visual_node_names("functions/built_in/print", Set<String>(), found, root, search_box);
 			get_visual_node_names("functions/by_type/" + Variant::get_type_name(type), Set<String>(), found, root, search_box);
 			get_visual_node_names("operators/compare/", Set<String>(), found, root, search_box);
-			if (type == Variant::INT) {
+			if (type == VariantType::INT) {
 				get_visual_node_names("operators/bitwise/", Set<String>(), found, root, search_box);
 			}
-			if (type == Variant::BOOL) {
+			if (type == VariantType::BOOL) {
 				get_visual_node_names("operators/logic/", Set<String>(), found, root, search_box);
 			}
-			if (type == Variant::BOOL || type == Variant::INT || type == Variant::REAL || type == Variant::VECTOR2 || type == Variant::VECTOR3) {
+			if (type == VariantType::BOOL || type == VariantType::INT || type == VariantType::REAL || type == Variant::VECTOR2 || type == Variant::VECTOR3) {
 				get_visual_node_names("operators/math/", Set<String>(), found, root, search_box);
 			}
 		}
@@ -506,7 +506,7 @@ void VisualScriptPropertySelector::select_method_from_base_type(const String &p_
 
 	base_type = p_base;
 	selected = p_current;
-	type = Variant::NIL;
+	type = VariantType::NIL;
 	script = 0;
 	properties = false;
 	instance = NULL;
@@ -520,7 +520,7 @@ void VisualScriptPropertySelector::select_method_from_base_type(const String &p_
 	_update_search();
 }
 
-void VisualScriptPropertySelector::set_type_filter(const Vector<Variant::Type> &p_type_filter) {
+void VisualScriptPropertySelector::set_type_filter(const Vector<VariantType> &p_type_filter) {
 	type_filter = p_type_filter;
 }
 
@@ -528,7 +528,7 @@ void VisualScriptPropertySelector::select_from_base_type(const String &p_base, c
 
 	base_type = p_base;
 	selected = p_current;
-	type = Variant::NIL;
+	type = VariantType::NIL;
 	script = 0;
 	properties = true;
 	visual_script_generic = false;
@@ -549,7 +549,7 @@ void VisualScriptPropertySelector::select_from_script(const Ref<Script> &p_scrip
 
 	base_type = p_script->get_instance_base_type();
 	selected = p_current;
-	type = Variant::NIL;
+	type = VariantType::NIL;
 	script = p_script->get_instance_id();
 	properties = true;
 	visual_script_generic = false;
@@ -565,8 +565,8 @@ void VisualScriptPropertySelector::select_from_script(const Ref<Script> &p_scrip
 	_update_search();
 }
 
-void VisualScriptPropertySelector::select_from_basic_type(Variant::Type p_type, const String &p_current, const bool p_connecting) {
-	ERR_FAIL_COND(p_type == Variant::NIL);
+void VisualScriptPropertySelector::select_from_basic_type(VariantType p_type, const String &p_current, const bool p_connecting) {
+	ERR_FAIL_COND(p_type == VariantType::NIL);
 	base_type = "";
 	selected = p_current;
 	type = p_type;
@@ -588,7 +588,7 @@ void VisualScriptPropertySelector::select_from_basic_type(Variant::Type p_type, 
 void VisualScriptPropertySelector::select_from_action(const String &p_type, const String &p_current, const bool p_connecting) {
 	base_type = p_type;
 	selected = p_current;
-	type = Variant::NIL;
+	type = VariantType::NIL;
 	script = 0;
 	properties = false;
 	visual_script_generic = false;
@@ -607,7 +607,7 @@ void VisualScriptPropertySelector::select_from_action(const String &p_type, cons
 void VisualScriptPropertySelector::select_from_instance(Object *p_instance, const String &p_current, const bool p_connecting) {
 	base_type = "";
 	selected = p_current;
-	type = Variant::NIL;
+	type = VariantType::NIL;
 	script = 0;
 	properties = true;
 	visual_script_generic = false;
@@ -626,7 +626,7 @@ void VisualScriptPropertySelector::select_from_instance(Object *p_instance, cons
 void VisualScriptPropertySelector::select_from_visual_script(const String &p_base, const bool p_connecting) {
 	base_type = p_base;
 	selected = "";
-	type = Variant::NIL;
+	type = VariantType::NIL;
 	script = 0;
 	properties = true;
 	visual_script_generic = true;
@@ -656,7 +656,7 @@ void VisualScriptPropertySelector::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_sbox_input"), &VisualScriptPropertySelector::_sbox_input);
 	ClassDB::bind_method(D_METHOD("_item_selected"), &VisualScriptPropertySelector::_item_selected);
 
-	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(Variant::STRING, "name"), PropertyInfo(Variant::STRING, "category"), PropertyInfo(Variant::BOOL, "connecting")));
+	ADD_SIGNAL(MethodInfo("selected", PropertyInfo(VariantType::STRING, "name"), PropertyInfo(VariantType::STRING, "category"), PropertyInfo(VariantType::BOOL, "connecting")));
 }
 
 VisualScriptPropertySelector::VisualScriptPropertySelector() {

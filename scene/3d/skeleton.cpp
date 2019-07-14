@@ -130,12 +130,12 @@ void Skeleton::_get_property_list(List<PropertyInfo> *p_list) const {
 	for (int i = 0; i < bones.size(); i++) {
 
 		String prep = "bones/" + itos(i) + "/";
-		p_list->push_back(PropertyInfo(Variant::STRING, prep + "name"));
-		p_list->push_back(PropertyInfo(Variant::INT, prep + "parent", PROPERTY_HINT_RANGE, "-1," + itos(bones.size() - 1) + ",1"));
+		p_list->push_back(PropertyInfo(VariantType::STRING, prep + "name"));
+		p_list->push_back(PropertyInfo(VariantType::INT, prep + "parent", PROPERTY_HINT_RANGE, "-1," + itos(bones.size() - 1) + ",1"));
 		p_list->push_back(PropertyInfo(Variant::TRANSFORM, prep + "rest"));
-		p_list->push_back(PropertyInfo(Variant::BOOL, prep + "enabled"));
+		p_list->push_back(PropertyInfo(VariantType::BOOL, prep + "enabled"));
 		p_list->push_back(PropertyInfo(Variant::TRANSFORM, prep + "pose", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
-		p_list->push_back(PropertyInfo(Variant::ARRAY, prep + "bound_children"));
+		p_list->push_back(PropertyInfo(VariantType::ARRAY, prep + "bound_children"));
 	}
 }
 
@@ -709,7 +709,7 @@ void Skeleton::physical_bones_start_simulation_on(const Array &p_bones) {
 		sim_bones.resize(p_bones.size());
 		int c = 0;
 		for (int i = sim_bones.size() - 1; 0 <= i; --i) {
-			if (Variant::STRING == p_bones.get(i).get_type()) {
+			if (VariantType::STRING == p_bones.get(i).get_type()) {
 				int bone_id = find_bone(p_bones.get(i));
 				if (bone_id != -1)
 					sim_bones[c++] = bone_id;
@@ -809,7 +809,7 @@ void Skeleton::_bind_methods() {
 
 	ClassDB::bind_method(D_METHOD("set_bone_ignore_animation", "bone", "ignore"), &Skeleton::set_bone_ignore_animation);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "bones_in_world_transform"), "set_use_bones_in_world_transform", "is_using_bones_in_world_transform");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "bones_in_world_transform"), "set_use_bones_in_world_transform", "is_using_bones_in_world_transform");
 	BIND_CONSTANT(NOTIFICATION_UPDATE_SKELETON);
 }
 

@@ -728,7 +728,7 @@ int GDScriptCompiler::_parse_expression(CodeGen &codegen, const GDScriptParser::
 
 					} else {
 
-						if (on->arguments[1]->type == GDScriptParser::Node::TYPE_CONSTANT && static_cast<const GDScriptParser::ConstantNode *>(on->arguments[1])->value.get_type() == Variant::STRING) {
+						if (on->arguments[1]->type == GDScriptParser::Node::TYPE_CONSTANT && static_cast<const GDScriptParser::ConstantNode *>(on->arguments[1])->value.get_type() == VariantType::STRING) {
 							//also, somehow, named (speed up anyway)
 							StringName name = static_cast<const GDScriptParser::ConstantNode *>(on->arguments[1])->value;
 							index = codegen.get_name_map_pos(name);
@@ -881,10 +881,10 @@ int GDScriptCompiler::_parse_expression(CodeGen &codegen, const GDScriptParser::
 					if (!_create_binary_operator(codegen, on, Variant::OP_NOT_EQUAL, p_stack_level)) return -1;
 				} break;
 				case GDScriptParser::OperatorNode::OP_LESS: {
-					if (!_create_binary_operator(codegen, on, Variant::OP_LESS, p_stack_level)) return -1;
+					if (!_create_binary_operator(codegen, on, VariantType::OP_LESS, p_stack_level)) return -1;
 				} break;
 				case GDScriptParser::OperatorNode::OP_LESS_EQUAL: {
-					if (!_create_binary_operator(codegen, on, Variant::OP_LESS_EQUAL, p_stack_level)) return -1;
+					if (!_create_binary_operator(codegen, on, VariantType::OP_LESS_EQUAL, p_stack_level)) return -1;
 				} break;
 				case GDScriptParser::OperatorNode::OP_GREATER: {
 					if (!_create_binary_operator(codegen, on, Variant::OP_GREATER, p_stack_level)) return -1;
@@ -1683,7 +1683,7 @@ Error GDScriptCompiler::_parse_function(GDScript *p_script, const GDScriptParser
 		gdfunc->return_type = GDScriptDataType();
 		gdfunc->return_type.has_type = true;
 		gdfunc->return_type.kind = GDScriptDataType::BUILTIN;
-		gdfunc->return_type.builtin_type = Variant::NIL;
+		gdfunc->return_type.builtin_type = VariantType::NIL;
 	}
 
 #ifdef TOOLS_ENABLED
@@ -1898,7 +1898,7 @@ Error GDScriptCompiler::_parse_class_level(GDScript *p_script, const GDScriptPar
 		prop_info.name = name;
 		PropertyInfo export_info = p_class->variables[i]._export;
 
-		if (export_info.type != Variant::NIL) {
+		if (export_info.type != VariantType::NIL) {
 
 			if (!minfo.data_type.has_type) {
 				prop_info.type = export_info.type;
@@ -1908,7 +1908,7 @@ Error GDScriptCompiler::_parse_class_level(GDScript *p_script, const GDScriptPar
 			prop_info.hint_string = export_info.hint_string;
 			prop_info.usage = export_info.usage;
 #ifdef TOOLS_ENABLED
-			if (p_class->variables[i].default_value.get_type() != Variant::NIL) {
+			if (p_class->variables[i].default_value.get_type() != VariantType::NIL) {
 				p_script->member_default_values[name] = p_class->variables[i].default_value;
 			}
 #endif

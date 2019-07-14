@@ -92,8 +92,8 @@ class EditorPropertyArray : public EditorProperty {
 	EditorSpinSlider *length;
 	EditorSpinSlider *page;
 	HBoxContainer *page_hb;
-	Variant::Type array_type;
-	Variant::Type subtype;
+	VariantType array_type;
+	VariantType subtype;
 	PropertyHint subtype_hint;
 	String subtype_hint_string;
 
@@ -111,7 +111,7 @@ protected:
 	void _notification(int p_what);
 
 public:
-	void setup(Variant::Type p_array_type, const String &p_hint_string = "");
+	void setup(VariantType p_array_type, const String &p_hint_string = "");
 	virtual void update_property();
 	EditorPropertyArray();
 };

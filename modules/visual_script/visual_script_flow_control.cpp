@@ -83,7 +83,7 @@ String VisualScriptReturn::get_text() const {
 	return get_name();
 }
 
-void VisualScriptReturn::set_return_type(Variant::Type p_type) {
+void VisualScriptReturn::set_return_type(VariantType p_type) {
 
 	if (type == p_type)
 		return;
@@ -91,7 +91,7 @@ void VisualScriptReturn::set_return_type(Variant::Type p_type) {
 	ports_changed_notify();
 }
 
-Variant::Type VisualScriptReturn::get_return_type() const {
+VariantType VisualScriptReturn::get_return_type() const {
 
 	return type;
 }
@@ -118,11 +118,11 @@ void VisualScriptReturn::_bind_methods() {
 
 	String argt = "Any";
 	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
-		argt += "," + Variant::get_type_name(Variant::Type(i));
+		argt += "," + Variant::get_type_name(VariantType(i));
 	}
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "return_enabled"), "set_enable_return_value", "is_return_value_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "return_type", PROPERTY_HINT_ENUM, argt), "set_return_type", "get_return_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "return_enabled"), "set_enable_return_value", "is_return_value_enabled");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "return_type", PROPERTY_HINT_ENUM, argt), "set_return_type", "get_return_type");
 }
 
 class VisualScriptNodeInstanceReturn : public VisualScriptNodeInstance {
@@ -159,7 +159,7 @@ VisualScriptNodeInstance *VisualScriptReturn::instance(VisualScriptInstance *p_i
 VisualScriptReturn::VisualScriptReturn() {
 
 	with_value = false;
-	type = Variant::NIL;
+	type = VariantType::NIL;
 }
 
 template <bool with_value>
@@ -208,7 +208,7 @@ PropertyInfo VisualScriptCondition::get_input_value_port_info(int p_idx) const {
 
 	PropertyInfo pinfo;
 	pinfo.name = "cond";
-	pinfo.type = Variant::BOOL;
+	pinfo.type = VariantType::BOOL;
 	return pinfo;
 }
 PropertyInfo VisualScriptCondition::get_output_value_port_info(int p_idx) const {
@@ -294,7 +294,7 @@ PropertyInfo VisualScriptWhile::get_input_value_port_info(int p_idx) const {
 
 	PropertyInfo pinfo;
 	pinfo.name = "cond";
-	pinfo.type = Variant::BOOL;
+	pinfo.type = VariantType::BOOL;
 	return pinfo;
 }
 PropertyInfo VisualScriptWhile::get_output_value_port_info(int p_idx) const {
@@ -379,13 +379,13 @@ PropertyInfo VisualScriptIterator::get_input_value_port_info(int p_idx) const {
 
 	PropertyInfo pinfo;
 	pinfo.name = "input";
-	pinfo.type = Variant::NIL;
+	pinfo.type = VariantType::NIL;
 	return pinfo;
 }
 PropertyInfo VisualScriptIterator::get_output_value_port_info(int p_idx) const {
 	PropertyInfo pinfo;
 	pinfo.name = "elem";
-	pinfo.type = Variant::NIL;
+	pinfo.type = VariantType::NIL;
 	return pinfo;
 }
 String VisualScriptIterator::get_caption() const {
@@ -504,7 +504,7 @@ PropertyInfo VisualScriptSequence::get_input_value_port_info(int p_idx) const {
 	return PropertyInfo();
 }
 PropertyInfo VisualScriptSequence::get_output_value_port_info(int p_idx) const {
-	return PropertyInfo(Variant::INT, "current");
+	return PropertyInfo(VariantType::INT, "current");
 }
 String VisualScriptSequence::get_caption() const {
 
@@ -536,7 +536,7 @@ void VisualScriptSequence::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_steps", "steps"), &VisualScriptSequence::set_steps);
 	ClassDB::bind_method(D_METHOD("get_steps"), &VisualScriptSequence::get_steps);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "steps", PROPERTY_HINT_RANGE, "1,64,1"), "set_steps", "get_steps");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "steps", PROPERTY_HINT_RANGE, "1,64,1"), "set_steps", "get_steps");
 }
 
 class VisualScriptNodeInstanceSequence : public VisualScriptNodeInstance {
@@ -618,7 +618,7 @@ PropertyInfo VisualScriptSwitch::get_input_value_port_info(int p_idx) const {
 	if (p_idx < case_values.size()) {
 		return PropertyInfo(case_values[p_idx].type, " =");
 	} else
-		return PropertyInfo(Variant::NIL, "input");
+		return PropertyInfo(VariantType::NIL, "input");
 }
 
 PropertyInfo VisualScriptSwitch::get_output_value_port_info(int p_idx) const {
@@ -684,7 +684,7 @@ bool VisualScriptSwitch::_set(const StringName &p_name, const Variant &p_value) 
 		int idx = String(p_name).get_slice("/", 1).to_int();
 		ERR_FAIL_INDEX_V(idx, case_values.size(), false);
 
-		case_values[idx].type = Variant::Type(int(p_value));
+		case_values[idx].type = VariantType(int(p_value));
 		_change_notify();
 		ports_changed_notify();
 
@@ -714,15 +714,15 @@ bool VisualScriptSwitch::_get(const StringName &p_name, Variant &r_ret) const {
 }
 void VisualScriptSwitch::_get_property_list(List<PropertyInfo> *p_list) const {
 
-	p_list->push_back(PropertyInfo(Variant::INT, "case_count", PROPERTY_HINT_RANGE, "0,128"));
+	p_list->push_back(PropertyInfo(VariantType::INT, "case_count", PROPERTY_HINT_RANGE, "0,128"));
 
 	String argt = "Any";
 	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
-		argt += "," + Variant::get_type_name(Variant::Type(i));
+		argt += "," + Variant::get_type_name(VariantType(i));
 	}
 
 	for (int i = 0; i < case_values.size(); i++) {
-		p_list->push_back(PropertyInfo(Variant::INT, "case/" + itos(i), PROPERTY_HINT_ENUM, argt));
+		p_list->push_back(PropertyInfo(VariantType::INT, "case/" + itos(i), PROPERTY_HINT_ENUM, argt));
 	}
 }
 
@@ -762,12 +762,12 @@ String VisualScriptTypeCast::get_output_sequence_port_text(int p_port) const {
 
 PropertyInfo VisualScriptTypeCast::get_input_value_port_info(int p_idx) const {
 
-	return PropertyInfo(Variant::OBJECT, "instance");
+	return PropertyInfo(VariantType::OBJECT, "instance");
 }
 
 PropertyInfo VisualScriptTypeCast::get_output_value_port_info(int p_idx) const {
 
-	return PropertyInfo(Variant::OBJECT, "", PROPERTY_HINT_TYPE_STRING, get_base_type());
+	return PropertyInfo(VariantType::OBJECT, "", PROPERTY_HINT_TYPE_STRING, get_base_type());
 }
 
 String VisualScriptTypeCast::get_caption() const {
@@ -815,7 +815,7 @@ String VisualScriptTypeCast::get_base_script() const {
 VisualScriptTypeCast::TypeGuess VisualScriptTypeCast::guess_output_type(TypeGuess *p_inputs, int p_output) const {
 
 	TypeGuess tg;
-	tg.type = Variant::OBJECT;
+	tg.type = VariantType::OBJECT;
 	if (script != String()) {
 		tg.script = ResourceLoader::load(script);
 	}
@@ -916,8 +916,8 @@ void VisualScriptTypeCast::_bind_methods() {
 		script_ext_hint += "*." + E->get();
 	}
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
 }
 
 VisualScriptTypeCast::VisualScriptTypeCast() {

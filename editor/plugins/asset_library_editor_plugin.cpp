@@ -492,7 +492,7 @@ void EditorAssetLibraryItemDownload::_bind_methods() {
 	ClassDB::bind_method("_close", &EditorAssetLibraryItemDownload::_close);
 	ClassDB::bind_method("_make_request", &EditorAssetLibraryItemDownload::_make_request);
 
-	ADD_SIGNAL(MethodInfo("install_asset", PropertyInfo(Variant::STRING, "zip_path"), PropertyInfo(Variant::STRING, "name")));
+	ADD_SIGNAL(MethodInfo("install_asset", PropertyInfo(VariantType::STRING, "zip_path"), PropertyInfo(VariantType::STRING, "name")));
 }
 
 EditorAssetLibraryItemDownload::EditorAssetLibraryItemDownload() {
@@ -1329,7 +1329,7 @@ void EditorAssetLibrary::_bind_methods() {
 	ClassDB::bind_method("_rerun_search", &EditorAssetLibrary::_rerun_search);
 	ClassDB::bind_method("_install_external_asset", &EditorAssetLibrary::_install_external_asset);
 
-	ADD_SIGNAL(MethodInfo("install_asset", PropertyInfo(Variant::STRING, "zip_path"), PropertyInfo(Variant::STRING, "name")));
+	ADD_SIGNAL(MethodInfo("install_asset", PropertyInfo(VariantType::STRING, "zip_path"), PropertyInfo(VariantType::STRING, "name")));
 }
 
 EditorAssetLibrary::EditorAssetLibrary(bool p_templates_only) {

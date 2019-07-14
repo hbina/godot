@@ -31,7 +31,7 @@
 #include "gdnative/aabb.h"
 
 #include "core/math/aabb.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef __cplusplus
 extern "C" {

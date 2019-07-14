@@ -14,8 +14,10 @@ def add_source_files(self, sources, filetype, lib_env=None, shared=False):
         dir_path = self.Dir('.').abspath
         filetype = sorted(glob.glob(dir_path + "/" + filetype))
 
-    for path in filetype:
-        sources.append(self.Object(path))
+        print("Adding source files")
+        for path in filetype:
+            print(path)
+            sources.append(self.Object(path))
 
 
 def disable_warnings(self):
@@ -31,9 +33,9 @@ def disable_warnings(self):
         self['CFLAGS'] = [x for x in self['CFLAGS'] if not x in warn_flags]
         self['CXXFLAGS'] = [x for x in self['CXXFLAGS'] if not x in warn_flags]
     else:
-        self.Append(CCFLAGS=['-w'])
-        self.Append(CFLAGS=['-w'])
-        self.Append(CXXFLAGS=['-w'])
+        self.Append(CCFLAGS=['-Wall'])
+        self.Append(CFLAGS=['-Wall'])
+        self.Append(CXXFLAGS=['-Wall'])
 
 
 def add_module_version_string(self, s):
@@ -189,37 +191,6 @@ def win32_spawn(sh, escape, cmd, args, env):
         print(err)
         print("=====")
     return rv
-
-
-"""
-def win32_spawn(sh, escape, cmd, args, spawnenv):
-	import win32file
-	import win32event
-	import win32process
-	import win32security
-	for var in spawnenv:
-		spawnenv[var] = spawnenv[var].encode('ascii', 'replace')
-
-	sAttrs = win32security.SECURITY_ATTRIBUTES()
-	StartupInfo = win32process.STARTUPINFO()
-	newargs = ' '.join(map(escape, args[1:]))
-	cmdline = cmd + " " + newargs
-
-	# check for any special operating system commands
-	if cmd == 'del':
-		for arg in args[1:]:
-			win32file.DeleteFile(arg)
-		exit_code = 0
-	else:
-		# otherwise execute the command.
-		hProcess, hThread, dwPid, dwTid = win32process.CreateProcess(None, cmdline, None, None, 1, 0, spawnenv, None, StartupInfo)
-		win32event.WaitForSingleObject(hProcess, win32event.INFINITE)
-		exit_code = win32process.GetExitCodeProcess(hProcess)
-		win32file.CloseHandle(hProcess);
-		win32file.CloseHandle(hThread);
-	return exit_code
-"""
-
 
 def disable_module(self):
     self.disabled_modules.append(self.current_module)
@@ -654,8 +625,8 @@ def get_compiler_version(env):
 
 
 def using_gcc(env):
-    return 'gcc' in os.path.basename(env["CC"])
+    return 'g++' in os.path.basename(env["CC"])
 
 
 def using_clang(env):
-    return 'clang' in os.path.basename(env["CC"])
+    return 'clang++' in os.path.basename(env["CC"])

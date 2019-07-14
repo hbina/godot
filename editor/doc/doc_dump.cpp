@@ -130,7 +130,7 @@ void DocDump::dump(const String &p_file) {
 					arginfo = E.return_val;
 					String type_name = (arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE) ? arginfo.hint_string : Variant::get_type_name(arginfo.type);
 
-					if (arginfo.type == Variant::NIL)
+					if (arginfo.type == VariantType::NIL)
 						continue;
 					_write_string(f, 3, "<return type=\"" + type_name + "\">");
 				} else {
@@ -141,7 +141,7 @@ void DocDump::dump(const String &p_file) {
 
 					if (arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE)
 						type_name = arginfo.hint_string;
-					else if (arginfo.type == Variant::NIL)
+					else if (arginfo.type == VariantType::NIL)
 						type_name = "Variant";
 					else
 						type_name = Variant::get_type_name(arginfo.type);
@@ -152,22 +152,22 @@ void DocDump::dump(const String &p_file) {
 
 						switch (default_arg.get_type()) {
 
-							case Variant::NIL:
+							case VariantType::NIL:
 								default_arg_text = "NULL";
 								break;
 							// atomic types
-							case Variant::BOOL:
+							case VariantType::BOOL:
 								if (bool(default_arg))
 									default_arg_text = "true";
 								else
 									default_arg_text = "false";
 								break;
-							case Variant::INT:
-							case Variant::REAL:
+							case VariantType::INT:
+							case VariantType::REAL:
 								//keep it
 								break;
-							case Variant::STRING:
-							case Variant::NODE_PATH:
+							case VariantType::STRING:
+							case VariantType::NODE_PATH:
 								default_arg_text = "\"" + default_arg_text + "\"";
 								break;
 							case Variant::TRANSFORM:
@@ -188,15 +188,15 @@ void DocDump::dump(const String &p_file) {
 							case Variant::COLOR:
 							case Variant::POOL_BYTE_ARRAY:
 							case Variant::POOL_INT_ARRAY:
-							case Variant::POOL_REAL_ARRAY:
+							case VariantType::POOL_REAL_ARRAY:
 							case Variant::POOL_STRING_ARRAY:
 							case Variant::POOL_VECTOR3_ARRAY:
 							case Variant::POOL_COLOR_ARRAY:
 								default_arg_text = Variant::get_type_name(default_arg.get_type()) + "(" + default_arg_text + ")";
 								break;
-							case Variant::OBJECT:
-							case Variant::DICTIONARY: // 20
-							case Variant::ARRAY:
+							case VariantType::OBJECT:
+							case VariantType::DICTIONARY: // 20
+							case VariantType::ARRAY:
 							case Variant::_RID:
 
 							default: {

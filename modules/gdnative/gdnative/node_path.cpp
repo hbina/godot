@@ -31,7 +31,7 @@
 #include "gdnative/node_path.h"
 
 #include "core/node_path.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef __cplusplus
 extern "C" {

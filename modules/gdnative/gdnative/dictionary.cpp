@@ -30,8 +30,8 @@
 
 #include "gdnative/dictionary.h"
 
-#include "core/variant.h"
-// core/variant.h before to avoid compile errors with MSVC
+#include "core/variant.hpp"
+// core/variant.hpp before to avoid compile errors with MSVC
 #include "core/dictionary.h"
 #include "core/io/json.h"
 

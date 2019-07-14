@@ -244,14 +244,7 @@ extern bool _err_error_exists;
  * the loop will skip to the next iteration.
  */
 
-#define ERR_CONTINUE(m_cond)                                                                                             \
-	{                                                                                                                    \
-		if (unlikely(m_cond)) {                                                                                          \
-			_err_print_error(FUNCTION_STR, __FILE__, __LINE__, "Condition ' " _STR(m_cond) " ' is true. Continuing..:"); \
-			continue;                                                                                                    \
-		}                                                                                                                \
-		_err_error_exists = false;                                                                                       \
-	}
+#define ERR_CONTINUE(m_cond) 
 
 /** An error condition happened (m_cond tested true) (WARNING this is the opposite as assert().
  * the loop will break

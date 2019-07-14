@@ -2342,21 +2342,21 @@ void BindingsGenerator::_populate_object_type_interfaces() {
 					ERR_EXPLAIN("Missing MethodBind for non-virtual method: " + itype.name + "." + imethod.name);
 					ERR_FAIL();
 				}
-			} else if (return_info.type == Variant::INT && return_info.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+			} else if (return_info.type == VariantType::INT && return_info.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 				imethod.return_type.cname = return_info.class_name;
 				imethod.return_type.is_enum = true;
 			} else if (return_info.class_name != StringName()) {
 				imethod.return_type.cname = return_info.class_name;
 			} else if (return_info.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 				imethod.return_type.cname = return_info.hint_string;
-			} else if (return_info.type == Variant::NIL && return_info.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
+			} else if (return_info.type == VariantType::NIL && return_info.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
 				imethod.return_type.cname = name_cache.type_Variant;
-			} else if (return_info.type == Variant::NIL) {
+			} else if (return_info.type == VariantType::NIL) {
 				imethod.return_type.cname = name_cache.type_void;
 			} else {
-				if (return_info.type == Variant::INT) {
+				if (return_info.type == VariantType::INT) {
 					imethod.return_type.cname = _get_int_type_name_from_meta(m ? m->get_argument_meta(-1) : GodotTypeInfo::METADATA_NONE);
-				} else if (return_info.type == Variant::REAL) {
+				} else if (return_info.type == VariantType::REAL) {
 					imethod.return_type.cname = _get_float_type_name_from_meta(m ? m->get_argument_meta(-1) : GodotTypeInfo::METADATA_NONE);
 				} else {
 					imethod.return_type.cname = Variant::get_type_name(return_info.type);
@@ -2369,19 +2369,19 @@ void BindingsGenerator::_populate_object_type_interfaces() {
 				ArgumentInterface iarg;
 				iarg.name = arginfo.name;
 
-				if (arginfo.type == Variant::INT && arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
+				if (arginfo.type == VariantType::INT && arginfo.usage & PROPERTY_USAGE_CLASS_IS_ENUM) {
 					iarg.type.cname = arginfo.class_name;
 					iarg.type.is_enum = true;
 				} else if (arginfo.class_name != StringName()) {
 					iarg.type.cname = arginfo.class_name;
 				} else if (arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE) {
 					iarg.type.cname = arginfo.hint_string;
-				} else if (arginfo.type == Variant::NIL) {
+				} else if (arginfo.type == VariantType::NIL) {
 					iarg.type.cname = name_cache.type_Variant;
 				} else {
-					if (arginfo.type == Variant::INT) {
+					if (arginfo.type == VariantType::INT) {
 						iarg.type.cname = _get_int_type_name_from_meta(m ? m->get_argument_meta(i) : GodotTypeInfo::METADATA_NONE);
-					} else if (arginfo.type == Variant::REAL) {
+					} else if (arginfo.type == VariantType::REAL) {
 						iarg.type.cname = _get_float_type_name_from_meta(m ? m->get_argument_meta(i) : GodotTypeInfo::METADATA_NONE);
 					} else {
 						iarg.type.cname = Variant::get_type_name(arginfo.type);
@@ -2535,26 +2535,26 @@ void BindingsGenerator::_default_argument_from_variant(const Variant &p_val, Arg
 	r_iarg.default_argument = p_val;
 
 	switch (p_val.get_type()) {
-		case Variant::NIL:
+		case VariantType::NIL:
 			// Either Object type or Variant
 			r_iarg.default_argument = "null";
 			break;
 		// Atomic types
-		case Variant::BOOL:
+		case VariantType::BOOL:
 			r_iarg.default_argument = bool(p_val) ? "true" : "false";
 			break;
-		case Variant::INT:
+		case VariantType::INT:
 			if (r_iarg.type.cname != name_cache.type_int) {
 				r_iarg.default_argument = "(%s)" + r_iarg.default_argument;
 			}
 			break;
-		case Variant::REAL:
+		case VariantType::REAL:
 #ifndef REAL_T_IS_DOUBLE
 			r_iarg.default_argument += "f";
 #endif
 			break;
-		case Variant::STRING:
-		case Variant::NODE_PATH:
+		case VariantType::STRING:
+		case VariantType::NODE_PATH:
 			r_iarg.default_argument = "\"" + r_iarg.default_argument + "\"";
 			break;
 		case Variant::TRANSFORM:
@@ -2575,23 +2575,23 @@ void BindingsGenerator::_default_argument_from_variant(const Variant &p_val, Arg
 			r_iarg.default_argument = "new %s" + r_iarg.default_argument;
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
-		case Variant::OBJECT:
+		case VariantType::OBJECT:
 			if (p_val.is_zero()) {
 				r_iarg.default_argument = "null";
 				break;
 			}
 			FALLTHROUGH;
-		case Variant::DICTIONARY:
+		case VariantType::DICTIONARY:
 		case Variant::_RID:
 			r_iarg.default_argument = "new %s()";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_REF;
 			break;
-		case Variant::ARRAY:
+		case VariantType::ARRAY:
 		case Variant::POOL_BYTE_ARRAY:
 		case Variant::POOL_INT_ARRAY:
-		case Variant::POOL_REAL_ARRAY:
+		case VariantType::POOL_REAL_ARRAY:
 		case Variant::POOL_STRING_ARRAY:
-		case Variant::POOL_VECTOR2_ARRAY:
+		case VariantType::POOL_VECTOR2_ARRAY:
 		case Variant::POOL_VECTOR3_ARRAY:
 		case Variant::POOL_COLOR_ARRAY:
 			r_iarg.default_argument = "new %s {}";

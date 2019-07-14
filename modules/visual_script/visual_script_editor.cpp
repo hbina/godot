@@ -34,7 +34,7 @@
 #include "core/os/input.h"
 #include "core/os/keyboard.h"
 #include "core/script_language.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "editor/editor_node.h"
 #include "editor/editor_resource_preview.h"
 #include "scene/main/viewport.h"
@@ -89,7 +89,7 @@ protected:
 
 				for (int i = argc; i < new_argc; i++) {
 
-					undo_redo->add_do_method(script.ptr(), "custom_signal_add_argument", sig, Variant::NIL, "arg" + itos(i + 1), -1);
+					undo_redo->add_do_method(script.ptr(), "custom_signal_add_argument", sig, VariantType::NIL, "arg" + itos(i + 1), -1);
 					undo_redo->add_undo_method(script.ptr(), "custom_signal_remove_argument", sig, argc);
 				}
 			}
@@ -162,15 +162,15 @@ protected:
 		if (sig == StringName())
 			return;
 
-		p_list->push_back(PropertyInfo(Variant::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
+		p_list->push_back(PropertyInfo(VariantType::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
 		String argt = "Variant";
 		for (int i = 1; i < Variant::VARIANT_MAX; i++) {
-			argt += "," + Variant::get_type_name(Variant::Type(i));
+			argt += "," + Variant::get_type_name(VariantType(i));
 		}
 
 		for (int i = 0; i < script->custom_signal_get_argument_count(sig); i++) {
-			p_list->push_back(PropertyInfo(Variant::INT, "argument/" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
-			p_list->push_back(PropertyInfo(Variant::STRING, "argument/" + itos(i + 1) + "/name"));
+			p_list->push_back(PropertyInfo(VariantType::INT, "argument/" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
+			p_list->push_back(PropertyInfo(VariantType::STRING, "argument/" + itos(i + 1) + "/name"));
 		}
 	}
 
@@ -317,14 +317,14 @@ protected:
 
 		String argt = "Variant";
 		for (int i = 1; i < Variant::VARIANT_MAX; i++) {
-			argt += "," + Variant::get_type_name(Variant::Type(i));
+			argt += "," + Variant::get_type_name(VariantType(i));
 		}
-		p_list->push_back(PropertyInfo(Variant::INT, "type", PROPERTY_HINT_ENUM, argt));
+		p_list->push_back(PropertyInfo(VariantType::INT, "type", PROPERTY_HINT_ENUM, argt));
 		p_list->push_back(PropertyInfo(script->get_variable_info(var).type, "value", script->get_variable_info(var).hint, script->get_variable_info(var).hint_string, PROPERTY_USAGE_DEFAULT));
 		// Update this when PropertyHint changes
-		p_list->push_back(PropertyInfo(Variant::INT, "hint", PROPERTY_HINT_ENUM, "None,Range,ExpRange,Enum,ExpEasing,Length,SpriteFrame,KeyAccel,Flags,Layers2dRender,Layers2dPhysics,Layer3dRender,Layer3dPhysics,File,Dir,GlobalFile,GlobalDir,ResourceType,MultilineText,PlaceholderText,ColorNoAlpha,ImageCompressLossy,ImageCompressLossLess,ObjectId,String,NodePathToEditedNode,MethodOfVariantType,MethodOfBaseType,MethodOfInstance,MethodOfScript,PropertyOfVariantType,PropertyOfBaseType,PropertyOfInstance,PropertyOfScript,ObjectTooBig,NodePathValidTypes"));
-		p_list->push_back(PropertyInfo(Variant::STRING, "hint_string"));
-		p_list->push_back(PropertyInfo(Variant::BOOL, "export"));
+		p_list->push_back(PropertyInfo(VariantType::INT, "hint", PROPERTY_HINT_ENUM, "None,Range,ExpRange,Enum,ExpEasing,Length,SpriteFrame,KeyAccel,Flags,Layers2dRender,Layers2dPhysics,Layer3dRender,Layer3dPhysics,File,Dir,GlobalFile,GlobalDir,ResourceType,MultilineText,PlaceholderText,ColorNoAlpha,ImageCompressLossy,ImageCompressLossLess,ObjectId,String,NodePathToEditedNode,MethodOfVariantType,MethodOfBaseType,MethodOfInstance,MethodOfScript,PropertyOfVariantType,PropertyOfBaseType,PropertyOfInstance,PropertyOfScript,ObjectTooBig,NodePathValidTypes"));
+		p_list->push_back(PropertyInfo(VariantType::STRING, "hint_string"));
+		p_list->push_back(PropertyInfo(VariantType::BOOL, "export"));
 	}
 
 public:
@@ -337,16 +337,16 @@ public:
 	VisualScriptEditorVariableEdit() { undo_redo = NULL; }
 };
 
-static Color _color_from_type(Variant::Type p_type, bool dark_theme = true) {
+static Color _color_from_type(VariantType p_type, bool dark_theme = true) {
 	Color color;
 	if (dark_theme)
 		switch (p_type) {
-			case Variant::NIL: color = Color::html("#69ecbd"); break;
+			case VariantType::NIL: color = Color::html("#69ecbd"); break;
 
-			case Variant::BOOL: color = Color::html("#8da6f0"); break;
-			case Variant::INT: color = Color::html("#7dc6ef"); break;
-			case Variant::REAL: color = Color::html("#61daf4"); break;
-			case Variant::STRING: color = Color::html("#6ba7ec"); break;
+			case VariantType::BOOL: color = Color::html("#8da6f0"); break;
+			case VariantType::INT: color = Color::html("#7dc6ef"); break;
+			case VariantType::REAL: color = Color::html("#61daf4"); break;
+			case VariantType::STRING: color = Color::html("#6ba7ec"); break;
 
 			case Variant::VECTOR2: color = Color::html("#bd91f1"); break;
 			case Variant::RECT2: color = Color::html("#f191a5"); break;
@@ -359,17 +359,17 @@ static Color _color_from_type(Variant::Type p_type, bool dark_theme = true) {
 			case Variant::TRANSFORM: color = Color::html("#f6a86e"); break;
 
 			case Variant::COLOR: color = Color::html("#9dff70"); break;
-			case Variant::NODE_PATH: color = Color::html("#6993ec"); break;
+			case VariantType::NODE_PATH: color = Color::html("#6993ec"); break;
 			case Variant::_RID: color = Color::html("#69ec9a"); break;
-			case Variant::OBJECT: color = Color::html("#79f3e8"); break;
-			case Variant::DICTIONARY: color = Color::html("#77edb1"); break;
+			case VariantType::OBJECT: color = Color::html("#79f3e8"); break;
+			case VariantType::DICTIONARY: color = Color::html("#77edb1"); break;
 
-			case Variant::ARRAY: color = Color::html("#e0e0e0"); break;
+			case VariantType::ARRAY: color = Color::html("#e0e0e0"); break;
 			case Variant::POOL_BYTE_ARRAY: color = Color::html("#aaf4c8"); break;
 			case Variant::POOL_INT_ARRAY: color = Color::html("#afdcf5"); break;
-			case Variant::POOL_REAL_ARRAY: color = Color::html("#97e7f8"); break;
+			case VariantType::POOL_REAL_ARRAY: color = Color::html("#97e7f8"); break;
 			case Variant::POOL_STRING_ARRAY: color = Color::html("#9dc4f2"); break;
-			case Variant::POOL_VECTOR2_ARRAY: color = Color::html("#d1b3f5"); break;
+			case VariantType::POOL_VECTOR2_ARRAY: color = Color::html("#d1b3f5"); break;
 			case Variant::POOL_VECTOR3_ARRAY: color = Color::html("#df9bf2"); break;
 			case Variant::POOL_COLOR_ARRAY: color = Color::html("#e9ff97"); break;
 
@@ -378,12 +378,12 @@ static Color _color_from_type(Variant::Type p_type, bool dark_theme = true) {
 		}
 	else
 		switch (p_type) {
-			case Variant::NIL: color = Color::html("#25e3a0"); break;
+			case VariantType::NIL: color = Color::html("#25e3a0"); break;
 
-			case Variant::BOOL: color = Color::html("#6d8eeb"); break;
-			case Variant::INT: color = Color::html("#4fb2e9"); break;
-			case Variant::REAL: color = Color::html("#27ccf0"); break;
-			case Variant::STRING: color = Color::html("#4690e7"); break;
+			case VariantType::BOOL: color = Color::html("#6d8eeb"); break;
+			case VariantType::INT: color = Color::html("#4fb2e9"); break;
+			case VariantType::REAL: color = Color::html("#27ccf0"); break;
+			case VariantType::STRING: color = Color::html("#4690e7"); break;
 
 			case Variant::VECTOR2: color = Color::html("#ad76ee"); break;
 			case Variant::RECT2: color = Color::html("#ee758e"); break;
@@ -396,17 +396,17 @@ static Color _color_from_type(Variant::Type p_type, bool dark_theme = true) {
 			case Variant::TRANSFORM: color = Color::html("#f49047"); break;
 
 			case Variant::COLOR: color = Color::html("#3cbf00"); break;
-			case Variant::NODE_PATH: color = Color::html("#6993ec"); break;
+			case VariantType::NODE_PATH: color = Color::html("#6993ec"); break;
 			case Variant::_RID: color = Color::html("#2ce573"); break;
-			case Variant::OBJECT: color = Color::html("#12d5c3"); break;
-			case Variant::DICTIONARY: color = Color::html("#57e99f"); break;
+			case VariantType::OBJECT: color = Color::html("#12d5c3"); break;
+			case VariantType::DICTIONARY: color = Color::html("#57e99f"); break;
 
-			case Variant::ARRAY: color = Color::html("#737373"); break;
+			case VariantType::ARRAY: color = Color::html("#737373"); break;
 			case Variant::POOL_BYTE_ARRAY: color = Color::html("#61ea98"); break;
 			case Variant::POOL_INT_ARRAY: color = Color::html("#61baeb"); break;
-			case Variant::POOL_REAL_ARRAY: color = Color::html("#40d3f2"); break;
+			case VariantType::POOL_REAL_ARRAY: color = Color::html("#40d3f2"); break;
 			case Variant::POOL_STRING_ARRAY: color = Color::html("#609fea"); break;
-			case Variant::POOL_VECTOR2_ARRAY: color = Color::html("#9d5dea"); break;
+			case VariantType::POOL_VECTOR2_ARRAY: color = Color::html("#9d5dea"); break;
 			case Variant::POOL_VECTOR3_ARRAY: color = Color::html("#ca5aea"); break;
 			case Variant::POOL_COLOR_ARRAY: color = Color::html("#92ba00"); break;
 
@@ -637,7 +637,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 		for (int i = 0; i < MAX(node->get_output_value_port_count(), MAX(mixed_seq_ports, node->get_input_value_port_count())); i++) {
 
 			bool left_ok = false;
-			Variant::Type left_type = Variant::NIL;
+			VariantType left_type = VariantType::NIL;
 			String left_name;
 
 			if (i < node->get_input_value_port_count()) {
@@ -648,7 +648,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 			}
 
 			bool right_ok = false;
-			Variant::Type right_type = Variant::NIL;
+			VariantType right_type = VariantType::NIL;
 			String right_name;
 
 			if (i >= mixed_seq_ports && i < node->get_output_value_port_count() + mixed_seq_ports) {
@@ -675,7 +675,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 
 				hbc->add_child(memnew(Label(left_name)));
 
-				if (left_type != Variant::NIL && !script->is_input_value_port_connected(edited_func, E->get(), i)) {
+				if (left_type != VariantType::NIL && !script->is_input_value_port_connected(edited_func, E->get(), i)) {
 
 					PropertyInfo pi = node->get_input_value_port_info(i);
 					Button *button = memnew(Button);
@@ -691,7 +691,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 					if (left_type == Variant::COLOR) {
 						button->set_custom_minimum_size(Size2(30, 0) * EDSCALE);
 						button->connect("draw", this, "_draw_color_over_button", varray(button, value));
-					} else if (left_type == Variant::OBJECT && Ref<Resource>(value).is_valid()) {
+					} else if (left_type == VariantType::OBJECT && Ref<Resource>(value).is_valid()) {
 
 						Ref<Resource> res = value;
 						Array arr;
@@ -699,7 +699,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 						arr.push_back(String(value));
 						EditorResourcePreview::get_singleton()->queue_edited_resource_preview(res, this, "_button_resource_previewed", arr);
 
-					} else if (pi.type == Variant::INT && pi.hint == PROPERTY_HINT_ENUM) {
+					} else if (pi.type == VariantType::INT && pi.hint == PROPERTY_HINT_ENUM) {
 
 						button->set_text(pi.hint_string.get_slice(",", value));
 					} else {
@@ -2164,16 +2164,16 @@ void VisualScriptEditor::add_callback(const String &p_function, PoolStringArray 
 	for (int i = 0; i < p_args.size(); i++) {
 
 		String name = p_args[i];
-		Variant::Type type = Variant::NIL;
+		VariantType type = VariantType::NIL;
 
 		if (name.find(":") != -1) {
 			String tt = name.get_slice(":", 1);
 			name = name.get_slice(":", 0);
 			for (int j = 0; j < Variant::VARIANT_MAX; j++) {
 
-				String tname = Variant::get_type_name(Variant::Type(j));
+				String tname = Variant::get_type_name(VariantType(j));
 				if (tname == tt) {
-					type = Variant::Type(j);
+					type = VariantType(j);
 					break;
 				}
 			}
@@ -2471,7 +2471,7 @@ void VisualScriptEditor::_graph_connect_to_empty(const String &p_from, int p_fro
 VisualScriptNode::TypeGuess VisualScriptEditor::_guess_output_type(int p_port_action_node, int p_port_action_output, Set<int> &visited_nodes) {
 
 	VisualScriptNode::TypeGuess tg;
-	tg.type = Variant::NIL;
+	tg.type = VariantType::NIL;
 
 	if (visited_nodes.has(p_port_action_node))
 		return tg; //no loop
@@ -2492,7 +2492,7 @@ VisualScriptNode::TypeGuess VisualScriptEditor::_guess_output_type(int p_port_ac
 		VisualScriptNode::TypeGuess g;
 		g.type = pi.type;
 
-		if (g.type == Variant::NIL || g.type == Variant::OBJECT) {
+		if (g.type == VariantType::NIL || g.type == VariantType::OBJECT) {
 			//any or object input, must further guess what this is
 			int from_node;
 			int from_port;
@@ -2502,13 +2502,13 @@ VisualScriptNode::TypeGuess VisualScriptEditor::_guess_output_type(int p_port_ac
 				g = _guess_output_type(from_node, from_port, visited_nodes);
 			} else {
 				Variant defval = node->get_default_input_value(i);
-				if (defval.get_type() == Variant::OBJECT) {
+				if (defval.get_type() == VariantType::OBJECT) {
 
 					Object *obj = defval;
 
 					if (obj) {
 
-						g.type = Variant::OBJECT;
+						g.type = VariantType::OBJECT;
 						g.gdclass = obj->get_class();
 						g.script = obj->get_script();
 					}
@@ -2548,7 +2548,7 @@ void VisualScriptEditor::_port_action_menu(int p_option) {
 			}
 
 			String type_string = script->get_node(edited_func, port_action_node)->get_output_value_port_info(port_action_output).hint_string;
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == VariantType::OBJECT) {
 				if (tg.script.is_valid()) {
 					new_connect_node_select->select_from_script(tg.script, "");
 				} else if (type_string != String()) {
@@ -2556,7 +2556,7 @@ void VisualScriptEditor::_port_action_menu(int p_option) {
 				} else {
 					new_connect_node_select->select_from_base_type(n->get_base_type());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == VariantType::NIL) {
 				new_connect_node_select->select_from_base_type("");
 			} else {
 				new_connect_node_select->select_from_basic_type(tg.type);
@@ -2565,13 +2565,13 @@ void VisualScriptEditor::_port_action_menu(int p_option) {
 		case CREATE_ACTION: {
 			VisualScriptNode::TypeGuess tg = _guess_output_type(port_action_node, port_action_output, vn);
 			PropertyInfo property_info = script->get_node(edited_func, port_action_node)->get_output_value_port_info(port_action_output);
-			if (tg.type == Variant::OBJECT) {
-				if (property_info.type == Variant::OBJECT && property_info.hint_string != String()) {
+			if (tg.type == VariantType::OBJECT) {
+				if (property_info.type == VariantType::OBJECT && property_info.hint_string != String()) {
 					new_connect_node_select->select_from_action(property_info.hint_string);
 				} else {
 					new_connect_node_select->select_from_action("");
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == VariantType::NIL) {
 				new_connect_node_select->select_from_action("");
 			} else {
 				new_connect_node_select->select_from_action(Variant::get_type_name(tg.type));
@@ -2634,17 +2634,17 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 		int new_id = script->get_available_id();
 
 		if (Object::cast_to<VisualScriptOperator>(vnode_new.ptr()) && script->get_node(edited_func, port_action_node).is_valid()) {
-			Variant::Type type = script->get_node(edited_func, port_action_node)->get_output_value_port_info(port_action_output).type;
+			VariantType type = script->get_node(edited_func, port_action_node)->get_output_value_port_info(port_action_output).type;
 			Object::cast_to<VisualScriptOperator>(vnode_new.ptr())->set_typed(type);
 		}
 
 		if (Object::cast_to<VisualScriptTypeCast>(vnode_new.ptr()) && script->get_node(edited_func, port_action_node).is_valid()) {
-			Variant::Type type = script->get_node(edited_func, port_action_node)->get_output_value_port_info(port_action_output).type;
+			VariantType type = script->get_node(edited_func, port_action_node)->get_output_value_port_info(port_action_output).type;
 			String hint_name = script->get_node(edited_func, port_action_node)->get_output_value_port_info(port_action_output).hint_string;
 
-			if (type == Variant::OBJECT) {
+			if (type == VariantType::OBJECT) {
 				Object::cast_to<VisualScriptTypeCast>(vnode_new.ptr())->set_base_type(hint_name);
-			} else if (type == Variant::NIL) {
+			} else if (type == VariantType::NIL) {
 				Object::cast_to<VisualScriptTypeCast>(vnode_new.ptr())->set_base_type("");
 			} else {
 				Object::cast_to<VisualScriptTypeCast>(vnode_new.ptr())->set_base_type(Variant::get_type_name(type));
@@ -2732,7 +2732,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 		if (p_connecting) {
 			VisualScriptNode::TypeGuess tg = _guess_output_type(port_action_node, port_action_output, vn);
 
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == VariantType::OBJECT) {
 				vsfc->set_call_mode(VisualScriptFunctionCall::CALL_MODE_INSTANCE);
 				vsfc->set_base_type(String(""));
 				if (tg.gdclass != StringName()) {
@@ -2752,7 +2752,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 				if (tg.script.is_valid()) {
 					vsfc->set_base_script(tg.script->get_path());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == VariantType::NIL) {
 				vsfc->set_call_mode(VisualScriptFunctionCall::CALL_MODE_INSTANCE);
 				vsfc->set_base_type(String(""));
 			} else {
@@ -2768,7 +2768,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 			Ref<VisualScriptPropertySet> vsp = vsn;
 
 			VisualScriptNode::TypeGuess tg = _guess_output_type(port_action_node, port_action_output, vn);
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == VariantType::OBJECT) {
 				vsp->set_call_mode(VisualScriptPropertySet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 				if (tg.gdclass != StringName()) {
@@ -2785,7 +2785,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 				if (tg.script.is_valid()) {
 					vsp->set_base_script(tg.script->get_path());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == VariantType::NIL) {
 				vsp->set_call_mode(VisualScriptPropertySet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 			} else {
@@ -2798,7 +2798,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 			Ref<VisualScriptPropertyGet> vsp = vsn;
 
 			VisualScriptNode::TypeGuess tg = _guess_output_type(port_action_node, port_action_output, vn);
-			if (tg.type == Variant::OBJECT) {
+			if (tg.type == VariantType::OBJECT) {
 				vsp->set_call_mode(VisualScriptPropertyGet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 				if (tg.gdclass != StringName()) {
@@ -2814,7 +2814,7 @@ void VisualScriptEditor::_selected_connect_node(const String &p_text, const Stri
 				if (tg.script.is_valid()) {
 					vsp->set_base_script(tg.script->get_path());
 				}
-			} else if (tg.type == Variant::NIL) {
+			} else if (tg.type == VariantType::NIL) {
 				vsp->set_call_mode(VisualScriptPropertyGet::CALL_MODE_INSTANCE);
 				vsp->set_base_type(String(""));
 			} else {
@@ -2914,7 +2914,7 @@ void VisualScriptEditor::_selected_new_virtual_method(const String &p_text, cons
 	}
 
 	undo_redo->add_do_method(script.ptr(), "add_node", name, script->get_available_id(), func_node);
-	if (minfo.return_val.type != Variant::NIL || minfo.return_val.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
+	if (minfo.return_val.type != VariantType::NIL || minfo.return_val.usage & PROPERTY_USAGE_NIL_IS_VARIANT) {
 		Ref<VisualScriptReturn> ret_node;
 		ret_node.instance();
 		ret_node->set_return_type(minfo.return_val.type);
@@ -2980,7 +2980,7 @@ void VisualScriptEditor::_default_value_edited(Node *p_button, int p_id, int p_i
 
 	PropertyInfo pinfo = vsn->get_input_value_port_info(p_input_port);
 	Variant existing = vsn->get_default_input_value(p_input_port);
-	if (pinfo.type != Variant::NIL && existing.get_type() != pinfo.type) {
+	if (pinfo.type != VariantType::NIL && existing.get_type() != pinfo.type) {
 
 		Variant::CallError ce;
 		const Variant *existingp = &existing;
@@ -2990,7 +2990,7 @@ void VisualScriptEditor::_default_value_edited(Node *p_button, int p_id, int p_i
 	default_value_edit->set_position(Object::cast_to<Control>(p_button)->get_global_position() + Vector2(0, Object::cast_to<Control>(p_button)->get_size().y));
 	default_value_edit->set_size(Size2(1, 1));
 
-	if (pinfo.type == Variant::NODE_PATH) {
+	if (pinfo.type == VariantType::NODE_PATH) {
 
 		Node *edited_scene = get_tree()->get_edited_scene_root();
 		Node *script_node = _find_script_node(edited_scene, edited_scene, script);
@@ -3602,10 +3602,10 @@ VisualScriptEditor::VisualScriptEditor() {
 
 	//allowed casts (connections)
 	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-		graph->add_valid_connection_type(Variant::NIL, i);
-		graph->add_valid_connection_type(i, Variant::NIL);
+		graph->add_valid_connection_type(VariantType::NIL, i);
+		graph->add_valid_connection_type(i, VariantType::NIL);
 		for (int j = 0; j < Variant::VARIANT_MAX; j++) {
-			if (Variant::can_convert(Variant::Type(i), Variant::Type(j))) {
+			if (Variant::can_convert(VariantType(i), VariantType(j))) {
 				graph->add_valid_connection_type(i, j);
 			}
 		}

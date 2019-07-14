@@ -48,8 +48,8 @@ void ARVRInterface::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("is_stereo"), &ARVRInterface::is_stereo);
 
 	ADD_GROUP("Interface", "interface_");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "interface_is_primary"), "set_is_primary", "is_primary");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "interface_is_initialized"), "set_is_initialized", "is_initialized");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "interface_is_primary"), "set_is_primary", "is_primary");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "interface_is_initialized"), "set_is_initialized", "is_initialized");
 
 	// we don't have any properties specific to VR yet....
 
@@ -59,7 +59,7 @@ void ARVRInterface::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_camera_feed_id"), &ARVRInterface::get_camera_feed_id);
 
 	ADD_GROUP("AR", "ar_");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "ar_is_anchor_detection_enabled"), "set_anchor_detection_is_enabled", "get_anchor_detection_is_enabled");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "ar_is_anchor_detection_enabled"), "set_anchor_detection_is_enabled", "get_anchor_detection_is_enabled");
 
 	BIND_ENUM_CONSTANT(ARVR_NONE);
 	BIND_ENUM_CONSTANT(ARVR_MONO);

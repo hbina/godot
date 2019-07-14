@@ -37,7 +37,7 @@
 #include "core/script_language.h"
 #include "core/self_list.h"
 #include "core/string_name.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 class GDScriptInstance;
 class GDScript;
@@ -51,7 +51,7 @@ struct GDScriptDataType {
 		SCRIPT,
 		GDSCRIPT,
 	} kind;
-	Variant::Type builtin_type;
+	VariantType builtin_type;
 	StringName native_type;
 	Ref<Script> script_type;
 
@@ -62,7 +62,7 @@ struct GDScriptDataType {
 			case UNINITIALIZED:
 				break;
 			case BUILTIN: {
-				Variant::Type var_type = p_variant.get_type();
+				VariantType var_type = p_variant.get_type();
 				bool valid = builtin_type == var_type;
 				if (!valid && p_allow_implicit_conversion) {
 					valid = Variant::can_convert_strict(var_type, builtin_type);
@@ -70,10 +70,10 @@ struct GDScriptDataType {
 				return valid;
 			} break;
 			case NATIVE: {
-				if (p_variant.get_type() == Variant::NIL) {
+				if (p_variant.get_type() == VariantType::NIL) {
 					return true;
 				}
-				if (p_variant.get_type() != Variant::OBJECT) {
+				if (p_variant.get_type() != VariantType::OBJECT) {
 					return false;
 				}
 				Object *obj = p_variant.operator Object *();
@@ -90,10 +90,10 @@ struct GDScriptDataType {
 			} break;
 			case SCRIPT:
 			case GDSCRIPT: {
-				if (p_variant.get_type() == Variant::NIL) {
+				if (p_variant.get_type() == VariantType::NIL) {
 					return true;
 				}
-				if (p_variant.get_type() != Variant::OBJECT) {
+				if (p_variant.get_type() != VariantType::OBJECT) {
 					return false;
 				}
 				Object *obj = p_variant.operator Object *();
@@ -122,17 +122,17 @@ struct GDScriptDataType {
 					info.type = builtin_type;
 				} break;
 				case NATIVE: {
-					info.type = Variant::OBJECT;
+					info.type = VariantType::OBJECT;
 					info.class_name = native_type;
 				} break;
 				case SCRIPT:
 				case GDSCRIPT: {
-					info.type = Variant::OBJECT;
+					info.type = VariantType::OBJECT;
 					info.class_name = script_type->get_instance_base_type();
 				} break;
 			}
 		} else {
-			info.type = Variant::NIL;
+			info.type = VariantType::NIL;
 			info.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
 		}
 		return info;
@@ -141,7 +141,7 @@ struct GDScriptDataType {
 	GDScriptDataType() :
 			has_type(false),
 			kind(UNINITIALIZED),
-			builtin_type(Variant::NIL) {}
+			builtin_type(VariantType::NIL) {}
 };
 
 class GDScriptFunction {

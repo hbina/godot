@@ -32,7 +32,7 @@
 
 #include "core/os/copymem.h"
 #include "core/print_string.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #include "thirdparty/misc/aes256.h"
 #include "thirdparty/misc/md5.h"

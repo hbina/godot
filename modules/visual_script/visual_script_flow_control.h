@@ -37,7 +37,7 @@ class VisualScriptReturn : public VisualScriptNode {
 
 	GDCLASS(VisualScriptReturn, VisualScriptNode);
 
-	Variant::Type type;
+	VariantType type;
 	bool with_value;
 
 protected:
@@ -59,8 +59,8 @@ public:
 	virtual String get_text() const;
 	virtual String get_category() const { return "flow_control"; }
 
-	void set_return_type(Variant::Type);
-	Variant::Type get_return_type() const;
+	void set_return_type(VariantType);
+	VariantType get_return_type() const;
 
 	void set_enable_return_value(bool p_enable);
 	bool is_return_value_enabled() const;
@@ -192,8 +192,8 @@ class VisualScriptSwitch : public VisualScriptNode {
 	GDCLASS(VisualScriptSwitch, VisualScriptNode);
 
 	struct Case {
-		Variant::Type type;
-		Case() { type = Variant::NIL; }
+		VariantType type;
+		Case() { type = VariantType::NIL; }
 	};
 
 	Vector<Case> case_values;

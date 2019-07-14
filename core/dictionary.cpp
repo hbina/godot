@@ -32,7 +32,7 @@
 
 #include "core/ordered_hash_map.h"
 #include "core/safe_refcount.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 struct DictionaryPrivate {
 
@@ -190,7 +190,7 @@ void Dictionary::_unref() const {
 }
 uint32_t Dictionary::hash() const {
 
-	uint32_t h = hash_djb2_one_32(Variant::DICTIONARY);
+	uint32_t h = hash_djb2_one_32(VariantType::DICTIONARY);
 
 	List<Variant> keys;
 	get_key_list(&keys);

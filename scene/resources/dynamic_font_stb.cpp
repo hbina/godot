@@ -389,8 +389,8 @@ void DynamicFont::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_size", "data"), &DynamicFont::set_size);
 	ClassDB::bind_method(D_METHOD("get_size"), &DynamicFont::get_size);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "font/size"), "set_size", "get_size");
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "font/font", PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"), "set_font_data", "get_font_data");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "font/size"), "set_size", "get_size");
+	ADD_PROPERTY(PropertyInfo(VariantType::OBJECT, "font/font", PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"), "set_font_data", "get_font_data");
 }
 
 void DynamicFont::set_font_data(const Ref<DynamicFontData> &p_data) {

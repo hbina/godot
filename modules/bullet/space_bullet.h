@@ -31,7 +31,7 @@
 #ifndef SPACE_BULLET_H
 #define SPACE_BULLET_H
 
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/vector.h"
 #include "godot_result_callbacks.h"
 #include "rid_bullet.h"

@@ -53,6 +53,9 @@
 #include "core/rid.h"
 #include "core/ustring.h"
 
+#include <array>
+#include <variant>
+
 class RefPtr;
 class Object;
 class Node; // helper
@@ -69,65 +72,59 @@ typedef PoolVector<Vector2> PoolVector2Array;
 typedef PoolVector<Vector3> PoolVector3Array;
 typedef PoolVector<Color> PoolColorArray;
 
-// Temporary workaround until c++11 alignas()
-#ifdef __GNUC__
-#define GCC_ALIGNED_8 __attribute__((aligned(8)))
-#else
-#define GCC_ALIGNED_8
-#endif
+enum class VariantType {
+
+	NIL,
+
+	// atomic types
+	BOOL,
+	INT,
+	REAL,
+	STRING,
+
+	// math types
+
+	VECTOR2, // 5
+	RECT2,
+	VECTOR3,
+	TRANSFORM2D,
+	PLANE,
+	QUAT, // 10
+	AABB,
+	BASIS,
+	TRANSFORM,
+
+	// misc types
+	COLOR,
+	NODE_PATH, // 15
+	_RID,
+	OBJECT,
+	DICTIONARY,
+	ARRAY,
+
+	// arrays
+	POOL_BYTE_ARRAY, // 20
+	POOL_INT_ARRAY,
+	POOL_REAL_ARRAY,
+	POOL_STRING_ARRAY,
+	POOL_VECTOR2_ARRAY,
+	POOL_VECTOR3_ARRAY, // 25
+	POOL_COLOR_ARRAY,
+
+	VARIANT_MAX
+
+};
 
 class Variant {
 public:
 	// If this changes the table in variant_op must be updated
-	enum Type {
-
-		NIL,
-
-		// atomic types
-		BOOL,
-		INT,
-		REAL,
-		STRING,
-
-		// math types
-
-		VECTOR2, // 5
-		RECT2,
-		VECTOR3,
-		TRANSFORM2D,
-		PLANE,
-		QUAT, // 10
-		AABB,
-		BASIS,
-		TRANSFORM,
-
-		// misc types
-		COLOR,
-		NODE_PATH, // 15
-		_RID,
-		OBJECT,
-		DICTIONARY,
-		ARRAY,
-
-		// arrays
-		POOL_BYTE_ARRAY, // 20
-		POOL_INT_ARRAY,
-		POOL_REAL_ARRAY,
-		POOL_STRING_ARRAY,
-		POOL_VECTOR2_ARRAY,
-		POOL_VECTOR3_ARRAY, // 25
-		POOL_COLOR_ARRAY,
-
-		VARIANT_MAX
-
-	};
 
 private:
 	friend struct _VariantCall;
 	// Variant takes 20 bytes when real_t is float, and 36 if double
 	// it only allocates extra memory for aabb/matrix.
 
-	Type type;
+	VariantType type;
 
 	struct ObjData {
 
@@ -135,33 +132,42 @@ private:
 		RefPtr ref;
 	};
 
-	_FORCE_INLINE_ ObjData &_get_obj();
-	_FORCE_INLINE_ const ObjData &_get_obj() const;
+	ObjData &_get_obj();
+	const ObjData &_get_obj() const;
 
-	union {
-		bool _bool;
-		int64_t _int;
-		double _real;
-		Transform2D *_transform2d;
-		::AABB *_aabb;
-		Basis *_basis;
-		Transform *_transform;
-		void *_ptr; //generic pointer
-		uint8_t _mem[sizeof(ObjData) > (sizeof(real_t) * 4) ? sizeof(ObjData) : (sizeof(real_t) * 4)];
-	} _data GCC_ALIGNED_8;
+	static constexpr int variant_array_size = sizeof(ObjData) > (sizeof(real_t) * 4) ? sizeof(ObjData) : (sizeof(real_t) * 4);
+	using arr_type = std::array<uint8_t, variant_array_size>;
+
+	std::variant<
+			bool,
+			int64_t,
+			double,
+			Transform2D *,
+			AABB *,
+			Basis *,
+			Transform *,
+			void *,
+			arr_type>
+			_data;
 
 	void reference(const Variant &p_variant);
 	void clear();
 
 public:
-	_FORCE_INLINE_ Type get_type() const { return type; }
-	static String get_type_name(Variant::Type p_type);
-	static bool can_convert(Type p_type_from, Type p_type_to);
-	static bool can_convert_strict(Type p_type_from, Type p_type_to);
+	VariantType get_type() const {
+		return type;
+	}
+	static String get_type_name(VariantType p_type);
+	static bool can_convert(VariantType p_type_from, VariantType p_type_to);
+	static bool can_convert_strict(VariantType p_type_from, VariantType p_type_to);
 
 	bool is_ref() const;
-	_FORCE_INLINE_ bool is_num() const { return type == INT || type == REAL; };
-	_FORCE_INLINE_ bool is_array() const { return type >= ARRAY; };
+	bool is_num() const {
+		return type == VariantType::INT || type == VariantType::REAL;
+	};
+	bool is_array() const {
+		return type >= VariantType::ARRAY;
+	};
 	bool is_shared() const;
 	bool is_zero() const;
 	bool is_one() const;
@@ -190,7 +196,7 @@ public:
 	operator Rect2() const;
 	operator Vector3() const;
 	operator Plane() const;
-	operator ::AABB() const;
+	operator AABB() const;
 	operator Quat() const;
 	operator Basis() const;
 	operator Transform() const;
@@ -260,7 +266,7 @@ public:
 	Variant(const Rect2 &p_rect2);
 	Variant(const Vector3 &p_vector3);
 	Variant(const Plane &p_plane);
-	Variant(const ::AABB &p_aabb);
+	Variant(const AABB &p_aabb);
 	Variant(const Quat &p_quat);
 	Variant(const Basis &p_matrix);
 	Variant(const Transform2D &p_transform);
@@ -336,7 +342,7 @@ public:
 
 	static String get_operator_name(Operator p_op);
 	static void evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b, Variant &r_ret, bool &r_valid);
-	static _FORCE_INLINE_ Variant evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b) {
+	static Variant evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b) {
 
 		bool valid = true;
 		Variant res;
@@ -360,7 +366,7 @@ public:
 		};
 		Error error;
 		int argument;
-		Type expected;
+		VariantType expected;
 	};
 
 	void call_ptr(const StringName &p_method, const Variant **p_args, int p_argcount, Variant *r_ret, CallError &r_error);
@@ -369,15 +375,15 @@ public:
 
 	static String get_call_error_text(Object *p_base, const StringName &p_method, const Variant **p_argptrs, int p_argcount, const Variant::CallError &ce);
 
-	static Variant construct(const Variant::Type, const Variant **p_args, int p_argcount, CallError &r_error, bool p_strict = true);
+	static Variant construct(const VariantType, const Variant **p_args, int p_argcount, CallError &r_error, bool p_strict = true);
 
 	void get_method_list(Vector<MethodInfo> &p_list) const;
 	bool has_method(const StringName &p_method) const;
-	static Vector<Variant::Type> get_method_argument_types(Variant::Type p_type, const StringName &p_method);
-	static Vector<Variant> get_method_default_arguments(Variant::Type p_type, const StringName &p_method);
-	static Variant::Type get_method_return_type(Variant::Type p_type, const StringName &p_method, bool *r_has_return = NULL);
-	static Vector<StringName> get_method_argument_names(Variant::Type p_type, const StringName &p_method);
-	static bool is_method_const(Variant::Type p_type, const StringName &p_method);
+	static Vector<VariantType> get_method_argument_types(VariantType p_type, const StringName &p_method);
+	static Vector<Variant> get_method_default_arguments(VariantType p_type, const StringName &p_method);
+	static VariantType get_method_return_type(VariantType p_type, const StringName &p_method, bool *r_has_return = NULL);
+	static Vector<StringName> get_method_argument_names(VariantType p_type, const StringName &p_method);
+	static bool is_method_const(VariantType p_type, const StringName &p_method);
 
 	void set_named(const StringName &p_index, const Variant &p_value, bool *r_valid = NULL);
 	Variant get_named(const StringName &p_index, bool *r_valid = NULL) const;
@@ -404,10 +410,10 @@ public:
 	String stringify(List<const void *> &stack) const;
 
 	void static_assign(const Variant &p_variant);
-	static void get_constructor_list(Variant::Type p_type, Vector<MethodInfo> &p_list);
-	static void get_constants_for_type(Variant::Type p_type, List<StringName> *p_constants);
-	static bool has_constant(Variant::Type p_type, const StringName &p_value);
-	static Variant get_constant_value(Variant::Type p_type, const StringName &p_value, bool *r_valid = NULL);
+	static void get_constructor_list(VariantType p_type, Vector<MethodInfo> &p_list);
+	static void get_constants_for_type(VariantType p_type, List<StringName> *p_constants);
+	static bool has_constant(VariantType p_type, const StringName &p_value);
+	static Variant get_constant_value(VariantType p_type, const StringName &p_value, bool *r_valid = NULL);
 
 	typedef String (*ObjectDeConstruct)(const Variant &p_object, void *ud);
 	typedef void (*ObjectConstruct)(const String &p_text, void *ud, Variant &r_value);
@@ -417,9 +423,11 @@ public:
 
 	void operator=(const Variant &p_variant); // only this is enough for all the other types
 	Variant(const Variant &p_variant);
-	_FORCE_INLINE_ Variant() { type = NIL; }
-	_FORCE_INLINE_ ~Variant() {
-		if (type != Variant::NIL) clear();
+	Variant() {
+		type = VariantType::NIL;
+	}
+	~Variant() {
+		if (type != VariantType::NIL) clear();
 	}
 };
 
@@ -435,22 +443,22 @@ Vector<Variant> varray(const Variant &p_arg1, const Variant &p_arg2, const Varia
 
 struct VariantHasher {
 
-	static _FORCE_INLINE_ uint32_t hash(const Variant &p_variant) { return p_variant.hash(); }
+	static uint32_t hash(const Variant &p_variant) { return p_variant.hash(); }
 };
 
 struct VariantComparator {
 
-	static _FORCE_INLINE_ bool compare(const Variant &p_lhs, const Variant &p_rhs) { return p_lhs.hash_compare(p_rhs); }
+	static bool compare(const Variant &p_lhs, const Variant &p_rhs) { return p_lhs.hash_compare(p_rhs); }
 };
 
 Variant::ObjData &Variant::_get_obj() {
 
-	return *reinterpret_cast<ObjData *>(&_data._mem[0]);
+	return *reinterpret_cast<ObjData *>(&std::get<arr_type>(_data)[0]);
 }
 
 const Variant::ObjData &Variant::_get_obj() const {
 
-	return *reinterpret_cast<const ObjData *>(&_data._mem[0]);
+	return *reinterpret_cast<const ObjData *>(&std::get<arr_type>(_data)[0]);
 }
 
 String vformat(const String &p_text, const Variant &p1 = Variant(), const Variant &p2 = Variant(), const Variant &p3 = Variant(), const Variant &p4 = Variant(), const Variant &p5 = Variant());

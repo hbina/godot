@@ -36,7 +36,7 @@
 #include "core/math/plane.h"
 #include "core/method_ptrcall.h"
 #include "core/pool_vector.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/vector.h"
 /**
 	@author Juan Linietsky <reduzio@gmail.com>

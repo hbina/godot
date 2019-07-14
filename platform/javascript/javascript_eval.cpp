@@ -52,7 +52,7 @@ Variant JavaScript::eval(const String &p_code, bool p_use_global_exec_context) {
 	PoolByteArray::Write arr_write;
 
 	/* clang-format off */
-	Variant::Type return_type = static_cast<Variant::Type>(EM_ASM_INT({
+	VariantType return_type = static_cast<VariantType>(EM_ASM_INT({
 
 		const CODE = $0;
 		const USE_GLOBAL_EXEC_CONTEXT = $1;
@@ -126,11 +126,11 @@ Variant JavaScript::eval(const String &p_code, bool p_use_global_exec_context) {
 	/* clang-format on */
 
 	switch (return_type) {
-		case Variant::BOOL:
+		case VariantType::BOOL:
 			return js_data.b;
-		case Variant::REAL:
+		case VariantType::REAL:
 			return js_data.d;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 			String str = String::utf8(js_data.s);
 			/* clang-format off */
 				EM_ASM_({ _free($0); }, js_data.s);

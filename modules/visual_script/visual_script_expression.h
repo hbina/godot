@@ -41,14 +41,14 @@ class VisualScriptExpression : public VisualScriptNode {
 
 	struct Input {
 
-		Variant::Type type;
+		VariantType type;
 		String name;
 
-		Input() { type = Variant::NIL; }
+		Input() { type = VariantType::NIL; }
 	};
 
 	Vector<Input> inputs;
-	Variant::Type output_type;
+	VariantType output_type;
 
 	String expression;
 
@@ -210,7 +210,7 @@ class VisualScriptExpression : public VisualScriptNode {
 	};
 
 	struct ConstructorNode : public ENode {
-		Variant::Type data_type;
+		VariantType data_type;
 		Vector<ENode *> arguments;
 
 		ConstructorNode() {

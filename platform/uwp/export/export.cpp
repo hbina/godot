@@ -1046,66 +1046,66 @@ public:
 	}
 
 	virtual void get_export_options(List<ExportOption> *r_options) {
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "architecture/target", PROPERTY_HINT_ENUM, "arm,x86,x64"), 1));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "architecture/target", PROPERTY_HINT_ENUM, "arm,x86,x64"), 1));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "command_line/extra_args"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "command_line/extra_args"), ""));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/display_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/short_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/unique_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game.Name"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/description"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/publisher", PROPERTY_HINT_PLACEHOLDER_TEXT, "CN=CompanyName"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/publisher_display_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Company Name"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/display_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/short_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/unique_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game.Name"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/description"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/publisher", PROPERTY_HINT_PLACEHOLDER_TEXT, "CN=CompanyName"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/publisher_display_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Company Name"), ""));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "identity/product_guid", PROPERTY_HINT_PLACEHOLDER_TEXT, "00000000-0000-0000-0000-000000000000"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "identity/publisher_guid", PROPERTY_HINT_PLACEHOLDER_TEXT, "00000000-0000-0000-0000-000000000000"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "identity/product_guid", PROPERTY_HINT_PLACEHOLDER_TEXT, "00000000-0000-0000-0000-000000000000"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "identity/publisher_guid", PROPERTY_HINT_PLACEHOLDER_TEXT, "00000000-0000-0000-0000-000000000000"), ""));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "signing/certificate", PROPERTY_HINT_GLOBAL_FILE, "*.pfx"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "signing/password"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "signing/algorithm", PROPERTY_HINT_ENUM, "MD5,SHA1,SHA256"), 2));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "signing/certificate", PROPERTY_HINT_GLOBAL_FILE, "*.pfx"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "signing/password"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "signing/algorithm", PROPERTY_HINT_ENUM, "MD5,SHA1,SHA256"), 2));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "version/major"), 1));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "version/minor"), 0));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "version/build"), 0));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "version/revision"), 0));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "version/major"), 1));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "version/minor"), 0));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "version/build"), 0));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "version/revision"), 0));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/landscape"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/portrait"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/landscape_flipped"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "orientation/portrait_flipped"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "orientation/landscape"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "orientation/portrait"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "orientation/landscape_flipped"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "orientation/portrait_flipped"), true));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "images/background_color"), "transparent"));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::OBJECT, "images/store_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::OBJECT, "images/square44x44_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::OBJECT, "images/square71x71_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::OBJECT, "images/square150x150_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::OBJECT, "images/square310x310_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::OBJECT, "images/wide310x150_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::OBJECT, "images/splash_screen", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "images/background_color"), "transparent"));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::OBJECT, "images/store_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::OBJECT, "images/square44x44_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::OBJECT, "images/square71x71_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::OBJECT, "images/square150x150_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::OBJECT, "images/square310x310_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::OBJECT, "images/wide310x150_logo", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::OBJECT, "images/splash_screen", PROPERTY_HINT_RESOURCE_TYPE, "StreamTexture"), Variant()));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "tiles/show_name_on_square150x150"), false));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "tiles/show_name_on_wide310x150"), false));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "tiles/show_name_on_square310x310"), false));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "tiles/show_name_on_square150x150"), false));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "tiles/show_name_on_wide310x150"), false));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "tiles/show_name_on_square310x310"), false));
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "custom_template/debug", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "custom_template/release", PROPERTY_HINT_GLOBAL_FILE, "*.zip"), ""));
 
 		// Capabilities
 		const char **basic = uwp_capabilities;
 		while (*basic) {
-			r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/" + String(*basic).camelcase_to_underscore(false)), false));
+			r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "capabilities/" + String(*basic).camelcase_to_underscore(false)), false));
 			basic++;
 		}
 
 		const char **uap = uwp_uap_capabilities;
 		while (*uap) {
-			r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/" + String(*uap).camelcase_to_underscore(false)), false));
+			r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "capabilities/" + String(*uap).camelcase_to_underscore(false)), false));
 			uap++;
 		}
 
 		const char **device = uwp_device_capabilities;
 		while (*device) {
-			r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "capabilities/" + String(*device).camelcase_to_underscore(false)), false));
+			r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "capabilities/" + String(*device).camelcase_to_underscore(false)), false));
 			device++;
 		}
 	}
@@ -1488,12 +1488,12 @@ void register_uwp_exporter() {
 
 #ifdef WINDOWS_ENABLED
 	EDITOR_DEF("export/uwp/signtool", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/uwp/signtool", PROPERTY_HINT_GLOBAL_FILE, "*.exe"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(VariantType::STRING, "export/uwp/signtool", PROPERTY_HINT_GLOBAL_FILE, "*.exe"));
 	EDITOR_DEF("export/uwp/debug_certificate", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/uwp/debug_certificate", PROPERTY_HINT_GLOBAL_FILE, "*.pfx"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(VariantType::STRING, "export/uwp/debug_certificate", PROPERTY_HINT_GLOBAL_FILE, "*.pfx"));
 	EDITOR_DEF("export/uwp/debug_password", "");
 	EDITOR_DEF("export/uwp/debug_algorithm", 2); // SHA256 is the default
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::INT, "export/uwp/debug_algorithm", PROPERTY_HINT_ENUM, "MD5,SHA1,SHA256"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(VariantType::INT, "export/uwp/debug_algorithm", PROPERTY_HINT_ENUM, "MD5,SHA1,SHA256"));
 #endif // WINDOWS_ENABLED
 
 	Ref<EditorExportPlatformUWP> exporter;

@@ -31,7 +31,7 @@
 #include "gdnative/transform.h"
 
 #include "core/math/transform.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef __cplusplus
 extern "C" {

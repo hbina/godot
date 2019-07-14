@@ -58,7 +58,7 @@ private:
 	CallMode call_mode;
 	StringName base_type;
 	String base_script;
-	Variant::Type basic_type;
+	VariantType basic_type;
 	NodePath base_path;
 	StringName function;
 	int use_default_args;
@@ -96,8 +96,8 @@ public:
 	virtual String get_text() const;
 	virtual String get_category() const { return "functions"; }
 
-	void set_basic_type(Variant::Type p_type);
-	Variant::Type get_basic_type() const;
+	void set_basic_type(VariantType p_type);
+	VariantType get_basic_type() const;
 
 	void set_base_type(const StringName &p_type);
 	StringName get_base_type() const;
@@ -168,7 +168,7 @@ private:
 	PropertyInfo type_cache;
 
 	CallMode call_mode;
-	Variant::Type basic_type;
+	VariantType basic_type;
 	StringName base_type;
 	String base_script;
 	NodePath base_path;
@@ -215,8 +215,8 @@ public:
 	void set_base_script(const String &p_path);
 	String get_base_script() const;
 
-	void set_basic_type(Variant::Type p_type);
-	Variant::Type get_basic_type() const;
+	void set_basic_type(VariantType p_type);
+	VariantType get_basic_type() const;
 
 	void set_property(const StringName &p_type);
 	StringName get_property() const;
@@ -256,10 +256,10 @@ public:
 	};
 
 private:
-	Variant::Type type_cache;
+	VariantType type_cache;
 
 	CallMode call_mode;
-	Variant::Type basic_type;
+	VariantType basic_type;
 	StringName base_type;
 	String base_script;
 	NodePath base_path;
@@ -272,8 +272,8 @@ private:
 
 	void _update_cache();
 
-	void _set_type_cache(Variant::Type p_type);
-	Variant::Type _get_type_cache() const;
+	void _set_type_cache(VariantType p_type);
+	VariantType _get_type_cache() const;
 
 protected:
 	virtual void _validate_property(PropertyInfo &property) const;
@@ -302,8 +302,8 @@ public:
 	void set_base_script(const String &p_path);
 	String get_base_script() const;
 
-	void set_basic_type(Variant::Type p_type);
-	Variant::Type get_basic_type() const;
+	void set_basic_type(VariantType p_type);
+	VariantType get_basic_type() const;
 
 	void set_property(const StringName &p_type);
 	StringName get_property() const;

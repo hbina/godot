@@ -384,10 +384,10 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 		return p_var_type_name;
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::OBJECT))
+	if (p_var_type_name == Variant::get_type_name(VariantType::OBJECT))
 		return "Godot.Object";
 
-	if (p_var_type_name == Variant::get_type_name(Variant::REAL)) {
+	if (p_var_type_name == Variant::get_type_name(VariantType::REAL)) {
 #ifdef REAL_T_IS_DOUBLE
 		return "double";
 #else
@@ -395,20 +395,20 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 #endif
 	}
 
-	if (p_var_type_name == Variant::get_type_name(Variant::STRING))
+	if (p_var_type_name == Variant::get_type_name(VariantType::STRING))
 		return "string"; // I prefer this one >:[
 
-	if (p_var_type_name == Variant::get_type_name(Variant::DICTIONARY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::DICTIONARY))
 		return "Collections.Dictionary";
 
-	if (p_var_type_name == Variant::get_type_name(Variant::ARRAY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::ARRAY))
 		return "Collections.Array";
 
 	if (p_var_type_name == Variant::get_type_name(Variant::POOL_BYTE_ARRAY))
 		return "byte[]";
 	if (p_var_type_name == Variant::get_type_name(Variant::POOL_INT_ARRAY))
 		return "int[]";
-	if (p_var_type_name == Variant::get_type_name(Variant::POOL_REAL_ARRAY)) {
+	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_REAL_ARRAY)) {
 #ifdef REAL_T_IS_DOUBLE
 		return "double[]";
 #else
@@ -417,16 +417,16 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 	}
 	if (p_var_type_name == Variant::get_type_name(Variant::POOL_STRING_ARRAY))
 		return "string[]";
-	if (p_var_type_name == Variant::get_type_name(Variant::POOL_VECTOR2_ARRAY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_VECTOR2_ARRAY))
 		return "Vector2[]";
 	if (p_var_type_name == Variant::get_type_name(Variant::POOL_VECTOR3_ARRAY))
 		return "Vector3[]";
 	if (p_var_type_name == Variant::get_type_name(Variant::POOL_COLOR_ARRAY))
 		return "Color[]";
 
-	Variant::Type var_types[] = {
-		Variant::BOOL,
-		Variant::INT,
+	VariantType var_types[] = {
+		VariantType::BOOL,
+		VariantType::INT,
 		Variant::VECTOR2,
 		Variant::RECT2,
 		Variant::VECTOR3,
@@ -437,11 +437,11 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 		Variant::BASIS,
 		Variant::TRANSFORM,
 		Variant::COLOR,
-		Variant::NODE_PATH,
+		VariantType::NODE_PATH,
 		Variant::_RID
 	};
 
-	for (unsigned int i = 0; i < sizeof(var_types) / sizeof(Variant::Type); i++) {
+	for (unsigned int i = 0; i < sizeof(var_types) / sizeof(VariantType); i++) {
 		if (p_var_type_name == Variant::get_type_name(var_types[i]))
 			return p_var_type_name;
 	}
@@ -1451,7 +1451,7 @@ void CSharpInstance::get_property_list(List<PropertyInfo> *p_properties) const {
 	}
 }
 
-Variant::Type CSharpInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
+VariantType CSharpInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
 
 	if (script->member_info.has(p_name)) {
 		if (r_is_valid)
@@ -1462,7 +1462,7 @@ Variant::Type CSharpInstance::get_property_type(const StringName &p_name, bool *
 	if (r_is_valid)
 		*r_is_valid = false;
 
-	return Variant::NIL;
+	return VariantType::NIL;
 }
 
 bool CSharpInstance::has_method(const StringName &p_method) const {
@@ -2175,7 +2175,7 @@ bool CSharpScript::_get_signal(GDMonoClass *p_class, GDMonoClass *p_delegate, Ve
 					arg.name = names[i];
 					arg.type = GDMonoMarshal::managed_to_variant_type(types[i]);
 
-					if (arg.type == Variant::NIL) {
+					if (arg.type == VariantType::NIL) {
 						ERR_PRINTS("Unknown type of signal parameter: " + arg.name + " in " + p_class->get_full_name());
 						return false;
 					}
@@ -2221,7 +2221,7 @@ bool CSharpScript::_get_member_export(IMonoClassMember *p_member, PropertyInfo &
 		CRASH_NOW();
 	}
 
-	Variant::Type variant_type = GDMonoMarshal::managed_to_variant_type(type);
+	VariantType variant_type = GDMonoMarshal::managed_to_variant_type(type);
 
 	if (!p_member->has_attribute(CACHED_CLASS(ExportAttribute))) {
 		r_prop_info = PropertyInfo(variant_type, (String)p_member->get_name(), PROPERTY_HINT_NONE, "", PROPERTY_USAGE_SCRIPT_VARIABLE);
@@ -2246,7 +2246,7 @@ bool CSharpScript::_get_member_export(IMonoClassMember *p_member, PropertyInfo &
 	PropertyHint hint = PROPERTY_HINT_NONE;
 	String hint_string;
 
-	if (variant_type == Variant::NIL) {
+	if (variant_type == VariantType::NIL) {
 		ERR_PRINTS("Unknown exported member type: " + MEMBER_FULL_QUALIFIED_NAME(p_member));
 		return false;
 	}
@@ -2271,9 +2271,9 @@ bool CSharpScript::_get_member_export(IMonoClassMember *p_member, PropertyInfo &
 #undef MEMBER_FULL_QUALIFIED_NAME
 }
 
-int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, ManagedType p_type, Variant::Type p_variant_type, bool p_allow_generics, PropertyHint &r_hint, String &r_hint_string) {
+int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, ManagedType p_type, VariantType p_variant_type, bool p_allow_generics, PropertyHint &r_hint, String &r_hint_string) {
 
-	if (p_variant_type == Variant::INT && p_type.type_encoding == MONO_TYPE_VALUETYPE && mono_class_is_enum(p_type.type_class->get_mono_ptr())) {
+	if (p_variant_type == VariantType::INT && p_type.type_encoding == MONO_TYPE_VALUETYPE && mono_class_is_enum(p_type.type_class->get_mono_ptr())) {
 		r_hint = PROPERTY_HINT_ENUM;
 
 		Vector<MonoClassField *> fields = p_type.type_class->get_enum_fields();
@@ -2331,13 +2331,13 @@ int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, Manage
 			// This may not be needed in the future if the editor is changed to not display values.
 			r_hint_string = name_only_hint_string;
 		}
-	} else if (p_variant_type == Variant::OBJECT && CACHED_CLASS(GodotResource)->is_assignable_from(p_type.type_class)) {
+	} else if (p_variant_type == VariantType::OBJECT && CACHED_CLASS(GodotResource)->is_assignable_from(p_type.type_class)) {
 		GDMonoClass *field_native_class = GDMonoUtils::get_class_native_base(p_type.type_class);
 		CRASH_COND(field_native_class == NULL);
 
 		r_hint = PROPERTY_HINT_RESOURCE_TYPE;
 		r_hint_string = NATIVE_GDMONOCLASS_NAME(field_native_class);
-	} else if (p_allow_generics && p_variant_type == Variant::ARRAY) {
+	} else if (p_allow_generics && p_variant_type == VariantType::ARRAY) {
 		// Nested arrays are not supported in the inspector
 
 		ManagedType elem_type;
@@ -2345,12 +2345,12 @@ int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, Manage
 		if (!GDMonoMarshal::try_get_array_element_type(p_type, elem_type))
 			return 0;
 
-		Variant::Type elem_variant_type = GDMonoMarshal::managed_to_variant_type(elem_type);
+		VariantType elem_variant_type = GDMonoMarshal::managed_to_variant_type(elem_type);
 
 		PropertyHint elem_hint = PROPERTY_HINT_NONE;
 		String elem_hint_string;
 
-		if (elem_variant_type == Variant::NIL) {
+		if (elem_variant_type == VariantType::NIL) {
 			ERR_EXPLAIN("Unknown array element type");
 			ERR_FAIL_V(-1);
 		}
@@ -2366,7 +2366,7 @@ int CSharpScript::_try_get_member_export_hint(IMonoClassMember *p_member, Manage
 		r_hint_string = itos(elem_variant_type) + "/" + itos(elem_hint) + ":" + elem_hint_string;
 		r_hint = PROPERTY_HINT_TYPE_STRING;
 
-	} else if (p_allow_generics && p_variant_type == Variant::DICTIONARY) {
+	} else if (p_allow_generics && p_variant_type == VariantType::DICTIONARY) {
 		// TODO: Dictionaries are not supported in the inspector
 	} else {
 		return 0;
@@ -2450,12 +2450,12 @@ bool CSharpScript::_set(const StringName &p_name, const Variant &p_value) {
 
 void CSharpScript::_get_property_list(List<PropertyInfo> *p_properties) const {
 
-	p_properties->push_back(PropertyInfo(Variant::STRING, CSharpLanguage::singleton->string_names._script_source, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+	p_properties->push_back(PropertyInfo(VariantType::STRING, CSharpLanguage::singleton->string_names._script_source, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 }
 
 void CSharpScript::_bind_methods() {
 
-	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "new", &CSharpScript::_new, MethodInfo(Variant::OBJECT, "new"));
+	ClassDB::bind_vararg_method(METHOD_FLAGS_DEFAULT, "new", &CSharpScript::_new, MethodInfo(VariantType::OBJECT, "new"));
 }
 
 Ref<CSharpScript> CSharpScript::create_for_managed_type(GDMonoClass *p_class, GDMonoClass *p_native) {

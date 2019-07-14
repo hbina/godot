@@ -60,7 +60,7 @@ void EditorResourceConversionPlugin::_bind_methods() {
 
 	MethodInfo mi;
 	mi.name = "_convert";
-	mi.return_val.type = Variant::OBJECT;
+	mi.return_val.type = VariantType::OBJECT;
 	mi.return_val.class_name = "Resource";
 	mi.return_val.hint = PROPERTY_HINT_RESOURCE_TYPE;
 	mi.return_val.hint_string = "Resource";
@@ -70,9 +70,9 @@ void EditorResourceConversionPlugin::_bind_methods() {
 	BIND_VMETHOD(mi)
 
 	mi.name = "_handles";
-	mi.return_val = PropertyInfo(Variant::BOOL, "");
+	mi.return_val = PropertyInfo(VariantType::BOOL, "");
 
-	BIND_VMETHOD(MethodInfo(Variant::STRING, "_converts_to"));
+	BIND_VMETHOD(MethodInfo(VariantType::STRING, "_converts_to"));
 }
 
 String EditorResourceConversionPlugin::converts_to() const {
@@ -115,7 +115,7 @@ void CustomPropertyEditor::_menu_option(int p_which) {
 
 	switch (type) {
 
-		case Variant::INT: {
+		case VariantType::INT: {
 
 			if (hint == PROPERTY_HINT_FLAGS) {
 
@@ -136,7 +136,7 @@ void CustomPropertyEditor::_menu_option(int p_which) {
 				emit_signal("variant_changed");
 			}
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			if (hint == PROPERTY_HINT_ENUM) {
 
@@ -144,7 +144,7 @@ void CustomPropertyEditor::_menu_option(int p_which) {
 				emit_signal("variant_changed");
 			}
 		} break;
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			switch (p_which) {
 				case OBJ_MENU_LOAD: {
@@ -329,7 +329,7 @@ String CustomPropertyEditor::get_name() const {
 	return name;
 }
 
-bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::Type p_type, const Variant &p_variant, int p_hint, String p_hint_text) {
+bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantType p_type, const Variant &p_variant, int p_hint, String p_hint_text) {
 
 	owner = p_owner;
 	updating = true;
@@ -367,11 +367,11 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 	for (int i = 0; i < 20; i++)
 		checks20[i]->hide();
 
-	type = (p_variant.get_type() != Variant::NIL && p_variant.get_type() != Variant::_RID && p_type != Variant::OBJECT) ? p_variant.get_type() : p_type;
+	type = (p_variant.get_type() != VariantType::NIL && p_variant.get_type() != Variant::_RID && p_type != VariantType::OBJECT) ? p_variant.get_type() : p_type;
 
 	switch (type) {
 
-		case Variant::BOOL: {
+		case VariantType::BOOL: {
 
 			checks20gc->show();
 
@@ -385,13 +385,13 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 			set_size(checks20gc->get_position() + checks20gc->get_size() + c->get_size() + Vector2(4, 4) * EDSCALE);
 
 		} break;
-		case Variant::INT:
-		case Variant::REAL: {
+		case VariantType::INT:
+		case VariantType::REAL: {
 
 			if (hint == PROPERTY_HINT_RANGE) {
 
 				int c = hint_text.get_slice_count(",");
-				float min = 0, max = 100, step = type == Variant::REAL ? .01 : 1;
+				float min = 0, max = 100, step = type == VariantType::REAL ? .01 : 1;
 				if (c >= 1) {
 
 					if (!hint_text.get_slice(",", 0).empty())
@@ -533,7 +533,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 			}
 
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			if (hint == PROPERTY_HINT_FILE || hint == PROPERTY_HINT_GLOBAL_FILE) {
 
@@ -608,10 +608,10 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 
 				MAKE_PROPSELECT;
 
-				Variant::Type type = Variant::NIL;
+				VariantType type = VariantType::NIL;
 				for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-					if (hint_text == Variant::get_type_name(Variant::Type(i))) {
-						type = Variant::Type(i);
+					if (hint_text == Variant::get_type_name(VariantType(i))) {
+						type = VariantType(i);
 					}
 				}
 				if (type)
@@ -651,17 +651,17 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 			} else if (hint == PROPERTY_HINT_PROPERTY_OF_VARIANT_TYPE) {
 
 				MAKE_PROPSELECT
-				Variant::Type type = Variant::NIL;
+				VariantType type = VariantType::NIL;
 				String tname = hint_text;
 				if (tname.find(".") != -1)
 					tname = tname.get_slice(".", 0);
 				for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-					if (tname == Variant::get_type_name(Variant::Type(i))) {
-						type = Variant::Type(Variant::Type(i));
+					if (tname == Variant::get_type_name(VariantType(i))) {
+						type = VariantType(VariantType(i));
 					}
 				}
 
-				if (type != Variant::NIL)
+				if (type != VariantType::NIL)
 					property_select->select_property_from_basic_type(type, v);
 
 				updating = false;
@@ -868,19 +868,19 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 
 		} break;
 
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 
 			List<String> names;
 			names.push_back(TTR("Assign"));
 			names.push_back(TTR("Clear"));
 
-			if (owner && owner->is_class("Node") && (v.get_type() == Variant::NODE_PATH) && Object::cast_to<Node>(owner)->has_node(v))
+			if (owner && owner->is_class("Node") && (v.get_type() == VariantType::NODE_PATH) && Object::cast_to<Node>(owner)->has_node(v))
 				names.push_back(TTR("Select Node"));
 
 			config_action_buttons(names);
 
 		} break;
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			if (hint != PROPERTY_HINT_RESOURCE_TYPE)
 				break;
@@ -1029,7 +1029,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 			return false;
 
 		} break;
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 		} break;
 		case Variant::POOL_BYTE_ARRAY: {
@@ -1038,7 +1038,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, Variant::
 		case Variant::POOL_INT_ARRAY: {
 
 		} break;
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 
 		} break;
 		case Variant::POOL_STRING_ARRAY: {
@@ -1062,7 +1062,7 @@ void CustomPropertyEditor::_file_selected(String p_file) {
 
 	switch (type) {
 
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			if (hint == PROPERTY_HINT_FILE || hint == PROPERTY_HINT_DIR) {
 
@@ -1079,7 +1079,7 @@ void CustomPropertyEditor::_file_selected(String p_file) {
 			}
 
 		} break;
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			String type = (hint == PROPERTY_HINT_RESOURCE_TYPE) ? hint_text : String();
 
@@ -1100,7 +1100,7 @@ void CustomPropertyEditor::_file_selected(String p_file) {
 
 void CustomPropertyEditor::_type_create_selected(int p_idx) {
 
-	if (type == Variant::INT || type == Variant::REAL) {
+	if (type == VariantType::INT || type == VariantType::REAL) {
 
 		float newval = 0;
 		switch (p_idx) {
@@ -1133,7 +1133,7 @@ void CustomPropertyEditor::_type_create_selected(int p_idx) {
 		emit_signal("variant_changed");
 		easing_draw->update();
 
-	} else if (type == Variant::OBJECT) {
+	} else if (type == VariantType::OBJECT) {
 
 		ERR_FAIL_INDEX(p_idx, inheritors_array.size());
 
@@ -1230,11 +1230,11 @@ void CustomPropertyEditor::_action_pressed(int p_which) {
 		return;
 
 	switch (type) {
-		case Variant::BOOL: {
+		case VariantType::BOOL: {
 			v = checks20[0]->is_pressed();
 			emit_signal("variant_changed");
 		} break;
-		case Variant::INT: {
+		case VariantType::INT: {
 
 			if (hint == PROPERTY_HINT_LAYERS_2D_PHYSICS || hint == PROPERTY_HINT_LAYERS_2D_RENDER || hint == PROPERTY_HINT_LAYERS_3D_PHYSICS || hint == PROPERTY_HINT_LAYERS_3D_RENDER) {
 
@@ -1249,7 +1249,7 @@ void CustomPropertyEditor::_action_pressed(int p_which) {
 			}
 
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			if (hint == PROPERTY_HINT_MULTILINE_TEXT) {
 
@@ -1309,7 +1309,7 @@ void CustomPropertyEditor::_action_pressed(int p_which) {
 			}
 
 		} break;
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 
 			if (p_which == 0) {
 
@@ -1324,7 +1324,7 @@ void CustomPropertyEditor::_action_pressed(int p_which) {
 				hide();
 			} else if (p_which == 2) {
 
-				if (owner->is_class("Node") && (v.get_type() == Variant::NODE_PATH) && Object::cast_to<Node>(owner)->has_node(v)) {
+				if (owner->is_class("Node") && (v.get_type() == VariantType::NODE_PATH) && Object::cast_to<Node>(owner)->has_node(v)) {
 
 					Node *target_node = Object::cast_to<Node>(owner)->get_node(v);
 					EditorNode::get_singleton()->get_editor_selection()->clear();
@@ -1335,7 +1335,7 @@ void CustomPropertyEditor::_action_pressed(int p_which) {
 			}
 
 		} break;
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			if (p_which == 0) {
 
@@ -1537,7 +1537,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 
 	updating = true;
 	switch (type) {
-		case Variant::INT: {
+		case VariantType::INT: {
 			String text = value_editor[0]->get_text();
 			Ref<Expression> expr;
 			expr.instance();
@@ -1551,7 +1551,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			emit_signal("variant_changed");
 
 		} break;
-		case Variant::REAL: {
+		case VariantType::REAL: {
 
 			if (hint != PROPERTY_HINT_EXP_EASING) {
 				String text = value_editor[0]->get_text();
@@ -1560,7 +1560,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			}
 
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			v = value_editor[0]->get_text();
 			emit_signal("variant_changed");
@@ -1677,12 +1677,12 @@ void CustomPropertyEditor::_modified(String p_string) {
 
 		} break;
 
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 
 			v = NodePath(value_editor[0]->get_text());
 			emit_signal("variant_changed");
 		} break;
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 		} break;
 		case Variant::POOL_BYTE_ARRAY: {
@@ -1691,7 +1691,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 		case Variant::POOL_INT_ARRAY: {
 
 		} break;
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 
 		} break;
 		case Variant::POOL_STRING_ARRAY: {
@@ -1739,8 +1739,8 @@ void CustomPropertyEditor::_range_modified(double p_value) {
 
 void CustomPropertyEditor::_focus_enter() {
 	switch (type) {
-		case Variant::REAL:
-		case Variant::STRING:
+		case VariantType::REAL:
+		case VariantType::STRING:
 		case Variant::VECTOR2:
 		case Variant::RECT2:
 		case Variant::VECTOR3:
@@ -1765,8 +1765,8 @@ void CustomPropertyEditor::_focus_enter() {
 
 void CustomPropertyEditor::_focus_exit() {
 	switch (type) {
-		case Variant::REAL:
-		case Variant::STRING:
+		case VariantType::REAL:
+		case VariantType::STRING:
 		case Variant::VECTOR2:
 		case Variant::RECT2:
 		case Variant::VECTOR3:
@@ -1873,7 +1873,7 @@ void CustomPropertyEditor::_bind_methods() {
 	ClassDB::bind_method("_create_selected_property", &CustomPropertyEditor::_create_selected_property);
 
 	ADD_SIGNAL(MethodInfo("variant_changed"));
-	ADD_SIGNAL(MethodInfo("variant_field_changed", PropertyInfo(Variant::STRING, "field")));
+	ADD_SIGNAL(MethodInfo("variant_field_changed", PropertyInfo(VariantType::STRING, "field")));
 	ADD_SIGNAL(MethodInfo("resource_edit_request"));
 }
 

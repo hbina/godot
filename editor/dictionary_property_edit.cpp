@@ -61,7 +61,7 @@ Variant DictionaryPropertyEdit::get_dictionary() const {
 	if (!o)
 		return Dictionary();
 	Variant dict = o->get(property);
-	if (dict.get_type() != Variant::DICTIONARY)
+	if (dict.get_type() != VariantType::DICTIONARY)
 		return Dictionary();
 	return dict;
 }

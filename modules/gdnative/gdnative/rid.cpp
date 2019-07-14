@@ -32,7 +32,7 @@
 
 #include "core/resource.h"
 #include "core/rid.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef __cplusplus
 extern "C" {

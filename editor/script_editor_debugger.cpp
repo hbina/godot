@@ -532,21 +532,21 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 
 			PropertyInfo pinfo;
 			pinfo.name = prop[0];
-			pinfo.type = Variant::Type(int(prop[1]));
+			pinfo.type = VariantType(int(prop[1]));
 			pinfo.hint = PropertyHint(int(prop[2]));
 			pinfo.hint_string = prop[3];
 			pinfo.usage = PropertyUsageFlags(int(prop[4]));
 			Variant var = prop[5];
 
-			if (pinfo.type == Variant::OBJECT) {
+			if (pinfo.type == VariantType::OBJECT) {
 				if (var.is_zero()) {
 					var = RES();
-				} else if (var.get_type() == Variant::STRING) {
+				} else if (var.get_type() == VariantType::STRING) {
 					var = ResourceLoader::load(var);
 
 					if (pinfo.hint_string == "Script")
 						debugObj->set_script(var);
-				} else if (var.get_type() == Variant::OBJECT) {
+				} else if (var.get_type() == VariantType::OBJECT) {
 					if (((Object *)var)->is_class("EncodedObjectAsID")) {
 						var = Object::cast_to<EncodedObjectAsID>(var)->get_object_id();
 						pinfo.type = var.get_type();
@@ -648,7 +648,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 			PropertyHint h = PROPERTY_HINT_NONE;
 			String hs = String();
 
-			if (v.get_type() == Variant::OBJECT) {
+			if (v.get_type() == VariantType::OBJECT) {
 				v = Object::cast_to<EncodedObjectAsID>(v)->get_object_id();
 				h = PROPERTY_HINT_OBJECT_ID;
 				hs = "Object";
@@ -667,7 +667,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 			PropertyHint h = PROPERTY_HINT_NONE;
 			String hs = String();
 
-			if (v.get_type() == Variant::OBJECT) {
+			if (v.get_type() == VariantType::OBJECT) {
 				v = Object::cast_to<EncodedObjectAsID>(v)->get_object_id();
 				h = PROPERTY_HINT_OBJECT_ID;
 				hs = "Object";
@@ -686,7 +686,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 			PropertyHint h = PROPERTY_HINT_NONE;
 			String hs = String();
 
-			if (v.get_type() == Variant::OBJECT) {
+			if (v.get_type() == VariantType::OBJECT) {
 				v = Object::cast_to<EncodedObjectAsID>(v)->get_object_id();
 				h = PROPERTY_HINT_OBJECT_ID;
 				hs = "Object";
@@ -1215,9 +1215,9 @@ void ScriptEditorDebugger::_notification(int p_what) {
 							stop();
 							ERR_FAIL_COND(ret != OK);
 						}
-						if (cmd.get_type() != Variant::STRING) {
+						if (cmd.get_type() != VariantType::STRING) {
 							stop();
-							ERR_FAIL_COND(cmd.get_type() != Variant::STRING);
+							ERR_FAIL_COND(cmd.get_type() != VariantType::STRING);
 						}
 
 						message_type = cmd;
@@ -1227,9 +1227,9 @@ void ScriptEditorDebugger::_notification(int p_what) {
 							stop();
 							ERR_FAIL_COND(ret != OK);
 						}
-						if (cmd.get_type() != Variant::INT) {
+						if (cmd.get_type() != VariantType::INT) {
 							stop();
-							ERR_FAIL_COND(cmd.get_type() != Variant::INT);
+							ERR_FAIL_COND(cmd.get_type() != VariantType::INT);
 						}
 
 						pending_in_queue = cmd;
@@ -1482,7 +1482,7 @@ void ScriptEditorDebugger::_method_changed(Object *p_base, const StringName &p_n
 
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
 		//no pointers, sorry
-		if (argptr[i] && (argptr[i]->get_type() == Variant::OBJECT || argptr[i]->get_type() == Variant::_RID))
+		if (argptr[i] && (argptr[i]->get_type() == VariantType::OBJECT || argptr[i]->get_type() == Variant::_RID))
 			return;
 	}
 
@@ -1994,10 +1994,10 @@ void ScriptEditorDebugger::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_scene_tree_property_value_edited"), &ScriptEditorDebugger::_scene_tree_property_value_edited);
 
 	ADD_SIGNAL(MethodInfo("goto_script_line"));
-	ADD_SIGNAL(MethodInfo("set_execution", PropertyInfo("script"), PropertyInfo(Variant::INT, "line")));
+	ADD_SIGNAL(MethodInfo("set_execution", PropertyInfo("script"), PropertyInfo(VariantType::INT, "line")));
 	ADD_SIGNAL(MethodInfo("clear_execution", PropertyInfo("script")));
-	ADD_SIGNAL(MethodInfo("breaked", PropertyInfo(Variant::BOOL, "reallydid"), PropertyInfo(Variant::BOOL, "can_debug")));
-	ADD_SIGNAL(MethodInfo("show_debugger", PropertyInfo(Variant::BOOL, "reallydid")));
+	ADD_SIGNAL(MethodInfo("breaked", PropertyInfo(VariantType::BOOL, "reallydid"), PropertyInfo(VariantType::BOOL, "can_debug")));
+	ADD_SIGNAL(MethodInfo("show_debugger", PropertyInfo(VariantType::BOOL, "reallydid")));
 }
 
 ScriptEditorDebugger::ScriptEditorDebugger(EditorNode *p_editor) {

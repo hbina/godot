@@ -88,12 +88,12 @@ public:
 
 	struct TypeGuess {
 
-		Variant::Type type;
+		VariantType type;
 		StringName gdclass;
 		Ref<Script> script;
 
 		TypeGuess() {
-			type = Variant::NIL;
+			type = VariantType::NIL;
 		}
 	};
 
@@ -213,7 +213,7 @@ private:
 	StringName base_type;
 	struct Argument {
 		String name;
-		Variant::Type type;
+		VariantType type;
 	};
 
 	struct Function {
@@ -308,9 +308,9 @@ public:
 
 	void add_custom_signal(const StringName &p_name);
 	bool has_custom_signal(const StringName &p_name) const;
-	void custom_signal_add_argument(const StringName &p_func, Variant::Type p_type, const String &p_name, int p_index = -1);
-	void custom_signal_set_argument_type(const StringName &p_func, int p_argidx, Variant::Type p_type);
-	Variant::Type custom_signal_get_argument_type(const StringName &p_func, int p_argidx) const;
+	void custom_signal_add_argument(const StringName &p_func, VariantType p_type, const String &p_name, int p_index = -1);
+	void custom_signal_set_argument_type(const StringName &p_func, int p_argidx, VariantType p_type);
+	VariantType custom_signal_get_argument_type(const StringName &p_func, int p_argidx) const;
 	void custom_signal_set_argument_name(const StringName &p_func, int p_argidx, const String &p_name);
 	String custom_signal_get_argument_name(const StringName &p_func, int p_argidx) const;
 	void custom_signal_remove_argument(const StringName &p_func, int p_argidx);
@@ -398,7 +398,7 @@ public:
 	virtual bool set(const StringName &p_name, const Variant &p_value);
 	virtual bool get(const StringName &p_name, Variant &r_ret) const;
 	virtual void get_property_list(List<PropertyInfo> *p_properties) const;
-	virtual Variant::Type get_property_type(const StringName &p_name, bool *r_is_valid = NULL) const;
+	virtual VariantType get_property_type(const StringName &p_name, bool *r_is_valid = NULL) const;
 
 	virtual void get_method_list(Vector<MethodInfo> &p_list) const;
 	virtual bool has_method(const StringName &p_method) const;

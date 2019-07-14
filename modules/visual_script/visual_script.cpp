@@ -80,9 +80,9 @@ void VisualScriptNode::validate_input_default_values() {
 	//actually validate on save
 	for (int i = 0; i < get_input_value_port_count(); i++) {
 
-		Variant::Type expected = get_input_value_port_info(i).type;
+		VariantType expected = get_input_value_port_info(i).type;
 
-		if (expected == Variant::NIL || expected == default_input_values[i].get_type()) {
+		if (expected == VariantType::NIL || expected == default_input_values[i].get_type()) {
 			continue;
 		} else {
 			//not the same, reconvert
@@ -120,7 +120,7 @@ void VisualScriptNode::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_default_input_values", "values"), &VisualScriptNode::_set_default_input_values);
 	ClassDB::bind_method(D_METHOD("_get_default_input_values"), &VisualScriptNode::_get_default_input_values);
 
-	ADD_PROPERTY(PropertyInfo(Variant::ARRAY, "_default_input_values", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_default_input_values", "_get_default_input_values");
+	ADD_PROPERTY(PropertyInfo(VariantType::ARRAY, "_default_input_values", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_default_input_values", "_get_default_input_values");
 	ADD_SIGNAL(MethodInfo("ports_changed"));
 }
 
@@ -666,7 +666,7 @@ void VisualScript::_set_variable_info(const StringName &p_name, const Dictionary
 
 	PropertyInfo pinfo;
 	if (p_info.has("type"))
-		pinfo.type = Variant::Type(int(p_info["type"]));
+		pinfo.type = VariantType(int(p_info["type"]));
 	if (p_info.has("name"))
 		pinfo.name = p_info["name"];
 	if (p_info.has("hint"))
@@ -737,7 +737,7 @@ bool VisualScript::has_custom_signal(const StringName &p_name) const {
 
 	return custom_signals.has(p_name);
 }
-void VisualScript::custom_signal_add_argument(const StringName &p_func, Variant::Type p_type, const String &p_name, int p_index) {
+void VisualScript::custom_signal_add_argument(const StringName &p_func, VariantType p_type, const String &p_name, int p_index) {
 
 	ERR_FAIL_COND(instances.size());
 	ERR_FAIL_COND(!custom_signals.has(p_func));
@@ -749,17 +749,17 @@ void VisualScript::custom_signal_add_argument(const StringName &p_func, Variant:
 	else
 		custom_signals[p_func].insert(0, arg);
 }
-void VisualScript::custom_signal_set_argument_type(const StringName &p_func, int p_argidx, Variant::Type p_type) {
+void VisualScript::custom_signal_set_argument_type(const StringName &p_func, int p_argidx, VariantType p_type) {
 
 	ERR_FAIL_COND(instances.size());
 	ERR_FAIL_COND(!custom_signals.has(p_func));
 	ERR_FAIL_INDEX(p_argidx, custom_signals[p_func].size());
 	custom_signals[p_func][p_argidx].type = p_type;
 }
-Variant::Type VisualScript::custom_signal_get_argument_type(const StringName &p_func, int p_argidx) const {
+VariantType VisualScript::custom_signal_get_argument_type(const StringName &p_func, int p_argidx) const {
 
-	ERR_FAIL_COND_V(!custom_signals.has(p_func), Variant::NIL);
-	ERR_FAIL_INDEX_V(p_argidx, custom_signals[p_func].size(), Variant::NIL);
+	ERR_FAIL_COND_V(!custom_signals.has(p_func), VariantType::NIL);
+	ERR_FAIL_INDEX_V(p_argidx, custom_signals[p_func].size(), VariantType::NIL);
 	return custom_signals[p_func][p_argidx].type;
 }
 void VisualScript::custom_signal_set_argument_name(const StringName &p_func, int p_argidx, const String &p_name) {
@@ -1127,7 +1127,7 @@ void VisualScript::_set_data(const Dictionary &p_data) {
 
 		Array args = cs["arguments"];
 		for (int j = 0; j < args.size(); j += 2) {
-			custom_signal_add_argument(cs["name"], Variant::Type(int(args[j + 1])), args[j]);
+			custom_signal_add_argument(cs["name"], VariantType(int(args[j + 1])), args[j]);
 		}
 	}
 
@@ -1310,9 +1310,9 @@ void VisualScript::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_set_data", "data"), &VisualScript::_set_data);
 	ClassDB::bind_method(D_METHOD("_get_data"), &VisualScript::_get_data);
 
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(VariantType::DICTIONARY, "data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_data", "_get_data");
 
-	ADD_SIGNAL(MethodInfo("node_ports_changed", PropertyInfo(Variant::STRING, "function"), PropertyInfo(Variant::INT, "id")));
+	ADD_SIGNAL(MethodInfo("node_ports_changed", PropertyInfo(VariantType::STRING, "function"), PropertyInfo(VariantType::INT, "id")));
 }
 
 VisualScript::VisualScript() {
@@ -1374,13 +1374,13 @@ void VisualScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 		p_properties->push_back(p);
 	}
 }
-Variant::Type VisualScriptInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
+VariantType VisualScriptInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {
 
 	const Map<StringName, VisualScript::Variable>::Element *E = script->variables.find(p_name);
 	if (!E) {
 		if (r_is_valid)
 			*r_is_valid = false;
-		ERR_FAIL_V(Variant::NIL);
+		ERR_FAIL_V(VariantType::NIL);
 	}
 
 	if (r_is_valid)
@@ -1971,7 +1971,7 @@ String VisualScriptInstance::to_string(bool *r_valid) {
 		Variant::CallError ce;
 		Variant ret = call(CoreStringNames::get_singleton()->_to_string, NULL, 0, ce);
 		if (ce.error == Variant::CallError::CALL_OK) {
-			if (ret.get_type() != Variant::STRING) {
+			if (ret.get_type() != VariantType::STRING) {
 				if (r_valid)
 					*r_valid = false;
 				ERR_EXPLAIN("Wrong type for " + CoreStringNames::get_singleton()->_to_string + ", must be a String.");
@@ -2295,7 +2295,7 @@ Variant VisualScriptFunctionState::_signal_callback(const Variant **p_args, int 
 	if (self.is_null()) {
 		r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = p_argcount - 1;
-		r_error.expected = Variant::OBJECT;
+		r_error.expected = VariantType::OBJECT;
 		return Variant();
 	}
 
@@ -2705,7 +2705,7 @@ VisualScriptLanguage::VisualScriptLanguage() {
 	_debug_parse_err_file = "";
 	_debug_call_stack_pos = 0;
 	int dmcs = GLOBAL_DEF("debug/settings/visual_script/max_call_stack", 1024);
-	ProjectSettings::get_singleton()->set_custom_property_info("debug/settings/visual_script/max_call_stack", PropertyInfo(Variant::INT, "debug/settings/visual_script/max_call_stack", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater")); //minimum is 1024
+	ProjectSettings::get_singleton()->set_custom_property_info("debug/settings/visual_script/max_call_stack", PropertyInfo(VariantType::INT, "debug/settings/visual_script/max_call_stack", PROPERTY_HINT_RANGE, "1024,4096,1,or_greater")); //minimum is 1024
 
 	if (ScriptDebugger::get_singleton()) {
 		//debugging enabled!

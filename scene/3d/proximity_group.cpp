@@ -189,11 +189,11 @@ void ProximityGroup::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("broadcast", "name", "parameters"), &ProximityGroup::broadcast);
 	ClassDB::bind_method(D_METHOD("_proximity_group_broadcast", "name", "params"), &ProximityGroup::_proximity_group_broadcast);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "group_name"), "set_group_name", "get_group_name");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "dispatch_mode", PROPERTY_HINT_ENUM, "Proxy,Signal"), "set_dispatch_mode", "get_dispatch_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "group_name"), "set_group_name", "get_group_name");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "dispatch_mode", PROPERTY_HINT_ENUM, "Proxy,Signal"), "set_dispatch_mode", "get_dispatch_mode");
 	ADD_PROPERTY(PropertyInfo(Variant::VECTOR3, "grid_radius"), "set_grid_radius", "get_grid_radius");
 
-	ADD_SIGNAL(MethodInfo("broadcast", PropertyInfo(Variant::STRING, "group_name"), PropertyInfo(Variant::ARRAY, "parameters")));
+	ADD_SIGNAL(MethodInfo("broadcast", PropertyInfo(VariantType::STRING, "group_name"), PropertyInfo(VariantType::ARRAY, "parameters")));
 
 	BIND_ENUM_CONSTANT(MODE_PROXY);
 	BIND_ENUM_CONSTANT(MODE_SIGNAL);

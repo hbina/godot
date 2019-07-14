@@ -183,7 +183,7 @@ void GDNativeLibraryEditor::_on_item_collapsed(Object *p_item) {
 void GDNativeLibraryEditor::_on_item_activated() {
 
 	TreeItem *item = tree->get_selected();
-	if (item && tree->get_selected_column() == 0 && item->get_metadata(0).get_type() == Variant::NIL) {
+	if (item && tree->get_selected_column() == 0 && item->get_metadata(0).get_type() == VariantType::NIL) {
 		new_architecture_dialog->set_meta("platform", item->get_metadata(1));
 		new_architecture_dialog->popup_centered();
 	}

@@ -203,12 +203,12 @@ void Timer::_bind_methods() {
 
 	ADD_SIGNAL(MethodInfo("timeout"));
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "process_mode", PROPERTY_HINT_ENUM, "Physics,Idle"), "set_timer_process_mode", "get_timer_process_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "wait_time", PROPERTY_HINT_EXP_RANGE, "0.01,4096,0.01"), "set_wait_time", "get_wait_time");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "one_shot"), "set_one_shot", "is_one_shot");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "autostart"), "set_autostart", "has_autostart");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "paused", PROPERTY_HINT_NONE, "", 0), "set_paused", "is_paused");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "time_left", PROPERTY_HINT_NONE, "", 0), "", "get_time_left");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "process_mode", PROPERTY_HINT_ENUM, "Physics,Idle"), "set_timer_process_mode", "get_timer_process_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "wait_time", PROPERTY_HINT_EXP_RANGE, "0.01,4096,0.01"), "set_wait_time", "get_wait_time");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "one_shot"), "set_one_shot", "is_one_shot");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "autostart"), "set_autostart", "has_autostart");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "paused", PROPERTY_HINT_NONE, "", 0), "set_paused", "is_paused");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "time_left", PROPERTY_HINT_NONE, "", 0), "", "get_time_left");
 
 	BIND_ENUM_CONSTANT(TIMER_PROCESS_PHYSICS);
 	BIND_ENUM_CONSTANT(TIMER_PROCESS_IDLE);

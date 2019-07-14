@@ -266,19 +266,19 @@ void Range::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("share", "with"), &Range::_share);
 	ClassDB::bind_method(D_METHOD("unshare"), &Range::unshare);
 
-	ADD_SIGNAL(MethodInfo("value_changed", PropertyInfo(Variant::REAL, "value")));
+	ADD_SIGNAL(MethodInfo("value_changed", PropertyInfo(VariantType::REAL, "value")));
 	ADD_SIGNAL(MethodInfo("changed"));
 
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "min_value"), "set_min", "get_min");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "max_value"), "set_max", "get_max");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "step"), "set_step", "get_step");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "page"), "set_page", "get_page");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "value"), "set_value", "get_value");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "ratio", PROPERTY_HINT_RANGE, "0,1,0.01", 0), "set_as_ratio", "get_as_ratio");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "exp_edit"), "set_exp_ratio", "is_ratio_exp");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "rounded"), "set_use_rounded_values", "is_using_rounded_values");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "allow_greater"), "set_allow_greater", "is_greater_allowed");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "allow_lesser"), "set_allow_lesser", "is_lesser_allowed");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "min_value"), "set_min", "get_min");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "max_value"), "set_max", "get_max");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "step"), "set_step", "get_step");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "page"), "set_page", "get_page");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "value"), "set_value", "get_value");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "ratio", PROPERTY_HINT_RANGE, "0,1,0.01", 0), "set_as_ratio", "get_as_ratio");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "exp_edit"), "set_exp_ratio", "is_ratio_exp");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "rounded"), "set_use_rounded_values", "is_using_rounded_values");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "allow_greater"), "set_allow_greater", "is_greater_allowed");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "allow_lesser"), "set_allow_lesser", "is_lesser_allowed");
 }
 
 void Range::set_use_rounded_values(bool p_enable) {

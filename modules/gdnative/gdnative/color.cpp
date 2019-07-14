@@ -31,7 +31,7 @@
 #include "gdnative/color.h"
 
 #include "core/color.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef __cplusplus
 extern "C" {

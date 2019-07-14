@@ -143,9 +143,9 @@ void InterpolatedCamera::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_interpolation_enabled", "target_path"), &InterpolatedCamera::set_interpolation_enabled);
 	ClassDB::bind_method(D_METHOD("is_interpolation_enabled"), &InterpolatedCamera::is_interpolation_enabled);
 
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "target"), "set_target_path", "get_target_path");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "speed"), "set_speed", "get_speed");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "enabled"), "set_interpolation_enabled", "is_interpolation_enabled");
+	ADD_PROPERTY(PropertyInfo(VariantType::NODE_PATH, "target"), "set_target_path", "get_target_path");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "speed"), "set_speed", "get_speed");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "enabled"), "set_interpolation_enabled", "is_interpolation_enabled");
 }
 
 InterpolatedCamera::InterpolatedCamera() {

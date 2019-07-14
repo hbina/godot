@@ -149,7 +149,7 @@ void Room::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_room", "room"), &Room::set_room);
 	ClassDB::bind_method(D_METHOD("get_room"), &Room::get_room);
 
-	ADD_PROPERTY(PropertyInfo(Variant::OBJECT, "room/room", PROPERTY_HINT_RESOURCE_TYPE, "Area"), "set_room", "get_room");
+	ADD_PROPERTY(PropertyInfo(VariantType::OBJECT, "room/room", PROPERTY_HINT_RESOURCE_TYPE, "Area"), "set_room", "get_room");
 }
 
 Room::Room() {

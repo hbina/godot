@@ -186,7 +186,7 @@ public:
 
 					Variant value = p_value;
 
-					if (value.get_type() == Variant::NODE_PATH) {
+					if (value.get_type() == VariantType::NODE_PATH) {
 
 						_fix_node_path(value);
 					}
@@ -234,7 +234,7 @@ public:
 
 					String what = name.get_slice("/", 2);
 					if (what == "type") {
-						Variant::Type t = Variant::Type(int(p_value));
+						VariantType t = VariantType(int(p_value));
 
 						if (t != args[idx].get_type()) {
 							Variant::CallError err;
@@ -253,7 +253,7 @@ public:
 					if (what == "value") {
 
 						Variant value = p_value;
-						if (value.get_type() == Variant::NODE_PATH) {
+						if (value.get_type() == VariantType::NODE_PATH) {
 
 							_fix_node_path(value);
 						}
@@ -542,9 +542,9 @@ public:
 
 		if (use_fps && animation->get_step() > 0) {
 			float max_frame = animation->get_length() / animation->get_step();
-			p_list->push_back(PropertyInfo(Variant::REAL, "frame", PROPERTY_HINT_RANGE, "0," + rtos(max_frame) + ",1"));
+			p_list->push_back(PropertyInfo(VariantType::REAL, "frame", PROPERTY_HINT_RANGE, "0," + rtos(max_frame) + ",1"));
 		} else {
-			p_list->push_back(PropertyInfo(Variant::REAL, "time", PROPERTY_HINT_RANGE, "0," + rtos(animation->get_length()) + ",0.01"));
+			p_list->push_back(PropertyInfo(VariantType::REAL, "time", PROPERTY_HINT_RANGE, "0," + rtos(animation->get_length()) + ",0.01"));
 		}
 
 		switch (animation->track_get_type(track)) {
@@ -560,7 +560,7 @@ public:
 
 				Variant v = animation->track_get_key_value(track, key);
 
-				if (hint.type != Variant::NIL) {
+				if (hint.type != VariantType::NIL) {
 
 					PropertyInfo pi = hint;
 					pi.name = "value";
@@ -570,7 +570,7 @@ public:
 					PropertyHint hint = PROPERTY_HINT_NONE;
 					String hint_string;
 
-					if (v.get_type() == Variant::OBJECT) {
+					if (v.get_type() == VariantType::OBJECT) {
 						//could actually check the object property if exists..? yes i will!
 						Ref<Resource> res = v;
 						if (res.is_valid()) {
@@ -580,15 +580,15 @@ public:
 						}
 					}
 
-					if (v.get_type() != Variant::NIL)
+					if (v.get_type() != VariantType::NIL)
 						p_list->push_back(PropertyInfo(v.get_type(), "value", hint, hint_string));
 				}
 
 			} break;
 			case Animation::TYPE_METHOD: {
 
-				p_list->push_back(PropertyInfo(Variant::STRING, "name"));
-				p_list->push_back(PropertyInfo(Variant::INT, "arg_count", PROPERTY_HINT_RANGE, "0,5,1"));
+				p_list->push_back(PropertyInfo(VariantType::STRING, "name"));
+				p_list->push_back(PropertyInfo(VariantType::INT, "arg_count", PROPERTY_HINT_RANGE, "0,5,1"));
 
 				Dictionary d = animation->track_get_key_value(track, key);
 				ERR_FAIL_COND(!d.has("args"));
@@ -598,29 +598,29 @@ public:
 
 					if (i > 0)
 						vtypes += ",";
-					vtypes += Variant::get_type_name(Variant::Type(i));
+					vtypes += Variant::get_type_name(VariantType(i));
 				}
 
 				for (int i = 0; i < args.size(); i++) {
 
-					p_list->push_back(PropertyInfo(Variant::INT, "args/" + itos(i) + "/type", PROPERTY_HINT_ENUM, vtypes));
-					if (args[i].get_type() != Variant::NIL)
+					p_list->push_back(PropertyInfo(VariantType::INT, "args/" + itos(i) + "/type", PROPERTY_HINT_ENUM, vtypes));
+					if (args[i].get_type() != VariantType::NIL)
 						p_list->push_back(PropertyInfo(args[i].get_type(), "args/" + itos(i) + "/value"));
 				}
 
 			} break;
 			case Animation::TYPE_BEZIER: {
 
-				p_list->push_back(PropertyInfo(Variant::REAL, "value"));
+				p_list->push_back(PropertyInfo(VariantType::REAL, "value"));
 				p_list->push_back(PropertyInfo(Variant::VECTOR2, "in_handle"));
 				p_list->push_back(PropertyInfo(Variant::VECTOR2, "out_handle"));
 
 			} break;
 			case Animation::TYPE_AUDIO: {
 
-				p_list->push_back(PropertyInfo(Variant::OBJECT, "stream", PROPERTY_HINT_RESOURCE_TYPE, "AudioStream"));
-				p_list->push_back(PropertyInfo(Variant::REAL, "start_offset", PROPERTY_HINT_RANGE, "0,3600,0.01,or_greater"));
-				p_list->push_back(PropertyInfo(Variant::REAL, "end_offset", PROPERTY_HINT_RANGE, "0,3600,0.01,or_greater"));
+				p_list->push_back(PropertyInfo(VariantType::OBJECT, "stream", PROPERTY_HINT_RESOURCE_TYPE, "AudioStream"));
+				p_list->push_back(PropertyInfo(VariantType::REAL, "start_offset", PROPERTY_HINT_RANGE, "0,3600,0.01,or_greater"));
+				p_list->push_back(PropertyInfo(VariantType::REAL, "end_offset", PROPERTY_HINT_RANGE, "0,3600,0.01,or_greater"));
 
 			} break;
 			case Animation::TYPE_ANIMATION: {
@@ -648,13 +648,13 @@ public:
 				}
 				animations += "[stop]";
 
-				p_list->push_back(PropertyInfo(Variant::STRING, "animation", PROPERTY_HINT_ENUM, animations));
+				p_list->push_back(PropertyInfo(VariantType::STRING, "animation", PROPERTY_HINT_ENUM, animations));
 
 			} break;
 		}
 
 		if (animation->track_get_type(track) == Animation::TYPE_VALUE) {
-			p_list->push_back(PropertyInfo(Variant::REAL, "easing", PROPERTY_HINT_EXP_EASING));
+			p_list->push_back(PropertyInfo(VariantType::REAL, "easing", PROPERTY_HINT_EXP_EASING));
 		}
 	}
 
@@ -1141,9 +1141,9 @@ void AnimationTimelineEdit::_bind_methods() {
 
 	ADD_SIGNAL(MethodInfo("zoom_changed"));
 	ADD_SIGNAL(MethodInfo("name_limit_changed"));
-	ADD_SIGNAL(MethodInfo("timeline_changed", PropertyInfo(Variant::REAL, "position"), PropertyInfo(Variant::BOOL, "drag")));
-	ADD_SIGNAL(MethodInfo("track_added", PropertyInfo(Variant::INT, "track")));
-	ADD_SIGNAL(MethodInfo("length_changed", PropertyInfo(Variant::REAL, "size")));
+	ADD_SIGNAL(MethodInfo("timeline_changed", PropertyInfo(VariantType::REAL, "position"), PropertyInfo(VariantType::BOOL, "drag")));
+	ADD_SIGNAL(MethodInfo("track_added", PropertyInfo(VariantType::INT, "track")));
+	ADD_SIGNAL(MethodInfo("length_changed", PropertyInfo(VariantType::REAL, "size")));
 }
 
 AnimationTimelineEdit::AnimationTimelineEdit() {
@@ -1568,7 +1568,7 @@ void AnimationTrackEdit::draw_key(int p_index, float p_pixels_sec, int p_x, bool
 	// Override type icon for invalid value keys, unless selected.
 	if (!p_selected && animation->track_get_type(track) == Animation::TYPE_VALUE) {
 		const Variant &v = animation->track_get_key_value(track, p_index);
-		Variant::Type valid_type = Variant::NIL;
+		VariantType valid_type = VariantType::NIL;
 		if (!_is_value_key_valid(v, valid_type)) {
 			icon_to_draw = get_icon("KeyInvalid", "EditorIcons");
 		}
@@ -1769,7 +1769,7 @@ void AnimationTrackEdit::_path_entered(const String &p_text) {
 	undo_redo->commit_action();
 }
 
-bool AnimationTrackEdit::_is_value_key_valid(const Variant &p_key_value, Variant::Type &r_valid_type) const {
+bool AnimationTrackEdit::_is_value_key_valid(const Variant &p_key_value, VariantType &r_valid_type) const {
 
 	RES res;
 	Vector<StringName> leftover_path;
@@ -1862,7 +1862,7 @@ String AnimationTrackEdit::get_tooltip(const Point2 &p_pos) const {
 
 					const Variant &v = animation->track_get_key_value(track, key_idx);
 					text += "Type: " + Variant::get_type_name(v.get_type()) + "\n";
-					Variant::Type valid_type = Variant::NIL;
+					VariantType valid_type = VariantType::NIL;
 					if (!_is_value_key_valid(v, valid_type)) {
 						text += "Value: " + String(v) + "  (Invalid, expected type: " + Variant::get_type_name(valid_type) + ")\n";
 					} else {
@@ -2360,17 +2360,17 @@ void AnimationTrackEdit::_bind_methods() {
 	ClassDB::bind_method("_path_entered", &AnimationTrackEdit::_path_entered);
 	ClassDB::bind_method("_play_position_draw", &AnimationTrackEdit::_play_position_draw);
 
-	ADD_SIGNAL(MethodInfo("timeline_changed", PropertyInfo(Variant::REAL, "position"), PropertyInfo(Variant::BOOL, "drag")));
-	ADD_SIGNAL(MethodInfo("remove_request", PropertyInfo(Variant::INT, "track")));
-	ADD_SIGNAL(MethodInfo("dropped", PropertyInfo(Variant::INT, "from_track"), PropertyInfo(Variant::INT, "to_track")));
-	ADD_SIGNAL(MethodInfo("insert_key", PropertyInfo(Variant::REAL, "ofs")));
-	ADD_SIGNAL(MethodInfo("select_key", PropertyInfo(Variant::INT, "index"), PropertyInfo(Variant::BOOL, "single")));
-	ADD_SIGNAL(MethodInfo("deselect_key", PropertyInfo(Variant::INT, "index")));
+	ADD_SIGNAL(MethodInfo("timeline_changed", PropertyInfo(VariantType::REAL, "position"), PropertyInfo(VariantType::BOOL, "drag")));
+	ADD_SIGNAL(MethodInfo("remove_request", PropertyInfo(VariantType::INT, "track")));
+	ADD_SIGNAL(MethodInfo("dropped", PropertyInfo(VariantType::INT, "from_track"), PropertyInfo(VariantType::INT, "to_track")));
+	ADD_SIGNAL(MethodInfo("insert_key", PropertyInfo(VariantType::REAL, "ofs")));
+	ADD_SIGNAL(MethodInfo("select_key", PropertyInfo(VariantType::INT, "index"), PropertyInfo(VariantType::BOOL, "single")));
+	ADD_SIGNAL(MethodInfo("deselect_key", PropertyInfo(VariantType::INT, "index")));
 	ADD_SIGNAL(MethodInfo("clear_selection"));
 	ADD_SIGNAL(MethodInfo("bezier_edit"));
 
 	ADD_SIGNAL(MethodInfo("move_selection_begin"));
-	ADD_SIGNAL(MethodInfo("move_selection", PropertyInfo(Variant::REAL, "ofs")));
+	ADD_SIGNAL(MethodInfo("move_selection", PropertyInfo(VariantType::REAL, "ofs")));
 	ADD_SIGNAL(MethodInfo("move_selection_commit"));
 	ADD_SIGNAL(MethodInfo("move_selection_cancel"));
 
@@ -2406,7 +2406,7 @@ AnimationTrackEdit::AnimationTrackEdit() {
 
 //////////////////////////////////////
 
-AnimationTrackEdit *AnimationTrackEditPlugin::create_value_track_edit(Object *p_object, Variant::Type p_type, const String &p_property, PropertyHint p_hint, const String &p_hint_string, int p_usage) {
+AnimationTrackEdit *AnimationTrackEditPlugin::create_value_track_edit(Object *p_object, VariantType p_type, const String &p_property, PropertyHint p_hint, const String &p_hint_string, int p_usage) {
 	if (get_script_instance()) {
 		Variant args[6] = {
 			p_object,
@@ -2771,8 +2771,8 @@ void AnimationTrackEditor::_query_insert(const InsertData &p_id) {
 					continue;
 				}
 				switch (insert_data[i].value.get_type()) {
-					case Variant::INT:
-					case Variant::REAL:
+					case VariantType::INT:
+					case VariantType::REAL:
 					case Variant::VECTOR2:
 					case Variant::VECTOR3:
 					case Variant::QUAT:
@@ -3184,16 +3184,16 @@ PropertyInfo AnimationTrackEditor::_find_hint_for_track(int p_idx, NodePath &r_b
 	return PropertyInfo();
 }
 
-static Vector<String> _get_bezier_subindices_for_type(Variant::Type p_type, bool *r_valid = NULL) {
+static Vector<String> _get_bezier_subindices_for_type(VariantType p_type, bool *r_valid = NULL) {
 	Vector<String> subindices;
 	if (r_valid) {
 		*r_valid = true;
 	}
 	switch (p_type) {
-		case Variant::INT: {
+		case VariantType::INT: {
 			subindices.push_back("");
 		} break;
-		case Variant::REAL: {
+		case VariantType::REAL: {
 			subindices.push_back("");
 		} break;
 		case Variant::VECTOR2: {
@@ -3274,7 +3274,7 @@ int AnimationTrackEditor::_confirm_insert(InsertData p_id, int p_last_track, boo
 				PropertyInfo h = _find_hint_for_track(animation->get_track_count() - 1, np);
 				animation->remove_track(animation->get_track_count() - 1); //hack
 
-				if (h.type == Variant::REAL ||
+				if (h.type == VariantType::REAL ||
 						h.type == Variant::VECTOR2 ||
 						h.type == Variant::RECT2 ||
 						h.type == Variant::VECTOR3 ||
@@ -3735,7 +3735,7 @@ void AnimationTrackEditor::_new_track_node_selected(NodePath p_path) {
 	switch (adding_track_type) {
 		case Animation::TYPE_VALUE: {
 			adding_track_path = path_to;
-			prop_selector->set_type_filter(Vector<Variant::Type>());
+			prop_selector->set_type_filter(Vector<VariantType>());
 			prop_selector->select_property_from_instance(node);
 		} break;
 		case Animation::TYPE_TRANSFORM:
@@ -3750,9 +3750,9 @@ void AnimationTrackEditor::_new_track_node_selected(NodePath p_path) {
 		} break;
 		case Animation::TYPE_BEZIER: {
 
-			Vector<Variant::Type> filter;
-			filter.push_back(Variant::INT);
-			filter.push_back(Variant::REAL);
+			Vector<VariantType> filter;
+			filter.push_back(VariantType::INT);
+			filter.push_back(VariantType::REAL);
 			filter.push_back(Variant::VECTOR2);
 			filter.push_back(Variant::VECTOR3);
 			filter.push_back(Variant::QUAT);
@@ -3822,7 +3822,7 @@ void AnimationTrackEditor::_new_track_property_selected(String p_name) {
 			animation->track_set_path(animation->get_track_count() - 1, full_path);
 			PropertyInfo h = _find_hint_for_track(animation->get_track_count() - 1, np);
 			animation->remove_track(animation->get_track_count() - 1); //hack
-			if (h.type == Variant::REAL ||
+			if (h.type == VariantType::REAL ||
 					h.type == Variant::VECTOR2 ||
 					h.type == Variant::RECT2 ||
 					h.type == Variant::VECTOR3 ||
@@ -4869,7 +4869,7 @@ void AnimationTrackEditor::_cleanup_animation(Ref<Animation> p_animation) {
 	for (int i = 0; i < p_animation->get_track_count(); i++) {
 
 		bool prop_exists = false;
-		Variant::Type valid_type = Variant::NIL;
+		VariantType valid_type = VariantType::NIL;
 		Object *obj = NULL;
 
 		RES res;
@@ -5025,10 +5025,10 @@ void AnimationTrackEditor::_bind_methods() {
 	ClassDB::bind_method("_show_imported_anim_warning", &AnimationTrackEditor::_show_imported_anim_warning);
 	ClassDB::bind_method("_select_all_tracks_for_copy", &AnimationTrackEditor::_select_all_tracks_for_copy);
 
-	ADD_SIGNAL(MethodInfo("timeline_changed", PropertyInfo(Variant::REAL, "position"), PropertyInfo(Variant::BOOL, "drag")));
+	ADD_SIGNAL(MethodInfo("timeline_changed", PropertyInfo(VariantType::REAL, "position"), PropertyInfo(VariantType::BOOL, "drag")));
 	ADD_SIGNAL(MethodInfo("keying_changed"));
-	ADD_SIGNAL(MethodInfo("animation_len_changed", PropertyInfo(Variant::REAL, "len")));
-	ADD_SIGNAL(MethodInfo("animation_step_changed", PropertyInfo(Variant::REAL, "step")));
+	ADD_SIGNAL(MethodInfo("animation_len_changed", PropertyInfo(VariantType::REAL, "len")));
+	ADD_SIGNAL(MethodInfo("animation_step_changed", PropertyInfo(VariantType::REAL, "step")));
 }
 
 AnimationTrackEditor::AnimationTrackEditor() {

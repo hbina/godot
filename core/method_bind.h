@@ -34,7 +34,7 @@
 #include "core/list.h"
 #include "core/method_ptrcall.h"
 #include "core/object.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #include <stdio.h>
 
@@ -108,7 +108,7 @@ struct VariantCaster<const T &> {
 			return m_enum(*reinterpret_cast<const int *>(p_ptr));            \
 		}                                                                    \
 		_FORCE_INLINE_ static void encode(m_enum p_val, const void *p_ptr) { \
-			*(int *)p_ptr = p_val;                                           \
+			*(int *)p_ptr = static_cast<int>(p_val);                         \
 		}                                                                    \
 	};
 
@@ -156,7 +156,7 @@ struct VariantObjectClassChecker<Control *> {
 
 #define CHECK_ARG(m_arg)                                                            \
 	if ((m_arg - 1) < p_arg_count) {                                                \
-		Variant::Type argtype = get_argument_type(m_arg - 1);                       \
+		VariantType argtype = get_argument_type(m_arg - 1);                         \
 		if (!Variant::can_convert_strict(p_args[m_arg - 1]->get_type(), argtype) || \
 				!VariantObjectClassChecker<P##m_arg>::check(*p_args[m_arg - 1])) {  \
 			r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;        \
@@ -166,12 +166,12 @@ struct VariantObjectClassChecker<Control *> {
 		}                                                                           \
 	}
 
-#define CHECK_NOARG(m_arg)                             \
-	{                                                  \
-		if (p_arg##m_arg.get_type() != Variant::NIL) { \
-			if (r_argerror) *r_argerror = (m_arg - 1); \
-			return CALL_ERROR_EXTRA_ARGUMENT;          \
-		}                                              \
+#define CHECK_NOARG(m_arg)                                 \
+	{                                                      \
+		if (p_arg##m_arg.get_type() != VariantType::NIL) { \
+			if (r_argerror) *r_argerror = (m_arg - 1);     \
+			return CALL_ERROR_EXTRA_ARGUMENT;              \
+		}                                                  \
 	}
 
 // some helpers
@@ -187,7 +187,7 @@ VARIANT_ENUM_CAST(VAlign);
 VARIANT_ENUM_CAST(PropertyHint);
 VARIANT_ENUM_CAST(PropertyUsageFlags);
 VARIANT_ENUM_CAST(MethodFlags);
-VARIANT_ENUM_CAST(Variant::Type);
+VARIANT_ENUM_CAST(VariantType);
 VARIANT_ENUM_CAST(Variant::Operator);
 
 template <>
@@ -222,13 +222,13 @@ class MethodBind {
 
 protected:
 #ifdef DEBUG_METHODS_ENABLED
-	Variant::Type *argument_types;
+	VariantType *argument_types;
 	Vector<StringName> arg_names;
 #endif
 	void _set_const(bool p_const);
 	void _set_returns(bool p_returns);
 #ifdef DEBUG_METHODS_ENABLED
-	virtual Variant::Type _gen_argument_type(int p_arg) const = 0;
+	virtual VariantType _gen_argument_type(int p_arg) const = 0;
 	virtual PropertyInfo _gen_argument_type_info(int p_arg) const = 0;
 	void _generate_argument_types(int p_count);
 
@@ -261,9 +261,9 @@ public:
 
 #ifdef DEBUG_METHODS_ENABLED
 
-	_FORCE_INLINE_ Variant::Type get_argument_type(int p_argument) const {
+	_FORCE_INLINE_ VariantType get_argument_type(int p_argument) const {
 
-		ERR_FAIL_COND_V(p_argument < -1 || p_argument > argument_count, Variant::NIL);
+		ERR_FAIL_COND_V(p_argument < -1 || p_argument > argument_count, VariantType::NIL);
 		return argument_types[p_argument + 1];
 	}
 
@@ -323,11 +323,11 @@ public:
 		} else if (p_arg < arguments.arguments.size()) {
 			return arguments.arguments[p_arg];
 		} else {
-			return PropertyInfo(Variant::NIL, "arg_" + itos(p_arg), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT);
+			return PropertyInfo(VariantType::NIL, "arg_" + itos(p_arg), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT);
 		}
 	}
 
-	virtual Variant::Type _gen_argument_type(int p_arg) const {
+	virtual VariantType _gen_argument_type(int p_arg) const {
 		return _gen_argument_type_info(p_arg).type;
 	}
 
@@ -337,8 +337,8 @@ public:
 
 #else
 
-	virtual Variant::Type _gen_argument_type(int p_arg) const {
-		return Variant::NIL;
+	virtual VariantType _gen_argument_type(int p_arg) const {
+		return VariantType::NIL;
 	}
 
 #endif
@@ -352,7 +352,7 @@ public:
 
 		set_argument_count(p_info.arguments.size());
 #ifdef DEBUG_METHODS_ENABLED
-		Variant::Type *at = memnew_arr(Variant::Type, p_info.arguments.size() + 1);
+		VariantType *at = memnew_arr(VariantType, p_info.arguments.size() + 1);
 		at[0] = p_info.return_val.type;
 		if (p_info.arguments.size()) {
 

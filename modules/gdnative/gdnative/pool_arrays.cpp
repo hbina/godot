@@ -32,7 +32,7 @@
 
 #include "core/array.h"
 #include "core/pool_vector.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #include "core/color.h"
 #include "core/math/vector2.h"

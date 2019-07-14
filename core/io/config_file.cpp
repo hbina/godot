@@ -66,7 +66,7 @@ PoolStringArray ConfigFile::_get_section_keys(const String &p_section) const {
 
 void ConfigFile::set_value(const String &p_section, const String &p_key, const Variant &p_value) {
 
-	if (p_value.get_type() == Variant::NIL) {
+	if (p_value.get_type() == VariantType::NIL) {
 		//erase
 		if (!values.has(p_section))
 			return; // ?
@@ -86,7 +86,7 @@ void ConfigFile::set_value(const String &p_section, const String &p_key, const V
 Variant ConfigFile::get_value(const String &p_section, const String &p_key, Variant p_default) const {
 
 	if (!values.has(p_section) || !values[p_section].has(p_key)) {
-		if (p_default.get_type() == Variant::NIL) {
+		if (p_default.get_type() == VariantType::NIL) {
 			ERR_EXPLAIN("Couldn't find the given section/key and no default was given");
 			ERR_FAIL_V(p_default);
 		}

@@ -31,7 +31,7 @@
 #include "gdnative/variant.h"
 
 #include "core/reference.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef __cplusplus
 extern "C" {

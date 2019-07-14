@@ -39,7 +39,7 @@
 #include "core/os/os.h"
 #include "core/print_string.h"
 #include "core/ustring.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/vmap.h"
 #include "scene/main/node.h"
 #include "scene/resources/texture.h"

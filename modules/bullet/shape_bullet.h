@@ -32,7 +32,7 @@
 #define SHAPE_BULLET_H
 
 #include "core/math/geometry.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "rid_bullet.h"
 #include "servers/physics_server.h"
 

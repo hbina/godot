@@ -162,7 +162,7 @@ void PluginConfigDialog::_bind_methods() {
 	ClassDB::bind_method("_on_required_text_changed", &PluginConfigDialog::_on_required_text_changed);
 	ClassDB::bind_method("_on_confirmed", &PluginConfigDialog::_on_confirmed);
 	ClassDB::bind_method("_on_cancelled", &PluginConfigDialog::_on_cancelled);
-	ADD_SIGNAL(MethodInfo("plugin_ready", PropertyInfo(Variant::STRING, "script_path", PROPERTY_HINT_NONE, ""), PropertyInfo(Variant::STRING, "activate_name")));
+	ADD_SIGNAL(MethodInfo("plugin_ready", PropertyInfo(VariantType::STRING, "script_path", PROPERTY_HINT_NONE, ""), PropertyInfo(VariantType::STRING, "activate_name")));
 }
 
 PluginConfigDialog::PluginConfigDialog() {

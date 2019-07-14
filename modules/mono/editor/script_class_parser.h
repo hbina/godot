@@ -32,7 +32,7 @@
 #define SCRIPT_CLASS_PARSER_H
 
 #include "core/ustring.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/vector.h"
 
 class ScriptClassParser {

@@ -412,7 +412,7 @@ void StreamPeer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_utf8_string", "bytes"), &StreamPeer::get_utf8_string, DEFVAL(-1));
 	ClassDB::bind_method(D_METHOD("get_var", "allow_objects"), &StreamPeer::get_var, DEFVAL(false));
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "big_endian"), "set_big_endian", "is_big_endian_enabled");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "big_endian"), "set_big_endian", "is_big_endian_enabled");
 }
 ////////////////////////////////
 

@@ -30,7 +30,7 @@
 
 #include "gdnative/vector3.h"
 
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "core/vector.h"
 
 #ifdef __cplusplus

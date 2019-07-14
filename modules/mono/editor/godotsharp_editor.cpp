@@ -510,7 +510,7 @@ GodotSharpEditor::GodotSharpEditor(EditorNode *p_editor) {
 	settings_hint_str += ",MonoDevelop,Visual Studio Code";
 #endif
 
-	ed_settings->add_property_hint(PropertyInfo(Variant::INT, "mono/editor/external_editor", PROPERTY_HINT_ENUM, settings_hint_str));
+	ed_settings->add_property_hint(PropertyInfo(VariantType::INT, "mono/editor/external_editor", PROPERTY_HINT_ENUM, settings_hint_str));
 
 	// Export plugin
 	Ref<GodotSharpExport> godotsharp_export;

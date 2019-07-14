@@ -696,12 +696,12 @@ void ColorPicker::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_html_focus_exit"), &ColorPicker::_html_focus_exit);
 
 	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "color"), "set_pick_color", "get_pick_color");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "edit_alpha"), "set_edit_alpha", "is_editing_alpha");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "hsv_mode"), "set_hsv_mode", "is_hsv_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "raw_mode"), "set_raw_mode", "is_raw_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "deferred_mode"), "set_deferred_mode", "is_deferred_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "presets_enabled"), "set_presets_enabled", "are_presets_enabled");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "presets_visible"), "set_presets_visible", "are_presets_visible");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "edit_alpha"), "set_edit_alpha", "is_editing_alpha");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "hsv_mode"), "set_hsv_mode", "is_hsv_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "raw_mode"), "set_raw_mode", "is_raw_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "deferred_mode"), "set_deferred_mode", "is_deferred_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "presets_enabled"), "set_presets_enabled", "are_presets_enabled");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "presets_visible"), "set_presets_visible", "are_presets_visible");
 
 	ADD_SIGNAL(MethodInfo("color_changed", PropertyInfo(Variant::COLOR, "color")));
 	ADD_SIGNAL(MethodInfo("preset_added", PropertyInfo(Variant::COLOR, "color")));
@@ -969,7 +969,7 @@ void ColorPickerButton::_bind_methods() {
 	ADD_SIGNAL(MethodInfo("color_changed", PropertyInfo(Variant::COLOR, "color")));
 	ADD_SIGNAL(MethodInfo("popup_closed"));
 	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "color"), "set_pick_color", "get_pick_color");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "edit_alpha"), "set_edit_alpha", "is_editing_alpha");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "edit_alpha"), "set_edit_alpha", "is_editing_alpha");
 }
 
 ColorPickerButton::ColorPickerButton() {

@@ -43,9 +43,9 @@ class ArrayPropertyEdit : public Reference {
 	String vtypes;
 	String subtype_hint_string;
 	PropertyHint subtype_hint;
-	Variant::Type subtype;
+	VariantType subtype;
 	Variant get_array() const;
-	Variant::Type default_type;
+	VariantType default_type;
 
 	void _notif_change();
 	void _notif_changev(const String &p_v);
@@ -61,7 +61,7 @@ protected:
 	void _get_property_list(List<PropertyInfo> *p_list) const;
 
 public:
-	void edit(Object *p_obj, const StringName &p_prop, const String &p_hint_string, Variant::Type p_deftype);
+	void edit(Object *p_obj, const StringName &p_prop, const String &p_hint_string, VariantType p_deftype);
 
 	Node *get_node();
 

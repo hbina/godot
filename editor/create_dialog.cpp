@@ -487,7 +487,7 @@ Object *CreateDialog::instance_selected() {
 		Variant md = selected->get_metadata(0);
 
 		String custom;
-		if (md.get_type() != Variant::NIL)
+		if (md.get_type() != VariantType::NIL)
 			custom = md;
 
 		if (custom != String()) {

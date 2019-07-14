@@ -101,7 +101,7 @@ class CSharpScript : public Script {
 
 	struct Argument {
 		String name;
-		Variant::Type type;
+		VariantType type;
 	};
 
 	Map<StringName, Vector<Argument> > _signals;
@@ -128,7 +128,7 @@ class CSharpScript : public Script {
 	bool _update_exports();
 #ifdef TOOLS_ENABLED
 	bool _get_member_export(IMonoClassMember *p_member, PropertyInfo &r_prop_info, bool &r_exported);
-	static int _try_get_member_export_hint(IMonoClassMember *p_member, ManagedType p_type, Variant::Type p_variant_type, bool p_allow_generics, PropertyHint &r_hint, String &r_hint_string);
+	static int _try_get_member_export_hint(IMonoClassMember *p_member, ManagedType p_type, VariantType p_variant_type, bool p_allow_generics, PropertyHint &r_hint, String &r_hint_string);
 #endif
 
 	CSharpInstance *_create_instance(const Variant **p_args, int p_argcount, Object *p_owner, bool p_isref, Variant::CallError &r_error);
@@ -236,7 +236,7 @@ public:
 	virtual bool set(const StringName &p_name, const Variant &p_value);
 	virtual bool get(const StringName &p_name, Variant &r_ret) const;
 	virtual void get_property_list(List<PropertyInfo> *p_properties) const;
-	virtual Variant::Type get_property_type(const StringName &p_name, bool *r_is_valid) const;
+	virtual VariantType get_property_type(const StringName &p_name, bool *r_is_valid) const;
 
 	/* TODO */ virtual void get_method_list(Vector<MethodInfo> &p_list) const {}
 	virtual bool has_method(const StringName &p_method) const;

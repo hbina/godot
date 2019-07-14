@@ -103,24 +103,24 @@ void ItemListPlugin::_get_property_list(List<PropertyInfo> *p_list) const {
 
 		String base = itos(i) + "/";
 
-		p_list->push_back(PropertyInfo(Variant::STRING, base + "text"));
-		p_list->push_back(PropertyInfo(Variant::OBJECT, base + "icon", PROPERTY_HINT_RESOURCE_TYPE, "Texture"));
+		p_list->push_back(PropertyInfo(VariantType::STRING, base + "text"));
+		p_list->push_back(PropertyInfo(VariantType::OBJECT, base + "icon", PROPERTY_HINT_RESOURCE_TYPE, "Texture"));
 
 		int flags = get_flags();
 
 		if (flags & FLAG_CHECKABLE) {
-			p_list->push_back(PropertyInfo(Variant::INT, base + "checkable", PROPERTY_HINT_ENUM, "No,As checkbox,As radio button"));
-			p_list->push_back(PropertyInfo(Variant::BOOL, base + "checked"));
+			p_list->push_back(PropertyInfo(VariantType::INT, base + "checkable", PROPERTY_HINT_ENUM, "No,As checkbox,As radio button"));
+			p_list->push_back(PropertyInfo(VariantType::BOOL, base + "checked"));
 		}
 
 		if (flags & FLAG_ID)
-			p_list->push_back(PropertyInfo(Variant::INT, base + "id", PROPERTY_HINT_RANGE, "-1,4096"));
+			p_list->push_back(PropertyInfo(VariantType::INT, base + "id", PROPERTY_HINT_RANGE, "-1,4096"));
 
 		if (flags & FLAG_ENABLE)
-			p_list->push_back(PropertyInfo(Variant::BOOL, base + "enabled"));
+			p_list->push_back(PropertyInfo(VariantType::BOOL, base + "enabled"));
 
 		if (flags & FLAG_SEPARATOR)
-			p_list->push_back(PropertyInfo(Variant::BOOL, base + "separator"));
+			p_list->push_back(PropertyInfo(VariantType::BOOL, base + "separator"));
 	}
 }
 

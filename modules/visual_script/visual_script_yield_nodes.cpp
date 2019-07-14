@@ -187,8 +187,8 @@ void VisualScriptYield::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_wait_time", "sec"), &VisualScriptYield::set_wait_time);
 	ClassDB::bind_method(D_METHOD("get_wait_time"), &VisualScriptYield::get_wait_time);
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "mode", PROPERTY_HINT_ENUM, "Frame,Physics Frame,Time", PROPERTY_USAGE_NOEDITOR), "set_yield_mode", "get_yield_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "wait_time"), "set_wait_time", "get_wait_time");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "mode", PROPERTY_HINT_ENUM, "Frame,Physics Frame,Time", PROPERTY_USAGE_NOEDITOR), "set_yield_mode", "get_yield_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "wait_time"), "set_wait_time", "get_wait_time");
 
 	BIND_ENUM_CONSTANT(YIELD_FRAME);
 	BIND_ENUM_CONSTANT(YIELD_PHYSICS_FRAME);
@@ -318,7 +318,7 @@ String VisualScriptYieldSignal::get_output_sequence_port_text(int p_port) const 
 PropertyInfo VisualScriptYieldSignal::get_input_value_port_info(int p_idx) const {
 
 	if (call_mode == CALL_MODE_INSTANCE)
-		return PropertyInfo(Variant::OBJECT, "instance");
+		return PropertyInfo(VariantType::OBJECT, "instance");
 	else
 		return PropertyInfo();
 }
@@ -483,13 +483,13 @@ void VisualScriptYieldSignal::_bind_methods() {
 		if (i > 0)
 			bt += ",";
 
-		bt += Variant::get_type_name(Variant::Type(i));
+		bt += Variant::get_type_name(VariantType(i));
 	}
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "call_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance"), "set_call_mode", "get_call_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "signal"), "set_signal", "get_signal");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "call_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance"), "set_call_mode", "get_call_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "signal"), "set_signal", "get_signal");
 
 	BIND_ENUM_CONSTANT(CALL_MODE_SELF);
 	BIND_ENUM_CONSTANT(CALL_MODE_NODE_PATH);

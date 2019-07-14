@@ -1139,44 +1139,44 @@ public:
 
 	virtual void get_export_options(List<ExportOption> *r_options) {
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "graphics/32_bits_framebuffer"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "one_click_deploy/clear_previous_install"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_package/debug", PROPERTY_HINT_GLOBAL_FILE, "*.apk"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "custom_package/release", PROPERTY_HINT_GLOBAL_FILE, "*.apk"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "custom_package/use_custom_build"), false));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "command_line/extra_args"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "version/code", PROPERTY_HINT_RANGE, "1,4096,1,or_greater"), 1));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "version/name"), "1.0"));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/unique_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "ext.domain.name"), "org.godotengine.$genname"));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "package/name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name [default if blank]"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "package/signed"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "screen/immersive_mode"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::INT, "screen/orientation", PROPERTY_HINT_ENUM, "Landscape,Portrait"), 0));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "screen/support_small"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "screen/support_normal"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "screen/support_large"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "screen/support_xlarge"), true));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "screen/opengl_debug"), false));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "graphics/32_bits_framebuffer"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "one_click_deploy/clear_previous_install"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "custom_package/debug", PROPERTY_HINT_GLOBAL_FILE, "*.apk"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "custom_package/release", PROPERTY_HINT_GLOBAL_FILE, "*.apk"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "custom_package/use_custom_build"), false));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "command_line/extra_args"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "version/code", PROPERTY_HINT_RANGE, "1,4096,1,or_greater"), 1));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "version/name"), "1.0"));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/unique_name", PROPERTY_HINT_PLACEHOLDER_TEXT, "ext.domain.name"), "org.godotengine.$genname"));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "package/name", PROPERTY_HINT_PLACEHOLDER_TEXT, "Game Name [default if blank]"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "package/signed"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "screen/immersive_mode"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::INT, "screen/orientation", PROPERTY_HINT_ENUM, "Landscape,Portrait"), 0));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "screen/support_small"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "screen/support_normal"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "screen/support_large"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "screen/support_xlarge"), true));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "screen/opengl_debug"), false));
 
 		for (unsigned int i = 0; i < sizeof(launcher_icons) / sizeof(launcher_icons[0]); ++i) {
-			r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, launcher_icons[i].option_id, PROPERTY_HINT_FILE, "*.png"), ""));
+			r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, launcher_icons[i].option_id, PROPERTY_HINT_FILE, "*.png"), ""));
 		}
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "keystore/debug", PROPERTY_HINT_GLOBAL_FILE, "*.keystore"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "keystore/debug_user"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "keystore/debug_password"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "keystore/release", PROPERTY_HINT_GLOBAL_FILE, "*.keystore"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "keystore/release_user"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "keystore/release_password"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "apk_expansion/enable"), false));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "apk_expansion/SALT"), ""));
-		r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, "apk_expansion/public_key", PROPERTY_HINT_MULTILINE_TEXT), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "keystore/debug", PROPERTY_HINT_GLOBAL_FILE, "*.keystore"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "keystore/debug_user"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "keystore/debug_password"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "keystore/release", PROPERTY_HINT_GLOBAL_FILE, "*.keystore"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "keystore/release_user"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "keystore/release_password"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "apk_expansion/enable"), false));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "apk_expansion/SALT"), ""));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::STRING, "apk_expansion/public_key", PROPERTY_HINT_MULTILINE_TEXT), ""));
 
 		Vector<String> abis = get_abis();
 		for (int i = 0; i < abis.size(); ++i) {
 			String abi = abis[i];
 			bool is_default = (abi == "armeabi-v7a" || abi == "arm64-v8a");
-			r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "architectures/" + abi), is_default));
+			r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "architectures/" + abi), is_default));
 		}
 
 		r_options->push_back(ExportOption(PropertyInfo(Variant::POOL_STRING_ARRAY, "permissions/custom_permissions"), PoolStringArray()));
@@ -1184,7 +1184,7 @@ public:
 		const char **perms = android_perms;
 		while (*perms) {
 
-			r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "permissions/" + String(*perms).to_lower()), false));
+			r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "permissions/" + String(*perms).to_lower()), false));
 			perms++;
 		}
 	}
@@ -2333,16 +2333,16 @@ void register_android_exporter() {
 	}
 
 	EDITOR_DEF("export/android/adb", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/android/adb", PROPERTY_HINT_GLOBAL_FILE, exe_ext));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(VariantType::STRING, "export/android/adb", PROPERTY_HINT_GLOBAL_FILE, exe_ext));
 	EDITOR_DEF("export/android/jarsigner", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/android/jarsigner", PROPERTY_HINT_GLOBAL_FILE, exe_ext));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(VariantType::STRING, "export/android/jarsigner", PROPERTY_HINT_GLOBAL_FILE, exe_ext));
 	EDITOR_DEF("export/android/debug_keystore", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/android/debug_keystore", PROPERTY_HINT_GLOBAL_FILE, "*.keystore"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(VariantType::STRING, "export/android/debug_keystore", PROPERTY_HINT_GLOBAL_FILE, "*.keystore"));
 	EDITOR_DEF("export/android/debug_keystore_user", "androiddebugkey");
 	EDITOR_DEF("export/android/debug_keystore_pass", "android");
 	EDITOR_DEF("export/android/force_system_user", false);
 	EDITOR_DEF("export/android/custom_build_sdk_path", "");
-	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::STRING, "export/android/custom_build_sdk_path", PROPERTY_HINT_GLOBAL_DIR, "*.keystore"));
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(VariantType::STRING, "export/android/custom_build_sdk_path", PROPERTY_HINT_GLOBAL_DIR, "*.keystore"));
 
 	EDITOR_DEF("export/android/timestamping_authority_url", "");
 	EDITOR_DEF("export/android/shutdown_adb_on_exit", true);

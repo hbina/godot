@@ -40,7 +40,7 @@ bool VisualScriptExpression::_set(const StringName &p_name, const Variant &p_val
 	}
 
 	if (String(p_name) == "out_type") {
-		output_type = Variant::Type(int(p_value));
+		output_type = VariantType(int(p_value));
 		expression_dirty = true;
 		ports_changed_notify();
 		return true;
@@ -78,7 +78,7 @@ bool VisualScriptExpression::_set(const StringName &p_name, const Variant &p_val
 
 		if (what == "type") {
 
-			inputs[idx].type = Variant::Type(int(p_value));
+			inputs[idx].type = VariantType(int(p_value));
 		} else if (what == "name") {
 
 			inputs[idx].name = p_value;
@@ -142,18 +142,18 @@ void VisualScriptExpression::_get_property_list(List<PropertyInfo> *p_list) cons
 
 	String argt = "Any";
 	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
-		argt += "," + Variant::get_type_name(Variant::Type(i));
+		argt += "," + Variant::get_type_name(VariantType(i));
 	}
 
-	p_list->push_back(PropertyInfo(Variant::STRING, "expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
-	p_list->push_back(PropertyInfo(Variant::INT, "out_type", PROPERTY_HINT_ENUM, argt));
-	p_list->push_back(PropertyInfo(Variant::INT, "input_count", PROPERTY_HINT_RANGE, "0,64,1"));
-	p_list->push_back(PropertyInfo(Variant::BOOL, "sequenced"));
+	p_list->push_back(PropertyInfo(VariantType::STRING, "expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
+	p_list->push_back(PropertyInfo(VariantType::INT, "out_type", PROPERTY_HINT_ENUM, argt));
+	p_list->push_back(PropertyInfo(VariantType::INT, "input_count", PROPERTY_HINT_RANGE, "0,64,1"));
+	p_list->push_back(PropertyInfo(VariantType::BOOL, "sequenced"));
 
 	for (int i = 0; i < inputs.size(); i++) {
 
-		p_list->push_back(PropertyInfo(Variant::INT, "input_" + itos(i) + "/type", PROPERTY_HINT_ENUM, argt));
-		p_list->push_back(PropertyInfo(Variant::STRING, "input_" + itos(i) + "/name"));
+		p_list->push_back(PropertyInfo(VariantType::INT, "input_" + itos(i) + "/type", PROPERTY_HINT_ENUM, argt));
+		p_list->push_back(PropertyInfo(VariantType::STRING, "input_" + itos(i) + "/name"));
 	}
 }
 
@@ -580,7 +580,7 @@ Error VisualScriptExpression::_get_token(Token &r_token) {
 					} else {
 
 						for (int i = 0; i < Variant::VARIANT_MAX; i++) {
-							if (id == Variant::get_type_name(Variant::Type(i))) {
+							if (id == Variant::get_type_name(VariantType(i))) {
 								r_token.type = TK_BASIC_TYPE;
 								r_token.value = i;
 								return OK;
@@ -788,7 +788,7 @@ VisualScriptExpression::ENode *VisualScriptExpression::_parse_expression() {
 			case TK_BASIC_TYPE: {
 				//constructor..
 
-				Variant::Type bt = Variant::Type(int(tk.value));
+				VariantType bt = VariantType(int(tk.value));
 				_get_token(tk);
 				if (tk.type != TK_PARENTHESIS_OPEN) {
 					_set_error("Expected '('");
@@ -1014,8 +1014,8 @@ VisualScriptExpression::ENode *VisualScriptExpression::_parse_expression() {
 			case TK_OP_IN: op = Variant::OP_IN; break;
 			case TK_OP_EQUAL: op = Variant::OP_EQUAL; break;
 			case TK_OP_NOT_EQUAL: op = Variant::OP_NOT_EQUAL; break;
-			case TK_OP_LESS: op = Variant::OP_LESS; break;
-			case TK_OP_LESS_EQUAL: op = Variant::OP_LESS_EQUAL; break;
+			case TK_OP_LESS: op = VariantType::OP_LESS; break;
+			case TK_OP_LESS_EQUAL: op = VariantType::OP_LESS_EQUAL; break;
 			case TK_OP_GREATER: op = Variant::OP_GREATER; break;
 			case TK_OP_GREATER_EQUAL: op = Variant::OP_GREATER_EQUAL; break;
 			case TK_OP_AND: op = Variant::OP_AND; break;
@@ -1094,8 +1094,8 @@ VisualScriptExpression::ENode *VisualScriptExpression::_parse_expression() {
 				case Variant::OP_BIT_XOR: priority = 6; break;
 				case Variant::OP_BIT_OR: priority = 7; break;
 
-				case Variant::OP_LESS: priority = 8; break;
-				case Variant::OP_LESS_EQUAL: priority = 8; break;
+				case VariantType::OP_LESS: priority = 8; break;
+				case VariantType::OP_LESS_EQUAL: priority = 8; break;
 				case Variant::OP_GREATER: priority = 8; break;
 				case Variant::OP_GREATER_EQUAL: priority = 8; break;
 
@@ -1460,7 +1460,7 @@ public:
 		}
 
 #ifdef DEBUG_ENABLED
-		if (!error && expression->output_type != Variant::NIL && !Variant::can_convert_strict(p_outputs[0]->get_type(), expression->output_type)) {
+		if (!error && expression->output_type != VariantType::NIL && !Variant::can_convert_strict(p_outputs[0]->get_type(), expression->output_type)) {
 
 			r_error_str += "Can't convert expression result from " + Variant::get_type_name(p_outputs[0]->get_type()) + " to " + Variant::get_type_name(expression->output_type) + ".";
 			r_error.error = Variant::CallError::CALL_ERROR_INVALID_METHOD;
@@ -1481,7 +1481,7 @@ VisualScriptNodeInstance *VisualScriptExpression::instance(VisualScriptInstance 
 }
 
 VisualScriptExpression::VisualScriptExpression() {
-	output_type = Variant::NIL;
+	output_type = VariantType::NIL;
 	expression_dirty = true;
 	error_set = true;
 	root = NULL;

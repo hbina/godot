@@ -83,7 +83,7 @@ Error MessageQueue::push_call(ObjectID p_id, const StringName &p_method, VARIANT
 	int argc = 0;
 
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL)
+		if (argptr[i]->get_type() == VariantType::NIL)
 			break;
 		argc++;
 	}
@@ -350,7 +350,7 @@ MessageQueue::MessageQueue() {
 	buffer_end = 0;
 	buffer_max_used = 0;
 	buffer_size = GLOBAL_DEF_RST("memory/limits/message_queue/max_size_kb", DEFAULT_QUEUE_SIZE_KB);
-	ProjectSettings::get_singleton()->set_custom_property_info("memory/limits/message_queue/max_size_kb", PropertyInfo(Variant::INT, "memory/limits/message_queue/max_size_kb", PROPERTY_HINT_RANGE, "0,2048,1,or_greater"));
+	ProjectSettings::get_singleton()->set_custom_property_info("memory/limits/message_queue/max_size_kb", PropertyInfo(VariantType::INT, "memory/limits/message_queue/max_size_kb", PROPERTY_HINT_RANGE, "0,2048,1,or_greater"));
 	buffer_size *= 1024;
 	buffer = memnew_arr(uint8_t, buffer_size);
 }

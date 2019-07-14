@@ -35,7 +35,7 @@
 #include "core/os/thread_safe.h"
 #include "core/reference.h"
 #include "core/rid.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 /**
 	@author Bastiaan Olij <mux213@gmail.com>

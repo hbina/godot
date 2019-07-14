@@ -126,7 +126,7 @@ StringName VisualScriptFunctionCall::_get_base_type() const {
 int VisualScriptFunctionCall::get_input_value_port_count() const {
 
 	if (call_mode == CALL_MODE_BASIC_TYPE) {
-		Vector<Variant::Type> types = Variant::get_method_argument_types(basic_type, function);
+		Vector<VariantType> types = Variant::get_method_argument_types(basic_type, function);
 		return types.size() + (rpc_call_mode >= RPC_RELIABLE_TO_ID ? 1 : 0) + 1;
 
 	} else {
@@ -173,7 +173,7 @@ PropertyInfo VisualScriptFunctionCall::get_input_value_port_info(int p_idx) cons
 	if (call_mode == CALL_MODE_INSTANCE || call_mode == CALL_MODE_BASIC_TYPE) {
 		if (p_idx == 0) {
 			PropertyInfo pi;
-			pi.type = (call_mode == CALL_MODE_INSTANCE ? Variant::OBJECT : basic_type);
+			pi.type = (call_mode == CALL_MODE_INSTANCE ? VariantType::OBJECT : basic_type);
 			pi.name = (call_mode == CALL_MODE_INSTANCE ? String("instance") : Variant::get_type_name(basic_type).to_lower());
 			return pi;
 		} else {
@@ -184,7 +184,7 @@ PropertyInfo VisualScriptFunctionCall::get_input_value_port_info(int p_idx) cons
 	if (rpc_call_mode >= RPC_RELIABLE_TO_ID) {
 
 		if (p_idx == 0) {
-			return PropertyInfo(Variant::INT, "peer_id");
+			return PropertyInfo(VariantType::INT, "peer_id");
 		} else {
 			p_idx--;
 		}
@@ -195,7 +195,7 @@ PropertyInfo VisualScriptFunctionCall::get_input_value_port_info(int p_idx) cons
 	if (call_mode == CALL_MODE_BASIC_TYPE) {
 
 		Vector<StringName> names = Variant::get_method_argument_names(basic_type, function);
-		Vector<Variant::Type> types = Variant::get_method_argument_types(basic_type, function);
+		Vector<VariantType> types = Variant::get_method_argument_types(basic_type, function);
 		return PropertyInfo(types[p_idx], names[p_idx]);
 
 	} else {
@@ -227,7 +227,7 @@ PropertyInfo VisualScriptFunctionCall::get_output_value_port_info(int p_idx) con
 
 		if (call_mode == CALL_MODE_INSTANCE) {
 			if (p_idx == 0) {
-				return PropertyInfo(Variant::OBJECT, "pass", PROPERTY_HINT_TYPE_STRING, get_base_type());
+				return PropertyInfo(VariantType::OBJECT, "pass", PROPERTY_HINT_TYPE_STRING, get_base_type());
 			} else {
 				p_idx--;
 			}
@@ -278,7 +278,7 @@ String VisualScriptFunctionCall::get_text() const {
 	return "";
 }
 
-void VisualScriptFunctionCall::set_basic_type(Variant::Type p_type) {
+void VisualScriptFunctionCall::set_basic_type(VariantType p_type) {
 
 	if (basic_type == p_type)
 		return;
@@ -288,7 +288,7 @@ void VisualScriptFunctionCall::set_basic_type(Variant::Type p_type) {
 	ports_changed_notify();
 }
 
-Variant::Type VisualScriptFunctionCall::get_basic_type() const {
+VariantType VisualScriptFunctionCall::get_basic_type() const {
 
 	return basic_type;
 }
@@ -414,7 +414,7 @@ void VisualScriptFunctionCall::_update_method_cache() {
 		if (mb->is_vararg()) {
 			//for vararg just give it 10 arguments (should be enough for most use cases)
 			for (int i = 0; i < 10; i++) {
-				method_cache.arguments.push_back(PropertyInfo(Variant::NIL, "arg" + itos(i)));
+				method_cache.arguments.push_back(PropertyInfo(VariantType::NIL, "arg" + itos(i)));
 				use_default_args++;
 			}
 		}
@@ -701,7 +701,7 @@ void VisualScriptFunctionCall::_bind_methods() {
 		if (i > 0)
 			bt += ",";
 
-		bt += Variant::get_type_name(Variant::Type(i));
+		bt += Variant::get_type_name(VariantType(i));
 	}
 
 	List<String> script_extensions;
@@ -716,17 +716,17 @@ void VisualScriptFunctionCall::_bind_methods() {
 		script_ext_hint += "*." + E->get();
 	}
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "call_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance,Basic Type,Singleton"), "set_call_mode", "get_call_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "singleton"), "set_singleton", "get_singleton");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "basic_type", PROPERTY_HINT_ENUM, bt), "set_basic_type", "get_basic_type");
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
-	ADD_PROPERTY(PropertyInfo(Variant::DICTIONARY, "argument_cache", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_argument_cache", "_get_argument_cache");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "function"), "set_function", "get_function"); //when set, if loaded properly, will override argument count.
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "use_default_args"), "set_use_default_args", "get_use_default_args");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "validate"), "set_validate", "get_validate");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "rpc_call_mode", PROPERTY_HINT_ENUM, "Disabled,Reliable,Unreliable,ReliableToID,UnreliableToID"), "set_rpc_call_mode", "get_rpc_call_mode"); //when set, if loaded properly, will override argument count.
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "call_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance,Basic Type,Singleton"), "set_call_mode", "get_call_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "singleton"), "set_singleton", "get_singleton");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "basic_type", PROPERTY_HINT_ENUM, bt), "set_basic_type", "get_basic_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
+	ADD_PROPERTY(PropertyInfo(VariantType::DICTIONARY, "argument_cache", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_argument_cache", "_get_argument_cache");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "function"), "set_function", "get_function"); //when set, if loaded properly, will override argument count.
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "use_default_args"), "set_use_default_args", "get_use_default_args");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "validate"), "set_validate", "get_validate");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "rpc_call_mode", PROPERTY_HINT_ENUM, "Disabled,Reliable,Unreliable,ReliableToID,UnreliableToID"), "set_rpc_call_mode", "get_rpc_call_mode"); //when set, if loaded properly, will override argument count.
 
 	BIND_ENUM_CONSTANT(CALL_MODE_SELF);
 	BIND_ENUM_CONSTANT(CALL_MODE_NODE_PATH);
@@ -920,7 +920,7 @@ VisualScriptFunctionCall::VisualScriptFunctionCall() {
 
 	validate = true;
 	call_mode = CALL_MODE_SELF;
-	basic_type = Variant::NIL;
+	basic_type = VariantType::NIL;
 	use_default_args = 0;
 	base_type = "Object";
 	rpc_call_mode = RPC_DISABLED;
@@ -1031,7 +1031,7 @@ PropertyInfo VisualScriptPropertySet::get_input_value_port_info(int p_idx) const
 	if (call_mode == CALL_MODE_INSTANCE || call_mode == CALL_MODE_BASIC_TYPE) {
 		if (p_idx == 0) {
 			PropertyInfo pi;
-			pi.type = (call_mode == CALL_MODE_INSTANCE ? Variant::OBJECT : basic_type);
+			pi.type = (call_mode == CALL_MODE_INSTANCE ? VariantType::OBJECT : basic_type);
 			pi.name = (call_mode == CALL_MODE_INSTANCE ? String("instance") : Variant::get_type_name(basic_type).to_lower());
 			_adjust_input_index(pi);
 			return pi;
@@ -1050,7 +1050,7 @@ PropertyInfo VisualScriptPropertySet::get_output_value_port_info(int p_idx) cons
 	if (call_mode == CALL_MODE_BASIC_TYPE) {
 		return PropertyInfo(basic_type, "out");
 	} else if (call_mode == CALL_MODE_INSTANCE) {
-		return PropertyInfo(Variant::OBJECT, "pass", PROPERTY_HINT_TYPE_STRING, get_base_type());
+		return PropertyInfo(VariantType::OBJECT, "pass", PROPERTY_HINT_TYPE_STRING, get_base_type());
 	} else {
 		return PropertyInfo();
 	}
@@ -1100,7 +1100,7 @@ void VisualScriptPropertySet::_update_base_type() {
 		}
 	}
 }
-void VisualScriptPropertySet::set_basic_type(Variant::Type p_type) {
+void VisualScriptPropertySet::set_basic_type(VariantType p_type) {
 
 	if (basic_type == p_type)
 		return;
@@ -1111,7 +1111,7 @@ void VisualScriptPropertySet::set_basic_type(Variant::Type p_type) {
 	ports_changed_notify();
 }
 
-Variant::Type VisualScriptPropertySet::get_basic_type() const {
+VariantType VisualScriptPropertySet::get_basic_type() const {
 
 	return basic_type;
 }
@@ -1413,7 +1413,7 @@ void VisualScriptPropertySet::_validate_property(PropertyInfo &property) const {
 
 		property.hint = PROPERTY_HINT_ENUM;
 		property.hint_string = options;
-		property.type = Variant::STRING;
+		property.type = VariantType::STRING;
 		if (options == "")
 			property.usage = 0; //hide if type has no usable index
 	}
@@ -1453,7 +1453,7 @@ void VisualScriptPropertySet::_bind_methods() {
 		if (i > 0)
 			bt += ",";
 
-		bt += Variant::get_type_name(Variant::Type(i));
+		bt += Variant::get_type_name(VariantType(i));
 	}
 
 	List<String> script_extensions;
@@ -1468,15 +1468,15 @@ void VisualScriptPropertySet::_bind_methods() {
 		script_ext_hint += "*." + E->get();
 	}
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "set_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance,Basic Type"), "set_call_mode", "get_call_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "type_cache", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_type_cache", "_get_type_cache");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "basic_type", PROPERTY_HINT_ENUM, bt), "set_basic_type", "get_basic_type");
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "property"), "set_property", "get_property");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "index"), "set_index", "get_index");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "assign_op", PROPERTY_HINT_ENUM, "Assign,Add,Sub,Mul,Div,Mod,ShiftLeft,ShiftRight,BitAnd,BitOr,Bitxor"), "set_assign_op", "get_assign_op");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "set_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance,Basic Type"), "set_call_mode", "get_call_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "type_cache", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_type_cache", "_get_type_cache");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "basic_type", PROPERTY_HINT_ENUM, bt), "set_basic_type", "get_basic_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "property"), "set_property", "get_property");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "index"), "set_index", "get_index");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "assign_op", PROPERTY_HINT_ENUM, "Assign,Add,Sub,Mul,Div,Mod,ShiftLeft,ShiftRight,BitAnd,BitOr,Bitxor"), "set_assign_op", "get_assign_op");
 
 	BIND_ENUM_CONSTANT(CALL_MODE_SELF);
 	BIND_ENUM_CONSTANT(CALL_MODE_NODE_PATH);
@@ -1683,7 +1683,7 @@ VisualScriptPropertySet::VisualScriptPropertySet() {
 	assign_op = ASSIGN_OP_NONE;
 	call_mode = CALL_MODE_SELF;
 	base_type = "Object";
-	basic_type = Variant::NIL;
+	basic_type = VariantType::NIL;
 }
 
 template <VisualScriptPropertySet::CallMode cmode>
@@ -1791,7 +1791,7 @@ PropertyInfo VisualScriptPropertyGet::get_input_value_port_info(int p_idx) const
 	if (call_mode == CALL_MODE_INSTANCE || call_mode == CALL_MODE_BASIC_TYPE) {
 		if (p_idx == 0) {
 			PropertyInfo pi;
-			pi.type = (call_mode == CALL_MODE_INSTANCE ? Variant::OBJECT : basic_type);
+			pi.type = (call_mode == CALL_MODE_INSTANCE ? VariantType::OBJECT : basic_type);
 			pi.name = (call_mode == CALL_MODE_INSTANCE ? String("instance") : Variant::get_type_name(basic_type).to_lower());
 			return pi;
 		} else {
@@ -1929,7 +1929,7 @@ void VisualScriptPropertyGet::_update_cache() {
 
 		bool valid = false;
 
-		Variant::Type type_ret;
+		VariantType type_ret;
 
 		type_ret = ClassDB::get_property_type(base_type, property, &valid);
 
@@ -2006,7 +2006,7 @@ VisualScriptPropertyGet::CallMode VisualScriptPropertyGet::get_call_mode() const
 	return call_mode;
 }
 
-void VisualScriptPropertyGet::set_basic_type(Variant::Type p_type) {
+void VisualScriptPropertyGet::set_basic_type(VariantType p_type) {
 
 	if (basic_type == p_type)
 		return;
@@ -2016,16 +2016,16 @@ void VisualScriptPropertyGet::set_basic_type(Variant::Type p_type) {
 	ports_changed_notify();
 }
 
-Variant::Type VisualScriptPropertyGet::get_basic_type() const {
+VariantType VisualScriptPropertyGet::get_basic_type() const {
 
 	return basic_type;
 }
 
-void VisualScriptPropertyGet::_set_type_cache(Variant::Type p_type) {
+void VisualScriptPropertyGet::_set_type_cache(VariantType p_type) {
 	type_cache = p_type;
 }
 
-Variant::Type VisualScriptPropertyGet::_get_type_cache() const {
+VariantType VisualScriptPropertyGet::_get_type_cache() const {
 
 	return type_cache;
 }
@@ -2133,7 +2133,7 @@ void VisualScriptPropertyGet::_validate_property(PropertyInfo &property) const {
 
 		property.hint = PROPERTY_HINT_ENUM;
 		property.hint_string = options;
-		property.type = Variant::STRING;
+		property.type = VariantType::STRING;
 		if (options == "")
 			property.usage = 0; //hide if type has no usable index
 	}
@@ -2170,7 +2170,7 @@ void VisualScriptPropertyGet::_bind_methods() {
 		if (i > 0)
 			bt += ",";
 
-		bt += Variant::get_type_name(Variant::Type(i));
+		bt += Variant::get_type_name(VariantType(i));
 	}
 
 	List<String> script_extensions;
@@ -2185,14 +2185,14 @@ void VisualScriptPropertyGet::_bind_methods() {
 		script_ext_hint += "." + E->get();
 	}
 
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "set_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance,Basic Type"), "set_call_mode", "get_call_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "type_cache", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_type_cache", "_get_type_cache");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "basic_type", PROPERTY_HINT_ENUM, bt), "set_basic_type", "get_basic_type");
-	ADD_PROPERTY(PropertyInfo(Variant::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "property"), "set_property", "get_property");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "index", PROPERTY_HINT_ENUM), "set_index", "get_index");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "set_mode", PROPERTY_HINT_ENUM, "Self,Node Path,Instance,Basic Type"), "set_call_mode", "get_call_mode");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_type", PROPERTY_HINT_TYPE_STRING, "Object"), "set_base_type", "get_base_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "base_script", PROPERTY_HINT_FILE, script_ext_hint), "set_base_script", "get_base_script");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "type_cache", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL), "_set_type_cache", "_get_type_cache");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "basic_type", PROPERTY_HINT_ENUM, bt), "set_basic_type", "get_basic_type");
+	ADD_PROPERTY(PropertyInfo(VariantType::NODE_PATH, "node_path", PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE), "set_base_path", "get_base_path");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "property"), "set_property", "get_property");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "index", PROPERTY_HINT_ENUM), "set_index", "get_index");
 
 	BIND_ENUM_CONSTANT(CALL_MODE_SELF);
 	BIND_ENUM_CONSTANT(CALL_MODE_NODE_PATH);
@@ -2300,8 +2300,8 @@ VisualScriptPropertyGet::VisualScriptPropertyGet() {
 
 	call_mode = CALL_MODE_SELF;
 	base_type = "Object";
-	basic_type = Variant::NIL;
-	type_cache = Variant::NIL;
+	basic_type = VariantType::NIL;
+	type_cache = VariantType::NIL;
 }
 
 template <VisualScriptPropertyGet::CallMode cmode>
@@ -2418,7 +2418,7 @@ void VisualScriptEmitSignal::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_signal", "name"), &VisualScriptEmitSignal::set_signal);
 	ClassDB::bind_method(D_METHOD("get_signal"), &VisualScriptEmitSignal::get_signal);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "signal"), "set_signal", "get_signal");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "signal"), "set_signal", "get_signal");
 }
 
 class VisualScriptNodeInstanceEmitSignal : public VisualScriptNodeInstance {
@@ -2465,12 +2465,12 @@ static Ref<VisualScriptNode> create_basic_type_call_node(const String &p_name) {
 	Ref<VisualScriptFunctionCall> node;
 	node.instance();
 
-	Variant::Type type = Variant::VARIANT_MAX;
+	VariantType type = Variant::VARIANT_MAX;
 
 	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
 
-		if (Variant::get_type_name(Variant::Type(i)) == base_type) {
-			type = Variant::Type(i);
+		if (Variant::get_type_name(VariantType(i)) == base_type) {
+			type = VariantType(i);
 			break;
 		}
 	}
@@ -2496,7 +2496,7 @@ void register_visual_script_func_nodes() {
 
 	for (int i = 0; i < Variant::VARIANT_MAX; i++) {
 
-		Variant::Type t = Variant::Type(i);
+		VariantType t = VariantType(i);
 		String type_name = Variant::get_type_name(t);
 		Variant::CallError ce;
 		Variant vt = Variant::construct(t, NULL, 0, ce);

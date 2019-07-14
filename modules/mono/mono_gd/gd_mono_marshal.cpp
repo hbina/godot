@@ -35,36 +35,36 @@
 
 namespace GDMonoMarshal {
 
-Variant::Type managed_to_variant_type(const ManagedType &p_type) {
+VariantType managed_to_variant_type(const ManagedType &p_type) {
 	switch (p_type.type_encoding) {
 		case MONO_TYPE_BOOLEAN:
-			return Variant::BOOL;
+			return VariantType::BOOL;
 
 		case MONO_TYPE_I1:
-			return Variant::INT;
+			return VariantType::INT;
 		case MONO_TYPE_I2:
-			return Variant::INT;
+			return VariantType::INT;
 		case MONO_TYPE_I4:
-			return Variant::INT;
+			return VariantType::INT;
 		case MONO_TYPE_I8:
-			return Variant::INT;
+			return VariantType::INT;
 
 		case MONO_TYPE_U1:
-			return Variant::INT;
+			return VariantType::INT;
 		case MONO_TYPE_U2:
-			return Variant::INT;
+			return VariantType::INT;
 		case MONO_TYPE_U4:
-			return Variant::INT;
+			return VariantType::INT;
 		case MONO_TYPE_U8:
-			return Variant::INT;
+			return VariantType::INT;
 
 		case MONO_TYPE_R4:
-			return Variant::REAL;
+			return VariantType::REAL;
 		case MONO_TYPE_R8:
-			return Variant::REAL;
+			return VariantType::REAL;
 
 		case MONO_TYPE_STRING: {
-			return Variant::STRING;
+			return VariantType::STRING;
 		} break;
 
 		case MONO_TYPE_VALUETYPE: {
@@ -101,7 +101,7 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 				return Variant::PLANE;
 
 			if (mono_class_is_enum(vtclass->get_mono_ptr()))
-				return Variant::INT;
+				return VariantType::INT;
 		} break;
 
 		case MONO_TYPE_ARRAY:
@@ -109,7 +109,7 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 			MonoArrayType *array_type = mono_type_get_array_type(p_type.type_class->get_mono_type());
 
 			if (array_type->eklass == CACHED_CLASS_RAW(MonoObject))
-				return Variant::ARRAY;
+				return VariantType::ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(uint8_t))
 				return Variant::POOL_BYTE_ARRAY;
@@ -118,13 +118,13 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 				return Variant::POOL_INT_ARRAY;
 
 			if (array_type->eklass == REAL_T_MONOCLASS)
-				return Variant::POOL_REAL_ARRAY;
+				return VariantType::POOL_REAL_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(String))
 				return Variant::POOL_STRING_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Vector2))
-				return Variant::POOL_VECTOR2_ARRAY;
+				return VariantType::POOL_VECTOR2_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Vector3))
 				return Variant::POOL_VECTOR3_ARRAY;
@@ -138,11 +138,11 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 
 			// GodotObject
 			if (CACHED_CLASS(GodotObject)->is_assignable_from(type_class)) {
-				return Variant::OBJECT;
+				return VariantType::OBJECT;
 			}
 
 			if (CACHED_CLASS(NodePath) == type_class) {
-				return Variant::NODE_PATH;
+				return VariantType::NODE_PATH;
 			}
 
 			if (CACHED_CLASS(RID) == type_class) {
@@ -150,11 +150,11 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 			}
 
 			if (CACHED_CLASS(Dictionary) == type_class) {
-				return Variant::DICTIONARY;
+				return VariantType::DICTIONARY;
 			}
 
 			if (CACHED_CLASS(Array) == type_class) {
-				return Variant::ARRAY;
+				return VariantType::ARRAY;
 			}
 
 			// The order in which we check the following interfaces is very important (dictionaries and generics first)
@@ -162,19 +162,19 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 			MonoReflectionType *reftype = mono_type_get_object(SCRIPTS_DOMAIN, type_class->get_mono_type());
 
 			if (GDMonoUtils::Marshal::generic_idictionary_is_assignable_from(reftype)) {
-				return Variant::DICTIONARY;
+				return VariantType::DICTIONARY;
 			}
 
 			if (type_class->implements_interface(CACHED_CLASS(System_Collections_IDictionary))) {
-				return Variant::DICTIONARY;
+				return VariantType::DICTIONARY;
 			}
 
 			if (GDMonoUtils::Marshal::generic_ienumerable_is_assignable_from(reftype)) {
-				return Variant::ARRAY;
+				return VariantType::ARRAY;
 			}
 
 			if (type_class->implements_interface(CACHED_CLASS(System_Collections_IEnumerable))) {
-				return Variant::ARRAY;
+				return VariantType::ARRAY;
 			}
 		} break;
 
@@ -182,27 +182,27 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 			MonoReflectionType *reftype = mono_type_get_object(SCRIPTS_DOMAIN, p_type.type_class->get_mono_type());
 
 			if (GDMonoUtils::Marshal::type_is_generic_dictionary(reftype)) {
-				return Variant::DICTIONARY;
+				return VariantType::DICTIONARY;
 			}
 
 			if (GDMonoUtils::Marshal::type_is_generic_array(reftype)) {
-				return Variant::ARRAY;
+				return VariantType::ARRAY;
 			}
 
 			// The order in which we check the following interfaces is very important (dictionaries and generics first)
 
 			if (GDMonoUtils::Marshal::generic_idictionary_is_assignable_from(reftype))
-				return Variant::DICTIONARY;
+				return VariantType::DICTIONARY;
 
 			if (p_type.type_class->implements_interface(CACHED_CLASS(System_Collections_IDictionary))) {
-				return Variant::DICTIONARY;
+				return VariantType::DICTIONARY;
 			}
 
 			if (GDMonoUtils::Marshal::generic_ienumerable_is_assignable_from(reftype))
-				return Variant::ARRAY;
+				return VariantType::ARRAY;
 
 			if (p_type.type_class->implements_interface(CACHED_CLASS(System_Collections_IEnumerable))) {
-				return Variant::ARRAY;
+				return VariantType::ARRAY;
 			}
 		} break;
 
@@ -211,7 +211,7 @@ Variant::Type managed_to_variant_type(const ManagedType &p_type) {
 	}
 
 	// Unknown
-	return Variant::NIL;
+	return VariantType::NIL;
 }
 
 bool try_get_array_element_type(const ManagedType &p_array_type, ManagedType &r_elem_type) {
@@ -564,15 +564,15 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 		case MONO_TYPE_OBJECT: {
 			// Variant
 			switch (p_var->get_type()) {
-				case Variant::BOOL: {
+				case VariantType::BOOL: {
 					MonoBoolean val = p_var->operator bool();
 					return BOX_BOOLEAN(val);
 				}
-				case Variant::INT: {
+				case VariantType::INT: {
 					int32_t val = p_var->operator signed int();
 					return BOX_INT32(val);
 				}
-				case Variant::REAL: {
+				case VariantType::REAL: {
 #ifdef REAL_T_IS_DOUBLE
 					double val = p_var->operator double();
 					return BOX_DOUBLE(val);
@@ -581,7 +581,7 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 					return BOX_FLOAT(val);
 #endif
 				}
-				case Variant::STRING:
+				case VariantType::STRING:
 					return (MonoObject *)mono_string_from_godot(p_var->operator String());
 				case Variant::VECTOR2: {
 					GDMonoMarshal::M_Vector2 from = MARSHALLED_OUT(Vector2, p_var->operator ::Vector2());
@@ -623,25 +623,25 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 					GDMonoMarshal::M_Color from = MARSHALLED_OUT(Color, p_var->operator ::Color());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Color), &from);
 				}
-				case Variant::NODE_PATH:
+				case VariantType::NODE_PATH:
 					return GDMonoUtils::create_managed_from(p_var->operator NodePath());
 				case Variant::_RID:
 					return GDMonoUtils::create_managed_from(p_var->operator RID());
-				case Variant::OBJECT:
+				case VariantType::OBJECT:
 					return GDMonoUtils::unmanaged_get_managed(p_var->operator Object *());
-				case Variant::DICTIONARY:
+				case VariantType::DICTIONARY:
 					return GDMonoUtils::create_managed_from(p_var->operator Dictionary(), CACHED_CLASS(Dictionary));
-				case Variant::ARRAY:
+				case VariantType::ARRAY:
 					return GDMonoUtils::create_managed_from(p_var->operator Array(), CACHED_CLASS(Array));
 				case Variant::POOL_BYTE_ARRAY:
 					return (MonoObject *)PoolByteArray_to_mono_array(p_var->operator PoolByteArray());
 				case Variant::POOL_INT_ARRAY:
 					return (MonoObject *)PoolIntArray_to_mono_array(p_var->operator PoolIntArray());
-				case Variant::POOL_REAL_ARRAY:
+				case VariantType::POOL_REAL_ARRAY:
 					return (MonoObject *)PoolRealArray_to_mono_array(p_var->operator PoolRealArray());
 				case Variant::POOL_STRING_ARRAY:
 					return (MonoObject *)PoolStringArray_to_mono_array(p_var->operator PoolStringArray());
-				case Variant::POOL_VECTOR2_ARRAY:
+				case VariantType::POOL_VECTOR2_ARRAY:
 					return (MonoObject *)PoolVector2Array_to_mono_array(p_var->operator PoolVector2Array());
 				case Variant::POOL_VECTOR3_ARRAY:
 					return (MonoObject *)PoolVector3Array_to_mono_array(p_var->operator PoolVector3Array());

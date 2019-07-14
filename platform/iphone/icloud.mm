@@ -149,15 +149,15 @@ Variant nsobject_to_variant(NSObject *object) {
 }
 
 NSObject *variant_to_nsobject(Variant v) {
-	if (v.get_type() == Variant::STRING) {
+	if (v.get_type() == VariantType::STRING) {
 		return [[[NSString alloc] initWithUTF8String:((String)v).utf8().get_data()] autorelease];
-	} else if (v.get_type() == Variant::REAL) {
+	} else if (v.get_type() == VariantType::REAL) {
 		return [NSNumber numberWithDouble:(double)v];
-	} else if (v.get_type() == Variant::INT) {
+	} else if (v.get_type() == VariantType::INT) {
 		return [NSNumber numberWithLongLong:(long)(int)v];
-	} else if (v.get_type() == Variant::BOOL) {
+	} else if (v.get_type() == VariantType::BOOL) {
 		return [NSNumber numberWithBool:BOOL((bool)v)];
-	} else if (v.get_type() == Variant::DICTIONARY) {
+	} else if (v.get_type() == VariantType::DICTIONARY) {
 		NSMutableDictionary *result = [[[NSMutableDictionary alloc] init] autorelease];
 		Dictionary dic = v;
 		Array keys = dic.keys();
@@ -172,7 +172,7 @@ NSObject *variant_to_nsobject(Variant v) {
 			[result setObject:value forKey:key];
 		}
 		return result;
-	} else if (v.get_type() == Variant::ARRAY) {
+	} else if (v.get_type() == VariantType::ARRAY) {
 		NSMutableArray *result = [[[NSMutableArray alloc] init] autorelease];
 		Array arr = v;
 		for (unsigned int i = 0; i < arr.size(); ++i) {

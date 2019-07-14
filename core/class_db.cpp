@@ -608,7 +608,7 @@ void ClassDB::get_method_list(StringName p_class, Vector<MethodInfo> &p_methods,
 
 			for (int i = 0; i < method->get_argument_count(); i++) {
 
-				//Variant::Type t=method->get_argument_type(i);
+				//VariantType t=method->get_argument_type(i);
 
 				minfo.arguments.push_back(method->get_argument_info(i));
 			}
@@ -903,7 +903,7 @@ void ClassDB::add_property_group(StringName p_class, const String &p_name, const
 	ClassInfo *type = classes.getptr(p_class);
 	ERR_FAIL_COND(!type);
 
-	type->property_list.push_back(PropertyInfo(Variant::NIL, p_name, PROPERTY_HINT_NONE, p_prefix, PROPERTY_USAGE_GROUP));
+	type->property_list.push_back(PropertyInfo(VariantType::NIL, p_name, PROPERTY_HINT_NONE, p_prefix, PROPERTY_USAGE_GROUP));
 }
 
 void ClassDB::add_property(StringName p_class, const PropertyInfo &p_pinfo, const StringName &p_setter, const StringName &p_getter, int p_index) {
@@ -1114,7 +1114,7 @@ int ClassDB::get_property_index(const StringName &p_class, const StringName &p_p
 	return -1;
 }
 
-Variant::Type ClassDB::get_property_type(const StringName &p_class, const StringName &p_property, bool *r_is_valid) {
+VariantType ClassDB::get_property_type(const StringName &p_class, const StringName &p_property, bool *r_is_valid) {
 
 	ClassInfo *type = classes.getptr(p_class);
 	ClassInfo *check = type;
@@ -1133,7 +1133,7 @@ Variant::Type ClassDB::get_property_type(const StringName &p_class, const String
 	if (r_is_valid)
 		*r_is_valid = false;
 
-	return Variant::NIL;
+	return VariantType::NIL;
 }
 
 StringName ClassDB::get_property_setter(StringName p_class, const StringName p_property) {

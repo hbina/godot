@@ -33,7 +33,7 @@
 
 #include "core/math/transform_2d.h"
 #include "core/typedefs.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #ifdef PTRCALL_ENABLED
 

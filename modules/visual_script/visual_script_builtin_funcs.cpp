@@ -262,108 +262,108 @@ PropertyInfo VisualScriptBuiltinFunc::get_input_value_port_info(int p_idx) const
 		case MATH_ACOS:
 		case MATH_ATAN:
 		case MATH_SQRT: {
-			return PropertyInfo(Variant::REAL, "s");
+			return PropertyInfo(VariantType::REAL, "s");
 		} break;
 		case MATH_ATAN2: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "y");
+				return PropertyInfo(VariantType::REAL, "y");
 			else
-				return PropertyInfo(Variant::REAL, "x");
+				return PropertyInfo(VariantType::REAL, "x");
 		} break;
 		case MATH_FMOD:
 		case MATH_FPOSMOD: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "x");
+				return PropertyInfo(VariantType::REAL, "x");
 			else
-				return PropertyInfo(Variant::REAL, "y");
+				return PropertyInfo(VariantType::REAL, "y");
 		} break;
 		case MATH_FLOOR:
 		case MATH_CEIL:
 		case MATH_ROUND:
 		case MATH_ABS:
 		case MATH_SIGN: {
-			return PropertyInfo(Variant::REAL, "s");
+			return PropertyInfo(VariantType::REAL, "s");
 
 		} break;
 
 		case MATH_POW: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "x");
+				return PropertyInfo(VariantType::REAL, "x");
 			else
-				return PropertyInfo(Variant::REAL, "y");
+				return PropertyInfo(VariantType::REAL, "y");
 		} break;
 		case MATH_LOG:
 		case MATH_EXP:
 		case MATH_ISNAN:
 		case MATH_ISINF: {
-			return PropertyInfo(Variant::REAL, "s");
+			return PropertyInfo(VariantType::REAL, "s");
 		} break;
 		case MATH_EASE: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "s");
+				return PropertyInfo(VariantType::REAL, "s");
 			else
-				return PropertyInfo(Variant::REAL, "curve");
+				return PropertyInfo(VariantType::REAL, "curve");
 		} break;
 		case MATH_DECIMALS: {
-			return PropertyInfo(Variant::REAL, "step");
+			return PropertyInfo(VariantType::REAL, "step");
 		} break;
 		case MATH_STEPIFY: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "s");
+				return PropertyInfo(VariantType::REAL, "s");
 			else
-				return PropertyInfo(Variant::REAL, "steps");
+				return PropertyInfo(VariantType::REAL, "steps");
 		} break;
 		case MATH_LERP: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "from");
+				return PropertyInfo(VariantType::REAL, "from");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "to");
+				return PropertyInfo(VariantType::REAL, "to");
 			else
-				return PropertyInfo(Variant::REAL, "weight");
+				return PropertyInfo(VariantType::REAL, "weight");
 		} break;
 		case MATH_INVERSE_LERP: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "from");
+				return PropertyInfo(VariantType::REAL, "from");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "to");
+				return PropertyInfo(VariantType::REAL, "to");
 			else
-				return PropertyInfo(Variant::REAL, "weight");
+				return PropertyInfo(VariantType::REAL, "weight");
 		} break;
 		case MATH_RANGE_LERP: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "value");
+				return PropertyInfo(VariantType::REAL, "value");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "istart");
+				return PropertyInfo(VariantType::REAL, "istart");
 			else if (p_idx == 2)
-				return PropertyInfo(Variant::REAL, "istop");
+				return PropertyInfo(VariantType::REAL, "istop");
 			else if (p_idx == 3)
-				return PropertyInfo(Variant::REAL, "ostart");
+				return PropertyInfo(VariantType::REAL, "ostart");
 			else
-				return PropertyInfo(Variant::REAL, "ostop");
+				return PropertyInfo(VariantType::REAL, "ostop");
 		} break;
 		case MATH_SMOOTHSTEP: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "from");
+				return PropertyInfo(VariantType::REAL, "from");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "to");
+				return PropertyInfo(VariantType::REAL, "to");
 			else
-				return PropertyInfo(Variant::REAL, "weight");
+				return PropertyInfo(VariantType::REAL, "weight");
 		} break;
 		case MATH_MOVE_TOWARD: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "from");
+				return PropertyInfo(VariantType::REAL, "from");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "to");
+				return PropertyInfo(VariantType::REAL, "to");
 			else
-				return PropertyInfo(Variant::REAL, "delta");
+				return PropertyInfo(VariantType::REAL, "delta");
 		} break;
 		case MATH_DECTIME: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "value");
+				return PropertyInfo(VariantType::REAL, "value");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "amount");
+				return PropertyInfo(VariantType::REAL, "amount");
 			else
-				return PropertyInfo(Variant::REAL, "step");
+				return PropertyInfo(VariantType::REAL, "step");
 		} break;
 		case MATH_RANDOMIZE: {
 
@@ -376,145 +376,145 @@ PropertyInfo VisualScriptBuiltinFunc::get_input_value_port_info(int p_idx) const
 		} break;
 		case MATH_RANDOM: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "from");
+				return PropertyInfo(VariantType::REAL, "from");
 			else
-				return PropertyInfo(Variant::REAL, "to");
+				return PropertyInfo(VariantType::REAL, "to");
 		} break;
 		case MATH_SEED: {
-			return PropertyInfo(Variant::INT, "seed");
+			return PropertyInfo(VariantType::INT, "seed");
 		} break;
 		case MATH_RANDSEED: {
-			return PropertyInfo(Variant::INT, "seed");
+			return PropertyInfo(VariantType::INT, "seed");
 		} break;
 		case MATH_DEG2RAD: {
-			return PropertyInfo(Variant::REAL, "deg");
+			return PropertyInfo(VariantType::REAL, "deg");
 		} break;
 		case MATH_RAD2DEG: {
-			return PropertyInfo(Variant::REAL, "rad");
+			return PropertyInfo(VariantType::REAL, "rad");
 		} break;
 		case MATH_LINEAR2DB: {
-			return PropertyInfo(Variant::REAL, "nrg");
+			return PropertyInfo(VariantType::REAL, "nrg");
 		} break;
 		case MATH_DB2LINEAR: {
-			return PropertyInfo(Variant::REAL, "db");
+			return PropertyInfo(VariantType::REAL, "db");
 		} break;
 		case MATH_POLAR2CARTESIAN: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "r");
+				return PropertyInfo(VariantType::REAL, "r");
 			else
-				return PropertyInfo(Variant::REAL, "th");
+				return PropertyInfo(VariantType::REAL, "th");
 		} break;
 		case MATH_CARTESIAN2POLAR: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "x");
+				return PropertyInfo(VariantType::REAL, "x");
 			else
-				return PropertyInfo(Variant::REAL, "y");
+				return PropertyInfo(VariantType::REAL, "y");
 		} break;
 		case MATH_WRAP: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::INT, "value");
+				return PropertyInfo(VariantType::INT, "value");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::INT, "min");
+				return PropertyInfo(VariantType::INT, "min");
 			else
-				return PropertyInfo(Variant::INT, "max");
+				return PropertyInfo(VariantType::INT, "max");
 		} break;
 		case MATH_WRAPF: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "value");
+				return PropertyInfo(VariantType::REAL, "value");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "min");
+				return PropertyInfo(VariantType::REAL, "min");
 			else
-				return PropertyInfo(Variant::REAL, "max");
+				return PropertyInfo(VariantType::REAL, "max");
 		} break;
 		case LOGIC_MAX: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "a");
+				return PropertyInfo(VariantType::REAL, "a");
 			else
-				return PropertyInfo(Variant::REAL, "b");
+				return PropertyInfo(VariantType::REAL, "b");
 		} break;
 		case LOGIC_MIN: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "a");
+				return PropertyInfo(VariantType::REAL, "a");
 			else
-				return PropertyInfo(Variant::REAL, "b");
+				return PropertyInfo(VariantType::REAL, "b");
 		} break;
 		case LOGIC_CLAMP: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::REAL, "value");
+				return PropertyInfo(VariantType::REAL, "value");
 			else if (p_idx == 1)
-				return PropertyInfo(Variant::REAL, "min");
+				return PropertyInfo(VariantType::REAL, "min");
 			else
-				return PropertyInfo(Variant::REAL, "max");
+				return PropertyInfo(VariantType::REAL, "max");
 		} break;
 		case LOGIC_NEAREST_PO2: {
-			return PropertyInfo(Variant::INT, "value");
+			return PropertyInfo(VariantType::INT, "value");
 		} break;
 		case OBJ_WEAKREF: {
 
-			return PropertyInfo(Variant::OBJECT, "source");
+			return PropertyInfo(VariantType::OBJECT, "source");
 
 		} break;
 		case FUNC_FUNCREF: {
 
 			if (p_idx == 0)
-				return PropertyInfo(Variant::OBJECT, "instance");
+				return PropertyInfo(VariantType::OBJECT, "instance");
 			else
-				return PropertyInfo(Variant::STRING, "funcname");
+				return PropertyInfo(VariantType::STRING, "funcname");
 
 		} break;
 		case TYPE_CONVERT: {
 
 			if (p_idx == 0)
-				return PropertyInfo(Variant::NIL, "what");
+				return PropertyInfo(VariantType::NIL, "what");
 			else
-				return PropertyInfo(Variant::STRING, "type");
+				return PropertyInfo(VariantType::STRING, "type");
 		} break;
 		case TYPE_OF: {
-			return PropertyInfo(Variant::NIL, "what");
+			return PropertyInfo(VariantType::NIL, "what");
 
 		} break;
 		case TYPE_EXISTS: {
 
-			return PropertyInfo(Variant::STRING, "type");
+			return PropertyInfo(VariantType::STRING, "type");
 
 		} break;
 		case TEXT_CHAR: {
 
-			return PropertyInfo(Variant::INT, "ascii");
+			return PropertyInfo(VariantType::INT, "ascii");
 
 		} break;
 		case TEXT_STR: {
 
-			return PropertyInfo(Variant::NIL, "value");
+			return PropertyInfo(VariantType::NIL, "value");
 
 		} break;
 		case TEXT_PRINT: {
 
-			return PropertyInfo(Variant::NIL, "value");
+			return PropertyInfo(VariantType::NIL, "value");
 
 		} break;
 		case TEXT_PRINTERR: {
-			return PropertyInfo(Variant::NIL, "value");
+			return PropertyInfo(VariantType::NIL, "value");
 
 		} break;
 		case TEXT_PRINTRAW: {
 
-			return PropertyInfo(Variant::NIL, "value");
+			return PropertyInfo(VariantType::NIL, "value");
 
 		} break;
 		case VAR_TO_STR: {
-			return PropertyInfo(Variant::NIL, "var");
+			return PropertyInfo(VariantType::NIL, "var");
 
 		} break;
 		case STR_TO_VAR: {
 
-			return PropertyInfo(Variant::STRING, "string");
+			return PropertyInfo(VariantType::STRING, "string");
 		} break;
 		case VAR_TO_BYTES: {
 			if (p_idx == 0)
-				return PropertyInfo(Variant::NIL, "var");
+				return PropertyInfo(VariantType::NIL, "var");
 			else
-				return PropertyInfo(Variant::BOOL, "full_objects");
+				return PropertyInfo(VariantType::BOOL, "full_objects");
 
 		} break;
 		case BYTES_TO_VAR: {
@@ -522,14 +522,14 @@ PropertyInfo VisualScriptBuiltinFunc::get_input_value_port_info(int p_idx) const
 			if (p_idx == 0)
 				return PropertyInfo(Variant::POOL_BYTE_ARRAY, "bytes");
 			else
-				return PropertyInfo(Variant::BOOL, "allow_objects");
+				return PropertyInfo(VariantType::BOOL, "allow_objects");
 		} break;
 		case COLORN: {
 
 			if (p_idx == 0)
-				return PropertyInfo(Variant::STRING, "name");
+				return PropertyInfo(VariantType::STRING, "name");
 			else
-				return PropertyInfo(Variant::REAL, "alpha");
+				return PropertyInfo(VariantType::REAL, "alpha");
 
 		} break;
 		case FUNC_MAX: {
@@ -541,7 +541,7 @@ PropertyInfo VisualScriptBuiltinFunc::get_input_value_port_info(int p_idx) const
 
 PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) const {
 
-	Variant::Type t = Variant::NIL;
+	VariantType t = VariantType::NIL;
 	switch (func) {
 
 		case MATH_SIN:
@@ -559,31 +559,31 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 		case MATH_FPOSMOD:
 		case MATH_FLOOR:
 		case MATH_CEIL: {
-			t = Variant::REAL;
+			t = VariantType::REAL;
 		} break;
 		case MATH_ROUND: {
-			t = Variant::INT;
+			t = VariantType::INT;
 		} break;
 		case MATH_ABS: {
-			t = Variant::NIL;
+			t = VariantType::NIL;
 		} break;
 		case MATH_SIGN: {
-			t = Variant::NIL;
+			t = VariantType::NIL;
 		} break;
 		case MATH_POW:
 		case MATH_LOG:
 		case MATH_EXP: {
-			t = Variant::REAL;
+			t = VariantType::REAL;
 		} break;
 		case MATH_ISNAN:
 		case MATH_ISINF: {
-			t = Variant::BOOL;
+			t = VariantType::BOOL;
 		} break;
 		case MATH_EASE: {
-			t = Variant::REAL;
+			t = VariantType::REAL;
 		} break;
 		case MATH_DECIMALS: {
-			t = Variant::INT;
+			t = VariantType::INT;
 		} break;
 		case MATH_STEPIFY:
 		case MATH_LERP:
@@ -592,7 +592,7 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 		case MATH_SMOOTHSTEP:
 		case MATH_MOVE_TOWARD:
 		case MATH_DECTIME: {
-			t = Variant::REAL;
+			t = VariantType::REAL;
 
 		} break;
 		case MATH_RANDOMIZE: {
@@ -600,11 +600,11 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 		} break;
 		case MATH_RAND: {
 
-			t = Variant::INT;
+			t = VariantType::INT;
 		} break;
 		case MATH_RANDF:
 		case MATH_RANDOM: {
-			t = Variant::REAL;
+			t = VariantType::REAL;
 		} break;
 		case MATH_SEED: {
 
@@ -612,23 +612,23 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 		case MATH_RANDSEED: {
 
 			if (p_idx == 0)
-				return PropertyInfo(Variant::INT, "rnd");
+				return PropertyInfo(VariantType::INT, "rnd");
 			else
-				return PropertyInfo(Variant::INT, "seed");
+				return PropertyInfo(VariantType::INT, "seed");
 		} break;
 		case MATH_DEG2RAD:
 		case MATH_RAD2DEG:
 		case MATH_LINEAR2DB:
 		case MATH_WRAPF:
 		case MATH_DB2LINEAR: {
-			t = Variant::REAL;
+			t = VariantType::REAL;
 		} break;
 		case MATH_POLAR2CARTESIAN:
 		case MATH_CARTESIAN2POLAR: {
 			t = Variant::VECTOR2;
 		} break;
 		case MATH_WRAP: {
-			t = Variant::INT;
+			t = VariantType::INT;
 		} break;
 		case LOGIC_MAX:
 		case LOGIC_MIN:
@@ -637,34 +637,34 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 		} break;
 
 		case LOGIC_NEAREST_PO2: {
-			t = Variant::NIL;
+			t = VariantType::NIL;
 		} break;
 		case OBJ_WEAKREF: {
 
-			t = Variant::OBJECT;
+			t = VariantType::OBJECT;
 
 		} break;
 		case FUNC_FUNCREF: {
 
-			t = Variant::OBJECT;
+			t = VariantType::OBJECT;
 
 		} break;
 		case TYPE_CONVERT: {
 
 		} break;
 		case TYPE_OF: {
-			t = Variant::INT;
+			t = VariantType::INT;
 
 		} break;
 		case TYPE_EXISTS: {
 
-			t = Variant::BOOL;
+			t = VariantType::BOOL;
 
 		} break;
 		case TEXT_CHAR:
 		case TEXT_STR: {
 
-			t = Variant::STRING;
+			t = VariantType::STRING;
 
 		} break;
 		case TEXT_PRINT: {
@@ -677,7 +677,7 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 
 		} break;
 		case VAR_TO_STR: {
-			t = Variant::STRING;
+			t = VariantType::STRING;
 		} break;
 		case STR_TO_VAR: {
 
@@ -686,12 +686,12 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 			if (p_idx == 0)
 				t = Variant::POOL_BYTE_ARRAY;
 			else
-				t = Variant::BOOL;
+				t = VariantType::BOOL;
 
 		} break;
 		case BYTES_TO_VAR: {
 			if (p_idx == 1)
-				t = Variant::BOOL;
+				t = VariantType::BOOL;
 		} break;
 		case COLORN: {
 			t = Variant::COLOR;
@@ -731,7 +731,7 @@ VisualScriptBuiltinFunc::BuiltinFunc VisualScriptBuiltinFunc::get_func() {
 	if (!p_inputs[m_arg]->is_num()) {                                    \
 		r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT; \
 		r_error.argument = m_arg;                                        \
-		r_error.expected = Variant::REAL;                                \
+		r_error.expected = VariantType::REAL;                                \
 		return;                                                          \
 	}
 
@@ -823,11 +823,11 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::MATH_ABS: {
 
-			if (p_inputs[0]->get_type() == Variant::INT) {
+			if (p_inputs[0]->get_type() == VariantType::INT) {
 
 				int64_t i = *p_inputs[0];
 				*r_return = ABS(i);
-			} else if (p_inputs[0]->get_type() == Variant::REAL) {
+			} else if (p_inputs[0]->get_type() == VariantType::REAL) {
 
 				real_t r = *p_inputs[0];
 				*r_return = Math::abs(r);
@@ -835,16 +835,16 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::REAL;
+				r_error.expected = VariantType::REAL;
 			}
 		} break;
 		case VisualScriptBuiltinFunc::MATH_SIGN: {
 
-			if (p_inputs[0]->get_type() == Variant::INT) {
+			if (p_inputs[0]->get_type() == VariantType::INT) {
 
 				int64_t i = *p_inputs[0];
 				*r_return = i < 0 ? -1 : (i > 0 ? +1 : 0);
-			} else if (p_inputs[0]->get_type() == Variant::REAL) {
+			} else if (p_inputs[0]->get_type() == VariantType::REAL) {
 
 				real_t r = *p_inputs[0];
 				*r_return = r < 0.0 ? -1.0 : (r > 0.0 ? +1.0 : 0.0);
@@ -852,7 +852,7 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::REAL;
+				r_error.expected = VariantType::REAL;
 			}
 		} break;
 		case VisualScriptBuiltinFunc::MATH_POW: {
@@ -1023,7 +1023,7 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::LOGIC_MAX: {
 
-			if (p_inputs[0]->get_type() == Variant::INT && p_inputs[1]->get_type() == Variant::INT) {
+			if (p_inputs[0]->get_type() == VariantType::INT && p_inputs[1]->get_type() == VariantType::INT) {
 
 				int64_t a = *p_inputs[0];
 				int64_t b = *p_inputs[1];
@@ -1041,7 +1041,7 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::LOGIC_MIN: {
 
-			if (p_inputs[0]->get_type() == Variant::INT && p_inputs[1]->get_type() == Variant::INT) {
+			if (p_inputs[0]->get_type() == VariantType::INT && p_inputs[1]->get_type() == VariantType::INT) {
 
 				int64_t a = *p_inputs[0];
 				int64_t b = *p_inputs[1];
@@ -1058,7 +1058,7 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::LOGIC_CLAMP: {
 
-			if (p_inputs[0]->get_type() == Variant::INT && p_inputs[1]->get_type() == Variant::INT && p_inputs[2]->get_type() == Variant::INT) {
+			if (p_inputs[0]->get_type() == VariantType::INT && p_inputs[1]->get_type() == VariantType::INT && p_inputs[2]->get_type() == VariantType::INT) {
 
 				int64_t a = *p_inputs[0];
 				int64_t b = *p_inputs[1];
@@ -1084,11 +1084,11 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::OBJ_WEAKREF: {
 
-			if (p_inputs[0]->get_type() != Variant::OBJECT) {
+			if (p_inputs[0]->get_type() != VariantType::OBJECT) {
 
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::OBJECT;
+				r_error.expected = VariantType::OBJECT;
 
 				return;
 			}
@@ -1118,19 +1118,19 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::FUNC_FUNCREF: {
 
-			if (p_inputs[0]->get_type() != Variant::OBJECT) {
+			if (p_inputs[0]->get_type() != VariantType::OBJECT) {
 
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::OBJECT;
+				r_error.expected = VariantType::OBJECT;
 
 				return;
 			}
-			if (p_inputs[1]->get_type() != Variant::STRING && p_inputs[1]->get_type() != Variant::NODE_PATH) {
+			if (p_inputs[1]->get_type() != VariantType::STRING && p_inputs[1]->get_type() != VariantType::NODE_PATH) {
 
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 1;
-				r_error.expected = Variant::STRING;
+				r_error.expected = VariantType::STRING;
 
 				return;
 			}
@@ -1152,12 +1152,12 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 				r_error_str = RTR("Invalid type argument to convert(), use TYPE_* constants.");
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::INT;
+				r_error.expected = VariantType::INT;
 				return;
 
 			} else {
 
-				*r_return = Variant::construct(Variant::Type(type), p_inputs, 1, r_error);
+				*r_return = Variant::construct(VariantType(type), p_inputs, 1, r_error);
 			}
 		} break;
 		case VisualScriptBuiltinFunc::TYPE_OF: {
@@ -1211,10 +1211,10 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::STR_TO_VAR: {
 
-			if (p_inputs[0]->get_type() != Variant::STRING) {
+			if (p_inputs[0]->get_type() != VariantType::STRING) {
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = VariantType::STRING;
 
 				return;
 			}
@@ -1229,7 +1229,7 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 			if (err != OK) {
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::STRING;
+				r_error.expected = VariantType::STRING;
 				*r_return = "Parse error at line " + itos(line) + ": " + errs;
 				return;
 			}
@@ -1237,10 +1237,10 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::VAR_TO_BYTES: {
 
-			if (p_inputs[1]->get_type() != Variant::BOOL) {
+			if (p_inputs[1]->get_type() != VariantType::BOOL) {
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 1;
-				r_error.expected = Variant::BOOL;
+				r_error.expected = VariantType::BOOL;
 				return;
 			}
 			PoolByteArray barr;
@@ -1250,7 +1250,7 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 			if (err) {
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::NIL;
+				r_error.expected = VariantType::NIL;
 				r_error_str = "Unexpected error encoding variable to bytes, likely unserializable type found (Object or RID).";
 				return;
 			}
@@ -1270,10 +1270,10 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 				r_error.expected = Variant::POOL_BYTE_ARRAY;
 				return;
 			}
-			if (p_inputs[1]->get_type() != Variant::BOOL) {
+			if (p_inputs[1]->get_type() != VariantType::BOOL) {
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 1;
-				r_error.expected = Variant::BOOL;
+				r_error.expected = VariantType::BOOL;
 				return;
 			}
 
@@ -1350,7 +1350,7 @@ void VisualScriptBuiltinFunc::_bind_methods() {
 			cc += ",";
 		cc += func_name[i];
 	}
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "function", PROPERTY_HINT_ENUM, cc), "set_func", "get_func");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "function", PROPERTY_HINT_ENUM, cc), "set_func", "get_func");
 
 	BIND_ENUM_CONSTANT(MATH_SIN);
 	BIND_ENUM_CONSTANT(MATH_COS);

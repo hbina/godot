@@ -43,7 +43,7 @@
 #include "core/map.h"
 #include "core/math/camera_matrix.h"
 #include "core/pair.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 #include "servers/visual/shader_language.h"
 
 #include <stdio.h>
@@ -73,7 +73,7 @@ protected:
 
 	struct UniformPair {
 		const char *name;
-		Variant::Type type_hint;
+		VariantType type_hint;
 	};
 
 	struct TexUnitPair {

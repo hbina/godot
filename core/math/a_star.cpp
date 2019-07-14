@@ -476,8 +476,8 @@ void AStar::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_point_path", "from_id", "to_id"), &AStar::get_point_path);
 	ClassDB::bind_method(D_METHOD("get_id_path", "from_id", "to_id"), &AStar::get_id_path);
 
-	BIND_VMETHOD(MethodInfo(Variant::REAL, "_estimate_cost", PropertyInfo(Variant::INT, "from_id"), PropertyInfo(Variant::INT, "to_id")));
-	BIND_VMETHOD(MethodInfo(Variant::REAL, "_compute_cost", PropertyInfo(Variant::INT, "from_id"), PropertyInfo(Variant::INT, "to_id")));
+	BIND_VMETHOD(MethodInfo(VariantType::REAL, "_estimate_cost", PropertyInfo(VariantType::INT, "from_id"), PropertyInfo(VariantType::INT, "to_id")));
+	BIND_VMETHOD(MethodInfo(VariantType::REAL, "_compute_cost", PropertyInfo(VariantType::INT, "from_id"), PropertyInfo(VariantType::INT, "to_id")));
 }
 
 AStar::AStar() {

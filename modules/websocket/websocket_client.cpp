@@ -137,11 +137,11 @@ void WebSocketClient::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_verify_ssl_enabled", "enabled"), &WebSocketClient::set_verify_ssl_enabled);
 	ClassDB::bind_method(D_METHOD("is_verify_ssl_enabled"), &WebSocketClient::is_verify_ssl_enabled);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "verify_ssl", PROPERTY_HINT_NONE, "", 0), "set_verify_ssl_enabled", "is_verify_ssl_enabled");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "verify_ssl", PROPERTY_HINT_NONE, "", 0), "set_verify_ssl_enabled", "is_verify_ssl_enabled");
 
 	ADD_SIGNAL(MethodInfo("data_received"));
-	ADD_SIGNAL(MethodInfo("connection_established", PropertyInfo(Variant::STRING, "protocol")));
-	ADD_SIGNAL(MethodInfo("server_close_request", PropertyInfo(Variant::INT, "code"), PropertyInfo(Variant::STRING, "reason")));
-	ADD_SIGNAL(MethodInfo("connection_closed", PropertyInfo(Variant::BOOL, "was_clean_close")));
+	ADD_SIGNAL(MethodInfo("connection_established", PropertyInfo(VariantType::STRING, "protocol")));
+	ADD_SIGNAL(MethodInfo("server_close_request", PropertyInfo(VariantType::INT, "code"), PropertyInfo(VariantType::STRING, "reason")));
+	ADD_SIGNAL(MethodInfo("connection_closed", PropertyInfo(VariantType::BOOL, "was_clean_close")));
 	ADD_SIGNAL(MethodInfo("connection_error"));
 }

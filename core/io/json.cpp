@@ -67,14 +67,14 @@ String JSON::_print_var(const Variant &p_var, const String &p_indent, int p_cur_
 
 	switch (p_var.get_type()) {
 
-		case Variant::NIL: return "null";
-		case Variant::BOOL: return p_var.operator bool() ? "true" : "false";
-		case Variant::INT: return itos(p_var);
-		case Variant::REAL: return rtos(p_var);
+		case VariantType::NIL: return "null";
+		case VariantType::BOOL: return p_var.operator bool() ? "true" : "false";
+		case VariantType::INT: return itos(p_var);
+		case VariantType::REAL: return rtos(p_var);
 		case Variant::POOL_INT_ARRAY:
-		case Variant::POOL_REAL_ARRAY:
+		case VariantType::POOL_REAL_ARRAY:
 		case Variant::POOL_STRING_ARRAY:
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 
 			String s = "[";
 			s += end_statement;
@@ -89,7 +89,7 @@ String JSON::_print_var(const Variant &p_var, const String &p_indent, int p_cur_
 			s += end_statement + _make_indent(p_indent, p_cur_indent) + "]";
 			return s;
 		};
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 			String s = "{";
 			s += end_statement;

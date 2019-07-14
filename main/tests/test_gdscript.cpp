@@ -85,7 +85,7 @@ static String _parser_expr(const GDScriptParser::Node *p_expr) {
 		} break;
 		case GDScriptParser::Node::TYPE_CONSTANT: {
 			const GDScriptParser::ConstantNode *c_node = static_cast<const GDScriptParser::ConstantNode *>(p_expr);
-			if (c_node->value.get_type() == Variant::STRING)
+			if (c_node->value.get_type() == VariantType::STRING)
 				txt = "\"" + String(c_node->value) + "\"";
 			else
 				txt = c_node->value;
@@ -510,7 +510,7 @@ static String _disassemble_addr(const Ref<GDScript> &p_script, const GDScriptFun
 
 			Variant v = func.get_constant(addr);
 			String txt;
-			if (v.get_type() == Variant::STRING || v.get_type() == Variant::NODE_PATH)
+			if (v.get_type() == VariantType::STRING || v.get_type() == VariantType::NODE_PATH)
 				txt = "\"" + String(v) + "\"";
 			else
 				txt = v;
@@ -687,7 +687,7 @@ static void _disassemble_class(const Ref<GDScript> &p_class, const Vector<String
 				} break;
 				case GDScriptFunction::OPCODE_CONSTRUCT: {
 
-					Variant::Type t = Variant::Type(code[ip + 1]);
+					VariantType t = VariantType(code[ip + 1]);
 					int argc = code[ip + 2];
 
 					txt += " construct ";
@@ -975,7 +975,7 @@ MainLoop *test(TestType p_type) {
 				text = "'" + tk.get_token_identifier() + "' (identifier)";
 			else if (tk.get_token() == GDScriptTokenizer::TK_CONSTANT) {
 				const Variant &c = tk.get_token_constant();
-				if (c.get_type() == Variant::STRING)
+				if (c.get_type() == VariantType::STRING)
 					text = "\"" + String(c) + "\"";
 				else
 					text = c;

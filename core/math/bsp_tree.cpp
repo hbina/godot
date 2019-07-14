@@ -487,7 +487,7 @@ BSP_Tree::BSP_Tree(const Variant &p_variant) {
 	PoolVector<int> src_nodes = d["nodes"];
 	ERR_FAIL_COND(src_nodes.size() % 3);
 
-	if (d["planes"].get_type() == Variant::POOL_REAL_ARRAY) {
+	if (d["planes"].get_type() == VariantType::POOL_REAL_ARRAY) {
 
 		PoolVector<real_t> src_planes = d["planes"];
 		int plane_count = src_planes.size();

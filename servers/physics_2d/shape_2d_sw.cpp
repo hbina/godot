@@ -136,7 +136,7 @@ real_t LineShape2DSW::get_moment_of_inertia(real_t p_mass, const Size2 &p_scale)
 
 void LineShape2DSW::set_data(const Variant &p_data) {
 
-	ERR_FAIL_COND(p_data.get_type() != Variant::ARRAY);
+	ERR_FAIL_COND(p_data.get_type() != VariantType::ARRAY);
 	Array arr = p_data;
 	ERR_FAIL_COND(arr.size() != 2);
 	normal = arr[0];
@@ -512,9 +512,9 @@ real_t CapsuleShape2DSW::get_moment_of_inertia(real_t p_mass, const Size2 &p_sca
 
 void CapsuleShape2DSW::set_data(const Variant &p_data) {
 
-	ERR_FAIL_COND(p_data.get_type() != Variant::ARRAY && p_data.get_type() != Variant::VECTOR2);
+	ERR_FAIL_COND(p_data.get_type() != VariantType::ARRAY && p_data.get_type() != Variant::VECTOR2);
 
-	if (p_data.get_type() == Variant::ARRAY) {
+	if (p_data.get_type() == VariantType::ARRAY) {
 		Array arr = p_data;
 		ERR_FAIL_COND(arr.size() != 2);
 		height = arr[0];
@@ -639,14 +639,14 @@ real_t ConvexPolygonShape2DSW::get_moment_of_inertia(real_t p_mass, const Size2 
 
 void ConvexPolygonShape2DSW::set_data(const Variant &p_data) {
 
-	ERR_FAIL_COND(p_data.get_type() != Variant::POOL_VECTOR2_ARRAY && p_data.get_type() != Variant::POOL_REAL_ARRAY);
+	ERR_FAIL_COND(p_data.get_type() != VariantType::POOL_VECTOR2_ARRAY && p_data.get_type() != VariantType::POOL_REAL_ARRAY);
 
 	if (points)
 		memdelete_arr(points);
 	points = NULL;
 	point_count = 0;
 
-	if (p_data.get_type() == Variant::POOL_VECTOR2_ARRAY) {
+	if (p_data.get_type() == VariantType::POOL_VECTOR2_ARRAY) {
 		PoolVector<Vector2> arr = p_data;
 		ERR_FAIL_COND(arr.size() == 0);
 		point_count = arr.size();
@@ -899,11 +899,11 @@ int ConcavePolygonShape2DSW::_generate_bvh(BVH *p_bvh, int p_len, int p_depth) {
 
 void ConcavePolygonShape2DSW::set_data(const Variant &p_data) {
 
-	ERR_FAIL_COND(p_data.get_type() != Variant::POOL_VECTOR2_ARRAY && p_data.get_type() != Variant::POOL_REAL_ARRAY);
+	ERR_FAIL_COND(p_data.get_type() != VariantType::POOL_VECTOR2_ARRAY && p_data.get_type() != VariantType::POOL_REAL_ARRAY);
 
 	Rect2 aabb;
 
-	if (p_data.get_type() == Variant::POOL_VECTOR2_ARRAY) {
+	if (p_data.get_type() == VariantType::POOL_VECTOR2_ARRAY) {
 
 		PoolVector<Vector2> p2arr = p_data;
 		int len = p2arr.size();

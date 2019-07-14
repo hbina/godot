@@ -2221,26 +2221,26 @@ void RasterizerStorageGLES3::shader_get_param_list(RID p_shader, List<PropertyIn
 		ShaderLanguage::ShaderNode::Uniform &u = shader->uniforms[E->get()];
 		pi.name = E->get();
 		switch (u.type) {
-			case ShaderLanguage::TYPE_VOID: pi.type = Variant::NIL; break;
-			case ShaderLanguage::TYPE_BOOL: pi.type = Variant::BOOL; break;
+			case ShaderLanguage::TYPE_VOID: pi.type = VariantType::NIL; break;
+			case ShaderLanguage::TYPE_BOOL: pi.type = VariantType::BOOL; break;
 			case ShaderLanguage::TYPE_BVEC2:
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y";
 				break;
 			case ShaderLanguage::TYPE_BVEC3:
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y,z";
 				break;
 			case ShaderLanguage::TYPE_BVEC4:
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y,z,w";
 				break;
 			case ShaderLanguage::TYPE_UINT:
 			case ShaderLanguage::TYPE_INT: {
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_RANGE) {
 					pi.hint = PROPERTY_HINT_RANGE;
 					pi.hint_string = rtos(u.hint_range[0]) + "," + rtos(u.hint_range[1]);
@@ -2257,7 +2257,7 @@ void RasterizerStorageGLES3::shader_get_param_list(RID p_shader, List<PropertyIn
 				pi.type = Variant::POOL_INT_ARRAY;
 			} break;
 			case ShaderLanguage::TYPE_FLOAT: {
-				pi.type = Variant::REAL;
+				pi.type = VariantType::REAL;
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_RANGE) {
 					pi.hint = PROPERTY_HINT_RANGE;
 					pi.hint_string = rtos(u.hint_range[0]) + "," + rtos(u.hint_range[1]) + "," + rtos(u.hint_range[2]);
@@ -2280,7 +2280,7 @@ void RasterizerStorageGLES3::shader_get_param_list(RID p_shader, List<PropertyIn
 			case ShaderLanguage::TYPE_ISAMPLER2D:
 			case ShaderLanguage::TYPE_USAMPLER2D: {
 
-				pi.type = Variant::OBJECT;
+				pi.type = VariantType::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "Texture";
 			} break;
@@ -2288,20 +2288,20 @@ void RasterizerStorageGLES3::shader_get_param_list(RID p_shader, List<PropertyIn
 			case ShaderLanguage::TYPE_ISAMPLER2DARRAY:
 			case ShaderLanguage::TYPE_USAMPLER2DARRAY: {
 
-				pi.type = Variant::OBJECT;
+				pi.type = VariantType::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "TextureArray";
 			} break;
 			case ShaderLanguage::TYPE_SAMPLER3D:
 			case ShaderLanguage::TYPE_ISAMPLER3D:
 			case ShaderLanguage::TYPE_USAMPLER3D: {
-				pi.type = Variant::OBJECT;
+				pi.type = VariantType::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "Texture3D";
 			} break;
 			case ShaderLanguage::TYPE_SAMPLERCUBE: {
 
-				pi.type = Variant::OBJECT;
+				pi.type = VariantType::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "CubeMap";
 			} break;
@@ -2388,7 +2388,7 @@ void RasterizerStorageGLES3::material_set_param(RID p_material, const StringName
 	Material *material = material_owner.get(p_material);
 	ERR_FAIL_COND(!material);
 
-	if (p_value.get_type() == Variant::NIL)
+	if (p_value.get_type() == VariantType::NIL)
 		material->params.erase(p_param);
 	else
 		material->params[p_param] = p_value;
@@ -8143,7 +8143,7 @@ void RasterizerStorageGLES3::initialize() {
 	{
 		//transform feedback buffers
 		uint32_t xf_feedback_size = GLOBAL_DEF_RST("rendering/limits/buffers/blend_shape_max_buffer_size_kb", 4096);
-		ProjectSettings::get_singleton()->set_custom_property_info("rendering/limits/buffers/blend_shape_max_buffer_size_kb", PropertyInfo(Variant::INT, "rendering/limits/buffers/blend_shape_max_buffer_size_kb", PROPERTY_HINT_RANGE, "0,8192,1,or_greater"));
+		ProjectSettings::get_singleton()->set_custom_property_info("rendering/limits/buffers/blend_shape_max_buffer_size_kb", PropertyInfo(VariantType::INT, "rendering/limits/buffers/blend_shape_max_buffer_size_kb", PROPERTY_HINT_RANGE, "0,8192,1,or_greater"));
 
 		for (int i = 0; i < 2; i++) {
 

@@ -156,10 +156,10 @@ void AudioEffectFilter::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_db", "amount"), &AudioEffectFilter::set_db);
 	ClassDB::bind_method(D_METHOD("get_db"), &AudioEffectFilter::get_db);
 
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "cutoff_hz", PROPERTY_HINT_RANGE, "1,40000,0.1"), "set_cutoff", "get_cutoff");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "resonance", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_resonance", "get_resonance");
-	ADD_PROPERTY(PropertyInfo(Variant::REAL, "gain", PROPERTY_HINT_RANGE, "0,4,0.01"), "set_gain", "get_gain");
-	ADD_PROPERTY(PropertyInfo(Variant::INT, "db", PROPERTY_HINT_ENUM, "6 dB,12 dB,18 dB,24 dB"), "set_db", "get_db");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "cutoff_hz", PROPERTY_HINT_RANGE, "1,40000,0.1"), "set_cutoff", "get_cutoff");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "resonance", PROPERTY_HINT_RANGE, "0,1,0.01"), "set_resonance", "get_resonance");
+	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "gain", PROPERTY_HINT_RANGE, "0,4,0.01"), "set_gain", "get_gain");
+	ADD_PROPERTY(PropertyInfo(VariantType::INT, "db", PROPERTY_HINT_ENUM, "6 dB,12 dB,18 dB,24 dB"), "set_db", "get_db");
 
 	BIND_ENUM_CONSTANT(FILTER_6DB);
 	BIND_ENUM_CONSTANT(FILTER_12DB);

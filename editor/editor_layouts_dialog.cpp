@@ -65,7 +65,7 @@ void EditorLayoutsDialog::_line_gui_input(const Ref<InputEvent> &p_event) {
 void EditorLayoutsDialog::_bind_methods() {
 	ClassDB::bind_method("_line_gui_input", &EditorLayoutsDialog::_line_gui_input);
 
-	ADD_SIGNAL(MethodInfo("name_confirmed", PropertyInfo(Variant::STRING, "name")));
+	ADD_SIGNAL(MethodInfo("name_confirmed", PropertyInfo(VariantType::STRING, "name")));
 }
 
 void EditorLayoutsDialog::ok_pressed() {

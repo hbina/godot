@@ -32,7 +32,7 @@
 #define MIDI_DRIVER_H
 
 #include "core/typedefs.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 /**
  * Multi-Platform abstraction for accessing to MIDI.

@@ -318,8 +318,8 @@ void WindowDialog::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_closed"), &WindowDialog::_closed);
 	ClassDB::bind_method(D_METHOD("get_close_button"), &WindowDialog::get_close_button);
 
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "window_title", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT_INTL), "set_title", "get_title");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "resizable", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT_INTL), "set_resizable", "get_resizable");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "window_title", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT_INTL), "set_title", "get_title");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "resizable", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT_INTL), "set_resizable", "get_resizable");
 }
 
 WindowDialog::WindowDialog() {
@@ -542,12 +542,12 @@ void AcceptDialog::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("has_autowrap"), &AcceptDialog::has_autowrap);
 
 	ADD_SIGNAL(MethodInfo("confirmed"));
-	ADD_SIGNAL(MethodInfo("custom_action", PropertyInfo(Variant::STRING, "action")));
+	ADD_SIGNAL(MethodInfo("custom_action", PropertyInfo(VariantType::STRING, "action")));
 
 	ADD_GROUP("Dialog", "dialog");
-	ADD_PROPERTY(PropertyInfo(Variant::STRING, "dialog_text", PROPERTY_HINT_MULTILINE_TEXT, "", PROPERTY_USAGE_DEFAULT_INTL), "set_text", "get_text");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "dialog_hide_on_ok"), "set_hide_on_ok", "get_hide_on_ok");
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "dialog_autowrap"), "set_autowrap", "has_autowrap");
+	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "dialog_text", PROPERTY_HINT_MULTILINE_TEXT, "", PROPERTY_USAGE_DEFAULT_INTL), "set_text", "get_text");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "dialog_hide_on_ok"), "set_hide_on_ok", "get_hide_on_ok");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "dialog_autowrap"), "set_autowrap", "has_autowrap");
 }
 
 bool AcceptDialog::swap_ok_cancel = false;

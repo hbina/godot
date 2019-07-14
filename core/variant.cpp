@@ -39,7 +39,7 @@
 #include "scene/gui/control.h"
 #include "scene/main/node.h"
 
-String Variant::get_type_name(Variant::Type p_type) {
+String Variant::get_type_name(VariantType p_type) {
 
 	switch (p_type) {
 		case NIL: {
@@ -186,7 +186,7 @@ String Variant::get_type_name(Variant::Type p_type) {
 	return "";
 }
 
-bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
+bool Variant::can_convert(VariantType p_type_from, VariantType p_type_to) {
 
 	if (p_type_from == p_type_to)
 		return true;
@@ -434,7 +434,7 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 	return false;
 }
 
-bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type_to) {
+bool Variant::can_convert_strict(VariantType p_type_from, VariantType p_type_to) {
 
 	if (p_type_from == p_type_to)
 		return true;
@@ -1420,7 +1420,7 @@ Variant::operator String() const {
 	return stringify(stack);
 }
 
-String Variant::stringify(List<const void *> &stack) const {
+String VariantType::STRINGify(List<const void *> &stack) const {
 	switch (type) {
 
 		case NIL: return "Null";
@@ -1826,7 +1826,7 @@ inline DA _convert_array_from_variant(const Variant &p_variant) {
 
 	switch (p_variant.get_type()) {
 
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 			return _convert_array<DA, Array>(p_variant.operator Array());
 		}
 		case Variant::POOL_BYTE_ARRAY: {
@@ -1835,13 +1835,13 @@ inline DA _convert_array_from_variant(const Variant &p_variant) {
 		case Variant::POOL_INT_ARRAY: {
 			return _convert_array<DA, PoolVector<int> >(p_variant.operator PoolVector<int>());
 		}
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 			return _convert_array<DA, PoolVector<real_t> >(p_variant.operator PoolVector<real_t>());
 		}
 		case Variant::POOL_STRING_ARRAY: {
 			return _convert_array<DA, PoolVector<String> >(p_variant.operator PoolVector<String>());
 		}
-		case Variant::POOL_VECTOR2_ARRAY: {
+		case VariantType::POOL_VECTOR2_ARRAY: {
 			return _convert_array<DA, PoolVector<Vector2> >(p_variant.operator PoolVector<Vector2>());
 		}
 		case Variant::POOL_VECTOR3_ARRAY: {
@@ -3209,7 +3209,7 @@ Variant Variant::call(const StringName &p_method, VARIANT_ARG_DECLARE) {
 	VARIANT_ARGPTRS;
 	int argc = 0;
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
-		if (argptr[i]->get_type() == Variant::NIL)
+		if (argptr[i]->get_type() == VariantType::NIL)
 			break;
 		argc++;
 	}
@@ -3291,23 +3291,23 @@ String Variant::get_call_error_text(Object *p_base, const StringName &p_method, 
 String vformat(const String &p_text, const Variant &p1, const Variant &p2, const Variant &p3, const Variant &p4, const Variant &p5) {
 
 	Array args;
-	if (p1.get_type() != Variant::NIL) {
+	if (p1.get_type() != VariantType::NIL) {
 
 		args.push_back(p1);
 
-		if (p2.get_type() != Variant::NIL) {
+		if (p2.get_type() != VariantType::NIL) {
 
 			args.push_back(p2);
 
-			if (p3.get_type() != Variant::NIL) {
+			if (p3.get_type() != VariantType::NIL) {
 
 				args.push_back(p3);
 
-				if (p4.get_type() != Variant::NIL) {
+				if (p4.get_type() != VariantType::NIL) {
 
 					args.push_back(p4);
 
-					if (p5.get_type() != Variant::NIL) {
+					if (p5.get_type() != VariantType::NIL) {
 
 						args.push_back(p5);
 					}

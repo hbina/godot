@@ -84,7 +84,7 @@ Variant SignalAwaiterHandle::_signal_callback(const Variant **p_args, int p_argc
 	if (self.is_null()) {
 		r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 		r_error.argument = p_argcount - 1;
-		r_error.expected = Variant::OBJECT;
+		r_error.expected = VariantType::OBJECT;
 		return Variant();
 	}
 

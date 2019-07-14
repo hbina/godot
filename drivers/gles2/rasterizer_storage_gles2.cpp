@@ -1540,26 +1540,26 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 
 		switch (u.type) {
 			case ShaderLanguage::TYPE_VOID: {
-				pi.type = Variant::NIL;
+				pi.type = VariantType::NIL;
 			} break;
 
 			case ShaderLanguage::TYPE_BOOL: {
-				pi.type = Variant::BOOL;
+				pi.type = VariantType::BOOL;
 			} break;
 
 			// bool vectors
 			case ShaderLanguage::TYPE_BVEC2: {
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y";
 			} break;
 			case ShaderLanguage::TYPE_BVEC3: {
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y,z";
 			} break;
 			case ShaderLanguage::TYPE_BVEC4: {
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 				pi.hint = PROPERTY_HINT_FLAGS;
 				pi.hint_string = "x,y,z,w";
 			} break;
@@ -1567,7 +1567,7 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 				// int stuff
 			case ShaderLanguage::TYPE_UINT:
 			case ShaderLanguage::TYPE_INT: {
-				pi.type = Variant::INT;
+				pi.type = VariantType::INT;
 
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_RANGE) {
 					pi.hint = PROPERTY_HINT_RANGE;
@@ -1585,7 +1585,7 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 			} break;
 
 			case ShaderLanguage::TYPE_FLOAT: {
-				pi.type = Variant::REAL;
+				pi.type = VariantType::REAL;
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_RANGE) {
 					pi.hint = PROPERTY_HINT_RANGE;
 					pi.hint_string = rtos(u.hint_range[0]) + "," + rtos(u.hint_range[1]) + "," + rtos(u.hint_range[2]);
@@ -1622,13 +1622,13 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 			case ShaderLanguage::TYPE_SAMPLER2D:
 			case ShaderLanguage::TYPE_ISAMPLER2D:
 			case ShaderLanguage::TYPE_USAMPLER2D: {
-				pi.type = Variant::OBJECT;
+				pi.type = VariantType::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "Texture";
 			} break;
 
 			case ShaderLanguage::TYPE_SAMPLERCUBE: {
-				pi.type = Variant::OBJECT;
+				pi.type = VariantType::OBJECT;
 				pi.hint = PROPERTY_HINT_RESOURCE_TYPE;
 				pi.hint_string = "CubeMap";
 			} break;
@@ -1731,7 +1731,7 @@ void RasterizerStorageGLES2::material_set_param(RID p_material, const StringName
 	Material *material = material_owner.get(p_material);
 	ERR_FAIL_COND(!material);
 
-	if (p_value.get_type() == Variant::NIL) {
+	if (p_value.get_type() == VariantType::NIL) {
 		material->params.erase(p_param);
 	} else {
 		material->params[p_param] = p_value;

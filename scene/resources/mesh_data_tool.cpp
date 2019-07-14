@@ -59,30 +59,30 @@ Error MeshDataTool::create_from_surface(const Ref<ArrayMesh> &p_mesh, int p_surf
 	PoolVector<Vector3>::Read vr = varray.read();
 
 	PoolVector<Vector3>::Read nr;
-	if (arrays[Mesh::ARRAY_NORMAL].get_type() != Variant::NIL)
+	if (arrays[Mesh::ARRAY_NORMAL].get_type() != VariantType::NIL)
 		nr = arrays[Mesh::ARRAY_NORMAL].operator PoolVector<Vector3>().read();
 
 	PoolVector<real_t>::Read ta;
-	if (arrays[Mesh::ARRAY_TANGENT].get_type() != Variant::NIL)
+	if (arrays[Mesh::ARRAY_TANGENT].get_type() != VariantType::NIL)
 		ta = arrays[Mesh::ARRAY_TANGENT].operator PoolVector<real_t>().read();
 
 	PoolVector<Vector2>::Read uv;
-	if (arrays[Mesh::ARRAY_TEX_UV].get_type() != Variant::NIL)
+	if (arrays[Mesh::ARRAY_TEX_UV].get_type() != VariantType::NIL)
 		uv = arrays[Mesh::ARRAY_TEX_UV].operator PoolVector<Vector2>().read();
 	PoolVector<Vector2>::Read uv2;
-	if (arrays[Mesh::ARRAY_TEX_UV2].get_type() != Variant::NIL)
+	if (arrays[Mesh::ARRAY_TEX_UV2].get_type() != VariantType::NIL)
 		uv2 = arrays[Mesh::ARRAY_TEX_UV2].operator PoolVector<Vector2>().read();
 
 	PoolVector<Color>::Read col;
-	if (arrays[Mesh::ARRAY_COLOR].get_type() != Variant::NIL)
+	if (arrays[Mesh::ARRAY_COLOR].get_type() != VariantType::NIL)
 		col = arrays[Mesh::ARRAY_COLOR].operator PoolVector<Color>().read();
 
 	PoolVector<int>::Read bo;
-	if (arrays[Mesh::ARRAY_BONES].get_type() != Variant::NIL)
+	if (arrays[Mesh::ARRAY_BONES].get_type() != VariantType::NIL)
 		bo = arrays[Mesh::ARRAY_BONES].operator PoolVector<int>().read();
 
 	PoolVector<real_t>::Read we;
-	if (arrays[Mesh::ARRAY_WEIGHTS].get_type() != Variant::NIL)
+	if (arrays[Mesh::ARRAY_WEIGHTS].get_type() != VariantType::NIL)
 		we = arrays[Mesh::ARRAY_WEIGHTS].operator PoolVector<real_t>().read();
 
 	vertices.resize(vcount);
@@ -123,7 +123,7 @@ Error MeshDataTool::create_from_surface(const Ref<ArrayMesh> &p_mesh, int p_surf
 
 	PoolVector<int> indices;
 
-	if (arrays[Mesh::ARRAY_INDEX].get_type() != Variant::NIL) {
+	if (arrays[Mesh::ARRAY_INDEX].get_type() != VariantType::NIL) {
 
 		indices = arrays[Mesh::ARRAY_INDEX];
 	} else {

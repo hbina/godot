@@ -60,13 +60,13 @@ struct jvalret {
 	jvalret() { obj = NULL; }
 };
 
-jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_arg, bool force_jobject = false) {
+jvalret _variant_to_jvalue(JNIEnv *env, VariantType p_type, const Variant *p_arg, bool force_jobject = false) {
 
 	jvalret v;
 
 	switch (p_type) {
 
-		case Variant::BOOL: {
+		case VariantType::BOOL: {
 
 			if (force_jobject) {
 				jclass bclass = env->FindClass("java/lang/Boolean");
@@ -81,7 +81,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 				v.val.z = *p_arg;
 			};
 		} break;
-		case Variant::INT: {
+		case VariantType::INT: {
 
 			if (force_jobject) {
 
@@ -98,7 +98,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 				v.val.i = *p_arg;
 			};
 		} break;
-		case Variant::REAL: {
+		case VariantType::REAL: {
 
 			if (force_jobject) {
 
@@ -115,7 +115,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 				v.val.f = *p_arg;
 			};
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			String s = *p_arg;
 			jstring jStr = env->NewStringUTF(s.utf8().get_data());
@@ -138,7 +138,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 
 		} break;
 
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 			Dictionary dict = *p_arg;
 			jclass dclass = env->FindClass("org/godotengine/godot/Dictionary");
@@ -200,7 +200,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, Variant::Type p_type, const Variant *p_a
 			v.obj = arr;
 
 		} break;
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 
 			PoolVector<float> array = *p_arg;
 			jfloatArray arr = env->NewFloatArray(array.size());
@@ -402,8 +402,8 @@ class JNISingleton : public Object {
 	struct MethodData {
 
 		jmethodID method;
-		Variant::Type ret_type;
-		Vector<Variant::Type> argtypes;
+		VariantType ret_type;
+		Vector<VariantType> argtypes;
 	};
 
 	jobject instance;
@@ -474,23 +474,23 @@ public:
 
 		switch (E->get().ret_type) {
 
-			case Variant::NIL: {
+			case VariantType::NIL: {
 
 				env->CallVoidMethodA(instance, E->get().method, v);
 			} break;
-			case Variant::BOOL: {
+			case VariantType::BOOL: {
 
 				ret = env->CallBooleanMethodA(instance, E->get().method, v) == JNI_TRUE;
 			} break;
-			case Variant::INT: {
+			case VariantType::INT: {
 
 				ret = env->CallIntMethodA(instance, E->get().method, v);
 			} break;
-			case Variant::REAL: {
+			case VariantType::REAL: {
 
 				ret = env->CallFloatMethodA(instance, E->get().method, v);
 			} break;
-			case Variant::STRING: {
+			case VariantType::STRING: {
 
 				jobject o = env->CallObjectMethodA(instance, E->get().method, v);
 				ret = jstring_to_string((jstring)o, env);
@@ -518,7 +518,7 @@ public:
 				ret = sarr;
 				env->DeleteLocalRef(arr);
 			} break;
-			case Variant::POOL_REAL_ARRAY: {
+			case VariantType::POOL_REAL_ARRAY: {
 
 				jfloatArray arr = (jfloatArray)env->CallObjectMethodA(instance, E->get().method, v);
 
@@ -533,7 +533,7 @@ public:
 				env->DeleteLocalRef(arr);
 			} break;
 
-			case Variant::DICTIONARY: {
+			case VariantType::DICTIONARY: {
 
 				jobject obj = env->CallObjectMethodA(instance, E->get().method, v);
 				ret = _jobject_to_variant(env, obj);
@@ -566,7 +566,7 @@ public:
 		instance = p_instance;
 	}
 
-	void add_method(const StringName &p_name, jmethodID p_method, const Vector<Variant::Type> &p_args, Variant::Type p_ret_type) {
+	void add_method(const StringName &p_name, jmethodID p_method, const Vector<VariantType> &p_args, VariantType p_ret_type) {
 
 		MethodData md;
 		md.method = p_method;
@@ -1224,24 +1224,24 @@ JNIEXPORT void JNICALL Java_org_godotengine_godot_GodotLib_singleton(JNIEnv *env
 	ProjectSettings::get_singleton()->set(singname, s);
 }
 
-static Variant::Type get_jni_type(const String &p_type) {
+static VariantType get_jni_type(const String &p_type) {
 
 	static struct {
 		const char *name;
-		Variant::Type type;
+		VariantType type;
 	} _type_to_vtype[] = {
-		{ "void", Variant::NIL },
-		{ "boolean", Variant::BOOL },
-		{ "int", Variant::INT },
-		{ "float", Variant::REAL },
-		{ "double", Variant::REAL },
-		{ "java.lang.String", Variant::STRING },
+		{ "void", VariantType::NIL },
+		{ "boolean", VariantType::BOOL },
+		{ "int", VariantType::INT },
+		{ "float", VariantType::REAL },
+		{ "double", VariantType::REAL },
+		{ "java.lang.String", VariantType::STRING },
 		{ "[I", Variant::POOL_INT_ARRAY },
 		{ "[B", Variant::POOL_BYTE_ARRAY },
-		{ "[F", Variant::POOL_REAL_ARRAY },
+		{ "[F", VariantType::POOL_REAL_ARRAY },
 		{ "[Ljava.lang.String;", Variant::POOL_STRING_ARRAY },
-		{ "org.godotengine.godot.Dictionary", Variant::DICTIONARY },
-		{ NULL, Variant::NIL }
+		{ "org.godotengine.godot.Dictionary", VariantType::DICTIONARY },
+		{ NULL, VariantType::NIL }
 	};
 
 	int idx = 0;
@@ -1254,7 +1254,7 @@ static Variant::Type get_jni_type(const String &p_type) {
 		idx++;
 	}
 
-	return Variant::NIL;
+	return VariantType::NIL;
 }
 
 static const char *get_jni_sig(const String &p_type) {
@@ -1307,7 +1307,7 @@ JNIEXPORT void JNICALL Java_org_godotengine_godot_GodotLib_method(JNIEnv *env, j
 
 	String mname = jstring_to_string(name, env);
 	String retval = jstring_to_string(ret, env);
-	Vector<Variant::Type> types;
+	Vector<VariantType> types;
 	String cs = "(";
 
 	int stringCount = env->GetArrayLength(args);

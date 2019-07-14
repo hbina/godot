@@ -103,7 +103,7 @@ void ScriptDebuggerRemote::_put_variable(const String &p_name, const Variant &p_
 	packet_peer_stream->put_var(p_name);
 
 	Variant var = p_variable;
-	if (p_variable.get_type() == Variant::OBJECT && !ObjectDB::instance_validate(p_variable)) {
+	if (p_variable.get_type() == VariantType::OBJECT && !ObjectDB::instance_validate(p_variable)) {
 		var = Variant();
 	}
 
@@ -159,12 +159,12 @@ void ScriptDebuggerRemote::debug(ScriptLanguage *p_script, bool p_can_continue) 
 			Variant var;
 			Error err = packet_peer_stream->get_var(var);
 			ERR_CONTINUE(err != OK);
-			ERR_CONTINUE(var.get_type() != Variant::ARRAY);
+			ERR_CONTINUE(var.get_type() != VariantType::ARRAY);
 
 			Array cmd = var;
 
 			ERR_CONTINUE(cmd.size() == 0);
-			ERR_CONTINUE(cmd[0].get_type() != Variant::STRING);
+			ERR_CONTINUE(cmd[0].get_type() != VariantType::STRING);
 
 			String command = cmd[0];
 
@@ -575,7 +575,7 @@ void ScriptDebuggerRemote::_send_object_id(ObjectID p_id) {
 			for (ScriptConstantsMap::Element *sc = constants.front(); sc; sc = sc->next()) {
 				for (Map<StringName, Variant>::Element *E = sc->get().front(); E; E = E->next()) {
 					String script_path = sc->key() == si->get_script().ptr() ? "" : sc->key()->get_path().get_file() + "/";
-					if (E->value().get_type() == Variant::OBJECT) {
+					if (E->value().get_type() == VariantType::OBJECT) {
 						Variant id = ((Object *)E->value())->get_instance_id();
 						PropertyInfo pi(id.get_type(), "Constants/" + E->key(), PROPERTY_HINT_OBJECT_ID, "Object");
 						properties.push_back(PropertyDesc(pi, id));
@@ -588,14 +588,14 @@ void ScriptDebuggerRemote::_send_object_id(ObjectID p_id) {
 		}
 	}
 	if (Node *node = Object::cast_to<Node>(obj)) {
-		PropertyInfo pi(Variant::NODE_PATH, String("Node/path"));
+		PropertyInfo pi(VariantType::NODE_PATH, String("Node/path"));
 		properties.push_front(PropertyDesc(pi, node->get_path()));
 	} else if (Resource *res = Object::cast_to<Resource>(obj)) {
 		if (Script *s = Object::cast_to<Script>(res)) {
 			Map<StringName, Variant> constants;
 			s->get_constants(&constants);
 			for (Map<StringName, Variant>::Element *E = constants.front(); E; E = E->next()) {
-				if (E->value().get_type() == Variant::OBJECT) {
+				if (E->value().get_type() == VariantType::OBJECT) {
 					Variant id = ((Object *)E->value())->get_instance_id();
 					PropertyInfo pi(id.get_type(), "Constants/" + E->key(), PROPERTY_HINT_OBJECT_ID, "Object");
 					properties.push_front(PropertyDesc(pi, E->value()));
@@ -690,12 +690,12 @@ void ScriptDebuggerRemote::_poll_events() {
 		Error err = packet_peer_stream->get_var(var);
 
 		ERR_CONTINUE(err != OK);
-		ERR_CONTINUE(var.get_type() != Variant::ARRAY);
+		ERR_CONTINUE(var.get_type() != VariantType::ARRAY);
 
 		Array cmd = var;
 
 		ERR_CONTINUE(cmd.size() == 0);
-		ERR_CONTINUE(cmd[0].get_type() != Variant::STRING);
+		ERR_CONTINUE(cmd[0].get_type() != VariantType::STRING);
 
 		String command = cmd[0];
 		//cmd.remove(0);

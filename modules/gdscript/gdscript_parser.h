@@ -60,7 +60,7 @@ public:
 		bool infer_type;
 		bool may_yield; // For function calls
 
-		Variant::Type builtin_type;
+		VariantType builtin_type;
 		StringName native_type;
 		Ref<Script> script_type;
 		ClassNode *class_type;
@@ -101,7 +101,7 @@ public:
 				is_meta_type(false),
 				infer_type(false),
 				may_yield(false),
-				builtin_type(Variant::NIL),
+				builtin_type(VariantType::NIL),
 				class_type(NULL) {}
 	};
 
@@ -259,7 +259,7 @@ public:
 
 	struct TypeNode : public Node {
 
-		Variant::Type vtype;
+		VariantType vtype;
 		TypeNode() { type = TYPE_TYPE; }
 	};
 	struct BuiltInFunctionNode : public Node {
@@ -317,7 +317,7 @@ public:
 			type = TYPE_ARRAY;
 			datatype.has_type = true;
 			datatype.kind = DataType::BUILTIN;
-			datatype.builtin_type = Variant::ARRAY;
+			datatype.builtin_type = VariantType::ARRAY;
 		}
 	};
 
@@ -337,7 +337,7 @@ public:
 			type = TYPE_DICTIONARY;
 			datatype.has_type = true;
 			datatype.kind = DataType::BUILTIN;
-			datatype.builtin_type = Variant::DICTIONARY;
+			datatype.builtin_type = VariantType::DICTIONARY;
 		}
 	};
 
@@ -561,7 +561,7 @@ private:
 
 	CompletionType completion_type;
 	StringName completion_cursor;
-	Variant::Type completion_built_in_constant;
+	VariantType completion_built_in_constant;
 	Node *completion_node;
 	ClassNode *completion_class;
 	FunctionNode *completion_function;
@@ -649,7 +649,7 @@ public:
 	CompletionType get_completion_type();
 	StringName get_completion_cursor();
 	int get_completion_line();
-	Variant::Type get_completion_built_in_constant();
+	VariantType get_completion_built_in_constant();
 	Node *get_completion_node();
 	ClassNode *get_completion_class();
 	BlockNode *get_completion_block();

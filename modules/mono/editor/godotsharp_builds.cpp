@@ -487,7 +487,7 @@ GodotSharpBuilds::GodotSharpBuilds() {
 	EDITOR_DEF("mono/builds/build_tool", MSBUILD_MONO);
 #endif
 
-	ed_settings->add_property_hint(PropertyInfo(Variant::INT, "mono/builds/build_tool", PROPERTY_HINT_ENUM,
+	ed_settings->add_property_hint(PropertyInfo(VariantType::INT, "mono/builds/build_tool", PROPERTY_HINT_ENUM,
 			PROP_NAME_MSBUILD_MONO
 #ifdef WINDOWS_ENABLED
 			"," PROP_NAME_MSBUILD_VS

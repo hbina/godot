@@ -1290,18 +1290,18 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 
 	switch (p_property.get_type()) {
 
-		case Variant::NIL: {
+		case VariantType::NIL: {
 
 			f->store_32(VARIANT_NIL);
 			// don't store anything
 		} break;
-		case Variant::BOOL: {
+		case VariantType::BOOL: {
 
 			f->store_32(VARIANT_BOOL);
 			bool val = p_property;
 			f->store_32(val);
 		} break;
-		case Variant::INT: {
+		case VariantType::INT: {
 
 			int64_t val = p_property;
 			if (val > 0x7FFFFFFF || val < -(int64_t)0x80000000) {
@@ -1314,7 +1314,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::REAL: {
+		case VariantType::REAL: {
 
 			double d = p_property;
 			float fl = d;
@@ -1328,7 +1328,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::STRING: {
+		case VariantType::STRING: {
 
 			f->store_32(VARIANT_STRING);
 			String val = p_property;
@@ -1450,7 +1450,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 
 		} break;
 
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 			f->store_32(VARIANT_NODE_PATH);
 			NodePath np = p_property;
 			f->store_16(np.get_name_count());
@@ -1481,7 +1481,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			RID val = p_property;
 			f->store_32(val.get_id());
 		} break;
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			f->store_32(VARIANT_OBJECT);
 			RES res = p_property;
@@ -1507,7 +1507,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 			f->store_32(VARIANT_DICTIONARY);
 			Dictionary d = p_property;
@@ -1528,7 +1528,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 
 			f->store_32(VARIANT_ARRAY);
 			Array a = p_property;
@@ -1561,7 +1561,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 				f->store_32(r[i]);
 
 		} break;
-		case Variant::POOL_REAL_ARRAY: {
+		case VariantType::POOL_REAL_ARRAY: {
 
 			f->store_32(VARIANT_REAL_ARRAY);
 			PoolVector<real_t> arr = p_property;
@@ -1599,7 +1599,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::POOL_VECTOR2_ARRAY: {
+		case VariantType::POOL_VECTOR2_ARRAY: {
 
 			f->store_32(VARIANT_VECTOR2_ARRAY);
 			PoolVector<Vector2> arr = p_property;
@@ -1638,7 +1638,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 void ResourceFormatSaverBinaryInstance::_find_resources(const Variant &p_variant, bool p_main) {
 
 	switch (p_variant.get_type()) {
-		case Variant::OBJECT: {
+		case VariantType::OBJECT: {
 
 			RES res = p_variant.operator RefPtr();
 
@@ -1688,7 +1688,7 @@ void ResourceFormatSaverBinaryInstance::_find_resources(const Variant &p_variant
 
 		} break;
 
-		case Variant::ARRAY: {
+		case VariantType::ARRAY: {
 
 			Array varray = p_variant;
 			int len = varray.size();
@@ -1700,7 +1700,7 @@ void ResourceFormatSaverBinaryInstance::_find_resources(const Variant &p_variant
 
 		} break;
 
-		case Variant::DICTIONARY: {
+		case VariantType::DICTIONARY: {
 
 			Dictionary d = p_variant;
 			List<Variant> keys;
@@ -1712,7 +1712,7 @@ void ResourceFormatSaverBinaryInstance::_find_resources(const Variant &p_variant
 				_find_resources(v);
 			}
 		} break;
-		case Variant::NODE_PATH: {
+		case VariantType::NODE_PATH: {
 			//take the chance and save node path strings
 			NodePath np = p_variant;
 			for (int i = 0; i < np.get_name_count(); i++)
@@ -1839,7 +1839,7 @@ Error ResourceFormatSaverBinaryInstance::save(const String &p_path, const RES &p
 
 					Variant default_value = ClassDB::class_get_default_property_value(E->get()->get_class(), F->get().name);
 
-					if (default_value.get_type() != Variant::NIL && bool(Variant::evaluate(Variant::OP_EQUAL, p.value, default_value))) {
+					if (default_value.get_type() != VariantType::NIL && bool(Variant::evaluate(Variant::OP_EQUAL, p.value, default_value))) {
 						continue;
 					}
 

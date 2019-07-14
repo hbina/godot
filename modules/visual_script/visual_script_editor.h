@@ -126,9 +126,9 @@ class VisualScriptEditor : public ScriptEditorBase {
 
 	struct VirtualInMenu {
 		String name;
-		Variant::Type ret;
+		VariantType ret;
 		bool ret_variant;
-		Vector<Pair<Variant::Type, String> > args;
+		Vector<Pair<VariantType, String> > args;
 	};
 
 	HashMap<StringName, Ref<StyleBox> > node_styles;

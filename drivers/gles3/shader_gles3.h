@@ -34,7 +34,7 @@
 #include "core/hash_map.h"
 #include "core/map.h"
 #include "core/math/camera_matrix.h"
-#include "core/variant.h"
+#include "core/variant.hpp"
 
 #include "platform_config.h"
 #ifndef GLES3_INCLUDE_H
@@ -72,7 +72,7 @@ protected:
 
 	struct UniformPair {
 		const char *name;
-		Variant::Type type_hint;
+		VariantType type_hint;
 	};
 
 	struct TexUnitPair {
@@ -202,44 +202,44 @@ private:
 			return; // do none
 		switch (p_value.get_type()) {
 
-			case Variant::BOOL:
-			case Variant::INT: {
+			case VariantType::BOOL:
+			case VariantType::INT: {
 
 				int val = p_value;
 				glUniform1i(p_uniform, val);
 			} break;
-			case Variant::REAL: {
+			case VariantType::REAL: {
 
 				real_t val = p_value;
 				glUniform1f(p_uniform, val);
 			} break;
-			case Variant::COLOR: {
+			case VariantType::COLOR: {
 
 				Color val = p_value;
 				glUniform4f(p_uniform, val.r, val.g, val.b, val.a);
 			} break;
-			case Variant::VECTOR2: {
+			case VariantType::VECTOR2: {
 
 				Vector2 val = p_value;
 				glUniform2f(p_uniform, val.x, val.y);
 			} break;
-			case Variant::VECTOR3: {
+			case VariantType::VECTOR3: {
 
 				Vector3 val = p_value;
 				glUniform3f(p_uniform, val.x, val.y, val.z);
 			} break;
-			case Variant::PLANE: {
+			case VariantType::PLANE: {
 
 				Plane val = p_value;
 				glUniform4f(p_uniform, val.normal.x, val.normal.y, val.normal.z, val.d);
 			} break;
-			case Variant::QUAT: {
+			case VariantType::QUAT: {
 
 				Quat val = p_value;
 				glUniform4f(p_uniform, val.x, val.y, val.z, val.w);
 			} break;
 
-			case Variant::TRANSFORM2D: {
+			case VariantType::TRANSFORM2D: {
 
 				Transform2D tr = p_value;
 				GLfloat matrix[16] = { /* build a 16x16 matrix */
@@ -264,8 +264,8 @@ private:
 				glUniformMatrix4fv(p_uniform, 1, false, matrix);
 
 			} break;
-			case Variant::BASIS:
-			case Variant::TRANSFORM: {
+			case VariantType::BASIS:
+			case VariantType::TRANSFORM: {
 
 				Transform tr = p_value;
 				GLfloat matrix[16] = { /* build a 16x16 matrix */
@@ -330,7 +330,7 @@ public:
 
 	void set_uniform_default(int p_idx, const Variant &p_value) {
 
-		if (p_value.get_type() == Variant::NIL) {
+		if (p_value.get_type() == VariantType::NIL) {
 
 			uniform_defaults.erase(p_idx);
 		} else {

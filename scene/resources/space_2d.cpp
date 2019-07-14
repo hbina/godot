@@ -51,7 +51,7 @@ void Space2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_active", "active"), &Space2D::set_active);
 	ClassDB::bind_method(D_METHOD("is_active"), &Space2D::is_active);
 
-	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "active"), "set_active", "is_active");
+	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "active"), "set_active", "is_active");
 }
 
 Space2D::Space2D() {
