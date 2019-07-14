@@ -1179,7 +1179,7 @@ public:
 			r_options->push_back(ExportOption(PropertyInfo(VariantType::BOOL, "architectures/" + abi), is_default));
 		}
 
-		r_options->push_back(ExportOption(PropertyInfo(Variant::POOL_STRING_ARRAY, "permissions/custom_permissions"), PoolStringArray()));
+		r_options->push_back(ExportOption(PropertyInfo(VariantType::POOL_STRING_ARRAY, "permissions/custom_permissions"), PoolStringArray()));
 
 		const char **perms = android_perms;
 		while (*perms) {

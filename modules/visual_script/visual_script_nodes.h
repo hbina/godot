@@ -108,7 +108,7 @@ class VisualScriptOperator : public VisualScriptNode {
 	GDCLASS(VisualScriptOperator, VisualScriptNode);
 
 	VariantType typed;
-	Variant::Operator op;
+	VariantOperator op;
 
 protected:
 	static void _bind_methods();
@@ -128,8 +128,8 @@ public:
 	virtual String get_caption() const;
 	virtual String get_category() const { return "operators"; }
 
-	void set_operator(Variant::Operator p_op);
-	Variant::Operator get_operator() const;
+	void set_operator(VariantOperator p_op);
+	VariantOperator get_operator() const;
 
 	void set_typed(VariantType p_op);
 	VariantType get_typed() const;

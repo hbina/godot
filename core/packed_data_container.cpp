@@ -230,22 +230,22 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 		case VariantType::BOOL:
 		case VariantType::INT:
 		case VariantType::REAL:
-		case Variant::VECTOR2:
-		case Variant::RECT2:
-		case Variant::VECTOR3:
-		case Variant::TRANSFORM2D:
-		case Variant::PLANE:
-		case Variant::QUAT:
-		case Variant::AABB:
-		case Variant::BASIS:
-		case Variant::TRANSFORM:
-		case Variant::POOL_BYTE_ARRAY:
-		case Variant::POOL_INT_ARRAY:
+		case VariantType::VECTOR2:
+		case VariantType::RECT2:
+		case VariantType::VECTOR3:
+		case VariantType::TRANSFORM2D:
+		case VariantType::PLANE:
+		case VariantType::QUAT:
+		case VariantType::AABB:
+		case VariantType::BASIS:
+		case VariantType::TRANSFORM:
+		case VariantType::POOL_BYTE_ARRAY:
+		case VariantType::POOL_INT_ARRAY:
 		case VariantType::POOL_REAL_ARRAY:
-		case Variant::POOL_STRING_ARRAY:
+		case VariantType::POOL_STRING_ARRAY:
 		case VariantType::POOL_VECTOR2_ARRAY:
-		case Variant::POOL_VECTOR3_ARRAY:
-		case Variant::POOL_COLOR_ARRAY:
+		case VariantType::POOL_VECTOR3_ARRAY:
+		case VariantType::POOL_COLOR_ARRAY:
 		case VariantType::NODE_PATH: {
 
 			uint32_t pos = tmpdata.size();
@@ -257,7 +257,7 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 
 		} break;
 		// misc types
-		case Variant::_RID:
+		case VariantType::_RID:
 		case VariantType::OBJECT: {
 
 			return _pack(Variant(), tmpdata, string_cache);
@@ -374,7 +374,7 @@ void PackedDataContainer::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("pack", "value"), &PackedDataContainer::pack);
 	ClassDB::bind_method(D_METHOD("size"), &PackedDataContainer::size);
 
-	ADD_PROPERTY(PropertyInfo(Variant::POOL_BYTE_ARRAY, "__data__"), "_set_data", "_get_data");
+	ADD_PROPERTY(PropertyInfo(VariantType::POOL_BYTE_ARRAY, "__data__"), "_set_data", "_get_data");
 }
 
 PackedDataContainer::PackedDataContainer() {

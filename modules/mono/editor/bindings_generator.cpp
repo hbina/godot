@@ -2557,21 +2557,21 @@ void BindingsGenerator::_default_argument_from_variant(const Variant &p_val, Arg
 		case VariantType::NODE_PATH:
 			r_iarg.default_argument = "\"" + r_iarg.default_argument + "\"";
 			break;
-		case Variant::TRANSFORM:
+		case VariantType::TRANSFORM:
 			if (p_val.operator Transform() == Transform())
 				r_iarg.default_argument.clear();
 			r_iarg.default_argument = "new %s(" + r_iarg.default_argument + ")";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
-		case Variant::PLANE:
-		case Variant::AABB:
-		case Variant::COLOR:
+		case VariantType::PLANE:
+		case VariantType::AABB:
+		case VariantType::COLOR:
 			r_iarg.default_argument = "new Color(1, 1, 1, 1)";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
-		case Variant::VECTOR2:
-		case Variant::RECT2:
-		case Variant::VECTOR3:
+		case VariantType::VECTOR2:
+		case VariantType::RECT2:
+		case VariantType::VECTOR3:
 			r_iarg.default_argument = "new %s" + r_iarg.default_argument;
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;
@@ -2582,24 +2582,24 @@ void BindingsGenerator::_default_argument_from_variant(const Variant &p_val, Arg
 			}
 			FALLTHROUGH;
 		case VariantType::DICTIONARY:
-		case Variant::_RID:
+		case VariantType::_RID:
 			r_iarg.default_argument = "new %s()";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_REF;
 			break;
 		case VariantType::ARRAY:
-		case Variant::POOL_BYTE_ARRAY:
-		case Variant::POOL_INT_ARRAY:
+		case VariantType::POOL_BYTE_ARRAY:
+		case VariantType::POOL_INT_ARRAY:
 		case VariantType::POOL_REAL_ARRAY:
-		case Variant::POOL_STRING_ARRAY:
+		case VariantType::POOL_STRING_ARRAY:
 		case VariantType::POOL_VECTOR2_ARRAY:
-		case Variant::POOL_VECTOR3_ARRAY:
-		case Variant::POOL_COLOR_ARRAY:
+		case VariantType::POOL_VECTOR3_ARRAY:
+		case VariantType::POOL_COLOR_ARRAY:
 			r_iarg.default_argument = "new %s {}";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_REF;
 			break;
-		case Variant::TRANSFORM2D:
-		case Variant::BASIS:
-		case Variant::QUAT:
+		case VariantType::TRANSFORM2D:
+		case VariantType::BASIS:
+		case VariantType::QUAT:
 			r_iarg.default_argument = Variant::get_type_name(p_val.get_type()) + ".Identity";
 			r_iarg.def_param_mode = ArgumentInterface::NULLABLE_VAL;
 			break;

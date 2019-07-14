@@ -111,13 +111,49 @@ enum class VariantType {
 	POOL_VECTOR3_ARRAY, // 25
 	POOL_COLOR_ARRAY,
 
-	VARIANT_MAX
+	VARIANT_TYPE_COUNT
+};
+
+enum class VariantOperator {
+
+	//comparison
+	OP_EQUAL,
+	OP_NOT_EQUAL,
+	OP_LESS,
+	OP_LESS_EQUAL,
+	OP_GREATER,
+	OP_GREATER_EQUAL,
+	//mathematic
+	OP_ADD,
+	OP_SUBTRACT,
+	OP_MULTIPLY,
+	OP_DIVIDE,
+	OP_NEGATE,
+	OP_POSITIVE,
+	OP_MODULE,
+	OP_STRING_CONCAT,
+	//bitwise
+	OP_SHIFT_LEFT,
+	OP_SHIFT_RIGHT,
+	OP_BIT_AND,
+	OP_BIT_OR,
+	OP_BIT_XOR,
+	OP_BIT_NEGATE,
+	//logic
+	OP_AND,
+	OP_OR,
+	OP_XOR,
+	OP_NOT,
+	//containment
+	OP_IN,
+	OP_MAX
 
 };
 
 class Variant {
 public:
 	// If this changes the table in variant_op must be updated
+	static constexpr int VARIANT_MAX = static_cast<int>(VariantType::VARIANT_TYPE_COUNT);
 
 private:
 	friend struct _VariantCall;
@@ -304,45 +340,10 @@ public:
 	Variant(const IP_Address &p_address);
 
 	// If this changes the table in variant_op must be updated
-	enum Operator {
 
-		//comparison
-		OP_EQUAL,
-		OP_NOT_EQUAL,
-		OP_LESS,
-		OP_LESS_EQUAL,
-		OP_GREATER,
-		OP_GREATER_EQUAL,
-		//mathematic
-		OP_ADD,
-		OP_SUBTRACT,
-		OP_MULTIPLY,
-		OP_DIVIDE,
-		OP_NEGATE,
-		OP_POSITIVE,
-		OP_MODULE,
-		OP_STRING_CONCAT,
-		//bitwise
-		OP_SHIFT_LEFT,
-		OP_SHIFT_RIGHT,
-		OP_BIT_AND,
-		OP_BIT_OR,
-		OP_BIT_XOR,
-		OP_BIT_NEGATE,
-		//logic
-		OP_AND,
-		OP_OR,
-		OP_XOR,
-		OP_NOT,
-		//containment
-		OP_IN,
-		OP_MAX
-
-	};
-
-	static String get_operator_name(Operator p_op);
-	static void evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b, Variant &r_ret, bool &r_valid);
-	static Variant evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b) {
+	static String get_operator_name(VariantOperator p_op);
+	static void evaluate(const VariantOperator &p_op, const Variant &p_a, const Variant &p_b, Variant &r_ret, bool &r_valid);
+	static Variant evaluate(const VariantOperator &p_op, const Variant &p_a, const Variant &p_b) {
 
 		bool valid = true;
 		Variant res;

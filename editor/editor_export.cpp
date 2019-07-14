@@ -613,8 +613,8 @@ void EditorExportPlugin::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("add_ios_cpp_code", "code"), &EditorExportPlugin::add_ios_cpp_code);
 	ClassDB::bind_method(D_METHOD("skip"), &EditorExportPlugin::skip);
 
-	BIND_VMETHOD(MethodInfo("_export_file", PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::STRING, "type"), PropertyInfo(Variant::POOL_STRING_ARRAY, "features")));
-	BIND_VMETHOD(MethodInfo("_export_begin", PropertyInfo(Variant::POOL_STRING_ARRAY, "features"), PropertyInfo(VariantType::BOOL, "is_debug"), PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::INT, "flags")));
+	BIND_VMETHOD(MethodInfo("_export_file", PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::STRING, "type"), PropertyInfo(VariantType::POOL_STRING_ARRAY, "features")));
+	BIND_VMETHOD(MethodInfo("_export_begin", PropertyInfo(VariantType::POOL_STRING_ARRAY, "features"), PropertyInfo(VariantType::BOOL, "is_debug"), PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::INT, "flags")));
 	BIND_VMETHOD(MethodInfo("_export_end"));
 }
 

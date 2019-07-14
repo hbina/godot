@@ -109,7 +109,7 @@ void VisibilityNotifier::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_aabb"), &VisibilityNotifier::get_aabb);
 	ClassDB::bind_method(D_METHOD("is_on_screen"), &VisibilityNotifier::is_on_screen);
 
-	ADD_PROPERTY(PropertyInfo(Variant::AABB, "aabb"), "set_aabb", "get_aabb");
+	ADD_PROPERTY(PropertyInfo(VariantType::AABB, "aabb"), "set_aabb", "get_aabb");
 
 	ADD_SIGNAL(MethodInfo("camera_entered", PropertyInfo(VariantType::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera")));
 	ADD_SIGNAL(MethodInfo("camera_exited", PropertyInfo(VariantType::OBJECT, "camera", PROPERTY_HINT_RESOURCE_TYPE, "Camera")));

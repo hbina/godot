@@ -55,7 +55,7 @@ void ReferenceRect::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_border_color"), &ReferenceRect::get_border_color);
 	ClassDB::bind_method(D_METHOD("set_border_color", "color"), &ReferenceRect::set_border_color);
 
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "border_color"), "set_border_color", "get_border_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "border_color"), "set_border_color", "get_border_color");
 }
 
 ReferenceRect::ReferenceRect() {

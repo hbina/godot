@@ -394,14 +394,7 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 	if (ScriptDebugger::get_singleton())
 		GDScriptLanguage::get_singleton()->enter_function(p_instance, this, stack, &ip, &line);
 
-#define GD_ERR_BREAK(m_cond)                                                                                           \
-	{                                                                                                                  \
-		if (unlikely(m_cond)) {                                                                                        \
-			_err_print_error(FUNCTION_STR, __FILE__, __LINE__, "Condition ' " _STR(m_cond) " ' is true. Breaking..:"); \
-			OPCODE_BREAK;                                                                                              \
-		} else                                                                                                         \
-			_err_error_exists = false;                                                                                 \
-	}
+#define GD_ERR_BREAK(m_cond)
 
 #define CHECK_SPACE(m_space) \
 	GD_ERR_BREAK((ip + m_space) > _code_size)
@@ -449,8 +442,8 @@ Variant GDScriptFunction::call(GDScriptInstance *p_instance, const Variant **p_a
 				CHECK_SPACE(5);
 
 				bool valid;
-				Variant::Operator op = (Variant::Operator)_code_ptr[ip + 1];
-				GD_ERR_BREAK(op >= Variant::OP_MAX);
+				VariantOperator op = (VariantOperator)_code_ptr[ip + 1];
+				GD_ERR_BREAK(op >= VariantOperator::OP_MAX);
 
 				GET_VARIANT_PTR(a, 2);
 				GET_VARIANT_PTR(b, 3);

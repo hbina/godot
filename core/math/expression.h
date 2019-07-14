@@ -229,7 +229,7 @@ private:
 
 		bool is_op;
 		union {
-			Variant::Operator op;
+			VariantOperator op;
 			ENode *node;
 		};
 	};
@@ -254,7 +254,7 @@ private:
 
 	struct OperatorNode : public ENode {
 
-		Variant::Operator op;
+		VariantOperator op;
 
 		ENode *nodes[2];
 

@@ -525,7 +525,7 @@ void VisualShaderEditor::_update_graph() {
 
 				switch (default_value.get_type()) {
 
-					case Variant::COLOR: {
+					case VariantType::COLOR: {
 						button->set_custom_minimum_size(Size2(30, 0) * EDSCALE);
 						button->connect("draw", this, "_draw_color_over_button", varray(button, default_value));
 					} break;
@@ -533,7 +533,7 @@ void VisualShaderEditor::_update_graph() {
 					case VariantType::REAL: {
 						button->set_text(String::num(default_value, 4));
 					} break;
-					case Variant::VECTOR3: {
+					case VariantType::VECTOR3: {
 						Vector3 v = default_value;
 						button->set_text(String::num(v.x, 3) + "," + String::num(v.y, 3) + "," + String::num(v.z, 3));
 					} break;

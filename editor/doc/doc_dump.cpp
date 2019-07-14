@@ -170,7 +170,7 @@ void DocDump::dump(const String &p_file) {
 							case VariantType::NODE_PATH:
 								default_arg_text = "\"" + default_arg_text + "\"";
 								break;
-							case Variant::TRANSFORM:
+							case VariantType::TRANSFORM:
 								if (default_arg.operator Transform() == Transform()) {
 									default_arg_text = "";
 								}
@@ -178,26 +178,26 @@ void DocDump::dump(const String &p_file) {
 								default_arg_text = Variant::get_type_name(default_arg.get_type()) + "(" + default_arg_text + ")";
 								break;
 
-							case Variant::VECTOR2:
-							case Variant::RECT2:
-							case Variant::VECTOR3:
-							case Variant::PLANE:
-							case Variant::QUAT:
-							case Variant::AABB:
-							case Variant::BASIS:
-							case Variant::COLOR:
-							case Variant::POOL_BYTE_ARRAY:
-							case Variant::POOL_INT_ARRAY:
+							case VariantType::VECTOR2:
+							case VariantType::RECT2:
+							case VariantType::VECTOR3:
+							case VariantType::PLANE:
+							case VariantType::QUAT:
+							case VariantType::AABB:
+							case VariantType::BASIS:
+							case VariantType::COLOR:
+							case VariantType::POOL_BYTE_ARRAY:
+							case VariantType::POOL_INT_ARRAY:
 							case VariantType::POOL_REAL_ARRAY:
-							case Variant::POOL_STRING_ARRAY:
-							case Variant::POOL_VECTOR3_ARRAY:
-							case Variant::POOL_COLOR_ARRAY:
+							case VariantType::POOL_STRING_ARRAY:
+							case VariantType::POOL_VECTOR3_ARRAY:
+							case VariantType::POOL_COLOR_ARRAY:
 								default_arg_text = Variant::get_type_name(default_arg.get_type()) + "(" + default_arg_text + ")";
 								break;
 							case VariantType::OBJECT:
 							case VariantType::DICTIONARY: // 20
 							case VariantType::ARRAY:
-							case Variant::_RID:
+							case VariantType::_RID:
 
 							default: {
 							}

@@ -206,7 +206,7 @@ void VisualShaderNodeColorConstant::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_constant", "value"), &VisualShaderNodeColorConstant::set_constant);
 	ClassDB::bind_method(D_METHOD("get_constant"), &VisualShaderNodeColorConstant::get_constant);
 
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "constant"), "set_constant", "get_constant");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "constant"), "set_constant", "get_constant");
 }
 
 VisualShaderNodeColorConstant::VisualShaderNodeColorConstant() {
@@ -265,7 +265,7 @@ void VisualShaderNodeVec3Constant::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_constant", "value"), &VisualShaderNodeVec3Constant::set_constant);
 	ClassDB::bind_method(D_METHOD("get_constant"), &VisualShaderNodeVec3Constant::get_constant);
 
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR3, "constant"), "set_constant", "get_constant");
+	ADD_PROPERTY(PropertyInfo(VariantType::VECTOR3, "constant"), "set_constant", "get_constant");
 }
 
 VisualShaderNodeVec3Constant::VisualShaderNodeVec3Constant() {
@@ -331,7 +331,7 @@ void VisualShaderNodeTransformConstant::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_constant", "value"), &VisualShaderNodeTransformConstant::set_constant);
 	ClassDB::bind_method(D_METHOD("get_constant"), &VisualShaderNodeTransformConstant::get_constant);
 
-	ADD_PROPERTY(PropertyInfo(Variant::TRANSFORM, "constant"), "set_constant", "get_constant");
+	ADD_PROPERTY(PropertyInfo(VariantType::TRANSFORM, "constant"), "set_constant", "get_constant");
 }
 
 VisualShaderNodeTransformConstant::VisualShaderNodeTransformConstant() {

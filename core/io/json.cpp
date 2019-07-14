@@ -71,9 +71,9 @@ String JSON::_print_var(const Variant &p_var, const String &p_indent, int p_cur_
 		case VariantType::BOOL: return p_var.operator bool() ? "true" : "false";
 		case VariantType::INT: return itos(p_var);
 		case VariantType::REAL: return rtos(p_var);
-		case Variant::POOL_INT_ARRAY:
+		case VariantType::POOL_INT_ARRAY:
 		case VariantType::POOL_REAL_ARRAY:
-		case Variant::POOL_STRING_ARRAY:
+		case VariantType::POOL_STRING_ARRAY:
 		case VariantType::ARRAY: {
 
 			String s = "[";

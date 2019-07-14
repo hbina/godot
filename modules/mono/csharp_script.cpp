@@ -404,9 +404,9 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 	if (p_var_type_name == Variant::get_type_name(VariantType::ARRAY))
 		return "Collections.Array";
 
-	if (p_var_type_name == Variant::get_type_name(Variant::POOL_BYTE_ARRAY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_BYTE_ARRAY))
 		return "byte[]";
-	if (p_var_type_name == Variant::get_type_name(Variant::POOL_INT_ARRAY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_INT_ARRAY))
 		return "int[]";
 	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_REAL_ARRAY)) {
 #ifdef REAL_T_IS_DOUBLE
@@ -415,30 +415,30 @@ static String variant_type_to_managed_name(const String &p_var_type_name) {
 		return "float[]";
 #endif
 	}
-	if (p_var_type_name == Variant::get_type_name(Variant::POOL_STRING_ARRAY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_STRING_ARRAY))
 		return "string[]";
 	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_VECTOR2_ARRAY))
 		return "Vector2[]";
-	if (p_var_type_name == Variant::get_type_name(Variant::POOL_VECTOR3_ARRAY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_VECTOR3_ARRAY))
 		return "Vector3[]";
-	if (p_var_type_name == Variant::get_type_name(Variant::POOL_COLOR_ARRAY))
+	if (p_var_type_name == Variant::get_type_name(VariantType::POOL_COLOR_ARRAY))
 		return "Color[]";
 
 	VariantType var_types[] = {
 		VariantType::BOOL,
 		VariantType::INT,
-		Variant::VECTOR2,
-		Variant::RECT2,
-		Variant::VECTOR3,
-		Variant::TRANSFORM2D,
-		Variant::PLANE,
-		Variant::QUAT,
-		Variant::AABB,
-		Variant::BASIS,
-		Variant::TRANSFORM,
-		Variant::COLOR,
+		VariantType::VECTOR2,
+		VariantType::RECT2,
+		VariantType::VECTOR3,
+		VariantType::TRANSFORM2D,
+		VariantType::PLANE,
+		VariantType::QUAT,
+		VariantType::AABB,
+		VariantType::BASIS,
+		VariantType::TRANSFORM,
+		VariantType::COLOR,
 		VariantType::NODE_PATH,
-		Variant::_RID
+		VariantType::_RID
 	};
 
 	for (unsigned int i = 0; i < sizeof(var_types) / sizeof(VariantType); i++) {

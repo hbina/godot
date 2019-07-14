@@ -877,7 +877,7 @@ void MultiplayerAPI::_bind_methods() {
 
 	ADD_SIGNAL(MethodInfo("network_peer_connected", PropertyInfo(VariantType::INT, "id")));
 	ADD_SIGNAL(MethodInfo("network_peer_disconnected", PropertyInfo(VariantType::INT, "id")));
-	ADD_SIGNAL(MethodInfo("network_peer_packet", PropertyInfo(VariantType::INT, "id"), PropertyInfo(Variant::POOL_BYTE_ARRAY, "packet")));
+	ADD_SIGNAL(MethodInfo("network_peer_packet", PropertyInfo(VariantType::INT, "id"), PropertyInfo(VariantType::POOL_BYTE_ARRAY, "packet")));
 	ADD_SIGNAL(MethodInfo("connected_to_server"));
 	ADD_SIGNAL(MethodInfo("connection_failed"));
 	ADD_SIGNAL(MethodInfo("server_disconnected"));

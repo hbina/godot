@@ -106,10 +106,10 @@ void GraphNode::_get_property_list(List<PropertyInfo> *p_list) const {
 
 		p_list->push_back(PropertyInfo(VariantType::BOOL, base + "left_enabled"));
 		p_list->push_back(PropertyInfo(VariantType::INT, base + "left_type"));
-		p_list->push_back(PropertyInfo(Variant::COLOR, base + "left_color"));
+		p_list->push_back(PropertyInfo(VariantType::COLOR, base + "left_color"));
 		p_list->push_back(PropertyInfo(VariantType::BOOL, base + "right_enabled"));
 		p_list->push_back(PropertyInfo(VariantType::INT, base + "right_type"));
-		p_list->push_back(PropertyInfo(Variant::COLOR, base + "right_color"));
+		p_list->push_back(PropertyInfo(VariantType::COLOR, base + "right_color"));
 
 		idx++;
 	}
@@ -713,7 +713,7 @@ void GraphNode::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_overlay"), &GraphNode::get_overlay);
 
 	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "title"), "set_title", "get_title");
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "offset"), "set_offset", "get_offset");
+	ADD_PROPERTY(PropertyInfo(VariantType::VECTOR2, "offset"), "set_offset", "get_offset");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "show_close"), "set_show_close_button", "is_close_button_visible");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "resizable"), "set_resizable", "is_resizable");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "selected"), "set_selected", "is_selected");
@@ -721,10 +721,10 @@ void GraphNode::_bind_methods() {
 	ADD_PROPERTY(PropertyInfo(VariantType::INT, "overlay", PROPERTY_HINT_ENUM, "Disabled,Breakpoint,Position"), "set_overlay", "get_overlay");
 
 	ADD_SIGNAL(MethodInfo("offset_changed"));
-	ADD_SIGNAL(MethodInfo("dragged", PropertyInfo(Variant::VECTOR2, "from"), PropertyInfo(Variant::VECTOR2, "to")));
+	ADD_SIGNAL(MethodInfo("dragged", PropertyInfo(VariantType::VECTOR2, "from"), PropertyInfo(VariantType::VECTOR2, "to")));
 	ADD_SIGNAL(MethodInfo("raise_request"));
 	ADD_SIGNAL(MethodInfo("close_request"));
-	ADD_SIGNAL(MethodInfo("resize_request", PropertyInfo(Variant::VECTOR2, "new_minsize")));
+	ADD_SIGNAL(MethodInfo("resize_request", PropertyInfo(VariantType::VECTOR2, "new_minsize")));
 
 	BIND_ENUM_CONSTANT(OVERLAY_DISABLED);
 	BIND_ENUM_CONSTANT(OVERLAY_BREAKPOINT);

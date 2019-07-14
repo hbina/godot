@@ -877,7 +877,7 @@ VisualScriptExpression::ENode *VisualScriptExpression::_parse_expression() {
 
 				Expression e;
 				e.is_op = true;
-				e.op = Variant::OP_NEGATE;
+				e.op = VariantOperator::OP_NEGATE;
 				expression.push_back(e);
 				continue;
 			} break;
@@ -885,7 +885,7 @@ VisualScriptExpression::ENode *VisualScriptExpression::_parse_expression() {
 
 				Expression e;
 				e.is_op = true;
-				e.op = Variant::OP_NOT;
+				e.op = VariantOperator::OP_NOT;
 				expression.push_back(e);
 				continue;
 			} break;
@@ -1008,35 +1008,35 @@ VisualScriptExpression::ENode *VisualScriptExpression::_parse_expression() {
 		if (error_set)
 			return NULL;
 
-		Variant::Operator op = Variant::OP_MAX;
+		VariantOperator op = VariantOperator::OP_MAX;
 
 		switch (tk.type) {
-			case TK_OP_IN: op = Variant::OP_IN; break;
-			case TK_OP_EQUAL: op = Variant::OP_EQUAL; break;
-			case TK_OP_NOT_EQUAL: op = Variant::OP_NOT_EQUAL; break;
-			case TK_OP_LESS: op = VariantType::OP_LESS; break;
-			case TK_OP_LESS_EQUAL: op = VariantType::OP_LESS_EQUAL; break;
-			case TK_OP_GREATER: op = Variant::OP_GREATER; break;
-			case TK_OP_GREATER_EQUAL: op = Variant::OP_GREATER_EQUAL; break;
-			case TK_OP_AND: op = Variant::OP_AND; break;
-			case TK_OP_OR: op = Variant::OP_OR; break;
-			case TK_OP_NOT: op = Variant::OP_NOT; break;
-			case TK_OP_ADD: op = Variant::OP_ADD; break;
-			case TK_OP_SUB: op = Variant::OP_SUBTRACT; break;
-			case TK_OP_MUL: op = Variant::OP_MULTIPLY; break;
-			case TK_OP_DIV: op = Variant::OP_DIVIDE; break;
-			case TK_OP_MOD: op = Variant::OP_MODULE; break;
-			case TK_OP_SHIFT_LEFT: op = Variant::OP_SHIFT_LEFT; break;
-			case TK_OP_SHIFT_RIGHT: op = Variant::OP_SHIFT_RIGHT; break;
-			case TK_OP_BIT_AND: op = Variant::OP_BIT_AND; break;
-			case TK_OP_BIT_OR: op = Variant::OP_BIT_OR; break;
-			case TK_OP_BIT_XOR: op = Variant::OP_BIT_XOR; break;
-			case TK_OP_BIT_INVERT: op = Variant::OP_BIT_NEGATE; break;
+			case TK_OP_IN: op = VariantOperator::OP_IN; break;
+			case TK_OP_EQUAL: op = VariantOperator::OP_EQUAL; break;
+			case TK_OP_NOT_EQUAL: op = VariantOperator::OP_NOT_EQUAL; break;
+			case TK_OP_LESS: op = VariantOperator::OP_LESS; break;
+			case TK_OP_LESS_EQUAL: op = VariantOperator::OP_LESS_EQUAL; break;
+			case TK_OP_GREATER: op = VariantOperator::OP_GREATER; break;
+			case TK_OP_GREATER_EQUAL: op = VariantOperator::OP_GREATER_EQUAL; break;
+			case TK_OP_AND: op = VariantOperator::OP_AND; break;
+			case TK_OP_OR: op = VariantOperator::OP_OR; break;
+			case TK_OP_NOT: op = VariantOperator::OP_NOT; break;
+			case TK_OP_ADD: op = VariantOperator::OP_ADD; break;
+			case TK_OP_SUB: op = VariantOperator::OP_SUBTRACT; break;
+			case TK_OP_MUL: op = VariantOperator::OP_MULTIPLY; break;
+			case TK_OP_DIV: op = VariantOperator::OP_DIVIDE; break;
+			case TK_OP_MOD: op = VariantOperator::OP_MODULE; break;
+			case TK_OP_SHIFT_LEFT: op = VariantOperator::OP_SHIFT_LEFT; break;
+			case TK_OP_SHIFT_RIGHT: op = VariantOperator::OP_SHIFT_RIGHT; break;
+			case TK_OP_BIT_AND: op = VariantOperator::OP_BIT_AND; break;
+			case TK_OP_BIT_OR: op = VariantOperator::OP_BIT_OR; break;
+			case TK_OP_BIT_XOR: op = VariantOperator::OP_BIT_XOR; break;
+			case TK_OP_BIT_INVERT: op = VariantOperator::OP_BIT_NEGATE; break;
 			default: {
 			};
 		}
 
-		if (op == Variant::OP_MAX) { //stop appending stuff
+		if (op == VariantOperator::OP_MAX) { //stop appending stuff
 			str_ofs = cofs;
 			break;
 		}
@@ -1071,45 +1071,45 @@ VisualScriptExpression::ENode *VisualScriptExpression::_parse_expression() {
 
 			switch (expression[i].op) {
 
-				case Variant::OP_BIT_NEGATE:
+				case VariantOperator::OP_BIT_NEGATE:
 					priority = 0;
 					unary = true;
 					break;
-				case Variant::OP_NEGATE:
+				case VariantOperator::OP_NEGATE:
 					priority = 1;
 					unary = true;
 					break;
 
-				case Variant::OP_MULTIPLY: priority = 2; break;
-				case Variant::OP_DIVIDE: priority = 2; break;
-				case Variant::OP_MODULE: priority = 2; break;
+				case VariantOperator::OP_MULTIPLY: priority = 2; break;
+				case VariantOperator::OP_DIVIDE: priority = 2; break;
+				case VariantOperator::OP_MODULE: priority = 2; break;
 
-				case Variant::OP_ADD: priority = 3; break;
-				case Variant::OP_SUBTRACT: priority = 3; break;
+				case VariantOperator::OP_ADD: priority = 3; break;
+				case VariantOperator::OP_SUBTRACT: priority = 3; break;
 
-				case Variant::OP_SHIFT_LEFT: priority = 4; break;
-				case Variant::OP_SHIFT_RIGHT: priority = 4; break;
+				case VariantOperator::OP_SHIFT_LEFT: priority = 4; break;
+				case VariantOperator::OP_SHIFT_RIGHT: priority = 4; break;
 
-				case Variant::OP_BIT_AND: priority = 5; break;
-				case Variant::OP_BIT_XOR: priority = 6; break;
-				case Variant::OP_BIT_OR: priority = 7; break;
+				case VariantOperator::OP_BIT_AND: priority = 5; break;
+				case VariantOperator::OP_BIT_XOR: priority = 6; break;
+				case VariantOperator::OP_BIT_OR: priority = 7; break;
 
-				case VariantType::OP_LESS: priority = 8; break;
-				case VariantType::OP_LESS_EQUAL: priority = 8; break;
-				case Variant::OP_GREATER: priority = 8; break;
-				case Variant::OP_GREATER_EQUAL: priority = 8; break;
+				case VariantOperator::OP_LESS: priority = 8; break;
+				case VariantOperator::OP_LESS_EQUAL: priority = 8; break;
+				case VariantOperator::OP_GREATER: priority = 8; break;
+				case VariantOperator::OP_GREATER_EQUAL: priority = 8; break;
 
-				case Variant::OP_EQUAL: priority = 8; break;
-				case Variant::OP_NOT_EQUAL: priority = 8; break;
+				case VariantOperator::OP_EQUAL: priority = 8; break;
+				case VariantOperator::OP_NOT_EQUAL: priority = 8; break;
 
-				case Variant::OP_IN: priority = 10; break;
+				case VariantOperator::OP_IN: priority = 10; break;
 
-				case Variant::OP_NOT:
+				case VariantOperator::OP_NOT:
 					priority = 11;
 					unary = true;
 					break;
-				case Variant::OP_AND: priority = 12; break;
-				case Variant::OP_OR: priority = 13; break;
+				case VariantOperator::OP_AND: priority = 12; break;
+				case VariantOperator::OP_OR: priority = 13; break;
 
 				default: {
 					_set_error("Parser bug, invalid operator in expression: " + itos(expression[i].op));

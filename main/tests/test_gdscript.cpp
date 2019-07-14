@@ -572,7 +572,7 @@ static void _disassemble_class(const Ref<GDScript> &p_class, const Vector<String
 					int op = code[ip + 1];
 					txt += " op ";
 
-					String opname = Variant::get_operator_name(Variant::Operator(op));
+					String opname = Variant::get_operator_name(VariantOperator(op));
 
 					txt += DADDR(4);
 					txt += " = ";

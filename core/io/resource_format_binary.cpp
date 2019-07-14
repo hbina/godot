@@ -1335,7 +1335,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			save_unicode_string(f, val);
 
 		} break;
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 
 			f->store_32(VARIANT_VECTOR2);
 			Vector2 val = p_property;
@@ -1343,7 +1343,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.y);
 
 		} break;
-		case Variant::RECT2: {
+		case VariantType::RECT2: {
 
 			f->store_32(VARIANT_RECT2);
 			Rect2 val = p_property;
@@ -1353,7 +1353,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.size.y);
 
 		} break;
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 
 			f->store_32(VARIANT_VECTOR3);
 			Vector3 val = p_property;
@@ -1362,7 +1362,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.z);
 
 		} break;
-		case Variant::PLANE: {
+		case VariantType::PLANE: {
 
 			f->store_32(VARIANT_PLANE);
 			Plane val = p_property;
@@ -1372,7 +1372,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.d);
 
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 
 			f->store_32(VARIANT_QUAT);
 			Quat val = p_property;
@@ -1382,7 +1382,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.w);
 
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 
 			f->store_32(VARIANT_AABB);
 			AABB val = p_property;
@@ -1394,7 +1394,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.size.z);
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 
 			f->store_32(VARIANT_MATRIX32);
 			Transform2D val = p_property;
@@ -1406,7 +1406,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.elements[2].y);
 
 		} break;
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 
 			f->store_32(VARIANT_MATRIX3);
 			Basis val = p_property;
@@ -1421,7 +1421,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.elements[2].z);
 
 		} break;
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 
 			f->store_32(VARIANT_TRANSFORM);
 			Transform val = p_property;
@@ -1439,7 +1439,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			f->store_real(val.origin.z);
 
 		} break;
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 
 			f->store_32(VARIANT_COLOR);
 			Color val = p_property;
@@ -1474,7 +1474,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::_RID: {
+		case VariantType::_RID: {
 
 			f->store_32(VARIANT_RID);
 			WARN_PRINT("Can't save RIDs");
@@ -1539,7 +1539,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 
 			f->store_32(VARIANT_RAW_ARRAY);
 			PoolVector<uint8_t> arr = p_property;
@@ -1550,7 +1550,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			_pad_buffer(f, len);
 
 		} break;
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 
 			f->store_32(VARIANT_INT_ARRAY);
 			PoolVector<int> arr = p_property;
@@ -1573,7 +1573,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 			f->store_32(VARIANT_STRING_ARRAY);
 			PoolVector<String> arr = p_property;
@@ -1585,7 +1585,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 
 			f->store_32(VARIANT_VECTOR3_ARRAY);
 			PoolVector<Vector3> arr = p_property;
@@ -1612,7 +1612,7 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			}
 
 		} break;
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 
 			f->store_32(VARIANT_COLOR_ARRAY);
 			PoolVector<Color> arr = p_property;
@@ -1839,7 +1839,7 @@ Error ResourceFormatSaverBinaryInstance::save(const String &p_path, const RES &p
 
 					Variant default_value = ClassDB::class_get_default_property_value(E->get()->get_class(), F->get().name);
 
-					if (default_value.get_type() != VariantType::NIL && bool(Variant::evaluate(Variant::OP_EQUAL, p.value, default_value))) {
+					if (default_value.get_type() != VariantType::NIL && bool(Variant::evaluate(VariantOperator::OP_EQUAL, p.value, default_value))) {
 						continue;
 					}
 

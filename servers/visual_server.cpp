@@ -117,7 +117,7 @@ Array VisualServer::_instances_cull_convex_bind(const Array &p_convex, RID p_sce
 	Vector<Plane> planes;
 	for (int i = 0; i < p_convex.size(); ++i) {
 		Variant v = p_convex[i];
-		ERR_FAIL_COND_V(v.get_type() != Variant::PLANE, Array());
+		ERR_FAIL_COND_V(v.get_type() != VariantType::PLANE, Array());
 		planes.push_back(v);
 	}
 
@@ -461,7 +461,7 @@ Error VisualServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint32_
 			} break;
 			case VS::ARRAY_NORMAL: {
 
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::POOL_VECTOR3_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != VariantType::POOL_VECTOR3_ARRAY, ERR_INVALID_PARAMETER);
 
 				PoolVector<Vector3> array = p_arrays[ai];
 				ERR_FAIL_COND_V(array.size() != p_vertex_array_len, ERR_INVALID_PARAMETER);
@@ -537,7 +537,7 @@ Error VisualServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint32_
 			} break;
 			case VS::ARRAY_COLOR: {
 
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::POOL_COLOR_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != VariantType::POOL_COLOR_ARRAY, ERR_INVALID_PARAMETER);
 
 				PoolVector<Color> array = p_arrays[ai];
 
@@ -570,7 +570,7 @@ Error VisualServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint32_
 			} break;
 			case VS::ARRAY_TEX_UV: {
 
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::POOL_VECTOR3_ARRAY && p_arrays[ai].get_type() != VariantType::POOL_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != VariantType::POOL_VECTOR3_ARRAY && p_arrays[ai].get_type() != VariantType::POOL_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
 
 				PoolVector<Vector2> array = p_arrays[ai];
 
@@ -601,7 +601,7 @@ Error VisualServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint32_
 
 			case VS::ARRAY_TEX_UV2: {
 
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::POOL_VECTOR3_ARRAY && p_arrays[ai].get_type() != VariantType::POOL_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != VariantType::POOL_VECTOR3_ARRAY && p_arrays[ai].get_type() != VariantType::POOL_VECTOR2_ARRAY, ERR_INVALID_PARAMETER);
 
 				PoolVector<Vector2> array = p_arrays[ai];
 
@@ -667,7 +667,7 @@ Error VisualServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint32_
 			} break;
 			case VS::ARRAY_BONES: {
 
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::POOL_INT_ARRAY && p_arrays[ai].get_type() != VariantType::POOL_REAL_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != VariantType::POOL_INT_ARRAY && p_arrays[ai].get_type() != VariantType::POOL_REAL_ARRAY, ERR_INVALID_PARAMETER);
 
 				PoolVector<int> array = p_arrays[ai];
 
@@ -707,7 +707,7 @@ Error VisualServer::_surface_set_data(Array p_arrays, uint32_t p_format, uint32_
 			case VS::ARRAY_INDEX: {
 
 				ERR_FAIL_COND_V(p_index_array_len <= 0, ERR_INVALID_DATA);
-				ERR_FAIL_COND_V(p_arrays[ai].get_type() != Variant::POOL_INT_ARRAY, ERR_INVALID_PARAMETER);
+				ERR_FAIL_COND_V(p_arrays[ai].get_type() != VariantType::POOL_INT_ARRAY, ERR_INVALID_PARAMETER);
 
 				PoolVector<int> indices = p_arrays[ai];
 				ERR_FAIL_COND_V(indices.size() == 0, ERR_INVALID_PARAMETER);
@@ -955,7 +955,7 @@ void VisualServer::mesh_add_surface_from_arrays(RID p_mesh, PrimitiveType p_prim
 				case VariantType::POOL_VECTOR2_ARRAY: {
 					PoolVector<Vector2> v2 = var;
 				} break;
-				case Variant::POOL_VECTOR3_ARRAY: {
+				case VariantType::POOL_VECTOR3_ARRAY: {
 					PoolVector<Vector3> v3 = var;
 				} break;
 				default: {
@@ -1010,7 +1010,7 @@ void VisualServer::mesh_add_surface_from_arrays(RID p_mesh, PrimitiveType p_prim
 				if (arr.get_type() == VariantType::POOL_VECTOR2_ARRAY) {
 					elem_size = 2;
 					p_compress_format |= ARRAY_FLAG_USE_2D_VERTICES;
-				} else if (arr.get_type() == Variant::POOL_VECTOR3_ARRAY) {
+				} else if (arr.get_type() == VariantType::POOL_VECTOR3_ARRAY) {
 					p_compress_format &= ~ARRAY_FLAG_USE_2D_VERTICES;
 					elem_size = 3;
 				} else {

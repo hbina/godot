@@ -564,7 +564,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 				debugObj->prop_values[pinfo.name] = var;
 			} else {
 
-				if (bool(Variant::evaluate(Variant::OP_NOT_EQUAL, debugObj->prop_values[pinfo.name], var))) {
+				if (bool(Variant::evaluate(VariantOperator::OP_NOT_EQUAL, debugObj->prop_values[pinfo.name], var))) {
 					debugObj->prop_values[pinfo.name] = var;
 					changed.insert(pinfo.name);
 				}
@@ -1482,7 +1482,7 @@ void ScriptEditorDebugger::_method_changed(Object *p_base, const StringName &p_n
 
 	for (int i = 0; i < VARIANT_ARG_MAX; i++) {
 		//no pointers, sorry
-		if (argptr[i] && (argptr[i]->get_type() == VariantType::OBJECT || argptr[i]->get_type() == Variant::_RID))
+		if (argptr[i] && (argptr[i]->get_type() == VariantType::OBJECT || argptr[i]->get_type() == VariantType::_RID))
 			return;
 	}
 

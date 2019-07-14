@@ -1901,74 +1901,74 @@ GDScriptParser::Node *GDScriptParser::_reduce_expression(Node *p_node, bool p_to
 
 				//unary operators
 				case OperatorNode::OP_NEG: {
-					_REDUCE_UNARY(Variant::OP_NEGATE);
+					_REDUCE_UNARY(VariantOperator::OP_NEGATE);
 				} break;
 				case OperatorNode::OP_POS: {
-					_REDUCE_UNARY(Variant::OP_POSITIVE);
+					_REDUCE_UNARY(VariantOperator::OP_POSITIVE);
 				} break;
 				case OperatorNode::OP_NOT: {
-					_REDUCE_UNARY(Variant::OP_NOT);
+					_REDUCE_UNARY(VariantOperator::OP_NOT);
 				} break;
 				case OperatorNode::OP_BIT_INVERT: {
-					_REDUCE_UNARY(Variant::OP_BIT_NEGATE);
+					_REDUCE_UNARY(VariantOperator::OP_BIT_NEGATE);
 				} break;
 				//binary operators (in precedence order)
 				case OperatorNode::OP_IN: {
-					_REDUCE_BINARY(Variant::OP_IN);
+					_REDUCE_BINARY(VariantOperator::OP_IN);
 				} break;
 				case OperatorNode::OP_EQUAL: {
-					_REDUCE_BINARY(Variant::OP_EQUAL);
+					_REDUCE_BINARY(VariantOperator::OP_EQUAL);
 				} break;
 				case OperatorNode::OP_NOT_EQUAL: {
-					_REDUCE_BINARY(Variant::OP_NOT_EQUAL);
+					_REDUCE_BINARY(VariantOperator::OP_NOT_EQUAL);
 				} break;
 				case OperatorNode::OP_LESS: {
-					_REDUCE_BINARY(VariantType::OP_LESS);
+					_REDUCE_BINARY(VariantOperator::OP_LESS);
 				} break;
 				case OperatorNode::OP_LESS_EQUAL: {
-					_REDUCE_BINARY(VariantType::OP_LESS_EQUAL);
+					_REDUCE_BINARY(VariantOperator::OP_LESS_EQUAL);
 				} break;
 				case OperatorNode::OP_GREATER: {
-					_REDUCE_BINARY(Variant::OP_GREATER);
+					_REDUCE_BINARY(VariantOperator::OP_GREATER);
 				} break;
 				case OperatorNode::OP_GREATER_EQUAL: {
-					_REDUCE_BINARY(Variant::OP_GREATER_EQUAL);
+					_REDUCE_BINARY(VariantOperator::OP_GREATER_EQUAL);
 				} break;
 				case OperatorNode::OP_AND: {
-					_REDUCE_BINARY(Variant::OP_AND);
+					_REDUCE_BINARY(VariantOperator::OP_AND);
 				} break;
 				case OperatorNode::OP_OR: {
-					_REDUCE_BINARY(Variant::OP_OR);
+					_REDUCE_BINARY(VariantOperator::OP_OR);
 				} break;
 				case OperatorNode::OP_ADD: {
-					_REDUCE_BINARY(Variant::OP_ADD);
+					_REDUCE_BINARY(VariantOperator::OP_ADD);
 				} break;
 				case OperatorNode::OP_SUB: {
-					_REDUCE_BINARY(Variant::OP_SUBTRACT);
+					_REDUCE_BINARY(VariantOperator::OP_SUBTRACT);
 				} break;
 				case OperatorNode::OP_MUL: {
-					_REDUCE_BINARY(Variant::OP_MULTIPLY);
+					_REDUCE_BINARY(VariantOperator::OP_MULTIPLY);
 				} break;
 				case OperatorNode::OP_DIV: {
-					_REDUCE_BINARY(Variant::OP_DIVIDE);
+					_REDUCE_BINARY(VariantOperator::OP_DIVIDE);
 				} break;
 				case OperatorNode::OP_MOD: {
-					_REDUCE_BINARY(Variant::OP_MODULE);
+					_REDUCE_BINARY(VariantOperator::OP_MODULE);
 				} break;
 				case OperatorNode::OP_SHIFT_LEFT: {
-					_REDUCE_BINARY(Variant::OP_SHIFT_LEFT);
+					_REDUCE_BINARY(VariantOperator::OP_SHIFT_LEFT);
 				} break;
 				case OperatorNode::OP_SHIFT_RIGHT: {
-					_REDUCE_BINARY(Variant::OP_SHIFT_RIGHT);
+					_REDUCE_BINARY(VariantOperator::OP_SHIFT_RIGHT);
 				} break;
 				case OperatorNode::OP_BIT_AND: {
-					_REDUCE_BINARY(Variant::OP_BIT_AND);
+					_REDUCE_BINARY(VariantOperator::OP_BIT_AND);
 				} break;
 				case OperatorNode::OP_BIT_OR: {
-					_REDUCE_BINARY(Variant::OP_BIT_OR);
+					_REDUCE_BINARY(VariantOperator::OP_BIT_OR);
 				} break;
 				case OperatorNode::OP_BIT_XOR: {
-					_REDUCE_BINARY(Variant::OP_BIT_XOR);
+					_REDUCE_BINARY(VariantOperator::OP_BIT_XOR);
 				} break;
 				case OperatorNode::OP_TERNARY_IF: {
 					if (static_cast<ConstantNode *>(op->arguments[0])->value.booleanize()) {
@@ -3106,8 +3106,8 @@ void GDScriptParser::_parse_block(BlockNode *p_block, bool p_static) {
 
 								switch (args.size()) {
 									case 1: tn->vtype = VariantType::INT; break;
-									case 2: tn->vtype = Variant::VECTOR2; break;
-									case 3: tn->vtype = Variant::VECTOR3; break;
+									case 2: tn->vtype = VariantType::VECTOR2; break;
+									case 3: tn->vtype = VariantType::VECTOR3; break;
 								}
 
 								for (int i = 0; i < args.size(); i++) {
@@ -4366,7 +4366,7 @@ void GDScriptParser::_parse_class(ClassNode *p_class) {
 										break;
 									}
 								} break;
-								case Variant::COLOR: {
+								case VariantType::COLOR: {
 
 									if (tokenizer->get_token() != GDScriptTokenizer::TK_IDENTIFIER) {
 
@@ -5763,7 +5763,7 @@ GDScriptParser::DataType GDScriptParser::_type_from_gdtype(const GDScriptDataTyp
 	return result;
 }
 
-GDScriptParser::DataType GDScriptParser::_get_operation_type(const Variant::Operator p_op, const DataType &p_a, const DataType &p_b, bool &r_valid) const {
+GDScriptParser::DataType GDScriptParser::_get_operation_type(const VariantOperator p_op, const DataType &p_a, const DataType &p_b, bool &r_valid) const {
 	if (!p_a.has_type || !p_b.has_type) {
 		r_valid = true;
 		return DataType();
@@ -5801,10 +5801,10 @@ GDScriptParser::DataType GDScriptParser::_get_operation_type(const Variant::Oper
 
 	// Avoid division by zero
 	if (a_type == VariantType::INT || a_type == VariantType::REAL) {
-		Variant::evaluate(Variant::OP_ADD, a, 1, a, r_valid);
+		Variant::evaluate(VariantOperator::OP_ADD, a, 1, a, r_valid);
 	}
 	if (b_type == VariantType::INT || b_type == VariantType::REAL) {
-		Variant::evaluate(Variant::OP_ADD, b, 1, b, r_valid);
+		Variant::evaluate(VariantOperator::OP_ADD, b, 1, b, r_valid);
 	}
 	if (a_type == VariantType::STRING && b_type != VariantType::ARRAY) {
 		a = "%s"; // Work around for formatting operator (%)
@@ -5820,89 +5820,89 @@ GDScriptParser::DataType GDScriptParser::_get_operation_type(const Variant::Oper
 	return DataType();
 }
 
-Variant::Operator GDScriptParser::_get_variant_operation(const OperatorNode::Operator &p_op) const {
+VariantOperator GDScriptParser::_get_variant_operation(const OperatorNode::Operator &p_op) const {
 	switch (p_op) {
 		case OperatorNode::OP_NEG: {
-			return Variant::OP_NEGATE;
+			return VariantOperator::OP_NEGATE;
 		} break;
 		case OperatorNode::OP_POS: {
-			return Variant::OP_POSITIVE;
+			return VariantOperator::OP_POSITIVE;
 		} break;
 		case OperatorNode::OP_NOT: {
-			return Variant::OP_NOT;
+			return VariantOperator::OP_NOT;
 		} break;
 		case OperatorNode::OP_BIT_INVERT: {
-			return Variant::OP_BIT_NEGATE;
+			return VariantOperator::OP_BIT_NEGATE;
 		} break;
 		case OperatorNode::OP_IN: {
-			return Variant::OP_IN;
+			return VariantOperator::OP_IN;
 		} break;
 		case OperatorNode::OP_EQUAL: {
-			return Variant::OP_EQUAL;
+			return VariantOperator::OP_EQUAL;
 		} break;
 		case OperatorNode::OP_NOT_EQUAL: {
-			return Variant::OP_NOT_EQUAL;
+			return VariantOperator::OP_NOT_EQUAL;
 		} break;
 		case OperatorNode::OP_LESS: {
-			return VariantType::OP_LESS;
+			return VariantOperator::OP_LESS;
 		} break;
 		case OperatorNode::OP_LESS_EQUAL: {
-			return VariantType::OP_LESS_EQUAL;
+			return VariantOperator::OP_LESS_EQUAL;
 		} break;
 		case OperatorNode::OP_GREATER: {
-			return Variant::OP_GREATER;
+			return VariantOperator::OP_GREATER;
 		} break;
 		case OperatorNode::OP_GREATER_EQUAL: {
-			return Variant::OP_GREATER_EQUAL;
+			return VariantOperator::OP_GREATER_EQUAL;
 		} break;
 		case OperatorNode::OP_AND: {
-			return Variant::OP_AND;
+			return VariantOperator::OP_AND;
 		} break;
 		case OperatorNode::OP_OR: {
-			return Variant::OP_OR;
+			return VariantOperator::OP_OR;
 		} break;
 		case OperatorNode::OP_ASSIGN_ADD:
 		case OperatorNode::OP_ADD: {
-			return Variant::OP_ADD;
+			return VariantOperator::OP_ADD;
 		} break;
 		case OperatorNode::OP_ASSIGN_SUB:
 		case OperatorNode::OP_SUB: {
-			return Variant::OP_SUBTRACT;
+			return VariantOperator::OP_SUBTRACT;
 		} break;
 		case OperatorNode::OP_ASSIGN_MUL:
 		case OperatorNode::OP_MUL: {
-			return Variant::OP_MULTIPLY;
+			return VariantOperator::OP_MULTIPLY;
 		} break;
 		case OperatorNode::OP_ASSIGN_DIV:
 		case OperatorNode::OP_DIV: {
-			return Variant::OP_DIVIDE;
+			return VariantOperator::OP_DIVIDE;
 		} break;
 		case OperatorNode::OP_ASSIGN_MOD:
 		case OperatorNode::OP_MOD: {
-			return Variant::OP_MODULE;
+			return VariantOperator::OP_MODULE;
 		} break;
 		case OperatorNode::OP_ASSIGN_BIT_AND:
 		case OperatorNode::OP_BIT_AND: {
-			return Variant::OP_BIT_AND;
+			return VariantOperator::OP_BIT_AND;
 		} break;
 		case OperatorNode::OP_ASSIGN_BIT_OR:
 		case OperatorNode::OP_BIT_OR: {
-			return Variant::OP_BIT_OR;
+			return VariantOperator::OP_BIT_OR;
 		} break;
 		case OperatorNode::OP_ASSIGN_BIT_XOR:
 		case OperatorNode::OP_BIT_XOR: {
-			return Variant::OP_BIT_XOR;
+			return VariantOperator::OP_BIT_XOR;
 		} break;
 		case OperatorNode::OP_ASSIGN_SHIFT_LEFT:
 		case OperatorNode::OP_SHIFT_LEFT: {
-			return Variant::OP_SHIFT_LEFT;
+			return VariantOperator::OP_SHIFT_LEFT;
 		}
 		case OperatorNode::OP_ASSIGN_SHIFT_RIGHT:
 		case OperatorNode::OP_SHIFT_RIGHT: {
-			return Variant::OP_SHIFT_RIGHT;
+			return VariantOperator::OP_SHIFT_RIGHT;
 		}
 		default: {
-			return Variant::OP_MAX;
+			return VariantOperator::OP_MAX;
 		} break;
 	}
 }
@@ -6216,7 +6216,7 @@ GDScriptParser::DataType GDScriptParser::_reduce_node_type(Node *p_node) {
 						break;
 					}
 
-					Variant::Operator var_op = _get_variant_operation(op->op);
+					VariantOperator var_op = _get_variant_operation(op->op);
 					bool valid = false;
 					node_type = _get_operation_type(var_op, argument_type, argument_type, valid);
 
@@ -6261,7 +6261,7 @@ GDScriptParser::DataType GDScriptParser::_reduce_node_type(Node *p_node) {
 						break;
 					}
 
-					Variant::Operator var_op = _get_variant_operation(op->op);
+					VariantOperator var_op = _get_variant_operation(op->op);
 					bool valid = false;
 					node_type = _get_operation_type(var_op, argument_a_type, argument_b_type, valid);
 
@@ -6272,7 +6272,7 @@ GDScriptParser::DataType GDScriptParser::_reduce_node_type(Node *p_node) {
 						return DataType();
 					}
 #ifdef DEBUG_ENABLED
-					if (var_op == Variant::OP_DIVIDE && argument_a_type.kind == DataType::BUILTIN && argument_a_type.builtin_type == VariantType::INT &&
+					if (var_op == VariantOperator::OP_DIVIDE && argument_a_type.kind == DataType::BUILTIN && argument_a_type.builtin_type == VariantType::INT &&
 							argument_b_type.kind == DataType::BUILTIN && argument_b_type.builtin_type == VariantType::INT) {
 						_add_warning(GDScriptWarning::INTEGER_DIVISION, op->line);
 					}
@@ -6407,36 +6407,36 @@ GDScriptParser::DataType GDScriptParser::_reduce_node_type(Node *p_node) {
 							if (!error) {
 								switch (base_type.builtin_type) {
 									// Expect int or real as index
-									case Variant::POOL_BYTE_ARRAY:
-									case Variant::POOL_COLOR_ARRAY:
-									case Variant::POOL_INT_ARRAY:
+									case VariantType::POOL_BYTE_ARRAY:
+									case VariantType::POOL_COLOR_ARRAY:
+									case VariantType::POOL_INT_ARRAY:
 									case VariantType::POOL_REAL_ARRAY:
-									case Variant::POOL_STRING_ARRAY:
+									case VariantType::POOL_STRING_ARRAY:
 									case VariantType::POOL_VECTOR2_ARRAY:
-									case Variant::POOL_VECTOR3_ARRAY:
+									case VariantType::POOL_VECTOR3_ARRAY:
 									case VariantType::ARRAY:
 									case VariantType::STRING: {
 										error = index_type.builtin_type != VariantType::INT && index_type.builtin_type != VariantType::REAL;
 									} break;
 									// Expect String only
-									case Variant::RECT2:
-									case Variant::PLANE:
-									case Variant::QUAT:
-									case Variant::AABB:
+									case VariantType::RECT2:
+									case VariantType::PLANE:
+									case VariantType::QUAT:
+									case VariantType::AABB:
 									case VariantType::OBJECT: {
 										error = index_type.builtin_type != VariantType::STRING;
 									} break;
 									// Expect String or number
-									case Variant::VECTOR2:
-									case Variant::VECTOR3:
-									case Variant::TRANSFORM2D:
-									case Variant::BASIS:
-									case Variant::TRANSFORM: {
+									case VariantType::VECTOR2:
+									case VariantType::VECTOR3:
+									case VariantType::TRANSFORM2D:
+									case VariantType::BASIS:
+									case VariantType::TRANSFORM: {
 										error = index_type.builtin_type != VariantType::INT && index_type.builtin_type != VariantType::REAL &&
 												index_type.builtin_type != VariantType::STRING;
 									} break;
 									// Expect String or int
-									case Variant::COLOR: {
+									case VariantType::COLOR: {
 										error = index_type.builtin_type != VariantType::INT && index_type.builtin_type != VariantType::STRING;
 									} break;
 									default: {
@@ -6457,13 +6457,13 @@ GDScriptParser::DataType GDScriptParser::_reduce_node_type(Node *p_node) {
 									case VariantType::STRING:
 									case VariantType::ARRAY:
 									case VariantType::DICTIONARY:
-									case Variant::POOL_BYTE_ARRAY:
-									case Variant::POOL_COLOR_ARRAY:
-									case Variant::POOL_INT_ARRAY:
+									case VariantType::POOL_BYTE_ARRAY:
+									case VariantType::POOL_COLOR_ARRAY:
+									case VariantType::POOL_INT_ARRAY:
 									case VariantType::POOL_REAL_ARRAY:
-									case Variant::POOL_STRING_ARRAY:
+									case VariantType::POOL_STRING_ARRAY:
 									case VariantType::POOL_VECTOR2_ARRAY:
-									case Variant::POOL_VECTOR3_ARRAY: {
+									case VariantType::POOL_VECTOR3_ARRAY: {
 										break;
 									}
 									default: {
@@ -6504,47 +6504,47 @@ GDScriptParser::DataType GDScriptParser::_reduce_node_type(Node *p_node) {
 							case VariantType::INT:
 							case VariantType::REAL:
 							case VariantType::NODE_PATH:
-							case Variant::_RID: {
+							case VariantType::_RID: {
 								_set_error("Can't index on a value of type '" + base_type.to_string() + "'.", op->line);
 								return DataType();
 							} break;
 								// Return int
-							case Variant::POOL_BYTE_ARRAY:
-							case Variant::POOL_INT_ARRAY: {
+							case VariantType::POOL_BYTE_ARRAY:
+							case VariantType::POOL_INT_ARRAY: {
 								result.builtin_type = VariantType::INT;
 							} break;
 								// Return real
 							case VariantType::POOL_REAL_ARRAY:
-							case Variant::VECTOR2:
-							case Variant::VECTOR3:
-							case Variant::QUAT: {
+							case VariantType::VECTOR2:
+							case VariantType::VECTOR3:
+							case VariantType::QUAT: {
 								result.builtin_type = VariantType::REAL;
 							} break;
 								// Return color
-							case Variant::POOL_COLOR_ARRAY: {
-								result.builtin_type = Variant::COLOR;
+							case VariantType::POOL_COLOR_ARRAY: {
+								result.builtin_type = VariantType::COLOR;
 							} break;
 								// Return string
-							case Variant::POOL_STRING_ARRAY:
+							case VariantType::POOL_STRING_ARRAY:
 							case VariantType::STRING: {
 								result.builtin_type = VariantType::STRING;
 							} break;
 								// Return Vector2
 							case VariantType::POOL_VECTOR2_ARRAY:
-							case Variant::TRANSFORM2D:
-							case Variant::RECT2: {
-								result.builtin_type = Variant::VECTOR2;
+							case VariantType::TRANSFORM2D:
+							case VariantType::RECT2: {
+								result.builtin_type = VariantType::VECTOR2;
 							} break;
 								// Return Vector3
-							case Variant::POOL_VECTOR3_ARRAY:
-							case Variant::AABB:
-							case Variant::BASIS: {
-								result.builtin_type = Variant::VECTOR3;
+							case VariantType::POOL_VECTOR3_ARRAY:
+							case VariantType::AABB:
+							case VariantType::BASIS: {
+								result.builtin_type = VariantType::VECTOR3;
 							} break;
 								// Depends on the index
-							case Variant::TRANSFORM:
-							case Variant::PLANE:
-							case Variant::COLOR:
+							case VariantType::TRANSFORM:
+							case VariantType::PLANE:
+							case VariantType::COLOR:
 							default: {
 								result.has_type = false;
 							} break;
@@ -7971,7 +7971,7 @@ void GDScriptParser::_check_block_types(BlockNode *p_block) {
 								break;
 							}
 
-							Variant::Operator oper = _get_variant_operation(op->op);
+							VariantOperator oper = _get_variant_operation(op->op);
 							bool valid = false;
 							rh_type = _get_operation_type(oper, lh_type, arg_type, valid);
 

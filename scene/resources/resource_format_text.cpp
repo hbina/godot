@@ -1674,7 +1674,7 @@ Error ResourceFormatSaverTextInstance::save(const String &p_path, const RES &p_r
 				}
 				Variant default_value = ClassDB::class_get_default_property_value(res->get_class(), name);
 
-				if (default_value.get_type() != VariantType::NIL && bool(Variant::evaluate(Variant::OP_EQUAL, value, default_value))) {
+				if (default_value.get_type() != VariantType::NIL && bool(Variant::evaluate(VariantOperator::OP_EQUAL, value, default_value))) {
 					continue;
 				}
 

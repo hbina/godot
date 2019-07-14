@@ -137,7 +137,7 @@ Variant JavaScript::eval(const String &p_code, bool p_use_global_exec_context) {
 			/* clang-format on */
 			return str;
 		}
-		case Variant::POOL_BYTE_ARRAY:
+		case VariantType::POOL_BYTE_ARRAY:
 			arr_write = PoolByteArray::Write();
 			return arr;
 		default:

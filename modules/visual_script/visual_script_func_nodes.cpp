@@ -1530,34 +1530,34 @@ public:
 					//should never get here
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_ADD: {
-					value = Variant::evaluate(Variant::OP_ADD, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_ADD, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_SUB: {
-					value = Variant::evaluate(Variant::OP_SUBTRACT, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_SUBTRACT, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_MUL: {
-					value = Variant::evaluate(Variant::OP_MULTIPLY, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_MULTIPLY, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_DIV: {
-					value = Variant::evaluate(Variant::OP_DIVIDE, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_DIVIDE, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_MOD: {
-					value = Variant::evaluate(Variant::OP_MODULE, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_MODULE, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_SHIFT_LEFT: {
-					value = Variant::evaluate(Variant::OP_SHIFT_LEFT, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_SHIFT_LEFT, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_SHIFT_RIGHT: {
-					value = Variant::evaluate(Variant::OP_SHIFT_RIGHT, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_SHIFT_RIGHT, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_BIT_AND: {
-					value = Variant::evaluate(Variant::OP_BIT_AND, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_BIT_AND, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_BIT_OR: {
-					value = Variant::evaluate(Variant::OP_BIT_OR, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_BIT_OR, value, p_argument);
 				} break;
 				case VisualScriptPropertySet::ASSIGN_OP_BIT_XOR: {
-					value = Variant::evaluate(Variant::OP_BIT_XOR, value, p_argument);
+					value = Variant::evaluate(VariantOperator::OP_BIT_XOR, value, p_argument);
 				} break;
 				default: {
 				}

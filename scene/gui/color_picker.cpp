@@ -695,7 +695,7 @@ void ColorPicker::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_focus_exit"), &ColorPicker::_focus_exit);
 	ClassDB::bind_method(D_METHOD("_html_focus_exit"), &ColorPicker::_html_focus_exit);
 
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "color"), "set_pick_color", "get_pick_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "color"), "set_pick_color", "get_pick_color");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "edit_alpha"), "set_edit_alpha", "is_editing_alpha");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "hsv_mode"), "set_hsv_mode", "is_hsv_mode");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "raw_mode"), "set_raw_mode", "is_raw_mode");
@@ -703,9 +703,9 @@ void ColorPicker::_bind_methods() {
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "presets_enabled"), "set_presets_enabled", "are_presets_enabled");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "presets_visible"), "set_presets_visible", "are_presets_visible");
 
-	ADD_SIGNAL(MethodInfo("color_changed", PropertyInfo(Variant::COLOR, "color")));
-	ADD_SIGNAL(MethodInfo("preset_added", PropertyInfo(Variant::COLOR, "color")));
-	ADD_SIGNAL(MethodInfo("preset_removed", PropertyInfo(Variant::COLOR, "color")));
+	ADD_SIGNAL(MethodInfo("color_changed", PropertyInfo(VariantType::COLOR, "color")));
+	ADD_SIGNAL(MethodInfo("preset_added", PropertyInfo(VariantType::COLOR, "color")));
+	ADD_SIGNAL(MethodInfo("preset_removed", PropertyInfo(VariantType::COLOR, "color")));
 }
 
 ColorPicker::ColorPicker() :
@@ -966,9 +966,9 @@ void ColorPickerButton::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_color_changed"), &ColorPickerButton::_color_changed);
 	ClassDB::bind_method(D_METHOD("_modal_closed"), &ColorPickerButton::_modal_closed);
 
-	ADD_SIGNAL(MethodInfo("color_changed", PropertyInfo(Variant::COLOR, "color")));
+	ADD_SIGNAL(MethodInfo("color_changed", PropertyInfo(VariantType::COLOR, "color")));
 	ADD_SIGNAL(MethodInfo("popup_closed"));
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "color"), "set_pick_color", "get_pick_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "color"), "set_pick_color", "get_pick_color");
 	ADD_PROPERTY(PropertyInfo(VariantType::BOOL, "edit_alpha"), "set_edit_alpha", "is_editing_alpha");
 }
 

@@ -71,7 +71,7 @@ Size2 PaneDrag::get_minimum_size() const {
 void PaneDrag::_bind_methods() {
 
 	ClassDB::bind_method("_gui_input", &PaneDrag::_gui_input);
-	ADD_SIGNAL(MethodInfo("dragged", PropertyInfo(Variant::VECTOR2, "amount")));
+	ADD_SIGNAL(MethodInfo("dragged", PropertyInfo(VariantType::VECTOR2, "amount")));
 }
 
 PaneDrag::PaneDrag() {

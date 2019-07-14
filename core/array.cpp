@@ -227,7 +227,7 @@ struct _ArrayVariantSort {
 	_FORCE_INLINE_ bool operator()(const Variant &p_l, const Variant &p_r) const {
 		bool valid = false;
 		Variant res;
-		Variant::evaluate(VariantType::OP_LESS, p_l, p_r, res, valid);
+		Variant::evaluate(VariantOperator::OP_LESS, p_l, p_r, res, valid);
 		if (!valid)
 			res = false;
 		return res;
@@ -365,7 +365,7 @@ Variant Array::min() const {
 			bool valid;
 			Variant ret;
 			Variant test = get(i);
-			Variant::evaluate(VariantType::OP_LESS, test, minval, ret, valid);
+			Variant::evaluate(VariantOperator::OP_LESS, test, minval, ret, valid);
 			if (!valid) {
 				return Variant(); //not a valid comparison
 			}
@@ -388,7 +388,7 @@ Variant Array::max() const {
 			bool valid;
 			Variant ret;
 			Variant test = get(i);
-			Variant::evaluate(Variant::OP_GREATER, test, maxval, ret, valid);
+			Variant::evaluate(VariantOperator::OP_GREATER, test, maxval, ret, valid);
 			if (!valid) {
 				return Variant(); //not a valid comparison
 			}

@@ -1616,41 +1616,41 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			str = "\"" + str.c_escape_multiline() + "\"";
 			p_store_string_func(p_store_string_ud, str);
 		} break;
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 
 			Vector2 v = p_variant;
 			p_store_string_func(p_store_string_ud, "Vector2( " + rtosfix(v.x) + ", " + rtosfix(v.y) + " )");
 		} break;
-		case Variant::RECT2: {
+		case VariantType::RECT2: {
 
 			Rect2 aabb = p_variant;
 			p_store_string_func(p_store_string_ud, "Rect2( " + rtosfix(aabb.position.x) + ", " + rtosfix(aabb.position.y) + ", " + rtosfix(aabb.size.x) + ", " + rtosfix(aabb.size.y) + " )");
 
 		} break;
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 
 			Vector3 v = p_variant;
 			p_store_string_func(p_store_string_ud, "Vector3( " + rtosfix(v.x) + ", " + rtosfix(v.y) + ", " + rtosfix(v.z) + " )");
 		} break;
-		case Variant::PLANE: {
+		case VariantType::PLANE: {
 
 			Plane p = p_variant;
 			p_store_string_func(p_store_string_ud, "Plane( " + rtosfix(p.normal.x) + ", " + rtosfix(p.normal.y) + ", " + rtosfix(p.normal.z) + ", " + rtosfix(p.d) + " )");
 
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 
 			AABB aabb = p_variant;
 			p_store_string_func(p_store_string_ud, "AABB( " + rtosfix(aabb.position.x) + ", " + rtosfix(aabb.position.y) + ", " + rtosfix(aabb.position.z) + ", " + rtosfix(aabb.size.x) + ", " + rtosfix(aabb.size.y) + ", " + rtosfix(aabb.size.z) + " )");
 
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 
 			Quat quat = p_variant;
 			p_store_string_func(p_store_string_ud, "Quat( " + rtosfix(quat.x) + ", " + rtosfix(quat.y) + ", " + rtosfix(quat.z) + ", " + rtosfix(quat.w) + " )");
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 
 			String s = "Transform2D( ";
 			Transform2D m3 = p_variant;
@@ -1666,7 +1666,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, s + " )");
 
 		} break;
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 
 			String s = "Basis( ";
 			Basis m3 = p_variant;
@@ -1682,7 +1682,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, s + " )");
 
 		} break;
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 
 			String s = "Transform( ";
 			Transform t = p_variant;
@@ -1702,7 +1702,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 		} break;
 
 		// misc types
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 
 			Color c = p_variant;
 			p_store_string_func(p_store_string_ud, "Color( " + rtosfix(c.r) + ", " + rtosfix(c.g) + ", " + rtosfix(c.b) + ", " + rtosfix(c.a) + " )");
@@ -1819,7 +1819,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 
 		} break;
 
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolByteArray( ");
 			String s;
@@ -1838,7 +1838,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolIntArray( ");
 			PoolVector<int> data = p_variant;
@@ -1875,7 +1875,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolStringArray( ");
 			PoolVector<String> data = p_variant;
@@ -1914,7 +1914,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolVector3Array( ");
 			PoolVector<Vector3> data = p_variant;
@@ -1932,7 +1932,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, " )");
 
 		} break;
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 
 			p_store_string_func(p_store_string_ud, "PoolColorArray( ");
 

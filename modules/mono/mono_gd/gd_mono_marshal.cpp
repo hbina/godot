@@ -71,34 +71,34 @@ VariantType managed_to_variant_type(const ManagedType &p_type) {
 			GDMonoClass *vtclass = p_type.type_class;
 
 			if (vtclass == CACHED_CLASS(Vector2))
-				return Variant::VECTOR2;
+				return VariantType::VECTOR2;
 
 			if (vtclass == CACHED_CLASS(Rect2))
-				return Variant::RECT2;
+				return VariantType::RECT2;
 
 			if (vtclass == CACHED_CLASS(Transform2D))
-				return Variant::TRANSFORM2D;
+				return VariantType::TRANSFORM2D;
 
 			if (vtclass == CACHED_CLASS(Vector3))
-				return Variant::VECTOR3;
+				return VariantType::VECTOR3;
 
 			if (vtclass == CACHED_CLASS(Basis))
-				return Variant::BASIS;
+				return VariantType::BASIS;
 
 			if (vtclass == CACHED_CLASS(Quat))
-				return Variant::QUAT;
+				return VariantType::QUAT;
 
 			if (vtclass == CACHED_CLASS(Transform))
-				return Variant::TRANSFORM;
+				return VariantType::TRANSFORM;
 
 			if (vtclass == CACHED_CLASS(AABB))
-				return Variant::AABB;
+				return VariantType::AABB;
 
 			if (vtclass == CACHED_CLASS(Color))
-				return Variant::COLOR;
+				return VariantType::COLOR;
 
 			if (vtclass == CACHED_CLASS(Plane))
-				return Variant::PLANE;
+				return VariantType::PLANE;
 
 			if (mono_class_is_enum(vtclass->get_mono_ptr()))
 				return VariantType::INT;
@@ -112,25 +112,25 @@ VariantType managed_to_variant_type(const ManagedType &p_type) {
 				return VariantType::ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(uint8_t))
-				return Variant::POOL_BYTE_ARRAY;
+				return VariantType::POOL_BYTE_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(int32_t))
-				return Variant::POOL_INT_ARRAY;
+				return VariantType::POOL_INT_ARRAY;
 
 			if (array_type->eklass == REAL_T_MONOCLASS)
 				return VariantType::POOL_REAL_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(String))
-				return Variant::POOL_STRING_ARRAY;
+				return VariantType::POOL_STRING_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Vector2))
 				return VariantType::POOL_VECTOR2_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Vector3))
-				return Variant::POOL_VECTOR3_ARRAY;
+				return VariantType::POOL_VECTOR3_ARRAY;
 
 			if (array_type->eklass == CACHED_CLASS_RAW(Color))
-				return Variant::POOL_COLOR_ARRAY;
+				return VariantType::POOL_COLOR_ARRAY;
 		} break;
 
 		case MONO_TYPE_CLASS: {
@@ -146,7 +146,7 @@ VariantType managed_to_variant_type(const ManagedType &p_type) {
 			}
 
 			if (CACHED_CLASS(RID) == type_class) {
-				return Variant::_RID;
+				return VariantType::_RID;
 			}
 
 			if (CACHED_CLASS(Dictionary) == type_class) {
@@ -583,49 +583,49 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 				}
 				case VariantType::STRING:
 					return (MonoObject *)mono_string_from_godot(p_var->operator String());
-				case Variant::VECTOR2: {
+				case VariantType::VECTOR2: {
 					GDMonoMarshal::M_Vector2 from = MARSHALLED_OUT(Vector2, p_var->operator ::Vector2());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Vector2), &from);
 				}
-				case Variant::RECT2: {
+				case VariantType::RECT2: {
 					GDMonoMarshal::M_Rect2 from = MARSHALLED_OUT(Rect2, p_var->operator ::Rect2());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Rect2), &from);
 				}
-				case Variant::VECTOR3: {
+				case VariantType::VECTOR3: {
 					GDMonoMarshal::M_Vector3 from = MARSHALLED_OUT(Vector3, p_var->operator ::Vector3());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Vector3), &from);
 				}
-				case Variant::TRANSFORM2D: {
+				case VariantType::TRANSFORM2D: {
 					GDMonoMarshal::M_Transform2D from = MARSHALLED_OUT(Transform2D, p_var->operator ::Transform2D());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Transform2D), &from);
 				}
-				case Variant::PLANE: {
+				case VariantType::PLANE: {
 					GDMonoMarshal::M_Plane from = MARSHALLED_OUT(Plane, p_var->operator ::Plane());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Plane), &from);
 				}
-				case Variant::QUAT: {
+				case VariantType::QUAT: {
 					GDMonoMarshal::M_Quat from = MARSHALLED_OUT(Quat, p_var->operator ::Quat());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Quat), &from);
 				}
-				case Variant::AABB: {
+				case VariantType::AABB: {
 					GDMonoMarshal::M_AABB from = MARSHALLED_OUT(AABB, p_var->operator ::AABB());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(AABB), &from);
 				}
-				case Variant::BASIS: {
+				case VariantType::BASIS: {
 					GDMonoMarshal::M_Basis from = MARSHALLED_OUT(Basis, p_var->operator ::Basis());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Basis), &from);
 				}
-				case Variant::TRANSFORM: {
+				case VariantType::TRANSFORM: {
 					GDMonoMarshal::M_Transform from = MARSHALLED_OUT(Transform, p_var->operator ::Transform());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Transform), &from);
 				}
-				case Variant::COLOR: {
+				case VariantType::COLOR: {
 					GDMonoMarshal::M_Color from = MARSHALLED_OUT(Color, p_var->operator ::Color());
 					return mono_value_box(mono_domain_get(), CACHED_CLASS_RAW(Color), &from);
 				}
 				case VariantType::NODE_PATH:
 					return GDMonoUtils::create_managed_from(p_var->operator NodePath());
-				case Variant::_RID:
+				case VariantType::_RID:
 					return GDMonoUtils::create_managed_from(p_var->operator RID());
 				case VariantType::OBJECT:
 					return GDMonoUtils::unmanaged_get_managed(p_var->operator Object *());
@@ -633,19 +633,19 @@ MonoObject *variant_to_mono_object(const Variant *p_var, const ManagedType &p_ty
 					return GDMonoUtils::create_managed_from(p_var->operator Dictionary(), CACHED_CLASS(Dictionary));
 				case VariantType::ARRAY:
 					return GDMonoUtils::create_managed_from(p_var->operator Array(), CACHED_CLASS(Array));
-				case Variant::POOL_BYTE_ARRAY:
+				case VariantType::POOL_BYTE_ARRAY:
 					return (MonoObject *)PoolByteArray_to_mono_array(p_var->operator PoolByteArray());
-				case Variant::POOL_INT_ARRAY:
+				case VariantType::POOL_INT_ARRAY:
 					return (MonoObject *)PoolIntArray_to_mono_array(p_var->operator PoolIntArray());
 				case VariantType::POOL_REAL_ARRAY:
 					return (MonoObject *)PoolRealArray_to_mono_array(p_var->operator PoolRealArray());
-				case Variant::POOL_STRING_ARRAY:
+				case VariantType::POOL_STRING_ARRAY:
 					return (MonoObject *)PoolStringArray_to_mono_array(p_var->operator PoolStringArray());
 				case VariantType::POOL_VECTOR2_ARRAY:
 					return (MonoObject *)PoolVector2Array_to_mono_array(p_var->operator PoolVector2Array());
-				case Variant::POOL_VECTOR3_ARRAY:
+				case VariantType::POOL_VECTOR3_ARRAY:
 					return (MonoObject *)PoolVector3Array_to_mono_array(p_var->operator PoolVector3Array());
-				case Variant::POOL_COLOR_ARRAY:
+				case VariantType::POOL_COLOR_ARRAY:
 					return (MonoObject *)PoolColorArray_to_mono_array(p_var->operator PoolColorArray());
 				default:
 					return NULL;

@@ -551,9 +551,9 @@ public:
 
 			case Animation::TYPE_TRANSFORM: {
 
-				p_list->push_back(PropertyInfo(Variant::VECTOR3, "location"));
-				p_list->push_back(PropertyInfo(Variant::QUAT, "rotation"));
-				p_list->push_back(PropertyInfo(Variant::VECTOR3, "scale"));
+				p_list->push_back(PropertyInfo(VariantType::VECTOR3, "location"));
+				p_list->push_back(PropertyInfo(VariantType::QUAT, "rotation"));
+				p_list->push_back(PropertyInfo(VariantType::VECTOR3, "scale"));
 
 			} break;
 			case Animation::TYPE_VALUE: {
@@ -612,8 +612,8 @@ public:
 			case Animation::TYPE_BEZIER: {
 
 				p_list->push_back(PropertyInfo(VariantType::REAL, "value"));
-				p_list->push_back(PropertyInfo(Variant::VECTOR2, "in_handle"));
-				p_list->push_back(PropertyInfo(Variant::VECTOR2, "out_handle"));
+				p_list->push_back(PropertyInfo(VariantType::VECTOR2, "in_handle"));
+				p_list->push_back(PropertyInfo(VariantType::VECTOR2, "out_handle"));
 
 			} break;
 			case Animation::TYPE_AUDIO: {
@@ -2773,11 +2773,11 @@ void AnimationTrackEditor::_query_insert(const InsertData &p_id) {
 				switch (insert_data[i].value.get_type()) {
 					case VariantType::INT:
 					case VariantType::REAL:
-					case Variant::VECTOR2:
-					case Variant::VECTOR3:
-					case Variant::QUAT:
-					case Variant::PLANE:
-					case Variant::COLOR: {
+					case VariantType::VECTOR2:
+					case VariantType::VECTOR3:
+					case VariantType::QUAT:
+					case VariantType::PLANE:
+					case VariantType::COLOR: {
 						//good
 					} break;
 					default: {
@@ -3196,28 +3196,28 @@ static Vector<String> _get_bezier_subindices_for_type(VariantType p_type, bool *
 		case VariantType::REAL: {
 			subindices.push_back("");
 		} break;
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 			subindices.push_back(":x");
 			subindices.push_back(":y");
 		} break;
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 			subindices.push_back(":x");
 			subindices.push_back(":y");
 			subindices.push_back(":z");
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 			subindices.push_back(":x");
 			subindices.push_back(":y");
 			subindices.push_back(":z");
 			subindices.push_back(":w");
 		} break;
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 			subindices.push_back(":r");
 			subindices.push_back(":g");
 			subindices.push_back(":b");
 			subindices.push_back(":a");
 		} break;
-		case Variant::PLANE: {
+		case VariantType::PLANE: {
 			subindices.push_back(":x");
 			subindices.push_back(":y");
 			subindices.push_back(":z");
@@ -3241,11 +3241,11 @@ int AnimationTrackEditor::_confirm_insert(InsertData p_id, int p_last_track, boo
 	bool created = false;
 	if (p_id.track_idx < 0) {
 
-		if (p_create_beziers && (p_id.value.get_type() == Variant::VECTOR2 ||
-										p_id.value.get_type() == Variant::VECTOR3 ||
-										p_id.value.get_type() == Variant::QUAT ||
-										p_id.value.get_type() == Variant::COLOR ||
-										p_id.value.get_type() == Variant::PLANE)) {
+		if (p_create_beziers && (p_id.value.get_type() == VariantType::VECTOR2 ||
+										p_id.value.get_type() == VariantType::VECTOR3 ||
+										p_id.value.get_type() == VariantType::QUAT ||
+										p_id.value.get_type() == VariantType::COLOR ||
+										p_id.value.get_type() == VariantType::PLANE)) {
 
 			Vector<String> subindices = _get_bezier_subindices_for_type(p_id.value.get_type());
 
@@ -3275,15 +3275,15 @@ int AnimationTrackEditor::_confirm_insert(InsertData p_id, int p_last_track, boo
 				animation->remove_track(animation->get_track_count() - 1); //hack
 
 				if (h.type == VariantType::REAL ||
-						h.type == Variant::VECTOR2 ||
-						h.type == Variant::RECT2 ||
-						h.type == Variant::VECTOR3 ||
-						h.type == Variant::AABB ||
-						h.type == Variant::QUAT ||
-						h.type == Variant::COLOR ||
-						h.type == Variant::PLANE ||
-						h.type == Variant::TRANSFORM2D ||
-						h.type == Variant::TRANSFORM) {
+						h.type == VariantType::VECTOR2 ||
+						h.type == VariantType::RECT2 ||
+						h.type == VariantType::VECTOR3 ||
+						h.type == VariantType::AABB ||
+						h.type == VariantType::QUAT ||
+						h.type == VariantType::COLOR ||
+						h.type == VariantType::PLANE ||
+						h.type == VariantType::TRANSFORM2D ||
+						h.type == VariantType::TRANSFORM) {
 
 					update_mode = Animation::UPDATE_CONTINUOUS;
 				}
@@ -3753,11 +3753,11 @@ void AnimationTrackEditor::_new_track_node_selected(NodePath p_path) {
 			Vector<VariantType> filter;
 			filter.push_back(VariantType::INT);
 			filter.push_back(VariantType::REAL);
-			filter.push_back(Variant::VECTOR2);
-			filter.push_back(Variant::VECTOR3);
-			filter.push_back(Variant::QUAT);
-			filter.push_back(Variant::PLANE);
-			filter.push_back(Variant::COLOR);
+			filter.push_back(VariantType::VECTOR2);
+			filter.push_back(VariantType::VECTOR3);
+			filter.push_back(VariantType::QUAT);
+			filter.push_back(VariantType::PLANE);
+			filter.push_back(VariantType::COLOR);
 
 			adding_track_path = path_to;
 			prop_selector->set_type_filter(filter);
@@ -3823,15 +3823,15 @@ void AnimationTrackEditor::_new_track_property_selected(String p_name) {
 			PropertyInfo h = _find_hint_for_track(animation->get_track_count() - 1, np);
 			animation->remove_track(animation->get_track_count() - 1); //hack
 			if (h.type == VariantType::REAL ||
-					h.type == Variant::VECTOR2 ||
-					h.type == Variant::RECT2 ||
-					h.type == Variant::VECTOR3 ||
-					h.type == Variant::AABB ||
-					h.type == Variant::QUAT ||
-					h.type == Variant::COLOR ||
-					h.type == Variant::PLANE ||
-					h.type == Variant::TRANSFORM2D ||
-					h.type == Variant::TRANSFORM) {
+					h.type == VariantType::VECTOR2 ||
+					h.type == VariantType::RECT2 ||
+					h.type == VariantType::VECTOR3 ||
+					h.type == VariantType::AABB ||
+					h.type == VariantType::QUAT ||
+					h.type == VariantType::COLOR ||
+					h.type == VariantType::PLANE ||
+					h.type == VariantType::TRANSFORM2D ||
+					h.type == VariantType::TRANSFORM) {
 
 				update_mode = Animation::UPDATE_CONTINUOUS;
 			}

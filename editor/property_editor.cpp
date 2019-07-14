@@ -367,7 +367,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 	for (int i = 0; i < 20; i++)
 		checks20[i]->hide();
 
-	type = (p_variant.get_type() != VariantType::NIL && p_variant.get_type() != Variant::_RID && p_type != VariantType::OBJECT) ? p_variant.get_type() : p_type;
+	type = (p_variant.get_type() != VariantType::NIL && p_variant.get_type() != VariantType::_RID && p_type != VariantType::OBJECT) ? p_variant.get_type() : p_type;
 
 	switch (type) {
 
@@ -706,7 +706,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			}
 
 		} break;
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 
 			field_names.push_back("x");
 			field_names.push_back("y");
@@ -715,7 +715,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			value_editor[0]->set_text(String::num(vec.x));
 			value_editor[1]->set_text(String::num(vec.y));
 		} break;
-		case Variant::RECT2: {
+		case VariantType::RECT2: {
 
 			field_names.push_back("x");
 			field_names.push_back("y");
@@ -728,7 +728,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			value_editor[2]->set_text(String::num(r.size.x));
 			value_editor[3]->set_text(String::num(r.size.y));
 		} break;
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 
 			field_names.push_back("x");
 			field_names.push_back("y");
@@ -739,7 +739,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			value_editor[1]->set_text(String::num(vec.y));
 			value_editor[2]->set_text(String::num(vec.z));
 		} break;
-		case Variant::PLANE: {
+		case VariantType::PLANE: {
 
 			field_names.push_back("x");
 			field_names.push_back("y");
@@ -753,7 +753,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			value_editor[3]->set_text(String::num(plane.d));
 
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 
 			field_names.push_back("x");
 			field_names.push_back("y");
@@ -767,7 +767,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			value_editor[3]->set_text(String::num(q.w));
 
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 
 			field_names.push_back("px");
 			field_names.push_back("py");
@@ -786,7 +786,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			value_editor[5]->set_text(String::num(aabb.size.z));
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 
 			field_names.push_back("xx");
 			field_names.push_back("xy");
@@ -803,7 +803,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			}
 
 		} break;
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 
 			field_names.push_back("xx");
 			field_names.push_back("xy");
@@ -823,7 +823,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			}
 
 		} break;
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 
 			field_names.push_back("xx");
 			field_names.push_back("xy");
@@ -850,7 +850,7 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 			value_editor[11]->set_text(String::num(tr.origin.z));
 
 		} break;
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 
 			if (!color_picker) {
 				//late init for performance
@@ -1032,22 +1032,22 @@ bool CustomPropertyEditor::edit(Object *p_owner, const String &p_name, VariantTy
 		case VariantType::DICTIONARY: {
 
 		} break;
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 
 		} break;
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 
 		} break;
 		case VariantType::POOL_REAL_ARRAY: {
 
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 		} break;
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 
 		} break;
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 
 		} break;
 		default: {
@@ -1565,7 +1565,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			v = value_editor[0]->get_text();
 			emit_signal("variant_changed");
 		} break;
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 
 			Vector2 vec;
 			vec.x = _parse_real_expression(value_editor[0]->get_text());
@@ -1574,7 +1574,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::RECT2: {
+		case VariantType::RECT2: {
 
 			Rect2 r2;
 
@@ -1587,7 +1587,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 
 		} break;
 
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 
 			Vector3 vec;
 			vec.x = _parse_real_expression(value_editor[0]->get_text());
@@ -1597,7 +1597,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::PLANE: {
+		case VariantType::PLANE: {
 
 			Plane pl;
 			pl.normal.x = _parse_real_expression(value_editor[0]->get_text());
@@ -1608,7 +1608,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 
 			Quat q;
 			q.x = _parse_real_expression(value_editor[0]->get_text());
@@ -1619,7 +1619,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 
 			Vector3 pos;
 			Vector3 size;
@@ -1634,7 +1634,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 
 			Transform2D m;
 			for (int i = 0; i < 6; i++) {
@@ -1645,7 +1645,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 
 			Basis m;
 			for (int i = 0; i < 9; i++) {
@@ -1656,7 +1656,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 
 			Basis basis;
 			for (int i = 0; i < 9; i++) {
@@ -1673,7 +1673,7 @@ void CustomPropertyEditor::_modified(String p_string) {
 			_emit_changed_whole_or_field();
 
 		} break;
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 
 		} break;
 
@@ -1685,22 +1685,22 @@ void CustomPropertyEditor::_modified(String p_string) {
 		case VariantType::DICTIONARY: {
 
 		} break;
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 
 		} break;
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 
 		} break;
 		case VariantType::POOL_REAL_ARRAY: {
 
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 		} break;
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 
 		} break;
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 
 		} break;
 		default: {
@@ -1741,15 +1741,15 @@ void CustomPropertyEditor::_focus_enter() {
 	switch (type) {
 		case VariantType::REAL:
 		case VariantType::STRING:
-		case Variant::VECTOR2:
-		case Variant::RECT2:
-		case Variant::VECTOR3:
-		case Variant::PLANE:
-		case Variant::QUAT:
-		case Variant::AABB:
-		case Variant::TRANSFORM2D:
-		case Variant::BASIS:
-		case Variant::TRANSFORM: {
+		case VariantType::VECTOR2:
+		case VariantType::RECT2:
+		case VariantType::VECTOR3:
+		case VariantType::PLANE:
+		case VariantType::QUAT:
+		case VariantType::AABB:
+		case VariantType::TRANSFORM2D:
+		case VariantType::BASIS:
+		case VariantType::TRANSFORM: {
 			for (int i = 0; i < MAX_VALUE_EDITORS; ++i) {
 				if (value_editor[i]->has_focus()) {
 					focused_value_editor = i;
@@ -1767,15 +1767,15 @@ void CustomPropertyEditor::_focus_exit() {
 	switch (type) {
 		case VariantType::REAL:
 		case VariantType::STRING:
-		case Variant::VECTOR2:
-		case Variant::RECT2:
-		case Variant::VECTOR3:
-		case Variant::PLANE:
-		case Variant::QUAT:
-		case Variant::AABB:
-		case Variant::TRANSFORM2D:
-		case Variant::BASIS:
-		case Variant::TRANSFORM: {
+		case VariantType::VECTOR2:
+		case VariantType::RECT2:
+		case VariantType::VECTOR3:
+		case VariantType::PLANE:
+		case VariantType::QUAT:
+		case VariantType::AABB:
+		case VariantType::TRANSFORM2D:
+		case VariantType::BASIS:
+		case VariantType::TRANSFORM: {
 			for (int i = 0; i < MAX_VALUE_EDITORS; ++i) {
 				value_editor[i]->select(0, 0);
 			}

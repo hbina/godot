@@ -249,7 +249,7 @@ void ResourceFormatLoader::_bind_methods() {
 		ClassDB::add_virtual_method(get_class_static(), info);
 	}
 
-	ClassDB::add_virtual_method(get_class_static(), MethodInfo(Variant::POOL_STRING_ARRAY, "get_recognized_extensions"));
+	ClassDB::add_virtual_method(get_class_static(), MethodInfo(VariantType::POOL_STRING_ARRAY, "get_recognized_extensions"));
 	ClassDB::add_virtual_method(get_class_static(), MethodInfo(VariantType::BOOL, "handles_type", PropertyInfo(VariantType::STRING, "typename")));
 	ClassDB::add_virtual_method(get_class_static(), MethodInfo(VariantType::STRING, "get_resource_type", PropertyInfo(VariantType::STRING, "path")));
 	ClassDB::add_virtual_method(get_class_static(), MethodInfo("get_dependencies", PropertyInfo(VariantType::STRING, "path"), PropertyInfo(VariantType::STRING, "add_types")));

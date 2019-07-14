@@ -132,9 +132,9 @@ void Skeleton::_get_property_list(List<PropertyInfo> *p_list) const {
 		String prep = "bones/" + itos(i) + "/";
 		p_list->push_back(PropertyInfo(VariantType::STRING, prep + "name"));
 		p_list->push_back(PropertyInfo(VariantType::INT, prep + "parent", PROPERTY_HINT_RANGE, "-1," + itos(bones.size() - 1) + ",1"));
-		p_list->push_back(PropertyInfo(Variant::TRANSFORM, prep + "rest"));
+		p_list->push_back(PropertyInfo(VariantType::TRANSFORM, prep + "rest"));
 		p_list->push_back(PropertyInfo(VariantType::BOOL, prep + "enabled"));
-		p_list->push_back(PropertyInfo(Variant::TRANSFORM, prep + "pose", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
+		p_list->push_back(PropertyInfo(VariantType::TRANSFORM, prep + "pose", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
 		p_list->push_back(PropertyInfo(VariantType::ARRAY, prep + "bound_children"));
 	}
 }

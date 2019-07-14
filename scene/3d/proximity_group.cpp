@@ -191,7 +191,7 @@ void ProximityGroup::_bind_methods() {
 
 	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "group_name"), "set_group_name", "get_group_name");
 	ADD_PROPERTY(PropertyInfo(VariantType::INT, "dispatch_mode", PROPERTY_HINT_ENUM, "Proxy,Signal"), "set_dispatch_mode", "get_dispatch_mode");
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR3, "grid_radius"), "set_grid_radius", "get_grid_radius");
+	ADD_PROPERTY(PropertyInfo(VariantType::VECTOR3, "grid_radius"), "set_grid_radius", "get_grid_radius");
 
 	ADD_SIGNAL(MethodInfo("broadcast", PropertyInfo(VariantType::STRING, "group_name"), PropertyInfo(VariantType::ARRAY, "parameters")));
 

@@ -177,7 +177,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 		} break;
 
 		// math types
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 
 			ERR_FAIL_COND_V(len < 4 * 2, ERR_INVALID_DATA);
 			Vector2 val;
@@ -189,7 +189,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 2;
 
 		} break; // 5
-		case Variant::RECT2: {
+		case VariantType::RECT2: {
 
 			ERR_FAIL_COND_V(len < 4 * 4, ERR_INVALID_DATA);
 			Rect2 val;
@@ -203,7 +203,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 4;
 
 		} break;
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 
 			ERR_FAIL_COND_V(len < 4 * 3, ERR_INVALID_DATA);
 			Vector3 val;
@@ -216,7 +216,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 3;
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 
 			ERR_FAIL_COND_V(len < 4 * 6, ERR_INVALID_DATA);
 			Transform2D val;
@@ -233,7 +233,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 6;
 
 		} break;
-		case Variant::PLANE: {
+		case VariantType::PLANE: {
 
 			ERR_FAIL_COND_V(len < 4 * 4, ERR_INVALID_DATA);
 			Plane val;
@@ -247,7 +247,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 4;
 
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 
 			ERR_FAIL_COND_V(len < 4 * 4, ERR_INVALID_DATA);
 			Quat val;
@@ -261,7 +261,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 4;
 
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 
 			ERR_FAIL_COND_V(len < 4 * 6, ERR_INVALID_DATA);
 			AABB val;
@@ -277,7 +277,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 6;
 
 		} break;
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 
 			ERR_FAIL_COND_V(len < 4 * 9, ERR_INVALID_DATA);
 			Basis val;
@@ -294,7 +294,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 				(*r_len) += 4 * 9;
 
 		} break;
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 
 			ERR_FAIL_COND_V(len < 4 * 12, ERR_INVALID_DATA);
 			Transform val;
@@ -316,7 +316,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 		} break;
 
 		// misc types
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 
 			ERR_FAIL_COND_V(len < 4 * 4, ERR_INVALID_DATA);
 			Color val;
@@ -383,7 +383,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 			ERR_EXPLAIN("Can't marshallize resources");
 			ERR_FAIL_V(ERR_INVALID_DATA); //no, i'm sorry, no go
 		} break;*/
-		case Variant::_RID: {
+		case VariantType::_RID: {
 
 			r_variant = RID();
 		} break;
@@ -542,7 +542,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 		} break;
 
 		// arrays
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 
 			ERR_FAIL_COND_V(len < 4, ERR_INVALID_DATA);
 			int32_t count = decode_uint32(buf);
@@ -572,7 +572,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 			}
 
 		} break;
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 
 			ERR_FAIL_COND_V(len < 4, ERR_INVALID_DATA);
 			int32_t count = decode_uint32(buf);
@@ -629,7 +629,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 			}
 
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 			ERR_FAIL_COND_V(len < 4, ERR_INVALID_DATA);
 			int32_t count = decode_uint32(buf);
@@ -689,7 +689,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 			r_variant = varray;
 
 		} break;
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 
 			ERR_FAIL_COND_V(len < 4, ERR_INVALID_DATA);
 			int32_t count = decode_uint32(buf);
@@ -725,7 +725,7 @@ Error decode_variant(Variant &r_variant, const uint8_t *p_buffer, int p_len, int
 			r_variant = varray;
 
 		} break;
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 
 			ERR_FAIL_COND_V(len < 4, ERR_INVALID_DATA);
 			int32_t count = decode_uint32(buf);
@@ -933,7 +933,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 		} break;
 
 		// math types
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 
 			if (buf) {
 				Vector2 v2 = p_variant;
@@ -944,7 +944,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 2 * 4;
 
 		} break; // 5
-		case Variant::RECT2: {
+		case VariantType::RECT2: {
 
 			if (buf) {
 				Rect2 r2 = p_variant;
@@ -956,7 +956,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 4 * 4;
 
 		} break;
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 
 			if (buf) {
 				Vector3 v3 = p_variant;
@@ -968,7 +968,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 3 * 4;
 
 		} break;
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 
 			if (buf) {
 				Transform2D val = p_variant;
@@ -983,7 +983,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 6 * 4;
 
 		} break;
-		case Variant::PLANE: {
+		case VariantType::PLANE: {
 
 			if (buf) {
 				Plane p = p_variant;
@@ -996,7 +996,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 4 * 4;
 
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 
 			if (buf) {
 				Quat q = p_variant;
@@ -1009,7 +1009,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 4 * 4;
 
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 
 			if (buf) {
 				AABB aabb = p_variant;
@@ -1024,7 +1024,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 6 * 4;
 
 		} break;
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 
 			if (buf) {
 				Basis val = p_variant;
@@ -1039,7 +1039,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 9 * 4;
 
 		} break;
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 
 			if (buf) {
 				Transform val = p_variant;
@@ -1060,7 +1060,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 		} break;
 
 		// misc types
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 
 			if (buf) {
 				Color c = p_variant;
@@ -1078,7 +1078,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			ERR_EXPLAIN("Can't marshallize resources");
 			ERR_FAIL_V(ERR_INVALID_DATA); //no, i'm sorry, no go
 		} break;*/
-		case Variant::_RID: {
+		case VariantType::_RID: {
 
 		} break;
 		case VariantType::OBJECT: {
@@ -1213,7 +1213,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 
 		} break;
 		// arrays
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 
 			PoolVector<uint8_t> data = p_variant;
 			int datalen = data.size();
@@ -1235,7 +1235,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			}
 
 		} break;
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 
 			PoolVector<int> data = p_variant;
 			int datalen = data.size();
@@ -1269,7 +1269,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 4 + datalen * datasize;
 
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 			PoolVector<String> data = p_variant;
 			int len = data.size();
@@ -1328,7 +1328,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 4 * 2 * len;
 
 		} break;
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 
 			PoolVector<Vector3> data = p_variant;
 			int len = data.size();
@@ -1356,7 +1356,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			r_len += 4 * 3 * len;
 
 		} break;
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 
 			PoolVector<Color> data = p_variant;
 			int len = data.size();

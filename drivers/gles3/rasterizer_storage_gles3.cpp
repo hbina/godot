@@ -2254,7 +2254,7 @@ void RasterizerStorageGLES3::shader_get_param_list(RID p_shader, List<PropertyIn
 			case ShaderLanguage::TYPE_UVEC3:
 			case ShaderLanguage::TYPE_UVEC4: {
 
-				pi.type = Variant::POOL_INT_ARRAY;
+				pi.type = VariantType::POOL_INT_ARRAY;
 			} break;
 			case ShaderLanguage::TYPE_FLOAT: {
 				pi.type = VariantType::REAL;
@@ -2264,18 +2264,18 @@ void RasterizerStorageGLES3::shader_get_param_list(RID p_shader, List<PropertyIn
 				}
 
 			} break;
-			case ShaderLanguage::TYPE_VEC2: pi.type = Variant::VECTOR2; break;
-			case ShaderLanguage::TYPE_VEC3: pi.type = Variant::VECTOR3; break;
+			case ShaderLanguage::TYPE_VEC2: pi.type = VariantType::VECTOR2; break;
+			case ShaderLanguage::TYPE_VEC3: pi.type = VariantType::VECTOR3; break;
 			case ShaderLanguage::TYPE_VEC4: {
 				if (u.hint == ShaderLanguage::ShaderNode::Uniform::HINT_COLOR) {
-					pi.type = Variant::COLOR;
+					pi.type = VariantType::COLOR;
 				} else {
-					pi.type = Variant::PLANE;
+					pi.type = VariantType::PLANE;
 				}
 			} break;
-			case ShaderLanguage::TYPE_MAT2: pi.type = Variant::TRANSFORM2D; break;
-			case ShaderLanguage::TYPE_MAT3: pi.type = Variant::BASIS; break;
-			case ShaderLanguage::TYPE_MAT4: pi.type = Variant::TRANSFORM; break;
+			case ShaderLanguage::TYPE_MAT2: pi.type = VariantType::TRANSFORM2D; break;
+			case ShaderLanguage::TYPE_MAT3: pi.type = VariantType::BASIS; break;
+			case ShaderLanguage::TYPE_MAT4: pi.type = VariantType::TRANSFORM; break;
 			case ShaderLanguage::TYPE_SAMPLER2D:
 			case ShaderLanguage::TYPE_ISAMPLER2D:
 			case ShaderLanguage::TYPE_USAMPLER2D: {
@@ -2670,7 +2670,7 @@ _FORCE_INLINE_ static void _fill_std140_variant_ubo_value(ShaderLanguage::DataTy
 
 			GLfloat *gui = (GLfloat *)data;
 
-			if (value.get_type() == Variant::COLOR) {
+			if (value.get_type() == VariantType::COLOR) {
 				Color v = value;
 
 				if (p_linear_color) {
@@ -2681,14 +2681,14 @@ _FORCE_INLINE_ static void _fill_std140_variant_ubo_value(ShaderLanguage::DataTy
 				gui[1] = v.g;
 				gui[2] = v.b;
 				gui[3] = v.a;
-			} else if (value.get_type() == Variant::RECT2) {
+			} else if (value.get_type() == VariantType::RECT2) {
 				Rect2 v = value;
 
 				gui[0] = v.position.x;
 				gui[1] = v.position.y;
 				gui[2] = v.size.x;
 				gui[3] = v.size.y;
-			} else if (value.get_type() == Variant::QUAT) {
+			} else if (value.get_type() == VariantType::QUAT) {
 				Quat v = value;
 
 				gui[0] = v.x;

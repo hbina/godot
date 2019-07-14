@@ -520,7 +520,7 @@ PropertyInfo VisualScriptBuiltinFunc::get_input_value_port_info(int p_idx) const
 		case BYTES_TO_VAR: {
 
 			if (p_idx == 0)
-				return PropertyInfo(Variant::POOL_BYTE_ARRAY, "bytes");
+				return PropertyInfo(VariantType::POOL_BYTE_ARRAY, "bytes");
 			else
 				return PropertyInfo(VariantType::BOOL, "allow_objects");
 		} break;
@@ -625,7 +625,7 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 		} break;
 		case MATH_POLAR2CARTESIAN:
 		case MATH_CARTESIAN2POLAR: {
-			t = Variant::VECTOR2;
+			t = VariantType::VECTOR2;
 		} break;
 		case MATH_WRAP: {
 			t = VariantType::INT;
@@ -684,7 +684,7 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 		} break;
 		case VAR_TO_BYTES: {
 			if (p_idx == 0)
-				t = Variant::POOL_BYTE_ARRAY;
+				t = VariantType::POOL_BYTE_ARRAY;
 			else
 				t = VariantType::BOOL;
 
@@ -694,7 +694,7 @@ PropertyInfo VisualScriptBuiltinFunc::get_output_value_port_info(int p_idx) cons
 				t = VariantType::BOOL;
 		} break;
 		case COLORN: {
-			t = Variant::COLOR;
+			t = VariantType::COLOR;
 		} break;
 		case FUNC_MAX: {
 		}
@@ -1264,10 +1264,10 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 		} break;
 		case VisualScriptBuiltinFunc::BYTES_TO_VAR: {
 
-			if (p_inputs[0]->get_type() != Variant::POOL_BYTE_ARRAY) {
+			if (p_inputs[0]->get_type() != VariantType::POOL_BYTE_ARRAY) {
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 0;
-				r_error.expected = Variant::POOL_BYTE_ARRAY;
+				r_error.expected = VariantType::POOL_BYTE_ARRAY;
 				return;
 			}
 			if (p_inputs[1]->get_type() != VariantType::BOOL) {
@@ -1287,7 +1287,7 @@ void VisualScriptBuiltinFunc::exec_func(BuiltinFunc p_func, const Variant **p_in
 					r_error_str = RTR("Not enough bytes for decoding bytes, or invalid format.");
 					r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 0;
-					r_error.expected = Variant::POOL_BYTE_ARRAY;
+					r_error.expected = VariantType::POOL_BYTE_ARRAY;
 					return;
 				}
 			}

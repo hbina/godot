@@ -120,23 +120,23 @@ class JavaClass : public Reference {
 			case ARG_ARRAY_BIT | ARG_TYPE_VOID: r_type = VariantType::NIL; break;
 			case ARG_ARRAY_BIT | ARG_TYPE_BOOLEAN: r_type = VariantType::ARRAY; break;
 			case ARG_ARRAY_BIT | ARG_TYPE_BYTE:
-				r_type = Variant::POOL_BYTE_ARRAY;
+				r_type = VariantType::POOL_BYTE_ARRAY;
 				likelihood = 1.0;
 				break;
 			case ARG_ARRAY_BIT | ARG_TYPE_CHAR:
-				r_type = Variant::POOL_BYTE_ARRAY;
+				r_type = VariantType::POOL_BYTE_ARRAY;
 				likelihood = 0.5;
 				break;
 			case ARG_ARRAY_BIT | ARG_TYPE_SHORT:
-				r_type = Variant::POOL_INT_ARRAY;
+				r_type = VariantType::POOL_INT_ARRAY;
 				likelihood = 0.3;
 				break;
 			case ARG_ARRAY_BIT | ARG_TYPE_INT:
-				r_type = Variant::POOL_INT_ARRAY;
+				r_type = VariantType::POOL_INT_ARRAY;
 				likelihood = 1.0;
 				break;
 			case ARG_ARRAY_BIT | ARG_TYPE_LONG:
-				r_type = Variant::POOL_INT_ARRAY;
+				r_type = VariantType::POOL_INT_ARRAY;
 				likelihood = 0.5;
 				break;
 			case ARG_ARRAY_BIT | ARG_TYPE_FLOAT:
@@ -147,7 +147,7 @@ class JavaClass : public Reference {
 				r_type = VariantType::POOL_REAL_ARRAY;
 				likelihood = 0.5;
 				break;
-			case ARG_ARRAY_BIT | ARG_TYPE_STRING: r_type = Variant::POOL_STRING_ARRAY; break;
+			case ARG_ARRAY_BIT | ARG_TYPE_STRING: r_type = VariantType::POOL_STRING_ARRAY; break;
 			case ARG_ARRAY_BIT | ARG_TYPE_CLASS: r_type = VariantType::ARRAY; break;
 		}
 	}

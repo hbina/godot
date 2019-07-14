@@ -372,7 +372,7 @@ bool VisualScriptOperator::has_input_sequence_port() const {
 
 int VisualScriptOperator::get_input_value_port_count() const {
 
-	return (op == Variant::OP_BIT_NEGATE || op == Variant::OP_NOT || op == Variant::OP_NEGATE || op == Variant::OP_POSITIVE) ? 1 : 2;
+	return (op == VariantOperator::OP_BIT_NEGATE || op == VariantOperator::OP_NOT || op == VariantOperator::OP_NEGATE || op == VariantOperator::OP_POSITIVE) ? 1 : 2;
 }
 int VisualScriptOperator::get_output_value_port_count() const {
 
@@ -386,7 +386,7 @@ String VisualScriptOperator::get_output_sequence_port_text(int p_port) const {
 
 PropertyInfo VisualScriptOperator::get_input_value_port_info(int p_idx) const {
 
-	static const VariantType port_types[Variant::OP_MAX][2] = {
+	static const VariantType port_types[VariantOperator::OP_MAX][2] = {
 		{ VariantType::NIL, VariantType::NIL }, //OP_EQUAL,
 		{ VariantType::NIL, VariantType::NIL }, //OP_NOT_EQUAL,
 		{ VariantType::NIL, VariantType::NIL }, //OP_LESS,
@@ -418,7 +418,7 @@ PropertyInfo VisualScriptOperator::get_input_value_port_info(int p_idx) const {
 		{ VariantType::NIL, VariantType::NIL } //OP_IN,
 	};
 
-	ERR_FAIL_INDEX_V(p_idx, Variant::OP_MAX, PropertyInfo());
+	ERR_FAIL_INDEX_V(p_idx, VariantOperator::OP_MAX, PropertyInfo());
 
 	PropertyInfo pinfo;
 	pinfo.name = p_idx == 0 ? "A" : "B";
@@ -428,7 +428,7 @@ PropertyInfo VisualScriptOperator::get_input_value_port_info(int p_idx) const {
 	return pinfo;
 }
 PropertyInfo VisualScriptOperator::get_output_value_port_info(int p_idx) const {
-	static const VariantType port_types[Variant::OP_MAX] = {
+	static const VariantType port_types[VariantOperator::OP_MAX] = {
 		//comparison
 		VariantType::BOOL, //OP_EQUAL,
 		VariantType::BOOL, //OP_NOT_EQUAL,
@@ -539,7 +539,7 @@ String VisualScriptOperator::get_caption() const {
 	return op_names[op];
 }
 
-void VisualScriptOperator::set_operator(Variant::Operator p_op) {
+void VisualScriptOperator::set_operator(VariantOperator p_op) {
 
 	if (op == p_op)
 		return;
@@ -547,7 +547,7 @@ void VisualScriptOperator::set_operator(Variant::Operator p_op) {
 	ports_changed_notify();
 }
 
-Variant::Operator VisualScriptOperator::get_operator() const {
+VariantOperator VisualScriptOperator::get_operator() const {
 
 	return op;
 }
@@ -575,7 +575,7 @@ void VisualScriptOperator::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_typed"), &VisualScriptOperator::get_typed);
 
 	String types;
-	for (int i = 0; i < Variant::OP_MAX; i++) {
+	for (int i = 0; i < VariantOperator::OP_MAX; i++) {
 		if (i > 0)
 			types += ",";
 		types += op_names[i];
@@ -593,7 +593,7 @@ void VisualScriptOperator::_bind_methods() {
 class VisualScriptNodeInstanceOperator : public VisualScriptNodeInstance {
 public:
 	bool unary;
-	Variant::Operator op;
+	VariantOperator op;
 
 	//virtual int get_working_memory_size() const { return 0; }
 
@@ -634,11 +634,11 @@ VisualScriptNodeInstance *VisualScriptOperator::instance(VisualScriptInstance *p
 
 VisualScriptOperator::VisualScriptOperator() {
 
-	op = Variant::OP_ADD;
+	op = VariantOperator::OP_ADD;
 	typed = VariantType::NIL;
 }
 
-template <Variant::Operator OP>
+template <VariantOperator OP>
 static Ref<VisualScriptNode> create_op_node(const String &p_name) {
 
 	Ref<VisualScriptOperator> node;
@@ -2915,7 +2915,7 @@ void VisualScriptComment::_bind_methods() {
 
 	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "title"), "set_title", "get_title");
 	ADD_PROPERTY(PropertyInfo(VariantType::STRING, "description", PROPERTY_HINT_MULTILINE_TEXT), "set_description", "get_description");
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "size"), "set_size", "get_size");
+	ADD_PROPERTY(PropertyInfo(VariantType::VECTOR2, "size"), "set_size", "get_size");
 }
 
 VisualScriptComment::VisualScriptComment() {
@@ -3668,34 +3668,34 @@ void register_visual_script_nodes() {
 	VisualScriptLanguage::singleton->add_register_func("index/get_index", create_node_generic<VisualScriptIndexGet>);
 	VisualScriptLanguage::singleton->add_register_func("index/set_index", create_node_generic<VisualScriptIndexSet>);
 
-	VisualScriptLanguage::singleton->add_register_func("operators/compare/equal", create_op_node<Variant::OP_EQUAL>);
-	VisualScriptLanguage::singleton->add_register_func("operators/compare/not_equal", create_op_node<Variant::OP_NOT_EQUAL>);
-	VisualScriptLanguage::singleton->add_register_func("operators/compare/less", create_op_node<VariantType::OP_LESS>);
-	VisualScriptLanguage::singleton->add_register_func("operators/compare/less_equal", create_op_node<VariantType::OP_LESS_EQUAL>);
-	VisualScriptLanguage::singleton->add_register_func("operators/compare/greater", create_op_node<Variant::OP_GREATER>);
-	VisualScriptLanguage::singleton->add_register_func("operators/compare/greater_equal", create_op_node<Variant::OP_GREATER_EQUAL>);
+	VisualScriptLanguage::singleton->add_register_func("operators/compare/equal", create_op_node<VariantOperator::OP_EQUAL>);
+	VisualScriptLanguage::singleton->add_register_func("operators/compare/not_equal", create_op_node<VariantOperator::OP_NOT_EQUAL>);
+	VisualScriptLanguage::singleton->add_register_func("operators/compare/less", create_op_node<VariantOperator::OP_LESS>);
+	VisualScriptLanguage::singleton->add_register_func("operators/compare/less_equal", create_op_node<VariantOperator::OP_LESS_EQUAL>);
+	VisualScriptLanguage::singleton->add_register_func("operators/compare/greater", create_op_node<VariantOperator::OP_GREATER>);
+	VisualScriptLanguage::singleton->add_register_func("operators/compare/greater_equal", create_op_node<VariantOperator::OP_GREATER_EQUAL>);
 	//mathematic
-	VisualScriptLanguage::singleton->add_register_func("operators/math/add", create_op_node<Variant::OP_ADD>);
-	VisualScriptLanguage::singleton->add_register_func("operators/math/subtract", create_op_node<Variant::OP_SUBTRACT>);
-	VisualScriptLanguage::singleton->add_register_func("operators/math/multiply", create_op_node<Variant::OP_MULTIPLY>);
-	VisualScriptLanguage::singleton->add_register_func("operators/math/divide", create_op_node<Variant::OP_DIVIDE>);
-	VisualScriptLanguage::singleton->add_register_func("operators/math/negate", create_op_node<Variant::OP_NEGATE>);
-	VisualScriptLanguage::singleton->add_register_func("operators/math/positive", create_op_node<Variant::OP_POSITIVE>);
-	VisualScriptLanguage::singleton->add_register_func("operators/math/remainder", create_op_node<Variant::OP_MODULE>);
+	VisualScriptLanguage::singleton->add_register_func("operators/math/add", create_op_node<VariantOperator::OP_ADD>);
+	VisualScriptLanguage::singleton->add_register_func("operators/math/subtract", create_op_node<VariantOperator::OP_SUBTRACT>);
+	VisualScriptLanguage::singleton->add_register_func("operators/math/multiply", create_op_node<VariantOperator::OP_MULTIPLY>);
+	VisualScriptLanguage::singleton->add_register_func("operators/math/divide", create_op_node<VariantOperator::OP_DIVIDE>);
+	VisualScriptLanguage::singleton->add_register_func("operators/math/negate", create_op_node<VariantOperator::OP_NEGATE>);
+	VisualScriptLanguage::singleton->add_register_func("operators/math/positive", create_op_node<VariantOperator::OP_POSITIVE>);
+	VisualScriptLanguage::singleton->add_register_func("operators/math/remainder", create_op_node<VariantOperator::OP_MODULE>);
 	VisualScriptLanguage::singleton->add_register_func("operators/math/string_concat", create_op_node<Variant::OP_STRING_CONCAT>);
 	//bitwise
-	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/shift_left", create_op_node<Variant::OP_SHIFT_LEFT>);
-	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/shift_right", create_op_node<Variant::OP_SHIFT_RIGHT>);
-	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_and", create_op_node<Variant::OP_BIT_AND>);
-	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_or", create_op_node<Variant::OP_BIT_OR>);
-	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_xor", create_op_node<Variant::OP_BIT_XOR>);
-	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_negate", create_op_node<Variant::OP_BIT_NEGATE>);
+	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/shift_left", create_op_node<VariantOperator::OP_SHIFT_LEFT>);
+	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/shift_right", create_op_node<VariantOperator::OP_SHIFT_RIGHT>);
+	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_and", create_op_node<VariantOperator::OP_BIT_AND>);
+	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_or", create_op_node<VariantOperator::OP_BIT_OR>);
+	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_xor", create_op_node<VariantOperator::OP_BIT_XOR>);
+	VisualScriptLanguage::singleton->add_register_func("operators/bitwise/bit_negate", create_op_node<VariantOperator::OP_BIT_NEGATE>);
 	//logic
-	VisualScriptLanguage::singleton->add_register_func("operators/logic/and", create_op_node<Variant::OP_AND>);
-	VisualScriptLanguage::singleton->add_register_func("operators/logic/or", create_op_node<Variant::OP_OR>);
+	VisualScriptLanguage::singleton->add_register_func("operators/logic/and", create_op_node<VariantOperator::OP_AND>);
+	VisualScriptLanguage::singleton->add_register_func("operators/logic/or", create_op_node<VariantOperator::OP_OR>);
 	VisualScriptLanguage::singleton->add_register_func("operators/logic/xor", create_op_node<Variant::OP_XOR>);
-	VisualScriptLanguage::singleton->add_register_func("operators/logic/not", create_op_node<Variant::OP_NOT>);
-	VisualScriptLanguage::singleton->add_register_func("operators/logic/in", create_op_node<Variant::OP_IN>);
+	VisualScriptLanguage::singleton->add_register_func("operators/logic/not", create_op_node<VariantOperator::OP_NOT>);
+	VisualScriptLanguage::singleton->add_register_func("operators/logic/in", create_op_node<VariantOperator::OP_IN>);
 	VisualScriptLanguage::singleton->add_register_func("operators/logic/select", create_node_generic<VisualScriptSelect>);
 
 	VisualScriptLanguage::singleton->add_register_func("functions/deconstruct", create_node_generic<VisualScriptDeconstruct>);

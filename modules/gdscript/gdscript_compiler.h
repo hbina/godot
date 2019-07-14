@@ -139,8 +139,8 @@ class GDScriptCompiler {
 
 	void _set_error(const String &p_error, const GDScriptParser::Node *p_node);
 
-	bool _create_unary_operator(CodeGen &codegen, const GDScriptParser::OperatorNode *on, Variant::Operator op, int p_stack_level);
-	bool _create_binary_operator(CodeGen &codegen, const GDScriptParser::OperatorNode *on, Variant::Operator op, int p_stack_level, bool p_initializer = false);
+	bool _create_unary_operator(CodeGen &codegen, const GDScriptParser::OperatorNode *on, VariantOperator op, int p_stack_level);
+	bool _create_binary_operator(CodeGen &codegen, const GDScriptParser::OperatorNode *on, VariantOperator op, int p_stack_level, bool p_initializer = false);
 
 	GDScriptDataType _gdtype_from_datatype(const GDScriptParser::DataType &p_datatype) const;
 

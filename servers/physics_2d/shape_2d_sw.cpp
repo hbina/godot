@@ -245,7 +245,7 @@ real_t SegmentShape2DSW::get_moment_of_inertia(real_t p_mass, const Size2 &p_sca
 
 void SegmentShape2DSW::set_data(const Variant &p_data) {
 
-	ERR_FAIL_COND(p_data.get_type() != Variant::RECT2);
+	ERR_FAIL_COND(p_data.get_type() != VariantType::RECT2);
 
 	Rect2 r = p_data;
 	a = r.position;
@@ -386,7 +386,7 @@ real_t RectangleShape2DSW::get_moment_of_inertia(real_t p_mass, const Size2 &p_s
 
 void RectangleShape2DSW::set_data(const Variant &p_data) {
 
-	ERR_FAIL_COND(p_data.get_type() != Variant::VECTOR2);
+	ERR_FAIL_COND(p_data.get_type() != VariantType::VECTOR2);
 
 	half_extents = p_data;
 	configure(Rect2(-half_extents, half_extents * 2.0));
@@ -512,7 +512,7 @@ real_t CapsuleShape2DSW::get_moment_of_inertia(real_t p_mass, const Size2 &p_sca
 
 void CapsuleShape2DSW::set_data(const Variant &p_data) {
 
-	ERR_FAIL_COND(p_data.get_type() != VariantType::ARRAY && p_data.get_type() != Variant::VECTOR2);
+	ERR_FAIL_COND(p_data.get_type() != VariantType::ARRAY && p_data.get_type() != VariantType::VECTOR2);
 
 	if (p_data.get_type() == VariantType::ARRAY) {
 		Array arr = p_data;

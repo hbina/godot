@@ -360,13 +360,13 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			VALIDATE_ARG_NUM(2);
 			const double t = (double)*p_args[2];
 			switch (p_args[0]->get_type() == p_args[1]->get_type() ? p_args[0]->get_type() : VariantType::REAL) {
-				case Variant::VECTOR2: {
+				case VariantType::VECTOR2: {
 					r_ret = ((Vector2)*p_args[0]).linear_interpolate((Vector2)*p_args[1], t);
 				} break;
-				case Variant::VECTOR3: {
+				case VariantType::VECTOR3: {
 					r_ret = ((Vector3)*p_args[0]).linear_interpolate((Vector3)*p_args[1], t);
 				} break;
-				case Variant::COLOR: {
+				case VariantType::COLOR: {
 					r_ret = ((Color)*p_args[0]).linear_interpolate((Color)*p_args[1], t);
 				} break;
 				default: {
@@ -866,10 +866,10 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 				allow_objects = *p_args[1];
 			}
 
-			if (p_args[0]->get_type() != Variant::POOL_BYTE_ARRAY) {
+			if (p_args[0]->get_type() != VariantType::POOL_BYTE_ARRAY) {
 				r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 				r_error.argument = 1;
-				r_error.expected = Variant::POOL_BYTE_ARRAY;
+				r_error.expected = VariantType::POOL_BYTE_ARRAY;
 				r_ret = Variant();
 				return;
 			}
@@ -883,7 +883,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					r_ret = RTR("Not enough bytes for decoding bytes, or invalid format.");
 					r_error.error = Variant::CallError::CALL_ERROR_INVALID_ARGUMENT;
 					r_error.argument = 0;
-					r_error.expected = Variant::POOL_BYTE_ARRAY;
+					r_error.expected = VariantType::POOL_BYTE_ARRAY;
 					return;
 				}
 			}
@@ -1357,12 +1357,12 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					Array d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::POOL_BYTE_ARRAY: {
+				case VariantType::POOL_BYTE_ARRAY: {
 
 					PoolVector<uint8_t> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::POOL_INT_ARRAY: {
+				case VariantType::POOL_INT_ARRAY: {
 
 					PoolVector<int> d = *p_args[0];
 					r_ret = d.size();
@@ -1372,7 +1372,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					PoolVector<real_t> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::POOL_STRING_ARRAY: {
+				case VariantType::POOL_STRING_ARRAY: {
 
 					PoolVector<String> d = *p_args[0];
 					r_ret = d.size();
@@ -1382,12 +1382,12 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					PoolVector<Vector2> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::POOL_VECTOR3_ARRAY: {
+				case VariantType::POOL_VECTOR3_ARRAY: {
 
 					PoolVector<Vector3> d = *p_args[0];
 					r_ret = d.size();
 				} break;
-				case Variant::POOL_COLOR_ARRAY: {
+				case VariantType::POOL_COLOR_ARRAY: {
 
 					PoolVector<Color> d = *p_args[0];
 					r_ret = d.size();
@@ -1724,12 +1724,12 @@ MethodInfo GDScriptFunctions::get_info(Function p_func) {
 		} break;
 		case MATH_POLAR2CARTESIAN: {
 			MethodInfo mi("polar2cartesian", PropertyInfo(VariantType::REAL, "r"), PropertyInfo(VariantType::REAL, "th"));
-			mi.return_val.type = Variant::VECTOR2;
+			mi.return_val.type = VariantType::VECTOR2;
 			return mi;
 		} break;
 		case MATH_CARTESIAN2POLAR: {
 			MethodInfo mi("cartesian2polar", PropertyInfo(VariantType::REAL, "x"), PropertyInfo(VariantType::REAL, "y"));
-			mi.return_val.type = Variant::VECTOR2;
+			mi.return_val.type = VariantType::VECTOR2;
 			return mi;
 		} break;
 		case MATH_WRAP: {
@@ -1895,12 +1895,12 @@ MethodInfo GDScriptFunctions::get_info(Function p_func) {
 
 			MethodInfo mi("var2bytes", PropertyInfo(VariantType::NIL, "var", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_NIL_IS_VARIANT), PropertyInfo(VariantType::BOOL, "full_objects"));
 			mi.default_arguments.push_back(false);
-			mi.return_val.type = Variant::POOL_BYTE_ARRAY;
+			mi.return_val.type = VariantType::POOL_BYTE_ARRAY;
 			return mi;
 		} break;
 		case BYTES_TO_VAR: {
 
-			MethodInfo mi(VariantType::NIL, "bytes2var", PropertyInfo(Variant::POOL_BYTE_ARRAY, "bytes"), PropertyInfo(VariantType::BOOL, "allow_objects"));
+			MethodInfo mi(VariantType::NIL, "bytes2var", PropertyInfo(VariantType::POOL_BYTE_ARRAY, "bytes"), PropertyInfo(VariantType::BOOL, "allow_objects"));
 			mi.default_arguments.push_back(false);
 			mi.return_val.type = VariantType::NIL;
 			mi.return_val.usage |= PROPERTY_USAGE_NIL_IS_VARIANT;
@@ -1961,14 +1961,14 @@ MethodInfo GDScriptFunctions::get_info(Function p_func) {
 
 			MethodInfo mi("Color8", PropertyInfo(VariantType::INT, "r8"), PropertyInfo(VariantType::INT, "g8"), PropertyInfo(VariantType::INT, "b8"), PropertyInfo(VariantType::INT, "a8"));
 			mi.default_arguments.push_back(255);
-			mi.return_val.type = Variant::COLOR;
+			mi.return_val.type = VariantType::COLOR;
 			return mi;
 		} break;
 		case COLORN: {
 
 			MethodInfo mi("ColorN", PropertyInfo(VariantType::STRING, "name"), PropertyInfo(VariantType::REAL, "alpha"));
 			mi.default_arguments.push_back(1.0f);
-			mi.return_val.type = Variant::COLOR;
+			mi.return_val.type = VariantType::COLOR;
 			return mi;
 		} break;
 

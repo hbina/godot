@@ -716,7 +716,7 @@ void Navigation::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_up_vector", "up"), &Navigation::set_up_vector);
 	ClassDB::bind_method(D_METHOD("get_up_vector"), &Navigation::get_up_vector);
 
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR3, "up_vector"), "set_up_vector", "get_up_vector");
+	ADD_PROPERTY(PropertyInfo(VariantType::VECTOR3, "up_vector"), "set_up_vector", "get_up_vector");
 }
 
 Navigation::Navigation() {

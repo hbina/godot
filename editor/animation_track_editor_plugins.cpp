@@ -1313,7 +1313,7 @@ AnimationTrackEdit *AnimationTrackEditDefaultPlugin::create_value_track_edit(Obj
 	if (p_type == VariantType::BOOL) {
 		return memnew(AnimationTrackEditBool);
 	}
-	if (p_type == Variant::COLOR) {
+	if (p_type == VariantType::COLOR) {
 		return memnew(AnimationTrackEditColor);
 	}
 

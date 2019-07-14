@@ -224,11 +224,11 @@ void EditorPropertyArray::update_property() {
 		} break;
 
 		// arrays
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 			arrtype = "PoolByteArray";
 
 		} break;
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 			arrtype = "PoolIntArray";
 
 		} break;
@@ -236,7 +236,7 @@ void EditorPropertyArray::update_property() {
 
 			arrtype = "PoolFloatArray";
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 			arrtype = "PoolStringArray";
 		} break;
@@ -244,11 +244,11 @@ void EditorPropertyArray::update_property() {
 
 			arrtype = "PoolVector2Array";
 		} break;
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 			arrtype = "PoolVector3Array";
 
 		} break;
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 			arrtype = "PoolColorArray";
 		} break;
 		default: {
@@ -719,62 +719,62 @@ void EditorPropertyDictionary::update_property() {
 				} break;
 
 				// math types
-				case Variant::VECTOR2: {
+				case VariantType::VECTOR2: {
 
 					EditorPropertyVector2 *editor = memnew(EditorPropertyVector2);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::RECT2: {
+				case VariantType::RECT2: {
 
 					EditorPropertyRect2 *editor = memnew(EditorPropertyRect2);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::VECTOR3: {
+				case VariantType::VECTOR3: {
 
 					EditorPropertyVector3 *editor = memnew(EditorPropertyVector3);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::TRANSFORM2D: {
+				case VariantType::TRANSFORM2D: {
 
 					EditorPropertyTransform2D *editor = memnew(EditorPropertyTransform2D);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::PLANE: {
+				case VariantType::PLANE: {
 
 					EditorPropertyPlane *editor = memnew(EditorPropertyPlane);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::QUAT: {
+				case VariantType::QUAT: {
 
 					EditorPropertyQuat *editor = memnew(EditorPropertyQuat);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::AABB: {
+				case VariantType::AABB: {
 
 					EditorPropertyAABB *editor = memnew(EditorPropertyAABB);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::BASIS: {
+				case VariantType::BASIS: {
 					EditorPropertyBasis *editor = memnew(EditorPropertyBasis);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
 
 				} break;
-				case Variant::TRANSFORM: {
+				case VariantType::TRANSFORM: {
 					EditorPropertyTransform *editor = memnew(EditorPropertyTransform);
 					editor->setup(-100000, 100000, 0.001, true);
 					prop = editor;
@@ -782,7 +782,7 @@ void EditorPropertyDictionary::update_property() {
 				} break;
 
 				// misc types
-				case Variant::COLOR: {
+				case VariantType::COLOR: {
 					prop = memnew(EditorPropertyColor);
 
 				} break;
@@ -790,7 +790,7 @@ void EditorPropertyDictionary::update_property() {
 					prop = memnew(EditorPropertyNodePath);
 
 				} break;
-				case Variant::_RID: {
+				case VariantType::_RID: {
 					prop = memnew(EditorPropertyRID);
 
 				} break;
@@ -821,16 +821,16 @@ void EditorPropertyDictionary::update_property() {
 				} break;
 
 				// arrays
-				case Variant::POOL_BYTE_ARRAY: {
+				case VariantType::POOL_BYTE_ARRAY: {
 
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::POOL_BYTE_ARRAY);
+					editor->setup(VariantType::POOL_BYTE_ARRAY);
 					prop = editor;
 				} break;
-				case Variant::POOL_INT_ARRAY: {
+				case VariantType::POOL_INT_ARRAY: {
 
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::POOL_INT_ARRAY);
+					editor->setup(VariantType::POOL_INT_ARRAY);
 					prop = editor;
 				} break;
 				case VariantType::POOL_REAL_ARRAY: {
@@ -839,10 +839,10 @@ void EditorPropertyDictionary::update_property() {
 					editor->setup(VariantType::POOL_REAL_ARRAY);
 					prop = editor;
 				} break;
-				case Variant::POOL_STRING_ARRAY: {
+				case VariantType::POOL_STRING_ARRAY: {
 
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::POOL_STRING_ARRAY);
+					editor->setup(VariantType::POOL_STRING_ARRAY);
 					prop = editor;
 				} break;
 				case VariantType::POOL_VECTOR2_ARRAY: {
@@ -851,16 +851,16 @@ void EditorPropertyDictionary::update_property() {
 					editor->setup(VariantType::POOL_VECTOR2_ARRAY);
 					prop = editor;
 				} break;
-				case Variant::POOL_VECTOR3_ARRAY: {
+				case VariantType::POOL_VECTOR3_ARRAY: {
 
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::POOL_VECTOR3_ARRAY);
+					editor->setup(VariantType::POOL_VECTOR3_ARRAY);
 					prop = editor;
 				} break;
-				case Variant::POOL_COLOR_ARRAY: {
+				case VariantType::POOL_COLOR_ARRAY: {
 
 					EditorPropertyArray *editor = memnew(EditorPropertyArray);
-					editor->setup(Variant::POOL_COLOR_ARRAY);
+					editor->setup(VariantType::POOL_COLOR_ARRAY);
 					prop = editor;
 				} break;
 				default: {

@@ -348,30 +348,30 @@ static Color _color_from_type(VariantType p_type, bool dark_theme = true) {
 			case VariantType::REAL: color = Color::html("#61daf4"); break;
 			case VariantType::STRING: color = Color::html("#6ba7ec"); break;
 
-			case Variant::VECTOR2: color = Color::html("#bd91f1"); break;
-			case Variant::RECT2: color = Color::html("#f191a5"); break;
-			case Variant::VECTOR3: color = Color::html("#d67dee"); break;
-			case Variant::TRANSFORM2D: color = Color::html("#c4ec69"); break;
-			case Variant::PLANE: color = Color::html("#f77070"); break;
-			case Variant::QUAT: color = Color::html("#ec69a3"); break;
-			case Variant::AABB: color = Color::html("#ee7991"); break;
-			case Variant::BASIS: color = Color::html("#e3ec69"); break;
-			case Variant::TRANSFORM: color = Color::html("#f6a86e"); break;
+			case VariantType::VECTOR2: color = Color::html("#bd91f1"); break;
+			case VariantType::RECT2: color = Color::html("#f191a5"); break;
+			case VariantType::VECTOR3: color = Color::html("#d67dee"); break;
+			case VariantType::TRANSFORM2D: color = Color::html("#c4ec69"); break;
+			case VariantType::PLANE: color = Color::html("#f77070"); break;
+			case VariantType::QUAT: color = Color::html("#ec69a3"); break;
+			case VariantType::AABB: color = Color::html("#ee7991"); break;
+			case VariantType::BASIS: color = Color::html("#e3ec69"); break;
+			case VariantType::TRANSFORM: color = Color::html("#f6a86e"); break;
 
-			case Variant::COLOR: color = Color::html("#9dff70"); break;
+			case VariantType::COLOR: color = Color::html("#9dff70"); break;
 			case VariantType::NODE_PATH: color = Color::html("#6993ec"); break;
-			case Variant::_RID: color = Color::html("#69ec9a"); break;
+			case VariantType::_RID: color = Color::html("#69ec9a"); break;
 			case VariantType::OBJECT: color = Color::html("#79f3e8"); break;
 			case VariantType::DICTIONARY: color = Color::html("#77edb1"); break;
 
 			case VariantType::ARRAY: color = Color::html("#e0e0e0"); break;
-			case Variant::POOL_BYTE_ARRAY: color = Color::html("#aaf4c8"); break;
-			case Variant::POOL_INT_ARRAY: color = Color::html("#afdcf5"); break;
+			case VariantType::POOL_BYTE_ARRAY: color = Color::html("#aaf4c8"); break;
+			case VariantType::POOL_INT_ARRAY: color = Color::html("#afdcf5"); break;
 			case VariantType::POOL_REAL_ARRAY: color = Color::html("#97e7f8"); break;
-			case Variant::POOL_STRING_ARRAY: color = Color::html("#9dc4f2"); break;
+			case VariantType::POOL_STRING_ARRAY: color = Color::html("#9dc4f2"); break;
 			case VariantType::POOL_VECTOR2_ARRAY: color = Color::html("#d1b3f5"); break;
-			case Variant::POOL_VECTOR3_ARRAY: color = Color::html("#df9bf2"); break;
-			case Variant::POOL_COLOR_ARRAY: color = Color::html("#e9ff97"); break;
+			case VariantType::POOL_VECTOR3_ARRAY: color = Color::html("#df9bf2"); break;
+			case VariantType::POOL_COLOR_ARRAY: color = Color::html("#e9ff97"); break;
 
 			default:
 				color.set_hsv(p_type / float(Variant::VARIANT_MAX), 0.7, 0.7);
@@ -385,30 +385,30 @@ static Color _color_from_type(VariantType p_type, bool dark_theme = true) {
 			case VariantType::REAL: color = Color::html("#27ccf0"); break;
 			case VariantType::STRING: color = Color::html("#4690e7"); break;
 
-			case Variant::VECTOR2: color = Color::html("#ad76ee"); break;
-			case Variant::RECT2: color = Color::html("#ee758e"); break;
-			case Variant::VECTOR3: color = Color::html("#dc6aed"); break;
-			case Variant::TRANSFORM2D: color = Color::html("#96ce1a"); break;
-			case Variant::PLANE: color = Color::html("#f77070"); break;
-			case Variant::QUAT: color = Color::html("#ec69a3"); break;
-			case Variant::AABB: color = Color::html("#ee7991"); break;
-			case Variant::BASIS: color = Color::html("#b2bb19"); break;
-			case Variant::TRANSFORM: color = Color::html("#f49047"); break;
+			case VariantType::VECTOR2: color = Color::html("#ad76ee"); break;
+			case VariantType::RECT2: color = Color::html("#ee758e"); break;
+			case VariantType::VECTOR3: color = Color::html("#dc6aed"); break;
+			case VariantType::TRANSFORM2D: color = Color::html("#96ce1a"); break;
+			case VariantType::PLANE: color = Color::html("#f77070"); break;
+			case VariantType::QUAT: color = Color::html("#ec69a3"); break;
+			case VariantType::AABB: color = Color::html("#ee7991"); break;
+			case VariantType::BASIS: color = Color::html("#b2bb19"); break;
+			case VariantType::TRANSFORM: color = Color::html("#f49047"); break;
 
-			case Variant::COLOR: color = Color::html("#3cbf00"); break;
+			case VariantType::COLOR: color = Color::html("#3cbf00"); break;
 			case VariantType::NODE_PATH: color = Color::html("#6993ec"); break;
-			case Variant::_RID: color = Color::html("#2ce573"); break;
+			case VariantType::_RID: color = Color::html("#2ce573"); break;
 			case VariantType::OBJECT: color = Color::html("#12d5c3"); break;
 			case VariantType::DICTIONARY: color = Color::html("#57e99f"); break;
 
 			case VariantType::ARRAY: color = Color::html("#737373"); break;
-			case Variant::POOL_BYTE_ARRAY: color = Color::html("#61ea98"); break;
-			case Variant::POOL_INT_ARRAY: color = Color::html("#61baeb"); break;
+			case VariantType::POOL_BYTE_ARRAY: color = Color::html("#61ea98"); break;
+			case VariantType::POOL_INT_ARRAY: color = Color::html("#61baeb"); break;
 			case VariantType::POOL_REAL_ARRAY: color = Color::html("#40d3f2"); break;
-			case Variant::POOL_STRING_ARRAY: color = Color::html("#609fea"); break;
+			case VariantType::POOL_STRING_ARRAY: color = Color::html("#609fea"); break;
 			case VariantType::POOL_VECTOR2_ARRAY: color = Color::html("#9d5dea"); break;
-			case Variant::POOL_VECTOR3_ARRAY: color = Color::html("#ca5aea"); break;
-			case Variant::POOL_COLOR_ARRAY: color = Color::html("#92ba00"); break;
+			case VariantType::POOL_VECTOR3_ARRAY: color = Color::html("#ca5aea"); break;
+			case VariantType::POOL_COLOR_ARRAY: color = Color::html("#92ba00"); break;
 
 			default:
 				color.set_hsv(p_type / float(Variant::VARIANT_MAX), 0.3, 0.3);
@@ -688,7 +688,7 @@ void VisualScriptEditor::_update_graph(int p_only_id) {
 						value = Variant::construct(left_type, &existingp, 1, ce, false);
 					}
 
-					if (left_type == Variant::COLOR) {
+					if (left_type == VariantType::COLOR) {
 						button->set_custom_minimum_size(Size2(30, 0) * EDSCALE);
 						button->connect("draw", this, "_draw_color_over_button", varray(button, value));
 					} else if (left_type == VariantType::OBJECT && Ref<Resource>(value).is_valid()) {

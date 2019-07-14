@@ -1060,23 +1060,23 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 						break;
 					}
 
-					Variant::Operator vop = Variant::OP_MAX;
+					VariantOperator vop = VariantOperator::OP_MAX;
 					switch (op->op) {
-						case GDScriptParser::OperatorNode::OP_ADD: vop = Variant::OP_ADD; break;
-						case GDScriptParser::OperatorNode::OP_SUB: vop = Variant::OP_SUBTRACT; break;
-						case GDScriptParser::OperatorNode::OP_MUL: vop = Variant::OP_MULTIPLY; break;
-						case GDScriptParser::OperatorNode::OP_DIV: vop = Variant::OP_DIVIDE; break;
-						case GDScriptParser::OperatorNode::OP_MOD: vop = Variant::OP_MODULE; break;
-						case GDScriptParser::OperatorNode::OP_SHIFT_LEFT: vop = Variant::OP_SHIFT_LEFT; break;
-						case GDScriptParser::OperatorNode::OP_SHIFT_RIGHT: vop = Variant::OP_SHIFT_RIGHT; break;
-						case GDScriptParser::OperatorNode::OP_BIT_AND: vop = Variant::OP_BIT_AND; break;
-						case GDScriptParser::OperatorNode::OP_BIT_OR: vop = Variant::OP_BIT_OR; break;
-						case GDScriptParser::OperatorNode::OP_BIT_XOR: vop = Variant::OP_BIT_XOR; break;
+						case GDScriptParser::OperatorNode::OP_ADD: vop = VariantOperator::OP_ADD; break;
+						case GDScriptParser::OperatorNode::OP_SUB: vop = VariantOperator::OP_SUBTRACT; break;
+						case GDScriptParser::OperatorNode::OP_MUL: vop = VariantOperator::OP_MULTIPLY; break;
+						case GDScriptParser::OperatorNode::OP_DIV: vop = VariantOperator::OP_DIVIDE; break;
+						case GDScriptParser::OperatorNode::OP_MOD: vop = VariantOperator::OP_MODULE; break;
+						case GDScriptParser::OperatorNode::OP_SHIFT_LEFT: vop = VariantOperator::OP_SHIFT_LEFT; break;
+						case GDScriptParser::OperatorNode::OP_SHIFT_RIGHT: vop = VariantOperator::OP_SHIFT_RIGHT; break;
+						case GDScriptParser::OperatorNode::OP_BIT_AND: vop = VariantOperator::OP_BIT_AND; break;
+						case GDScriptParser::OperatorNode::OP_BIT_OR: vop = VariantOperator::OP_BIT_OR; break;
+						case GDScriptParser::OperatorNode::OP_BIT_XOR: vop = VariantOperator::OP_BIT_XOR; break;
 						default: {
 						}
 					}
 
-					if (vop == Variant::OP_MAX) {
+					if (vop == VariantOperator::OP_MAX) {
 						break;
 					}
 
@@ -1102,11 +1102,11 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 					bool v2_use_value = p2.value.get_type() != VariantType::NIL && p2.value.get_type() != VariantType::OBJECT;
 					Variant v2 = (v2_use_value) ? p2.value : Variant::construct(p2.type.builtin_type, NULL, 0, ce);
 					// avoid potential invalid ops
-					if ((vop == Variant::OP_DIVIDE || vop == Variant::OP_MODULE) && v2.get_type() == VariantType::INT) {
+					if ((vop == VariantOperator::OP_DIVIDE || vop == VariantOperator::OP_MODULE) && v2.get_type() == VariantType::INT) {
 						v2 = 1;
 						v2_use_value = false;
 					}
-					if (vop == Variant::OP_DIVIDE && v2.get_type() == VariantType::REAL) {
+					if (vop == VariantOperator::OP_DIVIDE && v2.get_type() == VariantType::REAL) {
 						v2 = 1.0;
 						v2_use_value = false;
 					}

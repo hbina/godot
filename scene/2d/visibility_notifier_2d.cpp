@@ -136,7 +136,7 @@ void VisibilityNotifier2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_rect"), &VisibilityNotifier2D::get_rect);
 	ClassDB::bind_method(D_METHOD("is_on_screen"), &VisibilityNotifier2D::is_on_screen);
 
-	ADD_PROPERTY(PropertyInfo(Variant::RECT2, "rect"), "set_rect", "get_rect");
+	ADD_PROPERTY(PropertyInfo(VariantType::RECT2, "rect"), "set_rect", "get_rect");
 
 	ADD_SIGNAL(MethodInfo("viewport_entered", PropertyInfo(VariantType::OBJECT, "viewport", PROPERTY_HINT_RESOURCE_TYPE, "Viewport")));
 	ADD_SIGNAL(MethodInfo("viewport_exited", PropertyInfo(VariantType::OBJECT, "viewport", PROPERTY_HINT_RESOURCE_TYPE, "Viewport")));

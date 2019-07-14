@@ -503,7 +503,7 @@ void AnimationPlayer::_animation_process_animation(AnimationData *p_anim, float 
 							} break;
 							case SP_NODE2D_POS: {
 #ifdef DEBUG_ENABLED
-								if (value.get_type() != Variant::VECTOR2) {
+								if (value.get_type() != VariantType::VECTOR2) {
 									ERR_PRINTS("Position key at time " + rtos(p_time) + " in Animation Track '" + String(pa->owner->path) + "' not of type Vector2(). Animation '" + a->get_name() + "' at node '" + get_path() + "'.");
 								}
 #endif
@@ -520,7 +520,7 @@ void AnimationPlayer::_animation_process_animation(AnimationData *p_anim, float 
 							} break;
 							case SP_NODE2D_SCALE: {
 #ifdef DEBUG_ENABLED
-								if (value.get_type() != Variant::VECTOR2) {
+								if (value.get_type() != VariantType::VECTOR2) {
 									ERR_PRINTS("Scale key at time " + rtos(p_time) + " in Animation Track '" + String(pa->owner->path) + "' not of type Vector2()." + a->get_name() + "' at node '" + get_path() + "'.");
 								}
 #endif
@@ -894,7 +894,7 @@ void AnimationPlayer::_animation_update_transforms() {
 			} break;
 			case SP_NODE2D_POS: {
 #ifdef DEBUG_ENABLED
-				if (pa->value_accum.get_type() != Variant::VECTOR2) {
+				if (pa->value_accum.get_type() != VariantType::VECTOR2) {
 					ERR_PRINTS("Position key at time " + rtos(playback.current.pos) + " in Animation '" + get_current_animation() + "' at Node '" + get_path() + "', Track '" + String(pa->owner->path) + "' not of type Vector2()");
 				}
 #endif
@@ -911,7 +911,7 @@ void AnimationPlayer::_animation_update_transforms() {
 			} break;
 			case SP_NODE2D_SCALE: {
 #ifdef DEBUG_ENABLED
-				if (pa->value_accum.get_type() != Variant::VECTOR2) {
+				if (pa->value_accum.get_type() != VariantType::VECTOR2) {
 					ERR_PRINTS("Scale key at time " + rtos(playback.current.pos) + " in Animation '" + get_current_animation() + "' at Node '" + get_path() + "', Track '" + String(pa->owner->path) + "' not of type Vector2()");
 				}
 #endif

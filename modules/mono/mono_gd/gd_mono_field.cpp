@@ -373,41 +373,41 @@ void GDMonoField::set_value_from_variant(MonoObject *p_object, const Variant &p_
 					MonoString *mono_string = GDMonoMarshal::mono_string_from_godot(p_value);
 					mono_field_set_value(p_object, mono_field, mono_string);
 				} break;
-				case Variant::VECTOR2: {
+				case VariantType::VECTOR2: {
 					SET_FROM_STRUCT(Vector2);
 				} break;
-				case Variant::RECT2: {
+				case VariantType::RECT2: {
 					SET_FROM_STRUCT(Rect2);
 				} break;
-				case Variant::VECTOR3: {
+				case VariantType::VECTOR3: {
 					SET_FROM_STRUCT(Vector3);
 				} break;
-				case Variant::TRANSFORM2D: {
+				case VariantType::TRANSFORM2D: {
 					SET_FROM_STRUCT(Transform2D);
 				} break;
-				case Variant::PLANE: {
+				case VariantType::PLANE: {
 					SET_FROM_STRUCT(Plane);
 				} break;
-				case Variant::QUAT: {
+				case VariantType::QUAT: {
 					SET_FROM_STRUCT(Quat);
 				} break;
-				case Variant::AABB: {
+				case VariantType::AABB: {
 					SET_FROM_STRUCT(AABB);
 				} break;
-				case Variant::BASIS: {
+				case VariantType::BASIS: {
 					SET_FROM_STRUCT(Basis);
 				} break;
-				case Variant::TRANSFORM: {
+				case VariantType::TRANSFORM: {
 					SET_FROM_STRUCT(Transform);
 				} break;
-				case Variant::COLOR: {
+				case VariantType::COLOR: {
 					SET_FROM_STRUCT(Color);
 				} break;
 				case VariantType::NODE_PATH: {
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator NodePath());
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::_RID: {
+				case VariantType::_RID: {
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator RID());
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
@@ -424,25 +424,25 @@ void GDMonoField::set_value_from_variant(MonoObject *p_object, const Variant &p_
 					MonoObject *managed = GDMonoUtils::create_managed_from(p_value.operator Array(), CACHED_CLASS(Array));
 					mono_field_set_value(p_object, mono_field, managed);
 				} break;
-				case Variant::POOL_BYTE_ARRAY: {
+				case VariantType::POOL_BYTE_ARRAY: {
 					SET_FROM_ARRAY(PoolByteArray);
 				} break;
-				case Variant::POOL_INT_ARRAY: {
+				case VariantType::POOL_INT_ARRAY: {
 					SET_FROM_ARRAY(PoolIntArray);
 				} break;
 				case VariantType::POOL_REAL_ARRAY: {
 					SET_FROM_ARRAY(PoolRealArray);
 				} break;
-				case Variant::POOL_STRING_ARRAY: {
+				case VariantType::POOL_STRING_ARRAY: {
 					SET_FROM_ARRAY(PoolStringArray);
 				} break;
 				case VariantType::POOL_VECTOR2_ARRAY: {
 					SET_FROM_ARRAY(PoolVector2Array);
 				} break;
-				case Variant::POOL_VECTOR3_ARRAY: {
+				case VariantType::POOL_VECTOR3_ARRAY: {
 					SET_FROM_ARRAY(PoolVector3Array);
 				} break;
-				case Variant::POOL_COLOR_ARRAY: {
+				case VariantType::POOL_COLOR_ARRAY: {
 					SET_FROM_ARRAY(PoolColorArray);
 				} break;
 				default: break;

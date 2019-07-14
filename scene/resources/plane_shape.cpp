@@ -85,7 +85,7 @@ void PlaneShape::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_plane", "plane"), &PlaneShape::set_plane);
 	ClassDB::bind_method(D_METHOD("get_plane"), &PlaneShape::get_plane);
 
-	ADD_PROPERTY(PropertyInfo(Variant::PLANE, "plane"), "set_plane", "get_plane");
+	ADD_PROPERTY(PropertyInfo(VariantType::PLANE, "plane"), "set_plane", "get_plane");
 }
 
 PlaneShape::PlaneShape() :

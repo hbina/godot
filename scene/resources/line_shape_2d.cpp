@@ -108,7 +108,7 @@ void LineShape2D::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("set_d", "d"), &LineShape2D::set_d);
 	ClassDB::bind_method(D_METHOD("get_d"), &LineShape2D::get_d);
 
-	ADD_PROPERTY(PropertyInfo(Variant::VECTOR2, "normal"), "set_normal", "get_normal");
+	ADD_PROPERTY(PropertyInfo(VariantType::VECTOR2, "normal"), "set_normal", "get_normal");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "d"), "set_d", "get_d");
 }
 

@@ -188,7 +188,7 @@ VARIANT_ENUM_CAST(PropertyHint);
 VARIANT_ENUM_CAST(PropertyUsageFlags);
 VARIANT_ENUM_CAST(MethodFlags);
 VARIANT_ENUM_CAST(VariantType);
-VARIANT_ENUM_CAST(Variant::Operator);
+VARIANT_ENUM_CAST(VariantOperator);
 
 template <>
 struct VariantCaster<wchar_t> {

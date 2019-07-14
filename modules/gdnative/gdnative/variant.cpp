@@ -506,7 +506,7 @@ void GDAPI godot_variant_destroy(godot_variant *p_self) {
 // GDNative core 1.1
 
 godot_string GDAPI godot_variant_get_operator_name(godot_variant_operator p_op) {
-	Variant::Operator op = (Variant::Operator)p_op;
+	VariantOperator op = (VariantOperator)p_op;
 	godot_string raw_dest;
 	String *dest = (String *)&raw_dest;
 	memnew_placement(dest, String(Variant::get_operator_name(op))); // operator = is overloaded by String
@@ -514,7 +514,7 @@ godot_string GDAPI godot_variant_get_operator_name(godot_variant_operator p_op) 
 }
 
 void GDAPI godot_variant_evaluate(godot_variant_operator p_op, const godot_variant *p_a, const godot_variant *p_b, godot_variant *r_ret, godot_bool *r_valid) {
-	Variant::Operator op = (Variant::Operator)p_op;
+	VariantOperator op = (VariantOperator)p_op;
 	const Variant *a = (const Variant *)p_a;
 	const Variant *b = (const Variant *)p_b;
 	Variant *ret = (Variant *)r_ret;

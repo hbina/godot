@@ -122,7 +122,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, VariantType p_type, const Variant *p_arg
 			v.val.l = jStr;
 			v.obj = jStr;
 		} break;
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 
 			PoolVector<String> sarray = *p_arg;
 			jobjectArray arr = env->NewObjectArray(sarray.size(), env->FindClass("java/lang/String"), env->NewStringUTF(""));
@@ -181,7 +181,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, VariantType p_type, const Variant *p_arg
 			v.obj = jdict;
 		} break;
 
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 
 			PoolVector<int> array = *p_arg;
 			jintArray arr = env->NewIntArray(array.size());
@@ -191,7 +191,7 @@ jvalret _variant_to_jvalue(JNIEnv *env, VariantType p_type, const Variant *p_arg
 			v.obj = arr;
 
 		} break;
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 			PoolVector<uint8_t> array = *p_arg;
 			jbyteArray arr = env->NewByteArray(array.size());
 			PoolVector<uint8_t>::Read r = array.read();
@@ -496,7 +496,7 @@ public:
 				ret = jstring_to_string((jstring)o, env);
 				env->DeleteLocalRef(o);
 			} break;
-			case Variant::POOL_STRING_ARRAY: {
+			case VariantType::POOL_STRING_ARRAY: {
 
 				jobjectArray arr = (jobjectArray)env->CallObjectMethodA(instance, E->get().method, v);
 
@@ -504,7 +504,7 @@ public:
 
 				env->DeleteLocalRef(arr);
 			} break;
-			case Variant::POOL_INT_ARRAY: {
+			case VariantType::POOL_INT_ARRAY: {
 
 				jintArray arr = (jintArray)env->CallObjectMethodA(instance, E->get().method, v);
 
@@ -1236,10 +1236,10 @@ static VariantType get_jni_type(const String &p_type) {
 		{ "float", VariantType::REAL },
 		{ "double", VariantType::REAL },
 		{ "java.lang.String", VariantType::STRING },
-		{ "[I", Variant::POOL_INT_ARRAY },
-		{ "[B", Variant::POOL_BYTE_ARRAY },
+		{ "[I", VariantType::POOL_INT_ARRAY },
+		{ "[B", VariantType::POOL_BYTE_ARRAY },
 		{ "[F", VariantType::POOL_REAL_ARRAY },
-		{ "[Ljava.lang.String;", Variant::POOL_STRING_ARRAY },
+		{ "[Ljava.lang.String;", VariantType::POOL_STRING_ARRAY },
 		{ "org.godotengine.godot.Dictionary", VariantType::DICTIONARY },
 		{ NULL, VariantType::NIL }
 	};

@@ -1074,9 +1074,9 @@ void SceneTreeEditor::_bind_methods() {
 	ADD_SIGNAL(MethodInfo("node_changed"));
 	ADD_SIGNAL(MethodInfo("nodes_dragged"));
 	ADD_SIGNAL(MethodInfo("nodes_rearranged", PropertyInfo(VariantType::ARRAY, "paths"), PropertyInfo(VariantType::NODE_PATH, "to_path"), PropertyInfo(VariantType::INT, "type")));
-	ADD_SIGNAL(MethodInfo("files_dropped", PropertyInfo(Variant::POOL_STRING_ARRAY, "files"), PropertyInfo(VariantType::NODE_PATH, "to_path"), PropertyInfo(VariantType::INT, "type")));
+	ADD_SIGNAL(MethodInfo("files_dropped", PropertyInfo(VariantType::POOL_STRING_ARRAY, "files"), PropertyInfo(VariantType::NODE_PATH, "to_path"), PropertyInfo(VariantType::INT, "type")));
 	ADD_SIGNAL(MethodInfo("script_dropped", PropertyInfo(VariantType::STRING, "file"), PropertyInfo(VariantType::NODE_PATH, "to_path")));
-	ADD_SIGNAL(MethodInfo("rmb_pressed", PropertyInfo(Variant::VECTOR2, "position")));
+	ADD_SIGNAL(MethodInfo("rmb_pressed", PropertyInfo(VariantType::VECTOR2, "position")));
 
 	ADD_SIGNAL(MethodInfo("open"));
 	ADD_SIGNAL(MethodInfo("open_script"));

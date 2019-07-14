@@ -46,7 +46,7 @@ void MainLoop::_bind_methods() {
 	BIND_VMETHOD(MethodInfo("_initialize"));
 	BIND_VMETHOD(MethodInfo(VariantType::BOOL, "_iteration", PropertyInfo(VariantType::REAL, "delta")));
 	BIND_VMETHOD(MethodInfo(VariantType::BOOL, "_idle", PropertyInfo(VariantType::REAL, "delta")));
-	BIND_VMETHOD(MethodInfo("_drop_files", PropertyInfo(Variant::POOL_STRING_ARRAY, "files"), PropertyInfo(VariantType::INT, "from_screen")));
+	BIND_VMETHOD(MethodInfo("_drop_files", PropertyInfo(VariantType::POOL_STRING_ARRAY, "files"), PropertyInfo(VariantType::INT, "from_screen")));
 	BIND_VMETHOD(MethodInfo("_finalize"));
 
 	BIND_CONSTANT(NOTIFICATION_WM_MOUSE_ENTER);

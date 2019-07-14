@@ -1768,7 +1768,7 @@ Variant::operator RID() const {
 #endif
 		Variant::CallError ce;
 		Variant ret = _get_obj().obj->call(CoreStringNames::get_singleton()->get_rid, NULL, 0, ce);
-		if (ce.error == Variant::CallError::CALL_OK && ret.get_type() == Variant::_RID) {
+		if (ce.error == Variant::CallError::CALL_OK && ret.get_type() == VariantType::_RID) {
 			return ret;
 		}
 		return RID();
@@ -1829,25 +1829,25 @@ inline DA _convert_array_from_variant(const Variant &p_variant) {
 		case VariantType::ARRAY: {
 			return _convert_array<DA, Array>(p_variant.operator Array());
 		}
-		case Variant::POOL_BYTE_ARRAY: {
+		case VariantType::POOL_BYTE_ARRAY: {
 			return _convert_array<DA, PoolVector<uint8_t> >(p_variant.operator PoolVector<uint8_t>());
 		}
-		case Variant::POOL_INT_ARRAY: {
+		case VariantType::POOL_INT_ARRAY: {
 			return _convert_array<DA, PoolVector<int> >(p_variant.operator PoolVector<int>());
 		}
 		case VariantType::POOL_REAL_ARRAY: {
 			return _convert_array<DA, PoolVector<real_t> >(p_variant.operator PoolVector<real_t>());
 		}
-		case Variant::POOL_STRING_ARRAY: {
+		case VariantType::POOL_STRING_ARRAY: {
 			return _convert_array<DA, PoolVector<String> >(p_variant.operator PoolVector<String>());
 		}
 		case VariantType::POOL_VECTOR2_ARRAY: {
 			return _convert_array<DA, PoolVector<Vector2> >(p_variant.operator PoolVector<Vector2>());
 		}
-		case Variant::POOL_VECTOR3_ARRAY: {
+		case VariantType::POOL_VECTOR3_ARRAY: {
 			return _convert_array<DA, PoolVector<Vector3> >(p_variant.operator PoolVector<Vector3>());
 		}
-		case Variant::POOL_COLOR_ARRAY: {
+		case VariantType::POOL_COLOR_ARRAY: {
 			return _convert_array<DA, PoolVector<Color> >(p_variant.operator PoolVector<Color>());
 		}
 		default: {

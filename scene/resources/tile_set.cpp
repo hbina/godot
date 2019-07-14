@@ -82,7 +82,7 @@ bool TileSet::_set(const StringName &p_name, const Variant &p_value) {
 				Array p = p_value;
 				Vector2 last_coord;
 				while (p.size() > 0) {
-					if (p[0].get_type() == Variant::VECTOR2) {
+					if (p[0].get_type() == VariantType::VECTOR2) {
 						last_coord = p[0];
 					} else if (p[0].get_type() == VariantType::INT) {
 						autotile_set_bitmask(id, last_coord, p[0]);
@@ -95,7 +95,7 @@ bool TileSet::_set(const StringName &p_name, const Variant &p_value) {
 			Array p = p_value;
 			Vector2 last_coord;
 			while (p.size() > 0) {
-				if (p[0].get_type() == Variant::VECTOR2) {
+				if (p[0].get_type() == VariantType::VECTOR2) {
 					last_coord = p[0];
 				} else if (p[0].get_type() == VariantType::OBJECT) {
 					autotile_set_light_occluder(id, p[0], last_coord);
@@ -107,7 +107,7 @@ bool TileSet::_set(const StringName &p_name, const Variant &p_value) {
 			Array p = p_value;
 			Vector2 last_coord;
 			while (p.size() > 0) {
-				if (p[0].get_type() == Variant::VECTOR2) {
+				if (p[0].get_type() == VariantType::VECTOR2) {
 					last_coord = p[0];
 				} else if (p[0].get_type() == VariantType::OBJECT) {
 					autotile_set_navigation_polygon(id, p[0], last_coord);
@@ -298,36 +298,36 @@ void TileSet::_get_property_list(List<PropertyInfo> *p_list) const {
 		p_list->push_back(PropertyInfo(VariantType::STRING, pre + "name"));
 		p_list->push_back(PropertyInfo(VariantType::OBJECT, pre + "texture", PROPERTY_HINT_RESOURCE_TYPE, "Texture"));
 		p_list->push_back(PropertyInfo(VariantType::OBJECT, pre + "normal_map", PROPERTY_HINT_RESOURCE_TYPE, "Texture"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "tex_offset"));
+		p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "tex_offset"));
 		p_list->push_back(PropertyInfo(VariantType::OBJECT, pre + "material", PROPERTY_HINT_RESOURCE_TYPE, "ShaderMaterial"));
-		p_list->push_back(PropertyInfo(Variant::COLOR, pre + "modulate"));
-		p_list->push_back(PropertyInfo(Variant::RECT2, pre + "region"));
+		p_list->push_back(PropertyInfo(VariantType::COLOR, pre + "modulate"));
+		p_list->push_back(PropertyInfo(VariantType::RECT2, pre + "region"));
 		p_list->push_back(PropertyInfo(VariantType::INT, pre + "tile_mode", PROPERTY_HINT_ENUM, "SINGLE_TILE,AUTO_TILE,ATLAS_TILE"));
 		if (tile_get_tile_mode(id) == AUTO_TILE) {
 			p_list->push_back(PropertyInfo(VariantType::INT, pre + "autotile/bitmask_mode", PROPERTY_HINT_ENUM, "2X2,3X3 (minimal),3X3", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/bitmask_flags", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "autotile/icon_coordinate", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "autotile/tile_size", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+			p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "autotile/icon_coordinate", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+			p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "autotile/tile_size", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::INT, pre + "autotile/spacing", PROPERTY_HINT_RANGE, "0,256,1", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/occluder_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/navpoly_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/priority_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/z_index_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 		} else if (tile_get_tile_mode(id) == ATLAS_TILE) {
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "autotile/icon_coordinate", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "autotile/tile_size", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+			p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "autotile/icon_coordinate", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+			p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "autotile/tile_size", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::INT, pre + "autotile/spacing", PROPERTY_HINT_RANGE, "0,256,1", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/occluder_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/navpoly_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/priority_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 			p_list->push_back(PropertyInfo(VariantType::ARRAY, pre + "autotile/z_index_map", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 		}
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "occluder_offset"));
+		p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "occluder_offset"));
 		p_list->push_back(PropertyInfo(VariantType::OBJECT, pre + "occluder", PROPERTY_HINT_RESOURCE_TYPE, "OccluderPolygon2D"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "navigation_offset"));
+		p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "navigation_offset"));
 		p_list->push_back(PropertyInfo(VariantType::OBJECT, pre + "navigation", PROPERTY_HINT_RESOURCE_TYPE, "NavigationPolygon"));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "shape_offset", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
-		p_list->push_back(PropertyInfo(Variant::VECTOR2, pre + "shape_transform", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
+		p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "shape_offset", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
+		p_list->push_back(PropertyInfo(VariantType::VECTOR2, pre + "shape_transform", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
 		p_list->push_back(PropertyInfo(VariantType::OBJECT, pre + "shape", PROPERTY_HINT_RESOURCE_TYPE, "Shape2D", PROPERTY_USAGE_EDITOR));
 		p_list->push_back(PropertyInfo(VariantType::BOOL, pre + "shape_one_way", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_EDITOR));
 		p_list->push_back(PropertyInfo(VariantType::REAL, pre + "shape_one_way_margin", PROPERTY_HINT_RANGE, "0,128,0.01", PROPERTY_USAGE_EDITOR));
@@ -593,7 +593,7 @@ Vector2 TileSet::autotile_get_subtile_for_bitmask(int p_id, uint16_t p_bitmask, 
 		if (get_script_instance() != NULL) {
 			if (get_script_instance()->has_method("_forward_subtile_selection")) {
 				Variant ret = get_script_instance()->call("_forward_subtile_selection", p_id, p_bitmask, p_tilemap_node, p_tile_location);
-				if (ret.get_type() == Variant::VECTOR2) {
+				if (ret.get_type() == VariantType::VECTOR2) {
 					return ret;
 				}
 			}
@@ -654,7 +654,7 @@ Vector2 TileSet::atlastile_get_subtile_by_priority(int p_id, const Node *p_tilem
 	if (get_script_instance() != NULL) {
 		if (get_script_instance()->has_method("_forward_atlas_subtile_selection")) {
 			Variant ret = get_script_instance()->call("_forward_atlas_subtile_selection", p_id, p_tilemap_node, p_tile_location);
-			if (ret.get_type() == Variant::VECTOR2) {
+			if (ret.get_type() == VariantType::VECTOR2) {
 				return ret;
 			}
 		}
@@ -969,9 +969,9 @@ void TileSet::_tile_set_shapes(int p_id, const Array &p_shapes) {
 			} else
 				continue;
 
-			if (d.has("shape_transform") && d["shape_transform"].get_type() == Variant::TRANSFORM2D)
+			if (d.has("shape_transform") && d["shape_transform"].get_type() == VariantType::TRANSFORM2D)
 				s.shape_transform = d["shape_transform"];
-			else if (d.has("shape_offset") && d["shape_offset"].get_type() == Variant::VECTOR2)
+			else if (d.has("shape_offset") && d["shape_offset"].get_type() == VariantType::VECTOR2)
 				s.shape_transform = Transform2D(0, (Vector2)d["shape_offset"]);
 			else
 				s.shape_transform = default_transform;
@@ -986,7 +986,7 @@ void TileSet::_tile_set_shapes(int p_id, const Array &p_shapes) {
 			else
 				s.one_way_collision_margin = 1.0;
 
-			if (d.has("autotile_coord") && d["autotile_coord"].get_type() == Variant::VECTOR2)
+			if (d.has("autotile_coord") && d["autotile_coord"].get_type() == VariantType::VECTOR2)
 				s.autotile_coord = d["autotile_coord"];
 			else
 				s.autotile_coord = default_autotile_coord;
@@ -1183,8 +1183,8 @@ void TileSet::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("get_tiles_ids"), &TileSet::_get_tiles_ids);
 
 	BIND_VMETHOD(MethodInfo(VariantType::BOOL, "_is_tile_bound", PropertyInfo(VariantType::INT, "drawn_id"), PropertyInfo(VariantType::INT, "neighbor_id")));
-	BIND_VMETHOD(MethodInfo(Variant::VECTOR2, "_forward_subtile_selection", PropertyInfo(VariantType::INT, "autotile_id"), PropertyInfo(VariantType::INT, "bitmask"), PropertyInfo(VariantType::OBJECT, "tilemap", PROPERTY_HINT_NONE, "TileMap"), PropertyInfo(Variant::VECTOR2, "tile_location")));
-	BIND_VMETHOD(MethodInfo(Variant::VECTOR2, "_forward_atlas_subtile_selection", PropertyInfo(VariantType::INT, "atlastile_id"), PropertyInfo(VariantType::OBJECT, "tilemap", PROPERTY_HINT_NONE, "TileMap"), PropertyInfo(Variant::VECTOR2, "tile_location")));
+	BIND_VMETHOD(MethodInfo(VariantType::VECTOR2, "_forward_subtile_selection", PropertyInfo(VariantType::INT, "autotile_id"), PropertyInfo(VariantType::INT, "bitmask"), PropertyInfo(VariantType::OBJECT, "tilemap", PROPERTY_HINT_NONE, "TileMap"), PropertyInfo(VariantType::VECTOR2, "tile_location")));
+	BIND_VMETHOD(MethodInfo(VariantType::VECTOR2, "_forward_atlas_subtile_selection", PropertyInfo(VariantType::INT, "atlastile_id"), PropertyInfo(VariantType::OBJECT, "tilemap", PROPERTY_HINT_NONE, "TileMap"), PropertyInfo(VariantType::VECTOR2, "tile_location")));
 
 	BIND_ENUM_CONSTANT(BITMASK_2X2);
 	BIND_ENUM_CONSTANT(BITMASK_3X3_MINIMAL);

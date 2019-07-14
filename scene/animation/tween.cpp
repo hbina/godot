@@ -409,7 +409,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			result = _run_equation(p_data.trans_type, p_data.ease_type, p_data.elapsed - p_data.delay, (real_t)initial_val, (real_t)delta_val, p_data.duration);
 			break;
 
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 			// Get vectors for initial and delta values
 			Vector2 i = initial_val;
 			Vector2 d = delta_val;
@@ -422,7 +422,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			result = r;
 		} break;
 
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 			// Get vectors for initial and delta values
 			Vector3 i = initial_val;
 			Vector3 d = delta_val;
@@ -436,7 +436,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			result = r;
 		} break;
 
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 			// Get the basis for initial and delta values
 			Basis i = initial_val;
 			Basis d = delta_val;
@@ -456,7 +456,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			result = r;
 		} break;
 
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 			// Get the transforms for initial and delta values
 			Transform2D i = initial_val;
 			Transform2D d = delta_val;
@@ -472,7 +472,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			APPLY_EQUATION(elements[2][1]);
 			result = r;
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 			// Get the quaternian for the initial and delta values
 			Quat i = initial_val;
 			Quat d = delta_val;
@@ -486,7 +486,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			APPLY_EQUATION(w);
 			result = r;
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 			// Get the AABB's for the initial and delta values
 			AABB i = initial_val;
 			AABB d = delta_val;
@@ -502,7 +502,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			APPLY_EQUATION(size.z);
 			result = r;
 		} break;
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 			// Get the transforms for the initial and delta values
 			Transform i = initial_val;
 			Transform d = delta_val;
@@ -524,7 +524,7 @@ Variant Tween::_run_equation(InterpolateData &p_data) {
 			APPLY_EQUATION(origin.z);
 			result = r;
 		} break;
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 			// Get the Color for initial and delta value
 			Color i = initial_val;
 			Color d = delta_val;
@@ -1083,17 +1083,17 @@ bool Tween::_calc_delta_val(const Variant &p_initial_val, const Variant &p_final
 			delta_val = (real_t)final_val - (real_t)initial_val;
 			break;
 
-		case Variant::VECTOR2:
+		case VariantType::VECTOR2:
 			// Convert to Vectors and find the delta
 			delta_val = final_val.operator Vector2() - initial_val.operator Vector2();
 			break;
 
-		case Variant::VECTOR3:
+		case VariantType::VECTOR3:
 			// Convert to Vectors and find the delta
 			delta_val = final_val.operator Vector3() - initial_val.operator Vector3();
 			break;
 
-		case Variant::BASIS: {
+		case VariantType::BASIS: {
 			// Build a new basis which is the delta between the initial and final values
 			Basis i = initial_val;
 			Basis f = final_val;
@@ -1108,7 +1108,7 @@ bool Tween::_calc_delta_val(const Variant &p_initial_val, const Variant &p_final
 					f.elements[2][2] - i.elements[2][2]);
 		} break;
 
-		case Variant::TRANSFORM2D: {
+		case VariantType::TRANSFORM2D: {
 			// Build a new transform which is the difference between the initial and final values
 			Transform2D i = initial_val;
 			Transform2D f = final_val;
@@ -1122,19 +1122,19 @@ bool Tween::_calc_delta_val(const Variant &p_initial_val, const Variant &p_final
 			delta_val = d;
 		} break;
 
-		case Variant::QUAT:
+		case VariantType::QUAT:
 			// Convert to quaternianls and find the delta
 			delta_val = final_val.operator Quat() - initial_val.operator Quat();
 			break;
 
-		case Variant::AABB: {
+		case VariantType::AABB: {
 			// Build a new AABB and use the new position and sizes to make a delta
 			AABB i = initial_val;
 			AABB f = final_val;
 			delta_val = AABB(f.position - i.position, f.size - i.size);
 		} break;
 
-		case Variant::TRANSFORM: {
+		case VariantType::TRANSFORM: {
 			// Build a new transform which is the difference between the initial and final values
 			Transform i = initial_val;
 			Transform f = final_val;
@@ -1155,7 +1155,7 @@ bool Tween::_calc_delta_val(const Variant &p_initial_val, const Variant &p_final
 			delta_val = d;
 		} break;
 
-		case Variant::COLOR: {
+		case VariantType::COLOR: {
 			// Make a new color which is the difference between each the color's RGBA attributes
 			Color i = initial_val;
 			Color f = final_val;

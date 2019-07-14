@@ -164,7 +164,7 @@ void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
 
 		while ((key2 = color_map[*key].next(key2))) {
 
-			list.push_back(PropertyInfo(Variant::COLOR, String() + *key + "/colors/" + *key2));
+			list.push_back(PropertyInfo(VariantType::COLOR, String() + *key + "/colors/" + *key2));
 		}
 	}
 

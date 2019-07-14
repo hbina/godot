@@ -1018,7 +1018,7 @@ ProjectSettings::ProjectSettings() {
 	extensions.push_back("shader");
 
 	GLOBAL_DEF("editor/search_in_file_extensions", extensions);
-	custom_prop_info["editor/search_in_file_extensions"] = PropertyInfo(Variant::POOL_STRING_ARRAY, "editor/search_in_file_extensions");
+	custom_prop_info["editor/search_in_file_extensions"] = PropertyInfo(VariantType::POOL_STRING_ARRAY, "editor/search_in_file_extensions");
 
 	action = Dictionary();
 	action["deadzone"] = Variant(0.5f);

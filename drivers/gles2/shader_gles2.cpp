@@ -762,10 +762,10 @@ void ShaderGLES2::use_material(void *p_material) {
 				} break;
 
 				case ShaderLanguage::TYPE_VEC4: {
-					if (V->get().get_type() == Variant::COLOR) {
+					if (V->get().get_type() == VariantType::COLOR) {
 						Color value = V->get();
 						glUniform4f(location, value.r, value.g, value.b, value.a);
-					} else if (V->get().get_type() == Variant::QUAT) {
+					} else if (V->get().get_type() == VariantType::QUAT) {
 						Quat value = V->get();
 						glUniform4f(location, value.x, value.y, value.z, value.w);
 					} else {

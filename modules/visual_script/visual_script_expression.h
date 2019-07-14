@@ -150,7 +150,7 @@ class VisualScriptExpression : public VisualScriptNode {
 
 		bool is_op;
 		union {
-			Variant::Operator op;
+			VariantOperator op;
 			ENode *node;
 		};
 	};
@@ -175,7 +175,7 @@ class VisualScriptExpression : public VisualScriptNode {
 
 	struct OperatorNode : public ENode {
 
-		Variant::Operator op;
+		VariantOperator op;
 
 		ENode *nodes[2];
 

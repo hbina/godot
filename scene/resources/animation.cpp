@@ -1659,7 +1659,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 
 	switch (type_a) {
 
-		case Variant::VECTOR2: {
+		case VariantType::VECTOR2: {
 
 			Vector2 a = p_a;
 			Vector2 b = p_b;
@@ -1669,7 +1669,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 			return a.cubic_interpolate(b, pa, pb, p_c);
 
 		} break;
-		case Variant::RECT2: {
+		case VariantType::RECT2: {
 
 			Rect2 a = p_a;
 			Rect2 b = p_b;
@@ -1681,7 +1681,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 					a.size.cubic_interpolate(b.size, pa.size, pb.size, p_c));
 
 		} break;
-		case Variant::VECTOR3: {
+		case VariantType::VECTOR3: {
 
 			Vector3 a = p_a;
 			Vector3 b = p_b;
@@ -1691,7 +1691,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 			return a.cubic_interpolate(b, pa, pb, p_c);
 
 		} break;
-		case Variant::QUAT: {
+		case VariantType::QUAT: {
 
 			Quat a = p_a;
 			Quat b = p_b;
@@ -1701,7 +1701,7 @@ Variant Animation::_cubic_interpolate(const Variant &p_pre_a, const Variant &p_a
 			return a.cubic_slerp(b, pa, pb, p_c);
 
 		} break;
-		case Variant::AABB: {
+		case VariantType::AABB: {
 
 			AABB a = p_a;
 			AABB b = p_b;

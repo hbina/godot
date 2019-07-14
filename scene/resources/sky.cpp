@@ -505,19 +505,19 @@ void ProceduralSky::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("_thread_done", "image"), &ProceduralSky::_thread_done);
 
 	ADD_GROUP("Sky", "sky_");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "sky_top_color"), "set_sky_top_color", "get_sky_top_color");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "sky_horizon_color"), "set_sky_horizon_color", "get_sky_horizon_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "sky_top_color"), "set_sky_top_color", "get_sky_top_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "sky_horizon_color"), "set_sky_horizon_color", "get_sky_horizon_color");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "sky_curve", PROPERTY_HINT_EXP_EASING), "set_sky_curve", "get_sky_curve");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "sky_energy", PROPERTY_HINT_RANGE, "0,64,0.01"), "set_sky_energy", "get_sky_energy");
 
 	ADD_GROUP("Ground", "ground_");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "ground_bottom_color"), "set_ground_bottom_color", "get_ground_bottom_color");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "ground_horizon_color"), "set_ground_horizon_color", "get_ground_horizon_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "ground_bottom_color"), "set_ground_bottom_color", "get_ground_bottom_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "ground_horizon_color"), "set_ground_horizon_color", "get_ground_horizon_color");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "ground_curve", PROPERTY_HINT_EXP_EASING), "set_ground_curve", "get_ground_curve");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "ground_energy", PROPERTY_HINT_RANGE, "0,64,0.01"), "set_ground_energy", "get_ground_energy");
 
 	ADD_GROUP("Sun", "sun_");
-	ADD_PROPERTY(PropertyInfo(Variant::COLOR, "sun_color"), "set_sun_color", "get_sun_color");
+	ADD_PROPERTY(PropertyInfo(VariantType::COLOR, "sun_color"), "set_sun_color", "get_sun_color");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "sun_latitude", PROPERTY_HINT_RANGE, "-180,180,0.01"), "set_sun_latitude", "get_sun_latitude");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "sun_longitude", PROPERTY_HINT_RANGE, "-180,180,0.01"), "set_sun_longitude", "get_sun_longitude");
 	ADD_PROPERTY(PropertyInfo(VariantType::REAL, "sun_angle_min", PROPERTY_HINT_RANGE, "0,360,0.01"), "set_sun_angle_min", "get_sun_angle_min");

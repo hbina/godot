@@ -95,7 +95,7 @@ void Portal::_get_property_list(List<PropertyInfo> *p_list) const {
 	p_list->push_back(PropertyInfo(VariantType::POOL_REAL_ARRAY, "shape"));
 	p_list->push_back(PropertyInfo(VariantType::BOOL, "enabled"));
 	p_list->push_back(PropertyInfo(VariantType::REAL, "disable_distance", PROPERTY_HINT_RANGE, "0,4096,0.01"));
-	p_list->push_back(PropertyInfo(Variant::COLOR, "disabled_color"));
+	p_list->push_back(PropertyInfo(VariantType::COLOR, "disabled_color"));
 	p_list->push_back(PropertyInfo(VariantType::REAL, "connect_range", PROPERTY_HINT_RANGE, "0.1,4096,0.01"));
 }
 
