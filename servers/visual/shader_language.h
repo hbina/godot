@@ -382,7 +382,7 @@ public:
 		};
 
 		Map<StringName, Variable> variables;
-		List<Node *> statements;
+		Vector<Node *> statements;
 		bool single_statement;
 
 		BlockNode() :
@@ -562,8 +562,8 @@ public:
 	static bool is_sampler_type(DataType p_type);
 	static Variant constant_value_to_variant(const Vector<ShaderLanguage::ConstantNode::Value> &p_value, DataType p_type, ShaderLanguage::ShaderNode::Uniform::Hint p_hint = ShaderLanguage::ShaderNode::Uniform::HINT_NONE);
 
-	static void get_keyword_list(List<String> *r_keywords);
-	static void get_builtin_funcs(List<String> *r_keywords);
+	static void get_keyword_list(Vector<String> &r_keywords);
+	static void get_builtin_funcs(Vector<String> &r_keywords);
 
 	struct BuiltInInfo {
 		DataType type;
@@ -689,7 +689,7 @@ public:
 
 	static String get_shader_type(const String &p_code);
 	Error compile(const String &p_code, const Map<StringName, FunctionInfo> &p_functions, const Vector<StringName> &p_render_modes, const Set<String> &p_shader_types);
-	Error complete(const String &p_code, const Map<StringName, FunctionInfo> &p_functions, const Vector<StringName> &p_render_modes, const Set<String> &p_shader_types, List<String> *r_options, String &r_call_hint);
+	Error complete(const String &p_code, const Map<StringName, FunctionInfo> &p_functions, const Vector<StringName> &p_render_modes, const Set<String> &p_shader_types, Vector<String> &r_options, String &r_call_hint);
 
 	String get_error_text();
 	int get_error_line();

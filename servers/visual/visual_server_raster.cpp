@@ -108,15 +108,15 @@ void VisualServerRaster::draw(bool p_swap_buffers, double frame_step) {
 	_draw_margins();
 	VSG::rasterizer->end_frame(p_swap_buffers);
 
-	while (frame_drawn_callbacks.front()) {
+	while (!frame_drawn_callbacks.empty()) {
 
-		Object *obj = ObjectDB::get_instance(frame_drawn_callbacks.front()->get().object);
+		Object *obj = ObjectDB::get_instance(frame_drawn_callbacks.front().object);
 		if (obj) {
 			Variant::CallError ce;
-			const Variant *v = &frame_drawn_callbacks.front()->get().param;
-			obj->call(frame_drawn_callbacks.front()->get().method, &v, 1, ce);
+			const Variant *v = &frame_drawn_callbacks.front().param;
+			obj->call(frame_drawn_callbacks.front().method, &v, 1, ce);
 			if (ce.error != Variant::CallError::CALL_OK) {
-				String err = Variant::get_call_error_text(obj, frame_drawn_callbacks.front()->get().method, &v, 1, ce);
+				String err = Variant::get_call_error_text(obj, frame_drawn_callbacks.front().method, &v, 1, ce);
 				ERR_PRINTS("Error calling frame drawn function: " + err);
 			}
 		}

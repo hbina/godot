@@ -126,7 +126,7 @@ public:
 
 		Octree<Instance, true> octree;
 
-		List<Instance *> directional_lights;
+		Vector<Instance *> directional_lights;
 		RID environment;
 		RID fallback_environment;
 		RID reflection_probe_shadow_atlas;
@@ -241,18 +241,18 @@ public:
 
 	struct InstanceGeometryData : public InstanceBaseData {
 
-		List<Instance *> lighting;
+		Vector<Instance *> lighting;
 		bool lighting_dirty;
 		bool can_cast_shadows;
 		bool material_is_animated;
 
-		List<Instance *> reflection_probes;
+		Vector<Instance *> reflection_probes;
 		bool reflection_dirty;
 
-		List<Instance *> gi_probes;
+		Vector<Instance *> gi_probes;
 		bool gi_probes_dirty;
 
-		List<Instance *> lightmap_captures;
+		Vector<Instance *> lightmap_captures;
 
 		InstanceGeometryData() {
 
@@ -325,7 +325,7 @@ public:
 			Instance *geometry;
 		};
 
-		List<PairInfo> geometries;
+		Vector<PairInfo> geometries;
 
 		Set<Instance *> lights;
 
@@ -430,7 +430,7 @@ public:
 			List<Instance *>::Element *L; //iterator in geometry
 			Instance *geometry;
 		};
-		List<PairInfo> geometries;
+		Vector<PairInfo> geometries;
 
 		Set<Instance *> users;
 

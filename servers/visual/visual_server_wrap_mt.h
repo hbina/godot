@@ -104,7 +104,7 @@ public:
 	FUNC2(texture_set_path, RID, const String &)
 	FUNC1RC(String, texture_get_path, RID)
 	FUNC1(texture_set_shrink_all_x2_on_set_data, bool)
-	FUNC1(texture_debug_usage, List<TextureInfo> *)
+	FUNC1(texture_debug_usage, Vector<TextureInfo> &)
 
 	FUNC1(textures_keep_original, bool)
 
@@ -124,7 +124,7 @@ public:
 	FUNC2(shader_set_code, RID, const String &)
 	FUNC1RC(String, shader_get_code, RID)
 
-	FUNC2SC(shader_get_param_list, RID, List<PropertyInfo> *)
+	FUNC2SC(shader_get_param_list, RID, Vector<PropertyInfo> &)
 
 	FUNC3(shader_set_default_texture_param, RID, const StringName &, RID)
 	FUNC2RC(RID, shader_get_default_texture_param, RID, const StringName &)

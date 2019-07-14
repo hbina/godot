@@ -163,7 +163,7 @@ public:
 		String path;
 	};
 
-	virtual void texture_debug_usage(List<TextureInfo> *r_info) = 0;
+	virtual void texture_debug_usage(Vector<TextureInfo> &r_info) = 0;
 	Array _texture_debug_usage_bind();
 
 	virtual void textures_keep_original(bool p_enable) = 0;
@@ -190,7 +190,7 @@ public:
 
 	virtual void shader_set_code(RID p_shader, const String &p_code) = 0;
 	virtual String shader_get_code(RID p_shader) const = 0;
-	virtual void shader_get_param_list(RID p_shader, List<PropertyInfo> *p_param_list) const = 0;
+	virtual void shader_get_param_list(RID p_shader, Vector<PropertyInfo> &p_param_list) const = 0;
 	Array _shader_get_param_list_bind(RID p_shader) const;
 
 	virtual void shader_set_default_texture_param(RID p_shader, const StringName &p_name, RID p_texture) = 0;

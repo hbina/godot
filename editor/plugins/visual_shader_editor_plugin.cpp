@@ -683,9 +683,9 @@ void VisualShaderEditor::_update_graph() {
 
 			expression_box->set_syntax_coloring(true);
 
-			for (List<String>::Element *E = keyword_list.front(); E; E = E->next()) {
+			for (const auto &E : keyword_list) {
 
-				expression_box->add_keyword_color(E->get(), keyword_color);
+				expression_box->add_keyword_color(E, keyword_color);
 			}
 
 			expression_box->add_font_override("font", get_font("expression", "EditorFonts"));
@@ -1891,7 +1891,7 @@ VisualShaderEditor::VisualShaderEditor() {
 	updating = false;
 	saved_node_pos_dirty = false;
 	saved_node_pos = Point2(0, 0);
-	ShaderLanguage::get_keyword_list(&keyword_list);
+	ShaderLanguage::get_keyword_list(keyword_list);
 
 	to_node = -1;
 	to_slot = -1;

@@ -68,19 +68,19 @@ void Shader::get_param_list(List<PropertyInfo> *p_params) const {
 
 	_update_shader();
 
-	List<PropertyInfo> local;
-	VisualServer::get_singleton()->shader_get_param_list(shader, &local);
+	Vector<PropertyInfo> local;
+	VisualServer::get_singleton()->shader_get_param_list(shader, local);
 	params_cache.clear();
 	params_cache_dirty = false;
 
-	for (List<PropertyInfo>::Element *E = local.front(); E; E = E->next()) {
+	for (const auto &E : local) {
 
-		PropertyInfo pi = E->get();
+		PropertyInfo pi = E;
 		if (default_textures.has(pi.name)) { //do not show default textures
 			continue;
 		}
 		pi.name = "shader_param/" + pi.name;
-		params_cache[pi.name] = E->get().name;
+		params_cache[pi.name] = E.name;
 		if (p_params) {
 
 			//small little hack

@@ -122,7 +122,7 @@ void *VisualServerScene::_instance_pair(void *p_self, OctreeElementID, Instance 
 		pinfo.geometry = A;
 		pinfo.L = geom->lighting.push_back(B);
 
-		List<InstanceLightData::PairInfo>::Element *E = light->geometries.push_back(pinfo);
+		Vector<InstanceLightData::PairInfo>::Element *E = light->geometries.push_back(pinfo);
 
 		if (geom->can_cast_shadows) {
 
@@ -1970,9 +1970,9 @@ void VisualServerScene::_prepare_scene(const Transform p_cam_transform, const Ca
 				//only called when lights AABB enter/exit this geometry
 				ins->light_instances.resize(geom->lighting.size());
 
-				for (List<Instance *>::Element *E = geom->lighting.front(); E; E = E->next()) {
+				for (const auto &E : geom->lighting) {
 
-					InstanceLightData *light = static_cast<InstanceLightData *>(E->get()->base_data);
+					InstanceLightData *light = static_cast<InstanceLightData *>(E->base_data);
 
 					ins->light_instances[l++] = light->instance;
 				}

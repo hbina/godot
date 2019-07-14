@@ -142,8 +142,8 @@ void ShaderTextEditor::_load_theme_settings() {
 	get_text_edit()->add_color_override("search_result_border_color", search_result_border_color);
 	get_text_edit()->add_color_override("symbol_color", symbol_color);
 
-	List<String> keywords;
-	ShaderLanguage::get_keyword_list(&keywords);
+	Vector<String> keywords;
+	ShaderLanguage::get_keyword_list(keywords);
 
 	if (shader.is_valid()) {
 
@@ -160,9 +160,9 @@ void ShaderTextEditor::_load_theme_settings() {
 		}
 	}
 
-	for (List<String>::Element *E = keywords.front(); E; E = E->next()) {
+	for (const auto &E : keywords) {
 
-		get_text_edit()->add_keyword_color(E->get(), keyword_color);
+		get_text_edit()->add_keyword_color(E, keyword_color);
 	}
 
 	//colorize comments
@@ -190,7 +190,7 @@ void ShaderTextEditor::_check_shader_mode() {
 	}
 }
 
-void ShaderTextEditor::_code_complete_script(const String &p_code, List<String> *r_options) {
+void ShaderTextEditor::_code_complete_script(const String &p_code, Vector<String> &r_options) {
 
 	_check_shader_mode();
 

@@ -357,7 +357,7 @@ public:
 
 	virtual void texture_set_shrink_all_x2_on_set_data(bool p_enable);
 
-	virtual void texture_debug_usage(List<VS::TextureInfo> *r_info);
+	virtual void texture_debug_usage(Vector<VS::TextureInfo> &r_info);
 
 	virtual RID texture_create_radiance_cubemap(RID p_source, int p_resolution = -1) const;
 
@@ -516,7 +516,7 @@ public:
 
 	virtual void shader_set_code(RID p_shader, const String &p_code);
 	virtual String shader_get_code(RID p_shader) const;
-	virtual void shader_get_param_list(RID p_shader, List<PropertyInfo> *p_param_list) const;
+	virtual void shader_get_param_list(RID p_shader, Vector<PropertyInfo> &p_param_list) const;
 
 	virtual void shader_set_default_texture_param(RID p_shader, const StringName &p_name, RID p_texture);
 	virtual RID shader_get_default_texture_param(RID p_shader, const StringName &p_name) const;

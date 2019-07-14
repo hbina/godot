@@ -1029,7 +1029,7 @@ String RasterizerStorageGLES2::texture_get_path(RID p_texture) const {
 	return texture->path;
 }
 
-void RasterizerStorageGLES2::texture_debug_usage(List<VS::TextureInfo> *r_info) {
+void RasterizerStorageGLES2::texture_debug_usage(Vector<VS::TextureInfo> &r_info) {
 	List<RID> textures;
 	texture_owner.get_owned_list(&textures);
 
@@ -1045,7 +1045,7 @@ void RasterizerStorageGLES2::texture_debug_usage(List<VS::TextureInfo> *r_info) 
 		tinfo.height = t->alloc_height;
 		tinfo.depth = 0;
 		tinfo.bytes = t->total_data_size;
-		r_info->push_back(tinfo);
+		r_info.push_back(tinfo);
 	}
 }
 
@@ -1511,7 +1511,7 @@ void RasterizerStorageGLES2::update_dirty_shaders() {
 	}
 }
 
-void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyInfo> *p_param_list) const {
+void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, Vector<PropertyInfo> &p_param_list) const {
 
 	Shader *shader = shader_owner.get(p_shader);
 	ERR_FAIL_COND(!shader);
@@ -1643,7 +1643,7 @@ void RasterizerStorageGLES2::shader_get_param_list(RID p_shader, List<PropertyIn
 			} break;
 		}
 
-		p_param_list->push_back(pi);
+		p_param_list.push_back(pi);
 	}
 }
 

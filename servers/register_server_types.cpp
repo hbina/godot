@@ -67,20 +67,20 @@
 
 static void _debugger_get_resource_usage(List<ScriptDebuggerRemote::ResourceUsage> *r_usage) {
 
-	List<VS::TextureInfo> tinfo;
-	VS::get_singleton()->texture_debug_usage(&tinfo);
+	Vector<VS::TextureInfo> tinfo;
+	VS::get_singleton()->texture_debug_usage(tinfo);
 
-	for (List<VS::TextureInfo>::Element *E = tinfo.front(); E; E = E->next()) {
+	for (const auto &E : tinfo) {
 
 		ScriptDebuggerRemote::ResourceUsage usage;
-		usage.path = E->get().path;
-		usage.vram = E->get().bytes;
-		usage.id = E->get().texture;
+		usage.path = E.path;
+		usage.vram = E.bytes;
+		usage.id = E.texture;
 		usage.type = "Texture";
-		if (E->get().depth == 0) {
-			usage.format = itos(E->get().width) + "x" + itos(E->get().height) + " " + Image::get_format_name(E->get().format);
+		if (E.depth == 0) {
+			usage.format = itos(E.width) + "x" + itos(E.height) + " " + Image::get_format_name(E.format);
 		} else {
-			usage.format = itos(E->get().width) + "x" + itos(E->get().height) + "x" + itos(E->get().depth) + " " + Image::get_format_name(E->get().format);
+			usage.format = itos(E.width) + "x" + itos(E.height) + "x" + itos(E.depth) + " " + Image::get_format_name(E.format);
 		}
 		r_usage->push_back(usage);
 	}

@@ -66,19 +66,19 @@ RID VisualServer::texture_create_from_image(const Ref<Image> &p_image, uint32_t 
 
 Array VisualServer::_texture_debug_usage_bind() {
 
-	List<TextureInfo> list;
-	texture_debug_usage(&list);
+	Vector<TextureInfo> list;
+	texture_debug_usage(list);
 	Array arr;
-	for (const List<TextureInfo>::Element *E = list.front(); E; E = E->next()) {
+	for (const auto &E : list) {
 
 		Dictionary dict;
-		dict["texture"] = E->get().texture;
-		dict["width"] = E->get().width;
-		dict["height"] = E->get().height;
-		dict["depth"] = E->get().depth;
-		dict["format"] = E->get().format;
-		dict["bytes"] = E->get().bytes;
-		dict["path"] = E->get().path;
+		dict["texture"] = E.texture;
+		dict["width"] = E.width;
+		dict["height"] = E.height;
+		dict["depth"] = E.depth;
+		dict["format"] = E.format;
+		dict["bytes"] = E.bytes;
+		dict["path"] = E.path;
 		arr.push_back(dict);
 	}
 	return arr;
@@ -86,9 +86,9 @@ Array VisualServer::_texture_debug_usage_bind() {
 
 Array VisualServer::_shader_get_param_list_bind(RID p_shader) const {
 
-	List<PropertyInfo> l;
-	shader_get_param_list(p_shader, &l);
-	return convert_property_list(&l);
+	Vector<PropertyInfo> l;
+	shader_get_param_list(p_shader, l);
+	return convert_property_list(l);
 }
 
 static Array to_array(const Vector<ObjectID> &ids) {

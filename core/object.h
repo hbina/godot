@@ -183,7 +183,7 @@ struct PropertyInfo {
 	}
 };
 
-Array convert_property_list(const List<PropertyInfo> *p_list);
+Array convert_property_list(const Vector<PropertyInfo> &p_list);
 
 struct MethodInfo {
 

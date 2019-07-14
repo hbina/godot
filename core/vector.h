@@ -85,6 +85,7 @@ public:
 
 	// Hanif's additions
 	const T &back() const noexcept;
+	const T &front() const noexcept;
 };
 
 template <typename T>
@@ -234,7 +235,12 @@ void VectorImpl<T>::append_array(const VectorImpl<T> &p_other) {
 
 template <typename T>
 const T &VectorImpl<T>::back() const noexcept {
-	return _inner_.operator[](size());
+	return _inner_[size()];
+}
+
+template <typename T>
+const T &VectorImpl<T>::front() const noexcept {
+	return _inner_[0];
 }
 
 template <typename T>

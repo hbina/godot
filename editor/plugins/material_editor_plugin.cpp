@@ -262,19 +262,19 @@ Ref<Resource> SpatialMaterialConversionPlugin::convert(const Ref<Resource> &p_re
 
 	smat->set_shader(shader);
 
-	List<PropertyInfo> params;
-	VS::get_singleton()->shader_get_param_list(mat->get_shader_rid(), &params);
+	Vector<PropertyInfo> params;
+	VS::get_singleton()->shader_get_param_list(mat->get_shader_rid(), params);
 
-	for (List<PropertyInfo>::Element *E = params.front(); E; E = E->next()) {
+	for (const auto &E : params) {
 
 		// Texture parameter has to be treated specially since SpatialMaterial saved it
 		// as RID but ShaderMaterial needs Texture itself
-		Ref<Texture> texture = mat->get_texture_by_name(E->get().name);
+		Ref<Texture> texture = mat->get_texture_by_name(E.name);
 		if (texture.is_valid()) {
-			smat->set_shader_param(E->get().name, texture);
+			smat->set_shader_param(E.name, texture);
 		} else {
-			Variant value = VS::get_singleton()->material_get_param(mat->get_rid(), E->get().name);
-			smat->set_shader_param(E->get().name, value);
+			Variant value = VS::get_singleton()->material_get_param(mat->get_rid(), E.name);
+			smat->set_shader_param(E.name, value);
 		}
 	}
 
@@ -308,12 +308,12 @@ Ref<Resource> ParticlesMaterialConversionPlugin::convert(const Ref<Resource> &p_
 
 	smat->set_shader(shader);
 
-	List<PropertyInfo> params;
-	VS::get_singleton()->shader_get_param_list(mat->get_shader_rid(), &params);
+	Vector<PropertyInfo> params;
+	VS::get_singleton()->shader_get_param_list(mat->get_shader_rid(), params);
 
-	for (List<PropertyInfo>::Element *E = params.front(); E; E = E->next()) {
-		Variant value = VS::get_singleton()->material_get_param(mat->get_rid(), E->get().name);
-		smat->set_shader_param(E->get().name, value);
+	for (const auto &E : params) {
+		Variant value = VS::get_singleton()->material_get_param(mat->get_rid(), E.name);
+		smat->set_shader_param(E.name, value);
 	}
 
 	smat->set_render_priority(mat->get_render_priority());
@@ -346,12 +346,12 @@ Ref<Resource> CanvasItemMaterialConversionPlugin::convert(const Ref<Resource> &p
 
 	smat->set_shader(shader);
 
-	List<PropertyInfo> params;
-	VS::get_singleton()->shader_get_param_list(mat->get_shader_rid(), &params);
+	Vector<PropertyInfo> params;
+	VS::get_singleton()->shader_get_param_list(mat->get_shader_rid(), params);
 
-	for (List<PropertyInfo>::Element *E = params.front(); E; E = E->next()) {
-		Variant value = VS::get_singleton()->material_get_param(mat->get_rid(), E->get().name);
-		smat->set_shader_param(E->get().name, value);
+	for (const auto &E : params) {
+		Variant value = VS::get_singleton()->material_get_param(mat->get_rid(), E.name);
+		smat->set_shader_param(E.name, value);
 	}
 
 	smat->set_render_priority(mat->get_render_priority());

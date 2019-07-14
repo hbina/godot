@@ -70,7 +70,7 @@ class VisualServerRaster : public VisualServer {
 		Variant param;
 	};
 
-	List<FrameDrawnCallbacks> frame_drawn_callbacks;
+	Vector<FrameDrawnCallbacks> frame_drawn_callbacks;
 
 	void _draw_margins();
 	static void _changes_changed() {}
@@ -168,7 +168,7 @@ public:
 	BIND2(texture_set_path, RID, const String &)
 	BIND1RC(String, texture_get_path, RID)
 	BIND1(texture_set_shrink_all_x2_on_set_data, bool)
-	BIND1(texture_debug_usage, List<TextureInfo> *)
+	BIND1(texture_debug_usage, Vector<TextureInfo> &)
 
 	BIND1(textures_keep_original, bool)
 
@@ -188,7 +188,7 @@ public:
 	BIND2(shader_set_code, RID, const String &)
 	BIND1RC(String, shader_get_code, RID)
 
-	BIND2C(shader_get_param_list, RID, List<PropertyInfo> *)
+	BIND2C(shader_get_param_list, RID, Vector<PropertyInfo> &)
 
 	BIND3(shader_set_default_texture_param, RID, const StringName &, RID)
 	BIND2RC(RID, shader_get_default_texture_param, RID, const StringName &)

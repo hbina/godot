@@ -132,7 +132,7 @@ class VisualShaderEditor : public VBoxContainer {
 	};
 
 	Vector<AddOption> add_options;
-	List<String> keyword_list;
+	Vector<String> keyword_list;
 
 	void _draw_color_over_button(Object *obj, Color p_color);
 

@@ -986,11 +986,11 @@ ShaderCompilerGLES3::ShaderCompilerGLES3() {
 	light_name = "light";
 	time_name = "TIME";
 
-	List<String> func_list;
+	Vector<String> func_list;
 
-	ShaderLanguage::get_builtin_funcs(&func_list);
+	ShaderLanguage::get_builtin_funcs(func_list);
 
-	for (List<String>::Element *E = func_list.front(); E; E = E->next()) {
-		internal_functions.insert(E->get());
+	for (const auto &E : func_list) {
+		internal_functions.insert(E);
 	}
 }

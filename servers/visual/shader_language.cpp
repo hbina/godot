@@ -2507,7 +2507,7 @@ Variant ShaderLanguage::constant_value_to_variant(const Vector<ShaderLanguage::C
 	return Variant();
 }
 
-void ShaderLanguage::get_keyword_list(List<String> *r_keywords) {
+void ShaderLanguage::get_keyword_list(Vector<String> &r_keywords) {
 
 	Set<String> kws;
 
@@ -2529,11 +2529,11 @@ void ShaderLanguage::get_keyword_list(List<String> *r_keywords) {
 	}
 
 	for (Set<String>::Element *E = kws.front(); E; E = E->next()) {
-		r_keywords->push_back(E->get());
+		r_keywords.push_back(E->get());
 	}
 }
 
-void ShaderLanguage::get_builtin_funcs(List<String> *r_keywords) {
+void ShaderLanguage::get_builtin_funcs(Vector<String> &r_keywords) {
 
 	Set<String> kws;
 
@@ -2547,7 +2547,7 @@ void ShaderLanguage::get_builtin_funcs(List<String> *r_keywords) {
 	}
 
 	for (Set<String>::Element *E = kws.front(); E; E = E->next()) {
-		r_keywords->push_back(E->get());
+		r_keywords.push_back(E->get());
 	}
 }
 
@@ -4684,7 +4684,7 @@ Error ShaderLanguage::compile(const String &p_code, const Map<StringName, Functi
 	return OK;
 }
 
-Error ShaderLanguage::complete(const String &p_code, const Map<StringName, FunctionInfo> &p_functions, const Vector<StringName> &p_render_modes, const Set<String> &p_shader_types, List<String> *r_options, String &r_call_hint) {
+Error ShaderLanguage::complete(const String &p_code, const Map<StringName, FunctionInfo> &p_functions, const Vector<StringName> &p_render_modes, const Set<String> &p_shader_types, Vector<String> &r_options, String &r_call_hint) {
 
 	clear();
 
@@ -4706,7 +4706,7 @@ Error ShaderLanguage::complete(const String &p_code, const Map<StringName, Funct
 		case COMPLETION_RENDER_MODE: {
 			for (int i = 0; i < p_render_modes.size(); i++) {
 
-				r_options->push_back(p_render_modes[i]);
+				r_options.push_back(p_render_modes[i]);
 			}
 
 			return OK;
@@ -4715,7 +4715,7 @@ Error ShaderLanguage::complete(const String &p_code, const Map<StringName, Funct
 
 			for (const Map<StringName, FunctionInfo>::Element *E = p_functions.front(); E; E = E->next()) {
 
-				r_options->push_back(E->key());
+				r_options.push_back(E->key());
 			}
 
 			return OK;
@@ -4783,7 +4783,7 @@ Error ShaderLanguage::complete(const String &p_code, const Map<StringName, Funct
 			}
 
 			for (Set<String>::Element *E = matches.front(); E; E = E->next()) {
-				r_options->push_back(E->get());
+				r_options.push_back(E->get());
 			}
 
 			return OK;
@@ -4923,8 +4923,8 @@ Error ShaderLanguage::complete(const String &p_code, const Map<StringName, Funct
 			}
 
 			for (int i = 0; i < limit; i++) {
-				r_options->push_back(String::chr(colv[i]));
-				r_options->push_back(String::chr(coordv[i]));
+				r_options.push_back(String::chr(colv[i]));
+				r_options.push_back(String::chr(coordv[i]));
 			}
 
 		} break;
