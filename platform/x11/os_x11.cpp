@@ -627,14 +627,14 @@ bool OS_X11::refresh_device_info() {
 	int xi_minor_query = XINPUT_CLIENT_VERSION_MINOR;
 
 	if (XIQueryVersion(x11_display, &xi_major_query, &xi_minor_query) != Success) {
-		print_verbose(vformat("XInput 2 not available (server supports %d.%d).", xi_major_query, xi_minor_query));
+		print_verbose(vformat("XInput 2 not available (server supports %d.%d).", Variant(xi_major_query), Variant(xi_minor_query)));
 		xi.opcode = 0;
 		return false;
 	}
 
 	if (xi_major_query < XINPUT_CLIENT_VERSION_MAJOR || (xi_major_query == XINPUT_CLIENT_VERSION_MAJOR && xi_minor_query < XINPUT_CLIENT_VERSION_MINOR)) {
 		print_verbose(vformat("XInput %d.%d not available (server supports %d.%d). Touch input unavailable.",
-				XINPUT_CLIENT_VERSION_MAJOR, XINPUT_CLIENT_VERSION_MINOR, xi_major_query, xi_minor_query));
+				Variant(XINPUT_CLIENT_VERSION_MAJOR), Variant(XINPUT_CLIENT_VERSION_MINOR), Variant(xi_major_query), Variant(xi_minor_query)));
 	}
 
 	xi.absolute_devices.clear();
@@ -2961,8 +2961,8 @@ void OS_X11::set_custom_mouse_cursor(const RES &p_cursor, CursorShape p_shape, c
 		cursors[p_shape] = XcursorImageLoadCursor(x11_display, cursor_image);
 
 		Vector<Variant> params;
-		params.push_back(p_cursor);
-		params.push_back(p_hotspot);
+		params.push_back(Variant(p_cursor));
+		params.push_back(Variant(p_hotspot));
 		cursors_cache.insert(p_shape, params);
 
 		if (p_shape == current_cursor) {

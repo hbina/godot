@@ -32,6 +32,7 @@
 #define RECT2_H
 
 #include "core/math/vector2.h" // also includes math_funcs and ustring
+#include "core/variant.h"
 
 struct Transform2D;
 
@@ -218,7 +219,7 @@ struct Rect2 {
 		return Rect2(Point2(position.x + MIN(size.x, 0), position.y + MIN(size.y, 0)), size.abs());
 	}
 
-	operator String() const { return String(position) + ", " + String(size); }
+	operator String() const { return (String)position + ", " + (String)size; }
 
 	Rect2() {}
 	Rect2(real_t p_x, real_t p_y, real_t p_width, real_t p_height) :

@@ -244,9 +244,9 @@ public:
 		int idx = argument_count - p_arg - 1;
 
 		if (idx < 0 || idx >= default_arguments.size())
-			return false;
+			return Variant(false);
 		else
-			return true;
+			return Variant(true);
 	}
 
 	_FORCE_INLINE_ Variant get_default_argument(int p_arg) const {

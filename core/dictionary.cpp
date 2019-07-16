@@ -85,6 +85,17 @@ const Variant &Dictionary::operator[](const Variant &p_key) const {
 
 	return _p->variant_map[p_key];
 }
+
+Variant &Dictionary::operator[](const char *p_char) {
+
+	return _p->variant_map[Variant(p_char)];
+}
+
+const Variant &Dictionary::operator[](const char *p_char) const {
+
+	return _p->variant_map[Variant(p_char)];
+}
+
 const Variant *Dictionary::getptr(const Variant &p_key) const {
 
 	OrderedHashMap<Variant, Variant, VariantHasher, VariantComparator>::ConstElement E = ((const OrderedHashMap<Variant, Variant, VariantHasher, VariantComparator> *)&_p->variant_map)->find(p_key);

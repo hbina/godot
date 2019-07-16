@@ -238,9 +238,9 @@ private:
 		Vector3 scale;
 		transform_track_interpolate(p_track, p_time, &loc, &rot, &scale);
 		Array ret;
-		ret.push_back(loc);
-		ret.push_back(rot);
-		ret.push_back(scale);
+		ret.push_back(Variant(loc));
+		ret.push_back(Variant(rot));
+		ret.push_back(Variant(scale));
 		return ret;
 	}
 

@@ -89,7 +89,7 @@ class TestPhysics2DMainLoop : public MainLoop {
 
 			RID segment_shape = ps->segment_shape_create();
 			Rect2 sg(Point2(-16, 0), Point2(16, 0));
-			ps->shape_set_data(segment_shape, sg);
+			ps->shape_set_data(segment_shape, Variant(sg));
 
 			body_shape_data[Physics2DServer::SHAPE_SEGMENT].shape = segment_shape;
 		}
@@ -115,7 +115,7 @@ class TestPhysics2DMainLoop : public MainLoop {
 			body_shape_data[Physics2DServer::SHAPE_CIRCLE].image = vs->texture_create_from_image(image);
 
 			RID circle_shape = ps->circle_shape_create();
-			ps->shape_set_data(circle_shape, 16);
+			ps->shape_set_data(circle_shape, Variant(16));
 
 			body_shape_data[Physics2DServer::SHAPE_CIRCLE].shape = circle_shape;
 		}
@@ -142,7 +142,7 @@ class TestPhysics2DMainLoop : public MainLoop {
 			body_shape_data[Physics2DServer::SHAPE_RECTANGLE].image = vs->texture_create_from_image(image);
 
 			RID rectangle_shape = ps->rectangle_shape_create();
-			ps->shape_set_data(rectangle_shape, Vector2(16, 16));
+			ps->shape_set_data(rectangle_shape, Variant(Vector2(16, 16)));
 
 			body_shape_data[Physics2DServer::SHAPE_RECTANGLE].shape = rectangle_shape;
 		}
@@ -170,7 +170,7 @@ class TestPhysics2DMainLoop : public MainLoop {
 			body_shape_data[Physics2DServer::SHAPE_CAPSULE].image = vs->texture_create_from_image(image);
 
 			RID capsule_shape = ps->capsule_shape_create();
-			ps->shape_set_data(capsule_shape, Vector2(16, 32));
+			ps->shape_set_data(capsule_shape, Variant(Vector2(16, 32)));
 
 			body_shape_data[Physics2DServer::SHAPE_CAPSULE].shape = capsule_shape;
 		}
@@ -194,7 +194,7 @@ class TestPhysics2DMainLoop : public MainLoop {
 			arr.push_back(Point2(5, 56) - sb);
 			arr.push_back(Point2(4, 20) - sb);
 			arr.push_back(Point2(11, 7) - sb);
-			ps->shape_set_data(convex_polygon_shape, arr);
+			ps->shape_set_data(convex_polygon_shape, Variant(arr));
 
 			body_shape_data[Physics2DServer::SHAPE_CONVEX_POLYGON].shape = convex_polygon_shape;
 		}
@@ -254,7 +254,7 @@ protected:
 		ps->body_add_shape(body, body_shape_data[p_shape].shape);
 		ps->body_set_space(body, space);
 		ps->body_set_continuous_collision_detection_mode(body, Physics2DServer::CCD_MODE_CAST_SHAPE);
-		ps->body_set_state(body, Physics2DServer::BODY_STATE_TRANSFORM, p_xform);
+		ps->body_set_state(body, Physics2DServer::BODY_STATE_TRANSFORM, Variant(p_xform));
 
 		//print_line("add body with xform: "+p_xform);
 		RID sprite = vs->canvas_item_create();
@@ -263,7 +263,7 @@ protected:
 		Size2 imgsize(vs->texture_get_width(body_shape_data[p_shape].image), vs->texture_get_height(body_shape_data[p_shape].image));
 		vs->canvas_item_add_texture_rect(sprite, Rect2(-imgsize / 2.0, imgsize), body_shape_data[p_shape].image);
 
-		ps->body_set_force_integration_callback(body, this, "_body_moved", sprite);
+		ps->body_set_force_integration_callback(body, this, "_body_moved", Variant(sprite));
 		//RID q = ps->query_create(this,"_body_moved",sprite);
 		//ps->query_body_state(q,body);
 
@@ -279,7 +279,7 @@ protected:
 		arr.push_back(p_d);
 
 		RID plane = ps->line_shape_create();
-		ps->shape_set_data(plane, arr);
+		ps->shape_set_data(plane, Variant(arr));
 
 		RID plane_body = ps->body_create();
 		ps->body_set_mode(plane_body, Physics2DServer::BODY_MODE_STATIC);

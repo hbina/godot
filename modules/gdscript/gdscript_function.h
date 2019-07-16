@@ -328,7 +328,7 @@ public:
 	}
 	Variant get_default_argument(int p_idx) const {
 		ERR_FAIL_INDEX_V(p_idx, default_arguments.size(), Variant());
-		return default_arguments[p_idx];
+		return Variant(default_arguments[p_idx]);
 	}
 
 	Variant call(GDScriptInstance *p_instance, const Variant **p_args, int p_argcount, Variant::CallError &r_err, CallState *p_state = NULL);

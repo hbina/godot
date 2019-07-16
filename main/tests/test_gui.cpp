@@ -230,7 +230,7 @@ public:
 		richtext->add_text("keep writing a lot of text");
 		richtext->pop();
 		richtext->add_text(" so the label control overflows and the scrollbar appears.\n");
-		richtext->push_meta("http://www.scrollingcapabilities.xz");
+		richtext->push_meta(Variant("http://www.scrollingcapabilities.xz"));
 		richtext->add_text("This allows to test for the scrolling capabilities ");
 		richtext->pop();
 		richtext->add_text("of the rich text label for huge text (not like this text will really be huge but, you know).\nAs long as it is so long that it will work nicely for a test/demo, then it's welcomed in my book...\nChanging subject, the day is cloudy today and I'm wondering if I'll get che chance to travel somewhere nice. Sometimes, watching the clouds from satellite images may give a nice insight about how pressure zones in our planet work, although it also makes it pretty obvious to see why most weather forecasts get it wrong so often.\nClouds are so difficult to predict!\nBut it's pretty cool how our civilization has adapted to having water falling from the sky each time it rains...");

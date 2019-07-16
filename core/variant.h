@@ -135,8 +135,8 @@ private:
 		RefPtr ref;
 	};
 
-	_FORCE_INLINE_ ObjData &_get_obj();
-	_FORCE_INLINE_ const ObjData &_get_obj() const;
+	ObjData &_get_obj();
+	const ObjData &_get_obj() const;
 
 	union {
 		bool _bool;
@@ -154,14 +154,14 @@ private:
 	void clear();
 
 public:
-	_FORCE_INLINE_ Type get_type() const { return type; }
+	Type get_type() const { return type; }
 	static String get_type_name(Variant::Type p_type);
 	static bool can_convert(Type p_type_from, Type p_type_to);
 	static bool can_convert_strict(Type p_type_from, Type p_type_to);
 
 	bool is_ref() const;
-	_FORCE_INLINE_ bool is_num() const { return type == INT || type == REAL; };
-	_FORCE_INLINE_ bool is_array() const { return type >= ARRAY; };
+	bool is_num() const { return type == INT || type == REAL; };
+	bool is_array() const { return type >= ARRAY; };
 	bool is_shared() const;
 	bool is_zero() const;
 	bool is_one() const;
@@ -336,7 +336,7 @@ public:
 
 	static String get_operator_name(Operator p_op);
 	static void evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b, Variant &r_ret, bool &r_valid);
-	static _FORCE_INLINE_ Variant evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b) {
+	static Variant evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b) {
 
 		bool valid = true;
 		Variant res;
@@ -395,6 +395,7 @@ public:
 	//argsVariant call()
 
 	bool operator==(const Variant &p_variant) const;
+	constexpr bool operator==(const Vector2 &p_variant) const { return false; }
 	bool operator!=(const Variant &p_variant) const;
 	bool operator<(const Variant &p_variant) const;
 	uint32_t hash() const;
@@ -415,11 +416,20 @@ public:
 	String get_construct_string() const;
 	static void construct_from_string(const String &p_string, Variant &r_value, ObjectConstruct p_obj_construct = NULL, void *p_construct_ud = NULL);
 
-	void operator=(const Variant &p_variant); // only this is enough for all the other types
+	Variant &operator=(const Variant &);
+	Variant &operator=(const RID &);
+	Variant &operator=(const Plane &);
+	Variant &operator=(const char *);
+	Variant &operator=(const String &);
+	Variant &operator=(const int);
+
 	Variant(const Variant &p_variant);
-	_FORCE_INLINE_ Variant() { type = NIL; }
-	_FORCE_INLINE_ ~Variant() {
-		if (type != Variant::NIL) clear();
+	Variant() :
+			type(NIL) {}
+	~Variant() {
+		if (type != Variant::NIL) {
+			clear();
+		}
 	}
 };
 
@@ -435,12 +445,14 @@ Vector<Variant> varray(const Variant &p_arg1, const Variant &p_arg2, const Varia
 
 struct VariantHasher {
 
-	static _FORCE_INLINE_ uint32_t hash(const Variant &p_variant) { return p_variant.hash(); }
+	static uint32_t hash(const Variant &p_variant) { return p_variant.hash(); }
 };
 
 struct VariantComparator {
 
-	static _FORCE_INLINE_ bool compare(const Variant &p_lhs, const Variant &p_rhs) { return p_lhs.hash_compare(p_rhs); }
+	static bool compare(const Variant &p_lhs, const Variant &p_rhs) {
+		return p_lhs.hash_compare(p_rhs);
+	}
 };
 
 Variant::ObjData &Variant::_get_obj() {

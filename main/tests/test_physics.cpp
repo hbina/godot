@@ -94,9 +94,9 @@ protected:
 		ps->body_set_param(body, PhysicsServer::BODY_PARAM_BOUNCE, 0.0);
 		//todo set space
 		ps->body_add_shape(body, type_shape_map[p_shape]);
-		ps->body_set_force_integration_callback(body, this, "body_changed_transform", mesh_instance);
+		ps->body_set_force_integration_callback(body, this, "body_changed_transform", Variant(mesh_instance));
 
-		ps->body_set_state(body, PhysicsServer::BODY_STATE_TRANSFORM, p_location);
+		ps->body_set_state(body, PhysicsServer::BODY_STATE_TRANSFORM, Variant(p_location));
 		bodies.push_back(body);
 
 		if (p_body == PhysicsServer::BODY_MODE_STATIC) {
@@ -111,7 +111,7 @@ protected:
 		PhysicsServer *ps = PhysicsServer::get_singleton();
 
 		RID plane_shape = ps->shape_create(PhysicsServer::SHAPE_PLANE);
-		ps->shape_set_data(plane_shape, p_plane);
+		ps->shape_set_data(plane_shape, Variant(p_plane));
 
 		RID b = ps->body_create(PhysicsServer::BODY_MODE_STATIC);
 		ps->body_set_space(b, space);
@@ -138,7 +138,7 @@ protected:
 		type_mesh_map[PhysicsServer::SHAPE_SPHERE] = sphere_mesh;
 
 		RID sphere_shape = ps->shape_create(PhysicsServer::SHAPE_SPHERE);
-		ps->shape_set_data(sphere_shape, 0.5);
+		ps->shape_set_data(sphere_shape, Variant(0.5));
 		type_shape_map[PhysicsServer::SHAPE_SPHERE] = sphere_shape;
 
 		/* BOX SHAPE */
@@ -150,7 +150,7 @@ protected:
 		type_mesh_map[PhysicsServer::SHAPE_BOX] = box_mesh;
 
 		RID box_shape = ps->shape_create(PhysicsServer::SHAPE_BOX);
-		ps->shape_set_data(box_shape, Vector3(0.5, 0.5, 0.5));
+		ps->shape_set_data(box_shape, Variant(Vector3(0.5, 0.5, 0.5)));
 		type_shape_map[PhysicsServer::SHAPE_BOX] = box_shape;
 
 		/* CAPSULE SHAPE */
@@ -167,7 +167,7 @@ protected:
 		Dictionary capsule_params;
 		capsule_params["radius"] = 0.5;
 		capsule_params["height"] = 1.4;
-		ps->shape_set_data(capsule_shape, capsule_params);
+		ps->shape_set_data(capsule_shape, Variant(capsule_params));
 		type_shape_map[PhysicsServer::SHAPE_CAPSULE] = capsule_shape;
 
 		/* CONVEX SHAPE */
@@ -182,7 +182,7 @@ protected:
 		type_mesh_map[PhysicsServer::SHAPE_CONVEX_POLYGON] = convex_mesh;
 
 		RID convex_shape = ps->shape_create(PhysicsServer::SHAPE_CONVEX_POLYGON);
-		ps->shape_set_data(convex_shape, convex_data.vertices);
+		ps->shape_set_data(convex_shape, Variant(convex_data.vertices));
 		type_shape_map[PhysicsServer::SHAPE_CONVEX_POLYGON] = convex_shape;
 	}
 
@@ -191,7 +191,7 @@ protected:
 		VisualServer *vs = VisualServer::get_singleton();
 		PhysicsServer *ps = PhysicsServer::get_singleton();
 		RID trimesh_shape = ps->shape_create(PhysicsServer::SHAPE_CONCAVE_POLYGON);
-		ps->shape_set_data(trimesh_shape, p_faces);
+		ps->shape_set_data(trimesh_shape, Variant(p_faces));
 		p_faces = ps->shape_get_data(trimesh_shape); // optimized one
 		Vector<Vector3> normals; // for drawing
 		for (int i = 0; i < p_faces.size() / 3; i++) {
@@ -205,8 +205,8 @@ protected:
 		RID trimesh_mesh = vs->mesh_create();
 		Array d;
 		d.resize(VS::ARRAY_MAX);
-		d[VS::ARRAY_VERTEX] = p_faces;
-		d[VS::ARRAY_NORMAL] = normals;
+		d[VS::ARRAY_VERTEX] = Variant(p_faces);
+		d[VS::ARRAY_NORMAL] = Variant(normals);
 		vs->mesh_add_surface_from_arrays(trimesh_mesh, VS::PRIMITIVE_TRIANGLES, d);
 
 		RID triins = vs->instance_create2(trimesh_mesh, scenario);
@@ -216,7 +216,7 @@ protected:
 		//todo set space
 		ps->body_add_shape(tribody, trimesh_shape);
 		Transform tritrans = p_xform;
-		ps->body_set_state(tribody, PhysicsServer::BODY_STATE_TRANSFORM, tritrans);
+		ps->body_set_state(tribody, PhysicsServer::BODY_STATE_TRANSFORM, Variant(tritrans));
 		vs->instance_set_transform(triins, tritrans);
 	}
 
@@ -279,7 +279,7 @@ public:
 				Transform t = ps->body_get_state(mover, PhysicsServer::BODY_STATE_TRANSFORM);
 				t.origin += Vector3(x, y, 0);
 
-				ps->body_set_state(mover, PhysicsServer::BODY_STATE_TRANSFORM, t);
+				ps->body_set_state(mover, PhysicsServer::BODY_STATE_TRANSFORM, Variant(t));
 			}
 		}
 	}
@@ -337,7 +337,7 @@ public:
 			PhysicsServer *ps = PhysicsServer::get_singleton();
 			Transform t = ps->body_get_state(mover, PhysicsServer::BODY_STATE_TRANSFORM);
 			t.origin += Vector3(joy_speed * joy_direction.x * p_time, -joy_speed * joy_direction.y * p_time, 0);
-			ps->body_set_state(mover, PhysicsServer::BODY_STATE_TRANSFORM, t);
+			ps->body_set_state(mover, PhysicsServer::BODY_STATE_TRANSFORM, Variant(t));
 		};
 
 		Transform cameratr;
@@ -377,7 +377,7 @@ public:
 		Transform shape_xform;
 		shape_xform.rotate(Vector3(1, 0, 0), Math_PI / 2.0);
 		//shape_xform.origin=Vector3(1,1,1);
-		ps->shape_set_data(capsule_shape, capsule_params);
+		ps->shape_set_data(capsule_shape, Variant(capsule_params));
 
 		RID mesh_instance = vs->instance_create2(capsule_mesh, scenario);
 		character = ps->body_create(PhysicsServer::BODY_MODE_CHARACTER);
@@ -385,9 +385,9 @@ public:
 		//todo add space
 		ps->body_add_shape(character, capsule_shape);
 
-		ps->body_set_force_integration_callback(character, this, "body_changed_transform", mesh_instance);
+		ps->body_set_force_integration_callback(character, this, "body_changed_transform", Variant(mesh_instance));
 
-		ps->body_set_state(character, PhysicsServer::BODY_STATE_TRANSFORM, Transform(Basis(), Vector3(-2, 5, -2)));
+		ps->body_set_state(character, PhysicsServer::BODY_STATE_TRANSFORM, Variant(Transform(Basis(), Vector3(-2, 5, -2))));
 		bodies.push_back(character);
 	}
 

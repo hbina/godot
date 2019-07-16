@@ -251,7 +251,16 @@ bool Vector2i::operator==(const Vector2i &p_vec2) const {
 
 	return x == p_vec2.x && y == p_vec2.y;
 }
+
 bool Vector2i::operator!=(const Vector2i &p_vec2) const {
 
 	return x != p_vec2.x || y != p_vec2.y;
+}
+
+Vector2::operator String() const {
+	return String::num(x) + ", " + String::num(y);
+}
+
+Vector2i::operator String() const {
+	return String::num(x) + ", " + String::num(y);
 }

@@ -2520,7 +2520,7 @@ Variant::Variant(const Vector<Color> &p_array) {
 	*this = v;
 }
 
-void Variant::operator=(const Variant &p_variant) {
+Variant &Variant::operator=(const Variant &p_variant) {
 
 	if (unlikely(this == &p_variant))
 		return;
@@ -2651,6 +2651,8 @@ void Variant::operator=(const Variant &p_variant) {
 		default: {
 		}
 	}
+
+	return *this;
 }
 
 Variant::Variant(const IP_Address &p_address) {
@@ -2664,12 +2666,6 @@ Variant::Variant(const Variant &p_variant) {
 	type = NIL;
 	reference(p_variant);
 }
-
-/*
-Variant::~Variant() {
-
-	clear();
-}*/
 
 uint32_t Variant::hash() const {
 

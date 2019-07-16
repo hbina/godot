@@ -803,7 +803,7 @@ bool test_28() {
 	// Character bad type.
 	format = "fish %c frog";
 	args.clear();
-	args.push_back(Array());
+	args.push_back(Variant(Array()));
 	output = format.sprintf(args, &error);
 	success = (output == "%c requires number or single-character string" && error);
 	OS::get_singleton()->print(output_format, format.c_str(), output.c_str(), success ? "OK" : "FAIL");

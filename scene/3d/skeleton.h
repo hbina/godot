@@ -111,7 +111,7 @@ class Skeleton : public Spatial {
 
 		for (int i = 0; i < children.size(); i++) {
 
-			bound.push_back(children[i]);
+			bound.push_back(Variant(children[i]));
 		}
 		return bound;
 	}

@@ -51,8 +51,10 @@ public:
 	Variant get_key_at_index(int p_index) const;
 	Variant get_value_at_index(int p_index) const;
 
-	Variant &operator[](const Variant &p_key);
-	const Variant &operator[](const Variant &p_key) const;
+	Variant &operator[](const Variant &);
+	const Variant &operator[](const Variant &) const;
+	Variant &operator[](const char *);
+	const Variant &operator[](const char *) const;
 
 	const Variant *getptr(const Variant &p_key) const;
 	Variant *getptr(const Variant &p_key);

@@ -226,8 +226,9 @@ void InputDefault::joy_connection_changed(int p_idx, bool p_connected, String p_
 		};
 	};
 	joy_names[p_idx] = js;
-
-	emit_signal("joy_connection_changed", p_idx, p_connected);
+	const Variant v_p_idx = Variant(p_idx);
+	const Variant v_p_connected = Variant(p_connected);
+	emit_signal("joy_connection_changed", v_p_idx, v_p_connected);
 };
 
 Vector3 InputDefault::get_gravity() const {
@@ -1109,7 +1110,7 @@ Array InputDefault::get_connected_joypads() {
 	Map<int, Joypad>::Element *elem = joy_names.front();
 	while (elem) {
 		if (elem->get().connected) {
-			ret.push_back(elem->key());
+			ret.push_back(Variant(elem->key()));
 		}
 		elem = elem->next();
 	}

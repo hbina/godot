@@ -47,10 +47,10 @@ struct Vector2 {
 		real_t height;
 	};
 
-	_FORCE_INLINE_ real_t &operator[](int p_idx) {
+	real_t &operator[](int p_idx) {
 		return p_idx ? y : x;
 	}
-	_FORCE_INLINE_ const real_t &operator[](int p_idx) const {
+	const real_t &operator[](int p_idx) const {
 		return p_idx ? y : x;
 	}
 
@@ -65,7 +65,7 @@ struct Vector2 {
 	real_t distance_squared_to(const Vector2 &p_vector2) const;
 	real_t angle_to(const Vector2 &p_vector2) const;
 	real_t angle_to_point(const Vector2 &p_vector2) const;
-	_FORCE_INLINE_ Vector2 direction_to(const Vector2 &p_b) const;
+	Vector2 direction_to(const Vector2 &p_b) const;
 
 	real_t dot(const Vector2 &p_other) const;
 	real_t cross(const Vector2 &p_other) const;
@@ -75,9 +75,9 @@ struct Vector2 {
 
 	Vector2 clamped(real_t p_len) const;
 
-	_FORCE_INLINE_ static Vector2 linear_interpolate(const Vector2 &p_a, const Vector2 &p_b, real_t p_t);
-	_FORCE_INLINE_ Vector2 linear_interpolate(const Vector2 &p_b, real_t p_t) const;
-	_FORCE_INLINE_ Vector2 slerp(const Vector2 &p_b, real_t p_t) const;
+	static Vector2 linear_interpolate(const Vector2 &p_a, const Vector2 &p_b, real_t p_t);
+	Vector2 linear_interpolate(const Vector2 &p_b, real_t p_t) const;
+	Vector2 slerp(const Vector2 &p_b, real_t p_t) const;
 	Vector2 cubic_interpolate(const Vector2 &p_b, const Vector2 &p_pre_a, const Vector2 &p_post_b, real_t p_t) const;
 	Vector2 move_toward(const Vector2 &p_to, const real_t p_delta) const;
 
@@ -118,7 +118,7 @@ struct Vector2 {
 		y = Math::sin(p_radians);
 	}
 
-	_FORCE_INLINE_ Vector2 abs() const {
+	Vector2 abs() const {
 
 		return Vector2(Math::abs(x), Math::abs(y));
 	}
@@ -135,88 +135,88 @@ struct Vector2 {
 	Vector2 snapped(const Vector2 &p_by) const;
 	real_t aspect() const { return width / height; }
 
-	operator String() const { return String::num(x) + ", " + String::num(y); }
+	operator String() const;
 
-	_FORCE_INLINE_ Vector2(real_t p_x, real_t p_y) {
+	Vector2(real_t p_x, real_t p_y) {
 		x = p_x;
 		y = p_y;
 	}
-	_FORCE_INLINE_ Vector2() {
+	Vector2() {
 		x = 0;
 		y = 0;
 	}
 };
 
-_FORCE_INLINE_ Vector2 Vector2::plane_project(real_t p_d, const Vector2 &p_vec) const {
+Vector2 Vector2::plane_project(real_t p_d, const Vector2 &p_vec) const {
 
 	return p_vec - *this * (dot(p_vec) - p_d);
 }
 
-_FORCE_INLINE_ Vector2 operator*(real_t p_scalar, const Vector2 &p_vec) {
+Vector2 operator*(real_t p_scalar, const Vector2 &p_vec) {
 
 	return p_vec * p_scalar;
 }
 
-_FORCE_INLINE_ Vector2 Vector2::operator+(const Vector2 &p_v) const {
+Vector2 Vector2::operator+(const Vector2 &p_v) const {
 
 	return Vector2(x + p_v.x, y + p_v.y);
 }
-_FORCE_INLINE_ void Vector2::operator+=(const Vector2 &p_v) {
+void Vector2::operator+=(const Vector2 &p_v) {
 
 	x += p_v.x;
 	y += p_v.y;
 }
-_FORCE_INLINE_ Vector2 Vector2::operator-(const Vector2 &p_v) const {
+Vector2 Vector2::operator-(const Vector2 &p_v) const {
 
 	return Vector2(x - p_v.x, y - p_v.y);
 }
-_FORCE_INLINE_ void Vector2::operator-=(const Vector2 &p_v) {
+void Vector2::operator-=(const Vector2 &p_v) {
 
 	x -= p_v.x;
 	y -= p_v.y;
 }
 
-_FORCE_INLINE_ Vector2 Vector2::operator*(const Vector2 &p_v1) const {
+Vector2 Vector2::operator*(const Vector2 &p_v1) const {
 
 	return Vector2(x * p_v1.x, y * p_v1.y);
 };
 
-_FORCE_INLINE_ Vector2 Vector2::operator*(const real_t &rvalue) const {
+Vector2 Vector2::operator*(const real_t &rvalue) const {
 
 	return Vector2(x * rvalue, y * rvalue);
 };
-_FORCE_INLINE_ void Vector2::operator*=(const real_t &rvalue) {
+void Vector2::operator*=(const real_t &rvalue) {
 
 	x *= rvalue;
 	y *= rvalue;
 };
 
-_FORCE_INLINE_ Vector2 Vector2::operator/(const Vector2 &p_v1) const {
+Vector2 Vector2::operator/(const Vector2 &p_v1) const {
 
 	return Vector2(x / p_v1.x, y / p_v1.y);
 };
 
-_FORCE_INLINE_ Vector2 Vector2::operator/(const real_t &rvalue) const {
+Vector2 Vector2::operator/(const real_t &rvalue) const {
 
 	return Vector2(x / rvalue, y / rvalue);
 };
 
-_FORCE_INLINE_ void Vector2::operator/=(const real_t &rvalue) {
+void Vector2::operator/=(const real_t &rvalue) {
 
 	x /= rvalue;
 	y /= rvalue;
 };
 
-_FORCE_INLINE_ Vector2 Vector2::operator-() const {
+Vector2 Vector2::operator-() const {
 
 	return Vector2(-x, -y);
 }
 
-_FORCE_INLINE_ bool Vector2::operator==(const Vector2 &p_vec2) const {
+bool Vector2::operator==(const Vector2 &p_vec2) const {
 
 	return Math::is_equal_approx(x, p_vec2.x) && Math::is_equal_approx(y, p_vec2.y);
 }
-_FORCE_INLINE_ bool Vector2::operator!=(const Vector2 &p_vec2) const {
+bool Vector2::operator!=(const Vector2 &p_vec2) const {
 
 	return !Math::is_equal_approx(x, p_vec2.x) || !Math::is_equal_approx(y, p_vec2.y);
 }
@@ -271,10 +271,10 @@ struct Vector2i {
 		int height;
 	};
 
-	_FORCE_INLINE_ int &operator[](int p_idx) {
+	int &operator[](int p_idx) {
 		return p_idx ? y : x;
 	}
-	_FORCE_INLINE_ const int &operator[](int p_idx) const {
+	const int &operator[](int p_idx) const {
 		return p_idx ? y : x;
 	}
 
@@ -302,7 +302,7 @@ struct Vector2i {
 
 	real_t get_aspect() const { return width / (real_t)height; }
 
-	operator String() const { return String::num(x) + ", " + String::num(y); }
+	operator String() const;
 
 	operator Vector2() const { return Vector2(x, y); }
 	inline Vector2i(const Vector2 &p_vec2) {

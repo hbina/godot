@@ -165,10 +165,10 @@ protected:
 		Dictionary d;
 		double min, max, step;
 		get_range_config(p_column, min, max, step);
-		d["min"] = min;
-		d["max"] = max;
-		d["step"] = step;
-		d["expr"] = false;
+		d["min"] = Variant(min);
+		d["max"] = Variant(max);
+		d["step"] = Variant(step);
+		d["expr"] = Variant(false);
 
 		return d;
 	}

@@ -1604,7 +1604,7 @@ bool Main::start() {
 
 					if (global_var) {
 						for (int i = 0; i < ScriptServer::get_language_count(); i++) {
-							ScriptServer::get_language(i)->add_global_constant(name, n);
+							ScriptServer::get_language(i)->add_global_constant(name, Variant(n));
 						}
 					}
 				}
