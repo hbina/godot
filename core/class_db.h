@@ -43,8 +43,6 @@
  *  #include "core/method_bind_ext.gen.inc"
  */
 
-#define DEFVAL(m_defval) (m_defval)
-
 //#define SIMPLE_METHODDEF
 
 #ifdef DEBUG_METHODS_ENABLED

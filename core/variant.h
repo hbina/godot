@@ -69,13 +69,6 @@ typedef PoolVector<Vector2> PoolVector2Array;
 typedef PoolVector<Vector3> PoolVector3Array;
 typedef PoolVector<Color> PoolColorArray;
 
-// Temporary workaround until c++11 alignas()
-#ifdef __GNUC__
-#define GCC_ALIGNED_8 __attribute__((aligned(8)))
-#else
-#define GCC_ALIGNED_8
-#endif
-
 class Variant {
 public:
 	// If this changes the table in variant_op must be updated
@@ -148,7 +141,7 @@ private:
 		Transform *_transform;
 		void *_ptr; //generic pointer
 		uint8_t _mem[sizeof(ObjData) > (sizeof(real_t) * 4) ? sizeof(ObjData) : (sizeof(real_t) * 4)];
-	} _data GCC_ALIGNED_8;
+	} _data;
 
 	void reference(const Variant &p_variant);
 	void clear();
@@ -242,7 +235,7 @@ public:
 #ifdef NEED_LONG_INT
 	explicit Variant(signed long p_long); // real one
 	explicit Variant(unsigned long p_long);
-//explicit Variant(long unsigned int p_long);
+// explicit Variant(long unsigned int p_long);
 #endif
 	explicit Variant(signed short p_short); // real one
 	explicit Variant(unsigned short p_short);
@@ -252,9 +245,9 @@ public:
 	explicit Variant(uint64_t p_int);
 	explicit Variant(float p_float);
 	explicit Variant(double p_double);
-	explicit Variant(const String &p_string);
-	explicit Variant(const StringName &p_string);
-	explicit Variant(const char *const p_cstring);
+	Variant(const String &p_string);
+	Variant(const StringName &p_string);
+	Variant(const char *const p_cstring);
 	explicit Variant(const CharType *p_wstring);
 	explicit Variant(const Vector2 &p_vector2);
 	explicit Variant(const Rect2 &p_rect2);
@@ -416,12 +409,64 @@ public:
 	String get_construct_string() const;
 	static void construct_from_string(const String &p_string, Variant &r_value, ObjectConstruct p_obj_construct = NULL, void *p_construct_ud = NULL);
 
-	Variant &operator=(const Variant &);
-	Variant &operator=(const RID &);
-	Variant &operator=(const Plane &);
-	Variant &operator=(const char *);
+	Variant &operator=(const Variant &) = default;
+	Variant &operator=(signed int); // real one
+	Variant &operator=(unsigned int);
+#ifdef NEED_LONG_INT
+	Variant &operator=(signed long); // real one
+	Variant &operator=(unsigned long);
+// Variant &operator=(long unsigned int );
+#endif
+	Variant &operator=(signed short); // real one
+	Variant &operator=(unsigned short);
+	Variant &operator=(signed char); // real one
+	Variant &operator=(unsigned char);
+	Variant &operator=(int64_t); // real one
+	Variant &operator=(uint64_t);
+	Variant &operator=(float);
+	Variant &operator=(double);
 	Variant &operator=(const String &);
-	Variant &operator=(const int);
+	Variant &operator=(const StringName &);
+	Variant &operator=(const char *const);
+	Variant &operator=(const CharType *);
+	Variant &operator=(const Vector2 &p_vector2);
+	Variant &operator=(const Rect2 &p_rect2);
+	Variant &operator=(const Vector3 &p_vector3);
+	Variant &operator=(const Plane &);
+	Variant &operator=(const ::AABB &);
+	Variant &operator=(const Quat &);
+	Variant &operator=(const Basis &);
+	Variant &operator=(const Transform2D &);
+	Variant &operator=(const Transform &);
+	Variant &operator=(const Color &);
+	Variant &operator=(const NodePath &p_node_path);
+	Variant &operator=(const RefPtr &);
+	Variant &operator=(const RID &);
+	Variant &operator=(const Object *);
+	Variant &operator=(const Dictionary &);
+
+	Variant &operator=(const Array &);
+	Variant &operator=(const PoolVector<Plane> &); // helper
+	Variant &operator=(const PoolVector<uint8_t> &p_raw_array);
+	Variant &operator=(const PoolVector<int> &p_int_array);
+	Variant &operator=(const PoolVector<real_t> &p_real_array);
+	Variant &operator=(const PoolVector<String> &p_string_array);
+	Variant &operator=(const PoolVector<Vector3> &p_vector3_array);
+	Variant &operator=(const PoolVector<Color> &p_color_array);
+	Variant &operator=(const PoolVector<Face3> &p_face_array);
+
+	Variant &operator=(const Vector<Variant> &);
+	Variant &operator=(const Vector<uint8_t> &);
+	Variant &operator=(const Vector<int> &);
+	Variant &operator=(const Vector<real_t> &);
+	Variant &operator=(const Vector<String> &);
+	Variant &operator=(const Vector<StringName> &);
+	Variant &operator=(const Vector<Vector3> &);
+	Variant &operator=(const Vector<Color> &);
+	Variant &operator=(const Vector<Plane> &);
+	Variant &operator=(const Vector<RID> &);
+	Variant &operator=(const Vector<Vector2> &);
+	Variant &operator=(const PoolVector<Vector2> &p_vector2_array);
 
 	Variant(const Variant &p_variant);
 	Variant() :

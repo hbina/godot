@@ -361,7 +361,7 @@ void RigidBodyBullet::dispatch_callbacks() {
 
 		BulletPhysicsDirectBodyState *bodyDirect = BulletPhysicsDirectBodyState::get_singleton(this);
 
-		Variant variantBodyDirect = bodyDirect;
+		Variant variantBodyDirect = Variant(bodyDirect);
 
 		Object *obj = ObjectDB::get_instance(force_integration_callback->id);
 		if (!obj) {
@@ -607,15 +607,15 @@ void RigidBodyBullet::set_state(PhysicsServer::BodyState p_state, const Variant 
 Variant RigidBodyBullet::get_state(PhysicsServer::BodyState p_state) const {
 	switch (p_state) {
 		case PhysicsServer::BODY_STATE_TRANSFORM:
-			return get_transform();
+			return Variant(get_transform());
 		case PhysicsServer::BODY_STATE_LINEAR_VELOCITY:
-			return get_linear_velocity();
+			return Variant(get_linear_velocity());
 		case PhysicsServer::BODY_STATE_ANGULAR_VELOCITY:
-			return get_angular_velocity();
+			return Variant(get_angular_velocity());
 		case PhysicsServer::BODY_STATE_SLEEPING:
-			return !is_active();
+			return Variant(!is_active());
 		case PhysicsServer::BODY_STATE_CAN_SLEEP:
-			return can_sleep;
+			return Variant(can_sleep);
 		default:
 			WARN_PRINTS("This state " + itos(p_state) + " is not supported by Bullet");
 			return Variant();

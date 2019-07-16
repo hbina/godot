@@ -252,21 +252,21 @@ void AreaBullet::set_param(PhysicsServer::AreaParameter p_param, const Variant &
 Variant AreaBullet::get_param(PhysicsServer::AreaParameter p_param) const {
 	switch (p_param) {
 		case PhysicsServer::AREA_PARAM_GRAVITY:
-			return spOv_gravityMag;
+			return Variant(spOv_gravityMag);
 		case PhysicsServer::AREA_PARAM_GRAVITY_VECTOR:
-			return spOv_gravityVec;
+			return Variant(spOv_gravityVec);
 		case PhysicsServer::AREA_PARAM_LINEAR_DAMP:
-			return spOv_linearDump;
+			return Variant(spOv_linearDump);
 		case PhysicsServer::AREA_PARAM_ANGULAR_DAMP:
-			return spOv_angularDump;
+			return Variant(spOv_angularDump);
 		case PhysicsServer::AREA_PARAM_PRIORITY:
-			return spOv_priority;
+			return Variant(spOv_priority);
 		case PhysicsServer::AREA_PARAM_GRAVITY_IS_POINT:
-			return spOv_gravityPoint;
+			return Variant(spOv_gravityPoint);
 		case PhysicsServer::AREA_PARAM_GRAVITY_DISTANCE_SCALE:
-			return spOv_gravityPointDistanceScale;
+			return Variant(spOv_gravityPointDistanceScale);
 		case PhysicsServer::AREA_PARAM_GRAVITY_POINT_ATTENUATION:
-			return spOv_gravityPointAttenuation;
+			return Variant(spOv_gravityPointAttenuation);
 		default:
 			WARN_PRINTS("Area doesn't support this parameter in the Bullet backend: " + itos(p_param));
 			return Variant();

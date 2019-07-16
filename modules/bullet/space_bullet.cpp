@@ -396,20 +396,20 @@ void SpaceBullet::set_param(PhysicsServer::AreaParameter p_param, const Variant 
 Variant SpaceBullet::get_param(PhysicsServer::AreaParameter p_param) {
 	switch (p_param) {
 		case PhysicsServer::AREA_PARAM_GRAVITY:
-			return gravityMagnitude;
+			return Variant(gravityMagnitude);
 		case PhysicsServer::AREA_PARAM_GRAVITY_VECTOR:
-			return gravityDirection;
+			return Variant(gravityDirection);
 		case PhysicsServer::AREA_PARAM_LINEAR_DAMP:
 		case PhysicsServer::AREA_PARAM_ANGULAR_DAMP:
-			return 0; // No damp
+			return Variant(0); // No damp
 		case PhysicsServer::AREA_PARAM_PRIORITY:
-			return 0; // Priority is always 0, the lower
+			return Variant(0); // Priority is always 0, the lower
 		case PhysicsServer::AREA_PARAM_GRAVITY_IS_POINT:
-			return false;
+			return Variant(false);
 		case PhysicsServer::AREA_PARAM_GRAVITY_DISTANCE_SCALE:
-			return 0;
+			return Variant(0);
 		case PhysicsServer::AREA_PARAM_GRAVITY_POINT_ATTENUATION:
-			return 0;
+			return Variant(0);
 		default:
 			WARN_PRINTS("This get parameter (" + itos(p_param) + ") is ignored, the SpaceBullet doesn't support it.");
 			return Variant();

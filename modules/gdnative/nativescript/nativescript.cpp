@@ -528,7 +528,7 @@ Variant NativeScript::_new(const Variant **p_args, int p_argcount, Variant::Call
 	if (ref.is_valid()) {
 		return ref;
 	} else {
-		return owner;
+		return Variant(owner);
 	}
 }
 
@@ -578,7 +578,7 @@ bool NativeScriptInstance::set(const StringName &p_name, const Variant &p_value)
 
 		Map<StringName, NativeScriptDesc::Method>::Element *E = script_data->methods.find("_set");
 		if (E) {
-			Variant name = p_name;
+			Variant name(p_name);
 			const Variant *args[2] = { &name, &p_value };
 
 			godot_variant result;
@@ -615,7 +615,7 @@ bool NativeScriptInstance::get(const StringName &p_name, Variant &r_ret) const {
 
 		Map<StringName, NativeScriptDesc::Method>::Element *E = script_data->methods.find("_get");
 		if (E) {
-			Variant name = p_name;
+			Variant name(p_name);
 			const Variant *args[1] = { &name };
 
 			godot_variant result;
@@ -767,7 +767,7 @@ void NativeScriptInstance::notification(int p_notification) {
 	}
 #endif
 
-	Variant value = p_notification;
+	Variant value(p_notification);
 	const Variant *args[1] = { &value };
 	call_multilevel("_notification", args, 1);
 }

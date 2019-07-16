@@ -252,7 +252,7 @@ void NetworkedMultiplayerENet::poll() {
 
 				connection_status = CONNECTION_CONNECTED; // If connecting, this means it connected to something!
 
-				emit_signal("peer_connected", *new_id);
+				emit_signal("peer_connected", Variant(*new_id));
 
 				if (server) {
 					// Someone connected, notify all the peers available
@@ -307,7 +307,7 @@ void NetworkedMultiplayerENet::poll() {
 						return;
 					}
 
-					emit_signal("peer_disconnected", *id);
+					emit_signal("peer_disconnected", Variant(*id));
 					peer_map.erase(*id);
 					memdelete(id);
 				}
@@ -329,13 +329,13 @@ void NetworkedMultiplayerENet::poll() {
 						case SYSMSG_ADD_PEER: {
 
 							peer_map[id] = NULL;
-							emit_signal("peer_connected", id);
+							emit_signal("peer_connected", Variant(id));
 
 						} break;
 						case SYSMSG_REMOVE_PEER: {
 
 							peer_map.erase(id);
-							emit_signal("peer_disconnected", id);
+							emit_signal("peer_disconnected", Variant(id));
 						} break;
 					}
 
@@ -482,7 +482,7 @@ void NetworkedMultiplayerENet::disconnect_peer(int p_peer, bool now) {
 			enet_peer_send(E->get(), SYSCH_CONFIG, packet);
 		}
 
-		emit_signal("peer_disconnected", p_peer);
+		emit_signal("peer_disconnected", Variant(p_peer));
 		peer_map.erase(p_peer);
 	} else {
 		enet_peer_disconnect_later(peer_map[p_peer], 0);
@@ -827,10 +827,10 @@ bool NetworkedMultiplayerENet::is_always_ordered() const {
 
 void NetworkedMultiplayerENet::_bind_methods() {
 
-	ClassDB::bind_method(D_METHOD("create_server", "port", "max_clients", "in_bandwidth", "out_bandwidth"), &NetworkedMultiplayerENet::create_server, DEFVAL(32), DEFVAL(0), DEFVAL(0));
-	ClassDB::bind_method(D_METHOD("create_client", "address", "port", "in_bandwidth", "out_bandwidth", "client_port"), &NetworkedMultiplayerENet::create_client, DEFVAL(0), DEFVAL(0), DEFVAL(0));
-	ClassDB::bind_method(D_METHOD("close_connection", "wait_usec"), &NetworkedMultiplayerENet::close_connection, DEFVAL(100));
-	ClassDB::bind_method(D_METHOD("disconnect_peer", "id", "now"), &NetworkedMultiplayerENet::disconnect_peer, DEFVAL(false));
+	ClassDB::bind_method(D_METHOD("create_server", "port", "max_clients", "in_bandwidth", "out_bandwidth"), &NetworkedMultiplayerENet::create_server, Variant(32), Variant(0), Variant(0));
+	ClassDB::bind_method(D_METHOD("create_client", "address", "port", "in_bandwidth", "out_bandwidth", "client_port"), &NetworkedMultiplayerENet::create_client, Variant(0), Variant(0), Variant(0));
+	ClassDB::bind_method(D_METHOD("close_connection", "wait_usec"), &NetworkedMultiplayerENet::close_connection, Variant(100));
+	ClassDB::bind_method(D_METHOD("disconnect_peer", "id", "now"), &NetworkedMultiplayerENet::disconnect_peer, Variant(false));
 	ClassDB::bind_method(D_METHOD("set_compression_mode", "mode"), &NetworkedMultiplayerENet::set_compression_mode);
 	ClassDB::bind_method(D_METHOD("get_compression_mode"), &NetworkedMultiplayerENet::get_compression_mode);
 	ClassDB::bind_method(D_METHOD("set_bind_ip", "ip"), &NetworkedMultiplayerENet::set_bind_ip);

@@ -456,7 +456,7 @@ RID BulletPhysicsServer::body_create(BodyMode p_mode, bool p_init_sleeping) {
 	body->set_collision_layer(1);
 	body->set_collision_mask(1);
 	if (p_init_sleeping)
-		body->set_state(BODY_STATE_SLEEPING, p_init_sleeping);
+		body->set_state(BODY_STATE_SLEEPING, Variant(p_init_sleeping));
 	CreateThenReturnRID(rigid_body_owner, body);
 }
 

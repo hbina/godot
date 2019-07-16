@@ -79,7 +79,7 @@ void GDNativeLibrarySingletonEditor::_discover_singletons() {
 	}
 	Array files;
 	for (Set<String>::Element *E = file_paths.front(); E; E = E->next()) {
-		if (!current_files.has(E->get())) {
+		if (!current_files.has(Variant(E->get()))) {
 			changed = true;
 		}
 		files.append(E->get());
@@ -98,7 +98,7 @@ void GDNativeLibrarySingletonEditor::_discover_singletons() {
 
 	if (changed) {
 
-		ProjectSettings::get_singleton()->set("gdnative/singletons", files);
+		ProjectSettings::get_singleton()->set("gdnative/singletons", Variant(files));
 		_update_libraries(); // So singleton options (i.e. disabled) updates too
 		ProjectSettings::get_singleton()->save();
 	}
@@ -140,7 +140,7 @@ void GDNativeLibrarySingletonEditor::_update_libraries() {
 
 	// The singletons list changed, we must update the settings
 	if (updated_disabled.size() != singletons_disabled.size())
-		ProjectSettings::get_singleton()->set("gdnative/singletons_disabled", updated_disabled);
+		ProjectSettings::get_singleton()->set("gdnative/singletons_disabled", Variant(updated_disabled));
 
 	updating = false;
 }

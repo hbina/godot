@@ -275,8 +275,8 @@ protected:
 		Physics2DServer *ps = Physics2DServer::get_singleton();
 
 		Array arr;
-		arr.push_back(p_normal);
-		arr.push_back(p_d);
+		arr.push_back(Variant(p_normal));
+		arr.push_back(Variant(p_d));
 
 		RID plane = ps->line_shape_create();
 		ps->shape_set_data(plane, Variant(arr));
@@ -293,12 +293,12 @@ protected:
 		VisualServer *vs = VisualServer::get_singleton();
 
 		RID concave = ps->concave_polygon_shape_create();
-		ps->shape_set_data(concave, p_points);
+		ps->shape_set_data(concave, Variant(p_points));
 		RID body = ps->body_create();
 		ps->body_set_mode(body, Physics2DServer::BODY_MODE_STATIC);
 		ps->body_set_space(body, space);
 		ps->body_add_shape(body, concave);
-		ps->body_set_state(body, Physics2DServer::BODY_STATE_TRANSFORM, p_xform);
+		ps->body_set_state(body, Physics2DServer::BODY_STATE_TRANSFORM, Variant(p_xform));
 
 		RID sprite = vs->canvas_item_create();
 		vs->canvas_item_set_parent(sprite, canvas);
@@ -346,8 +346,8 @@ public:
 		space = ps->space_create();
 		ps->space_set_active(space, true);
 		ps->set_active(true);
-		ps->area_set_param(space, Physics2DServer::AREA_PARAM_GRAVITY_VECTOR, Vector2(0, 1));
-		ps->area_set_param(space, Physics2DServer::AREA_PARAM_GRAVITY, 98);
+		ps->area_set_param(space, Physics2DServer::AREA_PARAM_GRAVITY_VECTOR, Variant(Vector2(0, 1)));
+		ps->area_set_param(space, Physics2DServer::AREA_PARAM_GRAVITY, Variant(98));
 
 		{
 

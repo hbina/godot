@@ -31,7 +31,6 @@
 #ifndef ARRAY_H
 #define ARRAY_H
 
-#include "core/math/vector2.h"
 #include "core/typedefs.h"
 
 class Variant;
@@ -62,9 +61,6 @@ public:
 	void operator=(const Array &p_array);
 
 	void push_back(const Variant &);
-	void push_back(const int &);
-	void push_back(const char *);
-	// void push_back(const Vector2 &);
 
 	_FORCE_INLINE_ void append(const Variant &p_value) { push_back(p_value); } //for python compatibility
 	Error resize(int p_new_size);

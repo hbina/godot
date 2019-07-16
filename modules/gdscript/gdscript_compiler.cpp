@@ -286,7 +286,7 @@ int GDScriptCompiler::_parse_expression(CodeGen &codegen, const GDScriptParser::
 					bool success = false;
 					int constant = ClassDB::get_integer_constant(nc->get_name(), identifier, &success);
 					if (success) {
-						Variant key = constant;
+						Variant key(constant);
 						int idx;
 
 						if (!codegen.constant_map.has(key)) {

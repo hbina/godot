@@ -74,9 +74,9 @@ Variant GDScriptNativeClass::_new() {
 
 	Reference *ref = Object::cast_to<Reference>(o);
 	if (ref) {
-		return REF(ref);
+		return Variant(REF(ref));
 	} else {
-		return o;
+		return Variant(o);
 	}
 }
 
@@ -175,9 +175,9 @@ Variant GDScript::_new(const Variant **p_args, int p_argcount, Variant::CallErro
 	}
 
 	if (ref.is_valid()) {
-		return ref;
+		return Variant(ref);
 	} else {
-		return owner;
+		return Variant(owner);
 	}
 }
 
@@ -1218,7 +1218,7 @@ void GDScriptInstance::call_multilevel_reversed(const StringName &p_method, cons
 void GDScriptInstance::notification(int p_notification) {
 
 	//notification is not virtual, it gets called at ALL levels just like in C.
-	Variant value = p_notification;
+	Variant value(p_notification);
 	const Variant *args[1] = { &value };
 
 	GDScript *sptr = script.ptr();
@@ -1394,13 +1394,13 @@ void GDScriptLanguage::init() {
 	int gcc = GlobalConstants::get_global_constant_count();
 	for (int i = 0; i < gcc; i++) {
 
-		_add_global(StaticCString::create(GlobalConstants::get_global_constant_name(i)), GlobalConstants::get_global_constant_value(i));
+		_add_global(StaticCString::create(GlobalConstants::get_global_constant_name(i)), Variant(GlobalConstants::get_global_constant_value(i)));
 	}
 
-	_add_global(StaticCString::create("PI"), Math_PI);
-	_add_global(StaticCString::create("TAU"), Math_TAU);
-	_add_global(StaticCString::create("INF"), Math_INF);
-	_add_global(StaticCString::create("NAN"), Math_NAN);
+	_add_global(StaticCString::create("PI"), Variant(Math_PI));
+	_add_global(StaticCString::create("TAU"), Variant(Math_TAU));
+	_add_global(StaticCString::create("INF"), Variant(Math_INF));
+	_add_global(StaticCString::create("NAN"), Variant(Math_NAN));
 
 	//populate native classes
 
@@ -1425,7 +1425,7 @@ void GDScriptLanguage::init() {
 	Engine::get_singleton()->get_singletons(&singletons);
 	for (List<Engine::Singleton>::Element *E = singletons.front(); E; E = E->next()) {
 
-		_add_global(E->get().name, E->get().ptr);
+		_add_global(E->get().name, Variant(E->get().ptr));
 	}
 }
 

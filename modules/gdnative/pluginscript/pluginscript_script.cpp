@@ -121,9 +121,9 @@ Variant PluginScript::_new(const Variant **p_args, int p_argcount, Variant::Call
 	}
 
 	if (ref.is_valid()) {
-		return ref;
+		return Variant(ref);
 	} else {
-		return owner;
+		return Variant(owner);
 	}
 }
 

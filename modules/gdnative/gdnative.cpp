@@ -149,10 +149,10 @@ void GDNativeLibrary::_get_property_list(List<PropertyInfo> *p_list) const {
 
 void GDNativeLibrary::set_config_file(Ref<ConfigFile> p_config_file) {
 
-	set_singleton(p_config_file->get_value("general", "singleton", default_singleton));
-	set_load_once(p_config_file->get_value("general", "load_once", default_load_once));
-	set_symbol_prefix(p_config_file->get_value("general", "symbol_prefix", default_symbol_prefix));
-	set_reloadable(p_config_file->get_value("general", "reloadable", default_reloadable));
+	set_singleton(p_config_file->get_value("general", "singleton", Variant(default_singleton)));
+	set_load_once(p_config_file->get_value("general", "load_once", Variant(default_load_once)));
+	set_symbol_prefix(p_config_file->get_value("general", "symbol_prefix", Variant(default_symbol_prefix)));
+	set_reloadable(p_config_file->get_value("general", "reloadable", Variant(default_reloadable)));
 
 	String entry_lib_path;
 	{
@@ -536,10 +536,10 @@ Error GDNativeLibraryResourceSaver::save(const String &p_path, const RES &p_reso
 
 	Ref<ConfigFile> config = lib->get_config_file();
 
-	config->set_value("general", "singleton", lib->is_singleton());
-	config->set_value("general", "load_once", lib->should_load_once());
-	config->set_value("general", "symbol_prefix", lib->get_symbol_prefix());
-	config->set_value("general", "reloadable", lib->is_reloadable());
+	config->set_value("general", "singleton", Variant(lib->is_singleton()));
+	config->set_value("general", "load_once", Variant(lib->should_load_once()));
+	config->set_value("general", "symbol_prefix", Variant(lib->get_symbol_prefix()));
+	config->set_value("general", "reloadable", Variant(lib->is_reloadable()));
 
 	return config->save(p_path);
 }

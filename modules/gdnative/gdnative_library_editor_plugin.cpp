@@ -42,7 +42,7 @@ void GDNativeLibraryEditor::edit(Ref<GDNativeLibrary> p_library) {
 			String target = E->key() + "." + it->get();
 			TargetConfig ecfg;
 			ecfg.library = config->get_value("entry", target, "");
-			ecfg.dependencies = config->get_value("dependencies", target, Array());
+			ecfg.dependencies = config->get_value("dependencies", target, Variant(Array()));
 			entry_configs[target] = ecfg;
 		}
 	}
@@ -218,7 +218,7 @@ void GDNativeLibraryEditor::_erase_entry(const String &platform, const String &e
 
 			platforms[platform].entries.erase(E);
 			_set_target_value("entry", target, "");
-			_set_target_value("dependencies", target, Array());
+			_set_target_value("dependencies", target, Variant(Array()));
 			_translate_to_config_file();
 			_update_tree();
 		}
@@ -342,11 +342,11 @@ GDNativeLibraryEditor::GDNativeLibraryEditor() {
 
 	int idx = 0;
 	filter->add_item(TTR("All"), idx);
-	filter->set_item_metadata(idx, "All");
+	filter->set_item_metadata(idx, Variant("All"));
 	idx += 1;
 	for (Map<String, NativePlatformConfig>::Element *E = platforms.front(); E; E = E->next()) {
 		filter->add_item(E->get().name, idx);
-		filter->set_item_metadata(idx, E->key());
+		filter->set_item_metadata(idx, Variant(E->key()));
 		idx += 1;
 	}
 	filter->connect("item_selected", this, "_on_filter_selected");

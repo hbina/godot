@@ -258,7 +258,7 @@ void register_gdnative_types() {
 	for (int i = 0; i < singletons.size(); i++) {
 		String path = singletons[i];
 
-		if (excluded.has(path))
+		if (excluded.has(Variant(path)))
 			continue;
 
 		Ref<GDNativeLibrary> lib = ResourceLoader::load(path);

@@ -173,7 +173,7 @@ void PlaneShapeBullet::set_data(const Variant &p_data) {
 }
 
 Variant PlaneShapeBullet::get_data() const {
-	return plane;
+	return Variant(plane);
 }
 
 PhysicsServer::ShapeType PlaneShapeBullet::get_type() const {
@@ -201,7 +201,7 @@ void SphereShapeBullet::set_data(const Variant &p_data) {
 }
 
 Variant SphereShapeBullet::get_data() const {
-	return radius;
+	return Variant(radius);
 }
 
 PhysicsServer::ShapeType SphereShapeBullet::get_type() const {
@@ -228,7 +228,7 @@ void BoxShapeBullet::set_data(const Variant &p_data) {
 Variant BoxShapeBullet::get_data() const {
 	Vector3 g_half_extents;
 	B_TO_G(half_extents, g_half_extents);
-	return g_half_extents;
+	return Variant(g_half_extents);
 }
 
 PhysicsServer::ShapeType BoxShapeBullet::get_type() const {
@@ -251,8 +251,8 @@ CapsuleShapeBullet::CapsuleShapeBullet() :
 
 void CapsuleShapeBullet::set_data(const Variant &p_data) {
 	Dictionary d = p_data;
-	ERR_FAIL_COND(!d.has("radius"));
-	ERR_FAIL_COND(!d.has("height"));
+	ERR_FAIL_COND(!d.has(Variant("radius")));
+	ERR_FAIL_COND(!d.has(Variant("height")));
 	setup(d["height"], d["radius"]);
 }
 
@@ -260,7 +260,7 @@ Variant CapsuleShapeBullet::get_data() const {
 	Dictionary d;
 	d["radius"] = radius;
 	d["height"] = height;
-	return d;
+	return Variant(d);
 }
 
 PhysicsServer::ShapeType CapsuleShapeBullet::get_type() const {
@@ -284,8 +284,8 @@ CylinderShapeBullet::CylinderShapeBullet() :
 
 void CylinderShapeBullet::set_data(const Variant &p_data) {
 	Dictionary d = p_data;
-	ERR_FAIL_COND(!d.has("radius"));
-	ERR_FAIL_COND(!d.has("height"));
+	ERR_FAIL_COND(!d.has(Variant("radius")));
+	ERR_FAIL_COND(!d.has(Variant("height")));
 	setup(d["height"], d["radius"]);
 }
 
@@ -293,7 +293,7 @@ Variant CylinderShapeBullet::get_data() const {
 	Dictionary d;
 	d["radius"] = radius;
 	d["height"] = height;
-	return d;
+	return Variant(d);
 }
 
 PhysicsServer::ShapeType CylinderShapeBullet::get_type() const {
@@ -331,7 +331,7 @@ Variant ConvexPolygonShapeBullet::get_data() const {
 	ConvexPolygonShapeBullet *variable_self = const_cast<ConvexPolygonShapeBullet *>(this);
 	Vector<Vector3> out_vertices;
 	variable_self->get_vertices(out_vertices);
-	return out_vertices;
+	return Variant(out_vertices);
 }
 
 PhysicsServer::ShapeType ConvexPolygonShapeBullet::get_type() const {
@@ -378,7 +378,7 @@ void ConcavePolygonShapeBullet::set_data(const Variant &p_data) {
 }
 
 Variant ConcavePolygonShapeBullet::get_data() const {
-	return faces;
+	return Variant(faces);
 }
 
 PhysicsServer::ShapeType ConcavePolygonShapeBullet::get_type() const {
@@ -450,17 +450,17 @@ HeightMapShapeBullet::HeightMapShapeBullet() :
 void HeightMapShapeBullet::set_data(const Variant &p_data) {
 	ERR_FAIL_COND(p_data.get_type() != Variant::DICTIONARY);
 	Dictionary d = p_data;
-	ERR_FAIL_COND(!d.has("width"));
-	ERR_FAIL_COND(!d.has("depth"));
-	ERR_FAIL_COND(!d.has("heights"));
+	ERR_FAIL_COND(!d.has(Variant("width")));
+	ERR_FAIL_COND(!d.has(Variant("depth")));
+	ERR_FAIL_COND(!d.has(Variant("heights")));
 
 	real_t l_min_height = 0.0;
 	real_t l_max_height = 0.0;
 
 	// If specified, min and max height will be used as precomputed values
-	if (d.has("min_height"))
+	if (d.has(Variant("min_height")))
 		l_min_height = d["min_height"];
-	if (d.has("max_height"))
+	if (d.has(Variant("max_height")))
 		l_max_height = d["max_height"];
 
 	ERR_FAIL_COND(l_min_height > l_max_height);
@@ -514,7 +514,7 @@ void HeightMapShapeBullet::set_data(const Variant &p_data) {
 	ERR_FAIL_COND(l_heights.size() != (l_width * l_depth));
 
 	// Compute min and max heights if not specified.
-	if (!d.has("min_height") && !d.has("max_height")) {
+	if (!d.has(Variant("min_height")) && !d.has(Variant("max_height"))) {
 
 		PoolVector<real_t>::Read r = l_heights.read();
 		int heights_size = l_heights.size();
@@ -578,7 +578,7 @@ Variant RayShapeBullet::get_data() const {
 	Dictionary d;
 	d["length"] = length;
 	d["slips_on_slope"] = slips_on_slope;
-	return d;
+	return Variant(d);
 }
 
 PhysicsServer::ShapeType RayShapeBullet::get_type() const {

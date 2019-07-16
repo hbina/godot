@@ -60,8 +60,7 @@ void GDAPI godot_array_new_pool_color_array(godot_array *r_dest, const godot_poo
 	dest->resize(pca->size());
 
 	for (int i = 0; i < dest->size(); i++) {
-		Variant v = pca->operator[](i);
-		dest->operator[](i) = v;
+		dest->operator[](i) = Variant(pca->operator[](i));
 	}
 }
 
@@ -72,8 +71,7 @@ void GDAPI godot_array_new_pool_vector3_array(godot_array *r_dest, const godot_p
 	dest->resize(pca->size());
 
 	for (int i = 0; i < dest->size(); i++) {
-		Variant v = pca->operator[](i);
-		dest->operator[](i) = v;
+		dest->operator[](i) = Variant(pca->operator[](i));
 	}
 }
 
@@ -84,8 +82,7 @@ void GDAPI godot_array_new_pool_vector2_array(godot_array *r_dest, const godot_p
 	dest->resize(pca->size());
 
 	for (int i = 0; i < dest->size(); i++) {
-		Variant v = pca->operator[](i);
-		dest->operator[](i) = v;
+		dest->operator[](i) = Variant(pca->operator[](i));
 	}
 }
 
@@ -96,8 +93,7 @@ void GDAPI godot_array_new_pool_string_array(godot_array *r_dest, const godot_po
 	dest->resize(pca->size());
 
 	for (int i = 0; i < dest->size(); i++) {
-		Variant v = pca->operator[](i);
-		dest->operator[](i) = v;
+		dest->operator[](i) = Variant(pca->operator[](i));
 	}
 }
 
@@ -108,8 +104,7 @@ void GDAPI godot_array_new_pool_real_array(godot_array *r_dest, const godot_pool
 	dest->resize(pca->size());
 
 	for (int i = 0; i < dest->size(); i++) {
-		Variant v = pca->operator[](i);
-		dest->operator[](i) = v;
+		dest->operator[](i) = Variant(pca->operator[](i));
 	}
 }
 
@@ -120,8 +115,7 @@ void GDAPI godot_array_new_pool_int_array(godot_array *r_dest, const godot_pool_
 	dest->resize(pca->size());
 
 	for (int i = 0; i < dest->size(); i++) {
-		Variant v = pca->operator[](i);
-		dest->operator[](i) = v;
+		dest->operator[](i) = Variant(pca->operator[](i));
 	}
 }
 
@@ -132,8 +126,7 @@ void GDAPI godot_array_new_pool_byte_array(godot_array *r_dest, const godot_pool
 	dest->resize(pca->size());
 
 	for (int i = 0; i < dest->size(); i++) {
-		Variant v = pca->operator[](i);
-		dest->operator[](i) = v;
+		dest->operator[](i) = Variant(pca->operator[](i));
 	}
 }
 

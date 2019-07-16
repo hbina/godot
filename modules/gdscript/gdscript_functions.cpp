@@ -445,8 +445,8 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 			uint64_t seed = *p_args[0];
 			int ret = Math::rand_from_seed(&seed);
 			Array reta;
-			reta.push_back(ret);
-			reta.push_back(seed);
+			reta.push_back(Variant(ret));
+			reta.push_back(Variant(seed));
 			r_ret = reta;
 
 		} break;
@@ -1976,7 +1976,7 @@ MethodInfo GDScriptFunctions::get_info(Function p_func) {
 		case COLOR8: {
 
 			MethodInfo mi("Color8", PropertyInfo(Variant::INT, "r8"), PropertyInfo(Variant::INT, "g8"), PropertyInfo(Variant::INT, "b8"), PropertyInfo(Variant::INT, "a8"));
-			mi.default_arguments.push_back(255);
+			mi.default_arguments.push_back(Variant(255));
 			mi.return_val.type = Variant::COLOR;
 			return mi;
 		} break;

@@ -44,7 +44,7 @@ void CSGShape::set_use_collision(bool p_enable) {
 	if (use_collision) {
 		root_collision_shape.instance();
 		root_collision_instance = PhysicsServer::get_singleton()->body_create(PhysicsServer::BODY_MODE_STATIC);
-		PhysicsServer::get_singleton()->body_set_state(root_collision_instance, PhysicsServer::BODY_STATE_TRANSFORM, get_global_transform());
+		PhysicsServer::get_singleton()->body_set_state(root_collision_instance, PhysicsServer::BODY_STATE_TRANSFORM, Variant(get_global_transform()));
 		PhysicsServer::get_singleton()->body_add_shape(root_collision_instance, root_collision_shape->get_rid());
 		PhysicsServer::get_singleton()->body_set_space(root_collision_instance, get_world()->get_space());
 		PhysicsServer::get_singleton()->body_attach_object_instance_id(root_collision_instance, get_instance_id());
@@ -448,11 +448,11 @@ void CSGShape::_update_shape() {
 		Array array;
 		array.resize(Mesh::ARRAY_MAX);
 
-		array[Mesh::ARRAY_VERTEX] = surfaces[i].vertices;
-		array[Mesh::ARRAY_NORMAL] = surfaces[i].normals;
-		array[Mesh::ARRAY_TEX_UV] = surfaces[i].uvs;
+		array[Mesh::ARRAY_VERTEX] = Variant(surfaces[i].vertices);
+		array[Mesh::ARRAY_NORMAL] = Variant(surfaces[i].normals);
+		array[Mesh::ARRAY_TEX_UV] = Variant(surfaces[i].uvs);
 		if (have_tangents) {
-			array[Mesh::ARRAY_TANGENT] = surfaces[i].tans;
+			array[Mesh::ARRAY_TANGENT] = Variant(surfaces[i].tans);
 		}
 
 		int idx = root_mesh->get_surface_count();
@@ -513,7 +513,7 @@ void CSGShape::_notification(int p_what) {
 		if (use_collision && is_root_shape()) {
 			root_collision_shape.instance();
 			root_collision_instance = PhysicsServer::get_singleton()->body_create(PhysicsServer::BODY_MODE_STATIC);
-			PhysicsServer::get_singleton()->body_set_state(root_collision_instance, PhysicsServer::BODY_STATE_TRANSFORM, get_global_transform());
+			PhysicsServer::get_singleton()->body_set_state(root_collision_instance, PhysicsServer::BODY_STATE_TRANSFORM, Variant(get_global_transform()));
 			PhysicsServer::get_singleton()->body_add_shape(root_collision_instance, root_collision_shape->get_rid());
 			PhysicsServer::get_singleton()->body_set_space(root_collision_instance, get_world()->get_space());
 			PhysicsServer::get_singleton()->body_attach_object_instance_id(root_collision_instance, get_instance_id());

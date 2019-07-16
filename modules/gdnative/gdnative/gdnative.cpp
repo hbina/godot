@@ -152,7 +152,7 @@ void _gdnative_report_version_mismatch(const godot_object *p_library, const char
 	versions["want_major"] = p_want.major;
 	versions["want_minor"] = p_want.minor;
 
-	message += String("Got version {have_major}.{have_minor} but needs {want_major}.{want_minor}!").format(versions);
+	message += String("Got version {have_major}.{have_minor} but needs {want_major}.{want_minor}!").format(Variant(versions));
 
 	_err_print_error("gdnative_init", library->get_current_library_path().utf8().ptr(), 0, message.utf8().ptr());
 }

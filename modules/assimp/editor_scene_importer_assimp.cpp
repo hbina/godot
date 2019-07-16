@@ -80,7 +80,7 @@ void EditorSceneImporterAssimp::get_extensions(List<String> *r_extensions) const
 
 void EditorSceneImporterAssimp::_register_project_setting_import(const String generic, const String import_setting_string, const Vector<String> &exts, List<String> *r_extensions, const bool p_enabled) const {
 	const String use_generic = "use_" + generic;
-	_GLOBAL_DEF(import_setting_string + use_generic, p_enabled, true);
+	_GLOBAL_DEF(import_setting_string + use_generic, Variant(p_enabled), true);
 	if (ProjectSettings::get_singleton()->get(import_setting_string + use_generic)) {
 		for (int32_t i = 0; i < exts.size(); i++) {
 			r_extensions->push_back(exts[i]);
@@ -707,7 +707,7 @@ void EditorSceneImporterAssimp::_import_animation(ImportState &state, int p_anim
 				float t = anim_mesh->mKeys[k].mTime / ticks_per_second;
 				float w = anim_mesh->mKeys[k].mWeights[j];
 
-				animation->track_insert_key(base_track + j, t, w);
+				animation->track_insert_key(base_track + j, t, Variant(w));
 			}
 		}
 	}
@@ -1372,7 +1372,7 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 					w[l] = vertices[l];
 				}
 				ERR_CONTINUE(vertices.size() != new_vertices.size());
-				array_copy[VisualServer::ARRAY_VERTEX] = new_vertices;
+				array_copy[VisualServer::ARRAY_VERTEX] = Variant(new_vertices);
 			}
 
 			int32_t color_set = 0;
@@ -1390,7 +1390,7 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 					PoolColorArray::Write w = new_colors.write();
 					w[l] = colors[l];
 				}
-				array_copy[VisualServer::ARRAY_COLOR] = new_colors;
+				array_copy[VisualServer::ARRAY_COLOR] = Variant(new_colors);
 			}
 
 			if (ai_mesh->mAnimMeshes[j]->HasNormals()) {
@@ -1407,7 +1407,7 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 					PoolVector3Array::Write w = new_normals.write();
 					w[l] = normals[l];
 				}
-				array_copy[VisualServer::ARRAY_NORMAL] = new_normals;
+				array_copy[VisualServer::ARRAY_NORMAL] = Variant(new_normals);
 			}
 
 			if (ai_mesh->mAnimMeshes[j]->HasTangentsAndBitangents()) {
@@ -1426,10 +1426,10 @@ Ref<Mesh> EditorSceneImporterAssimp::_generate_mesh_from_surface_indices(ImportS
 					new_tangents.write()[l + 3] = tangents[l].a;
 				}
 
-				array_copy[VisualServer::ARRAY_TANGENT] = new_tangents;
+				array_copy[VisualServer::ARRAY_TANGENT] = Variant(new_tangents);
 			}
 
-			morphs[j] = array_copy;
+			morphs[j] = Variant(array_copy);
 		}
 
 		mesh->add_surface_from_arrays(primitive, array_mesh, morphs);
