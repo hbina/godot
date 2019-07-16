@@ -236,66 +236,66 @@ public:
 
 	operator IP_Address() const;
 
-	Variant(bool p_bool);
-	Variant(signed int p_int); // real one
-	Variant(unsigned int p_int);
+	explicit Variant(bool p_bool);
+	explicit Variant(signed int p_int); // real one
+	explicit Variant(unsigned int p_int);
 #ifdef NEED_LONG_INT
-	Variant(signed long p_long); // real one
-	Variant(unsigned long p_long);
-//Variant(long unsigned int p_long);
+	explicit Variant(signed long p_long); // real one
+	explicit Variant(unsigned long p_long);
+//explicit Variant(long unsigned int p_long);
 #endif
-	Variant(signed short p_short); // real one
-	Variant(unsigned short p_short);
-	Variant(signed char p_char); // real one
-	Variant(unsigned char p_char);
-	Variant(int64_t p_int); // real one
-	Variant(uint64_t p_int);
-	Variant(float p_float);
-	Variant(double p_double);
-	Variant(const String &p_string);
-	Variant(const StringName &p_string);
-	Variant(const char *const p_cstring);
-	Variant(const CharType *p_wstring);
-	Variant(const Vector2 &p_vector2);
-	Variant(const Rect2 &p_rect2);
-	Variant(const Vector3 &p_vector3);
-	Variant(const Plane &p_plane);
-	Variant(const ::AABB &p_aabb);
-	Variant(const Quat &p_quat);
-	Variant(const Basis &p_matrix);
-	Variant(const Transform2D &p_transform);
-	Variant(const Transform &p_transform);
-	Variant(const Color &p_color);
-	Variant(const NodePath &p_node_path);
-	Variant(const RefPtr &p_resource);
-	Variant(const RID &p_rid);
-	Variant(const Object *p_object);
-	Variant(const Dictionary &p_dictionary);
+	explicit Variant(signed short p_short); // real one
+	explicit Variant(unsigned short p_short);
+	explicit Variant(signed char p_char); // real one
+	explicit Variant(unsigned char p_char);
+	explicit Variant(int64_t p_int); // real one
+	explicit Variant(uint64_t p_int);
+	explicit Variant(float p_float);
+	explicit Variant(double p_double);
+	explicit Variant(const String &p_string);
+	explicit Variant(const StringName &p_string);
+	explicit Variant(const char *const p_cstring);
+	explicit Variant(const CharType *p_wstring);
+	explicit Variant(const Vector2 &p_vector2);
+	explicit Variant(const Rect2 &p_rect2);
+	explicit Variant(const Vector3 &p_vector3);
+	explicit Variant(const Plane &p_plane);
+	explicit Variant(const ::AABB &p_aabb);
+	explicit Variant(const Quat &p_quat);
+	explicit Variant(const Basis &p_matrix);
+	explicit Variant(const Transform2D &p_transform);
+	explicit Variant(const Transform &p_transform);
+	explicit Variant(const Color &p_color);
+	explicit Variant(const NodePath &p_node_path);
+	explicit Variant(const RefPtr &p_resource);
+	explicit Variant(const RID &p_rid);
+	explicit Variant(const Object *p_object);
+	explicit Variant(const Dictionary &p_dictionary);
 
-	Variant(const Array &p_array);
-	Variant(const PoolVector<Plane> &p_array); // helper
-	Variant(const PoolVector<uint8_t> &p_raw_array);
-	Variant(const PoolVector<int> &p_int_array);
-	Variant(const PoolVector<real_t> &p_real_array);
-	Variant(const PoolVector<String> &p_string_array);
-	Variant(const PoolVector<Vector3> &p_vector3_array);
-	Variant(const PoolVector<Color> &p_color_array);
-	Variant(const PoolVector<Face3> &p_face_array);
+	explicit Variant(const Array &p_array);
+	explicit Variant(const PoolVector<Plane> &p_array); // helper
+	explicit Variant(const PoolVector<uint8_t> &p_raw_array);
+	explicit Variant(const PoolVector<int> &p_int_array);
+	explicit Variant(const PoolVector<real_t> &p_real_array);
+	explicit Variant(const PoolVector<String> &p_string_array);
+	explicit Variant(const PoolVector<Vector3> &p_vector3_array);
+	explicit Variant(const PoolVector<Color> &p_color_array);
+	explicit Variant(const PoolVector<Face3> &p_face_array);
 
-	Variant(const Vector<Variant> &p_array);
-	Variant(const Vector<uint8_t> &p_array);
-	Variant(const Vector<int> &p_array);
-	Variant(const Vector<real_t> &p_array);
-	Variant(const Vector<String> &p_array);
-	Variant(const Vector<StringName> &p_array);
-	Variant(const Vector<Vector3> &p_array);
-	Variant(const Vector<Color> &p_array);
-	Variant(const Vector<Plane> &p_array); // helper
-	Variant(const Vector<RID> &p_array); // helper
-	Variant(const Vector<Vector2> &p_array); // helper
-	Variant(const PoolVector<Vector2> &p_vector2_array); // helper
+	explicit Variant(const Vector<Variant> &p_array);
+	explicit Variant(const Vector<uint8_t> &p_array);
+	explicit Variant(const Vector<int> &p_array);
+	explicit Variant(const Vector<real_t> &p_array);
+	explicit Variant(const Vector<String> &p_array);
+	explicit Variant(const Vector<StringName> &p_array);
+	explicit Variant(const Vector<Vector3> &p_array);
+	explicit Variant(const Vector<Color> &p_array);
+	explicit Variant(const Vector<Plane> &p_array); // helper
+	explicit Variant(const Vector<RID> &p_array); // helper
+	explicit Variant(const Vector<Vector2> &p_array); // helper
+	explicit Variant(const PoolVector<Vector2> &p_vector2_array); // helper
 
-	Variant(const IP_Address &p_address);
+	explicit Variant(const IP_Address &p_address);
 
 	// If this changes the table in variant_op must be updated
 	enum Operator {
