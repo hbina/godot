@@ -1020,14 +1020,14 @@ public:
 		for (int i = 0; i < n; ++i) {
 			while (k >= 2 && vec2_cross(H[k - 2], H[k - 1], P[i]) <= 0)
 				k--;
-			H.write[k++] = P[i];
+			H[k++] = P[i];
 		}
 
 		// Build upper hull
 		for (int i = n - 2, t = k + 1; i >= 0; i--) {
 			while (k >= t && vec2_cross(H[k - 2], H[k - 1], P[i]) <= 0)
 				k--;
-			H.write[k++] = P[i];
+			H[k++] = P[i];
 		}
 
 		H.resize(k);

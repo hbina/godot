@@ -329,6 +329,7 @@ double StreamPeer::get_double() {
 
 	return decode_double(buf);
 }
+
 String StreamPeer::get_string(int p_bytes) {
 
 	if (p_bytes < 0)
@@ -336,13 +337,12 @@ String StreamPeer::get_string(int p_bytes) {
 	ERR_FAIL_COND_V(p_bytes < 0, String());
 
 	Vector<char> buf;
-	Error err = buf.resize(p_bytes + 1);
-	ERR_FAIL_COND_V(err != OK, String());
-	err = get_data((uint8_t *)&buf[0], p_bytes);
-	ERR_FAIL_COND_V(err != OK, String());
-	buf.write[p_bytes] = 0;
+	buf.resize(p_bytes + 1);
+	get_data((uint8_t *)&buf[0], p_bytes);
+	buf[p_bytes] = 0;
 	return buf.ptr();
 }
+
 String StreamPeer::get_utf8_string(int p_bytes) {
 
 	if (p_bytes < 0)
@@ -350,11 +350,8 @@ String StreamPeer::get_utf8_string(int p_bytes) {
 	ERR_FAIL_COND_V(p_bytes < 0, String());
 
 	Vector<uint8_t> buf;
-	Error err = buf.resize(p_bytes);
-	ERR_FAIL_COND_V(err != OK, String());
-	err = get_data(buf.ptrw(), p_bytes);
-	ERR_FAIL_COND_V(err != OK, String());
-
+	buf.resize(p_bytes);
+	get_data(buf.ptrw(), p_bytes);
 	String ret;
 	ret.parse_utf8((const char *)buf.ptr(), buf.size());
 	return ret;
@@ -363,10 +360,8 @@ Variant StreamPeer::get_var(bool p_allow_objects) {
 
 	int len = get_32();
 	Vector<uint8_t> var;
-	Error err = var.resize(len);
-	ERR_FAIL_COND_V(err != OK, Variant());
-	err = get_data(var.ptrw(), len);
-	ERR_FAIL_COND_V(err != OK, Variant());
+	var.resize(len);
+	get_data(var.ptrw(), len);
 
 	Variant ret;
 	decode_variant(ret, var.ptr(), len, NULL, p_allow_objects);

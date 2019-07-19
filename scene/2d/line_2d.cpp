@@ -272,7 +272,7 @@ void Line2D::_draw() {
 	{
 		PoolVector<Vector2>::Read points_read = _points.read();
 		for (int i = 0; i < len; ++i) {
-			points.write[i] = points_read[i];
+			points[i] = points_read[i];
 		}
 	}
 
