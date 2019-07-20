@@ -867,16 +867,16 @@ void ResourceLoader::load_translation_remaps() {
 	Dictionary remaps = ProjectSettings::get_singleton()->get("locale/translation_remaps");
 	List<Variant> keys;
 	remaps.get_key_list(&keys);
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+	for (const auto &E : keys) {
 
-		Array langs = remaps[E->get()];
+		Array langs = remaps[E];
 		Vector<String> lang_remaps;
 		lang_remaps.resize(langs.size());
 		for (int i = 0; i < langs.size(); i++) {
 			lang_remaps.write[i] = langs[i];
 		}
 
-		translation_remaps[String(E->get())] = lang_remaps;
+		translation_remaps[String(E)] = lang_remaps;
 	}
 }
 

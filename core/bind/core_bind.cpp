@@ -85,9 +85,9 @@ PoolVector<String> _ResourceLoader::get_recognized_extensions_for_type(const Str
 	List<String> exts;
 	ResourceLoader::get_recognized_extensions_for_type(p_type, &exts);
 	PoolVector<String> ret;
-	for (List<String>::Element *E = exts.front(); E; E = E->next()) {
+	for (const auto& E : exts) {
 
-		ret.push_back(E->get());
+		ret.push_back(E);
 	}
 
 	return ret;
@@ -161,9 +161,9 @@ PoolVector<String> _ResourceSaver::get_recognized_extensions(const RES &p_resour
 	List<String> exts;
 	ResourceSaver::get_recognized_extensions(p_resource, &exts);
 	PoolVector<String> ret;
-	for (List<String>::Element *E = exts.front(); E; E = E->next()) {
+	for (const auto& E : exts) {
 
-		ret.push_back(E->get());
+		ret.push_back(E);
 	}
 	return ret;
 }

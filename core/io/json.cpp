@@ -100,15 +100,15 @@ String JSON::_print_var(const Variant &p_var, const String &p_indent, int p_cur_
 			if (p_sort_keys)
 				keys.sort();
 
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
 				if (E != keys.front()) {
 					s += ",";
 					s += end_statement;
 				}
-				s += _make_indent(p_indent, p_cur_indent + 1) + _print_var(String(E->get()), p_indent, p_cur_indent + 1, p_sort_keys);
+				s += _make_indent(p_indent, p_cur_indent + 1) + _print_var(String(E), p_indent, p_cur_indent + 1, p_sort_keys);
 				s += colon;
-				s += _print_var(d[E->get()], p_indent, p_cur_indent + 1, p_sort_keys);
+				s += _print_var(d[E], p_indent, p_cur_indent + 1, p_sort_keys);
 			}
 
 			s += end_statement + _make_indent(p_indent, p_cur_indent) + "}";

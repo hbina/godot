@@ -78,10 +78,10 @@ void AnimationNode::get_child_nodes(List<ChildNode> *r_child_nodes) {
 		Dictionary cn = get_script_instance()->call("get_child_nodes");
 		List<Variant> keys;
 		cn.get_key_list(&keys);
-		for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+		for (const auto &E : keys) {
 			ChildNode child;
-			child.name = E->get();
-			child.node = cn[E->get()];
+			child.name = E;
+			child.node = cn[E];
 			r_child_nodes->push_back(child);
 		}
 	}

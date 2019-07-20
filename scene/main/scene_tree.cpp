@@ -2034,10 +2034,10 @@ SceneTree::SceneTree() {
 		List<String> exts;
 		ResourceLoader::get_recognized_extensions_for_type("Environment", &exts);
 		String ext_hint;
-		for (List<String>::Element *E = exts.front(); E; E = E->next()) {
+		for (const auto& E : exts) {
 			if (ext_hint != String())
 				ext_hint += ",";
-			ext_hint += "*." + E->get();
+			ext_hint += "*." + E;
 		}
 		//get path
 		String env_path = GLOBAL_DEF("rendering/environment/default_environment", "");

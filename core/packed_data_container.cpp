@@ -276,11 +276,11 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 			d.get_key_list(&keys);
 			List<DictKey> sortk;
 
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
 				DictKey dk;
-				dk.hash = E->get().hash();
-				dk.key = E->get();
+				dk.hash = E.hash();
+				dk.key = E;
 				sortk.push_back(dk);
 			}
 

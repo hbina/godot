@@ -1451,9 +1451,9 @@ void ResourceFormatSaverTextInstance::_find_resources(const Variant &p_variant, 
 			Dictionary d = p_variant;
 			List<Variant> keys;
 			d.get_key_list(&keys);
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
-				Variant v = d[E->get()];
+				Variant v = d[E];
 				_find_resources(v);
 			}
 		} break;
