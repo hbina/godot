@@ -7857,8 +7857,7 @@ void GDScriptParser::_check_block_types(BlockNode *p_block) {
 	Node *last_var_assign = NULL;
 
 	// Check each statement
-	for (List<Node *>::Element *E = p_block->statements.front(); E; E = E->next()) {
-		Node *statement = E->get();
+	for (Node *statement : p_block->statements) {
 		switch (statement->type) {
 			case Node::TYPE_NEWLINE:
 			case Node::TYPE_BREAKPOINT:

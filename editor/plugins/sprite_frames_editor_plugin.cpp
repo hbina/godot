@@ -534,11 +534,11 @@ void SpriteFramesEditor::_animation_name_edited() {
 	undo_redo->add_do_method(frames, "rename_animation", edited_anim, name);
 	undo_redo->add_undo_method(frames, "rename_animation", name, edited_anim);
 
-	for (List<Node *>::Element *E = nodes.front(); E; E = E->next()) {
+	for (Node *E : nodes) {
 
-		String current = E->get()->call("get_animation");
-		undo_redo->add_do_method(E->get(), "set_animation", name);
-		undo_redo->add_undo_method(E->get(), "set_animation", edited_anim);
+		String current = E->call("get_animation");
+		undo_redo->add_do_method(E, "set_animation", name);
+		undo_redo->add_undo_method(E, "set_animation", edited_anim);
 	}
 
 	undo_redo->add_do_method(this, "_update_library");
@@ -566,11 +566,11 @@ void SpriteFramesEditor::_animation_add() {
 	undo_redo->add_do_method(this, "_update_library");
 	undo_redo->add_undo_method(this, "_update_library");
 
-	for (List<Node *>::Element *E = nodes.front(); E; E = E->next()) {
+	for (Node *E : nodes) {
 
-		String current = E->get()->call("get_animation");
-		undo_redo->add_do_method(E->get(), "set_animation", name);
-		undo_redo->add_undo_method(E->get(), "set_animation", current);
+		String current = E->call("get_animation");
+		undo_redo->add_do_method(E, "set_animation", name);
+		undo_redo->add_undo_method(E, "set_animation", current);
 	}
 
 	edited_anim = name;

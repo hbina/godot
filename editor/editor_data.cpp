@@ -645,8 +645,8 @@ bool EditorData::check_and_update_scene(int p_idx) {
 
 		//transfer selection
 		List<Node *> new_selection;
-		for (List<Node *>::Element *E = edited_scene.write[p_idx].selection.front(); E; E = E->next()) {
-			NodePath p = edited_scene[p_idx].root->get_path_to(E->get());
+		for (const auto &E : edited_scene.write[p_idx].selection) {
+			NodePath p = edited_scene[p_idx].root->get_path_to(E);
 			Node *new_node = new_scene->get_node(p);
 			if (new_node)
 				new_selection.push_back(new_node);
@@ -824,8 +824,8 @@ Dictionary EditorData::restore_edited_scene_state(EditorSelection *p_selection, 
 	p_history->history = es.history_stored;
 
 	p_selection->clear();
-	for (List<Node *>::Element *E = es.selection.front(); E; E = E->next()) {
-		p_selection->add_node(E->get());
+	for (const auto &E : es.selection) {
+		p_selection->add_node(E);
 	}
 	set_editor_states(es.editor_states);
 
@@ -1038,9 +1038,9 @@ Array EditorSelection::_get_transformable_selected_nodes() {
 
 	Array ret;
 
-	for (List<Node *>::Element *E = selected_node_list.front(); E; E = E->next()) {
+	for (const auto &E : selected_node_list) {
 
-		ret.push_back(E->get());
+		ret.push_back(E);
 	}
 
 	return ret;

@@ -483,8 +483,8 @@ void EditorAutoloadSettings::update_autoload() {
 		}
 	}
 
-	for (List<Node *>::Element *E = nodes_to_add.front(); E; E = E->next()) {
-		get_tree()->get_root()->add_child(E->get());
+	for (const auto &E : nodes_to_add) {
+		get_tree()->get_root()->add_child(E);
 	}
 
 	updating_autoload = false;

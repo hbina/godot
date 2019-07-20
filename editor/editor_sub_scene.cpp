@@ -140,8 +140,7 @@ void EditorSubScene::ok_pressed() {
 	if (selection.size() <= 0) {
 		return;
 	}
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-		Node *c = E->get();
+	for (Node *c : selection) {
 		_remove_selection_child(c);
 	}
 	emit_signal("subscene_selected");
@@ -175,8 +174,7 @@ void EditorSubScene::move(Node *p_new_parent, Node *p_new_owner) {
 		return;
 	}
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-		Node *selnode = E->get();
+	for (Node *selnode : selection) {
 		if (!selnode) {
 			return;
 		}
