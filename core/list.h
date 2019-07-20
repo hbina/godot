@@ -161,22 +161,14 @@ public:
 
 	const Element *getNextElement(const Element *p_elem) const {
 
-		if (internal_state.size() < 2) {
+		if (internal_state.size() < 2 || p_elem->inner_index > internal_state.size() - 2) {
 			return nullptr;
 		}
-
-		for (std::size_t iter = 0; iter < internal_state.size() - 1; ++iter) {
-
-			if (p_elem == internal_state[iter]) {
-				return internal_state[iter + 1];
-			}
-		}
-
-		return nullptr; // p_elem does not exist in this List
+		return internal_state[p_elem->inner_index + 1]; // p_elem does not exist in this List
 	};
 
 	Element *getPreviousElement(const Element *p_elem) {
-
+		// TODO: Because we maintain the ordering all the time, just skip the check
 		if (internal_state.size() < 2) {
 			return nullptr;
 		}
@@ -344,7 +336,7 @@ public:
 	};
 
 	template <class T2>
-	Element *find(const T2 &p_value) {
+	Element *find(const T2 &p_value) const {
 
 		std::size_t find_idx = 0;
 		for (; find_idx < internal_vector.size(); ++find_idx) {
