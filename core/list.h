@@ -34,6 +34,10 @@
 #include "core/os/memory.h"
 #include "core/sort_array.h"
 
+#include <algorithm>
+#include <utility>
+#include <vector>
+
 /**
  * Generic Templatized Linked List Implementation.
  * The implementation differs from the STL one because
@@ -42,679 +46,548 @@
  * from the iterator.
  */
 
-template <class T, class A = DefaultAllocator>
+template <typename T, typename A = DefaultAllocator>
 class List {
-	struct _Data;
-
 public:
 	class Element {
 
-	private:
-		friend class List<T, A>;
-
-		T value;
-		Element *next_ptr;
-		Element *prev_ptr;
-		_Data *data;
-
 	public:
-		/**
-		 * Get NEXT Element iterator, for constant lists.
-		 */
-		_FORCE_INLINE_ const Element *next() const {
+		friend class List<T, A>;
+		List<T, A> *ptr_to_list;
+		std::size_t inner_index;
 
-			return next_ptr;
-		};
-		/**
-		 * Get NEXT Element iterator,
-		 */
-		_FORCE_INLINE_ Element *next() {
+		Element() = delete;
+		Element(List<T, A> *_ptr_to_list, std::size_t _inner_index) :
+				ptr_to_list(_ptr_to_list),
+				inner_index(_inner_index) {}
 
-			return next_ptr;
-		};
+		const Element *next() const {
 
-		/**
-		 * Get PREV Element iterator, for constant lists.
-		 */
-		_FORCE_INLINE_ const Element *prev() const {
-
-			return prev_ptr;
-		};
-		/**
-		 * Get PREV Element iterator,
-		 */
-		_FORCE_INLINE_ Element *prev() {
-
-			return prev_ptr;
+			return ptr_to_list->getNextElement(this);
 		};
 
-		/**
-		 * * operator, for using as *iterator, when iterators are defined on stack.
-		 */
-		_FORCE_INLINE_ const T &operator*() const {
-			return value;
-		};
-		/**
-		 * operator->, for using as iterator->, when iterators are defined on stack, for constant lists.
-		 */
-		_FORCE_INLINE_ const T *operator->() const {
+		Element *next() {
 
-			return &value;
-		};
-		/**
-		 * * operator, for using as *iterator, when iterators are defined on stack,
-		 */
-		_FORCE_INLINE_ T &operator*() {
-			return value;
-		};
-		/**
-		 * operator->, for using as iterator->, when iterators are defined on stack, for constant lists.
-		 */
-		_FORCE_INLINE_ T *operator->() {
-			return &value;
+			return ptr_to_list->getNextElement(this);
 		};
 
-		/**
-		 * get the value stored in this element.
-		 */
-		_FORCE_INLINE_ T &get() {
-			return value;
+		const Element *prev() const {
+
+			return ptr_to_list->getPreviousElement(this);
 		};
-		/**
-		 * get the value stored in this element, for constant lists
-		 */
-		_FORCE_INLINE_ const T &get() const {
-			return value;
+
+		Element *prev() {
+
+			return ptr_to_list->getPreviousElement(this);
 		};
-		/**
-		 * set the value stored in this element.
-		 */
-		_FORCE_INLINE_ void set(const T &p_value) {
-			value = (T &)p_value;
+
+		const T &operator*() const {
+
+			return ptr_to_list->internal_vector[inner_index];
+		};
+
+		const T *operator->() const {
+
+			return &ptr_to_list->internal_vector[inner_index];
+		};
+
+		T &operator*() {
+
+			return ptr_to_list->internal_vector[inner_index];
+		};
+
+		T *operator->() {
+
+			return &ptr_to_list->internal_vector[inner_index];
+		};
+
+		T &get() {
+
+			return ptr_to_list->internal_vector[inner_index];
+		};
+
+		const T &get() const {
+
+			// What does this actually do?
+			return ptr_to_list->internal_vector[inner_index];
+		};
+
+		void set(const T &p_value) {
+
+			// Sets ptr_to_list->internal_vector[inner_index] to p_value
+			ptr_to_list->internal_vector[inner_index] = p_value;
 		};
 
 		void erase() {
 
-			data->erase(this);
-		}
-
-		_FORCE_INLINE_ Element() {
-			next_ptr = 0;
-			prev_ptr = 0;
-			data = NULL;
+			ptr_to_list->erase(this);
 		};
 	};
 
 private:
-	struct _Data {
-
-		Element *first;
-		Element *last;
-		int size_cache;
-
-		bool erase(const Element *p_I) {
-
-			ERR_FAIL_COND_V(!p_I, false);
-			ERR_FAIL_COND_V(p_I->data != this, false);
-
-			if (first == p_I) {
-				first = p_I->next_ptr;
-			};
-
-			if (last == p_I)
-				last = p_I->prev_ptr;
-
-			if (p_I->prev_ptr)
-				p_I->prev_ptr->next_ptr = p_I->next_ptr;
-
-			if (p_I->next_ptr)
-				p_I->next_ptr->prev_ptr = p_I->prev_ptr;
-
-			memdelete_allocator<Element, A>(const_cast<Element *>(p_I));
-			size_cache--;
-
-			return true;
-		}
-	};
-
-	_Data *_data;
+	std::vector<T> internal_vector;
+	std::vector<Element *> internal_state;
 
 public:
-	/**
-	* return a const iterator to the beginning of the list.
-	*/
-	_FORCE_INLINE_ const Element *front() const {
+	typename std::vector<T>::iterator begin2() noexcept {
+		return internal_vector.begin();
+	}
 
-		return _data ? _data->first : 0;
-	};
+	typename std::vector<T>::iterator end2() noexcept {
+		return internal_vector.end();
+	}
 
-	/**
-	* return an iterator to the beginning of the list.
-	*/
-	_FORCE_INLINE_ Element *front() {
-		return _data ? _data->first : 0;
-	};
+	typename std::vector<T>::const_iterator begin() const noexcept {
+		return internal_vector.begin();
+	}
 
-	/**
- 	* return a const iterator to the last member of the list.
-	*/
-	_FORCE_INLINE_ const Element *back() const {
+	typename std::vector<T>::const_iterator end() const noexcept {
+		return internal_vector.end();
+	}
 
-		return _data ? _data->last : 0;
-	};
+	Element *getNextElement(const Element *p_elem) {
 
-	/**
- 	* return an iterator to the last member of the list.
-	*/
-	_FORCE_INLINE_ Element *back() {
-
-		return _data ? _data->last : 0;
-	};
-
-	/**
-	 * store a new element at the end of the list
-	 */
-	Element *push_back(const T &value) {
-
-		if (!_data) {
-
-			_data = memnew_allocator(_Data, A);
-			_data->first = NULL;
-			_data->last = NULL;
-			_data->size_cache = 0;
+		if (internal_state.size() < 2) {
+			return nullptr;
+		}
+		for (std::size_t iter = 0; iter < internal_state.size() - 1; ++iter) {
+			if (p_elem == internal_state[iter]) {
+				return internal_state[iter + 1];
+			}
 		}
 
-		Element *n = memnew_allocator(Element, A);
-		n->value = (T &)value;
+		return nullptr; // p_elem does not exist in this List
+	};
 
-		n->prev_ptr = _data->last;
-		n->next_ptr = 0;
-		n->data = _data;
+	const Element *getNextElement(const Element *p_elem) const {
 
-		if (_data->last) {
-
-			_data->last->next_ptr = n;
+		if (internal_state.size() < 2) {
+			return nullptr;
 		}
 
-		_data->last = n;
+		for (std::size_t iter = 0; iter < internal_state.size() - 1; ++iter) {
 
-		if (!_data->first)
-			_data->first = n;
+			if (p_elem == internal_state[iter]) {
+				return internal_state[iter + 1];
+			}
+		}
 
-		_data->size_cache++;
+		return nullptr; // p_elem does not exist in this List
+	};
 
-		return n;
+	Element *getPreviousElement(const Element *p_elem) {
+
+		if (internal_state.size() < 2) {
+			return nullptr;
+		}
+
+		for (std::size_t iter = 1; iter < internal_state.size(); ++iter) {
+
+			if (p_elem == internal_state[iter]) {
+				return internal_state[iter - 1];
+			}
+		}
+
+		return nullptr; // p_elem does not exist in this List
+	};
+
+	const Element *getPreviousElement(const Element *p_elem) const {
+
+		if (internal_state.size() < 2) {
+			return nullptr;
+		}
+
+		for (std::size_t iter = 1; iter < internal_state.size(); ++iter) {
+
+			if (p_elem == internal_state[iter]) {
+				return internal_state[iter - 1];
+			}
+		}
+
+		return nullptr; // p_elem does not exist in this List
+	};
+
+	const Element *front() const {
+
+		if (internal_state.size() == 0) {
+			return nullptr;
+		}
+		return internal_state[0];
+	};
+
+	Element *front() {
+
+		if (internal_state.size() == 0) {
+			return nullptr;
+		}
+
+		return internal_state[0];
+	};
+
+	const T &frontT() const {
+
+		return internal_vector[0];
+	};
+
+	T &frontT() {
+
+		return internal_vector[0];
+	};
+
+	const Element *back() const {
+
+		if (internal_state.size() == 0) {
+			return nullptr;
+		}
+
+		return internal_state.back();
+	};
+
+	Element *back() {
+
+		if (internal_state.size() == 0) {
+			return nullptr;
+		}
+
+		return internal_state.back();
+	};
+
+	Element *push_back(T &p_value) {
+
+		std::size_t new_idx = internal_vector.size();
+		internal_vector.push_back(p_value);
+		internal_state.push_back(new Element(this, new_idx));
+
+		return internal_state[new_idx];
+	};
+
+	Element *push_back(const T &p_value) {
+
+		std::size_t new_idx = internal_vector.size();
+		internal_vector.push_back(p_value);
+		internal_state.push_back(new Element(this, new_idx));
+
+		return internal_state[new_idx];
 	};
 
 	void pop_back() {
 
-		if (_data && _data->last)
-			erase(_data->last);
-	}
-
-	/**
-	 * store a new element at the beginning of the list
-	 */
-	Element *push_front(const T &value) {
-
-		if (!_data) {
-
-			_data = memnew_allocator(_Data, A);
-			_data->first = NULL;
-			_data->last = NULL;
-			_data->size_cache = 0;
+		if (internal_vector.size() == 0) {
+			return;
 		}
 
-		Element *n = memnew_allocator(Element, A);
-		n->value = (T &)value;
-		n->prev_ptr = 0;
-		n->next_ptr = _data->first;
-		n->data = _data;
+		internal_vector.erase(internal_vector.end() - 1);
+		internal_state.erase(internal_state.end() - 1);
+	};
 
-		if (_data->first) {
+	Element *push_front(const T &p_value) {
 
-			_data->first->prev_ptr = n;
+		internal_vector.insert(internal_vector.begin(), p_value);
+		internal_state.insert(internal_state.begin(), new Element(this, 0));
+
+		for (std::size_t iter = 1; iter < internal_state.size(); ++iter) {
+			++(internal_state[iter]->inner_index);
 		}
-
-		_data->first = n;
-
-		if (!_data->last)
-			_data->last = n;
-
-		_data->size_cache++;
-
-		return n;
+		return internal_state[0];
 	};
 
 	void pop_front() {
 
-		if (_data && _data->first)
-			erase(_data->first);
-	}
-
-	Element *insert_after(Element *p_element, const T &p_value) {
-		CRASH_COND(p_element && (!_data || p_element->data != _data));
-
-		if (!p_element) {
-			return push_back(p_value);
+		if (internal_vector.size() == 0) {
+			return;
 		}
 
-		Element *n = memnew_allocator(Element, A);
-		n->value = (T &)p_value;
-		n->prev_ptr = p_element;
-		n->next_ptr = p_element->next_ptr;
-		n->data = _data;
-
-		if (!p_element->next_ptr) {
-			_data->last = n;
-		} else {
-			p_element->next_ptr->prev_ptr = n;
+		internal_vector.erase(internal_vector.begin());
+		internal_state.erase(internal_state.begin());
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
+			--(internal_state[iter]->inner_index);
 		}
-
-		p_element->next_ptr = n;
-
-		_data->size_cache++;
-
-		return n;
-	}
-
-	Element *insert_before(Element *p_element, const T &p_value) {
-		CRASH_COND(p_element && (!_data || p_element->data != _data));
-
-		if (!p_element) {
-			return push_back(p_value);
-		}
-
-		Element *n = memnew_allocator(Element, A);
-		n->value = (T &)p_value;
-		n->prev_ptr = p_element->prev_ptr;
-		n->next_ptr = p_element;
-		n->data = _data;
-
-		if (!p_element->prev_ptr) {
-			_data->first = n;
-		} else {
-			p_element->prev_ptr->next_ptr = n;
-		}
-
-		p_element->prev_ptr = n;
-
-		_data->size_cache++;
-
-		return n;
-	}
-
-	/**
-	 * find an element in the list,
-	 */
-	template <class T_v>
-	Element *find(const T_v &p_val) {
-
-		Element *it = front();
-		while (it) {
-			if (it->value == p_val) return it;
-			it = it->next();
-		};
-
-		return NULL;
 	};
 
-	/**
-	 * erase an element in the list, by iterator pointing to it. Return true if it was found/erased.
-	 */
-	bool erase(const Element *p_I) {
+	Element *insert_after(Element *p_element, const T &p_value) {
 
-		if (_data) {
-			bool ret = _data->erase(p_I);
+		Element *return_val = nullptr;
+		bool found = false;
 
-			if (_data->size_cache == 0) {
-				memdelete_allocator<_Data, A>(_data);
-				_data = NULL;
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
+
+			if (internal_state[iter] == p_element) {
+
+				internal_vector.insert(internal_vector.begin() + iter + 1, p_value);
+				internal_state.insert(internal_state.begin() + iter + 1, new Element(this, iter + 1));
+				return_val = internal_state[iter + 1];
+				found = true;
 			}
 
-			return ret;
+			if (found) {
+				++(internal_state[iter]->inner_index);
+			}
 		}
 
+		return return_val;
+	};
+
+	Element *insert_before(Element *p_element, const T &p_value) {
+
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
+			if (internal_state[iter] == p_element) {
+				internal_vector.insert(internal_vector.begin() + iter, p_value);
+				internal_state.insert(internal_state.begin() + iter, new Element(this, iter));
+
+				return internal_state[iter];
+			} else {
+				++(internal_state[iter]->inner_index);
+			}
+		}
+
+		return nullptr;
+	};
+
+	template <class T2>
+	Element *find(const T2 &p_value) {
+
+		std::size_t find_idx = 0;
+		for (; find_idx < internal_vector.size(); ++find_idx) {
+			if (p_value == internal_vector[find_idx]) {
+				break;
+			}
+		}
+		return find_idx == internal_vector.size() ? nullptr : internal_state[find_idx];
+	};
+
+	bool erase(const Element *p_elem) {
+
+		bool found = false;
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
+			if (internal_state[iter] == p_elem) {
+				internal_vector.erase(internal_vector.begin() + iter);
+				internal_state.erase(internal_state.begin() + iter);
+				found = true;
+				break;
+			}
+		}
+		updateIndexes(); // Temporary...can be improved by moving all calculations to lambda... I think..
+		return found;
+	};
+
+	bool erase(const T &p_value) {
+		Element *elem = find(p_value);
+		if (elem) {
+			return erase(elem);
+		}
 		return false;
 	};
 
-	/**
-	 * erase the first element in the list, that contains value
-	 */
-	bool erase(const T &value) {
+	bool empty() const noexcept {
 
-		Element *I = find(value);
-		return erase(I);
+		return internal_vector.empty();
 	};
 
-	/**
-	 * return whether the list is empty
-	 */
-	_FORCE_INLINE_ bool empty() const {
-
-		return (!_data || !_data->size_cache);
-	}
-
-	/**
-	 * clear the list
-	 */
-	void clear() {
-
-		while (front()) {
-			erase(front());
-		};
+	void clear() noexcept {
+		internal_state.clear();
+		internal_vector.clear();
 	};
 
-	_FORCE_INLINE_ int size() const {
+	int size() const noexcept {
 
-		return _data ? _data->size_cache : 0;
-	}
+		return internal_vector.size();
+	};
 
-	void swap(Element *p_A, Element *p_B) {
+	void swap(Element *p_elem_left, Element *p_elem_right) {
 
-		ERR_FAIL_COND(!p_A || !p_B);
-		ERR_FAIL_COND(p_A->data != _data);
-		ERR_FAIL_COND(p_B->data != _data);
+		std::size_t p_idx_left = internal_state.size() + 1;
+		std::size_t p_idx_right = internal_state.size() + 1;
 
-		Element *A_prev = p_A->prev_ptr;
-		Element *A_next = p_A->next_ptr;
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
 
-		p_A->next_ptr = p_B->next_ptr;
-		p_A->prev_ptr = p_B->prev_ptr;
+			if (internal_state[iter] == p_elem_left) {
+				p_idx_left = iter;
+			} else if (internal_state[iter] == p_elem_right) {
+				p_elem_right = iter;
+			}
+		}
+		if (p_idx_left != internal_state.size() + 1 && p_idx_right != internal_state.size() + 1) {
 
-		p_B->next_ptr = A_next;
-		p_B->prev_ptr = A_prev;
+			internal_state[p_idx_left]->inner_index = p_idx_right;
+			internal_state[p_idx_right]->inner_index = p_idx_left;
+			std::iter_swap(internal_state.begin() + p_idx_left, internal_state.begin() + p_idx_right);
+			std::iter_swap(internal_vector.begin() + p_idx_left, internal_vector.begin() + p_idx_right);
+		}
+	};
 
-		if (p_A->prev_ptr)
-			p_A->prev_ptr->next_ptr = p_A;
-		if (p_A->next_ptr)
-			p_A->next_ptr->prev_ptr = p_A;
-
-		if (p_B->prev_ptr)
-			p_B->prev_ptr->next_ptr = p_B;
-		if (p_B->next_ptr)
-			p_B->next_ptr->prev_ptr = p_B;
-	}
-	/**
-	 * copy the list
-	 */
-	void operator=(const List &p_list) {
+	List &operator=(const List &p_list) {
 
 		clear();
-		const Element *it = p_list.front();
-		while (it) {
 
-			push_back(it->get());
-			it = it->next();
-		}
-	}
-
-	T &operator[](int p_index) {
-
-		CRASH_BAD_INDEX(p_index, size());
-
-		Element *I = front();
-		int c = 0;
-		while (I) {
-
-			if (c == p_index) {
-
-				return I->get();
-			}
-			I = I->next();
-			c++;
+		for (const T &p_value : p_list.internal_vector) {
+			internal_vector.push_back(p_value);
 		}
 
-		CRASH_NOW(); // bug!!
-	}
-
-	const T &operator[](int p_index) const {
-
-		CRASH_BAD_INDEX(p_index, size());
-
-		const Element *I = front();
-		int c = 0;
-		while (I) {
-
-			if (c == p_index) {
-
-				return I->get();
-			}
-			I = I->next();
-			c++;
+		for (std::size_t iter = 0; iter < p_list.internal_state.size(); ++iter) {
+			internal_state.push_back(new Element(this, iter));
 		}
 
-		CRASH_NOW(); // bug!!
-	}
+		return *this;
+	};
 
-	void move_to_back(Element *p_I) {
+	T &operator[](std::size_t p_index) {
 
-		ERR_FAIL_COND(p_I->data != _data);
-		if (!p_I->next_ptr)
+		return internal_vector[p_index];
+	};
+
+	const T &operator[](std::size_t p_index) const {
+
+		return internal_vector[p_index];
+	};
+
+	void move_to_back(Element *p_elem) {
+
+		// Find p_elem in internal_vector
+		// Move it to the back???
+		if (internal_state.size() == 0) {
 			return;
+		}
 
-		if (_data->first == p_I) {
-			_data->first = p_I->next_ptr;
-		};
+		const std::size_t last_idx = internal_state.size() - 1;
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
+			if (internal_state[iter]->inner_index == last_idx) {
+				internal_state[iter]->inner_index = p_elem->inner_index;
+			}
+		}
 
-		if (_data->last == p_I)
-			_data->last = p_I->prev_ptr;
-
-		if (p_I->prev_ptr)
-			p_I->prev_ptr->next_ptr = p_I->next_ptr;
-
-		p_I->next_ptr->prev_ptr = p_I->prev_ptr;
-
-		_data->last->next_ptr = p_I;
-		p_I->prev_ptr = _data->last;
-		p_I->next_ptr = NULL;
-		_data->last = p_I;
-	}
+		std::iter_swap(internal_vector.end(), internal_vector.begin() + p_elem->inner_index);
+		p_elem->inner_index = last_idx;
+	};
 
 	void invert() {
 
-		int s = size() / 2;
-		Element *F = front();
-		Element *B = back();
-		for (int i = 0; i < s; i++) {
-
-			SWAP(F->value, B->value);
-			F = F->next();
-			B = B->prev();
-		}
-	}
-
-	void move_to_front(Element *p_I) {
-
-		ERR_FAIL_COND(p_I->data != _data);
-		if (!p_I->prev_ptr)
-			return;
-
-		if (_data->first == p_I) {
-			_data->first = p_I->next_ptr;
-		};
-
-		if (_data->last == p_I)
-			_data->last = p_I->prev_ptr;
-
-		p_I->prev_ptr->next_ptr = p_I->next_ptr;
-
-		if (p_I->next_ptr)
-			p_I->next_ptr->prev_ptr = p_I->prev_ptr;
-
-		_data->first->prev_ptr = p_I;
-		p_I->next_ptr = _data->first;
-		p_I->prev_ptr = NULL;
-		_data->first = p_I;
-	}
-
-	void move_before(Element *value, Element *where) {
-
-		if (value->prev_ptr) {
-			value->prev_ptr->next_ptr = value->next_ptr;
-		} else {
-			_data->first = value->next_ptr;
-		}
-		if (value->next_ptr) {
-			value->next_ptr->prev_ptr = value->prev_ptr;
-		} else {
-			_data->last = value->prev_ptr;
-		}
-
-		value->next_ptr = where;
-		if (!where) {
-			value->prev_ptr = _data->last;
-			_data->last = value;
-			return;
-		};
-
-		value->prev_ptr = where->prev_ptr;
-
-		if (where->prev_ptr) {
-			where->prev_ptr->next_ptr = value;
-		} else {
-			_data->first = value;
-		};
-
-		where->prev_ptr = value;
+		// Iterate through internal_vector
+		// change inner_index = size() - inner_index
+		// invert internal_vector
+		std::reverse(internal_state.begin(), internal_state.end());
+		std::reverse(internal_vector.begin(), internal_vector.end());
 	};
 
-	/**
-	 * simple insertion sort
-	 */
+	void move_to_front(Element *p_elem) {
+
+		std::size_t iter = 1;
+		for (; iter < internal_state.size(); ++iter) {
+			if (internal_state[iter] == p_elem) {
+				std::iter_swap(internal_state.begin(), internal_state.begin() + iter);
+				break;
+			}
+		}
+
+		if (iter != internal_state.size()) {
+			std::iter_swap(internal_vector.begin(), internal_vector.begin() + iter);
+		}
+	};
+
+	void move_before(Element *p_value, Element *p_where) {
+
+		std::size_t iter_p_value = internal_state.size();
+		std::size_t iter_p_where = internal_state.size();
+
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
+
+			if (internal_state[iter] == p_value) {
+				iter_p_value = iter;
+			} else if (internal_state[iter] == p_where) {
+				iter_p_where = iter;
+			}
+			if (iter_p_value != internal_state.size() && iter_p_where != internal_state.size()) {
+				return;
+			}
+		}
+
+		if (iter_p_value != internal_state.size() && iter_p_where != internal_state.size()) {
+
+			std::iter_swap(internal_vector.begin() + iter_p_value, internal_vector.begin() + iter_p_where);
+			std::iter_swap(internal_state.begin() + iter_p_value, internal_state.begin() + iter_p_where);
+		}
+	};
 
 	void sort() {
 
-		sort_custom<Comparator<T> >();
-	}
+		std::sort(
+				internal_vector.begin(),
+				internal_vector.end());
+		std::sort(
+				internal_state.begin(),
+				internal_state.end(),
+				[this](const Element *p_left, const Element *p_right) {
+					return this->internal_vector[p_left->inner_index] < this->internal_vector[p_right->inner_index];
+				});
+		updateIndexes();
+	};
 
-	template <class C>
+	template <typename C>
 	void sort_custom_inplace() {
-
-		if (size() < 2)
-			return;
-
-		Element *from = front();
-		Element *current = from;
-		Element *to = from;
-
-		while (current) {
-
-			Element *next = current->next_ptr;
-
-			if (from != current) {
-
-				current->prev_ptr = NULL;
-				current->next_ptr = from;
-
-				Element *find = from;
-				C less;
-				while (find && less(find->value, current->value)) {
-
-					current->prev_ptr = find;
-					current->next_ptr = find->next_ptr;
-					find = find->next_ptr;
-				}
-
-				if (current->prev_ptr)
-					current->prev_ptr->next_ptr = current;
-				else
-					from = current;
-
-				if (current->next_ptr)
-					current->next_ptr->prev_ptr = current;
-				else
-					to = current;
-			} else {
-
-				current->prev_ptr = NULL;
-				current->next_ptr = NULL;
-			}
-
-			current = next;
-		}
-		_data->first = from;
-		_data->last = to;
-	}
-
-	template <class C>
-	struct AuxiliaryComparator {
-
-		C compare;
-		_FORCE_INLINE_ bool operator()(const Element *a, const Element *b) const {
-
-			return compare(a->value, b->value);
-		}
+		C c;
+		std::stable_sort(
+				internal_vector.begin(),
+				internal_vector.end(),
+				[&c](const T &p_left, const T &p_right) {
+					return c(p_left, p_right);
+				});
+		std::stable_sort(
+				internal_state.begin(),
+				internal_state.end(),
+				[&c, this](const Element *p_left, const Element *p_right) {
+					return c(this->internal_vector[p_left->inner_index], this->internal_vector[p_right->inner_index]);
+				});
+		updateIndexes();
 	};
 
 	template <class C>
 	void sort_custom() {
-
-		//this version uses auxiliary memory for speed.
-		//if you don't want to use auxiliary memory, use the in_place version
-
-		int s = size();
-		if (s < 2)
-			return;
-
-		Element **aux_buffer = memnew_arr(Element *, s);
-
-		int idx = 0;
-		for (Element *E = front(); E; E = E->next_ptr) {
-
-			aux_buffer[idx] = E;
-			idx++;
-		}
-
-		SortArray<Element *, AuxiliaryComparator<C> > sort;
-		sort.sort(aux_buffer, s);
-
-		_data->first = aux_buffer[0];
-		aux_buffer[0]->prev_ptr = NULL;
-		aux_buffer[0]->next_ptr = aux_buffer[1];
-
-		_data->last = aux_buffer[s - 1];
-		aux_buffer[s - 1]->prev_ptr = aux_buffer[s - 2];
-		aux_buffer[s - 1]->next_ptr = NULL;
-
-		for (int i = 1; i < s - 1; i++) {
-
-			aux_buffer[i]->prev_ptr = aux_buffer[i - 1];
-			aux_buffer[i]->next_ptr = aux_buffer[i + 1];
-		}
-
-		memdelete_arr(aux_buffer);
-	}
+		C c;
+		std::sort(
+				internal_vector.begin(),
+				internal_vector.end(),
+				[&c](const T &p_left, const T &p_right) {
+					return c(p_left, p_right);
+				});
+		std::sort(
+				internal_state.begin(),
+				internal_state.end(),
+				[&c, this](const Element *p_left, const Element *p_right) {
+					return c(this->internal_vector[p_left->inner_index], this->internal_vector[p_right->inner_index]);
+				});
+		updateIndexes();
+	};
 
 	const void *id() const {
-		return (void *)_data;
-	}
+		return (void *)&internal_vector;
+	};
 
-	/**
-	 * copy constructor for the list
-	 */
 	List(const List &p_list) {
 
-		_data = NULL;
-		const Element *it = p_list.front();
-		while (it) {
-
-			push_back(it->get());
-			it = it->next();
+		if (this == &p_list) {
+			return;
 		}
-	}
 
-	List() {
-		_data = NULL;
+		internal_state.clear();
+		internal_vector.clear();
+
+		// Copies
+		for (std::size_t iter = 0; iter < p_list.internal_vector.size(); ++iter) {
+			internal_vector.push_back(p_list.internal_vector[iter]);
+			internal_state.push_back(new Element(this, iter));
+		}
 	};
+	List() = default;
 	~List() {
 		clear();
-		if (_data) {
-
-			ERR_FAIL_COND(_data->size_cache);
-			memdelete_allocator<_Data, A>(_data);
-		}
 	};
+
+private:
+	void updateIndexes() {
+
+		for (std::size_t iter = 0; iter < internal_state.size(); ++iter) {
+			internal_state[iter]->inner_index = iter;
+		}
+	}
 };
 
 #endif
