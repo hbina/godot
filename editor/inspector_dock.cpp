@@ -82,11 +82,13 @@ void InspectorDock::_menu_option(int p_option) {
 		case OBJECT_UNIQUE_RESOURCES: {
 			editor_data->apply_changes_in_editors();
 			if (current) {
+				print_verbose("current: " + current->to_string());
 				List<PropertyInfo> props;
 				current->get_property_list(&props);
 				Map<RES, RES> duplicates;
 				for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 
+					print_verbose("name : " + E->get().name);
 					if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
 						continue;
 
@@ -103,6 +105,7 @@ void InspectorDock::_menu_option(int p_option) {
 								}
 								res = duplicates[res];
 
+								print_verbose("change current current " + current->to_string() + " > " + E->get().name);
 								current->set(E->get().name, res);
 								editor->get_inspector()->update_property(E->get().name);
 							}
@@ -391,6 +394,10 @@ void InspectorDock::clear() {
 
 void InspectorDock::update(Object *p_object) {
 
+	if (p_object == current) {
+		return;
+	}
+
 	EditorHistory *editor_history = EditorNode::get_singleton()->get_editor_history();
 	backward_button->set_disabled(editor_history->is_at_beginning());
 	forward_button->set_disabled(editor_history->is_at_end());
@@ -400,6 +407,18 @@ void InspectorDock::update(Object *p_object) {
 		history_menu->set_disabled(false);
 	}
 	editor_path->update_path();
+
+	if (current) {
+		print_verbose("old current " + current->to_string());
+	} else {
+		print_verbose("old current is null");
+	}
+
+	if (p_object) {
+		print_verbose("  p_object " + p_object->to_string());
+	} else {
+		print_verbose("  p_object is null");
+	}
 
 	current = p_object;
 
