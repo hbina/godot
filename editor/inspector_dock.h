@@ -127,7 +127,7 @@ public:
 	void open_resource(const String &p_type);
 	void clear();
 	void set_warning(const String &p_message);
-	void update(Object *p_object);
+	void update2(Object *p_object);
 	Container *get_addon_area();
 	EditorInspector *get_inspector() { return inspector; }
 

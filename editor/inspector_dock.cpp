@@ -82,7 +82,6 @@ void InspectorDock::_menu_option(int p_option) {
 		case OBJECT_UNIQUE_RESOURCES: {
 			editor_data->apply_changes_in_editors();
 			if (current) {
-				print_verbose("current: " + current->to_string());
 				List<PropertyInfo> props;
 				current->get_property_list(&props);
 				Map<RES, RES> duplicates;
@@ -169,8 +168,8 @@ void InspectorDock::_resource_file_selected(String p_file) {
 }
 
 void InspectorDock::_save_resource(bool save_as) const {
-	uint32_t current = EditorNode::get_singleton()->get_editor_history()->get_current();
-	Object *current_obj = current > 0 ? ObjectDB::get_instance(current) : NULL;
+	uint32_t current_id = EditorNode::get_singleton()->get_editor_history()->get_current();
+	Object *current_obj = current_id > 0 ? ObjectDB::get_instance(current_id) : NULL;
 
 	ERR_FAIL_COND(!Object::cast_to<Resource>(current_obj));
 
@@ -183,8 +182,8 @@ void InspectorDock::_save_resource(bool save_as) const {
 }
 
 void InspectorDock::_unref_resource() const {
-	uint32_t current = EditorNode::get_singleton()->get_editor_history()->get_current();
-	Object *current_obj = current > 0 ? ObjectDB::get_instance(current) : NULL;
+	uint32_t current_id = EditorNode::get_singleton()->get_editor_history()->get_current();
+	Object *current_obj = current_id > 0 ? ObjectDB::get_instance(current_id) : NULL;
 
 	ERR_FAIL_COND(!Object::cast_to<Resource>(current_obj));
 
@@ -194,8 +193,8 @@ void InspectorDock::_unref_resource() const {
 }
 
 void InspectorDock::_copy_resource() const {
-	uint32_t current = EditorNode::get_singleton()->get_editor_history()->get_current();
-	Object *current_obj = current > 0 ? ObjectDB::get_instance(current) : NULL;
+	uint32_t current_id = EditorNode::get_singleton()->get_editor_history()->get_current();
+	Object *current_obj = current_id > 0 ? ObjectDB::get_instance(current_id) : NULL;
 
 	ERR_FAIL_COND(!Object::cast_to<Resource>(current_obj));
 
@@ -392,7 +391,7 @@ void InspectorDock::set_warning(const String &p_message) {
 void InspectorDock::clear() {
 }
 
-void InspectorDock::update(Object *p_object) {
+void InspectorDock::update2(Object *p_object) {
 
 	if (p_object == current) {
 		return;

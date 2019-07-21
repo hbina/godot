@@ -201,6 +201,7 @@ bool EditorHistory::is_current_inspector_only() const {
 	const History &h = history[current];
 	return h.path[h.level].inspector_only;
 }
+
 ObjectID EditorHistory::get_current() {
 
 	if (current < 0 || current >= history.size())
