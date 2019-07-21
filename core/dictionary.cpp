@@ -195,10 +195,10 @@ uint32_t Dictionary::hash() const {
 	List<Variant> keys;
 	get_key_list(&keys);
 
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+	for (const auto &E : keys) {
 
-		h = hash_djb2_one_32(E->get().hash(), h);
-		h = hash_djb2_one_32(operator[](E->get()).hash(), h);
+		h = hash_djb2_one_32(E.hash(), h);
+		h = hash_djb2_one_32(operator[](E).hash(), h);
 	}
 
 	return h;
@@ -258,8 +258,8 @@ Dictionary Dictionary::duplicate(bool p_deep) const {
 	List<Variant> keys;
 	get_key_list(&keys);
 
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
-		n[E->get()] = p_deep ? operator[](E->get()).duplicate(p_deep) : operator[](E->get());
+	for (const auto &E : keys) {
+		n[E] = p_deep ? operator[](E).duplicate(p_deep) : operator[](E);
 	}
 
 	return n;

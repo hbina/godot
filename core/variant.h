@@ -417,7 +417,10 @@ public:
 
 	void operator=(const Variant &p_variant); // only this is enough for all the other types
 	Variant(const Variant &p_variant);
-	_FORCE_INLINE_ Variant() { type = NIL; }
+	_FORCE_INLINE_ Variant() {
+		_data = { 0 },
+		type = NIL;
+	}
 	_FORCE_INLINE_ ~Variant() {
 		if (type != Variant::NIL) clear();
 	}

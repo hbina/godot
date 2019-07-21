@@ -165,7 +165,7 @@ public:
 		Ref r;
 		r.reference = Object::cast_to<T>(refb);
 		ref(r);
-		r.reference = NULL;
+		r.reference = nullptr;
 	}
 
 	void operator=(const RefPtr &p_refptr) {
@@ -179,7 +179,7 @@ public:
 		Ref r;
 		r.reference = Object::cast_to<T>(refb);
 		ref(r);
-		r.reference = NULL;
+		r.reference = nullptr;
 	}
 
 	void operator=(const Variant &p_variant) {
@@ -194,7 +194,7 @@ public:
 		Ref r;
 		r.reference = Object::cast_to<T>(refb);
 		ref(r);
-		r.reference = NULL;
+		r.reference = nullptr;
 	}
 
 	template <class T_Other>
@@ -212,14 +212,14 @@ public:
 
 	Ref(const Ref &p_from) {
 
-		reference = NULL;
+		reference = nullptr;
 		ref(p_from);
 	}
 
 	template <class T_Other>
 	Ref(const Ref<T_Other> &p_from) {
 
-		reference = NULL;
+		reference = nullptr;
 		Reference *refb = const_cast<Reference *>(static_cast<const Reference *>(p_from.ptr()));
 		if (!refb) {
 			unref();
@@ -228,12 +228,12 @@ public:
 		Ref r;
 		r.reference = Object::cast_to<T>(refb);
 		ref(r);
-		r.reference = NULL;
+		r.reference = nullptr;
 	}
 
 	Ref(T *p_reference) {
 
-		reference = NULL;
+		reference = nullptr;
 		if (p_reference)
 			ref_pointer(p_reference);
 	}
@@ -242,7 +242,7 @@ public:
 
 		RefPtr refptr = p_variant;
 		Ref<Reference> *irr = reinterpret_cast<Ref<Reference> *>(refptr.get_data());
-		reference = NULL;
+		reference = nullptr;
 		Reference *refb = irr->ptr();
 		if (!refb) {
 			unref();
@@ -251,13 +251,13 @@ public:
 		Ref r;
 		r.reference = Object::cast_to<T>(refb);
 		ref(r);
-		r.reference = NULL;
+		r.reference = nullptr;
 	}
 
 	Ref(const RefPtr &p_refptr) {
 
 		Ref<Reference> *irr = reinterpret_cast<Ref<Reference> *>(p_refptr.get_data());
-		reference = NULL;
+		reference = nullptr;
 		Reference *refb = irr->ptr();
 		if (!refb) {
 			unref();
@@ -266,11 +266,11 @@ public:
 		Ref r;
 		r.reference = Object::cast_to<T>(refb);
 		ref(r);
-		r.reference = NULL;
+		r.reference = nullptr;
 	}
 
-	inline bool is_valid() const { return reference != NULL; }
-	inline bool is_null() const { return reference == NULL; }
+	inline bool is_valid() const { return reference != nullptr; }
+	inline bool is_null() const { return reference == nullptr; }
 
 	void unref() {
 		//TODO this should be moved to mutexes, since this engine does not really
@@ -281,7 +281,7 @@ public:
 
 			memdelete(reference);
 		}
-		reference = NULL;
+		reference = nullptr;
 	}
 
 	void instance() {
@@ -290,7 +290,7 @@ public:
 
 	Ref() {
 
-		reference = NULL;
+		reference = nullptr;
 	}
 
 	~Ref() {

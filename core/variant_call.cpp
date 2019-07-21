@@ -1151,8 +1151,7 @@ Variant Variant::construct(const Variant::Type p_type, const Variant **p_args, i
 
 		_VariantCall::ConstructFunc &c = _VariantCall::construct_funcs[p_type];
 
-		for (List<_VariantCall::ConstructData>::Element *E = c.constructors.front(); E; E = E->next()) {
-			const _VariantCall::ConstructData &cd = E->get();
+		for (const auto &cd : c.constructors) {
 
 			if (cd.arg_count != p_argcount)
 				continue;
@@ -1395,9 +1394,9 @@ void Variant::get_constants_for_type(Variant::Type p_type, List<StringName> *p_c
 	_VariantCall::ConstantData &cd = _VariantCall::constant_data[p_type];
 
 #ifdef DEBUG_ENABLED
-	for (List<StringName>::Element *E = cd.value_ordered.front(); E; E = E->next()) {
+	for (const auto &E : cd.value_ordered) {
 
-		p_constants->push_back(E->get());
+		p_constants->push_back(E);
 #else
 	for (Map<StringName, int>::Element *E = cd.value.front(); E; E = E->next()) {
 

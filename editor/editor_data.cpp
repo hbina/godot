@@ -958,8 +958,8 @@ void EditorData::script_class_load_icon_paths() {
 		List<Variant> keys;
 		d.get_key_list(&keys);
 
-		for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
-			String name = E->get().operator String();
+		for (const auto &E : keys) {
+			String name = E.operator String();
 			_script_class_icon_paths[name] = d[name];
 
 			String path = ScriptServer::get_global_class_path(name);

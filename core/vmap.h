@@ -31,8 +31,8 @@
 #ifndef VMAP_H
 #define VMAP_H
 
-#include "core/cowdata.h"
 #include "core/typedefs.h"
+#include "core/vector.h"
 
 template <class T, class V>
 class VMap {
@@ -42,9 +42,9 @@ public:
 		T key;
 		V value;
 
-		_FORCE_INLINE_ Pair() {}
+		Pair() {}
 
-		_FORCE_INLINE_ Pair(const T &p_key, const V &p_value) {
+		Pair(const T &p_key, const V &p_value) {
 
 			key = p_key;
 			value = p_value;
@@ -52,17 +52,17 @@ public:
 	};
 
 private:
-	CowData<Pair> _cowdata;
+	Vector<Pair> internal_vector;
 
-	_FORCE_INLINE_ int _find(const T &p_val, bool &r_exact) const {
+	int _find(const T &p_val, bool &r_exact) const {
 
 		r_exact = false;
-		if (_cowdata.empty())
+		if (internal_vector.empty())
 			return 0;
 
 		int low = 0;
-		int high = _cowdata.size() - 1;
-		const Pair *a = _cowdata.ptr();
+		int high = internal_vector.size() - 1;
+		const Pair *a = internal_vector.ptr();
 		int middle = 0;
 
 #ifdef DEBUG_ENABLED
@@ -88,15 +88,15 @@ private:
 		return middle;
 	}
 
-	_FORCE_INLINE_ int _find_exact(const T &p_val) const {
+	int _find_exact(const T &p_val) const {
 
-		if (_cowdata.empty())
+		if (internal_vector.empty())
 			return -1;
 
 		int low = 0;
-		int high = _cowdata.size() - 1;
+		int high = internal_vector.size() - 1;
 		int middle;
-		const Pair *a = _cowdata.ptr();
+		const Pair *a = internal_vector.ptr();
 
 		while (low <= high) {
 			middle = (low + high) / 2;
@@ -119,10 +119,10 @@ public:
 		bool exact;
 		int pos = _find(p_key, exact);
 		if (exact) {
-			_cowdata.get_m(pos).value = p_val;
+			internal_vector.get(pos).value = p_val;
 			return pos;
 		}
-		_cowdata.insert(pos, Pair(p_key, p_val));
+		internal_vector.insert(pos, Pair(p_key, p_val));
 		return pos;
 	}
 
@@ -136,7 +136,7 @@ public:
 		int pos = _find_exact(p_val);
 		if (pos < 0)
 			return;
-		_cowdata.remove(pos);
+		internal_vector.remove(pos);
 	}
 
 	int find(const T &p_val) const {
@@ -150,37 +150,37 @@ public:
 		return _find(p_val, exact);
 	}
 
-	_FORCE_INLINE_ int size() const { return _cowdata.size(); }
-	_FORCE_INLINE_ bool empty() const { return _cowdata.empty(); }
+	int size() const { return internal_vector.size(); }
+	bool empty() const { return internal_vector.empty(); }
 
 	const Pair *get_array() const {
 
-		return _cowdata.ptr();
+		return internal_vector.ptr();
 	}
 
 	Pair *get_array() {
 
-		return _cowdata.ptrw();
+		return internal_vector.ptrw();
 	}
 
 	const V &getv(int p_index) const {
 
-		return _cowdata.get(p_index).value;
+		return internal_vector.get(p_index).value;
 	}
 
 	V &getv(int p_index) {
 
-		return _cowdata.get_m(p_index).value;
+		return internal_vector.get(p_index).value;
 	}
 
 	const T &getk(int p_index) const {
 
-		return _cowdata.get(p_index).key;
+		return internal_vector.get(p_index).key;
 	}
 
 	T &getk(int p_index) {
 
-		return _cowdata.get_m(p_index).key;
+		return internal_vector.get(p_index).key;
 	}
 
 	inline const V &operator[](const T &p_key) const {
@@ -189,7 +189,7 @@ public:
 
 		CRASH_COND(pos < 0);
 
-		return _cowdata.get(pos).value;
+		return internal_vector.get(pos).value;
 	}
 
 	inline V &operator[](const T &p_key) {
@@ -200,13 +200,18 @@ public:
 			pos = insert(p_key, val);
 		}
 
-		return _cowdata.get_m(pos).value;
+		return internal_vector.get(pos).value;
 	}
 
-	_FORCE_INLINE_ VMap(){};
-	_FORCE_INLINE_ VMap(const VMap &p_from) { _cowdata._ref(p_from._cowdata); }
+	VMap(){};
+	VMap(const VMap &p_from) {
+		if (this == &p_from) {
+			return;
+		}
+		internal_vector = p_from.internal_vector;
+	}
 	inline VMap &operator=(const VMap &p_from) {
-		_cowdata._ref(p_from._cowdata);
+		internal_vector = p_from.internal_vector;
 		return *this;
 	}
 };

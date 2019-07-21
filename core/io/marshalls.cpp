@@ -1152,7 +1152,7 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 			List<Variant> keys;
 			d.get_key_list(&keys);
 
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
 				/*
 				CharString utf8 = E->->utf8();
@@ -1168,12 +1168,12 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 					r_len++; //pad
 				*/
 				int len;
-				encode_variant(E->get(), buf, len, p_full_objects);
+				encode_variant(E, buf, len, p_full_objects);
 				ERR_FAIL_COND_V(len % 4, ERR_BUG);
 				r_len += len;
 				if (buf)
 					buf += len;
-				Variant *v = d.getptr(E->get());
+				Variant *v = d.getptr(E);
 				ERR_FAIL_COND_V(!v, ERR_BUG);
 				encode_variant(*v, buf, len, p_full_objects);
 				ERR_FAIL_COND_V(len % 4, ERR_BUG);

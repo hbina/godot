@@ -1,5 +1,5 @@
 /*************************************************************************/
-/*  cowdata.h                                                            */
+/*  TMP_CowData_TMP.h                                                            */
 /*************************************************************************/
 /*                       This file is part of:                           */
 /*                           GODOT ENGINE                                */
@@ -28,8 +28,8 @@
 /* SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                */
 /*************************************************************************/
 
-#ifndef COWDATA_H_
-#define COWDATA_H_
+#ifndef TMP_CowData_TMP_H_
+#define TMP_CowData_TMP_H_
 
 #include <string.h>
 
@@ -44,7 +44,7 @@ template <class T, class V>
 class VMap;
 
 template <class T>
-class CowData {
+class TMP_CowData_TMP {
 	template <class TV>
 	friend class Vector;
 	friend class String;
@@ -105,12 +105,12 @@ private:
 	}
 
 	void _unref(void *p_data);
-	void _ref(const CowData *p_from);
-	void _ref(const CowData &p_from);
+	void _ref(const TMP_CowData_TMP *p_from);
+	void _ref(const TMP_CowData_TMP &p_from);
 	void _copy_on_write();
 
 public:
-	void operator=(const CowData<T> &p_from) { _ref(p_from); }
+	void operator=(const TMP_CowData_TMP<T> &p_from) { _ref(p_from); }
 
 	_FORCE_INLINE_ T *ptrw() {
 		_copy_on_write();
@@ -181,13 +181,13 @@ public:
 
 	int find(const T &p_val, int p_from = 0) const;
 
-	_FORCE_INLINE_ CowData();
-	_FORCE_INLINE_ ~CowData();
-	_FORCE_INLINE_ CowData(CowData<T> &p_from) { _ref(p_from); };
+	_FORCE_INLINE_ TMP_CowData_TMP();
+	_FORCE_INLINE_ ~TMP_CowData_TMP();
+	_FORCE_INLINE_ TMP_CowData_TMP(TMP_CowData_TMP<T> &p_from) { _ref(p_from); };
 };
 
 template <class T>
-void CowData<T>::_unref(void *p_data) {
+void TMP_CowData_TMP<T>::_unref(void *p_data) {
 
 	if (!p_data)
 		return;
@@ -213,7 +213,7 @@ void CowData<T>::_unref(void *p_data) {
 }
 
 template <class T>
-void CowData<T>::_copy_on_write() {
+void TMP_CowData_TMP<T>::_copy_on_write() {
 
 	if (!_ptr)
 		return;
@@ -247,7 +247,7 @@ void CowData<T>::_copy_on_write() {
 }
 
 template <class T>
-Error CowData<T>::resize(int p_size) {
+Error TMP_CowData_TMP<T>::resize(int p_size) {
 
 	ERR_FAIL_COND_V(p_size < 0, ERR_INVALID_PARAMETER);
 
@@ -318,7 +318,7 @@ Error CowData<T>::resize(int p_size) {
 }
 
 template <class T>
-int CowData<T>::find(const T &p_val, int p_from) const {
+int TMP_CowData_TMP<T>::find(const T &p_val, int p_from) const {
 	int ret = -1;
 
 	if (p_from < 0 || size() == 0) {
@@ -336,12 +336,12 @@ int CowData<T>::find(const T &p_val, int p_from) const {
 }
 
 template <class T>
-void CowData<T>::_ref(const CowData *p_from) {
+void TMP_CowData_TMP<T>::_ref(const TMP_CowData_TMP *p_from) {
 	_ref(*p_from);
 }
 
 template <class T>
-void CowData<T>::_ref(const CowData &p_from) {
+void TMP_CowData_TMP<T>::_ref(const TMP_CowData_TMP &p_from) {
 
 	if (_ptr == p_from._ptr)
 		return; // self assign, do nothing.
@@ -358,13 +358,13 @@ void CowData<T>::_ref(const CowData &p_from) {
 }
 
 template <class T>
-CowData<T>::CowData() {
+TMP_CowData_TMP<T>::TMP_CowData_TMP() {
 
 	_ptr = NULL;
 }
 
 template <class T>
-CowData<T>::~CowData() {
+TMP_CowData_TMP<T>::~TMP_CowData_TMP() {
 
 	_unref(_ptr);
 }

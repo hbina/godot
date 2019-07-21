@@ -1096,9 +1096,9 @@ PoolVector<String> Object::_get_meta_list_bind() const {
 
 	List<Variant> keys;
 	metadata.get_key_list(&keys);
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+	for (const auto &E : keys) {
 
-		_metaret.push_back(E->get());
+		_metaret.push_back(E);
 	}
 
 	return _metaret;
@@ -1107,9 +1107,9 @@ void Object::get_meta_list(List<String> *p_list) const {
 
 	List<Variant> keys;
 	metadata.get_key_list(&keys);
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+	for (const auto &E : keys) {
 
-		p_list->push_back(E->get());
+		p_list->push_back(E);
 	}
 }
 
@@ -1642,10 +1642,10 @@ void Object::_clear_internal_resource_paths(const Variant &p_var) {
 			List<Variant> keys;
 			d.get_key_list(&keys);
 
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
-				_clear_internal_resource_paths(E->get());
-				_clear_internal_resource_paths(d[E->get()]);
+				_clear_internal_resource_paths(E);
+				_clear_internal_resource_paths(d[E]);
 			}
 		} break;
 		default: {

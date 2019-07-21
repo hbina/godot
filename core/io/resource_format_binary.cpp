@@ -1516,15 +1516,15 @@ void ResourceFormatSaverBinaryInstance::write_variant(FileAccess *f, const Varia
 			List<Variant> keys;
 			d.get_key_list(&keys);
 
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
 				/*
 				if (!_check_type(dict[E->get()]))
 					continue;
 				*/
 
-				write_variant(f, E->get(), resource_set, external_resources, string_map);
-				write_variant(f, d[E->get()], resource_set, external_resources, string_map);
+				write_variant(f, E, resource_set, external_resources, string_map);
+				write_variant(f, d[E], resource_set, external_resources, string_map);
 			}
 
 		} break;
@@ -1705,10 +1705,10 @@ void ResourceFormatSaverBinaryInstance::_find_resources(const Variant &p_variant
 			Dictionary d = p_variant;
 			List<Variant> keys;
 			d.get_key_list(&keys);
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
-				_find_resources(E->get());
-				Variant v = d[E->get()];
+				_find_resources(E);
+				Variant v = d[E];
 				_find_resources(v);
 			}
 		} break;

@@ -35,6 +35,25 @@
 
 #include "editor_file_dialog.h"
 
+struct AutoLoadInfo {
+	String name;
+	String path;
+	bool is_singleton;
+	bool in_editor;
+	int order;
+	Node *node;
+
+	bool operator==(const AutoLoadInfo &p_info) const {
+		return order == p_info.order;
+	}
+
+	AutoLoadInfo() {
+		is_singleton = false;
+		in_editor = false;
+		node = NULL;
+	}
+};
+
 class EditorAutoloadSettings : public VBoxContainer {
 
 	GDCLASS(EditorAutoloadSettings, VBoxContainer);
@@ -47,25 +66,6 @@ class EditorAutoloadSettings : public VBoxContainer {
 	};
 
 	String autoload_changed;
-
-	struct AutoLoadInfo {
-		String name;
-		String path;
-		bool is_singleton;
-		bool in_editor;
-		int order;
-		Node *node;
-
-		bool operator==(const AutoLoadInfo &p_info) {
-			return order == p_info.order;
-		}
-
-		AutoLoadInfo() {
-			is_singleton = false;
-			in_editor = false;
-			node = NULL;
-		}
-	};
 
 	List<AutoLoadInfo> autoload_cache;
 
