@@ -918,12 +918,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 						r_ret = arr;
 						return;
 					}
-					Error err = arr.resize(count);
-					if (err != OK) {
-						r_error.error = Variant::CallError::CALL_ERROR_INVALID_METHOD;
-						r_ret = Variant();
-						return;
-					}
+					arr.resize(count);
 
 					for (int i = 0; i < count; i++) {
 						arr[i] = i;
@@ -944,12 +939,9 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 						r_ret = arr;
 						return;
 					}
-					Error err = arr.resize(to - from);
-					if (err != OK) {
-						r_error.error = Variant::CallError::CALL_ERROR_INVALID_METHOD;
-						r_ret = Variant();
-						return;
-					}
+
+					arr.resize(to - from);
+
 					for (int i = from; i < to; i++)
 						arr[i - from] = i;
 					r_ret = arr;
@@ -990,13 +982,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 						count = ((from - to - 1) / -incr) + 1;
 					}
 
-					Error err = arr.resize(count);
-
-					if (err != OK) {
-						r_error.error = Variant::CallError::CALL_ERROR_INVALID_METHOD;
-						r_ret = Variant();
-						return;
-					}
+					arr.resize(count);
 
 					if (incr > 0) {
 						int idx = 0;
@@ -1196,7 +1182,7 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 
 			for (Map<StringName, GDScript::MemberInfo>::Element *E = gd_ref->member_indices.front(); E; E = E->next()) {
 				if (d.has(E->key())) {
-					ins->members.write[E->get().index] = d[E->key()];
+					ins->members[E->get().index] = d[E->key()];
 				}
 			}
 

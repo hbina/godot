@@ -3038,7 +3038,7 @@ void GDScriptLanguage::auto_indent_code(String &p_code, int p_from_line, int p_t
 			break;
 		}
 
-		lines.write[i] = l;
+		lines[i] = l;
 	}
 
 	p_code = "";

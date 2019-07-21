@@ -41,10 +41,10 @@
 Gradient::Gradient() {
 	//Set initial color ramp transition from black to white
 	points.resize(2);
-	points.write[0].color = Color(0, 0, 0, 1);
-	points.write[0].offset = 0;
-	points.write[1].color = Color(1, 1, 1, 1);
-	points.write[1].offset = 1;
+	points[0].color = Color(0, 0, 0, 1);
+	points[0].offset = 0;
+	points[1].color = Color(1, 1, 1, 1);
+	points[1].offset = 1;
 	is_sorted = true;
 }
 
@@ -80,7 +80,7 @@ Vector<float> Gradient::get_offsets() const {
 	Vector<float> offsets;
 	offsets.resize(points.size());
 	for (int i = 0; i < points.size(); i++) {
-		offsets.write[i] = points[i].offset;
+		offsets[i] = points[i].offset;
 	}
 	return offsets;
 }
@@ -89,7 +89,7 @@ Vector<Color> Gradient::get_colors() const {
 	Vector<Color> colors;
 	colors.resize(points.size());
 	for (int i = 0; i < points.size(); i++) {
-		colors.write[i] = points[i].color;
+		colors[i] = points[i].color;
 	}
 	return colors;
 }
@@ -97,7 +97,7 @@ Vector<Color> Gradient::get_colors() const {
 void Gradient::set_offsets(const Vector<float> &p_offsets) {
 	points.resize(p_offsets.size());
 	for (int i = 0; i < points.size(); i++) {
-		points.write[i].offset = p_offsets[i];
+		points[i].offset = p_offsets[i];
 	}
 	is_sorted = false;
 	emit_signal(CoreStringNames::get_singleton()->changed);
@@ -108,7 +108,7 @@ void Gradient::set_colors(const Vector<Color> &p_colors) {
 		is_sorted = false;
 	points.resize(p_colors.size());
 	for (int i = 0; i < points.size(); i++) {
-		points.write[i].color = p_colors[i];
+		points[i].color = p_colors[i];
 	}
 	emit_signal(CoreStringNames::get_singleton()->changed);
 }
@@ -147,7 +147,7 @@ void Gradient::set_offset(int pos, const float offset) {
 	ERR_FAIL_COND(pos < 0);
 	if (points.size() <= pos)
 		points.resize(pos + 1);
-	points.write[pos].offset = offset;
+	points[pos].offset = offset;
 	is_sorted = false;
 	emit_signal(CoreStringNames::get_singleton()->changed);
 }
@@ -163,7 +163,7 @@ void Gradient::set_color(int pos, const Color &color) {
 		points.resize(pos + 1);
 		is_sorted = false;
 	}
-	points.write[pos].color = color;
+	points[pos].color = color;
 	emit_signal(CoreStringNames::get_singleton()->changed);
 }
 
