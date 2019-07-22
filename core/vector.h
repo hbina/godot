@@ -48,10 +48,9 @@
 #include <type_traits>
 #include <vector>
 
-template <typename T>
+template <class T>
 class VectorImpl {
 
-protected:
 	std::vector<T> internal_vector;
 
 public:
@@ -83,8 +82,8 @@ public:
 
 	void clear() noexcept;
 
-	// T *data() noexcept;
-	// const T *data() const noexcept;
+	T *data() noexcept;
+	const T *data() const noexcept;
 	typename std::vector<T>::iterator begin() noexcept;
 	typename std::vector<T>::iterator end() noexcept;
 	typename std::vector<T>::const_iterator begin() const noexcept;
@@ -93,6 +92,11 @@ public:
 	// Hanif's additions
 	const T &back() const noexcept;
 };
+
+template <typename T>
+T *VectorImpl<T>::data() noexcept {
+	return internal_vector.data();
+}
 
 template <typename T>
 typename std::vector<T>::iterator VectorImpl<T>::begin() noexcept {
@@ -112,6 +116,11 @@ typename std::vector<T>::const_iterator VectorImpl<T>::begin() const noexcept {
 template <typename T>
 typename std::vector<T>::const_iterator VectorImpl<T>::end() const noexcept {
 	return internal_vector.end();
+}
+
+template <typename T>
+const T *VectorImpl<T>::data() const noexcept {
+	return internal_vector.data();
 }
 
 template <typename T>

@@ -1609,8 +1609,17 @@ CharString String::utf8() const {
 	return utf8s;
 }
 
+/*
+String::String(CharType p_char) {
+
+	shared=NULL;
+	copy_from(p_char);
+}
+*/
+
 String::String(const char *p_str) {
-	internal_data.internal_vector.assign(p_str, p_str + strlen(p_str));
+
+	copy_from(p_str);
 }
 
 String::String(const CharType *p_str, int p_clip_to_len) {
