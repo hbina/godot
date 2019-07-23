@@ -1032,9 +1032,9 @@ void RasterizerStorageGLES2::texture_debug_usage(List<VS::TextureInfo> *r_info) 
 	List<RID> textures;
 	texture_owner.get_owned_list(&textures);
 
-	for (List<RID>::Element *E = textures.front(); E; E = E->next()) {
+	for (const auto &E : textures) {
 
-		Texture *t = texture_owner.getornull(E->get());
+		Texture *t = texture_owner.getornull(E);
 		if (!t)
 			continue;
 		VS::TextureInfo tinfo;

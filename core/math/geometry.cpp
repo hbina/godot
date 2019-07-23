@@ -760,11 +760,9 @@ Vector<Vector<Vector2> > Geometry::decompose_polygon_in_convex(const Vector<Poin
 
 	decomp.resize(out_poly.size());
 	int idx = 0;
-	for (List<TriangulatorPoly>::Element *I = out_poly.front(); I; I = I->next()) {
-		TriangulatorPoly &tp = I->get();
+	for (const auto &tp : out_poly) {
 
 		decomp[idx].resize(tp.GetNumPoints());
-
 		for (int i = 0; i < tp.GetNumPoints(); i++) {
 			decomp[idx][i] = tp.GetPoint(i);
 		}

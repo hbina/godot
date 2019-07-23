@@ -227,8 +227,8 @@ Array IP::_get_local_addresses() const {
 	Array addresses;
 	List<IP_Address> ip_addresses;
 	get_local_addresses(&ip_addresses);
-	for (List<IP_Address>::Element *E = ip_addresses.front(); E; E = E->next()) {
-		addresses.push_back(E->get());
+	for (const auto &E : ip_addresses) {
+		addresses.push_back(E);
 	}
 
 	return addresses;
@@ -247,11 +247,12 @@ Array IP::_get_local_interfaces() const {
 		rc["index"] = c.index;
 
 		Array ips;
-		for (const List<IP_Address>::Element *F = c.ip_addresses.front(); F; F = F->next()) {
-			ips.push_front(F->get());
-		}
-		rc["addresses"] = ips;
 
+		for (const auto &F : c.ip_addresses) {
+			ips.push_front(F);
+		}
+
+		rc["addresses"] = ips;
 		results.push_front(rc);
 	}
 

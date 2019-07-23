@@ -1080,10 +1080,9 @@ Array Object::_get_method_list_bind() const {
 	get_method_list(&ml);
 	Array ret;
 
-	for (List<MethodInfo>::Element *E = ml.front(); E; E = E->next()) {
+	for (const auto &E : ml) {
 
-		Dictionary d = E->get();
-		//va.push_back(d);
+		Dictionary d = E;
 		ret.push_back(d);
 	}
 
@@ -1323,9 +1322,9 @@ Array Object::_get_signal_list() const {
 	get_signal_list(&signal_list);
 
 	Array ret;
-	for (List<MethodInfo>::Element *E = signal_list.front(); E; E = E->next()) {
+	for (const auto &E : signal_list) {
 
-		ret.push_back(Dictionary(E->get()));
+		ret.push_back(Dictionary(E));
 	}
 
 	return ret;
@@ -1338,9 +1337,7 @@ Array Object::_get_signal_connection_list(const String &p_signal) const {
 
 	Array ret;
 
-	for (List<Connection>::Element *E = conns.front(); E; E = E->next()) {
-
-		Connection &c = E->get();
+	for (const auto &c : conns) {
 		if (c.signal == p_signal) {
 			Dictionary rc;
 			rc["signal"] = c.signal;
@@ -1676,9 +1673,9 @@ void Object::clear_internal_resource_paths() {
 
 	get_property_list(&pinfo);
 
-	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
+	for (const auto &E : pinfo) {
 
-		_clear_internal_resource_paths(get(E->get().name));
+		_clear_internal_resource_paths(get(E.name));
 	}
 }
 
@@ -1810,12 +1807,12 @@ void Object::get_translatable_strings(List<String> *p_strings) const {
 	List<PropertyInfo> plist;
 	get_property_list(&plist);
 
-	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
+	for (const auto &E : plist) {
 
-		if (!(E->get().usage & PROPERTY_USAGE_INTERNATIONALIZED))
+		if (!(E.usage & PROPERTY_USAGE_INTERNATIONALIZED))
 			continue;
 
-		String text = get(E->get().name);
+		String text = get(E.name);
 
 		if (text == "")
 			continue;

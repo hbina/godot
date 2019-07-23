@@ -71,8 +71,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_icon_list(p_type, &il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}

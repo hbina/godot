@@ -1015,8 +1015,8 @@ void ResourceFormatLoaderBinary::get_recognized_extensions_for_type(const String
 
 	extensions.sort();
 
-	for (List<String>::Element *E = extensions.front(); E; E = E->next()) {
-		String ext = E->get().to_lower();
+	for (const auto &E : extensions) {
+		const String ext = E.to_lower();
 		p_extensions->push_back(ext);
 	}
 }
@@ -1026,8 +1026,8 @@ void ResourceFormatLoaderBinary::get_recognized_extensions(List<String> *p_exten
 	ClassDB::get_resource_base_extensions(&extensions);
 	extensions.sort();
 
-	for (List<String>::Element *E = extensions.front(); E; E = E->next()) {
-		String ext = E->get().to_lower();
+	for (const auto &E : extensions) {
+		String ext = E.to_lower();
 		p_extensions->push_back(ext);
 	}
 }
@@ -1662,17 +1662,17 @@ void ResourceFormatSaverBinaryInstance::_find_resources(const Variant &p_variant
 
 			res->get_property_list(&property_list);
 
-			for (List<PropertyInfo>::Element *E = property_list.front(); E; E = E->next()) {
+			for (const auto &E : property_list) {
 
-				if (E->get().usage & PROPERTY_USAGE_STORAGE) {
+				if (E.usage & PROPERTY_USAGE_STORAGE) {
 
-					Variant value = res->get(E->get().name);
-					if (E->get().usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT) {
+					Variant value = res->get(E.name);
+					if (E.usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT) {
 						RES sres = value;
 						if (sres.is_valid()) {
 							NonPersistentKey npk;
 							npk.base = res;
-							npk.property = E->get().name;
+							npk.property = E.name;
 							non_persistent_map[npk] = sres;
 							resource_set.insert(sres);
 							saved_resources.push_back(sres);
@@ -1810,40 +1810,40 @@ Error ResourceFormatSaverBinaryInstance::save(const String &p_path, const RES &p
 
 	{
 
-		for (List<RES>::Element *E = saved_resources.front(); E; E = E->next()) {
+		for (const auto &E : saved_resources) {
 
 			ResourceData &rd = resources.push_back(ResourceData())->get();
-			rd.type = E->get()->get_class();
+			rd.type = E->get_class();
 
 			List<PropertyInfo> property_list;
-			E->get()->get_property_list(&property_list);
+			E->get_property_list(&property_list);
 
-			for (List<PropertyInfo>::Element *F = property_list.front(); F; F = F->next()) {
+			for (const auto &F : property_list) {
 
-				if (skip_editor && F->get().name.begins_with("__editor"))
+				if (skip_editor && F.name.begins_with("__editor"))
 					continue;
-				if ((F->get().usage & PROPERTY_USAGE_STORAGE)) {
+				if ((F.usage & PROPERTY_USAGE_STORAGE)) {
 					Property p;
-					p.name_idx = get_string_index(F->get().name);
+					p.name_idx = get_string_index(F.name);
 
-					if (F->get().usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT) {
+					if (F.usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT) {
 						NonPersistentKey npk;
-						npk.base = E->get();
-						npk.property = F->get().name;
+						npk.base = E;
+						npk.property = F.name;
 						if (non_persistent_map.has(npk)) {
 							p.value = non_persistent_map[npk];
 						}
 					} else {
-						p.value = E->get()->get(F->get().name);
+						p.value = E->get(F.name);
 					}
 
-					Variant default_value = ClassDB::class_get_default_property_value(E->get()->get_class(), F->get().name);
+					Variant default_value = ClassDB::class_get_default_property_value(E->get_class(), F.name);
 
 					if (default_value.get_type() != Variant::NIL && bool(Variant::evaluate(Variant::OP_EQUAL, p.value, default_value))) {
 						continue;
 					}
 
-					p.pi = F->get();
+					p.pi = F;
 
 					rd.properties.push_back(p);
 				}
@@ -1877,9 +1877,8 @@ Error ResourceFormatSaverBinaryInstance::save(const String &p_path, const RES &p
 	Vector<uint64_t> ofs_pos;
 	Set<int> used_indices;
 
-	for (List<RES>::Element *E = saved_resources.front(); E; E = E->next()) {
+	for (auto &r : saved_resources) {
 
-		RES r = E->get();
 		if (r->get_path() == "" || r->get_path().find("::") != -1) {
 
 			if (r->get_subindex() != 0) {
@@ -1892,9 +1891,8 @@ Error ResourceFormatSaverBinaryInstance::save(const String &p_path, const RES &p
 		}
 	}
 
-	for (List<RES>::Element *E = saved_resources.front(); E; E = E->next()) {
+	for (auto r : saved_resources) {
 
-		RES r = E->get();
 		if (r->get_path() == "" || r->get_path().find("::") != -1) {
 			if (r->get_subindex() == 0) {
 				int new_subindex = 1;
@@ -1923,19 +1921,15 @@ Error ResourceFormatSaverBinaryInstance::save(const String &p_path, const RES &p
 	Vector<uint64_t> ofs_table;
 
 	//now actually save the resources
-	for (List<ResourceData>::Element *E = resources.front(); E; E = E->next()) {
-
-		ResourceData &rd = E->get();
+	for (const auto &rd : resources) {
 
 		ofs_table.push_back(f->get_position());
 		save_unicode_string(f, rd.type);
 		f->store_32(rd.properties.size());
 
-		for (List<Property>::Element *F = rd.properties.front(); F; F = F->next()) {
-
-			Property &p = F->get();
+		for (const auto &p : rd.properties) {
 			f->store_32(p.name_idx);
-			_write_variant(p.value, F->get().pi);
+			_write_variant(p.value, p.pi);
 		}
 	}
 

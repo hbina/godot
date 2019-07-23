@@ -1000,14 +1000,14 @@ void ClassDB::get_property_list(StringName p_class, List<PropertyInfo> *p_list, 
 	ClassInfo *check = type;
 	while (check) {
 
-		for (List<PropertyInfo>::Element *E = check->property_list.front(); E; E = E->next()) {
+		for (const auto &E : check->property_list) {
 
 			if (p_validator) {
-				PropertyInfo pi = E->get();
+				PropertyInfo pi = E;
 				p_validator->_validate_property(pi);
 				p_list->push_back(pi);
 			} else {
-				p_list->push_back(E->get());
+				p_list->push_back(E);
 			}
 		}
 
@@ -1311,8 +1311,8 @@ void ClassDB::get_virtual_methods(const StringName &p_class, List<MethodInfo> *p
 	ClassInfo *check = type;
 	while (check) {
 
-		for (List<MethodInfo>::Element *E = check->virtual_methods.front(); E; E = E->next()) {
-			p_methods->push_back(E->get());
+		for (const auto &E : check->virtual_methods) {
+			p_methods->push_back(E);
 		}
 
 		if (p_no_inheritance)
@@ -1420,12 +1420,12 @@ Variant ClassDB::class_get_default_property_value(const StringName &p_class, con
 
 			List<PropertyInfo> plist;
 			c->get_property_list(&plist);
-			for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
-				if (E->get().usage & (PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_EDITOR)) {
+			for (const auto &E : plist) {
+				if (E.usage & (PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_EDITOR)) {
 
-					if (!default_values[p_class].has(E->get().name)) {
-						Variant v = c->get(E->get().name);
-						default_values[p_class][E->get().name] = v;
+					if (!default_values[p_class].has(E.name)) {
+						Variant v = c->get(E.name);
+						default_values[p_class][E.name] = v;
 					}
 				}
 			}

@@ -435,7 +435,7 @@ bool MultiplayerAPI::_send_confirm_path(NodePath p_path, PathSentCache *psc, int
 
 	// Those that need to be added, send a message for this.
 
-	for (List<int>::Element *E = peers_to_add.front(); E; E = E->next()) {
+	for (const auto &E : peers_to_add) {
 
 		// Encode function name.
 		CharString pname = String(p_path).utf8();
@@ -448,11 +448,11 @@ bool MultiplayerAPI::_send_confirm_path(NodePath p_path, PathSentCache *psc, int
 		encode_uint32(psc->id, &packet[1]);
 		encode_cstring(pname.get_data(), &packet[5]);
 
-		network_peer->set_target_peer(E->get()); // To all of you.
+		network_peer->set_target_peer(E); // To all of you.
 		network_peer->set_transfer_mode(NetworkedMultiplayerPeer::TRANSFER_MODE_RELIABLE);
 		network_peer->put_packet(packet.ptr(), packet.size());
 
-		psc->confirmed_peers.insert(E->get(), false); // Insert into confirmed, but as false since it was not confirmed.
+		psc->confirmed_peers.insert(E, false); // Insert into confirmed, but as false since it was not confirmed.
 	}
 
 	return has_all_peers;

@@ -108,10 +108,12 @@ uint32_t Array::hash() const {
 	}
 	return h;
 }
+
 void Array::operator=(const Array &p_array) {
 
 	_ref(p_array);
 }
+
 void Array::push_back(const Variant &p_value) {
 
 	_p->array.push_back(p_value);

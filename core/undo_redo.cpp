@@ -39,11 +39,11 @@ void UndoRedo::_discard_redo() {
 
 	for (int i = current_action + 1; i < actions.size(); i++) {
 
-		for (List<Operation>::Element *E = actions[i].do_ops.front(); E; E = E->next()) {
+		for (const auto &E : actions[i].do_ops) {
 
-			if (E->get().type == Operation::TYPE_REFERENCE) {
+			if (E.type == Operation::TYPE_REFERENCE) {
 
-				Object *obj = ObjectDB::get_instance(E->get().object);
+				Object *obj = ObjectDB::get_instance(E.object);
 				if (obj)
 					memdelete(obj);
 			}

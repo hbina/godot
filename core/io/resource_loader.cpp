@@ -70,9 +70,9 @@ bool ResourceFormatLoader::recognize_path(const String &p_path, const String &p_
 		get_recognized_extensions_for_type(p_for_type, &extensions);
 	}
 
-	for (List<String>::Element *E = extensions.front(); E; E = E->next()) {
+	for (const auto &E : extensions) {
 
-		if (E->get().nocasecmp_to(extension) == 0)
+		if (E.nocasecmp_to(extension) == 0)
 			return true;
 	}
 
@@ -963,9 +963,8 @@ void ResourceLoader::add_custom_loaders() {
 	List<StringName> global_classes;
 	ScriptServer::get_global_class_list(&global_classes);
 
-	for (List<StringName>::Element *E = global_classes.front(); E; E = E->next()) {
+	for (const auto &class_name : global_classes) {
 
-		StringName class_name = E->get();
 		StringName base_class = ScriptServer::get_global_class_native_base(class_name);
 
 		if (base_class == custom_loader_base_class) {

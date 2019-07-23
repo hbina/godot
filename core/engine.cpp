@@ -211,8 +211,8 @@ bool Engine::has_singleton(const String &p_name) const {
 
 void Engine::get_singletons(List<Singleton> *p_singletons) {
 
-	for (List<Singleton>::Element *E = singletons.front(); E; E = E->next())
-		p_singletons->push_back(E->get());
+	for (const auto &E : singletons)
+		p_singletons->push_back(E);
 }
 
 Engine *Engine::singleton = NULL;
