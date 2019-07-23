@@ -1089,7 +1089,7 @@ void SceneTree::get_nodes_in_group(const StringName &p_group, List<Node *> *p_li
 
 static void _fill_array(Node *p_node, Array &array, int p_level) {
 
-	array.push_back(p_level);
+	array.push_back(p_node->get_child_count());
 	array.push_back(p_node->get_name());
 	array.push_back(p_node->get_class());
 	array.push_back(p_node->get_instance_id());
@@ -2034,10 +2034,10 @@ SceneTree::SceneTree() {
 		List<String> exts;
 		ResourceLoader::get_recognized_extensions_for_type("Environment", &exts);
 		String ext_hint;
-		for (List<String>::Element *E = exts.front(); E; E = E->next()) {
+		for (const auto& E : exts) {
 			if (ext_hint != String())
 				ext_hint += ",";
-			ext_hint += "*." + E->get();
+			ext_hint += "*." + E;
 		}
 		//get path
 		String env_path = GLOBAL_DEF("rendering/environment/default_environment", "");

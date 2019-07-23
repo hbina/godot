@@ -866,9 +866,9 @@ void EditorNode::_set_scene_metadata(const String &p_file, int p_idx) {
 	List<Variant> keys;
 	md.get_key_list(&keys);
 
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+	for (const auto &E : keys) {
 
-		cf->set_value("editor_states", E->get(), md[E->get()]);
+		cf->set_value("editor_states", E, md[E]);
 	}
 
 	Error err = cf->save(path);

@@ -4466,17 +4466,17 @@ void GDScriptParser::_parse_class(ClassNode *p_class) {
 							enum_values.get_key_list(&keys);
 
 							bool first = true;
-							for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
-								if (enum_values[E->get()].get_type() == Variant::INT) {
+							for (const auto &E : keys) {
+								if (enum_values[E].get_type() == Variant::INT) {
 									if (!first)
 										current_export.hint_string += ",";
 									else
 										first = false;
 
-									current_export.hint_string += E->get().operator String().camelcase_to_underscore(true).capitalize().xml_escape();
+									current_export.hint_string += E.operator String().camelcase_to_underscore(true).capitalize().xml_escape();
 									if (!is_flags) {
 										current_export.hint_string += ":";
-										current_export.hint_string += enum_values[E->get()].operator String().xml_escape();
+										current_export.hint_string += enum_values[E].operator String().xml_escape();
 									}
 								}
 							}

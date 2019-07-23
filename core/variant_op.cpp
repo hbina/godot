@@ -2897,9 +2897,9 @@ void Variant::get_property_list(List<PropertyInfo> *p_list) const {
 			const Dictionary *dic = reinterpret_cast<const Dictionary *>(_data._mem);
 			List<Variant> keys;
 			dic->get_key_list(&keys);
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
-				if (E->get().get_type() == Variant::STRING) {
-					p_list->push_back(PropertyInfo(Variant::STRING, E->get()));
+			for (const auto &E : keys) {
+				if (E.get_type() == Variant::STRING) {
+					p_list->push_back(PropertyInfo(Variant::STRING, E));
 				}
 			}
 		} break;

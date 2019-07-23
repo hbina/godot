@@ -2888,9 +2888,9 @@ String String::format(const Variant &values, String placeholder) const {
 		List<Variant> keys;
 		d.get_key_list(&keys);
 
-		for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
-			String key = E->get();
-			String val = d[E->get()];
+		for (const auto &E : keys) {
+			String key = E;
+			String val = d[E];
 
 			if (key.left(1) == "\"" && key.right(key.length() - 1) == "\"") {
 				key = key.substr(1, key.length() - 2);

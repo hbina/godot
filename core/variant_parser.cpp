@@ -1774,16 +1774,16 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			keys.sort();
 
 			p_store_string_func(p_store_string_ud, "{\n");
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
 				/*
 				if (!_check_type(dict[E->get()]))
 					continue;
 				*/
-				write(E->get(), p_store_string_func, p_store_string_ud, p_encode_res_func, p_encode_res_ud);
+				write(E, p_store_string_func, p_store_string_ud, p_encode_res_func, p_encode_res_ud);
 				p_store_string_func(p_store_string_ud, ": ");
-				write(dict[E->get()], p_store_string_func, p_store_string_ud, p_encode_res_func, p_encode_res_ud);
-				if (E->next())
+				write(dict[E], p_store_string_func, p_store_string_ud, p_encode_res_func, p_encode_res_ud);
+				if (E)
 					p_store_string_func(p_store_string_ud, ",\n");
 			}
 

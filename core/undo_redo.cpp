@@ -223,11 +223,11 @@ void UndoRedo::_pop_history_tail() {
 	if (!actions.size())
 		return;
 
-	for (List<Operation>::Element *E = actions[0].undo_ops.front(); E; E = E->next()) {
+	for (const auto &E : actions[0].undo_ops) {
 
-		if (E->get().type == Operation::TYPE_REFERENCE) {
+		if (E.type == Operation::TYPE_REFERENCE) {
 
-			Object *obj = ObjectDB::get_instance(E->get().object);
+			Object *obj = ObjectDB::get_instance(E.object);
 			if (obj)
 				memdelete(obj);
 		}

@@ -372,9 +372,9 @@ uint64_t ClassDB::get_api_hash(APIType p_api) {
 	//must be alphabetically sorted for hash to compute
 	names.sort_custom<StringName::AlphCompare>();
 
-	for (List<StringName>::Element *E = names.front(); E; E = E->next()) {
+	for (const auto &E : names) {
 
-		ClassInfo *t = classes.getptr(E->get());
+		ClassInfo *t = classes.getptr(E);
 		ERR_FAIL_COND_V(!t, 0);
 		if (t->api != p_api || !t->exposed)
 			continue;
@@ -394,9 +394,9 @@ uint64_t ClassDB::get_api_hash(APIType p_api) {
 
 			snames.sort_custom<StringName::AlphCompare>();
 
-			for (List<StringName>::Element *F = snames.front(); F; F = F->next()) {
+			for (const auto &F : snames) {
 
-				MethodBind *mb = t->method_map[F->get()];
+				MethodBind *mb = t->method_map[F];
 				hash = hash_djb2_one_64(mb->get_name().hash(), hash);
 				hash = hash_djb2_one_64(mb->get_argument_count(), hash);
 				hash = hash_djb2_one_64(mb->get_argument_type(-1), hash); //return
@@ -434,10 +434,10 @@ uint64_t ClassDB::get_api_hash(APIType p_api) {
 
 			snames.sort_custom<StringName::AlphCompare>();
 
-			for (List<StringName>::Element *F = snames.front(); F; F = F->next()) {
+			for (const auto &F : snames) {
 
-				hash = hash_djb2_one_64(F->get().hash(), hash);
-				hash = hash_djb2_one_64(t->constant_map[F->get()], hash);
+				hash = hash_djb2_one_64(F.hash(), hash);
+				hash = hash_djb2_one_64(t->constant_map[F], hash);
 			}
 		}
 
@@ -454,10 +454,10 @@ uint64_t ClassDB::get_api_hash(APIType p_api) {
 
 			snames.sort_custom<StringName::AlphCompare>();
 
-			for (List<StringName>::Element *F = snames.front(); F; F = F->next()) {
+			for (const auto &F : snames) {
 
-				MethodInfo &mi = t->signal_map[F->get()];
-				hash = hash_djb2_one_64(F->get().hash(), hash);
+				MethodInfo &mi = t->signal_map[F];
+				hash = hash_djb2_one_64(F.hash(), hash);
 				for (int i = 0; i < mi.arguments.size(); i++) {
 					hash = hash_djb2_one_64(mi.arguments[i].type, hash);
 				}
@@ -477,24 +477,24 @@ uint64_t ClassDB::get_api_hash(APIType p_api) {
 
 			snames.sort_custom<StringName::AlphCompare>();
 
-			for (List<StringName>::Element *F = snames.front(); F; F = F->next()) {
+			for (const auto &F : snames) {
 
-				PropertySetGet *psg = t->property_setget.getptr(F->get());
+				PropertySetGet *psg = t->property_setget.getptr(F);
 
-				hash = hash_djb2_one_64(F->get().hash(), hash);
+				hash = hash_djb2_one_64(F.hash(), hash);
 				hash = hash_djb2_one_64(psg->setter.hash(), hash);
 				hash = hash_djb2_one_64(psg->getter.hash(), hash);
 			}
 		}
 
 		//property list
-		for (List<PropertyInfo>::Element *F = t->property_list.front(); F; F = F->next()) {
+		for (const auto &F : t->property_list) {
 
-			hash = hash_djb2_one_64(F->get().name.hash(), hash);
-			hash = hash_djb2_one_64(F->get().type, hash);
-			hash = hash_djb2_one_64(F->get().hint, hash);
-			hash = hash_djb2_one_64(F->get().hint_string.hash(), hash);
-			hash = hash_djb2_one_64(F->get().usage, hash);
+			hash = hash_djb2_one_64(F.name.hash(), hash);
+			hash = hash_djb2_one_64(F.type, hash);
+			hash = hash_djb2_one_64(F.hint, hash);
+			hash = hash_djb2_one_64(F.hint_string.hash(), hash);
+			hash = hash_djb2_one_64(F.usage, hash);
 		}
 	}
 
@@ -596,16 +596,16 @@ void ClassDB::get_method_list(StringName p_class, List<MethodInfo> *p_methods, b
 
 #ifdef DEBUG_METHODS_ENABLED
 
-		for (List<MethodInfo>::Element *E = type->virtual_methods.front(); E; E = E->next()) {
+		for (const auto &E : type->virtual_methods) {
 
-			p_methods->push_back(E->get());
+			p_methods->push_back(E);
 		}
 
-		for (List<StringName>::Element *E = type->method_order.front(); E; E = E->next()) {
+		for (const auto &E : type->method_order) {
 
-			MethodBind *method = type->method_map.get(E->get());
+			MethodBind *method = type->method_map.get(E);
 			MethodInfo minfo;
-			minfo.name = E->get();
+			minfo.name = E;
 			minfo.id = method->get_method_id();
 
 			if (p_exclude_from_properties && type->methods_in_properties.has(minfo.name))
@@ -712,8 +712,8 @@ void ClassDB::get_integer_constant_list(const StringName &p_class, List<String> 
 	while (type) {
 
 #ifdef DEBUG_METHODS_ENABLED
-		for (List<StringName>::Element *E = type->constant_order.front(); E; E = E->next())
-			p_constants->push_back(E->get());
+		for (const auto &E : type->constant_order)
+			p_constants->push_back(E);
 #else
 		const StringName *K = NULL;
 

@@ -635,9 +635,12 @@ void Object::get_property_list(List<PropertyInfo> *p_list, bool p_reversed) cons
 #endif
 		p_list->push_back(PropertyInfo(Variant::OBJECT, "script", PROPERTY_HINT_RESOURCE_TYPE, "Script", PROPERTY_USAGE_DEFAULT));
 	}
-	if (!metadata.empty()) {
-		p_list->push_back(PropertyInfo(Variant::DICTIONARY, "__meta__", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
-	}
+
+#ifdef TOOLS_ENABLED
+	p_list->push_back(PropertyInfo(Variant::NIL, "Metadata", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_GROUP));
+#endif
+	p_list->push_back(PropertyInfo(Variant::DICTIONARY, "__meta__", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_DEFAULT));
+
 	if (script_instance && !p_reversed) {
 		p_list->push_back(PropertyInfo(Variant::NIL, "Script Variables", PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));
 		script_instance->get_property_list(p_list);
@@ -1093,9 +1096,9 @@ PoolVector<String> Object::_get_meta_list_bind() const {
 
 	List<Variant> keys;
 	metadata.get_key_list(&keys);
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+	for (const auto &E : keys) {
 
-		_metaret.push_back(E->get());
+		_metaret.push_back(E);
 	}
 
 	return _metaret;
@@ -1104,9 +1107,9 @@ void Object::get_meta_list(List<String> *p_list) const {
 
 	List<Variant> keys;
 	metadata.get_key_list(&keys);
-	for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+	for (const auto &E : keys) {
 
-		p_list->push_back(E->get());
+		p_list->push_back(E);
 	}
 }
 
@@ -1639,10 +1642,10 @@ void Object::_clear_internal_resource_paths(const Variant &p_var) {
 			List<Variant> keys;
 			d.get_key_list(&keys);
 
-			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
+			for (const auto &E : keys) {
 
-				_clear_internal_resource_paths(E->get());
-				_clear_internal_resource_paths(d[E->get()]);
+				_clear_internal_resource_paths(E);
+				_clear_internal_resource_paths(d[E]);
 			}
 		} break;
 		default: {
