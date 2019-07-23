@@ -154,8 +154,11 @@ void VectorImpl<T>::resize(int p_size) {
 }
 
 template <typename T>
+using std_vector_type = typename std::vector<T>::size_type;
+
+template <typename T>
 int VectorImpl<T>::size() const noexcept {
-	assert(std::numeric_limits<int>::max() > internal_vector.size());
+	assert(std::numeric_limits<std_vector_type<T> >::max() > (std_vector_type<T>)internal_vector.size());
 	return internal_vector.size();
 }
 
