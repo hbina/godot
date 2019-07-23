@@ -37,9 +37,9 @@ void GDNativeLibraryEditor::edit(Ref<GDNativeLibrary> p_library) {
 	Ref<ConfigFile> config = p_library->get_config_file();
 
 	for (Map<String, NativePlatformConfig>::Element *E = platforms.front(); E; E = E->next()) {
-		for (List<String>::Element *it = E->value().entries.front(); it; it = it->next()) {
+		for (const auto &it : E->value().entries) {
 
-			String target = E->key() + "." + it->get();
+			String target = E->key() + "." + it;
 			TargetConfig ecfg;
 			ecfg.library = config->get_value("entry", target, "");
 			ecfg.dependencies = config->get_value("dependencies", target, Array());

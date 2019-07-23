@@ -1609,9 +1609,9 @@ bool Main::start() {
 					}
 				}
 
-				for (List<Node *>::Element *E = to_add.front(); E; E = E->next()) {
+				for (Node *E : to_add) {
 
-					sml->get_root()->add_child(E->get());
+					sml->get_root()->add_child(E);
 				}
 			}
 		}

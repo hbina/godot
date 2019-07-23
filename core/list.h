@@ -129,11 +129,11 @@ private:
 	std::vector<Element *> internal_state;
 
 public:
-	typename std::vector<T>::iterator begin2() noexcept {
+	typename std::vector<T>::iterator begin() noexcept {
 		return internal_vector.begin();
 	}
 
-	typename std::vector<T>::iterator end2() noexcept {
+	typename std::vector<T>::iterator end() noexcept {
 		return internal_vector.end();
 	}
 

@@ -511,13 +511,13 @@ void SceneTreeDock::_tool_selected(int p_tool, bool p_confirm_override) {
 
 			int lowest_id = common_parent->get_child_count() - 1;
 			int highest_id = 0;
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-				int index = E->get()->get_index();
+			for (const Node *E : selection) {
+				int index = E->get_index();
 
 				if (index > highest_id) highest_id = index;
 				if (index < lowest_id) lowest_id = index;
 
-				if (E->get()->get_parent() != common_parent)
+				if (E->get_parent() != common_parent)
 					common_parent = NULL;
 			}
 
@@ -576,9 +576,8 @@ void SceneTreeDock::_tool_selected(int p_tool, bool p_confirm_override) {
 
 			selection.sort_custom<Node::Comparator>();
 
-			for (List<Node *>::Element *E = selection.back(); E; E = E->prev()) {
+			for (Node *node : selection) {
 
-				Node *node = E->get();
 				Node *parent = node->get_parent();
 				Node *selection_tail = _get_selection_group_tail(node, selection);
 
@@ -623,8 +622,8 @@ void SceneTreeDock::_tool_selected(int p_tool, bool p_confirm_override) {
 			if (dupsingle)
 				editor->push_item(dupsingle);
 
-			for (List<Node *>::Element *E = editable_children.front(); E; E = E->next())
-				_toggle_editable_children(E->get());
+			for (Node *E : editable_children)
+				_toggle_editable_children(E);
 
 		} break;
 		case TOOL_REPARENT: {
@@ -649,9 +648,9 @@ void SceneTreeDock::_tool_selected(int p_tool, bool p_confirm_override) {
 
 			List<Node *> nodes = editor_selection->get_selected_node_list();
 			Set<Node *> nodeset;
-			for (List<Node *>::Element *E = nodes.front(); E; E = E->next()) {
+			for (Node *E : nodes) {
 
-				nodeset.insert(E->get());
+				nodeset.insert(E);
 			}
 			reparent_dialog->popup_centered_ratio();
 			reparent_dialog->set_current(nodeset);
@@ -1478,9 +1477,9 @@ bool SceneTreeDock::_validate_no_foreign() {
 
 	List<Node *> selection = editor_selection->get_selected_node_list();
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		if (E->get() != edited_scene && E->get()->get_owner() != edited_scene) {
+		if (E != edited_scene && E->get_owner() != edited_scene) {
 
 			accept->set_text(TTR("Can't operate on nodes from a foreign scene!"));
 			accept->popup_centered_minsize();
@@ -1490,11 +1489,11 @@ bool SceneTreeDock::_validate_no_foreign() {
 		// When edited_scene inherits from another one the root Node will be the parent Scene,
 		// we don't want to consider that Node a foreign one otherwise we would not be able to
 		// delete it
-		if (edited_scene->get_scene_inherited_state().is_valid() && edited_scene == E->get()) {
+		if (edited_scene->get_scene_inherited_state().is_valid() && edited_scene == E) {
 			continue;
 		}
 
-		if (edited_scene->get_scene_inherited_state().is_valid() && edited_scene->get_scene_inherited_state()->find_node_by_path(edited_scene->get_path_to(E->get())) >= 0) {
+		if (edited_scene->get_scene_inherited_state().is_valid() && edited_scene->get_scene_inherited_state()->find_node_by_path(edited_scene->get_path_to(E)) >= 0) {
 
 			accept->set_text(TTR("Can't operate on nodes the current scene inherits from!"));
 			accept->popup_centered_minsize();
@@ -1517,8 +1516,8 @@ void SceneTreeDock::_node_reparent(NodePath p_path, bool p_keep_global_xform) {
 
 	Vector<Node *> nodes;
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-		nodes.push_back(E->get());
+	for (Node *E : selection) {
+		nodes.push_back(E);
 	}
 
 	_do_reparent(new_parent, -1, nodes, p_keep_global_xform);
@@ -1564,9 +1563,9 @@ void SceneTreeDock::_do_reparent(Node *p_new_parent, int p_position_in_parent, V
 		List<Node *> owned;
 		node->get_owned_by(node->get_owner(), &owned);
 		Array owners;
-		for (List<Node *>::Element *E = owned.front(); E; E = E->next()) {
+		for (const Node *E : owned) {
 
-			owners.push_back(E->get());
+			owners.push_back(E);
 		}
 
 		if (new_parent == node->get_parent() && node->get_index() < p_position_in_parent + ni) {
@@ -1637,9 +1636,9 @@ void SceneTreeDock::_do_reparent(Node *p_new_parent, int p_position_in_parent, V
 		List<Node *> owned;
 		node->get_owned_by(node->get_owner(), &owned);
 		Array owners;
-		for (List<Node *>::Element *E = owned.front(); E; E = E->next()) {
+		for (Node *E : owned) {
 
-			owners.push_back(E->get());
+			owners.push_back(E);
 		}
 
 		int child_pos = node->get_position_in_parent();
@@ -1719,11 +1718,11 @@ void SceneTreeDock::_script_created(Ref<Script> p_script) {
 		return;
 
 	editor_data->get_undo_redo().create_action(TTR("Attach Script"));
-	for (List<Node *>::Element *E = selected.front(); E; E = E->next()) {
+	for (Node *E : selected) {
 
-		Ref<Script> existing = E->get()->get_script();
-		editor_data->get_undo_redo().add_do_method(E->get(), "set_script", p_script.get_ref_ptr());
-		editor_data->get_undo_redo().add_undo_method(E->get(), "set_script", existing);
+		Ref<Script> existing = E->get_script();
+		editor_data->get_undo_redo().add_do_method(E, "set_script", p_script.get_ref_ptr());
+		editor_data->get_undo_redo().add_undo_method(E, "set_script", existing);
 		editor_data->get_undo_redo().add_do_method(this, "_update_script_button");
 		editor_data->get_undo_redo().add_undo_method(this, "_update_script_button");
 	}
@@ -1776,9 +1775,9 @@ void SceneTreeDock::_delete_confirm() {
 
 	bool entire_scene = false;
 
-	for (List<Node *>::Element *E = remove_list.front(); E; E = E->next()) {
+	for (const auto &E : remove_list) {
 
-		if (E->get() == edited_scene) {
+		if (E == edited_scene) {
 			entire_scene = true;
 		}
 	}
@@ -1797,8 +1796,7 @@ void SceneTreeDock::_delete_confirm() {
 		List<Pair<NodePath, NodePath> > path_renames;
 
 		//delete from animation
-		for (List<Node *>::Element *E = remove_list.front(); E; E = E->next()) {
-			Node *n = E->get();
+		for (Node *n : remove_list) {
 			if (!n->is_inside_tree() || !n->get_parent())
 				continue;
 
@@ -1807,8 +1805,8 @@ void SceneTreeDock::_delete_confirm() {
 
 		perform_node_renames(NULL, &path_renames);
 		//delete for read
-		for (List<Node *>::Element *E = remove_list.front(); E; E = E->next()) {
-			Node *n = E->get();
+		for (Node *n : remove_list) {
+
 			if (!n->is_inside_tree() || !n->get_parent())
 				continue;
 
@@ -1981,8 +1979,7 @@ void SceneTreeDock::_create() {
 	} else if (current_option == TOOL_REPLACE) {
 		List<Node *> selection = editor_selection->get_selected_node_list();
 		ERR_FAIL_COND(selection.size() <= 0);
-		for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-			Node *n = E->get();
+		for (Node *n : selection) {
 			ERR_FAIL_COND(!n);
 
 			Object *c = create_dialog->instance_selected();
@@ -2005,8 +2002,7 @@ void SceneTreeDock::_create() {
 		int smaller_path_to_top = first->get_path_to(scene_root).get_name_count();
 		Node *top_node = first;
 
-		for (List<Node *>::Element *E = selection.front()->next(); E; E = E->next()) {
-			Node *n = E->get();
+		for (Node *n : selection) {
 			ERR_FAIL_COND(!n);
 
 			int path_length = n->get_path_to(scene_root).get_name_count();
@@ -2032,8 +2028,8 @@ void SceneTreeDock::_create() {
 		_do_create(parent);
 
 		Vector<Node *> nodes;
-		for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-			nodes.push_back(E->get());
+		for (Node *E : selection) {
+			nodes.push_back(E);
 		}
 
 		// This works because editor_selection was cleared and populated with last created node in _do_create()
@@ -2311,8 +2307,8 @@ void SceneTreeDock::_nodes_dragged(Array p_nodes, NodePath p_to, int p_type) {
 		return;
 
 	Vector<Node *> nodes;
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-		nodes.push_back(E->get());
+	for (Node *E : selection) {
+		nodes.push_back(E);
 	}
 
 	int to_pos = -1;

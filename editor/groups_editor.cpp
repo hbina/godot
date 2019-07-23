@@ -197,8 +197,7 @@ void GroupDialog::_group_renamed() {
 	List<Node *> nodes;
 	scene_tree->get_nodes_in_group(selected_group, &nodes);
 	bool removed_all = true;
-	for (List<Node *>::Element *E = nodes.front(); E; E = E->next()) {
-		Node *node = E->get();
+	for (Node *node : nodes) {
 		if (_can_edit(node, selected_group)) {
 			node->remove_from_group(selected_group);
 			node->add_to_group(name, true);
@@ -254,9 +253,9 @@ void GroupDialog::_delete_group_pressed(Object *p_item, int p_column, int p_id) 
 	List<Node *> nodes;
 	scene_tree->get_nodes_in_group(name, &nodes);
 	bool removed_all = true;
-	for (List<Node *>::Element *E = nodes.front(); E; E = E->next()) {
-		if (_can_edit(E->get(), name)) {
-			E->get()->remove_from_group(name);
+	for (Node *E : nodes) {
+		if (_can_edit(E, name)) {
+			E->remove_from_group(name);
 		} else {
 			removed_all = false;
 		}

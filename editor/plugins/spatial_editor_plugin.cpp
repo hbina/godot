@@ -577,9 +577,9 @@ void SpatialEditorViewport::_compute_edit(const Point2 &p_point) {
 
 	List<Node *> &selection = editor_selection->get_selected_node_list();
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		Spatial *sp = Object::cast_to<Spatial>(E->get());
+		Spatial *sp = Object::cast_to<Spatial>(E);
 		if (!sp)
 			continue;
 
@@ -962,9 +962,9 @@ void SpatialEditorViewport::_sinput(const Ref<InputEvent> &p_event) {
 
 					List<Node *> &selection = editor_selection->get_selected_node_list();
 
-					for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+					for (Node *E : selection) {
 
-						Spatial *sp = Object::cast_to<Spatial>(E->get());
+						Spatial *sp = Object::cast_to<Spatial>(E);
 						if (!sp)
 							continue;
 
@@ -1184,9 +1184,9 @@ void SpatialEditorViewport::_sinput(const Ref<InputEvent> &p_event) {
 
 						List<Node *> &selection = editor_selection->get_selected_node_list();
 
-						for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+						for (Node *E : selection) {
 
-							Spatial *sp = Object::cast_to<Spatial>(E->get());
+							Spatial *sp = Object::cast_to<Spatial>(E);
 							if (!sp)
 								continue;
 
@@ -1385,9 +1385,9 @@ void SpatialEditorViewport::_sinput(const Ref<InputEvent> &p_event) {
 							set_message(TTR("Scaling: ") + motion);
 						}
 
-						for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+						for (Node *E : selection) {
 
-							Spatial *sp = Object::cast_to<Spatial>(E->get());
+							Spatial *sp = Object::cast_to<Spatial>(E);
 							if (!sp) {
 								continue;
 							}
@@ -1514,9 +1514,9 @@ void SpatialEditorViewport::_sinput(const Ref<InputEvent> &p_event) {
 							set_message(TTR("Translating: ") + motion);
 						}
 
-						for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+						for (Node *E : selection) {
 
-							Spatial *sp = Object::cast_to<Spatial>(E->get());
+							Spatial *sp = Object::cast_to<Spatial>(E);
 							if (!sp) {
 								continue;
 							}
@@ -1620,9 +1620,9 @@ void SpatialEditorViewport::_sinput(const Ref<InputEvent> &p_event) {
 
 						bool local_coords = (spatial_editor->are_local_coords_enabled() && _edit.plane != TRANSFORM_VIEW); // Disable local transformation for TRANSFORM_VIEW
 
-						for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+						for (Node *E : selection) {
 
-							Spatial *sp = Object::cast_to<Spatial>(E->get());
+							Spatial *sp = Object::cast_to<Spatial>(E);
 							if (!sp)
 								continue;
 
@@ -1849,9 +1849,9 @@ void SpatialEditorViewport::_sinput(const Ref<InputEvent> &p_event) {
 
 			List<Node *> &selection = editor_selection->get_selected_node_list();
 
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+			for (Node *E : selection) {
 
-				Spatial *sp = Object::cast_to<Spatial>(E->get());
+				Spatial *sp = Object::cast_to<Spatial>(E);
 				if (!sp)
 					continue;
 
@@ -2572,9 +2572,9 @@ void SpatialEditorViewport::_menu_option(int p_option) {
 			List<Node *> &selection = editor_selection->get_selected_node_list();
 
 			undo_redo->create_action(TTR("Align with View"));
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+			for (Node *E : selection) {
 
-				Spatial *sp = Object::cast_to<Spatial>(E->get());
+				Spatial *sp = Object::cast_to<Spatial>(E);
 				if (!sp)
 					continue;
 
@@ -3111,9 +3111,9 @@ void SpatialEditorViewport::focus_selection() {
 
 	List<Node *> &selection = editor_selection->get_selected_node_list();
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		Spatial *sp = Object::cast_to<Spatial>(E->get());
+		Spatial *sp = Object::cast_to<Spatial>(E);
 		if (!sp)
 			continue;
 
@@ -3999,9 +3999,9 @@ void SpatialEditor::update_transform_gizmo() {
 	Basis gizmo_basis;
 	bool local_gizmo_coords = are_local_coords_enabled();
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		Spatial *sp = Object::cast_to<Spatial>(E->get());
+		Spatial *sp = Object::cast_to<Spatial>(E);
 		if (!sp)
 			continue;
 
@@ -4300,9 +4300,9 @@ void SpatialEditor::_xform_dialog_action() {
 
 	List<Node *> &selection = editor_selection->get_selected_node_list();
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		Spatial *sp = Object::cast_to<Spatial>(E->get());
+		Spatial *sp = Object::cast_to<Spatial>(E);
 		if (!sp)
 			continue;
 
@@ -4511,9 +4511,9 @@ void SpatialEditor::_menu_item_pressed(int p_option) {
 
 			List<Node *> &selection = editor_selection->get_selected_node_list();
 
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+			for (Node *E : selection) {
 
-				Spatial *spatial = Object::cast_to<Spatial>(E->get());
+				Spatial *spatial = Object::cast_to<Spatial>(E);
 				if (!spatial || !spatial->is_visible_in_tree())
 					continue;
 
@@ -4535,9 +4535,9 @@ void SpatialEditor::_menu_item_pressed(int p_option) {
 
 			List<Node *> &selection = editor_selection->get_selected_node_list();
 
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+			for (Node *E : selection) {
 
-				Spatial *spatial = Object::cast_to<Spatial>(E->get());
+				Spatial *spatial = Object::cast_to<Spatial>(E);
 				if (!spatial || !spatial->is_visible_in_tree())
 					continue;
 
@@ -4559,9 +4559,9 @@ void SpatialEditor::_menu_item_pressed(int p_option) {
 
 			List<Node *> &selection = editor_selection->get_selected_node_list();
 
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+			for (Node *E : selection) {
 
-				Spatial *spatial = Object::cast_to<Spatial>(E->get());
+				Spatial *spatial = Object::cast_to<Spatial>(E);
 				if (!spatial || !spatial->is_visible_in_tree())
 					continue;
 
@@ -4582,9 +4582,9 @@ void SpatialEditor::_menu_item_pressed(int p_option) {
 			undo_redo->create_action(TTR("Ungroup Selected"));
 			List<Node *> &selection = editor_selection->get_selected_node_list();
 
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+			for (Node *E : selection) {
 
-				Spatial *spatial = Object::cast_to<Spatial>(E->get());
+				Spatial *spatial = Object::cast_to<Spatial>(E);
 				if (!spatial || !spatial->is_visible_in_tree())
 					continue;
 
@@ -5051,14 +5051,14 @@ void SpatialEditor::_refresh_menu_icons() {
 		all_locked = false;
 		all_grouped = false;
 	} else {
-		for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-			if (Object::cast_to<Spatial>(E->get()) && !Object::cast_to<Spatial>(E->get())->has_meta("_edit_lock_")) {
+		for (Node *E : selection) {
+			if (Object::cast_to<Spatial>(E) && !Object::cast_to<Spatial>(E)->has_meta("_edit_lock_")) {
 				all_locked = false;
 				break;
 			}
 		}
-		for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-			if (Object::cast_to<Spatial>(E->get()) && !Object::cast_to<Spatial>(E->get())->has_meta("_edit_group_")) {
+		for (Node *E : selection) {
+			if (Object::cast_to<Spatial>(E) && !Object::cast_to<Spatial>(E)->has_meta("_edit_group_")) {
 				all_grouped = false;
 				break;
 			}
@@ -5111,8 +5111,8 @@ void SpatialEditor::snap_selected_nodes_to_floor() {
 	List<Node *> &selection = editor_selection->get_selected_node_list();
 	Dictionary snap_data;
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-		Spatial *sp = Object::cast_to<Spatial>(E->get());
+	for (Node *E : selection) {
+		Spatial *sp = Object::cast_to<Spatial>(E);
 		if (sp) {
 			Vector3 from = Vector3();
 			Vector3 position_offset = Vector3();

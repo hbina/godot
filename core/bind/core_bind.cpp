@@ -85,7 +85,7 @@ PoolVector<String> _ResourceLoader::get_recognized_extensions_for_type(const Str
 	List<String> exts;
 	ResourceLoader::get_recognized_extensions_for_type(p_type, &exts);
 	PoolVector<String> ret;
-	for (const auto& E : exts) {
+	for (const auto &E : exts) {
 
 		ret.push_back(E);
 	}
@@ -104,8 +104,8 @@ PoolStringArray _ResourceLoader::get_dependencies(const String &p_path) {
 	ResourceLoader::get_dependencies(p_path, &deps);
 
 	PoolStringArray ret;
-	for (List<String>::Element *E = deps.front(); E; E = E->next()) {
-		ret.push_back(E->get());
+	for (const auto &E : deps) {
+		ret.push_back(E);
 	}
 
 	return ret;
@@ -161,7 +161,7 @@ PoolVector<String> _ResourceSaver::get_recognized_extensions(const RES &p_resour
 	List<String> exts;
 	ResourceSaver::get_recognized_extensions(p_resource, &exts);
 	PoolVector<String> ret;
-	for (const auto& E : exts) {
+	for (const auto &E : exts) {
 
 		ret.push_back(E);
 	}
@@ -432,9 +432,9 @@ Array _OS::get_fullscreen_mode_list(int p_screen) const {
 	List<OS::VideoMode> vmlist;
 	OS::get_singleton()->get_fullscreen_mode_list(&vmlist, p_screen);
 	Array vmarr;
-	for (List<OS::VideoMode>::Element *E = vmlist.front(); E; E = E->next()) {
+	for (const auto &E : vmlist) {
 
-		vmarr.push_back(Size2(E->get().width, E->get().height));
+		vmarr.push_back(Size2(E.width, E.height));
 	}
 
 	return vmarr;
@@ -502,9 +502,9 @@ Vector<String> _OS::get_cmdline_args() {
 
 	List<String> cmdline = OS::get_singleton()->get_cmdline_args();
 	Vector<String> cmdlinev;
-	for (List<String>::Element *E = cmdline.front(); E; E = E->next()) {
+	for (const auto &E : cmdline) {
 
-		cmdlinev.push_back(E->get());
+		cmdlinev.push_back(E);
 	}
 
 	return cmdlinev;
@@ -930,20 +930,20 @@ void _OS::print_all_textures_by_size() {
 		List<Ref<Resource> > rsrc;
 		ResourceCache::get_cached_resources(&rsrc);
 
-		for (List<Ref<Resource> >::Element *E = rsrc.front(); E; E = E->next()) {
+		for (Ref<Resource> &E : rsrc) {
 
-			if (!E->get()->is_class("ImageTexture"))
+			if (!E->is_class("ImageTexture"))
 				continue;
 
-			Size2 size = E->get()->call("get_size");
-			int fmt = E->get()->call("get_format");
+			Size2 size = E->call("get_size");
+			int fmt = E->call("get_format");
 
 			_OSCoreBindImg img;
 			img.size = size;
 			img.fmt = fmt;
-			img.path = E->get()->get_path();
+			img.path = E->get_path();
 			img.vram = Image::get_image_data_size(img.size.width, img.size.height, Image::Format(img.fmt));
-			img.id = E->get()->get_instance_id();
+			img.id = E->get_instance_id();
 			total += img.vram;
 			imgs.push_back(img);
 		}
@@ -951,9 +951,9 @@ void _OS::print_all_textures_by_size() {
 
 	imgs.sort();
 
-	for (List<_OSCoreBindImg>::Element *E = imgs.front(); E; E = E->next()) {
+	for (const auto &E : imgs) {
 
-		total -= E->get().vram;
+		total -= E.vram;
 	}
 }
 

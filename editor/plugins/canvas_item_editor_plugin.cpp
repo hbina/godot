@@ -3256,14 +3256,14 @@ void CanvasItemEditor::_draw_viewport() {
 		all_locked = false;
 		all_group = false;
 	} else {
-		for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-			if (Object::cast_to<CanvasItem>(E->get()) && !Object::cast_to<CanvasItem>(E->get())->has_meta("_edit_lock_")) {
+		for (Node *E : selection) {
+			if (Object::cast_to<CanvasItem>(E) && !Object::cast_to<CanvasItem>(E)->has_meta("_edit_lock_")) {
 				all_locked = false;
 				break;
 			}
 		}
-		for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-			if (Object::cast_to<CanvasItem>(E->get()) && !Object::cast_to<CanvasItem>(E->get())->has_meta("_edit_group_")) {
+		for (Node *E : selection) {
+			if (Object::cast_to<CanvasItem>(E) && !Object::cast_to<CanvasItem>(E)->has_meta("_edit_group_")) {
 				all_group = false;
 				break;
 			}
@@ -3538,8 +3538,8 @@ void CanvasItemEditor::_selection_changed() {
 	int nbValidControls = 0;
 	int nbAnchorsMode = 0;
 	List<Node *> selection = editor_selection->get_selected_node_list();
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-		Control *control = Object::cast_to<Control>(E->get());
+	for (Node *E : selection) {
+		Control *control = Object::cast_to<Control>(E);
 		if (!control)
 			continue;
 		if (Object::cast_to<Container>(control->get_parent()))
@@ -3742,9 +3742,9 @@ void CanvasItemEditor::_set_anchors_and_margins_preset(Control::LayoutPreset p_p
 
 	undo_redo->create_action(TTR("Change Anchors and Margins"));
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		Control *control = Object::cast_to<Control>(E->get());
+		Control *control = Object::cast_to<Control>(E);
 		if (control) {
 			undo_redo->add_do_method(control, "set_anchors_preset", p_preset);
 			switch (p_preset) {
@@ -3784,9 +3784,9 @@ void CanvasItemEditor::_set_anchors_and_margins_to_keep_ratio() {
 
 	undo_redo->create_action(TTR("Change Anchors and Margins"));
 
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		Control *control = Object::cast_to<Control>(E->get());
+		Control *control = Object::cast_to<Control>(E);
 		if (control) {
 			Point2 top_left_anchor = _position_to_anchor(control, Point2());
 			Point2 bottom_right_anchor = _position_to_anchor(control, control->get_size());
@@ -3812,9 +3812,9 @@ void CanvasItemEditor::_set_anchors_preset(Control::LayoutPreset p_preset) {
 	List<Node *> selection = editor_selection->get_selected_node_list();
 
 	undo_redo->create_action(TTR("Change Anchors"));
-	for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+	for (Node *E : selection) {
 
-		Control *control = Object::cast_to<Control>(E->get());
+		Control *control = Object::cast_to<Control>(E);
 		if (control) {
 			undo_redo->add_do_method(control, "set_anchors_preset", p_preset);
 			undo_redo->add_undo_method(control, "_edit_set_state", control->_edit_get_state());
@@ -4064,8 +4064,8 @@ void CanvasItemEditor::_popup_callback(int p_op) {
 			undo_redo->create_action(TTR("Lock Selected"));
 
 			List<Node *> selection = editor_selection->get_selected_node_list();
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E->get());
+			for (Node *E : selection) {
+				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E);
 				if (!canvas_item || !canvas_item->is_inside_tree())
 					continue;
 				if (canvas_item->get_viewport() != EditorNode::get_singleton()->get_scene_root())
@@ -4084,8 +4084,8 @@ void CanvasItemEditor::_popup_callback(int p_op) {
 			undo_redo->create_action(TTR("Unlock Selected"));
 
 			List<Node *> selection = editor_selection->get_selected_node_list();
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E->get());
+			for (Node *E : selection) {
+				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E);
 				if (!canvas_item || !canvas_item->is_inside_tree())
 					continue;
 				if (canvas_item->get_viewport() != EditorNode::get_singleton()->get_scene_root())
@@ -4104,8 +4104,8 @@ void CanvasItemEditor::_popup_callback(int p_op) {
 			undo_redo->create_action(TTR("Group Selected"));
 
 			List<Node *> selection = editor_selection->get_selected_node_list();
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E->get());
+			for (Node *E : selection) {
+				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E);
 				if (!canvas_item || !canvas_item->is_inside_tree())
 					continue;
 				if (canvas_item->get_viewport() != EditorNode::get_singleton()->get_scene_root())
@@ -4124,8 +4124,8 @@ void CanvasItemEditor::_popup_callback(int p_op) {
 			undo_redo->create_action(TTR("Ungroup Selected"));
 
 			List<Node *> selection = editor_selection->get_selected_node_list();
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
-				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E->get());
+			for (Node *E : selection) {
+				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E);
 				if (!canvas_item || !canvas_item->is_inside_tree())
 					continue;
 				if (canvas_item->get_viewport() != EditorNode::get_singleton()->get_scene_root())
@@ -4417,9 +4417,9 @@ void CanvasItemEditor::_popup_callback(int p_op) {
 			List<Node *> selection = editor_selection->get_selected_node_list();
 
 			undo_redo->create_action(TTR("Make IK Chain"));
-			for (List<Node *>::Element *E = selection.front(); E; E = E->next()) {
+			for (Node *E : selection) {
 
-				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E->get());
+				CanvasItem *canvas_item = Object::cast_to<CanvasItem>(E);
 				if (!canvas_item || !canvas_item->is_visible_in_tree())
 					continue;
 				if (canvas_item->get_viewport() != EditorNode::get_singleton()->get_scene_root())

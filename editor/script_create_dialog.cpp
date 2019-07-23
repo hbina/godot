@@ -411,8 +411,8 @@ void ScriptCreateDialog::_browse_path(bool browse_parent, bool p_save) {
 	int lang = language_menu->get_selected();
 	ScriptServer::get_language(lang)->get_recognized_extensions(&extensions);
 
-	for (List<String>::Element *E = extensions.front(); E; E = E->next()) {
-		file_browse->add_filter("*." + E->get());
+	for (const auto &E : extensions) {
+		file_browse->add_filter("*." + E);
 	}
 
 	file_browse->set_current_path(file_path->get_text());
