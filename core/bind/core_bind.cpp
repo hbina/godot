@@ -967,9 +967,7 @@ void _OS::print_resources_by_type(const Vector<String> &p_types) {
 	List<Ref<Resource> > rsrc;
 	ResourceCache::get_cached_resources(&rsrc);
 
-	for (List<Ref<Resource> >::Element *E = rsrc.front(); E; E = E->next()) {
-
-		Ref<Resource> r = E->get();
+	for (const auto &r : rsrc) {
 
 		bool found = false;
 

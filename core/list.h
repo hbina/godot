@@ -138,11 +138,11 @@ public:
 	}
 
 	typename std::vector<T>::const_iterator begin() const noexcept {
-		return internal_vector.begin();
+		return internal_vector.cbegin();
 	}
 
 	typename std::vector<T>::const_iterator end() const noexcept {
-		return internal_vector.end();
+		return internal_vector.cend();
 	}
 
 	Element *getNextElement(const Element *p_elem) {
