@@ -2268,7 +2268,7 @@ ProjectManager::~ProjectManager() {
 		EditorSettings::destroy();
 }
 
-void ProjectListFilter::_setup_filters(Vector<String> options) {
+void ProjectListFilter::_setup_filters(const Vector<String> &options) {
 
 	filter_option->clear();
 	for (int i = 0; i < options.size(); i++)

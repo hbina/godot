@@ -491,7 +491,7 @@ private:
 	void _instance_request(const Vector<String> &p_files);
 
 	void _display_top_editors(bool p_display);
-	void _set_top_editors(Vector<EditorPlugin *> p_editor_plugins_over);
+	void _set_top_editors(const Vector<EditorPlugin *> &p_editor_plugins_over);
 	void _set_editing_top_editors(Object *p_current_object);
 
 	void _quick_opened();
@@ -838,7 +838,7 @@ public:
 	void remove_tool_menu_item(const String &p_name);
 
 	void save_all_scenes();
-	void save_scene_list(Vector<String> p_scene_filenames);
+	void save_scene_list(const Vector<String> &p_scene_filenames);
 	void restart_editor();
 
 	void dim_editor(bool p_dimming);
@@ -880,7 +880,7 @@ private:
 	Vector<EditorPlugin *> plugins_list;
 
 public:
-	void set_plugins_list(Vector<EditorPlugin *> p_plugins_list) {
+	void set_plugins_list(const Vector<EditorPlugin *> &p_plugins_list) {
 		plugins_list = p_plugins_list;
 	}
 

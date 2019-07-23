@@ -2053,7 +2053,7 @@ void EditorInspector::_property_changed_update_all(const String &p_path, const V
 	update_tree();
 }
 
-void EditorInspector::_multiple_properties_changed(Vector<String> p_paths, Array p_values) {
+void EditorInspector::_multiple_properties_changed(const Vector<String> &p_paths, Array p_values) {
 
 	ERR_FAIL_COND(p_paths.size() == 0 || p_values.size() == 0);
 	ERR_FAIL_COND(p_paths.size() != p_values.size());

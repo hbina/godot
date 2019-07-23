@@ -186,7 +186,7 @@ protected:
 		type_shape_map[PhysicsServer::SHAPE_CONVEX_POLYGON] = convex_shape;
 	}
 
-	void make_trimesh(Vector<Vector3> p_faces, const Transform &p_xform = Transform()) {
+	void make_trimesh(Vector<Vector3> &p_faces, const Transform &p_xform = Transform()) {
 
 		VisualServer *vs = VisualServer::get_singleton();
 		PhysicsServer *ps = PhysicsServer::get_singleton();

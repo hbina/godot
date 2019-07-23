@@ -182,7 +182,7 @@ class TileMapEditor : public VBoxContainer {
 	void _update_copydata();
 
 	Vector<int> get_selected_tiles() const;
-	void set_selected_tiles(Vector<int> p_tile);
+	void set_selected_tiles(const Vector<int> &p_tile);
 
 	void _manual_toggled(bool p_enabled);
 	void _priority_toggled(bool p_enabled);

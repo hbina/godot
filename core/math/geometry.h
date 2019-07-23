@@ -1033,7 +1033,7 @@ public:
 		H.resize(k);
 		return H;
 	}
-	static Vector<Vector<Vector2> > decompose_polygon_in_convex(Vector<Point2> polygon);
+	static Vector<Vector<Vector2> > decompose_polygon_in_convex(const Vector<Point2> &polygon);
 
 	static MeshData build_convex_mesh(const PoolVector<Plane> &p_planes);
 	static PoolVector<Plane> build_sphere_planes(real_t p_radius, int p_lats, int p_lons, Vector3::Axis p_axis = Vector3::AXIS_Z);

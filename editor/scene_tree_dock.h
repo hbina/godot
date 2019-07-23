@@ -199,12 +199,12 @@ class SceneTreeDock : public VBoxContainer {
 	void _update_script_button();
 	Node *_get_selection_group_tail(Node *p_node, List<Node *> p_list);
 
-	void _fill_path_renames(Vector<StringName> base_path, Vector<StringName> new_base_path, Node *p_node, List<Pair<NodePath, NodePath> > *p_renames);
+	void _fill_path_renames(Vector<StringName> &base_path, Vector<StringName> new_base_path, Node *p_node, List<Pair<NodePath, NodePath> > *p_renames);
 
 	void _normalize_drop(Node *&to_node, int &to_pos, int p_type);
 
 	void _nodes_dragged(Array p_nodes, NodePath p_to, int p_type);
-	void _files_dropped(Vector<String> p_files, NodePath p_to, int p_type);
+	void _files_dropped(const Vector<String> &p_files, NodePath p_to, int p_type);
 	void _script_dropped(String p_file, NodePath p_to);
 	void _quick_open();
 
