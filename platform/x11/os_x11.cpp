@@ -67,6 +67,9 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <chrono>
+#include <ctime>
+#include <iostream>
 
 //stupid linux.h
 #ifdef KEY_TAB
@@ -3160,13 +3163,10 @@ void OS_X11::run() {
 
 	if (!main_loop)
 		return;
-
 	main_loop->init();
 
-	//uint64_t last_ticks=get_ticks_usec();
-
-	//int frames=0;
-	//uint64_t frame=0;
+	auto start = std::chrono::system_clock::now();
+	unsigned int loop_counter = 1;
 
 	while (!force_quit) {
 
@@ -3174,9 +3174,14 @@ void OS_X11::run() {
 #ifdef JOYDEV_ENABLED
 		joypad->process_joypads();
 #endif
+
+		++loop_counter;
 		if (Main::iteration())
 			break;
 	};
+	auto end = std::chrono::system_clock::now();
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	std::cout << "loop: " << (elapsed_seconds.count()) / (float)loop_counter << " seconds" << std::endl;
 
 	main_loop->finish();
 }
