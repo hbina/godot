@@ -71,8 +71,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_icon_list(p_type, &il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}
@@ -80,8 +80,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_stylebox_list(p_type, &il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}
@@ -89,8 +89,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_stylebox_types(&il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}
@@ -98,8 +98,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_font_list(p_type, &il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}
@@ -107,8 +107,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_color_list(p_type, &il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}
@@ -116,8 +116,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_constant_list(p_type, &il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}
@@ -125,8 +125,8 @@ protected:
 		PoolVector<String> ilret;
 		List<StringName> il;
 		get_type_list(&il);
-		for (List<StringName>::Element *E = il.front(); E; E = E->next()) {
-			ilret.push_back(E->get());
+		for (const auto &E : il) {
+			ilret.push_back(E);
 		}
 		return ilret;
 	}

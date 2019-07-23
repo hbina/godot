@@ -225,7 +225,7 @@ Vector<int> TileMapEditor::get_selected_tiles() const {
 	return items;
 }
 
-void TileMapEditor::set_selected_tiles(Vector<int> p_tiles) {
+void TileMapEditor::set_selected_tiles(const Vector<int> &p_tiles) {
 
 	palette->unselect_all();
 

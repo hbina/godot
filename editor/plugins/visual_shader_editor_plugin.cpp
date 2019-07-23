@@ -2527,7 +2527,7 @@ public:
 	Ref<VisualShaderNode> node;
 	Vector<EditorProperty *> properties;
 
-	void setup(Vector<EditorProperty *> p_properties, const Vector<StringName> &p_names, Ref<VisualShaderNode> p_node) {
+	void setup(const Vector<EditorProperty *> &p_properties, const Vector<StringName> &p_names, Ref<VisualShaderNode> p_node) {
 		updating = false;
 		node = p_node;
 		properties = p_properties;

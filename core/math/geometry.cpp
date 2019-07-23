@@ -741,7 +741,7 @@ PoolVector<Face3> Geometry::wrap_geometry(PoolVector<Face3> p_array, real_t *p_e
 	return wrapped_faces;
 }
 
-Vector<Vector<Vector2> > Geometry::decompose_polygon_in_convex(Vector<Point2> polygon) {
+Vector<Vector<Vector2> > Geometry::decompose_polygon_in_convex(const Vector<Point2> &polygon) {
 	Vector<Vector<Vector2> > decomp;
 	List<TriangulatorPoly> in_poly, out_poly;
 

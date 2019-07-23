@@ -1227,7 +1227,7 @@ void EditorNode::save_all_scenes() {
 	_save_all_scenes();
 }
 
-void EditorNode::save_scene_list(Vector<String> p_scene_filenames) {
+void EditorNode::save_scene_list(const Vector<String> &p_scene_filenames) {
 
 	for (int i = 0; i < editor_data.get_edited_scene_count(); i++) {
 		Node *scene = editor_data.get_edited_scene_root(i);
@@ -1613,7 +1613,7 @@ void EditorNode::_display_top_editors(bool p_display) {
 	editor_plugins_over->make_visible(p_display);
 }
 
-void EditorNode::_set_top_editors(Vector<EditorPlugin *> p_editor_plugins_over) {
+void EditorNode::_set_top_editors(const Vector<EditorPlugin *> &p_editor_plugins_over) {
 	editor_plugins_over->set_plugins_list(p_editor_plugins_over);
 }
 
