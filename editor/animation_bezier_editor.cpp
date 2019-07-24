@@ -917,16 +917,14 @@ void AnimationBezierTrackEdit::_gui_input(const Ref<InputEvent> &p_event) {
 			}
 
 			// 6-(undo) reinsert overlapped keys
-			for (List<AnimMoveRestore>::Element *E = to_restore.front(); E; E = E->next()) {
+			for (const auto &amr : to_restore) {
 
-				AnimMoveRestore &amr = E->get();
 				undo_redo->add_undo_method(animation.ptr(), "track_insert_key", amr.track, amr.time, amr.key, 1);
 			}
 
 			// 6-(undo) reinsert overlapped keys
-			for (List<AnimMoveRestore>::Element *E = to_restore.front(); E; E = E->next()) {
+			for (const auto &amr : to_restore) {
 
-				AnimMoveRestore &amr = E->get();
 				undo_redo->add_undo_method(animation.ptr(), "track_insert_key", amr.track, amr.time, amr.key, 1);
 			}
 
@@ -1124,10 +1122,10 @@ void AnimationBezierTrackEdit::duplicate_selection() {
 	//reselect duplicated
 
 	selection.clear();
-	for (List<Pair<int, float> >::Element *E = new_selection_values.front(); E; E = E->next()) {
+	for (const auto &E : new_selection_values) {
 
-		int track = E->get().first;
-		float time = E->get().second;
+		int track = E.first;
+		float time = E.second;
 
 		int existing_idx = animation->track_find_key(track, time, true);
 

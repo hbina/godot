@@ -53,7 +53,7 @@ class RID_Data {
 	uint32_t _id;
 
 public:
-	_FORCE_INLINE_ uint32_t get_id() const { return _id; }
+	uint32_t get_id() const { return _id; }
 
 	virtual ~RID_Data();
 };
@@ -64,33 +64,33 @@ class RID {
 	mutable RID_Data *_data;
 
 public:
-	_FORCE_INLINE_ RID_Data *get_data() const { return _data; }
+	RID_Data *get_data() const { return _data; }
 
-	_FORCE_INLINE_ bool operator==(const RID &p_rid) const {
+	bool operator==(const RID &p_rid) const {
 
 		return _data == p_rid._data;
 	}
-	_FORCE_INLINE_ bool operator<(const RID &p_rid) const {
+	bool operator<(const RID &p_rid) const {
 
 		return _data < p_rid._data;
 	}
-	_FORCE_INLINE_ bool operator<=(const RID &p_rid) const {
+	bool operator<=(const RID &p_rid) const {
 
 		return _data <= p_rid._data;
 	}
-	_FORCE_INLINE_ bool operator>(const RID &p_rid) const {
+	bool operator>(const RID &p_rid) const {
 
 		return _data > p_rid._data;
 	}
-	_FORCE_INLINE_ bool operator!=(const RID &p_rid) const {
+	bool operator!=(const RID &p_rid) const {
 
 		return _data != p_rid._data;
 	}
-	_FORCE_INLINE_ bool is_valid() const { return _data != NULL; }
+	bool is_valid() const { return _data != NULL; }
 
-	_FORCE_INLINE_ uint32_t get_id() const { return _data ? _data->get_id() : 0; }
+	uint32_t get_id() const { return _data ? _data->get_id() : 0; }
 
-	_FORCE_INLINE_ RID() {
+	RID() {
 		_data = NULL;
 	}
 };
@@ -98,7 +98,7 @@ public:
 class RID_OwnerBase {
 protected:
 	static SafeRefCount refcount;
-	_FORCE_INLINE_ void _set_data(RID &p_rid, RID_Data *p_data) {
+	void _set_data(RID &p_rid, RID_Data *p_data) {
 		p_rid._data = p_data;
 		refcount.ref();
 		p_data->_id = refcount.get();
@@ -109,12 +109,12 @@ protected:
 
 #ifndef DEBUG_ENABLED
 
-	_FORCE_INLINE_ bool _is_owner(const RID &p_rid) const {
+	bool _is_owner(const RID &p_rid) const {
 
 		return this == p_rid._data->_owner;
 	}
 
-	_FORCE_INLINE_ void _remove_owner(RID &p_rid) {
+	void _remove_owner(RID &p_rid) {
 
 		p_rid._data->_owner = NULL;
 	}
@@ -134,7 +134,7 @@ public:
 	mutable Set<RID_Data *> id_map;
 #endif
 public:
-	_FORCE_INLINE_ RID make_rid(T *p_data) {
+	RID make_rid(T *p_data) {
 
 		RID rid;
 		_set_data(rid, p_data);
@@ -146,7 +146,7 @@ public:
 		return rid;
 	}
 
-	_FORCE_INLINE_ T *get(const RID &p_rid) {
+	T *get(const RID &p_rid) {
 
 #ifdef DEBUG_ENABLED
 
@@ -156,7 +156,7 @@ public:
 		return static_cast<T *>(p_rid.get_data());
 	}
 
-	_FORCE_INLINE_ T *getornull(const RID &p_rid) {
+	T *getornull(const RID &p_rid) {
 
 #ifdef DEBUG_ENABLED
 
@@ -167,12 +167,12 @@ public:
 		return static_cast<T *>(p_rid.get_data());
 	}
 
-	_FORCE_INLINE_ T *getptr(const RID &p_rid) {
+	T *getptr(const RID &p_rid) {
 
 		return static_cast<T *>(p_rid.get_data());
 	}
 
-	_FORCE_INLINE_ bool owns(const RID &p_rid) const {
+	bool owns(const RID &p_rid) const {
 
 		if (p_rid.get_data() == NULL)
 			return false;

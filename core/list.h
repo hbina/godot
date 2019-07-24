@@ -138,11 +138,35 @@ public:
 	}
 
 	typename std::vector<T>::const_iterator begin() const noexcept {
-		return internal_vector.cbegin();
+		return internal_vector.begin();
 	}
 
 	typename std::vector<T>::const_iterator end() const noexcept {
+		return internal_vector.end();
+	}
+
+	typename std::vector<T>::const_iterator cbegin() const noexcept {
+		return internal_vector.cbegin();
+	}
+
+	typename std::vector<T>::const_iterator cend() const noexcept {
 		return internal_vector.cend();
+	}
+
+	typename std::vector<T>::reverse_iterator rbegin() noexcept {
+		return internal_vector.rbegin();
+	}
+
+	typename std::vector<T>::reverse_iterator rend() noexcept {
+		return internal_vector.rend();
+	}
+
+	typename std::vector<T>::const_reverse_iterator crbegin() const noexcept {
+		return internal_vector.crbegin();
+	}
+
+	typename std::vector<T>::const_reverse_iterator crend() const noexcept {
+		return internal_vector.crend();
 	}
 
 	Element *getNextElement(const Element *p_elem) {

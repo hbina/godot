@@ -287,12 +287,12 @@ uint32_t PackedDataContainer::_pack(const Variant &p_data, Vector<uint8_t> &tmpd
 			sortk.sort();
 
 			int idx = 0;
-			for (List<DictKey>::Element *E = sortk.front(); E; E = E->next()) {
+			for (const auto &E : sortk) {
 
-				encode_uint32(E->get().hash, &tmpdata[pos + 8 + idx * 12 + 0]);
-				uint32_t ofs = _pack(E->get().key, tmpdata, string_cache);
+				encode_uint32(E.hash, &tmpdata[pos + 8 + idx * 12 + 0]);
+				uint32_t ofs = _pack(E.key, tmpdata, string_cache);
 				encode_uint32(ofs, &tmpdata[pos + 8 + idx * 12 + 4]);
-				ofs = _pack(d[E->get().key], tmpdata, string_cache);
+				ofs = _pack(d[E.key], tmpdata, string_cache);
 				encode_uint32(ofs, &tmpdata[pos + 8 + idx * 12 + 8]);
 				idx++;
 			}

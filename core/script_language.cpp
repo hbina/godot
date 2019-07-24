@@ -206,20 +206,20 @@ void ScriptServer::get_global_class_list(List<StringName> *r_global_classes) {
 		classes.push_back(*K);
 	}
 	classes.sort_custom<StringName::AlphCompare>();
-	for (List<StringName>::Element *E = classes.front(); E; E = E->next()) {
-		r_global_classes->push_back(E->get());
+	for (const auto &E : classes) {
+		r_global_classes->push_back(E);
 	}
 }
 void ScriptServer::save_global_classes() {
 	List<StringName> gc;
 	get_global_class_list(&gc);
 	Array gcarr;
-	for (List<StringName>::Element *E = gc.front(); E; E = E->next()) {
+	for (const auto &E : gc) {
 		Dictionary d;
-		d["class"] = E->get();
-		d["language"] = global_classes[E->get()].language;
-		d["path"] = global_classes[E->get()].path;
-		d["base"] = global_classes[E->get()].base;
+		d["class"] = E;
+		d["language"] = global_classes[E].language;
+		d["path"] = global_classes[E].path;
+		d["base"] = global_classes[E].base;
 		gcarr.push_back(d);
 	}
 
@@ -232,11 +232,11 @@ void ScriptInstance::get_property_state(List<Pair<StringName, Variant> > &state)
 
 	List<PropertyInfo> pinfo;
 	get_property_list(&pinfo);
-	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
+	for (const auto &E : pinfo) {
 
-		if (E->get().usage & PROPERTY_USAGE_STORAGE) {
+		if (E.usage & PROPERTY_USAGE_STORAGE) {
 			Pair<StringName, Variant> p;
-			p.first = E->get().name;
+			p.first = E.name;
 			if (get(p.first, p.second))
 				state.push_back(p);
 		}

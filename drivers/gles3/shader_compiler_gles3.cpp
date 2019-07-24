@@ -1072,7 +1072,7 @@ ShaderCompilerGLES3::ShaderCompilerGLES3() {
 
 	ShaderLanguage::get_builtin_funcs(&func_list);
 
-	for (List<String>::Element *E = func_list.front(); E; E = E->next()) {
-		internal_functions.insert(E->get());
+	for (const auto &E : func_list) {
+		internal_functions.insert(E);
 	}
 }

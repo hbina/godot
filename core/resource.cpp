@@ -136,14 +136,14 @@ void Resource::reload_from_file() {
 	List<PropertyInfo> pi;
 	s->get_property_list(&pi);
 
-	for (List<PropertyInfo>::Element *E = pi.front(); E; E = E->next()) {
+	for (const auto &E : pi) {
 
-		if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
+		if (!(E.usage & PROPERTY_USAGE_STORAGE))
 			continue;
-		if (E->get().name == "resource_path")
+		if (E.name == "resource_path")
 			continue; //do not change path
 
-		set(E->get().name, s->get(E->get().name));
+		set(E.name, s->get(E.name));
 	}
 }
 
@@ -157,11 +157,11 @@ Ref<Resource> Resource::duplicate_for_local_scene(Node *p_for_scene, Map<Ref<Res
 
 	r->local_scene = p_for_scene;
 
-	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
+	for (const auto &E : plist) {
 
-		if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
+		if (!(E.usage & PROPERTY_USAGE_STORAGE))
 			continue;
-		Variant p = get(E->get().name);
+		Variant p = get(E.name);
 		if (p.get_type() == Variant::OBJECT) {
 
 			RES sr = p;
@@ -180,7 +180,7 @@ Ref<Resource> Resource::duplicate_for_local_scene(Node *p_for_scene, Map<Ref<Res
 			}
 		}
 
-		r->set(E->get().name, p);
+		r->set(E.name, p);
 	}
 
 	RES res = Ref<Resource>(r);
@@ -195,11 +195,11 @@ void Resource::configure_for_local_scene(Node *p_for_scene, Map<Ref<Resource>, R
 
 	local_scene = p_for_scene;
 
-	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
+	for (const auto &E : plist) {
 
-		if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
+		if (!(E.usage & PROPERTY_USAGE_STORAGE))
 			continue;
-		Variant p = get(E->get().name);
+		Variant p = get(E.name);
 		if (p.get_type() == Variant::OBJECT) {
 
 			RES sr = p;
@@ -224,23 +224,23 @@ Ref<Resource> Resource::duplicate(bool p_subresources) const {
 	Resource *r = (Resource *)ClassDB::instance(get_class());
 	ERR_FAIL_COND_V(!r, Ref<Resource>());
 
-	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
+	for (const auto &E : plist) {
 
-		if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
+		if (!(E.usage & PROPERTY_USAGE_STORAGE))
 			continue;
-		Variant p = get(E->get().name);
+		Variant p = get(E.name);
 
 		if ((p.get_type() == Variant::DICTIONARY || p.get_type() == Variant::ARRAY)) {
-			r->set(E->get().name, p.duplicate(p_subresources));
-		} else if (p.get_type() == Variant::OBJECT && (p_subresources || (E->get().usage & PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE))) {
+			r->set(E.name, p.duplicate(p_subresources));
+		} else if (p.get_type() == Variant::OBJECT && (p_subresources || (E.usage & PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE))) {
 
 			RES sr = p;
 			if (sr.is_valid()) {
-				r->set(E->get().name, sr->duplicate(p_subresources));
+				r->set(E.name, sr->duplicate(p_subresources));
 			}
 		} else {
 
-			r->set(E->get().name, p);
+			r->set(E.name, p);
 		}
 	}
 
@@ -293,10 +293,10 @@ uint32_t Resource::hash_edited_version() const {
 	List<PropertyInfo> plist;
 	get_property_list(&plist);
 
-	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
+	for (const auto &E : plist) {
 
-		if (E->get().usage & PROPERTY_USAGE_STORAGE && E->get().type == Variant::OBJECT && E->get().hint == PROPERTY_HINT_RESOURCE_TYPE) {
-			RES res = get(E->get().name);
+		if (E.usage & PROPERTY_USAGE_STORAGE && E.type == Variant::OBJECT && E.hint == PROPERTY_HINT_RESOURCE_TYPE) {
+			RES res = get(E.name);
 			if (res.is_valid()) {
 				hash = hash_djb2_one_32(res->hash_edited_version(), hash);
 			}

@@ -32,28 +32,24 @@
 //Polygon implemented as an array of points with a 'hole' flag
 class TriangulatorPoly {
 protected:
-
-
-
 	Vector2 *points;
 	long numpoints;
 	bool hole;
 
 public:
-
 	//constructors/destructors
 	TriangulatorPoly();
 	~TriangulatorPoly();
 
 	TriangulatorPoly(const TriangulatorPoly &src);
-	TriangulatorPoly& operator=(const TriangulatorPoly &src);
+	TriangulatorPoly &operator=(const TriangulatorPoly &src);
 
 	//getters and setters
-	long GetNumPoints() {
+	long GetNumPoints() const {
 		return numpoints;
 	}
 
-	bool IsHole() {
+	bool IsHole() const {
 		return hole;
 	}
 
@@ -61,7 +57,7 @@ public:
 		this->hole = hole;
 	}
 
-	Vector2 &GetPoint(long i) {
+	Vector2 &GetPoint(long i) const {
 		return points[i];
 	}
 
@@ -69,7 +65,7 @@ public:
 		return points;
 	}
 
-	Vector2& operator[] (int i) {
+	Vector2 &operator[](int i) {
 		return points[i];
 	}
 
@@ -118,9 +114,9 @@ protected:
 		long next;
 	};
 
-	struct VertexSorter{
+	struct VertexSorter {
 		mutable MonotoneVertex *vertices;
-		bool operator() (long index1, long index2) const;
+		bool operator()(long index1, long index2) const;
 	};
 
 	struct Diagonal {
@@ -149,15 +145,15 @@ protected:
 		Vector2 p2;
 
 		//determines if the edge is to the left of another edge
-		bool operator< (const ScanLineEdge & other) const;
+		bool operator<(const ScanLineEdge &other) const;
 
-		bool IsConvex(const Vector2& p1, const Vector2& p2, const Vector2& p3) const;
+		bool IsConvex(const Vector2 &p1, const Vector2 &p2, const Vector2 &p3) const;
 	};
 
 	//standard helper functions
-	bool IsConvex(Vector2& p1, Vector2& p2, Vector2& p3);
-	bool IsReflex(Vector2& p1, Vector2& p2, Vector2& p3);
-	bool IsInside(Vector2& p1, Vector2& p2, Vector2& p3, Vector2 &p);
+	bool IsConvex(Vector2 &p1, Vector2 &p2, Vector2 &p3);
+	bool IsReflex(Vector2 &p1, Vector2 &p2, Vector2 &p3);
+	bool IsInside(Vector2 &p1, Vector2 &p2, Vector2 &p3, Vector2 &p);
 
 	bool InCone(Vector2 &p1, Vector2 &p2, Vector2 &p3, Vector2 &p);
 	bool InCone(PartitionVertex *v, Vector2 &p);
@@ -169,7 +165,7 @@ protected:
 
 	//helper functions for Triangulate_EC
 	void UpdateVertexReflexity(PartitionVertex *v);
-	void UpdateVertex(PartitionVertex *v,PartitionVertex *vertices, long numvertices);
+	void UpdateVertex(PartitionVertex *v, PartitionVertex *vertices, long numvertices);
 
 	//helper functions for ConvexPartition_OPT
 	void UpdateState(long a, long b, long w, long i, long j, DPState2 **dpstates);
@@ -179,14 +175,13 @@ protected:
 	//helper functions for MonotonePartition
 	bool Below(Vector2 &p1, Vector2 &p2);
 	void AddDiagonal(MonotoneVertex *vertices, long *numvertices, long index1, long index2,
-			 char *vertextypes, Set<ScanLineEdge>::Element **edgeTreeIterators,
-			 Set<ScanLineEdge> *edgeTree, long *helpers);
+			char *vertextypes, Set<ScanLineEdge>::Element **edgeTreeIterators,
+			Set<ScanLineEdge> *edgeTree, long *helpers);
 
 	//triangulates a monotone polygon, used in Triangulate_MONO
 	int TriangulateMonotone(TriangulatorPoly *inPoly, List<TriangulatorPoly> *triangles);
 
 public:
-
 	//simple heuristic procedure for removing holes from a list of polygons
 	//works by creating a diagonal from the rightmost hole vertex to some visible vertex
 	//time complexity: O(h*(n^2)), h is the number of holes, n is the number of vertices
@@ -301,6 +296,5 @@ public:
 	//returns 1 on success, 0 on failure
 	int ConvexPartition_OPT(TriangulatorPoly *poly, List<TriangulatorPoly> *parts);
 };
-
 
 #endif

@@ -1092,9 +1092,9 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 					obj->get_property_list(&props);
 
 					int pc = 0;
-					for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
+					for (const auto &E : props) {
 
-						if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
+						if (!(E.usage & PROPERTY_USAGE_STORAGE))
 							continue;
 						pc++;
 					}
@@ -1106,15 +1106,15 @@ Error encode_variant(const Variant &p_variant, uint8_t *r_buffer, int &r_len, bo
 
 					r_len += 4;
 
-					for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
+					for (const auto &E : props) {
 
-						if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
+						if (!(E.usage & PROPERTY_USAGE_STORAGE))
 							continue;
 
-						_encode_string(E->get().name, buf, r_len);
+						_encode_string(E.name, buf, r_len);
 
 						int len;
-						Error err = encode_variant(obj->get(E->get().name), buf, len, p_full_objects);
+						Error err = encode_variant(obj->get(E.name), buf, len, p_full_objects);
 						if (err)
 							return err;
 						ERR_FAIL_COND_V(len % 4, ERR_BUG);

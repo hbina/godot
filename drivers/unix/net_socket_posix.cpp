@@ -248,10 +248,10 @@ _FORCE_INLINE_ Error NetSocketPosix::_change_multicast_group(IP_Address p_ip, St
 		if (type == IP::TYPE_IPV6)
 			break; // IPv6 uses index.
 
-		for (List<IP_Address>::Element *F = c.ip_addresses.front(); F; F = F->next()) {
-			if (!F->get().is_ipv4())
+		for (const auto &F : c.ip_addresses) {
+			if (!F.is_ipv4())
 				continue; // Wrong IP type
-			if_ip = F->get();
+			if_ip = F;
 			break;
 		}
 		break;

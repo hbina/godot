@@ -40,6 +40,8 @@
 #include "scene/gui/separator.h"
 #include "scene/resources/dynamic_font.h"
 
+#include <algorithm>
+
 void GotoLineDialog::popup_find_line(TextEdit *p_edit) {
 
 	text_editor = p_edit;
@@ -777,8 +779,8 @@ void CodeTextEditor::_complete_request() {
 	if (entries.size() == 0)
 		return;
 
-	for (List<ScriptCodeCompletionOption>::Element *E = entries.front(); E; E = E->next()) {
-		E->get().icon = _get_completion_icon(E->get());
+	for (auto &E : entries) {
+		E.icon = _get_completion_icon(E);
 	}
 	text_editor->code_complete(entries, forced);
 }
@@ -1520,8 +1522,7 @@ void CodeTextEditor::goto_next_bookmark() {
 		text_editor->unfold_line(bmarks[0]);
 		text_editor->cursor_set_line(bmarks[0]);
 	} else {
-		for (List<int>::Element *E = bmarks.front(); E; E = E->next()) {
-			int bline = E->get();
+		for (const auto bline : bmarks) {
 			if (bline > line) {
 				text_editor->unfold_line(bline);
 				text_editor->cursor_set_line(bline);
@@ -1544,14 +1545,13 @@ void CodeTextEditor::goto_prev_bookmark() {
 		text_editor->unfold_line(bmarks[bmarks.size() - 1]);
 		text_editor->cursor_set_line(bmarks[bmarks.size() - 1]);
 	} else {
-		for (List<int>::Element *E = bmarks.back(); E; E = E->prev()) {
-			int bline = E->get();
+		std::for_each(bmarks.rbegin(), bmarks.rend(), [this, line](auto bline) {
 			if (bline < line) {
-				text_editor->unfold_line(bline);
-				text_editor->cursor_set_line(bline);
+				this->text_editor->unfold_line(bline);
+				this->text_editor->cursor_set_line(bline);
 				return;
 			}
-		}
+		});
 	}
 }
 

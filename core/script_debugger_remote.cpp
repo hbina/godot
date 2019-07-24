@@ -50,12 +50,12 @@ void ScriptDebuggerRemote::_send_video_memory() {
 	packet_peer_stream->put_var("message:video_mem");
 	packet_peer_stream->put_var(usage.size() * 4);
 
-	for (List<ResourceUsage>::Element *E = usage.front(); E; E = E->next()) {
+	for (const auto &E : usage) {
 
-		packet_peer_stream->put_var(E->get().path);
-		packet_peer_stream->put_var(E->get().type);
-		packet_peer_stream->put_var(E->get().format);
-		packet_peer_stream->put_var(E->get().vram);
+		packet_peer_stream->put_var(E.path);
+		packet_peer_stream->put_var(E.type);
+		packet_peer_stream->put_var(E.format);
+		packet_peer_stream->put_var(E.vram);
 	}
 }
 
@@ -609,9 +609,9 @@ void ScriptDebuggerRemote::_send_object_id(ObjectID p_id) {
 
 	List<PropertyInfo> pinfo;
 	obj->get_property_list(&pinfo, true);
-	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
-		if (E->get().usage & (PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_CATEGORY)) {
-			properties.push_back(PropertyDesc(E->get(), obj->get(E->get().name)));
+	for (const auto &E : pinfo) {
+		if (E.usage & (PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_CATEGORY)) {
+			properties.push_back(PropertyDesc(E, obj->get(E.name)));
 		}
 	}
 

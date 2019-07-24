@@ -2717,8 +2717,8 @@ PoolStringArray _ClassDB::get_class_list() const {
 	PoolStringArray ret;
 	ret.resize(classes.size());
 	int idx = 0;
-	for (List<StringName>::Element *E = classes.front(); E; E = E->next()) {
-		ret.set(idx++, E->get());
+	for (const auto &E : classes) {
+		ret.set(idx++, E);
 	}
 
 	return ret;
@@ -2731,8 +2731,8 @@ PoolStringArray _ClassDB::get_inheriters_from_class(const StringName &p_class) c
 	PoolStringArray ret;
 	ret.resize(classes.size());
 	int idx = 0;
-	for (List<StringName>::Element *E = classes.front(); E; E = E->next()) {
-		ret.set(idx++, E->get());
+	for (const auto &E : classes) {
+		ret.set(idx++, E);
 	}
 
 	return ret;
@@ -2786,8 +2786,8 @@ Array _ClassDB::get_signal_list(StringName p_class, bool p_no_inheritance) const
 	ClassDB::get_signal_list(p_class, &signals, p_no_inheritance);
 	Array ret;
 
-	for (List<MethodInfo>::Element *E = signals.front(); E; E = E->next()) {
-		ret.push_back(E->get().operator Dictionary());
+	for (const auto &E : signals) {
+		ret.push_back(E.operator Dictionary());
 	}
 
 	return ret;
@@ -2798,8 +2798,8 @@ Array _ClassDB::get_property_list(StringName p_class, bool p_no_inheritance) con
 	List<PropertyInfo> plist;
 	ClassDB::get_property_list(p_class, &plist, p_no_inheritance);
 	Array ret;
-	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
-		ret.push_back(E->get().operator Dictionary());
+	for (const auto &E : plist) {
+		ret.push_back(E.operator Dictionary());
 	}
 
 	return ret;
@@ -2833,9 +2833,9 @@ Array _ClassDB::get_method_list(StringName p_class, bool p_no_inheritance) const
 	ClassDB::get_method_list(p_class, &methods, p_no_inheritance);
 	Array ret;
 
-	for (List<MethodInfo>::Element *E = methods.front(); E; E = E->next()) {
+	for (const auto &E : methods) {
 #ifdef DEBUG_METHODS_ENABLED
-		ret.push_back(E->get().operator Dictionary());
+		ret.push_back(E.operator Dictionary());
 #else
 		Dictionary dict;
 		dict["name"] = E->get().name;
@@ -2854,8 +2854,8 @@ PoolStringArray _ClassDB::get_integer_constant_list(const StringName &p_class, b
 	PoolStringArray ret;
 	ret.resize(constants.size());
 	int idx = 0;
-	for (List<String>::Element *E = constants.front(); E; E = E->next()) {
-		ret.set(idx++, E->get());
+	for (const auto &E : constants) {
+		ret.set(idx++, E);
 	}
 
 	return ret;

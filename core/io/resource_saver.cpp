@@ -99,9 +99,9 @@ Error ResourceSaver::save(const String &p_path, const RES &p_resource, uint32_t 
 		bool recognized = false;
 		saver[i]->get_recognized_extensions(p_resource, &extensions);
 
-		for (List<String>::Element *E = extensions.front(); E; E = E->next()) {
+		for (const auto &E : extensions) {
 
-			if (E->get().nocasecmp_to(extension) == 0)
+			if (E.nocasecmp_to(extension) == 0)
 				recognized = true;
 		}
 
@@ -246,9 +246,8 @@ void ResourceSaver::add_custom_savers() {
 	List<StringName> global_classes;
 	ScriptServer::get_global_class_list(&global_classes);
 
-	for (List<StringName>::Element *E = global_classes.front(); E; E = E->next()) {
+	for (const auto &class_name : global_classes) {
 
-		StringName class_name = E->get();
 		StringName base_class = ScriptServer::get_global_class_native_base(class_name);
 
 		if (base_class == custom_saver_base_class) {

@@ -37,6 +37,8 @@
 #include "core/os/memory.h"
 #include "core/typedefs.h"
 
+#include <array>
+
 class Reverb {
 public:
 	enum {
@@ -53,8 +55,25 @@ private:
 
 	};
 
-	static const float comb_tunings[MAX_COMBS];
-	static const float allpass_tunings[MAX_ALLPASS];
+	static constexpr std::array<float, MAX_COMBS> comb_tunings = {
+		//freeverb comb tunings
+		0.025306122448979593f,
+		0.026938775510204082f,
+		0.028956916099773241f,
+		0.03074829931972789f,
+		0.032244897959183672f,
+		0.03380952380952381f,
+		0.035306122448979592f,
+		0.036666666666666667f
+	};
+
+	static constexpr std::array<float, MAX_ALLPASS> allpass_tunings = {
+		//freeverb allpass tunings
+		0.0051020408163265302f,
+		0.007732426303854875f,
+		0.01f,
+		0.012607709750566893f
+	};
 
 	struct Comb {
 
@@ -66,13 +85,14 @@ private:
 		int pos;
 		int extra_spread_frames;
 
-		Comb() {
-			size = 0;
-			buffer = 0;
-			feedback = 0;
-			damp_h = 0;
-			pos = 0;
-		}
+		Comb() :
+				size(0),
+				buffer(nullptr),
+				feedback(0),
+				damp(0.0),
+				damp_h(0.0),
+				pos(0),
+				extra_spread_frames(0) {}
 	};
 
 	struct AllPass {
@@ -81,15 +101,16 @@ private:
 		float *buffer;
 		int pos;
 		int extra_spread_frames;
-		AllPass() {
-			size = 0;
-			buffer = 0;
-			pos = 0;
-		}
+
+		AllPass() :
+				size(0),
+				buffer(nullptr),
+				pos(0),
+				extra_spread_frames(0) {}
 	};
 
-	Comb comb[MAX_COMBS];
-	AllPass allpass[MAX_ALLPASS];
+	std::array<Comb, MAX_COMBS> comb;
+	std::array<AllPass, MAX_ALLPASS> allpass;
 	float *input_buffer;
 	float *echo_buffer;
 	int echo_buffer_size;

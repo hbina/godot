@@ -657,11 +657,7 @@ Error ProjectSettings::_save_settings_binary(const String &p_file, const Map<Str
 	int count = 0;
 
 	for (Map<String, List<String> >::Element *E = props.front(); E; E = E->next()) {
-
-		for (List<String>::Element *F = E->get().front(); F; F = F->next()) {
-
-			count++;
-		}
+		count += E->get().size();
 	}
 
 	if (p_custom_features != String()) {
@@ -695,9 +691,8 @@ Error ProjectSettings::_save_settings_binary(const String &p_file, const Map<Str
 
 	for (Map<String, List<String> >::Element *E = props.front(); E; E = E->next()) {
 
-		for (List<String>::Element *F = E->get().front(); F; F = F->next()) {
+		for (auto key : E->get()) {
 
-			String key = F->get();
 			if (E->key() != "")
 				key = E->key() + "/" + key;
 			Variant value;
@@ -764,9 +759,8 @@ Error ProjectSettings::_save_settings_text(const String &p_file, const Map<Strin
 
 		if (E->key() != "")
 			file->store_string("[" + E->key() + "]\n\n");
-		for (List<String>::Element *F = E->get().front(); F; F = F->next()) {
-
-			String key = F->get();
+		for (const auto &F : E->get()) {
+			String key = F;
 			if (E->key() != "")
 				key = E->key() + "/" + key;
 			Variant value;
@@ -777,10 +771,10 @@ Error ProjectSettings::_save_settings_text(const String &p_file, const Map<Strin
 
 			String vstr;
 			VariantWriter::write_to_string(value, vstr);
-			if (F->get().find(" ") != -1)
-				file->store_string(F->get().quote() + "=" + vstr + "\n");
+			if (key.find(" ") != -1)
+				file->store_string(F.quote() + "=" + vstr + "\n");
 			else
-				file->store_string(F->get() + "=" + vstr + "\n");
+				file->store_string(F + "=" + vstr + "\n");
 		}
 	}
 
@@ -897,11 +891,11 @@ Vector<String> ProjectSettings::get_optimizer_presets() const {
 	ProjectSettings::get_singleton()->get_property_list(&pi);
 	Vector<String> names;
 
-	for (List<PropertyInfo>::Element *E = pi.front(); E; E = E->next()) {
+	for (const auto &E : pi) {
 
-		if (!E->get().name.begins_with("optimizer_presets/"))
+		if (!E.name.begins_with("optimizer_presets/"))
 			continue;
-		names.push_back(E->get().name.get_slicec('/', 1));
+		names.push_back(E.name.get_slicec('/', 1));
 	}
 
 	names.sort();
