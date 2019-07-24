@@ -244,7 +244,7 @@ public:
 								args[idx] = Variant::construct(t, (const Variant **)ptrs, 1, err);
 							} else {
 
-								args[idx] = Variant::construct(t, NULL, 0, err);
+								args[idx] = Variant::construct(t, nullptr, 0, err);
 							}
 							change_notify_deserved = true;
 							d_new["args"] = args;
@@ -633,12 +633,12 @@ public:
 					if (ap) {
 						List<StringName> anims;
 						ap->get_animation_list(&anims);
-						for (List<StringName>::Element *E = anims.front(); E; E = E->next()) {
+						for (const auto &E : anims) {
 							if (animations != String()) {
 								animations += ",";
 							}
 
-							animations += String(E->get());
+							animations += String(E);
 						}
 					}
 				}
@@ -687,7 +687,7 @@ public:
 		key_ofs = 0;
 		track = -1;
 		setting = false;
-		root_path = NULL;
+		root_path = nullptr;
 	}
 };
 
@@ -1151,7 +1151,7 @@ AnimationTimelineEdit::AnimationTimelineEdit() {
 	use_fps = false;
 	editing = false;
 	name_limit = 150;
-	zoom = NULL;
+	zoom = nullptr;
 
 	play_position_pos = 0;
 	play_position = memnew(Control);
@@ -1250,7 +1250,7 @@ void AnimationTrackEdit::_notification(int p_what) {
 			ofs += type_icon->get_width() + hsep;
 
 			NodePath path = animation->track_get_path(track);
-			Node *node = NULL;
+			Node *node = nullptr;
 			if (root && root->has_node(path)) {
 				node = root->get_node(path);
 			}
@@ -1775,7 +1775,7 @@ bool AnimationTrackEdit::_is_value_key_valid(const Variant &p_key_value, Variant
 	Vector<StringName> leftover_path;
 	Node *node = root->get_node_and_resource(animation->track_get_path(track), res, leftover_path);
 
-	Object *obj = NULL;
+	Object *obj = nullptr;
 	if (res.is_valid()) {
 		obj = res.ptr();
 	} else if (node) {
@@ -1907,7 +1907,7 @@ String AnimationTrackEdit::get_tooltip(const Point2 &p_pos) const {
 				} break;
 				case Animation::TYPE_AUDIO: {
 
-					String stream_name = "null";
+					String stream_name = "nullptr";
 					RES stream = animation->audio_track_get_key_stream(track, key_idx);
 					if (stream.is_valid()) {
 						if (stream->get_path().is_resource_file()) {
@@ -2384,11 +2384,11 @@ void AnimationTrackEdit::_bind_methods() {
 }
 
 AnimationTrackEdit::AnimationTrackEdit() {
-	undo_redo = NULL;
-	timeline = NULL;
-	root = NULL;
-	path = NULL;
-	menu = NULL;
+	undo_redo = nullptr;
+	timeline = nullptr;
+	root = nullptr;
+	path = nullptr;
+	menu = nullptr;
 	clicking_on_name = false;
 	dropping_at = 0;
 
@@ -2433,7 +2433,7 @@ AnimationTrackEdit *AnimationTrackEditPlugin::create_value_track_edit(Object *p_
 		Variant::CallError ce;
 		return Object::cast_to<AnimationTrackEdit>(get_script_instance()->call("create_value_track_edit", (const Variant **)&argptrs, 6, ce).operator Object *());
 	}
-	return NULL;
+	return nullptr;
 }
 
 AnimationTrackEdit *AnimationTrackEditPlugin::create_audio_track_edit() {
@@ -2441,14 +2441,14 @@ AnimationTrackEdit *AnimationTrackEditPlugin::create_audio_track_edit() {
 	if (get_script_instance()) {
 		return Object::cast_to<AnimationTrackEdit>(get_script_instance()->call("create_audio_track_edit").operator Object *());
 	}
-	return NULL;
+	return nullptr;
 }
 
 AnimationTrackEdit *AnimationTrackEditPlugin::create_animation_track_edit(Object *p_object) {
 	if (get_script_instance()) {
 		return Object::cast_to<AnimationTrackEdit>(get_script_instance()->call("create_animation_track_edit", p_object).operator Object *());
 	}
-	return NULL;
+	return nullptr;
 }
 
 ///////////////////////////////////////
@@ -2597,7 +2597,7 @@ Ref<Animation> AnimationTrackEditor::get_current_animation() const {
 	return animation;
 }
 void AnimationTrackEditor::_root_removed(Node *p_root) {
-	root = NULL;
+	root = nullptr;
 }
 
 void AnimationTrackEditor::set_root(Node *p_root) {
@@ -2749,9 +2749,9 @@ void AnimationTrackEditor::_query_insert(const InsertData &p_id) {
 	}
 	insert_frame = Engine::get_singleton()->get_frames_drawn();
 
-	for (List<InsertData>::Element *E = insert_data.front(); E; E = E->next()) {
+	for (const auto &E : insert_data) {
 		//prevent insertion of multiple tracks
-		if (E->get().path == p_id.path)
+		if (E.path == p_id.path)
 			return; //already inserted a track for this on this frame
 	}
 
@@ -3178,17 +3178,17 @@ PropertyInfo AnimationTrackEditor::_find_hint_for_track(int p_idx, NodePath &r_b
 	List<PropertyInfo> pinfo;
 	property_info_base.get_property_list(&pinfo);
 
-	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
+	for (const auto &E : pinfo) {
 
-		if (E->get().name == leftover_path[leftover_path.size() - 1]) {
-			return E->get();
+		if (E.name == leftover_path[leftover_path.size() - 1]) {
+			return E;
 		}
 	}
 
 	return PropertyInfo();
 }
 
-static Vector<String> _get_bezier_subindices_for_type(Variant::Type p_type, bool *r_valid = NULL) {
+static Vector<String> _get_bezier_subindices_for_type(Variant::Type p_type, bool *r_valid = nullptr) {
 	Vector<String> subindices;
 	if (r_valid) {
 		*r_valid = true;
@@ -3405,7 +3405,7 @@ void AnimationTrackEditor::_update_tracks() {
 	bool use_filter = selected_filter->is_pressed();
 
 	for (int i = 0; i < animation->get_track_count(); i++) {
-		AnimationTrackEdit *track_edit = NULL;
+		AnimationTrackEdit *track_edit = nullptr;
 
 		//find hint and info for plugin
 
@@ -3466,7 +3466,7 @@ void AnimationTrackEditor::_update_tracks() {
 		if (animation->track_get_type(i) == Animation::TYPE_ANIMATION) {
 			NodePath path = animation->track_get_path(i);
 
-			Node *node = NULL;
+			Node *node = nullptr;
 			if (root && root->has_node(path)) {
 				node = root->get_node(path);
 			}
@@ -3481,7 +3481,7 @@ void AnimationTrackEditor::_update_tracks() {
 			}
 		}
 
-		if (track_edit == NULL) {
+		if (track_edit == nullptr) {
 			//no valid plugin_found
 			track_edit = memnew(AnimationTrackEdit);
 		}
@@ -4021,22 +4021,22 @@ void AnimationTrackEditor::_add_method_key(const String &p_method) {
 	List<MethodInfo> minfo;
 	base->get_method_list(&minfo);
 
-	for (List<MethodInfo>::Element *E = minfo.front(); E; E = E->next()) {
-		if (E->get().name == p_method) {
+	for (const auto &E : minfo) {
+		if (E.name == p_method) {
 
 			Dictionary d;
 			d["method"] = p_method;
 			Array params;
-			int first_defarg = E->get().arguments.size() - E->get().default_arguments.size();
+			int first_defarg = E.arguments.size() - E.default_arguments.size();
 
-			for (int i = 0; i < E->get().arguments.size(); i++) {
+			for (int i = 0; i < E.arguments.size(); i++) {
 
 				if (i >= first_defarg) {
-					Variant arg = E->get().default_arguments[i - first_defarg];
+					Variant arg = E.default_arguments[i - first_defarg];
 					params.push_back(arg);
 				} else {
 					Variant::CallError ce;
-					Variant arg = Variant::construct(E->get().arguments[i].type, NULL, 0, ce);
+					Variant arg = Variant::construct(E.arguments[i].type, nullptr, 0, ce);
 					params.push_back(arg);
 				}
 			}
@@ -4128,12 +4128,12 @@ void AnimationTrackEditor::_clear_key_edit() {
 
 		bool go_back = false;
 		if (EditorNode::get_singleton()->get_inspector()->get_edited_object() == key_edit) {
-			EditorNode::get_singleton()->push_item(NULL);
+			EditorNode::get_singleton()->push_item(nullptr);
 			go_back = true;
 		}
 
 		memdelete(key_edit);
-		key_edit = NULL;
+		key_edit = nullptr;
 
 		if (go_back) {
 			EditorNode::get_singleton()->get_inspector_dock()->go_back();
@@ -4141,11 +4141,11 @@ void AnimationTrackEditor::_clear_key_edit() {
 #else
 		//if key edit is the object being inspected, remove it first
 		if (EditorNode::get_singleton()->get_inspector()->get_edited_object() == key_edit) {
-			EditorNode::get_singleton()->push_item(NULL);
+			EditorNode::get_singleton()->push_item(nullptr);
 		}
 		//then actually delete it
 		memdelete(key_edit);
-		key_edit = NULL;
+		key_edit = nullptr;
 #endif
 	}
 }
@@ -4274,9 +4274,8 @@ void AnimationTrackEditor::_move_selection_commit() {
 	}
 
 	// 6-(undo) reinsert overlapped keys
-	for (List<_AnimMoveRestore>::Element *E = to_restore.front(); E; E = E->next()) {
+	for (const auto &amr : to_restore) {
 
-		_AnimMoveRestore &amr = E->get();
 		undo_redo->add_undo_method(animation.ptr(), "track_insert_key", amr.track, amr.time, amr.key, amr.transition);
 	}
 
@@ -4495,10 +4494,10 @@ void AnimationTrackEditor::_anim_duplicate_keys(bool transpose) {
 		//reselect duplicated
 
 		Map<SelectedKey, KeyInfo> new_selection;
-		for (List<Pair<int, float> >::Element *E = new_selection_values.front(); E; E = E->next()) {
+		for (const auto &E : new_selection_values) {
 
-			int track = E->get().first;
-			float time = E->get().second;
+			int track = E.first;
+			float time = E.second;
 
 			int existing_idx = animation->track_find_key(track, time, true);
 
@@ -4530,7 +4529,7 @@ void AnimationTrackEditor::_edit_menu_pressed(int p_option) {
 			for (int i = 0; i < animation->get_track_count(); i++) {
 
 				NodePath path = animation->track_get_path(i);
-				Node *node = NULL;
+				Node *node = nullptr;
 
 				if (root && root->has_node(path)) {
 					node = root->get_node(path);
@@ -4627,7 +4626,7 @@ void AnimationTrackEditor::_edit_menu_pressed(int p_option) {
 			undo_redo->create_action(TTR("Paste Tracks"));
 			for (int i = 0; i < track_clipboard.size(); i++) {
 				undo_redo->add_do_method(animation.ptr(), "add_track", track_clipboard[i].track_type);
-				Node *exists = NULL;
+				Node *exists = nullptr;
 				NodePath path = track_clipboard[i].base_path;
 
 				if (root) {
@@ -4748,9 +4747,8 @@ void AnimationTrackEditor::_edit_menu_pressed(int p_option) {
 			}
 
 			// 6-(undo) reinsert overlapped keys
-			for (List<_AnimMoveRestore>::Element *E = to_restore.front(); E; E = E->next()) {
+			for (const auto &amr : to_restore) {
 
-				_AnimMoveRestore &amr = E->get();
 				undo_redo->add_undo_method(animation.ptr(), "track_insert_key", amr.track, amr.time, amr.key, amr.transition);
 			}
 
@@ -4857,8 +4855,8 @@ void AnimationTrackEditor::_edit_menu_pressed(int p_option) {
 			if (cleanup_all->is_pressed()) {
 				List<StringName> names;
 				AnimationPlayerEditor::singleton->get_player()->get_animation_list(&names);
-				for (List<StringName>::Element *E = names.front(); E; E = E->next()) {
-					_cleanup_animation(AnimationPlayerEditor::singleton->get_player()->get_animation(E->get()));
+				for (const auto &E : names) {
+					_cleanup_animation(AnimationPlayerEditor::singleton->get_player()->get_animation(E));
 				}
 			} else {
 				_cleanup_animation(animation);
@@ -4874,7 +4872,7 @@ void AnimationTrackEditor::_cleanup_animation(Ref<Animation> p_animation) {
 
 		bool prop_exists = false;
 		Variant::Type valid_type = Variant::NIL;
-		Object *obj = NULL;
+		Object *obj = nullptr;
 
 		RES res;
 		Vector<StringName> leftover_path;
@@ -5036,7 +5034,7 @@ void AnimationTrackEditor::_bind_methods() {
 }
 
 AnimationTrackEditor::AnimationTrackEditor() {
-	root = NULL;
+	root = nullptr;
 
 	undo_redo = EditorNode::get_singleton()->get_undo_redo();
 
@@ -5219,7 +5217,7 @@ AnimationTrackEditor::AnimationTrackEditor() {
 	icvb->add_child(insert_confirm_bezier);
 	keying = false;
 	moving_selection = 0;
-	key_edit = NULL;
+	key_edit = nullptr;
 
 	box_selection = memnew(Control);
 	add_child(box_selection);
