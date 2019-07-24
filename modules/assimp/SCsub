@@ -14,10 +14,11 @@ env_assimp.Prepend(CPPPATH=['#thirdparty/assimp/contrib/unzip/'])
 env_assimp.Prepend(CPPPATH=['#thirdparty/assimp/code/Importer/STEPParser'])
 env_assimp.Prepend(CPPPATH=['#thirdparty/assimp/'])
 env_assimp.Prepend(CPPPATH=['#thirdparty/zlib/'])
-env_assimp.Prepend(CPPPATH=['#thirdparty/assimp/contrib/openddlparser/include'])
+env_assimp.Prepend(
+    CPPPATH=['#thirdparty/assimp/contrib/openddlparser/include'])
 env_assimp.Prepend(CPPPATH=['#thirdparty/assimp/contrib/rapidjson/include'])
 env_assimp.Prepend(CPPPATH=['.'])
-#env_assimp.Append(CPPDEFINES=['ASSIMP_DOUBLE_PRECISION']) # TODO default to what godot is compiled with for future double support
+# env_assimp.Append(CPPDEFINES=['ASSIMP_DOUBLE_PRECISION']) # TODO default to what godot is compiled with for future double support
 env_assimp.Append(CPPDEFINES=['ASSIMP_BUILD_BOOST_WORKAROUND'])
 env_assimp.Append(CPPDEFINES=['OPENDDLPARSER_BUILD'])
 env_assimp.Append(CPPDEFINES=['ASSIMP_BUILD_NO_OWN_ZLIB'])
@@ -72,9 +73,7 @@ env_assimp.Append(CPPDEFINES=['ASSIMP_BUILD_NO_X3D_IMPORTER'])
 
 env_assimp.Append(CPPDEFINES=['ASSIMP_BUILD_SINGLETHREADED'])
 
-if (not env.msvc):
-    env_assimp.Append(CXXFLAGS=['-std=c++11'])
-elif (env.msvc == False and env['platform'] == 'windows'):
+if (env.msvc == False and env['platform'] == 'windows'):
     env_assimp.Append(LDFLAGS=['-pthread'])
 
 if(env['platform'] == 'windows'):
@@ -86,10 +85,11 @@ elif(env['platform'] == 'x11'):
 elif(env['platform'] == 'osx'):
     env_assimp.Append(CPPDEFINES=['PLATFORM_DARWIN'])
     env_assimp.Append(CPPDEFINES=[('PLATFORM', 'DARWIN')])
-    
+
 env_thirdparty = env_assimp.Clone()
 env_thirdparty.disable_warnings()
-env_thirdparty.add_source_files(env.modules_sources, Glob('#thirdparty/assimp/code/*.cpp'))
+env_thirdparty.add_source_files(
+    env.modules_sources, Glob('#thirdparty/assimp/code/*.cpp'))
 
 # Godot's own source files
 env_assimp.add_source_files(env.modules_sources, "*.cpp")
