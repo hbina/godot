@@ -67,7 +67,7 @@ void Array::_unref() const {
 	if (_p->refcount.unref()) {
 		memdelete(_p);
 	}
-	_p = NULL;
+	_p = nullptr;
 }
 
 Variant &Array::operator[](int p_idx) {
@@ -230,9 +230,10 @@ Array Array::duplicate(bool p_deep) const {
 
 	return new_arr;
 }
+
 struct _ArrayVariantSort {
 
-	_FORCE_INLINE_ bool operator()(const Variant &p_l, const Variant &p_r) const {
+	bool operator()(const Variant &p_l, const Variant &p_r) const {
 		bool valid = false;
 		Variant res;
 		Variant::evaluate(Variant::OP_LESS, p_l, p_r, res, valid);
@@ -253,7 +254,7 @@ struct _ArrayVariantSortCustom {
 	Object *obj;
 	StringName func;
 
-	_FORCE_INLINE_ bool operator()(const Variant &p_l, const Variant &p_r) const {
+	bool operator()(const Variant &p_l, const Variant &p_r) const {
 
 		const Variant *args[2] = { &p_l, &p_r };
 		Variant::CallError err;
@@ -263,6 +264,7 @@ struct _ArrayVariantSortCustom {
 		return res;
 	}
 };
+
 Array &Array::sort_custom(Object *p_obj, const StringName &p_function) {
 
 	ERR_FAIL_NULL_V(p_obj, *this);
@@ -289,7 +291,7 @@ void Array::shuffle() {
 }
 
 template <typename Less>
-_FORCE_INLINE_ int bisect(const Vector<Variant> &p_array, const Variant &p_value, bool p_before, const Less &p_less) {
+int bisect(const Vector<Variant> &p_array, const Variant &p_value, bool p_before, const Less &p_less) {
 
 	int lo = 0;
 	int hi = p_array.size();
@@ -414,8 +416,7 @@ const void *Array::id() const {
 }
 
 Array::Array(const Array &p_from) {
-
-	_p = NULL;
+	_p = nullptr;
 	_ref(p_from);
 }
 
