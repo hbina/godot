@@ -165,7 +165,7 @@ public:
 
 	Element *getPreviousElement(const Element *p_elem) {
 
-		if (p_elem->inner_index - 1 < 0) {
+		if (p_elem->inner_index <= 0 || p_elem->inner_index >= internal_state.size()) {
 			return nullptr;
 		} else {
 			return internal_state[p_elem->inner_index - 1];
@@ -174,7 +174,7 @@ public:
 
 	const Element *getPreviousElement(const Element *p_elem) const {
 
-		if (p_elem->inner_index - 1 < 0) {
+		if (p_elem->inner_index <= 0 || p_elem->inner_index >= internal_state.size()) {
 			return nullptr;
 		} else {
 			return internal_state[p_elem->inner_index - 1];
