@@ -34,26 +34,6 @@
 #include "core/math/math_funcs.h"
 #include <math.h>
 
-const float Reverb::comb_tunings[MAX_COMBS] = {
-	//freeverb comb tunings
-	0.025306122448979593f,
-	0.026938775510204082f,
-	0.028956916099773241f,
-	0.03074829931972789f,
-	0.032244897959183672f,
-	0.03380952380952381f,
-	0.035306122448979592f,
-	0.036666666666666667f
-};
-
-const float Reverb::allpass_tunings[MAX_ALLPASS] = {
-	//freeverb allpass tunings
-	0.0051020408163265302f,
-	0.007732426303854875f,
-	0.01f,
-	0.012607709750566893f
-};
-
 void Reverb::process(float *p_src, float *p_dst, int p_frames) {
 
 	if (p_frames > INPUT_BUFFER_MAX_SIZE)
@@ -120,40 +100,6 @@ void Reverb::process(float *p_src, float *p_dst, int p_frames) {
 	}
 
 	static const float allpass_feedback = 0.7;
-	/* this one works, but the other version is just nicer....
-	int ap_size_limit[MAX_ALLPASS];
-
-	for (int i=0;i<MAX_ALLPASS;i++) {
-
-		AllPass &a=allpass[i];
-		ap_size_limit[i]=a.size-lrintf((float)a.extra_spread_frames*(1.0-params.extra_spread));
-	}
-
-	for (int i=0;i<p_frames;i++) {
-
-		float sample=p_dst[i];
-		float aux,in;
-		float AllPass*ap;
-
-#define PROCESS_ALLPASS(m_ap) 	\
-	ap=&allpass[m_ap];	\
-	if (ap->pos>=ap_size_limit[m_ap])	\
-		ap->pos=0;	\
-	aux=undenormalise(ap->buffer[ap->pos]);	\
-	in=sample;	\
-	sample=-in+aux;	\
-	ap->pos++;
-
-
-		PROCESS_ALLPASS(0);
-		PROCESS_ALLPASS(1);
-		PROCESS_ALLPASS(2);
-		PROCESS_ALLPASS(3);
-
-		p_dst[i]=sample;
-	}
-	*/
-
 	for (int i = 0; i < MAX_ALLPASS; i++) {
 
 		AllPass &a = allpass[i];
@@ -248,7 +194,7 @@ void Reverb::configure_buffers() {
 		if (len < 5)
 			len = 5; //may this happen?
 
-		c.buffer = memnew_arr(float, len);
+		c.buffer = new float[len];
 		c.pos = 0;
 		for (int j = 0; j < len; j++)
 			c.buffer[j] = 0;
@@ -265,7 +211,7 @@ void Reverb::configure_buffers() {
 		if (len < 5)
 			len = 5; //may this happen?
 
-		a.buffer = memnew_arr(float, len);
+		a.buffer = new float[len];
 		a.pos = 0;
 		for (int j = 0; j < len; j++)
 			a.buffer[j] = 0;
@@ -273,7 +219,7 @@ void Reverb::configure_buffers() {
 	}
 
 	echo_buffer_size = (int)(((float)MAX_ECHO_MS / 1000.0) * params.mix_rate + 1.0);
-	echo_buffer = memnew_arr(float, echo_buffer_size);
+	echo_buffer = new float[echo_buffer_size];
 	for (int i = 0; i < echo_buffer_size; i++) {
 
 		echo_buffer[i] = 0;
@@ -307,22 +253,22 @@ void Reverb::update_parameters() {
 void Reverb::clear_buffers() {
 
 	if (echo_buffer)
-		memdelete_arr(echo_buffer);
+		delete[] echo_buffer;
 
 	for (int i = 0; i < MAX_COMBS; i++) {
 
 		if (comb[i].buffer)
-			memdelete_arr(comb[i].buffer);
+			delete[] comb[i].buffer;
 
-		comb[i].buffer = 0;
+		comb[i].buffer = nullptr;
 	}
 
 	for (int i = 0; i < MAX_ALLPASS; i++) {
 
 		if (allpass[i].buffer)
-			memdelete_arr(allpass[i].buffer);
+			delete[] allpass[i].buffer;
 
-		allpass[i].buffer = 0;
+		allpass[i].buffer = nullptr;
 	}
 }
 
