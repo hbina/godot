@@ -931,8 +931,8 @@ void VisualServerScene::_update_instance(Instance *p_instance) {
 		//make sure lights are updated if it casts shadow
 
 		if (geom->can_cast_shadows) {
-			for (List<Instance *>::Element *E = geom->lighting.front(); E; E = E->next()) {
-				InstanceLightData *light = static_cast<InstanceLightData *>(E->get()->base_data);
+			for (const auto E : geom->lighting) {
+				InstanceLightData *light = static_cast<InstanceLightData *>(E->base_data);
 				light->shadow_dirty = true;
 			}
 		}
@@ -1278,14 +1278,14 @@ void VisualServerScene::_update_instance_lightmap_captures(Instance *p_instance)
 		new (&p_instance->lightmap_capture_data.ptrw()[i]) Color;
 
 	//this could use some sort of blending..
-	for (List<Instance *>::Element *E = geom->lightmap_captures.front(); E; E = E->next()) {
-		const PoolVector<RasterizerStorage::LightmapCaptureOctree> *octree = VSG::storage->lightmap_capture_get_octree_ptr(E->get()->base);
+	for (const auto E : geom->lightmap_captures) {
+		const PoolVector<RasterizerStorage::LightmapCaptureOctree> *octree = VSG::storage->lightmap_capture_get_octree_ptr(E->base);
 		//print_line("octree size: " + itos(octree->size()));
 		if (octree->size() == 0)
 			continue;
-		Transform to_cell_xform = VSG::storage->lightmap_capture_get_octree_cell_transform(E->get()->base);
-		int cell_subdiv = VSG::storage->lightmap_capture_get_octree_cell_subdiv(E->get()->base);
-		to_cell_xform = to_cell_xform * E->get()->transform.affine_inverse();
+		Transform to_cell_xform = VSG::storage->lightmap_capture_get_octree_cell_transform(E->base);
+		int cell_subdiv = VSG::storage->lightmap_capture_get_octree_cell_subdiv(E->base);
+		to_cell_xform = to_cell_xform * E->transform.affine_inverse();
 
 		PoolVector<RasterizerStorage::LightmapCaptureOctree>::Read octree_r = octree->read();
 
@@ -1970,9 +1970,9 @@ void VisualServerScene::_prepare_scene(const Transform p_cam_transform, const Ca
 				//only called when lights AABB enter/exit this geometry
 				ins->light_instances.resize(geom->lighting.size());
 
-				for (List<Instance *>::Element *E = geom->lighting.front(); E; E = E->next()) {
+				for (const auto &E : geom->lighting) {
 
-					InstanceLightData *light = static_cast<InstanceLightData *>(E->get()->base_data);
+					InstanceLightData *light = static_cast<InstanceLightData *>(E->base_data);
 
 					ins->light_instances[l++] = light->instance;
 				}
@@ -1985,9 +1985,9 @@ void VisualServerScene::_prepare_scene(const Transform p_cam_transform, const Ca
 				//only called when reflection probe AABB enter/exit this geometry
 				ins->reflection_probe_instances.resize(geom->reflection_probes.size());
 
-				for (List<Instance *>::Element *E = geom->reflection_probes.front(); E; E = E->next()) {
+				for (const auto E : geom->reflection_probes) {
 
-					InstanceReflectionProbeData *reflection_probe = static_cast<InstanceReflectionProbeData *>(E->get()->base_data);
+					InstanceReflectionProbeData *reflection_probe = static_cast<InstanceReflectionProbeData *>(E->base_data);
 
 					ins->reflection_probe_instances[l++] = reflection_probe->instance;
 				}
@@ -2000,9 +2000,9 @@ void VisualServerScene::_prepare_scene(const Transform p_cam_transform, const Ca
 				//only called when reflection probe AABB enter/exit this geometry
 				ins->gi_probe_instances.resize(geom->gi_probes.size());
 
-				for (List<Instance *>::Element *E = geom->gi_probes.front(); E; E = E->next()) {
+				for (const auto E : geom->gi_probes) {
 
-					InstanceGIProbeData *gi_probe = static_cast<InstanceGIProbeData *>(E->get()->base_data);
+					InstanceGIProbeData *gi_probe = static_cast<InstanceGIProbeData *>(E->base_data);
 
 					ins->gi_probe_instances[l++] = gi_probe->probe_instance;
 				}
@@ -2037,22 +2037,22 @@ void VisualServerScene::_prepare_scene(const Transform p_cam_transform, const Ca
 		Instance **lights_with_shadow = (Instance **)alloca(sizeof(Instance *) * scenario->directional_lights.size());
 		int directional_shadow_count = 0;
 
-		for (List<Instance *>::Element *E = scenario->directional_lights.front(); E; E = E->next()) {
+		for (const auto E : scenario->directional_lights) {
 
 			if (light_cull_count + directional_light_count >= MAX_LIGHTS_CULLED) {
 				break;
 			}
 
-			if (!E->get()->visible)
+			if (!E->visible)
 				continue;
 
-			InstanceLightData *light = static_cast<InstanceLightData *>(E->get()->base_data);
+			InstanceLightData *light = static_cast<InstanceLightData *>(E->base_data);
 
 			//check shadow..
 
 			if (light) {
-				if (p_shadow_atlas.is_valid() && VSG::storage->light_has_shadow(E->get()->base)) {
-					lights_with_shadow[directional_shadow_count++] = E->get();
+				if (p_shadow_atlas.is_valid() && VSG::storage->light_has_shadow(E->base)) {
+					lights_with_shadow[directional_shadow_count++] = E;
 				}
 				//add to list
 				directional_light_ptr[directional_light_count++] = light->instance;
@@ -3115,27 +3115,27 @@ bool VisualServerScene::_check_gi_probe(Instance *p_gi_probe) {
 
 	bool all_equal = true;
 
-	for (List<Instance *>::Element *E = p_gi_probe->scenario->directional_lights.front(); E; E = E->next()) {
+	for (const auto E : p_gi_probe->scenario->directional_lights) {
 
-		if (!VSG::storage->light_get_use_gi(E->get()->base))
+		if (!VSG::storage->light_get_use_gi(E->base))
 			continue;
 
 		InstanceGIProbeData::LightCache lc;
-		lc.type = VSG::storage->light_get_type(E->get()->base);
-		lc.color = VSG::storage->light_get_color(E->get()->base);
-		lc.energy = VSG::storage->light_get_param(E->get()->base, VS::LIGHT_PARAM_ENERGY) * VSG::storage->light_get_param(E->get()->base, VS::LIGHT_PARAM_INDIRECT_ENERGY);
-		lc.radius = VSG::storage->light_get_param(E->get()->base, VS::LIGHT_PARAM_RANGE);
-		lc.attenuation = VSG::storage->light_get_param(E->get()->base, VS::LIGHT_PARAM_ATTENUATION);
-		lc.spot_angle = VSG::storage->light_get_param(E->get()->base, VS::LIGHT_PARAM_SPOT_ANGLE);
-		lc.spot_attenuation = VSG::storage->light_get_param(E->get()->base, VS::LIGHT_PARAM_SPOT_ATTENUATION);
-		lc.transform = probe_data->dynamic.light_to_cell_xform * E->get()->transform;
-		lc.visible = E->get()->visible;
+		lc.type = VSG::storage->light_get_type(E->base);
+		lc.color = VSG::storage->light_get_color(E->base);
+		lc.energy = VSG::storage->light_get_param(E->base, VS::LIGHT_PARAM_ENERGY) * VSG::storage->light_get_param(E->base, VS::LIGHT_PARAM_INDIRECT_ENERGY);
+		lc.radius = VSG::storage->light_get_param(E->base, VS::LIGHT_PARAM_RANGE);
+		lc.attenuation = VSG::storage->light_get_param(E->base, VS::LIGHT_PARAM_ATTENUATION);
+		lc.spot_angle = VSG::storage->light_get_param(E->base, VS::LIGHT_PARAM_SPOT_ANGLE);
+		lc.spot_attenuation = VSG::storage->light_get_param(E->base, VS::LIGHT_PARAM_SPOT_ATTENUATION);
+		lc.transform = probe_data->dynamic.light_to_cell_xform * E->transform;
+		lc.visible = E->visible;
 
-		if (!probe_data->dynamic.light_cache.has(E->get()->self) || probe_data->dynamic.light_cache[E->get()->self] != lc) {
+		if (!probe_data->dynamic.light_cache.has(E->self) || probe_data->dynamic.light_cache[E->self] != lc) {
 			all_equal = false;
 		}
 
-		probe_data->dynamic.light_cache_changes[E->get()->self] = lc;
+		probe_data->dynamic.light_cache_changes[E->self] = lc;
 	}
 
 	for (Set<Instance *>::Element *E = probe_data->lights.front(); E; E = E->next()) {
@@ -3432,8 +3432,8 @@ void VisualServerScene::_update_dirty_instance(Instance *p_instance) {
 
 			if (can_cast_shadows != geom->can_cast_shadows) {
 				//ability to cast shadows change, let lights now
-				for (List<Instance *>::Element *E = geom->lighting.front(); E; E = E->next()) {
-					InstanceLightData *light = static_cast<InstanceLightData *>(E->get()->base_data);
+				for (const auto E : geom->lighting) {
+					InstanceLightData *light = static_cast<InstanceLightData *>(E->base_data);
 					light->shadow_dirty = true;
 				}
 
