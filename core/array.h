@@ -40,9 +40,7 @@ class StringName;
 
 class Array {
 
-	mutable ArrayPrivate *_p;
-	void _ref(const Array &p_from) const;
-	void _unref() const;
+	Vector<Variant> internal_vector;
 
 public:
 	Variant &operator[](int p_idx);
@@ -58,7 +56,7 @@ public:
 	bool operator==(const Array &p_array) const;
 
 	uint32_t hash() const;
-	void operator=(const Array &p_array);
+	Array &operator=(const Array &p_array);
 
 	void push_back(const Variant &p_value);
 	void append(const Variant &p_value) { push_back(p_value); }

@@ -35,148 +35,113 @@
 #include "core/variant.h"
 #include "core/vector.h"
 
-class ArrayPrivate {
-public:
-	SafeRefCount refcount;
-	Vector<Variant> array;
-};
-
-void Array::_ref(const Array &p_from) const {
-
-	ArrayPrivate *_fp = p_from._p;
-
-	ERR_FAIL_COND(!_fp); // should NOT happen.
-
-	if (_fp == _p)
-		return; // whatever it is, nothing to do here move along
-
-	bool success = _fp->refcount.ref();
-
-	ERR_FAIL_COND(!success); // should really not happen either
-
-	_unref();
-
-	_p = p_from._p;
-}
-
-void Array::_unref() const {
-
-	if (!_p)
-		return;
-
-	if (_p->refcount.unref()) {
-		memdelete(_p);
-	}
-	_p = nullptr;
-}
+#include <iterator>
 
 Variant &Array::operator[](int p_idx) {
 
-	return _p->array[p_idx];
+	return internal_vector[p_idx];
 }
 
 const Variant &Array::operator[](int p_idx) const {
 
-	return _p->array[p_idx];
+	return internal_vector[p_idx];
 }
 
 int Array::size() const {
 
-	return _p->array.size();
+	return internal_vector.size();
 }
 bool Array::empty() const {
 
-	return _p->array.empty();
+	return internal_vector.empty();
 }
 void Array::clear() {
 
-	_p->array.clear();
+	internal_vector.clear();
 }
 
 bool Array::operator==(const Array &p_array) const {
 
-	return _p == p_array._p;
+	return this == &p_array;
 }
 
 uint32_t Array::hash() const {
 
 	uint32_t h = hash_djb2_one_32(0);
-
-	for (int i = 0; i < _p->array.size(); i++) {
-
-		h = hash_djb2_one_32(_p->array[i].hash(), h);
+	for (const auto &v : internal_vector) {
+		h = hash_djb2_one_32(v.hash(), h);
 	}
 	return h;
 }
 
-void Array::operator=(const Array &p_array) {
+Array &Array::operator=(const Array &p_array) {
 
-	_ref(p_array);
+	internal_vector = p_array.internal_vector;
+	return *this;
 }
 
 void Array::push_back(const Variant &p_value) {
 
-	_p->array.push_back(p_value);
+	internal_vector.push_back(p_value);
 }
 
 void Array::resize(int p_new_size) {
 
-	_p->array.resize(p_new_size);
+	internal_vector.resize(p_new_size);
 }
 
 void Array::insert(int p_pos, const Variant &p_value) {
 
-	_p->array.insert(p_pos, p_value);
+	internal_vector.insert(p_pos, p_value);
 }
 
 void Array::erase(const Variant &p_value) {
 
-	_p->array.erase(p_value);
+	internal_vector.erase(p_value);
 }
 
 Variant Array::front() const {
-	if (_p->array.size() == 0) {
-		ERR_EXPLAIN("Can't take value from empty array");
-		ERR_FAIL_V(Variant());
+
+	if (internal_vector.size() == 0) {
+		CRASH_NOW();
 	}
 	return operator[](0);
 }
 
 Variant Array::back() const {
-	if (_p->array.size() == 0) {
-		ERR_EXPLAIN("Can't take value from empty array");
-		ERR_FAIL_V(Variant());
+
+	if (internal_vector.size() == 0) {
+		CRASH_NOW();
 	}
-	return operator[](_p->array.size() - 1);
+	return internal_vector[internal_vector.size() - 1];
 }
 
 int Array::find(const Variant &p_value, int p_from) const {
 
-	return _p->array.find(p_value, p_from);
+	int return_index = static_cast<int>(
+			std::distance(
+					internal_vector.begin() + p_from,
+					std::find_if(
+							internal_vector.begin(),
+							internal_vector.end(),
+							[&p_value](const auto &value) {
+								return value == p_value;
+							})));
+	return return_index == internal_vector.size() ? -1 : return_index;
 }
 
 int Array::rfind(const Variant &p_value, int p_from) const {
 
-	if (_p->array.size() == 0)
-		return -1;
-
-	if (p_from < 0) {
-		// Relative offset from the end
-		p_from = _p->array.size() + p_from;
-	}
-	if (p_from < 0 || p_from >= _p->array.size()) {
-		// Limit to array boundaries
-		p_from = _p->array.size() - 1;
-	}
-
-	for (int i = p_from; i >= 0; i--) {
-
-		if (_p->array[i] == p_value) {
-			return i;
-		}
-	}
-
-	return -1;
+	auto return_index = static_cast<int>(
+			std::distance(
+					internal_vector.rbegin(),
+					std::find_if(
+							internal_vector.rbegin() + p_from,
+							internal_vector.rend(),
+							[&p_value](const auto &value) {
+								return value == p_value;
+							})));
+	return return_index == internal_vector.size() ? -1 : return_index;
 }
 
 int Array::find_last(const Variant &p_value) const {
@@ -186,48 +151,44 @@ int Array::find_last(const Variant &p_value) const {
 
 int Array::count(const Variant &p_value) const {
 
-	if (_p->array.size() == 0)
-		return 0;
-
 	int amount = 0;
-	for (int i = 0; i < _p->array.size(); i++) {
-
-		if (_p->array[i] == p_value) {
-			amount++;
-		}
-	}
-
+	std::for_each(
+			internal_vector.begin(),
+			internal_vector.end(),
+			[&p_value, &amount](const auto &value) {
+				if (value == p_value) {
+					++amount;
+				}
+			});
 	return amount;
 }
 
 bool Array::has(const Variant &p_value) const {
-	return _p->array.find(p_value, 0) != -1;
+
+	return find(p_value) != -1;
 }
 
 void Array::remove(int p_pos) {
 
-	_p->array.remove(p_pos);
+	internal_vector.remove(p_pos);
 }
 
 void Array::set(int p_idx, const Variant &p_value) {
 
-	operator[](p_idx) = p_value;
+	internal_vector[p_idx] = p_value;
 }
 
 const Variant &Array::get(int p_idx) const {
 
-	return operator[](p_idx);
+	return internal_vector[p_idx];
 }
 
 Array Array::duplicate(bool p_deep) const {
 
 	Array new_arr;
-	int element_count = size();
-	new_arr.resize(element_count);
-	for (int i = 0; i < element_count; i++) {
-		new_arr[i] = p_deep ? get(i).duplicate(p_deep) : get(i);
+	for (const auto &variant : internal_vector) {
+		new_arr.push_back(variant);
 	}
-
 	return new_arr;
 }
 
@@ -245,7 +206,7 @@ struct _ArrayVariantSort {
 
 Array &Array::sort() {
 
-	_p->array.sort_custom<_ArrayVariantSort>();
+	internal_vector.sort_custom<_ArrayVariantSort>();
 	return *this;
 }
 
@@ -267,12 +228,11 @@ struct _ArrayVariantSortCustom {
 
 Array &Array::sort_custom(Object *p_obj, const StringName &p_function) {
 
-	ERR_FAIL_NULL_V(p_obj, *this);
-
+	// Fuck does this actually do?
 	SortArray<Variant, _ArrayVariantSortCustom, true> avs;
 	avs.compare.obj = p_obj;
 	avs.compare.func = p_function;
-	avs.sort(_p->array.ptrw(), _p->array.size());
+	avs.sort(internal_vector.ptrw(), internal_vector.size());
 	return *this;
 }
 
