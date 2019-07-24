@@ -84,10 +84,21 @@ public:
 
 	T *data() noexcept;
 	const T *data() const noexcept;
+
 	typename std::vector<T>::iterator begin() noexcept;
 	typename std::vector<T>::iterator end() noexcept;
 	typename std::vector<T>::const_iterator begin() const noexcept;
 	typename std::vector<T>::const_iterator end() const noexcept;
+
+	typename std::vector<T>::iterator rbegin() noexcept;
+	typename std::vector<T>::iterator rend() noexcept;
+	typename std::vector<T>::const_iterator rbegin() const noexcept;
+	typename std::vector<T>::const_iterator rend() const noexcept;
+
+	typename std::vector<T>::iterator cbegin() const noexcept;
+	typename std::vector<T>::iterator cend() const noexcept;
+	typename std::vector<T>::const_iterator rcbegin() const noexcept;
+	typename std::vector<T>::const_iterator rcend() const noexcept;
 
 	// Hanif's additions
 	const T &back() const noexcept;
@@ -116,6 +127,46 @@ typename std::vector<T>::const_iterator VectorImpl<T>::begin() const noexcept {
 template <typename T>
 typename std::vector<T>::const_iterator VectorImpl<T>::end() const noexcept {
 	return internal_vector.end();
+}
+
+template <typename T>
+typename std::vector<T>::iterator VectorImpl<T>::rbegin() noexcept {
+	return internal_vector.rbegin();
+}
+
+template <typename T>
+typename std::vector<T>::iterator VectorImpl<T>::rend() noexcept {
+	return internal_vector.rend();
+}
+
+template <typename T>
+typename std::vector<T>::const_iterator VectorImpl<T>::rbegin() const noexcept {
+	return internal_vector.rbegin();
+}
+
+template <typename T>
+typename std::vector<T>::const_iterator VectorImpl<T>::rend() const noexcept {
+	return internal_vector.rend();
+}
+
+template <typename T>
+typename std::vector<T>::iterator VectorImpl<T>::cbegin() const noexcept {
+	return internal_vector.cbegin();
+}
+
+template <typename T>
+typename std::vector<T>::iterator VectorImpl<T>::cend() const noexcept {
+	return internal_vector.cend();
+}
+
+template <typename T>
+typename std::vector<T>::const_iterator VectorImpl<T>::rcbegin() const noexcept {
+	return internal_vector.rcbegin();
+}
+
+template <typename T>
+typename std::vector<T>::const_iterator VectorImpl<T>::rcend() const noexcept {
+	return internal_vector.rcend();
 }
 
 template <typename T>
