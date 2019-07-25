@@ -197,7 +197,7 @@ void CustomPropertyEditor::_menu_option(int p_which) {
 						return;
 
 					List<PropertyInfo> property_list;
-					res_orig->get_property_list(&property_list);
+					res_orig->get_property_list(property_list);
 					List<Pair<String, Variant> > propvalues;
 
 					for (List<PropertyInfo>::Element *E = property_list.front(); E; E = E->next()) {
@@ -1401,7 +1401,7 @@ void CustomPropertyEditor::_action_pressed(int p_which) {
 					return;
 
 				List<PropertyInfo> property_list;
-				res_orig->get_property_list(&property_list);
+				res_orig->get_property_list(property_list);
 				List<Pair<String, Variant> > propvalues;
 
 				for (List<PropertyInfo>::Element *E = property_list.front(); E; E = E->next()) {

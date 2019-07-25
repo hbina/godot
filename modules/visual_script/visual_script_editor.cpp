@@ -157,20 +157,20 @@ protected:
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	void _get_property_list(List<PropertyInfo> &p_list) const {
 
 		if (sig == StringName())
 			return;
 
-		p_list->push_back(PropertyInfo(Variant::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
+		p_list.push_back(PropertyInfo(Variant::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
 		String argt = "Variant";
 		for (int i = 1; i < Variant::VARIANT_MAX; i++) {
 			argt += "," + Variant::get_type_name(Variant::Type(i));
 		}
 
 		for (int i = 0; i < script->custom_signal_get_argument_count(sig); i++) {
-			p_list->push_back(PropertyInfo(Variant::INT, "argument/" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
-			p_list->push_back(PropertyInfo(Variant::STRING, "argument/" + itos(i + 1) + "/name"));
+			p_list.push_back(PropertyInfo(Variant::INT, "argument/" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
+			p_list.push_back(PropertyInfo(Variant::STRING, "argument/" + itos(i + 1) + "/name"));
 		}
 	}
 
@@ -310,7 +310,7 @@ protected:
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	void _get_property_list(List<PropertyInfo> &p_list) const {
 
 		if (var == StringName())
 			return;
@@ -319,12 +319,12 @@ protected:
 		for (int i = 1; i < Variant::VARIANT_MAX; i++) {
 			argt += "," + Variant::get_type_name(Variant::Type(i));
 		}
-		p_list->push_back(PropertyInfo(Variant::INT, "type", PROPERTY_HINT_ENUM, argt));
-		p_list->push_back(PropertyInfo(script->get_variable_info(var).type, "value", script->get_variable_info(var).hint, script->get_variable_info(var).hint_string, PROPERTY_USAGE_DEFAULT));
+		p_list.push_back(PropertyInfo(Variant::INT, "type", PROPERTY_HINT_ENUM, argt));
+		p_list.push_back(PropertyInfo(script->get_variable_info(var).type, "value", script->get_variable_info(var).hint, script->get_variable_info(var).hint_string, PROPERTY_USAGE_DEFAULT));
 		// Update this when PropertyHint changes
-		p_list->push_back(PropertyInfo(Variant::INT, "hint", PROPERTY_HINT_ENUM, "None,Range,ExpRange,Enum,ExpEasing,Length,SpriteFrame,KeyAccel,Flags,Layers2dRender,Layers2dPhysics,Layer3dRender,Layer3dPhysics,File,Dir,GlobalFile,GlobalDir,ResourceType,MultilineText,PlaceholderText,ColorNoAlpha,ImageCompressLossy,ImageCompressLossLess,ObjectId,String,NodePathToEditedNode,MethodOfVariantType,MethodOfBaseType,MethodOfInstance,MethodOfScript,PropertyOfVariantType,PropertyOfBaseType,PropertyOfInstance,PropertyOfScript,ObjectTooBig,NodePathValidTypes"));
-		p_list->push_back(PropertyInfo(Variant::STRING, "hint_string"));
-		p_list->push_back(PropertyInfo(Variant::BOOL, "export"));
+		p_list.push_back(PropertyInfo(Variant::INT, "hint", PROPERTY_HINT_ENUM, "None,Range,ExpRange,Enum,ExpEasing,Length,SpriteFrame,KeyAccel,Flags,Layers2dRender,Layers2dPhysics,Layer3dRender,Layer3dPhysics,File,Dir,GlobalFile,GlobalDir,ResourceType,MultilineText,PlaceholderText,ColorNoAlpha,ImageCompressLossy,ImageCompressLossLess,ObjectId,String,NodePathToEditedNode,MethodOfVariantType,MethodOfBaseType,MethodOfInstance,MethodOfScript,PropertyOfVariantType,PropertyOfBaseType,PropertyOfInstance,PropertyOfScript,ObjectTooBig,NodePathValidTypes"));
+		p_list.push_back(PropertyInfo(Variant::STRING, "hint_string"));
+		p_list.push_back(PropertyInfo(Variant::BOOL, "export"));
 	}
 
 public:

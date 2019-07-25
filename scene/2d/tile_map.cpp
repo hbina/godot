@@ -1585,13 +1585,13 @@ bool TileMap::_get(const StringName &p_name, Variant &r_ret) const {
 	return false;
 }
 
-void TileMap::_get_property_list(List<PropertyInfo> *p_list) const {
+void TileMap::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	PropertyInfo p(Variant::INT, "format", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL);
-	p_list->push_back(p);
+	p_list.push_back(p);
 
 	p = PropertyInfo(Variant::OBJECT, "tile_data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL);
-	p_list->push_back(p);
+	p_list.push_back(p);
 }
 
 void TileMap::_validate_property(PropertyInfo &property) const {

@@ -908,7 +908,7 @@ bool EditorNode::_find_and_save_edited_subresources(Object *obj, Map<RES, bool> 
 
 	bool ret_changed = false;
 	List<PropertyInfo> pi;
-	obj->get_property_list(&pi);
+	obj->get_property_list(pi);
 	for (List<PropertyInfo>::Element *E = pi.front(); E; E = E->next()) {
 
 		if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
@@ -1087,7 +1087,7 @@ static bool _find_edited_resources(const Ref<Resource> &p_resource, Set<Ref<Reso
 
 	List<PropertyInfo> plist;
 
-	p_resource->get_property_list(&plist);
+	p_resource->get_property_list(plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 		if (E->get().type == Variant::OBJECT && E->get().usage & PROPERTY_USAGE_STORAGE && !(E->get().usage & PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT)) {

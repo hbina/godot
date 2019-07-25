@@ -148,26 +148,26 @@ bool VisualScriptFunction::_get(const StringName &p_name, Variant &r_ret) const 
 
 	return false;
 }
-void VisualScriptFunction::_get_property_list(List<PropertyInfo> *p_list) const {
+void VisualScriptFunction::_get_property_list(List<PropertyInfo> &p_list) const {
 
-	p_list->push_back(PropertyInfo(Variant::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
+	p_list.push_back(PropertyInfo(Variant::INT, "argument_count", PROPERTY_HINT_RANGE, "0,256"));
 	String argt = "Any";
 	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
 		argt += "," + Variant::get_type_name(Variant::Type(i));
 	}
 
 	for (int i = 0; i < arguments.size(); i++) {
-		p_list->push_back(PropertyInfo(Variant::INT, "argument_" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
-		p_list->push_back(PropertyInfo(Variant::STRING, "argument_" + itos(i + 1) + "/name"));
+		p_list.push_back(PropertyInfo(Variant::INT, "argument_" + itos(i + 1) + "/type", PROPERTY_HINT_ENUM, argt));
+		p_list.push_back(PropertyInfo(Variant::STRING, "argument_" + itos(i + 1) + "/name"));
 	}
 
-	p_list->push_back(PropertyInfo(Variant::BOOL, "sequenced/sequenced"));
+	p_list.push_back(PropertyInfo(Variant::BOOL, "sequenced/sequenced"));
 
 	if (!stack_less) {
-		p_list->push_back(PropertyInfo(Variant::INT, "stack/size", PROPERTY_HINT_RANGE, "1,100000"));
+		p_list.push_back(PropertyInfo(Variant::INT, "stack/size", PROPERTY_HINT_RANGE, "1,100000"));
 	}
-	p_list->push_back(PropertyInfo(Variant::BOOL, "stack/stackless"));
-	p_list->push_back(PropertyInfo(Variant::INT, "rpc/mode", PROPERTY_HINT_ENUM, "Disabled,Remote,Master,Puppet,Remote Sync,Master Sync,Puppet Sync"));
+	p_list.push_back(PropertyInfo(Variant::BOOL, "stack/stackless"));
+	p_list.push_back(PropertyInfo(Variant::INT, "rpc/mode", PROPERTY_HINT_ENUM, "Disabled,Remote,Master,Puppet,Remote Sync,Master Sync,Puppet Sync"));
 }
 
 int VisualScriptFunction::get_output_sequence_port_count() const {
@@ -3427,7 +3427,7 @@ void VisualScriptInputAction::_validate_property(PropertyInfo &property) const {
 		String actions;
 
 		List<PropertyInfo> pinfo;
-		ProjectSettings::get_singleton()->get_property_list(&pinfo);
+		ProjectSettings::get_singleton()->get_property_list(pinfo);
 		Vector<String> al;
 
 		for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
@@ -3531,7 +3531,7 @@ void VisualScriptDeconstruct::_update_elements() {
 	v = Variant::construct(type, NULL, 0, ce);
 
 	List<PropertyInfo> pinfo;
-	v.get_property_list(&pinfo);
+	v.get_property_list(pinfo);
 
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 

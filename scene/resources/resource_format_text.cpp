@@ -1113,7 +1113,7 @@ Error ResourceInteractiveLoaderText::save_as_binary(FileAccess *p_f, const Strin
 		error = OK;
 		//get it here
 		List<PropertyInfo> props;
-		packed_scene->get_property_list(&props);
+		packed_scene->get_property_list(props);
 
 		bs_save_unicode_string(wf, "local://0");
 		local_pointers_pos.push_back(wf->get_position());
@@ -1398,7 +1398,7 @@ void ResourceFormatSaverTextInstance::_find_resources(const Variant &p_variant, 
 
 			List<PropertyInfo> property_list;
 
-			res->get_property_list(&property_list);
+			res->get_property_list(property_list);
 			property_list.sort();
 
 			List<PropertyInfo>::Element *I = property_list.front();
@@ -1644,7 +1644,7 @@ Error ResourceFormatSaverTextInstance::save(const String &p_path, const RES &p_r
 		}
 
 		List<PropertyInfo> property_list;
-		res->get_property_list(&property_list);
+		res->get_property_list(property_list);
 		//property_list.sort();
 		for (List<PropertyInfo>::Element *PE = property_list.front(); PE; PE = PE->next()) {
 

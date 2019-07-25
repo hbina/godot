@@ -159,7 +159,7 @@ void AnimationPlayer::_validate_property(PropertyInfo &property) const {
 	}
 }
 
-void AnimationPlayer::_get_property_list(List<PropertyInfo> *p_list) const {
+void AnimationPlayer::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	List<PropertyInfo> anim_names;
 
@@ -173,10 +173,10 @@ void AnimationPlayer::_get_property_list(List<PropertyInfo> *p_list) const {
 	anim_names.sort();
 
 	for (List<PropertyInfo>::Element *E = anim_names.front(); E; E = E->next()) {
-		p_list->push_back(E->get());
+		p_list.push_back(E->get());
 	}
 
-	p_list->push_back(PropertyInfo(Variant::ARRAY, "blend_times", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+	p_list.push_back(PropertyInfo(Variant::ARRAY, "blend_times", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 }
 
 void AnimationPlayer::advance(float p_time) {

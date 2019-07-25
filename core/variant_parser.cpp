@@ -1741,7 +1741,7 @@ Error VariantWriter::write(const Variant &p_variant, StoreStringFunc p_store_str
 			p_store_string_func(p_store_string_ud, "Object(" + obj->get_class() + ",");
 
 			List<PropertyInfo> props;
-			obj->get_property_list(&props);
+			obj->get_property_list(props);
 			bool first = true;
 			for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 

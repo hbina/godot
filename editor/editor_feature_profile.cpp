@@ -556,7 +556,7 @@ void EditorFeatureProfileManager::_class_list_item_selected() {
 
 	List<PropertyInfo> props;
 
-	ClassDB::get_property_list(class_name, &props, true);
+	ClassDB::get_property_list(class_name, props, true);
 
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 

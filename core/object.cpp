@@ -620,10 +620,10 @@ Variant Object::get_indexed(const Vector<StringName> &p_names, bool *r_valid) co
 	return current_value;
 }
 
-void Object::get_property_list(List<PropertyInfo> *p_list, bool p_reversed) const {
+void Object::get_property_list(List<PropertyInfo> &p_list, bool p_reversed) const {
 
 	if (script_instance && p_reversed) {
-		p_list->push_back(PropertyInfo(Variant::NIL, "Script Variables", PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));
+		p_list.push_back(PropertyInfo(Variant::NIL, "Script Variables", PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));
 		script_instance->get_property_list(p_list);
 	}
 
@@ -631,15 +631,15 @@ void Object::get_property_list(List<PropertyInfo> *p_list, bool p_reversed) cons
 
 	if (!is_class("Script")) { // can still be set, but this is for userfriendlyness
 #ifdef TOOLS_ENABLED
-		p_list->push_back(PropertyInfo(Variant::NIL, "Script", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_GROUP));
+		p_list.push_back(PropertyInfo(Variant::NIL, "Script", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_GROUP));
 #endif
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "script", PROPERTY_HINT_RESOURCE_TYPE, "Script", PROPERTY_USAGE_DEFAULT));
+		p_list.push_back(PropertyInfo(Variant::OBJECT, "script", PROPERTY_HINT_RESOURCE_TYPE, "Script", PROPERTY_USAGE_DEFAULT));
 	}
 	if (!metadata.empty()) {
-		p_list->push_back(PropertyInfo(Variant::DICTIONARY, "__meta__", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+		p_list.push_back(PropertyInfo(Variant::DICTIONARY, "__meta__", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 	}
 	if (script_instance && !p_reversed) {
-		p_list->push_back(PropertyInfo(Variant::NIL, "Script Variables", PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));
+		p_list.push_back(PropertyInfo(Variant::NIL, "Script Variables", PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));
 		script_instance->get_property_list(p_list);
 	}
 }
@@ -1067,7 +1067,7 @@ void Object::remove_meta(const String &p_name) {
 Array Object::_get_property_list_bind() const {
 
 	List<PropertyInfo> lpi;
-	get_property_list(&lpi);
+	get_property_list(lpi);
 	return convert_property_list(&lpi);
 }
 
@@ -1671,7 +1671,7 @@ void Object::clear_internal_resource_paths() {
 
 	List<PropertyInfo> pinfo;
 
-	get_property_list(&pinfo);
+	get_property_list(pinfo);
 
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 
@@ -1805,7 +1805,7 @@ bool Object::is_blocking_signals() const {
 void Object::get_translatable_strings(List<String> *p_strings) const {
 
 	List<PropertyInfo> plist;
-	get_property_list(&plist);
+	get_property_list(plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 

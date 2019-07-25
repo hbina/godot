@@ -138,22 +138,22 @@ bool VisualScriptExpression::_get(const StringName &p_name, Variant &r_ret) cons
 
 	return false;
 }
-void VisualScriptExpression::_get_property_list(List<PropertyInfo> *p_list) const {
+void VisualScriptExpression::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	String argt = "Any";
 	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
 		argt += "," + Variant::get_type_name(Variant::Type(i));
 	}
 
-	p_list->push_back(PropertyInfo(Variant::STRING, "expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
-	p_list->push_back(PropertyInfo(Variant::INT, "out_type", PROPERTY_HINT_ENUM, argt));
-	p_list->push_back(PropertyInfo(Variant::INT, "input_count", PROPERTY_HINT_RANGE, "0,64,1"));
-	p_list->push_back(PropertyInfo(Variant::BOOL, "sequenced"));
+	p_list.push_back(PropertyInfo(Variant::STRING, "expression", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR));
+	p_list.push_back(PropertyInfo(Variant::INT, "out_type", PROPERTY_HINT_ENUM, argt));
+	p_list.push_back(PropertyInfo(Variant::INT, "input_count", PROPERTY_HINT_RANGE, "0,64,1"));
+	p_list.push_back(PropertyInfo(Variant::BOOL, "sequenced"));
 
 	for (int i = 0; i < inputs.size(); i++) {
 
-		p_list->push_back(PropertyInfo(Variant::INT, "input_" + itos(i) + "/type", PROPERTY_HINT_ENUM, argt));
-		p_list->push_back(PropertyInfo(Variant::STRING, "input_" + itos(i) + "/name"));
+		p_list.push_back(PropertyInfo(Variant::INT, "input_" + itos(i) + "/type", PROPERTY_HINT_ENUM, argt));
+		p_list.push_back(PropertyInfo(Variant::STRING, "input_" + itos(i) + "/name"));
 	}
 }
 

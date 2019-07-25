@@ -2057,7 +2057,7 @@ Node *Node::_duplicate(int p_flags, Map<const Node *, Node *> *r_duplimap) const
 		}
 
 		List<PropertyInfo> plist;
-		N->get()->get_property_list(&plist);
+		N->get()->get_property_list(plist);
 
 		for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 
@@ -2204,7 +2204,7 @@ void Node::_duplicate_and_reown(Node *p_new_parent, const Map<Node *, Node *> &p
 
 	List<PropertyInfo> plist;
 
-	get_property_list(&plist);
+	get_property_list(plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 
@@ -2309,7 +2309,7 @@ Node *Node::duplicate_and_reown(const Map<Node *, Node *> &p_reown_map) const {
 
 	List<PropertyInfo> plist;
 
-	get_property_list(&plist);
+	get_property_list(plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 
@@ -2368,7 +2368,7 @@ void Node::replace_by(Node *p_node, bool p_keep_data) {
 	if (p_keep_data) {
 
 		List<PropertyInfo> plist;
-		get_property_list(&plist);
+		get_property_list(plist);
 
 		for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 

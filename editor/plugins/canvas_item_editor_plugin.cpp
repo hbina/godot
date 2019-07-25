@@ -5351,7 +5351,7 @@ void CanvasItemEditorViewport::_create_nodes(Node *parent, Node *child, String &
 	// handle with different property for texture
 	String property = "texture";
 	List<PropertyInfo> props;
-	child->get_property_list(&props);
+	child->get_property_list(props);
 	for (const List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 		if (E->get().name == "config/texture") { // Particles2D
 			property = "config/texture";

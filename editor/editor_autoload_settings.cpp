@@ -364,7 +364,7 @@ void EditorAutoloadSettings::update_autoload() {
 	TreeItem *root = tree->create_item();
 
 	List<PropertyInfo> props;
-	ProjectSettings::get_singleton()->get_property_list(&props);
+	ProjectSettings::get_singleton()->get_property_list(props);
 
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 
@@ -734,7 +734,7 @@ EditorAutoloadSettings::EditorAutoloadSettings() {
 
 	// Make first cache
 	List<PropertyInfo> props;
-	ProjectSettings::get_singleton()->get_property_list(&props);
+	ProjectSettings::get_singleton()->get_property_list(props);
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 
 		const PropertyInfo &pi = E->get();

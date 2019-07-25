@@ -229,7 +229,7 @@ void InputMap::load_from_globals() {
 	input_map.clear();
 
 	List<PropertyInfo> pinfo;
-	ProjectSettings::get_singleton()->get_property_list(&pinfo);
+	ProjectSettings::get_singleton()->get_property_list(pinfo);
 
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 		const PropertyInfo &pi = E->get();

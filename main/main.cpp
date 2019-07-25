@@ -1535,7 +1535,7 @@ bool Main::start() {
 			if (game_path != "" || script != "") {
 				//autoload
 				List<PropertyInfo> props;
-				ProjectSettings::get_singleton()->get_property_list(&props);
+				ProjectSettings::get_singleton()->get_property_list(props);
 
 				//first pass, add the constants so they exist before any script is loaded
 				for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {

@@ -158,11 +158,11 @@ bool ImageTexture::_get(const StringName &p_name, Variant &r_ret) const {
 	return true;
 }
 
-void ImageTexture::_get_property_list(List<PropertyInfo> *p_list) const {
+void ImageTexture::_get_property_list(List<PropertyInfo> &p_list) const {
 
-	p_list->push_back(PropertyInfo(Variant::INT, "flags", PROPERTY_HINT_FLAGS, "Mipmaps,Repeat,Filter,Anisotropic,sRGB,Mirrored Repeat"));
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "image", PROPERTY_HINT_RESOURCE_TYPE, "Image", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT));
-	p_list->push_back(PropertyInfo(Variant::VECTOR2, "size", PROPERTY_HINT_NONE, ""));
+	p_list.push_back(PropertyInfo(Variant::INT, "flags", PROPERTY_HINT_FLAGS, "Mipmaps,Repeat,Filter,Anisotropic,sRGB,Mirrored Repeat"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "image", PROPERTY_HINT_RESOURCE_TYPE, "Image", PROPERTY_USAGE_DEFAULT | PROPERTY_USAGE_RESOURCE_NOT_PERSISTENT));
+	p_list.push_back(PropertyInfo(Variant::VECTOR2, "size", PROPERTY_HINT_NONE, ""));
 }
 
 void ImageTexture::_reload_hook(const RID &p_hook) {
@@ -1605,14 +1605,14 @@ bool CubeMap::_get(const StringName &p_name, Variant &r_ret) const {
 	return true;
 }
 
-void CubeMap::_get_property_list(List<PropertyInfo> *p_list) const {
+void CubeMap::_get_property_list(List<PropertyInfo> &p_list) const {
 
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "side/left", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "side/right", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "side/bottom", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "side/top", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "side/front", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "side/back", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "side/left", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "side/right", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "side/bottom", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "side/top", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "side/front", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "side/back", PROPERTY_HINT_RESOURCE_TYPE, "Image"));
 }
 
 void CubeMap::_bind_methods() {

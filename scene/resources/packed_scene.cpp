@@ -473,7 +473,7 @@ Error SceneState::_parse_node(Node *p_owner, Node *p_node, int p_parent_idx, Map
 	// and save the ones that are worth saving
 
 	List<PropertyInfo> plist;
-	p_node->get_property_list(&plist);
+	p_node->get_property_list(plist);
 	StringName type = p_node->get_class();
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {

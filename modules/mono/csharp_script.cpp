@@ -1562,7 +1562,7 @@ bool CSharpInstance::get(const StringName &p_name, Variant &r_ret) const {
 void CSharpInstance::get_properties_state_for_reloading(List<Pair<StringName, Variant> > &r_state) {
 
 	List<PropertyInfo> pinfo;
-	get_property_list(&pinfo);
+	get_property_list(pinfo);
 
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 		Pair<StringName, Variant> state_pair;
@@ -1584,10 +1584,10 @@ void CSharpInstance::get_properties_state_for_reloading(List<Pair<StringName, Va
 	}
 }
 
-void CSharpInstance::get_property_list(List<PropertyInfo> *p_properties) const {
+void CSharpInstance::get_property_list(List<PropertyInfo> &p_properties) const {
 
 	for (Map<StringName, PropertyInfo>::Element *E = script->member_info.front(); E; E = E->next()) {
-		p_properties->push_back(E->value());
+		p_properties.push_back(E->value());
 	}
 
 	// Call _get_property_list
@@ -1608,7 +1608,7 @@ void CSharpInstance::get_property_list(List<PropertyInfo> *p_properties) const {
 			if (ret) {
 				Array array = Array(GDMonoMarshal::mono_object_to_variant(ret));
 				for (int i = 0, size = array.size(); i < size; i++)
-					p_properties->push_back(PropertyInfo::from_dict(array.get(i)));
+					p_properties.push_back(PropertyInfo::from_dict(array.get(i)));
 				return;
 			}
 
@@ -2676,9 +2676,9 @@ bool CSharpScript::_set(const StringName &p_name, const Variant &p_value) {
 	return false;
 }
 
-void CSharpScript::_get_property_list(List<PropertyInfo> *p_properties) const {
+void CSharpScript::_get_property_list(List<PropertyInfo> &p_properties) const {
 
-	p_properties->push_back(PropertyInfo(Variant::STRING, CSharpLanguage::singleton->string_names._script_source, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+	p_properties.push_back(PropertyInfo(Variant::STRING, CSharpLanguage::singleton->string_names._script_source, PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 }
 
 void CSharpScript::_bind_methods() {
@@ -3189,7 +3189,7 @@ Ref<Script> CSharpScript::get_base_script() const {
 	return Ref<Script>();
 }
 
-void CSharpScript::get_script_property_list(List<PropertyInfo> *p_list) const {
+void CSharpScript::get_script_property_list(List<PropertyInfo> &p_list) const {
 
 	for (Map<StringName, PropertyInfo>::Element *E = member_info.front(); E; E = E->next()) {
 		p_list->push_back(E->value());

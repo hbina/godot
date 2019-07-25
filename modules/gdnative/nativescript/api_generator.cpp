@@ -276,7 +276,7 @@ List<ClassAPI> generate_c_api_classes() {
 		//properties
 		{
 			List<PropertyInfo> properties;
-			ClassDB::get_property_list(class_name, &properties, true);
+			ClassDB::get_property_list(class_name, properties, true);
 			properties.sort_custom<PropertyInfoComparator>();
 
 			for (List<PropertyInfo>::Element *p = properties.front(); p != NULL; p = p->next()) {

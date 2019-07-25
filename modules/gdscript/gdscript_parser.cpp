@@ -7178,7 +7178,7 @@ bool GDScriptParser::_get_member_type(const DataType &p_base_type, const StringN
 		}
 
 		List<PropertyInfo> properties;
-		scr->get_script_property_list(&properties);
+		scr->get_script_property_list(properties);
 		for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 			if (E->get().name == p_member) {
 				r_member_type = _type_from_property(E->get());
@@ -7221,7 +7221,7 @@ bool GDScriptParser::_get_member_type(const DataType &p_base_type, const StringN
 
 	if (!base_type.is_meta_type) {
 		List<PropertyInfo> properties;
-		ClassDB::get_property_list(native, &properties);
+		ClassDB::get_property_list(native, properties);
 		for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 			if (E->get().name == p_member) {
 				// Check if a getter exists
@@ -7261,7 +7261,7 @@ bool GDScriptParser::_get_member_type(const DataType &p_base_type, const StringN
 		}
 
 		List<PropertyInfo> properties;
-		ClassDB::get_property_list(native, &properties);
+		ClassDB::get_property_list(native, properties);
 		for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 			if (E->get().name == p_member) {
 				// Check if a getter exists
@@ -7400,7 +7400,7 @@ GDScriptParser::DataType GDScriptParser::_reduce_identifier_type(const DataType 
 
 		// Non-tool singletons aren't loaded, check project settings
 		List<PropertyInfo> props;
-		ProjectSettings::get_singleton()->get_property_list(&props);
+		ProjectSettings::get_singleton()->get_property_list(props);
 
 		for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 			String s = E->get().name;

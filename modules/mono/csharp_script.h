@@ -153,7 +153,7 @@ protected:
 	virtual void _resource_path_changed();
 	bool _get(const StringName &p_name, Variant &r_ret) const;
 	bool _set(const StringName &p_name, const Variant &p_value);
-	void _get_property_list(List<PropertyInfo> *p_properties) const;
+	void _get_property_list(List<PropertyInfo> &p_properties) const;
 
 public:
 	virtual bool can_instance() const;
@@ -172,7 +172,7 @@ public:
 	virtual void get_script_signal_list(List<MethodInfo> *r_signals) const;
 
 	virtual bool get_property_default_value(const StringName &p_property, Variant &r_value) const;
-	virtual void get_script_property_list(List<PropertyInfo> *p_list) const;
+	virtual void get_script_property_list(List<PropertyInfo> &p_list) const;
 	virtual void update_exports();
 
 	virtual bool is_tool() const { return tool; }
@@ -245,7 +245,7 @@ public:
 
 	virtual bool set(const StringName &p_name, const Variant &p_value);
 	virtual bool get(const StringName &p_name, Variant &r_ret) const;
-	virtual void get_property_list(List<PropertyInfo> *p_properties) const;
+	virtual void get_property_list(List<PropertyInfo> &p_properties) const;
 	virtual Variant::Type get_property_type(const StringName &p_name, bool *r_is_valid) const;
 
 	/* TODO */ virtual void get_method_list(List<MethodInfo> *p_list) const {}

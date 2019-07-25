@@ -390,7 +390,7 @@ public:
 	bool iter_next(Variant &r_iter, bool &r_valid) const;
 	Variant iter_get(const Variant &r_iter, bool &r_valid) const;
 
-	void get_property_list(List<PropertyInfo> *p_list) const;
+	void get_property_list(List<PropertyInfo> &p_list) const;
 
 	//argsVariant call()
 

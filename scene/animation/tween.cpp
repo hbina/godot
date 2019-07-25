@@ -151,11 +151,11 @@ bool Tween::_get(const StringName &p_name, Variant &r_ret) const {
 	return true;
 }
 
-void Tween::_get_property_list(List<PropertyInfo> *p_list) const {
+void Tween::_get_property_list(List<PropertyInfo> &p_list) const {
 	// Add the property info for the Tween object
-	p_list->push_back(PropertyInfo(Variant::BOOL, "playback/active", PROPERTY_HINT_NONE, ""));
-	p_list->push_back(PropertyInfo(Variant::BOOL, "playback/repeat", PROPERTY_HINT_NONE, ""));
-	p_list->push_back(PropertyInfo(Variant::REAL, "playback/speed", PROPERTY_HINT_RANGE, "-64,64,0.01"));
+	p_list.push_back(PropertyInfo(Variant::BOOL, "playback/active", PROPERTY_HINT_NONE, ""));
+	p_list.push_back(PropertyInfo(Variant::BOOL, "playback/repeat", PROPERTY_HINT_NONE, ""));
+	p_list.push_back(PropertyInfo(Variant::REAL, "playback/speed", PROPERTY_HINT_RANGE, "-64,64,0.01"));
 }
 
 void Tween::_notification(int p_what) {

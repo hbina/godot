@@ -2043,7 +2043,7 @@ void EditorPropertyResource::_file_selected(const String &p_path) {
 	ERR_FAIL_COND(res.is_null());
 
 	List<PropertyInfo> prop_list;
-	get_edited_object()->get_property_list(&prop_list);
+	get_edited_object()->get_property_list(prop_list);
 	String property_types;
 
 	for (List<PropertyInfo>::Element *E = prop_list.front(); E; E = E->next()) {
@@ -2126,7 +2126,7 @@ void EditorPropertyResource::_menu_option(int p_which) {
 				return;
 
 			List<PropertyInfo> property_list;
-			res_orig->get_property_list(&property_list);
+			res_orig->get_property_list(property_list);
 			List<Pair<String, Variant> > propvalues;
 
 			for (List<PropertyInfo>::Element *E = property_list.front(); E; E = E->next()) {

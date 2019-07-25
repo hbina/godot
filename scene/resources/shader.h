@@ -72,7 +72,7 @@ public:
 	void set_code(const String &p_code);
 	String get_code() const;
 
-	void get_param_list(List<PropertyInfo> *p_params) const;
+	void get_param_list(List<PropertyInfo> &p_params, bool list_given = true) const;
 	bool has_param(const StringName &p_param) const;
 
 	void set_default_texture_param(const StringName &p_param, const Ref<Texture> &p_texture);
@@ -82,9 +82,10 @@ public:
 	virtual bool is_text_shader() const;
 
 	_FORCE_INLINE_ StringName remap_param(const StringName &p_param) const {
-		if (params_cache_dirty)
-			get_param_list(NULL);
-
+		if (params_cache_dirty) {
+			List<PropertyInfo> tmp;
+			get_param_list(tmp, false);
+		}
 		const Map<StringName, StringName>::Element *E = params_cache.find(p_param);
 		if (E)
 			return E->get();

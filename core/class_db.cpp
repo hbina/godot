@@ -993,7 +993,7 @@ void ClassDB::set_property_default_value(StringName p_class, const StringName &p
 	default_values[p_class][p_name] = p_default;
 }
 
-void ClassDB::get_property_list(StringName p_class, List<PropertyInfo> *p_list, bool p_no_inheritance, const Object *p_validator) {
+void ClassDB::get_property_list(StringName p_class, List<PropertyInfo> &p_list, bool p_no_inheritance, const Object *p_validator) {
 
 	OBJTYPE_RLOCK;
 
@@ -1006,9 +1006,9 @@ void ClassDB::get_property_list(StringName p_class, List<PropertyInfo> *p_list, 
 			if (p_validator) {
 				PropertyInfo pi = E->get();
 				p_validator->_validate_property(pi);
-				p_list->push_back(pi);
+				p_list.push_back(pi);
 			} else {
-				p_list->push_back(E->get());
+				p_list.push_back(E->get());
 			}
 		}
 
@@ -1420,7 +1420,7 @@ Variant ClassDB::class_get_default_property_value(const StringName &p_class, con
 		if (c) {
 
 			List<PropertyInfo> plist;
-			c->get_property_list(&plist);
+			c->get_property_list(plist);
 			for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 				if (E->get().usage & (PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_EDITOR)) {
 

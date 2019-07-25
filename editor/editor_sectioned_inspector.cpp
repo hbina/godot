@@ -68,13 +68,13 @@ class SectionedInspectorFilter : public Object {
 		r_ret = edited->get(name, &valid);
 		return valid;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	void _get_property_list(List<PropertyInfo> &p_list) const {
 
 		if (!edited)
 			return;
 
 		List<PropertyInfo> pinfo;
-		edited->get_property_list(&pinfo);
+		edited->get_property_list(pinfo);
 		for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 
 			PropertyInfo pi = E->get();
@@ -91,7 +91,7 @@ class SectionedInspectorFilter : public Object {
 				pi.name = pi.name.replace_first(section + "/", "");
 				if (!allow_sub && pi.name.find("/") != -1)
 					continue;
-				p_list->push_back(pi);
+				p_list.push_back(pi);
 			}
 		}
 	}
@@ -222,7 +222,7 @@ void SectionedInspector::update_category_list() {
 		return;
 
 	List<PropertyInfo> pinfo;
-	o->get_property_list(&pinfo);
+	o->get_property_list(pinfo);
 
 	section_map.clear();
 

@@ -1660,7 +1660,7 @@ void ResourceFormatSaverBinaryInstance::_find_resources(const Variant &p_variant
 
 			List<PropertyInfo> property_list;
 
-			res->get_property_list(&property_list);
+			res->get_property_list(property_list);
 
 			for (List<PropertyInfo>::Element *E = property_list.front(); E; E = E->next()) {
 
@@ -1816,7 +1816,7 @@ Error ResourceFormatSaverBinaryInstance::save(const String &p_path, const RES &p
 			rd.type = E->get()->get_class();
 
 			List<PropertyInfo> property_list;
-			E->get()->get_property_list(&property_list);
+			E->get()->get_property_list(property_list);
 
 			for (List<PropertyInfo>::Element *F = property_list.front(); F; F = F->next()) {
 

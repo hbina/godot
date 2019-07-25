@@ -64,7 +64,7 @@ String Shader::get_code() const {
 	return VisualServer::get_singleton()->shader_get_code(shader);
 }
 
-void Shader::get_param_list(List<PropertyInfo> *p_params) const {
+void Shader::get_param_list(List<PropertyInfo> &p_params, bool list_given) const {
 
 	_update_shader();
 
@@ -81,12 +81,12 @@ void Shader::get_param_list(List<PropertyInfo> *p_params) const {
 		}
 		pi.name = "shader_param/" + pi.name;
 		params_cache[pi.name] = E->get().name;
-		if (p_params) {
+		if (list_given) {
 
 			//small little hack
 			if (pi.type == Variant::_RID)
 				pi.type = Variant::OBJECT;
-			p_params->push_back(pi);
+			p_params.push_back(pi);
 		}
 	}
 }

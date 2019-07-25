@@ -935,7 +935,7 @@ static String _make_extname(const String &p_str) {
 void ResourceImporterScene::_find_meshes(Node *p_node, Map<Ref<ArrayMesh>, Transform> &meshes) {
 
 	List<PropertyInfo> pi;
-	p_node->get_property_list(&pi);
+	p_node->get_property_list(pi);
 
 	MeshInstance *mi = Object::cast_to<MeshInstance>(p_node);
 
@@ -1005,7 +1005,7 @@ void ResourceImporterScene::_make_external_resources(Node *p_node, const String 
 		}
 	}
 
-	p_node->get_property_list(&pi);
+	p_node->get_property_list(pi);
 
 	for (List<PropertyInfo>::Element *E = pi.front(); E; E = E->next()) {
 

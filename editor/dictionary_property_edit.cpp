@@ -66,7 +66,7 @@ Variant DictionaryPropertyEdit::get_dictionary() const {
 	return dict;
 }
 
-void DictionaryPropertyEdit::_get_property_list(List<PropertyInfo> *p_list) const {
+void DictionaryPropertyEdit::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	Dictionary dict = get_dictionary();
 
@@ -78,11 +78,11 @@ void DictionaryPropertyEdit::_get_property_list(List<PropertyInfo> *p_list) cons
 
 		const Variant &key = keys[i];
 		PropertyInfo pi(key.get_type(), index + ": key");
-		p_list->push_back(pi);
+		p_list.push_back(pi);
 
 		const Variant &value = dict[key];
 		pi = PropertyInfo(value.get_type(), index + ": value");
-		p_list->push_back(pi);
+		p_list.push_back(pi);
 	}
 }
 

@@ -1058,7 +1058,7 @@ MethodInfo VisualScript::get_method_info(const StringName &p_method) const {
 	return mi;
 }
 
-void VisualScript::get_script_property_list(List<PropertyInfo> *p_list) const {
+void VisualScript::get_script_property_list(List<PropertyInfo> &p_list) const {
 
 	List<StringName> vars;
 	get_variable_list(&vars);
@@ -1068,7 +1068,7 @@ void VisualScript::get_script_property_list(List<PropertyInfo> *p_list) const {
 		//	continue;
 		PropertyInfo pi = variables[E->get()].info;
 		pi.usage |= PROPERTY_USAGE_SCRIPT_VARIABLE;
-		p_list->push_back(pi);
+		p_list.push_back(pi);
 	}
 }
 
@@ -1362,7 +1362,7 @@ bool VisualScriptInstance::get(const StringName &p_name, Variant &r_ret) const {
 	r_ret = E->get();
 	return true;
 }
-void VisualScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const {
+void VisualScriptInstance::get_property_list(List<PropertyInfo> &p_properties) const {
 
 	for (const Map<StringName, VisualScript::Variable>::Element *E = script->variables.front(); E; E = E->next()) {
 
@@ -1371,7 +1371,7 @@ void VisualScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 		PropertyInfo p = E->get().info;
 		p.name = String(E->key());
 		p.usage |= PROPERTY_USAGE_SCRIPT_VARIABLE;
-		p_properties->push_back(p);
+		p_properties.push_back(p);
 	}
 }
 Variant::Type VisualScriptInstance::get_property_type(const StringName &p_name, bool *r_is_valid) const {

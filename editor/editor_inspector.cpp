@@ -498,7 +498,7 @@ void EditorProperty::update_reload_status() {
 
 bool EditorProperty::use_keying_next() const {
 	List<PropertyInfo> plist;
-	object->get_property_list(&plist, true);
+	object->get_property_list(plist, true);
 
 	for (List<PropertyInfo>::Element *I = plist.front(); I; I = I->next()) {
 		PropertyInfo &p = I->get();
@@ -1460,7 +1460,7 @@ void EditorInspector::update_tree() {
 
 	List<PropertyInfo>
 			plist;
-	object->get_property_list(&plist, true);
+	object->get_property_list(plist, true);
 
 	HashMap<String, VBoxContainer *> item_path;
 	Map<VBoxContainer *, EditorInspectorSection *> section_map;
@@ -2105,7 +2105,7 @@ void EditorInspector::_property_checked(const String &p_path, bool p_checked) {
 
 			Variant to_create;
 			List<PropertyInfo> pinfo;
-			object->get_property_list(&pinfo);
+			object->get_property_list(pinfo);
 			for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 				if (E->get().name == p_path) {
 					Variant::CallError ce;

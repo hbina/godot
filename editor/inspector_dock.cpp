@@ -83,7 +83,7 @@ void InspectorDock::_menu_option(int p_option) {
 			editor_data->apply_changes_in_editors();
 			if (current) {
 				List<PropertyInfo> props;
-				current->get_property_list(&props);
+				current->get_property_list(props);
 				Map<RES, RES> duplicates;
 				for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 

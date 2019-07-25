@@ -53,7 +53,7 @@ bool InstancePlaceholder::_get(const StringName &p_name, Variant &r_ret) const {
 	return false;
 }
 
-void InstancePlaceholder::_get_property_list(List<PropertyInfo> *p_list) const {
+void InstancePlaceholder::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	for (const List<PropSet>::Element *E = stored_values.front(); E; E = E->next()) {
 		PropertyInfo pi;
@@ -61,7 +61,7 @@ void InstancePlaceholder::_get_property_list(List<PropertyInfo> *p_list) const {
 		pi.type = E->get().value.get_type();
 		pi.usage = PROPERTY_USAGE_STORAGE;
 
-		p_list->push_back(pi);
+		p_list.push_back(pi);
 	}
 }
 

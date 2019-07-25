@@ -348,14 +348,14 @@ protected:                                                                      
 		}                                                                                                                               \
 		return false;                                                                                                                   \
 	}                                                                                                                                   \
-	_FORCE_INLINE_ void (Object::*_get_get_property_list() const)(List<PropertyInfo> * p_list) const {                                  \
-		return (void (Object::*)(List<PropertyInfo> *) const) & m_class::_get_property_list;                                            \
+	_FORCE_INLINE_ void (Object::*_get_get_property_list() const)(List<PropertyInfo> & p_list) const {                                  \
+		return (void (Object::*)(List<PropertyInfo> &) const) & m_class::_get_property_list;                                            \
 	}                                                                                                                                   \
-	virtual void _get_property_listv(List<PropertyInfo> *p_list, bool p_reversed) const {                                               \
+	virtual void _get_property_listv(List<PropertyInfo> &p_list, bool p_reversed) const override {                                      \
 		if (!p_reversed) {                                                                                                              \
 			m_inherits::_get_property_listv(p_list, p_reversed);                                                                        \
 		}                                                                                                                               \
-		p_list->push_back(PropertyInfo(Variant::NIL, get_class_static(), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));       \
+		p_list.push_back(PropertyInfo(Variant::NIL, get_class_static(), PROPERTY_HINT_NONE, String(), PROPERTY_USAGE_CATEGORY));        \
 		if (!_is_gpl_reversed())                                                                                                        \
 			ClassDB::get_property_list(#m_class, p_list, true, this);                                                                   \
 		if (m_class::_get_get_property_list() != m_inherits::_get_get_property_list()) {                                                \
@@ -511,14 +511,14 @@ protected:
 	virtual void _initialize_classv() { initialize_class(); }
 	virtual bool _setv(const StringName &p_name, const Variant &p_property) { return false; };
 	virtual bool _getv(const StringName &p_name, Variant &r_property) const { return false; };
-	virtual void _get_property_listv(List<PropertyInfo> *p_list, bool p_reversed) const {};
+	virtual void _get_property_listv(List<PropertyInfo> &p_list, bool p_reversed) const {};
 	virtual void _notificationv(int p_notification, bool p_reversed){};
 
 	static String _get_category() { return ""; }
 	static void _bind_methods();
 	bool _set(const StringName &p_name, const Variant &p_property) { return false; };
 	bool _get(const StringName &p_name, Variant &r_property) const { return false; };
-	void _get_property_list(List<PropertyInfo> *p_list) const {};
+	void _get_property_list(List<PropertyInfo> &p_list) const {};
 	void _notification(int p_notification){};
 
 	_FORCE_INLINE_ static void (*_get_bind_methods())() {
@@ -530,7 +530,7 @@ protected:
 	_FORCE_INLINE_ bool (Object::*_get_set() const)(const StringName &p_name, const Variant &p_property) {
 		return &Object::_set;
 	}
-	_FORCE_INLINE_ void (Object::*_get_get_property_list() const)(List<PropertyInfo> *p_list) const {
+	_FORCE_INLINE_ void (Object::*_get_get_property_list() const)(List<PropertyInfo> &p_list) const {
 		return &Object::_get_property_list;
 	}
 	_FORCE_INLINE_ void (Object::*_get_notification() const)(int) {
@@ -657,7 +657,7 @@ public:
 	void set_indexed(const Vector<StringName> &p_names, const Variant &p_value, bool *r_valid = NULL);
 	Variant get_indexed(const Vector<StringName> &p_names, bool *r_valid = NULL) const;
 
-	void get_property_list(List<PropertyInfo> *p_list, bool p_reversed = false) const;
+	void get_property_list(List<PropertyInfo> &p_list, bool p_reversed = false) const;
 
 	bool has_method(const StringName &p_method) const;
 	void get_method_list(List<MethodInfo> *p_list) const;

@@ -387,9 +387,9 @@ bool AnimationTreePlayer::_get(const StringName &p_name, Variant &r_ret) const {
 	return true;
 }
 
-void AnimationTreePlayer::_get_property_list(List<PropertyInfo> *p_list) const {
+void AnimationTreePlayer::_get_property_list(List<PropertyInfo> &p_list) const {
 
-	p_list->push_back(PropertyInfo(Variant::DICTIONARY, "data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_NETWORK));
+	p_list.push_back(PropertyInfo(Variant::DICTIONARY, "data", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_NETWORK));
 }
 
 void AnimationTreePlayer::advance(float p_time) {

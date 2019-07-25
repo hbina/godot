@@ -65,7 +65,7 @@ public:
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	void _get_property_list(List<PropertyInfo> &p_list) const {
 
 		for (const List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 			if (!importer->get_option_visibility(E->get().name, values))
@@ -77,7 +77,7 @@ public:
 					pi.usage |= PROPERTY_USAGE_CHECKED;
 				}
 			}
-			p_list->push_back(pi);
+			p_list.push_back(pi);
 		}
 	}
 

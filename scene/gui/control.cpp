@@ -336,7 +336,7 @@ bool Control::_get(const StringName &p_name, Variant &r_ret) const {
 
 	return true;
 }
-void Control::_get_property_list(List<PropertyInfo> *p_list) const {
+void Control::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	Ref<Theme> theme = Theme::get_default();
 	/* Using the default theme since the properties below are meant for editor only
@@ -357,7 +357,7 @@ void Control::_get_property_list(List<PropertyInfo> *p_list) const {
 			if (data.icon_override.has(E->get()))
 				hint |= PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_CHECKED;
 
-			p_list->push_back(PropertyInfo(Variant::OBJECT, "custom_icons/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "Texture", hint));
+			p_list.push_back(PropertyInfo(Variant::OBJECT, "custom_icons/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "Texture", hint));
 		}
 	}
 	{
@@ -369,7 +369,7 @@ void Control::_get_property_list(List<PropertyInfo> *p_list) const {
 			if (data.shader_override.has(E->get()))
 				hint |= PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_CHECKED;
 
-			p_list->push_back(PropertyInfo(Variant::OBJECT, "custom_shaders/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "Shader,VisualShader", hint));
+			p_list.push_back(PropertyInfo(Variant::OBJECT, "custom_shaders/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "Shader,VisualShader", hint));
 		}
 	}
 	{
@@ -381,7 +381,7 @@ void Control::_get_property_list(List<PropertyInfo> *p_list) const {
 			if (data.style_override.has(E->get()))
 				hint |= PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_CHECKED;
 
-			p_list->push_back(PropertyInfo(Variant::OBJECT, "custom_styles/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "StyleBox", hint));
+			p_list.push_back(PropertyInfo(Variant::OBJECT, "custom_styles/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "StyleBox", hint));
 		}
 	}
 	{
@@ -393,7 +393,7 @@ void Control::_get_property_list(List<PropertyInfo> *p_list) const {
 			if (data.font_override.has(E->get()))
 				hint |= PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_CHECKED;
 
-			p_list->push_back(PropertyInfo(Variant::OBJECT, "custom_fonts/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "Font", hint));
+			p_list.push_back(PropertyInfo(Variant::OBJECT, "custom_fonts/" + E->get(), PROPERTY_HINT_RESOURCE_TYPE, "Font", hint));
 		}
 	}
 	{
@@ -405,7 +405,7 @@ void Control::_get_property_list(List<PropertyInfo> *p_list) const {
 			if (data.color_override.has(E->get()))
 				hint |= PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_CHECKED;
 
-			p_list->push_back(PropertyInfo(Variant::COLOR, "custom_colors/" + E->get(), PROPERTY_HINT_NONE, "", hint));
+			p_list.push_back(PropertyInfo(Variant::COLOR, "custom_colors/" + E->get(), PROPERTY_HINT_NONE, "", hint));
 		}
 	}
 	{
@@ -417,7 +417,7 @@ void Control::_get_property_list(List<PropertyInfo> *p_list) const {
 			if (data.constant_override.has(E->get()))
 				hint |= PROPERTY_USAGE_STORAGE | PROPERTY_USAGE_CHECKED;
 
-			p_list->push_back(PropertyInfo(Variant::INT, "custom_constants/" + E->get(), PROPERTY_HINT_RANGE, "-16384,16384", hint));
+			p_list.push_back(PropertyInfo(Variant::INT, "custom_constants/" + E->get(), PROPERTY_HINT_RANGE, "-16384,16384", hint));
 		}
 	}
 }

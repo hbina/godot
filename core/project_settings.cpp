@@ -219,7 +219,7 @@ struct _VCSort {
 	bool operator<(const _VCSort &p_vcs) const { return order == p_vcs.order ? name < p_vcs.name : order < p_vcs.order; }
 };
 
-void ProjectSettings::_get_property_list(List<PropertyInfo> *p_list) const {
+void ProjectSettings::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	_THREAD_SAFE_METHOD_
 
@@ -258,9 +258,9 @@ void ProjectSettings::_get_property_list(List<PropertyInfo> *p_list) const {
 			PropertyInfo pi = custom_prop_info[prop_info_name];
 			pi.name = E->get().name;
 			pi.usage = E->get().flags;
-			p_list->push_back(pi);
+			p_list.push_back(pi);
 		} else
-			p_list->push_back(PropertyInfo(E->get().type, E->get().name, PROPERTY_HINT_NONE, "", E->get().flags));
+			p_list.push_back(PropertyInfo(E->get().type, E->get().name, PROPERTY_HINT_NONE, "", E->get().flags));
 	}
 }
 
@@ -894,7 +894,7 @@ Variant _GLOBAL_DEF(const String &p_var, const Variant &p_default, bool p_restar
 Vector<String> ProjectSettings::get_optimizer_presets() const {
 
 	List<PropertyInfo> pi;
-	ProjectSettings::get_singleton()->get_property_list(&pi);
+	ProjectSettings::get_singleton()->get_property_list(pi);
 	Vector<String> names;
 
 	for (List<PropertyInfo>::Element *E = pi.front(); E; E = E->next()) {

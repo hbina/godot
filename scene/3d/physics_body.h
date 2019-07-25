@@ -389,7 +389,7 @@ public:
 		/// "j" is used to set the parameter inside the PhysicsServer
 		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
 		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual void _get_property_list(List<PropertyInfo> &p_list) const;
 
 		virtual ~JointData() {}
 	};
@@ -399,7 +399,7 @@ public:
 
 		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
 		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual void _get_property_list(List<PropertyInfo> &p_list) const;
 
 		real_t bias;
 		real_t damping;
@@ -416,7 +416,7 @@ public:
 
 		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
 		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual void _get_property_list(List<PropertyInfo> &p_list) const;
 
 		real_t swing_span;
 		real_t twist_span;
@@ -437,7 +437,7 @@ public:
 
 		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
 		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual void _get_property_list(List<PropertyInfo> &p_list) const;
 
 		bool angular_limit_enabled;
 		real_t angular_limit_upper;
@@ -460,7 +460,7 @@ public:
 
 		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
 		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual void _get_property_list(List<PropertyInfo> &p_list) const;
 
 		real_t linear_limit_upper;
 		real_t linear_limit_lower;
@@ -538,7 +538,7 @@ public:
 
 		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
 		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual void _get_property_list(List<PropertyInfo> &p_list) const;
 
 		SixDOFAxisData axis_data[3];
 
@@ -573,7 +573,7 @@ private:
 protected:
 	bool _set(const StringName &p_name, const Variant &p_value);
 	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
+	void _get_property_list(List<PropertyInfo> &p_list) const;
 	void _notification(int p_what);
 	void _direct_state_changed(Object *p_state);
 

@@ -113,7 +113,7 @@ void EditorFolding::_fill_folds(const Node *p_root, const Node *p_node, Array &p
 	}
 
 	List<PropertyInfo> plist;
-	p_node->get_property_list(&plist);
+	p_node->get_property_list(plist);
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 		if (E->get().usage & PROPERTY_USAGE_EDITOR) {
 			if (E->get().type == Variant::OBJECT) {
@@ -224,7 +224,7 @@ bool EditorFolding::has_folding_data(const String &p_path) {
 void EditorFolding::_do_object_unfolds(Object *p_object, Set<RES> &resources) {
 
 	List<PropertyInfo> plist;
-	p_object->get_property_list(&plist);
+	p_object->get_property_list(plist);
 	String group_base;
 	String group;
 

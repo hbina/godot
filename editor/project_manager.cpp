@@ -1190,7 +1190,7 @@ void ProjectList::load_projects() {
 	// Use a dictionary associating project path to metadata (like is_favorite).
 
 	List<PropertyInfo> properties;
-	EditorSettings::get_singleton()->get_property_list(&properties);
+	EditorSettings::get_singleton()->get_property_list(properties);
 
 	Set<String> favorites;
 	// Find favourites...
@@ -1475,7 +1475,7 @@ int ProjectList::refresh_project(const String &dir_path) {
 	String property_key = "projects/" + project_key;
 	{
 		List<PropertyInfo> properties;
-		EditorSettings::get_singleton()->get_property_list(&properties);
+		EditorSettings::get_singleton()->get_property_list(properties);
 		String favorite_property_key = "favorite_projects/" + project_key;
 
 		bool found = false;
@@ -2461,7 +2461,7 @@ ProjectManager::ProjectManager() {
 
 	Vector<String> editor_languages;
 	List<PropertyInfo> editor_settings_properties;
-	EditorSettings::get_singleton()->get_property_list(&editor_settings_properties);
+	EditorSettings::get_singleton()->get_property_list(editor_settings_properties);
 	for (List<PropertyInfo>::Element *E = editor_settings_properties.front(); E; E = E->next()) {
 		PropertyInfo &pi = E->get();
 		if (pi.name == "interface/editor/editor_language") {

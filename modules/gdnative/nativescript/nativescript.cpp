@@ -92,7 +92,7 @@ void NativeScript::_update_placeholder(PlaceHolderScriptInstance *p_placeholder)
 	ERR_FAIL_COND(!script_data);
 
 	List<PropertyInfo> info;
-	get_script_property_list(&info);
+	get_script_property_list(info);
 	Map<StringName, Variant> values;
 	for (List<PropertyInfo>::Element *E = info.front(); E; E = E->next()) {
 		Variant value;
@@ -381,17 +381,17 @@ void NativeScript::get_script_method_list(List<MethodInfo> *p_list) const {
 	}
 }
 
-void NativeScript::get_script_property_list(List<PropertyInfo> *p_list) const {
+void NativeScript::get_script_property_list(List<PropertyInfo> &p_list) const {
 	NativeScriptDesc *script_data = get_script_desc();
 
 	Set<StringName> existing_properties;
-	List<PropertyInfo>::Element *original_back = p_list->back();
+	List<PropertyInfo>::Element *original_back = p_list.back();
 	while (script_data) {
 		List<PropertyInfo>::Element *insert_position = original_back;
 
 		for (OrderedHashMap<StringName, NativeScriptDesc::Property>::Element E = script_data->properties.front(); E; E = E.next()) {
 			if (!existing_properties.has(E.key())) {
-				insert_position = p_list->insert_after(insert_position, E.get().info);
+				insert_position = p_list.insert_after(insert_position, E.get().info);
 				existing_properties.insert(E.key());
 			}
 		}
@@ -636,7 +636,7 @@ bool NativeScriptInstance::get(const StringName &p_name, Variant &r_ret) const {
 	return false;
 }
 
-void NativeScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const {
+void NativeScriptInstance::get_property_list(List<PropertyInfo> &p_properties) const {
 	script->get_script_property_list(p_properties);
 
 	NativeScriptDesc *script_data = GET_SCRIPT_DESC();
@@ -687,7 +687,7 @@ void NativeScriptInstance::get_property_list(List<PropertyInfo> *p_properties) c
 					info.usage = d["usage"];
 				}
 
-				p_properties->push_back(info);
+				p_properties.push_back(info);
 			}
 		}
 

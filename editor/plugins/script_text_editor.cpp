@@ -165,7 +165,7 @@ void ScriptTextEditor::_update_member_keywords() {
 	if (instance_base == StringName())
 		return;
 	List<PropertyInfo> plist;
-	ClassDB::get_property_list(instance_base, &plist);
+	ClassDB::get_property_list(instance_base, plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 		String name = E->get().name;

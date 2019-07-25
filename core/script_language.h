@@ -143,7 +143,7 @@ public:
 
 	virtual void update_exports() {} //editor tool
 	virtual void get_script_method_list(List<MethodInfo> *p_list) const = 0;
-	virtual void get_script_property_list(List<PropertyInfo> *p_list) const = 0;
+	virtual void get_script_property_list(List<PropertyInfo> &p_list) const = 0;
 
 	virtual int get_member_line(const StringName &p_member) const { return -1; }
 
@@ -159,7 +159,7 @@ class ScriptInstance {
 public:
 	virtual bool set(const StringName &p_name, const Variant &p_value) = 0;
 	virtual bool get(const StringName &p_name, Variant &r_ret) const = 0;
-	virtual void get_property_list(List<PropertyInfo> *p_properties) const = 0;
+	virtual void get_property_list(List<PropertyInfo> &p_properties) const = 0;
 	virtual Variant::Type get_property_type(const StringName &p_name, bool *r_is_valid = NULL) const = 0;
 
 	virtual Object *get_owner() { return NULL; }
@@ -380,7 +380,7 @@ class PlaceHolderScriptInstance : public ScriptInstance {
 public:
 	virtual bool set(const StringName &p_name, const Variant &p_value);
 	virtual bool get(const StringName &p_name, Variant &r_ret) const;
-	virtual void get_property_list(List<PropertyInfo> *p_properties) const;
+	virtual void get_property_list(List<PropertyInfo> &p_properties) const;
 	virtual Variant::Type get_property_type(const StringName &p_name, bool *r_is_valid = NULL) const;
 
 	virtual void get_method_list(List<MethodInfo> *p_list) const;

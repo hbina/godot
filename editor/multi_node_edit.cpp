@@ -116,7 +116,7 @@ bool MultiNodeEdit::_get(const StringName &p_name, Variant &r_ret) const {
 	return false;
 }
 
-void MultiNodeEdit::_get_property_list(List<PropertyInfo> *p_list) const {
+void MultiNodeEdit::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	HashMap<String, PLData> usage;
 
@@ -138,7 +138,7 @@ void MultiNodeEdit::_get_property_list(List<PropertyInfo> *p_list) const {
 			continue;
 
 		List<PropertyInfo> plist;
-		n->get_property_list(&plist, true);
+		n->get_property_list(plist, true);
 
 		for (List<PropertyInfo>::Element *F = plist.front(); F; F = F->next()) {
 
@@ -163,11 +163,11 @@ void MultiNodeEdit::_get_property_list(List<PropertyInfo> *p_list) const {
 	for (List<PLData *>::Element *E = datas.front(); E; E = E->next()) {
 
 		if (nc == E->get()->uses) {
-			p_list->push_back(E->get()->info);
+			p_list.push_back(E->get()->info);
 		}
 	}
 
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "scripts", PROPERTY_HINT_RESOURCE_TYPE, "Script"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "scripts", PROPERTY_HINT_RESOURCE_TYPE, "Script"));
 }
 
 void MultiNodeEdit::clear_nodes() {

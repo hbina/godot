@@ -70,10 +70,10 @@ protected:
 		r_ret = values[p_name];
 		return true;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	void _get_property_list(List<PropertyInfo> &p_list) const {
 
 		for (const List<PropertyInfo>::Element *E = props.front(); E; E = E->next())
-			p_list->push_back(E->get());
+			p_list.push_back(E->get());
 	}
 
 public:
@@ -137,11 +137,11 @@ protected:
 		return true;
 	}
 
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	void _get_property_list(List<PropertyInfo> &p_list) const {
 
-		p_list->clear(); //sorry, no want category
+		p_list.clear(); //sorry, no want category
 		for (const List<PropertyInfo>::Element *E = prop_list.front(); E; E = E->next()) {
-			p_list->push_back(E->get());
+			p_list.push_back(E->get());
 		}
 	}
 

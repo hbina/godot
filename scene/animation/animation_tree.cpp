@@ -1491,13 +1491,13 @@ bool AnimationTree::_get(const StringName &p_name, Variant &r_ret) const {
 
 	return false;
 }
-void AnimationTree::_get_property_list(List<PropertyInfo> *p_list) const {
+void AnimationTree::_get_property_list(List<PropertyInfo> &p_list) const {
 	if (properties_dirty) {
 		const_cast<AnimationTree *>(this)->_update_properties();
 	}
 
 	for (const List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
-		p_list->push_back(E->get());
+		p_list.push_back(E->get());
 	}
 }
 

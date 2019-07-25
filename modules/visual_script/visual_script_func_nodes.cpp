@@ -1037,7 +1037,7 @@ PropertyInfo VisualScriptPropertySet::get_input_value_port_info(int p_idx) const
 	}
 
 	List<PropertyInfo> props;
-	ClassDB::get_property_list(_get_base_type(), &props, true);
+	ClassDB::get_property_list(_get_base_type(), props, true);
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 		if (E->get().name == property) {
 			PropertyInfo pinfo = PropertyInfo(E->get().type, "value", PROPERTY_HINT_TYPE_STRING, E->get().hint_string);
@@ -1057,7 +1057,7 @@ PropertyInfo VisualScriptPropertySet::get_output_value_port_info(int p_idx) cons
 		return PropertyInfo(basic_type, "out");
 	} else if (call_mode == CALL_MODE_INSTANCE) {
 		List<PropertyInfo> props;
-		ClassDB::get_property_list(_get_base_type(), &props, true);
+		ClassDB::get_property_list(_get_base_type(), props, true);
 		for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 			if (E->get().name == property) {
 				return PropertyInfo(E->get().type, "pass", PROPERTY_HINT_TYPE_STRING, E->get().hint_string);
@@ -1176,7 +1176,7 @@ void VisualScriptPropertySet::_update_cache() {
 		v = Variant::construct(basic_type, NULL, 0, ce);
 
 		List<PropertyInfo> pinfo;
-		v.get_property_list(&pinfo);
+		v.get_property_list(pinfo);
 
 		for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 
@@ -1230,14 +1230,14 @@ void VisualScriptPropertySet::_update_cache() {
 
 		if (node) {
 
-			node->get_property_list(&pinfo);
+			node->get_property_list(pinfo);
 		} else {
-			ClassDB::get_property_list(type, &pinfo);
+			ClassDB::get_property_list(type, pinfo);
 		}
 
 		if (script.is_valid()) {
 
-			script->get_script_property_list(&pinfo);
+			script->get_script_property_list(pinfo);
 		}
 
 		for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
@@ -1417,7 +1417,7 @@ void VisualScriptPropertySet::_validate_property(PropertyInfo &property) const {
 		Variant::CallError ce;
 		Variant v = Variant::construct(type_cache.type, NULL, 0, ce);
 		List<PropertyInfo> plist;
-		v.get_property_list(&plist);
+		v.get_property_list(plist);
 		String options = "";
 		for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 			options += "," + E->get().name;
@@ -1813,7 +1813,7 @@ PropertyInfo VisualScriptPropertyGet::get_input_value_port_info(int p_idx) const
 
 PropertyInfo VisualScriptPropertyGet::get_output_value_port_info(int p_idx) const {
 	List<PropertyInfo> props;
-	ClassDB::get_property_list(_get_base_type(), &props, true);
+	ClassDB::get_property_list(_get_base_type(), props, true);
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 		if (E->get().name == property) {
 			return PropertyInfo(E->get().type, "value." + String(index));
@@ -1884,7 +1884,7 @@ void VisualScriptPropertyGet::_update_cache() {
 		v = Variant::construct(basic_type, NULL, 0, ce);
 
 		List<PropertyInfo> pinfo;
-		v.get_property_list(&pinfo);
+		v.get_property_list(pinfo);
 
 		for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 
@@ -2132,7 +2132,7 @@ void VisualScriptPropertyGet::_validate_property(PropertyInfo &property) const {
 		Variant::CallError ce;
 		Variant v = Variant::construct(type_cache, NULL, 0, ce);
 		List<PropertyInfo> plist;
-		v.get_property_list(&plist);
+		v.get_property_list(plist);
 		String options = "";
 		for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 			options += "," + E->get().name;

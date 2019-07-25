@@ -1309,7 +1309,7 @@ void SceneTreeDock::perform_node_renames(Node *p_base, List<Pair<NodePath, NodeP
 		if (si) {
 
 			List<PropertyInfo> properties;
-			si->get_property_list(&properties);
+			si->get_property_list(properties);
 
 			for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 
@@ -2054,7 +2054,7 @@ void SceneTreeDock::replace_node(Node *p_node, Node *p_by_node, bool p_keep_prop
 	if (p_keep_properties) {
 		Node *default_oldnode = Object::cast_to<Node>(ClassDB::instance(n->get_class()));
 		List<PropertyInfo> pinfo;
-		n->get_property_list(&pinfo);
+		n->get_property_list(pinfo);
 
 		for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 			if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
@@ -2329,7 +2329,7 @@ void SceneTreeDock::_add_children_to_popup(Object *p_obj, int p_depth) {
 		return;
 
 	List<PropertyInfo> pinfo;
-	p_obj->get_property_list(&pinfo);
+	p_obj->get_property_list(pinfo);
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 
 		if (!(E->get().usage & PROPERTY_USAGE_EDITOR))

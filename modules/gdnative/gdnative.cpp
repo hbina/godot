@@ -111,7 +111,7 @@ bool GDNativeLibrary::_get(const StringName &p_name, Variant &r_property) const 
 	return false;
 }
 
-void GDNativeLibrary::_get_property_list(List<PropertyInfo> *p_list) const {
+void GDNativeLibrary::_get_property_list(List<PropertyInfo> &p_list) const {
 	// set entries
 	List<String> entry_key_list;
 
@@ -126,7 +126,7 @@ void GDNativeLibrary::_get_property_list(List<PropertyInfo> *p_list) const {
 		prop.type = Variant::STRING;
 		prop.name = "entry/" + key;
 
-		p_list->push_back(prop);
+		p_list.push_back(prop);
 	}
 
 	// set dependencies
@@ -143,7 +143,7 @@ void GDNativeLibrary::_get_property_list(List<PropertyInfo> *p_list) const {
 		prop.type = Variant::STRING;
 		prop.name = "dependency/" + key;
 
-		p_list->push_back(prop);
+		p_list.push_back(prop);
 	}
 }
 

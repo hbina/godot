@@ -215,15 +215,15 @@ bool ArrayPropertyEdit::_get(const StringName &p_name, Variant &r_ret) const {
 	return false;
 }
 
-void ArrayPropertyEdit::_get_property_list(List<PropertyInfo> *p_list) const {
+void ArrayPropertyEdit::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	Variant arr = get_array();
 	int size = arr.call("size");
 
-	p_list->push_back(PropertyInfo(Variant::INT, "array/size", PROPERTY_HINT_RANGE, "0,100000,1"));
+	p_list.push_back(PropertyInfo(Variant::INT, "array/size", PROPERTY_HINT_RANGE, "0,100000,1"));
 	int pages = size / ITEMS_PER_PAGE;
 	if (pages > 0)
-		p_list->push_back(PropertyInfo(Variant::INT, "array/page", PROPERTY_HINT_RANGE, "0," + itos(pages) + ",1"));
+		p_list.push_back(PropertyInfo(Variant::INT, "array/page", PROPERTY_HINT_RANGE, "0," + itos(pages) + ",1"));
 
 	int offset = page * ITEMS_PER_PAGE;
 
@@ -235,11 +235,11 @@ void ArrayPropertyEdit::_get_property_list(List<PropertyInfo> *p_list) const {
 		bool is_typed = arr.get_type() != Variant::ARRAY || subtype != Variant::NIL;
 
 		if (!is_typed) {
-			p_list->push_back(PropertyInfo(Variant::INT, "indices/" + itos(i + offset) + "_type", PROPERTY_HINT_ENUM, vtypes));
+			p_list.push_back(PropertyInfo(Variant::INT, "indices/" + itos(i + offset) + "_type", PROPERTY_HINT_ENUM, vtypes));
 		}
 
 		if (v.get_type() == Variant::OBJECT && Object::cast_to<EncodedObjectAsID>(v)) {
-			p_list->push_back(PropertyInfo(Variant::INT, "indices/" + itos(i + offset), PROPERTY_HINT_OBJECT_ID, "Object"));
+			p_list.push_back(PropertyInfo(Variant::INT, "indices/" + itos(i + offset), PROPERTY_HINT_OBJECT_ID, "Object"));
 			continue;
 		}
 
@@ -254,7 +254,7 @@ void ArrayPropertyEdit::_get_property_list(List<PropertyInfo> *p_list) const {
 				pi.hint_string = "Resource";
 			}
 
-			p_list->push_back(pi);
+			p_list.push_back(pi);
 		}
 	}
 }

@@ -331,7 +331,7 @@ public:
 	static void add_property_group(StringName p_class, const String &p_name, const String &p_prefix = "");
 	static void add_property(StringName p_class, const PropertyInfo &p_pinfo, const StringName &p_setter, const StringName &p_getter, int p_index = -1);
 	static void set_property_default_value(StringName p_class, const StringName &p_name, const Variant &p_default);
-	static void get_property_list(StringName p_class, List<PropertyInfo> *p_list, bool p_no_inheritance = false, const Object *p_validator = NULL);
+	static void get_property_list(StringName p_class, List<PropertyInfo> &p_list, bool p_no_inheritance = false, const Object *p_validator = NULL);
 	static bool set_property(Object *p_object, const StringName &p_property, const Variant &p_value, bool *r_valid = NULL);
 	static bool get_property(Object *p_object, const StringName &p_property, Variant &r_value);
 	static bool has_property(const StringName &p_class, const StringName &p_property, bool p_no_inheritance = false);

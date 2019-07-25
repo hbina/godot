@@ -352,7 +352,7 @@ public:
 	virtual bool has_method(const StringName &p_method) const;
 	virtual MethodInfo get_method_info(const StringName &p_method) const;
 
-	virtual void get_script_property_list(List<PropertyInfo> *p_list) const;
+	virtual void get_script_property_list(List<PropertyInfo> &p_list) const;
 
 	virtual int get_member_line(const StringName &p_member) const;
 
@@ -397,7 +397,7 @@ class VisualScriptInstance : public ScriptInstance {
 public:
 	virtual bool set(const StringName &p_name, const Variant &p_value);
 	virtual bool get(const StringName &p_name, Variant &r_ret) const;
-	virtual void get_property_list(List<PropertyInfo> *p_properties) const;
+	virtual void get_property_list(List<PropertyInfo> &p_properties) const;
 	virtual Variant::Type get_property_type(const StringName &p_name, bool *r_is_valid = NULL) const;
 
 	virtual void get_method_list(List<MethodInfo> *p_list) const;

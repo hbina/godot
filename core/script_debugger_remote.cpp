@@ -608,7 +608,7 @@ void ScriptDebuggerRemote::_send_object_id(ObjectID p_id) {
 	}
 
 	List<PropertyInfo> pinfo;
-	obj->get_property_list(&pinfo, true);
+	obj->get_property_list(pinfo, true);
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 		if (E->get().usage & (PROPERTY_USAGE_EDITOR | PROPERTY_USAGE_CATEGORY)) {
 			properties.push_back(PropertyDesc(E->get(), obj->get(E->get().name)));

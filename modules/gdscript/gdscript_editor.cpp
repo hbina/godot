@@ -830,7 +830,7 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 													found = true;
 												} else {
 													List<PropertyInfo> props;
-													ProjectSettings::get_singleton()->get_property_list(&props);
+													ProjectSettings::get_singleton()->get_property_list(props);
 
 													for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 
@@ -1463,7 +1463,7 @@ static bool _guess_identifier_type_from_base(GDScriptCompletionContext &p_contex
 
 					if (!_static) {
 						List<PropertyInfo> members;
-						scr->get_script_property_list(&members);
+						scr->get_script_property_list(members);
 						for (const List<PropertyInfo>::Element *E = members.front(); E; E = E->next()) {
 							const PropertyInfo &prop = E->get();
 							if (prop.name == p_identifier) {
@@ -1495,7 +1495,7 @@ static bool _guess_identifier_type_from_base(GDScriptCompletionContext &p_contex
 				// Skip constants since they're all integers. Type does not matter because int has no members
 
 				List<PropertyInfo> props;
-				ClassDB::get_property_list(class_name, &props);
+				ClassDB::get_property_list(class_name, props);
 				for (const List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 					const PropertyInfo &prop = E->get();
 					if (prop.name == p_identifier) {
@@ -1983,7 +1983,7 @@ static void _find_identifiers_in_base(const GDScriptCompletionContext &p_context
 				if (scr.is_valid()) {
 					if (!_static && !p_only_functions) {
 						List<PropertyInfo> members;
-						scr->get_script_property_list(&members);
+						scr->get_script_property_list(members);
 						for (List<PropertyInfo>::Element *E = members.front(); E; E = E->next()) {
 							ScriptCodeCompletionOption option(E->get().name, ScriptCodeCompletionOption::KIND_MEMBER);
 							r_result.insert(option.display, option);
@@ -2040,7 +2040,7 @@ static void _find_identifiers_in_base(const GDScriptCompletionContext &p_context
 
 					if (!_static) {
 						List<PropertyInfo> pinfo;
-						ClassDB::get_property_list(type, &pinfo);
+						ClassDB::get_property_list(type, pinfo);
 						for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 							if (E->get().usage & (PROPERTY_USAGE_GROUP | PROPERTY_USAGE_CATEGORY)) {
 								continue;
@@ -2083,7 +2083,7 @@ static void _find_identifiers_in_base(const GDScriptCompletionContext &p_context
 
 				if (!p_only_functions) {
 					List<PropertyInfo> members;
-					p_base.value.get_property_list(&members);
+					p_base.value.get_property_list(members);
 
 					for (List<PropertyInfo>::Element *E = members.front(); E; E = E->next()) {
 						if (String(E->get().name).find("/") == -1) {
@@ -2187,7 +2187,7 @@ static void _find_identifiers(const GDScriptCompletionContext &p_context, bool p
 
 	// Autoload singletons
 	List<PropertyInfo> props;
-	ProjectSettings::get_singleton()->get_property_list(&props);
+	ProjectSettings::get_singleton()->get_property_list(props);
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 		String s = E->get().name;
 		if (!s.begins_with("autoload/")) {
@@ -2325,7 +2325,7 @@ static void _find_call_arguments(const GDScriptCompletionContext &p_context, con
 				if (ClassDB::is_parent_class(class_name, "Node") && (p_method == "get_node" || p_method == "has_node") && p_argidx == 0) {
 					// Get autoloads
 					List<PropertyInfo> props;
-					ProjectSettings::get_singleton()->get_property_list(&props);
+					ProjectSettings::get_singleton()->get_property_list(props);
 
 					for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 						String s = E->get().name;
@@ -2342,7 +2342,7 @@ static void _find_call_arguments(const GDScriptCompletionContext &p_context, con
 				if (p_argidx == 0 && method_args > 0 && ClassDB::is_parent_class(class_name, "InputEvent") && p_method.operator String().find("action") != -1) {
 					// Get input actions
 					List<PropertyInfo> props;
-					ProjectSettings::get_singleton()->get_property_list(&props);
+					ProjectSettings::get_singleton()->get_property_list(props);
 					for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 						String s = E->get().name;
 						if (!s.begins_with("input/")) {
@@ -2580,7 +2580,7 @@ Error GDScriptLanguage::complete_code(const String &p_code, const String &p_path
 
 				// Get autoloads
 				List<PropertyInfo> props;
-				ProjectSettings::get_singleton()->get_property_list(&props);
+				ProjectSettings::get_singleton()->get_property_list(props);
 
 				for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 					String s = E->get().name;
@@ -3159,7 +3159,7 @@ static Error _lookup_symbol_from_base(const GDScriptParser::DataType &p_base, co
 				}
 
 				List<PropertyInfo> properties;
-				ClassDB::get_property_list(class_name, &properties, true);
+				ClassDB::get_property_list(class_name, properties, true);
 				for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 					if (E->get().name == p_symbol) {
 						r_result.type = ScriptLanguage::LookupResult::RESULT_CLASS_PROPERTY;
@@ -3359,7 +3359,7 @@ Error GDScriptLanguage::lookup_code(const String &p_code, const String &p_symbol
 			if (!is_function) {
 				// Guess in autoloads as singletons
 				List<PropertyInfo> props;
-				ProjectSettings::get_singleton()->get_property_list(&props);
+				ProjectSettings::get_singleton()->get_property_list(props);
 
 				for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 

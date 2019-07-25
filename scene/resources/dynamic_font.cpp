@@ -971,13 +971,13 @@ bool DynamicFont::_get(const StringName &p_name, Variant &r_ret) const {
 
 	return false;
 }
-void DynamicFont::_get_property_list(List<PropertyInfo> *p_list) const {
+void DynamicFont::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	for (int i = 0; i < fallbacks.size(); i++) {
-		p_list->push_back(PropertyInfo(Variant::OBJECT, "fallback/" + itos(i), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
+		p_list.push_back(PropertyInfo(Variant::OBJECT, "fallback/" + itos(i), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
 	}
 
-	p_list->push_back(PropertyInfo(Variant::OBJECT, "fallback/" + itos(fallbacks.size()), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
+	p_list.push_back(PropertyInfo(Variant::OBJECT, "fallback/" + itos(fallbacks.size()), PROPERTY_HINT_RESOURCE_TYPE, "DynamicFontData"));
 }
 
 void DynamicFont::_bind_methods() {

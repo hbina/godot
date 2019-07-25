@@ -231,7 +231,7 @@ void ScriptServer::save_global_classes() {
 void ScriptInstance::get_property_state(List<Pair<StringName, Variant> > &state) {
 
 	List<PropertyInfo> pinfo;
-	get_property_list(&pinfo);
+	get_property_list(pinfo);
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 
 		if (E->get().usage & PROPERTY_USAGE_STORAGE) {
@@ -434,11 +434,11 @@ bool PlaceHolderScriptInstance::get(const StringName &p_name, Variant &r_ret) co
 	return false;
 }
 
-void PlaceHolderScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const {
+void PlaceHolderScriptInstance::get_property_list(List<PropertyInfo> &p_properties) const {
 
 	if (script->is_placeholder_fallback_enabled()) {
 		for (const List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
-			p_properties->push_back(E->get());
+			p_properties.push_back(E->get());
 		}
 	} else {
 		for (const List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
@@ -446,7 +446,7 @@ void PlaceHolderScriptInstance::get_property_list(List<PropertyInfo> *p_properti
 			if (!values.has(pinfo.name)) {
 				pinfo.usage |= PROPERTY_USAGE_SCRIPT_DEFAULT_VALUE;
 			}
-			p_properties->push_back(E->get());
+			p_properties.push_back(E->get());
 		}
 	}
 }

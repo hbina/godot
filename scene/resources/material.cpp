@@ -159,7 +159,7 @@ bool ShaderMaterial::_get(const StringName &p_name, Variant &r_ret) const {
 	return false;
 }
 
-void ShaderMaterial::_get_property_list(List<PropertyInfo> *p_list) const {
+void ShaderMaterial::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	if (!shader.is_null()) {
 
@@ -256,7 +256,7 @@ void ShaderMaterial::get_argument_options(const StringName &p_function, int p_id
 
 		if (shader.is_valid()) {
 			List<PropertyInfo> pl;
-			shader->get_param_list(&pl);
+			shader->get_param_list(pl);
 			for (List<PropertyInfo>::Element *E = pl.front(); E; E = E->next()) {
 				r_options->push_back(quote_style + E->get().name.replace_first("shader_param/", "") + quote_style);
 			}

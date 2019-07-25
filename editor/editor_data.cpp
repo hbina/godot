@@ -310,7 +310,7 @@ void EditorData::copy_object_params(Object *p_object) {
 	clipboard.clear();
 
 	List<PropertyInfo> pinfo;
-	p_object->get_property_list(&pinfo);
+	p_object->get_property_list(pinfo);
 
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 

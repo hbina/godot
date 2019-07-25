@@ -139,13 +139,13 @@ void VisualScriptPropertySelector::_update_search() {
 		}
 		if (properties || seq_connect) {
 			if (instance) {
-				instance->get_property_list(&props, true);
+				instance->get_property_list(props, true);
 			} else {
 				Object *obj = ObjectDB::get_instance(script);
 				if (Object::cast_to<Script>(obj)) {
-					Object::cast_to<Script>(obj)->get_script_property_list(&props);
+					Object::cast_to<Script>(obj)->get_script_property_list(props);
 				} else {
-					ClassDB::get_property_list(E->get(), &props, true);
+					ClassDB::get_property_list(E->get(), props, true);
 				}
 			}
 			for (List<PropertyInfo>::Element *F = props.front(); F; F = F->next()) {

@@ -1167,7 +1167,7 @@ void FileSystemDock::_update_project_settings_after_move(const Map<String, Strin
 
 	// Also search for the file in autoload, as they are stored differently from normal files.
 	List<PropertyInfo> property_list;
-	ProjectSettings::get_singleton()->get_property_list(&property_list);
+	ProjectSettings::get_singleton()->get_property_list(property_list);
 	for (const List<PropertyInfo>::Element *E = property_list.front(); E; E = E->next()) {
 		if (E->get().name.begins_with("autoload/")) {
 			// If the autoload resource paths has a leading "*", it indicates that it is a Singleton,

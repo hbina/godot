@@ -2798,7 +2798,7 @@ Array _ClassDB::get_signal_list(StringName p_class, bool p_no_inheritance) const
 Array _ClassDB::get_property_list(StringName p_class, bool p_no_inheritance) const {
 
 	List<PropertyInfo> plist;
-	ClassDB::get_property_list(p_class, &plist, p_no_inheritance);
+	ClassDB::get_property_list(p_class, plist, p_no_inheritance);
 	Array ret;
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 		ret.push_back(E->get().operator Dictionary());

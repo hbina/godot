@@ -966,7 +966,7 @@ void AnimationPlayerEditor::_animation_duplicate() {
 
 	Ref<Animation> new_anim = memnew(Animation);
 	List<PropertyInfo> plist;
-	anim->get_property_list(&plist);
+	anim->get_property_list(plist);
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 
 		if (E->get().usage & PROPERTY_USAGE_STORAGE) {

@@ -712,9 +712,9 @@ bool VisualScriptSwitch::_get(const StringName &p_name, Variant &r_ret) const {
 
 	return false;
 }
-void VisualScriptSwitch::_get_property_list(List<PropertyInfo> *p_list) const {
+void VisualScriptSwitch::_get_property_list(List<PropertyInfo> &p_list) const {
 
-	p_list->push_back(PropertyInfo(Variant::INT, "case_count", PROPERTY_HINT_RANGE, "0,128"));
+	p_list.push_back(PropertyInfo(Variant::INT, "case_count", PROPERTY_HINT_RANGE, "0,128"));
 
 	String argt = "Any";
 	for (int i = 1; i < Variant::VARIANT_MAX; i++) {
@@ -722,7 +722,7 @@ void VisualScriptSwitch::_get_property_list(List<PropertyInfo> *p_list) const {
 	}
 
 	for (int i = 0; i < case_values.size(); i++) {
-		p_list->push_back(PropertyInfo(Variant::INT, "case/" + itos(i), PROPERTY_HINT_ENUM, argt));
+		p_list.push_back(PropertyInfo(Variant::INT, "case/" + itos(i), PROPERTY_HINT_ENUM, argt));
 	}
 }
 

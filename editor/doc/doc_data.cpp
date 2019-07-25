@@ -231,9 +231,9 @@ void DocData::generate(bool p_basic_types) {
 		List<PropertyInfo> properties;
 		if (name == "ProjectSettings") {
 			//special case for project settings, so settings can be documented
-			ProjectSettings::get_singleton()->get_property_list(&properties);
+			ProjectSettings::get_singleton()->get_property_list(properties);
 		} else {
-			ClassDB::get_property_list(name, &properties, true);
+			ClassDB::get_property_list(name, properties, true);
 		}
 
 		for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
@@ -538,7 +538,7 @@ void DocData::generate(bool p_basic_types) {
 		}
 
 		List<PropertyInfo> properties;
-		v.get_property_list(&properties);
+		v.get_property_list(properties);
 		for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 
 			PropertyInfo pi = E->get();

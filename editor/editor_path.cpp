@@ -39,7 +39,7 @@ void EditorPath::_add_children_to_popup(Object *p_obj, int p_depth) {
 		return;
 
 	List<PropertyInfo> pinfo;
-	p_obj->get_property_list(&pinfo);
+	p_obj->get_property_list(pinfo);
 	for (List<PropertyInfo>::Element *E = pinfo.front(); E; E = E->next()) {
 
 		if (!(E->get().usage & PROPERTY_USAGE_EDITOR))

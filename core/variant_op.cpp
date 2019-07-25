@@ -2791,83 +2791,83 @@ bool Variant::in(const Variant &p_index, bool *r_valid) const {
 	return false;
 }
 
-void Variant::get_property_list(List<PropertyInfo> *p_list) const {
+void Variant::get_property_list(List<PropertyInfo> &p_list) const {
 
 	switch (type) {
 		case VECTOR2: {
 
-			p_list->push_back(PropertyInfo(Variant::REAL, "x"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "y"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "x"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "y"));
 
 		} break; // 5
 		case RECT2: {
 
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "position"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "size"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "end"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR2, "position"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR2, "size"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR2, "end"));
 
 		} break;
 		case VECTOR3: {
 
-			p_list->push_back(PropertyInfo(Variant::REAL, "x"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "y"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "z"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "x"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "y"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "z"));
 
 		} break;
 		case TRANSFORM2D: {
 
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "x"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "y"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR2, "origin"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR2, "x"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR2, "y"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR2, "origin"));
 
 		} break;
 		case PLANE: {
 
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "normal"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "x"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "y"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "z"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "d"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "normal"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "x"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "y"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "z"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "d"));
 
 		} break;
 		case QUAT: {
 
-			p_list->push_back(PropertyInfo(Variant::REAL, "x"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "y"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "z"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "w"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "x"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "y"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "z"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "w"));
 
 		} break; // 10
 		case AABB: {
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "position"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "size"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "end"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "position"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "size"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "end"));
 		} break;
 		case BASIS: {
 
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "x"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "y"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "z"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "x"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "y"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "z"));
 
 		} break;
 		case TRANSFORM: {
 
-			p_list->push_back(PropertyInfo(Variant::BASIS, "basis"));
-			p_list->push_back(PropertyInfo(Variant::VECTOR3, "origin"));
+			p_list.push_back(PropertyInfo(Variant::BASIS, "basis"));
+			p_list.push_back(PropertyInfo(Variant::VECTOR3, "origin"));
 
 		} break;
 		case COLOR: {
-			p_list->push_back(PropertyInfo(Variant::REAL, "r"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "g"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "b"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "a"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "h"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "s"));
-			p_list->push_back(PropertyInfo(Variant::REAL, "v"));
-			p_list->push_back(PropertyInfo(Variant::INT, "r8"));
-			p_list->push_back(PropertyInfo(Variant::INT, "g8"));
-			p_list->push_back(PropertyInfo(Variant::INT, "b8"));
-			p_list->push_back(PropertyInfo(Variant::INT, "a8"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "r"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "g"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "b"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "a"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "h"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "s"));
+			p_list.push_back(PropertyInfo(Variant::REAL, "v"));
+			p_list.push_back(PropertyInfo(Variant::INT, "r8"));
+			p_list.push_back(PropertyInfo(Variant::INT, "g8"));
+			p_list.push_back(PropertyInfo(Variant::INT, "b8"));
+			p_list.push_back(PropertyInfo(Variant::INT, "a8"));
 
 		} break;
 		case NODE_PATH: {
@@ -2899,7 +2899,7 @@ void Variant::get_property_list(List<PropertyInfo> *p_list) const {
 			dic->get_key_list(&keys);
 			for (List<Variant>::Element *E = keys.front(); E; E = E->next()) {
 				if (E->get().get_type() == Variant::STRING) {
-					p_list->push_back(PropertyInfo(Variant::STRING, E->get()));
+					p_list.push_back(PropertyInfo(Variant::STRING, E->get()));
 				}
 			}
 		} break;

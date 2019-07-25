@@ -116,7 +116,7 @@ bool Theme::_get(const StringName &p_name, Variant &r_ret) const {
 	return false;
 }
 
-void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
+void Theme::_get_property_list(List<PropertyInfo> &p_list) const {
 
 	List<PropertyInfo> list;
 
@@ -182,7 +182,7 @@ void Theme::_get_property_list(List<PropertyInfo> *p_list) const {
 
 	list.sort();
 	for (List<PropertyInfo>::Element *E = list.front(); E; E = E->next()) {
-		p_list->push_back(E->get());
+		p_list.push_back(E->get());
 	}
 }
 

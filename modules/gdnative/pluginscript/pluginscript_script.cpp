@@ -165,7 +165,7 @@ void PluginScript::update_exports() {
 		Map<StringName, Variant> propdefvalues;
 		List<PropertyInfo> propinfos;
 
-		get_script_property_list(&propinfos);
+		get_script_property_list(propinfos);
 		for (Set<PlaceHolderScriptInstance *>::Element *E = placeholders.front(); E; E = E->next()) {
 			E->get()->update(propinfos, _properties_default_values);
 		}
@@ -345,10 +345,10 @@ void PluginScript::get_script_method_list(List<MethodInfo> *r_methods) const {
 	}
 }
 
-void PluginScript::get_script_property_list(List<PropertyInfo> *r_properties) const {
+void PluginScript::get_script_property_list(List<PropertyInfo> &r_properties) const {
 	ASSERT_SCRIPT_VALID();
 	for (Map<StringName, PropertyInfo>::Element *e = _properties_info.front(); e != NULL; e = e->next()) {
-		r_properties->push_back(e->get());
+		r_properties.push_back(e->get());
 	}
 }
 

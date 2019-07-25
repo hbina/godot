@@ -2566,7 +2566,7 @@ Control *VisualShaderNodePluginDefault::create_editor(const Ref<VisualShaderNode
 	}
 
 	List<PropertyInfo> props;
-	p_node->get_property_list(&props);
+	p_node->get_property_list(props);
 
 	Vector<PropertyInfo> pinfo;
 
@@ -2659,7 +2659,7 @@ void EditorPropertyShaderMode::_option_selected(int p_which) {
 
 	//3. restore enums and flags
 	List<PropertyInfo> props;
-	visual_shader->get_property_list(&props);
+	visual_shader->get_property_list(props);
 
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 
@@ -2764,7 +2764,7 @@ void VisualShaderNodePortPreview::_shader_changed() {
 		if (src_mat && src_mat->get_shader().is_valid()) {
 
 			List<PropertyInfo> params;
-			src_mat->get_shader()->get_param_list(&params);
+			src_mat->get_shader()->get_param_list(params);
 			for (List<PropertyInfo>::Element *E = params.front(); E; E = E->next()) {
 				material->set(E->get().name, src_mat->get(E->get().name));
 			}

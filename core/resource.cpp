@@ -134,7 +134,7 @@ void Resource::reload_from_file() {
 		return;
 
 	List<PropertyInfo> pi;
-	s->get_property_list(&pi);
+	s->get_property_list(pi);
 
 	for (List<PropertyInfo>::Element *E = pi.front(); E; E = E->next()) {
 
@@ -150,7 +150,7 @@ void Resource::reload_from_file() {
 Ref<Resource> Resource::duplicate_for_local_scene(Node *p_for_scene, Map<Ref<Resource>, Ref<Resource> > &remap_cache) {
 
 	List<PropertyInfo> plist;
-	get_property_list(&plist);
+	get_property_list(plist);
 
 	Resource *r = Object::cast_to<Resource>(ClassDB::instance(get_class()));
 	ERR_FAIL_COND_V(!r, Ref<Resource>());
@@ -191,7 +191,7 @@ Ref<Resource> Resource::duplicate_for_local_scene(Node *p_for_scene, Map<Ref<Res
 void Resource::configure_for_local_scene(Node *p_for_scene, Map<Ref<Resource>, Ref<Resource> > &remap_cache) {
 
 	List<PropertyInfo> plist;
-	get_property_list(&plist);
+	get_property_list(plist);
 
 	local_scene = p_for_scene;
 
@@ -219,7 +219,7 @@ void Resource::configure_for_local_scene(Node *p_for_scene, Map<Ref<Resource>, R
 Ref<Resource> Resource::duplicate(bool p_subresources) const {
 
 	List<PropertyInfo> plist;
-	get_property_list(&plist);
+	get_property_list(plist);
 
 	Resource *r = (Resource *)ClassDB::instance(get_class());
 	ERR_FAIL_COND_V(!r, Ref<Resource>());
@@ -291,7 +291,7 @@ uint32_t Resource::hash_edited_version() const {
 	uint32_t hash = hash_djb2_one_32(get_edited_version());
 
 	List<PropertyInfo> plist;
-	get_property_list(&plist);
+	get_property_list(plist);
 
 	for (List<PropertyInfo>::Element *E = plist.front(); E; E = E->next()) {
 

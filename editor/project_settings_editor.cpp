@@ -675,7 +675,7 @@ void ProjectSettingsEditor::_update_actions() {
 	input_editor->set_hide_root(true);
 
 	List<PropertyInfo> props;
-	ProjectSettings::get_singleton()->get_property_list(&props);
+	ProjectSettings::get_singleton()->get_property_list(props);
 
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 

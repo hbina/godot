@@ -243,7 +243,7 @@ void GDScript::get_script_method_list(List<MethodInfo> *p_list) const {
 	}
 }
 
-void GDScript::get_script_property_list(List<PropertyInfo> *p_list) const {
+void GDScript::get_script_property_list(List<PropertyInfo> &p_list) const {
 
 	const GDScript *sptr = this;
 	List<PropertyInfo> props;
@@ -271,7 +271,7 @@ void GDScript::get_script_property_list(List<PropertyInfo> *p_list) const {
 	}
 
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
-		p_list->push_back(E->get());
+		p_list.push_back(E->get());
 	}
 }
 
@@ -711,9 +711,9 @@ bool GDScript::_set(const StringName &p_name, const Variant &p_value) {
 	return true;
 }
 
-void GDScript::_get_property_list(List<PropertyInfo> *p_properties) const {
+void GDScript::_get_property_list(List<PropertyInfo> &p_properties) const {
 
-	p_properties->push_back(PropertyInfo(Variant::STRING, "script/source", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
+	p_properties.push_back(PropertyInfo(Variant::STRING, "script/source", PROPERTY_HINT_NONE, "", PROPERTY_USAGE_NOEDITOR | PROPERTY_USAGE_INTERNAL));
 }
 
 void GDScript::_bind_methods() {
@@ -1064,7 +1064,7 @@ Variant::Type GDScriptInstance::get_property_type(const StringName &p_name, bool
 	return Variant::NIL;
 }
 
-void GDScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const {
+void GDScriptInstance::get_property_list(List<PropertyInfo> &p_properties) const {
 	// exported members, not done yet!
 
 	const GDScript *sptr = script.ptr();
@@ -1131,7 +1131,7 @@ void GDScriptInstance::get_property_list(List<PropertyInfo> *p_properties) const
 
 	for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 
-		p_properties->push_back(E->get());
+		p_properties.push_back(E->get());
 	}
 }
 

@@ -114,7 +114,7 @@ private:
 	bool _set_only(const StringName &p_name, const Variant &p_value);
 	bool _get(const StringName &p_name, Variant &r_ret) const;
 	void _initial_set(const StringName &p_name, const Variant &p_value);
-	void _get_property_list(List<PropertyInfo> *p_list) const;
+	void _get_property_list(List<PropertyInfo> &p_list) const;
 	void _add_property_info_bind(const Dictionary &p_info);
 
 	void _load_defaults(Ref<ConfigFile> p_extra_config = NULL);
