@@ -1071,17 +1071,8 @@ void Variant::clear() {
 	switch (type) {
 		case STRING: {
 
-			reinterpret_cast<String *>(_data._mem)->~String();
+			variant_string_map.erase(variant_id);
 		} break;
-		/*
-		// no point, they don't allocate memory
-		VECTOR3,
-		PLANE,
-		QUAT,
-		COLOR,
-		VECTOR2,
-		RECT2
-	*/
 		case TRANSFORM2D: {
 
 			memdelete(_data._transform2d);
@@ -1102,7 +1093,6 @@ void Variant::clear() {
 		// misc types
 		case NODE_PATH: {
 
-			reinterpret_cast<NodePath *>(_data._mem)->~NodePath();
 		} break;
 		case OBJECT: {
 
@@ -2109,217 +2099,169 @@ Variant::operator IP_Address() const {
 }
 
 Variant::Variant(bool p_bool) {
-
+	variant_id = variant_counter++;
 	type = BOOL;
-	_data._bool = p_bool;
 }
 
-/*
-Variant::Variant(long unsigned int p_long) {
-
-	type=INT;
-	_data._int=p_long;
-};
-*/
-
-Variant::Variant(signed int p_int) {
-
-	type = INT;
-	_data._int = p_int;
-}
-Variant::Variant(unsigned int p_int) {
-
-	type = INT;
-	_data._int = p_int;
-}
-
-#ifdef NEED_LONG_INT
-
-Variant::Variant(signed long p_int) {
-
-	type = INT;
-	_data._int = p_int;
-}
-Variant::Variant(unsigned long p_int) {
-
-	type = INT;
-	_data._int = p_int;
-}
-#endif
-
-Variant::Variant(int64_t p_int) {
-
-	type = INT;
-	_data._int = p_int;
+Variant::Variant() {
+	variant_id = variant_counter++;
+	type = NIL;
 }
 
 Variant::Variant(uint64_t p_int) {
-
+	variant_id = variant_counter++;
 	type = INT;
-	_data._int = p_int;
+	variant_uint64_map.insert({ variant_id, p_int });
 }
 
-Variant::Variant(signed short p_short) {
-
-	type = INT;
-	_data._int = p_short;
-}
-Variant::Variant(unsigned short p_short) {
-
-	type = INT;
-	_data._int = p_short;
-}
-Variant::Variant(signed char p_char) {
-
-	type = INT;
-	_data._int = p_char;
-}
-Variant::Variant(unsigned char p_char) {
-
-	type = INT;
-	_data._int = p_char;
-}
-Variant::Variant(float p_float) {
-
-	type = REAL;
-	_data._real = p_float;
-}
 Variant::Variant(double p_double) {
 
+	variant_id = variant_counter++;
 	type = REAL;
-	_data._real = p_double;
+	variant_double_map.insert({ variant_id, p_double });
 }
 
 Variant::Variant(const StringName &p_string) {
 
+	variant_id = variant_counter++;
 	type = STRING;
-	memnew_placement(_data._mem, String(p_string.operator String()));
+	variant_string_map.insert({ variant_id, p_string.operator String() });
 }
+
 Variant::Variant(const String &p_string) {
 
+	variant_id = variant_counter++;
 	type = STRING;
-	memnew_placement(_data._mem, String(p_string));
+	variant_string_map.insert({ variant_id, p_string });
 }
 
 Variant::Variant(const char *const p_cstring) {
 
+	variant_id = variant_counter++;
 	type = STRING;
-	memnew_placement(_data._mem, String((const char *)p_cstring));
+	variant_string_map.insert({ variant_id, String(p_cstring) });
 }
 
 Variant::Variant(const CharType *p_wstring) {
 
+	variant_id = variant_counter++;
 	type = STRING;
-	memnew_placement(_data._mem, String(p_wstring));
+	variant_string_map.insert({ variant_id, String(p_wstring) });
 }
+
 Variant::Variant(const Vector3 &p_vector3) {
 
+	variant_id = variant_counter++;
 	type = VECTOR3;
-	memnew_placement(_data._mem, Vector3(p_vector3));
+	variant_vector3_map.insert({ variant_id, p_vector3 });
 }
+
 Variant::Variant(const Vector2 &p_vector2) {
 
+	variant_id = variant_counter++;
 	type = VECTOR2;
-	memnew_placement(_data._mem, Vector2(p_vector2));
+	variant_vector2_map.insert({ variant_id, p_vector2 });
 }
+
 Variant::Variant(const Rect2 &p_rect2) {
 
+	variant_id = variant_counter++;
 	type = RECT2;
-	memnew_placement(_data._mem, Rect2(p_rect2));
+	variant_rect2_map.insert({ variant_id, p_rect2 });
 }
 
 Variant::Variant(const Plane &p_plane) {
 
+	variant_id = variant_counter++;
 	type = PLANE;
-	memnew_placement(_data._mem, Plane(p_plane));
+	variant_plane_map.insert({ variant_id, p_plane });
 }
+
 Variant::Variant(const ::AABB &p_aabb) {
 
+	variant_id = variant_counter++;
 	type = AABB;
-	_data._aabb = memnew(::AABB(p_aabb));
+	variant_aabb_map.insert({ variant_id, p_aabb });
 }
 
 Variant::Variant(const Basis &p_matrix) {
 
+	variant_id = variant_counter++;
 	type = BASIS;
-	_data._basis = memnew(Basis(p_matrix));
+	variant_basis_map.insert({ variant_id, p_matrix });
 }
 
 Variant::Variant(const Quat &p_quat) {
 
+	variant_id = variant_counter++;
 	type = QUAT;
-	memnew_placement(_data._mem, Quat(p_quat));
+	variant_quat_map.insert({ variant_id, p_quat });
 }
+
 Variant::Variant(const Transform &p_transform) {
 
+	variant_id = variant_counter++;
 	type = TRANSFORM;
-	_data._transform = memnew(Transform(p_transform));
+	variant_transform_map.insert({ variant_id, p_transform });
 }
 
-Variant::Variant(const Transform2D &p_transform) {
+Variant::Variant(const Transform2D &p_transform2d) {
 
+	variant_id = variant_counter++;
 	type = TRANSFORM2D;
-	_data._transform2d = memnew(Transform2D(p_transform));
+	variant_transform2d_map.insert({ variant_id, p_transform2d });
 }
+
 Variant::Variant(const Color &p_color) {
 
+	variant_id = variant_counter++;
 	type = COLOR;
-	memnew_placement(_data._mem, Color(p_color));
+	variant_color_map.insert({ variant_id, p_color });
 }
 
 Variant::Variant(const NodePath &p_node_path) {
 
+	variant_id = variant_counter++;
 	type = NODE_PATH;
-	memnew_placement(_data._mem, NodePath(p_node_path));
+	variant_node_path_map.insert({ variant_id, p_node_path });
 }
 
 Variant::Variant(const RefPtr &p_resource) {
 
-	type = OBJECT;
-	memnew_placement(_data._mem, ObjData);
-	REF *ref = reinterpret_cast<REF *>(p_resource.get_data());
-	_get_obj().obj = ref->ptr();
-	_get_obj().ref = p_resource;
+	std::cout << "whatever this is..." << std::endl;
 }
 
 Variant::Variant(const RID &p_rid) {
 
+	variant_id = variant_counter++;
 	type = _RID;
-	memnew_placement(_data._mem, RID(p_rid));
+	variant_rid_map.insert({ variant_id, p_rid });
 }
 
 Variant::Variant(const Object *p_object) {
 
-	type = OBJECT;
-
-	memnew_placement(_data._mem, ObjData);
-	_get_obj().obj = const_cast<Object *>(p_object);
+	std::cout << "whatever this is..." << std::endl;
 }
 
 Variant::Variant(const Dictionary &p_dictionary) {
 
+	variant_id = variant_counter++;
 	type = DICTIONARY;
-	memnew_placement(_data._mem, (Dictionary)(p_dictionary));
+	variant_dictionary_map.insert({ variant_id, p_dictionary });
 }
 
 Variant::Variant(const Array &p_array) {
 
+	variant_id = variant_counter++;
 	type = ARRAY;
-	memnew_placement(_data._mem, Array(p_array));
+	variant_array_map.insert({ variant_id, p_array });
 }
 
 Variant::Variant(const PoolVector<Plane> &p_array) {
 
+	variant_id = variant_counter++;
 	type = ARRAY;
-
-	Array *plane_array = memnew_placement(_data._mem, Array);
-
-	plane_array->resize(p_array.size());
-
-	for (int i = 0; i < p_array.size(); i++) {
-
-		plane_array->operator[](i) = Variant(p_array[i]);
-	}
+	variant_vector_plane_map.insert({ variant_id, p_array });
 }
 
 Variant::Variant(const Vector<Plane> &p_array) {
@@ -2371,21 +2313,25 @@ Variant::Variant(const PoolVector<uint8_t> &p_raw_array) {
 	type = POOL_BYTE_ARRAY;
 	memnew_placement(_data._mem, PoolVector<uint8_t>(p_raw_array));
 }
+
 Variant::Variant(const PoolVector<int> &p_int_array) {
 
 	type = POOL_INT_ARRAY;
 	memnew_placement(_data._mem, PoolVector<int>(p_int_array));
 }
+
 Variant::Variant(const PoolVector<real_t> &p_real_array) {
 
 	type = POOL_REAL_ARRAY;
 	memnew_placement(_data._mem, PoolVector<real_t>(p_real_array));
 }
+
 Variant::Variant(const PoolVector<String> &p_string_array) {
 
 	type = POOL_STRING_ARRAY;
 	memnew_placement(_data._mem, PoolVector<String>(p_string_array));
 }
+
 Variant::Variant(const PoolVector<Vector3> &p_vector3_array) {
 
 	type = POOL_VECTOR3_ARRAY;
@@ -2397,6 +2343,7 @@ Variant::Variant(const PoolVector<Vector2> &p_vector2_array) {
 	type = POOL_VECTOR2_ARRAY;
 	memnew_placement(_data._mem, PoolVector<Vector2>(p_vector2_array));
 }
+
 Variant::Variant(const PoolVector<Color> &p_color_array) {
 
 	type = POOL_COLOR_ARRAY;
@@ -2518,6 +2465,13 @@ Variant::Variant(const Vector<Color> &p_array) {
 	for (int i = 0; i < len; i++)
 		v.set(i, p_array[i]);
 	*this = v;
+}
+
+Variant::~Variant() {
+	variant_id = variant_counter++;
+	if (type != Variant::NIL) {
+		clear();
+	}
 }
 
 void Variant::operator=(const Variant &p_variant) {

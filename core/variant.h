@@ -53,6 +53,9 @@
 #include "core/rid.h"
 #include "core/ustring.h"
 
+#include <atomic>
+#include <unordered_map>
+
 class RefPtr;
 class Object;
 class Node; // helper
@@ -68,13 +71,6 @@ typedef PoolVector<String> PoolStringArray;
 typedef PoolVector<Vector2> PoolVector2Array;
 typedef PoolVector<Vector3> PoolVector3Array;
 typedef PoolVector<Color> PoolColorArray;
-
-// Temporary workaround until c++11 alignas()
-#ifdef __GNUC__
-#define GCC_ALIGNED_8 __attribute__((aligned(8)))
-#else
-#define GCC_ALIGNED_8
-#endif
 
 class Variant {
 public:
@@ -119,7 +115,6 @@ public:
 		POOL_COLOR_ARRAY,
 
 		VARIANT_MAX
-
 	};
 
 private:
@@ -135,33 +130,49 @@ private:
 		RefPtr ref;
 	};
 
-	_FORCE_INLINE_ ObjData &_get_obj();
-	_FORCE_INLINE_ const ObjData &_get_obj() const;
+	ObjData &_get_obj();
+	const ObjData &_get_obj() const;
 
-	union {
-		bool _bool;
-		int64_t _int;
-		double _real;
-		Transform2D *_transform2d;
-		::AABB *_aabb;
-		Basis *_basis;
-		Transform *_transform;
-		void *_ptr; //generic pointer
-		uint8_t _mem[sizeof(ObjData) > (sizeof(real_t) * 4) ? sizeof(ObjData) : (sizeof(real_t) * 4)];
-	} _data GCC_ALIGNED_8;
+private:
+	int variant_id;
+	static std::atomic<int> variant_counter;
+
+	static std::unordered_map<int, String> variant_string_map;
+	static std::unordered_map<int, Vector3> variant_vector3_map;
+	static std::unordered_map<int, Vector2> variant_vector2_map;
+	static std::unordered_map<int, Rect2> variant_rect2_map;
+	static std::unordered_map<int, Plane> variant_plane_map;
+	static std::unordered_map<int, bool> variant_bool_map;
+	static std::unordered_map<int, uint64_t> variant_uint64_map;
+	static std::unordered_map<int, double> variant_double_map;
+	static std::unordered_map<int, Transform2D> variant_transform2d_map;
+	static std::unordered_map<int, Color> variant_color_map;
+	static std::unordered_map<int, NodePath> variant_node_path_map;
+	static std::unordered_map<int, RID> variant_rid_map;
+	static std::unordered_map<int, Dictionary> variant_dictionary_map;
+	static std::unordered_map<int, ::AABB> variant_aabb_map;
+	static std::unordered_map<int, Quat> variant_quat_map;
+	static std::unordered_map<int, Basis> variant_basis_map;
+	static std::unordered_map<int, Transform> variant_transform_map;
 
 	void reference(const Variant &p_variant);
 	void clear();
 
 public:
-	_FORCE_INLINE_ Type get_type() const { return type; }
+	Type get_type() const {
+		return type;
+	}
 	static String get_type_name(Variant::Type p_type);
 	static bool can_convert(Type p_type_from, Type p_type_to);
 	static bool can_convert_strict(Type p_type_from, Type p_type_to);
 
 	bool is_ref() const;
-	_FORCE_INLINE_ bool is_num() const { return type == INT || type == REAL; };
-	_FORCE_INLINE_ bool is_array() const { return type >= ARRAY; };
+	bool is_num() const {
+		return type == INT || type == REAL;
+	};
+	bool is_array() const {
+		return type >= ARRAY;
+	};
 	bool is_shared() const;
 	bool is_zero() const;
 	bool is_one() const;
@@ -237,18 +248,6 @@ public:
 	operator IP_Address() const;
 
 	Variant(bool p_bool);
-	Variant(signed int p_int); // real one
-	Variant(unsigned int p_int);
-#ifdef NEED_LONG_INT
-	Variant(signed long p_long); // real one
-	Variant(unsigned long p_long);
-//Variant(long unsigned int p_long);
-#endif
-	Variant(signed short p_short); // real one
-	Variant(unsigned short p_short);
-	Variant(signed char p_char); // real one
-	Variant(unsigned char p_char);
-	Variant(int64_t p_int); // real one
 	Variant(uint64_t p_int);
 	Variant(float p_float);
 	Variant(double p_double);
@@ -294,8 +293,10 @@ public:
 	Variant(const Vector<RID> &p_array); // helper
 	Variant(const Vector<Vector2> &p_array); // helper
 	Variant(const PoolVector<Vector2> &p_vector2_array); // helper
-
 	Variant(const IP_Address &p_address);
+	Variant(const Variant &p_variant);
+	Variant();
+	~Variant();
 
 	// If this changes the table in variant_op must be updated
 	enum Operator {
@@ -336,7 +337,7 @@ public:
 
 	static String get_operator_name(Operator p_op);
 	static void evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b, Variant &r_ret, bool &r_valid);
-	static _FORCE_INLINE_ Variant evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b) {
+	static Variant evaluate(const Operator &p_op, const Variant &p_a, const Variant &p_b) {
 
 		bool valid = true;
 		Variant res;
@@ -416,11 +417,6 @@ public:
 	static void construct_from_string(const String &p_string, Variant &r_value, ObjectConstruct p_obj_construct = NULL, void *p_construct_ud = NULL);
 
 	void operator=(const Variant &p_variant); // only this is enough for all the other types
-	Variant(const Variant &p_variant);
-	_FORCE_INLINE_ Variant() { type = NIL; }
-	_FORCE_INLINE_ ~Variant() {
-		if (type != Variant::NIL) clear();
-	}
 };
 
 //typedef Dictionary Dictionary; no
@@ -435,23 +431,13 @@ Vector<Variant> varray(const Variant &p_arg1, const Variant &p_arg2, const Varia
 
 struct VariantHasher {
 
-	static _FORCE_INLINE_ uint32_t hash(const Variant &p_variant) { return p_variant.hash(); }
+	static uint32_t hash(const Variant &p_variant) { return p_variant.hash(); }
 };
 
 struct VariantComparator {
 
-	static _FORCE_INLINE_ bool compare(const Variant &p_lhs, const Variant &p_rhs) { return p_lhs.hash_compare(p_rhs); }
+	static bool compare(const Variant &p_lhs, const Variant &p_rhs) { return p_lhs.hash_compare(p_rhs); }
 };
-
-Variant::ObjData &Variant::_get_obj() {
-
-	return *reinterpret_cast<ObjData *>(&_data._mem[0]);
-}
-
-const Variant::ObjData &Variant::_get_obj() const {
-
-	return *reinterpret_cast<const ObjData *>(&_data._mem[0]);
-}
 
 String vformat(const String &p_text, const Variant &p1 = Variant(), const Variant &p2 = Variant(), const Variant &p3 = Variant(), const Variant &p4 = Variant(), const Variant &p5 = Variant());
 #endif
