@@ -109,25 +109,25 @@ void DocDump::dump(const String &p_file) {
 		ClassDB::get_method_list(name, &method_list, true);
 		method_list.sort();
 
-		for (List<MethodInfo>::Element *E = method_list.front(); E; E = E->next()) {
-			if (E->get().name == "" || E->get().name[0] == '_')
+		for (const MethodInfo &E : method_list) {
+			if (E.name == "" || E.name[0] == '_')
 				continue; //hidden
 
-			MethodBind *m = ClassDB::get_method(name, E->get().name);
+			MethodBind *m = ClassDB::get_method(name, E.name);
 
 			String qualifiers;
-			if (E->get().flags & METHOD_FLAG_CONST)
+			if (E.flags & METHOD_FLAG_CONST)
 				qualifiers += "qualifiers=\"const\"";
 
-			_write_string(f, 2, "<method name=\"" + _escape_string(E->get().name) + "\" " + qualifiers + " >");
+			_write_string(f, 2, "<method name=\"" + _escape_string(E.name) + "\" " + qualifiers + " >");
 
-			for (int i = -1; i < E->get().arguments.size(); i++) {
+			for (int i = -1; i < E.arguments.size(); i++) {
 
 				PropertyInfo arginfo;
 
 				if (i == -1) {
 
-					arginfo = E->get().return_val;
+					arginfo = E.return_val;
 					String type_name = (arginfo.hint == PROPERTY_HINT_RESOURCE_TYPE) ? arginfo.hint_string : Variant::get_type_name(arginfo.type);
 
 					if (arginfo.type == Variant::NIL)
@@ -135,7 +135,7 @@ void DocDump::dump(const String &p_file) {
 					_write_string(f, 3, "<return type=\"" + type_name + "\">");
 				} else {
 
-					arginfo = E->get().arguments[i];
+					arginfo = E.arguments[i];
 
 					String type_name;
 
@@ -252,11 +252,11 @@ void DocDump::dump(const String &p_file) {
 		if (signal_list.size()) {
 
 			_write_string(f, 1, "<signals>");
-			for (List<MethodInfo>::Element *EV = signal_list.front(); EV; EV = EV->next()) {
+			for (const MethodInfo &EV : signal_list) {
 
-				_write_string(f, 2, "<signal name=\"" + EV->get().name + "\">");
-				for (int i = 0; i < EV->get().arguments.size(); i++) {
-					PropertyInfo arginfo = EV->get().arguments[i];
+				_write_string(f, 2, "<signal name=\"" + EV.name + "\">");
+				for (int i = 0; i < EV.arguments.size(); i++) {
+					PropertyInfo arginfo = EV.arguments[i];
 					_write_string(f, 3, "<argument index=\"" + itos(i) + "\" name=\"" + arginfo.name + "\" type=\"" + Variant::get_type_name(arginfo.type) + "\">");
 					_write_string(f, 3, "</argument>");
 				}
@@ -278,18 +278,18 @@ void DocDump::dump(const String &p_file) {
 
 		List<_ConstantSort> constant_sort;
 
-		for (List<String>::Element *E = constant_list.front(); E; E = E->next()) {
+		for (const String &E : constant_list) {
 			_ConstantSort cs;
-			cs.name = E->get();
-			cs.value = ClassDB::get_integer_constant(name, E->get());
+			cs.name = E;
+			cs.value = ClassDB::get_integer_constant(name, E);
 			constant_sort.push_back(cs);
 		}
 
 		constant_sort.sort();
 
-		for (List<_ConstantSort>::Element *E = constant_sort.front(); E; E = E->next()) {
+		for (const _ConstantSort &E : constant_sort) {
 
-			_write_string(f, 2, "<constant name=\"" + E->get().name + "\" value=\"" + itos(E->get().value) + "\">");
+			_write_string(f, 2, "<constant name=\"" + E.name + "\" value=\"" + itos(E.value) + "\">");
 			_write_string(f, 2, "</constant>");
 		}
 

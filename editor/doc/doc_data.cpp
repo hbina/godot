@@ -236,15 +236,15 @@ void DocData::generate(bool p_basic_types) {
 			ClassDB::get_property_list(name, &properties, true);
 		}
 
-		for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
-			if (E->get().usage & PROPERTY_USAGE_GROUP || E->get().usage & PROPERTY_USAGE_CATEGORY || E->get().usage & PROPERTY_USAGE_INTERNAL)
+		for (const PropertyInfo &E : properties) {
+			if (E.usage & PROPERTY_USAGE_GROUP || E.usage & PROPERTY_USAGE_CATEGORY || E.usage & PROPERTY_USAGE_INTERNAL)
 				continue;
 
 			PropertyDoc prop;
-			StringName setter = ClassDB::get_property_setter(name, E->get().name);
-			StringName getter = ClassDB::get_property_getter(name, E->get().name);
+			StringName setter = ClassDB::get_property_setter(name, E.name);
+			StringName getter = ClassDB::get_property_getter(name, E.name);
 
-			prop.name = E->get().name;
+			prop.name = E.name;
 			prop.setter = setter;
 			prop.getter = getter;
 
@@ -252,14 +252,14 @@ void DocData::generate(bool p_basic_types) {
 			bool default_value_valid = false;
 
 			if (ClassDB::can_instance(name)) {
-				default_value = ClassDB::class_get_default_property_value(name, E->get().name, &default_value_valid);
+				default_value = ClassDB::class_get_default_property_value(name, E.name, &default_value_valid);
 			} else {
 				// Cannot get default value of classes that can't be instanced
 				List<StringName> inheriting_classes;
 				ClassDB::get_direct_inheriters_from_class(name, &inheriting_classes);
-				for (List<StringName>::Element *E2 = inheriting_classes.front(); E2; E2 = E2->next()) {
-					if (ClassDB::can_instance(E2->get())) {
-						default_value = ClassDB::class_get_default_property_value(E2->get(), E->get().name, &default_value_valid);
+				for (const StringName &E2 : inheriting_classes) {
+					if (ClassDB::can_instance(E2)) {
+						default_value = ClassDB::class_get_default_property_value(E2, E.name, &default_value_valid);
 						if (default_value_valid)
 							break;
 					}
@@ -305,10 +305,10 @@ void DocData::generate(bool p_basic_types) {
 
 			if (!found_type) {
 
-				if (E->get().type == Variant::OBJECT && E->get().hint == PROPERTY_HINT_RESOURCE_TYPE)
-					prop.type = E->get().hint_string;
+				if (E.type == Variant::OBJECT && E.hint == PROPERTY_HINT_RESOURCE_TYPE)
+					prop.type = E.hint_string;
 				else
-					prop.type = Variant::get_type_name(E->get().type);
+					prop.type = Variant::get_type_name(E.type);
 			}
 
 			c.properties.push_back(prop);
@@ -318,55 +318,55 @@ void DocData::generate(bool p_basic_types) {
 		ClassDB::get_method_list(name, &method_list, true);
 		method_list.sort();
 
-		for (List<MethodInfo>::Element *E = method_list.front(); E; E = E->next()) {
+		for (const MethodInfo &E : method_list) {
 
-			if (E->get().name == "" || (E->get().name[0] == '_' && !(E->get().flags & METHOD_FLAG_VIRTUAL)))
+			if (E.name == "" || (E.name[0] == '_' && !(E.flags & METHOD_FLAG_VIRTUAL)))
 				continue; //hidden, don't count
 
-			if (skip_setter_getter_methods && setters_getters.has(E->get().name)) {
+			if (skip_setter_getter_methods && setters_getters.has(E.name)) {
 				// Don't skip parametric setters and getters, i.e. method which require
 				// one or more parameters to define what property should be set or retrieved.
 				// E.g. CPUParticles::set_param(Parameter param, float value).
-				if (E->get().arguments.size() == 0 /* getter */ || (E->get().arguments.size() == 1 && E->get().return_val.type == Variant::NIL /* setter */)) {
+				if (E.arguments.size() == 0 /* getter */ || (E.arguments.size() == 1 && E.return_val.type == Variant::NIL /* setter */)) {
 					continue;
 				}
 			}
 
 			MethodDoc method;
 
-			method.name = E->get().name;
+			method.name = E.name;
 
-			if (E->get().flags & METHOD_FLAG_VIRTUAL)
+			if (E.flags & METHOD_FLAG_VIRTUAL)
 				method.qualifiers = "virtual";
 
-			if (E->get().flags & METHOD_FLAG_CONST) {
+			if (E.flags & METHOD_FLAG_CONST) {
 				if (method.qualifiers != "")
 					method.qualifiers += " ";
 				method.qualifiers += "const";
-			} else if (E->get().flags & METHOD_FLAG_VARARG) {
+			} else if (E.flags & METHOD_FLAG_VARARG) {
 				if (method.qualifiers != "")
 					method.qualifiers += " ";
 				method.qualifiers += "vararg";
 			}
 
-			for (int i = -1; i < E->get().arguments.size(); i++) {
+			for (int i = -1; i < E.arguments.size(); i++) {
 
 				if (i == -1) {
 #ifdef DEBUG_METHODS_ENABLED
-					return_doc_from_retinfo(method, E->get().return_val);
+					return_doc_from_retinfo(method, E.return_val);
 #endif
 				} else {
 
-					const PropertyInfo &arginfo = E->get().arguments[i];
+					const PropertyInfo &arginfo = E.arguments[i];
 
 					ArgumentDoc argument;
 
 					argument_doc_from_arginfo(argument, arginfo);
 
-					int darg_idx = i - (E->get().arguments.size() - E->get().default_arguments.size());
+					int darg_idx = i - (E.arguments.size() - E.default_arguments.size());
 
 					if (darg_idx >= 0) {
-						Variant default_arg = E->get().default_arguments[darg_idx];
+						Variant default_arg = E.default_arguments[darg_idx];
 						argument.default_value = default_arg.get_construct_string();
 					}
 
@@ -382,13 +382,12 @@ void DocData::generate(bool p_basic_types) {
 
 		if (signal_list.size()) {
 
-			for (List<MethodInfo>::Element *EV = signal_list.front(); EV; EV = EV->next()) {
+			for (const MethodInfo &EV : signal_list) {
 
 				MethodDoc signal;
-				signal.name = EV->get().name;
-				for (int i = 0; i < EV->get().arguments.size(); i++) {
+				signal.name = EV.name;
+				for (const PropertyInfo &arginfo : EV.arguments) {
 
-					PropertyInfo arginfo = EV->get().arguments[i];
 					ArgumentDoc argument;
 					argument.name = arginfo.name;
 					if (arginfo.type == Variant::OBJECT && arginfo.class_name != StringName()) {
@@ -403,67 +402,70 @@ void DocData::generate(bool p_basic_types) {
 			}
 		}
 
-		List<String> constant_list;
-		ClassDB::get_integer_constant_list(name, &constant_list, true);
+		{
+			List<String> constant_list;
+			ClassDB::get_integer_constant_list(name, &constant_list, true);
 
-		for (List<String>::Element *E = constant_list.front(); E; E = E->next()) {
+			for (const String &E : constant_list) {
 
-			ConstantDoc constant;
-			constant.name = E->get();
-			constant.value = itos(ClassDB::get_integer_constant(name, E->get()));
-			constant.enumeration = ClassDB::get_integer_constant_enum(name, E->get());
-			c.constants.push_back(constant);
+				ConstantDoc constant;
+				constant.name = E;
+				constant.value = itos(ClassDB::get_integer_constant(name, E));
+				constant.enumeration = ClassDB::get_integer_constant_enum(name, E);
+				c.constants.push_back(constant);
+			}
 		}
-
 		//theme stuff
 
 		{
-			List<StringName> l;
-			Theme::get_default()->get_constant_list(cname, &l);
-			for (List<StringName>::Element *E = l.front(); E; E = E->next()) {
+			List<StringName> constant_list;
+			Theme::get_default()->get_constant_list(cname, &constant_list);
+			for (const StringName &E : constant_list) {
 
 				PropertyDoc pd;
-				pd.name = E->get();
+				pd.name = E;
 				pd.type = "int";
-				pd.default_value = itos(Theme::get_default()->get_constant(E->get(), cname));
+				pd.default_value = itos(Theme::get_default()->get_constant(E, cname));
 				c.theme_properties.push_back(pd);
 			}
 
-			l.clear();
-			Theme::get_default()->get_color_list(cname, &l);
-			for (List<StringName>::Element *E = l.front(); E; E = E->next()) {
+			List<StringName> color_list;
+			Theme::get_default()->get_color_list(cname, &color_list);
+			for (const StringName &E : color_list) {
 
 				PropertyDoc pd;
-				pd.name = E->get();
+				pd.name = E;
 				pd.type = "Color";
-				pd.default_value = Variant(Theme::get_default()->get_color(E->get(), cname)).get_construct_string();
+				pd.default_value = Variant(Theme::get_default()->get_color(E, cname)).get_construct_string();
 				c.theme_properties.push_back(pd);
 			}
 
-			l.clear();
-			Theme::get_default()->get_icon_list(cname, &l);
-			for (List<StringName>::Element *E = l.front(); E; E = E->next()) {
+			List<StringName> icon_list;
+			Theme::get_default()->get_icon_list(cname, &icon_list);
+			for (const StringName &E : icon_list) {
 
 				PropertyDoc pd;
-				pd.name = E->get();
+				pd.name = E;
 				pd.type = "Texture";
 				c.theme_properties.push_back(pd);
 			}
-			l.clear();
-			Theme::get_default()->get_font_list(cname, &l);
-			for (List<StringName>::Element *E = l.front(); E; E = E->next()) {
+
+			List<StringName> font_list;
+			Theme::get_default()->get_font_list(cname, &font_list);
+			for (const StringName &E : font_list) {
 
 				PropertyDoc pd;
-				pd.name = E->get();
+				pd.name = E;
 				pd.type = "Font";
 				c.theme_properties.push_back(pd);
 			}
-			l.clear();
-			Theme::get_default()->get_stylebox_list(cname, &l);
-			for (List<StringName>::Element *E = l.front(); E; E = E->next()) {
+
+			List<StringName> stylebox_list;
+			Theme::get_default()->get_stylebox_list(cname, &stylebox_list);
+			for (const StringName &E : stylebox_list) {
 
 				PropertyDoc pd;
-				pd.name = E->get();
+				pd.name = E;
 				pd.type = "StyleBox";
 				c.theme_properties.push_back(pd);
 			}
@@ -501,11 +503,9 @@ void DocData::generate(bool p_basic_types) {
 		method_list.sort();
 		Variant::get_constructor_list(Variant::Type(i), &method_list);
 
-		for (List<MethodInfo>::Element *E = method_list.front(); E; E = E->next()) {
+		for (const MethodInfo mi : method_list) {
 
-			MethodInfo &mi = E->get();
 			MethodDoc method;
-
 			method.name = mi.name;
 
 			for (int j = 0; j < mi.arguments.size(); j++) {
@@ -539,9 +539,8 @@ void DocData::generate(bool p_basic_types) {
 
 		List<PropertyInfo> properties;
 		v.get_property_list(&properties);
-		for (List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
+		for (const PropertyInfo &pi : properties) {
 
-			PropertyInfo pi = E->get();
 			PropertyDoc property;
 			property.name = pi.name;
 			property.type = Variant::get_type_name(pi.type);
@@ -553,11 +552,11 @@ void DocData::generate(bool p_basic_types) {
 		List<StringName> constants;
 		Variant::get_constants_for_type(Variant::Type(i), &constants);
 
-		for (List<StringName>::Element *E = constants.front(); E; E = E->next()) {
+		for (const StringName &E : constants) {
 
 			ConstantDoc constant;
-			constant.name = E->get();
-			Variant value = Variant::get_constant_value(Variant::Type(i), E->get());
+			constant.name = E;
+			Variant value = Variant::get_constant_value(Variant::Type(i), E);
 			constant.value = value.get_type() == Variant::INT ? itos(value) : value.get_construct_string();
 			c.constants.push_back(constant);
 		}
@@ -585,10 +584,9 @@ void DocData::generate(bool p_basic_types) {
 		Engine::get_singleton()->get_singletons(&singletons);
 
 		//servers (this is kind of hackish)
-		for (List<Engine::Singleton>::Element *E = singletons.front(); E; E = E->next()) {
+		for (const Engine::Singleton &s : singletons) {
 
 			PropertyDoc pd;
-			Engine::Singleton &s = E->get();
 			if (!s.ptr) {
 				continue;
 			}

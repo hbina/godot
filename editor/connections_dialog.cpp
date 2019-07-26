@@ -903,9 +903,7 @@ void ConnectionsDock::update_tree() {
 			node_signals2.sort();
 		}
 
-		for (List<MethodInfo>::Element *E = node_signals2.front(); E; E = E->next()) {
-
-			MethodInfo &mi = E->get();
+		for (const MethodInfo &mi : node_signals2) {
 
 			StringName signal_name = mi.name;
 			String signaldesc = "(";
@@ -914,7 +912,7 @@ void ConnectionsDock::update_tree() {
 				signaldesc += " ";
 				for (int i = 0; i < mi.arguments.size(); i++) {
 
-					PropertyInfo &pi = mi.arguments[i];
+					const PropertyInfo &pi = mi.arguments[i];
 
 					if (i > 0)
 						signaldesc += ", ";
@@ -980,9 +978,8 @@ void ConnectionsDock::update_tree() {
 			List<Object::Connection> connections;
 			selectedNode->get_signal_connection_list(signal_name, &connections);
 
-			for (List<Object::Connection>::Element *F = connections.front(); F; F = F->next()) {
+			for (const Object::Connection &c : connections) {
 
-				Object::Connection &c = F->get();
 				if (!(c.flags & CONNECT_PERSIST))
 					continue;
 

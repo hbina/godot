@@ -1560,8 +1560,8 @@ void CodeTextEditor::remove_all_bookmarks() {
 	List<int> bmarks;
 	text_editor->get_bookmarks(&bmarks);
 
-	for (List<int>::Element *E = bmarks.front(); E; E = E->next()) {
-		text_editor->set_line_as_bookmark(E->get(), false);
+	for (const int E : bmarks) {
+		text_editor->set_line_as_bookmark(E, false);
 	}
 }
 

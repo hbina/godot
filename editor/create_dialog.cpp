@@ -314,9 +314,7 @@ void CreateDialog::_update_search() {
 
 	TreeItem *to_select = search_box->get_text() == base_type ? root : NULL;
 
-	for (List<StringName>::Element *I = type_list.front(); I; I = I->next()) {
-
-		String type = I->get();
+	for (const String &type : type_list) {
 
 		if (_is_class_disabled_by_feature_profile(type)) {
 			continue;
@@ -345,7 +343,7 @@ void CreateDialog::_update_search() {
 		} else {
 
 			bool found = false;
-			String type2 = I->get();
+			String type2 = type;
 			while (type2 != "" && (cpp_type ? ClassDB::is_parent_class(type2, base_type) : ed.script_class_is_parent(type2, base_type)) && type2 != base_type) {
 				if (search_box->get_text().is_subsequence_ofi(type2)) {
 
@@ -357,7 +355,7 @@ void CreateDialog::_update_search() {
 			}
 
 			if (found)
-				add_type(I->get(), search_options_types, root, &to_select);
+				add_type(type, search_options_types, root, &to_select);
 		}
 
 		if (EditorNode::get_editor_data().get_custom_types().has(type) && ClassDB::is_parent_class(type, base_type)) {
