@@ -98,28 +98,28 @@ public:
 	bool operator==(const String &p_name) const;
 	bool operator==(const char *p_name) const;
 	bool operator!=(const String &p_name) const;
-	_FORCE_INLINE_ bool operator<(const StringName &p_name) const {
+	bool operator<(const StringName &p_name) const {
 
 		return _data < p_name._data;
 	}
-	_FORCE_INLINE_ bool operator==(const StringName &p_name) const {
+	bool operator==(const StringName &p_name) const {
 		// the real magic of all this mess happens here.
 		// this is why path comparisons are very fast
 		return _data == p_name._data;
 	}
-	_FORCE_INLINE_ uint32_t hash() const {
+	uint32_t hash() const {
 
 		if (_data)
 			return _data->hash;
 		else
 			return 0;
 	}
-	_FORCE_INLINE_ const void *data_unique_pointer() const {
+	const void *data_unique_pointer() const {
 		return (void *)_data;
 	}
 	bool operator!=(const StringName &p_name) const;
 
-	_FORCE_INLINE_ operator String() const {
+	operator String() const {
 
 		if (_data) {
 			if (_data->cname)
@@ -137,7 +137,7 @@ public:
 
 	struct AlphCompare {
 
-		_FORCE_INLINE_ bool operator()(const StringName &l, const StringName &r) const {
+		bool operator()(const StringName &l, const StringName &r) const {
 
 			const char *l_cname = l._data ? l._data->cname : "";
 			const char *r_cname = r._data ? r._data->cname : "";
