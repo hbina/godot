@@ -154,6 +154,15 @@ private:
 	static std::unordered_map<int, Quat> variant_quat_map;
 	static std::unordered_map<int, Basis> variant_basis_map;
 	static std::unordered_map<int, Transform> variant_transform_map;
+	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, PoolVector<Plane> > variant_pool_vector_plane_map;
+	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, Array> variant_array_map;
 
 	void reference(const Variant &p_variant);
 	void clear();

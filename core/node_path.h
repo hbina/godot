@@ -58,7 +58,7 @@ class NodePath {
 	void _update_hash_cache() const;
 
 public:
-	_FORCE_INLINE_ StringName get_sname() const {
+	StringName get_sname() const {
 
 		if (data && data->path.size() == 1 && data->subpath.empty()) {
 			return data->path[0];
@@ -83,7 +83,7 @@ public:
 
 	NodePath get_parent() const;
 
-	_FORCE_INLINE_ uint32_t hash() const {
+	uint32_t hash() const {
 		if (!data)
 			return 0;
 		if (!data->hash_cache_valid) {
