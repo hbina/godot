@@ -144,7 +144,7 @@ private:
 	static std::unordered_map<int, Plane> variant_plane_map;
 	static std::unordered_map<int, bool> variant_bool_map;
 	static std::unordered_map<int, uint64_t> variant_uint64_map;
-	static std::unordered_map<int, double> variant_double_map;
+	static std::unordered_map<int, double> variant_real_map;
 	static std::unordered_map<int, Transform2D> variant_transform2d_map;
 	static std::unordered_map<int, Color> variant_color_map;
 	static std::unordered_map<int, NodePath> variant_node_path_map;
@@ -156,13 +156,13 @@ private:
 	static std::unordered_map<int, Transform> variant_transform_map;
 	static std::unordered_map<int, Array> variant_array_map;
 	static std::unordered_map<int, PoolVector<Plane> > variant_pool_vector_plane_map;
-	static std::unordered_map<int, Array> variant_array_map;
-	static std::unordered_map<int, Array> variant_array_map;
-	static std::unordered_map<int, Array> variant_array_map;
-	static std::unordered_map<int, Array> variant_array_map;
-	static std::unordered_map<int, Array> variant_array_map;
-	static std::unordered_map<int, Array> variant_array_map;
-	static std::unordered_map<int, Array> variant_array_map;
+	static std::unordered_map<int, PoolVector<char> > variant_pool_vector_char_map;
+	static std::unordered_map<int, PoolVector<uint64_t> > variant_pool_vector_uint64_map;
+	static std::unordered_map<int, PoolVector<double> > variant_pool_vector_real_map;
+	static std::unordered_map<int, PoolVector<String> > variant_pool_vector_string_map;
+	static std::unordered_map<int, PoolVector<Vector2> > variant_pool_vector_vector2_map;
+	static std::unordered_map<int, PoolVector<Vector3> > variant_pool_vector_vector3_map;
+	static std::unordered_map<int, PoolVector<Color> > variant_pool_vector_color_map;
 
 	void reference(const Variant &p_variant);
 	void clear();
@@ -171,9 +171,9 @@ public:
 	Type get_type() const {
 		return type;
 	}
-	static String get_type_name(Variant::Type p_type);
-	static bool can_convert(Type p_type_from, Type p_type_to);
-	static bool can_convert_strict(Type p_type_from, Type p_type_to);
+	static String get_type_name(const Variant::Type p_type);
+	static bool can_convert(const Type p_type_from, const Type p_type_to);
+	static bool can_convert_strict(const Type p_type_from, const Type p_type_to);
 
 	bool is_ref() const;
 	bool is_num() const {

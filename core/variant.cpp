@@ -39,7 +39,7 @@
 #include "scene/gui/control.h"
 #include "scene/main/node.h"
 
-String Variant::get_type_name(Variant::Type p_type) {
+String Variant::get_type_name(const Variant::Type p_type) {
 
 	switch (p_type) {
 		case NIL: {
@@ -168,7 +168,7 @@ String Variant::get_type_name(Variant::Type p_type) {
 	return "";
 }
 
-bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
+bool Variant::can_convert(const Variant::Type p_type_from, const Variant::Type p_type_to) {
 
 	if (p_type_from == p_type_to)
 		return true;
@@ -179,8 +179,8 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 		return (p_type_to == OBJECT);
 	};
 
-	const Type *valid_types = NULL;
-	const Type *invalid_types = NULL;
+	const Type *valid_types = nullptr;
+	const Type *invalid_types = nullptr;
 
 	switch (p_type_to) {
 		case BOOL: {
@@ -416,7 +416,7 @@ bool Variant::can_convert(Variant::Type p_type_from, Variant::Type p_type_to) {
 	return false;
 }
 
-bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type_to) {
+bool Variant::can_convert_strict(const Variant::Type p_type_from, const Variant::Type p_type_to) {
 
 	if (p_type_from == p_type_to)
 		return true;
@@ -427,7 +427,7 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 		return (p_type_to == OBJECT);
 	};
 
-	const Type *valid_types = NULL;
+	const Type *valid_types = nullptr;
 
 	switch (p_type_to) {
 		case BOOL: {
@@ -435,7 +435,6 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 			static const Type valid[] = {
 				INT,
 				REAL,
-				//STRING,
 				NIL,
 			};
 
@@ -446,7 +445,6 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 			static const Type valid[] = {
 				BOOL,
 				REAL,
-				//STRING,
 				NIL,
 			};
 
@@ -458,7 +456,6 @@ bool Variant::can_convert_strict(Variant::Type p_type_from, Variant::Type p_type
 			static const Type valid[] = {
 				BOOL,
 				INT,
-				//STRING,
 				NIL,
 			};
 
@@ -682,6 +679,8 @@ bool Variant::operator<(const Variant &p_variant) const {
 
 bool Variant::is_zero() const {
 
+	// TODO : Add check if the entry does not exist
+	// TODO : Add check if it does exist, but the entry is empty
 	switch (type) {
 		case NIL: {
 
@@ -691,133 +690,115 @@ bool Variant::is_zero() const {
 		// atomic types
 		case BOOL: {
 
-			return !(_data._bool);
+			return variant_bool_map.find(variant_id) == variant_bool_map.end();
 		} break;
 		case INT: {
 
-			return _data._int == 0;
-
+			return variant_uint64_map.find(variant_id) == variant_uint64_map.end();
 		} break;
 		case REAL: {
 
-			return _data._real == 0;
-
+			return variant_real_map.find(variant_id) == variant_real_map.end();
 		} break;
 		case STRING: {
 
-			return *reinterpret_cast<const String *>(_data._mem) == String();
-
+			return variant_string_map.find(variant_id) == variant_string_map.end();
 		} break;
 
 		// math types
 		case VECTOR2: {
 
-			return *reinterpret_cast<const Vector2 *>(_data._mem) == Vector2();
-
+			return variant_vector2_map.find(variant_id) == variant_vector2_map.end();
 		} break;
 		case RECT2: {
 
-			return *reinterpret_cast<const Rect2 *>(_data._mem) == Rect2();
-
+			return variant_rect2_map.find(variant_id) == variant_rect2_map.end();
 		} break;
 		case TRANSFORM2D: {
 
-			return *_data._transform2d == Transform2D();
-
+			return variant_transform2d_map.find(variant_id) == variant_transform2d_map.end();
 		} break;
 		case VECTOR3: {
 
-			return *reinterpret_cast<const Vector3 *>(_data._mem) == Vector3();
-
+			return variant_vector3_map.find(variant_id) == variant_vector3_map.end();
 		} break;
 		case PLANE: {
 
-			return *reinterpret_cast<const Plane *>(_data._mem) == Plane();
+			return variant_plane_map.find(variant_id) == variant_plane_map.end();
 		} break;
 		case AABB: {
 
-			return *_data._aabb == ::AABB();
+			return variant_aabb_map.find(variant_id) == variant_aabb_map.end();
 		} break;
 		case QUAT: {
 
-			return *reinterpret_cast<const Quat *>(_data._mem) == Quat();
+			return variant_quat_map.find(variant_id) == variant_quat_map.end();
 		} break;
 		case BASIS: {
 
-			return *_data._basis == Basis();
-
+			return variant_basis_map.find(variant_id) == variant_basis_map.end();
 		} break;
 		case TRANSFORM: {
 
-			return *_data._transform == Transform();
-
+			return variant_transform_map.find(variant_id) == variant_transform_map.end();
 		} break;
 
 		// misc types
 		case COLOR: {
 
-			return *reinterpret_cast<const Color *>(_data._mem) == Color();
-
+			return variant_color_map.find(variant_id) == variant_color_map.end();
 		} break;
 		case _RID: {
 
-			return *reinterpret_cast<const RID *>(_data._mem) == RID();
+			return variant_rid_map.find(variant_id) == variant_rid_map.end();
 		} break;
 		case OBJECT: {
 
-			return _get_obj().obj == NULL;
+			// TODO : Figure out what this actually does
+			// return variant_object_map.find(variant_id) == variant_object_map.end();
 		} break;
 		case NODE_PATH: {
 
-			return reinterpret_cast<const NodePath *>(_data._mem)->is_empty();
-
+			return variant_node_path_map.find(variant_id) == variant_node_path_map.end();
 		} break;
 		case DICTIONARY: {
 
-			return reinterpret_cast<const Dictionary *>(_data._mem)->empty();
-
+			return variant_dictionary_map.find(variant_id) == variant_dictionary_map.end();
 		} break;
 		case ARRAY: {
 
-			return reinterpret_cast<const Array *>(_data._mem)->empty();
-
+			return variant_transform_map.find(variant_id) == variant_transform_map.end();
 		} break;
 
-		// arrays
+		// TODO : Figure out if we want to store these as pointers or as actual stuff...
+		// Check if array exist
 		case POOL_BYTE_ARRAY: {
 
-			return reinterpret_cast<const PoolVector<uint8_t> *>(_data._mem)->size() == 0;
-
+			return variant_pool_vector_char_map.find(variant_id) == variant_pool_vector_char_map.end();
 		} break;
 		case POOL_INT_ARRAY: {
 
-			return reinterpret_cast<const PoolVector<int> *>(_data._mem)->size() == 0;
-
+			return variant_pool_vector_uint64_map.find(variant_id) == variant_pool_vector_uint64_map.end();
 		} break;
 		case POOL_REAL_ARRAY: {
 
-			return reinterpret_cast<const PoolVector<real_t> *>(_data._mem)->size() == 0;
-
+			return variant_pool_vector_real_map.find(variant_id) == variant_pool_vector_real_map.end();
 		} break;
 		case POOL_STRING_ARRAY: {
 
-			return reinterpret_cast<const PoolVector<String> *>(_data._mem)->size() == 0;
-
+			return variant_pool_vector_string_map.find(variant_id) == variant_pool_vector_string_map.end();
 		} break;
 		case POOL_VECTOR2_ARRAY: {
 
-			return reinterpret_cast<const PoolVector<Vector2> *>(_data._mem)->size() == 0;
-
+			return variant_pool_vector_vector2_map.find(variant_id) == variant_pool_vector_vector2_map.end();
 		} break;
 		case POOL_VECTOR3_ARRAY: {
 
-			return reinterpret_cast<const PoolVector<Vector3> *>(_data._mem)->size() == 0;
-
+			return variant_pool_vector_vector3_map.find(variant_id) == variant_pool_vector_vector3_map.end();
 		} break;
 		case POOL_COLOR_ARRAY: {
 
-			return reinterpret_cast<const PoolVector<Color> *>(_data._mem)->size() == 0;
-
+			return variant_pool_vector_color_map.find(variant_id) == variant_pool_vector_color_map.end();
 		} break;
 		default: {
 		}
@@ -826,6 +807,7 @@ bool Variant::is_zero() const {
 	return false;
 }
 
+// TODO : What if I only want to check if such map exist...without adding an entry.
 bool Variant::is_one() const {
 
 	switch (type) {
@@ -1041,6 +1023,7 @@ void Variant::zero() {
 	}
 }
 
+// TODO : Call this before changing types
 void Variant::clear() {
 
 	switch (type) {
@@ -1071,7 +1054,7 @@ void Variant::clear() {
 		} break;
 		case OBJECT: {
 
-			_get_obj().obj = NULL;
+			_get_obj().obj = nullptr;
 			_get_obj().ref.unref();
 		} break;
 		case _RID: {
@@ -1196,7 +1179,7 @@ Variant::operator uint64_t() const {
 		case NIL: return 0;
 		case BOOL: return _data._bool ? 1 : 0;
 		case INT: return _data._int;
-		case REAL: return _data._real;
+		case REAL: return _data._real; // Really? wtf is this
 		case STRING: return operator String().to_int();
 		default: {
 
@@ -1423,7 +1406,7 @@ String Variant::stringify(List<const void *> &stack) const {
 
 			stack.push_back(d.id());
 
-			//const String *K=NULL;
+			//const String *K=nullptr;
 			String str("{");
 			List<Variant> keys;
 			d.get_key_list(&keys);
@@ -1712,7 +1695,7 @@ Variant::operator RID() const {
 		};
 #endif
 		Variant::CallError ce;
-		Variant ret = _get_obj().obj->call(CoreStringNames::get_singleton()->get_rid, NULL, 0, ce);
+		Variant ret = _get_obj().obj->call(CoreStringNames::get_singleton()->get_rid, nullptr, 0, ce);
 		if (ce.error == Variant::CallError::CALL_OK && ret.get_type() == Variant::_RID) {
 			return ret;
 		}
@@ -1727,21 +1710,21 @@ Variant::operator Object *() const {
 	if (type == OBJECT)
 		return _get_obj().obj;
 	else
-		return NULL;
+		return nullptr;
 }
 Variant::operator Node *() const {
 
 	if (type == OBJECT)
 		return Object::cast_to<Node>(_get_obj().obj);
 	else
-		return NULL;
+		return nullptr;
 }
 Variant::operator Control *() const {
 
 	if (type == OBJECT)
 		return Object::cast_to<Control>(_get_obj().obj);
 	else
-		return NULL;
+		return nullptr;
 }
 
 Variant::operator Dictionary() const {
@@ -2093,7 +2076,7 @@ Variant::Variant(double p_double) {
 
 	variant_id = variant_counter++;
 	type = REAL;
-	variant_double_map.insert({ variant_id, p_double });
+	variant_real_map.insert({ variant_id, p_double });
 }
 
 Variant::Variant(const StringName &p_string) {
