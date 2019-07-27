@@ -819,42 +819,43 @@ bool Variant::is_one() const {
 		// atomic types
 		case BOOL: {
 
-			return _data._bool;
+			auto return_var = variant_bool_map.find(variant_id);
+			return return_var != variant_bool_map.end() ? return_var->second : false;
 		} break;
 		case INT: {
 
-			return _data._int == 1;
-
+			auto return_var = variant_uint64_map.find(variant_id);
+			return return_var != variant_uint64_map.end() ? return_var->second == 1 : false;
 		} break;
 		case REAL: {
 
-			return _data._real == 1;
-
+			auto return_var = variant_real_map.find(variant_id);
+			return return_var != variant_real_map.end() ? return_var->second == 1.0f : false;
 		} break;
 		case VECTOR2: {
 
-			return *reinterpret_cast<const Vector2 *>(_data._mem) == Vector2(1, 1);
-
+			auto return_var = variant_vector2_map.find(variant_id);
+			return return_var != variant_vector2_map.end() ? return_var->second == Vector2(1, 1) : false;
 		} break;
 		case RECT2: {
 
-			return *reinterpret_cast<const Rect2 *>(_data._mem) == Rect2(1, 1, 1, 1);
-
+			auto return_var = variant_rect2_map.find(variant_id);
+			return return_var != variant_rect2_map.end() ? return_var->second == Rect2(1, 1, 1, 1) : false;
 		} break;
 		case VECTOR3: {
 
-			return *reinterpret_cast<const Vector3 *>(_data._mem) == Vector3(1, 1, 1);
-
+			auto return_var = variant_vector3_map.find(variant_id);
+			return return_var != variant_vector3_map.end() ? return_var->second == Vector3(1, 1, 1) : false;
 		} break;
 		case PLANE: {
 
-			return *reinterpret_cast<const Plane *>(_data._mem) == Plane(1, 1, 1, 1);
-
+			auto return_var = variant_plane_map.find(variant_id);
+			return return_var != variant_plane_map.end() ? return_var->second == Plane(1, 1, 1, 1) : false;
 		} break;
 		case COLOR: {
 
-			return *reinterpret_cast<const Color *>(_data._mem) == Color(1, 1, 1, 1);
-
+			auto return_var = variant_color_map.find(variant_id);
+			return return_var != variant_color_map.end() ? return_var->second == Color(1, 1, 1, 1) : false;
 		} break;
 
 		default: {
@@ -874,135 +875,122 @@ void Variant::reference(const Variant &p_variant) {
 	switch (p_variant.type) {
 		case NIL: {
 
-			// none
+			// do nothing
 		} break;
-
-		// atomic types
 		case BOOL: {
 
-			_data._bool = p_variant._data._bool;
+			variant_bool_map[variant_id] = variant_bool_map[p_variant.variant_id];
 		} break;
 		case INT: {
 
-			_data._int = p_variant._data._int;
+			variant_uint64_map[variant_id] = variant_uint64_map[p_variant.variant_id];
 		} break;
 		case REAL: {
 
-			_data._real = p_variant._data._real;
+			variant_real_map[variant_id] = variant_real_map[p_variant.variant_id];
 		} break;
 		case STRING: {
 
-			memnew_placement(_data._mem, String(*reinterpret_cast<const String *>(p_variant._data._mem)));
+			variant_string_map[variant_id] = variant_string_map[p_variant.variant_id];
 		} break;
 
 		// math types
 		case VECTOR2: {
 
-			memnew_placement(_data._mem, Vector2(*reinterpret_cast<const Vector2 *>(p_variant._data._mem)));
+			variant_vector2_map[variant_id] = variant_vector2_map[p_variant.variant_id];
 		} break;
 		case RECT2: {
 
-			memnew_placement(_data._mem, Rect2(*reinterpret_cast<const Rect2 *>(p_variant._data._mem)));
+			variant_rect2_map[variant_id] = variant_rect2_map[p_variant.variant_id];
 		} break;
 		case TRANSFORM2D: {
 
-			_data._transform2d = memnew(Transform2D(*p_variant._data._transform2d));
+			variant_transform2d_map[variant_id] = variant_transform2d_map[p_variant.variant_id];
 		} break;
 		case VECTOR3: {
 
-			memnew_placement(_data._mem, Vector3(*reinterpret_cast<const Vector3 *>(p_variant._data._mem)));
+			variant_vector3_map[variant_id] = variant_vector3_map[p_variant.variant_id];
 		} break;
 		case PLANE: {
 
-			memnew_placement(_data._mem, Plane(*reinterpret_cast<const Plane *>(p_variant._data._mem)));
+			variant_plane_map[variant_id] = variant_plane_map[p_variant.variant_id];
 		} break;
 
 		case AABB: {
 
-			_data._aabb = memnew(::AABB(*p_variant._data._aabb));
+			variant_aabb_map[variant_id] = variant_aabb_map[p_variant.variant_id];
 		} break;
 		case QUAT: {
 
-			memnew_placement(_data._mem, Quat(*reinterpret_cast<const Quat *>(p_variant._data._mem)));
-
+			variant_quat_map[variant_id] = variant_quat_map[p_variant.variant_id];
 		} break;
 		case BASIS: {
 
-			_data._basis = memnew(Basis(*p_variant._data._basis));
-
+			variant_basis_map[variant_id] = variant_basis_map[p_variant.variant_id];
 		} break;
 		case TRANSFORM: {
 
-			_data._transform = memnew(Transform(*p_variant._data._transform));
+			variant_transform_map[variant_id] = variant_transform_map[p_variant.variant_id];
 		} break;
 
 		// misc types
 		case COLOR: {
 
-			memnew_placement(_data._mem, Color(*reinterpret_cast<const Color *>(p_variant._data._mem)));
-
+			variant_color_map[variant_id] = variant_color_map[p_variant.variant_id];
 		} break;
 		case _RID: {
 
-			memnew_placement(_data._mem, RID(*reinterpret_cast<const RID *>(p_variant._data._mem)));
+			variant_rid_map[variant_id] = variant_rid_map[p_variant.variant_id];
 		} break;
 		case OBJECT: {
 
-			memnew_placement(_data._mem, ObjData(p_variant._get_obj()));
+			std::cerr << "Attempting to reference Object with id:" << variant_id << std::endl;
+			// variant_object_map[variant_id] = variant_object_map[p_variant.variant_id];
 		} break;
 		case NODE_PATH: {
 
-			memnew_placement(_data._mem, NodePath(*reinterpret_cast<const NodePath *>(p_variant._data._mem)));
-
+			variant_node_path_map[variant_id] = variant_node_path_map[p_variant.variant_id];
 		} break;
 		case DICTIONARY: {
 
-			memnew_placement(_data._mem, Dictionary(*reinterpret_cast<const Dictionary *>(p_variant._data._mem)));
-
+			variant_dictionary_map[variant_id] = variant_dictionary_map[p_variant.variant_id];
 		} break;
 		case ARRAY: {
 
-			memnew_placement(_data._mem, Array(*reinterpret_cast<const Array *>(p_variant._data._mem)));
-
+			variant_array_map[variant_id] = variant_array_map[p_variant.variant_id];
 		} break;
 
 		// arrays
 		case POOL_BYTE_ARRAY: {
 
-			memnew_placement(_data._mem, PoolVector<uint8_t>(*reinterpret_cast<const PoolVector<uint8_t> *>(p_variant._data._mem)));
-
+			variant_pool_vector_char_map[variant_id] = variant_pool_vector_char_map[p_variant.variant_id];
 		} break;
 		case POOL_INT_ARRAY: {
 
-			memnew_placement(_data._mem, PoolVector<int>(*reinterpret_cast<const PoolVector<int> *>(p_variant._data._mem)));
-
+			variant_pool_vector_uint64_map[variant_id] = variant_pool_vector_uint64_map[p_variant.variant_id];
 		} break;
 		case POOL_REAL_ARRAY: {
 
-			memnew_placement(_data._mem, PoolVector<real_t>(*reinterpret_cast<const PoolVector<real_t> *>(p_variant._data._mem)));
-
+			variant_pool_vector_real_map[variant_id] = variant_pool_vector_real_map[p_variant.variant_id];
 		} break;
 		case POOL_STRING_ARRAY: {
 
-			memnew_placement(_data._mem, PoolVector<String>(*reinterpret_cast<const PoolVector<String> *>(p_variant._data._mem)));
-
+			variant_pool_vector_string_map[variant_id] = variant_pool_vector_string_map[p_variant.variant_id];
 		} break;
 		case POOL_VECTOR2_ARRAY: {
 
-			memnew_placement(_data._mem, PoolVector<Vector2>(*reinterpret_cast<const PoolVector<Vector2> *>(p_variant._data._mem)));
-
+			variant_pool_vector_vector2_map[variant_id] = variant_pool_vector_vector2_map[p_variant.variant_id];
 		} break;
 		case POOL_VECTOR3_ARRAY: {
 
-			memnew_placement(_data._mem, PoolVector<Vector3>(*reinterpret_cast<const PoolVector<Vector3> *>(p_variant._data._mem)));
-
+			variant_pool_vector_vector3_map[variant_id] = variant_pool_vector_vector3_map[p_variant.variant_id];
 		} break;
 		case POOL_COLOR_ARRAY: {
 
-			memnew_placement(_data._mem, PoolVector<Color>(*reinterpret_cast<const PoolVector<Color> *>(p_variant._data._mem)));
-
+			variant_pool_vector_color_map[variant_id] = variant_pool_vector_color_map[p_variant.variant_id];
 		} break;
 		default: {
+			CRASH_NOW();
 		}
 	}
 }
@@ -1010,16 +998,43 @@ void Variant::reference(const Variant &p_variant) {
 void Variant::zero() {
 	switch (type) {
 		case NIL: break;
-		case BOOL: this->_data._bool = false; break;
-		case INT: this->_data._int = 0; break;
-		case REAL: this->_data._real = 0; break;
-		case VECTOR2: *reinterpret_cast<Vector2 *>(this->_data._mem) = Vector2(); break;
-		case RECT2: *reinterpret_cast<Rect2 *>(this->_data._mem) = Rect2(); break;
-		case VECTOR3: *reinterpret_cast<Vector3 *>(this->_data._mem) = Vector3(); break;
-		case PLANE: *reinterpret_cast<Plane *>(this->_data._mem) = Plane(); break;
-		case QUAT: *reinterpret_cast<Quat *>(this->_data._mem) = Quat(); break;
-		case COLOR: *reinterpret_cast<Color *>(this->_data._mem) = Color(); break;
-		default: this->clear(); break;
+		case BOOL: {
+
+			variant_bool_map[variant_id] = false;
+		} break;
+		case INT: {
+
+			variant_uint64_map[variant_id] = 0u;
+		} break;
+		case REAL: {
+
+			variant_real_map[variant_id] = 0.0;
+		} break;
+		case VECTOR2: {
+
+			variant_vector2_map[variant_id] = Vector2();
+		} break;
+		case RECT2: {
+
+			variant_rect2_map[variant_id] = Rect2();
+		} break;
+		case VECTOR3: {
+
+			variant_vector3_map[variant_id] = Vector3();
+		} break;
+		case PLANE: {
+
+			variant_plane_map[variant_id] = Plane();
+		} break;
+		case QUAT: {
+
+			variant_quat_map[variant_id] = Quat();
+		} break;
+		case COLOR: {
+
+			variant_color_map[variant_id] = Color();
+		} break;
+		default: clear();
 	}
 }
 
@@ -1033,104 +1048,122 @@ void Variant::clear() {
 		} break;
 		case TRANSFORM2D: {
 
-			memdelete(_data._transform2d);
+			variant_transform2d_map.erase(variant_id);
 		} break;
 		case AABB: {
 
-			memdelete(_data._aabb);
+			variant_aabb_map.erase(variant_id);
 		} break;
 		case BASIS: {
 
-			memdelete(_data._basis);
+			variant_basis_map.erase(variant_id);
 		} break;
 		case TRANSFORM: {
 
-			memdelete(_data._transform);
+			variant_transform_map.erase(variant_id);
 		} break;
 
 		// misc types
 		case NODE_PATH: {
 
+			variant_node_path_map.erase(variant_id);
 		} break;
 		case OBJECT: {
 
-			_get_obj().obj = nullptr;
-			_get_obj().ref.unref();
+			std::cerr << "Attempting to clear Object with id:" << variant_id << std::endl;
+			// variant_object_map.erase(variant_id);
 		} break;
 		case _RID: {
-			// not much need probably
-			reinterpret_cast<RID *>(_data._mem)->~RID();
+
+			variant_rid_map.erase(variant_id);
 		} break;
 		case DICTIONARY: {
 
-			reinterpret_cast<Dictionary *>(_data._mem)->~Dictionary();
+			variant_dictionary_map.erase(variant_id);
 		} break;
 		case ARRAY: {
 
-			reinterpret_cast<Array *>(_data._mem)->~Array();
+			variant_array_map.erase(variant_id);
 		} break;
 		// arrays
 		case POOL_BYTE_ARRAY: {
 
-			reinterpret_cast<PoolVector<uint8_t> *>(_data._mem)->~PoolVector<uint8_t>();
+			variant_pool_vector_char_map.erase(variant_id);
 		} break;
 		case POOL_INT_ARRAY: {
 
-			reinterpret_cast<PoolVector<int> *>(_data._mem)->~PoolVector<int>();
+			variant_pool_vector_uint64_map.erase(variant_id);
 		} break;
 		case POOL_REAL_ARRAY: {
 
-			reinterpret_cast<PoolVector<real_t> *>(_data._mem)->~PoolVector<real_t>();
+			variant_real_map.erase(variant_id);
 		} break;
 		case POOL_STRING_ARRAY: {
 
-			reinterpret_cast<PoolVector<String> *>(_data._mem)->~PoolVector<String>();
+			variant_pool_vector_string_map.erase(variant_id);
 		} break;
 		case POOL_VECTOR2_ARRAY: {
 
-			reinterpret_cast<PoolVector<Vector2> *>(_data._mem)->~PoolVector<Vector2>();
+			variant_pool_vector_vector2_map.erase(variant_id);
 		} break;
 		case POOL_VECTOR3_ARRAY: {
 
-			reinterpret_cast<PoolVector<Vector3> *>(_data._mem)->~PoolVector<Vector3>();
+			variant_pool_vector_vector3_map.erase(variant_id);
 		} break;
 		case POOL_COLOR_ARRAY: {
 
-			reinterpret_cast<PoolVector<Color> *>(_data._mem)->~PoolVector<Color>();
+			variant_pool_vector_color_map.erase(variant_id);
 		} break;
 		default: {
-		} /* not needed */
+			std::cerr << "Nothing to clear" << std::endl;
+		}
 	}
-
 	type = NIL;
 }
 
 Variant::operator signed int() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int();
+		}
 		default: {
-
 			return 0;
 		}
 	}
 }
+
 Variant::operator unsigned int() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int();
+		}
 		default: {
-
 			return 0;
 		}
 	}
@@ -1139,104 +1172,70 @@ Variant::operator unsigned int() const {
 Variant::operator int64_t() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int64();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int64();
+		}
 		default: {
-
 			return 0;
 		}
 	}
 }
-
-/*
-Variant::operator long unsigned int() const {
-
-	switch( type ) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
-		default: {
-
-			return 0;
-		}
-	}
-
-	return 0;
-};
-*/
 
 Variant::operator uint64_t() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real; // Really? wtf is this
-		case STRING: return operator String().to_int();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int();
+		}
 		default: {
-
 			return 0;
 		}
 	}
 }
 
-#ifdef NEED_LONG_INT
-Variant::operator signed long() const {
-
-	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
-		default: {
-
-			return 0;
-		}
-	}
-
-	return 0;
-};
-
-Variant::operator unsigned long() const {
-
-	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
-		default: {
-
-			return 0;
-		}
-	}
-
-	return 0;
-};
-#endif
-
 Variant::operator signed short() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int();
+		}
 		default: {
-
 			return 0;
 		}
 	}
@@ -1244,14 +1243,22 @@ Variant::operator signed short() const {
 Variant::operator unsigned short() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int();
+		}
 		default: {
-
 			return 0;
 		}
 	}
@@ -1259,14 +1266,22 @@ Variant::operator unsigned short() const {
 Variant::operator signed char() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int();
+		}
 		default: {
-
 			return 0;
 		}
 	}
@@ -1274,14 +1289,22 @@ Variant::operator signed char() const {
 Variant::operator unsigned char() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1 : 0;
-		case INT: return _data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_int();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_int();
+		}
 		default: {
-
 			return 0;
 		}
 	}
@@ -1295,14 +1318,22 @@ Variant::operator CharType() const {
 Variant::operator float() const {
 
 	switch (type) {
-
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1.0 : 0.0;
-		case INT: return (float)_data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_double();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_float();
+		}
 		default: {
-
 			return 0;
 		}
 	}
@@ -1311,13 +1342,22 @@ Variant::operator double() const {
 
 	switch (type) {
 
-		case NIL: return 0;
-		case BOOL: return _data._bool ? 1.0 : 0.0;
-		case INT: return (double)_data._int;
-		case REAL: return _data._real;
-		case STRING: return operator String().to_double();
+		case NIL: {
+			return 0;
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id];
+		}
+		case INT: {
+			return variant_uint64_map[variant_id];
+		}
+		case REAL: {
+			return variant_real_map[variant_id];
+		}
+		case STRING: {
+			return variant_string_map[variant_id].to_double();
+		}
 		default: {
-
 			return 0;
 		}
 	}
@@ -1326,17 +1366,17 @@ Variant::operator double() const {
 Variant::operator StringName() const {
 
 	if (type == NODE_PATH) {
-		return reinterpret_cast<const NodePath *>(_data._mem)->get_sname();
+		return variant_node_path_map[variant_id].get_sname();
 	}
 	return StringName(operator String());
 }
 
-struct _VariantStrPair {
+struct VariantStringPair {
 
 	String key;
 	String value;
 
-	bool operator<(const _VariantStrPair &p) const {
+	bool operator<(const VariantStringPair &p) const {
 
 		return key < p.key;
 	}
@@ -1351,169 +1391,169 @@ Variant::operator String() const {
 String Variant::stringify(List<const void *> &stack) const {
 	switch (type) {
 
-		case NIL: return "Null";
-		case BOOL: return _data._bool ? "True" : "False";
-		case INT: return itos(_data._int);
-		case REAL: return rtos(_data._real);
-		case STRING: return *reinterpret_cast<const String *>(_data._mem);
-		case VECTOR2: return "(" + operator Vector2() + ")";
-		case RECT2: return "(" + operator Rect2() + ")";
+		case NIL: {
+			return "VariantType::NIL";
+		}
+		case BOOL: {
+			return variant_bool_map[variant_id] ? "VariantType::BOOL::true" : "VariantType::BOOL::false";
+		}
+		case INT: {
+			return itos(variant_uint64_map[variant_id]);
+		}
+		case REAL: {
+			return rtos(variant_real_map[variant_id]);
+		}
+		case STRING: {
+			return variant_string_map[variant_id];
+		}
+		case VECTOR2: {
+			return "(" + operator Vector2() + ")";
+		}
+		case RECT2: {
+			return "(" + operator Rect2() + ")";
+		}
 		case TRANSFORM2D: {
-
 			Transform2D mat32 = operator Transform2D();
 			return "(" + Variant(mat32.elements[0]).operator String() + ", " + Variant(mat32.elements[1]).operator String() + ", " + Variant(mat32.elements[2]).operator String() + ")";
 		} break;
-		case VECTOR3: return "(" + operator Vector3() + ")";
-		case PLANE:
+		case VECTOR3: {
+			return "(" + operator Vector3() + ")";
+		}
+		case PLANE: {
 			return operator Plane();
-		//case QUAT:
-		case AABB: return operator ::AABB();
-		case QUAT: return "(" + operator Quat() + ")";
+		}
+		case AABB: {
+			return operator ::AABB();
+		}
+		case QUAT: {
+			return "(" + operator Quat() + ")";
+		}
 		case BASIS: {
-
 			Basis mat3 = operator Basis();
-
 			String mtx("(");
 			for (int i = 0; i < 3; i++) {
-
-				if (i != 0)
+				if (i != 0) {
 					mtx += ", ";
-
+				}
 				mtx += "(";
-
 				for (int j = 0; j < 3; j++) {
-
-					if (j != 0)
+					if (j != 0) {
 						mtx += ", ";
-
+					}
 					mtx += Variant(mat3.elements[i][j]).operator String();
 				}
-
 				mtx += ")";
 			}
-
 			return mtx + ")";
 		} break;
-		case TRANSFORM: return operator Transform();
-		case NODE_PATH: return operator NodePath();
-		case COLOR: return String::num(operator Color().r) + "," + String::num(operator Color().g) + "," + String::num(operator Color().b) + "," + String::num(operator Color().a);
+		case TRANSFORM: {
+			return operator Transform();
+		}
+		case NODE_PATH: {
+			return operator NodePath();
+		}
+		case COLOR: {
+			return String::num(operator Color().r) + "," + String::num(operator Color().g) + "," + String::num(operator Color().b) + "," + String::num(operator Color().a);
+		}
 		case DICTIONARY: {
-
 			const Dictionary &d = *reinterpret_cast<const Dictionary *>(_data._mem);
 			if (stack.find(d.id())) {
 				return "{...}";
 			}
-
 			stack.push_back(d.id());
-
-			//const String *K=nullptr;
 			String str("{");
 			List<Variant> keys;
 			d.get_key_list(&keys);
-
-			Vector<_VariantStrPair> pairs;
-
+			Vector<VariantStringPair> pairs;
 			for (const auto &E : keys) {
-
-				_VariantStrPair sp;
+				VariantStringPair sp;
 				sp.key = E.stringify(stack);
 				sp.value = d[E].stringify(stack);
-
 				pairs.push_back(sp);
 			}
-
 			pairs.sort();
-
 			for (int i = 0; i < pairs.size(); i++) {
-				if (i > 0)
+				if (i > 0) {
 					str += ", ";
+				}
 				str += pairs[i].key + ":" + pairs[i].value;
 			}
 			str += "}";
-
 			return str;
 		} break;
 		case POOL_VECTOR2_ARRAY: {
-
 			PoolVector<Vector2> vec = operator PoolVector<Vector2>();
 			String str("[");
 			for (int i = 0; i < vec.size(); i++) {
-
-				if (i > 0)
+				if (i > 0) {
 					str += ", ";
+				}
 				str = str + Variant(vec[i]);
 			}
 			str += "]";
 			return str;
 		} break;
 		case POOL_VECTOR3_ARRAY: {
-
 			PoolVector<Vector3> vec = operator PoolVector<Vector3>();
 			String str("[");
 			for (int i = 0; i < vec.size(); i++) {
-
-				if (i > 0)
+				if (i > 0) {
 					str += ", ";
+				}
 				str = str + Variant(vec[i]);
 			}
 			str += "]";
 			return str;
 		} break;
 		case POOL_STRING_ARRAY: {
-
 			PoolVector<String> vec = operator PoolVector<String>();
 			String str("[");
 			for (int i = 0; i < vec.size(); i++) {
-
-				if (i > 0)
+				if (i > 0) {
 					str += ", ";
+				}
 				str = str + vec[i];
 			}
 			str += "]";
 			return str;
 		} break;
 		case POOL_INT_ARRAY: {
-
 			PoolVector<int> vec = operator PoolVector<int>();
 			String str("[");
 			for (int i = 0; i < vec.size(); i++) {
-
-				if (i > 0)
+				if (i > 0) {
 					str += ", ";
+				}
 				str = str + itos(vec[i]);
 			}
 			str += "]";
 			return str;
 		} break;
 		case POOL_REAL_ARRAY: {
-
 			PoolVector<real_t> vec = operator PoolVector<real_t>();
 			String str("[");
 			for (int i = 0; i < vec.size(); i++) {
-
-				if (i > 0)
+				if (i > 0) {
 					str += ", ";
+				}
 				str = str + rtos(vec[i]);
 			}
 			str += "]";
 			return str;
 		} break;
 		case ARRAY: {
-
 			Array arr = operator Array();
 			if (stack.find(arr.id())) {
 				return "[...]";
 			}
 			stack.push_back(arr.id());
-
 			String str("[");
 			for (int i = 0; i < arr.size(); i++) {
-				if (i)
+				if (i) {
 					str += ", ";
-
+				}
 				str += arr[i].stringify(stack);
 			}
-
 			str += "]";
 			return str;
 
@@ -1525,13 +1565,13 @@ String Variant::stringify(List<const void *> &stack) const {
 				if (ScriptDebugger::get_singleton() && _get_obj().ref.is_null()) {
 					//only if debugging!
 					if (!ObjectDB::instance_validate(_get_obj().obj)) {
-						return "[Deleted Object]";
+						return "VariantType::OBJECT::deleted";
 					};
 				};
 #endif
 				return _get_obj().obj->to_string();
 			} else
-				return "[Object:null]";
+				return "VariantType::OBJECT::null";
 
 		} break;
 		default: {
@@ -1543,70 +1583,81 @@ String Variant::stringify(List<const void *> &stack) const {
 }
 
 Variant::operator Vector2() const {
-
-	if (type == VECTOR2)
-		return *reinterpret_cast<const Vector2 *>(_data._mem);
-	else if (type == VECTOR3)
-		return Vector2(reinterpret_cast<const Vector3 *>(_data._mem)->x, reinterpret_cast<const Vector3 *>(_data._mem)->y);
-	else
+	if (type == VECTOR2) {
+		return variant_vector2_map[variant_id];
+	} else if (type == VECTOR3) {
+		const Vector3 &vec = variant_vector3_map[variant_id];
+		return Vector2(vec.x, vec.y);
+	} else {
 		return Vector2();
+	}
 }
+
 Variant::operator Rect2() const {
 
-	if (type == RECT2)
-		return *reinterpret_cast<const Rect2 *>(_data._mem);
-	else
+	if (type == RECT2) {
+		return variant_rect2_map[variant_id];
+	} else {
 		return Rect2();
+	}
 }
 
 Variant::operator Vector3() const {
 
-	if (type == VECTOR3)
-		return *reinterpret_cast<const Vector3 *>(_data._mem);
-	else if (type == VECTOR2)
-		return Vector3(reinterpret_cast<const Vector2 *>(_data._mem)->x, reinterpret_cast<const Vector2 *>(_data._mem)->y, 0.0);
-	else
+	if (type == VECTOR3) {
+		return variant_vector3_map[variant_id];
+	} else if (type == VECTOR2) {
+		const Vector2 &vec = variant_vector2_map[variant_id];
+		return Vector3(vec.x, vec.y, 0.0);
+	} else {
 		return Vector3();
+	}
 }
+
 Variant::operator Plane() const {
 
-	if (type == PLANE)
-		return *reinterpret_cast<const Plane *>(_data._mem);
-	else
+	if (type == PLANE) {
+		return variant_plane_map[variant_id];
+	} else {
 		return Plane();
+	}
 }
+
 Variant::operator ::AABB() const {
 
-	if (type == AABB)
-		return *_data._aabb;
-	else
+	if (type == AABB) {
+		return variant_aabb_map[variant_id];
+	} else {
 		return ::AABB();
+	}
 }
 
 Variant::operator Basis() const {
 
-	if (type == BASIS)
-		return *_data._basis;
-	else if (type == QUAT)
-		return *reinterpret_cast<const Quat *>(_data._mem);
-	else if (type == VECTOR3) {
-		return Basis(*reinterpret_cast<const Vector3 *>(_data._mem));
-	} else if (type == TRANSFORM) // unexposed in Variant::can_convert?
-		return _data._transform->basis;
-	else
+	if (type == BASIS) {
+		return variant_basis_map[variant_id];
+	} else if (type == QUAT) {
+		return variant_quat_map[variant_id];
+	} else if (type == VECTOR3) {
+		return variant_vector3_map[variant_id];
+	} else if (type == TRANSFORM) {
+		return variant_transform_map[variant_id].basis;
+	} else {
 		return Basis();
+	}
 }
 
 Variant::operator Quat() const {
 
-	if (type == QUAT)
-		return *reinterpret_cast<const Quat *>(_data._mem);
-	else if (type == BASIS)
-		return *_data._basis;
-	else if (type == TRANSFORM)
-		return _data._transform->basis;
-	else
+	if (type == QUAT) {
+		return variant_quat_map[variant_id];
+	} else if (type == BASIS) {
+		return variant_basis_map[variant_id];
+	} else if (type == TRANSFORM) {
+		return variant_transform_map[variant_id].basis;
+	} else {
 		return Quat();
+	}
 }
 
 Variant::operator Transform() const {
@@ -1736,7 +1787,7 @@ Variant::operator Dictionary() const {
 }
 
 template <class DA, class SA>
-inline DA _convert_array(const SA &p_array) {
+DA _convert_array(const SA &p_array) {
 
 	DA da;
 	da.resize(p_array.size());
@@ -1750,7 +1801,7 @@ inline DA _convert_array(const SA &p_array) {
 }
 
 template <class DA>
-inline DA _convert_array_from_variant(const Variant &p_variant) {
+DA _convert_array_from_variant(const Variant &p_variant) {
 
 	switch (p_variant.get_type()) {
 
