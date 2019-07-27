@@ -2730,7 +2730,7 @@ uint32_t Variant::hash() const {
 			const PoolVector<Vector3> &arr = *reinterpret_cast<const PoolVector<Vector3> *>(_data._mem);
 			int len = arr.size();
 
-			if (likely(len)) {
+			if (len) {
 				PoolVector<Vector3>::Read r = arr.read();
 
 				for (int i = 0; i < len; i++) {
