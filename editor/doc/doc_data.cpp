@@ -636,7 +636,7 @@ void DocData::generate(bool p_basic_types) {
 					int darg_idx = j - (mi.arguments.size() - mi.default_arguments.size());
 
 					if (darg_idx >= 0) {
-						Variant default_arg = E.default_arguments[darg_idx];
+						Variant default_arg = mi.default_arguments[darg_idx];
 						ad.default_value = default_arg.get_construct_string();
 					}
 
