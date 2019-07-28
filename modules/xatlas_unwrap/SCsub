@@ -17,7 +17,7 @@ if env['builtin_xatlas']:
 
     # upstream uses c++11
     if (not env.msvc):
-        env_xatlas_unwrap.Append(CXXFLAGS="-std=c++11")
+        env_xatlas_unwrap.Append(CXXFLAGS="-std=c++17")
 
     env_thirdparty = env_xatlas_unwrap.Clone()
     env_thirdparty.disable_warnings()
