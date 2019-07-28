@@ -72,6 +72,11 @@ typedef PoolVector<Vector2> PoolVector2Array;
 typedef PoolVector<Vector3> PoolVector3Array;
 typedef PoolVector<Color> PoolColorArray;
 
+struct ObjData {
+	Object *obj;
+	RefPtr ref;
+};
+
 class Variant {
 public:
 	// If this changes the table in variant_op must be updated
@@ -119,58 +124,18 @@ public:
 
 private:
 	friend struct _VariantCall;
-	// Variant takes 20 bytes when real_t is float, and 36 if double
-	// it only allocates extra memory for aabb/matrix.
-
 	Type type;
-
-	struct ObjData {
-
-		Object *obj;
-		RefPtr ref;
-	};
 
 	ObjData &_get_obj();
 	const ObjData &_get_obj() const;
 
 private:
-	int variant_id;
-	static std::atomic<int> variant_counter;
-
-	static std::unordered_map<int, String> variant_string_map;
-	static std::unordered_map<int, Vector3> variant_vector3_map;
-	static std::unordered_map<int, Vector2> variant_vector2_map;
-	static std::unordered_map<int, Rect2> variant_rect2_map;
-	static std::unordered_map<int, Plane> variant_plane_map;
-	static std::unordered_map<int, bool> variant_bool_map;
-	static std::unordered_map<int, uint64_t> variant_uint64_map;
-	static std::unordered_map<int, double> variant_real_map;
-	static std::unordered_map<int, Transform2D> variant_transform2d_map;
-	static std::unordered_map<int, Color> variant_color_map;
-	static std::unordered_map<int, NodePath> variant_node_path_map;
-	static std::unordered_map<int, RID> variant_rid_map;
-	static std::unordered_map<int, Dictionary> variant_dictionary_map;
-	static std::unordered_map<int, ::AABB> variant_aabb_map;
-	static std::unordered_map<int, Quat> variant_quat_map;
-	static std::unordered_map<int, Basis> variant_basis_map;
-	static std::unordered_map<int, Transform> variant_transform_map;
-	static std::unordered_map<int, Array> variant_array_map;
-	static std::unordered_map<int, PoolVector<Plane> > variant_pool_vector_plane_map;
-	static std::unordered_map<int, PoolVector<char> > variant_pool_vector_char_map;
-	static std::unordered_map<int, PoolVector<uint64_t> > variant_pool_vector_uint64_map;
-	static std::unordered_map<int, PoolVector<double> > variant_pool_vector_real_map;
-	static std::unordered_map<int, PoolVector<String> > variant_pool_vector_string_map;
-	static std::unordered_map<int, PoolVector<Vector2> > variant_pool_vector_vector2_map;
-	static std::unordered_map<int, PoolVector<Vector3> > variant_pool_vector_vector3_map;
-	static std::unordered_map<int, PoolVector<Color> > variant_pool_vector_color_map;
-
+	const int variant_id;
 	void reference(const Variant &p_variant);
 	void clear();
 
 public:
-	Type get_type() const {
-		return type;
-	}
+	Type get_type() const;
 	static String get_type_name(const Variant::Type p_type);
 	static bool can_convert(const Type p_type_from, const Type p_type_to);
 	static bool can_convert_strict(const Type p_type_from, const Type p_type_to);
@@ -257,6 +222,18 @@ public:
 	operator IP_Address() const;
 
 	Variant(bool p_bool);
+	Variant(signed int p_int); // real one
+	Variant(unsigned int p_int);
+#ifdef NEED_LONG_INT
+	Variant(signed long p_long); // real one
+	Variant(unsigned long p_long);
+//Variant(long unsigned int p_long);
+#endif
+	Variant(signed short p_short); // real one
+	Variant(unsigned short p_short);
+	Variant(signed char p_char); // real one
+	Variant(unsigned char p_char);
+	Variant(int64_t p_int); // real one
 	Variant(uint64_t p_int);
 	Variant(float p_float);
 	Variant(double p_double);
@@ -402,8 +379,6 @@ public:
 
 	void get_property_list(List<PropertyInfo> *p_list) const;
 
-	//argsVariant call()
-
 	bool operator==(const Variant &p_variant) const;
 	bool operator!=(const Variant &p_variant) const;
 	bool operator<(const Variant &p_variant) const;
@@ -425,11 +400,8 @@ public:
 	String get_construct_string() const;
 	static void construct_from_string(const String &p_string, Variant &r_value, ObjectConstruct p_obj_construct = NULL, void *p_construct_ud = NULL);
 
-	void operator=(const Variant &p_variant); // only this is enough for all the other types
+	Variant &operator=(const Variant &p_variant); // only this is enough for all the other types
 };
-
-//typedef Dictionary Dictionary; no
-//typedef Array Array;
 
 Vector<Variant> varray();
 Vector<Variant> varray(const Variant &p_arg1);

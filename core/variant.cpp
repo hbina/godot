@@ -39,6 +39,57 @@
 #include "scene/gui/control.h"
 #include "scene/main/node.h"
 
+static std::atomic<int> variant_counter;
+
+static std::unordered_map<int, String> variant_string_map;
+static std::unordered_map<int, Vector3> variant_vector3_map;
+static std::unordered_map<int, Vector2> variant_vector2_map;
+static std::unordered_map<int, Rect2> variant_rect2_map;
+static std::unordered_map<int, Plane> variant_plane_map;
+static std::unordered_map<int, bool> variant_bool_map;
+static std::unordered_map<int, uint64_t> variant_uint64_map;
+static std::unordered_map<int, real_t> variant_real_map;
+static std::unordered_map<int, double> variant_double_map;
+static std::unordered_map<int, float> variant_float_map;
+static std::unordered_map<int, Transform2D> variant_transform2d_map;
+static std::unordered_map<int, Color> variant_color_map;
+static std::unordered_map<int, NodePath> variant_node_path_map;
+static std::unordered_map<int, RID> variant_rid_map;
+static std::unordered_map<int, Dictionary> variant_dictionary_map;
+static std::unordered_map<int, ::AABB> variant_aabb_map;
+static std::unordered_map<int, Quat> variant_quat_map;
+static std::unordered_map<int, Basis> variant_basis_map;
+static std::unordered_map<int, Transform> variant_transform_map;
+static std::unordered_map<int, Array> variant_array_map;
+static std::unordered_map<int, Vector<Plane> > variant_vector_plane_map;
+static std::unordered_map<int, Vector<RID> > variant_vector_rid_map;
+static std::unordered_map<int, Vector<Vector2> > variant_vector_vector2_map;
+static std::unordered_map<int, Vector<Variant> > variant_vector_variant_map;
+static std::unordered_map<int, Vector<uint8_t> > variant_vector_uint8_map;
+static std::unordered_map<int, Vector<int> > variant_vector_int_map;
+static std::unordered_map<int, Vector<Color> > variant_vector_color_map;
+static std::unordered_map<int, Vector<real_t> > variant_vector_real_map;
+static std::unordered_map<int, Vector<double> > variant_vector_double_map;
+static std::unordered_map<int, Vector<float> > variant_vector_float_map;
+static std::unordered_map<int, Vector<String> > variant_vector_string_map;
+static std::unordered_map<int, Vector<StringName> > variant_vector_string_name_map;
+static std::unordered_map<int, Vector<Vector3> > variant_vector_vector3_map;
+static std::unordered_map<int, PoolVector<Plane> > variant_pool_vector_plane_map;
+static std::unordered_map<int, PoolVector<uint8_t> > variant_pool_vector_uint8_map;
+static std::unordered_map<int, PoolVector<int> > variant_pool_vector_int_map;
+static std::unordered_map<int, PoolVector<uint64_t> > variant_pool_vector_uint64_map;
+static std::unordered_map<int, PoolVector<real_t> > variant_pool_vector_real_map;
+static std::unordered_map<int, PoolVector<String> > variant_pool_vector_string_map;
+static std::unordered_map<int, PoolVector<Vector2> > variant_pool_vector_vector2_map;
+static std::unordered_map<int, PoolVector<Vector3> > variant_pool_vector_vector3_map;
+static std::unordered_map<int, PoolVector<Color> > variant_pool_vector_color_map;
+static std::unordered_map<int, PoolVector<Face3> > variant_pool_vector_face3_map;
+static std::unordered_map<int, ObjData> variant_objdata_map;
+
+Variant::Type Variant::get_type() const {
+	return type;
+}
+
 String Variant::get_type_name(const Variant::Type p_type) {
 
 	switch (p_type) {
@@ -774,7 +825,7 @@ bool Variant::is_zero() const {
 		// Check if array exist
 		case POOL_BYTE_ARRAY: {
 
-			return variant_pool_vector_char_map.find(variant_id) == variant_pool_vector_char_map.end();
+			return variant_pool_vector_uint8_map.find(variant_id) == variant_pool_vector_uint8_map.end();
 		} break;
 		case POOL_INT_ARRAY: {
 
@@ -963,7 +1014,7 @@ void Variant::reference(const Variant &p_variant) {
 		// arrays
 		case POOL_BYTE_ARRAY: {
 
-			variant_pool_vector_char_map[variant_id] = variant_pool_vector_char_map[p_variant.variant_id];
+			variant_pool_vector_uint8_map[variant_id] = variant_pool_vector_uint8_map[p_variant.variant_id];
 		} break;
 		case POOL_INT_ARRAY: {
 
@@ -1088,7 +1139,7 @@ void Variant::clear() {
 		// arrays
 		case POOL_BYTE_ARRAY: {
 
-			variant_pool_vector_char_map.erase(variant_id);
+			variant_pool_vector_uint8_map.erase(variant_id);
 		} break;
 		case POOL_INT_ARRAY: {
 
@@ -1338,6 +1389,7 @@ Variant::operator float() const {
 		}
 	}
 }
+
 Variant::operator double() const {
 
 	switch (type) {
@@ -1456,7 +1508,7 @@ String Variant::stringify(List<const void *> &stack) const {
 			return String::num(operator Color().r) + "," + String::num(operator Color().g) + "," + String::num(operator Color().b) + "," + String::num(operator Color().a);
 		}
 		case DICTIONARY: {
-			const Dictionary &d = *reinterpret_cast<const Dictionary *>(_data._mem);
+			const Dictionary &d = variant_dictionary_map[variant_id];
 			if (stack.find(d.id())) {
 				return "{...}";
 			}
@@ -1558,22 +1610,6 @@ String Variant::stringify(List<const void *> &stack) const {
 			return str;
 
 		} break;
-		case OBJECT: {
-
-			if (_get_obj().obj) {
-#ifdef DEBUG_ENABLED
-				if (ScriptDebugger::get_singleton() && _get_obj().ref.is_null()) {
-					//only if debugging!
-					if (!ObjectDB::instance_validate(_get_obj().obj)) {
-						return "VariantType::OBJECT::deleted";
-					};
-				};
-#endif
-				return _get_obj().obj->to_string();
-			} else
-				return "VariantType::OBJECT::null";
-
-		} break;
 		default: {
 			return "[" + get_type_name(type) + "]";
 		}
@@ -1662,14 +1698,14 @@ Variant::operator Quat() const {
 
 Variant::operator Transform() const {
 
-	if (type == TRANSFORM)
-		return *_data._transform;
-	else if (type == BASIS)
-		return Transform(*_data._basis, Vector3());
-	else if (type == QUAT)
-		return Transform(Basis(*reinterpret_cast<const Quat *>(_data._mem)), Vector3());
-	else if (type == TRANSFORM2D) {
-		const Transform2D &t = *_data._transform2d;
+	if (type == TRANSFORM) {
+		return variant_transform_map[variant_id];
+	} else if (type == BASIS) {
+		return Transform(variant_basis_map[variant_id], Vector3());
+	} else if (type == QUAT) {
+		return Transform(Basis(variant_quat_map[variant_id], Vector3()));
+	} else if (type == TRANSFORM2D) {
+		const Transform2D &t = variant_transform2d_map[variant_id];
 		Transform m;
 		m.basis.elements[0][0] = t.elements[0][0];
 		m.basis.elements[1][0] = t.elements[0][1];
@@ -1685,9 +1721,9 @@ Variant::operator Transform() const {
 Variant::operator Transform2D() const {
 
 	if (type == TRANSFORM2D) {
-		return *_data._transform2d;
+		return variant_transform2d_map[variant_id];
 	} else if (type == TRANSFORM) {
-		const Transform &t = *_data._transform;
+		const Transform &t = variant_transform_map[variant_id];
 		Transform2D m;
 		m.elements[0][0] = t.basis.elements[0][0];
 		m.elements[0][1] = t.basis.elements[1][0];
@@ -1696,46 +1732,39 @@ Variant::operator Transform2D() const {
 		m.elements[2][0] = t.origin[0];
 		m.elements[2][1] = t.origin[1];
 		return m;
-	} else
+	} else {
 		return Transform2D();
+	}
 }
 
 Variant::operator Color() const {
 
-	if (type == COLOR)
-		return *reinterpret_cast<const Color *>(_data._mem);
-	else if (type == STRING)
+	if (type == COLOR) {
+		return variant_color_map[variant_id];
+	} else if (type == STRING) {
 		return Color::html(operator String());
-	else if (type == INT)
+	} else if (type == INT) {
 		return Color::hex(operator int());
-	else
+	} else {
 		return Color();
+	}
 }
 
 Variant::operator NodePath() const {
 
-	if (type == NODE_PATH)
-		return *reinterpret_cast<const NodePath *>(_data._mem);
-	else if (type == STRING)
+	if (type == NODE_PATH) {
+		return variant_node_path_map[variant_id];
+	} else if (type == STRING) {
 		return NodePath(operator String());
-	else
+	} else {
 		return NodePath();
-}
-
-Variant::operator RefPtr() const {
-
-	if (type == OBJECT)
-		return _get_obj().ref;
-	else
-		return RefPtr();
+	}
 }
 
 Variant::operator RID() const {
 
-	if (type == _RID)
-		return *reinterpret_cast<const RID *>(_data._mem);
-	else if (type == OBJECT && !_get_obj().ref.is_null()) {
-		return _get_obj().ref.get_rid();
+	if (type == _RID) {
+		return variant_rid_map[variant_id];
 	} else if (type == OBJECT && _get_obj().obj) {
 #ifdef DEBUG_ENABLED
 		if (ScriptDebugger::get_singleton()) {
@@ -1780,10 +1809,11 @@ Variant::operator Control *() const {
 
 Variant::operator Dictionary() const {
 
-	if (type == DICTIONARY)
-		return *reinterpret_cast<const Dictionary *>(_data._mem);
-	else
+	if (type == DICTIONARY) {
+		return variant_dictionary_map[variant_id];
+	} else {
 		return Dictionary();
+	}
 }
 
 template <class DA, class SA>
@@ -1839,61 +1869,63 @@ DA _convert_array_from_variant(const Variant &p_variant) {
 
 Variant::operator Array() const {
 
-	if (type == ARRAY)
-		return *reinterpret_cast<const Array *>(_data._mem);
-	else
+	if (type == ARRAY) {
+		variant_array_map[variant_id];
+	} else {
 		return _convert_array_from_variant<Array>(*this);
+	}
 }
 
 Variant::operator PoolVector<uint8_t>() const {
 
-	if (type == POOL_BYTE_ARRAY)
-		return *reinterpret_cast<const PoolVector<uint8_t> *>(_data._mem);
-	else
+	if (type == POOL_BYTE_ARRAY) {
+		return variant_pool_vector_uint8_map[variant_id];
+	} else
 		return _convert_array_from_variant<PoolVector<uint8_t> >(*this);
 }
 Variant::operator PoolVector<int>() const {
 
-	if (type == POOL_INT_ARRAY)
-		return *reinterpret_cast<const PoolVector<int> *>(_data._mem);
-	else
+	if (type == POOL_INT_ARRAY) {
+		return variant_pool_vector_int_map[variant_id];
+	} else
 		return _convert_array_from_variant<PoolVector<int> >(*this);
 }
 Variant::operator PoolVector<real_t>() const {
 
-	if (type == POOL_REAL_ARRAY)
-		return *reinterpret_cast<const PoolVector<real_t> *>(_data._mem);
-	else
+	if (type == POOL_REAL_ARRAY) {
+		return variant_pool_vector_real_map[variant_id];
+	} else
 		return _convert_array_from_variant<PoolVector<real_t> >(*this);
 }
 
 Variant::operator PoolVector<String>() const {
 
-	if (type == POOL_STRING_ARRAY)
-		return *reinterpret_cast<const PoolVector<String> *>(_data._mem);
-	else
+	if (type == POOL_STRING_ARRAY) {
+		return variant_pool_vector_string_map[variant_id];
+	} else
 		return _convert_array_from_variant<PoolVector<String> >(*this);
 }
 Variant::operator PoolVector<Vector3>() const {
 
-	if (type == POOL_VECTOR3_ARRAY)
-		return *reinterpret_cast<const PoolVector<Vector3> *>(_data._mem);
-	else
+	if (type == POOL_VECTOR3_ARRAY) {
+		return variant_pool_vector_vector3_map[variant_id];
+	} else
 		return _convert_array_from_variant<PoolVector<Vector3> >(*this);
 }
 Variant::operator PoolVector<Vector2>() const {
 
-	if (type == POOL_VECTOR2_ARRAY)
-		return *reinterpret_cast<const PoolVector<Vector2> *>(_data._mem);
-	else
+	if (type == POOL_VECTOR2_ARRAY) {
+		return variant_pool_vector_vector2_map[variant_id];
+	} else {
 		return _convert_array_from_variant<PoolVector<Vector2> >(*this);
+	}
 }
 
 Variant::operator PoolVector<Color>() const {
 
-	if (type == POOL_COLOR_ARRAY)
-		return *reinterpret_cast<const PoolVector<Color> *>(_data._mem);
-	else
+	if (type == POOL_COLOR_ARRAY) {
+		return variant_pool_vector_color_map[variant_id];
+	} else
 		return _convert_array_from_variant<PoolVector<Color> >(*this);
 }
 
@@ -2107,326 +2139,286 @@ Variant::operator IP_Address() const {
 	return IP_Address(operator String());
 }
 
-Variant::Variant(bool p_bool) {
-	variant_id = variant_counter++;
+Variant::Variant(bool p_bool) :
+		variant_id(variant_counter++) {
 	type = BOOL;
 }
 
-Variant::Variant() {
-	variant_id = variant_counter++;
+Variant::Variant() :
+		variant_id(variant_counter++) {
 	type = NIL;
 }
 
-Variant::Variant(uint64_t p_int) {
-	variant_id = variant_counter++;
+Variant::Variant(const uint64_t p_int) :
+		variant_id(variant_counter++) {
 	type = INT;
 	variant_uint64_map.insert({ variant_id, p_int });
 }
 
-Variant::Variant(double p_double) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const real_t p_double) :
+		variant_id(variant_counter++) {
 	type = REAL;
 	variant_real_map.insert({ variant_id, p_double });
 }
 
-Variant::Variant(const StringName &p_string) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const StringName &p_string) :
+		variant_id(variant_counter++) {
 	type = STRING;
 	variant_string_map.insert({ variant_id, p_string.operator String() });
 }
 
-Variant::Variant(const String &p_string) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const String &p_string) :
+		variant_id(variant_counter++) {
 	type = STRING;
 	variant_string_map.insert({ variant_id, p_string });
 }
 
-Variant::Variant(const char *const p_cstring) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const char *const p_cstring) :
+		variant_id(variant_counter++) {
 	type = STRING;
 	variant_string_map.insert({ variant_id, String(p_cstring) });
 }
 
-Variant::Variant(const CharType *p_wstring) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const CharType *p_wstring) :
+		variant_id(variant_counter++) {
 	type = STRING;
 	variant_string_map.insert({ variant_id, String(p_wstring) });
 }
 
-Variant::Variant(const Vector3 &p_vector3) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector3 &p_vector3) :
+		variant_id(variant_counter++) {
 	type = VECTOR3;
 	variant_vector3_map.insert({ variant_id, p_vector3 });
 }
 
-Variant::Variant(const Vector2 &p_vector2) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector2 &p_vector2) :
+		variant_id(variant_counter++) {
 	type = VECTOR2;
 	variant_vector2_map.insert({ variant_id, p_vector2 });
 }
 
-Variant::Variant(const Rect2 &p_rect2) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Rect2 &p_rect2) :
+		variant_id(variant_counter++) {
 	type = RECT2;
 	variant_rect2_map.insert({ variant_id, p_rect2 });
 }
 
-Variant::Variant(const Plane &p_plane) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Plane &p_plane) :
+		variant_id(variant_counter++) {
 	type = PLANE;
 	variant_plane_map.insert({ variant_id, p_plane });
 }
 
-Variant::Variant(const ::AABB &p_aabb) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const ::AABB &p_aabb) :
+		variant_id(variant_counter++) {
 	type = AABB;
 	variant_aabb_map.insert({ variant_id, p_aabb });
 }
 
-Variant::Variant(const Basis &p_matrix) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Basis &p_matrix) :
+		variant_id(variant_counter++) {
 	type = BASIS;
 	variant_basis_map.insert({ variant_id, p_matrix });
 }
 
-Variant::Variant(const Quat &p_quat) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Quat &p_quat) :
+		variant_id(variant_counter++) {
 	type = QUAT;
 	variant_quat_map.insert({ variant_id, p_quat });
 }
 
-Variant::Variant(const Transform &p_transform) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Transform &p_transform) :
+		variant_id(variant_counter++) {
 	type = TRANSFORM;
 	variant_transform_map.insert({ variant_id, p_transform });
 }
 
-Variant::Variant(const Transform2D &p_transform2d) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Transform2D &p_transform2d) :
+		variant_id(variant_counter++) {
 	type = TRANSFORM2D;
 	variant_transform2d_map.insert({ variant_id, p_transform2d });
 }
 
-Variant::Variant(const Color &p_color) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Color &p_color) :
+		variant_id(variant_counter++) {
 	type = COLOR;
 	variant_color_map.insert({ variant_id, p_color });
 }
 
-Variant::Variant(const NodePath &p_node_path) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const NodePath &p_node_path) :
+		variant_id(variant_counter++) {
 	type = NODE_PATH;
 	variant_node_path_map.insert({ variant_id, p_node_path });
 }
 
-Variant::Variant(const RefPtr &p_resource) {
-
-	std::cout << "whatever this is..." << std::endl;
+Variant::Variant(const RefPtr &p_resource) :
+		variant_id(variant_counter++) {
+	std::cout << "constructing RefPtr id:" << variant_id << std::endl;
 }
 
-Variant::Variant(const RID &p_rid) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const RID &p_rid) :
+		variant_id(variant_counter++) {
 	type = _RID;
 	variant_rid_map.insert({ variant_id, p_rid });
 }
 
-Variant::Variant(const Object *p_object) {
-
-	std::cout << "whatever this is..." << std::endl;
+Variant::Variant(const Object *p_object) :
+		variant_id(variant_counter++) {
+	std::cout << "constructing Object* id:" << variant_id << std::endl;
 }
 
-Variant::Variant(const Dictionary &p_dictionary) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Dictionary &p_dictionary) :
+		variant_id(variant_counter++) {
 	type = DICTIONARY;
 	variant_dictionary_map.insert({ variant_id, p_dictionary });
 }
 
-Variant::Variant(const Array &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Array &p_array) :
+		variant_id(variant_counter++) {
 	type = ARRAY;
 	variant_array_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const PoolVector<Plane> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<Plane> &p_array) :
+		variant_id(variant_counter++) {
 	type = ARRAY;
 	variant_pool_vector_plane_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<Plane> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<Plane> &p_array) :
+		variant_id(variant_counter++) {
 	type = ARRAY;
 	variant_vector_plane_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<RID> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<RID> &p_array) :
+		variant_id(variant_counter++) {
 	type = ARRAY;
 	variant_vector_rid_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<Vector2> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<Vector2> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_vector2_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const PoolVector<uint8_t> &p_raw_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<uint8_t> &p_raw_array) :
+		variant_id(variant_counter++) {
 	type = POOL_BYTE_ARRAY;
-	variant_vector_uint8_map.insert({ variant_id, p_raw_array });
+	variant_pool_vector_uint8_map.insert({ variant_id, p_raw_array });
 }
 
-Variant::Variant(const PoolVector<int> &p_int_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<int> &p_int_array) :
+		variant_id(variant_counter++) {
 	type = POOL_INT_ARRAY;
 	variant_pool_vector_int_map.insert({ variant_id, p_int_array });
 }
 
-Variant::Variant(const PoolVector<real_t> &p_real_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<real_t> &p_real_array) :
+		variant_id(variant_counter++) {
 	type = POOL_REAL_ARRAY;
 	variant_pool_vector_real_map.insert({ variant_id, p_real_array });
 }
 
-Variant::Variant(const PoolVector<String> &p_string_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<String> &p_string_array) :
+		variant_id(variant_counter++) {
 	type = POOL_STRING_ARRAY;
 	variant_pool_vector_string_map.insert({ variant_id, p_string_array });
 }
 
-Variant::Variant(const PoolVector<Vector3> &p_vector3_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<Vector3> &p_vector3_array) :
+		variant_id(variant_counter++) {
 	type = POOL_VECTOR3_ARRAY;
 	variant_pool_vector_vector3_map.insert({ variant_id, p_vector3_array });
 }
 
-Variant::Variant(const PoolVector<Vector2> &p_vector2_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<Vector2> &p_vector2_array) :
+		variant_id(variant_counter++) {
 	type = POOL_VECTOR2_ARRAY;
 	variant_pool_vector_vector2_map.insert({ variant_id, p_vector2_array });
 }
 
-Variant::Variant(const PoolVector<Color> &p_color_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<Color> &p_color_array) :
+		variant_id(variant_counter++) {
 	type = POOL_COLOR_ARRAY;
 	variant_pool_vector_color_map.insert({ variant_id, p_color_array });
 }
 
-Variant::Variant(const PoolVector<Face3> &p_face_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const PoolVector<Face3> &p_face_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_pool_vector_face3_map.insert({ variant_id, p_face_array });
 }
 
 /* helpers */
 
-Variant::Variant(const Vector<Variant> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<Variant> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_variant_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<uint8_t> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<uint8_t> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_uint8_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<int> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<int> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_int_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<real_t> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<real_t> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_real_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<String> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<String> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
-	variant_vector_real_map.insert({ variant_id, p_array });
+	variant_vector_string_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<StringName> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<StringName> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_string_name_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<Vector3> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<Vector3> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_vector3_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const Vector<Color> &p_array) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Vector<Color> &p_array) :
+		variant_id(variant_counter++) {
 	type = NIL;
 	variant_vector_color_map.insert({ variant_id, p_array });
 }
 
-Variant::Variant(const IP_Address &p_address) {
-
+Variant::Variant(const IP_Address &p_address) :
+		variant_id(variant_counter++) {
 	type = STRING;
+	// TODO : What now?
 }
 
-Variant::Variant(const Variant &p_variant) {
-
-	variant_id = variant_counter++;
+Variant::Variant(const Variant &p_variant) :
+		variant_id(variant_counter++) {
 	type = NIL;
 }
 
 Variant::~Variant() {
-	variant_id = variant_counter++;
 	if (type != Variant::NIL) { // TODO : Since previous implementation does not delete Vectors...must change this
 		clear();
 	}
 }
 
-void Variant::operator=(const Variant &p_variant) {
+Variant &Variant::operator=(const Variant &p_variant) {
 
 	// TODO : Do we really not change the type of this?
 	if (this == &p_variant)
@@ -2556,6 +2548,8 @@ void Variant::operator=(const Variant &p_variant) {
 			CRASH_NOW();
 		}
 	}
+
+	return *this;
 }
 
 uint32_t Variant::hash() const {
@@ -2633,7 +2627,6 @@ uint32_t Variant::hash() const {
 			hash = hash_djb2_one_float(variant_quat_map[variant_id].y, hash);
 			hash = hash_djb2_one_float(variant_quat_map[variant_id].z, hash);
 			return hash_djb2_one_float(variant_quat_map[variant_id].w, hash);
-
 		} break;
 		case BASIS: {
 
@@ -2667,7 +2660,7 @@ uint32_t Variant::hash() const {
 		} break;
 		case _RID: {
 
-			return hash_djb2_one_64(reinterpret_cast<const RID *>(_data._mem)->get_id());
+			return hash_djb2_one_64(variant_rid_map[variant_id].get_id());
 		} break;
 		case OBJECT: {
 
@@ -2675,22 +2668,20 @@ uint32_t Variant::hash() const {
 		} break;
 		case NODE_PATH: {
 
-			return reinterpret_cast<const NodePath *>(_data._mem)->hash();
+			return variant_node_path_map[variant_id].hash();
 		} break;
 		case DICTIONARY: {
 
-			return reinterpret_cast<const Dictionary *>(_data._mem)->hash();
+			return variant_dictionary_map[variant_id].hash();
 
 		} break;
 		case ARRAY: {
 
-			const Array &arr = *reinterpret_cast<const Array *>(_data._mem);
-			return arr.hash();
-
+			return variant_array_map[variant_id].hash();
 		} break;
 		case POOL_BYTE_ARRAY: {
 
-			const PoolVector<uint8_t> &arr = *reinterpret_cast<const PoolVector<uint8_t> *>(_data._mem);
+			const PoolVector<uint8_t> &arr = variant_pool_vector_uint8_map[variant_id];
 			int len = arr.size();
 			if (likely(len)) {
 				PoolVector<uint8_t>::Read r = arr.read();
@@ -2702,7 +2693,7 @@ uint32_t Variant::hash() const {
 		} break;
 		case POOL_INT_ARRAY: {
 
-			const PoolVector<int> &arr = *reinterpret_cast<const PoolVector<int> *>(_data._mem);
+			const PoolVector<int> &arr = variant_pool_vector_int_map[variant_id];
 			int len = arr.size();
 			if (likely(len)) {
 				PoolVector<int>::Read r = arr.read();
@@ -2714,7 +2705,7 @@ uint32_t Variant::hash() const {
 		} break;
 		case POOL_REAL_ARRAY: {
 
-			const PoolVector<real_t> &arr = *reinterpret_cast<const PoolVector<real_t> *>(_data._mem);
+			const PoolVector<real_t> &arr = variant_pool_vector_real_map[variant_id];
 			int len = arr.size();
 
 			if (likely(len)) {
@@ -2728,7 +2719,7 @@ uint32_t Variant::hash() const {
 		case POOL_STRING_ARRAY: {
 
 			uint32_t hash = 5831;
-			const PoolVector<String> &arr = *reinterpret_cast<const PoolVector<String> *>(_data._mem);
+			const PoolVector<String> &arr = variant_pool_vector_string_map[variant_id];
 			int len = arr.size();
 
 			if (likely(len)) {
@@ -2744,10 +2735,10 @@ uint32_t Variant::hash() const {
 		case POOL_VECTOR2_ARRAY: {
 
 			uint32_t hash = 5831;
-			const PoolVector<Vector2> &arr = *reinterpret_cast<const PoolVector<Vector2> *>(_data._mem);
+			const PoolVector<Vector2> &arr = variant_pool_vector_vector2_map[variant_id];
 			int len = arr.size();
 
-			if (likely(len)) {
+			if (len) {
 				PoolVector<Vector2>::Read r = arr.read();
 
 				for (int i = 0; i < len; i++) {
@@ -2761,7 +2752,7 @@ uint32_t Variant::hash() const {
 		case POOL_VECTOR3_ARRAY: {
 
 			uint32_t hash = 5831;
-			const PoolVector<Vector3> &arr = *reinterpret_cast<const PoolVector<Vector3> *>(_data._mem);
+			const PoolVector<Vector3> &arr = variant_pool_vector_vector3_map[variant_id];
 			int len = arr.size();
 
 			if (len) {
@@ -2773,16 +2764,14 @@ uint32_t Variant::hash() const {
 					hash = hash_djb2_one_float(r[i].z, hash);
 				}
 			}
-
 			return hash;
 		} break;
 		case POOL_COLOR_ARRAY: {
 
 			uint32_t hash = 5831;
-			const PoolVector<Color> &arr = *reinterpret_cast<const PoolVector<Color> *>(_data._mem);
+			const PoolVector<Color> &arr = variant_pool_vector_color_map[variant_id];
 			int len = arr.size();
-
-			if (likely(len)) {
+			if (len) {
 				PoolVector<Color>::Read r = arr.read();
 
 				for (int i = 0; i < len; i++) {
@@ -2826,21 +2815,19 @@ uint32_t Variant::hash() const {
 			(hash_compare_scalar((p_lhs).b, (p_rhs).b)) && \
 			(hash_compare_scalar((p_lhs).a, (p_rhs).a))
 
-#define hash_compare_pool_array(p_lhs, p_rhs, p_type, p_compare_func)                   \
-	const PoolVector<p_type> &l = *reinterpret_cast<const PoolVector<p_type> *>(p_lhs); \
-	const PoolVector<p_type> &r = *reinterpret_cast<const PoolVector<p_type> *>(p_rhs); \
-                                                                                        \
-	if (l.size() != r.size())                                                           \
-		return false;                                                                   \
-                                                                                        \
-	PoolVector<p_type>::Read lr = l.read();                                             \
-	PoolVector<p_type>::Read rr = r.read();                                             \
-                                                                                        \
-	for (int i = 0; i < l.size(); ++i) {                                                \
-		if (!p_compare_func((lr[i]), (rr[i])))                                          \
-			return false;                                                               \
-	}                                                                                   \
-                                                                                        \
+#define hash_compare_pool_array(l, r, p_type, p_compare_func) \
+                                                              \
+	if (l.size() != r.size())                                 \
+		return false;                                         \
+                                                              \
+	PoolVector<p_type>::Read lr = l.read();                   \
+	PoolVector<p_type>::Read rr = r.read();                   \
+                                                              \
+	for (int i = 0; i < l.size(); ++i) {                      \
+		if (!p_compare_func((lr[i]), (rr[i])))                \
+			return false;                                     \
+	}                                                         \
+                                                              \
 	return true
 
 bool Variant::hash_compare(const Variant &p_variant) const {
@@ -2849,136 +2836,141 @@ bool Variant::hash_compare(const Variant &p_variant) const {
 
 	switch (type) {
 		case REAL: {
-			return hash_compare_scalar(_data._real, p_variant._data._real);
-		} break;
 
+			return hash_compare_scalar(variant_real_map[variant_id], variant_real_map[p_variant.variant_id]);
+		} break;
 		case VECTOR2: {
-			const Vector2 *l = reinterpret_cast<const Vector2 *>(_data._mem);
-			const Vector2 *r = reinterpret_cast<const Vector2 *>(p_variant._data._mem);
 
-			return hash_compare_vector2(*l, *r);
+			const Vector2 &lhs = variant_vector2_map[variant_id];
+			const Vector2 &rhs = variant_vector2_map[p_variant.variant_id];
+			return hash_compare_vector2(lhs, rhs);
 		} break;
-
 		case RECT2: {
-			const Rect2 *l = reinterpret_cast<const Rect2 *>(_data._mem);
-			const Rect2 *r = reinterpret_cast<const Rect2 *>(p_variant._data._mem);
 
-			return (hash_compare_vector2(l->position, r->position)) &&
-				   (hash_compare_vector2(l->size, r->size));
+			const Rect2 &lhs = variant_rect2_map[variant_id];
+			const Rect2 &rhs = variant_rect2_map[p_variant.variant_id];
+			return (hash_compare_vector2(lhs.position, rhs.position)) &&
+				   (hash_compare_vector2(lhs.size, rhs.size));
 		} break;
-
 		case TRANSFORM2D: {
-			Transform2D *l = _data._transform2d;
-			Transform2D *r = p_variant._data._transform2d;
 
+			Transform2D &lhs = variant_transform2d_map[variant_id];
+			Transform2D &rhs = variant_transform2d_map[p_variant.variant_id];
 			for (int i = 0; i < 3; i++) {
-				if (!(hash_compare_vector2(l->elements[i], r->elements[i])))
+				if (!(hash_compare_vector2(lhs.elements[i], rhs.elements[i]))) {
 					return false;
+				}
 			}
-
 			return true;
 		} break;
-
 		case VECTOR3: {
-			const Vector3 *l = reinterpret_cast<const Vector3 *>(_data._mem);
-			const Vector3 *r = reinterpret_cast<const Vector3 *>(p_variant._data._mem);
 
-			return hash_compare_vector3(*l, *r);
+			const Vector3 &lhs = variant_vector3_map[variant_id];
+			const Vector3 &rhs = variant_vector3_map[p_variant.variant_id];
+			return hash_compare_vector3(lhs, rhs);
 		} break;
-
 		case PLANE: {
-			const Plane *l = reinterpret_cast<const Plane *>(_data._mem);
-			const Plane *r = reinterpret_cast<const Plane *>(p_variant._data._mem);
 
-			return (hash_compare_vector3(l->normal, r->normal)) &&
-				   (hash_compare_scalar(l->d, r->d));
+			const Plane &lhs = variant_plane_map[variant_id];
+			const Plane &rhs = variant_plane_map[p_variant.variant_id];
+			return (hash_compare_vector3(lhs.normal, rhs.normal)) &&
+				   (hash_compare_scalar(lhs.d, rhs.d));
 		} break;
-
 		case AABB: {
-			const ::AABB *l = _data._aabb;
-			const ::AABB *r = p_variant._data._aabb;
 
-			return (hash_compare_vector3(l->position, r->position) &&
-					(hash_compare_vector3(l->size, r->size)));
-
+			const ::AABB &lhs = variant_aabb_map[variant_id];
+			const ::AABB &rhs = variant_aabb_map[p_variant.variant_id];
+			return (hash_compare_vector3(lhs.position, rhs.position) &&
+					(hash_compare_vector3(lhs.size, rhs.size)));
 		} break;
-
 		case QUAT: {
-			const Quat *l = reinterpret_cast<const Quat *>(_data._mem);
-			const Quat *r = reinterpret_cast<const Quat *>(p_variant._data._mem);
 
-			return hash_compare_quat(*l, *r);
+			const Quat &lhs = variant_quat_map[variant_id];
+			const Quat &rhs = variant_quat_map[p_variant.variant_id];
+			return hash_compare_quat(lhs, rhs);
 		} break;
-
 		case BASIS: {
-			const Basis *l = _data._basis;
-			const Basis *r = p_variant._data._basis;
 
+			const Basis &lhs = variant_basis_map[variant_id];
+			const Basis &rhs = variant_basis_map[p_variant.variant_id];
 			for (int i = 0; i < 3; i++) {
-				if (!(hash_compare_vector3(l->elements[i], r->elements[i])))
+				if (!(hash_compare_vector3(lhs.elements[i], rhs.elements[i]))) {
 					return false;
+				}
 			}
-
 			return true;
 		} break;
-
 		case TRANSFORM: {
-			const Transform *l = _data._transform;
-			const Transform *r = p_variant._data._transform;
 
+			const Transform &lhs = variant_transform_map[variant_id];
+			const Transform &rhs = variant_transform_map[p_variant.variant_id];
 			for (int i = 0; i < 3; i++) {
-				if (!(hash_compare_vector3(l->basis.elements[i], r->basis.elements[i])))
+				if (!(hash_compare_vector3(lhs.basis.elements[i], rhs.basis.elements[i])))
 					return false;
 			}
-
-			return hash_compare_vector3(l->origin, r->origin);
+			return hash_compare_vector3(lhs.origin, rhs.origin);
 		} break;
 
 		case COLOR: {
-			const Color *l = reinterpret_cast<const Color *>(_data._mem);
-			const Color *r = reinterpret_cast<const Color *>(p_variant._data._mem);
 
-			return hash_compare_color(*l, *r);
+			const Color &lhs = variant_color_map[variant_id];
+			const Color &rhs = variant_color_map[p_variant.variant_id];
+			return hash_compare_color(lhs, rhs);
 		} break;
-
 		case ARRAY: {
-			const Array &l = *(reinterpret_cast<const Array *>(_data._mem));
-			const Array &r = *(reinterpret_cast<const Array *>(p_variant._data._mem));
 
-			if (l.size() != r.size())
+			const Array &lhs = variant_array_map[variant_id];
+			const Array &rhs = variant_array_map[p_variant.variant_id];
+			if (lhs.size() != rhs.size()) {
 				return false;
-
-			for (int i = 0; i < l.size(); ++i) {
-				if (!l[i].hash_compare(r[i]))
-					return false;
 			}
-
+			for (int i = 0; i < lhs.size(); ++i) {
+				if (!lhs[i].hash_compare(rhs[i])) {
+					return false;
+				}
+			}
 			return true;
 		} break;
-
 		case POOL_REAL_ARRAY: {
-			hash_compare_pool_array(_data._mem, p_variant._data._mem, real_t, hash_compare_scalar);
-		} break;
 
+			hash_compare_pool_array(
+					variant_pool_vector_real_map[variant_id],
+					variant_pool_vector_real_map[p_variant.variant_id],
+					real_t,
+					hash_compare_scalar);
+		} break;
 		case POOL_VECTOR2_ARRAY: {
-			hash_compare_pool_array(_data._mem, p_variant._data._mem, Vector2, hash_compare_vector2);
-		} break;
 
+			hash_compare_pool_array(
+					variant_pool_vector_vector2_map[variant_id],
+					variant_pool_vector_vector2_map[p_variant.variant_id],
+					Vector2,
+					hash_compare_vector2);
+		} break;
 		case POOL_VECTOR3_ARRAY: {
-			hash_compare_pool_array(_data._mem, p_variant._data._mem, Vector3, hash_compare_vector3);
+
+			hash_compare_pool_array(
+					variant_pool_vector_vector3_map[variant_id],
+					variant_pool_vector_vector3_map[p_variant.variant_id],
+					Vector3,
+					hash_compare_vector3);
 		} break;
 
 		case POOL_COLOR_ARRAY: {
-			hash_compare_pool_array(_data._mem, p_variant._data._mem, Color, hash_compare_color);
-		} break;
 
+			hash_compare_pool_array(
+					variant_pool_vector_color_map[variant_id],
+					variant_pool_vector_color_map[p_variant.variant_id],
+					Color,
+					hash_compare_color);
+		} break;
 		default:
+
 			bool v;
 			Variant r;
 			evaluate(OP_EQUAL, *this, p_variant, r, v);
 			return r;
 	}
-
 	return false;
 }
 
@@ -3168,4 +3160,14 @@ String vformat(const String &p_text, const Variant &p1, const Variant &p2, const
 	ERR_FAIL_COND_V(error, String());
 
 	return fmt;
+}
+
+Variant::ObjData &Variant::_get_obj() {
+
+	return variant_objdata_map[variant_id];
+}
+
+const Variant::ObjData &Variant::_get_obj() const {
+
+	return variant_objdata_map[variant_id];
 }
