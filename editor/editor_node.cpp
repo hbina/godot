@@ -832,7 +832,7 @@ void EditorNode::_get_scene_metadata(const String &p_file) {
 	for (List<String>::Element *E = esl.front(); E; E = E->next()) {
 
 		Variant st = cf->get_value("editor_states", E->get());
-		if (st.get_type()) {
+		if (st.get_type() != Variant::NIL) {
 			md[E->get()] = st;
 		}
 	}
@@ -2488,12 +2488,6 @@ void EditorNode::_menu_option_confirm(int p_option, bool p_confirmed) {
 
 			screenshot_timer->start();
 		} break;
-		case EDITOR_OPEN_SCREENSHOT: {
-
-			bool is_checked = settings_menu->get_popup()->is_item_checked(settings_menu->get_popup()->get_item_index(EDITOR_OPEN_SCREENSHOT));
-			settings_menu->get_popup()->set_item_checked(settings_menu->get_popup()->get_item_index(EDITOR_OPEN_SCREENSHOT), !is_checked);
-			EditorSettings::get_singleton()->set_project_metadata("screenshot_options", "open_screenshot", !is_checked);
-		} break;
 		case SETTINGS_PICK_MAIN_SCENE: {
 
 			file->set_mode(EditorFileDialog::MODE_OPEN_FILE);
@@ -2541,8 +2535,6 @@ void EditorNode::_menu_option_confirm(int p_option, bool p_confirmed) {
 			restart_editor();
 		} break;
 		default: {
-			if (p_option >= IMPORT_PLUGIN_BASE) {
-			}
 		}
 	}
 }
@@ -2555,7 +2547,7 @@ void EditorNode::_screenshot(bool p_use_utc) {
 	String name = "editor_screenshot_" + OS::get_singleton()->get_iso_date_time(p_use_utc).replace(":", "") + ".png";
 	NodePath path = String("user://") + name;
 	_save_screenshot(path);
-	if (EditorSettings::get_singleton()->get_project_metadata("screenshot_options", "open_screenshot", true)) {
+	if (EditorSettings::get_singleton()->get("interface/editor/automatically_open_screenshots")) {
 		OS::get_singleton()->shell_open(String("file://") + ProjectSettings::get_singleton()->globalize_path(path));
 	}
 }
@@ -3488,6 +3480,69 @@ void EditorNode::stop_child_process() {
 	_menu_option_confirm(RUN_STOP, false);
 }
 
+Ref<Script> EditorNode::get_object_custom_type_base(const Object *p_object) const {
+	ERR_FAIL_COND_V(!p_object, NULL);
+
+	Ref<Script> script = p_object->get_script();
+
+	if (script.is_valid()) {
+		// Uncommenting would break things! Consider adding a parameter if you need it.
+		// StringName name = EditorNode::get_editor_data().script_class_get_name(base_script->get_path());
+		// if (name != StringName())
+		// 	return name;
+
+		// should probably be deprecated in 4.x
+		StringName base = script->get_instance_base_type();
+		if (base != StringName() && EditorNode::get_editor_data().get_custom_types().has(base)) {
+			const Vector<EditorData::CustomType> &types = EditorNode::get_editor_data().get_custom_types()[base];
+
+			Ref<Script> base_script = script;
+			while (base_script.is_valid()) {
+				for (int i = 0; i < types.size(); ++i) {
+					if (types[i].script == base_script) {
+						return types[i].script;
+					}
+				}
+				base_script = base_script->get_base_script();
+			}
+		}
+	}
+
+	return NULL;
+}
+
+StringName EditorNode::get_object_custom_type_name(const Object *p_object) const {
+	ERR_FAIL_COND_V(!p_object, StringName());
+
+	Ref<Script> script = p_object->get_script();
+	if (script.is_null() && p_object->is_class("Script")) {
+		script = p_object;
+	}
+
+	if (script.is_valid()) {
+		Ref<Script> base_script = script;
+		while (base_script.is_valid()) {
+			StringName name = EditorNode::get_editor_data().script_class_get_name(base_script->get_path());
+			if (name != StringName())
+				return name;
+
+			// should probably be deprecated in 4.x
+			StringName base = base_script->get_instance_base_type();
+			if (base != StringName() && EditorNode::get_editor_data().get_custom_types().has(base)) {
+				const Vector<EditorData::CustomType> &types = EditorNode::get_editor_data().get_custom_types()[base];
+				for (int i = 0; i < types.size(); ++i) {
+					if (types[i].script == base_script) {
+						return types[i].name;
+					}
+				}
+			}
+			base_script = base_script->get_base_script();
+		}
+	}
+
+	return StringName();
+}
+
 Ref<Texture> EditorNode::get_object_icon(const Object *p_object, const String &p_fallback) const {
 	ERR_FAIL_COND_V(!p_object || !gui_base, NULL);
 
@@ -3497,23 +3552,24 @@ Ref<Texture> EditorNode::get_object_icon(const Object *p_object, const String &p
 	}
 
 	if (script.is_valid()) {
-		StringName name = EditorNode::get_editor_data().script_class_get_name(script->get_path());
-		String icon_path = EditorNode::get_editor_data().script_class_get_icon_path(name);
-		if (icon_path.length())
-			return ResourceLoader::load(icon_path);
+		Ref<Script> base_script = script;
+		while (base_script.is_valid()) {
+			StringName name = EditorNode::get_editor_data().script_class_get_name(base_script->get_path());
+			String icon_path = EditorNode::get_editor_data().script_class_get_icon_path(name);
+			if (icon_path.length())
+				return ResourceLoader::load(icon_path);
 
-		// should probably be deprecated in 4.x
-		StringName base = script->get_instance_base_type();
-		if (base != StringName()) {
-			const Map<String, Vector<EditorData::CustomType> > &p_map = EditorNode::get_editor_data().get_custom_types();
-			for (const Map<String, Vector<EditorData::CustomType> >::Element *E = p_map.front(); E; E = E->next()) {
-				const Vector<EditorData::CustomType> &ct = E->value();
-				for (int i = 0; i < ct.size(); ++i) {
-					if (ct[i].name == base && ct[i].icon.is_valid()) {
-						return ct[i].icon;
+			// should probably be deprecated in 4.x
+			StringName base = base_script->get_instance_base_type();
+			if (base != StringName() && EditorNode::get_editor_data().get_custom_types().has(base)) {
+				const Vector<EditorData::CustomType> &types = EditorNode::get_editor_data().get_custom_types()[base];
+				for (int i = 0; i < types.size(); ++i) {
+					if (types[i].script == base_script && types[i].icon.is_valid()) {
+						return types[i].icon;
 					}
 				}
 			}
+			base_script = base_script->get_base_script();
 		}
 	}
 
@@ -5501,6 +5557,8 @@ EditorNode::EditorNode() {
 	EDITOR_DEF_RST("interface/scene_tabs/restore_scenes_on_load", false);
 	EDITOR_DEF_RST("interface/scene_tabs/show_thumbnail_on_hover", true);
 	EDITOR_DEF_RST("interface/inspector/capitalize_properties", true);
+	EDITOR_DEF_RST("interface/inspector/default_float_step", 0.001);
+	EditorSettings::get_singleton()->add_property_hint(PropertyInfo(Variant::REAL, "interface/inspector/default_float_step", PROPERTY_HINT_EXP_RANGE, "0,1,0"));
 	EDITOR_DEF_RST("interface/inspector/disable_folding", false);
 	EDITOR_DEF_RST("interface/inspector/auto_unfold_foreign_scenes", true);
 	EDITOR_DEF("interface/inspector/horizontal_vector2_editing", false);
@@ -5938,16 +5996,13 @@ EditorNode::EditorNode() {
 	p->add_child(editor_layouts);
 	editor_layouts->connect("id_pressed", this, "_layout_menu_option");
 	p->add_submenu_item(TTR("Editor Layout"), "Layouts");
+	p->add_separator();
 #ifdef OSX_ENABLED
 	p->add_shortcut(ED_SHORTCUT("editor/take_screenshot", TTR("Take Screenshot"), KEY_MASK_CMD | KEY_F12), EDITOR_SCREENSHOT);
 #else
 	p->add_shortcut(ED_SHORTCUT("editor/take_screenshot", TTR("Take Screenshot"), KEY_MASK_CTRL | KEY_F12), EDITOR_SCREENSHOT);
 #endif
 	p->set_item_tooltip(p->get_item_count() - 1, TTR("Screenshots are stored in the Editor Data/Settings Folder."));
-	p->add_check_shortcut(ED_SHORTCUT("editor/open_screenshot", TTR("Automatically Open Screenshots")), EDITOR_OPEN_SCREENSHOT);
-	bool is_open_screenshot = EditorSettings::get_singleton()->get_project_metadata("screenshot_options", "open_screenshot", true);
-	p->set_item_checked(p->get_item_count() - 1, is_open_screenshot);
-	p->set_item_tooltip(p->get_item_count() - 1, TTR("Open in an external image editor."));
 #ifdef OSX_ENABLED
 	p->add_shortcut(ED_SHORTCUT("editor/fullscreen_mode", TTR("Toggle Fullscreen"), KEY_MASK_CMD | KEY_MASK_CTRL | KEY_F), SETTINGS_TOGGLE_FULLSCREEN);
 #else

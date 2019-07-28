@@ -364,7 +364,9 @@ Variant StreamPeer::get_var(bool p_allow_objects) {
 	get_data(var.ptrw(), len);
 
 	Variant ret;
-	decode_variant(ret, var.ptr(), len, NULL, p_allow_objects);
+	Error err = decode_variant(ret, var.ptr(), len, NULL, p_allow_objects);
+	ERR_FAIL_COND_V(err != OK, Variant());
+
 	return ret;
 }
 
