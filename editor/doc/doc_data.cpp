@@ -616,9 +616,7 @@ void DocData::generate(bool p_basic_types) {
 
 			lang->get_public_functions(&minfo);
 
-			for (List<MethodInfo>::Element *E = minfo.front(); E; E = E->next()) {
-
-				MethodInfo &mi = E->get();
+			for (const MethodInfo &mi : minfo) {
 				MethodDoc md;
 				md.name = mi.name;
 
@@ -638,7 +636,7 @@ void DocData::generate(bool p_basic_types) {
 					int darg_idx = j - (mi.arguments.size() - mi.default_arguments.size());
 
 					if (darg_idx >= 0) {
-						Variant default_arg = E->get().default_arguments[darg_idx];
+						Variant default_arg = E.default_arguments[darg_idx];
 						ad.default_value = default_arg.get_construct_string();
 					}
 
@@ -651,11 +649,11 @@ void DocData::generate(bool p_basic_types) {
 			List<Pair<String, Variant> > cinfo;
 			lang->get_public_constants(&cinfo);
 
-			for (List<Pair<String, Variant> >::Element *E = cinfo.front(); E; E = E->next()) {
+			for (const Pair<String, Variant> &E : cinfo) {
 
 				ConstantDoc cd;
-				cd.name = E->get().first;
-				cd.value = E->get().second;
+				cd.name = E.first;
+				cd.value = E.second;
 				c.constants.push_back(cd);
 			}
 		}
