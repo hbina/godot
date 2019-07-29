@@ -1644,7 +1644,6 @@ void EditorNode::_edit_current() {
 		scene_tree_dock->set_selected(NULL);
 		get_inspector()->edit(NULL);
 		node_dock->set_node(NULL);
-		inspector_dock->update(NULL);
 
 		_display_top_editors(false);
 
@@ -1792,7 +1791,7 @@ void EditorNode::_edit_current() {
 		}
 	}
 
-	inspector_dock->update(current_obj);
+	inspector_dock->update();
 	inspector_dock->update_keying();
 }
 

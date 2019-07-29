@@ -81,7 +81,8 @@ void InspectorDock::_menu_option(int p_option) {
 
 		case OBJECT_UNIQUE_RESOURCES: {
 			editor_data->apply_changes_in_editors();
-			if (inspector->get_edited_object()) {
+			const Object * o_bject = inspector->get_edited_object();
+			if (o_bject) {
 				List<PropertyInfo> props;
 				inspector->get_edited_object()->get_property_list(&props);
 				Map<RES, RES> duplicates;
@@ -389,8 +390,9 @@ void InspectorDock::set_warning(const String &p_message) {
 void InspectorDock::clear() {
 }
 
-void InspectorDock::update(Object *p_object) {
+void InspectorDock::update() {
 
+	const Object *p_object = inspector->get_edited_object();
 	EditorHistory *editor_history = EditorNode::get_singleton()->get_editor_history();
 	backward_button->set_disabled(editor_history->is_at_beginning());
 	forward_button->set_disabled(editor_history->is_at_end());
