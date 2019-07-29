@@ -73,7 +73,7 @@ class InspectorDock : public VBoxContainer {
 
 	EditorInspector *inspector;
 
-	Object *current;
+	// Object *current;
 
 	ToolButton *backward_button;
 	ToolButton *forward_button;

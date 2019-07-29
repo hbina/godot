@@ -60,37 +60,37 @@ void InspectorDock::_menu_option(int p_option) {
 		} break;
 
 		case OBJECT_REQUEST_HELP: {
-			if (current) {
+			if (inspector->get_edited_object()) {
 				editor->set_visible_editor(EditorNode::EDITOR_SCRIPT);
-				emit_signal("request_help", current->get_class());
+				emit_signal("request_help", inspector->get_edited_object()->get_class());
 			}
 		} break;
 
 		case OBJECT_COPY_PARAMS: {
 			editor_data->apply_changes_in_editors();
-			if (current)
-				editor_data->copy_object_params(current);
+			if (inspector->get_edited_object())
+				editor_data->copy_object_params(inspector->get_edited_object());
 		} break;
 
 		case OBJECT_PASTE_PARAMS: {
 			editor_data->apply_changes_in_editors();
-			if (current)
-				editor_data->paste_object_params(current);
+			if (inspector->get_edited_object())
+				editor_data->paste_object_params(inspector->get_edited_object());
 			editor_data->get_undo_redo().clear_history();
 		} break;
 
 		case OBJECT_UNIQUE_RESOURCES: {
 			editor_data->apply_changes_in_editors();
-			if (current) {
+			if (inspector->get_edited_object()) {
 				List<PropertyInfo> props;
-				current->get_property_list(&props);
+				inspector->get_edited_object()->get_property_list(&props);
 				Map<RES, RES> duplicates;
 				for (List<PropertyInfo>::Element *E = props.front(); E; E = E->next()) {
 
 					if (!(E->get().usage & PROPERTY_USAGE_STORAGE))
 						continue;
 
-					Variant v = current->get(E->get().name);
+					Variant v = inspector->get_edited_object()->get(E->get().name);
 					if (v.is_ref()) {
 						REF ref = v;
 						if (ref.is_valid()) {
@@ -103,7 +103,7 @@ void InspectorDock::_menu_option(int p_option) {
 								}
 								res = duplicates[res];
 
-								current->set(E->get().name, res);
+								inspector->get_edited_object()->set(E->get().name, res);
 								editor->get_inspector()->update_property(E->get().name);
 							}
 						}
@@ -114,23 +114,23 @@ void InspectorDock::_menu_option(int p_option) {
 			editor_data->get_undo_redo().clear_history();
 
 			editor->get_editor_plugins_over()->edit(NULL);
-			editor->get_editor_plugins_over()->edit(current);
+			editor->get_editor_plugins_over()->edit(inspector->get_edited_object());
 
 		} break;
 
 		default: {
 			if (p_option >= OBJECT_METHOD_BASE) {
-				ERR_FAIL_COND(!current);
+				ERR_FAIL_COND(!inspector->get_edited_object());
 
 				int idx = p_option - OBJECT_METHOD_BASE;
 
 				List<MethodInfo> methods;
-				current->get_method_list(&methods);
+				inspector->get_edited_object()->get_method_list(&methods);
 
 				ERR_FAIL_INDEX(idx, methods.size());
 				String name = methods[idx].name;
 
-				current->call(name);
+				inspector->get_edited_object()->call(name);
 			}
 		}
 	}
@@ -400,8 +400,6 @@ void InspectorDock::update(Object *p_object) {
 		history_menu->set_disabled(false);
 	}
 	editor_path->update_path();
-
-	current = p_object;
 
 	if (!p_object) {
 		object_menu->set_disabled(true);
