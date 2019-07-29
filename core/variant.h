@@ -69,7 +69,7 @@ typedef PoolVector<Vector2> PoolVector2Array;
 typedef PoolVector<Vector3> PoolVector3Array;
 typedef PoolVector<Color> PoolColorArray;
 
-// Temporary workaround until c++11 alignas()
+// Temporary workaround until c++17 alignas()
 #ifdef __GNUC__
 #define GCC_ALIGNED_8 __attribute__((aligned(8)))
 #else

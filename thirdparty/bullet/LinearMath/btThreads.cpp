@@ -53,7 +53,7 @@ subject to the following restrictions:
 #if __cplusplus >= 201103L
 
 // for anything claiming full C++11 compliance, use C++11 atomics
-// on GCC or Clang you need to compile with -std=c++11
+// on GCC or Clang you need to compile with -std=c++17
 #define USE_CPP11_ATOMICS 1
 
 #elif defined(_MSC_VER)
