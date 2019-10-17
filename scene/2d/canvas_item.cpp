@@ -326,7 +326,6 @@ CanvasItemMaterial::CanvasItemMaterial() :
 	set_particles_anim_loop(false);
 
 	current_key.key = 0;
-	current_key.invalid_key = 1;
 	_queue_shader_change();
 }
 

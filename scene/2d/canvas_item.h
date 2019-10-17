@@ -71,7 +71,6 @@ private:
 			uint32_t blend_mode : 4;
 			uint32_t light_mode : 4;
 			uint32_t particles_animation : 1;
-			uint32_t invalid_key : 1;
 		};
 
 		uint32_t key;
