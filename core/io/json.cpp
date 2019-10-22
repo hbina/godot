@@ -32,7 +32,7 @@
 
 #include "core/print_string.h"
 
-const char *JSON::tk_name[TK_MAX] = {
+const char *JSON::tk_name[static_cast<int>(TokenType::TK_MAX)] = {
 	"'{'",
 	"'}'",
 	"'['",
@@ -135,42 +135,42 @@ Error JSON::_get_token(const CharType *p_str, int &index, int p_len, Token &r_to
 				break;
 			};
 			case 0: {
-				r_token.type = TK_EOF;
+				r_token.type = TokenType::TK_EOF;
 				return OK;
 			} break;
 			case '{': {
 
-				r_token.type = TK_CURLY_BRACKET_OPEN;
+				r_token.type = TokenType::TK_CURLY_BRACKET_OPEN;
 				index++;
 				return OK;
 			};
 			case '}': {
 
-				r_token.type = TK_CURLY_BRACKET_CLOSE;
+				r_token.type = TokenType::TK_CURLY_BRACKET_CLOSE;
 				index++;
 				return OK;
 			};
 			case '[': {
 
-				r_token.type = TK_BRACKET_OPEN;
+				r_token.type = TokenType::TK_BRACKET_OPEN;
 				index++;
 				return OK;
 			};
 			case ']': {
 
-				r_token.type = TK_BRACKET_CLOSE;
+				r_token.type = TokenType::TK_BRACKET_CLOSE;
 				index++;
 				return OK;
 			};
 			case ':': {
 
-				r_token.type = TK_COLON;
+				r_token.type = TokenType::TK_COLON;
 				index++;
 				return OK;
 			};
 			case ',': {
 
-				r_token.type = TK_COMMA;
+				r_token.type = TokenType::TK_COMMA;
 				index++;
 				return OK;
 			};
@@ -256,7 +256,7 @@ Error JSON::_get_token(const CharType *p_str, int &index, int p_len, Token &r_to
 					index++;
 				}
 
-				r_token.type = TK_STRING;
+				r_token.type = TokenType::TK_STRING;
 				r_token.value = str;
 				return OK;
 
@@ -273,7 +273,7 @@ Error JSON::_get_token(const CharType *p_str, int &index, int p_len, Token &r_to
 					const CharType *rptr;
 					double number = String::to_double(&p_str[index], &rptr);
 					index += (rptr - &p_str[index]);
-					r_token.type = TK_NUMBER;
+					r_token.type = TokenType::TK_NUMBER;
 					r_token.value = number;
 					return OK;
 
@@ -287,7 +287,7 @@ Error JSON::_get_token(const CharType *p_str, int &index, int p_len, Token &r_to
 						index++;
 					}
 
-					r_token.type = TK_IDENTIFIER;
+					r_token.type = TokenType::TK_IDENTIFIER;
 					r_token.value = id;
 					return OK;
 				} else {
@@ -303,7 +303,7 @@ Error JSON::_get_token(const CharType *p_str, int &index, int p_len, Token &r_to
 
 Error JSON::_parse_value(Variant &value, Token &token, const CharType *p_str, int &index, int p_len, int &line, String &r_err_str) {
 
-	if (token.type == TK_CURLY_BRACKET_OPEN) {
+	if (token.type == TokenType::TK_CURLY_BRACKET_OPEN) {
 
 		Dictionary d;
 		Error err = _parse_object(d, p_str, index, p_len, line, r_err_str);
@@ -311,7 +311,7 @@ Error JSON::_parse_value(Variant &value, Token &token, const CharType *p_str, in
 			return err;
 		value = d;
 		return OK;
-	} else if (token.type == TK_BRACKET_OPEN) {
+	} else if (token.type == TokenType::TK_BRACKET_OPEN) {
 
 		Array a;
 		Error err = _parse_array(a, p_str, index, p_len, line, r_err_str);
@@ -320,7 +320,7 @@ Error JSON::_parse_value(Variant &value, Token &token, const CharType *p_str, in
 		value = a;
 		return OK;
 
-	} else if (token.type == TK_IDENTIFIER) {
+	} else if (token.type == TokenType::TK_IDENTIFIER) {
 
 		String id = token.value;
 		if (id == "true")
@@ -335,16 +335,16 @@ Error JSON::_parse_value(Variant &value, Token &token, const CharType *p_str, in
 		}
 		return OK;
 
-	} else if (token.type == TK_NUMBER) {
+	} else if (token.type == TokenType::TK_NUMBER) {
 
 		value = token.value;
 		return OK;
-	} else if (token.type == TK_STRING) {
+	} else if (token.type == TokenType::TK_STRING) {
 
 		value = token.value;
 		return OK;
 	} else {
-		r_err_str = "Expected value, got " + String(tk_name[token.type]) + ".";
+		r_err_str = "Expected value, got " + String(tk_name[static_cast<int>(token.type)]) + ".";
 		return ERR_PARSE_ERROR;
 	}
 }
@@ -360,14 +360,14 @@ Error JSON::_parse_array(Array &array, const CharType *p_str, int &index, int p_
 		if (err != OK)
 			return err;
 
-		if (token.type == TK_BRACKET_CLOSE) {
+		if (token.type == TokenType::TK_BRACKET_CLOSE) {
 
 			return OK;
 		}
 
 		if (need_comma) {
 
-			if (token.type != TK_COMMA) {
+			if (token.type != TokenType::TK_COMMA) {
 
 				r_err_str = "Expected ','";
 				return ERR_PARSE_ERROR;
@@ -404,14 +404,14 @@ Error JSON::_parse_object(Dictionary &object, const CharType *p_str, int &index,
 			if (err != OK)
 				return err;
 
-			if (token.type == TK_CURLY_BRACKET_CLOSE) {
+			if (token.type == TokenType::TK_CURLY_BRACKET_CLOSE) {
 
 				return OK;
 			}
 
 			if (need_comma) {
 
-				if (token.type != TK_COMMA) {
+				if (token.type != TokenType::TK_COMMA) {
 
 					r_err_str = "Expected '}' or ','";
 					return ERR_PARSE_ERROR;
@@ -421,7 +421,7 @@ Error JSON::_parse_object(Dictionary &object, const CharType *p_str, int &index,
 				}
 			}
 
-			if (token.type != TK_STRING) {
+			if (token.type != TokenType::TK_STRING) {
 
 				r_err_str = "Expected key";
 				return ERR_PARSE_ERROR;
@@ -431,7 +431,7 @@ Error JSON::_parse_object(Dictionary &object, const CharType *p_str, int &index,
 			err = _get_token(p_str, index, p_len, token, line, r_err_str);
 			if (err != OK)
 				return err;
-			if (token.type != TK_COLON) {
+			if (token.type != TokenType::TK_COLON) {
 
 				r_err_str = "Expected ':'";
 				return ERR_PARSE_ERROR;

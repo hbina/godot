@@ -35,7 +35,7 @@
 
 class JSON {
 
-	enum TokenType {
+	enum class TokenType {
 		TK_CURLY_BRACKET_OPEN,
 		TK_CURLY_BRACKET_CLOSE,
 		TK_BRACKET_OPEN,
@@ -49,7 +49,7 @@ class JSON {
 		TK_MAX
 	};
 
-	enum Expecting {
+	enum class Expecting {
 
 		EXPECT_OBJECT,
 		EXPECT_OBJECT_KEY,
@@ -63,7 +63,7 @@ class JSON {
 		Variant value;
 	};
 
-	static const char *tk_name[TK_MAX];
+	static const char *tk_name[static_cast<int>(TokenType::TK_MAX)];
 
 	static String _print_var(const Variant &p_var, const String &p_indent, int p_cur_indent, bool p_sort_keys);
 

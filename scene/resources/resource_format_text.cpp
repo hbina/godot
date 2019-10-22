@@ -59,7 +59,7 @@ Error ResourceInteractiveLoaderText::_parse_sub_resource_dummy(DummyReadData *p_
 
 	VariantParser::Token token;
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_NUMBER) {
+	if (token.type != VariantParser::TokenType::TK_NUMBER) {
 		r_err_str = "Expected number (sub-resource index)";
 		return ERR_PARSE_ERROR;
 	}
@@ -77,7 +77,7 @@ Error ResourceInteractiveLoaderText::_parse_sub_resource_dummy(DummyReadData *p_
 	r_res = p_data->resource_map[index];
 
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_PARENTHESIS_CLOSE) {
+	if (token.type != VariantParser::TokenType::TK_PARENTHESIS_CLOSE) {
 		r_err_str = "Expected ')'";
 		return ERR_PARSE_ERROR;
 	}
@@ -89,7 +89,7 @@ Error ResourceInteractiveLoaderText::_parse_ext_resource_dummy(DummyReadData *p_
 
 	VariantParser::Token token;
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_NUMBER) {
+	if (token.type != VariantParser::TokenType::TK_NUMBER) {
 		r_err_str = "Expected number (sub-resource index)";
 		return ERR_PARSE_ERROR;
 	}
@@ -101,7 +101,7 @@ Error ResourceInteractiveLoaderText::_parse_ext_resource_dummy(DummyReadData *p_
 	r_res = p_data->rev_external_resources[id];
 
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_PARENTHESIS_CLOSE) {
+	if (token.type != VariantParser::TokenType::TK_PARENTHESIS_CLOSE) {
 		r_err_str = "Expected ')'";
 		return ERR_PARSE_ERROR;
 	}
@@ -113,7 +113,7 @@ Error ResourceInteractiveLoaderText::_parse_sub_resource(VariantParser::Stream *
 
 	VariantParser::Token token;
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_NUMBER) {
+	if (token.type != VariantParser::TokenType::TK_NUMBER) {
 		r_err_str = "Expected number (sub-resource index)";
 		return ERR_PARSE_ERROR;
 	}
@@ -135,7 +135,7 @@ Error ResourceInteractiveLoaderText::_parse_sub_resource(VariantParser::Stream *
 	}
 
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_PARENTHESIS_CLOSE) {
+	if (token.type != VariantParser::TokenType::TK_PARENTHESIS_CLOSE) {
 		r_err_str = "Expected ')'";
 		return ERR_PARSE_ERROR;
 	}
@@ -147,7 +147,7 @@ Error ResourceInteractiveLoaderText::_parse_ext_resource(VariantParser::Stream *
 
 	VariantParser::Token token;
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_NUMBER) {
+	if (token.type != VariantParser::TokenType::TK_NUMBER) {
 		r_err_str = "Expected number (sub-resource index)";
 		return ERR_PARSE_ERROR;
 	}
@@ -179,7 +179,7 @@ Error ResourceInteractiveLoaderText::_parse_ext_resource(VariantParser::Stream *
 	}
 
 	VariantParser::get_token(p_stream, token, line, r_err_str);
-	if (token.type != VariantParser::TK_PARENTHESIS_CLOSE) {
+	if (token.type != VariantParser::TokenType::TK_PARENTHESIS_CLOSE) {
 		r_err_str = "Expected ')'";
 		return ERR_PARSE_ERROR;
 	}

@@ -72,7 +72,7 @@ Vector3 Quat::get_euler_xyz() const {
 // (ax,ay,az), where ax is the angle of rotation around x axis,
 // and similar for other axes.
 // This implementation uses YXZ convention (Z is the first rotation).
-void Quat::set_euler_yxz(const Vector3 &p_euler) {
+constexpr void Quat::set_euler_yxz(const Vector3 &p_euler) {
 	real_t half_a1 = p_euler.y * 0.5;
 	real_t half_a2 = p_euler.x * 0.5;
 	real_t half_a3 = p_euler.z * 0.5;

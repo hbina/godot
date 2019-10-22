@@ -83,7 +83,7 @@ public:
 		ParseResourceFunc sub_func;
 	};
 
-	enum TokenType {
+	enum class TokenType {
 		TK_CURLY_BRACKET_OPEN,
 		TK_CURLY_BRACKET_CLOSE,
 		TK_BRACKET_OPEN,
@@ -103,7 +103,7 @@ public:
 		TK_MAX
 	};
 
-	enum Expecting {
+	enum class Expecting {
 
 		EXPECT_OBJECT,
 		EXPECT_OBJECT_KEY,
@@ -124,7 +124,7 @@ public:
 	};
 
 private:
-	static const char *tk_name[TK_MAX];
+	static const char *tk_name[static_cast<int>(TokenType::TK_MAX)];
 
 	template <class T>
 	static Error _parse_construct(Stream *p_stream, Vector<T> &r_construct, int &line, String &r_err_str);

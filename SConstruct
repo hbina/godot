@@ -313,7 +313,7 @@ if selected_platform in platform_list:
 
     # Enable C++11 support
     if not env.msvc:
-        env.Append(CXXFLAGS=['-std=c++11'])
+        env.Append(CXXFLAGS=['-std=c++17'])
 
     # Configure compiler warnings
     if env.msvc:
