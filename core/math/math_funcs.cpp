@@ -99,36 +99,6 @@ double Math::dectime(double p_value, double p_amount, double p_step) {
 	return val * sgn;
 }
 
-double Math::ease(double p_x, double p_c) {
-	if (p_x < 0)
-		p_x = 0;
-	else if (p_x > 1.0)
-		p_x = 1.0;
-	if (p_c > 0) {
-		if (p_c < 1.0) {
-			return 1.0 - Math::pow(1.0 - p_x, 1.0 / p_c);
-		} else {
-			return Math::pow(p_x, p_c);
-		}
-	} else if (p_c < 0) {
-		//inout ease
-
-		if (p_x < 0.5) {
-			return Math::pow(p_x * 2.0, -p_c) * 0.5;
-		} else {
-			return (1.0 - Math::pow(1.0 - (p_x - 0.5) * 2.0, -p_c)) * 0.5 + 0.5;
-		}
-	} else
-		return 0; // no ease (raw)
-}
-
-double Math::stepify(double p_value, double p_step) {
-	if (p_step != 0) {
-		p_value = Math::floor(p_value / p_step + 0.5) * p_step;
-	}
-	return p_value;
-}
-
 uint32_t Math::larger_prime(uint32_t p_val) {
 
 	static const uint32_t primes[] = {

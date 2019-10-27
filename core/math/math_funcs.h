@@ -40,6 +40,7 @@
 
 #include <float.h>
 #include <math.h>
+#include <type_traits>
 
 class Math {
 
@@ -50,77 +51,75 @@ public:
 
 	static const uint64_t RANDOM_MAX = 0xFFFFFFFF;
 
-	constexpr static double sin(double p_x) { return gcem::sin(p_x); }
-	constexpr static float sin(float p_x) { return gcem::sin(p_x); }
+	template <typename T>
+	constexpr static T sin(const T p_x) { return gcem::sin(p_x); }
 
-	constexpr static double cos(double p_x) { return gcem::cos(p_x); }
-	constexpr static float cos(float p_x) { return gcem::cos(p_x); }
+	template <typename T>
+	constexpr static T cos(const T p_x) { return gcem::cos(p_x); }
 
-	constexpr static double tan(double p_x) { return gcem::tan(p_x); }
-	constexpr static float tan(float p_x) { return gcem::tan(p_x); }
+	template <typename T>
+	constexpr static T tan(const T p_x) { return gcem::tan(p_x); }
 
-	constexpr static double sinh(double p_x) { return gcem::sin(p_x); }
-	constexpr static float sinh(float p_x) { return gcem::sinh(p_x); }
+	template <typename T>
+	constexpr static T sinh(const T p_x) { return gcem::sin(p_x); }
 
-	constexpr static float sinc(float p_x) { return p_x == 0 ? 1 : gcem::sin(p_x) / p_x; }
-	constexpr static double sinc(double p_x) { return p_x == 0 ? 1 : gcem::sin(p_x) / p_x; }
+	template <typename T>
+	constexpr static T sinc(const T p_x) { return p_x == 0 ? 1 : gcem::sin(p_x) / p_x; }
 
-	constexpr static float sincn(float p_x) { return sinc(Math_PI * p_x); }
-	constexpr static double sincn(double p_x) { return sinc(Math_PI * p_x); }
+	template <typename T>
+	constexpr static T sincn(T p_x) { return sinc(Math_PI * p_x); }
 
-	constexpr static double cosh(double p_x) { return gcem::cosh(p_x); }
-	constexpr static float cosh(float p_x) { return gcem::cosh(p_x); }
+	template <typename T>
+	constexpr static T cosh(const T &p_x) { return gcem::cosh(p_x); }
 
-	constexpr static double tanh(double p_x) { return gcem::tanh(p_x); }
-	constexpr static float tanh(float p_x) { return gcem::tanh(p_x); }
+	template <typename T>
+	constexpr static T tanh(const T &p_x) { return gcem::tanh(p_x); }
 
-	constexpr static double asin(double p_x) { return gcem::asin(p_x); }
-	constexpr static float asin(float p_x) { return gcem::asin(p_x); }
+	template <typename T>
+	constexpr static T asin(const T &p_x) { return gcem::asin(p_x); }
 
-	constexpr static double acos(double p_x) { return gcem::acos(p_x); }
-	constexpr static float acos(float p_x) { return gcem::acos(p_x); }
+	template <typename T>
+	constexpr static T acos(const T &p_x) { return gcem::acos(p_x); }
 
-	constexpr static double atan(double p_x) { return gcem::atan(p_x); }
-	constexpr static float atan(float p_x) { return gcem::atan(p_x); }
+	template <typename T>
+	constexpr static T atan(const T &p_x) { return gcem::atan(p_x); }
 
-	constexpr static double atan2(double p_y, double p_x) { return gcem::atan2(p_y, p_x); }
-	constexpr static float atan2(float p_y, float p_x) { return gcem::atan2(p_y, p_x); }
+	template <typename T>
+	constexpr static T atan2(const T &p_y, const T &p_x) { return gcem::atan2(p_y, p_x); }
 
-	constexpr static double sqrt(double p_x) { return gcem::sqrt(p_x); }
-	constexpr static float sqrt(float p_x) { return gcem::sqrt(p_x); }
+	template <typename T>
+	constexpr static T sqrt(const T &p_x) { return gcem::sqrt(p_x); }
 
 	// TODO :: 	It should be possible to make this constexpr
 	//			We just have to make PR in gcem
 	static double fmod(double p_x, double p_y) { return ::fmod(p_x, p_y); }
 	static float fmod(float p_x, float p_y) { return ::fmodf(p_x, p_y); }
 
-	constexpr static double floor(double p_x) { return gcem::floor(p_x); }
-	constexpr static float floor(float p_x) { return gcem::floor(p_x); }
+	template <typename T>
+	constexpr static T floor(const T &p_x) { return gcem::floor(p_x); }
 
-	constexpr static double ceil(double p_x) { return gcem::ceil(p_x); }
-	constexpr static float ceil(float p_x) { return gcem::ceil(p_x); }
+	template <typename T>
+	constexpr static T ceil(const T &p_x) { return gcem::ceil(p_x); }
 
-	constexpr static double pow(double p_x, double p_y) { return gcem::pow(p_x, p_y); }
-	constexpr static float pow(float p_x, float p_y) { return gcem::pow(p_x, p_y); }
+	template <typename T, typename T2>
+	constexpr static auto pow(const T &p_x, const T2 &p_y) { return gcem::pow(p_x, p_y); }
 
-	constexpr static double log(double p_x) { return gcem::log(p_x); }
-	constexpr static float log(float p_x) { return gcem::log(p_x); }
+	template <typename T>
+	constexpr static T log(const T &p_x) { return gcem::log(p_x); }
 
-	constexpr static double exp(double p_x) { return gcem::exp(p_x); }
-	constexpr static float exp(float p_x) { return gcem::exp(p_x); }
+	template <typename T>
+	constexpr static T exp(const T &p_x) { return gcem::exp(p_x); }
 
-	constexpr static bool is_nan(double p_val) { return gcem::internal::is_nan(p_val); }
+	template <typename T>
+	constexpr static bool is_nan(const T &p_val) { return gcem::internal::is_nan(p_val); }
 
-	constexpr static bool is_nan(float p_val) { return gcem::internal::is_nan(p_val); }
+	template <typename T>
+	constexpr static bool is_inf(const T &p_val) { return gcem::internal::is_inf(p_val); }
 
-	constexpr static bool is_inf(double p_val) { return gcem::internal::is_inf(p_val); }
+	template <typename T>
+	constexpr static T abs(const T &g) { return gcem::abs(g); }
 
-	constexpr static bool is_inf(float p_val) { return gcem::internal::is_inf(p_val); }
-
-	constexpr static double abs(double g) { return gcem::abs(g); }
-	constexpr static float abs(float g) { return gcem::abs(g); }
-	constexpr static int abs(int g) { return gcem::abs(g); }
-
+	// FIXME :: Once `constexpr fmod` is enabled, make this constexpr as well...
 	static double fposmod(double p_x, double p_y) {
 		double value = Math::fmod(p_x, p_y);
 		if ((value < 0 && p_y > 0) || (value > 0 && p_y < 0)) {
@@ -138,23 +137,24 @@ public:
 		return value;
 	}
 
-	constexpr static int posmod(int p_x, int p_y) {
-		int value = p_x % p_y;
+	template <typename T>
+	constexpr static T posmod(const T &p_x, const T &p_y) {
+		T value = p_x % p_y;
 		if ((value < 0 && p_y > 0) || (value > 0 && p_y < 0)) {
 			value += p_y;
 		}
 		return value;
 	}
 
-	constexpr static double deg2rad(double p_y) { return p_y * Math_PI / 180.0; }
-	constexpr static float deg2rad(float p_y) { return p_y * Math_PI / 180.0; }
+	template <typename T>
+	constexpr static T deg2rad(const T &p_y) { return p_y * Math_PI / 180.0; }
 
-	constexpr static double rad2deg(double p_y) { return p_y * 180.0 / Math_PI; }
-	constexpr static float rad2deg(float p_y) { return p_y * 180.0 / Math_PI; }
+	template <typename T>
+	constexpr static T rad2deg(const T &p_y) { return p_y * 180.0 / Math_PI; }
 
-	constexpr static double lerp(double p_from, double p_to, double p_weight) { return p_from + (p_to - p_from) * p_weight; }
-	constexpr static float lerp(float p_from, float p_to, float p_weight) { return p_from + (p_to - p_from) * p_weight; }
+	constexpr static double lerp(const double &p_from, const double &p_to, const double &p_weight) { return p_from + (p_to - p_from) * p_weight; }
 
+	// FIXME :: Once `constexpr fmod` is implemented, make this constexpr as well...
 	static double lerp_angle(double p_from, double p_to, double p_weight) {
 		double difference = fmod(p_to - p_from, Math_TAU);
 		double distance = fmod(2.0 * difference, Math_TAU) - difference;
@@ -172,47 +172,70 @@ public:
 	static double range_lerp(double p_value, double p_istart, double p_istop, double p_ostart, double p_ostop) { return Math::lerp(p_ostart, p_ostop, Math::inverse_lerp(p_istart, p_istop, p_value)); }
 	static float range_lerp(float p_value, float p_istart, float p_istop, float p_ostart, float p_ostop) { return Math::lerp(p_ostart, p_ostop, Math::inverse_lerp(p_istart, p_istop, p_value)); }
 
-	constexpr static double smoothstep(double p_from, double p_to, double p_weight) {
+	template <typename T>
+	constexpr static T smoothstep(const T p_from, const T p_to, const T p_weight) {
 		if (is_equal_approx(p_from, p_to)) return p_from;
-		double x = CLAMP((p_weight - p_from) / (p_to - p_from), 0.0, 1.0);
+		T x = CLAMP((p_weight - p_from) / (p_to - p_from), 0.0, 1.0);
 		return x * x * (3.0 - 2.0 * x);
 	}
-	constexpr static float smoothstep(float p_from, float p_to, float p_weight) {
-		if (is_equal_approx(p_from, p_to)) return p_from;
-		float x = CLAMP((p_weight - p_from) / (p_to - p_from), 0.0f, 1.0f);
-		return x * x * (3.0f - 2.0f * x);
-	}
 
-	constexpr static double move_toward(double p_from, double p_to, double p_delta) { return gcem::abs(p_to - p_from) <= p_delta ? p_to : p_from + SGN(p_to - p_from) * p_delta; }
-	constexpr static float move_toward(float p_from, float p_to, float p_delta) { return gcem::abs(p_to - p_from) <= p_delta ? p_to : p_from + SGN(p_to - p_from) * p_delta; }
+	template <typename T>
+	constexpr static T move_toward(const T p_from, const T p_to, const T p_delta) { return gcem::abs(p_to - p_from) <= p_delta ? p_to : p_from + SGN(p_to - p_from) * p_delta; }
 
-	constexpr static double linear2db(double p_linear) { return Math::log(p_linear) * 8.6858896380650365530225783783321; }
-	constexpr static float linear2db(float p_linear) { return Math::log(p_linear) * 8.6858896380650365530225783783321; }
+	template <typename T>
+	constexpr static T linear2db(const T p_linear) { return Math::log(p_linear) * 8.6858896380650365530225783783321; }
 
-	constexpr static double db2linear(double p_db) { return Math::exp(p_db * 0.11512925464970228420089957273422); }
-	constexpr static float db2linear(float p_db) { return Math::exp(p_db * 0.11512925464970228420089957273422); }
+	template <typename T>
+	constexpr static T db2linear(const T p_db) { return Math::exp(p_db * 0.11512925464970228420089957273422); }
 
-	constexpr static double round(double p_val) { return (p_val >= 0) ? Math::floor(p_val + 0.5) : -Math::floor(-p_val + 0.5); }
-	constexpr static float round(float p_val) { return (p_val >= 0) ? Math::floor(p_val + 0.5) : -Math::floor(-p_val + 0.5); }
+	template <typename T>
+	constexpr static T round(const T p_val) { return (p_val >= 0) ? Math::floor(p_val + 0.5) : -Math::floor(-p_val + 0.5); }
 
-	constexpr static int64_t wrapi(int64_t value, int64_t min, int64_t max) {
-		int64_t range = max - min;
+	template <typename T>
+	constexpr static T wrapi(const T value, const T min, const T max) {
+		T range = max - min;
 		return range == 0 ? min : min + ((((value - min) % range) + range) % range);
 	}
-	constexpr static double wrapf(double value, double min, double max) {
-		double range = max - min;
-		return is_zero_approx(range) ? min : value - (range * Math::floor((value - min) / range));
-	}
-	constexpr static float wrapf(float value, float min, float max) {
-		float range = max - min;
+
+	template <typename T>
+	constexpr static T wrapf(const T value, const T min, const T max) {
+		T range = max - min;
 		return is_zero_approx(range) ? min : value - (range * Math::floor((value - min) / range));
 	}
 
-	// double only, as these functions are mainly used by the editor and not performance-critical,
-	static double ease(double p_x, double p_c);
+	// NOTE :: This function is not a template because the calculation inside is done in `double`
+	constexpr static double ease(double p_x, const double p_c) {
+		if (p_x < 0)
+			p_x = 0;
+		else if (p_x > 1.0)
+			p_x = 1.0;
+		if (p_c > 0) {
+			if (p_c < 1.0) {
+				return 1.0 - Math::pow(1.0 - p_x, 1.0 / p_c);
+			} else {
+				return Math::pow(p_x, p_c);
+			}
+		} else if (p_c < 0) {
+			//inout ease
+
+			if (p_x < 0.5) {
+				return Math::pow(p_x * 2.0, -p_c) * 0.5;
+			} else {
+				return (1.0 - Math::pow(1.0 - (p_x - 0.5) * 2.0, -p_c)) * 0.5 + 0.5;
+			}
+		} else
+			return 0.0; // no ease (raw)
+	};
+
 	static int step_decimals(double p_step);
 	static int range_step_decimals(double p_step);
-	static double stepify(double p_value, double p_step);
+
+	constexpr static double stepify(double p_value, double p_step) {
+		if (p_step != 0) {
+			p_value = Math::floor(p_value / p_step + 0.5) * p_step;
+		}
+		return p_value;
+	};
 	static double dectime(double p_value, double p_amount, double p_step);
 
 	static uint32_t larger_prime(uint32_t p_val);
@@ -267,11 +290,11 @@ public:
 	}
 
 	// TODO :: do we still need this?
-	constexpr static float absf(float g) {
+	constexpr static float absf(const float &g) {
 		return gcem::abs(g);
 	}
 
-	constexpr static double absd(double g) {
+	constexpr static double absd(const double &g) {
 		return gcem::abs(g);
 	}
 
@@ -375,11 +398,12 @@ public:
 		return hf;
 	}
 
-	static float snap_scalar(float p_offset, float p_step, float p_target) {
+	constexpr static double snap_scalar(const double &p_offset, const double &p_step, const double &p_target) {
 		return p_step != 0 ? Math::stepify(p_target - p_offset, p_step) + p_offset : p_target;
 	}
 
-	static float snap_scalar_seperation(float p_offset, float p_step, float p_target, float p_separation) {
+	template <typename T>
+	constexpr static T snap_scalar_seperation(const T &p_offset, const T &p_step, const T &p_target, const T &p_separation) {
 		if (p_step != 0) {
 			float a = Math::stepify(p_target - p_offset, p_step + p_separation) + p_offset;
 			float b = a;
