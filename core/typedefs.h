@@ -32,6 +32,7 @@
 #define TYPEDEFS_H
 
 #include <stddef.h>
+#include <algorithm>
 
 /**
  * Basic definitions and simple functions to be used everywhere.
@@ -133,19 +134,9 @@ T *_nullptr() {
 #define CLAMP(m_a, m_min, m_max) (((m_a) < (m_min)) ? (m_min) : (((m_a) > (m_max)) ? m_max : m_a))
 #endif
 
-/** Generic swap template */
 #ifndef SWAP
-
-#define SWAP(m_x, m_y) __swap_tmpl((m_x), (m_y))
-template <class T>
-inline void __swap_tmpl(T &x, T &y) {
-
-	T aux = x;
-	x = y;
-	y = aux;
-}
-
-#endif //swap
+#define SWAP(m_a, m_b) std::swap((m_a), (m_b))
+#endif
 
 /* clang-format off */
 #define HEX2CHR(m_hex) \
@@ -172,7 +163,7 @@ inline void __swap_tmpl(T &x, T &y) {
 
 /** Function to find the next power of 2 to an integer */
 
-static _FORCE_INLINE_ unsigned int next_power_of_2(unsigned int x) {
+constexpr static uint32_t next_power_of_2(uint32_t x) {
 
 	--x;
 	x |= x >> 1;
@@ -184,7 +175,7 @@ static _FORCE_INLINE_ unsigned int next_power_of_2(unsigned int x) {
 	return ++x;
 }
 
-static _FORCE_INLINE_ unsigned int previous_power_of_2(unsigned int x) {
+constexpr static uint32_t previous_power_of_2(uint32_t x) {
 
 	x |= x >> 1;
 	x |= x >> 2;
@@ -194,18 +185,28 @@ static _FORCE_INLINE_ unsigned int previous_power_of_2(unsigned int x) {
 	return x - (x >> 1);
 }
 
-static _FORCE_INLINE_ unsigned int closest_power_of_2(unsigned int x) {
+constexpr static uint32_t closest_power_of_2(uint32_t x) {
 
-	unsigned int nx = next_power_of_2(x);
-	unsigned int px = previous_power_of_2(x);
+	uint32_t nx = next_power_of_2(x);
+	uint32_t px = previous_power_of_2(x);
 	return (nx - x) > (x - px) ? px : nx;
 }
 
 // We need this definition inside the function below.
-static inline int get_shift_from_power_of_2(unsigned int p_pixel);
+static inline int get_shift_from_power_of_2(uint32_t p_pixel) {
+	// return a GL_TEXTURE_SIZE_ENUM
+
+	for (uint32_t i = 0; i < 32; i++) {
+
+		if (p_pixel == (uint32_t)(1 << i))
+			return i;
+	}
+
+	return -1;
+}
 
 template <class T>
-static _FORCE_INLINE_ T nearest_power_of_2_templated(T x) {
+static T nearest_power_of_2_templated(T x) {
 
 	--x;
 
@@ -223,8 +224,7 @@ static _FORCE_INLINE_ T nearest_power_of_2_templated(T x) {
 }
 
 /** Function to find the nearest (bigger) power of 2 to an integer */
-
-static inline unsigned int nearest_shift(unsigned int p_number) {
+static inline uint32_t nearest_shift(uint32_t p_number) {
 
 	for (int i = 30; i >= 0; i--) {
 
@@ -233,19 +233,6 @@ static inline unsigned int nearest_shift(unsigned int p_number) {
 	}
 
 	return 0;
-}
-
-/** get a shift value from a power of 2 */
-static inline int get_shift_from_power_of_2(unsigned int p_pixel) {
-	// return a GL_TEXTURE_SIZE_ENUM
-
-	for (unsigned int i = 0; i < 32; i++) {
-
-		if (p_pixel == (unsigned int)(1 << i))
-			return i;
-	}
-
-	return -1;
 }
 
 /** Swap 16 bits value for endianness */
