@@ -1442,10 +1442,10 @@ Error Main::setup2(Thread::ID p_main_tid_override) {
 		}
 	}
 #ifdef TOOLS_ENABLED
-	ClassDB::set_current_api(ClassDB::API_EDITOR);
+	ClassDB::set_current_api(ClassDB::APIType::API_EDITOR);
 	EditorNode::register_editor_types();
 
-	ClassDB::set_current_api(ClassDB::API_CORE);
+	ClassDB::set_current_api(ClassDB::APIType::API_CORE);
 
 #endif
 
@@ -1496,10 +1496,10 @@ Error Main::setup2(Thread::ID p_main_tid_override) {
 	_start_success = true;
 	locale = String();
 
-	ClassDB::set_current_api(ClassDB::API_NONE); //no more api is registered at this point
+	ClassDB::set_current_api(ClassDB::APIType::API_NONE); //no more api is registered at this point
 
-	print_verbose("CORE API HASH: " + uitos(ClassDB::get_api_hash(ClassDB::API_CORE)));
-	print_verbose("EDITOR API HASH: " + uitos(ClassDB::get_api_hash(ClassDB::API_EDITOR)));
+	print_verbose("CORE API HASH: " + uitos(ClassDB::get_api_hash(ClassDB::APIType::API_CORE)));
+	print_verbose("EDITOR API HASH: " + uitos(ClassDB::get_api_hash(ClassDB::APIType::API_EDITOR)));
 	MAIN_PRINT("Main: Done");
 
 	return OK;

@@ -284,11 +284,11 @@ void godot_icall_Internal_GodotMainIteration() {
 }
 
 uint64_t godot_icall_Internal_GetCoreApiHash() {
-	return ClassDB::get_api_hash(ClassDB::API_CORE);
+	return ClassDB::get_api_hash(ClassDB::APIType::API_CORE);
 }
 
 uint64_t godot_icall_Internal_GetEditorApiHash() {
-	return ClassDB::get_api_hash(ClassDB::API_EDITOR);
+	return ClassDB::get_api_hash(ClassDB::APIType::API_EDITOR);
 }
 
 MonoBoolean godot_icall_Internal_IsAssembliesReloadingNeeded() {

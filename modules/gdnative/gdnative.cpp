@@ -351,9 +351,9 @@ bool GDNative::initialize() {
 	static uint64_t no_api_hash = 0;
 
 	if (!(core_api_hash || editor_api_hash || no_api_hash)) {
-		core_api_hash = ClassDB::get_api_hash(ClassDB::API_CORE);
-		editor_api_hash = ClassDB::get_api_hash(ClassDB::API_EDITOR);
-		no_api_hash = ClassDB::get_api_hash(ClassDB::API_NONE);
+		core_api_hash = ClassDB::get_api_hash(ClassDB::APIType::API_CORE);
+		editor_api_hash = ClassDB::get_api_hash(ClassDB::APIType::API_EDITOR);
+		no_api_hash = ClassDB::get_api_hash(ClassDB::APIType::API_NONE);
 	}
 
 	godot_gdnative_init_options options;

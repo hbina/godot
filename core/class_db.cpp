@@ -242,7 +242,7 @@ MethodDefinition D_METHOD(const char *p_name, const char *p_arg1, const char *p_
 
 #endif
 
-ClassDB::APIType ClassDB::current_api = API_CORE;
+ClassDB::APIType ClassDB::current_api = APIType::API_CORE;
 
 void ClassDB::set_current_api(APIType p_api) {
 
@@ -260,7 +260,7 @@ HashMap<StringName, StringName> ClassDB::compat_classes;
 
 ClassDB::ClassInfo::ClassInfo() {
 
-	api = API_NONE;
+	api = APIType::API_NONE;
 	class_ptr = nullptr;
 	creation_func = nullptr;
 	inherits_ptr = nullptr;
@@ -364,7 +364,7 @@ ClassDB::APIType ClassDB::get_api_type(const StringName &p_class) {
 
 	ClassInfo *ti = classes.getptr(p_class);
 
-	ERR_FAIL_COND_V_MSG(!ti, API_NONE, "Cannot get class '" + String(p_class) + "'.");
+	ERR_FAIL_COND_V_MSG(!ti, APIType::API_NONE, "Cannot get class '" + String(p_class) + "'.");
 	return ti->api;
 }
 
@@ -554,7 +554,7 @@ Object *ClassDB::instance(const StringName &p_class) {
 		ERR_FAIL_COND_V(!ti->creation_func, nullptr);
 	}
 #ifdef TOOLS_ENABLED
-	if (ti->api == API_EDITOR && !Engine::get_singleton()->is_editor_hint()) {
+	if (ti->api == APIType::API_EDITOR && !Engine::get_singleton()->is_editor_hint()) {
 		ERR_PRINT("Class '" + String(p_class) + "' can only be instantiated by editor.");
 		return nullptr;
 	}
@@ -568,7 +568,7 @@ bool ClassDB::can_instance(const StringName &p_class) {
 	ClassInfo *ti = classes.getptr(p_class);
 	ERR_FAIL_COND_V_MSG(!ti, false, "Cannot get class '" + String(p_class) + "'.");
 #ifdef TOOLS_ENABLED
-	if (ti->api == API_EDITOR && !Engine::get_singleton()->is_editor_hint()) {
+	if (ti->api == APIType::API_EDITOR && !Engine::get_singleton()->is_editor_hint()) {
 		return false;
 	}
 #endif

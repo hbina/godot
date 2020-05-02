@@ -762,7 +762,7 @@ void BindingsGenerator::_generate_method_icalls(const TypeInterface &p_itype) {
 		List<InternalCall>::Element *match = method_icalls.find(im_icall);
 
 		if (match) {
-			if (p_itype.api_type != ClassDB::API_EDITOR)
+			if (p_itype.api_type != ClassDB::APIType::API_EDITOR)
 				match->get().editor_only = false;
 			method_icalls_map.insert(&E->get(), &match->get());
 		} else {
@@ -917,7 +917,7 @@ Error BindingsGenerator::generate_cs_core_project(const String &p_proj_dir) {
 	for (OrderedHashMap<StringName, TypeInterface>::Element E = obj_types.front(); E; E = E.next()) {
 		const TypeInterface &itype = E.get();
 
-		if (itype.api_type == ClassDB::API_EDITOR)
+		if (itype.api_type == ClassDB::APIType::API_EDITOR)
 			continue;
 
 		String output_file = path::join(godot_objects_gen_dir, itype.proxy_name + ".cs");
@@ -1020,7 +1020,7 @@ Error BindingsGenerator::generate_cs_editor_project(const String &p_proj_dir) {
 	for (OrderedHashMap<StringName, TypeInterface>::Element E = obj_types.front(); E; E = E.next()) {
 		const TypeInterface &itype = E.get();
 
-		if (itype.api_type != ClassDB::API_EDITOR)
+		if (itype.api_type != ClassDB::APIType::API_EDITOR)
 			continue;
 
 		String output_file = path::join(godot_objects_gen_dir, itype.proxy_name + ".cs");
@@ -1156,12 +1156,12 @@ Error BindingsGenerator::_generate_cs_type(const TypeInterface &itype, const Str
 		// Some Godot.Object assertions
 		CRASH_COND(itype.cname != name_cache.type_Object);
 		CRASH_COND(!itype.is_instantiable);
-		CRASH_COND(itype.api_type != ClassDB::API_CORE);
+		CRASH_COND(itype.api_type != ClassDB::APIType::API_CORE);
 		CRASH_COND(itype.is_reference);
 		CRASH_COND(itype.is_singleton);
 	}
 
-	List<InternalCall> &custom_icalls = itype.api_type == ClassDB::API_EDITOR ? editor_custom_icalls : core_custom_icalls;
+	List<InternalCall> &custom_icalls = itype.api_type == ClassDB::APIType::API_EDITOR ? editor_custom_icalls : core_custom_icalls;
 
 	_log("Generating %s.cs...\n", itype.proxy_name.utf8().get_data());
 
@@ -1325,7 +1325,7 @@ Error BindingsGenerator::_generate_cs_type(const TypeInterface &itype, const Str
 		output.append("\";\n");
 
 		output.append(INDENT2 "internal static IntPtr " BINDINGS_PTR_FIELD " = ");
-		output.append(itype.api_type == ClassDB::API_EDITOR ? BINDINGS_CLASS_NATIVECALLS_EDITOR : BINDINGS_CLASS_NATIVECALLS);
+		output.append(itype.api_type == ClassDB::APIType::API_EDITOR ? BINDINGS_CLASS_NATIVECALLS_EDITOR : BINDINGS_CLASS_NATIVECALLS);
 		output.append("." ICALL_PREFIX);
 		output.append(itype.name);
 		output.append(SINGLETON_ICALL_SUFFIX "();\n");
@@ -1347,7 +1347,7 @@ Error BindingsGenerator::_generate_cs_type(const TypeInterface &itype, const Str
 			// The engine will initialize the pointer field of the managed side before calling the constructor
 			// This is why we only allocate a new native object from the constructor if the pointer field is not set
 			output.append(")\n" OPEN_BLOCK_L2 "if (" BINDINGS_PTR_FIELD " == IntPtr.Zero)\n" INDENT4 BINDINGS_PTR_FIELD " = ");
-			output.append(itype.api_type == ClassDB::API_EDITOR ? BINDINGS_CLASS_NATIVECALLS_EDITOR : BINDINGS_CLASS_NATIVECALLS);
+			output.append(itype.api_type == ClassDB::APIType::API_EDITOR ? BINDINGS_CLASS_NATIVECALLS_EDITOR : BINDINGS_CLASS_NATIVECALLS);
 			output.append("." + ctor_method);
 			output.append("(this);\n" CLOSE_BLOCK_L2);
 		} else {
@@ -1875,12 +1875,12 @@ Error BindingsGenerator::generate_glue(const String &p_output_dir) {
 			// Some Object assertions
 			CRASH_COND(itype.cname != name_cache.type_Object);
 			CRASH_COND(!itype.is_instantiable);
-			CRASH_COND(itype.api_type != ClassDB::API_CORE);
+			CRASH_COND(itype.api_type != ClassDB::APIType::API_CORE);
 			CRASH_COND(itype.is_reference);
 			CRASH_COND(itype.is_singleton);
 		}
 
-		List<InternalCall> &custom_icalls = itype.api_type == ClassDB::API_EDITOR ? editor_custom_icalls : core_custom_icalls;
+		List<InternalCall> &custom_icalls = itype.api_type == ClassDB::APIType::API_EDITOR ? editor_custom_icalls : core_custom_icalls;
 
 		OS::get_singleton()->print("Generating %s...\n", itype.name.utf8().get_data());
 
@@ -2337,7 +2337,7 @@ bool BindingsGenerator::_populate_object_type_interfaces() {
 
 		ClassDB::APIType api_type = ClassDB::get_api_type(type_cname);
 
-		if (api_type == ClassDB::API_NONE) {
+		if (api_type == ClassDB::APIType::API_NONE) {
 			class_list.pop_front();
 			continue;
 		}

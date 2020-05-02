@@ -95,7 +95,7 @@ static _FORCE_INLINE_ const char *D_METHOD(const char *m_name, ...) {
 
 class ClassDB {
 public:
-	enum APIType {
+	enum class APIType {
 		API_CORE,
 		API_EDITOR,
 		API_NONE

@@ -484,7 +484,7 @@ class BindingsGenerator {
 
 		TypeInterface() {
 
-			api_type = ClassDB::API_NONE;
+			api_type = ClassDB::APIType::API_NONE;
 
 			is_enum = false;
 			is_object_type = false;
@@ -524,7 +524,7 @@ class BindingsGenerator {
 			im_type_out = p_im_type_out;
 			im_sig = p_im_sig;
 			unique_sig = p_unique_sig;
-			editor_only = api_type == ClassDB::API_EDITOR;
+			editor_only = api_type == ClassDB::APIType::API_EDITOR;
 		}
 
 		inline bool operator==(const InternalCall &p_a) const {

@@ -514,7 +514,7 @@ void EditorFeatureProfileManager::_fill_classes_from(TreeItem *p_parent, const S
 
 	for (List<StringName>::Element *E = child_classes.front(); E; E = E->next()) {
 		String name = E->get();
-		if (name.begins_with("Editor") || ClassDB::get_api_type(name) != ClassDB::API_CORE) {
+		if (name.begins_with("Editor") || ClassDB::get_api_type(name) != ClassDB::APIType::API_CORE) {
 			continue;
 		}
 		_fill_classes_from(class_item, name, p_selected);

@@ -109,9 +109,9 @@ void CSharpLanguage::init() {
 
 #ifdef DEBUG_METHODS_ENABLED
 	if (OS::get_singleton()->get_cmdline_args().find("--class-db-json")) {
-		class_db_api_to_json("user://class_db_api.json", ClassDB::API_CORE);
+		class_db_api_to_json("user://class_db_api.json", ClassDB::APIType::API_CORE);
 #ifdef TOOLS_ENABLED
-		class_db_api_to_json("user://class_db_api_editor.json", ClassDB::API_EDITOR);
+		class_db_api_to_json("user://class_db_api_editor.json", ClassDB::APIType::API_EDITOR);
 #endif
 	}
 #endif

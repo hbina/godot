@@ -114,9 +114,9 @@ void register_visual_script_types() {
 	register_visual_script_expression_node();
 
 #ifdef TOOLS_ENABLED
-	ClassDB::set_current_api(ClassDB::API_EDITOR);
+	ClassDB::set_current_api(ClassDB::APIType::API_EDITOR);
 	ClassDB::register_class<_VisualScriptEditor>();
-	ClassDB::set_current_api(ClassDB::API_CORE);
+	ClassDB::set_current_api(ClassDB::APIType::API_CORE);
 	vs_editor_singleton = memnew(_VisualScriptEditor);
 	Engine::get_singleton()->add_singleton(Engine::Singleton("VisualScriptEditor", _VisualScriptEditor::get_singleton()));
 
