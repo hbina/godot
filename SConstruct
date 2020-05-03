@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 
+from platform_methods import run_in_subprocess
+import version
+import gles_builders
+import methods
+import sys
+import pickle
+import os
+import glob
 EnsureSConsVersion(3, 0, 0)
 EnsurePythonVersion(3, 5)
 
 # System
-import glob
-import os
-import pickle
-import sys
 
 # Local
-import methods
-import gles_builders
-import version
-from platform_methods import run_in_subprocess
 
 # Scan possible build platforms
 
@@ -109,15 +109,18 @@ opts = Variables(customs, ARGUMENTS)
 
 # Target build options
 opts.Add("arch", "Platform-dependent architecture (arm/arm64/x86/x64/mips/...)", "")
-opts.Add(EnumVariable("bits", "Target platform bits", "default", ("default", "32", "64")))
+opts.Add(EnumVariable("bits", "Target platform bits",
+                      "default", ("default", "32", "64")))
 opts.Add("p", "Platform (alias for 'platform')", "")
 opts.Add("platform", "Target platform (%s)" % ("|".join(platform_list),), "")
-opts.Add(EnumVariable("target", "Compilation target", "debug", ("debug", "release_debug", "release")))
+opts.Add(EnumVariable("target", "Compilation target",
+                      "debug", ("debug", "release_debug", "release")))
 opts.Add(EnumVariable("optimize", "Optimization type", "speed", ("speed", "size")))
 
 opts.Add(BoolVariable("tools", "Build the tools (a.k.a. the Godot editor)", True))
 opts.Add(BoolVariable("use_lto", "Use link-time optimization", False))
-opts.Add(BoolVariable("use_precise_math_checks", "Math checks use very precise epsilon (debug option)", False))
+opts.Add(BoolVariable("use_precise_math_checks",
+                      "Math checks use very precise epsilon (debug option)", False))
 
 # Components
 opts.Add(BoolVariable("deprecated", "Enable deprecated features", True))
@@ -126,41 +129,61 @@ opts.Add(BoolVariable("xaudio2", "Enable the XAudio2 audio driver", False))
 
 # Advanced options
 opts.Add(BoolVariable("verbose", "Enable verbose output for the compilation", False))
-opts.Add(BoolVariable("progress", "Show a progress indicator during compilation", True))
-opts.Add(EnumVariable("warnings", "Level of compilation warnings", "all", ("extra", "all", "moderate", "no")))
-opts.Add(BoolVariable("werror", "Treat compiler warnings as errors", not env_base.stable_release))
-opts.Add(BoolVariable("dev", "If yes, alias for verbose=yes warnings=extra werror=yes", False))
-opts.Add("extra_suffix", "Custom extra suffix added to the base filename of all generated binary files", "")
+opts.Add(BoolVariable(
+    "progress", "Show a progress indicator during compilation", True))
+opts.Add(EnumVariable("warnings", "Level of compilation warnings",
+                      "all", ("extra", "all", "moderate", "no")))
+opts.Add(BoolVariable("werror", "Treat compiler warnings as errors",
+                      not env_base.stable_release))
+opts.Add(BoolVariable(
+    "dev", "If yes, alias for verbose=yes warnings=extra werror=yes", False))
+opts.Add("extra_suffix",
+         "Custom extra suffix added to the base filename of all generated binary files", "")
 opts.Add(BoolVariable("vsproj", "Generate a Visual Studio solution", False))
-opts.Add(EnumVariable("macports_clang", "Build using Clang from MacPorts", "no", ("no", "5.0", "devel")))
-opts.Add(BoolVariable("disable_3d", "Disable 3D nodes for a smaller executable", False))
-opts.Add(BoolVariable("disable_advanced_gui", "Disable advanced GUI nodes and behaviors", False))
-opts.Add(BoolVariable("no_editor_splash", "Don't use the custom splash screen for the editor", False))
-opts.Add("system_certs_path", "Use this path as SSL certificates default for editor (for package maintainers)", "")
+opts.Add(EnumVariable("macports_clang",
+                      "Build using Clang from MacPorts", "no", ("no", "5.0", "devel")))
+opts.Add(BoolVariable("disable_3d",
+                      "Disable 3D nodes for a smaller executable", False))
+opts.Add(BoolVariable("disable_advanced_gui",
+                      "Disable advanced GUI nodes and behaviors", False))
+opts.Add(BoolVariable("no_editor_splash",
+                      "Don't use the custom splash screen for the editor", False))
+opts.Add("system_certs_path",
+         "Use this path as SSL certificates default for editor (for package maintainers)", "")
 
 # Thirdparty libraries
 # opts.Add(BoolVariable('builtin_assimp', "Use the built-in Assimp library", True))
 opts.Add(BoolVariable("builtin_bullet", "Use the built-in Bullet library", True))
-opts.Add(BoolVariable("builtin_certs", "Use the built-in SSL certificates bundles", True))
+opts.Add(BoolVariable("builtin_certs",
+                      "Use the built-in SSL certificates bundles", True))
 opts.Add(BoolVariable("builtin_enet", "Use the built-in ENet library", True))
-opts.Add(BoolVariable("builtin_freetype", "Use the built-in FreeType library", True))
-opts.Add(BoolVariable("builtin_glslang", "Use the built-in glslang library", True))
+opts.Add(BoolVariable("builtin_freetype",
+                      "Use the built-in FreeType library", True))
+opts.Add(BoolVariable("builtin_glslang",
+                      "Use the built-in glslang library", True))
 opts.Add(BoolVariable("builtin_libogg", "Use the built-in libogg library", True))
 opts.Add(BoolVariable("builtin_libpng", "Use the built-in libpng library", True))
-opts.Add(BoolVariable("builtin_libtheora", "Use the built-in libtheora library", True))
-opts.Add(BoolVariable("builtin_libvorbis", "Use the built-in libvorbis library", True))
+opts.Add(BoolVariable("builtin_libtheora",
+                      "Use the built-in libtheora library", True))
+opts.Add(BoolVariable("builtin_libvorbis",
+                      "Use the built-in libvorbis library", True))
 opts.Add(BoolVariable("builtin_libvpx", "Use the built-in libvpx library", True))
-opts.Add(BoolVariable("builtin_libwebp", "Use the built-in libwebp library", True))
+opts.Add(BoolVariable("builtin_libwebp",
+                      "Use the built-in libwebp library", True))
 opts.Add(BoolVariable("builtin_wslay", "Use the built-in wslay library", True))
-opts.Add(BoolVariable("builtin_mbedtls", "Use the built-in mbedTLS library", True))
-opts.Add(BoolVariable("builtin_miniupnpc", "Use the built-in miniupnpc library", True))
+opts.Add(BoolVariable("builtin_mbedtls",
+                      "Use the built-in mbedTLS library", True))
+opts.Add(BoolVariable("builtin_miniupnpc",
+                      "Use the built-in miniupnpc library", True))
 opts.Add(BoolVariable("builtin_opus", "Use the built-in Opus library", True))
 opts.Add(BoolVariable("builtin_pcre2", "Use the built-in PCRE2 library", True))
-opts.Add(BoolVariable("builtin_pcre2_with_jit", "Use JIT compiler for the built-in PCRE2 library", True))
+opts.Add(BoolVariable("builtin_pcre2_with_jit",
+                      "Use JIT compiler for the built-in PCRE2 library", True))
 opts.Add(BoolVariable("builtin_recast", "Use the built-in Recast library", True))
 opts.Add(BoolVariable("builtin_rvo2", "Use the built-in RVO2 library", True))
 opts.Add(BoolVariable("builtin_squish", "Use the built-in squish library", True))
-opts.Add(BoolVariable("builtin_vulkan", "Use the built-in Vulkan loader library and headers", True))
+opts.Add(BoolVariable("builtin_vulkan",
+                      "Use the built-in Vulkan loader library and headers", True))
 opts.Add(BoolVariable("builtin_xatlas", "Use the built-in xatlas library", True))
 opts.Add(BoolVariable("builtin_zlib", "Use the built-in zlib library", True))
 opts.Add(BoolVariable("builtin_zstd", "Use the built-in Zstd library", True))
@@ -192,7 +215,8 @@ for x in module_list:
         module_enabled = False
     sys.path.remove(tmppath)
     sys.modules.pop("config")
-    opts.Add(BoolVariable("module_" + x + "_enabled", "Enable module '%s'" % (x,), module_enabled))
+    opts.Add(BoolVariable("module_" + x + "_enabled",
+                          "Enable module '%s'" % (x,), module_enabled))
 
 opts.Update(env_base)  # update environment
 Help(opts.GenerateHelpText(env_base))  # generate help
@@ -349,6 +373,7 @@ if selected_platform in platform_list:
 
     # Enforce our minimal compiler version requirements
     cc_version = methods.get_compiler_version(env) or [-1, -1]
+    print(f'cc_version:{cc_version}')
     cc_version_major = cc_version[0]
     cc_version_minor = cc_version[1]
 
@@ -398,7 +423,8 @@ if selected_platform in platform_list:
     # Configure compiler warnings
     if env.msvc:
         # Truncations, narrowing conversions, signed/unsigned comparisons...
-        disable_nonessential_warnings = ["/wd4267", "/wd4244", "/wd4305", "/wd4018", "/wd4800"]
+        disable_nonessential_warnings = [
+            "/wd4267", "/wd4244", "/wd4305", "/wd4018", "/wd4800"]
         if env["warnings"] == "extra":
             env.Append(CCFLAGS=["/Wall"])  # Implies /W4
         elif env["warnings"] == "all":
@@ -422,7 +448,8 @@ if selected_platform in platform_list:
                 shadow_local_warning = ["-Wshadow-local"]
 
         if env["warnings"] == "extra":
-            env.Append(CCFLAGS=["-Wall", "-Wextra", "-Wno-unused-parameter"] + all_plus_warnings + shadow_local_warning)
+            env.Append(CCFLAGS=["-Wall", "-Wextra", "-Wno-unused-parameter"] +
+                       all_plus_warnings + shadow_local_warning)
             env.Append(CXXFLAGS=["-Wctor-dtor-privacy", "-Wnon-virtual-dtor"])
             if methods.using_gcc(env):
                 env.Append(
@@ -520,7 +547,8 @@ if selected_platform in platform_list:
             # Get icon paths (if present)
             try:
                 icons_path = config.get_icons_path()
-                env.module_icons_paths.append("modules/" + x + "/" + icons_path)
+                env.module_icons_paths.append(
+                    "modules/" + x + "/" + icons_path)
             except:
                 # Default path for module icons
                 env.module_icons_paths.append("modules/" + x + "/" + "icons")
@@ -575,7 +603,8 @@ if selected_platform in platform_list:
         if not env["module_" + x + "_enabled"]:
             if env["tools"]:
                 print(
-                    "Build option 'module_" + x + "_enabled=no' cannot be used with 'tools=yes' (editor), "
+                    "Build option 'module_" + x +
+                    "_enabled=no' cannot be used with 'tools=yes' (editor), "
                     "only with 'tools=no' (export template)."
                 )
                 sys.exit(255)
@@ -618,7 +647,8 @@ if selected_platform in platform_list:
     SConscript("modules/SCsub")
     SConscript("main/SCsub")
 
-    SConscript("platform/" + selected_platform + "/SCsub")  # build selected platform
+    SConscript("platform/" + selected_platform +
+               "/SCsub")  # build selected platform
 
     # Microsoft Visual Studio Project Generation
     if env["vsproj"]:
@@ -662,7 +692,8 @@ if "env" in locals():
     node_count_interval = 1
     node_count_fname = str(env.Dir("#")) + "/.scons_node_count"
 
-    import time, math
+    import time
+    import math
 
     class cache_progress:
         # The default is 1 GB cache and 12 hours half life
@@ -673,7 +704,8 @@ if "env" in locals():
             if env["verbose"] and path != None:
                 screen.write(
                     "Current cache limit is {} (used: {})\n".format(
-                        self.convert_size(limit), self.convert_size(self.get_size(path))
+                        self.convert_size(limit), self.convert_size(
+                            self.get_size(path))
                     )
                 )
             self.delete(self.file_list())
@@ -684,7 +716,8 @@ if "env" in locals():
                 # Print the progress percentage
                 node_count += node_count_interval
                 if node_count_max > 0 and node_count <= node_count_max:
-                    screen.write("\r[%3d%%] " % (node_count * 100 / node_count_max))
+                    screen.write("\r[%3d%%] " %
+                                 (node_count * 100 / node_count_max))
                     screen.flush()
                 elif node_count_max > 0 and node_count > node_count_max:
                     screen.write("\r[100%] ")
@@ -698,7 +731,8 @@ if "env" in locals():
                 return
             if env["verbose"]:
                 # Utter something
-                screen.write("\rPurging %d %s from cache...\n" % (len(files), len(files) > 1 and "files" or "file"))
+                screen.write("\rPurging %d %s from cache...\n" %
+                             (len(files), len(files) > 1 and "files" or "file"))
             [os.remove(f) for f in files]
 
         def file_list(self):
@@ -707,7 +741,8 @@ if "env" in locals():
                 return []
             # Gather a list of (filename, (size, atime)) within the
             # cache directory
-            file_stat = [(x, os.stat(x)[6:8]) for x in glob.glob(os.path.join(self.path, "*", "*"))]
+            file_stat = [(x, os.stat(x)[6:8])
+                         for x in glob.glob(os.path.join(self.path, "*", "*"))]
             if file_stat == []:
                 # Nothing to do
                 return []
@@ -716,7 +751,8 @@ if "env" in locals():
             # decay since the ctime, and return a list with the entries
             # (filename, size, weight).
             current_time = time.time()
-            file_stat = [(x[0], x[1][0], (current_time - x[1][1])) for x in file_stat]
+            file_stat = [(x[0], x[1][0], (current_time - x[1][1]))
+                         for x in file_stat]
             # Sort by the most recently accessed files (most sensible to keep) first
             file_stat.sort(key=lambda x: x[2])
             # Search for the first entry where the storage limit is
@@ -735,7 +771,8 @@ if "env" in locals():
         def convert_size(self, size_bytes):
             if size_bytes == 0:
                 return "0 bytes"
-            size_name = ("bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
+            size_name = ("bytes", "KB", "MB", "GB",
+                         "TB", "PB", "EB", "ZB", "YB")
             i = int(math.floor(math.log(size_bytes, 1024)))
             p = math.pow(1024, i)
             s = round(size_bytes / p, 2)
