@@ -97,7 +97,7 @@ protected:
 	virtual void set_main_loop(MainLoop *p_main_loop);
 	virtual void delete_main_loop();
 
-	virtual void finalize();
+	virtual void finalize() override;
 
 	virtual bool _check_internal_feature_support(const String &p_feature);
 
@@ -154,7 +154,7 @@ public:
 	virtual void set_icon(const Ref<Image> &p_icon);
 	String get_executable_path() const;
 	virtual Error shell_open(String p_uri);
-	virtual String get_name() const;
+	virtual String get_name() const override;
 	virtual bool can_draw() const;
 
 	virtual String get_resource_dir() const;
