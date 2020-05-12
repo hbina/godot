@@ -193,7 +193,7 @@ public:
 	_FORCE_INLINE_ bool is_debugging_contacts() const { return !contact_debug.empty(); }
 	_FORCE_INLINE_ void add_debug_contact(const Vector2 &p_contact) {
 		if (contact_debug_count < contact_debug.size())
-			contact_debug.write[contact_debug_count++] = p_contact;
+			contact_debug[contact_debug_count++] = p_contact;
 	}
 	_FORCE_INLINE_ Vector<Vector2> get_debug_contacts() { return contact_debug; }
 	_FORCE_INLINE_ int get_debug_contact_count() { return contact_debug_count; }

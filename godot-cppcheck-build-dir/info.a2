@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="521957030">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="130" column="10"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="157" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buffer&apos; can be reduced." verbose="The scope of the variable &apos;buffer&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="346" column="8"/>
+            <symbol>buffer</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="358" col="18" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="385" col="20" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" call-funcname="vorbis_comment_add" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="72" col="3" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="563" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:186:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="616" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:167:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="55" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="97" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="119" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:166:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="145" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:164:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="151" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:165:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="156" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:204:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="205" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:235:12" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="240" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:267:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="268" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:443:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="444" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" my-argnr="2" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="484" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:501:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="502" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="587" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="3" my-argname="op" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="606" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="4" my-argname="op_comm" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="621" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="5" my-argname="op_code" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="636" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="358" col="18" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="385" col="20" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" call-funcname="vorbis_comment_add" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="72" col="3" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="563" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:186:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="616" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:167:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="55" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="97" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="119" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:166:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="145" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:164:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="151" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:165:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="156" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:204:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="205" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:235:12" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="240" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:267:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="268" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:443:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="444" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" my-argnr="2" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="484" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:501:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="502" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="587" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="3" my-argname="op" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="606" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="4" my-argname="op_comm" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="621" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="5" my-argname="op_code" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="636" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="358" col="18" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="385" col="20" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" call-funcname="vorbis_comment_add" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="72" col="3" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="563" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:186:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="616" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:167:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="55" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="97" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="119" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:166:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="145" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:164:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="151" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:165:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="156" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:204:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="205" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:235:12" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="240" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:267:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="268" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:443:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="444" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" my-argnr="2" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="484" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:501:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="502" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="587" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="3" my-argname="op" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="606" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="4" my-argname="op_comm" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="621" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="5" my-argname="op_code" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="636" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="358" col="18" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="385" col="20" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" call-funcname="vorbis_comment_add" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="72" col="3" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="563" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:186:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="616" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:167:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="55" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="97" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="119" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:166:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="145" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:164:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="151" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:165:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="156" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:204:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="205" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:235:12" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="240" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:267:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="268" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:443:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="444" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" my-argnr="2" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="484" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:501:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="502" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="587" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="3" my-argname="op" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="606" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="4" my-argname="op_comm" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="621" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="5" my-argname="op_code" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="636" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="358" col="18" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="385" col="20" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" call-funcname="vorbis_comment_add" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="72" col="3" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="563" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:186:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="616" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:167:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="55" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="97" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="119" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:166:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="145" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:164:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="151" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:165:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="156" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:204:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="205" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:235:12" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="240" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:267:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="268" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:443:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="444" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" my-argnr="2" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="484" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:501:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="502" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="587" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="3" my-argname="op" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="606" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="4" my-argname="op_comm" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="621" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="5" my-argname="op_code" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="636" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="358" col="18" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:44:13" call-funcname="_v_readstring" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="385" col="20" call-argexpr="buffer" call-argvaluetype="7" call-argvalue="6"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" call-funcname="vorbis_comment_add" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="72" col="3" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="563" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:186:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" call-funcname="_vorbis_pack_comment" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="616" col="6" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:167:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="51" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="55" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="97" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="119" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:166:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="145" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:164:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="151" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:165:17" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="156" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:204:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="205" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:235:12" my-argnr="1" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="240" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:267:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="268" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:443:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="444" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:471:12" my-argnr="2" my-argname="vc" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="484" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/info.c:501:12" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="502" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="587" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="3" my-argname="op" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="606" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="4" my-argname="op_comm" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="621" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:187:17" my-argnr="5" my-argname="op_code" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="636" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:168:17" my-argnr="2" my-argname="comment" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="59" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:169:17" my-argnr="3" my-argname="contents" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="68" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:171:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="91" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/codec.h:172:17" my-argnr="2" my-argname="tag" file="/home/hbina/git/godot/thirdparty/libvorbis/info.c" line="114" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_v_writestring" lineNumber="37"/>
+    <functiondecl functionName="_v_readstring" lineNumber="44"/>
+    <functiondecl functionName="vorbis_comment_init" lineNumber="50"/>
+    <functiondecl functionName="vorbis_comment_add" lineNumber="54"/>
+    <functiondecl functionName="vorbis_comment_add_tag" lineNumber="66"/>
+    <functiondecl functionName="tagcompare" lineNumber="78"/>
+    <functiondecl functionName="vorbis_comment_query" lineNumber="88"/>
+    <functiondecl functionName="vorbis_comment_query_count" lineNumber="112"/>
+    <functiondecl functionName="vorbis_comment_clear" lineNumber="128"/>
+    <functiondecl functionName="vorbis_info_blocksize" lineNumber="144"/>
+    <functiondecl functionName="vorbis_info_init" lineNumber="150"/>
+    <functiondecl functionName="vorbis_info_clear" lineNumber="155"/>
+    <functiondecl functionName="_vorbis_unpack_info" lineNumber="204"/>
+    <functiondecl functionName="_vorbis_unpack_comment" lineNumber="235"/>
+    <functiondecl functionName="_vorbis_unpack_books" lineNumber="267"/>
+    <functiondecl functionName="vorbis_synthesis_idheader" lineNumber="344"/>
+    <functiondecl functionName="vorbis_synthesis_headerin" lineNumber="373"/>
+    <functiondecl functionName="_vorbis_pack_info" lineNumber="443"/>
+    <functiondecl functionName="_vorbis_pack_comment" lineNumber="471"/>
+    <functiondecl functionName="_vorbis_pack_books" lineNumber="501"/>
+    <functiondecl functionName="vorbis_commentheader_out" lineNumber="557"/>
+    <functiondecl functionName="vorbis_analysis_headerout" lineNumber="581"/>
+    <functiondecl functionName="vorbis_granule_time" lineNumber="662"/>
+    <functiondecl functionName="vorbis_version_string" lineNumber="677"/>
+    <functiondecl functionName="_v_writestring" lineNumber="37"/>
+    <functiondecl functionName="_v_readstring" lineNumber="44"/>
+    <functiondecl functionName="vorbis_comment_init" lineNumber="50"/>
+    <functiondecl functionName="vorbis_comment_add" lineNumber="54"/>
+    <functiondecl functionName="vorbis_comment_add_tag" lineNumber="66"/>
+    <functiondecl functionName="tagcompare" lineNumber="78"/>
+    <functiondecl functionName="vorbis_comment_query" lineNumber="88"/>
+    <functiondecl functionName="vorbis_comment_query_count" lineNumber="112"/>
+    <functiondecl functionName="vorbis_comment_clear" lineNumber="128"/>
+    <functiondecl functionName="vorbis_info_blocksize" lineNumber="144"/>
+    <functiondecl functionName="vorbis_info_init" lineNumber="150"/>
+    <functiondecl functionName="vorbis_info_clear" lineNumber="155"/>
+    <functiondecl functionName="_vorbis_unpack_info" lineNumber="204"/>
+    <functiondecl functionName="_vorbis_unpack_comment" lineNumber="235"/>
+    <functiondecl functionName="_vorbis_unpack_books" lineNumber="267"/>
+    <functiondecl functionName="vorbis_synthesis_idheader" lineNumber="344"/>
+    <functiondecl functionName="vorbis_synthesis_headerin" lineNumber="373"/>
+    <functiondecl functionName="_vorbis_pack_info" lineNumber="443"/>
+    <functiondecl functionName="_vorbis_pack_comment" lineNumber="471"/>
+    <functiondecl functionName="_vorbis_pack_books" lineNumber="501"/>
+    <functiondecl functionName="vorbis_commentheader_out" lineNumber="557"/>
+    <functiondecl functionName="vorbis_analysis_headerout" lineNumber="581"/>
+    <functiondecl functionName="vorbis_granule_time" lineNumber="662"/>
+    <functiondecl functionName="vorbis_version_string" lineNumber="677"/>
+    <functiondecl functionName="_v_writestring" lineNumber="37"/>
+    <functiondecl functionName="_v_readstring" lineNumber="44"/>
+    <functiondecl functionName="vorbis_comment_init" lineNumber="50"/>
+    <functiondecl functionName="vorbis_comment_add" lineNumber="54"/>
+    <functiondecl functionName="vorbis_comment_add_tag" lineNumber="66"/>
+    <functiondecl functionName="tagcompare" lineNumber="78"/>
+    <functiondecl functionName="vorbis_comment_query" lineNumber="88"/>
+    <functiondecl functionName="vorbis_comment_query_count" lineNumber="112"/>
+    <functiondecl functionName="vorbis_comment_clear" lineNumber="128"/>
+    <functiondecl functionName="vorbis_info_blocksize" lineNumber="144"/>
+    <functiondecl functionName="vorbis_info_init" lineNumber="150"/>
+    <functiondecl functionName="vorbis_info_clear" lineNumber="155"/>
+    <functiondecl functionName="_vorbis_unpack_info" lineNumber="204"/>
+    <functiondecl functionName="_vorbis_unpack_comment" lineNumber="235"/>
+    <functiondecl functionName="_vorbis_unpack_books" lineNumber="267"/>
+    <functiondecl functionName="vorbis_synthesis_idheader" lineNumber="344"/>
+    <functiondecl functionName="vorbis_synthesis_headerin" lineNumber="373"/>
+    <functiondecl functionName="_vorbis_pack_info" lineNumber="443"/>
+    <functiondecl functionName="_vorbis_pack_comment" lineNumber="471"/>
+    <functiondecl functionName="_vorbis_pack_books" lineNumber="501"/>
+    <functiondecl functionName="vorbis_commentheader_out" lineNumber="557"/>
+    <functiondecl functionName="vorbis_analysis_headerout" lineNumber="581"/>
+    <functiondecl functionName="vorbis_granule_time" lineNumber="662"/>
+    <functiondecl functionName="vorbis_version_string" lineNumber="677"/>
+    <functiondecl functionName="_v_writestring" lineNumber="37"/>
+    <functiondecl functionName="_v_readstring" lineNumber="44"/>
+    <functiondecl functionName="vorbis_comment_init" lineNumber="50"/>
+    <functiondecl functionName="vorbis_comment_add" lineNumber="54"/>
+    <functiondecl functionName="vorbis_comment_add_tag" lineNumber="66"/>
+    <functiondecl functionName="tagcompare" lineNumber="78"/>
+    <functiondecl functionName="vorbis_comment_query" lineNumber="88"/>
+    <functiondecl functionName="vorbis_comment_query_count" lineNumber="112"/>
+    <functiondecl functionName="vorbis_comment_clear" lineNumber="128"/>
+    <functiondecl functionName="vorbis_info_blocksize" lineNumber="144"/>
+    <functiondecl functionName="vorbis_info_init" lineNumber="150"/>
+    <functiondecl functionName="vorbis_info_clear" lineNumber="155"/>
+    <functiondecl functionName="_vorbis_unpack_info" lineNumber="204"/>
+    <functiondecl functionName="_vorbis_unpack_comment" lineNumber="235"/>
+    <functiondecl functionName="_vorbis_unpack_books" lineNumber="267"/>
+    <functiondecl functionName="vorbis_synthesis_idheader" lineNumber="344"/>
+    <functiondecl functionName="vorbis_synthesis_headerin" lineNumber="373"/>
+    <functiondecl functionName="_vorbis_pack_info" lineNumber="443"/>
+    <functiondecl functionName="_vorbis_pack_comment" lineNumber="471"/>
+    <functiondecl functionName="_vorbis_pack_books" lineNumber="501"/>
+    <functiondecl functionName="vorbis_commentheader_out" lineNumber="557"/>
+    <functiondecl functionName="vorbis_analysis_headerout" lineNumber="581"/>
+    <functiondecl functionName="vorbis_granule_time" lineNumber="662"/>
+    <functiondecl functionName="vorbis_version_string" lineNumber="677"/>
+    <functiondecl functionName="_v_writestring" lineNumber="37"/>
+    <functiondecl functionName="_v_readstring" lineNumber="44"/>
+    <functiondecl functionName="vorbis_comment_init" lineNumber="50"/>
+    <functiondecl functionName="vorbis_comment_add" lineNumber="54"/>
+    <functiondecl functionName="vorbis_comment_add_tag" lineNumber="66"/>
+    <functiondecl functionName="tagcompare" lineNumber="78"/>
+    <functiondecl functionName="vorbis_comment_query" lineNumber="88"/>
+    <functiondecl functionName="vorbis_comment_query_count" lineNumber="112"/>
+    <functiondecl functionName="vorbis_comment_clear" lineNumber="128"/>
+    <functiondecl functionName="vorbis_info_blocksize" lineNumber="144"/>
+    <functiondecl functionName="vorbis_info_init" lineNumber="150"/>
+    <functiondecl functionName="vorbis_info_clear" lineNumber="155"/>
+    <functiondecl functionName="_vorbis_unpack_info" lineNumber="204"/>
+    <functiondecl functionName="_vorbis_unpack_comment" lineNumber="235"/>
+    <functiondecl functionName="_vorbis_unpack_books" lineNumber="267"/>
+    <functiondecl functionName="vorbis_synthesis_idheader" lineNumber="344"/>
+    <functiondecl functionName="vorbis_synthesis_headerin" lineNumber="373"/>
+    <functiondecl functionName="_vorbis_pack_info" lineNumber="443"/>
+    <functiondecl functionName="_vorbis_pack_comment" lineNumber="471"/>
+    <functiondecl functionName="_vorbis_pack_books" lineNumber="501"/>
+    <functiondecl functionName="vorbis_commentheader_out" lineNumber="557"/>
+    <functiondecl functionName="vorbis_analysis_headerout" lineNumber="581"/>
+    <functiondecl functionName="vorbis_granule_time" lineNumber="662"/>
+    <functiondecl functionName="vorbis_version_string" lineNumber="677"/>
+    <functiondecl functionName="_v_writestring" lineNumber="37"/>
+    <functiondecl functionName="_v_readstring" lineNumber="44"/>
+    <functiondecl functionName="vorbis_comment_init" lineNumber="50"/>
+    <functiondecl functionName="vorbis_comment_add" lineNumber="54"/>
+    <functiondecl functionName="vorbis_comment_add_tag" lineNumber="66"/>
+    <functiondecl functionName="tagcompare" lineNumber="78"/>
+    <functiondecl functionName="vorbis_comment_query" lineNumber="88"/>
+    <functiondecl functionName="vorbis_comment_query_count" lineNumber="112"/>
+    <functiondecl functionName="vorbis_comment_clear" lineNumber="128"/>
+    <functiondecl functionName="vorbis_info_blocksize" lineNumber="144"/>
+    <functiondecl functionName="vorbis_info_init" lineNumber="150"/>
+    <functiondecl functionName="vorbis_info_clear" lineNumber="155"/>
+    <functiondecl functionName="_vorbis_unpack_info" lineNumber="204"/>
+    <functiondecl functionName="_vorbis_unpack_comment" lineNumber="235"/>
+    <functiondecl functionName="_vorbis_unpack_books" lineNumber="267"/>
+    <functiondecl functionName="vorbis_synthesis_idheader" lineNumber="344"/>
+    <functiondecl functionName="vorbis_synthesis_headerin" lineNumber="373"/>
+    <functiondecl functionName="_vorbis_pack_info" lineNumber="443"/>
+    <functiondecl functionName="_vorbis_pack_comment" lineNumber="471"/>
+    <functiondecl functionName="_vorbis_pack_books" lineNumber="501"/>
+    <functiondecl functionName="vorbis_commentheader_out" lineNumber="557"/>
+    <functiondecl functionName="vorbis_analysis_headerout" lineNumber="581"/>
+    <functiondecl functionName="vorbis_granule_time" lineNumber="662"/>
+    <functiondecl functionName="vorbis_version_string" lineNumber="677"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="_VDBG_free"/>
+    <functioncall functionName="_VDBG_malloc"/>
+    <functioncall functionName="_mm_cvtsd_si32"/>
+    <functioncall functionName="_mm_load_sd"/>
+    <functioncall functionName="_ogg_calloc"/>
+    <functioncall functionName="_ogg_free"/>
+    <functioncall functionName="_ogg_malloc"/>
+    <functioncall functionName="_ogg_realloc"/>
+    <functioncall functionName="_v_readstring"/>
+    <functioncall functionName="_v_writestring"/>
+    <functioncall functionName="_vi_psy_free"/>
+    <functioncall functionName="_vorbis_pack_books"/>
+    <functioncall functionName="_vorbis_pack_comment"/>
+    <functioncall functionName="_vorbis_pack_info"/>
+    <functioncall functionName="_vorbis_unpack_books"/>
+    <functioncall functionName="_vorbis_unpack_comment"/>
+    <functioncall functionName="_vorbis_unpack_info"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b_o_s"/>
+    <functioncall functionName="backend_state"/>
+    <functioncall functionName="bitrate_lower"/>
+    <functioncall functionName="bitrate_nominal"/>
+    <functioncall functionName="bitrate_upper"/>
+    <functioncall functionName="blockflag"/>
+    <functioncall functionName="books"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="codec_setup"/>
+    <functioncall functionName="comment"/>
+    <functioncall functionName="comment_lengths"/>
+    <functioncall functionName="comments"/>
+    <functioncall functionName="contents"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="err_out"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="floors"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpu"/>
+    <functioncall functionName="free_info"/>
+    <functioncall functionName="fullbooks"/>
+    <functioncall functionName="fulltag"/>
+    <functioncall functionName="granuleoff"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="header1"/>
+    <functioncall functionName="header2"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="mapping"/>
+    <functioncall functionName="maps"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="modes"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="ogg_int32_t"/>
+    <functioncall functionName="oggpack_bytes"/>
+    <functioncall functionName="oggpack_read"/>
+    <functioncall functionName="oggpack_readinit"/>
+    <functioncall functionName="oggpack_reset"/>
+    <functioncall functionName="oggpack_write"/>
+    <functioncall functionName="oggpack_writeclear"/>
+    <functioncall functionName="oggpack_writeinit"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="op_code"/>
+    <functioncall functionName="op_comm"/>
+    <functioncall functionName="opb"/>
+    <functioncall functionName="ov_ilog"/>
+    <functioncall functionName="pack"/>
+    <functioncall functionName="packet"/>
+    <functioncall functionName="packtype"/>
+    <functioncall functionName="psys"/>
+    <functioncall functionName="rate"/>
+    <functioncall functionName="residues"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="strcat"/>
+    <functioncall functionName="strcpy"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="tagcompare"/>
+    <functioncall functionName="taglen"/>
+    <functioncall functionName="toupper"/>
+    <functioncall functionName="transformtype"/>
+    <functioncall functionName="unpack"/>
+    <functioncall functionName="user_comments"/>
+    <functioncall functionName="vc"/>
+    <functioncall functionName="vendor"/>
+    <functioncall functionName="vendorlen"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vorbis_book_clear"/>
+    <functioncall functionName="vorbis_comment_add"/>
+    <functioncall functionName="vorbis_comment_clear"/>
+    <functioncall functionName="vorbis_info_clear"/>
+    <functioncall functionName="vorbis_staticbook_destroy"/>
+    <functioncall functionName="vorbis_staticbook_pack"/>
+    <functioncall functionName="vorbis_staticbook_unpack"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="windowtype"/>
+    <functioncall functionName="zo"/>
+  </FileInfo>
+</analyzerinfo>

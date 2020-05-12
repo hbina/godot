@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1025437357">
+        <error id="noConstructor" severity="style" msg="The class &apos;AudioEffectSpectrumAnalyzerInstance&apos; does not have a constructor although it has private member variables." verbose="The class &apos;AudioEffectSpectrumAnalyzerInstance&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.cpp" file="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.h" line="38" column="1"/>
+            <symbol>AudioEffectSpectrumAnalyzerInstance</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wr&apos; can be reduced." verbose="The scope of the variable &apos;wr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.cpp" line="47" column="8"/>
+            <symbol>wr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wi&apos; can be reduced." verbose="The scope of the variable &apos;wi&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.cpp" line="47" column="12"/>
+            <symbol>wi</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;arg&apos; can be reduced." verbose="The scope of the variable &apos;arg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.cpp" line="47" column="16"/>
+            <symbol>arg</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ur&apos; can be reduced." verbose="The scope of the variable &apos;ur&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.cpp" line="48" column="16"/>
+            <symbol>ur</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ui&apos; can be reduced." verbose="The scope of the variable &apos;ui&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.cpp" line="48" column="20"/>
+            <symbol>ui</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;le2&apos; can be reduced." verbose="The scope of the variable &apos;le2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_spectrum_analyzer.cpp" line="49" column="23"/>
+            <symbol>le2</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="smbFft" lineNumber="34"/>
+    <functiondecl functionName="process" lineNumber="99"/>
+    <functiondecl functionName="_bind_methods" lineNumber="151"/>
+    <functiondecl functionName="get_magnitude_for_frequency_range" lineNumber="158"/>
+    <functiondecl functionName="instance" lineNumber="212"/>
+    <functiondecl functionName="set_buffer_length" lineNumber="235"/>
+    <functiondecl functionName="get_buffer_length" lineNumber="239"/>
+    <functiondecl functionName="set_tap_back_pos" lineNumber="244"/>
+    <functiondecl functionName="get_tap_back_pos" lineNumber="248"/>
+    <functiondecl functionName="set_fft_size" lineNumber="252"/>
+    <functiondecl functionName="get_fft_size" lineNumber="257"/>
+    <functiondecl functionName="_bind_methods" lineNumber="261"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="AudioEffect"/>
+    <functioncall functionName="AudioEffectInstance"/>
+    <functioncall functionName="AudioEffectSpectrumAnalyzer"/>
+    <functioncall functionName="AudioEffectSpectrumAnalyzerInstance"/>
+    <functioncall functionName="AudioFrame"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="FFT_SIZE_1024"/>
+    <functioncall functionName="FFT_SIZE_2048"/>
+    <functioncall functionName="FFT_SIZE_256"/>
+    <functioncall functionName="FFT_SIZE_4096"/>
+    <functioncall functionName="FFT_SIZE_512"/>
+    <functioncall functionName="FFT_SIZE_MAX"/>
+    <functioncall functionName="FFT_Size"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MAGNITUDE_AVERAGE"/>
+    <functioncall functionName="MAGNITUDE_MAX"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="arg"/>
+    <functioncall functionName="begin_pos"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="diff"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="end_pos"/>
+    <functioncall functionName="fftFrameSize"/>
+    <functioncall functionName="fft_count"/>
+    <functioncall functionName="fft_index"/>
+    <functioncall functionName="fft_pos"/>
+    <functioncall functionName="fft_size"/>
+    <functioncall functionName="fftw"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_buffer_length"/>
+    <functioncall functionName="get_fft_size"/>
+    <functioncall functionName="get_magnitude_for_frequency_range"/>
+    <functioncall functionName="get_mix_rate"/>
+    <functioncall functionName="get_output_latency"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_tap_back_pos"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="last_fft_time"/>
+    <functioncall functionName="le2"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mix_rate"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_fft_size"/>
+    <functioncall functionName="p_frame_count"/>
+    <functioncall functionName="p_seconds"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="set_buffer_length"/>
+    <functioncall functionName="set_fft_size"/>
+    <functioncall functionName="set_tap_back_pos"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="smbFft"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="temporal_fft_pos"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="ti"/>
+    <functioncall functionName="to_fill"/>
+    <functioncall functionName="tr"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

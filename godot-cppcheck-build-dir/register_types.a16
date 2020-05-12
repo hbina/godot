@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="715778238">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ResourceFormatLoaderPluginScript&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ResourceFormatLoaderPluginScript&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h" line="46" column="2"/>
+            <symbol>ResourceFormatLoaderPluginScript</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ResourceFormatSaverPluginScript&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ResourceFormatSaverPluginScript&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h" line="58" column="2"/>
+            <symbol>ResourceFormatSaverPluginScript</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PluginScriptLanguage&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PluginScriptLanguage&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_language.h" line="128" column="2"/>
+            <symbol>PluginScriptLanguage</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp:46:14" call-funcname="_check_language_desc" call-argnr="1" file="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp" line="98" col="14" my-id="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp:97:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp:46:14" my-argnr="1" my-argname="desc" file="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp" line="47" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp:46:14" call-funcname="_check_language_desc" call-argnr="1" file="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp" line="98" col="14" my-id="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp:97:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp:46:14" my-argnr="1" my-argname="desc" file="/home/hbina/git/godot/modules/gdnative/pluginscript/register_types.cpp" line="47" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_check_language_desc" lineNumber="46"/>
+    <functiondecl functionName="godot_pluginscript_register_language" lineNumber="97"/>
+    <functiondecl functionName="register_pluginscript_types" lineNumber="109"/>
+    <functiondecl functionName="unregister_pluginscript_types" lineNumber="113"/>
+    <functiondecl functionName="_check_language_desc" lineNumber="46"/>
+    <functiondecl functionName="godot_pluginscript_register_language" lineNumber="97"/>
+    <functiondecl functionName="register_pluginscript_types" lineNumber="109"/>
+    <functiondecl functionName="unregister_pluginscript_types" lineNumber="113"/>
+    <functioncall functionName="ERR_BUG"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="PluginScript"/>
+    <functioncall functionName="PluginScriptLanguage"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Script"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="_check_language_desc"/>
+    <functioncall functionName="add_global_constant"/>
+    <functioncall functionName="add_resource_format_loader"/>
+    <functioncall functionName="add_resource_format_saver"/>
+    <functioncall functionName="call_method"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finish"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_prop"/>
+    <functioncall functionName="get_resource_loader"/>
+    <functioncall functionName="get_resource_saver"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="language"/>
+    <functioncall functionName="language_desc"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="notification"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="register_class"/>
+    <functioncall functionName="register_language"/>
+    <functioncall functionName="remove_resource_format_loader"/>
+    <functioncall functionName="remove_resource_format_saver"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="set_prop"/>
+    <functioncall functionName="unregister_language"/>
+  </FileInfo>
+</analyzerinfo>

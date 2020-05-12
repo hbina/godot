@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3203831441">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;ctx&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;ctx&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="70" column="4"/>
+            <symbol>ctx</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." verbose="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="53" column="15" info="Derived variable &apos;WSLClient::_peer&apos;"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="45" column="21" info="Parent variable &apos;WebSocketClient::_peer&apos;"/>
+            <symbol>WSLClient</symbol>
+            <symbol>_peer</symbol>
+            <symbol>WebSocketClient</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;is_server&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;is_server&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="65" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="88" column="15" info="Virtual function in base class"/>
+            <symbol>is_server</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="66" column="27" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="91" column="27" info="Virtual function in base class"/>
+            <symbol>get_connection_status</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="74" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="100" column="16" info="Virtual function in base class"/>
+            <symbol>set_buffers</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_available_packet_count&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_available_packet_count&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="98" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="53" column="14" info="Virtual function in base class"/>
+            <symbol>get_available_packet_count</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="99" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="54" column="16" info="Virtual function in base class"/>
+            <symbol>get_packet</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;put_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;put_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="100" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="55" column="16" info="Virtual function in base class"/>
+            <symbol>put_packet</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="101" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="56" column="14" info="Virtual function in base class"/>
+            <symbol>get_max_packet_size</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="104" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="61" column="15" info="Virtual function in base class"/>
+            <symbol>close</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;is_connected_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;is_connected_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="105" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="63" column="15" info="Virtual function in base class"/>
+            <symbol>is_connected_to_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="106" column="21" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="64" column="21" info="Virtual function in base class"/>
+            <symbol>get_connected_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="107" column="19" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="65" column="19" info="Virtual function in base class"/>
+            <symbol>get_connected_port</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="109" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="58" column="20" info="Virtual function in base class"/>
+            <symbol>get_write_mode</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="110" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="59" column="15" info="Virtual function in base class"/>
+            <symbol>set_write_mode</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;was_string_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;was_string_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="111" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="66" column="15" info="Virtual function in base class"/>
+            <symbol>was_string_packet</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_no_delay&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_no_delay&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="112" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="67" column="15" info="Virtual function in base class"/>
+            <symbol>set_no_delay</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="74" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="74" column="16" info="Virtual function in base class"/>
+            <symbol>set_buffers</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;connect_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;connect_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="75" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="60" column="16" info="Virtual function in base class"/>
+            <symbol>connect_to_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="76" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="95" column="14" info="Virtual function in base class"/>
+            <symbol>get_max_packet_size</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="77" column="21" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="101" column="29" info="Virtual function in base class"/>
+            <symbol>get_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;disconnect_from_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;disconnect_from_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="78" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="61" column="15" info="Virtual function in base class"/>
+            <symbol>disconnect_from_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="79" column="13" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="62" column="21" info="Virtual function in base class"/>
+            <symbol>get_connected_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="80" column="11" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="63" column="19" info="Virtual function in base class"/>
+            <symbol>get_connected_port</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="81" column="27" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="66" column="27" info="Virtual function in base class"/>
+            <symbol>get_connection_status</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="82" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="59" column="15" info="Virtual function in base class"/>
+            <symbol>poll</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="59" column="29" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="101" column="29" info="Virtual function in base class"/>
+            <symbol>get_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;is_server&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;is_server&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="60" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="88" column="15" info="Virtual function in base class"/>
+            <symbol>is_server</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="61" column="19" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="91" column="27" info="Virtual function in base class"/>
+            <symbol>get_connection_status</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="84" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="100" column="16" info="Virtual function in base class"/>
+            <symbol>set_buffers</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="84" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="84" column="16" info="Virtual function in base class"/>
+            <symbol>set_buffers</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;listen&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;listen&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="85" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="55" column="16" info="Virtual function in base class"/>
+            <symbol>listen</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;stop&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;stop&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="86" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="56" column="15" info="Virtual function in base class"/>
+            <symbol>stop</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;is_listening&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;is_listening&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="87" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="57" column="15" info="Virtual function in base class"/>
+            <symbol>is_listening</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="88" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="95" column="14" info="Virtual function in base class"/>
+            <symbol>get_max_packet_size</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;has_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;has_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="89" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="58" column="15" info="Virtual function in base class"/>
+            <symbol>has_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="90" column="21" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="59" column="29" info="Virtual function in base class"/>
+            <symbol>get_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer_address&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer_address&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="91" column="13" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="63" column="21" info="Virtual function in base class"/>
+            <symbol>get_peer_address</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="92" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="64" column="14" info="Virtual function in base class"/>
+            <symbol>get_peer_port</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;disconnect_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;disconnect_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="93" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="65" column="15" info="Virtual function in base class"/>
+            <symbol>disconnect_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_server.h" line="94" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="54" column="15" info="Virtual function in base class"/>
+            <symbol>poll</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_available_packet_count&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_available_packet_count&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="58" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="53" column="14" info="Virtual function in base class"/>
+            <symbol>get_available_packet_count</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="59" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="54" column="16" info="Virtual function in base class"/>
+            <symbol>get_packet</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;put_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;put_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="60" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="55" column="16" info="Virtual function in base class"/>
+            <symbol>put_packet</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="61" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="56" column="14" info="Virtual function in base class"/>
+            <symbol>get_max_packet_size</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="63" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="61" column="15" info="Virtual function in base class"/>
+            <symbol>close</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;is_connected_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;is_connected_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="64" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="63" column="15" info="Virtual function in base class"/>
+            <symbol>is_connected_to_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="65" column="21" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="64" column="21" info="Virtual function in base class"/>
+            <symbol>get_connected_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="66" column="19" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="65" column="19" info="Virtual function in base class"/>
+            <symbol>get_connected_port</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="68" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="58" column="20" info="Virtual function in base class"/>
+            <symbol>get_write_mode</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_write_mode&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="69" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="59" column="15" info="Virtual function in base class"/>
+            <symbol>set_write_mode</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;was_string_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;was_string_packet&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="70" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="66" column="15" info="Virtual function in base class"/>
+            <symbol>was_string_packet</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_no_delay&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_no_delay&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_peer.h" line="71" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_peer.h" line="67" column="15" info="Virtual function in base class"/>
+            <symbol>set_no_delay</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="52" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="74" column="16" info="Virtual function in base class"/>
+            <symbol>set_buffers</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;connect_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;connect_to_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="53" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="60" column="16" info="Virtual function in base class"/>
+            <symbol>connect_to_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="54" column="21" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="101" column="29" info="Virtual function in base class"/>
+            <symbol>get_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;disconnect_from_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;disconnect_from_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="55" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="61" column="15" info="Virtual function in base class"/>
+            <symbol>disconnect_from_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_host&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="56" column="13" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="62" column="21" info="Virtual function in base class"/>
+            <symbol>get_connected_host</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connected_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="57" column="11" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="63" column="19" info="Virtual function in base class"/>
+            <symbol>get_connected_port</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_connection_status&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="58" column="27" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="66" column="27" info="Virtual function in base class"/>
+            <symbol>get_connection_status</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="59" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="95" column="14" info="Virtual function in base class"/>
+            <symbol>get_max_packet_size</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_client.h" line="60" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="59" column="15" info="Virtual function in base class"/>
+            <symbol>poll</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_buffers&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="45" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="84" column="16" info="Virtual function in base class"/>
+            <symbol>set_buffers</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;stop&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;stop&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="47" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="56" column="15" info="Virtual function in base class"/>
+            <symbol>stop</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;is_listening&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;is_listening&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="48" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="57" column="15" info="Virtual function in base class"/>
+            <symbol>is_listening</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;has_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;has_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="49" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="58" column="15" info="Virtual function in base class"/>
+            <symbol>has_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="50" column="21" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="59" column="29" info="Virtual function in base class"/>
+            <symbol>get_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer_address&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer_address&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="51" column="13" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="63" column="21" info="Virtual function in base class"/>
+            <symbol>get_peer_address</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_peer_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_peer_port&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="52" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="64" column="14" info="Virtual function in base class"/>
+            <symbol>get_peer_port</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;disconnect_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;disconnect_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="53" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="65" column="15" info="Virtual function in base class"/>
+            <symbol>disconnect_peer</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_max_packet_size&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="54" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_multiplayer_peer.h" line="95" column="14" info="Virtual function in base class"/>
+            <symbol>get_max_packet_size</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;poll&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="55" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="54" column="15" info="Virtual function in base class"/>
+            <symbol>poll</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="register_websocket_types" lineNumber="44"/>
+    <functiondecl functionName="unregister_websocket_types" lineNumber="77"/>
+    <functiondecl functionName="register_websocket_types" lineNumber="44"/>
+    <functiondecl functionName="unregister_websocket_types" lineNumber="77"/>
+    <functioncall functionName="EMWSClient"/>
+    <functioncall functionName="EMWSPeer"/>
+    <functioncall functionName="EMWSServer"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_DEF"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="NetworkedMultiplayerPeer"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PacketPeer"/>
+    <functioncall functionName="PeerData"/>
+    <functioncall functionName="PendingPeer"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="WRITE_MODE_BINARY"/>
+    <functioncall functionName="WRITE_MODE_TEXT"/>
+    <functioncall functionName="WSLClient"/>
+    <functioncall functionName="WSLPeer"/>
+    <functioncall functionName="WSLServer"/>
+    <functioncall functionName="WebSocketClient"/>
+    <functioncall functionName="WebSocketMultiplayerPeer"/>
+    <functioncall functionName="WebSocketPeer"/>
+    <functioncall functionName="WebSocketServer"/>
+    <functioncall functionName="WriteMode"/>
+    <functioncall functionName="_create"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="make_default"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="protected:"/>
+    <functioncall functionName="register_custom_instance_class"/>
+    <functioncall functionName="register_virtual_class"/>
+    <functioncall functionName="set_custom_property_info"/>
+    <functioncall functionName="size"/>
+  </FileInfo>
+</analyzerinfo>

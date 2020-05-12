@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4027932857">
+        <error id="constArgument" severity="style" msg="Argument &apos;arch==0&apos; to function celt_assert is always 1" verbose="Argument &apos;arch==0&apos; to function celt_assert is always 1" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="164" column="22" info="Argument &apos;arch==0&apos; to function celt_assert is always 1"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="160" column="14" info="Assignment &apos;arch=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;arch==1&apos; to function celt_assert is always 1" verbose="Argument &apos;arch==1&apos; to function celt_assert is always 1" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="170" column="22" info="Argument &apos;arch==1&apos; to function celt_assert is always 1"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="167" column="3" info="arch is incremented&apos;, new value is 1"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="160" column="14" info="Assignment &apos;arch=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;arch==2&apos; to function celt_assert is always 1" verbose="Argument &apos;arch==2&apos; to function celt_assert is always 1" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="176" column="22" info="Argument &apos;arch==2&apos; to function celt_assert is always 1"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="173" column="3" info="arch is incremented&apos;, new value is 2"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="167" column="3" info="arch is incremented&apos;, new value is 1"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="160" column="14" info="Assignment &apos;arch=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;arch==3&apos; to function celt_assert is always 1" verbose="Argument &apos;arch==3&apos; to function celt_assert is always 1" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="181" column="20" info="Argument &apos;arch==3&apos; to function celt_assert is always 1"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="179" column="3" info="arch is incremented&apos;, new value is 3"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="173" column="3" info="arch is incremented&apos;, new value is 2"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="167" column="3" info="arch is incremented&apos;, new value is 1"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/armcpu.c" line="160" column="14" info="Assignment &apos;arch=0&apos;, assigned value is 0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="opus_cpu_capabilities" lineNumber="53"/>
+    <functiondecl functionName="opus_select_arch" lineNumber="157"/>
+    <functiondecl functionName="opus_cpu_capabilities" lineNumber="96"/>
+    <functiondecl functionName="opus_select_arch" lineNumber="157"/>
+    <functiondecl functionName="opus_cpu_capabilities" lineNumber="53"/>
+    <functiondecl functionName="opus_select_arch" lineNumber="157"/>
+    <functiondecl functionName="opus_cpu_capabilities" lineNumber="96"/>
+    <functiondecl functionName="opus_select_arch" lineNumber="157"/>
+    <functioncall functionName="GetExceptionCode"/>
+    <functioncall functionName="__emit"/>
+    <functioncall functionName="__except"/>
+    <functioncall functionName="atoi"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="celt_assert"/>
+    <functioncall functionName="cpuinfo"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fgets"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="opus_cpu_capabilities"/>
+    <functioncall functionName="strstr"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

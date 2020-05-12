@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3174146256">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverDummy::samples_in&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverDummy::samples_in&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="125" column="19"/>
+            <symbol>AudioDriverDummy::samples_in</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverDummy::buffer_frames&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverDummy::buffer_frames&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="125" column="19"/>
+            <symbol>AudioDriverDummy::buffer_frames</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverDummy::mix_rate&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverDummy::mix_rate&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="125" column="19"/>
+            <symbol>AudioDriverDummy::mix_rate</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverDummy::channels&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverDummy::channels&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="125" column="19"/>
+            <symbol>AudioDriverDummy::channels</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverDummy::active&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverDummy::active&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="125" column="19"/>
+            <symbol>AudioDriverDummy::active</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverDummy::thread_exited&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverDummy::thread_exited&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="125" column="19"/>
+            <symbol>AudioDriverDummy::thread_exited</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverDummy::exit_thread&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverDummy::exit_thread&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="125" column="19"/>
+            <symbol>AudioDriverDummy::exit_thread</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/audio_driver_dummy.cpp" line="59" column="25"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="init" lineNumber="36"/>
+    <functiondecl functionName="thread_func" lineNumber="57"/>
+    <functiondecl functionName="start" lineNumber="80"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="85"/>
+    <functiondecl functionName="get_speaker_mode" lineNumber="90"/>
+    <functiondecl functionName="lock" lineNumber="95"/>
+    <functiondecl functionName="unlock" lineNumber="102"/>
+    <functiondecl functionName="finish" lineNumber="109"/>
+    <functioncall functionName="AudioDriverDummy"/>
+    <functioncall functionName="DEFAULT_MIX_RATE"/>
+    <functioncall functionName="DEFAULT_OUTPUT_LATENCY"/>
+    <functioncall functionName="GLOBAL_DEF_RST"/>
+    <functioncall functionName="SPEAKER_MODE_STEREO"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="audio_server_process"/>
+    <functioncall functionName="buffer_frames"/>
+    <functioncall functionName="closest_power_of_2"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="exit_thread"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memdelete_arr"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="mix_rate"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_udata"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="samples_in"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread"/>
+    <functioncall functionName="thread_func"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="usdelay"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

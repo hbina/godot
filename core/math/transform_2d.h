@@ -216,13 +216,10 @@ Rect2 Transform2D::xform_inv(const Rect2 &p_rect) const {
 Vector<Vector2> Transform2D::xform(const Vector<Vector2> &p_array) const {
 
 	Vector<Vector2> array;
-	array.resize(p_array.size());
+	array.reserve(p_array.size());
 
-	const Vector2 *r = p_array.ptr();
-	Vector2 *w = array.ptrw();
-
-	for (int i = 0; i < p_array.size(); ++i) {
-		w[i] = xform(r[i]);
+	for (const auto &x : p_array) {
+		array.push_back(x);
 	}
 	return array;
 }

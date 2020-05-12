@@ -1,0 +1,1426 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1373557979">
+        <error id="negativeIndex" severity="warning" msg="Either the condition &apos;month==0&apos; is redundant or the array &apos;MONTH_DAYS_TABLE[2][12]&apos; is accessed at index MONTH_DAYS_TABLE[*][-1], which is out of bounds." verbose="Either the condition &apos;month==0&apos; is redundant or the array &apos;MONTH_DAYS_TABLE[2][12]&apos; is accessed at index MONTH_DAYS_TABLE[*][-1], which is out of bounds." cwe="786" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/bind/core_bind.cpp" line="478" column="44" info="Negative array index"/>
+            <location file="/home/hbina/git/godot/core/bind/core_bind.cpp" line="458" column="50" info="Assignment &apos;month=(datetime.has(&quot;month&quot;))?(static_cast&lt;unsigned int&gt;(datetime[&quot;month&quot;])):1&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/bind/core_bind.cpp" line="475" column="42" info="Assuming that condition &apos;month==0&apos; is not redundant"/>
+        </error>
+        <error id="negativeIndex" severity="warning" msg="Either the condition &apos;month==0&apos; is redundant or the array &apos;DAYS_PAST_THIS_YEAR_TABLE[2][13]&apos; is accessed at index DAYS_PAST_THIS_YEAR_TABLE[*][-1], which is out of bounds." verbose="Either the condition &apos;month==0&apos; is redundant or the array &apos;DAYS_PAST_THIS_YEAR_TABLE[2][13]&apos; is accessed at index DAYS_PAST_THIS_YEAR_TABLE[*][-1], which is out of bounds." cwe="786" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/bind/core_bind.cpp" line="480" column="73" info="Negative array index"/>
+            <location file="/home/hbina/git/godot/core/bind/core_bind.cpp" line="458" column="50" info="Assignment &apos;month=(datetime.has(&quot;month&quot;))?(static_cast&lt;unsigned int&gt;(datetime[&quot;month&quot;])):1&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/bind/core_bind.cpp" line="475" column="42" info="Assuming that condition &apos;month==0&apos; is not redundant"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="load_threaded_request" lineNumber="67"/>
+    <functiondecl functionName="load_threaded_get_status" lineNumber="71"/>
+    <functiondecl functionName="load_threaded_get" lineNumber="78"/>
+    <functiondecl functionName="load" lineNumber="84"/>
+    <functiondecl functionName="get_recognized_extensions_for_type" lineNumber="93"/>
+    <functiondecl functionName="set_abort_on_missing_resources" lineNumber="106"/>
+    <functiondecl functionName="get_dependencies" lineNumber="111"/>
+    <functiondecl functionName="has_cached" lineNumber="124"/>
+    <functiondecl functionName="exists" lineNumber="130"/>
+    <functiondecl functionName="_bind_methods" lineNumber="134"/>
+    <functiondecl functionName="save" lineNumber="158"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="163"/>
+    <functiondecl functionName="_bind_methods" lineNumber="178"/>
+    <functiondecl functionName="get_connected_midi_inputs" lineNumber="197"/>
+    <functiondecl functionName="open_midi_inputs" lineNumber="201"/>
+    <functiondecl functionName="close_midi_inputs" lineNumber="205"/>
+    <functiondecl functionName="set_use_file_access_save_and_swap" lineNumber="209"/>
+    <functiondecl functionName="set_low_processor_usage_mode" lineNumber="214"/>
+    <functiondecl functionName="is_in_low_processor_usage_mode" lineNumber="218"/>
+    <functiondecl functionName="set_low_processor_usage_mode_sleep_usec" lineNumber="223"/>
+    <functiondecl functionName="get_low_processor_usage_mode_sleep_usec" lineNumber="228"/>
+    <functiondecl functionName="get_executable_path" lineNumber="233"/>
+    <functiondecl functionName="shell_open" lineNumber="238"/>
+    <functiondecl functionName="execute" lineNumber="248"/>
+    <functiondecl functionName="kill" lineNumber="267"/>
+    <functiondecl functionName="get_process_id" lineNumber="272"/>
+    <functiondecl functionName="has_environment" lineNumber="277"/>
+    <functiondecl functionName="get_environment" lineNumber="281"/>
+    <functiondecl functionName="get_name" lineNumber="286"/>
+    <functiondecl functionName="get_cmdline_args" lineNumber="290"/>
+    <functiondecl functionName="get_locale" lineNumber="302"/>
+    <functiondecl functionName="get_model_name" lineNumber="307"/>
+    <functiondecl functionName="set_thread_name" lineNumber="312"/>
+    <functiondecl functionName="has_feature" lineNumber="317"/>
+    <functiondecl functionName="get_static_memory_usage" lineNumber="366"/>
+    <functiondecl functionName="get_static_memory_peak_usage" lineNumber="371"/>
+    <functiondecl functionName="get_exit_code" lineNumber="376"/>
+    <functiondecl functionName="set_exit_code" lineNumber="381"/>
+    <functiondecl functionName="get_datetime" lineNumber="394"/>
+    <functiondecl functionName="get_date" lineNumber="409"/>
+    <functiondecl functionName="get_time" lineNumber="421"/>
+    <functiondecl functionName="get_unix_time_from_datetime" lineNumber="443"/>
+    <functiondecl functionName="get_datetime_from_unix_time" lineNumber="516"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="572"/>
+    <functiondecl functionName="get_unix_time" lineNumber="580"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="585"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="589"/>
+    <functiondecl functionName="delay_usec" lineNumber="593"/>
+    <functiondecl functionName="delay_msec" lineNumber="598"/>
+    <functiondecl functionName="get_ticks_msec" lineNumber="603"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="608"/>
+    <functiondecl functionName="get_splash_tick_msec" lineNumber="613"/>
+    <functiondecl functionName="can_use_threads" lineNumber="618"/>
+    <functiondecl functionName="is_userfs_persistent" lineNumber="623"/>
+    <functiondecl functionName="get_processor_count" lineNumber="628"/>
+    <functiondecl functionName="is_stdout_verbose" lineNumber="633"/>
+    <functiondecl functionName="dump_memory_to_file" lineNumber="638"/>
+    <functiondecl functionName="print_all_textures_by_size" lineNumber="653"/>
+    <functiondecl functionName="print_resources_by_type" lineNumber="680"/>
+    <functiondecl functionName="print_all_resources" lineNumber="711"/>
+    <functiondecl functionName="print_resources_in_use" lineNumber="716"/>
+    <functiondecl functionName="dump_resources_to_file" lineNumber="721"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="726"/>
+    <functiondecl functionName="is_debug_build" lineNumber="731"/>
+    <functiondecl functionName="get_system_dir" lineNumber="740"/>
+    <functiondecl functionName="get_keycode_string" lineNumber="745"/>
+    <functiondecl functionName="is_keycode_unicode" lineNumber="750"/>
+    <functiondecl functionName="find_keycode_from_string" lineNumber="755"/>
+    <functiondecl functionName="request_permission" lineNumber="760"/>
+    <functiondecl functionName="request_permissions" lineNumber="765"/>
+    <functiondecl functionName="get_granted_permissions" lineNumber="770"/>
+    <functiondecl functionName="get_unique_id" lineNumber="775"/>
+    <functiondecl functionName="_bind_methods" lineNumber="780"/>
+    <functiondecl functionName="get_singleton" lineNumber="918"/>
+    <functiondecl functionName="build_box_planes" lineNumber="923"/>
+    <functiondecl functionName="build_cylinder_planes" lineNumber="928"/>
+    <functiondecl functionName="build_capsule_planes" lineNumber="932"/>
+    <functiondecl functionName="is_point_in_circle" lineNumber="937"/>
+    <functiondecl functionName="segment_intersects_circle" lineNumber="942"/>
+    <functiondecl functionName="segment_intersects_segment_2d" lineNumber="947"/>
+    <functiondecl functionName="line_intersects_line_2d" lineNumber="958"/>
+    <functiondecl functionName="get_closest_points_between_segments_2d" lineNumber="968"/>
+    <functiondecl functionName="get_closest_points_between_segments" lineNumber="979"/>
+    <functiondecl functionName="get_closest_point_to_segment_2d" lineNumber="989"/>
+    <functiondecl functionName="get_closest_point_to_segment" lineNumber="994"/>
+    <functiondecl functionName="get_closest_point_to_segment_uncapped_2d" lineNumber="999"/>
+    <functiondecl functionName="get_closest_point_to_segment_uncapped" lineNumber="1004"/>
+    <functiondecl functionName="ray_intersects_triangle" lineNumber="1009"/>
+    <functiondecl functionName="segment_intersects_triangle" lineNumber="1017"/>
+    <functiondecl functionName="point_is_inside_triangle" lineNumber="1026"/>
+    <functiondecl functionName="segment_intersects_sphere" lineNumber="1031"/>
+    <functiondecl functionName="segment_intersects_cylinder" lineNumber="1043"/>
+    <functiondecl functionName="segment_intersects_convex" lineNumber="1055"/>
+    <functiondecl functionName="is_polygon_clockwise" lineNumber="1068"/>
+    <functiondecl functionName="is_point_in_polygon" lineNumber="1073"/>
+    <functiondecl functionName="triangulate_polygon" lineNumber="1078"/>
+    <functiondecl functionName="triangulate_delaunay_2d" lineNumber="1083"/>
+    <functiondecl functionName="convex_hull_2d" lineNumber="1088"/>
+    <functiondecl functionName="clip_polygon" lineNumber="1093"/>
+    <functiondecl functionName="merge_polygons_2d" lineNumber="1098"/>
+    <functiondecl functionName="clip_polygons_2d" lineNumber="1110"/>
+    <functiondecl functionName="intersect_polygons_2d" lineNumber="1122"/>
+    <functiondecl functionName="exclude_polygons_2d" lineNumber="1134"/>
+    <functiondecl functionName="clip_polyline_with_polygon_2d" lineNumber="1146"/>
+    <functiondecl functionName="intersect_polyline_with_polygon_2d" lineNumber="1158"/>
+    <functiondecl functionName="offset_polygon_2d" lineNumber="1170"/>
+    <functiondecl functionName="offset_polyline_2d" lineNumber="1182"/>
+    <functiondecl functionName="make_atlas" lineNumber="1194"/>
+    <functiondecl functionName="get_uv84_normal_bit" lineNumber="1222"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1227"/>
+    <functiondecl functionName="open_encrypted" lineNumber="1297"/>
+    <functiondecl functionName="open_encrypted_pass" lineNumber="1314"/>
+    <functiondecl functionName="open_compressed" lineNumber="1332"/>
+    <functiondecl functionName="open" lineNumber="1349"/>
+    <functiondecl functionName="close" lineNumber="1359"/>
+    <functiondecl functionName="is_open" lineNumber="1365"/>
+    <functiondecl functionName="get_path" lineNumber="1369"/>
+    <functiondecl functionName="get_path_absolute" lineNumber="1375"/>
+    <functiondecl functionName="seek" lineNumber="1381"/>
+    <functiondecl functionName="seek_end" lineNumber="1386"/>
+    <functiondecl functionName="get_position" lineNumber="1391"/>
+    <functiondecl functionName="get_len" lineNumber="1397"/>
+    <functiondecl functionName="eof_reached" lineNumber="1403"/>
+    <functiondecl functionName="get_8" lineNumber="1409"/>
+    <functiondecl functionName="get_16" lineNumber="1414"/>
+    <functiondecl functionName="get_32" lineNumber="1419"/>
+    <functiondecl functionName="get_64" lineNumber="1424"/>
+    <functiondecl functionName="get_float" lineNumber="1430"/>
+    <functiondecl functionName="get_double" lineNumber="1435"/>
+    <functiondecl functionName="get_real" lineNumber="1440"/>
+    <functiondecl functionName="get_buffer" lineNumber="1446"/>
+    <functiondecl functionName="get_as_text" lineNumber="1468"/>
+    <functiondecl functionName="get_md5" lineNumber="1488"/>
+    <functiondecl functionName="get_sha256" lineNumber="1493"/>
+    <functiondecl functionName="get_line" lineNumber="1498"/>
+    <functiondecl functionName="get_csv_line" lineNumber="1504"/>
+    <functiondecl functionName="set_endian_swap" lineNumber="1514"/>
+    <functiondecl functionName="get_endian_swap" lineNumber="1520"/>
+    <functiondecl functionName="get_error" lineNumber="1525"/>
+    <functiondecl functionName="store_8" lineNumber="1532"/>
+    <functiondecl functionName="store_16" lineNumber="1538"/>
+    <functiondecl functionName="store_32" lineNumber="1544"/>
+    <functiondecl functionName="store_64" lineNumber="1550"/>
+    <functiondecl functionName="store_float" lineNumber="1557"/>
+    <functiondecl functionName="store_double" lineNumber="1563"/>
+    <functiondecl functionName="store_real" lineNumber="1569"/>
+    <functiondecl functionName="store_string" lineNumber="1576"/>
+    <functiondecl functionName="store_pascal_string" lineNumber="1583"/>
+    <functiondecl functionName="get_pascal_string" lineNumber="1590"/>
+    <functiondecl functionName="store_line" lineNumber="1597"/>
+    <functiondecl functionName="store_csv_line" lineNumber="1603"/>
+    <functiondecl functionName="store_buffer" lineNumber="1608"/>
+    <functiondecl functionName="file_exists" lineNumber="1621"/>
+    <functiondecl functionName="store_var" lineNumber="1626"/>
+    <functiondecl functionName="get_var" lineNumber="1644"/>
+    <functiondecl functionName="get_modified_time" lineNumber="1660"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1665"/>
+    <functiondecl functionName="open" lineNumber="1745"/>
+    <functiondecl functionName="list_dir_begin" lineNumber="1758"/>
+    <functiondecl functionName="get_next" lineNumber="1768"/>
+    <functiondecl functionName="current_is_dir" lineNumber="1779"/>
+    <functiondecl functionName="list_dir_end" lineNumber="1785"/>
+    <functiondecl functionName="get_drive_count" lineNumber="1791"/>
+    <functiondecl functionName="get_drive" lineNumber="1796"/>
+    <functiondecl functionName="get_current_drive" lineNumber="1801"/>
+    <functiondecl functionName="change_dir" lineNumber="1806"/>
+    <functiondecl functionName="get_current_dir" lineNumber="1811"/>
+    <functiondecl functionName="make_dir" lineNumber="1816"/>
+    <functiondecl functionName="make_dir_recursive" lineNumber="1827"/>
+    <functiondecl functionName="file_exists" lineNumber="1839"/>
+    <functiondecl functionName="dir_exists" lineNumber="1850"/>
+    <functiondecl functionName="get_space_left" lineNumber="1864"/>
+    <functiondecl functionName="copy" lineNumber="1870"/>
+    <functiondecl functionName="rename" lineNumber="1875"/>
+    <functiondecl functionName="remove" lineNumber="1887"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1900"/>
+    <functiondecl functionName="get_singleton" lineNumber="1936"/>
+    <functiondecl functionName="variant_to_base64" lineNumber="1940"/>
+    <functiondecl functionName="base64_to_variant" lineNumber="1959"/>
+    <functiondecl functionName="raw_to_base64" lineNumber="1978"/>
+    <functiondecl functionName="base64_to_raw" lineNumber="1985"/>
+    <functiondecl functionName="utf8_to_base64" lineNumber="2003"/>
+    <functiondecl functionName="base64_to_utf8" lineNumber="2011"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2029"/>
+    <functiondecl functionName="wait" lineNumber="2043"/>
+    <functiondecl functionName="try_wait" lineNumber="2048"/>
+    <functiondecl functionName="post" lineNumber="2053"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2058"/>
+    <functiondecl functionName="lock" lineNumber="2067"/>
+    <functiondecl functionName="try_lock" lineNumber="2072"/>
+    <functiondecl functionName="unlock" lineNumber="2077"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2082"/>
+    <functiondecl functionName="_start_func" lineNumber="2091"/>
+    <functiondecl functionName="start" lineNumber="2130"/>
+    <functiondecl functionName="get_id" lineNumber="2159"/>
+    <functiondecl functionName="is_active" lineNumber="2167"/>
+    <functiondecl functionName="wait_to_finish" lineNumber="2171"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2188"/>
+    <functiondecl functionName="get_class_list" lineNumber="2213"/>
+    <functiondecl functionName="get_inheriters_from_class" lineNumber="2227"/>
+    <functiondecl functionName="get_parent_class" lineNumber="2241"/>
+    <functiondecl functionName="class_exists" lineNumber="2245"/>
+    <functiondecl functionName="is_parent_class" lineNumber="2249"/>
+    <functiondecl functionName="can_instance" lineNumber="2253"/>
+    <functiondecl functionName="instance" lineNumber="2257"/>
+    <functiondecl functionName="has_signal" lineNumber="2271"/>
+    <functiondecl functionName="get_signal" lineNumber="2275"/>
+    <functiondecl functionName="get_signal_list" lineNumber="2284"/>
+    <functiondecl functionName="get_property_list" lineNumber="2297"/>
+    <functiondecl functionName="get_property" lineNumber="2309"/>
+    <functiondecl functionName="set_property" lineNumber="2315"/>
+    <functiondecl functionName="has_method" lineNumber="2326"/>
+    <functiondecl functionName="get_method_list" lineNumber="2331"/>
+    <functiondecl functionName="get_integer_constant_list" lineNumber="2350"/>
+    <functiondecl functionName="has_integer_constant" lineNumber="2365"/>
+    <functiondecl functionName="get_integer_constant" lineNumber="2372"/>
+    <functiondecl functionName="get_category" lineNumber="2379"/>
+    <functiondecl functionName="is_class_enabled" lineNumber="2384"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2389"/>
+    <functiondecl functionName="set_iterations_per_second" lineNumber="2426"/>
+    <functiondecl functionName="get_iterations_per_second" lineNumber="2430"/>
+    <functiondecl functionName="set_physics_jitter_fix" lineNumber="2435"/>
+    <functiondecl functionName="get_physics_jitter_fix" lineNumber="2439"/>
+    <functiondecl functionName="get_physics_interpolation_fraction" lineNumber="2443"/>
+    <functiondecl functionName="set_target_fps" lineNumber="2447"/>
+    <functiondecl functionName="get_target_fps" lineNumber="2451"/>
+    <functiondecl functionName="get_frames_per_second" lineNumber="2455"/>
+    <functiondecl functionName="get_physics_frames" lineNumber="2460"/>
+    <functiondecl functionName="get_idle_frames" lineNumber="2465"/>
+    <functiondecl functionName="set_time_scale" lineNumber="2470"/>
+    <functiondecl functionName="get_time_scale" lineNumber="2474"/>
+    <functiondecl functionName="get_frames_drawn" lineNumber="2479"/>
+    <functiondecl functionName="get_main_loop" lineNumber="2484"/>
+    <functiondecl functionName="get_version_info" lineNumber="2490"/>
+    <functiondecl functionName="get_author_info" lineNumber="2495"/>
+    <functiondecl functionName="get_copyright_info" lineNumber="2499"/>
+    <functiondecl functionName="get_donor_info" lineNumber="2503"/>
+    <functiondecl functionName="get_license_info" lineNumber="2507"/>
+    <functiondecl functionName="get_license_text" lineNumber="2511"/>
+    <functiondecl functionName="is_in_physics_frame" lineNumber="2515"/>
+    <functiondecl functionName="has_singleton" lineNumber="2519"/>
+    <functiondecl functionName="get_singleton_object" lineNumber="2524"/>
+    <functiondecl functionName="set_editor_hint" lineNumber="2529"/>
+    <functiondecl functionName="is_editor_hint" lineNumber="2534"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2539"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2587"/>
+    <functiondecl functionName="set_error" lineNumber="2604"/>
+    <functiondecl functionName="get_error" lineNumber="2608"/>
+    <functiondecl functionName="set_error_string" lineNumber="2612"/>
+    <functiondecl functionName="get_error_string" lineNumber="2616"/>
+    <functiondecl functionName="set_error_line" lineNumber="2620"/>
+    <functiondecl functionName="get_error_line" lineNumber="2624"/>
+    <functiondecl functionName="set_result" lineNumber="2628"/>
+    <functiondecl functionName="get_result" lineNumber="2632"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2636"/>
+    <functiondecl functionName="print" lineNumber="2641"/>
+    <functiondecl functionName="parse" lineNumber="2645"/>
+    <functiondecl functionName="load_threaded_request" lineNumber="67"/>
+    <functiondecl functionName="load_threaded_get_status" lineNumber="71"/>
+    <functiondecl functionName="load_threaded_get" lineNumber="78"/>
+    <functiondecl functionName="load" lineNumber="84"/>
+    <functiondecl functionName="get_recognized_extensions_for_type" lineNumber="93"/>
+    <functiondecl functionName="set_abort_on_missing_resources" lineNumber="106"/>
+    <functiondecl functionName="get_dependencies" lineNumber="111"/>
+    <functiondecl functionName="has_cached" lineNumber="124"/>
+    <functiondecl functionName="exists" lineNumber="130"/>
+    <functiondecl functionName="_bind_methods" lineNumber="134"/>
+    <functiondecl functionName="save" lineNumber="158"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="163"/>
+    <functiondecl functionName="_bind_methods" lineNumber="178"/>
+    <functiondecl functionName="get_connected_midi_inputs" lineNumber="197"/>
+    <functiondecl functionName="open_midi_inputs" lineNumber="201"/>
+    <functiondecl functionName="close_midi_inputs" lineNumber="205"/>
+    <functiondecl functionName="set_use_file_access_save_and_swap" lineNumber="209"/>
+    <functiondecl functionName="set_low_processor_usage_mode" lineNumber="214"/>
+    <functiondecl functionName="is_in_low_processor_usage_mode" lineNumber="218"/>
+    <functiondecl functionName="set_low_processor_usage_mode_sleep_usec" lineNumber="223"/>
+    <functiondecl functionName="get_low_processor_usage_mode_sleep_usec" lineNumber="228"/>
+    <functiondecl functionName="get_executable_path" lineNumber="233"/>
+    <functiondecl functionName="shell_open" lineNumber="238"/>
+    <functiondecl functionName="execute" lineNumber="248"/>
+    <functiondecl functionName="kill" lineNumber="267"/>
+    <functiondecl functionName="get_process_id" lineNumber="272"/>
+    <functiondecl functionName="has_environment" lineNumber="277"/>
+    <functiondecl functionName="get_environment" lineNumber="281"/>
+    <functiondecl functionName="get_name" lineNumber="286"/>
+    <functiondecl functionName="get_cmdline_args" lineNumber="290"/>
+    <functiondecl functionName="get_locale" lineNumber="302"/>
+    <functiondecl functionName="get_model_name" lineNumber="307"/>
+    <functiondecl functionName="set_thread_name" lineNumber="312"/>
+    <functiondecl functionName="has_feature" lineNumber="317"/>
+    <functiondecl functionName="get_static_memory_usage" lineNumber="366"/>
+    <functiondecl functionName="get_static_memory_peak_usage" lineNumber="371"/>
+    <functiondecl functionName="get_exit_code" lineNumber="376"/>
+    <functiondecl functionName="set_exit_code" lineNumber="381"/>
+    <functiondecl functionName="get_datetime" lineNumber="394"/>
+    <functiondecl functionName="get_date" lineNumber="409"/>
+    <functiondecl functionName="get_time" lineNumber="421"/>
+    <functiondecl functionName="get_unix_time_from_datetime" lineNumber="443"/>
+    <functiondecl functionName="get_datetime_from_unix_time" lineNumber="516"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="572"/>
+    <functiondecl functionName="get_unix_time" lineNumber="580"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="585"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="589"/>
+    <functiondecl functionName="delay_usec" lineNumber="593"/>
+    <functiondecl functionName="delay_msec" lineNumber="598"/>
+    <functiondecl functionName="get_ticks_msec" lineNumber="603"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="608"/>
+    <functiondecl functionName="get_splash_tick_msec" lineNumber="613"/>
+    <functiondecl functionName="can_use_threads" lineNumber="618"/>
+    <functiondecl functionName="is_userfs_persistent" lineNumber="623"/>
+    <functiondecl functionName="get_processor_count" lineNumber="628"/>
+    <functiondecl functionName="is_stdout_verbose" lineNumber="633"/>
+    <functiondecl functionName="dump_memory_to_file" lineNumber="638"/>
+    <functiondecl functionName="print_all_textures_by_size" lineNumber="653"/>
+    <functiondecl functionName="print_resources_by_type" lineNumber="680"/>
+    <functiondecl functionName="print_all_resources" lineNumber="711"/>
+    <functiondecl functionName="print_resources_in_use" lineNumber="716"/>
+    <functiondecl functionName="dump_resources_to_file" lineNumber="721"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="726"/>
+    <functiondecl functionName="is_debug_build" lineNumber="731"/>
+    <functiondecl functionName="get_system_dir" lineNumber="740"/>
+    <functiondecl functionName="get_keycode_string" lineNumber="745"/>
+    <functiondecl functionName="is_keycode_unicode" lineNumber="750"/>
+    <functiondecl functionName="find_keycode_from_string" lineNumber="755"/>
+    <functiondecl functionName="request_permission" lineNumber="760"/>
+    <functiondecl functionName="request_permissions" lineNumber="765"/>
+    <functiondecl functionName="get_granted_permissions" lineNumber="770"/>
+    <functiondecl functionName="get_unique_id" lineNumber="775"/>
+    <functiondecl functionName="_bind_methods" lineNumber="780"/>
+    <functiondecl functionName="get_singleton" lineNumber="918"/>
+    <functiondecl functionName="build_box_planes" lineNumber="923"/>
+    <functiondecl functionName="build_cylinder_planes" lineNumber="928"/>
+    <functiondecl functionName="build_capsule_planes" lineNumber="932"/>
+    <functiondecl functionName="is_point_in_circle" lineNumber="937"/>
+    <functiondecl functionName="segment_intersects_circle" lineNumber="942"/>
+    <functiondecl functionName="segment_intersects_segment_2d" lineNumber="947"/>
+    <functiondecl functionName="line_intersects_line_2d" lineNumber="958"/>
+    <functiondecl functionName="get_closest_points_between_segments_2d" lineNumber="968"/>
+    <functiondecl functionName="get_closest_points_between_segments" lineNumber="979"/>
+    <functiondecl functionName="get_closest_point_to_segment_2d" lineNumber="989"/>
+    <functiondecl functionName="get_closest_point_to_segment" lineNumber="994"/>
+    <functiondecl functionName="get_closest_point_to_segment_uncapped_2d" lineNumber="999"/>
+    <functiondecl functionName="get_closest_point_to_segment_uncapped" lineNumber="1004"/>
+    <functiondecl functionName="ray_intersects_triangle" lineNumber="1009"/>
+    <functiondecl functionName="segment_intersects_triangle" lineNumber="1017"/>
+    <functiondecl functionName="point_is_inside_triangle" lineNumber="1026"/>
+    <functiondecl functionName="segment_intersects_sphere" lineNumber="1031"/>
+    <functiondecl functionName="segment_intersects_cylinder" lineNumber="1043"/>
+    <functiondecl functionName="segment_intersects_convex" lineNumber="1055"/>
+    <functiondecl functionName="is_polygon_clockwise" lineNumber="1068"/>
+    <functiondecl functionName="is_point_in_polygon" lineNumber="1073"/>
+    <functiondecl functionName="triangulate_polygon" lineNumber="1078"/>
+    <functiondecl functionName="triangulate_delaunay_2d" lineNumber="1083"/>
+    <functiondecl functionName="convex_hull_2d" lineNumber="1088"/>
+    <functiondecl functionName="clip_polygon" lineNumber="1093"/>
+    <functiondecl functionName="merge_polygons_2d" lineNumber="1098"/>
+    <functiondecl functionName="clip_polygons_2d" lineNumber="1110"/>
+    <functiondecl functionName="intersect_polygons_2d" lineNumber="1122"/>
+    <functiondecl functionName="exclude_polygons_2d" lineNumber="1134"/>
+    <functiondecl functionName="clip_polyline_with_polygon_2d" lineNumber="1146"/>
+    <functiondecl functionName="intersect_polyline_with_polygon_2d" lineNumber="1158"/>
+    <functiondecl functionName="offset_polygon_2d" lineNumber="1170"/>
+    <functiondecl functionName="offset_polyline_2d" lineNumber="1182"/>
+    <functiondecl functionName="make_atlas" lineNumber="1194"/>
+    <functiondecl functionName="get_uv84_normal_bit" lineNumber="1222"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1227"/>
+    <functiondecl functionName="open_encrypted" lineNumber="1297"/>
+    <functiondecl functionName="open_encrypted_pass" lineNumber="1314"/>
+    <functiondecl functionName="open_compressed" lineNumber="1332"/>
+    <functiondecl functionName="open" lineNumber="1349"/>
+    <functiondecl functionName="close" lineNumber="1359"/>
+    <functiondecl functionName="is_open" lineNumber="1365"/>
+    <functiondecl functionName="get_path" lineNumber="1369"/>
+    <functiondecl functionName="get_path_absolute" lineNumber="1375"/>
+    <functiondecl functionName="seek" lineNumber="1381"/>
+    <functiondecl functionName="seek_end" lineNumber="1386"/>
+    <functiondecl functionName="get_position" lineNumber="1391"/>
+    <functiondecl functionName="get_len" lineNumber="1397"/>
+    <functiondecl functionName="eof_reached" lineNumber="1403"/>
+    <functiondecl functionName="get_8" lineNumber="1409"/>
+    <functiondecl functionName="get_16" lineNumber="1414"/>
+    <functiondecl functionName="get_32" lineNumber="1419"/>
+    <functiondecl functionName="get_64" lineNumber="1424"/>
+    <functiondecl functionName="get_float" lineNumber="1430"/>
+    <functiondecl functionName="get_double" lineNumber="1435"/>
+    <functiondecl functionName="get_real" lineNumber="1440"/>
+    <functiondecl functionName="get_buffer" lineNumber="1446"/>
+    <functiondecl functionName="get_as_text" lineNumber="1468"/>
+    <functiondecl functionName="get_md5" lineNumber="1488"/>
+    <functiondecl functionName="get_sha256" lineNumber="1493"/>
+    <functiondecl functionName="get_line" lineNumber="1498"/>
+    <functiondecl functionName="get_csv_line" lineNumber="1504"/>
+    <functiondecl functionName="set_endian_swap" lineNumber="1514"/>
+    <functiondecl functionName="get_endian_swap" lineNumber="1520"/>
+    <functiondecl functionName="get_error" lineNumber="1525"/>
+    <functiondecl functionName="store_8" lineNumber="1532"/>
+    <functiondecl functionName="store_16" lineNumber="1538"/>
+    <functiondecl functionName="store_32" lineNumber="1544"/>
+    <functiondecl functionName="store_64" lineNumber="1550"/>
+    <functiondecl functionName="store_float" lineNumber="1557"/>
+    <functiondecl functionName="store_double" lineNumber="1563"/>
+    <functiondecl functionName="store_real" lineNumber="1569"/>
+    <functiondecl functionName="store_string" lineNumber="1576"/>
+    <functiondecl functionName="store_pascal_string" lineNumber="1583"/>
+    <functiondecl functionName="get_pascal_string" lineNumber="1590"/>
+    <functiondecl functionName="store_line" lineNumber="1597"/>
+    <functiondecl functionName="store_csv_line" lineNumber="1603"/>
+    <functiondecl functionName="store_buffer" lineNumber="1608"/>
+    <functiondecl functionName="file_exists" lineNumber="1621"/>
+    <functiondecl functionName="store_var" lineNumber="1626"/>
+    <functiondecl functionName="get_var" lineNumber="1644"/>
+    <functiondecl functionName="get_modified_time" lineNumber="1660"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1665"/>
+    <functiondecl functionName="open" lineNumber="1745"/>
+    <functiondecl functionName="list_dir_begin" lineNumber="1758"/>
+    <functiondecl functionName="get_next" lineNumber="1768"/>
+    <functiondecl functionName="current_is_dir" lineNumber="1779"/>
+    <functiondecl functionName="list_dir_end" lineNumber="1785"/>
+    <functiondecl functionName="get_drive_count" lineNumber="1791"/>
+    <functiondecl functionName="get_drive" lineNumber="1796"/>
+    <functiondecl functionName="get_current_drive" lineNumber="1801"/>
+    <functiondecl functionName="change_dir" lineNumber="1806"/>
+    <functiondecl functionName="get_current_dir" lineNumber="1811"/>
+    <functiondecl functionName="make_dir" lineNumber="1816"/>
+    <functiondecl functionName="make_dir_recursive" lineNumber="1827"/>
+    <functiondecl functionName="file_exists" lineNumber="1839"/>
+    <functiondecl functionName="dir_exists" lineNumber="1850"/>
+    <functiondecl functionName="get_space_left" lineNumber="1864"/>
+    <functiondecl functionName="copy" lineNumber="1870"/>
+    <functiondecl functionName="rename" lineNumber="1875"/>
+    <functiondecl functionName="remove" lineNumber="1887"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1900"/>
+    <functiondecl functionName="get_singleton" lineNumber="1936"/>
+    <functiondecl functionName="variant_to_base64" lineNumber="1940"/>
+    <functiondecl functionName="base64_to_variant" lineNumber="1959"/>
+    <functiondecl functionName="raw_to_base64" lineNumber="1978"/>
+    <functiondecl functionName="base64_to_raw" lineNumber="1985"/>
+    <functiondecl functionName="utf8_to_base64" lineNumber="2003"/>
+    <functiondecl functionName="base64_to_utf8" lineNumber="2011"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2029"/>
+    <functiondecl functionName="wait" lineNumber="2043"/>
+    <functiondecl functionName="try_wait" lineNumber="2048"/>
+    <functiondecl functionName="post" lineNumber="2053"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2058"/>
+    <functiondecl functionName="lock" lineNumber="2067"/>
+    <functiondecl functionName="try_lock" lineNumber="2072"/>
+    <functiondecl functionName="unlock" lineNumber="2077"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2082"/>
+    <functiondecl functionName="_start_func" lineNumber="2091"/>
+    <functiondecl functionName="start" lineNumber="2130"/>
+    <functiondecl functionName="get_id" lineNumber="2159"/>
+    <functiondecl functionName="is_active" lineNumber="2167"/>
+    <functiondecl functionName="wait_to_finish" lineNumber="2171"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2188"/>
+    <functiondecl functionName="get_class_list" lineNumber="2213"/>
+    <functiondecl functionName="get_inheriters_from_class" lineNumber="2227"/>
+    <functiondecl functionName="get_parent_class" lineNumber="2241"/>
+    <functiondecl functionName="class_exists" lineNumber="2245"/>
+    <functiondecl functionName="is_parent_class" lineNumber="2249"/>
+    <functiondecl functionName="can_instance" lineNumber="2253"/>
+    <functiondecl functionName="instance" lineNumber="2257"/>
+    <functiondecl functionName="has_signal" lineNumber="2271"/>
+    <functiondecl functionName="get_signal" lineNumber="2275"/>
+    <functiondecl functionName="get_signal_list" lineNumber="2284"/>
+    <functiondecl functionName="get_property_list" lineNumber="2297"/>
+    <functiondecl functionName="get_property" lineNumber="2309"/>
+    <functiondecl functionName="set_property" lineNumber="2315"/>
+    <functiondecl functionName="has_method" lineNumber="2326"/>
+    <functiondecl functionName="get_method_list" lineNumber="2331"/>
+    <functiondecl functionName="get_integer_constant_list" lineNumber="2350"/>
+    <functiondecl functionName="has_integer_constant" lineNumber="2365"/>
+    <functiondecl functionName="get_integer_constant" lineNumber="2372"/>
+    <functiondecl functionName="get_category" lineNumber="2379"/>
+    <functiondecl functionName="is_class_enabled" lineNumber="2384"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2389"/>
+    <functiondecl functionName="set_iterations_per_second" lineNumber="2426"/>
+    <functiondecl functionName="get_iterations_per_second" lineNumber="2430"/>
+    <functiondecl functionName="set_physics_jitter_fix" lineNumber="2435"/>
+    <functiondecl functionName="get_physics_jitter_fix" lineNumber="2439"/>
+    <functiondecl functionName="get_physics_interpolation_fraction" lineNumber="2443"/>
+    <functiondecl functionName="set_target_fps" lineNumber="2447"/>
+    <functiondecl functionName="get_target_fps" lineNumber="2451"/>
+    <functiondecl functionName="get_frames_per_second" lineNumber="2455"/>
+    <functiondecl functionName="get_physics_frames" lineNumber="2460"/>
+    <functiondecl functionName="get_idle_frames" lineNumber="2465"/>
+    <functiondecl functionName="set_time_scale" lineNumber="2470"/>
+    <functiondecl functionName="get_time_scale" lineNumber="2474"/>
+    <functiondecl functionName="get_frames_drawn" lineNumber="2479"/>
+    <functiondecl functionName="get_main_loop" lineNumber="2484"/>
+    <functiondecl functionName="get_version_info" lineNumber="2490"/>
+    <functiondecl functionName="get_author_info" lineNumber="2495"/>
+    <functiondecl functionName="get_copyright_info" lineNumber="2499"/>
+    <functiondecl functionName="get_donor_info" lineNumber="2503"/>
+    <functiondecl functionName="get_license_info" lineNumber="2507"/>
+    <functiondecl functionName="get_license_text" lineNumber="2511"/>
+    <functiondecl functionName="is_in_physics_frame" lineNumber="2515"/>
+    <functiondecl functionName="has_singleton" lineNumber="2519"/>
+    <functiondecl functionName="get_singleton_object" lineNumber="2524"/>
+    <functiondecl functionName="set_editor_hint" lineNumber="2529"/>
+    <functiondecl functionName="is_editor_hint" lineNumber="2534"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2539"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2587"/>
+    <functiondecl functionName="set_error" lineNumber="2604"/>
+    <functiondecl functionName="get_error" lineNumber="2608"/>
+    <functiondecl functionName="set_error_string" lineNumber="2612"/>
+    <functiondecl functionName="get_error_string" lineNumber="2616"/>
+    <functiondecl functionName="set_error_line" lineNumber="2620"/>
+    <functiondecl functionName="get_error_line" lineNumber="2624"/>
+    <functiondecl functionName="set_result" lineNumber="2628"/>
+    <functiondecl functionName="get_result" lineNumber="2632"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2636"/>
+    <functiondecl functionName="print" lineNumber="2641"/>
+    <functiondecl functionName="parse" lineNumber="2645"/>
+    <functiondecl functionName="load_threaded_request" lineNumber="67"/>
+    <functiondecl functionName="load_threaded_get_status" lineNumber="71"/>
+    <functiondecl functionName="load_threaded_get" lineNumber="78"/>
+    <functiondecl functionName="load" lineNumber="84"/>
+    <functiondecl functionName="get_recognized_extensions_for_type" lineNumber="93"/>
+    <functiondecl functionName="set_abort_on_missing_resources" lineNumber="106"/>
+    <functiondecl functionName="get_dependencies" lineNumber="111"/>
+    <functiondecl functionName="has_cached" lineNumber="124"/>
+    <functiondecl functionName="exists" lineNumber="130"/>
+    <functiondecl functionName="_bind_methods" lineNumber="134"/>
+    <functiondecl functionName="save" lineNumber="158"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="163"/>
+    <functiondecl functionName="_bind_methods" lineNumber="178"/>
+    <functiondecl functionName="get_connected_midi_inputs" lineNumber="197"/>
+    <functiondecl functionName="open_midi_inputs" lineNumber="201"/>
+    <functiondecl functionName="close_midi_inputs" lineNumber="205"/>
+    <functiondecl functionName="set_use_file_access_save_and_swap" lineNumber="209"/>
+    <functiondecl functionName="set_low_processor_usage_mode" lineNumber="214"/>
+    <functiondecl functionName="is_in_low_processor_usage_mode" lineNumber="218"/>
+    <functiondecl functionName="set_low_processor_usage_mode_sleep_usec" lineNumber="223"/>
+    <functiondecl functionName="get_low_processor_usage_mode_sleep_usec" lineNumber="228"/>
+    <functiondecl functionName="get_executable_path" lineNumber="233"/>
+    <functiondecl functionName="shell_open" lineNumber="238"/>
+    <functiondecl functionName="execute" lineNumber="248"/>
+    <functiondecl functionName="kill" lineNumber="267"/>
+    <functiondecl functionName="get_process_id" lineNumber="272"/>
+    <functiondecl functionName="has_environment" lineNumber="277"/>
+    <functiondecl functionName="get_environment" lineNumber="281"/>
+    <functiondecl functionName="get_name" lineNumber="286"/>
+    <functiondecl functionName="get_cmdline_args" lineNumber="290"/>
+    <functiondecl functionName="get_locale" lineNumber="302"/>
+    <functiondecl functionName="get_model_name" lineNumber="307"/>
+    <functiondecl functionName="set_thread_name" lineNumber="312"/>
+    <functiondecl functionName="has_feature" lineNumber="317"/>
+    <functiondecl functionName="get_static_memory_usage" lineNumber="366"/>
+    <functiondecl functionName="get_static_memory_peak_usage" lineNumber="371"/>
+    <functiondecl functionName="get_exit_code" lineNumber="376"/>
+    <functiondecl functionName="set_exit_code" lineNumber="381"/>
+    <functiondecl functionName="get_datetime" lineNumber="394"/>
+    <functiondecl functionName="get_date" lineNumber="409"/>
+    <functiondecl functionName="get_time" lineNumber="421"/>
+    <functiondecl functionName="get_unix_time_from_datetime" lineNumber="443"/>
+    <functiondecl functionName="get_datetime_from_unix_time" lineNumber="516"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="572"/>
+    <functiondecl functionName="get_unix_time" lineNumber="580"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="585"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="589"/>
+    <functiondecl functionName="delay_usec" lineNumber="593"/>
+    <functiondecl functionName="delay_msec" lineNumber="598"/>
+    <functiondecl functionName="get_ticks_msec" lineNumber="603"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="608"/>
+    <functiondecl functionName="get_splash_tick_msec" lineNumber="613"/>
+    <functiondecl functionName="can_use_threads" lineNumber="618"/>
+    <functiondecl functionName="is_userfs_persistent" lineNumber="623"/>
+    <functiondecl functionName="get_processor_count" lineNumber="628"/>
+    <functiondecl functionName="is_stdout_verbose" lineNumber="633"/>
+    <functiondecl functionName="dump_memory_to_file" lineNumber="638"/>
+    <functiondecl functionName="print_all_textures_by_size" lineNumber="653"/>
+    <functiondecl functionName="print_resources_by_type" lineNumber="680"/>
+    <functiondecl functionName="print_all_resources" lineNumber="711"/>
+    <functiondecl functionName="print_resources_in_use" lineNumber="716"/>
+    <functiondecl functionName="dump_resources_to_file" lineNumber="721"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="726"/>
+    <functiondecl functionName="is_debug_build" lineNumber="731"/>
+    <functiondecl functionName="get_system_dir" lineNumber="740"/>
+    <functiondecl functionName="get_keycode_string" lineNumber="745"/>
+    <functiondecl functionName="is_keycode_unicode" lineNumber="750"/>
+    <functiondecl functionName="find_keycode_from_string" lineNumber="755"/>
+    <functiondecl functionName="request_permission" lineNumber="760"/>
+    <functiondecl functionName="request_permissions" lineNumber="765"/>
+    <functiondecl functionName="get_granted_permissions" lineNumber="770"/>
+    <functiondecl functionName="get_unique_id" lineNumber="775"/>
+    <functiondecl functionName="_bind_methods" lineNumber="780"/>
+    <functiondecl functionName="get_singleton" lineNumber="918"/>
+    <functiondecl functionName="build_box_planes" lineNumber="923"/>
+    <functiondecl functionName="build_cylinder_planes" lineNumber="928"/>
+    <functiondecl functionName="build_capsule_planes" lineNumber="932"/>
+    <functiondecl functionName="is_point_in_circle" lineNumber="937"/>
+    <functiondecl functionName="segment_intersects_circle" lineNumber="942"/>
+    <functiondecl functionName="segment_intersects_segment_2d" lineNumber="947"/>
+    <functiondecl functionName="line_intersects_line_2d" lineNumber="958"/>
+    <functiondecl functionName="get_closest_points_between_segments_2d" lineNumber="968"/>
+    <functiondecl functionName="get_closest_points_between_segments" lineNumber="979"/>
+    <functiondecl functionName="get_closest_point_to_segment_2d" lineNumber="989"/>
+    <functiondecl functionName="get_closest_point_to_segment" lineNumber="994"/>
+    <functiondecl functionName="get_closest_point_to_segment_uncapped_2d" lineNumber="999"/>
+    <functiondecl functionName="get_closest_point_to_segment_uncapped" lineNumber="1004"/>
+    <functiondecl functionName="ray_intersects_triangle" lineNumber="1009"/>
+    <functiondecl functionName="segment_intersects_triangle" lineNumber="1017"/>
+    <functiondecl functionName="point_is_inside_triangle" lineNumber="1026"/>
+    <functiondecl functionName="segment_intersects_sphere" lineNumber="1031"/>
+    <functiondecl functionName="segment_intersects_cylinder" lineNumber="1043"/>
+    <functiondecl functionName="segment_intersects_convex" lineNumber="1055"/>
+    <functiondecl functionName="is_polygon_clockwise" lineNumber="1068"/>
+    <functiondecl functionName="is_point_in_polygon" lineNumber="1073"/>
+    <functiondecl functionName="triangulate_polygon" lineNumber="1078"/>
+    <functiondecl functionName="triangulate_delaunay_2d" lineNumber="1083"/>
+    <functiondecl functionName="convex_hull_2d" lineNumber="1088"/>
+    <functiondecl functionName="clip_polygon" lineNumber="1093"/>
+    <functiondecl functionName="merge_polygons_2d" lineNumber="1098"/>
+    <functiondecl functionName="clip_polygons_2d" lineNumber="1110"/>
+    <functiondecl functionName="intersect_polygons_2d" lineNumber="1122"/>
+    <functiondecl functionName="exclude_polygons_2d" lineNumber="1134"/>
+    <functiondecl functionName="clip_polyline_with_polygon_2d" lineNumber="1146"/>
+    <functiondecl functionName="intersect_polyline_with_polygon_2d" lineNumber="1158"/>
+    <functiondecl functionName="offset_polygon_2d" lineNumber="1170"/>
+    <functiondecl functionName="offset_polyline_2d" lineNumber="1182"/>
+    <functiondecl functionName="make_atlas" lineNumber="1194"/>
+    <functiondecl functionName="get_uv84_normal_bit" lineNumber="1222"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1227"/>
+    <functiondecl functionName="open_encrypted" lineNumber="1297"/>
+    <functiondecl functionName="open_encrypted_pass" lineNumber="1314"/>
+    <functiondecl functionName="open_compressed" lineNumber="1332"/>
+    <functiondecl functionName="open" lineNumber="1349"/>
+    <functiondecl functionName="close" lineNumber="1359"/>
+    <functiondecl functionName="is_open" lineNumber="1365"/>
+    <functiondecl functionName="get_path" lineNumber="1369"/>
+    <functiondecl functionName="get_path_absolute" lineNumber="1375"/>
+    <functiondecl functionName="seek" lineNumber="1381"/>
+    <functiondecl functionName="seek_end" lineNumber="1386"/>
+    <functiondecl functionName="get_position" lineNumber="1391"/>
+    <functiondecl functionName="get_len" lineNumber="1397"/>
+    <functiondecl functionName="eof_reached" lineNumber="1403"/>
+    <functiondecl functionName="get_8" lineNumber="1409"/>
+    <functiondecl functionName="get_16" lineNumber="1414"/>
+    <functiondecl functionName="get_32" lineNumber="1419"/>
+    <functiondecl functionName="get_64" lineNumber="1424"/>
+    <functiondecl functionName="get_float" lineNumber="1430"/>
+    <functiondecl functionName="get_double" lineNumber="1435"/>
+    <functiondecl functionName="get_real" lineNumber="1440"/>
+    <functiondecl functionName="get_buffer" lineNumber="1446"/>
+    <functiondecl functionName="get_as_text" lineNumber="1468"/>
+    <functiondecl functionName="get_md5" lineNumber="1488"/>
+    <functiondecl functionName="get_sha256" lineNumber="1493"/>
+    <functiondecl functionName="get_line" lineNumber="1498"/>
+    <functiondecl functionName="get_csv_line" lineNumber="1504"/>
+    <functiondecl functionName="set_endian_swap" lineNumber="1514"/>
+    <functiondecl functionName="get_endian_swap" lineNumber="1520"/>
+    <functiondecl functionName="get_error" lineNumber="1525"/>
+    <functiondecl functionName="store_8" lineNumber="1532"/>
+    <functiondecl functionName="store_16" lineNumber="1538"/>
+    <functiondecl functionName="store_32" lineNumber="1544"/>
+    <functiondecl functionName="store_64" lineNumber="1550"/>
+    <functiondecl functionName="store_float" lineNumber="1557"/>
+    <functiondecl functionName="store_double" lineNumber="1563"/>
+    <functiondecl functionName="store_real" lineNumber="1569"/>
+    <functiondecl functionName="store_string" lineNumber="1576"/>
+    <functiondecl functionName="store_pascal_string" lineNumber="1583"/>
+    <functiondecl functionName="get_pascal_string" lineNumber="1590"/>
+    <functiondecl functionName="store_line" lineNumber="1597"/>
+    <functiondecl functionName="store_csv_line" lineNumber="1603"/>
+    <functiondecl functionName="store_buffer" lineNumber="1608"/>
+    <functiondecl functionName="file_exists" lineNumber="1621"/>
+    <functiondecl functionName="store_var" lineNumber="1626"/>
+    <functiondecl functionName="get_var" lineNumber="1644"/>
+    <functiondecl functionName="get_modified_time" lineNumber="1660"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1665"/>
+    <functiondecl functionName="open" lineNumber="1745"/>
+    <functiondecl functionName="list_dir_begin" lineNumber="1758"/>
+    <functiondecl functionName="get_next" lineNumber="1768"/>
+    <functiondecl functionName="current_is_dir" lineNumber="1779"/>
+    <functiondecl functionName="list_dir_end" lineNumber="1785"/>
+    <functiondecl functionName="get_drive_count" lineNumber="1791"/>
+    <functiondecl functionName="get_drive" lineNumber="1796"/>
+    <functiondecl functionName="get_current_drive" lineNumber="1801"/>
+    <functiondecl functionName="change_dir" lineNumber="1806"/>
+    <functiondecl functionName="get_current_dir" lineNumber="1811"/>
+    <functiondecl functionName="make_dir" lineNumber="1816"/>
+    <functiondecl functionName="make_dir_recursive" lineNumber="1827"/>
+    <functiondecl functionName="file_exists" lineNumber="1839"/>
+    <functiondecl functionName="dir_exists" lineNumber="1850"/>
+    <functiondecl functionName="get_space_left" lineNumber="1864"/>
+    <functiondecl functionName="copy" lineNumber="1870"/>
+    <functiondecl functionName="rename" lineNumber="1875"/>
+    <functiondecl functionName="remove" lineNumber="1887"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1900"/>
+    <functiondecl functionName="get_singleton" lineNumber="1936"/>
+    <functiondecl functionName="variant_to_base64" lineNumber="1940"/>
+    <functiondecl functionName="base64_to_variant" lineNumber="1959"/>
+    <functiondecl functionName="raw_to_base64" lineNumber="1978"/>
+    <functiondecl functionName="base64_to_raw" lineNumber="1985"/>
+    <functiondecl functionName="utf8_to_base64" lineNumber="2003"/>
+    <functiondecl functionName="base64_to_utf8" lineNumber="2011"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2029"/>
+    <functiondecl functionName="wait" lineNumber="2043"/>
+    <functiondecl functionName="try_wait" lineNumber="2048"/>
+    <functiondecl functionName="post" lineNumber="2053"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2058"/>
+    <functiondecl functionName="lock" lineNumber="2067"/>
+    <functiondecl functionName="try_lock" lineNumber="2072"/>
+    <functiondecl functionName="unlock" lineNumber="2077"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2082"/>
+    <functiondecl functionName="_start_func" lineNumber="2091"/>
+    <functiondecl functionName="start" lineNumber="2130"/>
+    <functiondecl functionName="get_id" lineNumber="2159"/>
+    <functiondecl functionName="is_active" lineNumber="2167"/>
+    <functiondecl functionName="wait_to_finish" lineNumber="2171"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2188"/>
+    <functiondecl functionName="get_class_list" lineNumber="2213"/>
+    <functiondecl functionName="get_inheriters_from_class" lineNumber="2227"/>
+    <functiondecl functionName="get_parent_class" lineNumber="2241"/>
+    <functiondecl functionName="class_exists" lineNumber="2245"/>
+    <functiondecl functionName="is_parent_class" lineNumber="2249"/>
+    <functiondecl functionName="can_instance" lineNumber="2253"/>
+    <functiondecl functionName="instance" lineNumber="2257"/>
+    <functiondecl functionName="has_signal" lineNumber="2271"/>
+    <functiondecl functionName="get_signal" lineNumber="2275"/>
+    <functiondecl functionName="get_signal_list" lineNumber="2284"/>
+    <functiondecl functionName="get_property_list" lineNumber="2297"/>
+    <functiondecl functionName="get_property" lineNumber="2309"/>
+    <functiondecl functionName="set_property" lineNumber="2315"/>
+    <functiondecl functionName="has_method" lineNumber="2326"/>
+    <functiondecl functionName="get_method_list" lineNumber="2331"/>
+    <functiondecl functionName="get_integer_constant_list" lineNumber="2350"/>
+    <functiondecl functionName="has_integer_constant" lineNumber="2365"/>
+    <functiondecl functionName="get_integer_constant" lineNumber="2372"/>
+    <functiondecl functionName="get_category" lineNumber="2379"/>
+    <functiondecl functionName="is_class_enabled" lineNumber="2384"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2389"/>
+    <functiondecl functionName="set_iterations_per_second" lineNumber="2426"/>
+    <functiondecl functionName="get_iterations_per_second" lineNumber="2430"/>
+    <functiondecl functionName="set_physics_jitter_fix" lineNumber="2435"/>
+    <functiondecl functionName="get_physics_jitter_fix" lineNumber="2439"/>
+    <functiondecl functionName="get_physics_interpolation_fraction" lineNumber="2443"/>
+    <functiondecl functionName="set_target_fps" lineNumber="2447"/>
+    <functiondecl functionName="get_target_fps" lineNumber="2451"/>
+    <functiondecl functionName="get_frames_per_second" lineNumber="2455"/>
+    <functiondecl functionName="get_physics_frames" lineNumber="2460"/>
+    <functiondecl functionName="get_idle_frames" lineNumber="2465"/>
+    <functiondecl functionName="set_time_scale" lineNumber="2470"/>
+    <functiondecl functionName="get_time_scale" lineNumber="2474"/>
+    <functiondecl functionName="get_frames_drawn" lineNumber="2479"/>
+    <functiondecl functionName="get_main_loop" lineNumber="2484"/>
+    <functiondecl functionName="get_version_info" lineNumber="2490"/>
+    <functiondecl functionName="get_author_info" lineNumber="2495"/>
+    <functiondecl functionName="get_copyright_info" lineNumber="2499"/>
+    <functiondecl functionName="get_donor_info" lineNumber="2503"/>
+    <functiondecl functionName="get_license_info" lineNumber="2507"/>
+    <functiondecl functionName="get_license_text" lineNumber="2511"/>
+    <functiondecl functionName="is_in_physics_frame" lineNumber="2515"/>
+    <functiondecl functionName="has_singleton" lineNumber="2519"/>
+    <functiondecl functionName="get_singleton_object" lineNumber="2524"/>
+    <functiondecl functionName="set_editor_hint" lineNumber="2529"/>
+    <functiondecl functionName="is_editor_hint" lineNumber="2534"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2539"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2587"/>
+    <functiondecl functionName="set_error" lineNumber="2604"/>
+    <functiondecl functionName="get_error" lineNumber="2608"/>
+    <functiondecl functionName="set_error_string" lineNumber="2612"/>
+    <functiondecl functionName="get_error_string" lineNumber="2616"/>
+    <functiondecl functionName="set_error_line" lineNumber="2620"/>
+    <functiondecl functionName="get_error_line" lineNumber="2624"/>
+    <functiondecl functionName="set_result" lineNumber="2628"/>
+    <functiondecl functionName="get_result" lineNumber="2632"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2636"/>
+    <functiondecl functionName="print" lineNumber="2641"/>
+    <functiondecl functionName="parse" lineNumber="2645"/>
+    <functioncall functionName="ACCESS_RESOURCES"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_PROPERTY_DEFAULT"/>
+    <functioncall functionName="AXIS_Z"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="COMPRESSION_DEFLATE"/>
+    <functioncall functionName="COMPRESSION_FASTLZ"/>
+    <functioncall functionName="COMPRESSION_GZIP"/>
+    <functioncall functionName="COMPRESSION_ZSTD"/>
+    <functioncall functionName="CompressionMode"/>
+    <functioncall functionName="DAY_FRIDAY"/>
+    <functioncall functionName="DAY_MONDAY"/>
+    <functioncall functionName="DAY_SATURDAY"/>
+    <functioncall functionName="DAY_SUNDAY"/>
+    <functioncall functionName="DAY_THURSDAY"/>
+    <functioncall functionName="DAY_TUESDAY"/>
+    <functioncall functionName="DAY_WEDNESDAY"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="Dictionary"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="END_BUTT"/>
+    <functioncall functionName="END_JOINED"/>
+    <functioncall functionName="END_POLYGON"/>
+    <functioncall functionName="END_ROUND"/>
+    <functioncall functionName="END_SQUARE"/>
+    <functioncall functionName="ERR_ALREADY_IN_USE"/>
+    <functioncall functionName="ERR_BUSY"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="FLAG_BUNDLE_RESOURCES"/>
+    <functioncall functionName="FLAG_CHANGE_PATH"/>
+    <functioncall functionName="FLAG_COMPRESS"/>
+    <functioncall functionName="FLAG_OMIT_EDITOR_PROPERTIES"/>
+    <functioncall functionName="FLAG_RELATIVE_PATHS"/>
+    <functioncall functionName="FLAG_REPLACE_SUBRESOURCE_PATHS"/>
+    <functioncall functionName="FLAG_SAVE_BIG_ENDIAN"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FileAccessCompressed"/>
+    <functioncall functionName="FileAccessEncrypted"/>
+    <functioncall functionName="Format"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="JOIN_MITER"/>
+    <functioncall functionName="JOIN_ROUND"/>
+    <functioncall functionName="JOIN_SQUARE"/>
+    <functioncall functionName="JSONParseResult"/>
+    <functioncall functionName="MODE_DEFLATE"/>
+    <functioncall functionName="MODE_FASTLZ"/>
+    <functioncall functionName="MODE_GZIP"/>
+    <functioncall functionName="MODE_READ"/>
+    <functioncall functionName="MODE_WRITE_AES256"/>
+    <functioncall functionName="MODE_ZSTD"/>
+    <functioncall functionName="MONTH_APRIL"/>
+    <functioncall functionName="MONTH_AUGUST"/>
+    <functioncall functionName="MONTH_DECEMBER"/>
+    <functioncall functionName="MONTH_FEBRUARY"/>
+    <functioncall functionName="MONTH_JANUARY"/>
+    <functioncall functionName="MONTH_JULY"/>
+    <functioncall functionName="MONTH_JUNE"/>
+    <functioncall functionName="MONTH_MARCH"/>
+    <functioncall functionName="MONTH_MAY"/>
+    <functioncall functionName="MONTH_NOVEMBER"/>
+    <functioncall functionName="MONTH_OCTOBER"/>
+    <functioncall functionName="MONTH_SEPTEMBER"/>
+    <functioncall functionName="Mode"/>
+    <functioncall functionName="ModeFlags"/>
+    <functioncall functionName="Month"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="OPERATION_DIFFERENCE"/>
+    <functioncall functionName="OPERATION_INTERSECTION"/>
+    <functioncall functionName="OPERATION_UNION"/>
+    <functioncall functionName="OPERATION_XOR"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="PRIORITY_HIGH"/>
+    <functioncall functionName="PRIORITY_LOW"/>
+    <functioncall functionName="PRIORITY_MAX"/>
+    <functioncall functionName="PRIORITY_NORMAL"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_USAGE_CLASS_IS_ENUM"/>
+    <functioncall functionName="PROPERTY_USAGE_NIL_IS_VARIANT"/>
+    <functioncall functionName="PolyBooleanOperation"/>
+    <functioncall functionName="PolyEndType"/>
+    <functioncall functionName="PolyJoinType"/>
+    <functioncall functionName="Priority"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="READ_WRITE"/>
+    <functioncall functionName="REF"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="SECONDS_FROM_YEARS_PAST"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="SYSTEM_DIR_DCIM"/>
+    <functioncall functionName="SYSTEM_DIR_DESKTOP"/>
+    <functioncall functionName="SYSTEM_DIR_DOCUMENTS"/>
+    <functioncall functionName="SYSTEM_DIR_DOWNLOADS"/>
+    <functioncall functionName="SYSTEM_DIR_MOVIES"/>
+    <functioncall functionName="SYSTEM_DIR_MUSIC"/>
+    <functioncall functionName="SYSTEM_DIR_PICTURES"/>
+    <functioncall functionName="SYSTEM_DIR_RINGTONES"/>
+    <functioncall functionName="SaverFlags"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="SystemDir"/>
+    <functioncall functionName="THREAD_LOAD_FAILED"/>
+    <functioncall functionName="THREAD_LOAD_INVALID_RESOURCE"/>
+    <functioncall functionName="THREAD_LOAD_IN_PROGRESS"/>
+    <functioncall functionName="THREAD_LOAD_LOADED"/>
+    <functioncall functionName="ThreadLoadStatus"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VIDEO_DRIVER_GLES2"/>
+    <functioncall functionName="VIDEO_DRIVER_VULKAN"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="VideoDriver"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="WRITE_READ"/>
+    <functioncall functionName="Weekday"/>
+    <functioncall functionName="_ClassDB"/>
+    <functioncall functionName="_Directory"/>
+    <functioncall functionName="_Engine"/>
+    <functioncall functionName="_File"/>
+    <functioncall functionName="_Geometry"/>
+    <functioncall functionName="_JSON"/>
+    <functioncall functionName="_Marshalls"/>
+    <functioncall functionName="_Mutex"/>
+    <functioncall functionName="_OS"/>
+    <functioncall functionName="_ResourceLoader"/>
+    <functioncall functionName="_ResourceSaver"/>
+    <functioncall functionName="_Semaphore"/>
+    <functioncall functionName="_Thread"/>
+    <functioncall functionName="_open"/>
+    <functioncall functionName="_start_func"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="alt"/>
+    <functioncall functionName="arg"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="argument"/>
+    <functioncall functionName="arr_len"/>
+    <functioncall functionName="ascii"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b64_decode"/>
+    <functioncall functionName="b64_encode_str"/>
+    <functioncall functionName="base64_to_raw"/>
+    <functioncall functionName="base64_to_utf8"/>
+    <functioncall functionName="base64_to_variant"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bias"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buff"/>
+    <functioncall functionName="build_box_planes"/>
+    <functioncall functionName="build_capsule_planes"/>
+    <functioncall functionName="build_cylinder_planes"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="can_instance"/>
+    <functioncall functionName="can_use_threads"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="change_dir"/>
+    <functioncall functionName="class_exists"/>
+    <functioncall functionName="classes"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clip_polygon"/>
+    <functioncall functionName="clip_polygons_2d"/>
+    <functioncall functionName="clip_polyline_with_polygon_2d"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="close_midi_inputs"/>
+    <functioncall functionName="configure"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constants"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convex_hull_2d"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_for_path"/>
+    <functioncall functionName="current_is_dir"/>
+    <functioncall functionName="current_is_hidden"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="day"/>
+    <functioncall functionName="decode_variant"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delay_msec"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="deps"/>
+    <functioncall functionName="dict"/>
+    <functioncall functionName="dir_exists"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dump_memory_to_file"/>
+    <functioncall functionName="dump_resources_to_file"/>
+    <functioncall functionName="encode_variant"/>
+    <functioncall functionName="eof_reached"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="error_line"/>
+    <functioncall functionName="error_string"/>
+    <functioncall functionName="eswap"/>
+    <functioncall functionName="exclude_polygons_2d"/>
+    <functioncall functionName="execute"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="exitcode"/>
+    <functioncall functionName="exts"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fac"/>
+    <functioncall functionName="fae"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file_exists"/>
+    <functioncall functionName="find_keycode"/>
+    <functioncall functionName="find_keycode_from_string"/>
+    <functioncall functionName="fmt"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_16"/>
+    <functioncall functionName="get_32"/>
+    <functioncall functionName="get_64"/>
+    <functioncall functionName="get_8"/>
+    <functioncall functionName="get_as_text"/>
+    <functioncall functionName="get_author_info"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_cached_resources"/>
+    <functioncall functionName="get_category"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_class_list"/>
+    <functioncall functionName="get_closest_point_to_segment"/>
+    <functioncall functionName="get_closest_point_to_segment_2d"/>
+    <functioncall functionName="get_closest_point_to_segment_uncapped"/>
+    <functioncall functionName="get_closest_point_to_segment_uncapped_2d"/>
+    <functioncall functionName="get_closest_points_between_segments"/>
+    <functioncall functionName="get_closest_points_between_segments_2d"/>
+    <functioncall functionName="get_cmdline_args"/>
+    <functioncall functionName="get_connected_midi_inputs"/>
+    <functioncall functionName="get_copyright_info"/>
+    <functioncall functionName="get_csv_line"/>
+    <functioncall functionName="get_current_dir"/>
+    <functioncall functionName="get_current_drive"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_date"/>
+    <functioncall functionName="get_datetime"/>
+    <functioncall functionName="get_datetime_from_unix_time"/>
+    <functioncall functionName="get_dependencies"/>
+    <functioncall functionName="get_donor_info"/>
+    <functioncall functionName="get_double"/>
+    <functioncall functionName="get_drive"/>
+    <functioncall functionName="get_drive_count"/>
+    <functioncall functionName="get_endian_swap"/>
+    <functioncall functionName="get_environment"/>
+    <functioncall functionName="get_error"/>
+    <functioncall functionName="get_error_line"/>
+    <functioncall functionName="get_error_string"/>
+    <functioncall functionName="get_executable_path"/>
+    <functioncall functionName="get_exit_code"/>
+    <functioncall functionName="get_float"/>
+    <functioncall functionName="get_frames_drawn"/>
+    <functioncall functionName="get_frames_per_second"/>
+    <functioncall functionName="get_granted_permissions"/>
+    <functioncall functionName="get_id"/>
+    <functioncall functionName="get_idle_frames"/>
+    <functioncall functionName="get_image_data_size"/>
+    <functioncall functionName="get_inheriters_from_class"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_integer_constant"/>
+    <functioncall functionName="get_integer_constant_list"/>
+    <functioncall functionName="get_iterations_per_second"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_keycode_string"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_license_info"/>
+    <functioncall functionName="get_license_text"/>
+    <functioncall functionName="get_line"/>
+    <functioncall functionName="get_locale"/>
+    <functioncall functionName="get_low_processor_usage_mode_sleep_usec"/>
+    <functioncall functionName="get_main_loop"/>
+    <functioncall functionName="get_md5"/>
+    <functioncall functionName="get_method_list"/>
+    <functioncall functionName="get_model_name"/>
+    <functioncall functionName="get_modified_time"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_next"/>
+    <functioncall functionName="get_parent_class"/>
+    <functioncall functionName="get_pascal_string"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_path_absolute"/>
+    <functioncall functionName="get_physics_frames"/>
+    <functioncall functionName="get_physics_interpolation_fraction"/>
+    <functioncall functionName="get_physics_jitter_fix"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_process_id"/>
+    <functioncall functionName="get_processor_count"/>
+    <functioncall functionName="get_property"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_real"/>
+    <functioncall functionName="get_recognized_extensions"/>
+    <functioncall functionName="get_recognized_extensions_for_type"/>
+    <functioncall functionName="get_result"/>
+    <functioncall functionName="get_sha256"/>
+    <functioncall functionName="get_signal"/>
+    <functioncall functionName="get_signal_list"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_singleton_object"/>
+    <functioncall functionName="get_space_left"/>
+    <functioncall functionName="get_splash_tick_msec"/>
+    <functioncall functionName="get_static_memory_peak_usage"/>
+    <functioncall functionName="get_static_memory_usage"/>
+    <functioncall functionName="get_system_dir"/>
+    <functioncall functionName="get_system_time_msecs"/>
+    <functioncall functionName="get_system_time_secs"/>
+    <functioncall functionName="get_target_fps"/>
+    <functioncall functionName="get_ticks_msec"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_time"/>
+    <functioncall functionName="get_time_scale"/>
+    <functioncall functionName="get_time_zone_info"/>
+    <functioncall functionName="get_unique_id"/>
+    <functioncall functionName="get_unix_time"/>
+    <functioncall functionName="get_unix_time_from_datetime"/>
+    <functioncall functionName="get_user_data_dir"/>
+    <functioncall functionName="get_uv84_normal_bit"/>
+    <functioncall functionName="get_var"/>
+    <functioncall functionName="get_version_info"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_cached"/>
+    <functioncall functionName="has_environment"/>
+    <functioncall functionName="has_feature"/>
+    <functioncall functionName="has_integer_constant"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="has_signal"/>
+    <functioncall functionName="has_singleton"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hour"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="imonth"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="intersect_polygons_2d"/>
+    <functioncall functionName="intersect_polyline_with_polygon_2d"/>
+    <functioncall functionName="is_active"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_class_enabled"/>
+    <functioncall functionName="is_debug_build"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_in_low_processor_usage_mode"/>
+    <functioncall functionName="is_in_physics_frame"/>
+    <functioncall functionName="is_keycode_unicode"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_open"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="is_point_in_circle"/>
+    <functioncall functionName="is_point_in_polygon"/>
+    <functioncall functionName="is_point_in_triangle"/>
+    <functioncall functionName="is_polygon_clockwise"/>
+    <functioncall functionName="is_rel_path"/>
+    <functioncall functionName="is_stdout_verbose"/>
+    <functioncall functionName="is_userfs_persistent"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="iyear"/>
+    <functioncall functionName="keycode_get_string"/>
+    <functioncall functionName="keycode_has_unicode"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="kill"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="line_intersects_line_2d"/>
+    <functioncall functionName="list_dir_begin"/>
+    <functioncall functionName="list_dir_end"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="load_threaded_get"/>
+    <functioncall functionName="load_threaded_get_status"/>
+    <functioncall functionName="load_threaded_request"/>
+    <functioncall functionName="local_path"/>
+    <functioncall functionName="localize_path"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="make_atlas"/>
+    <functioncall functionName="make_dir"/>
+    <functioncall functionName="make_dir_recursive"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="merge_polygons_2d"/>
+    <functioncall functionName="methods"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="minute"/>
+    <functioncall functionName="month"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="norm"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="offset_polygon_2d"/>
+    <functioncall functionName="offset_polyline_2d"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_and_parse"/>
+    <functioncall functionName="open_and_parse_password"/>
+    <functioncall functionName="open_compressed"/>
+    <functioncall functionName="open_encrypted"/>
+    <functioncall functionName="open_encrypted_pass"/>
+    <functioncall functionName="open_midi_inputs"/>
+    <functioncall functionName="operatorDictionary"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="original_pos"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_abort"/>
+    <functioncall functionName="p_allow_objects"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_blocking"/>
+    <functioncall functionName="p_circle_pos"/>
+    <functioncall functionName="p_circle_radius"/>
+    <functioncall functionName="p_class"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_compress_mode"/>
+    <functioncall functionName="p_delim"/>
+    <functioncall functionName="p_delta"/>
+    <functioncall functionName="p_dest"/>
+    <functioncall functionName="p_dir"/>
+    <functioncall functionName="p_dir_a"/>
+    <functioncall functionName="p_dir_b"/>
+    <functioncall functionName="p_drive"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_end_type"/>
+    <functioncall functionName="p_error"/>
+    <functioncall functionName="p_error_line"/>
+    <functioncall functionName="p_error_string"/>
+    <functioncall functionName="p_extents"/>
+    <functioncall functionName="p_feature"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_fps"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_from_a"/>
+    <functioncall functionName="p_from_b"/>
+    <functioncall functionName="p_full_objects"/>
+    <functioncall functionName="p_height"/>
+    <functioncall functionName="p_indent"/>
+    <functioncall functionName="p_inherits"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_ips"/>
+    <functioncall functionName="p_join_type"/>
+    <functioncall functionName="p_json"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_lats"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_mode_flags"/>
+    <functioncall functionName="p_msec"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_no_cache"/>
+    <functioncall functionName="p_no_inheritance"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_pass"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_plane"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_points"/>
+    <functioncall functionName="p_polygon"/>
+    <functioncall functionName="p_polygon_a"/>
+    <functioncall functionName="p_polygon_b"/>
+    <functioncall functionName="p_polyline"/>
+    <functioncall functionName="p_position"/>
+    <functioncall functionName="p_priority"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_radius"/>
+    <functioncall functionName="p_read_stderr"/>
+    <functioncall functionName="p_real"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_result"/>
+    <functioncall functionName="p_scale"/>
+    <functioncall functionName="p_short"/>
+    <functioncall functionName="p_sides"/>
+    <functioncall functionName="p_signal"/>
+    <functioncall functionName="p_skip_hidden"/>
+    <functioncall functionName="p_skip_navigational"/>
+    <functioncall functionName="p_sort_keys"/>
+    <functioncall functionName="p_sphere_pos"/>
+    <functioncall functionName="p_sphere_radius"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_swap"/>
+    <functioncall functionName="p_threshold"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_to_a"/>
+    <functioncall functionName="p_to_b"/>
+    <functioncall functionName="p_to_file"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_type_hint"/>
+    <functioncall functionName="p_unicode"/>
+    <functioncall functionName="p_uri"/>
+    <functioncall functionName="p_use_sub_threads"/>
+    <functioncall functionName="p_usec"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="p_v0"/>
+    <functioncall functionName="p_v1"/>
+    <functioncall functionName="p_v2"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_values"/>
+    <functioncall functionName="p_var"/>
+    <functioncall functionName="p_vector"/>
+    <functioncall functionName="parse"/>
+    <functioncall functionName="pid"/>
+    <functioncall functionName="pipe"/>
+    <functioncall functionName="plist"/>
+    <functioncall functionName="point_is_inside_triangle"/>
+    <functioncall functionName="post"/>
+    <functioncall functionName="print"/>
+    <functioncall functionName="print_all_resources"/>
+    <functioncall functionName="print_all_textures_by_size"/>
+    <functioncall functionName="print_resources_by_type"/>
+    <functioncall functionName="print_resources_in_use"/>
+    <functioncall functionName="progress"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="q1"/>
+    <functioncall functionName="q2"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r1"/>
+    <functioncall functionName="r2"/>
+    <functioncall functionName="r_result"/>
+    <functioncall functionName="r_size"/>
+    <functioncall functionName="raw_to_base64"/>
+    <functioncall functionName="ray_intersects_triangle"/>
+    <functioncall functionName="rects"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="rename"/>
+    <functioncall functionName="request_permission"/>
+    <functioncall functionName="request_permissions"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resources"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rsrc"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="sec"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="seek_end"/>
+    <functioncall functionName="segment_intersects_circle"/>
+    <functioncall functionName="segment_intersects_convex"/>
+    <functioncall functionName="segment_intersects_cylinder"/>
+    <functioncall functionName="segment_intersects_segment_2d"/>
+    <functioncall functionName="segment_intersects_sphere"/>
+    <functioncall functionName="segment_intersects_triangle"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_abort_on_missing_resources"/>
+    <functioncall functionName="set_backup_save"/>
+    <functioncall functionName="set_editor_hint"/>
+    <functioncall functionName="set_endian_swap"/>
+    <functioncall functionName="set_error"/>
+    <functioncall functionName="set_error_line"/>
+    <functioncall functionName="set_error_string"/>
+    <functioncall functionName="set_exit_code"/>
+    <functioncall functionName="set_iterations_per_second"/>
+    <functioncall functionName="set_low_processor_usage_mode"/>
+    <functioncall functionName="set_low_processor_usage_mode_sleep_usec"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_physics_jitter_fix"/>
+    <functioncall functionName="set_property"/>
+    <functioncall functionName="set_result"/>
+    <functioncall functionName="set_target_fps"/>
+    <functioncall functionName="set_thread_name"/>
+    <functioncall functionName="set_time_scale"/>
+    <functioncall functionName="set_use_file_access_save_and_swap"/>
+    <functioncall functionName="shell_open"/>
+    <functioncall functionName="signal"/>
+    <functioncall functionName="signals"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="store_16"/>
+    <functioncall functionName="store_32"/>
+    <functioncall functionName="store_64"/>
+    <functioncall functionName="store_8"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="store_csv_line"/>
+    <functioncall functionName="store_double"/>
+    <functioncall functionName="store_float"/>
+    <functioncall functionName="store_line"/>
+    <functioncall functionName="store_pascal_string"/>
+    <functioncall functionName="store_real"/>
+    <functioncall functionName="store_string"/>
+    <functioncall functionName="store_var"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="target_method"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread"/>
+    <functioncall functionName="tls"/>
+    <functioncall functionName="triangulate_delaunay_2d"/>
+    <functioncall functionName="triangulate_polygon"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="try_lock"/>
+    <functioncall functionName="try_wait"/>
+    <functioncall functionName="tud"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="userdata"/>
+    <functioncall functionName="utc"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="utf8_to_base64"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="variant_to_base64"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="vram"/>
+    <functioncall functionName="wait"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="weekday"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="year"/>
+  </FileInfo>
+</analyzerinfo>

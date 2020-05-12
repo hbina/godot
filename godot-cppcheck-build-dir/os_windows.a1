@@ -1,0 +1,990 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2243442784">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Windows::ticks_start&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Windows::ticks_start&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="814" column="13"/>
+            <symbol>OS_Windows::ticks_start</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Windows::ticks_per_second&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Windows::ticks_per_second&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="814" column="13"/>
+            <symbol>OS_Windows::ticks_per_second</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Windows::main_loop&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Windows::main_loop&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="814" column="13"/>
+            <symbol>OS_Windows::main_loop</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Windows::process_map&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Windows::process_map&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="814" column="13"/>
+            <symbol>OS_Windows::process_map</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;xinput_gamepad::id&apos; is not initialized in the constructor." verbose="Member variable &apos;xinput_gamepad::id&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/windows/os_windows.cpp" file="/home/hbina/git/godot/platform/windows/joypad_windows.h" line="105" column="3"/>
+            <symbol>xinput_gamepad::id</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;last_pad&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;last_pad&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/windows/os_windows.cpp" file="/home/hbina/git/godot/platform/windows/joypad_windows.h" line="86" column="4"/>
+            <symbol>last_pad</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;last_packet&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;last_packet&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/windows/os_windows.cpp" file="/home/hbina/git/godot/platform/windows/joypad_windows.h" line="110" column="4"/>
+            <symbol>last_packet</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;hInstance&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;hInstance&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="818" column="2"/>
+            <symbol>hInstance</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;OS_Windows&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;OS_Windows&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/windows/os_windows.cpp" file="/home/hbina/git/godot/platform/windows/os_windows.h" line="172" column="2"/>
+            <symbol>OS_Windows</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;JoypadWindows&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;JoypadWindows&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/windows/os_windows.cpp" file="/home/hbina/git/godot/platform/windows/joypad_windows.h" line="55" column="2"/>
+            <symbol>JoypadWindows</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476">
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="456" column="28" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="451" column="20" info="Assignment &apos;f=_wpopen(argss.c_str(),L&quot;r&quot;)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/windows/os_windows.cpp" line="453" column="19" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="format_error_message" lineNumber="82"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="format_error_message" lineNumber="82"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functiondecl functionName="RedirectIOToConsole" lineNumber="96"/>
+    <functiondecl functionName="HandlerRoutine" lineNumber="163"/>
+    <functiondecl functionName="initialize_debugging" lineNumber="177"/>
+    <functiondecl functionName="initialize" lineNumber="182"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="219"/>
+    <functiondecl functionName="set_main_loop" lineNumber="226"/>
+    <functiondecl functionName="finalize" lineNumber="231"/>
+    <functiondecl functionName="finalize_core" lineNumber="243"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="251"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="283"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="290"/>
+    <functiondecl functionName="get_name" lineNumber="302"/>
+    <functiondecl functionName="get_date" lineNumber="307"/>
+    <functiondecl functionName="get_time" lineNumber="323"/>
+    <functiondecl functionName="get_time_zone_info" lineNumber="338"/>
+    <functiondecl functionName="get_unix_time" lineNumber="357"/>
+    <functiondecl functionName="get_system_time_secs" lineNumber="389"/>
+    <functiondecl functionName="get_system_time_msecs" lineNumber="394"/>
+    <functiondecl functionName="delay_usec" lineNumber="411"/>
+    <functiondecl functionName="get_ticks_usec" lineNumber="418"/>
+    <functiondecl functionName="execute" lineNumber="433"/>
+    <functiondecl functionName="kill" lineNumber="515"/>
+    <functiondecl functionName="get_process_id" lineNumber="530"/>
+    <functiondecl functionName="set_cwd" lineNumber="534"/>
+    <functiondecl functionName="get_executable_path" lineNumber="542"/>
+    <functiondecl functionName="has_environment" lineNumber="550"/>
+    <functiondecl functionName="get_environment" lineNumber="564"/>
+    <functiondecl functionName="set_environment" lineNumber="574"/>
+    <functiondecl functionName="get_stdin_string" lineNumber="579"/>
+    <functiondecl functionName="shell_open" lineNumber="589"/>
+    <functiondecl functionName="get_locale" lineNumber="595"/>
+    <functiondecl functionName="is_wow64" lineNumber="627"/>
+    <functiondecl functionName="get_processor_count" lineNumber="641"/>
+    <functiondecl functionName="run" lineNumber="651"/>
+    <functiondecl functionName="get_main_loop" lineNumber="668"/>
+    <functiondecl functionName="get_config_path" lineNumber="673"/>
+    <functiondecl functionName="get_data_path" lineNumber="684"/>
+    <functiondecl functionName="get_cache_path" lineNumber="693"/>
+    <functiondecl functionName="get_godot_dir_name" lineNumber="705"/>
+    <functiondecl functionName="get_system_dir" lineNumber="710"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="749"/>
+    <functiondecl functionName="get_unique_id" lineNumber="768"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="775"/>
+    <functiondecl functionName="disable_crash_handler" lineNumber="780"/>
+    <functiondecl functionName="is_disable_crash_handler" lineNumber="784"/>
+    <functiondecl functionName="move_to_trash" lineNumber="788"/>
+    <functioncall functionName="ACCESS_FILESYSTEM"/>
+    <functioncall functionName="ACCESS_RESOURCES"/>
+    <functioncall functionName="ACCESS_USERDATA"/>
+    <functioncall functionName="AllocConsole"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="Bias"/>
+    <functioncall functionName="CloseHandle"/>
+    <functioncall functionName="CoTaskMemFree"/>
+    <functioncall functionName="CompositeLogger"/>
+    <functioncall functionName="ContextGL_Windows"/>
+    <functioncall functionName="CrashHandler"/>
+    <functioncall functionName="CreateProcessW"/>
+    <functioncall functionName="DLL_DIRECTORY_COOKIE"/>
+    <functioncall functionName="DWORD"/>
+    <functioncall functionName="DaylightName"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CANT_FORK"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_CANT_RESOLVE"/>
+    <functioncall functionName="ERR_ERROR"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="FALSE"/>
+    <functioncall functionName="FOF_NOCONFIRMATION"/>
+    <functioncall functionName="FOLDERID_Desktop"/>
+    <functioncall functionName="FOLDERID_Documents"/>
+    <functioncall functionName="FOLDERID_Downloads"/>
+    <functioncall functionName="FOLDERID_Music"/>
+    <functioncall functionName="FOLDERID_Pictures"/>
+    <functioncall functionName="FOLDERID_Videos"/>
+    <functioncall functionName="FORMAT_MESSAGE_IGNORE_INSERTS"/>
+    <functioncall functionName="FO_DELETE"/>
+    <functioncall functionName="FormatMessageW"/>
+    <functioncall functionName="FreeLibrary"/>
+    <functioncall functionName="GetConsoleScreenBufferInfo"/>
+    <functioncall functionName="GetCurrentHwProfile"/>
+    <functioncall functionName="GetCurrentProcess"/>
+    <functioncall functionName="GetEnvironmentVariableW"/>
+    <functioncall functionName="GetLastError"/>
+    <functioncall functionName="GetLocalTime"/>
+    <functioncall functionName="GetModuleFileNameW"/>
+    <functioncall functionName="GetModuleHandle"/>
+    <functioncall functionName="GetNativeSystemInfo"/>
+    <functioncall functionName="GetProcAddress"/>
+    <functioncall functionName="GetStdHandle"/>
+    <functioncall functionName="GetSystemInfo"/>
+    <functioncall functionName="GetSystemTime"/>
+    <functioncall functionName="GetTimeZoneInformation"/>
+    <functioncall functionName="GetUserDefaultUILanguage"/>
+    <functioncall functionName="HANDLE"/>
+    <functioncall functionName="HMODULE"/>
+    <functioncall functionName="HandlerRoutine"/>
+    <functioncall functionName="HwProfInfo"/>
+    <functioncall functionName="I"/>
+    <functioncall functionName="INFINITE"/>
+    <functioncall functionName="JOYPADS_MAX"/>
+    <functioncall functionName="JoypadWindows"/>
+    <functioncall functionName="KeyMappingWindows"/>
+    <functioncall functionName="LANG_ALBANIAN"/>
+    <functioncall functionName="LANG_ARABIC"/>
+    <functioncall functionName="LANG_ARMENIAN"/>
+    <functioncall functionName="LANG_BELARUSIAN"/>
+    <functioncall functionName="LANG_BULGARIAN"/>
+    <functioncall functionName="LANG_CATALAN"/>
+    <functioncall functionName="LANG_CHINESE"/>
+    <functioncall functionName="LANG_CROATIAN"/>
+    <functioncall functionName="LANG_CZECH"/>
+    <functioncall functionName="LANG_DANISH"/>
+    <functioncall functionName="LANG_DUTCH"/>
+    <functioncall functionName="LANG_ENGLISH"/>
+    <functioncall functionName="LANG_ESTONIAN"/>
+    <functioncall functionName="LANG_FINNISH"/>
+    <functioncall functionName="LANG_FRENCH"/>
+    <functioncall functionName="LANG_GERMAN"/>
+    <functioncall functionName="LANG_GREEK"/>
+    <functioncall functionName="LANG_HEBREW"/>
+    <functioncall functionName="LANG_HINDI"/>
+    <functioncall functionName="LANG_HUNGARIAN"/>
+    <functioncall functionName="LANG_ICELANDIC"/>
+    <functioncall functionName="LANG_INDONESIAN"/>
+    <functioncall functionName="LANG_IRISH"/>
+    <functioncall functionName="LANG_ITALIAN"/>
+    <functioncall functionName="LANG_JAPANESE"/>
+    <functioncall functionName="LANG_KOREAN"/>
+    <functioncall functionName="LANG_LATVIAN"/>
+    <functioncall functionName="LANG_LITHUANIAN"/>
+    <functioncall functionName="LANG_MACEDONIAN"/>
+    <functioncall functionName="LANG_MALAY"/>
+    <functioncall functionName="LANG_MALTESE"/>
+    <functioncall functionName="LANG_NEUTRAL"/>
+    <functioncall functionName="LANG_NORWEGIAN"/>
+    <functioncall functionName="LANG_POLISH"/>
+    <functioncall functionName="LANG_PORTUGUESE"/>
+    <functioncall functionName="LANG_ROMANIAN"/>
+    <functioncall functionName="LANG_RUSSIAN"/>
+    <functioncall functionName="LANG_SERBIAN_NEUTRAL"/>
+    <functioncall functionName="LANG_SLOVAK"/>
+    <functioncall functionName="LANG_SLOVENIAN"/>
+    <functioncall functionName="LANG_SPANISH"/>
+    <functioncall functionName="LANG_SWEDISH"/>
+    <functioncall functionName="LANG_THAI"/>
+    <functioncall functionName="LANG_TURKISH"/>
+    <functioncall functionName="LANG_UKRAINIAN"/>
+    <functioncall functionName="LANG_VIETNAMESE"/>
+    <functioncall functionName="LOAD_LIBRARY_SEARCH_DEFAULT_DIRS"/>
+    <functioncall functionName="LPSTARTUPINFOW"/>
+    <functioncall functionName="LPWSTR"/>
+    <functioncall functionName="LoadLibraryExW"/>
+    <functioncall functionName="LocalFree"/>
+    <functioncall functionName="MAKELANGID"/>
+    <functioncall functionName="MAX_CONSOLE_LINES"/>
+    <functioncall functionName="MAX_JOY_BUTTONS"/>
+    <functioncall functionName="MSEC_TO_UNIX_EPOCH"/>
+    <functioncall functionName="Month"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="OS_Windows"/>
+    <functioncall functionName="PBOOL"/>
+    <functioncall functionName="PCWSTR"/>
+    <functioncall functionName="ProcessInfo"/>
+    <functioncall functionName="QuadPart"/>
+    <functioncall functionName="QueryPerformanceCounter"/>
+    <functioncall functionName="QueryPerformanceFrequency"/>
+    <functioncall functionName="SHFileOperationW"/>
+    <functioncall functionName="SHGetKnownFolderPath"/>
+    <functioncall functionName="STD_ERROR_HANDLE"/>
+    <functioncall functionName="STD_INPUT_HANDLE"/>
+    <functioncall functionName="STD_OUTPUT_HANDLE"/>
+    <functioncall functionName="SUBLANG_ALBANIAN_ALBANIA"/>
+    <functioncall functionName="SUBLANG_ARABIC_ALGERIA"/>
+    <functioncall functionName="SUBLANG_ARABIC_BAHRAIN"/>
+    <functioncall functionName="SUBLANG_ARABIC_EGYPT"/>
+    <functioncall functionName="SUBLANG_ARABIC_IRAQ"/>
+    <functioncall functionName="SUBLANG_ARABIC_JORDAN"/>
+    <functioncall functionName="SUBLANG_ARABIC_KUWAIT"/>
+    <functioncall functionName="SUBLANG_ARABIC_LEBANON"/>
+    <functioncall functionName="SUBLANG_ARABIC_LIBYA"/>
+    <functioncall functionName="SUBLANG_ARABIC_MOROCCO"/>
+    <functioncall functionName="SUBLANG_ARABIC_OMAN"/>
+    <functioncall functionName="SUBLANG_ARABIC_QATAR"/>
+    <functioncall functionName="SUBLANG_ARABIC_SAUDI_ARABIA"/>
+    <functioncall functionName="SUBLANG_ARABIC_SYRIA"/>
+    <functioncall functionName="SUBLANG_ARABIC_TUNISIA"/>
+    <functioncall functionName="SUBLANG_ARABIC_UAE"/>
+    <functioncall functionName="SUBLANG_ARABIC_YEMEN"/>
+    <functioncall functionName="SUBLANG_BELARUSIAN_BELARUS"/>
+    <functioncall functionName="SUBLANG_BULGARIAN_BULGARIA"/>
+    <functioncall functionName="SUBLANG_CATALAN_CATALAN"/>
+    <functioncall functionName="SUBLANG_CHINESE_HONGKONG"/>
+    <functioncall functionName="SUBLANG_CHINESE_SIMPLIFIED"/>
+    <functioncall functionName="SUBLANG_CHINESE_SINGAPORE"/>
+    <functioncall functionName="SUBLANG_CHINESE_TRADITIONAL"/>
+    <functioncall functionName="SUBLANG_CROATIAN_CROATIA"/>
+    <functioncall functionName="SUBLANG_CZECH_CZECH_REPUBLIC"/>
+    <functioncall functionName="SUBLANG_DANISH_DENMARK"/>
+    <functioncall functionName="SUBLANG_DEFAULT"/>
+    <functioncall functionName="SUBLANG_DUTCH"/>
+    <functioncall functionName="SUBLANG_DUTCH_BELGIAN"/>
+    <functioncall functionName="SUBLANG_ENGLISH_AUS"/>
+    <functioncall functionName="SUBLANG_ENGLISH_CAN"/>
+    <functioncall functionName="SUBLANG_ENGLISH_INDIA"/>
+    <functioncall functionName="SUBLANG_ENGLISH_NZ"/>
+    <functioncall functionName="SUBLANG_ENGLISH_PHILIPPINES"/>
+    <functioncall functionName="SUBLANG_ENGLISH_SINGAPORE"/>
+    <functioncall functionName="SUBLANG_ENGLISH_SOUTH_AFRICA"/>
+    <functioncall functionName="SUBLANG_ENGLISH_UK"/>
+    <functioncall functionName="SUBLANG_ENGLISH_US"/>
+    <functioncall functionName="SUBLANG_ESTONIAN_ESTONIA"/>
+    <functioncall functionName="SUBLANG_FINNISH_FINLAND"/>
+    <functioncall functionName="SUBLANG_FRENCH"/>
+    <functioncall functionName="SUBLANG_FRENCH_BELGIAN"/>
+    <functioncall functionName="SUBLANG_FRENCH_CANADIAN"/>
+    <functioncall functionName="SUBLANG_FRENCH_LUXEMBOURG"/>
+    <functioncall functionName="SUBLANG_FRENCH_SWISS"/>
+    <functioncall functionName="SUBLANG_GERMAN"/>
+    <functioncall functionName="SUBLANG_GERMAN_AUSTRIAN"/>
+    <functioncall functionName="SUBLANG_GERMAN_LUXEMBOURG"/>
+    <functioncall functionName="SUBLANG_GERMAN_SWISS"/>
+    <functioncall functionName="SUBLANG_GREEK_GREECE"/>
+    <functioncall functionName="SUBLANG_HEBREW_ISRAEL"/>
+    <functioncall functionName="SUBLANG_HINDI_INDIA"/>
+    <functioncall functionName="SUBLANG_HUNGARIAN_HUNGARY"/>
+    <functioncall functionName="SUBLANG_ICELANDIC_ICELAND"/>
+    <functioncall functionName="SUBLANG_INDONESIAN_INDONESIA"/>
+    <functioncall functionName="SUBLANG_IRISH_IRELAND"/>
+    <functioncall functionName="SUBLANG_ITALIAN"/>
+    <functioncall functionName="SUBLANG_ITALIAN_SWISS"/>
+    <functioncall functionName="SUBLANG_JAPANESE_JAPAN"/>
+    <functioncall functionName="SUBLANG_KOREAN"/>
+    <functioncall functionName="SUBLANG_LATVIAN_LATVIA"/>
+    <functioncall functionName="SUBLANG_MACEDONIAN_MACEDONIA"/>
+    <functioncall functionName="SUBLANG_MALAY_MALAYSIA"/>
+    <functioncall functionName="SUBLANG_MALTESE_MALTA"/>
+    <functioncall functionName="SUBLANG_NEUTRAL"/>
+    <functioncall functionName="SUBLANG_NORWEGIAN_BOKMAL"/>
+    <functioncall functionName="SUBLANG_NORWEGIAN_NYNORSK"/>
+    <functioncall functionName="SUBLANG_POLISH_POLAND"/>
+    <functioncall functionName="SUBLANG_PORTUGUESE"/>
+    <functioncall functionName="SUBLANG_PORTUGUESE_BRAZILIAN"/>
+    <functioncall functionName="SUBLANG_ROMANIAN_ROMANIA"/>
+    <functioncall functionName="SUBLANG_RUSSIAN_RUSSIA"/>
+    <functioncall functionName="SUBLANG_SLOVAK_SLOVAKIA"/>
+    <functioncall functionName="SUBLANG_SLOVENIAN_SLOVENIA"/>
+    <functioncall functionName="SUBLANG_SPANISH"/>
+    <functioncall functionName="SUBLANG_SPANISH_ARGENTINA"/>
+    <functioncall functionName="SUBLANG_SPANISH_BOLIVIA"/>
+    <functioncall functionName="SUBLANG_SPANISH_CHILE"/>
+    <functioncall functionName="SUBLANG_SPANISH_COLOMBIA"/>
+    <functioncall functionName="SUBLANG_SPANISH_COSTA_RICA"/>
+    <functioncall functionName="SUBLANG_SPANISH_DOMINICAN_REPUBLIC"/>
+    <functioncall functionName="SUBLANG_SPANISH_ECUADOR"/>
+    <functioncall functionName="SUBLANG_SPANISH_EL_SALVADOR"/>
+    <functioncall functionName="SUBLANG_SPANISH_GUATEMALA"/>
+    <functioncall functionName="SUBLANG_SPANISH_HONDURAS"/>
+    <functioncall functionName="SUBLANG_SPANISH_MEXICAN"/>
+    <functioncall functionName="SUBLANG_SPANISH_NICARAGUA"/>
+    <functioncall functionName="SUBLANG_SPANISH_PANAMA"/>
+    <functioncall functionName="SUBLANG_SPANISH_PARAGUAY"/>
+    <functioncall functionName="SUBLANG_SPANISH_PERU"/>
+    <functioncall functionName="SUBLANG_SPANISH_PUERTO_RICO"/>
+    <functioncall functionName="SUBLANG_SPANISH_URUGUAY"/>
+    <functioncall functionName="SUBLANG_SPANISH_US"/>
+    <functioncall functionName="SUBLANG_SPANISH_VENEZUELA"/>
+    <functioncall functionName="SUBLANG_SWEDISH"/>
+    <functioncall functionName="SUBLANG_THAI_THAILAND"/>
+    <functioncall functionName="SUBLANG_TURKISH_TURKEY"/>
+    <functioncall functionName="SUBLANG_UKRAINIAN_UKRAINE"/>
+    <functioncall functionName="SUBLANG_VIETNAMESE_VIETNAM"/>
+    <functioncall functionName="SW_SHOWNORMAL"/>
+    <functioncall functionName="SetConsoleCtrlHandler"/>
+    <functioncall functionName="SetConsoleScreenBufferSize"/>
+    <functioncall functionName="SetEnvironmentVariableW"/>
+    <functioncall functionName="ShellExecuteW"/>
+    <functioncall functionName="Sleep"/>
+    <functioncall functionName="StandardName"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="SystemTimeToFileTime"/>
+    <functioncall functionName="TEXT"/>
+    <functioncall functionName="TRUE"/>
+    <functioncall functionName="TerminateProcess"/>
+    <functioncall functionName="UINT64"/>
+    <functioncall functionName="VERSION_SHORT_NAME"/>
+    <functioncall functionName="WaitForSingleObject"/>
+    <functioncall functionName="Weekday"/>
+    <functioncall functionName="WindowsTerminalLogger"/>
+    <functioncall functionName="ZeroMemory"/>
+    <functioncall functionName="_IONBF"/>
+    <functioncall functionName="_O_TEXT"/>
+    <functioncall functionName="_fdopen"/>
+    <functioncall functionName="_getpid"/>
+    <functioncall functionName="_hInstance"/>
+    <functioncall functionName="_open_osfhandle"/>
+    <functioncall functionName="_pclose"/>
+    <functioncall functionName="_set_logger"/>
+    <functioncall functionName="_wchdir"/>
+    <functioncall functionName="_wdupenv_s"/>
+    <functioncall functionName="_wgetenv"/>
+    <functioncall functionName="_wpopen"/>
+    <functioncall functionName="add_dll_directory"/>
+    <functioncall functionName="add_driver"/>
+    <functioncall functionName="appname"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buff"/>
+    <functioncall functionName="bufname"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="capitalize"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="coninfo"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cookie"/>
+    <functioncall functionName="custom_dir"/>
+    <functioncall functionName="daylight"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dinput_gamepad"/>
+    <functioncall functionName="disable"/>
+    <functioncall functionName="driver_wasapi"/>
+    <functioncall functionName="driver_xaudio2"/>
+    <functioncall functionName="dwCtrlType"/>
+    <functioncall functionName="dwHighDateTime"/>
+    <functioncall functionName="dwLowDateTime"/>
+    <functioncall functionName="dwNumberOfProcessors"/>
+    <functioncall functionName="dwProcessId"/>
+    <functioncall functionName="dwSize"/>
+    <functioncall functionName="env"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fep"/>
+    <functioncall functionName="fgets"/>
+    <functioncall functionName="finish"/>
+    <functioncall functionName="fnIsWow64Process"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_quit"/>
+    <functioncall functionName="format_error_message"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="ft"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_config_path"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_data_path"/>
+    <functioncall functionName="get_environment"/>
+    <functioncall functionName="get_executable_path"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_godot_dir_name"/>
+    <functioncall functionName="get_resource_path"/>
+    <functioncall functionName="get_safe_dir_name"/>
+    <functioncall functionName="get_script_debugger"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_system_time_msecs"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="hConHandle"/>
+    <functioncall functionName="hProcess"/>
+    <functioncall functionName="hThread"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_environment"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_active"/>
+    <functioncall functionName="is_disabled"/>
+    <functioncall functionName="is_wow64"/>
+    <functioncall functionName="iteration"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="lStdHandle"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="locale"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="loggers"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="main_loop"/>
+    <functioncall functionName="main_window"/>
+    <functioncall functionName="make_default"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="messageBuffer"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_block"/>
+    <functioncall functionName="p_blocking"/>
+    <functioncall functionName="p_dir"/>
+    <functioncall functionName="p_library_handle"/>
+    <functioncall functionName="p_main_loop"/>
+    <functioncall functionName="p_main_window"/>
+    <functioncall functionName="p_optional"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_pipe_mutex"/>
+    <functioncall functionName="p_symbol_handle"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pi"/>
+    <functioncall functionName="pid"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="process_events"/>
+    <functioncall functionName="process_map"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_child_id"/>
+    <functioncall functionName="r_exitcode"/>
+    <functioncall functionName="read_stderr"/>
+    <functioncall functionName="register_windows_driver"/>
+    <functioncall functionName="remove_dll_directory"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="ret2"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rv"/>
+    <functioncall functionName="set_depth"/>
+    <functioncall functionName="set_lines_left"/>
+    <functioncall functionName="setvbuf"/>
+    <functioncall functionName="sf"/>
+    <functioncall functionName="si"/>
+    <functioncall functionName="si_w"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="st"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="stdin"/>
+    <functioncall functionName="stdo"/>
+    <functioncall functionName="stdout"/>
+    <functioncall functionName="sublang"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="sysinfo"/>
+    <functioncall functionName="systemtime"/>
+    <functioncall functionName="szHwProfileGuid"/>
+    <functioncall functionName="szPath"/>
+    <functioncall functionName="ticks"/>
+    <functioncall functionName="ticks_per_second"/>
+    <functioncall functionName="timeBeginPeriod"/>
+    <functioncall functionName="timeEndPeriod"/>
+    <functioncall functionName="timeGetTime"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="use_custom_dir"/>
+    <functioncall functionName="utc"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="wDay"/>
+    <functioncall functionName="wDayOfWeek"/>
+    <functioncall functionName="wHour"/>
+    <functioncall functionName="wMinute"/>
+    <functioncall functionName="wMonth"/>
+    <functioncall functionName="wSecond"/>
+    <functioncall functionName="wYear"/>
+    <functioncall functionName="wcscpy_s"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wlen"/>
+    <functioncall functionName="wow64"/>
+    <functioncall functionName="wval"/>
+    <functioncall functionName="xinput_gamepad"/>
+  </FileInfo>
+</analyzerinfo>

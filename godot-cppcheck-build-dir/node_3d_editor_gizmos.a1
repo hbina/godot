@@ -1,0 +1,855 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3148762966">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;pos3d_mesh&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;pos3d_mesh&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1570" column="2"/>
+            <symbol>pos3d_mesh</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:424:14" call-funcname="CreateHingeJointGizmo" call-argnr="9" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4317" col="24" call-argexpr="node_body_a?&body_a_points:nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:424:14" call-funcname="CreateHingeJointGizmo" call-argnr="10" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4317" col="24" call-argexpr="node_body_b?&body_b_points:nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:425:14" call-funcname="CreateSliderJointGizmo" call-argnr="10" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4341" col="25" call-argexpr="node_body_a?&body_a_points:nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:425:14" call-funcname="CreateSliderJointGizmo" call-argnr="11" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4341" col="25" call-argexpr="node_body_b?&body_b_points:nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:426:14" call-funcname="CreateConeTwistJointGizmo" call-argnr="7" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4366" col="28" call-argexpr="node_body_a?&body_a_points:nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:426:14" call-funcname="CreateConeTwistJointGizmo" call-argnr="8" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4366" col="28" call-argexpr="node_body_b?&body_b_points:nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:427:14" call-funcname="CreateGeneric6DOFJointGizmo" call-argnr="24" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4386" col="30" call-argexpr="node_body_a?&body_a_points:nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:427:14" call-funcname="CreateGeneric6DOFJointGizmo" call-argnr="25" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4386" col="30" call-argexpr="node_body_a?&body_b_points:nullptr" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:49:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="843" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:50:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="883" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:50:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="887" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:51:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="931" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:52:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="955" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:67:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1124" col="69" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:68:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1130" col="69" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:68:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1135" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:69:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1169" col="69" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:70:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1187" col="75" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:84:17" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1265" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:85:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1276" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:86:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1288" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:86:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1293" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:87:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1319" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:88:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1351" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:102:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1520" col="57" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:116:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1557" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:132:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1616" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:145:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1643" col="49" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:158:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1850" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:171:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="1990" col="50" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:184:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2010" col="57" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:197:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2064" col="62" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:211:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2141" col="54" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:214:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2176" col="54" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:215:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2181" col="54" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:216:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2186" col="54" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:232:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2234" col="73" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:233:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2239" col="73" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:233:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2249" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:234:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2292" col="73" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:229:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2308" col="73" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:263:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2431" col="62" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:264:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2436" col="62" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:264:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2445" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:265:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2488" col="62" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:260:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2504" col="62" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:281:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2602" col="60" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:282:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2607" col="60" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:283:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2665" col="60" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:278:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2686" col="60" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:299:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2785" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:300:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2790" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:300:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2797" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:301:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2821" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:296:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2839" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:317:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2929" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:318:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2934" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:318:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2941" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:319:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2965" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:314:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="2983" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:353:17" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="3227" col="65" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:354:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="3263" col="59" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:355:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="3303" col="59" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:356:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="3416" col="59" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:351:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="3523" col="59" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:368:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="3855" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:388:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="3904" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/node_3d_editor_gizmos.h:421:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/editor/node_3d_editor_gizmos.cpp" line="4282" col="44" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="has_gizmo" lineNumber="821"/>
+    <functiondecl functionName="get_name" lineNumber="825"/>
+    <functiondecl functionName="get_priority" lineNumber="829"/>
+    <functiondecl functionName="get_handle_name" lineNumber="833"/>
+    <functiondecl functionName="get_handle_value" lineNumber="841"/>
+    <functiondecl functionName="_find_closest_angle_to_half_pi_arc" lineNumber="852"/>
+    <functiondecl functionName="set_handle" lineNumber="881"/>
+    <functiondecl functionName="commit_handle" lineNumber="929"/>
+    <functiondecl functionName="redraw" lineNumber="953"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1106"/>
+    <functiondecl functionName="get_name" lineNumber="1110"/>
+    <functiondecl functionName="get_priority" lineNumber="1114"/>
+    <functiondecl functionName="get_handle_name" lineNumber="1118"/>
+    <functiondecl functionName="get_handle_value" lineNumber="1123"/>
+    <functiondecl functionName="set_handle" lineNumber="1128"/>
+    <functiondecl functionName="commit_handle" lineNumber="1167"/>
+    <functiondecl functionName="redraw" lineNumber="1185"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1251"/>
+    <functiondecl functionName="get_name" lineNumber="1255"/>
+    <functiondecl functionName="get_priority" lineNumber="1259"/>
+    <functiondecl functionName="get_handle_name" lineNumber="1263"/>
+    <functiondecl functionName="get_handle_value" lineNumber="1274"/>
+    <functiondecl functionName="set_handle" lineNumber="1286"/>
+    <functiondecl functionName="commit_handle" lineNumber="1317"/>
+    <functiondecl functionName="redraw" lineNumber="1349"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1502"/>
+    <functiondecl functionName="get_name" lineNumber="1506"/>
+    <functiondecl functionName="get_priority" lineNumber="1510"/>
+    <functiondecl functionName="can_be_hidden" lineNumber="1514"/>
+    <functiondecl functionName="redraw" lineNumber="1518"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1539"/>
+    <functiondecl functionName="get_name" lineNumber="1543"/>
+    <functiondecl functionName="get_priority" lineNumber="1547"/>
+    <functiondecl functionName="can_be_hidden" lineNumber="1551"/>
+    <functiondecl functionName="redraw" lineNumber="1555"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1602"/>
+    <functiondecl functionName="get_name" lineNumber="1606"/>
+    <functiondecl functionName="get_priority" lineNumber="1610"/>
+    <functiondecl functionName="redraw" lineNumber="1614"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1629"/>
+    <functiondecl functionName="get_name" lineNumber="1633"/>
+    <functiondecl functionName="get_priority" lineNumber="1637"/>
+    <functiondecl functionName="redraw" lineNumber="1641"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1836"/>
+    <functiondecl functionName="get_name" lineNumber="1840"/>
+    <functiondecl functionName="get_priority" lineNumber="1844"/>
+    <functiondecl functionName="redraw" lineNumber="1848"/>
+    <functiondecl functionName="has_gizmo" lineNumber="1976"/>
+    <functiondecl functionName="get_name" lineNumber="1980"/>
+    <functiondecl functionName="get_priority" lineNumber="1984"/>
+    <functiondecl functionName="redraw" lineNumber="1988"/>
+    <functiondecl functionName="redraw" lineNumber="2008"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2030"/>
+    <functiondecl functionName="get_name" lineNumber="2034"/>
+    <functiondecl functionName="get_priority" lineNumber="2038"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2050"/>
+    <functiondecl functionName="get_name" lineNumber="2054"/>
+    <functiondecl functionName="get_priority" lineNumber="2058"/>
+    <functiondecl functionName="redraw" lineNumber="2062"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2124"/>
+    <functiondecl functionName="get_name" lineNumber="2128"/>
+    <functiondecl functionName="get_priority" lineNumber="2132"/>
+    <functiondecl functionName="is_selectable_when_hidden" lineNumber="2136"/>
+    <functiondecl functionName="redraw" lineNumber="2140"/>
+    <functiondecl functionName="get_handle_name" lineNumber="2171"/>
+    <functiondecl functionName="get_handle_value" lineNumber="2175"/>
+    <functiondecl functionName="commit_handle" lineNumber="2180"/>
+    <functiondecl functionName="is_handle_highlighted" lineNumber="2185"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2200"/>
+    <functiondecl functionName="get_name" lineNumber="2204"/>
+    <functiondecl functionName="get_priority" lineNumber="2208"/>
+    <functiondecl functionName="get_handle_name" lineNumber="2212"/>
+    <functiondecl functionName="get_handle_value" lineNumber="2232"/>
+    <functiondecl functionName="set_handle" lineNumber="2237"/>
+    <functiondecl functionName="commit_handle" lineNumber="2290"/>
+    <functiondecl functionName="redraw" lineNumber="2306"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2362"/>
+    <functiondecl functionName="get_name" lineNumber="2366"/>
+    <functiondecl functionName="get_priority" lineNumber="2370"/>
+    <functiondecl functionName="is_selectable_when_hidden" lineNumber="2374"/>
+    <functiondecl functionName="redraw" lineNumber="2378"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2394"/>
+    <functiondecl functionName="get_name" lineNumber="2398"/>
+    <functiondecl functionName="get_priority" lineNumber="2402"/>
+    <functiondecl functionName="is_selectable_when_hidden" lineNumber="2406"/>
+    <functiondecl functionName="get_handle_name" lineNumber="2410"/>
+    <functiondecl functionName="get_handle_value" lineNumber="2429"/>
+    <functiondecl functionName="set_handle" lineNumber="2434"/>
+    <functiondecl functionName="commit_handle" lineNumber="2486"/>
+    <functiondecl functionName="redraw" lineNumber="2502"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2569"/>
+    <functiondecl functionName="get_name" lineNumber="2573"/>
+    <functiondecl functionName="get_priority" lineNumber="2577"/>
+    <functiondecl functionName="get_handle_name" lineNumber="2581"/>
+    <functiondecl functionName="get_handle_value" lineNumber="2600"/>
+    <functiondecl functionName="set_handle" lineNumber="2605"/>
+    <functiondecl functionName="commit_handle" lineNumber="2663"/>
+    <functiondecl functionName="redraw" lineNumber="2684"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2758"/>
+    <functiondecl functionName="get_name" lineNumber="2762"/>
+    <functiondecl functionName="get_priority" lineNumber="2766"/>
+    <functiondecl functionName="get_handle_name" lineNumber="2770"/>
+    <functiondecl functionName="get_handle_value" lineNumber="2783"/>
+    <functiondecl functionName="set_handle" lineNumber="2788"/>
+    <functiondecl functionName="commit_handle" lineNumber="2819"/>
+    <functiondecl functionName="redraw" lineNumber="2837"/>
+    <functiondecl functionName="has_gizmo" lineNumber="2902"/>
+    <functiondecl functionName="get_name" lineNumber="2906"/>
+    <functiondecl functionName="get_priority" lineNumber="2910"/>
+    <functiondecl functionName="get_handle_name" lineNumber="2914"/>
+    <functiondecl functionName="get_handle_value" lineNumber="2927"/>
+    <functiondecl functionName="set_handle" lineNumber="2932"/>
+    <functiondecl functionName="commit_handle" lineNumber="2963"/>
+    <functiondecl functionName="redraw" lineNumber="2981"/>
+    <functiondecl functionName="has_gizmo" lineNumber="3213"/>
+    <functiondecl functionName="get_name" lineNumber="3217"/>
+    <functiondecl functionName="get_priority" lineNumber="3221"/>
+    <functiondecl functionName="get_handle_name" lineNumber="3225"/>
+    <functiondecl functionName="get_handle_value" lineNumber="3261"/>
+    <functiondecl functionName="set_handle" lineNumber="3301"/>
+    <functiondecl functionName="commit_handle" lineNumber="3414"/>
+    <functiondecl functionName="redraw" lineNumber="3521"/>
+    <functiondecl functionName="has_gizmo" lineNumber="3841"/>
+    <functiondecl functionName="get_name" lineNumber="3845"/>
+    <functiondecl functionName="get_priority" lineNumber="3849"/>
+    <functiondecl functionName="redraw" lineNumber="3853"/>
+    <functiondecl functionName="has_gizmo" lineNumber="3890"/>
+    <functiondecl functionName="get_name" lineNumber="3894"/>
+    <functiondecl functionName="get_priority" lineNumber="3898"/>
+    <functiondecl functionName="redraw" lineNumber="3902"/>
+    <functiondecl functionName="look_body" lineNumber="4000"/>
+    <functiondecl functionName="look_body_toward" lineNumber="4025"/>
+    <functiondecl functionName="look_body_toward_x" lineNumber="4039"/>
+    <functiondecl functionName="look_body_toward_y" lineNumber="4071"/>
+    <functiondecl functionName="look_body_toward_z" lineNumber="4103"/>
+    <functiondecl functionName="draw_circle" lineNumber="4135"/>
+    <functiondecl functionName="draw_cone" lineNumber="4201"/>
+    <functiondecl functionName="incremental_update_gizmos" lineNumber="4261"/>
+    <functiondecl functionName="has_gizmo" lineNumber="4269"/>
+    <functiondecl functionName="get_name" lineNumber="4273"/>
+    <functiondecl functionName="get_priority" lineNumber="4277"/>
+    <functiondecl functionName="redraw" lineNumber="4281"/>
+    <functiondecl functionName="CreatePinJointGizmo" lineNumber="4427"/>
+    <functiondecl functionName="CreateHingeJointGizmo" lineNumber="4438"/>
+    <functiondecl functionName="CreateSliderJointGizmo" lineNumber="4470"/>
+    <functiondecl functionName="CreateConeTwistJointGizmo" lineNumber="4530"/>
+    <functiondecl functionName="CreateGeneric6DOFJointGizmo" lineNumber="4549"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ARRAY_COLOR"/>
+    <functioncall functionName="ARRAY_INDEX"/>
+    <functioncall functionName="ARRAY_MAX"/>
+    <functioncall functionName="ARRAY_TEX_UV"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="AXIS_X"/>
+    <functioncall functionName="AXIS_Y"/>
+    <functioncall functionName="AXIS_Z"/>
+    <functioncall functionName="ArrayMesh"/>
+    <functioncall functionName="AudioStreamPlayer3DGizmoPlugin"/>
+    <functioncall functionName="BIND_VMETHOD"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="Basis"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="CMP_EPSILON"/>
+    <functioncall functionName="CPUParticles3DGizmoPlugin"/>
+    <functioncall functionName="Camera3DGizmoPlugin"/>
+    <functioncall functionName="CollisionPolygon3DGizmoPlugin"/>
+    <functioncall functionName="CollisionShape3DGizmoPlugin"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="CreateConeTwistJointGizmo"/>
+    <functioncall functionName="CreateGeneric6DOFJointGizmo"/>
+    <functioncall functionName="CreateHingeJointGizmo"/>
+    <functioncall functionName="CreatePinJointGizmo"/>
+    <functioncall functionName="CreateSliderJointGizmo"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="DecalGizmoPlugin"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITOR_DEF"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="EditorNode3DGizmo"/>
+    <functioncall functionName="EditorNode3DGizmoPlugin"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FLAG_ALBEDO_FROM_VERTEX_COLOR"/>
+    <functioncall functionName="FLAG_ENABLE_ANGULAR_LIMIT"/>
+    <functioncall functionName="FLAG_ENABLE_LINEAR_LIMIT"/>
+    <functioncall functionName="FLAG_SRGB_VERTEX_COLOR"/>
+    <functioncall functionName="FLAG_USE_LIMIT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GIProbeGizmoPlugin"/>
+    <functioncall functionName="GPUParticles3DGizmoPlugin"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="Joint3DGizmoPlugin"/>
+    <functioncall functionName="Light3DGizmoPlugin"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="MeshInstance3DGizmoPlugin"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="NavigationRegion3DGizmoPlugin"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PARAM_ANGULAR_LIMIT_LOWER"/>
+    <functioncall functionName="PARAM_ANGULAR_LIMIT_UPPER"/>
+    <functioncall functionName="PARAM_ANGULAR_LOWER_LIMIT"/>
+    <functioncall functionName="PARAM_ANGULAR_UPPER_LIMIT"/>
+    <functioncall functionName="PARAM_LIMIT_LOWER"/>
+    <functioncall functionName="PARAM_LIMIT_UPPER"/>
+    <functioncall functionName="PARAM_LINEAR_LIMIT_LOWER"/>
+    <functioncall functionName="PARAM_LINEAR_LIMIT_UPPER"/>
+    <functioncall functionName="PARAM_LINEAR_LOWER_LIMIT"/>
+    <functioncall functionName="PARAM_LINEAR_UPPER_LIMIT"/>
+    <functioncall functionName="PARAM_RANGE"/>
+    <functioncall functionName="PARAM_SPOT_ANGLE"/>
+    <functioncall functionName="PARAM_SWING_SPAN"/>
+    <functioncall functionName="PARAM_TWIST_SPAN"/>
+    <functioncall functionName="PRIMITIVE_LINES"/>
+    <functioncall functionName="PRIMITIVE_POINTS"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PhysicalBone3DGizmoPlugin"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="Position3DGizmoPlugin"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="RayCast3DGizmoPlugin"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="ReflectionProbeGizmoPlugin"/>
+    <functioncall functionName="SHADING_MODE_UNSHADED"/>
+    <functioncall functionName="SHADOW_CASTING_SETTING_OFF"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="SUBDIV_MAX"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Skeleton3DGizmoPlugin"/>
+    <functioncall functionName="SoftBody3DGizmoPlugin"/>
+    <functioncall functionName="SpringArm3DGizmoPlugin"/>
+    <functioncall functionName="Sprite3DGizmoPlugin"/>
+    <functioncall functionName="StandardMaterial3D"/>
+    <functioncall functionName="SurfaceTool"/>
+    <functioncall functionName="TRANSPARENCY_ALPHA"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Timer"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="TriangleMesh"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="VehicleWheel3DGizmoPlugin"/>
+    <functioncall functionName="VisibilityNotifier3DGizmoPlugin"/>
+    <functioncall functionName="_find_closest_angle_to_half_pi_arc"/>
+    <functioncall functionName="_set_spatial_node"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a1"/>
+    <functioncall functionName="a2"/>
+    <functioncall functionName="a3"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="add_bones"/>
+    <functioncall functionName="add_collision_segments"/>
+    <functioncall functionName="add_collision_triangles"/>
+    <functioncall functionName="add_color"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_do_property"/>
+    <functioncall functionName="add_handles"/>
+    <functioncall functionName="add_lines"/>
+    <functioncall functionName="add_mesh"/>
+    <functioncall functionName="add_solid_box"/>
+    <functioncall functionName="add_surface_from_arrays"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="add_undo_property"/>
+    <functioncall functionName="add_unscaled_billboard"/>
+    <functioncall functionName="add_vertex"/>
+    <functioncall functionName="add_weights"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="ah"/>
+    <functioncall functionName="an"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="angular_limit_enabled"/>
+    <functioncall functionName="angular_limit_lower"/>
+    <functioncall functionName="angular_limit_upper"/>
+    <functioncall functionName="any_out"/>
+    <functioncall functionName="arc_test_points"/>
+    <functioncall functionName="arrays"/>
+    <functioncall functionName="arrow_length"/>
+    <functioncall functionName="arrow_points"/>
+    <functioncall functionName="arrow_sides"/>
+    <functioncall functionName="aspect"/>
+    <functioncall functionName="ax"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bh"/>
+    <functioncall functionName="billboard_handle"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="body_a_material"/>
+    <functioncall functionName="body_a_points"/>
+    <functioncall functionName="body_b_material"/>
+    <functioncall functionName="body_b_points"/>
+    <functioncall functionName="body_transform"/>
+    <functioncall functionName="bonecolor"/>
+    <functioncall functionName="bones"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="build"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c0"/>
+    <functioncall functionName="c1"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cam_normal"/>
+    <functioncall functionName="cam_pos"/>
+    <functioncall functionName="camera"/>
+    <functioncall functionName="camera_position"/>
+    <functioncall functionName="camp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="chs"/>
+    <functioncall functionName="cjd"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clipcam"/>
+    <functioncall functionName="closest_angle"/>
+    <functioncall functionName="cm"/>
+    <functioncall functionName="cn"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="collision_segments"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="colors"/>
+    <functioncall functionName="commit"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="commit_handle"/>
+    <functioncall functionName="common_material"/>
+    <functioncall functionName="compute_convex_mesh_points"/>
+    <functioncall functionName="cone"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cp"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="create_handle_material"/>
+    <functioncall functionName="create_icon_material"/>
+    <functioncall functionName="create_instance"/>
+    <functioncall functionName="create_material"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="cursor_colors"/>
+    <functioncall functionName="cursor_points"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="decal"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="distance_squared_to"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dp"/>
+    <functioncall functionName="draw_circle"/>
+    <functioncall functionName="draw_cone"/>
+    <functioncall functionName="dud"/>
+    <functioncall functionName="edge_material"/>
+    <functioncall functionName="edge_material_disabled"/>
+    <functioncall functionName="ek"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="enable_ang"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="extents"/>
+    <functioncall functionName="extra_margin"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_skeleton_parent"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fov"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="gen"/>
+    <functioncall functionName="generate_debug_mesh_indices"/>
+    <functioncall functionName="generate_debug_mesh_lines"/>
+    <functioncall functionName="generate_triangle_mesh"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_aabb"/>
+    <functioncall functionName="get_any_perpendicular_normal"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_basis"/>
+    <functioncall functionName="get_bone_count"/>
+    <functioncall functionName="get_bone_id"/>
+    <functioncall functionName="get_bone_parent"/>
+    <functioncall functionName="get_bone_rest"/>
+    <functioncall functionName="get_camera_transform"/>
+    <functioncall functionName="get_cast_to"/>
+    <functioncall functionName="get_closest_point_to_segment_2d"/>
+    <functioncall functionName="get_closest_points_between_segments"/>
+    <functioncall functionName="get_color"/>
+    <functioncall functionName="get_debug_mesh"/>
+    <functioncall functionName="get_debug_mesh_lines"/>
+    <functioncall functionName="get_depth"/>
+    <functioncall functionName="get_edge"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_emission_angle"/>
+    <functioncall functionName="get_endpoint"/>
+    <functioncall functionName="get_extents"/>
+    <functioncall functionName="get_flag"/>
+    <functioncall functionName="get_flag_x"/>
+    <functioncall functionName="get_flag_y"/>
+    <functioncall functionName="get_flag_z"/>
+    <functioncall functionName="get_fov"/>
+    <functioncall functionName="get_frustum_offset"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_gui_base"/>
+    <functioncall functionName="get_h"/>
+    <functioncall functionName="get_handle_name"/>
+    <functioncall functionName="get_handle_value"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_joint_data"/>
+    <functioncall functionName="get_joint_offset"/>
+    <functioncall functionName="get_joint_type"/>
+    <functioncall functionName="get_length"/>
+    <functioncall functionName="get_longest_axis_size"/>
+    <functioncall functionName="get_material"/>
+    <functioncall functionName="get_mesh"/>
+    <functioncall functionName="get_navigation_mesh"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_node_a"/>
+    <functioncall functionName="get_node_b"/>
+    <functioncall functionName="get_origin"/>
+    <functioncall functionName="get_origin_offset"/>
+    <functioncall functionName="get_over_gizmo_handle"/>
+    <functioncall functionName="get_owner"/>
+    <functioncall functionName="get_param"/>
+    <functioncall functionName="get_param_x"/>
+    <functioncall functionName="get_param_y"/>
+    <functioncall functionName="get_param_z"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_physical_bone"/>
+    <functioncall functionName="get_physical_bone_parent"/>
+    <functioncall functionName="get_plane"/>
+    <functioncall functionName="get_plugin"/>
+    <functioncall functionName="get_points"/>
+    <functioncall functionName="get_polygon"/>
+    <functioncall functionName="get_polygon_count"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_process_order"/>
+    <functioncall functionName="get_projection"/>
+    <functioncall functionName="get_radius"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_s"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_scenario"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_shape"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_skeleton"/>
+    <functioncall functionName="get_spatial_node"/>
+    <functioncall functionName="get_subdiv"/>
+    <functioncall functionName="get_suspension_rest_length"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_translate_snap"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_v"/>
+    <functioncall functionName="get_vertices"/>
+    <functioncall functionName="get_viewport"/>
+    <functioncall functionName="get_visibility_aabb"/>
+    <functioncall functionName="get_visible_rect"/>
+    <functioncall functionName="get_world_3d"/>
+    <functioncall functionName="get_znear"/>
+    <functioncall functionName="gizmo_color"/>
+    <functioncall functionName="gizmo_color_disabled"/>
+    <functioncall functionName="gizmo_plugin"/>
+    <functioncall functionName="gizmo_value"/>
+    <functioncall functionName="gt"/>
+    <functioncall functionName="gt2"/>
+    <functioncall functionName="ha"/>
+    <functioncall functionName="handles"/>
+    <functioncall functionName="handles_material"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="has_point"/>
+    <functioncall functionName="he"/>
+    <functioncall functionName="hidden"/>
+    <functioncall functionName="hinge"/>
+    <functioncall functionName="hjd"/>
+    <functioncall functionName="hpos"/>
+    <functioncall functionName="hsize"/>
+    <functioncall functionName="hvget"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_bone"/>
+    <functioncall functionName="icon"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="incremental_update_gizmos"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="ins"/>
+    <functioncall functionName="inside_convex_shape"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instance_attach_object_instance_id"/>
+    <functioncall functionName="instance_attach_skeleton"/>
+    <functioncall functionName="instance_create2"/>
+    <functioncall functionName="instance_geometry_set_cast_shadows_setting"/>
+    <functioncall functionName="instance_geometry_set_material_override"/>
+    <functioncall functionName="instance_set_extra_visibility_margin"/>
+    <functioncall functionName="instance_set_layer_mask"/>
+    <functioncall functionName="instance_set_transform"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="internal_lines"/>
+    <functioncall functionName="inters"/>
+    <functioncall functionName="intersect_ray"/>
+    <functioncall functionName="intersects_ray"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="is_disabled"/>
+    <functioncall functionName="is_editable"/>
+    <functioncall functionName="is_editable_instance"/>
+    <functioncall functionName="is_emission_angle_enabled"/>
+    <functioncall functionName="is_empty"/>
+    <functioncall functionName="is_enabled"/>
+    <functioncall functionName="is_handle_highlighted"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_point_over"/>
+    <functioncall functionName="is_point_pinned"/>
+    <functioncall functionName="is_selectable_when_hidden"/>
+    <functioncall functionName="is_selected"/>
+    <functioncall functionName="is_snap_enabled"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="j_n1"/>
+    <functioncall functionName="j_n2"/>
+    <functioncall functionName="joint"/>
+    <functioncall functionName="joint_transform"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="layer"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="light"/>
+    <functioncall functionName="linear_limit_enabled"/>
+    <functioncall functionName="linear_limit_lower"/>
+    <functioncall functionName="linear_limit_upper"/>
+    <functioncall functionName="lines"/>
+    <functioncall functionName="lines_billboard_material"/>
+    <functioncall functionName="lines_material"/>
+    <functioncall functionName="ll"/>
+    <functioncall functionName="lll"/>
+    <functioncall functionName="look_at"/>
+    <functioncall functionName="look_body"/>
+    <functioncall functionName="look_body_toward"/>
+    <functioncall functionName="look_body_toward_x"/>
+    <functioncall functionName="look_body_toward_y"/>
+    <functioncall functionName="look_body_toward_z"/>
+    <functioncall functionName="lul"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="ma"/>
+    <functioncall functionName="mat"/>
+    <functioncall functionName="material"/>
+    <functioncall functionName="material_internal"/>
+    <functioncall functionName="material_primary"/>
+    <functioncall functionName="material_secondary"/>
+    <functioncall functionName="md"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="mesh_scale"/>
+    <functioncall functionName="move"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n1"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node_body_b"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="notifier"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="orig_camera_transform"/>
+    <functioncall functionName="orig_handle"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="orthonormalize"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p_angular_limit_lower"/>
+    <functioncall functionName="p_angular_limit_lower_x"/>
+    <functioncall functionName="p_angular_limit_lower_y"/>
+    <functioncall functionName="p_angular_limit_lower_z"/>
+    <functioncall functionName="p_angular_limit_upper"/>
+    <functioncall functionName="p_angular_limit_upper_x"/>
+    <functioncall functionName="p_angular_limit_upper_y"/>
+    <functioncall functionName="p_angular_limit_upper_z"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_billboard"/>
+    <functioncall functionName="p_camera"/>
+    <functioncall functionName="p_cancel"/>
+    <functioncall functionName="p_enable_angular_limit_x"/>
+    <functioncall functionName="p_enable_angular_limit_y"/>
+    <functioncall functionName="p_enable_angular_limit_z"/>
+    <functioncall functionName="p_enable_linear_limit_x"/>
+    <functioncall functionName="p_enable_linear_limit_y"/>
+    <functioncall functionName="p_enable_linear_limit_z"/>
+    <functioncall functionName="p_eye"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_front"/>
+    <functioncall functionName="p_gizmo"/>
+    <functioncall functionName="p_handles"/>
+    <functioncall functionName="p_hidden"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_inverse"/>
+    <functioncall functionName="p_lateral"/>
+    <functioncall functionName="p_limit_lower"/>
+    <functioncall functionName="p_limit_upper"/>
+    <functioncall functionName="p_linear_limit_lower"/>
+    <functioncall functionName="p_linear_limit_lower_x"/>
+    <functioncall functionName="p_linear_limit_lower_y"/>
+    <functioncall functionName="p_linear_limit_lower_z"/>
+    <functioncall functionName="p_linear_limit_upper"/>
+    <functioncall functionName="p_linear_limit_upper_x"/>
+    <functioncall functionName="p_linear_limit_upper_y"/>
+    <functioncall functionName="p_linear_limit_upper_z"/>
+    <functioncall functionName="p_lines"/>
+    <functioncall functionName="p_material"/>
+    <functioncall functionName="p_mesh"/>
+    <functioncall functionName="p_modulate"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_plugin"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_restore"/>
+    <functioncall functionName="p_scale"/>
+    <functioncall functionName="p_secondary"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_skin_reference"/>
+    <functioncall functionName="p_spatial"/>
+    <functioncall functionName="p_swing"/>
+    <functioncall functionName="p_target"/>
+    <functioncall functionName="p_tmesh"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_trs_body_a"/>
+    <functioncall functionName="p_trs_body_b"/>
+    <functioncall functionName="p_trs_joint"/>
+    <functioncall functionName="p_twist"/>
+    <functioncall functionName="p_up"/>
+    <functioncall functionName="p_use_limit"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="parent_plane"/>
+    <functioncall functionName="parent_pos"/>
+    <functioncall functionName="particles"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="pbp"/>
+    <functioncall functionName="pc"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="physical_bone"/>
+    <functioncall functionName="pin_point_toggle"/>
+    <functioncall functionName="player"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="points2"/>
+    <functioncall functionName="points_billboard"/>
+    <functioncall functionName="points_primary"/>
+    <functioncall functionName="points_secondary"/>
+    <functioncall functionName="pos3d_mesh"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="probe"/>
+    <functioncall functionName="project"/>
+    <functioncall functionName="project_ray_normal"/>
+    <functioncall functionName="project_ray_origin"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r1"/>
+    <functioncall functionName="r2"/>
+    <functioncall functionName="r_body_a_points"/>
+    <functioncall functionName="r_body_b_points"/>
+    <functioncall functionName="ra"/>
+    <functioncall functionName="rad2deg"/>
+    <functioncall functionName="ray_dir"/>
+    <functioncall functionName="ray_from"/>
+    <functioncall functionName="ray_to"/>
+    <functioncall functionName="rb"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="redraw"/>
+    <functioncall functionName="register_skin"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="restore"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="rnorm"/>
+    <functioncall functionName="rootcolor"/>
+    <functioncall functionName="rpos"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sdofjd"/>
+    <functioncall functionName="selectable_icon_size"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_aabb"/>
+    <functioncall functionName="set_autostart"/>
+    <functioncall functionName="set_custom_aabb"/>
+    <functioncall functionName="set_emission_angle"/>
+    <functioncall functionName="set_extents"/>
+    <functioncall functionName="set_flag"/>
+    <functioncall functionName="set_global_transform"/>
+    <functioncall functionName="set_handle"/>
+    <functioncall functionName="set_height"/>
+    <functioncall functionName="set_hidden"/>
+    <functioncall functionName="set_hsv"/>
+    <functioncall functionName="set_length"/>
+    <functioncall functionName="set_look_at"/>
+    <functioncall functionName="set_material"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_origin_offset"/>
+    <functioncall functionName="set_param"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_radius"/>
+    <functioncall functionName="set_shading_mode"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="set_transparency"/>
+    <functioncall functionName="set_visibility_aabb"/>
+    <functioncall functionName="set_wait_time"/>
+    <functioncall functionName="side"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sjd"/>
+    <functioncall functionName="sk"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="slider"/>
+    <functioncall functionName="snapped"/>
+    <functioncall functionName="solid_material"/>
+    <functioncall functionName="solid_material_disabled"/>
+    <functioncall functionName="spatial_node"/>
+    <functioncall functionName="springsec"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stepify"/>
+    <functioncall functionName="subdiv"/>
+    <functioncall functionName="surface_get_arrays"/>
+    <functioncall functionName="surface_get_primitive_type"/>
+    <functioncall functionName="surface_set_material"/>
+    <functioncall functionName="surface_tool"/>
+    <functioncall functionName="swing_span"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tcp"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tm"/>
+    <functioncall functionName="tmesh"/>
+    <functioncall functionName="tmeshfaces"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="translated"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ts"/>
+    <functioncall functionName="tup"/>
+    <functioncall functionName="twist_span"/>
+    <functioncall functionName="ul"/>
+    <functioncall functionName="unproject_position"/>
+    <functioncall functionName="unregister_gizmo"/>
+    <functioncall functionName="up"/>
+    <functioncall functionName="update_idx"/>
+    <functioncall functionName="update_timer"/>
+    <functioncall functionName="uv"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="v_x"/>
+    <functioncall functionName="v_y"/>
+    <functioncall functionName="v_z"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="varr"/>
+    <functioncall functionName="vertex"/>
+    <functioncall functionName="vs"/>
+    <functioncall functionName="weights"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

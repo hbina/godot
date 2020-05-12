@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3218108119">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;img!=NULL&apos; is redundant or there is possible null pointer dereference: img." verbose="Either the condition &apos;img!=NULL&apos; is redundant or there is possible null pointer dereference: img." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="79" column="28" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="85" column="14" info="Assuming that condition &apos;img!=NULL&apos; is not redundant"/>
+            <symbol>img</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:326:21" call-funcname="MuxGetCanvasInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="366" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:326:21" call-funcname="MuxGetCanvasInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="371" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:326:21" call-funcname="MuxGetCanvasInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="371" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:76:5" my-argnr="1" my-argname="wpi" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="77" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:99:12" my-argnr="1" my-argname="chunk" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="101" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:308:21" my-argnr="1" my-argname="mux" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="309" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:389:21" my-argnr="1" my-argname="wpi" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="394" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:445:21" my-argnr="1" my-argname="wpi" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="454" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:445:21" my-argnr="2" my-argname="info" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="448" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c:458:21" my-argnr="1" my-argname="wpi" file="/home/hbina/git/godot/thirdparty/libwebp/src/mux/muxread.c" line="460" col="25" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="MuxGet" lineNumber="35"/>
+    <functiondecl functionName="ChunkVerifyAndAssign" lineNumber="53"/>
+    <functiondecl functionName="MuxImageFinalize" lineNumber="76"/>
+    <functiondecl functionName="MuxImageParse" lineNumber="99"/>
+    <functiondecl functionName="WebPMuxCreateInternal" lineNumber="175"/>
+    <functiondecl functionName="ValidateForSingleImage" lineNumber="308"/>
+    <functiondecl functionName="MuxGetCanvasInfo" lineNumber="326"/>
+    <functiondecl functionName="WebPMuxGetCanvasSize" lineNumber="362"/>
+    <functiondecl functionName="WebPMuxGetFeatures" lineNumber="369"/>
+    <functiondecl functionName="EmitVP8XChunk" lineNumber="374"/>
+    <functiondecl functionName="SynthesizeBitstream" lineNumber="389"/>
+    <functiondecl functionName="WebPMuxGetChunk" lineNumber="425"/>
+    <functiondecl functionName="MuxGetImageInternal" lineNumber="445"/>
+    <functiondecl functionName="MuxGetFrameInternal" lineNumber="458"/>
+    <functiondecl functionName="WebPMuxGetFrame" lineNumber="481"/>
+    <functiondecl functionName="WebPMuxGetAnimationParams" lineNumber="503"/>
+    <functiondecl functionName="ChunkGetIndexFromId" lineNumber="520"/>
+    <functiondecl functionName="CountChunks" lineNumber="530"/>
+    <functiondecl functionName="WebPMuxNumChunks" lineNumber="541"/>
+    <functioncall functionName="ALPHA_FLAG"/>
+    <functioncall functionName="ANMF_CHUNK_SIZE"/>
+    <functioncall functionName="CHUNK_HEADER_SIZE"/>
+    <functioncall functionName="CHUNK_INDEX"/>
+    <functioncall functionName="ChunkAppend"/>
+    <functioncall functionName="ChunkAssignData"/>
+    <functioncall functionName="ChunkDelete"/>
+    <functioncall functionName="ChunkDiskSize"/>
+    <functioncall functionName="ChunkGetIdFromTag"/>
+    <functioncall functionName="ChunkGetIndexFromFourCC"/>
+    <functioncall functionName="ChunkGetIndexFromId"/>
+    <functioncall functionName="ChunkGetTagFromFourCC"/>
+    <functioncall functionName="ChunkInit"/>
+    <functioncall functionName="ChunkListEmit"/>
+    <functioncall functionName="ChunkRelease"/>
+    <functioncall functionName="ChunkSearchList"/>
+    <functioncall functionName="ChunkSetHead"/>
+    <functioncall functionName="ChunkVerifyAndAssign"/>
+    <functioncall functionName="CountChunks"/>
+    <functioncall functionName="EmitVP8XChunk"/>
+    <functioncall functionName="Err"/>
+    <functioncall functionName="Fail"/>
+    <functioncall functionName="GetLE16"/>
+    <functioncall functionName="GetLE24"/>
+    <functioncall functionName="GetLE32"/>
+    <functioncall functionName="IDX_ANIM"/>
+    <functioncall functionName="IDX_ANMF"/>
+    <functioncall functionName="IDX_EXIF"/>
+    <functioncall functionName="IDX_ICCP"/>
+    <functioncall functionName="IDX_VP8"/>
+    <functioncall functionName="IDX_VP8L"/>
+    <functioncall functionName="IDX_VP8X"/>
+    <functioncall functionName="IDX_XMP"/>
+    <functioncall functionName="IsWPI"/>
+    <functioncall functionName="MKFOURCC"/>
+    <functioncall functionName="MuxEmitRiffHeader"/>
+    <functioncall functionName="MuxGet"/>
+    <functioncall functionName="MuxGetCanvasInfo"/>
+    <functioncall functionName="MuxGetChunkListFromId"/>
+    <functioncall functionName="MuxGetFrameInternal"/>
+    <functioncall functionName="MuxGetImageInternal"/>
+    <functioncall functionName="MuxImageCount"/>
+    <functioncall functionName="MuxImageDelete"/>
+    <functioncall functionName="MuxImageFinalize"/>
+    <functioncall functionName="MuxImageGetNth"/>
+    <functioncall functionName="MuxImageInit"/>
+    <functioncall functionName="MuxImageParse"/>
+    <functioncall functionName="MuxImagePush"/>
+    <functioncall functionName="MuxValidate"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="PushImage"/>
+    <functioncall functionName="PutLE24"/>
+    <functioncall functionName="PutLE32"/>
+    <functioncall functionName="RIFF_HEADER_SIZE"/>
+    <functioncall functionName="SizeWithPadding"/>
+    <functioncall functionName="SynthesizeBitstream"/>
+    <functioncall functionName="TAG_SIZE"/>
+    <functioncall functionName="VP8GetInfo"/>
+    <functioncall functionName="VP8LGetInfo"/>
+    <functioncall functionName="VP8X_CHUNK_SIZE"/>
+    <functioncall functionName="ValidateForSingleImage"/>
+    <functioncall functionName="WEBP_ABI_IS_INCOMPATIBLE"/>
+    <functioncall functionName="WEBP_CHUNK_ANIM"/>
+    <functioncall functionName="WEBP_CHUNK_ANMF"/>
+    <functioncall functionName="WEBP_CHUNK_IMAGE"/>
+    <functioncall functionName="WEBP_MUX_ABI_VERSION"/>
+    <functioncall functionName="WEBP_MUX_BLEND"/>
+    <functioncall functionName="WEBP_MUX_DISPOSE_BACKGROUND"/>
+    <functioncall functionName="WEBP_MUX_DISPOSE_NONE"/>
+    <functioncall functionName="WEBP_MUX_NO_BLEND"/>
+    <functioncall functionName="WebPDataInit"/>
+    <functioncall functionName="WebPMuxDelete"/>
+    <functioncall functionName="WebPMuxNew"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="alpha_"/>
+    <functioncall functionName="anim"/>
+    <functioncall functionName="anim_"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="bitstream"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="canvas_height_"/>
+    <functioncall functionName="canvas_width_"/>
+    <functioncall functionName="chunk"/>
+    <functioncall functionName="chunk_data"/>
+    <functioncall functionName="chunk_disk_size"/>
+    <functioncall functionName="chunk_list"/>
+    <functioncall functionName="chunk_size"/>
+    <functioncall functionName="copy_data"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="exif_"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fourcc"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has_alpha_"/>
+    <functioncall functionName="hdr_size"/>
+    <functioncall functionName="header_"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="height_"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iccp_"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="images_"/>
+    <functioncall functionName="img_"/>
+    <functioncall functionName="is_frame"/>
+    <functioncall functionName="is_partial_"/>
+    <functioncall functionName="mux"/>
+    <functioncall functionName="need_vp8x"/>
+    <functioncall functionName="next_"/>
+    <functioncall functionName="nth"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="riff_size"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="subchunk"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="tag_"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="unknown_"/>
+    <functioncall functionName="unknown_chunk_list"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="vp8l_has_alpha"/>
+    <functioncall functionName="vp8x_"/>
+    <functioncall functionName="vp8x_size"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="width_"/>
+    <functioncall functionName="wpi"/>
+    <functioncall functionName="xmp_"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1070944548">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GotoLineDialog::line_label&apos; is not initialized in the constructor." verbose="Member variable &apos;GotoLineDialog::line_label&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/code_editor.cpp" line="67" column="17"/>
+            <symbol>GotoLineDialog::line_label</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/code_editor.cpp" file="/home/hbina/git/godot/editor/editor_node.h" line="549" column="20"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="689" col="51" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="711" col="48" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="713" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/code_editor.h:110:7" call-funcname="_search" call-argnr="2" file="/home/hbina/git/godot/editor/code_editor.cpp" line="425" col="16" call-argexpr="line" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/editor/code_editor.cpp" line="420" col="12" info="Assignment 'line=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/editor/code_editor.h:110:7" call-funcname="_search" call-argnr="3" file="/home/hbina/git/godot/editor/code_editor.cpp" line="425" col="16" call-argexpr="col" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/editor/code_editor.cpp" line="421" col="10" info="Assignment 'col=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/editor/code_editor.h:96:7" call-funcname="_show_search" call-argnr="1" file="/home/hbina/git/godot/editor/code_editor.cpp" line="478" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/code_editor.h:186:7" call-funcname="_set_show_warnings_panel" call-argnr="1" file="/home/hbina/git/godot/editor/code_editor.cpp" line="1572" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/code_editor.h:238:7" call-funcname="set_warning_nb" call-argnr="1" file="/home/hbina/git/godot/editor/code_editor.cpp" line="1747" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="popup_find_line" lineNumber="43"/>
+    <functiondecl functionName="get_line" lineNumber="53"/>
+    <functiondecl functionName="ok_pressed" lineNumber="58"/>
+    <functiondecl functionName="_notification" lineNumber="90"/>
+    <functiondecl functionName="_unhandled_input" lineNumber="116"/>
+    <functiondecl functionName="_search" lineNumber="144"/>
+    <functiondecl functionName="_replace" lineNumber="182"/>
+    <functiondecl functionName="_replace_all" lineNumber="201"/>
+    <functiondecl functionName="_get_search_from" lineNumber="291"/>
+    <functiondecl functionName="_update_results_count" lineNumber="305"/>
+    <functiondecl functionName="_update_matches_label" lineNumber="337"/>
+    <functiondecl functionName="search_current" lineNumber="349"/>
+    <functiondecl functionName="search_prev" lineNumber="364"/>
+    <functiondecl functionName="search_next" lineNumber="395"/>
+    <functiondecl functionName="_hide_bar" lineNumber="428"/>
+    <functiondecl functionName="_show_search" lineNumber="439"/>
+    <functiondecl functionName="popup_search" lineNumber="472"/>
+    <functiondecl functionName="popup_replace" lineNumber="481"/>
+    <functiondecl functionName="_search_options_changed" lineNumber="494"/>
+    <functiondecl functionName="_editor_text_changed" lineNumber="500"/>
+    <functiondecl functionName="_search_text_changed" lineNumber="510"/>
+    <functiondecl functionName="_search_text_entered" lineNumber="516"/>
+    <functiondecl functionName="_replace_text_entered" lineNumber="525"/>
+    <functiondecl functionName="get_search_text" lineNumber="538"/>
+    <functiondecl functionName="get_replace_text" lineNumber="543"/>
+    <functiondecl functionName="is_case_sensitive" lineNumber="548"/>
+    <functiondecl functionName="is_whole_words" lineNumber="553"/>
+    <functiondecl functionName="is_selection_only" lineNumber="558"/>
+    <functiondecl functionName="set_error" lineNumber="563"/>
+    <functiondecl functionName="set_text_edit" lineNumber="568"/>
+    <functiondecl functionName="_bind_methods" lineNumber="575"/>
+    <functiondecl functionName="_input" lineNumber="678"/>
+    <functiondecl functionName="_text_editor_gui_input" lineNumber="706"/>
+    <functiondecl functionName="_zoom_in" lineNumber="757"/>
+    <functiondecl functionName="_zoom_out" lineNumber="762"/>
+    <functiondecl functionName="_zoom_changed" lineNumber="767"/>
+    <functiondecl functionName="_reset_zoom" lineNumber="772"/>
+    <functiondecl functionName="_line_col_changed" lineNumber="781"/>
+    <functiondecl functionName="_text_changed" lineNumber="804"/>
+    <functiondecl functionName="_code_complete_timer_timeout" lineNumber="813"/>
+    <functiondecl functionName="_complete_request" lineNumber="819"/>
+    <functiondecl functionName="_get_completion_icon" lineNumber="837"/>
+    <functiondecl functionName="_font_resize_timeout" lineNumber="881"/>
+    <functiondecl functionName="_add_font_size" lineNumber="888"/>
+    <functiondecl functionName="update_editor_settings" lineNumber="906"/>
+    <functiondecl functionName="trim_trailing_whitespace" lineNumber="938"/>
+    <functiondecl functionName="insert_final_newline" lineNumber="966"/>
+    <functiondecl functionName="convert_indent_to_spaces" lineNumber="984"/>
+    <functiondecl functionName="convert_indent_to_tabs" lineNumber="1028"/>
+    <functiondecl functionName="convert_case" lineNumber="1077"/>
+    <functiondecl functionName="move_lines_up" lineNumber="1120"/>
+    <functiondecl functionName="move_lines_down" lineNumber="1161"/>
+    <functiondecl functionName="_delete_line" lineNumber="1202"/>
+    <functiondecl functionName="delete_lines" lineNumber="1215"/>
+    <functiondecl functionName="clone_lines_down" lineNumber="1233"/>
+    <functiondecl functionName="toggle_inline_comment" lineNumber="1277"/>
+    <functiondecl functionName="goto_line" lineNumber="1350"/>
+    <functiondecl functionName="goto_line_selection" lineNumber="1356"/>
+    <functiondecl functionName="goto_line_centered" lineNumber="1363"/>
+    <functiondecl functionName="set_executing_line" lineNumber="1368"/>
+    <functiondecl functionName="clear_executing_line" lineNumber="1372"/>
+    <functiondecl functionName="get_edit_state" lineNumber="1376"/>
+    <functiondecl functionName="set_edit_state" lineNumber="1405"/>
+    <functiondecl functionName="set_error" lineNumber="1442"/>
+    <functiondecl functionName="set_error_pos" lineNumber="1452"/>
+    <functiondecl functionName="goto_error" lineNumber="1457"/>
+    <functiondecl functionName="_update_font" lineNumber="1465"/>
+    <functiondecl functionName="_on_settings_change" lineNumber="1482"/>
+    <functiondecl functionName="_text_changed_idle_timeout" lineNumber="1503"/>
+    <functiondecl functionName="validate_script" lineNumber="1508"/>
+    <functiondecl functionName="_warning_label_gui_input" lineNumber="1512"/>
+    <functiondecl functionName="_warning_button_pressed" lineNumber="1519"/>
+    <functiondecl functionName="_set_show_warnings_panel" lineNumber="1523"/>
+    <functiondecl functionName="_toggle_scripts_pressed" lineNumber="1528"/>
+    <functiondecl functionName="_error_pressed" lineNumber="1532"/>
+    <functiondecl functionName="_notification" lineNumber="1539"/>
+    <functiondecl functionName="set_warning_nb" lineNumber="1567"/>
+    <functiondecl functionName="toggle_bookmark" lineNumber="1575"/>
+    <functiondecl functionName="goto_next_bookmark" lineNumber="1581"/>
+    <functiondecl functionName="goto_prev_bookmark" lineNumber="1607"/>
+    <functiondecl functionName="remove_all_bookmarks" lineNumber="1633"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1643"/>
+    <functiondecl functionName="set_code_complete_func" lineNumber="1653"/>
+    <functiondecl functionName="show_toggle_scripts_button" lineNumber="1658"/>
+    <functiondecl functionName="update_toggle_scripts_button" lineNumber="1662"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ALIGN_CENTER"/>
+    <functioncall functionName="ALIGN_END"/>
+    <functioncall functionName="ALIGN_RIGHT"/>
+    <functioncall functionName="ANCHOR_BEGIN"/>
+    <functioncall functionName="ANCHOR_END"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="CAPITALIZE"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="CURSOR_ARROW"/>
+    <functioncall functionName="CURSOR_POINTING_HAND"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="CheckBox"/>
+    <functioncall functionName="CodeTextEditor"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BR"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UR"/>
+    <functioncall functionName="DOCK_SLOT_MAX"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BR"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UR"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITOR_3D"/>
+    <functioncall functionName="EDITOR_ASSETLIB"/>
+    <functioncall functionName="EDITOR_OPEN_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCRIPT"/>
+    <functioncall functionName="EDIT_REDO"/>
+    <functioncall functionName="EDIT_REVERT"/>
+    <functioncall functionName="EDIT_UNDO"/>
+    <functioncall functionName="EDSCALE"/>
+    <functioncall functionName="ED_GET_SHORTCUT"/>
+    <functioncall functionName="ED_SHORTCUT"/>
+    <functioncall functionName="EditorNode"/>
+    <functioncall functionName="EditorPluginList"/>
+    <functioncall functionName="EditorProgress"/>
+    <functioncall functionName="EditorProgressBG"/>
+    <functioncall functionName="EditorSettings"/>
+    <functioncall functionName="FILE_CLOSE"/>
+    <functioncall functionName="FILE_CLOSE_ALL"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_QUIT"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="FILE_CLOSE_OTHERS"/>
+    <functioncall functionName="FILE_CLOSE_RIGHT"/>
+    <functioncall functionName="FILE_EXPLORE_ANDROID_BUILD_TEMPLATES"/>
+    <functioncall functionName="FILE_EXPORT_MESH_LIBRARY"/>
+    <functioncall functionName="FILE_EXPORT_PROJECT"/>
+    <functioncall functionName="FILE_EXPORT_TILESET"/>
+    <functioncall functionName="FILE_EXTERNAL_OPEN_SCENE"/>
+    <functioncall functionName="FILE_IMPORT_SUBSCENE"/>
+    <functioncall functionName="FILE_INSTALL_ANDROID_SOURCE"/>
+    <functioncall functionName="FILE_NEW_INHERITED_SCENE"/>
+    <functioncall functionName="FILE_NEW_SCENE"/>
+    <functioncall functionName="FILE_OPEN_OLD_SCENE"/>
+    <functioncall functionName="FILE_OPEN_PREV"/>
+    <functioncall functionName="FILE_OPEN_RECENT"/>
+    <functioncall functionName="FILE_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCRIPT"/>
+    <functioncall functionName="FILE_QUIT"/>
+    <functioncall functionName="FILE_SAVE_ALL_SCENES"/>
+    <functioncall functionName="FILE_SAVE_AND_RUN"/>
+    <functioncall functionName="FILE_SAVE_AS_SCENE"/>
+    <functioncall functionName="FILE_SAVE_BEFORE_RUN"/>
+    <functioncall functionName="FILE_SAVE_OPTIMIZED"/>
+    <functioncall functionName="FILE_SAVE_SCENE"/>
+    <functioncall functionName="FILE_SHOW_IN_FILESYSTEM"/>
+    <functioncall functionName="FOCUS_NONE"/>
+    <functioncall functionName="FindReplaceBar"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_NEW_WINDOW"/>
+    <functioncall functionName="GLOBAL_SCENE"/>
+    <functioncall functionName="GotoLineDialog"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HELP_ABOUT"/>
+    <functioncall functionName="HELP_COMMUNITY"/>
+    <functioncall functionName="HELP_DOCS"/>
+    <functioncall functionName="HELP_QA"/>
+    <functioncall functionName="HELP_REPORT_A_BUG"/>
+    <functioncall functionName="HELP_SEARCH"/>
+    <functioncall functionName="HELP_SEND_DOCS_FEEDBACK"/>
+    <functioncall functionName="KEY_0"/>
+    <functioncall functionName="KEY_EQUAL"/>
+    <functioncall functionName="KEY_MINUS"/>
+    <functioncall functionName="KEY_SHIFT"/>
+    <functioncall functionName="LOWER"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="LineEdit"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MAX_BUILD_CALLBACKS"/>
+    <functioncall functionName="MAX_INIT_CALLBACKS"/>
+    <functioncall functionName="MOUSE_FILTER_STOP"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="Point2i"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RESOURCE_SAVE"/>
+    <functioncall functionName="RESOURCE_SAVE_AS"/>
+    <functioncall functionName="RUN_PLAY"/>
+    <functioncall functionName="RUN_PLAY_CUSTOM_SCENE"/>
+    <functioncall functionName="RUN_PLAY_NATIVE"/>
+    <functioncall functionName="RUN_PLAY_SCENE"/>
+    <functioncall functionName="RUN_PROJECT_DATA_FOLDER"/>
+    <functioncall functionName="RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="RUN_SCENE_SETTINGS"/>
+    <functioncall functionName="RUN_SETTINGS"/>
+    <functioncall functionName="RUN_STOP"/>
+    <functioncall functionName="RUN_VCS_SETTINGS"/>
+    <functioncall functionName="RUN_VCS_SHUT_DOWN"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SCENE_TAB_CLOSE"/>
+    <functioncall functionName="SETTINGS_EDITOR_CONFIG_FOLDER"/>
+    <functioncall functionName="SETTINGS_EDITOR_DATA_FOLDER"/>
+    <functioncall functionName="SETTINGS_HELP"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DEFAULT"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DELETE"/>
+    <functioncall functionName="SETTINGS_LAYOUT_SAVE"/>
+    <functioncall functionName="SETTINGS_MANAGE_EXPORT_TEMPLATES"/>
+    <functioncall functionName="SETTINGS_MANAGE_FEATURE_PROFILES"/>
+    <functioncall functionName="SETTINGS_PICK_MAIN_SCENE"/>
+    <functioncall functionName="SETTINGS_PREFERENCES"/>
+    <functioncall functionName="SETTINGS_TOGGLE_CONSOLE"/>
+    <functioncall functionName="SETTINGS_TOGGLE_FULLSCREEN"/>
+    <functioncall functionName="SETTINGS_UPDATE_ALWAYS"/>
+    <functioncall functionName="SETTINGS_UPDATE_CHANGES"/>
+    <functioncall functionName="SETTINGS_UPDATE_CONTINUOUSLY"/>
+    <functioncall functionName="SETTINGS_UPDATE_SPINNER_HIDE"/>
+    <functioncall functionName="SETTINGS_UPDATE_WHEN_CHANGED"/>
+    <functioncall functionName="SET_VIDEO_DRIVER_SAVE_AND_RESTART"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="SIZE_SHRINK_CENTER"/>
+    <functioncall functionName="ScrollContainer"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TOOLS_CUSTOM"/>
+    <functioncall functionName="TOOLS_ORPHAN_RESOURCES"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TextEdit"/>
+    <functioncall functionName="TextureButton"/>
+    <functioncall functionName="Timer"/>
+    <functioncall functionName="ToolButton"/>
+    <functioncall functionName="UPPER"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="VariantContainer"/>
+    <functioncall functionName="_EDITOR_GET"/>
+    <functioncall functionName="_add_font_size"/>
+    <functioncall functionName="_cleanup_scene"/>
+    <functioncall functionName="_code_complete_script"/>
+    <functioncall functionName="_code_complete_timer_timeout"/>
+    <functioncall functionName="_complete_request"/>
+    <functioncall functionName="_delete_line"/>
+    <functioncall functionName="_edit_current"/>
+    <functioncall functionName="_editor_select"/>
+    <functioncall functionName="_editor_text_changed"/>
+    <functioncall functionName="_error_pressed"/>
+    <functioncall functionName="_font_resize_timeout"/>
+    <functioncall functionName="_get_completion_icon"/>
+    <functioncall functionName="_get_search_from"/>
+    <functioncall functionName="_get_syntax_highlighting"/>
+    <functioncall functionName="_hide_bar"/>
+    <functioncall functionName="_input"/>
+    <functioncall functionName="_line_col_changed"/>
+    <functioncall functionName="_load_theme_settings"/>
+    <functioncall functionName="_menu_option_confirm"/>
+    <functioncall functionName="_on_settings_change"/>
+    <functioncall functionName="_replace"/>
+    <functioncall functionName="_replace_all"/>
+    <functioncall functionName="_replace_text_entered"/>
+    <functioncall functionName="_reset_zoom"/>
+    <functioncall functionName="_save_scene"/>
+    <functioncall functionName="_save_scene_with_preview"/>
+    <functioncall functionName="_search"/>
+    <functioncall functionName="_search_options_changed"/>
+    <functioncall functionName="_search_text_changed"/>
+    <functioncall functionName="_search_text_entered"/>
+    <functioncall functionName="_set"/>
+    <functioncall functionName="_set_only"/>
+    <functioncall functionName="_set_show_warnings_panel"/>
+    <functioncall functionName="_show_search"/>
+    <functioncall functionName="_text_changed"/>
+    <functioncall functionName="_text_changed_idle_timeout"/>
+    <functioncall functionName="_text_editor_gui_input"/>
+    <functioncall functionName="_toggle_scripts_pressed"/>
+    <functioncall functionName="_unhandled_input"/>
+    <functioncall functionName="_update_font"/>
+    <functioncall functionName="_update_matches_label"/>
+    <functioncall functionName="_update_results_count"/>
+    <functioncall functionName="_validate_script"/>
+    <functioncall functionName="_warning_button_pressed"/>
+    <functioncall functionName="_warning_label_gui_input"/>
+    <functioncall functionName="_zoom_changed"/>
+    <functioncall functionName="_zoom_in"/>
+    <functioncall functionName="_zoom_out"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="accept_event"/>
+    <functioncall functionName="accepted"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_theme_color_override"/>
+    <functioncall functionName="add_theme_constant_override"/>
+    <functioncall functionName="add_theme_font_override"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="as_string"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="backspace_at_cursor"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="begin_col"/>
+    <functioncall functionName="begin_complex_operation"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bline"/>
+    <functioncall functionName="bmarks"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="capitalize"/>
+    <functioncall functionName="case_sensitive"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="center_viewport_to_cursor"/>
+    <functioncall functionName="changed_indentation"/>
+    <functioncall functionName="clear_executing_line"/>
+    <functioncall functionName="clone_lines_down"/>
+    <functioncall functionName="code_complete"/>
+    <functioncall functionName="code_complete_func"/>
+    <functioncall functionName="code_complete_timer"/>
+    <functioncall functionName="code_complete_ud"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="col_from"/>
+    <functioncall functionName="col_to"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="ctext"/>
+    <functioncall functionName="cursor_column"/>
+    <functioncall functionName="cursor_get_column"/>
+    <functioncall functionName="cursor_get_line"/>
+    <functioncall functionName="cursor_new_column"/>
+    <functioncall functionName="cursor_new_line"/>
+    <functioncall functionName="cursor_pos"/>
+    <functioncall functionName="cursor_set_blink_enabled"/>
+    <functioncall functionName="cursor_set_blink_speed"/>
+    <functioncall functionName="cursor_set_block_mode"/>
+    <functioncall functionName="cursor_set_column"/>
+    <functioncall functionName="cursor_set_line"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delete_lines"/>
+    <functioncall functionName="delimiter"/>
+    <functioncall functionName="delimiter_length"/>
+    <functioncall functionName="deselect"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="display"/>
+    <functioncall functionName="edit_resource"/>
+    <functioncall functionName="editor_data"/>
+    <functioncall functionName="editor_folding"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="end_col"/>
+    <functioncall functionName="end_complex_operation"/>
+    <functioncall functionName="ends_with"/>
+    <functioncall functionName="entries"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="error_column"/>
+    <functioncall functionName="error_line"/>
+    <functioncall functionName="event"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="final_line"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_next"/>
+    <functioncall functionName="find_prev"/>
+    <functioncall functionName="find_replace_bar"/>
+    <functioncall functionName="findn"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="fold_line"/>
+    <functioncall functionName="font_resize_timer"/>
+    <functioncall functionName="font_resize_val"/>
+    <functioncall functionName="font_size"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="forced"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="from_col"/>
+    <functioncall functionName="from_column"/>
+    <functioncall functionName="from_line"/>
+    <functioncall functionName="from_line_down"/>
+    <functioncall functionName="from_line_up"/>
+    <functioncall functionName="from_pos"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_addon_area"/>
+    <functioncall functionName="get_as_text"/>
+    <functioncall functionName="get_bookmarks"/>
+    <functioncall functionName="get_bookmarks_array"/>
+    <functioncall functionName="get_breakpoints_array"/>
+    <functioncall functionName="get_button_index"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_command"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_factor"/>
+    <functioncall functionName="get_focus_owner"/>
+    <functioncall functionName="get_folded_lines"/>
+    <functioncall functionName="get_gui_base"/>
+    <functioncall functionName="get_h_scroll"/>
+    <functioncall functionName="get_indent_size"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_keycode"/>
+    <functioncall functionName="get_line"/>
+    <functioncall functionName="get_line_count"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_normal_texture"/>
+    <functioncall functionName="get_parent_control"/>
+    <functioncall functionName="get_replace_text"/>
+    <functioncall functionName="get_script_create_dialog"/>
+    <functioncall functionName="get_search_text"/>
+    <functioncall functionName="get_selection_from_column"/>
+    <functioncall functionName="get_selection_from_line"/>
+    <functioncall functionName="get_selection_text"/>
+    <functioncall functionName="get_selection_to_column"/>
+    <functioncall functionName="get_selection_to_line"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_text"/>
+    <functioncall functionName="get_text_edit"/>
+    <functioncall functionName="get_text_for_completion"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_font"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_time_left"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_v_scroll"/>
+    <functioncall functionName="goto_line"/>
+    <functioncall functionName="grab_focus"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_child_process"/>
+    <functioncall functionName="has_default_value"/>
+    <functioncall functionName="has_focus"/>
+    <functioncall functionName="has_theme_icon"/>
+    <functioncall functionName="hbc_button_replace"/>
+    <functioncall functionName="hbc_button_search"/>
+    <functioncall functionName="hbc_option_replace"/>
+    <functioncall functionName="hbc_option_search"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="hide_button"/>
+    <functioncall functionName="hide_from_editor"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idle"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="indent_size"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="insert_text_at_cursor"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_a_parent_of"/>
+    <functioncall functionName="is_case_sensitive"/>
+    <functioncall functionName="is_commented"/>
+    <functioncall functionName="is_insert_text_operation"/>
+    <functioncall functionName="is_key_pressed"/>
+    <functioncall functionName="is_line_set_as_bookmark"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_scripts_panel_toggled"/>
+    <functioncall functionName="is_selection_active"/>
+    <functioncall functionName="is_selection_only"/>
+    <functioncall functionName="is_shortcut"/>
+    <functioncall functionName="is_symbol"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="is_warnings_panel_opened"/>
+    <functioncall functionName="is_whole_words"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key_event"/>
+    <functioncall functionName="kind"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="line_and_col_txt"/>
+    <functioncall functionName="line_id"/>
+    <functioncall functionName="line_text"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="lpad"/>
+    <functioncall functionName="match_from"/>
+    <functioncall functionName="match_to"/>
+    <functioncall functionName="matches_label"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="menu_hb"/>
+    <functioncall functionName="move_lines_down"/>
+    <functioncall functionName="move_lines_up"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="new_line"/>
+    <functioncall functionName="new_size"/>
+    <functioncall functionName="new_text"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_id"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="open_resource"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="orig_cursor"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_begin"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_can_cancel"/>
+    <functioncall functionName="p_case"/>
+    <functioncall functionName="p_code_complete_func"/>
+    <functioncall functionName="p_column"/>
+    <functioncall functionName="p_delta"/>
+    <functioncall functionName="p_edit"/>
+    <functioncall functionName="p_emit_signal"/>
+    <functioncall functionName="p_end"/>
+    <functioncall functionName="p_error"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_focus_replace"/>
+    <functioncall functionName="p_force_refresh"/>
+    <functioncall functionName="p_from_col"/>
+    <functioncall functionName="p_from_line"/>
+    <functioncall functionName="p_label"/>
+    <functioncall functionName="p_line"/>
+    <functioncall functionName="p_old"/>
+    <functioncall functionName="p_order"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_plugins_list"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_setting"/>
+    <functioncall functionName="p_show"/>
+    <functioncall functionName="p_show_only"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_table"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="p_text_edit"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_ud"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="p_warning_nb"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_with_preview"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="popup_search"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="powf"/>
+    <functioncall functionName="preserve_cursor"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="progress_add_task"/>
+    <functioncall functionName="progress_add_task_bg"/>
+    <functioncall functionName="progress_end_task"/>
+    <functioncall functionName="progress_end_task_bg"/>
+    <functioncall functionName="progress_task_step"/>
+    <functioncall functionName="progress_task_step_bg"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="query_code_comple"/>
+    <functioncall functionName="rc"/>
+    <functioncall functionName="register_text_enter"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="replace_all"/>
+    <functioncall functionName="replace_all_mode"/>
+    <functioncall functionName="replace_text"/>
+    <functioncall functionName="restart_if_changed"/>
+    <functioncall functionName="result_col"/>
+    <functioncall functionName="result_line"/>
+    <functioncall functionName="results_count"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="scroll"/>
+    <functioncall functionName="search"/>
+    <functioncall functionName="search_current"/>
+    <functioncall functionName="search_next"/>
+    <functioncall functionName="search_prev"/>
+    <functioncall functionName="search_text"/>
+    <functioncall functionName="search_text_len"/>
+    <functioncall functionName="searched"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="select_all"/>
+    <functioncall functionName="selection_active"/>
+    <functioncall functionName="selection_enabled"/>
+    <functioncall functionName="selection_only"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_align"/>
+    <functioncall functionName="set_alignment"/>
+    <functioncall functionName="set_anchor_and_margin"/>
+    <functioncall functionName="set_auto_brace_completion"/>
+    <functioncall functionName="set_auto_indent"/>
+    <functioncall functionName="set_bookmark_gutter_enabled"/>
+    <functioncall functionName="set_brace_matching"/>
+    <functioncall functionName="set_breakpoint_gutter_enabled"/>
+    <functioncall functionName="set_callhint_settings"/>
+    <functioncall functionName="set_completion"/>
+    <functioncall functionName="set_current_search_result"/>
+    <functioncall functionName="set_cursor_position"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_default_cursor_shape"/>
+    <functioncall functionName="set_draw_fold_gutter"/>
+    <functioncall functionName="set_draw_info_gutter"/>
+    <functioncall functionName="set_draw_minimap"/>
+    <functioncall functionName="set_draw_spaces"/>
+    <functioncall functionName="set_draw_tabs"/>
+    <functioncall functionName="set_enable_v_scroll"/>
+    <functioncall functionName="set_executing_line"/>
+    <functioncall functionName="set_focus_mode"/>
+    <functioncall functionName="set_h_scroll"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_hide_on_ok"/>
+    <functioncall functionName="set_hiding_enabled"/>
+    <functioncall functionName="set_highlight_all_occurrences"/>
+    <functioncall functionName="set_highlight_current_line"/>
+    <functioncall functionName="set_hover_texture"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_indent_size"/>
+    <functioncall functionName="set_indent_using_spaces"/>
+    <functioncall functionName="set_line"/>
+    <functioncall functionName="set_line_as_bookmark"/>
+    <functioncall functionName="set_line_as_breakpoint"/>
+    <functioncall functionName="set_line_length_guideline_hard_column"/>
+    <functioncall functionName="set_line_length_guideline_soft_column"/>
+    <functioncall functionName="set_line_numbers_zero_padded"/>
+    <functioncall functionName="set_minimap_width"/>
+    <functioncall functionName="set_mouse_filter"/>
+    <functioncall functionName="set_normal_texture"/>
+    <functioncall functionName="set_one_shot"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_pressed_texture"/>
+    <functioncall functionName="set_process_input"/>
+    <functioncall functionName="set_process_unhandled_input"/>
+    <functioncall functionName="set_scroll_pass_end_of_file"/>
+    <functioncall functionName="set_search_flags"/>
+    <functioncall functionName="set_search_text"/>
+    <functioncall functionName="set_show_line_length_guidelines"/>
+    <functioncall functionName="set_show_line_numbers"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="set_smooth_scroll_enabled"/>
+    <functioncall functionName="set_syntax_coloring"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_text_edit"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_v_scroll"/>
+    <functioncall functionName="set_v_scroll_speed"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_visible"/>
+    <functioncall functionName="set_wait_time"/>
+    <functioncall functionName="set_warning_nb"/>
+    <functioncall functionName="set_wrap_enabled"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="status_bar"/>
+    <functioncall functionName="status_bar_font"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="swap_lines"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="syntax_highlighter"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="text"/>
+    <functioncall functionName="text_editor"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_column"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="to_line"/>
+    <functioncall functionName="to_line_down"/>
+    <functioncall functionName="to_line_up"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="to_upper"/>
+    <functioncall functionName="toggle_scripts_button"/>
+    <functioncall functionName="toggle_scripts_panel"/>
+    <functioncall functionName="top_split"/>
+    <functioncall functionName="trimed_whitespace"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="unfold_line"/>
+    <functioncall functionName="unsaved_cache"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="update_keying"/>
+    <functioncall functionName="update_toggle_scripts_button"/>
+    <functioncall functionName="variant"/>
+    <functioncall functionName="vbc"/>
+    <functioncall functionName="vbc_button"/>
+    <functioncall functionName="vbc_lineedit"/>
+    <functioncall functionName="vbc_option"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="vsval"/>
+    <functioncall functionName="warning_button"/>
+    <functioncall functionName="warning_count_label"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="whole_words"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

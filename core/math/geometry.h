@@ -865,7 +865,7 @@ public:
 		int c = p_polygon.size();
 		if (c < 3)
 			return false;
-		const Vector2 *p = p_polygon.ptr();
+		const Vector<Vector2> &p = p_polygon;
 		real_t sum = 0;
 		for (int i = 0; i < c; i++) {
 			const Vector2 &v1 = p[i];
@@ -881,7 +881,7 @@ public:
 		int c = p_polygon.size();
 		if (c < 3)
 			return false;
-		const Vector2 *p = p_polygon.ptr();
+		const Vector<Vector2> &p = p_polygon;
 		Vector2 further_away(-1e20, -1e20);
 		Vector2 further_away_opposite(1e20, 1e20);
 
@@ -999,14 +999,14 @@ public:
 		for (int i = 0; i < n; ++i) {
 			while (k >= 2 && vec2_cross(H[k - 2], H[k - 1], P[i]) <= 0)
 				k--;
-			H.write[k++] = P[i];
+			H[k++] = P[i];
 		}
 
 		// Build upper hull.
 		for (int i = n - 2, t = k + 1; i >= 0; i--) {
 			while (k >= t && vec2_cross(H[k - 2], H[k - 1], P[i]) <= 0)
 				k--;
-			H.write[k++] = P[i];
+			H[k++] = P[i];
 		}
 
 		H.resize(k);

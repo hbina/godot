@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3606812567">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ConstraintCfg::m_enableParallelSolve&apos; is not initialized in the constructor." verbose="Member variable &apos;ConstraintCfg::m_enableParallelSolve&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h" line="48" column="3"/>
+            <symbol>ConstraintCfg::m_enableParallelSolve</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ConstraintCfg::m_batchCellSize&apos; is not initialized in the constructor." verbose="Member variable &apos;ConstraintCfg::m_batchCellSize&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h" line="48" column="3"/>
+            <symbol>ConstraintCfg::m_batchCellSize</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;b3GpuRigidBodyPipeline&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;b3GpuRigidBodyPipeline&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="67" column="2"/>
+            <symbol>b3GpuRigidBodyPipeline</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;b3GpuRigidBodyPipeline&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;b3GpuRigidBodyPipeline&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="67" column="2"/>
+            <symbol>b3GpuRigidBodyPipeline</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;useGpu&apos; is always true" verbose="Condition &apos;useGpu&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="396" column="8" info="Condition &apos;useGpu&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="395" column="18" info="Assignment &apos;useGpu=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;forceHost&apos; is always false" verbose="Condition &apos;forceHost&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="399" column="9" info="Condition &apos;forceHost&apos; is always false"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="398" column="22" info="Assignment &apos;forceHost=false&apos;, assigned value is 0"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;bodyIndex&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;bodyIndex&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="628" column="12" info="bodyIndex is overwritten"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="627" column="16" info="bodyIndex is initialized"/>
+            <symbol>bodyIndex</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;registerPhysicsInstance&apos; argument 4 names different: declaration &apos;collisionShapeIndex&apos; definition &apos;collidableIndex&apos;." verbose="Function &apos;registerPhysicsInstance&apos; argument 4 names different: declaration &apos;collisionShapeIndex&apos; definition &apos;collidableIndex&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="603" column="118"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h" line="49" column="95"/>
+            <symbol>registerPhysicsInstance</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;registerPhysicsInstance&apos; argument 5 names different: declaration &apos;userData&apos; definition &apos;userIndex&apos;." verbose="Function &apos;registerPhysicsInstance&apos; argument 5 names different: declaration &apos;userData&apos; definition &apos;userIndex&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="603" column="139"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h" line="49" column="120"/>
+            <symbol>registerPhysicsInstance</symbol>
+        </error>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:56:6" my-argnr="3" my-argname="pivotInA" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:56:6" my-argnr="4" my-argname="pivotInB" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="196" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:57:6" my-argnr="3" my-argname="pivotInA" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="211" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:57:6" my-argnr="4" my-argname="pivotInB" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="212" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:57:6" my-argnr="5" my-argname="relTargetAB" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="213" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:53:7" my-argnr="1" my-argname="grav" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="589" col="29" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:56:6" my-argnr="3" my-argname="pivotInA" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:56:6" my-argnr="4" my-argname="pivotInB" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="196" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:57:6" my-argnr="3" my-argname="pivotInA" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="211" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:57:6" my-argnr="4" my-argname="pivotInB" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="212" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:57:6" my-argnr="5" my-argname="relTargetAB" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="213" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.h:53:7" my-argnr="1" my-argname="grav" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuRigidBodyPipeline.cpp" line="589" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="reset" lineNumber="141"/>
+    <functiondecl functionName="addConstraint" lineNumber="149"/>
+    <functiondecl functionName="removeConstraint" lineNumber="154"/>
+    <functiondecl functionName="removeConstraintByUid" lineNumber="159"/>
+    <functiondecl functionName="createPoint2PointConstraint" lineNumber="186"/>
+    <functiondecl functionName="createFixedConstraint" lineNumber="202"/>
+    <functiondecl functionName="stepSimulation" lineNumber="221"/>
+    <functiondecl functionName="integrate" lineNumber="465"/>
+    <functiondecl functionName="setupGpuAabbsFull" lineNumber="500"/>
+    <functiondecl functionName="getBodyBuffer" lineNumber="577"/>
+    <functiondecl functionName="getNumBodies" lineNumber="582"/>
+    <functiondecl functionName="setGravity" lineNumber="587"/>
+    <functiondecl functionName="copyConstraintsToHost" lineNumber="592"/>
+    <functiondecl functionName="writeAllInstancesToGpu" lineNumber="597"/>
+    <functiondecl functionName="registerPhysicsInstance" lineNumber="603"/>
+    <functiondecl functionName="castRays" lineNumber="671"/>
+    <functioncall functionName="B3_ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="B3_CONSTRAINT_FLAG_ENABLED"/>
+    <functioncall functionName="B3_DECLARE_ALIGNED_ALLOCATOR"/>
+    <functioncall functionName="B3_GPU_FIXED_CONSTRAINT_TYPE"/>
+    <functioncall functionName="B3_GPU_POINT2POINT_CONSTRAINT_TYPE"/>
+    <functioncall functionName="B3_PROFILE"/>
+    <functioncall functionName="CL_SUCCESS"/>
+    <functioncall functionName="ConstraintCfg"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="aabbMax"/>
+    <functioncall functionName="aabbMin"/>
+    <functioncall functionName="aabbsWS"/>
+    <functioncall functionName="angularDamp"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="b3Assert"/>
+    <functioncall functionName="b3ComputeWorldAabb"/>
+    <functioncall functionName="b3Error"/>
+    <functioncall functionName="b3GpuConstraint4"/>
+    <functioncall functionName="b3GpuJacobiContactSolver"/>
+    <functioncall functionName="b3GpuPgsConstraintSolver"/>
+    <functioncall functionName="b3GpuPgsContactSolver"/>
+    <functioncall functionName="b3GpuRaycast"/>
+    <functioncall functionName="b3GpuRigidBodyPipeline"/>
+    <functioncall functionName="b3JacobiSolverInfo"/>
+    <functioncall functionName="b3MakeVector3"/>
+    <functioncall functionName="b3OpenCLArray"/>
+    <functioncall functionName="b3PgsJacobiSolver"/>
+    <functioncall functionName="b3Quaternion"/>
+    <functioncall functionName="b3Solver"/>
+    <functioncall functionName="b3TransformAabb"/>
+    <functioncall functionName="bodies"/>
+    <functioncall functionName="bodyA"/>
+    <functioncall functionName="bodyB"/>
+    <functioncall functionName="bodyIndex"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="breakingThreshold"/>
+    <functioncall functionName="broadphaseDbvt"/>
+    <functioncall functionName="broadphaseSap"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="calculateOverlappingPairs"/>
+    <functioncall functionName="calculateOverlappingPairsHost"/>
+    <functioncall functionName="castRays"/>
+    <functioncall functionName="ciErrNum"/>
+    <functioncall functionName="clReleaseKernel"/>
+    <functioncall functionName="clReleaseProgram"/>
+    <functioncall functionName="collidableIndex"/>
+    <functioncall functionName="collidables"/>
+    <functioncall functionName="compileCLKernelFromString"/>
+    <functioncall functionName="compileCLProgramFromString"/>
+    <functioncall functionName="computeContacts"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constraint"/>
+    <functioncall functionName="copyFromHost"/>
+    <functioncall functionName="copyToHost"/>
+    <functioncall functionName="createLargeProxy"/>
+    <functioncall functionName="createProxy"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="deltaTime"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="dt"/>
+    <functioncall functionName="errNum"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="forceHost"/>
+    <functioncall functionName="gCalcWorldSpaceAabbOnCpu"/>
+    <functioncall functionName="gClearPairsOnGpu"/>
+    <functioncall functionName="gIntegrateOnCpu"/>
+    <functioncall functionName="gUseCalculateOverlappingPairsHost"/>
+    <functioncall functionName="gUseDbvt"/>
+    <functioncall functionName="gUseJacobi"/>
+    <functioncall functionName="getAabbBufferWS"/>
+    <functioncall functionName="getAabbLocalSpaceBufferGpu"/>
+    <functioncall functionName="getAllAabbsCPU"/>
+    <functioncall functionName="getAllAabbsGPU"/>
+    <functioncall functionName="getBodiesCpu"/>
+    <functioncall functionName="getBodiesGpu"/>
+    <functioncall functionName="getBodyInertiasGpu"/>
+    <functioncall functionName="getBufferCL"/>
+    <functioncall functionName="getCollidablesCpu"/>
+    <functioncall functionName="getCollidablesGpu"/>
+    <functioncall functionName="getContactsCPU"/>
+    <functioncall functionName="getContactsGpu"/>
+    <functioncall functionName="getInternalData"/>
+    <functioncall functionName="getLocalSpaceAabb"/>
+    <functioncall functionName="getLocalSpaceAabbsCpu"/>
+    <functioncall functionName="getNPoints"/>
+    <functioncall functionName="getNumBodies"/>
+    <functioncall functionName="getNumCollidablesGpu"/>
+    <functioncall functionName="getNumContactsGpu"/>
+    <functioncall functionName="getNumOverlap"/>
+    <functioncall functionName="getNumOverlappingPairs"/>
+    <functioncall functionName="getNumRigidBodies"/>
+    <functioncall functionName="getOverlappingPairArray"/>
+    <functioncall functionName="getOverlappingPairBuffer"/>
+    <functioncall functionName="getOverlappingPairCache"/>
+    <functioncall functionName="getStatic0Index"/>
+    <functioncall functionName="getX"/>
+    <functioncall functionName="gpuBodies"/>
+    <functioncall functionName="gpuContacts"/>
+    <functioncall functionName="gpuInertias"/>
+    <functioncall functionName="gpuPairs"/>
+    <functioncall functionName="hitResults"/>
+    <functioncall functionName="hostBodies"/>
+    <functioncall functionName="hostContacts"/>
+    <functioncall functionName="hostInertias"/>
+    <functioncall functionName="hostPairs"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="integrate"/>
+    <functioncall functionName="integrateKernelCL"/>
+    <functioncall functionName="integrateSingleTransform"/>
+    <functioncall functionName="joints"/>
+    <functioncall functionName="launch1D"/>
+    <functioncall functionName="launcher"/>
+    <functioncall functionName="localAabbMax"/>
+    <functioncall functionName="localAabbMin"/>
+    <functioncall functionName="localAabbs"/>
+    <functioncall functionName="m_allAabbsCPU"/>
+    <functioncall functionName="m_allAabbsGPU"/>
+    <functioncall functionName="m_bodyBufferCPU"/>
+    <functioncall functionName="m_broadphaseSap"/>
+    <functioncall functionName="m_clearOverlappingPairsKernel"/>
+    <functioncall functionName="m_config"/>
+    <functioncall functionName="m_constraintUid"/>
+    <functioncall functionName="m_context"/>
+    <functioncall functionName="m_cpuConstraints"/>
+    <functioncall functionName="m_deltaTime"/>
+    <functioncall functionName="m_device"/>
+    <functioncall functionName="m_dt"/>
+    <functioncall functionName="m_fixedBodyIndex"/>
+    <functioncall functionName="m_gpuConstraints"/>
+    <functioncall functionName="m_gravity"/>
+    <functioncall functionName="m_integrateTransformsKernel"/>
+    <functioncall functionName="m_maxBroadphasePairs"/>
+    <functioncall functionName="m_maxConvexBodies"/>
+    <functioncall functionName="m_numIterations"/>
+    <functioncall functionName="m_overlappingPairsGPU"/>
+    <functioncall functionName="m_positionConstraintCoeff"/>
+    <functioncall functionName="m_positionDrift"/>
+    <functioncall functionName="m_queue"/>
+    <functioncall functionName="m_raycaster"/>
+    <functioncall functionName="m_solver"/>
+    <functioncall functionName="m_solver2"/>
+    <functioncall functionName="m_solver3"/>
+    <functioncall functionName="m_staticIdx"/>
+    <functioncall functionName="m_uid"/>
+    <functioncall functionName="m_updateAabbsKernel"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="mass"/>
+    <functioncall functionName="narrowphase"/>
+    <functioncall functionName="nodeID"/>
+    <functioncall functionName="numBodies"/>
+    <functioncall functionName="numContacts"/>
+    <functioncall functionName="numJoints"/>
+    <functioncall functionName="numPairs"/>
+    <functioncall functionName="oclCHECKERROR"/>
+    <functioncall functionName="orientation"/>
+    <functioncall functionName="pairs"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="prog"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="rays"/>
+    <functioncall functionName="readbackAllBodiesToCpu"/>
+    <functioncall functionName="recomputeBatches"/>
+    <functioncall functionName="registerRigidBody"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="setAabb"/>
+    <functioncall functionName="setBuffer"/>
+    <functioncall functionName="setConst"/>
+    <functioncall functionName="setFromOpenCLBuffer"/>
+    <functioncall functionName="setIdentity"/>
+    <functioncall functionName="setOrigin"/>
+    <functioncall functionName="setRotation"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="setupGpuAabbsFull"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="solveContacts"/>
+    <functioncall functionName="solveGroupHost"/>
+    <functioncall functionName="solveJoints"/>
+    <functioncall functionName="solverInfo"/>
+    <functioncall functionName="static0Index"/>
+    <functioncall functionName="struct"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="timeStep"/>
+    <functioncall functionName="totalPoints"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="updateAabbsKernelCL"/>
+    <functioncall functionName="useGpu"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="worldAabbs"/>
+    <functioncall functionName="writeInstanceToGpu"/>
+    <functioncall functionName="writeToGpu"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2941663830">
+        <error id="operatorEq" severity="style" msg="&apos;Array::operator=&apos; should return &apos;Array &amp;&apos;." verbose="The Array::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;Array &amp;Array::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/array.cpp" file="/home/hbina/git/godot/core/array.h" line="67" column="2"/>
+            <symbol>Array</symbol>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;p_step&gt;0&apos; is redundant or there is division by zero at line 317." verbose="Either the condition &apos;p_step&gt;0&apos; is redundant or there is division by zero at line 317." cwe="369">
+            <location file="/home/hbina/git/godot/core/array.cpp" line="317" column="49" info="Division by zero"/>
+            <location file="/home/hbina/git/godot/core/array.cpp" line="306" column="13" info="Assuming that condition &apos;p_step&gt;0&apos; is not redundant"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/array.h:55:17" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="190" col="19" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/array.h:55:17" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="272" col="19" call-argexpr="p_idx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/array.cpp" line="477" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/array.cpp" line="478" col="17" info="Calling function 'get', 1st argument 'i' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/array.h:58:17" call-funcname="get" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="478" col="16" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/array.cpp" line="477" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/array.h:58:17" call-funcname="get" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="501" col="16" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/array.cpp" line="500" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/array.h:55:17" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="190" col="19" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/array.h:55:17" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="272" col="19" call-argexpr="p_idx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/array.cpp" line="477" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/array.cpp" line="478" col="17" info="Calling function 'get', 1st argument 'i' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/array.h:58:17" call-funcname="get" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="478" col="16" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/array.cpp" line="477" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/array.h:58:17" call-funcname="get" call-argnr="1" file="/home/hbina/git/godot/core/array.cpp" line="501" col="16" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/array.cpp" line="500" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_ref" lineNumber="48"/>
+    <functiondecl functionName="_unref" lineNumber="66"/>
+    <functiondecl functionName="size" lineNumber="87"/>
+    <functiondecl functionName="empty" lineNumber="91"/>
+    <functiondecl functionName="clear" lineNumber="95"/>
+    <functiondecl functionName="hash" lineNumber="105"/>
+    <functiondecl functionName="_assign" lineNumber="116"/>
+    <functiondecl functionName="push_back" lineNumber="165"/>
+    <functiondecl functionName="resize" lineNumber="171"/>
+    <functiondecl functionName="insert" lineNumber="176"/>
+    <functiondecl functionName="erase" lineNumber="182"/>
+    <functiondecl functionName="front" lineNumber="188"/>
+    <functiondecl functionName="back" lineNumber="193"/>
+    <functiondecl functionName="find" lineNumber="198"/>
+    <functiondecl functionName="rfind" lineNumber="204"/>
+    <functiondecl functionName="find_last" lineNumber="229"/>
+    <functiondecl functionName="count" lineNumber="235"/>
+    <functiondecl functionName="has" lineNumber="252"/>
+    <functiondecl functionName="remove" lineNumber="258"/>
+    <functiondecl functionName="set" lineNumber="263"/>
+    <functiondecl functionName="get" lineNumber="270"/>
+    <functiondecl functionName="duplicate" lineNumber="275"/>
+    <functiondecl functionName="_clamp_slice_index" lineNumber="288"/>
+    <functiondecl functionName="slice" lineNumber="298"/>
+    <functiondecl functionName="sort" lineNumber="349"/>
+    <functiondecl functionName="sort_custom" lineNumber="370"/>
+    <functiondecl functionName="shuffle" lineNumber="381"/>
+    <functiondecl functionName="bsearch" lineNumber="422"/>
+    <functiondecl functionName="bsearch_custom" lineNumber="428"/>
+    <functiondecl functionName="invert" lineNumber="440"/>
+    <functiondecl functionName="push_front" lineNumber="446"/>
+    <functiondecl functionName="pop_back" lineNumber="452"/>
+    <functiondecl functionName="pop_front" lineNumber="463"/>
+    <functiondecl functionName="min" lineNumber="473"/>
+    <functiondecl functionName="max" lineNumber="496"/>
+    <functiondecl functionName="id" lineNumber="519"/>
+    <functiondecl functionName="set_typed" lineNumber="530"/>
+    <functiondecl functionName="_ref" lineNumber="48"/>
+    <functiondecl functionName="_unref" lineNumber="66"/>
+    <functiondecl functionName="size" lineNumber="87"/>
+    <functiondecl functionName="empty" lineNumber="91"/>
+    <functiondecl functionName="clear" lineNumber="95"/>
+    <functiondecl functionName="hash" lineNumber="105"/>
+    <functiondecl functionName="_assign" lineNumber="116"/>
+    <functiondecl functionName="push_back" lineNumber="165"/>
+    <functiondecl functionName="resize" lineNumber="171"/>
+    <functiondecl functionName="insert" lineNumber="176"/>
+    <functiondecl functionName="erase" lineNumber="182"/>
+    <functiondecl functionName="front" lineNumber="188"/>
+    <functiondecl functionName="back" lineNumber="193"/>
+    <functiondecl functionName="find" lineNumber="198"/>
+    <functiondecl functionName="rfind" lineNumber="204"/>
+    <functiondecl functionName="find_last" lineNumber="229"/>
+    <functiondecl functionName="count" lineNumber="235"/>
+    <functiondecl functionName="has" lineNumber="252"/>
+    <functiondecl functionName="remove" lineNumber="258"/>
+    <functiondecl functionName="set" lineNumber="263"/>
+    <functiondecl functionName="get" lineNumber="270"/>
+    <functiondecl functionName="duplicate" lineNumber="275"/>
+    <functiondecl functionName="_clamp_slice_index" lineNumber="288"/>
+    <functiondecl functionName="slice" lineNumber="298"/>
+    <functiondecl functionName="sort" lineNumber="349"/>
+    <functiondecl functionName="sort_custom" lineNumber="370"/>
+    <functiondecl functionName="shuffle" lineNumber="381"/>
+    <functiondecl functionName="bsearch" lineNumber="422"/>
+    <functiondecl functionName="bsearch_custom" lineNumber="428"/>
+    <functiondecl functionName="invert" lineNumber="440"/>
+    <functiondecl functionName="push_front" lineNumber="446"/>
+    <functiondecl functionName="pop_back" lineNumber="452"/>
+    <functiondecl functionName="pop_front" lineNumber="463"/>
+    <functiondecl functionName="min" lineNumber="473"/>
+    <functiondecl functionName="max" lineNumber="496"/>
+    <functiondecl functionName="id" lineNumber="519"/>
+    <functiondecl functionName="set_typed" lineNumber="530"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="ArrayPrivate"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_FAIL_NULL_V"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="OP_GREATER"/>
+    <functioncall functionName="OP_LESS"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="Type"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="_ArrayVariantSort"/>
+    <functioncall functionName="_ArrayVariantSortCustom"/>
+    <functioncall functionName="_assign"/>
+    <functioncall functionName="_clamp_slice_index"/>
+    <functioncall functionName="_fp"/>
+    <functioncall functionName="_p"/>
+    <functioncall functionName="_ref"/>
+    <functioncall functionName="_unref"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="arr_size"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bisect"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="can_convert_strict"/>
+    <functioncall functionName="can_reference"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="class_name"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="construct"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="element_count"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="evaluate"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="fixed_index"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="func"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_class_name"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_script"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_type_name"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash_djb2_one_32"/>
+    <functioncall functionName="hi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inherits_script"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="invert"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="less"/>
+    <functioncall functionName="maxval"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="minval"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="new_arr"/>
+    <functioncall functionName="new_arr_size"/>
+    <functioncall functionName="new_array"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="object_id"/>
+    <functioncall functionName="operator[]"/>
+    <functioncall functionName="p_array"/>
+    <functioncall functionName="p_before"/>
+    <functioncall functionName="p_begin"/>
+    <functioncall functionName="p_class_name"/>
+    <functioncall functionName="p_deep"/>
+    <functioncall functionName="p_end"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_function"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_l"/>
+    <functioncall functionName="p_less"/>
+    <functioncall functionName="p_new_size"/>
+    <functioncall functionName="p_obj"/>
+    <functioncall functionName="p_operation"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_r"/>
+    <functioncall functionName="p_script"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rand"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rfind"/>
+    <functioncall functionName="script"/>
+    <functioncall functionName="set_typed"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="sort_custom"/>
+    <functioncall functionName="src_val"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="test"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="typed"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="validate"/>
+    <functioncall functionName="where"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

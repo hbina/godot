@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2397360260">
+        <error id="noConstructor" severity="style" msg="The class &apos;RIDBullet&apos; does not have a constructor although it has private member variables." verbose="The class &apos;RIDBullet&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/rid_bullet.h" line="42" column="1"/>
+            <symbol>RIDBullet</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GodotRestInfoContactResultCallback::m_rest_info_collision_object&apos; is not initialized in the constructor." verbose="Member variable &apos;GodotRestInfoContactResultCallback::m_rest_info_collision_object&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/godot_result_callbacks.h" line="200" column="2"/>
+            <symbol>GodotRestInfoContactResultCallback::m_rest_info_collision_object</symbol>
+        </error>
+        <error id="uninitMemberVarPrivate" severity="warning" msg="Member variable &apos;BulletPhysicsDirectBodyState3D::body&apos; is not initialized in the constructor." verbose="Member variable &apos;BulletPhysicsDirectBodyState3D::body&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/rigid_body_bullet.h" line="88" column="2"/>
+            <symbol>BulletPhysicsDirectBodyState3D::body</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;ShapeWrapper::operator=&apos; should return &apos;ShapeWrapper &amp;&apos;." verbose="The ShapeWrapper::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;ShapeWrapper &amp;ShapeWrapper::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="102" column="3"/>
+            <symbol>ShapeWrapper</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;CollisionObjectBullet::getType&apos; can be const." verbose="The member function &apos;CollisionObjectBullet::getType&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="142" column="7"/>
+            <symbol>CollisionObjectBullet::getType</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::get_delta_time&apos; can be const." verbose="The member function &apos;SpaceBullet::get_delta_time&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="125" column="9"/>
+            <symbol>SpaceBullet::get_delta_time</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::is_using_soft_world&apos; can be const." verbose="The member function &apos;SpaceBullet::is_using_soft_world&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="131" column="22"/>
+            <symbol>SpaceBullet::is_using_soft_world</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::get_debug_contacts&apos; can be const." verbose="The member function &apos;SpaceBullet::get_debug_contacts&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="176" column="33"/>
+            <symbol>SpaceBullet::get_debug_contacts</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::get_debug_contact_count&apos; can be const." verbose="The member function &apos;SpaceBullet::get_debug_contact_count&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="177" column="21"/>
+            <symbol>SpaceBullet::get_debug_contact_count</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;RigidBodyBullet::get_max_collisions_detection&apos; can be const." verbose="The member function &apos;RigidBodyBullet::get_max_collisions_detection&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/rigid_body_bullet.h" line="265" column="6"/>
+            <symbol>RigidBodyBullet::get_max_collisions_detection</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;RigidBodyBullet::can_add_collision&apos; can be const." verbose="The member function &apos;RigidBodyBullet::can_add_collision&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/rigid_body_bullet.h" line="269" column="7"/>
+            <symbol>RigidBodyBullet::can_add_collision</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;PinJointBullet&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;PinJointBullet&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" line="57" column="3"/>
+            <symbol>PinJointBullet</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;PinJointBullet&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;PinJointBullet&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" line="57" column="3"/>
+            <symbol>PinJointBullet</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;BulletPhysicsDirectSpaceState&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;BulletPhysicsDirectSpaceState&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="77" column="2"/>
+            <symbol>BulletPhysicsDirectSpaceState</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;KinematicUtilities&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;KinematicUtilities&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/rigid_body_bullet.h" line="178" column="3"/>
+            <symbol>KinematicUtilities</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.h" line="49" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/joint_bullet.h" line="50" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;find_shape&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;find_shape&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="239" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="48" column="14" info="Virtual function in base class"/>
+            <symbol>find_shape</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;remove_shape_full&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;remove_shape_full&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="241" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="51" column="15" info="Virtual function in base class"/>
+            <symbol>remove_shape_full</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;shape_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;shape_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="253" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="49" column="15" info="Virtual function in base class"/>
+            <symbol>shape_changed</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;reload_shapes&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;reload_shapes&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="254" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="50" column="15" info="Virtual function in base class"/>
+            <symbol>reload_shapes</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;body_scale_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;body_scale_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="257" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/pin_joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="162" column="15" info="Virtual function in base class"/>
+            <symbol>body_scale_changed</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_param" lineNumber="65"/>
+    <functiondecl functionName="get_param" lineNumber="79"/>
+    <functiondecl functionName="setPivotInA" lineNumber="92"/>
+    <functiondecl functionName="setPivotInB" lineNumber="98"/>
+    <functiondecl functionName="getPivotInA" lineNumber="104"/>
+    <functiondecl functionName="getPivotInB" lineNumber="111"/>
+    <functioncall functionName="B_TO_G"/>
+    <functioncall functionName="BulletPhysicsDirectBodyState3D"/>
+    <functioncall functionName="BulletPhysicsDirectSpaceState"/>
+    <functioncall functionName="ClosestConvexResultCallback"/>
+    <functioncall functionName="ClosestRayResultCallback"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="G_TO_B"/>
+    <functioncall functionName="GodotAllContactResultCallback"/>
+    <functioncall functionName="GodotAllConvexResultCallback"/>
+    <functioncall functionName="GodotClosestConvexResultCallback"/>
+    <functioncall functionName="GodotContactPairContactResultCallback"/>
+    <functioncall functionName="GodotDeepPenetrationContactResultCallback"/>
+    <functioncall functionName="GodotKinClosestConvexResultCallback"/>
+    <functioncall functionName="GodotRestInfoContactResultCallback"/>
+    <functioncall functionName="JointBullet"/>
+    <functioncall functionName="KinematicShape"/>
+    <functioncall functionName="KinematicUtilities"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="PhysicsDirectBodyState3D"/>
+    <functioncall functionName="PhysicsDirectSpaceState3D"/>
+    <functioncall functionName="PinJointBullet"/>
+    <functioncall functionName="RecoverResult"/>
+    <functioncall functionName="ShapeWrapper"/>
+    <functioncall functionName="TYPE_KINEMATIC_GHOST_BODY"/>
+    <functioncall functionName="TYPE_RIGID_BODY"/>
+    <functioncall functionName="TYPE_SOFT_BODY"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="addSingleResult"/>
+    <functioncall functionName="body0Wrap"/>
+    <functioncall functionName="body1Wrap"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="btManifoldResult"/>
+    <functioncall functionName="btPivotA"/>
+    <functioncall functionName="btPivotB"/>
+    <functioncall functionName="btPoint2PointConstraint"/>
+    <functioncall functionName="btVec"/>
+    <functioncall functionName="bt_shape"/>
+    <functioncall functionName="collide_with_areas"/>
+    <functioncall functionName="collide_with_bodies"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="convexFromWorld"/>
+    <functioncall functionName="convexToWorld"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="gVec"/>
+    <functioncall functionName="getPivotInA"/>
+    <functioncall functionName="getPivotInB"/>
+    <functioncall functionName="get_body_scale"/>
+    <functioncall functionName="get_bt_rigid_body"/>
+    <functioncall functionName="hasPenetration"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="local_shape_most_recovered"/>
+    <functioncall functionName="m_collided"/>
+    <functioncall functionName="m_count"/>
+    <functioncall functionName="m_damping"/>
+    <functioncall functionName="m_exclude"/>
+    <functioncall functionName="m_impulseClamp"/>
+    <functioncall functionName="m_infinite_inertia"/>
+    <functioncall functionName="m_localShapeInfo"/>
+    <functioncall functionName="m_min_distance"/>
+    <functioncall functionName="m_other_compound_shape_index"/>
+    <functioncall functionName="m_penetration_distance"/>
+    <functioncall functionName="m_pickRay"/>
+    <functioncall functionName="m_result"/>
+    <functioncall functionName="m_resultMax"/>
+    <functioncall functionName="m_results"/>
+    <functioncall functionName="m_self_object"/>
+    <functioncall functionName="m_shapeId"/>
+    <functioncall functionName="m_tau"/>
+    <functioncall functionName="m_triangleIndex"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalInWorldSpace"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="on_collision_filters_change"/>
+    <functioncall functionName="operator="/>
+    <functioncall functionName="otherShape"/>
+    <functioncall functionName="other_collision_object"/>
+    <functioncall functionName="other_compound_shape_index"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p2pConstraint"/>
+    <functioncall functionName="p_active"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_body"/>
+    <functioncall functionName="p_body_b"/>
+    <functioncall functionName="p_collide_with_areas"/>
+    <functioncall functionName="p_collide_with_bodies"/>
+    <functioncall functionName="p_contact"/>
+    <functioncall functionName="p_deltaTime"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_exclude"/>
+    <functioncall functionName="p_infinite_inertia"/>
+    <functioncall functionName="p_instance_id"/>
+    <functioncall functionName="p_layer"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_maxCollisionsDetection"/>
+    <functioncall functionName="p_param"/>
+    <functioncall functionName="p_physicsServer"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_pos_a"/>
+    <functioncall functionName="p_result"/>
+    <functioncall functionName="p_resultMax"/>
+    <functioncall functionName="p_results"/>
+    <functioncall functionName="p_self"/>
+    <functioncall functionName="p_self_object"/>
+    <functioncall functionName="p_shape"/>
+    <functioncall functionName="p_transform"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="penetration_distance"/>
+    <functioncall functionName="pointWorld"/>
+    <functioncall functionName="prev_collision_count"/>
+    <functioncall functionName="rayFromWorld"/>
+    <functioncall functionName="rayResult"/>
+    <functioncall functionName="rayToWorld"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="setPivotA"/>
+    <functioncall functionName="setPivotB"/>
+    <functioncall functionName="set_transform"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="singleton"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="vec"/>
+  </FileInfo>
+</analyzerinfo>

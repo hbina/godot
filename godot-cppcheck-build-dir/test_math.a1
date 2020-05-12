@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3556352768">
+        <error id="noConstructor" severity="style" msg="The class &apos;GetClassAndNamespace&apos; does not have a constructor although it has private member variables." verbose="The class &apos;GetClassAndNamespace&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="52" column="1"/>
+            <symbol>GetClassAndNamespace</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;TestMath::GetClassAndNamespace::get_error&apos; can be const." verbose="The member function &apos;TestMath::GetClassAndNamespace::get_error&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="367" column="9"/>
+            <symbol>TestMath::GetClassAndNamespace::get_error</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;TestMath::GetClassAndNamespace::get_class&apos; can be const." verbose="The member function &apos;TestMath::GetClassAndNamespace::get_class&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="371" column="9"/>
+            <symbol>TestMath::GetClassAndNamespace::get_class</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!fa&apos; is redundant or there is possible null pointer dereference: fa." verbose="Either the condition &apos;!fa&apos; is redundant or there is possible null pointer dereference: fa." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="502" column="13" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="498" column="35" info="Assignment &apos;fa=FileAccess::open(test,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="499" column="22" info="Assuming that condition &apos;!fa&apos; is not redundant"/>
+            <symbol>fa</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!fa&apos; is redundant or there is possible null pointer dereference: fa." verbose="Either the condition &apos;!fa&apos; is redundant or there is possible null pointer dereference: fa." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="503" column="13" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="498" column="35" info="Assignment &apos;fa=FileAccess::open(test,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="499" column="22" info="Assuming that condition &apos;!fa&apos; is not redundant"/>
+            <symbol>fa</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!fa&apos; is redundant or there is possible null pointer dereference: fa." verbose="Either the condition &apos;!fa&apos; is redundant or there is possible null pointer dereference: fa." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="504" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="498" column="35" info="Assignment &apos;fa=FileAccess::open(test,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="499" column="22" info="Assuming that condition &apos;!fa&apos; is not redundant"/>
+            <symbol>fa</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;b[&quot;44&quot;]&apos; is assigned a value that is never used." verbose="Variable &apos;b[&quot;44&quot;]&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/main/tests/test_math.cpp" line="609" column="11"/>
+            <symbol>b["44"]</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_token" lineNumber="79"/>
+    <functiondecl functionName="parse" lineNumber="287"/>
+    <functiondecl functionName="get_error" lineNumber="367"/>
+    <functiondecl functionName="get_class" lineNumber="371"/>
+    <functiondecl functionName="test_vec" lineNumber="376"/>
+    <functiondecl functionName="ihash" lineNumber="387"/>
+    <functiondecl functionName="ihash2" lineNumber="397"/>
+    <functiondecl functionName="ihash3" lineNumber="406"/>
+    <functiondecl functionName="test" lineNumber="415"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="Math_LN2"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="Quat"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TK_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_BRACKET_OPEN"/>
+    <functioncall functionName="TK_COLON"/>
+    <functioncall functionName="TK_COMMA"/>
+    <functioncall functionName="TK_CURLY_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_CURLY_BRACKET_OPEN"/>
+    <functioncall functionName="TK_EOF"/>
+    <functioncall functionName="TK_ERROR"/>
+    <functioncall functionName="TK_IDENTIFIER"/>
+    <functioncall functionName="TK_NUMBER"/>
+    <functioncall functionName="TK_PERIOD"/>
+    <functioncall functionName="TK_STRING"/>
+    <functioncall functionName="TK_SYMBOL"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a2"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="at_level"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="bd"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cBlue"/>
+    <functioncall functionName="cGreen"/>
+    <functioncall functionName="cMax"/>
+    <functioncall functionName="cRed"/>
+    <functioncall functionName="chr"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="curly_stack"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="distance_squared_to"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="eh"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="execute"/>
+    <functioncall functionName="expp"/>
+    <functioncall functionName="exps"/>
+    <functioncall functionName="fa"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fast_ftoi"/>
+    <functioncall functionName="flen"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="gd"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_axis_angle"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_class_list"/>
+    <functioncall functionName="get_cmdline_args"/>
+    <functioncall functionName="get_error"/>
+    <functioncall functionName="get_euler"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_token"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ihash"/>
+    <functioncall functionName="ihash2"/>
+    <functioncall functionName="ihash3"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="ints"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="length_squared"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="m2"/>
+    <functioncall functionName="m3"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nearest_shift"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="number"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="operatorString().md5_buffer"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_vec"/>
+    <functioncall functionName="parse"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="q3"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rd"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="rotate"/>
+    <functioncall functionName="rptr"/>
+    <functioncall functionName="rtos"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sBlue"/>
+    <functioncall functionName="sGreen"/>
+    <functioncall functionName="sRed"/>
+    <functioncall functionName="segment_intersects_circle"/>
+    <functioncall functionName="set_euler"/>
+    <functioncall functionName="set_perspective"/>
+    <functioncall functionName="sharedexp"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="test"/>
+    <functioncall functionName="tk_string"/>
+    <functioncall functionName="tl"/>
+    <functioncall functionName="to_double"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="xform4"/>
+  </FileInfo>
+</analyzerinfo>

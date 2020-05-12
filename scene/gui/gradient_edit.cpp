@@ -283,7 +283,7 @@ void GradientEdit::_gui_input(const Ref<InputEvent> &p_event) {
 		if (!valid || grabbed == -1) {
 			return;
 		}
-		points.write[grabbed].offset = newofs;
+		points[grabbed].offset = newofs;
 
 		points.sort();
 		for (int i = 0; i < points.size(); i++) {
@@ -443,7 +443,7 @@ void GradientEdit::_color_changed(const Color &p_color) {
 
 	if (grabbed == -1)
 		return;
-	points.write[grabbed].color = p_color;
+	points[grabbed].color = p_color;
 	update();
 	emit_signal("ramp_changed");
 }

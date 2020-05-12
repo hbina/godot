@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2153983760">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioEffectRecordInstance::is_recording&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioEffectRecordInstance::is_recording&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.cpp" file="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.h" line="74" column="2"/>
+            <symbol>AudioEffectRecordInstance::is_recording</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioEffectRecordInstance::io_thread&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioEffectRecordInstance::io_thread&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.cpp" file="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.h" line="74" column="2"/>
+            <symbol>AudioEffectRecordInstance::io_thread</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioEffectRecordInstance::ring_buffer_pos&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioEffectRecordInstance::ring_buffer_pos&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.cpp" file="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.h" line="74" column="2"/>
+            <symbol>AudioEffectRecordInstance::ring_buffer_pos</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioEffectRecordInstance::ring_buffer_mask&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioEffectRecordInstance::ring_buffer_mask&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.cpp" file="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.h" line="74" column="2"/>
+            <symbol>AudioEffectRecordInstance::ring_buffer_mask</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioEffectRecordInstance::ring_buffer_read_pos&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioEffectRecordInstance::ring_buffer_read_pos&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.cpp" file="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.h" line="74" column="2"/>
+            <symbol>AudioEffectRecordInstance::ring_buffer_read_pos</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;format&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;format&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.cpp" line="300" column="2"/>
+            <symbol>format</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/audio/effects/audio_effect_record.cpp" line="60" column="35"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="process" lineNumber="33"/>
+    <functiondecl functionName="_update_buffer" lineNumber="51"/>
+    <functiondecl functionName="_update" lineNumber="59"/>
+    <functiondecl functionName="process_silence" lineNumber="64"/>
+    <functiondecl functionName="_io_thread_process" lineNumber="68"/>
+    <functiondecl functionName="_io_store_buffer" lineNumber="88"/>
+    <functiondecl functionName="_thread_callback" lineNumber="103"/>
+    <functiondecl functionName="init" lineNumber="110"/>
+    <functiondecl functionName="finish" lineNumber="126"/>
+    <functiondecl functionName="instance" lineNumber="142"/>
+    <functiondecl functionName="ensure_thread_stopped" lineNumber="179"/>
+    <functiondecl functionName="set_recording_active" lineNumber="186"/>
+    <functiondecl functionName="is_recording_active" lineNumber="202"/>
+    <functiondecl functionName="set_format" lineNumber="206"/>
+    <functiondecl functionName="get_format" lineNumber="210"/>
+    <functiondecl functionName="get_recording" lineNumber="214"/>
+    <functiondecl functionName="_bind_methods" lineNumber="289"/>
+    <functiondecl functionName="process" lineNumber="33"/>
+    <functiondecl functionName="_update_buffer" lineNumber="51"/>
+    <functiondecl functionName="_update" lineNumber="59"/>
+    <functiondecl functionName="process_silence" lineNumber="64"/>
+    <functiondecl functionName="_io_thread_process" lineNumber="68"/>
+    <functiondecl functionName="_io_store_buffer" lineNumber="88"/>
+    <functiondecl functionName="_thread_callback" lineNumber="103"/>
+    <functiondecl functionName="init" lineNumber="110"/>
+    <functiondecl functionName="finish" lineNumber="126"/>
+    <functiondecl functionName="instance" lineNumber="142"/>
+    <functiondecl functionName="ensure_thread_stopped" lineNumber="179"/>
+    <functiondecl functionName="set_recording_active" lineNumber="186"/>
+    <functiondecl functionName="is_recording_active" lineNumber="202"/>
+    <functiondecl functionName="set_format" lineNumber="206"/>
+    <functiondecl functionName="get_format" lineNumber="210"/>
+    <functiondecl functionName="get_recording" lineNumber="214"/>
+    <functiondecl functionName="_bind_methods" lineNumber="289"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="AudioEffect"/>
+    <functioncall functionName="AudioEffectInstance"/>
+    <functioncall functionName="AudioEffectRecord"/>
+    <functioncall functionName="AudioEffectRecordInstance"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="FORMAT_16_BITS"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="IO_BUFFER_SIZE_MS"/>
+    <functioncall functionName="LOOP_DISABLED"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_compress_ima_adpcm"/>
+    <functioncall functionName="_instance"/>
+    <functioncall functionName="_io_store_buffer"/>
+    <functioncall functionName="_io_thread_process"/>
+    <functioncall functionName="_thread_callback"/>
+    <functioncall functionName="_update"/>
+    <functioncall functionName="_update_buffer"/>
+    <functioncall functionName="add_update_callback"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bleft"/>
+    <functioncall functionName="bright"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="data_size"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="dst_data"/>
+    <functioncall functionName="dst_format"/>
+    <functioncall functionName="encode_uint16"/>
+    <functioncall functionName="ensure_thread_stopped"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finish"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format"/>
+    <functioncall functionName="get_format"/>
+    <functioncall functionName="get_mix_rate"/>
+    <functioncall functionName="get_recording"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="ins"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="io_thread"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_recording"/>
+    <functioncall functionName="is_recording_active"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_format"/>
+    <functioncall functionName="p_record"/>
+    <functioncall functionName="p_src_frames"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="recording_active"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="remove_update_callback"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="ring_buffer_max_size"/>
+    <functioncall functionName="ring_buffer_read_pos"/>
+    <functioncall functionName="ringbuff_size"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_data"/>
+    <functioncall functionName="set_format"/>
+    <functioncall functionName="set_loop_begin"/>
+    <functioncall functionName="set_loop_end"/>
+    <functioncall functionName="set_loop_mode"/>
+    <functioncall functionName="set_mix_rate"/>
+    <functioncall functionName="set_recording_active"/>
+    <functioncall functionName="set_stereo"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="stereo"/>
+    <functioncall functionName="tframes"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread_active"/>
+    <functioncall functionName="to_read"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="userdata"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

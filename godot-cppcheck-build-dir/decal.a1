@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="314184538">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;extents&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;extents&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/decal.cpp" line="216" column="2"/>
+            <symbol>extents</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;set_upper_fade&apos; argument 1 names different: declaration &apos;p_energy&apos; definition &apos;p_fade&apos;." verbose="Function &apos;set_upper_fade&apos; argument 1 names different: declaration &apos;p_energy&apos; definition &apos;p_fade&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/3d/decal.cpp" line="71" column="34"/>
+            <location file0="/home/hbina/git/godot/scene/3d/decal.cpp" file="/home/hbina/git/godot/scene/3d/decal.h" line="84" column="28"/>
+            <symbol>set_upper_fade</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_extents" lineNumber="33"/>
+    <functiondecl functionName="get_extents" lineNumber="40"/>
+    <functiondecl functionName="set_texture" lineNumber="44"/>
+    <functiondecl functionName="get_texture" lineNumber="50"/>
+    <functiondecl functionName="set_emission_energy" lineNumber="55"/>
+    <functiondecl functionName="get_emission_energy" lineNumber="59"/>
+    <functiondecl functionName="set_albedo_mix" lineNumber="63"/>
+    <functiondecl functionName="get_albedo_mix" lineNumber="67"/>
+    <functiondecl functionName="set_upper_fade" lineNumber="71"/>
+    <functiondecl functionName="get_upper_fade" lineNumber="75"/>
+    <functiondecl functionName="set_lower_fade" lineNumber="79"/>
+    <functiondecl functionName="get_lower_fade" lineNumber="83"/>
+    <functiondecl functionName="set_normal_fade" lineNumber="87"/>
+    <functiondecl functionName="get_normal_fade" lineNumber="91"/>
+    <functiondecl functionName="set_modulate" lineNumber="95"/>
+    <functiondecl functionName="get_modulate" lineNumber="100"/>
+    <functiondecl functionName="set_enable_distance_fade" lineNumber="104"/>
+    <functiondecl functionName="is_distance_fade_enabled" lineNumber="108"/>
+    <functiondecl functionName="set_distance_fade_begin" lineNumber="112"/>
+    <functiondecl functionName="get_distance_fade_begin" lineNumber="116"/>
+    <functiondecl functionName="set_distance_fade_length" lineNumber="120"/>
+    <functiondecl functionName="get_distance_fade_length" lineNumber="124"/>
+    <functiondecl functionName="set_cull_mask" lineNumber="128"/>
+    <functiondecl functionName="get_cull_mask" lineNumber="132"/>
+    <functiondecl functionName="get_aabb" lineNumber="136"/>
+    <functiondecl functionName="get_faces" lineNumber="143"/>
+    <functiondecl functionName="_bind_methods" lineNumber="148"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_PROPERTYI"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="Decal"/>
+    <functioncall functionName="DecalTexture"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_EASING"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_RENDER"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="TEXTURE_ALBEDO"/>
+    <functioncall functionName="TEXTURE_EMISSION"/>
+    <functioncall functionName="TEXTURE_MAX"/>
+    <functioncall functionName="TEXTURE_NORMAL"/>
+    <functioncall functionName="TEXTURE_ORM"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR3"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="VisualInstance3D"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="albedo_mix"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cull_mask"/>
+    <functioncall functionName="decal"/>
+    <functioncall functionName="decal_create"/>
+    <functioncall functionName="decal_set_albedo_mix"/>
+    <functioncall functionName="decal_set_cull_mask"/>
+    <functioncall functionName="decal_set_distance_fade"/>
+    <functioncall functionName="decal_set_emission_energy"/>
+    <functioncall functionName="decal_set_extents"/>
+    <functioncall functionName="decal_set_fade"/>
+    <functioncall functionName="decal_set_modulate"/>
+    <functioncall functionName="decal_set_normal_fade"/>
+    <functioncall functionName="decal_set_texture"/>
+    <functioncall functionName="distance_fade_begin"/>
+    <functioncall functionName="distance_fade_enabled"/>
+    <functioncall functionName="distance_fade_length"/>
+    <functioncall functionName="emission_energy"/>
+    <functioncall functionName="extents"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get_albedo_mix"/>
+    <functioncall functionName="get_cull_mask"/>
+    <functioncall functionName="get_distance_fade_begin"/>
+    <functioncall functionName="get_distance_fade_length"/>
+    <functioncall functionName="get_emission_energy"/>
+    <functioncall functionName="get_extents"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_lower_fade"/>
+    <functioncall functionName="get_modulate"/>
+    <functioncall functionName="get_normal_fade"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_texture"/>
+    <functioncall functionName="get_upper_fade"/>
+    <functioncall functionName="instance_set_base"/>
+    <functioncall functionName="is_distance_fade_enabled"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="lower_fade"/>
+    <functioncall functionName="normal_fade"/>
+    <functioncall functionName="p_distance"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_energy"/>
+    <functioncall functionName="p_extents"/>
+    <functioncall functionName="p_fade"/>
+    <functioncall functionName="p_layers"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_mix"/>
+    <functioncall functionName="p_modulate"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="set_albedo_mix"/>
+    <functioncall functionName="set_cull_mask"/>
+    <functioncall functionName="set_distance_fade_begin"/>
+    <functioncall functionName="set_distance_fade_length"/>
+    <functioncall functionName="set_emission_energy"/>
+    <functioncall functionName="set_enable_distance_fade"/>
+    <functioncall functionName="set_extents"/>
+    <functioncall functionName="set_lower_fade"/>
+    <functioncall functionName="set_modulate"/>
+    <functioncall functionName="set_normal_fade"/>
+    <functioncall functionName="set_texture"/>
+    <functioncall functionName="set_upper_fade"/>
+    <functioncall functionName="texture_rid"/>
+    <functioncall functionName="update_gizmo"/>
+    <functioncall functionName="upper_fade"/>
+  </FileInfo>
+</analyzerinfo>

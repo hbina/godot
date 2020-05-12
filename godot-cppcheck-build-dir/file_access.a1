@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2388006915">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CharBuffer::stack_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;CharBuffer::stack_buffer&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/core/os/file_access.cpp" line="306" column="17"/>
+            <symbol>CharBuffer::stack_buffer</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;FileAccessRef&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;FileAccessRef&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/os/file_access.cpp" file="/home/hbina/git/godot/core/os/file_access.h" line="193" column="2"/>
+            <symbol>FileAccessRef</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/os/file_access.h:154:21" call-funcname="create" call-argnr="1" file="/home/hbina/git/godot/core/os/file_access.cpp" line="76" col="15" call-argexpr="ACCESS_RESOURCES" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="create" lineNumber="45"/>
+    <functiondecl functionName="exists" lineNumber="54"/>
+    <functiondecl functionName="_set_access_type" lineNumber="66"/>
+    <functiondecl functionName="create_for_path" lineNumber="71"/>
+    <functiondecl functionName="reopen" lineNumber="89"/>
+    <functiondecl functionName="open" lineNumber="94"/>
+    <functiondecl functionName="get_create_func" lineNumber="122"/>
+    <functiondecl functionName="fix_path" lineNumber="127"/>
+    <functiondecl functionName="get_16" lineNumber="175"/>
+    <functiondecl functionName="get_32" lineNumber="194"/>
+    <functiondecl functionName="get_64" lineNumber="213"/>
+    <functiondecl functionName="get_float" lineNumber="233"/>
+    <functiondecl functionName="get_real" lineNumber="240"/>
+    <functiondecl functionName="get_double" lineNumber="248"/>
+    <functiondecl functionName="get_token" lineNumber="255"/>
+    <functiondecl functionName="grow" lineNumber="283"/>
+    <functiondecl functionName="push_back" lineNumber="312"/>
+    <functiondecl functionName="get_data" lineNumber="322"/>
+    <functiondecl functionName="get_line" lineNumber="328"/>
+    <functiondecl functionName="get_csv_line" lineNumber="348"/>
+    <functiondecl functionName="get_buffer" lineNumber="402"/>
+    <functiondecl functionName="get_as_utf8_string" lineNumber="411"/>
+    <functiondecl functionName="store_16" lineNumber="428"/>
+    <functiondecl functionName="store_32" lineNumber="443"/>
+    <functiondecl functionName="store_64" lineNumber="458"/>
+    <functiondecl functionName="store_real" lineNumber="474"/>
+    <functiondecl functionName="store_float" lineNumber="482"/>
+    <functiondecl functionName="store_double" lineNumber="489"/>
+    <functiondecl functionName="get_modified_time" lineNumber="496"/>
+    <functiondecl functionName="get_unix_permissions" lineNumber="509"/>
+    <functiondecl functionName="set_unix_permissions" lineNumber="522"/>
+    <functiondecl functionName="store_string" lineNumber="532"/>
+    <functiondecl functionName="store_pascal_string" lineNumber="541"/>
+    <functiondecl functionName="get_pascal_string" lineNumber="548"/>
+    <functiondecl functionName="store_line" lineNumber="562"/>
+    <functiondecl functionName="store_csv_line" lineNumber="568"/>
+    <functiondecl functionName="store_buffer" lineNumber="590"/>
+    <functiondecl functionName="get_file_as_array" lineNumber="596"/>
+    <functiondecl functionName="get_file_as_string" lineNumber="612"/>
+    <functiondecl functionName="get_md5" lineNumber="631"/>
+    <functiondecl functionName="get_multiple_md5" lineNumber="661"/>
+    <functiondecl functionName="get_sha256" lineNumber="691"/>
+    <functioncall functionName="ACCESS_FILESYSTEM"/>
+    <functioncall functionName="ACCESS_MAX"/>
+    <functioncall functionName="ACCESS_RESOURCES"/>
+    <functioncall functionName="ACCESS_USERDATA"/>
+    <functioncall functionName="ERR_CANT_CREATE"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="FileAccess"/>
+    <functioncall functionName="FileAccessRef"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="_access_type"/>
+    <functioncall functionName="_get_modified_time"/>
+    <functioncall functionName="_get_unix_permissions"/>
+    <functioncall functionName="_open"/>
+    <functioncall functionName="_set_access_type"/>
+    <functioncall functionName="_set_unix_permissions"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="br"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="capacity"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_for_path"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data_dir"/>
+    <functioncall functionName="endian_swap"/>
+    <functioncall functionName="eof_reached"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fa"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="finish"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_16"/>
+    <functioncall functionName="get_32"/>
+    <functioncall functionName="get_64"/>
+    <functioncall functionName="get_8"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_double"/>
+    <functioncall functionName="get_file_as_array"/>
+    <functioncall functionName="get_float"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_line"/>
+    <functioncall functionName="get_resource_path"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_user_data_dir"/>
+    <functioncall functionName="grow"/>
+    <functioncall functionName="has_path"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hex_encode_buffer"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in_quote"/>
+    <functioncall functionName="is_disabled"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="md5"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next_power_of_2"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="operatorFileAccess*"/>
+    <functioncall functionName="operatorbool"/>
+    <functioncall functionName="p_access"/>
+    <functioncall functionName="p_cbk"/>
+    <functioncall functionName="p_delim"/>
+    <functioncall functionName="p_dest"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_line"/>
+    <functioncall functionName="p_mode_flags"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_permissions"/>
+    <functioncall functionName="p_real"/>
+    <functioncall functionName="p_swap"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="real_is_double"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resource_path"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sl"/>
+    <functioncall functionName="stack_buffer"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="store_16"/>
+    <functioncall functionName="store_32"/>
+    <functioncall functionName="store_64"/>
+    <functioncall functionName="store_8"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="store_double"/>
+    <functioncall functionName="store_float"/>
+    <functioncall functionName="store_line"/>
+    <functioncall functionName="store_string"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="try_open_path"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="written"/>
+  </FileInfo>
+</analyzerinfo>

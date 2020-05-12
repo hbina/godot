@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="733243841">
+        <error id="noConstructor" severity="style" msg="The class &apos;RIDBullet&apos; does not have a constructor although it has private member variables." verbose="The class &apos;RIDBullet&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/rid_bullet.h" line="42" column="1"/>
+            <symbol>RIDBullet</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;ShapeWrapper::operator=&apos; should return &apos;ShapeWrapper &amp;&apos;." verbose="The ShapeWrapper::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;ShapeWrapper &amp;ShapeWrapper::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="102" column="3"/>
+            <symbol>ShapeWrapper</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;CreateFunc&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;CreateFunc&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h" line="66" column="3"/>
+            <symbol>CreateFunc</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;SwappedCreateFunc&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;SwappedCreateFunc&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h" line="77" column="3"/>
+            <symbol>SwappedCreateFunc</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;find_shape&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;find_shape&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="239" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="48" column="14" info="Virtual function in base class"/>
+            <symbol>find_shape</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;remove_shape_full&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;remove_shape_full&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="241" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="51" column="15" info="Virtual function in base class"/>
+            <symbol>remove_shape_full</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;shape_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;shape_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="253" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="49" column="15" info="Virtual function in base class"/>
+            <symbol>shape_changed</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;reload_shapes&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;reload_shapes&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="254" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/shape_owner_bullet.h" line="50" column="15" info="Virtual function in base class"/>
+            <symbol>reload_shapes</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;body_scale_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;body_scale_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="257" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" file="/home/hbina/git/godot/modules/bullet/collision_object_bullet.h" line="162" column="15" info="Virtual function in base class"/>
+            <symbol>body_scale_changed</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:52:2" call-funcname="GodotRayWorldAlgorithm" call-argnr="6" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h" line="70" col="43" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:52:2" call-funcname="GodotRayWorldAlgorithm" call-argnr="4" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h" line="70" col="21" my-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:68:33" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:52:2" call-funcname="GodotRayWorldAlgorithm" call-argnr="5" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h" line="70" col="21" my-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:68:33" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:52:2" call-funcname="GodotRayWorldAlgorithm" call-argnr="4" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h" line="81" col="21" my-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:79:33" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:52:2" call-funcname="GodotRayWorldAlgorithm" call-argnr="5" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h" line="81" col="21" my-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:79:33" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.h:55:15" my-argnr="4" my-argname="resultOut" file="/home/hbina/git/godot/modules/bullet/godot_ray_world_algorithm.cpp" line="75" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="processCollision" lineNumber="64"/>
+    <functiondecl functionName="calculateTimeOfImpact" lineNumber="117"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="CreateFunc"/>
+    <functioncall functionName="GodotRayWorldAlgorithm"/>
+    <functioncall functionName="ShapeWrapper"/>
+    <functioncall functionName="SwappedCreateFunc"/>
+    <functioncall functionName="TYPE_KINEMATIC_GHOST_BODY"/>
+    <functioncall functionName="TYPE_RIGID_BODY"/>
+    <functioncall functionName="TYPE_SOFT_BODY"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="addContactPoint"/>
+    <functioncall functionName="allocateCollisionAlgorithm"/>
+    <functioncall functionName="body0Wrap"/>
+    <functioncall functionName="body1Wrap"/>
+    <functioncall functionName="btActivatingCollisionAlgorithm"/>
+    <functioncall functionName="btRayShape"/>
+    <functioncall functionName="btResult"/>
+    <functioncall functionName="bt_shape"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="clearManifold"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="getCollisionObject"/>
+    <functioncall functionName="getCollisionShape"/>
+    <functioncall functionName="getNewManifold"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getScaledLength"/>
+    <functioncall functionName="getSlipsOnSlope"/>
+    <functioncall functionName="getSupportPoint"/>
+    <functioncall functionName="getWorldTransform"/>
+    <functioncall functionName="hasHit"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="isSwapped"/>
+    <functioncall functionName="m_hitNormalWorld"/>
+    <functioncall functionName="m_hitPointWorld"/>
+    <functioncall functionName="m_isSwapped"/>
+    <functioncall functionName="m_manifold"/>
+    <functioncall functionName="m_manifoldPtr"/>
+    <functioncall functionName="m_ownManifold"/>
+    <functioncall functionName="m_world"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="mf"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="on_collision_filters_change"/>
+    <functioncall functionName="operator="/>
+    <functioncall functionName="otherShape"/>
+    <functioncall functionName="other_co_wrapper"/>
+    <functioncall functionName="p_active"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_instance_id"/>
+    <functioncall functionName="p_layer"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_physicsServer"/>
+    <functioncall functionName="p_self"/>
+    <functioncall functionName="p_shape"/>
+    <functioncall functionName="p_transform"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rayTestSingleInternal"/>
+    <functioncall functionName="ray_transform"/>
+    <functioncall functionName="releaseManifold"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="setPersistentManifold"/>
+    <functioncall functionName="set_transform"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="world"/>
+  </FileInfo>
+</analyzerinfo>

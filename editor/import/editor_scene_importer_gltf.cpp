@@ -221,7 +221,7 @@ String EditorSceneImporterGLTF::_gen_unique_bone_name(GLTFState &state, const GL
 		index++;
 	}
 
-	state.skeletons.write[skel_i].unique_names.insert(name);
+	state.skeletons[skel_i].unique_names.insert(name);
 
 	return name;
 }
@@ -750,7 +750,7 @@ Vector<double> EditorSceneImporterGLTF::_decode_accessor(GLTFState &state, const
 	} else {
 		//fill with zeros, as bufferview is not defined.
 		for (int i = 0; i < (a.count * component_count); i++) {
-			dst_buffer.write[i] = 0;
+			dst_buffer[i] = 0;
 		}
 	}
 
@@ -906,7 +906,7 @@ Vector<Quat> EditorSceneImporterGLTF::_decode_accessor_as_quat(GLTFState &state,
 	ret.resize(ret_size);
 	{
 		for (int i = 0; i < ret_size; i++) {
-			ret.write[i] = Quat(attribs_ptr[i * 4 + 0], attribs_ptr[i * 4 + 1], attribs_ptr[i * 4 + 2], attribs_ptr[i * 4 + 3]).normalized();
+			ret[i] = Quat(attribs_ptr[i * 4 + 0], attribs_ptr[i * 4 + 1], attribs_ptr[i * 4 + 2], attribs_ptr[i * 4 + 3]).normalized();
 		}
 	}
 	return ret;
@@ -922,8 +922,8 @@ Vector<Transform2D> EditorSceneImporterGLTF::_decode_accessor_as_xform2d(GLTFSta
 	ERR_FAIL_COND_V(attribs.size() % 4 != 0, ret);
 	ret.resize(attribs.size() / 4);
 	for (int i = 0; i < ret.size(); i++) {
-		ret.write[i][0] = Vector2(attribs[i * 4 + 0], attribs[i * 4 + 1]);
-		ret.write[i][1] = Vector2(attribs[i * 4 + 2], attribs[i * 4 + 3]);
+		ret[i][0] = Vector2(attribs[i * 4 + 0], attribs[i * 4 + 1]);
+		ret[i][1] = Vector2(attribs[i * 4 + 2], attribs[i * 4 + 3]);
 	}
 	return ret;
 }
@@ -939,9 +939,9 @@ Vector<Basis> EditorSceneImporterGLTF::_decode_accessor_as_basis(GLTFState &stat
 	ERR_FAIL_COND_V(attribs.size() % 9 != 0, ret);
 	ret.resize(attribs.size() / 9);
 	for (int i = 0; i < ret.size(); i++) {
-		ret.write[i].set_axis(0, Vector3(attribs[i * 9 + 0], attribs[i * 9 + 1], attribs[i * 9 + 2]));
-		ret.write[i].set_axis(1, Vector3(attribs[i * 9 + 3], attribs[i * 9 + 4], attribs[i * 9 + 5]));
-		ret.write[i].set_axis(2, Vector3(attribs[i * 9 + 6], attribs[i * 9 + 7], attribs[i * 9 + 8]));
+		ret[i].set_axis(0, Vector3(attribs[i * 9 + 0], attribs[i * 9 + 1], attribs[i * 9 + 2]));
+		ret[i].set_axis(1, Vector3(attribs[i * 9 + 3], attribs[i * 9 + 4], attribs[i * 9 + 5]));
+		ret[i].set_axis(2, Vector3(attribs[i * 9 + 6], attribs[i * 9 + 7], attribs[i * 9 + 8]));
 	}
 	return ret;
 }
@@ -957,10 +957,10 @@ Vector<Transform> EditorSceneImporterGLTF::_decode_accessor_as_xform(GLTFState &
 	ERR_FAIL_COND_V(attribs.size() % 16 != 0, ret);
 	ret.resize(attribs.size() / 16);
 	for (int i = 0; i < ret.size(); i++) {
-		ret.write[i].basis.set_axis(0, Vector3(attribs[i * 16 + 0], attribs[i * 16 + 1], attribs[i * 16 + 2]));
-		ret.write[i].basis.set_axis(1, Vector3(attribs[i * 16 + 4], attribs[i * 16 + 5], attribs[i * 16 + 6]));
-		ret.write[i].basis.set_axis(2, Vector3(attribs[i * 16 + 8], attribs[i * 16 + 9], attribs[i * 16 + 10]));
-		ret.write[i].set_origin(Vector3(attribs[i * 16 + 12], attribs[i * 16 + 13], attribs[i * 16 + 14]));
+		ret[i].basis.set_axis(0, Vector3(attribs[i * 16 + 0], attribs[i * 16 + 1], attribs[i * 16 + 2]));
+		ret[i].basis.set_axis(1, Vector3(attribs[i * 16 + 4], attribs[i * 16 + 5], attribs[i * 16 + 6]));
+		ret[i].basis.set_axis(2, Vector3(attribs[i * 16 + 8], attribs[i * 16 + 9], attribs[i * 16 + 10]));
+		ret[i].set_origin(Vector3(attribs[i * 16 + 12], attribs[i * 16 + 13], attribs[i * 16 + 14]));
 	}
 	return ret;
 }
@@ -1246,7 +1246,7 @@ Error EditorSceneImporterGLTF::_parse_meshes(GLTFState &state) {
 			ERR_FAIL_COND_V(mesh.mesh->get_blend_shape_count() != weights.size(), ERR_PARSE_ERROR);
 			mesh.blend_weights.resize(weights.size());
 			for (int j = 0; j < weights.size(); j++) {
-				mesh.blend_weights.write[j] = weights[j];
+				mesh.blend_weights[j] = weights[j];
 			}
 		}
 
@@ -1607,7 +1607,7 @@ void EditorSceneImporterGLTF::_capture_nodes_for_multirooted_skin(GLTFState &sta
 		}
 
 		// replace the roots
-		roots.write[i] = current_node;
+		roots[i] = current_node;
 	}
 
 	// Climb up the tree until they all have the same parent
@@ -1632,7 +1632,7 @@ void EditorSceneImporterGLTF::_capture_nodes_for_multirooted_skin(GLTFState &sta
 					skin.non_joints.push_back(parent);
 				}
 
-				roots.write[i] = parent;
+				roots[i] = parent;
 			}
 		}
 
@@ -1796,7 +1796,7 @@ Error EditorSceneImporterGLTF::_parse_skins(GLTFState &state) {
 	}
 
 	for (GLTFSkinIndex i = 0; i < state.skins.size(); ++i) {
-		GLTFSkin &skin = state.skins.write[i];
+		GLTFSkin &skin = state.skins[i];
 
 		// Expand the skin to capture all the extra non-joints that lie in between the actual joints,
 		// and expand the hierarchy to ensure multi-rooted trees lie on the same height level
@@ -1896,7 +1896,7 @@ Error EditorSceneImporterGLTF::_determine_skeletons(GLTFState &state) {
 		skeleton_sets.get_members(skeleton_nodes, skeleton_owner);
 
 		for (GLTFSkinIndex skin_i = 0; skin_i < state.skins.size(); ++skin_i) {
-			GLTFSkin &skin = state.skins.write[skin_i];
+			GLTFSkin &skin = state.skins[skin_i];
 
 			// If any of the the skeletons nodes exist in a skin, that skin now maps to the skeleton
 			for (int i = 0; i < skeleton_nodes.size(); ++i) {
@@ -1921,11 +1921,11 @@ Error EditorSceneImporterGLTF::_determine_skeletons(GLTFState &state) {
 
 		state.skeletons.push_back(skeleton);
 
-		_reparent_non_joint_skeleton_subtrees(state, state.skeletons.write[skel_i], non_joints);
+		_reparent_non_joint_skeleton_subtrees(state, state.skeletons[skel_i], non_joints);
 	}
 
 	for (GLTFSkeletonIndex skel_i = 0; skel_i < state.skeletons.size(); ++skel_i) {
-		GLTFSkeleton &skeleton = state.skeletons.write[skel_i];
+		GLTFSkeleton &skeleton = state.skeletons[skel_i];
 
 		for (int i = 0; i < skeleton.joints.size(); ++i) {
 			const GLTFNodeIndex node_i = skeleton.joints[i];
@@ -2048,7 +2048,7 @@ Error EditorSceneImporterGLTF::_reparent_to_fake_joint(GLTFState &state, GLTFSke
 
 	// Replace skin_skeletons with fake joints if we must.
 	for (GLTFSkinIndex skin_i = 0; skin_i < state.skins.size(); ++skin_i) {
-		GLTFSkin &skin = state.skins.write[skin_i];
+		GLTFSkin &skin = state.skins[skin_i];
 		if (skin.skin_root == node_index) {
 			skin.skin_root = fake_joint_index;
 		}
@@ -2075,7 +2075,7 @@ Error EditorSceneImporterGLTF::_determine_skeleton_roots(GLTFState &state, const
 		}
 	}
 
-	GLTFSkeleton &skeleton = state.skeletons.write[skel_i];
+	GLTFSkeleton &skeleton = state.skeletons[skel_i];
 
 	Vector<GLTFNodeIndex> owners;
 	disjoint_set.get_representatives(owners);
@@ -2114,7 +2114,7 @@ Error EditorSceneImporterGLTF::_determine_skeleton_roots(GLTFState &state, const
 Error EditorSceneImporterGLTF::_create_skeletons(GLTFState &state) {
 	for (GLTFSkeletonIndex skel_i = 0; skel_i < state.skeletons.size(); ++skel_i) {
 
-		GLTFSkeleton &gltf_skeleton = state.skeletons.write[skel_i];
+		GLTFSkeleton &gltf_skeleton = state.skeletons[skel_i];
 
 		Skeleton3D *skeleton = memnew(Skeleton3D);
 		gltf_skeleton.godot_skeleton = skeleton;
@@ -2183,7 +2183,7 @@ Error EditorSceneImporterGLTF::_create_skeletons(GLTFState &state) {
 
 Error EditorSceneImporterGLTF::_map_skin_joints_indices_to_skeleton_bone_indices(GLTFState &state) {
 	for (GLTFSkinIndex skin_i = 0; skin_i < state.skins.size(); ++skin_i) {
-		GLTFSkin &skin = state.skins.write[skin_i];
+		GLTFSkin &skin = state.skins[skin_i];
 
 		const GLTFSkeleton &skeleton = state.skeletons[skin.skeleton];
 
@@ -2205,7 +2205,7 @@ Error EditorSceneImporterGLTF::_map_skin_joints_indices_to_skeleton_bone_indices
 
 Error EditorSceneImporterGLTF::_create_skins(GLTFState &state) {
 	for (GLTFSkinIndex skin_i = 0; skin_i < state.skins.size(); ++skin_i) {
-		GLTFSkin &gltf_skin = state.skins.write[skin_i];
+		GLTFSkin &gltf_skin = state.skins[skin_i];
 
 		Ref<Skin> skin;
 		skin.instance();
@@ -2277,7 +2277,7 @@ void EditorSceneImporterGLTF::_remove_duplicate_skins(GLTFState &state) {
 
 			if (_skins_are_same(skin_i, skin_j)) {
 				// replace it and delete the old
-				state.skins.write[j].godot_skin = skin_i;
+				state.skins[j].godot_skin = skin_i;
 			}
 		}
 	}
@@ -2451,11 +2451,11 @@ Error EditorSceneImporterGLTF::_parse_animations(GLTFState &state) {
 					Vector<float> wdata;
 					wdata.resize(wlen);
 					for (int l = 0; l < wlen; l++) {
-						wdata.write[l] = r[l * wc + k];
+						wdata[l] = r[l * wc + k];
 					}
 
 					cf.values = wdata;
-					track->weight_tracks.write[k] = cf;
+					track->weight_tracks[k] = cf;
 				}
 			} else {
 				WARN_PRINT("Invalid path '" + path + "'.");
@@ -2516,7 +2516,7 @@ MeshInstance3D *EditorSceneImporterGLTF::_generate_mesh_instance(GLTFState &stat
 	MeshInstance3D *mi = memnew(MeshInstance3D);
 	print_verbose("glTF: Creating mesh for: " + gltf_node->name);
 
-	GLTFMesh &mesh = state.meshes.write[gltf_node->mesh];
+	GLTFMesh &mesh = state.meshes[gltf_node->mesh];
 	mi->set_mesh(mesh.mesh);
 
 	if (mesh.mesh->get_name() == "") {

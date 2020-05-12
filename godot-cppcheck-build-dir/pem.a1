@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="683719025">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;k&apos; can be reduced." verbose="The scope of the variable &apos;k&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="62" column="18"/>
+            <symbol>k</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;len&apos; can be reduced." verbose="The scope of the variable &apos;len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="444" column="12"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;len&apos; is assigned a value that is never used." verbose="Variable &apos;len&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="444" column="16"/>
+            <symbol>len</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="153" col="27" call-argexpr="des_key" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="153" col="27" call-argexpr="des_iv" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="181" col="27" call-argexpr="des3_key" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="181" col="27" call-argexpr="des3_iv" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="211" col="27" call-argexpr="aes_key" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="211" col="27" call-argexpr="aes_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:59:12" call-funcname="pem_get_iv" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="294" col="43" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:59:12" call-funcname="pem_get_iv" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="304" col="43" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:59:12" call-funcname="pem_get_iv" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="326" col="43" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:171:12" call-funcname="pem_des3_decrypt" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="378" col="35" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:143:12" call-funcname="pem_des_decrypt" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="380" col="34" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:201:12" call-funcname="pem_aes_decrypt" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="385" col="34" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:201:12" call-funcname="pem_aes_decrypt" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="387" col="34" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:201:12" call-funcname="pem_aes_decrypt" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="389" col="34" call-argexpr="pem_iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="153" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:143:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="181" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:171:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" call-funcname="pem_pbkdf1" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="211" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:201:12" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:49:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="51" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:59:12" my-argnr="2" my-argname="iv" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="64" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:81:12" my-argnr="1" my-argname="key" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="110" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:424:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="426" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="1" my-argname="header" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="2" my-argname="footer" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="42" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="1" my-argname="header" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="2" my-argname="footer" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="42" value="0"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="25" column="0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;enc!=0&apos; is always false" verbose="Condition &apos;enc!=0&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="363" column="13" info="Condition &apos;enc!=0&apos; is always false"/>
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="274" column="11" info="Assignment &apos;enc=0&apos;, assigned value is 0"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:49:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="51" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:424:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="426" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="1" my-argname="header" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="2" my-argname="footer" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="42" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="1" my-argname="header" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="2" my-argname="footer" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="42" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:49:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="51" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:424:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="426" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="1" my-argname="header" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="2" my-argname="footer" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="42" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="1" my-argname="header" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c:438:5" my-argnr="2" my-argname="footer" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pem.c" line="447" col="42" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="mbedtls_pem_init" lineNumber="49"/>
+    <functiondecl functionName="pem_get_iv" lineNumber="59"/>
+    <functiondecl functionName="pem_pbkdf1" lineNumber="81"/>
+    <functiondecl functionName="pem_des_decrypt" lineNumber="143"/>
+    <functiondecl functionName="pem_des3_decrypt" lineNumber="171"/>
+    <functiondecl functionName="pem_aes_decrypt" lineNumber="201"/>
+    <functiondecl functionName="mbedtls_pem_read_buffer" lineNumber="230"/>
+    <functiondecl functionName="mbedtls_pem_free" lineNumber="424"/>
+    <functiondecl functionName="mbedtls_pem_write_buffer" lineNumber="438"/>
+    <functiondecl functionName="mbedtls_pem_init" lineNumber="49"/>
+    <functiondecl functionName="mbedtls_pem_read_buffer" lineNumber="230"/>
+    <functiondecl functionName="mbedtls_pem_free" lineNumber="424"/>
+    <functiondecl functionName="mbedtls_pem_write_buffer" lineNumber="438"/>
+    <functiondecl functionName="mbedtls_pem_init" lineNumber="49"/>
+    <functiondecl functionName="mbedtls_pem_read_buffer" lineNumber="230"/>
+    <functiondecl functionName="mbedtls_pem_free" lineNumber="424"/>
+    <functiondecl functionName="mbedtls_pem_write_buffer" lineNumber="438"/>
+    <functioncall functionName="MBEDTLS_AES_DECRYPT"/>
+    <functioncall functionName="MBEDTLS_CIPHER_AES_128_CBC"/>
+    <functioncall functionName="MBEDTLS_CIPHER_AES_192_CBC"/>
+    <functioncall functionName="MBEDTLS_CIPHER_AES_256_CBC"/>
+    <functioncall functionName="MBEDTLS_CIPHER_DES_CBC"/>
+    <functioncall functionName="MBEDTLS_CIPHER_DES_EDE3_CBC"/>
+    <functioncall functionName="MBEDTLS_CIPHER_NONE"/>
+    <functioncall functionName="MBEDTLS_DES_DECRYPT"/>
+    <functioncall functionName="MBEDTLS_ERR_BASE64_BUFFER_TOO_SMALL"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_ALLOC_FAILED"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_FEATURE_UNAVAILABLE"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_INVALID_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_INVALID_ENC_IV"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_NO_HEADER_FOOTER_PRESENT"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_PASSWORD_MISMATCH"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_PASSWORD_REQUIRED"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_UNKNOWN_ENC_ALG"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="add_len"/>
+    <functioncall functionName="aes_ctx"/>
+    <functioncall functionName="aes_iv"/>
+    <functioncall functionName="aes_key"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buflen"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="calloc"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="der_data"/>
+    <functioncall functionName="der_len"/>
+    <functioncall functionName="des3_ctx"/>
+    <functioncall functionName="des3_iv"/>
+    <functioncall functionName="des3_key"/>
+    <functioncall functionName="des_ctx"/>
+    <functioncall functionName="des_iv"/>
+    <functioncall functionName="des_key"/>
+    <functioncall functionName="encode_buf"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="footer"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="iv"/>
+    <functioncall functionName="iv_len"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keylen"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="mbedtls_aes_crypt_cbc"/>
+    <functioncall functionName="mbedtls_aes_free"/>
+    <functioncall functionName="mbedtls_aes_init"/>
+    <functioncall functionName="mbedtls_aes_setkey_dec"/>
+    <functioncall functionName="mbedtls_base64_decode"/>
+    <functioncall functionName="mbedtls_base64_encode"/>
+    <functioncall functionName="mbedtls_calloc"/>
+    <functioncall functionName="mbedtls_des3_crypt_cbc"/>
+    <functioncall functionName="mbedtls_des3_free"/>
+    <functioncall functionName="mbedtls_des3_init"/>
+    <functioncall functionName="mbedtls_des3_set3key_dec"/>
+    <functioncall functionName="mbedtls_des_crypt_cbc"/>
+    <functioncall functionName="mbedtls_des_free"/>
+    <functioncall functionName="mbedtls_des_init"/>
+    <functioncall functionName="mbedtls_des_setkey_dec"/>
+    <functioncall functionName="mbedtls_free"/>
+    <functioncall functionName="mbedtls_md5_finish_ret"/>
+    <functioncall functionName="mbedtls_md5_free"/>
+    <functioncall functionName="mbedtls_md5_init"/>
+    <functioncall functionName="mbedtls_md5_starts_ret"/>
+    <functioncall functionName="mbedtls_md5_update_ret"/>
+    <functioncall functionName="mbedtls_pem_context"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="md5_ctx"/>
+    <functioncall functionName="md5sum"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pem_aes_decrypt"/>
+    <functioncall functionName="pem_des3_decrypt"/>
+    <functioncall functionName="pem_des_decrypt"/>
+    <functioncall functionName="pem_get_iv"/>
+    <functioncall functionName="pem_iv"/>
+    <functioncall functionName="pem_pbkdf1"/>
+    <functioncall functionName="pwd"/>
+    <functioncall functionName="pwdlen"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s1"/>
+    <functioncall functionName="s2"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="strstr"/>
+    <functioncall functionName="use_len"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3116123869">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Haiku::app&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Haiku::app&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" line="41" column="11"/>
+            <symbol>OS_Haiku::app</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Haiku::window&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Haiku::window&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" line="41" column="11"/>
+            <symbol>OS_Haiku::window</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Haiku::main_loop&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Haiku::main_loop&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" line="41" column="11"/>
+            <symbol>OS_Haiku::main_loop</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Haiku::input&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Haiku::input&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" line="41" column="11"/>
+            <symbol>OS_Haiku::input</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Haiku::rendering_server&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Haiku::rendering_server&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" line="41" column="11"/>
+            <symbol>OS_Haiku::rendering_server</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Haiku::video_driver_index&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Haiku::video_driver_index&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" line="41" column="11"/>
+            <symbol>OS_Haiku::video_driver_index</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OS_Haiku::context_gl&apos; is not initialized in the constructor." verbose="Member variable &apos;OS_Haiku::context_gl&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" line="41" column="11"/>
+            <symbol>OS_Haiku::context_gl</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ContextGL_Haiku&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ContextGL_Haiku&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/haiku/os_haiku.cpp" file="/home/hbina/git/godot/platform/haiku/context_gl_haiku.h" line="57" column="2"/>
+            <symbol>ContextGL_Haiku</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="run" lineNumber="47"/>
+    <functiondecl functionName="get_name" lineNumber="71"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="75"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="79"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="83"/>
+    <functiondecl functionName="initialize" lineNumber="87"/>
+    <functiondecl functionName="finalize" lineNumber="140"/>
+    <functiondecl functionName="set_main_loop" lineNumber="157"/>
+    <functiondecl functionName="get_main_loop" lineNumber="163"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="167"/>
+    <functiondecl functionName="release_rendering_thread" lineNumber="176"/>
+    <functiondecl functionName="make_rendering_thread" lineNumber="180"/>
+    <functiondecl functionName="can_draw" lineNumber="184"/>
+    <functiondecl functionName="swap_buffers" lineNumber="189"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="193"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="197"/>
+    <functiondecl functionName="set_cursor_shape" lineNumber="201"/>
+    <functiondecl functionName="get_cursor_shape" lineNumber="205"/>
+    <functiondecl functionName="set_custom_mouse_cursor" lineNumber="209"/>
+    <functiondecl functionName="get_screen_count" lineNumber="213"/>
+    <functiondecl functionName="get_current_screen" lineNumber="218"/>
+    <functiondecl functionName="set_current_screen" lineNumber="223"/>
+    <functiondecl functionName="get_screen_position" lineNumber="227"/>
+    <functiondecl functionName="get_screen_size" lineNumber="235"/>
+    <functiondecl functionName="set_window_title" lineNumber="243"/>
+    <functiondecl functionName="get_window_size" lineNumber="247"/>
+    <functiondecl functionName="set_window_size" lineNumber="252"/>
+    <functiondecl functionName="get_window_position" lineNumber="257"/>
+    <functiondecl functionName="set_window_position" lineNumber="263"/>
+    <functiondecl functionName="set_window_fullscreen" lineNumber="267"/>
+    <functiondecl functionName="is_window_fullscreen" lineNumber="273"/>
+    <functiondecl functionName="set_window_resizable" lineNumber="277"/>
+    <functiondecl functionName="is_window_resizable" lineNumber="290"/>
+    <functiondecl functionName="set_window_minimized" lineNumber="294"/>
+    <functiondecl functionName="is_window_minimized" lineNumber="298"/>
+    <functiondecl functionName="set_window_maximized" lineNumber="302"/>
+    <functiondecl functionName="is_window_maximized" lineNumber="306"/>
+    <functiondecl functionName="set_video_mode" lineNumber="310"/>
+    <functiondecl functionName="get_video_mode" lineNumber="314"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="318"/>
+    <functiondecl functionName="get_executable_path" lineNumber="322"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="326"/>
+    <functiondecl functionName="get_config_path" lineNumber="331"/>
+    <functiondecl functionName="get_data_path" lineNumber="342"/>
+    <functiondecl functionName="get_cache_path" lineNumber="353"/>
+    <functiondecl functionName="run" lineNumber="47"/>
+    <functiondecl functionName="get_name" lineNumber="71"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="75"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="79"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="83"/>
+    <functiondecl functionName="initialize" lineNumber="87"/>
+    <functiondecl functionName="finalize" lineNumber="140"/>
+    <functiondecl functionName="set_main_loop" lineNumber="157"/>
+    <functiondecl functionName="get_main_loop" lineNumber="163"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="167"/>
+    <functiondecl functionName="release_rendering_thread" lineNumber="176"/>
+    <functiondecl functionName="make_rendering_thread" lineNumber="180"/>
+    <functiondecl functionName="can_draw" lineNumber="184"/>
+    <functiondecl functionName="swap_buffers" lineNumber="189"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="193"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="197"/>
+    <functiondecl functionName="set_cursor_shape" lineNumber="201"/>
+    <functiondecl functionName="get_cursor_shape" lineNumber="205"/>
+    <functiondecl functionName="set_custom_mouse_cursor" lineNumber="209"/>
+    <functiondecl functionName="get_screen_count" lineNumber="213"/>
+    <functiondecl functionName="get_current_screen" lineNumber="218"/>
+    <functiondecl functionName="set_current_screen" lineNumber="223"/>
+    <functiondecl functionName="get_screen_position" lineNumber="227"/>
+    <functiondecl functionName="get_screen_size" lineNumber="235"/>
+    <functiondecl functionName="set_window_title" lineNumber="243"/>
+    <functiondecl functionName="get_window_size" lineNumber="247"/>
+    <functiondecl functionName="set_window_size" lineNumber="252"/>
+    <functiondecl functionName="get_window_position" lineNumber="257"/>
+    <functiondecl functionName="set_window_position" lineNumber="263"/>
+    <functiondecl functionName="set_window_fullscreen" lineNumber="267"/>
+    <functiondecl functionName="is_window_fullscreen" lineNumber="273"/>
+    <functiondecl functionName="set_window_resizable" lineNumber="277"/>
+    <functiondecl functionName="is_window_resizable" lineNumber="290"/>
+    <functiondecl functionName="set_window_minimized" lineNumber="294"/>
+    <functiondecl functionName="is_window_minimized" lineNumber="298"/>
+    <functiondecl functionName="set_window_maximized" lineNumber="302"/>
+    <functiondecl functionName="is_window_maximized" lineNumber="306"/>
+    <functiondecl functionName="set_video_mode" lineNumber="310"/>
+    <functiondecl functionName="get_video_mode" lineNumber="314"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="318"/>
+    <functiondecl functionName="get_executable_path" lineNumber="322"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="326"/>
+    <functiondecl functionName="get_config_path" lineNumber="331"/>
+    <functiondecl functionName="get_data_path" lineNumber="342"/>
+    <functiondecl functionName="get_cache_path" lineNumber="353"/>
+    <functiondecl functionName="run" lineNumber="47"/>
+    <functiondecl functionName="get_name" lineNumber="71"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="75"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="79"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="83"/>
+    <functiondecl functionName="initialize" lineNumber="87"/>
+    <functiondecl functionName="finalize" lineNumber="140"/>
+    <functiondecl functionName="set_main_loop" lineNumber="157"/>
+    <functiondecl functionName="get_main_loop" lineNumber="163"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="167"/>
+    <functiondecl functionName="release_rendering_thread" lineNumber="176"/>
+    <functiondecl functionName="make_rendering_thread" lineNumber="180"/>
+    <functiondecl functionName="can_draw" lineNumber="184"/>
+    <functiondecl functionName="swap_buffers" lineNumber="189"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="193"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="197"/>
+    <functiondecl functionName="set_cursor_shape" lineNumber="201"/>
+    <functiondecl functionName="get_cursor_shape" lineNumber="205"/>
+    <functiondecl functionName="set_custom_mouse_cursor" lineNumber="209"/>
+    <functiondecl functionName="get_screen_count" lineNumber="213"/>
+    <functiondecl functionName="get_current_screen" lineNumber="218"/>
+    <functiondecl functionName="set_current_screen" lineNumber="223"/>
+    <functiondecl functionName="get_screen_position" lineNumber="227"/>
+    <functiondecl functionName="get_screen_size" lineNumber="235"/>
+    <functiondecl functionName="set_window_title" lineNumber="243"/>
+    <functiondecl functionName="get_window_size" lineNumber="247"/>
+    <functiondecl functionName="set_window_size" lineNumber="252"/>
+    <functiondecl functionName="get_window_position" lineNumber="257"/>
+    <functiondecl functionName="set_window_position" lineNumber="263"/>
+    <functiondecl functionName="set_window_fullscreen" lineNumber="267"/>
+    <functiondecl functionName="is_window_fullscreen" lineNumber="273"/>
+    <functiondecl functionName="set_window_resizable" lineNumber="277"/>
+    <functiondecl functionName="is_window_resizable" lineNumber="290"/>
+    <functiondecl functionName="set_window_minimized" lineNumber="294"/>
+    <functiondecl functionName="is_window_minimized" lineNumber="298"/>
+    <functiondecl functionName="set_window_maximized" lineNumber="302"/>
+    <functiondecl functionName="is_window_maximized" lineNumber="306"/>
+    <functiondecl functionName="set_video_mode" lineNumber="310"/>
+    <functiondecl functionName="get_video_mode" lineNumber="314"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="318"/>
+    <functiondecl functionName="get_executable_path" lineNumber="322"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="326"/>
+    <functiondecl functionName="get_config_path" lineNumber="331"/>
+    <functiondecl functionName="get_data_path" lineNumber="342"/>
+    <functiondecl functionName="get_cache_path" lineNumber="353"/>
+    <functioncall functionName="AudioDriverMediaKit"/>
+    <functioncall functionName="BMessage"/>
+    <functioncall functionName="BMessenger"/>
+    <functioncall functionName="BScreen"/>
+    <functioncall functionName="B_NOT_RESIZABLE"/>
+    <functioncall functionName="ContextGL_Haiku"/>
+    <functioncall functionName="ConvertToScreen"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="Flags"/>
+    <functioncall functionName="Frame"/>
+    <functioncall functionName="GetLastButtonMask"/>
+    <functioncall functionName="GetLastMousePosition"/>
+    <functioncall functionName="HaikuApplication"/>
+    <functioncall functionName="HaikuDirectWindow"/>
+    <functioncall functionName="InputDefault"/>
+    <functioncall functionName="IntegerHeight"/>
+    <functioncall functionName="IntegerWidth"/>
+    <functioncall functionName="IsMinimized"/>
+    <functioncall functionName="Minimize"/>
+    <functioncall functionName="MoveTo"/>
+    <functioncall functionName="OS_Haiku"/>
+    <functioncall functionName="Point2i"/>
+    <functioncall functionName="RenderingServerRaster"/>
+    <functioncall functionName="RenderingServerWrapMT"/>
+    <functioncall functionName="ResizeTo"/>
+    <functioncall functionName="Run"/>
+    <functioncall functionName="SendMessage"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="SetFlags"/>
+    <functioncall functionName="SetFullScreen"/>
+    <functioncall functionName="SetInput"/>
+    <functioncall functionName="SetMainLoop"/>
+    <functioncall functionName="SetTitle"/>
+    <functioncall functionName="SetVideoMode"/>
+    <functioncall functionName="Show"/>
+    <functioncall functionName="Size"/>
+    <functioncall functionName="Size2i"/>
+    <functioncall functionName="StartMessageRunner"/>
+    <functioncall functionName="StopMessageRunner"/>
+    <functioncall functionName="add_driver"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="context_gl"/>
+    <functioncall functionName="current_video_mode"/>
+    <functioncall functionName="driver_media_kit"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finish"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="fullscreen"/>
+    <functioncall functionName="get_config_path"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_environment"/>
+    <functioncall functionName="get_executable_path"/>
+    <functioncall functionName="get_render_thread_mode"/>
+    <functioncall functionName="has_environment"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="main_loop"/>
+    <functioncall functionName="make_current"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_audio_driver"/>
+    <functioncall functionName="p_desired"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_main_loop"/>
+    <functioncall functionName="p_video_driver"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="register_config"/>
+    <functioncall functionName="release_current"/>
+    <functioncall functionName="rendering_server"/>
+    <functioncall functionName="resizable"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_main_loop"/>
+    <functioncall functionName="set_use_vsync"/>
+    <functioncall functionName="swap_buffers"/>
+    <functioncall functionName="top"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="use_vsync"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="video_mode"/>
+    <functioncall functionName="window"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

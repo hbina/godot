@@ -618,21 +618,21 @@ String ShaderCompilerRD::_dump_node_code(const SL::Node *p_node, int p_level, Ge
 						r_gen_code.uses_global_textures = true;
 					}
 
-					r_gen_code.texture_uniforms.write[E->get().texture_order] = texture;
+					r_gen_code.texture_uniforms[E->get().texture_order] = texture;
 				} else {
 					if (!uses_uniforms) {
 
 						r_gen_code.defines.push_back(String("#define USE_MATERIAL_UNIFORMS\n"));
 						uses_uniforms = true;
 					}
-					uniform_defines.write[E->get().order] = ucode;
+					uniform_defines[E->get().order] = ucode;
 					if (is_buffer_global) {
 						//globals are indices into the global table
-						uniform_sizes.write[E->get().order] = _get_datatype_size(ShaderLanguage::TYPE_UINT);
-						uniform_alignments.write[E->get().order] = _get_datatype_alignment(ShaderLanguage::TYPE_UINT);
+						uniform_sizes[E->get().order] = _get_datatype_size(ShaderLanguage::TYPE_UINT);
+						uniform_alignments[E->get().order] = _get_datatype_alignment(ShaderLanguage::TYPE_UINT);
 					} else {
-						uniform_sizes.write[E->get().order] = _get_datatype_size(E->get().type);
-						uniform_alignments.write[E->get().order] = _get_datatype_alignment(E->get().type);
+						uniform_sizes[E->get().order] = _get_datatype_size(E->get().type);
+						uniform_alignments[E->get().order] = _get_datatype_alignment(E->get().type);
 					}
 				}
 

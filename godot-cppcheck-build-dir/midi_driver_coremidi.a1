@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2854725345">
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~MIDIDriverCoreMidi()&apos; at line 120. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~MIDIDriverCoreMidi()&apos; at line 120. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/drivers/coremidi/midi_driver_coremidi.cpp" file="/home/hbina/git/godot/drivers/coremidi/midi_driver_coremidi.h" line="53" column="15" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/drivers/coremidi/midi_driver_coremidi.cpp" line="120" column="2" info="Calling close"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/coremidi/midi_driver_coremidi.h:49:14" my-argnr="1" my-argname="packet_list" file="/home/hbina/git/godot/drivers/coremidi/midi_driver_coremidi.cpp" line="41" col="48" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="read" lineNumber="40"/>
+    <functiondecl functionName="open" lineNumber="48"/>
+    <functiondecl functionName="close" lineNumber="77"/>
+    <functiondecl functionName="get_connected_inputs" lineNumber="96"/>
+    <functioncall functionName="CFRelease"/>
+    <functioncall functionName="CFSTR"/>
+    <functioncall functionName="CFStringCreateWithCString"/>
+    <functioncall functionName="CFStringGetCString"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="MIDIClientCreate"/>
+    <functioncall functionName="MIDIClientDispose"/>
+    <functioncall functionName="MIDIDriverCoreMidi"/>
+    <functioncall functionName="MIDIGetNumberOfSources"/>
+    <functioncall functionName="MIDIGetSource"/>
+    <functioncall functionName="MIDIInputPortCreate"/>
+    <functioncall functionName="MIDIObjectGetStringProperty"/>
+    <functioncall functionName="MIDIPacketNext"/>
+    <functioncall functionName="MIDIPortConnectSource"/>
+    <functioncall functionName="MIDIPortDisconnectSource"/>
+    <functioncall functionName="MIDIPortDispose"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="client"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="kCFStringEncodingASCII"/>
+    <functioncall functionName="kCFStringEncodingUTF8"/>
+    <functioncall functionName="kMIDIPropertyDisplayName"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="numPackets"/>
+    <functioncall functionName="packet"/>
+    <functioncall functionName="port_in"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="receive_input_packet"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="timeStamp"/>
+  </FileInfo>
+</analyzerinfo>

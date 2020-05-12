@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1573961099">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;enc!=NULL&apos; is redundant or there is possible null pointer dereference: enc." verbose="Either the condition &apos;enc!=NULL&apos; is redundant or there is possible null pointer dereference: enc." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="296" column="34" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="308" column="14" info="Assuming that condition &apos;enc!=NULL&apos; is not redundant"/>
+            <symbol>enc</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." verbose="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="297" column="21" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="308" column="29" info="Assuming that condition &apos;pic!=NULL&apos; is not redundant"/>
+            <symbol>pic</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." verbose="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="298" column="22" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="308" column="29" info="Assuming that condition &apos;pic!=NULL&apos; is not redundant"/>
+            <symbol>pic</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:229:13" call-funcname="InitFilterTrial" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="244" col="18" call-argexpr="&best" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:229:13" call-funcname="InitFilterTrial" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="244" col="18" call-argexpr="best" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="253" col="33" call-argexpr="&trial" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="253" col="33" call-argexpr="trial" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="266" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="266" col="29" call-argexpr="&best" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:292:12" call-funcname="EncodeAlpha" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="374" col="19" call-argexpr="&alpha_data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:292:12" call-funcname="EncodeAlpha" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="374" col="19" call-argexpr="&alpha_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:364:12" call-funcname="CompressAlphaJob" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="413" col="30" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:179:12" call-funcname="GetNumColors" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="210" col="28" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:202:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:202:17" call-funcname="GetFilterMap" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="243" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:234:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:229:13" my-argnr="1" my-argname="score" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="230" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:292:12" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="296" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:388:6" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="390" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:402:5" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="403" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:419:5" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="420" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:429:5" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="431" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:229:13" call-funcname="InitFilterTrial" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="244" col="18" call-argexpr="&best" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:229:13" call-funcname="InitFilterTrial" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="244" col="18" call-argexpr="best" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="253" col="33" call-argexpr="&trial" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="253" col="33" call-argexpr="trial" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="266" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:109:12" call-funcname="EncodeAlphaInternal" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="266" col="29" call-argexpr="&best" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:292:12" call-funcname="EncodeAlpha" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="374" col="19" call-argexpr="&alpha_data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:292:12" call-funcname="EncodeAlpha" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="374" col="19" call-argexpr="&alpha_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:364:12" call-funcname="CompressAlphaJob" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="413" col="30" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:179:12" call-funcname="GetNumColors" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="210" col="28" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:202:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:202:17" call-funcname="GetFilterMap" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="243" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:234:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:229:13" my-argnr="1" my-argname="score" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="230" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:292:12" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="296" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:388:6" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="390" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:402:5" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="403" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:419:5" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="420" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c:429:5" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/alpha_enc.c" line="431" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="EncodeLossless" lineNumber="49"/>
+    <functiondecl functionName="EncodeAlphaInternal" lineNumber="109"/>
+    <functiondecl functionName="GetNumColors" lineNumber="179"/>
+    <functiondecl functionName="GetFilterMap" lineNumber="202"/>
+    <functiondecl functionName="InitFilterTrial" lineNumber="229"/>
+    <functiondecl functionName="ApplyFiltersAndEncode" lineNumber="234"/>
+    <functiondecl functionName="EncodeAlpha" lineNumber="292"/>
+    <functiondecl functionName="CompressAlphaJob" lineNumber="364"/>
+    <functiondecl functionName="VP8EncInitAlpha" lineNumber="388"/>
+    <functiondecl functionName="VP8EncStartAlpha" lineNumber="402"/>
+    <functiondecl functionName="VP8EncFinishAlpha" lineNumber="419"/>
+    <functiondecl functionName="VP8EncDeleteAlpha" lineNumber="429"/>
+    <functiondecl functionName="EncodeLossless" lineNumber="49"/>
+    <functiondecl functionName="EncodeAlphaInternal" lineNumber="109"/>
+    <functiondecl functionName="GetNumColors" lineNumber="179"/>
+    <functiondecl functionName="GetFilterMap" lineNumber="202"/>
+    <functiondecl functionName="InitFilterTrial" lineNumber="229"/>
+    <functiondecl functionName="ApplyFiltersAndEncode" lineNumber="234"/>
+    <functiondecl functionName="EncodeAlpha" lineNumber="292"/>
+    <functiondecl functionName="CompressAlphaJob" lineNumber="364"/>
+    <functiondecl functionName="VP8EncInitAlpha" lineNumber="388"/>
+    <functiondecl functionName="VP8EncStartAlpha" lineNumber="402"/>
+    <functiondecl functionName="VP8EncFinishAlpha" lineNumber="419"/>
+    <functiondecl functionName="VP8EncDeleteAlpha" lineNumber="429"/>
+    <functioncall functionName="ALPHA_HEADER_LEN"/>
+    <functioncall functionName="ALPHA_NO_COMPRESSION"/>
+    <functioncall functionName="ApplyFiltersAndEncode"/>
+    <functioncall functionName="CompressAlphaJob"/>
+    <functioncall functionName="EncodeAlpha"/>
+    <functioncall functionName="EncodeAlphaInternal"/>
+    <functioncall functionName="EncodeLossless"/>
+    <functioncall functionName="End"/>
+    <functioncall functionName="GetFilterMap"/>
+    <functioncall functionName="GetNumColors"/>
+    <functioncall functionName="Init"/>
+    <functioncall functionName="InitFilterTrial"/>
+    <functioncall functionName="Launch"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="QuantizeLevels"/>
+    <functioncall functionName="Reset"/>
+    <functioncall functionName="Sync"/>
+    <functioncall functionName="VP8BitWriterAppend"/>
+    <functioncall functionName="VP8BitWriterBuf"/>
+    <functioncall functionName="VP8BitWriterInit"/>
+    <functioncall functionName="VP8BitWriterSize"/>
+    <functioncall functionName="VP8BitWriterWipeOut"/>
+    <functioncall functionName="VP8FiltersInit"/>
+    <functioncall functionName="VP8LBitWriterFinish"/>
+    <functioncall functionName="VP8LBitWriterInit"/>
+    <functioncall functionName="VP8LBitWriterNumBytes"/>
+    <functioncall functionName="VP8LBitWriterWipeOut"/>
+    <functioncall functionName="VP8LEncodeStream"/>
+    <functioncall functionName="WEBP_FILTER_BEST"/>
+    <functioncall functionName="WEBP_FILTER_FAST"/>
+    <functioncall functionName="WEBP_FILTER_NONE"/>
+    <functioncall functionName="WebPConfigInit"/>
+    <functioncall functionName="WebPCopyPlane"/>
+    <functioncall functionName="WebPDispatchAlphaToGreen"/>
+    <functioncall functionName="WebPEstimateBestFilter"/>
+    <functioncall functionName="WebPGetWorkerInterface"/>
+    <functioncall functionName="WebPInitAlphaProcessing"/>
+    <functioncall functionName="WebPPictureAlloc"/>
+    <functioncall functionName="WebPPictureFree"/>
+    <functioncall functionName="WebPPictureHasTransparency"/>
+    <functioncall functionName="WebPPictureInit"/>
+    <functioncall functionName="WebPReportProgress"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a_stride"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="alpha_compression"/>
+    <functioncall functionName="alpha_data"/>
+    <functioncall functionName="alpha_data_"/>
+    <functioncall functionName="alpha_levels"/>
+    <functioncall functionName="alpha_quality"/>
+    <functioncall functionName="alpha_size"/>
+    <functioncall functionName="alpha_src"/>
+    <functioncall functionName="alpha_worker_"/>
+    <functioncall functionName="arg1"/>
+    <functioncall functionName="argb"/>
+    <functioncall functionName="argb_stride"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="best"/>
+    <functioncall functionName="bw"/>
+    <functioncall functionName="cache_bits"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="config_"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_size"/>
+    <functioncall functionName="dummy"/>
+    <functioncall functionName="effort_level"/>
+    <functioncall functionName="enc"/>
+    <functioncall functionName="error_"/>
+    <functioncall functionName="filter"/>
+    <functioncall functionName="filter_func"/>
+    <functioncall functionName="filtered_alpha"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="has_alpha_"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="histogram_bits"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="lossless_data_size"/>
+    <functioncall functionName="lossless_features"/>
+    <functioncall functionName="lossless_hdr_size"/>
+    <functioncall functionName="lossless_size"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="output_size"/>
+    <functioncall functionName="palette_size"/>
+    <functioncall functionName="percent_"/>
+    <functioncall functionName="pic_"/>
+    <functioncall functionName="picture"/>
+    <functioncall functionName="quant_alpha"/>
+    <functioncall functionName="reduce_levels"/>
+    <functioncall functionName="score"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sse"/>
+    <functioncall functionName="stats"/>
+    <functioncall functionName="thread_level_"/>
+    <functioncall functionName="tmp_alpha"/>
+    <functioncall functionName="tmp_bw"/>
+    <functioncall functionName="transform_bits"/>
+    <functioncall functionName="trial"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="worker"/>
+  </FileInfo>
+</analyzerinfo>

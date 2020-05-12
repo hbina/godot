@@ -1,0 +1,1013 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4233510196">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="804" column="31"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Slot::cE&apos; is not initialized in the constructor." verbose="Member variable &apos;Slot::cE&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="448" column="4"/>
+            <symbol>Slot::cE</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_set&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_set&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="510" column="7"/>
+            <symbol>Object::_set</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_get&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_get&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="511" column="7"/>
+            <symbol>Object::_get</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_get_property_list&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_get_property_list&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="512" column="7"/>
+            <symbol>Object::_get_property_list</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_notification&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_notification&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="513" column="7"/>
+            <symbol>Object::_notification</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Object::_call_deferred_bind&apos; can be const." verbose="The member function &apos;Object::_call_deferred_bind&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="541" column="10"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="662" column="17"/>
+            <symbol>Object::_call_deferred_bind</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_change_notify&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_change_notify&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="572" column="22"/>
+            <symbol>Object::_change_notify</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_is_gpl_reversed&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_is_gpl_reversed&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="579" column="7"/>
+            <symbol>Object::_is_gpl_reversed</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Object::has_script_instance_binding&apos; can be const." verbose="The member function &apos;Object::has_script_instance_binding&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="742" column="7"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1912" column="14"/>
+            <symbol>Object::has_script_instance_binding</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;get_class&apos; is called from destructor &apos;~Object()&apos; at line 1965. Dynamic binding is not used." verbose="Virtual function &apos;get_class&apos; is called from destructor &apos;~Object()&apos; at line 1965. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="628" column="17" info="get_class is a virtual function"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="928" column="15" info="Calling get_class"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1965" column="25" info="Calling to_string"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PropertyInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PropertyInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="179" column="2"/>
+            <symbol>PropertyInfo</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="218" column="2"/>
+            <symbol>MethodInfo</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="224" column="2"/>
+            <symbol>MethodInfo</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Object&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Object&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="499" column="2"/>
+            <symbol>Object</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;Connection&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;Connection&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="427" column="3"/>
+            <symbol>Connection</symbol>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: p_args" verbose="Possible null pointer dereference: p_args" cwe="476">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1184" column="25" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1130" column="22" info="Calling function &apos;emit_signal&apos;, 2nd argument &apos;args&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1123" column="25" info="Assignment &apos;args=nullptr&apos;, assigned value is 0"/>
+            <symbol>p_args</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!target_object&apos; is redundant or there is possible null pointer dereference: target_object." verbose="Either the condition &apos;!target_object&apos; is redundant or there is possible null pointer dereference: target_object." cwe="476">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1475" column="12" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1428" column="47" info="Assignment &apos;target_object=p_callable.get_object()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1429" column="18" info="Assuming that condition &apos;!target_object&apos; is not redundant"/>
+            <symbol>target_object</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!s&apos; is redundant or there is possible null pointer dereference: s." verbose="Either the condition &apos;!s&apos; is redundant or there is possible null pointer dereference: s." cwe="476">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1531" column="21" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1528" column="35" info="Assignment &apos;s=signal_map.getptr(p_signal)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1529" column="20" info="Assuming that condition &apos;!s&apos; is not redundant"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!target_object&apos; is redundant or there is possible null pointer dereference: target_object." verbose="Either the condition &apos;!target_object&apos; is redundant or there is possible null pointer dereference: target_object." cwe="476">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1542" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1525" column="47" info="Assignment &apos;target_object=p_callable.get_object()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1526" column="16" info="Assuming that condition &apos;!target_object&apos; is not redundant"/>
+            <symbol>target_object</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!s&apos; is redundant or there is possible null pointer dereference: s." verbose="Either the condition &apos;!s&apos; is redundant or there is possible null pointer dereference: s." cwe="476">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1543" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1528" column="35" info="Assignment &apos;s=signal_map.getptr(p_signal)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/object.cpp" line="1529" column="20" info="Assuming that condition &apos;!s&apos; is not redundant"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="2046" column="18"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/object.h:662:7" call-funcname="notification" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="379" col="14" call-argexpr="NOTIFICATION_POSTINITIALIZE" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:647:10" call-funcname="get" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="594" col="29" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:505:15" call-funcname="_get_property_listv" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="614" col="21" call-argexpr="p_reversed" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="625" col="25" info="Assuming that condition '!p_reversed' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:506:15" call-funcname="_notificationv" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="914" col="16" call-argexpr="p_notification" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="379" col="15" info="Calling function 'notification', 1st argument 'NOTIFICATION_POSTINITIALIZE' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="args" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1123" col="25" info="Assignment 'args=nullptr', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="argc" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1126" col="5" info="Assuming that condition 'if(argc)' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1125" col="24" info="Assignment 'argc=p_argcount-1', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:717:16" call-funcname="get_static_property_type" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1835" col="44" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:493:22" call-funcname="_construct_object" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="1952" col="19" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:482:10" my-argnr="1" my-argname="p_args" file="/home/hbina/git/godot/core/object.cpp" line="1112" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:200:7" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/object.cpp" line="106" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:752:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2006" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:753:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2011" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:782:14" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2085" col="15" value="0"/>
+  </FileInfo>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;_ObjectDebugLock&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;_ObjectDebugLock&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/core/object.cpp" line="48" column="2"/>
+            <symbol>_ObjectDebugLock</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/object.h:662:7" call-funcname="notification" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="379" col="14" call-argexpr="NOTIFICATION_POSTINITIALIZE" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:647:10" call-funcname="get" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="594" col="29" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:505:15" call-funcname="_get_property_listv" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="614" col="21" call-argexpr="p_reversed" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="625" col="25" info="Assuming that condition '!p_reversed' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:506:15" call-funcname="_notificationv" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="914" col="16" call-argexpr="p_notification" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="379" col="15" info="Calling function 'notification', 1st argument 'NOTIFICATION_POSTINITIALIZE' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="args" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1123" col="25" info="Assignment 'args=nullptr', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="argc" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1126" col="5" info="Assuming that condition 'if(argc)' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1125" col="24" info="Assignment 'argc=p_argcount-1', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:717:16" call-funcname="get_static_property_type" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1835" col="44" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:493:22" call-funcname="_construct_object" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="1952" col="19" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:482:10" my-argnr="1" my-argname="p_args" file="/home/hbina/git/godot/core/object.cpp" line="1112" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:200:7" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/object.cpp" line="106" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:752:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2006" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:753:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2011" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:782:14" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2085" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/object.h:662:7" call-funcname="notification" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="379" col="14" call-argexpr="NOTIFICATION_POSTINITIALIZE" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:647:10" call-funcname="get" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="594" col="29" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:505:15" call-funcname="_get_property_listv" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="614" col="21" call-argexpr="p_reversed" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="625" col="25" info="Assuming that condition '!p_reversed' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:506:15" call-funcname="_notificationv" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="914" col="16" call-argexpr="p_notification" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="379" col="15" info="Calling function 'notification', 1st argument 'NOTIFICATION_POSTINITIALIZE' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="args" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1123" col="25" info="Assignment 'args=nullptr', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="argc" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1126" col="5" info="Assuming that condition 'if(argc)' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1125" col="24" info="Assignment 'argc=p_argcount-1', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:717:16" call-funcname="get_static_property_type" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1835" col="44" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:493:22" call-funcname="_construct_object" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="1952" col="19" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:482:10" my-argnr="1" my-argname="p_args" file="/home/hbina/git/godot/core/object.cpp" line="1112" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:200:7" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/object.cpp" line="106" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:752:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2006" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:753:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2011" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:782:14" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2085" col="15" value="0"/>
+  </FileInfo>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/core/object.cpp" file="/home/hbina/git/godot/core/object.h" line="569" column="5"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/object.h:662:7" call-funcname="notification" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="379" col="14" call-argexpr="NOTIFICATION_POSTINITIALIZE" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:667:15" call-funcname="setvar" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="438" col="9" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:666:18" call-funcname="getvar" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="508" col="16" call-argexpr="valid" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/object.h:647:10" call-funcname="get" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="594" col="29" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:505:15" call-funcname="_get_property_listv" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="614" col="21" call-argexpr="p_reversed" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="625" col="25" info="Assuming that condition '!p_reversed' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:506:15" call-funcname="_notificationv" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="914" col="16" call-argexpr="p_notification" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="379" col="15" info="Calling function 'notification', 1st argument 'NOTIFICATION_POSTINITIALIZE' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="args" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1123" col="25" info="Assignment 'args=nullptr', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:695:8" call-funcname="emit_signal" call-argnr="3" file="/home/hbina/git/godot/core/object.cpp" line="1130" col="13" call-argexpr="argc" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1126" col="5" info="Assuming that condition 'if(argc)' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/object.cpp" line="1125" col="24" info="Assignment 'argc=p_argcount-1', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/object.h:717:16" call-funcname="get_static_property_type" call-argnr="2" file="/home/hbina/git/godot/core/object.cpp" line="1835" col="44" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/object.h:493:22" call-funcname="_construct_object" call-argnr="1" file="/home/hbina/git/godot/core/object.cpp" line="1952" col="19" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:482:10" my-argnr="1" my-argname="p_args" file="/home/hbina/git/godot/core/object.cpp" line="1112" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:200:7" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/object.cpp" line="106" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:752:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2006" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:753:6" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2011" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:782:14" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/core/object.cpp" line="2085" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="from_dict" lineNumber="77"/>
+    <functiondecl functionName="convert_property_list" lineNumber="103"/>
+    <functiondecl functionName="from_dict" lineNumber="135"/>
+    <functiondecl functionName="_predelete" lineNumber="366"/>
+    <functiondecl functionName="_postinitialize" lineNumber="376"/>
+    <functiondecl functionName="get_valid_parents_static" lineNumber="382"/>
+    <functiondecl functionName="_get_valid_parents_static" lineNumber="384"/>
+    <functiondecl functionName="set" lineNumber="387"/>
+    <functiondecl functionName="get" lineNumber="462"/>
+    <functiondecl functionName="set_indexed" lineNumber="534"/>
+    <functiondecl functionName="get_indexed" lineNumber="586"/>
+    <functiondecl functionName="get_property_list" lineNumber="607"/>
+    <functiondecl functionName="_validate_property" lineNumber="631"/>
+    <functiondecl functionName="get_method_list" lineNumber="634"/>
+    <functiondecl functionName="_call_bind" lineNumber="642"/>
+    <functiondecl functionName="_call_deferred_bind" lineNumber="662"/>
+    <functiondecl functionName="call_multilevel" lineNumber="719"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="752"/>
+    <functiondecl functionName="has_method" lineNumber="773"/>
+    <functiondecl functionName="getvar" lineNumber="788"/>
+    <functiondecl functionName="setvar" lineNumber="794"/>
+    <functiondecl functionName="callv" lineNumber="800"/>
+    <functiondecl functionName="call" lineNumber="818"/>
+    <functiondecl functionName="call_multilevel" lineNumber="835"/>
+    <functiondecl functionName="call" lineNumber="850"/>
+    <functiondecl functionName="notification" lineNumber="912"/>
+    <functiondecl functionName="to_string" lineNumber="921"/>
+    <functiondecl functionName="_changed_callback" lineNumber="931"/>
+    <functiondecl functionName="add_change_receptor" lineNumber="934"/>
+    <functiondecl functionName="remove_change_receptor" lineNumber="939"/>
+    <functiondecl functionName="property_list_changed_notify" lineNumber="944"/>
+    <functiondecl functionName="cancel_delete" lineNumber="949"/>
+    <functiondecl functionName="set_script_and_instance" lineNumber="954"/>
+    <functiondecl functionName="set_script" lineNumber="965"/>
+    <functiondecl functionName="set_script_instance" lineNumber="992"/>
+    <functiondecl functionName="get_script" lineNumber="1008"/>
+    <functiondecl functionName="has_meta" lineNumber="1013"/>
+    <functiondecl functionName="set_meta" lineNumber="1018"/>
+    <functiondecl functionName="get_meta" lineNumber="1028"/>
+    <functiondecl functionName="remove_meta" lineNumber="1034"/>
+    <functiondecl functionName="_get_property_list_bind" lineNumber="1038"/>
+    <functiondecl functionName="_get_method_list_bind" lineNumber="1045"/>
+    <functiondecl functionName="_get_meta_list_bind" lineNumber="1061"/>
+    <functiondecl functionName="get_meta_list" lineNumber="1074"/>
+    <functiondecl functionName="add_user_signal" lineNumber="1084"/>
+    <functiondecl functionName="_has_user_signal" lineNumber="1094"/>
+    <functiondecl functionName="_emit_signal" lineNumber="1107"/>
+    <functiondecl functionName="emit_signal" lineNumber="1135"/>
+    <functiondecl functionName="emit_signal" lineNumber="1244"/>
+    <functiondecl functionName="_add_user_signal" lineNumber="1260"/>
+    <functiondecl functionName="_get_signal_list" lineNumber="1285"/>
+    <functiondecl functionName="_get_signal_connection_list" lineNumber="1299"/>
+    <functiondecl functionName="_get_incoming_connections" lineNumber="1317"/>
+    <functiondecl functionName="has_signal" lineNumber="1328"/>
+    <functiondecl functionName="get_signal_list" lineNumber="1347"/>
+    <functiondecl functionName="get_all_signal_connections" lineNumber="1369"/>
+    <functiondecl functionName="get_signal_connection_list" lineNumber="1384"/>
+    <functiondecl functionName="get_persistent_signal_connection_count" lineNumber="1394"/>
+    <functiondecl functionName="get_signals_connected_to_this" lineNumber="1413"/>
+    <functiondecl functionName="connect_compat" lineNumber="1420"/>
+    <functiondecl functionName="connect" lineNumber="1424"/>
+    <functiondecl functionName="is_connected_compat" lineNumber="1485"/>
+    <functiondecl functionName="is_connected" lineNumber="1490"/>
+    <functiondecl functionName="disconnect_compat" lineNumber="1512"/>
+    <functiondecl functionName="disconnect" lineNumber="1517"/>
+    <functiondecl functionName="_disconnect" lineNumber="1521"/>
+    <functiondecl functionName="_set_bind" lineNumber="1551"/>
+    <functiondecl functionName="_get_bind" lineNumber="1556"/>
+    <functiondecl functionName="_set_indexed_bind" lineNumber="1561"/>
+    <functiondecl functionName="_get_indexed_bind" lineNumber="1566"/>
+    <functiondecl functionName="initialize_class" lineNumber="1571"/>
+    <functiondecl functionName="tr" lineNumber="1581"/>
+    <functiondecl functionName="_clear_internal_resource_paths" lineNumber="1589"/>
+    <functiondecl functionName="clear_internal_resource_paths" lineNumber="1651"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1663"/>
+    <functiondecl functionName="call_deferred" lineNumber="1768"/>
+    <functiondecl functionName="set_deferred" lineNumber="1773"/>
+    <functiondecl functionName="set_block_signals" lineNumber="1777"/>
+    <functiondecl functionName="is_blocking_signals" lineNumber="1782"/>
+    <functiondecl functionName="get_translatable_strings" lineNumber="1787"/>
+    <functiondecl functionName="get_static_property_type" lineNumber="1806"/>
+    <functiondecl functionName="get_static_property_type_indexed" lineNumber="1825"/>
+    <functiondecl functionName="is_queued_for_deletion" lineNumber="1869"/>
+    <functiondecl functionName="get_script_instance_binding" lineNumber="1891"/>
+    <functiondecl functionName="has_script_instance_binding" lineNumber="1912"/>
+    <functiondecl functionName="set_script_instance_binding" lineNumber="1917"/>
+    <functiondecl functionName="_construct_object" lineNumber="1924"/>
+    <functiondecl functionName="predelete_handler" lineNumber="2004"/>
+    <functiondecl functionName="postinitialize_handler" lineNumber="2009"/>
+    <functiondecl functionName="get_argument_options" lineNumber="2024"/>
+    <functiondecl functionName="get_object_count" lineNumber="2033"/>
+    <functiondecl functionName="add_instance" lineNumber="2038"/>
+    <functiondecl functionName="remove_instance" lineNumber="2084"/>
+    <functiondecl functionName="setup" lineNumber="2117"/>
+    <functiondecl functionName="cleanup" lineNumber="2122"/>
+    <functiondecl functionName="from_dict" lineNumber="77"/>
+    <functiondecl functionName="convert_property_list" lineNumber="103"/>
+    <functiondecl functionName="from_dict" lineNumber="135"/>
+    <functiondecl functionName="_predelete" lineNumber="366"/>
+    <functiondecl functionName="_postinitialize" lineNumber="376"/>
+    <functiondecl functionName="get_valid_parents_static" lineNumber="382"/>
+    <functiondecl functionName="_get_valid_parents_static" lineNumber="384"/>
+    <functiondecl functionName="set" lineNumber="387"/>
+    <functiondecl functionName="get" lineNumber="462"/>
+    <functiondecl functionName="set_indexed" lineNumber="534"/>
+    <functiondecl functionName="get_indexed" lineNumber="586"/>
+    <functiondecl functionName="get_property_list" lineNumber="607"/>
+    <functiondecl functionName="_validate_property" lineNumber="631"/>
+    <functiondecl functionName="get_method_list" lineNumber="634"/>
+    <functiondecl functionName="_call_bind" lineNumber="642"/>
+    <functiondecl functionName="_call_deferred_bind" lineNumber="662"/>
+    <functiondecl functionName="_test_call_error" lineNumber="687"/>
+    <functiondecl functionName="call_multilevel" lineNumber="719"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="752"/>
+    <functiondecl functionName="has_method" lineNumber="773"/>
+    <functiondecl functionName="getvar" lineNumber="788"/>
+    <functiondecl functionName="setvar" lineNumber="794"/>
+    <functiondecl functionName="callv" lineNumber="800"/>
+    <functiondecl functionName="call" lineNumber="818"/>
+    <functiondecl functionName="call_multilevel" lineNumber="835"/>
+    <functiondecl functionName="call" lineNumber="850"/>
+    <functiondecl functionName="notification" lineNumber="912"/>
+    <functiondecl functionName="to_string" lineNumber="921"/>
+    <functiondecl functionName="_changed_callback" lineNumber="931"/>
+    <functiondecl functionName="add_change_receptor" lineNumber="934"/>
+    <functiondecl functionName="remove_change_receptor" lineNumber="939"/>
+    <functiondecl functionName="property_list_changed_notify" lineNumber="944"/>
+    <functiondecl functionName="cancel_delete" lineNumber="949"/>
+    <functiondecl functionName="set_script_and_instance" lineNumber="954"/>
+    <functiondecl functionName="set_script" lineNumber="965"/>
+    <functiondecl functionName="set_script_instance" lineNumber="992"/>
+    <functiondecl functionName="get_script" lineNumber="1008"/>
+    <functiondecl functionName="has_meta" lineNumber="1013"/>
+    <functiondecl functionName="set_meta" lineNumber="1018"/>
+    <functiondecl functionName="get_meta" lineNumber="1028"/>
+    <functiondecl functionName="remove_meta" lineNumber="1034"/>
+    <functiondecl functionName="_get_property_list_bind" lineNumber="1038"/>
+    <functiondecl functionName="_get_method_list_bind" lineNumber="1045"/>
+    <functiondecl functionName="_get_meta_list_bind" lineNumber="1061"/>
+    <functiondecl functionName="get_meta_list" lineNumber="1074"/>
+    <functiondecl functionName="add_user_signal" lineNumber="1084"/>
+    <functiondecl functionName="_has_user_signal" lineNumber="1094"/>
+    <functiondecl functionName="_emit_signal" lineNumber="1107"/>
+    <functiondecl functionName="emit_signal" lineNumber="1135"/>
+    <functiondecl functionName="emit_signal" lineNumber="1244"/>
+    <functiondecl functionName="_add_user_signal" lineNumber="1260"/>
+    <functiondecl functionName="_get_signal_list" lineNumber="1285"/>
+    <functiondecl functionName="_get_signal_connection_list" lineNumber="1299"/>
+    <functiondecl functionName="_get_incoming_connections" lineNumber="1317"/>
+    <functiondecl functionName="has_signal" lineNumber="1328"/>
+    <functiondecl functionName="get_signal_list" lineNumber="1347"/>
+    <functiondecl functionName="get_all_signal_connections" lineNumber="1369"/>
+    <functiondecl functionName="get_signal_connection_list" lineNumber="1384"/>
+    <functiondecl functionName="get_persistent_signal_connection_count" lineNumber="1394"/>
+    <functiondecl functionName="get_signals_connected_to_this" lineNumber="1413"/>
+    <functiondecl functionName="connect_compat" lineNumber="1420"/>
+    <functiondecl functionName="connect" lineNumber="1424"/>
+    <functiondecl functionName="is_connected_compat" lineNumber="1485"/>
+    <functiondecl functionName="is_connected" lineNumber="1490"/>
+    <functiondecl functionName="disconnect_compat" lineNumber="1512"/>
+    <functiondecl functionName="disconnect" lineNumber="1517"/>
+    <functiondecl functionName="_disconnect" lineNumber="1521"/>
+    <functiondecl functionName="_set_bind" lineNumber="1551"/>
+    <functiondecl functionName="_get_bind" lineNumber="1556"/>
+    <functiondecl functionName="_set_indexed_bind" lineNumber="1561"/>
+    <functiondecl functionName="_get_indexed_bind" lineNumber="1566"/>
+    <functiondecl functionName="initialize_class" lineNumber="1571"/>
+    <functiondecl functionName="tr" lineNumber="1581"/>
+    <functiondecl functionName="_clear_internal_resource_paths" lineNumber="1589"/>
+    <functiondecl functionName="clear_internal_resource_paths" lineNumber="1651"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1663"/>
+    <functiondecl functionName="call_deferred" lineNumber="1768"/>
+    <functiondecl functionName="set_deferred" lineNumber="1773"/>
+    <functiondecl functionName="set_block_signals" lineNumber="1777"/>
+    <functiondecl functionName="is_blocking_signals" lineNumber="1782"/>
+    <functiondecl functionName="get_translatable_strings" lineNumber="1787"/>
+    <functiondecl functionName="get_static_property_type" lineNumber="1806"/>
+    <functiondecl functionName="get_static_property_type_indexed" lineNumber="1825"/>
+    <functiondecl functionName="is_queued_for_deletion" lineNumber="1869"/>
+    <functiondecl functionName="get_script_instance_binding" lineNumber="1891"/>
+    <functiondecl functionName="has_script_instance_binding" lineNumber="1912"/>
+    <functiondecl functionName="set_script_instance_binding" lineNumber="1917"/>
+    <functiondecl functionName="_construct_object" lineNumber="1924"/>
+    <functiondecl functionName="predelete_handler" lineNumber="2004"/>
+    <functiondecl functionName="postinitialize_handler" lineNumber="2009"/>
+    <functiondecl functionName="get_argument_options" lineNumber="2024"/>
+    <functiondecl functionName="get_object_count" lineNumber="2033"/>
+    <functiondecl functionName="add_instance" lineNumber="2038"/>
+    <functiondecl functionName="remove_instance" lineNumber="2084"/>
+    <functiondecl functionName="setup" lineNumber="2117"/>
+    <functiondecl functionName="cleanup" lineNumber="2122"/>
+    <functiondecl functionName="from_dict" lineNumber="77"/>
+    <functiondecl functionName="convert_property_list" lineNumber="103"/>
+    <functiondecl functionName="from_dict" lineNumber="135"/>
+    <functiondecl functionName="_predelete" lineNumber="366"/>
+    <functiondecl functionName="_postinitialize" lineNumber="376"/>
+    <functiondecl functionName="get_valid_parents_static" lineNumber="382"/>
+    <functiondecl functionName="_get_valid_parents_static" lineNumber="384"/>
+    <functiondecl functionName="set" lineNumber="387"/>
+    <functiondecl functionName="get" lineNumber="462"/>
+    <functiondecl functionName="set_indexed" lineNumber="534"/>
+    <functiondecl functionName="get_indexed" lineNumber="586"/>
+    <functiondecl functionName="get_property_list" lineNumber="607"/>
+    <functiondecl functionName="_validate_property" lineNumber="631"/>
+    <functiondecl functionName="get_method_list" lineNumber="634"/>
+    <functiondecl functionName="_call_bind" lineNumber="642"/>
+    <functiondecl functionName="_call_deferred_bind" lineNumber="662"/>
+    <functiondecl functionName="call_multilevel" lineNumber="719"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="752"/>
+    <functiondecl functionName="has_method" lineNumber="773"/>
+    <functiondecl functionName="getvar" lineNumber="788"/>
+    <functiondecl functionName="setvar" lineNumber="794"/>
+    <functiondecl functionName="callv" lineNumber="800"/>
+    <functiondecl functionName="call" lineNumber="818"/>
+    <functiondecl functionName="call_multilevel" lineNumber="835"/>
+    <functiondecl functionName="call" lineNumber="850"/>
+    <functiondecl functionName="notification" lineNumber="912"/>
+    <functiondecl functionName="to_string" lineNumber="921"/>
+    <functiondecl functionName="_changed_callback" lineNumber="931"/>
+    <functiondecl functionName="add_change_receptor" lineNumber="934"/>
+    <functiondecl functionName="remove_change_receptor" lineNumber="939"/>
+    <functiondecl functionName="property_list_changed_notify" lineNumber="944"/>
+    <functiondecl functionName="cancel_delete" lineNumber="949"/>
+    <functiondecl functionName="set_script_and_instance" lineNumber="954"/>
+    <functiondecl functionName="set_script" lineNumber="965"/>
+    <functiondecl functionName="set_script_instance" lineNumber="992"/>
+    <functiondecl functionName="get_script" lineNumber="1008"/>
+    <functiondecl functionName="has_meta" lineNumber="1013"/>
+    <functiondecl functionName="set_meta" lineNumber="1018"/>
+    <functiondecl functionName="get_meta" lineNumber="1028"/>
+    <functiondecl functionName="remove_meta" lineNumber="1034"/>
+    <functiondecl functionName="_get_property_list_bind" lineNumber="1038"/>
+    <functiondecl functionName="_get_method_list_bind" lineNumber="1045"/>
+    <functiondecl functionName="_get_meta_list_bind" lineNumber="1061"/>
+    <functiondecl functionName="get_meta_list" lineNumber="1074"/>
+    <functiondecl functionName="add_user_signal" lineNumber="1084"/>
+    <functiondecl functionName="_has_user_signal" lineNumber="1094"/>
+    <functiondecl functionName="_emit_signal" lineNumber="1107"/>
+    <functiondecl functionName="emit_signal" lineNumber="1135"/>
+    <functiondecl functionName="emit_signal" lineNumber="1244"/>
+    <functiondecl functionName="_add_user_signal" lineNumber="1260"/>
+    <functiondecl functionName="_get_signal_list" lineNumber="1285"/>
+    <functiondecl functionName="_get_signal_connection_list" lineNumber="1299"/>
+    <functiondecl functionName="_get_incoming_connections" lineNumber="1317"/>
+    <functiondecl functionName="has_signal" lineNumber="1328"/>
+    <functiondecl functionName="get_signal_list" lineNumber="1347"/>
+    <functiondecl functionName="get_all_signal_connections" lineNumber="1369"/>
+    <functiondecl functionName="get_signal_connection_list" lineNumber="1384"/>
+    <functiondecl functionName="get_persistent_signal_connection_count" lineNumber="1394"/>
+    <functiondecl functionName="get_signals_connected_to_this" lineNumber="1413"/>
+    <functiondecl functionName="connect_compat" lineNumber="1420"/>
+    <functiondecl functionName="connect" lineNumber="1424"/>
+    <functiondecl functionName="is_connected_compat" lineNumber="1485"/>
+    <functiondecl functionName="is_connected" lineNumber="1490"/>
+    <functiondecl functionName="disconnect_compat" lineNumber="1512"/>
+    <functiondecl functionName="disconnect" lineNumber="1517"/>
+    <functiondecl functionName="_disconnect" lineNumber="1521"/>
+    <functiondecl functionName="_set_bind" lineNumber="1551"/>
+    <functiondecl functionName="_get_bind" lineNumber="1556"/>
+    <functiondecl functionName="_set_indexed_bind" lineNumber="1561"/>
+    <functiondecl functionName="_get_indexed_bind" lineNumber="1566"/>
+    <functiondecl functionName="initialize_class" lineNumber="1571"/>
+    <functiondecl functionName="tr" lineNumber="1581"/>
+    <functiondecl functionName="_clear_internal_resource_paths" lineNumber="1589"/>
+    <functiondecl functionName="clear_internal_resource_paths" lineNumber="1651"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1663"/>
+    <functiondecl functionName="call_deferred" lineNumber="1768"/>
+    <functiondecl functionName="set_deferred" lineNumber="1773"/>
+    <functiondecl functionName="set_block_signals" lineNumber="1777"/>
+    <functiondecl functionName="is_blocking_signals" lineNumber="1782"/>
+    <functiondecl functionName="get_translatable_strings" lineNumber="1787"/>
+    <functiondecl functionName="get_static_property_type" lineNumber="1806"/>
+    <functiondecl functionName="get_static_property_type_indexed" lineNumber="1825"/>
+    <functiondecl functionName="is_queued_for_deletion" lineNumber="1869"/>
+    <functiondecl functionName="get_script_instance_binding" lineNumber="1891"/>
+    <functiondecl functionName="has_script_instance_binding" lineNumber="1912"/>
+    <functiondecl functionName="set_script_instance_binding" lineNumber="1917"/>
+    <functiondecl functionName="_construct_object" lineNumber="1924"/>
+    <functiondecl functionName="predelete_handler" lineNumber="2004"/>
+    <functiondecl functionName="postinitialize_handler" lineNumber="2009"/>
+    <functiondecl functionName="get_argument_options" lineNumber="2024"/>
+    <functiondecl functionName="get_object_count" lineNumber="2033"/>
+    <functiondecl functionName="add_instance" lineNumber="2038"/>
+    <functiondecl functionName="remove_instance" lineNumber="2084"/>
+    <functiondecl functionName="setup" lineNumber="2117"/>
+    <functiondecl functionName="cleanup" lineNumber="2122"/>
+    <functiondecl functionName="from_dict" lineNumber="77"/>
+    <functiondecl functionName="convert_property_list" lineNumber="103"/>
+    <functiondecl functionName="from_dict" lineNumber="135"/>
+    <functiondecl functionName="_predelete" lineNumber="366"/>
+    <functiondecl functionName="_postinitialize" lineNumber="376"/>
+    <functiondecl functionName="get_valid_parents_static" lineNumber="382"/>
+    <functiondecl functionName="_get_valid_parents_static" lineNumber="384"/>
+    <functiondecl functionName="set" lineNumber="387"/>
+    <functiondecl functionName="get" lineNumber="462"/>
+    <functiondecl functionName="set_indexed" lineNumber="534"/>
+    <functiondecl functionName="get_indexed" lineNumber="586"/>
+    <functiondecl functionName="get_property_list" lineNumber="607"/>
+    <functiondecl functionName="_validate_property" lineNumber="631"/>
+    <functiondecl functionName="get_method_list" lineNumber="634"/>
+    <functiondecl functionName="_call_bind" lineNumber="642"/>
+    <functiondecl functionName="_call_deferred_bind" lineNumber="662"/>
+    <functiondecl functionName="call_multilevel" lineNumber="719"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="752"/>
+    <functiondecl functionName="has_method" lineNumber="773"/>
+    <functiondecl functionName="getvar" lineNumber="788"/>
+    <functiondecl functionName="setvar" lineNumber="794"/>
+    <functiondecl functionName="callv" lineNumber="800"/>
+    <functiondecl functionName="call" lineNumber="818"/>
+    <functiondecl functionName="call_multilevel" lineNumber="835"/>
+    <functiondecl functionName="call" lineNumber="850"/>
+    <functiondecl functionName="notification" lineNumber="912"/>
+    <functiondecl functionName="to_string" lineNumber="921"/>
+    <functiondecl functionName="_changed_callback" lineNumber="931"/>
+    <functiondecl functionName="add_change_receptor" lineNumber="934"/>
+    <functiondecl functionName="remove_change_receptor" lineNumber="939"/>
+    <functiondecl functionName="property_list_changed_notify" lineNumber="944"/>
+    <functiondecl functionName="cancel_delete" lineNumber="949"/>
+    <functiondecl functionName="set_script_and_instance" lineNumber="954"/>
+    <functiondecl functionName="set_script" lineNumber="965"/>
+    <functiondecl functionName="set_script_instance" lineNumber="992"/>
+    <functiondecl functionName="get_script" lineNumber="1008"/>
+    <functiondecl functionName="has_meta" lineNumber="1013"/>
+    <functiondecl functionName="set_meta" lineNumber="1018"/>
+    <functiondecl functionName="get_meta" lineNumber="1028"/>
+    <functiondecl functionName="remove_meta" lineNumber="1034"/>
+    <functiondecl functionName="_get_property_list_bind" lineNumber="1038"/>
+    <functiondecl functionName="_get_method_list_bind" lineNumber="1045"/>
+    <functiondecl functionName="_get_meta_list_bind" lineNumber="1061"/>
+    <functiondecl functionName="get_meta_list" lineNumber="1074"/>
+    <functiondecl functionName="add_user_signal" lineNumber="1084"/>
+    <functiondecl functionName="_has_user_signal" lineNumber="1094"/>
+    <functiondecl functionName="_emit_signal" lineNumber="1107"/>
+    <functiondecl functionName="emit_signal" lineNumber="1135"/>
+    <functiondecl functionName="emit_signal" lineNumber="1244"/>
+    <functiondecl functionName="_add_user_signal" lineNumber="1260"/>
+    <functiondecl functionName="_get_signal_list" lineNumber="1285"/>
+    <functiondecl functionName="_get_signal_connection_list" lineNumber="1299"/>
+    <functiondecl functionName="_get_incoming_connections" lineNumber="1317"/>
+    <functiondecl functionName="has_signal" lineNumber="1328"/>
+    <functiondecl functionName="get_signal_list" lineNumber="1347"/>
+    <functiondecl functionName="get_all_signal_connections" lineNumber="1369"/>
+    <functiondecl functionName="get_signal_connection_list" lineNumber="1384"/>
+    <functiondecl functionName="get_persistent_signal_connection_count" lineNumber="1394"/>
+    <functiondecl functionName="get_signals_connected_to_this" lineNumber="1413"/>
+    <functiondecl functionName="connect_compat" lineNumber="1420"/>
+    <functiondecl functionName="connect" lineNumber="1424"/>
+    <functiondecl functionName="is_connected_compat" lineNumber="1485"/>
+    <functiondecl functionName="is_connected" lineNumber="1490"/>
+    <functiondecl functionName="disconnect_compat" lineNumber="1512"/>
+    <functiondecl functionName="disconnect" lineNumber="1517"/>
+    <functiondecl functionName="_disconnect" lineNumber="1521"/>
+    <functiondecl functionName="_set_bind" lineNumber="1551"/>
+    <functiondecl functionName="_get_bind" lineNumber="1556"/>
+    <functiondecl functionName="_set_indexed_bind" lineNumber="1561"/>
+    <functiondecl functionName="_get_indexed_bind" lineNumber="1566"/>
+    <functiondecl functionName="initialize_class" lineNumber="1571"/>
+    <functiondecl functionName="tr" lineNumber="1581"/>
+    <functiondecl functionName="_clear_internal_resource_paths" lineNumber="1589"/>
+    <functiondecl functionName="editor_set_section_unfold" lineNumber="1635"/>
+    <functiondecl functionName="editor_is_section_unfolded" lineNumber="1644"/>
+    <functiondecl functionName="clear_internal_resource_paths" lineNumber="1651"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1663"/>
+    <functiondecl functionName="call_deferred" lineNumber="1768"/>
+    <functiondecl functionName="set_deferred" lineNumber="1773"/>
+    <functiondecl functionName="set_block_signals" lineNumber="1777"/>
+    <functiondecl functionName="is_blocking_signals" lineNumber="1782"/>
+    <functiondecl functionName="get_translatable_strings" lineNumber="1787"/>
+    <functiondecl functionName="get_static_property_type" lineNumber="1806"/>
+    <functiondecl functionName="get_static_property_type_indexed" lineNumber="1825"/>
+    <functiondecl functionName="is_queued_for_deletion" lineNumber="1869"/>
+    <functiondecl functionName="set_edited" lineNumber="1874"/>
+    <functiondecl functionName="is_edited" lineNumber="1880"/>
+    <functiondecl functionName="get_edited_version" lineNumber="1885"/>
+    <functiondecl functionName="get_script_instance_binding" lineNumber="1891"/>
+    <functiondecl functionName="has_script_instance_binding" lineNumber="1912"/>
+    <functiondecl functionName="set_script_instance_binding" lineNumber="1917"/>
+    <functiondecl functionName="_construct_object" lineNumber="1924"/>
+    <functiondecl functionName="predelete_handler" lineNumber="2004"/>
+    <functiondecl functionName="postinitialize_handler" lineNumber="2009"/>
+    <functiondecl functionName="get_argument_options" lineNumber="2024"/>
+    <functiondecl functionName="get_object_count" lineNumber="2033"/>
+    <functiondecl functionName="add_instance" lineNumber="2038"/>
+    <functiondecl functionName="remove_instance" lineNumber="2084"/>
+    <functiondecl functionName="setup" lineNumber="2117"/>
+    <functiondecl functionName="cleanup" lineNumber="2122"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="BIND_CONSTANT"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BIND_VMETHOD"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CALL_ERROR_INVALID_ARGUMENT"/>
+    <functioncall functionName="CALL_ERROR_INVALID_METHOD"/>
+    <functioncall functionName="CALL_ERROR_TOO_FEW_ARGUMENTS"/>
+    <functioncall functionName="CALL_ERROR_TOO_MANY_ARGUMENTS"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="CONNECT_DEFERRED"/>
+    <functioncall functionName="CONNECT_ONESHOT"/>
+    <functioncall functionName="CONNECT_PERSIST"/>
+    <functioncall functionName="CONNECT_REFERENCE_COUNTED"/>
+    <functioncall functionName="CRASH_COND"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="Connection"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="DICTIONARY"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="Dictionary"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_METHOD_NOT_FOUND"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MAX_SCRIPT_INSTANCE_BINDINGS"/>
+    <functioncall functionName="METHOD_FLAGS_DEFAULT"/>
+    <functioncall functionName="METHOD_FLAG_NORMAL"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="NOTIFICATION_POSTINITIALIZE"/>
+    <functioncall functionName="NOTIFICATION_PREDELETE"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="ObjectSlot"/>
+    <functioncall functionName="PROPERTY_HINT_ARRAY_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_COLOR_NO_ALPHA"/>
+    <functioncall functionName="PROPERTY_HINT_DIR"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_EASING"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_FLAGS"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_DIR"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_IMAGE_COMPRESS_LOSSLESS"/>
+    <functioncall functionName="PROPERTY_HINT_IMAGE_COMPRESS_LOSSY"/>
+    <functioncall functionName="PROPERTY_HINT_INT_IS_OBJECTID"/>
+    <functioncall functionName="PROPERTY_HINT_KEY_ACCEL"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_2D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_2D_RENDER"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_RENDER"/>
+    <functioncall functionName="PROPERTY_HINT_LENGTH"/>
+    <functioncall functionName="PROPERTY_HINT_MAX"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_BASE_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_INSTANCE"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_SCRIPT"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_VARIANT_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_MULTILINE_TEXT"/>
+    <functioncall functionName="PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE"/>
+    <functioncall functionName="PROPERTY_HINT_NODE_PATH_VALID_TYPES"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_OBJECT_ID"/>
+    <functioncall functionName="PROPERTY_HINT_OBJECT_TOO_BIG"/>
+    <functioncall functionName="PROPERTY_HINT_PLACEHOLDER_TEXT"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_BASE_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_INSTANCE"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_SCRIPT"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_VARIANT_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_SAVE_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_TYPE_STRING"/>
+    <functioncall functionName="PROPERTY_USAGE_CATEGORY"/>
+    <functioncall functionName="PROPERTY_USAGE_DEFAULT"/>
+    <functioncall functionName="PROPERTY_USAGE_GROUP"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNATIONALIZED"/>
+    <functioncall functionName="PROPERTY_USAGE_NETWORK"/>
+    <functioncall functionName="PropertyHint"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="S"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="Signal"/>
+    <functioncall functionName="SignalData"/>
+    <functioncall functionName="Slot"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="Type"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_ObjectDebugLock"/>
+    <functioncall functionName="_add_class"/>
+    <functioncall functionName="_add_user_signal"/>
+    <functioncall functionName="_bind_methods"/>
+    <functioncall functionName="_block_signals"/>
+    <functioncall functionName="_call_bind"/>
+    <functioncall functionName="_call_deferred_bind"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_changed_callback"/>
+    <functioncall functionName="_class_name"/>
+    <functioncall functionName="_class_ptr"/>
+    <functioncall functionName="_clear_internal_resource_paths"/>
+    <functioncall functionName="_construct_object"/>
+    <functioncall functionName="_debug_lock"/>
+    <functioncall functionName="_disconnect"/>
+    <functioncall functionName="_emit_signal"/>
+    <functioncall functionName="_emitting"/>
+    <functioncall functionName="_free"/>
+    <functioncall functionName="_get_bind"/>
+    <functioncall functionName="_get_class_namev"/>
+    <functioncall functionName="_get_incoming_connections"/>
+    <functioncall functionName="_get_indexed_bind"/>
+    <functioncall functionName="_get_meta_list_bind"/>
+    <functioncall functionName="_get_method_list_bind"/>
+    <functioncall functionName="_get_property_list_bind"/>
+    <functioncall functionName="_get_property_listv"/>
+    <functioncall functionName="_get_signal_connection_list"/>
+    <functioncall functionName="_get_signal_list"/>
+    <functioncall functionName="_getv"/>
+    <functioncall functionName="_has_user_signal"/>
+    <functioncall functionName="_initialize_classv"/>
+    <functioncall functionName="_meta"/>
+    <functioncall functionName="_notificationv"/>
+    <functioncall functionName="_postinitialize"/>
+    <functioncall functionName="_predelete"/>
+    <functioncall functionName="_predelete_ok"/>
+    <functioncall functionName="_script"/>
+    <functioncall functionName="_script_instance_bindings"/>
+    <functioncall functionName="_set_bind"/>
+    <functioncall functionName="_set_indexed_bind"/>
+    <functioncall functionName="_setv"/>
+    <functioncall functionName="_test_call_error"/>
+    <functioncall functionName="add_instance"/>
+    <functioncall functionName="add_signal"/>
+    <functioncall functionName="add_user_signal"/>
+    <functioncall functionName="add_virtual_method"/>
+    <functioncall functionName="alloc_instance_binding_data"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="are_languages_finished"/>
+    <functioncall functionName="argc"/>
+    <functioncall functionName="argptr"/>
+    <functioncall functionName="argptrs"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="argument"/>
+    <functioncall functionName="arguments"/>
+    <functioncall functionName="atomic_increment"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bind_vararg_method"/>
+    <functioncall functionName="binds"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cE"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_multilevel"/>
+    <functioncall functionName="call_multilevel_reversed"/>
+    <functioncall functionName="callable"/>
+    <functioncall functionName="callv"/>
+    <functioncall functionName="can_instance"/>
+    <functioncall functionName="can_translate_messages"/>
+    <functioncall functionName="cast_to &lt; Reference &gt;"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="class_exists"/>
+    <functioncall functionName="class_name"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_internal_resource_paths"/>
+    <functioncall functionName="conn"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="conns"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="construct"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convert_property_list"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="da"/>
+    <functioncall functionName="dd"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="dynamic_cast"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="expected"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free_instance_binding_data"/>
+    <functioncall functionName="from_dict"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_all_signal_connections"/>
+    <functioncall functionName="get_array"/>
+    <functioncall functionName="get_as_property_path"/>
+    <functioncall functionName="get_call_error_text"/>
+    <functioncall functionName="get_callable_error_text"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_class_name"/>
+    <functioncall functionName="get_class_ptr_static"/>
+    <functioncall functionName="get_class_static"/>
+    <functioncall functionName="get_indexed"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_language"/>
+    <functioncall functionName="get_meta"/>
+    <functioncall functionName="get_method"/>
+    <functioncall functionName="get_method_list"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_named"/>
+    <functioncall functionName="get_object"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_property"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_property_type"/>
+    <functioncall functionName="get_script"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_script_signal_list"/>
+    <functioncall functionName="get_signal_list"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_static_property_type"/>
+    <functioncall functionName="get_subnames"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_type_name"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="getv"/>
+    <functioncall functionName="getvar"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_meta"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="has_script_signal"/>
+    <functioncall functionName="has_signal"/>
+    <functioncall functionName="hint"/>
+    <functioncall functionName="hint_string"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx_conn"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="initialize_class"/>
+    <functioncall functionName="initialized"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance_binding_count"/>
+    <functioncall functionName="instance_create"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_blocking_signals"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_class_ptr"/>
+    <functioncall functionName="is_connected"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_queued_for_deletion"/>
+    <functioncall functionName="is_reference"/>
+    <functioncall functionName="is_stdout_verbose"/>
+    <functioncall functionName="is_tool"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="lpi"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memrealloc"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="metadata"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="mi"/>
+    <functioncall functionName="miget"/>
+    <functioncall functionName="ml"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_slot_max"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_free"/>
+    <functioncall functionName="node_name"/>
+    <functioncall functionName="notification"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="object"/>
+    <functioncall functionName="object_slots"/>
+    <functioncall functionName="operatorDictionary"/>
+    <functioncall functionName="operatorVariant"/>
+    <functioncall functionName="p_arg1"/>
+    <functioncall functionName="p_arg2"/>
+    <functioncall functionName="p_arg3"/>
+    <functioncall functionName="p_arg4"/>
+    <functioncall functionName="p_arg5"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_binds"/>
+    <functioncall functionName="p_block"/>
+    <functioncall functionName="p_callable"/>
+    <functioncall functionName="p_class_name"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_edited"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_force"/>
+    <functioncall functionName="p_func"/>
+    <functioncall functionName="p_hint"/>
+    <functioncall functionName="p_hint_string"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_instance_id"/>
+    <functioncall functionName="p_list"/>
+    <functioncall functionName="p_message"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_notification"/>
+    <functioncall functionName="p_obj"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_param1"/>
+    <functioncall functionName="p_param2"/>
+    <functioncall functionName="p_param3"/>
+    <functioncall functionName="p_param4"/>
+    <functioncall functionName="p_param5"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_receptor"/>
+    <functioncall functionName="p_reference"/>
+    <functioncall functionName="p_ret"/>
+    <functioncall functionName="p_reversed"/>
+    <functioncall functionName="p_script"/>
+    <functioncall functionName="p_script_language_index"/>
+    <functioncall functionName="p_section"/>
+    <functioncall functionName="p_set"/>
+    <functioncall functionName="p_signal"/>
+    <functioncall functionName="p_signals"/>
+    <functioncall functionName="p_to_method"/>
+    <functioncall functionName="p_to_object"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_unfolded"/>
+    <functioncall functionName="p_usage"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_var"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="param"/>
+    <functioncall functionName="pinfo"/>
+    <functioncall functionName="placeholder_instance_create"/>
+    <functioncall functionName="plget"/>
+    <functioncall functionName="plist"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="property_get_fallback"/>
+    <functioncall functionName="property_list_changed_notify"/>
+    <functioncall functionName="property_set_fallback"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_call"/>
+    <functioncall functionName="push_callable"/>
+    <functioncall functionName="push_set"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="r_valid"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="remove_instance"/>
+    <functioncall functionName="remove_meta"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="return_val"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="script"/>
+    <functioncall functionName="script_changed"/>
+    <functioncall functionName="script_data"/>
+    <functioncall functionName="script_instance"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_block_signals"/>
+    <functioncall functionName="set_deferred"/>
+    <functioncall functionName="set_edited"/>
+    <functioncall functionName="set_indexed"/>
+    <functioncall functionName="set_message_translation"/>
+    <functioncall functionName="set_meta"/>
+    <functioncall functionName="set_named"/>
+    <functioncall functionName="set_path"/>
+    <functioncall functionName="set_property"/>
+    <functioncall functionName="set_script"/>
+    <functioncall functionName="setvar"/>
+    <functioncall functionName="signal"/>
+    <functioncall functionName="signal_is_valid"/>
+    <functioncall functionName="signal_list"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="slot"/>
+    <functioncall functionName="slot_count"/>
+    <functioncall functionName="slot_map"/>
+    <functioncall functionName="slot_max"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="target_object"/>
+    <functioncall functionName="text"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_string"/>
+    <functioncall functionName="tr"/>
+    <functioncall functionName="translate"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="unlikely"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="usage"/>
+    <functioncall functionName="user"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="validator"/>
+    <functioncall functionName="validator_counter"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

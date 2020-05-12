@@ -1,0 +1,1009 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1589886313">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;NativeScriptDesc::base_data&apos; is not initialized in the constructor." verbose="Member variable &apos;NativeScriptDesc::base_data&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h" line="89" column="9"/>
+            <symbol>NativeScriptDesc::base_data</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;NativeScriptDesc::is_tool&apos; is not initialized in the constructor." verbose="Member variable &apos;NativeScriptDesc::is_tool&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h" line="89" column="9"/>
+            <symbol>NativeScriptDesc::is_tool</symbol>
+        </error>
+        <error id="noConstructor" severity="style" msg="The class &apos;NativeScriptInstance&apos; does not have a constructor although it has private member variables." verbose="The class &apos;NativeScriptInstance&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h" line="203" column="1"/>
+            <symbol>NativeScriptInstance</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;NativeScriptLanguage::lang_idx&apos; is not initialized in the constructor." verbose="Member variable &apos;NativeScriptLanguage::lang_idx&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1234" column="23"/>
+            <symbol>NativeScriptLanguage::lang_idx</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;NativeScriptLanguage::profiling&apos; is not initialized in the constructor." verbose="Member variable &apos;NativeScriptLanguage::profiling&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1234" column="23"/>
+            <symbol>NativeScriptLanguage::profiling</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;library&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;library&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="785" column="2"/>
+            <symbol>library</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;lib_path&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;lib_path&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="786" column="2"/>
+            <symbol>lib_path</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;class_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;class_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="787" column="2"/>
+            <symbol>class_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_init_call_type&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_init_call_type&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1244" column="2"/>
+            <symbol>_init_call_type</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_init_call_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_init_call_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1245" column="2"/>
+            <symbol>_init_call_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_terminate_call_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_terminate_call_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1246" column="2"/>
+            <symbol>_terminate_call_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_noarg_call_type&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_noarg_call_type&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1247" column="2"/>
+            <symbol>_noarg_call_type</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_frame_call_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_frame_call_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1248" column="2"/>
+            <symbol>_frame_call_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_thread_enter_call_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_thread_enter_call_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1250" column="2"/>
+            <symbol>_thread_enter_call_name</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;_thread_exit_call_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;_thread_exit_call_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1251" column="2"/>
+            <symbol>_thread_exit_call_name</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!script_data&apos; is redundant or there is possible null pointer dereference: script_data." verbose="Either the condition &apos;!script_data&apos; is redundant or there is possible null pointer dereference: script_data." cwe="476">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="671" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="667" column="49" info="Assignment &apos;script_data=get_script_desc()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="669" column="22" info="Assuming that condition &apos;!script_data&apos; is not redundant"/>
+            <symbol>script_data</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="191" column="25"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="766" column="35"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="2" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="798" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1125" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:245:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="1" my-argname="script_data" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="797" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:276:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1723" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:277:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1729" col="75" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:178:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="396" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:366:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1389" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:377:8" my-argnr="2" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1539" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:381:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1604" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:382:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1626" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:413:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1946" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="2" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="798" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1125" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:245:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="1" my-argname="script_data" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="797" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:276:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1723" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:277:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1729" col="75" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:178:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="396" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:366:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1389" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:377:8" my-argnr="2" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1539" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:381:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1604" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:382:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1626" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:413:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1946" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="2" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="798" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1125" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:245:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="1" my-argname="script_data" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="797" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:276:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1723" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:277:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1729" col="75" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:109:7" my-argnr="1" my-argname="p_placeholder" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="105" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:178:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="396" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:366:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1389" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:377:8" my-argnr="2" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1539" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:381:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1604" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:382:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1626" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:413:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1946" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="2" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:225:18" call-funcname="call" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1017" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="798" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" call-funcname="_ml_call_reversed" call-argnr="3" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1125" col="3" my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:245:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:213:7" my-argnr="1" my-argname="script_data" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="797" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:276:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1723" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:277:7" my-argnr="1" my-argname="script" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1729" col="75" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:109:7" my-argnr="1" my-argname="p_placeholder" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="105" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:178:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="396" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:366:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1389" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:377:8" my-argnr="2" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1539" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:381:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1604" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:382:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1626" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.h:413:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/nativescript/nativescript.cpp" line="1946" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_bind_methods" lineNumber="61"/>
+    <functiondecl functionName="inherits_script" lineNumber="114"/>
+    <functiondecl functionName="set_class_name" lineNumber="121"/>
+    <functiondecl functionName="get_class_name" lineNumber="125"/>
+    <functiondecl functionName="set_library" lineNumber="129"/>
+    <functiondecl functionName="get_library" lineNumber="151"/>
+    <functiondecl functionName="set_script_class_name" lineNumber="155"/>
+    <functiondecl functionName="get_script_class_name" lineNumber="159"/>
+    <functiondecl functionName="set_script_class_icon_path" lineNumber="163"/>
+    <functiondecl functionName="get_script_class_icon_path" lineNumber="167"/>
+    <functiondecl functionName="can_instance" lineNumber="171"/>
+    <functiondecl functionName="get_base_script" lineNumber="185"/>
+    <functiondecl functionName="get_instance_base_type" lineNumber="200"/>
+    <functiondecl functionName="instance_create" lineNumber="209"/>
+    <functiondecl functionName="placeholder_instance_create" lineNumber="241"/>
+    <functiondecl functionName="instance_has" lineNumber="254"/>
+    <functiondecl functionName="has_source_code" lineNumber="258"/>
+    <functiondecl functionName="get_source_code" lineNumber="262"/>
+    <functiondecl functionName="set_source_code" lineNumber="266"/>
+    <functiondecl functionName="reload" lineNumber="269"/>
+    <functiondecl functionName="has_method" lineNumber="273"/>
+    <functiondecl functionName="get_method_info" lineNumber="285"/>
+    <functiondecl functionName="is_valid" lineNumber="302"/>
+    <functiondecl functionName="is_tool" lineNumber="306"/>
+    <functiondecl functionName="get_language" lineNumber="315"/>
+    <functiondecl functionName="has_script_signal" lineNumber="319"/>
+    <functiondecl functionName="get_script_signal_list" lineNumber="330"/>
+    <functiondecl functionName="get_property_default_value" lineNumber="352"/>
+    <functiondecl functionName="update_exports" lineNumber="367"/>
+    <functiondecl functionName="get_script_method_list" lineNumber="370"/>
+    <functiondecl functionName="get_script_property_list" lineNumber="392"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="410"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="433"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="449"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="468"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="505"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="539"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="560"/>
+    <functiondecl functionName="get_rset_property" lineNumber="576"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="595"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="632"/>
+    <functiondecl functionName="get_class_documentation" lineNumber="666"/>
+    <functiondecl functionName="get_method_documentation" lineNumber="674"/>
+    <functiondecl functionName="get_signal_documentation" lineNumber="693"/>
+    <functiondecl functionName="get_property_documentation" lineNumber="712"/>
+    <functiondecl functionName="_new" lineNumber="731"/>
+    <functiondecl functionName="_ml_call_reversed" lineNumber="796"/>
+    <functiondecl functionName="set" lineNumber="808"/>
+    <functiondecl functionName="get" lineNumber="843"/>
+    <functiondecl functionName="get_property_list" lineNumber="881"/>
+    <functiondecl functionName="get_property_type" lineNumber="938"/>
+    <functiondecl functionName="get_method_list" lineNumber="955"/>
+    <functiondecl functionName="has_method" lineNumber="959"/>
+    <functiondecl functionName="call" lineNumber="963"/>
+    <functiondecl functionName="notification" lineNumber="999"/>
+    <functiondecl functionName="to_string" lineNumber="1014"/>
+    <functiondecl functionName="refcount_incremented" lineNumber="1034"/>
+    <functiondecl functionName="refcount_decremented" lineNumber="1042"/>
+    <functiondecl functionName="get_script" lineNumber="1056"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="1060"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="1064"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="1068"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="1072"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="1076"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="1080"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="1084"/>
+    <functiondecl functionName="get_rset_property" lineNumber="1088"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="1092"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="1096"/>
+    <functiondecl functionName="get_language" lineNumber="1100"/>
+    <functiondecl functionName="call_multilevel" lineNumber="1104"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="1121"/>
+    <functiondecl functionName="_unload_stuff" lineNumber="1147"/>
+    <functiondecl functionName="get_name" lineNumber="1276"/>
+    <functiondecl functionName="_add_reload_node" lineNumber="1280"/>
+    <functiondecl functionName="init" lineNumber="1287"/>
+    <functiondecl functionName="get_type" lineNumber="1307"/>
+    <functiondecl functionName="get_extension" lineNumber="1310"/>
+    <functiondecl functionName="execute_file" lineNumber="1313"/>
+    <functiondecl functionName="finish" lineNumber="1316"/>
+    <functiondecl functionName="get_reserved_words" lineNumber="1319"/>
+    <functiondecl functionName="get_comment_delimiters" lineNumber="1321"/>
+    <functiondecl functionName="get_string_delimiters" lineNumber="1323"/>
+    <functiondecl functionName="get_template" lineNumber="1326"/>
+    <functiondecl functionName="validate" lineNumber="1331"/>
+    <functiondecl functionName="create_script" lineNumber="1335"/>
+    <functiondecl functionName="has_named_classes" lineNumber="1339"/>
+    <functiondecl functionName="supports_builtin_mode" lineNumber="1342"/>
+    <functiondecl functionName="find_function" lineNumber="1345"/>
+    <functiondecl functionName="make_function" lineNumber="1348"/>
+    <functiondecl functionName="auto_indent_code" lineNumber="1351"/>
+    <functiondecl functionName="add_global_constant" lineNumber="1353"/>
+    <functiondecl functionName="debug_get_error" lineNumber="1357"/>
+    <functiondecl functionName="debug_get_stack_level_count" lineNumber="1360"/>
+    <functiondecl functionName="debug_get_stack_level_line" lineNumber="1363"/>
+    <functiondecl functionName="debug_get_stack_level_function" lineNumber="1366"/>
+    <functiondecl functionName="debug_get_stack_level_source" lineNumber="1369"/>
+    <functiondecl functionName="debug_get_stack_level_locals" lineNumber="1372"/>
+    <functiondecl functionName="debug_get_stack_level_members" lineNumber="1374"/>
+    <functiondecl functionName="debug_get_globals" lineNumber="1376"/>
+    <functiondecl functionName="debug_parse_stack_level_expression" lineNumber="1378"/>
+    <functiondecl functionName="reload_all_scripts" lineNumber="1383"/>
+    <functiondecl functionName="reload_tool_script" lineNumber="1386"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1388"/>
+    <functiondecl functionName="get_public_functions" lineNumber="1392"/>
+    <functiondecl functionName="get_public_constants" lineNumber="1395"/>
+    <functiondecl functionName="profiling_start" lineNumber="1398"/>
+    <functiondecl functionName="profiling_stop" lineNumber="1407"/>
+    <functiondecl functionName="profiling_get_accumulated_data" lineNumber="1415"/>
+    <functiondecl functionName="profiling_get_frame_data" lineNumber="1438"/>
+    <functiondecl functionName="profiling_add_data" lineNumber="1463"/>
+    <functiondecl functionName="register_binding_functions" lineNumber="1492"/>
+    <functiondecl functionName="unregister_binding_functions" lineNumber="1518"/>
+    <functiondecl functionName="get_instance_binding_data" lineNumber="1534"/>
+    <functiondecl functionName="alloc_instance_binding_data" lineNumber="1566"/>
+    <functiondecl functionName="free_instance_binding_data" lineNumber="1581"/>
+    <functiondecl functionName="refcount_incremented_instance_binding" lineNumber="1602"/>
+    <functiondecl functionName="refcount_decremented_instance_binding" lineNumber="1624"/>
+    <functiondecl functionName="set_global_type_tag" lineNumber="1650"/>
+    <functiondecl functionName="get_global_type_tag" lineNumber="1660"/>
+    <functiondecl functionName="defer_init_library" lineNumber="1675"/>
+    <functiondecl functionName="init_library" lineNumber="1683"/>
+    <functiondecl functionName="register_script" lineNumber="1720"/>
+    <functiondecl functionName="unregister_script" lineNumber="1726"/>
+    <functiondecl functionName="call_libraries_cb" lineNumber="1741"/>
+    <functiondecl functionName="frame" lineNumber="1761"/>
+    <functiondecl functionName="thread_enter" lineNumber="1797"/>
+    <functiondecl functionName="thread_exit" lineNumber="1801"/>
+    <functiondecl functionName="handles_global_class_type" lineNumber="1807"/>
+    <functiondecl functionName="get_global_class_name" lineNumber="1811"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1829"/>
+    <functiondecl functionName="_notification" lineNumber="1833"/>
+    <functiondecl functionName="load" lineNumber="1941"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1945"/>
+    <functiondecl functionName="handles_type" lineNumber="1949"/>
+    <functiondecl functionName="get_resource_type" lineNumber="1953"/>
+    <functiondecl functionName="save" lineNumber="1960"/>
+    <functiondecl functionName="recognize" lineNumber="1965"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1969"/>
+    <functiondecl functionName="_bind_methods" lineNumber="61"/>
+    <functiondecl functionName="inherits_script" lineNumber="114"/>
+    <functiondecl functionName="set_class_name" lineNumber="121"/>
+    <functiondecl functionName="get_class_name" lineNumber="125"/>
+    <functiondecl functionName="set_library" lineNumber="129"/>
+    <functiondecl functionName="get_library" lineNumber="151"/>
+    <functiondecl functionName="set_script_class_name" lineNumber="155"/>
+    <functiondecl functionName="get_script_class_name" lineNumber="159"/>
+    <functiondecl functionName="set_script_class_icon_path" lineNumber="163"/>
+    <functiondecl functionName="get_script_class_icon_path" lineNumber="167"/>
+    <functiondecl functionName="can_instance" lineNumber="171"/>
+    <functiondecl functionName="get_base_script" lineNumber="185"/>
+    <functiondecl functionName="get_instance_base_type" lineNumber="200"/>
+    <functiondecl functionName="instance_create" lineNumber="209"/>
+    <functiondecl functionName="placeholder_instance_create" lineNumber="241"/>
+    <functiondecl functionName="instance_has" lineNumber="254"/>
+    <functiondecl functionName="has_source_code" lineNumber="258"/>
+    <functiondecl functionName="get_source_code" lineNumber="262"/>
+    <functiondecl functionName="set_source_code" lineNumber="266"/>
+    <functiondecl functionName="reload" lineNumber="269"/>
+    <functiondecl functionName="has_method" lineNumber="273"/>
+    <functiondecl functionName="get_method_info" lineNumber="285"/>
+    <functiondecl functionName="is_valid" lineNumber="302"/>
+    <functiondecl functionName="is_tool" lineNumber="306"/>
+    <functiondecl functionName="get_language" lineNumber="315"/>
+    <functiondecl functionName="has_script_signal" lineNumber="319"/>
+    <functiondecl functionName="get_script_signal_list" lineNumber="330"/>
+    <functiondecl functionName="get_property_default_value" lineNumber="352"/>
+    <functiondecl functionName="update_exports" lineNumber="367"/>
+    <functiondecl functionName="get_script_method_list" lineNumber="370"/>
+    <functiondecl functionName="get_script_property_list" lineNumber="392"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="410"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="433"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="449"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="468"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="505"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="539"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="560"/>
+    <functiondecl functionName="get_rset_property" lineNumber="576"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="595"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="632"/>
+    <functiondecl functionName="get_class_documentation" lineNumber="666"/>
+    <functiondecl functionName="get_method_documentation" lineNumber="674"/>
+    <functiondecl functionName="get_signal_documentation" lineNumber="693"/>
+    <functiondecl functionName="get_property_documentation" lineNumber="712"/>
+    <functiondecl functionName="_new" lineNumber="731"/>
+    <functiondecl functionName="_ml_call_reversed" lineNumber="796"/>
+    <functiondecl functionName="set" lineNumber="808"/>
+    <functiondecl functionName="get" lineNumber="843"/>
+    <functiondecl functionName="get_property_list" lineNumber="881"/>
+    <functiondecl functionName="get_property_type" lineNumber="938"/>
+    <functiondecl functionName="get_method_list" lineNumber="955"/>
+    <functiondecl functionName="has_method" lineNumber="959"/>
+    <functiondecl functionName="call" lineNumber="963"/>
+    <functiondecl functionName="notification" lineNumber="999"/>
+    <functiondecl functionName="to_string" lineNumber="1014"/>
+    <functiondecl functionName="refcount_incremented" lineNumber="1034"/>
+    <functiondecl functionName="refcount_decremented" lineNumber="1042"/>
+    <functiondecl functionName="get_script" lineNumber="1056"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="1060"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="1064"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="1068"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="1072"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="1076"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="1080"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="1084"/>
+    <functiondecl functionName="get_rset_property" lineNumber="1088"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="1092"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="1096"/>
+    <functiondecl functionName="get_language" lineNumber="1100"/>
+    <functiondecl functionName="call_multilevel" lineNumber="1104"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="1121"/>
+    <functiondecl functionName="_unload_stuff" lineNumber="1147"/>
+    <functiondecl functionName="get_name" lineNumber="1276"/>
+    <functiondecl functionName="_add_reload_node" lineNumber="1280"/>
+    <functiondecl functionName="init" lineNumber="1287"/>
+    <functiondecl functionName="get_type" lineNumber="1307"/>
+    <functiondecl functionName="get_extension" lineNumber="1310"/>
+    <functiondecl functionName="execute_file" lineNumber="1313"/>
+    <functiondecl functionName="finish" lineNumber="1316"/>
+    <functiondecl functionName="get_reserved_words" lineNumber="1319"/>
+    <functiondecl functionName="get_comment_delimiters" lineNumber="1321"/>
+    <functiondecl functionName="get_string_delimiters" lineNumber="1323"/>
+    <functiondecl functionName="get_template" lineNumber="1326"/>
+    <functiondecl functionName="validate" lineNumber="1331"/>
+    <functiondecl functionName="create_script" lineNumber="1335"/>
+    <functiondecl functionName="has_named_classes" lineNumber="1339"/>
+    <functiondecl functionName="supports_builtin_mode" lineNumber="1342"/>
+    <functiondecl functionName="find_function" lineNumber="1345"/>
+    <functiondecl functionName="make_function" lineNumber="1348"/>
+    <functiondecl functionName="auto_indent_code" lineNumber="1351"/>
+    <functiondecl functionName="add_global_constant" lineNumber="1353"/>
+    <functiondecl functionName="debug_get_error" lineNumber="1357"/>
+    <functiondecl functionName="debug_get_stack_level_count" lineNumber="1360"/>
+    <functiondecl functionName="debug_get_stack_level_line" lineNumber="1363"/>
+    <functiondecl functionName="debug_get_stack_level_function" lineNumber="1366"/>
+    <functiondecl functionName="debug_get_stack_level_source" lineNumber="1369"/>
+    <functiondecl functionName="debug_get_stack_level_locals" lineNumber="1372"/>
+    <functiondecl functionName="debug_get_stack_level_members" lineNumber="1374"/>
+    <functiondecl functionName="debug_get_globals" lineNumber="1376"/>
+    <functiondecl functionName="debug_parse_stack_level_expression" lineNumber="1378"/>
+    <functiondecl functionName="reload_all_scripts" lineNumber="1383"/>
+    <functiondecl functionName="reload_tool_script" lineNumber="1386"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1388"/>
+    <functiondecl functionName="get_public_functions" lineNumber="1392"/>
+    <functiondecl functionName="get_public_constants" lineNumber="1395"/>
+    <functiondecl functionName="profiling_start" lineNumber="1398"/>
+    <functiondecl functionName="profiling_stop" lineNumber="1407"/>
+    <functiondecl functionName="profiling_get_accumulated_data" lineNumber="1415"/>
+    <functiondecl functionName="profiling_get_frame_data" lineNumber="1438"/>
+    <functiondecl functionName="profiling_add_data" lineNumber="1463"/>
+    <functiondecl functionName="register_binding_functions" lineNumber="1492"/>
+    <functiondecl functionName="unregister_binding_functions" lineNumber="1518"/>
+    <functiondecl functionName="get_instance_binding_data" lineNumber="1534"/>
+    <functiondecl functionName="alloc_instance_binding_data" lineNumber="1566"/>
+    <functiondecl functionName="free_instance_binding_data" lineNumber="1581"/>
+    <functiondecl functionName="refcount_incremented_instance_binding" lineNumber="1602"/>
+    <functiondecl functionName="refcount_decremented_instance_binding" lineNumber="1624"/>
+    <functiondecl functionName="set_global_type_tag" lineNumber="1650"/>
+    <functiondecl functionName="get_global_type_tag" lineNumber="1660"/>
+    <functiondecl functionName="defer_init_library" lineNumber="1675"/>
+    <functiondecl functionName="init_library" lineNumber="1683"/>
+    <functiondecl functionName="register_script" lineNumber="1720"/>
+    <functiondecl functionName="unregister_script" lineNumber="1726"/>
+    <functiondecl functionName="call_libraries_cb" lineNumber="1741"/>
+    <functiondecl functionName="frame" lineNumber="1761"/>
+    <functiondecl functionName="thread_enter" lineNumber="1797"/>
+    <functiondecl functionName="thread_exit" lineNumber="1801"/>
+    <functiondecl functionName="handles_global_class_type" lineNumber="1807"/>
+    <functiondecl functionName="get_global_class_name" lineNumber="1811"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1829"/>
+    <functiondecl functionName="_notification" lineNumber="1833"/>
+    <functiondecl functionName="load" lineNumber="1941"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1945"/>
+    <functiondecl functionName="handles_type" lineNumber="1949"/>
+    <functiondecl functionName="get_resource_type" lineNumber="1953"/>
+    <functiondecl functionName="save" lineNumber="1960"/>
+    <functiondecl functionName="recognize" lineNumber="1965"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1969"/>
+    <functiondecl functionName="_bind_methods" lineNumber="61"/>
+    <functiondecl functionName="_update_placeholder" lineNumber="91"/>
+    <functiondecl functionName="_placeholder_erased" lineNumber="108"/>
+    <functiondecl functionName="inherits_script" lineNumber="114"/>
+    <functiondecl functionName="set_class_name" lineNumber="121"/>
+    <functiondecl functionName="get_class_name" lineNumber="125"/>
+    <functiondecl functionName="set_library" lineNumber="129"/>
+    <functiondecl functionName="get_library" lineNumber="151"/>
+    <functiondecl functionName="set_script_class_name" lineNumber="155"/>
+    <functiondecl functionName="get_script_class_name" lineNumber="159"/>
+    <functiondecl functionName="set_script_class_icon_path" lineNumber="163"/>
+    <functiondecl functionName="get_script_class_icon_path" lineNumber="167"/>
+    <functiondecl functionName="can_instance" lineNumber="171"/>
+    <functiondecl functionName="get_base_script" lineNumber="185"/>
+    <functiondecl functionName="get_instance_base_type" lineNumber="200"/>
+    <functiondecl functionName="instance_create" lineNumber="209"/>
+    <functiondecl functionName="placeholder_instance_create" lineNumber="241"/>
+    <functiondecl functionName="instance_has" lineNumber="254"/>
+    <functiondecl functionName="has_source_code" lineNumber="258"/>
+    <functiondecl functionName="get_source_code" lineNumber="262"/>
+    <functiondecl functionName="set_source_code" lineNumber="266"/>
+    <functiondecl functionName="reload" lineNumber="269"/>
+    <functiondecl functionName="has_method" lineNumber="273"/>
+    <functiondecl functionName="get_method_info" lineNumber="285"/>
+    <functiondecl functionName="is_valid" lineNumber="302"/>
+    <functiondecl functionName="is_tool" lineNumber="306"/>
+    <functiondecl functionName="get_language" lineNumber="315"/>
+    <functiondecl functionName="has_script_signal" lineNumber="319"/>
+    <functiondecl functionName="get_script_signal_list" lineNumber="330"/>
+    <functiondecl functionName="get_property_default_value" lineNumber="352"/>
+    <functiondecl functionName="update_exports" lineNumber="367"/>
+    <functiondecl functionName="get_script_method_list" lineNumber="370"/>
+    <functiondecl functionName="get_script_property_list" lineNumber="392"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="410"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="433"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="449"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="468"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="505"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="539"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="560"/>
+    <functiondecl functionName="get_rset_property" lineNumber="576"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="595"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="632"/>
+    <functiondecl functionName="get_class_documentation" lineNumber="666"/>
+    <functiondecl functionName="get_method_documentation" lineNumber="674"/>
+    <functiondecl functionName="get_signal_documentation" lineNumber="693"/>
+    <functiondecl functionName="get_property_documentation" lineNumber="712"/>
+    <functiondecl functionName="_new" lineNumber="731"/>
+    <functiondecl functionName="_ml_call_reversed" lineNumber="796"/>
+    <functiondecl functionName="set" lineNumber="808"/>
+    <functiondecl functionName="get" lineNumber="843"/>
+    <functiondecl functionName="get_property_list" lineNumber="881"/>
+    <functiondecl functionName="get_property_type" lineNumber="938"/>
+    <functiondecl functionName="get_method_list" lineNumber="955"/>
+    <functiondecl functionName="has_method" lineNumber="959"/>
+    <functiondecl functionName="call" lineNumber="963"/>
+    <functiondecl functionName="notification" lineNumber="999"/>
+    <functiondecl functionName="to_string" lineNumber="1014"/>
+    <functiondecl functionName="refcount_incremented" lineNumber="1034"/>
+    <functiondecl functionName="refcount_decremented" lineNumber="1042"/>
+    <functiondecl functionName="get_script" lineNumber="1056"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="1060"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="1064"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="1068"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="1072"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="1076"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="1080"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="1084"/>
+    <functiondecl functionName="get_rset_property" lineNumber="1088"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="1092"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="1096"/>
+    <functiondecl functionName="get_language" lineNumber="1100"/>
+    <functiondecl functionName="call_multilevel" lineNumber="1104"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="1121"/>
+    <functiondecl functionName="_unload_stuff" lineNumber="1147"/>
+    <functiondecl functionName="get_name" lineNumber="1276"/>
+    <functiondecl functionName="_add_reload_node" lineNumber="1280"/>
+    <functiondecl functionName="init" lineNumber="1287"/>
+    <functiondecl functionName="get_type" lineNumber="1307"/>
+    <functiondecl functionName="get_extension" lineNumber="1310"/>
+    <functiondecl functionName="execute_file" lineNumber="1313"/>
+    <functiondecl functionName="finish" lineNumber="1316"/>
+    <functiondecl functionName="get_reserved_words" lineNumber="1319"/>
+    <functiondecl functionName="get_comment_delimiters" lineNumber="1321"/>
+    <functiondecl functionName="get_string_delimiters" lineNumber="1323"/>
+    <functiondecl functionName="get_template" lineNumber="1326"/>
+    <functiondecl functionName="validate" lineNumber="1331"/>
+    <functiondecl functionName="create_script" lineNumber="1335"/>
+    <functiondecl functionName="has_named_classes" lineNumber="1339"/>
+    <functiondecl functionName="supports_builtin_mode" lineNumber="1342"/>
+    <functiondecl functionName="find_function" lineNumber="1345"/>
+    <functiondecl functionName="make_function" lineNumber="1348"/>
+    <functiondecl functionName="auto_indent_code" lineNumber="1351"/>
+    <functiondecl functionName="add_global_constant" lineNumber="1353"/>
+    <functiondecl functionName="debug_get_error" lineNumber="1357"/>
+    <functiondecl functionName="debug_get_stack_level_count" lineNumber="1360"/>
+    <functiondecl functionName="debug_get_stack_level_line" lineNumber="1363"/>
+    <functiondecl functionName="debug_get_stack_level_function" lineNumber="1366"/>
+    <functiondecl functionName="debug_get_stack_level_source" lineNumber="1369"/>
+    <functiondecl functionName="debug_get_stack_level_locals" lineNumber="1372"/>
+    <functiondecl functionName="debug_get_stack_level_members" lineNumber="1374"/>
+    <functiondecl functionName="debug_get_globals" lineNumber="1376"/>
+    <functiondecl functionName="debug_parse_stack_level_expression" lineNumber="1378"/>
+    <functiondecl functionName="reload_all_scripts" lineNumber="1383"/>
+    <functiondecl functionName="reload_tool_script" lineNumber="1386"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1388"/>
+    <functiondecl functionName="get_public_functions" lineNumber="1392"/>
+    <functiondecl functionName="get_public_constants" lineNumber="1395"/>
+    <functiondecl functionName="profiling_start" lineNumber="1398"/>
+    <functiondecl functionName="profiling_stop" lineNumber="1407"/>
+    <functiondecl functionName="profiling_get_accumulated_data" lineNumber="1415"/>
+    <functiondecl functionName="profiling_get_frame_data" lineNumber="1438"/>
+    <functiondecl functionName="profiling_add_data" lineNumber="1463"/>
+    <functiondecl functionName="register_binding_functions" lineNumber="1492"/>
+    <functiondecl functionName="unregister_binding_functions" lineNumber="1518"/>
+    <functiondecl functionName="get_instance_binding_data" lineNumber="1534"/>
+    <functiondecl functionName="alloc_instance_binding_data" lineNumber="1566"/>
+    <functiondecl functionName="free_instance_binding_data" lineNumber="1581"/>
+    <functiondecl functionName="refcount_incremented_instance_binding" lineNumber="1602"/>
+    <functiondecl functionName="refcount_decremented_instance_binding" lineNumber="1624"/>
+    <functiondecl functionName="set_global_type_tag" lineNumber="1650"/>
+    <functiondecl functionName="get_global_type_tag" lineNumber="1660"/>
+    <functiondecl functionName="defer_init_library" lineNumber="1675"/>
+    <functiondecl functionName="init_library" lineNumber="1683"/>
+    <functiondecl functionName="register_script" lineNumber="1720"/>
+    <functiondecl functionName="unregister_script" lineNumber="1726"/>
+    <functiondecl functionName="call_libraries_cb" lineNumber="1741"/>
+    <functiondecl functionName="frame" lineNumber="1761"/>
+    <functiondecl functionName="thread_enter" lineNumber="1797"/>
+    <functiondecl functionName="thread_exit" lineNumber="1801"/>
+    <functiondecl functionName="handles_global_class_type" lineNumber="1807"/>
+    <functiondecl functionName="get_global_class_name" lineNumber="1811"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1829"/>
+    <functiondecl functionName="_notification" lineNumber="1833"/>
+    <functiondecl functionName="load" lineNumber="1941"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1945"/>
+    <functiondecl functionName="handles_type" lineNumber="1949"/>
+    <functiondecl functionName="get_resource_type" lineNumber="1953"/>
+    <functiondecl functionName="save" lineNumber="1960"/>
+    <functiondecl functionName="recognize" lineNumber="1965"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1969"/>
+    <functiondecl functionName="_bind_methods" lineNumber="61"/>
+    <functiondecl functionName="_update_placeholder" lineNumber="91"/>
+    <functiondecl functionName="_placeholder_erased" lineNumber="108"/>
+    <functiondecl functionName="inherits_script" lineNumber="114"/>
+    <functiondecl functionName="set_class_name" lineNumber="121"/>
+    <functiondecl functionName="get_class_name" lineNumber="125"/>
+    <functiondecl functionName="set_library" lineNumber="129"/>
+    <functiondecl functionName="get_library" lineNumber="151"/>
+    <functiondecl functionName="set_script_class_name" lineNumber="155"/>
+    <functiondecl functionName="get_script_class_name" lineNumber="159"/>
+    <functiondecl functionName="set_script_class_icon_path" lineNumber="163"/>
+    <functiondecl functionName="get_script_class_icon_path" lineNumber="167"/>
+    <functiondecl functionName="can_instance" lineNumber="171"/>
+    <functiondecl functionName="get_base_script" lineNumber="185"/>
+    <functiondecl functionName="get_instance_base_type" lineNumber="200"/>
+    <functiondecl functionName="instance_create" lineNumber="209"/>
+    <functiondecl functionName="placeholder_instance_create" lineNumber="241"/>
+    <functiondecl functionName="instance_has" lineNumber="254"/>
+    <functiondecl functionName="has_source_code" lineNumber="258"/>
+    <functiondecl functionName="get_source_code" lineNumber="262"/>
+    <functiondecl functionName="set_source_code" lineNumber="266"/>
+    <functiondecl functionName="reload" lineNumber="269"/>
+    <functiondecl functionName="has_method" lineNumber="273"/>
+    <functiondecl functionName="get_method_info" lineNumber="285"/>
+    <functiondecl functionName="is_valid" lineNumber="302"/>
+    <functiondecl functionName="is_tool" lineNumber="306"/>
+    <functiondecl functionName="get_language" lineNumber="315"/>
+    <functiondecl functionName="has_script_signal" lineNumber="319"/>
+    <functiondecl functionName="get_script_signal_list" lineNumber="330"/>
+    <functiondecl functionName="get_property_default_value" lineNumber="352"/>
+    <functiondecl functionName="update_exports" lineNumber="367"/>
+    <functiondecl functionName="get_script_method_list" lineNumber="370"/>
+    <functiondecl functionName="get_script_property_list" lineNumber="392"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="410"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="433"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="449"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="468"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="505"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="539"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="560"/>
+    <functiondecl functionName="get_rset_property" lineNumber="576"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="595"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="632"/>
+    <functiondecl functionName="get_class_documentation" lineNumber="666"/>
+    <functiondecl functionName="get_method_documentation" lineNumber="674"/>
+    <functiondecl functionName="get_signal_documentation" lineNumber="693"/>
+    <functiondecl functionName="get_property_documentation" lineNumber="712"/>
+    <functiondecl functionName="_new" lineNumber="731"/>
+    <functiondecl functionName="_ml_call_reversed" lineNumber="796"/>
+    <functiondecl functionName="set" lineNumber="808"/>
+    <functiondecl functionName="get" lineNumber="843"/>
+    <functiondecl functionName="get_property_list" lineNumber="881"/>
+    <functiondecl functionName="get_property_type" lineNumber="938"/>
+    <functiondecl functionName="get_method_list" lineNumber="955"/>
+    <functiondecl functionName="has_method" lineNumber="959"/>
+    <functiondecl functionName="call" lineNumber="963"/>
+    <functiondecl functionName="notification" lineNumber="999"/>
+    <functiondecl functionName="to_string" lineNumber="1014"/>
+    <functiondecl functionName="refcount_incremented" lineNumber="1034"/>
+    <functiondecl functionName="refcount_decremented" lineNumber="1042"/>
+    <functiondecl functionName="get_script" lineNumber="1056"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="1060"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="1064"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="1068"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="1072"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="1076"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="1080"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="1084"/>
+    <functiondecl functionName="get_rset_property" lineNumber="1088"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="1092"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="1096"/>
+    <functiondecl functionName="get_language" lineNumber="1100"/>
+    <functiondecl functionName="call_multilevel" lineNumber="1104"/>
+    <functiondecl functionName="call_multilevel_reversed" lineNumber="1121"/>
+    <functiondecl functionName="_unload_stuff" lineNumber="1147"/>
+    <functiondecl functionName="get_name" lineNumber="1276"/>
+    <functiondecl functionName="_add_reload_node" lineNumber="1280"/>
+    <functiondecl functionName="init" lineNumber="1287"/>
+    <functiondecl functionName="get_type" lineNumber="1307"/>
+    <functiondecl functionName="get_extension" lineNumber="1310"/>
+    <functiondecl functionName="execute_file" lineNumber="1313"/>
+    <functiondecl functionName="finish" lineNumber="1316"/>
+    <functiondecl functionName="get_reserved_words" lineNumber="1319"/>
+    <functiondecl functionName="get_comment_delimiters" lineNumber="1321"/>
+    <functiondecl functionName="get_string_delimiters" lineNumber="1323"/>
+    <functiondecl functionName="get_template" lineNumber="1326"/>
+    <functiondecl functionName="validate" lineNumber="1331"/>
+    <functiondecl functionName="create_script" lineNumber="1335"/>
+    <functiondecl functionName="has_named_classes" lineNumber="1339"/>
+    <functiondecl functionName="supports_builtin_mode" lineNumber="1342"/>
+    <functiondecl functionName="find_function" lineNumber="1345"/>
+    <functiondecl functionName="make_function" lineNumber="1348"/>
+    <functiondecl functionName="auto_indent_code" lineNumber="1351"/>
+    <functiondecl functionName="add_global_constant" lineNumber="1353"/>
+    <functiondecl functionName="debug_get_error" lineNumber="1357"/>
+    <functiondecl functionName="debug_get_stack_level_count" lineNumber="1360"/>
+    <functiondecl functionName="debug_get_stack_level_line" lineNumber="1363"/>
+    <functiondecl functionName="debug_get_stack_level_function" lineNumber="1366"/>
+    <functiondecl functionName="debug_get_stack_level_source" lineNumber="1369"/>
+    <functiondecl functionName="debug_get_stack_level_locals" lineNumber="1372"/>
+    <functiondecl functionName="debug_get_stack_level_members" lineNumber="1374"/>
+    <functiondecl functionName="debug_get_globals" lineNumber="1376"/>
+    <functiondecl functionName="debug_parse_stack_level_expression" lineNumber="1378"/>
+    <functiondecl functionName="reload_all_scripts" lineNumber="1383"/>
+    <functiondecl functionName="reload_tool_script" lineNumber="1386"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1388"/>
+    <functiondecl functionName="get_public_functions" lineNumber="1392"/>
+    <functiondecl functionName="get_public_constants" lineNumber="1395"/>
+    <functiondecl functionName="profiling_start" lineNumber="1398"/>
+    <functiondecl functionName="profiling_stop" lineNumber="1407"/>
+    <functiondecl functionName="profiling_get_accumulated_data" lineNumber="1415"/>
+    <functiondecl functionName="profiling_get_frame_data" lineNumber="1438"/>
+    <functiondecl functionName="profiling_add_data" lineNumber="1463"/>
+    <functiondecl functionName="register_binding_functions" lineNumber="1492"/>
+    <functiondecl functionName="unregister_binding_functions" lineNumber="1518"/>
+    <functiondecl functionName="get_instance_binding_data" lineNumber="1534"/>
+    <functiondecl functionName="alloc_instance_binding_data" lineNumber="1566"/>
+    <functiondecl functionName="free_instance_binding_data" lineNumber="1581"/>
+    <functiondecl functionName="refcount_incremented_instance_binding" lineNumber="1602"/>
+    <functiondecl functionName="refcount_decremented_instance_binding" lineNumber="1624"/>
+    <functiondecl functionName="set_global_type_tag" lineNumber="1650"/>
+    <functiondecl functionName="get_global_type_tag" lineNumber="1660"/>
+    <functiondecl functionName="defer_init_library" lineNumber="1675"/>
+    <functiondecl functionName="init_library" lineNumber="1683"/>
+    <functiondecl functionName="register_script" lineNumber="1720"/>
+    <functiondecl functionName="unregister_script" lineNumber="1726"/>
+    <functiondecl functionName="call_libraries_cb" lineNumber="1741"/>
+    <functiondecl functionName="frame" lineNumber="1761"/>
+    <functiondecl functionName="thread_enter" lineNumber="1797"/>
+    <functiondecl functionName="thread_exit" lineNumber="1801"/>
+    <functiondecl functionName="handles_global_class_type" lineNumber="1807"/>
+    <functiondecl functionName="get_global_class_name" lineNumber="1811"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1829"/>
+    <functiondecl functionName="_notification" lineNumber="1833"/>
+    <functiondecl functionName="load" lineNumber="1941"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1945"/>
+    <functiondecl functionName="handles_type" lineNumber="1949"/>
+    <functiondecl functionName="get_resource_type" lineNumber="1953"/>
+    <functiondecl functionName="save" lineNumber="1960"/>
+    <functiondecl functionName="recognize" lineNumber="1965"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1969"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="C"/>
+    <functioncall functionName="CALL_ERROR_INSTANCE_IS_NULL"/>
+    <functioncall functionName="CALL_ERROR_INVALID_METHOD"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="HashMap"/>
+    <functioncall functionName="L"/>
+    <functioncall functionName="M"/>
+    <functioncall functionName="METHOD_FLAGS_DEFAULT"/>
+    <functioncall functionName="Map"/>
+    <functioncall functionName="Method"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NativeReloadNode"/>
+    <functioncall functionName="NativeScript"/>
+    <functioncall functionName="NativeScriptDesc"/>
+    <functioncall functionName="NativeScriptInstance"/>
+    <functioncall functionName="NativeScriptLanguage"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="P"/>
+    <functioncall functionName="PROPERTY_HINT_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PlaceHolderScriptInstance"/>
+    <functioncall functionName="ProfileData"/>
+    <functioncall functionName="Property"/>
+    <functioncall functionName="PropertyHint"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="R"/>
+    <functioncall functionName="REF"/>
+    <functioncall functionName="RPCMode"/>
+    <functioncall functionName="RPC_MODE_DISABLED"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="S"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="Script"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="Signal"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="Type"/>
+    <functioncall functionName="U"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_add_reload_node"/>
+    <functioncall functionName="_frame_call_name"/>
+    <functioncall functionName="_init_call_name"/>
+    <functioncall functionName="_ml_call_reversed"/>
+    <functioncall functionName="_new"/>
+    <functioncall functionName="_notification"/>
+    <functioncall functionName="_terminate_call_name"/>
+    <functioncall functionName="_thread_enter_call_name"/>
+    <functioncall functionName="_thread_exit_call_name"/>
+    <functioncall functionName="_to_string"/>
+    <functioncall functionName="_unload_stuff"/>
+    <functioncall functionName="_update_placeholder"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_init_callback"/>
+    <functioncall functionName="alloc_instance_binding_data"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="base_data"/>
+    <functioncall functionName="base_native_type"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bind_vararg_method"/>
+    <functioncall functionName="binding_data"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_count"/>
+    <functioncall functionName="call_libraries_cb"/>
+    <functioncall functionName="call_multilevel"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="class_name"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_func"/>
+    <functioncall functionName="create_script"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="current_method_call"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="default_value"/>
+    <functioncall functionName="defer_init_library"/>
+    <functioncall functionName="destroy_func"/>
+    <functioncall functionName="documentation"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame_call_count"/>
+    <functioncall functionName="frame_self_time"/>
+    <functioncall functionName="frame_total_time"/>
+    <functioncall functionName="free_func"/>
+    <functioncall functionName="free_instance_binding_data"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="gdn"/>
+    <functioncall functionName="generate_c_api"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_caller_id"/>
+    <functioncall functionName="get_class_documentation"/>
+    <functioncall functionName="get_class_name"/>
+    <functioncall functionName="get_cmdline_args"/>
+    <functioncall functionName="get_current_library_path"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_func"/>
+    <functioncall functionName="get_global_type_tag"/>
+    <functioncall functionName="get_instance_base_type"/>
+    <functioncall functionName="get_library"/>
+    <functioncall functionName="get_main_id"/>
+    <functioncall functionName="get_method_documentation"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_property_default_value"/>
+    <functioncall functionName="get_property_documentation"/>
+    <functioncall functionName="get_rpc_method"/>
+    <functioncall functionName="get_rpc_method_id"/>
+    <functioncall functionName="get_rpc_methods"/>
+    <functioncall functionName="get_rpc_mode"/>
+    <functioncall functionName="get_rpc_mode_by_id"/>
+    <functioncall functionName="get_rset_mode"/>
+    <functioncall functionName="get_rset_mode_by_id"/>
+    <functioncall functionName="get_rset_properties"/>
+    <functioncall functionName="get_rset_property"/>
+    <functioncall functionName="get_rset_property_id"/>
+    <functioncall functionName="get_script_class_icon_path"/>
+    <functioncall functionName="get_script_class_name"/>
+    <functioncall functionName="get_script_desc"/>
+    <functioncall functionName="get_script_instance_binding"/>
+    <functioncall functionName="get_script_method_list"/>
+    <functioncall functionName="get_script_property_list"/>
+    <functioncall functionName="get_signal_documentation"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_symbol"/>
+    <functioncall functionName="get_symbol_prefix"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="global_type_tag"/>
+    <functioncall functionName="godot_instance_binding_functions"/>
+    <functioncall functionName="godot_instance_create_func"/>
+    <functioncall functionName="godot_instance_destroy_func"/>
+    <functioncall functionName="godot_variant_destroy"/>
+    <functioncall functionName="handled"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="has_objects_to_register"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="init_library"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="insert_after"/>
+    <functioncall functionName="insert_position"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instance_create"/>
+    <functioncall functionName="is_initialized"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_reloadable"/>
+    <functioncall functionName="is_scripting_enabled"/>
+    <functioncall functionName="is_singleton"/>
+    <functioncall functionName="is_tool"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="lang_idx"/>
+    <functioncall functionName="last_frame_call_count"/>
+    <functioncall functionName="last_frame_self_time"/>
+    <functioncall functionName="last_frame_total_time"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lib"/>
+    <functioncall functionName="lib_path"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="method_data"/>
+    <functioncall functionName="methods"/>
+    <functioncall functionName="mutex"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nd"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="old_size"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="operatorint64_t"/>
+    <functioncall functionName="original_back"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="owners_lock"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_binding_functions"/>
+    <functioncall functionName="p_class_name"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_icon_path"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_library"/>
+    <functioncall functionName="p_list"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_notification"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_original_path"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_placeholder"/>
+    <functioncall functionName="p_properties"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_reload"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_signal"/>
+    <functioncall functionName="p_signal_name"/>
+    <functioncall functionName="p_signature"/>
+    <functioncall functionName="p_this"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_type_tag"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variable"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="proc_ptr"/>
+    <functioncall functionName="properties"/>
+    <functioncall functionName="property"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_base_type"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="r_icon_path"/>
+    <functioncall functionName="r_valid"/>
+    <functioncall functionName="refcount_decremented_instance_binding"/>
+    <functioncall functionName="refcount_incremented_instance_binding"/>
+    <functioncall functionName="register_script"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rn"/>
+    <functioncall functionName="rpc_count"/>
+    <functioncall functionName="rpc_method_id"/>
+    <functioncall functionName="rpc_mode"/>
+    <functioncall functionName="rset_count"/>
+    <functioncall functionName="rset_mode"/>
+    <functioncall functionName="rset_property_id"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="script"/>
+    <functioncall functionName="script_data"/>
+    <functioncall functionName="self_time"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_class_name"/>
+    <functioncall functionName="set_func"/>
+    <functioncall functionName="set_library"/>
+    <functioncall functionName="set_script_class_icon_path"/>
+    <functioncall functionName="set_script_class_name"/>
+    <functioncall functionName="set_script_instance"/>
+    <functioncall functionName="should_reload"/>
+    <functioncall functionName="signal"/>
+    <functioncall functionName="signals_"/>
+    <functioncall functionName="signature"/>
+    <functioncall functionName="sins"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="terminate"/>
+    <functioncall functionName="terminate_fn"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="total_time"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="type_tag"/>
+    <functioncall functionName="unloaded"/>
+    <functioncall functionName="unregister_script"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="userdata"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zeromem"/>
+  </FileInfo>
+</analyzerinfo>

@@ -101,7 +101,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 				for (int i = 0; i < (vcount / 12); i++) {
 
-					TKey<TransformKey> &tk = tt->transforms.write[i];
+					TKey<TransformKey> &tk = tt->transforms[i];
 					const float *ofs = &r[i * 12];
 					tk.time = ofs[0];
 					tk.transition = ofs[1];
@@ -155,8 +155,8 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					for (int i = 0; i < valcount; i++) {
 
-						vt->values.write[i].time = rt[i];
-						vt->values.write[i].value = values[i];
+						vt->values[i].time = rt[i];
+						vt->values[i].value = values[i];
 					}
 
 					if (d.has("transitions")) {
@@ -168,7 +168,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 						for (int i = 0; i < valcount; i++) {
 
-							vt->values.write[i].transition = rtr[i];
+							vt->values[i].transition = rtr[i];
 						}
 					}
 				}
@@ -236,13 +236,13 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 
 					for (int i = 0; i < valcount; i++) {
 
-						bt->values.write[i].time = rt[i];
-						bt->values.write[i].transition = 0; //unused in bezier
-						bt->values.write[i].value.value = rv[i * 5 + 0];
-						bt->values.write[i].value.in_handle.x = rv[i * 5 + 1];
-						bt->values.write[i].value.in_handle.y = rv[i * 5 + 2];
-						bt->values.write[i].value.out_handle.x = rv[i * 5 + 3];
-						bt->values.write[i].value.out_handle.y = rv[i * 5 + 4];
+						bt->values[i].time = rt[i];
+						bt->values[i].transition = 0; //unused in bezier
+						bt->values[i].value.value = rv[i * 5 + 0];
+						bt->values[i].value.in_handle.x = rv[i * 5 + 1];
+						bt->values[i].value.in_handle.y = rv[i * 5 + 2];
+						bt->values[i].value.out_handle.x = rv[i * 5 + 3];
+						bt->values[i].value.out_handle.y = rv[i * 5 + 4];
 					}
 				}
 
@@ -314,7 +314,7 @@ bool Animation::_set(const StringName &p_name, const Variant &p_value) {
 						TKey<StringName> ak;
 						ak.time = rt[i];
 						ak.value = rc[i];
-						an->values.write[i] = ak;
+						an->values[i] = ak;
 					}
 				}
 
@@ -819,7 +819,7 @@ int Animation::_insert(float p_time, T &p_keys, const V &p_value) {
 		// Condition for replacement.
 		if (idx > 0 && Math::is_equal_approx(p_keys[idx - 1].time, p_time)) {
 
-			p_keys.write[idx - 1] = p_value;
+			p_keys[idx - 1] = p_value;
 			return idx - 1;
 
 			// Condition for insert.
@@ -1426,11 +1426,11 @@ void Animation::track_set_key_value(int p_track, int p_key_idx, const Variant &p
 			Dictionary d = p_value;
 
 			if (d.has("location"))
-				tt->transforms.write[p_key_idx].value.loc = d["location"];
+				tt->transforms[p_key_idx].value.loc = d["location"];
 			if (d.has("rotation"))
-				tt->transforms.write[p_key_idx].value.rot = d["rotation"];
+				tt->transforms[p_key_idx].value.rot = d["rotation"];
 			if (d.has("scale"))
-				tt->transforms.write[p_key_idx].value.scale = d["scale"];
+				tt->transforms[p_key_idx].value.scale = d["scale"];
 
 		} break;
 		case TYPE_VALUE: {
@@ -1438,7 +1438,7 @@ void Animation::track_set_key_value(int p_track, int p_key_idx, const Variant &p
 			ValueTrack *vt = static_cast<ValueTrack *>(t);
 			ERR_FAIL_INDEX(p_key_idx, vt->values.size());
 
-			vt->values.write[p_key_idx].value = p_value;
+			vt->values[p_key_idx].value = p_value;
 
 		} break;
 		case TYPE_METHOD: {
@@ -1449,9 +1449,9 @@ void Animation::track_set_key_value(int p_track, int p_key_idx, const Variant &p
 			Dictionary d = p_value;
 
 			if (d.has("method"))
-				mt->methods.write[p_key_idx].method = d["method"];
+				mt->methods[p_key_idx].method = d["method"];
 			if (d.has("args"))
-				mt->methods.write[p_key_idx].params = d["args"];
+				mt->methods[p_key_idx].params = d["args"];
 
 		} break;
 		case TYPE_BEZIER: {
@@ -1462,11 +1462,11 @@ void Animation::track_set_key_value(int p_track, int p_key_idx, const Variant &p
 			Array arr = p_value;
 			ERR_FAIL_COND(arr.size() != 5);
 
-			bt->values.write[p_key_idx].value.value = arr[0];
-			bt->values.write[p_key_idx].value.in_handle.x = arr[1];
-			bt->values.write[p_key_idx].value.in_handle.y = arr[2];
-			bt->values.write[p_key_idx].value.out_handle.x = arr[3];
-			bt->values.write[p_key_idx].value.out_handle.y = arr[4];
+			bt->values[p_key_idx].value.value = arr[0];
+			bt->values[p_key_idx].value.in_handle.x = arr[1];
+			bt->values[p_key_idx].value.in_handle.y = arr[2];
+			bt->values[p_key_idx].value.out_handle.x = arr[3];
+			bt->values[p_key_idx].value.out_handle.y = arr[4];
 
 		} break;
 		case TYPE_AUDIO: {
@@ -1479,9 +1479,9 @@ void Animation::track_set_key_value(int p_track, int p_key_idx, const Variant &p
 			ERR_FAIL_COND(!k.has("end_offset"));
 			ERR_FAIL_COND(!k.has("stream"));
 
-			at->values.write[p_key_idx].value.start_offset = k["start_offset"];
-			at->values.write[p_key_idx].value.end_offset = k["end_offset"];
-			at->values.write[p_key_idx].value.stream = k["stream"];
+			at->values[p_key_idx].value.start_offset = k["start_offset"];
+			at->values[p_key_idx].value.end_offset = k["end_offset"];
+			at->values[p_key_idx].value.stream = k["stream"];
 
 		} break;
 		case TYPE_ANIMATION: {
@@ -1489,7 +1489,7 @@ void Animation::track_set_key_value(int p_track, int p_key_idx, const Variant &p
 			AnimationTrack *at = static_cast<AnimationTrack *>(t);
 			ERR_FAIL_INDEX(p_key_idx, at->values.size());
 
-			at->values.write[p_key_idx].value = p_value;
+			at->values[p_key_idx].value = p_value;
 
 		} break;
 	}
@@ -1508,20 +1508,20 @@ void Animation::track_set_key_transition(int p_track, int p_key_idx, float p_tra
 
 			TransformTrack *tt = static_cast<TransformTrack *>(t);
 			ERR_FAIL_INDEX(p_key_idx, tt->transforms.size());
-			tt->transforms.write[p_key_idx].transition = p_transition;
+			tt->transforms[p_key_idx].transition = p_transition;
 		} break;
 		case TYPE_VALUE: {
 
 			ValueTrack *vt = static_cast<ValueTrack *>(t);
 			ERR_FAIL_INDEX(p_key_idx, vt->values.size());
-			vt->values.write[p_key_idx].transition = p_transition;
+			vt->values[p_key_idx].transition = p_transition;
 
 		} break;
 		case TYPE_METHOD: {
 
 			MethodTrack *mt = static_cast<MethodTrack *>(t);
 			ERR_FAIL_INDEX(p_key_idx, mt->methods.size());
-			mt->methods.write[p_key_idx].transition = p_transition;
+			mt->methods[p_key_idx].transition = p_transition;
 
 		} break;
 		case TYPE_BEZIER:
@@ -2297,7 +2297,7 @@ void Animation::bezier_track_set_key_value(int p_track, int p_index, float p_val
 
 	ERR_FAIL_INDEX(p_index, bt->values.size());
 
-	bt->values.write[p_index].value.value = p_value;
+	bt->values[p_index].value.value = p_value;
 	emit_changed();
 }
 
@@ -2311,9 +2311,9 @@ void Animation::bezier_track_set_key_in_handle(int p_track, int p_index, const V
 
 	ERR_FAIL_INDEX(p_index, bt->values.size());
 
-	bt->values.write[p_index].value.in_handle = p_handle;
+	bt->values[p_index].value.in_handle = p_handle;
 	if (bt->values[p_index].value.in_handle.x > 0) {
-		bt->values.write[p_index].value.in_handle.x = 0;
+		bt->values[p_index].value.in_handle.x = 0;
 	}
 	emit_changed();
 }
@@ -2327,9 +2327,9 @@ void Animation::bezier_track_set_key_out_handle(int p_track, int p_index, const 
 
 	ERR_FAIL_INDEX(p_index, bt->values.size());
 
-	bt->values.write[p_index].value.out_handle = p_handle;
+	bt->values[p_index].value.out_handle = p_handle;
 	if (bt->values[p_index].value.out_handle.x < 0) {
-		bt->values.write[p_index].value.out_handle.x = 0;
+		bt->values[p_index].value.out_handle.x = 0;
 	}
 	emit_changed();
 }
@@ -2483,7 +2483,7 @@ void Animation::audio_track_set_key_stream(int p_track, int p_key, const RES &p_
 
 	ERR_FAIL_INDEX(p_key, at->values.size());
 
-	at->values.write[p_key].value.stream = p_stream;
+	at->values[p_key].value.stream = p_stream;
 
 	emit_changed();
 }
@@ -2501,7 +2501,7 @@ void Animation::audio_track_set_key_start_offset(int p_track, int p_key, float p
 	if (p_offset < 0)
 		p_offset = 0;
 
-	at->values.write[p_key].value.start_offset = p_offset;
+	at->values[p_key].value.start_offset = p_offset;
 
 	emit_changed();
 }
@@ -2519,7 +2519,7 @@ void Animation::audio_track_set_key_end_offset(int p_track, int p_key, float p_o
 	if (p_offset < 0)
 		p_offset = 0;
 
-	at->values.write[p_key].value.end_offset = p_offset;
+	at->values[p_key].value.end_offset = p_offset;
 
 	emit_changed();
 }
@@ -2592,7 +2592,7 @@ void Animation::animation_track_set_key_animation(int p_track, int p_key, const 
 
 	ERR_FAIL_INDEX(p_key, at->values.size());
 
-	at->values.write[p_key].value = p_animation;
+	at->values[p_key].value = p_animation;
 
 	emit_changed();
 }
@@ -2662,7 +2662,7 @@ void Animation::track_move_up(int p_track) {
 
 	if (p_track >= 0 && p_track < (tracks.size() - 1)) {
 
-		SWAP(tracks.write[p_track], tracks.write[p_track + 1]);
+		SWAP(tracks[p_track], tracks[p_track + 1]);
 	}
 
 	emit_changed();
@@ -2673,7 +2673,7 @@ void Animation::track_move_down(int p_track) {
 
 	if (p_track > 0 && p_track < tracks.size()) {
 
-		SWAP(tracks.write[p_track], tracks.write[p_track - 1]);
+		SWAP(tracks[p_track], tracks[p_track - 1]);
 	}
 
 	emit_changed();
@@ -2702,7 +2702,7 @@ void Animation::track_swap(int p_track, int p_with_track) {
 	ERR_FAIL_INDEX(p_with_track, tracks.size());
 	if (p_track == p_with_track)
 		return;
-	SWAP(tracks.write[p_track], tracks.write[p_with_track]);
+	SWAP(tracks[p_track], tracks[p_with_track]);
 
 	emit_changed();
 	emit_signal(SceneStringNames::get_singleton()->tracks_changed);
@@ -3039,9 +3039,9 @@ void Animation::_transform_track_optimize(int p_idx, float p_allowed_linear_err,
 
 	for (int i = 1; i < tt->transforms.size() - 1; i++) {
 
-		TKey<TransformKey> &t0 = tt->transforms.write[i - 1];
-		TKey<TransformKey> &t1 = tt->transforms.write[i];
-		TKey<TransformKey> &t2 = tt->transforms.write[i + 1];
+		TKey<TransformKey> &t0 = tt->transforms[i - 1];
+		TKey<TransformKey> &t1 = tt->transforms[i];
+		TKey<TransformKey> &t2 = tt->transforms[i + 1];
 
 		bool erase = _transform_track_optimize_key(t0, t1, t2, p_allowed_linear_err, p_allowed_angular_err, p_max_optimizable_angle, norm);
 		if (erase && !prev_erased) {

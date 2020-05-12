@@ -1,0 +1,1231 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2578206131">
+        <error id="operatorEq" severity="style" msg="&apos;CharString::operator=&apos; should return &apos;CharString &amp;&apos;." verbose="The CharString::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;CharString &amp;CharString::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="96" column="2"/>
+            <symbol>CharString</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;String::operator=&apos; should return &apos;String &amp;&apos;." verbose="The String::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;String &amp;String::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="359" column="2"/>
+            <symbol>String</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;CharProxy &lt; char &gt;::operator=&apos; should return &apos;CharProxy &lt; char &gt; &amp;&apos;." verbose="The CharProxy &lt; char &gt;::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;CharProxy &lt; char &gt; &amp;CharProxy &lt; char &gt;::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="68" column="2"/>
+            <symbol>CharProxy &lt; char &gt;</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;CharProxy &lt; wchar_t &gt;::operator=&apos; should return &apos;CharProxy &lt; wchar_t &gt; &amp;&apos;." verbose="The CharProxy &lt; wchar_t &gt;::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;CharProxy &lt; wchar_t &gt; &amp;CharProxy &lt; wchar_t &gt;::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="68" column="2"/>
+            <symbol>CharProxy &lt; wchar_t &gt;</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;String::join&apos; can be const." verbose="The member function &apos;String::join&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="274" column="9"/>
+            <location file="/home/hbina/git/godot/core/ustring.cpp" line="962" column="16"/>
+            <symbol>String::join</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;CharString&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;CharString&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="100" column="17"/>
+            <symbol>CharString</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;String&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;String&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="364" column="2"/>
+            <symbol>String</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;String&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;String&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="365" column="2"/>
+            <symbol>String</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;String&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;String&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/ustring.cpp" file="/home/hbina/git/godot/core/ustring.h" line="366" column="2"/>
+            <symbol>String</symbol>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%hhX in format string (no. 1) requires &apos;unsigned char&apos; but the argument type is &apos;signed char&apos;." verbose="%hhX in format string (no. 1) requires &apos;unsigned char&apos; but the argument type is &apos;signed char&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/core/ustring.cpp" line="3435" column="4"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;base&apos; is assigned a value that is never used." verbose="Variable &apos;base&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/core/ustring.cpp" line="3837" column="8"/>
+            <symbol>base</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;base&apos; is assigned a value that is never used." verbose="Variable &apos;base&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/core/ustring.cpp" line="3843" column="8"/>
+            <symbol>base</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;base&apos; is assigned a value that is never used." verbose="Variable &apos;base&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/core/ustring.cpp" line="3858" column="8"/>
+            <symbol>base</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="149" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:85:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="115" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:92:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="124" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="138" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="145" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="160" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="171" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="189" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="200" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="213" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="225" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="226" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="288" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="305" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="327" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="355" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="704" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="685" col="17" info="Assignment 'prev_pos=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="699" col="14" info="Assignment 'from=prev_pos', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="761" col="26" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="763" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="793" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="798" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="803" col="26" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="808" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="832" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="841" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="865" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="860" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="883" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="918" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="913" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="936" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1017" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1565" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1885" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2369" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2405" col="24" call-argexpr="findfrom" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2403" col="17" info="Assignment 'findfrom=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2724" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2742" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:135:7" call-funcname="_base_is_subsequence_of" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2763" col="32" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:136:6" call-funcname="_count" call-argnr="4" file="/home/hbina/git/godot/core/ustring.cpp" line="2814" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2833" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2905" col="26" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2907" col="61" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="24" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3007" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3004" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3027" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3053" col="10" info="Assuming that condition 'pos>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3052" col="16" info="Assignment 'pos=find(p_key)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:206:6" call-funcname="findn" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3065" col="24" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3062" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3105" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3243" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3369" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:3545:27" call-funcname="_xml_unescape" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="3637" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3974" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="4093" col="10" info="Assuming that condition 'pos<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="100" col="50" my-id="/home/hbina/git/godot/core/ustring.h:100:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="131" col="2" my-id="/home/hbina/git/godot/core/ustring.h:102:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:365:2" call-funcname="String" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="298" col="11" my-id="/home/hbina/git/godot/core/ustring.h:172:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="337" col="2" my-id="/home/hbina/git/godot/core/ustring.h:176:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="342" col="2" my-id="/home/hbina/git/godot/core/ustring.h:177:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1650" col="2" my-id="/home/hbina/git/godot/core/ustring.h:364:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1655" col="2" my-id="/home/hbina/git/godot/core/ustring.h:365:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < char >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2124" col="9" my-id="/home/hbina/git/godot/core/ustring.h:255:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < wchar_t >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2138" col="9" my-id="/home/hbina/git/godot/core/ustring.h:256:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="19" my-id="/home/hbina/git/godot/core/ustring.h:224:9" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:234:9" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/core/ustring.cpp" line="4158" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:306:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2233" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:304:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2262" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="149" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:85:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="115" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:92:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="124" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="138" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="145" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="160" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="171" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="189" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="200" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="213" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="225" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="226" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="288" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="305" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="327" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="355" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="704" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="685" col="17" info="Assignment 'prev_pos=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="699" col="14" info="Assignment 'from=prev_pos', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="761" col="26" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="763" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="793" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="798" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="803" col="26" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="808" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="832" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="841" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="865" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="860" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="883" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="918" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="913" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="936" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1017" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1565" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1885" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2369" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2405" col="24" call-argexpr="findfrom" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2403" col="17" info="Assignment 'findfrom=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2724" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2742" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:135:7" call-funcname="_base_is_subsequence_of" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2763" col="32" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:136:6" call-funcname="_count" call-argnr="4" file="/home/hbina/git/godot/core/ustring.cpp" line="2814" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2833" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2905" col="26" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2907" col="61" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="24" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3007" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3004" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3027" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3053" col="10" info="Assuming that condition 'pos>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3052" col="16" info="Assignment 'pos=find(p_key)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:206:6" call-funcname="findn" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3065" col="24" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3062" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3105" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3243" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3369" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:3545:27" call-funcname="_xml_unescape" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="3637" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3974" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="4093" col="10" info="Assuming that condition 'pos<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="100" col="50" my-id="/home/hbina/git/godot/core/ustring.h:100:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="131" col="2" my-id="/home/hbina/git/godot/core/ustring.h:102:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:365:2" call-funcname="String" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="298" col="11" my-id="/home/hbina/git/godot/core/ustring.h:172:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="337" col="2" my-id="/home/hbina/git/godot/core/ustring.h:176:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="342" col="2" my-id="/home/hbina/git/godot/core/ustring.h:177:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1650" col="2" my-id="/home/hbina/git/godot/core/ustring.h:364:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1655" col="2" my-id="/home/hbina/git/godot/core/ustring.h:365:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < char >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2124" col="9" my-id="/home/hbina/git/godot/core/ustring.h:255:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < wchar_t >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2138" col="9" my-id="/home/hbina/git/godot/core/ustring.h:256:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="19" my-id="/home/hbina/git/godot/core/ustring.h:224:9" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:234:9" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/core/ustring.cpp" line="4158" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:306:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2233" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:304:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2262" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="149" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:85:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="115" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:92:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="124" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="138" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="145" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="160" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="171" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="189" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="200" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="213" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="225" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="226" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="288" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="305" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="327" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="355" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="704" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="685" col="17" info="Assignment 'prev_pos=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="699" col="14" info="Assignment 'from=prev_pos', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="761" col="26" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="763" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="793" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="798" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="803" col="26" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="808" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="832" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="841" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="865" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="860" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="883" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="918" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="913" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="936" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1017" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1565" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1885" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2369" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2405" col="24" call-argexpr="findfrom" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2403" col="17" info="Assignment 'findfrom=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2724" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2742" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:135:7" call-funcname="_base_is_subsequence_of" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2763" col="32" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:136:6" call-funcname="_count" call-argnr="4" file="/home/hbina/git/godot/core/ustring.cpp" line="2814" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2833" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2905" col="26" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2907" col="61" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="24" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3007" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3004" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3027" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3053" col="10" info="Assuming that condition 'pos>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3052" col="16" info="Assignment 'pos=find(p_key)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:206:6" call-funcname="findn" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3065" col="24" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3062" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3105" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3243" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3369" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:3545:27" call-funcname="_xml_unescape" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="3637" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3974" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="4093" col="10" info="Assuming that condition 'pos<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="100" col="50" my-id="/home/hbina/git/godot/core/ustring.h:100:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="131" col="2" my-id="/home/hbina/git/godot/core/ustring.h:102:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:365:2" call-funcname="String" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="298" col="11" my-id="/home/hbina/git/godot/core/ustring.h:172:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="337" col="2" my-id="/home/hbina/git/godot/core/ustring.h:176:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="342" col="2" my-id="/home/hbina/git/godot/core/ustring.h:177:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1650" col="2" my-id="/home/hbina/git/godot/core/ustring.h:364:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1655" col="2" my-id="/home/hbina/git/godot/core/ustring.h:365:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < char >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2127" col="9" my-id="/home/hbina/git/godot/core/ustring.h:255:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < wchar_t >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2138" col="9" my-id="/home/hbina/git/godot/core/ustring.h:256:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="19" my-id="/home/hbina/git/godot/core/ustring.h:224:9" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:234:9" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/core/ustring.cpp" line="4158" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:306:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2233" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:304:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2262" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="149" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:85:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="115" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:92:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="124" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="138" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:82:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="145" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="160" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="171" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="189" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:154:8" call-funcname="resize" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="200" col="9" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="213" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="225" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="226" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="288" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="305" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:152:22" call-funcname="set" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="327" col="5" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="355" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="704" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="685" col="17" info="Assignment 'prev_pos=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="699" col="14" info="Assignment 'from=prev_pos', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="761" col="26" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="763" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="793" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="798" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="803" col="26" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="808" col="25" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="788" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="832" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="841" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="865" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="860" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="883" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="889" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="918" col="17" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="913" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="936" col="13" info="Assignment 'from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="&idx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:209:6" call-funcname="findmk" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="942" col="19" call-argexpr="idx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1017" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1565" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1885" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2369" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2405" col="24" call-argexpr="findfrom" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2403" col="17" info="Assignment 'findfrom=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2724" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2742" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:135:7" call-funcname="_base_is_subsequence_of" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="2763" col="32" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:136:6" call-funcname="_count" call-argnr="4" file="/home/hbina/git/godot/core/ustring.cpp" line="2814" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2833" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2905" col="26" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2907" col="61" call-argexpr="p_case_sensitive" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="54" info="Calling function '_wildcard_match', 3rd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" call-funcname="_wildcard_match" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="2926" col="24" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:202:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3007" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3004" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="23" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3027" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3054" col="16" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3053" col="10" info="Assuming that condition 'pos>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3052" col="16" info="Assignment 'pos=find(p_key)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:206:6" call-funcname="findn" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="3065" col="24" call-argexpr="search_from" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="3062" col="20" info="Assignment 'search_from=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3105" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3243" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3355" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:162:37" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3357" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3369" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.cpp:3545:27" call-funcname="_xml_unescape" call-argnr="3" file="/home/hbina/git/godot/core/ustring.cpp" line="3637" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3729" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3749" col="53" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:156:33" call-funcname="operator[]" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3781" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3974" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/ustring.h:201:9" call-funcname="substr" call-argnr="2" file="/home/hbina/git/godot/core/ustring.cpp" line="4096" col="15" call-argexpr="pos" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/ustring.cpp" line="4093" col="10" info="Assuming that condition 'pos<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.h" line="100" col="50" my-id="/home/hbina/git/godot/core/ustring.h:100:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:110:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="131" col="2" my-id="/home/hbina/git/godot/core/ustring.h:102:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:365:2" call-funcname="String" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="298" col="11" my-id="/home/hbina/git/godot/core/ustring.h:172:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="337" col="2" my-id="/home/hbina/git/godot/core/ustring.h:176:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="342" col="2" my-id="/home/hbina/git/godot/core/ustring.h:177:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:131:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1650" col="2" my-id="/home/hbina/git/godot/core/ustring.h:364:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:132:7" call-funcname="copy_from" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="1655" col="2" my-id="/home/hbina/git/godot/core/ustring.h:365:2" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < char >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2124" col="9" my-id="/home/hbina/git/godot/core/ustring.h:255:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.cpp:1905:0" call-funcname="built_in_strtod < wchar_t >" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="2138" col="9" my-id="/home/hbina/git/godot/core/ustring.h:256:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/ustring.h:203:6" call-funcname="find" call-argnr="1" file="/home/hbina/git/godot/core/ustring.cpp" line="3030" col="19" my-id="/home/hbina/git/godot/core/ustring.h:224:9" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:234:9" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/core/ustring.cpp" line="4158" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:306:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2233" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.h:304:18" my-argnr="1" my-argname="p_cstr" file="/home/hbina/git/godot/core/ustring.cpp" line="2262" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/ustring.cpp:2900:13" my-argnr="1" my-argname="p_pattern" file="/home/hbina/git/godot/core/ustring.cpp" line="2901" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="is_symbol" lineNumber="67"/>
+    <functiondecl functionName="select_word" lineNumber="71"/>
+    <functiondecl functionName="get_data" lineNumber="121"/>
+    <functiondecl functionName="copy_from" lineNumber="135"/>
+    <functiondecl functionName="copy_from" lineNumber="156"/>
+    <functiondecl functionName="copy_from" lineNumber="185"/>
+    <functiondecl functionName="copy_from_unchecked" lineNumber="211"/>
+    <functiondecl functionName="copy_from" lineNumber="222"/>
+    <functiondecl functionName="nocasecmp_to" lineNumber="461"/>
+    <functiondecl functionName="casecmp_to" lineNumber="491"/>
+    <functiondecl functionName="naturalnocasecmp_to" lineNumber="521"/>
+    <functiondecl functionName="erase" lineNumber="583"/>
+    <functiondecl functionName="capitalize" lineNumber="588"/>
+    <functiondecl functionName="camelcase_to_underscore" lineNumber="607"/>
+    <functiondecl functionName="get_with_code_lines" lineNumber="649"/>
+    <functiondecl functionName="get_slice_count" lineNumber="660"/>
+    <functiondecl functionName="get_slice" lineNumber="679"/>
+    <functiondecl functionName="get_slicec" lineNumber="717"/>
+    <functiondecl functionName="split_spaces" lineNumber="748"/>
+    <functiondecl functionName="split" lineNumber="785"/>
+    <functiondecl functionName="rsplit" lineNumber="821"/>
+    <functiondecl functionName="split_floats" lineNumber="857"/>
+    <functiondecl functionName="split_floats_mk" lineNumber="880"/>
+    <functiondecl functionName="split_ints" lineNumber="910"/>
+    <functiondecl functionName="split_ints_mk" lineNumber="933"/>
+    <functiondecl functionName="join" lineNumber="962"/>
+    <functiondecl functionName="char_uppercase" lineNumber="973"/>
+    <functiondecl functionName="char_lowercase" lineNumber="978"/>
+    <functiondecl functionName="to_upper" lineNumber="983"/>
+    <functiondecl functionName="to_lower" lineNumber="998"/>
+    <functiondecl functionName="c_str" lineNumber="1013"/>
+    <functiondecl functionName="md5" lineNumber="1020"/>
+    <functiondecl functionName="hex_encode_buffer" lineNumber="1024"/>
+    <functiondecl functionName="chr" lineNumber="1040"/>
+    <functiondecl functionName="num" lineNumber="1045"/>
+    <functiondecl functionName="num_int64" lineNumber="1202"/>
+    <functiondecl functionName="num_uint64" lineNumber="1239"/>
+    <functiondecl functionName="num_real" lineNumber="1269"/>
+    <functiondecl functionName="num_scientific" lineNumber="1350"/>
+    <functiondecl functionName="ascii" lineNumber="1381"/>
+    <functiondecl functionName="utf8" lineNumber="1395"/>
+    <functiondecl functionName="parse_utf8" lineNumber="1403"/>
+    <functiondecl functionName="utf8" lineNumber="1559"/>
+    <functiondecl functionName="hex_to_int" lineNumber="1666"/>
+    <functiondecl functionName="hex_to_int64" lineNumber="1708"/>
+    <functiondecl functionName="bin_to_int64" lineNumber="1750"/>
+    <functiondecl functionName="to_int" lineNumber="1790"/>
+    <functiondecl functionName="to_int64" lineNumber="1818"/>
+    <functiondecl functionName="to_int" lineNumber="1846"/>
+    <functiondecl functionName="is_numeric" lineNumber="1878"/>
+    <functiondecl functionName="to_double" lineNumber="2121"/>
+    <functiondecl functionName="to_float" lineNumber="2131"/>
+    <functiondecl functionName="to_double" lineNumber="2136"/>
+    <functiondecl functionName="to_int" lineNumber="2141"/>
+    <functiondecl functionName="to_double" lineNumber="2200"/>
+    <functiondecl functionName="hash" lineNumber="2228"/>
+    <functiondecl functionName="hash" lineNumber="2239"/>
+    <functiondecl functionName="hash" lineNumber="2248"/>
+    <functiondecl functionName="hash" lineNumber="2257"/>
+    <functiondecl functionName="hash" lineNumber="2268"/>
+    <functiondecl functionName="hash64" lineNumber="2282"/>
+    <functiondecl functionName="md5_text" lineNumber="2296"/>
+    <functiondecl functionName="sha1_text" lineNumber="2304"/>
+    <functiondecl functionName="sha256_text" lineNumber="2311"/>
+    <functiondecl functionName="md5_buffer" lineNumber="2318"/>
+    <functiondecl functionName="sha1_buffer" lineNumber="2332"/>
+    <functiondecl functionName="sha256_buffer" lineNumber="2346"/>
+    <functiondecl functionName="insert" lineNumber="2359"/>
+    <functiondecl functionName="substr" lineNumber="2377"/>
+    <functiondecl functionName="find_last" lineNumber="2400"/>
+    <functiondecl functionName="find" lineNumber="2414"/>
+    <functiondecl functionName="find" lineNumber="2455"/>
+    <functiondecl functionName="find_char" lineNumber="2511"/>
+    <functiondecl functionName="findmk" lineNumber="2515"/>
+    <functiondecl functionName="findn" lineNumber="2569"/>
+    <functiondecl functionName="rfind" lineNumber="2610"/>
+    <functiondecl functionName="rfindn" lineNumber="2656"/>
+    <functiondecl functionName="ends_with" lineNumber="2706"/>
+    <functiondecl functionName="begins_with" lineNumber="2714"/>
+    <functiondecl functionName="begins_with" lineNumber="2736"/>
+    <functiondecl functionName="is_enclosed_in" lineNumber="2756"/>
+    <functiondecl functionName="is_subsequence_of" lineNumber="2761"/>
+    <functiondecl functionName="is_subsequence_ofi" lineNumber="2766"/>
+    <functiondecl functionName="is_quoted" lineNumber="2771"/>
+    <functiondecl functionName="_count" lineNumber="2776"/>
+    <functiondecl functionName="count" lineNumber="2813"/>
+    <functiondecl functionName="countn" lineNumber="2817"/>
+    <functiondecl functionName="_base_is_subsequence_of" lineNumber="2821"/>
+    <functiondecl functionName="bigrams" lineNumber="2856"/>
+    <functiondecl functionName="similarity" lineNumber="2870"/>
+    <functiondecl functionName="_wildcard_match" lineNumber="2900"/>
+    <functiondecl functionName="match" lineNumber="2914"/>
+    <functiondecl functionName="matchn" lineNumber="2922"/>
+    <functiondecl functionName="format" lineNumber="2929"/>
+    <functiondecl functionName="replace" lineNumber="3001"/>
+    <functiondecl functionName="replace" lineNumber="3024"/>
+    <functiondecl functionName="replace_first" lineNumber="3050"/>
+    <functiondecl functionName="replacen" lineNumber="3059"/>
+    <functiondecl functionName="repeat" lineNumber="3081"/>
+    <functiondecl functionName="left" lineNumber="3097"/>
+    <functiondecl functionName="right" lineNumber="3108"/>
+    <functiondecl functionName="ord_at" lineNumber="3119"/>
+    <functiondecl functionName="dedent" lineNumber="3125"/>
+    <functiondecl functionName="strip_edges" lineNumber="3167"/>
+    <functiondecl functionName="strip_escapes" lineNumber="3198"/>
+    <functiondecl functionName="lstrip" lineNumber="3212"/>
+    <functiondecl functionName="rstrip" lineNumber="3229"/>
+    <functiondecl functionName="simplify_path" lineNumber="3246"/>
+    <functiondecl functionName="_humanize_digits" lineNumber="3318"/>
+    <functiondecl functionName="humanize_size" lineNumber="3328"/>
+    <functiondecl functionName="is_abs_path" lineNumber="3352"/>
+    <functiondecl functionName="is_valid_identifier" lineNumber="3362"/>
+    <functiondecl functionName="word_wrap" lineNumber="3389"/>
+    <functiondecl functionName="http_escape" lineNumber="3420"/>
+    <functiondecl functionName="http_unescape" lineNumber="3444"/>
+    <functiondecl functionName="c_unescape" lineNumber="3466"/>
+    <functiondecl functionName="c_escape" lineNumber="3484"/>
+    <functiondecl functionName="c_escape_multiline" lineNumber="3502"/>
+    <functiondecl functionName="json_escape" lineNumber="3511"/>
+    <functiondecl functionName="xml_escape" lineNumber="3526"/>
+    <functiondecl functionName="_xml_unescape" lineNumber="3545"/>
+    <functiondecl functionName="xml_unescape" lineNumber="3633"/>
+    <functiondecl functionName="pad_decimals" lineNumber="3646"/>
+    <functiondecl functionName="pad_zeros" lineNumber="3673"/>
+    <functiondecl functionName="trim_prefix" lineNumber="3703"/>
+    <functiondecl functionName="trim_suffix" lineNumber="3712"/>
+    <functiondecl functionName="is_valid_integer" lineNumber="3721"/>
+    <functiondecl functionName="is_valid_hex_number" lineNumber="3741"/>
+    <functiondecl functionName="is_valid_float" lineNumber="3773"/>
+    <functiondecl functionName="path_to_file" lineNumber="3812"/>
+    <functiondecl functionName="path_to" lineNumber="3824"/>
+    <functiondecl functionName="is_valid_html_color" lineNumber="3899"/>
+    <functiondecl functionName="is_valid_filename" lineNumber="3904"/>
+    <functiondecl functionName="is_valid_ip_address" lineNumber="3918"/>
+    <functiondecl functionName="is_resource_file" lineNumber="3956"/>
+    <functiondecl functionName="is_rel_path" lineNumber="3961"/>
+    <functiondecl functionName="get_base_dir" lineNumber="3966"/>
+    <functiondecl functionName="get_file" lineNumber="3992"/>
+    <functiondecl functionName="get_extension" lineNumber="4001"/>
+    <functiondecl functionName="plus_file" lineNumber="4010"/>
+    <functiondecl functionName="percent_encode" lineNumber="4018"/>
+    <functiondecl functionName="percent_decode" lineNumber="4040"/>
+    <functiondecl functionName="property_name_encode" lineNumber="4077"/>
+    <functiondecl functionName="get_basename" lineNumber="4090"/>
+    <functiondecl functionName="itos" lineNumber="4099"/>
+    <functiondecl functionName="uitos" lineNumber="4104"/>
+    <functiondecl functionName="rtos" lineNumber="4109"/>
+    <functiondecl functionName="rtoss" lineNumber="4114"/>
+    <functiondecl functionName="rpad" lineNumber="4120"/>
+    <functiondecl functionName="lpad" lineNumber="4131"/>
+    <functiondecl functionName="sprintf" lineNumber="4146"/>
+    <functiondecl functionName="quote" lineNumber="4407"/>
+    <functiondecl functionName="unquote" lineNumber="4411"/>
+    <functiondecl functionName="RTR" lineNumber="4439"/>
+    <functiondecl functionName="built_in_strtod &lt; char &gt;" lineNumber="1906"/>
+    <functiondecl functionName="built_in_strtod &lt; wchar_t &gt;" lineNumber="1906"/>
+    <functiondecl functionName="is_symbol" lineNumber="67"/>
+    <functiondecl functionName="select_word" lineNumber="71"/>
+    <functiondecl functionName="get_data" lineNumber="121"/>
+    <functiondecl functionName="copy_from" lineNumber="135"/>
+    <functiondecl functionName="copy_from" lineNumber="156"/>
+    <functiondecl functionName="copy_from" lineNumber="185"/>
+    <functiondecl functionName="copy_from_unchecked" lineNumber="211"/>
+    <functiondecl functionName="copy_from" lineNumber="222"/>
+    <functiondecl functionName="nocasecmp_to" lineNumber="461"/>
+    <functiondecl functionName="casecmp_to" lineNumber="491"/>
+    <functiondecl functionName="naturalnocasecmp_to" lineNumber="521"/>
+    <functiondecl functionName="erase" lineNumber="583"/>
+    <functiondecl functionName="capitalize" lineNumber="588"/>
+    <functiondecl functionName="camelcase_to_underscore" lineNumber="607"/>
+    <functiondecl functionName="get_with_code_lines" lineNumber="649"/>
+    <functiondecl functionName="get_slice_count" lineNumber="660"/>
+    <functiondecl functionName="get_slice" lineNumber="679"/>
+    <functiondecl functionName="get_slicec" lineNumber="717"/>
+    <functiondecl functionName="split_spaces" lineNumber="748"/>
+    <functiondecl functionName="split" lineNumber="785"/>
+    <functiondecl functionName="rsplit" lineNumber="821"/>
+    <functiondecl functionName="split_floats" lineNumber="857"/>
+    <functiondecl functionName="split_floats_mk" lineNumber="880"/>
+    <functiondecl functionName="split_ints" lineNumber="910"/>
+    <functiondecl functionName="split_ints_mk" lineNumber="933"/>
+    <functiondecl functionName="join" lineNumber="962"/>
+    <functiondecl functionName="char_uppercase" lineNumber="973"/>
+    <functiondecl functionName="char_lowercase" lineNumber="978"/>
+    <functiondecl functionName="to_upper" lineNumber="983"/>
+    <functiondecl functionName="to_lower" lineNumber="998"/>
+    <functiondecl functionName="c_str" lineNumber="1013"/>
+    <functiondecl functionName="md5" lineNumber="1020"/>
+    <functiondecl functionName="hex_encode_buffer" lineNumber="1024"/>
+    <functiondecl functionName="chr" lineNumber="1040"/>
+    <functiondecl functionName="num" lineNumber="1045"/>
+    <functiondecl functionName="num_int64" lineNumber="1202"/>
+    <functiondecl functionName="num_uint64" lineNumber="1239"/>
+    <functiondecl functionName="num_real" lineNumber="1269"/>
+    <functiondecl functionName="num_scientific" lineNumber="1350"/>
+    <functiondecl functionName="ascii" lineNumber="1381"/>
+    <functiondecl functionName="utf8" lineNumber="1395"/>
+    <functiondecl functionName="parse_utf8" lineNumber="1403"/>
+    <functiondecl functionName="utf8" lineNumber="1559"/>
+    <functiondecl functionName="hex_to_int" lineNumber="1666"/>
+    <functiondecl functionName="hex_to_int64" lineNumber="1708"/>
+    <functiondecl functionName="bin_to_int64" lineNumber="1750"/>
+    <functiondecl functionName="to_int" lineNumber="1790"/>
+    <functiondecl functionName="to_int64" lineNumber="1818"/>
+    <functiondecl functionName="to_int" lineNumber="1846"/>
+    <functiondecl functionName="is_numeric" lineNumber="1878"/>
+    <functiondecl functionName="to_double" lineNumber="2121"/>
+    <functiondecl functionName="to_float" lineNumber="2131"/>
+    <functiondecl functionName="to_double" lineNumber="2136"/>
+    <functiondecl functionName="to_int" lineNumber="2141"/>
+    <functiondecl functionName="to_double" lineNumber="2200"/>
+    <functiondecl functionName="hash" lineNumber="2228"/>
+    <functiondecl functionName="hash" lineNumber="2239"/>
+    <functiondecl functionName="hash" lineNumber="2248"/>
+    <functiondecl functionName="hash" lineNumber="2257"/>
+    <functiondecl functionName="hash" lineNumber="2268"/>
+    <functiondecl functionName="hash64" lineNumber="2282"/>
+    <functiondecl functionName="md5_text" lineNumber="2296"/>
+    <functiondecl functionName="sha1_text" lineNumber="2304"/>
+    <functiondecl functionName="sha256_text" lineNumber="2311"/>
+    <functiondecl functionName="md5_buffer" lineNumber="2318"/>
+    <functiondecl functionName="sha1_buffer" lineNumber="2332"/>
+    <functiondecl functionName="sha256_buffer" lineNumber="2346"/>
+    <functiondecl functionName="insert" lineNumber="2359"/>
+    <functiondecl functionName="substr" lineNumber="2377"/>
+    <functiondecl functionName="find_last" lineNumber="2400"/>
+    <functiondecl functionName="find" lineNumber="2414"/>
+    <functiondecl functionName="find" lineNumber="2455"/>
+    <functiondecl functionName="find_char" lineNumber="2511"/>
+    <functiondecl functionName="findmk" lineNumber="2515"/>
+    <functiondecl functionName="findn" lineNumber="2569"/>
+    <functiondecl functionName="rfind" lineNumber="2610"/>
+    <functiondecl functionName="rfindn" lineNumber="2656"/>
+    <functiondecl functionName="ends_with" lineNumber="2706"/>
+    <functiondecl functionName="begins_with" lineNumber="2714"/>
+    <functiondecl functionName="begins_with" lineNumber="2736"/>
+    <functiondecl functionName="is_enclosed_in" lineNumber="2756"/>
+    <functiondecl functionName="is_subsequence_of" lineNumber="2761"/>
+    <functiondecl functionName="is_subsequence_ofi" lineNumber="2766"/>
+    <functiondecl functionName="is_quoted" lineNumber="2771"/>
+    <functiondecl functionName="_count" lineNumber="2776"/>
+    <functiondecl functionName="count" lineNumber="2813"/>
+    <functiondecl functionName="countn" lineNumber="2817"/>
+    <functiondecl functionName="_base_is_subsequence_of" lineNumber="2821"/>
+    <functiondecl functionName="bigrams" lineNumber="2856"/>
+    <functiondecl functionName="similarity" lineNumber="2870"/>
+    <functiondecl functionName="_wildcard_match" lineNumber="2900"/>
+    <functiondecl functionName="match" lineNumber="2914"/>
+    <functiondecl functionName="matchn" lineNumber="2922"/>
+    <functiondecl functionName="format" lineNumber="2929"/>
+    <functiondecl functionName="replace" lineNumber="3001"/>
+    <functiondecl functionName="replace" lineNumber="3024"/>
+    <functiondecl functionName="replace_first" lineNumber="3050"/>
+    <functiondecl functionName="replacen" lineNumber="3059"/>
+    <functiondecl functionName="repeat" lineNumber="3081"/>
+    <functiondecl functionName="left" lineNumber="3097"/>
+    <functiondecl functionName="right" lineNumber="3108"/>
+    <functiondecl functionName="ord_at" lineNumber="3119"/>
+    <functiondecl functionName="dedent" lineNumber="3125"/>
+    <functiondecl functionName="strip_edges" lineNumber="3167"/>
+    <functiondecl functionName="strip_escapes" lineNumber="3198"/>
+    <functiondecl functionName="lstrip" lineNumber="3212"/>
+    <functiondecl functionName="rstrip" lineNumber="3229"/>
+    <functiondecl functionName="simplify_path" lineNumber="3246"/>
+    <functiondecl functionName="_humanize_digits" lineNumber="3318"/>
+    <functiondecl functionName="humanize_size" lineNumber="3328"/>
+    <functiondecl functionName="is_abs_path" lineNumber="3352"/>
+    <functiondecl functionName="is_valid_identifier" lineNumber="3362"/>
+    <functiondecl functionName="word_wrap" lineNumber="3389"/>
+    <functiondecl functionName="http_escape" lineNumber="3420"/>
+    <functiondecl functionName="http_unescape" lineNumber="3444"/>
+    <functiondecl functionName="c_unescape" lineNumber="3466"/>
+    <functiondecl functionName="c_escape" lineNumber="3484"/>
+    <functiondecl functionName="c_escape_multiline" lineNumber="3502"/>
+    <functiondecl functionName="json_escape" lineNumber="3511"/>
+    <functiondecl functionName="xml_escape" lineNumber="3526"/>
+    <functiondecl functionName="_xml_unescape" lineNumber="3545"/>
+    <functiondecl functionName="xml_unescape" lineNumber="3633"/>
+    <functiondecl functionName="pad_decimals" lineNumber="3646"/>
+    <functiondecl functionName="pad_zeros" lineNumber="3673"/>
+    <functiondecl functionName="trim_prefix" lineNumber="3703"/>
+    <functiondecl functionName="trim_suffix" lineNumber="3712"/>
+    <functiondecl functionName="is_valid_integer" lineNumber="3721"/>
+    <functiondecl functionName="is_valid_hex_number" lineNumber="3741"/>
+    <functiondecl functionName="is_valid_float" lineNumber="3773"/>
+    <functiondecl functionName="path_to_file" lineNumber="3812"/>
+    <functiondecl functionName="path_to" lineNumber="3824"/>
+    <functiondecl functionName="is_valid_html_color" lineNumber="3899"/>
+    <functiondecl functionName="is_valid_filename" lineNumber="3904"/>
+    <functiondecl functionName="is_valid_ip_address" lineNumber="3918"/>
+    <functiondecl functionName="is_resource_file" lineNumber="3956"/>
+    <functiondecl functionName="is_rel_path" lineNumber="3961"/>
+    <functiondecl functionName="get_base_dir" lineNumber="3966"/>
+    <functiondecl functionName="get_file" lineNumber="3992"/>
+    <functiondecl functionName="get_extension" lineNumber="4001"/>
+    <functiondecl functionName="plus_file" lineNumber="4010"/>
+    <functiondecl functionName="percent_encode" lineNumber="4018"/>
+    <functiondecl functionName="percent_decode" lineNumber="4040"/>
+    <functiondecl functionName="property_name_encode" lineNumber="4077"/>
+    <functiondecl functionName="get_basename" lineNumber="4090"/>
+    <functiondecl functionName="itos" lineNumber="4099"/>
+    <functiondecl functionName="uitos" lineNumber="4104"/>
+    <functiondecl functionName="rtos" lineNumber="4109"/>
+    <functiondecl functionName="rtoss" lineNumber="4114"/>
+    <functiondecl functionName="rpad" lineNumber="4120"/>
+    <functiondecl functionName="lpad" lineNumber="4131"/>
+    <functiondecl functionName="sprintf" lineNumber="4146"/>
+    <functiondecl functionName="quote" lineNumber="4407"/>
+    <functiondecl functionName="unquote" lineNumber="4411"/>
+    <functiondecl functionName="RTR" lineNumber="4439"/>
+    <functiondecl functionName="built_in_strtod &lt; char &gt;" lineNumber="1906"/>
+    <functiondecl functionName="built_in_strtod &lt; wchar_t &gt;" lineNumber="1906"/>
+    <functiondecl functionName="is_symbol" lineNumber="67"/>
+    <functiondecl functionName="select_word" lineNumber="71"/>
+    <functiondecl functionName="get_data" lineNumber="121"/>
+    <functiondecl functionName="copy_from" lineNumber="135"/>
+    <functiondecl functionName="copy_from" lineNumber="156"/>
+    <functiondecl functionName="copy_from" lineNumber="185"/>
+    <functiondecl functionName="copy_from_unchecked" lineNumber="211"/>
+    <functiondecl functionName="copy_from" lineNumber="222"/>
+    <functiondecl functionName="nocasecmp_to" lineNumber="461"/>
+    <functiondecl functionName="casecmp_to" lineNumber="491"/>
+    <functiondecl functionName="naturalnocasecmp_to" lineNumber="521"/>
+    <functiondecl functionName="erase" lineNumber="583"/>
+    <functiondecl functionName="capitalize" lineNumber="588"/>
+    <functiondecl functionName="camelcase_to_underscore" lineNumber="607"/>
+    <functiondecl functionName="get_with_code_lines" lineNumber="649"/>
+    <functiondecl functionName="get_slice_count" lineNumber="660"/>
+    <functiondecl functionName="get_slice" lineNumber="679"/>
+    <functiondecl functionName="get_slicec" lineNumber="717"/>
+    <functiondecl functionName="split_spaces" lineNumber="748"/>
+    <functiondecl functionName="split" lineNumber="785"/>
+    <functiondecl functionName="rsplit" lineNumber="821"/>
+    <functiondecl functionName="split_floats" lineNumber="857"/>
+    <functiondecl functionName="split_floats_mk" lineNumber="880"/>
+    <functiondecl functionName="split_ints" lineNumber="910"/>
+    <functiondecl functionName="split_ints_mk" lineNumber="933"/>
+    <functiondecl functionName="join" lineNumber="962"/>
+    <functiondecl functionName="char_uppercase" lineNumber="973"/>
+    <functiondecl functionName="char_lowercase" lineNumber="978"/>
+    <functiondecl functionName="to_upper" lineNumber="983"/>
+    <functiondecl functionName="to_lower" lineNumber="998"/>
+    <functiondecl functionName="c_str" lineNumber="1013"/>
+    <functiondecl functionName="md5" lineNumber="1020"/>
+    <functiondecl functionName="hex_encode_buffer" lineNumber="1024"/>
+    <functiondecl functionName="chr" lineNumber="1040"/>
+    <functiondecl functionName="num" lineNumber="1045"/>
+    <functiondecl functionName="num_int64" lineNumber="1202"/>
+    <functiondecl functionName="num_uint64" lineNumber="1239"/>
+    <functiondecl functionName="num_real" lineNumber="1269"/>
+    <functiondecl functionName="num_scientific" lineNumber="1350"/>
+    <functiondecl functionName="ascii" lineNumber="1381"/>
+    <functiondecl functionName="utf8" lineNumber="1395"/>
+    <functiondecl functionName="parse_utf8" lineNumber="1403"/>
+    <functiondecl functionName="utf8" lineNumber="1559"/>
+    <functiondecl functionName="hex_to_int" lineNumber="1666"/>
+    <functiondecl functionName="hex_to_int64" lineNumber="1708"/>
+    <functiondecl functionName="bin_to_int64" lineNumber="1750"/>
+    <functiondecl functionName="to_int" lineNumber="1790"/>
+    <functiondecl functionName="to_int64" lineNumber="1818"/>
+    <functiondecl functionName="to_int" lineNumber="1846"/>
+    <functiondecl functionName="is_numeric" lineNumber="1878"/>
+    <functiondecl functionName="to_double" lineNumber="2121"/>
+    <functiondecl functionName="to_float" lineNumber="2131"/>
+    <functiondecl functionName="to_double" lineNumber="2136"/>
+    <functiondecl functionName="to_int" lineNumber="2141"/>
+    <functiondecl functionName="to_double" lineNumber="2200"/>
+    <functiondecl functionName="hash" lineNumber="2228"/>
+    <functiondecl functionName="hash" lineNumber="2239"/>
+    <functiondecl functionName="hash" lineNumber="2248"/>
+    <functiondecl functionName="hash" lineNumber="2257"/>
+    <functiondecl functionName="hash" lineNumber="2268"/>
+    <functiondecl functionName="hash64" lineNumber="2282"/>
+    <functiondecl functionName="md5_text" lineNumber="2296"/>
+    <functiondecl functionName="sha1_text" lineNumber="2304"/>
+    <functiondecl functionName="sha256_text" lineNumber="2311"/>
+    <functiondecl functionName="md5_buffer" lineNumber="2318"/>
+    <functiondecl functionName="sha1_buffer" lineNumber="2332"/>
+    <functiondecl functionName="sha256_buffer" lineNumber="2346"/>
+    <functiondecl functionName="insert" lineNumber="2359"/>
+    <functiondecl functionName="substr" lineNumber="2377"/>
+    <functiondecl functionName="find_last" lineNumber="2400"/>
+    <functiondecl functionName="find" lineNumber="2414"/>
+    <functiondecl functionName="find" lineNumber="2455"/>
+    <functiondecl functionName="find_char" lineNumber="2511"/>
+    <functiondecl functionName="findmk" lineNumber="2515"/>
+    <functiondecl functionName="findn" lineNumber="2569"/>
+    <functiondecl functionName="rfind" lineNumber="2610"/>
+    <functiondecl functionName="rfindn" lineNumber="2656"/>
+    <functiondecl functionName="ends_with" lineNumber="2706"/>
+    <functiondecl functionName="begins_with" lineNumber="2714"/>
+    <functiondecl functionName="begins_with" lineNumber="2736"/>
+    <functiondecl functionName="is_enclosed_in" lineNumber="2756"/>
+    <functiondecl functionName="is_subsequence_of" lineNumber="2761"/>
+    <functiondecl functionName="is_subsequence_ofi" lineNumber="2766"/>
+    <functiondecl functionName="is_quoted" lineNumber="2771"/>
+    <functiondecl functionName="_count" lineNumber="2776"/>
+    <functiondecl functionName="count" lineNumber="2813"/>
+    <functiondecl functionName="countn" lineNumber="2817"/>
+    <functiondecl functionName="_base_is_subsequence_of" lineNumber="2821"/>
+    <functiondecl functionName="bigrams" lineNumber="2856"/>
+    <functiondecl functionName="similarity" lineNumber="2870"/>
+    <functiondecl functionName="_wildcard_match" lineNumber="2900"/>
+    <functiondecl functionName="match" lineNumber="2914"/>
+    <functiondecl functionName="matchn" lineNumber="2922"/>
+    <functiondecl functionName="format" lineNumber="2929"/>
+    <functiondecl functionName="replace" lineNumber="3001"/>
+    <functiondecl functionName="replace" lineNumber="3024"/>
+    <functiondecl functionName="replace_first" lineNumber="3050"/>
+    <functiondecl functionName="replacen" lineNumber="3059"/>
+    <functiondecl functionName="repeat" lineNumber="3081"/>
+    <functiondecl functionName="left" lineNumber="3097"/>
+    <functiondecl functionName="right" lineNumber="3108"/>
+    <functiondecl functionName="ord_at" lineNumber="3119"/>
+    <functiondecl functionName="dedent" lineNumber="3125"/>
+    <functiondecl functionName="strip_edges" lineNumber="3167"/>
+    <functiondecl functionName="strip_escapes" lineNumber="3198"/>
+    <functiondecl functionName="lstrip" lineNumber="3212"/>
+    <functiondecl functionName="rstrip" lineNumber="3229"/>
+    <functiondecl functionName="simplify_path" lineNumber="3246"/>
+    <functiondecl functionName="_humanize_digits" lineNumber="3318"/>
+    <functiondecl functionName="humanize_size" lineNumber="3328"/>
+    <functiondecl functionName="is_abs_path" lineNumber="3352"/>
+    <functiondecl functionName="is_valid_identifier" lineNumber="3362"/>
+    <functiondecl functionName="word_wrap" lineNumber="3389"/>
+    <functiondecl functionName="http_escape" lineNumber="3420"/>
+    <functiondecl functionName="http_unescape" lineNumber="3444"/>
+    <functiondecl functionName="c_unescape" lineNumber="3466"/>
+    <functiondecl functionName="c_escape" lineNumber="3484"/>
+    <functiondecl functionName="c_escape_multiline" lineNumber="3502"/>
+    <functiondecl functionName="json_escape" lineNumber="3511"/>
+    <functiondecl functionName="xml_escape" lineNumber="3526"/>
+    <functiondecl functionName="_xml_unescape" lineNumber="3545"/>
+    <functiondecl functionName="xml_unescape" lineNumber="3633"/>
+    <functiondecl functionName="pad_decimals" lineNumber="3646"/>
+    <functiondecl functionName="pad_zeros" lineNumber="3673"/>
+    <functiondecl functionName="trim_prefix" lineNumber="3703"/>
+    <functiondecl functionName="trim_suffix" lineNumber="3712"/>
+    <functiondecl functionName="is_valid_integer" lineNumber="3721"/>
+    <functiondecl functionName="is_valid_hex_number" lineNumber="3741"/>
+    <functiondecl functionName="is_valid_float" lineNumber="3773"/>
+    <functiondecl functionName="path_to_file" lineNumber="3812"/>
+    <functiondecl functionName="path_to" lineNumber="3824"/>
+    <functiondecl functionName="is_valid_html_color" lineNumber="3899"/>
+    <functiondecl functionName="is_valid_filename" lineNumber="3904"/>
+    <functiondecl functionName="is_valid_ip_address" lineNumber="3918"/>
+    <functiondecl functionName="is_resource_file" lineNumber="3956"/>
+    <functiondecl functionName="is_rel_path" lineNumber="3961"/>
+    <functiondecl functionName="get_base_dir" lineNumber="3966"/>
+    <functiondecl functionName="get_file" lineNumber="3992"/>
+    <functiondecl functionName="get_extension" lineNumber="4001"/>
+    <functiondecl functionName="plus_file" lineNumber="4010"/>
+    <functiondecl functionName="percent_encode" lineNumber="4018"/>
+    <functiondecl functionName="percent_decode" lineNumber="4040"/>
+    <functiondecl functionName="property_name_encode" lineNumber="4077"/>
+    <functiondecl functionName="get_basename" lineNumber="4090"/>
+    <functiondecl functionName="itos" lineNumber="4099"/>
+    <functiondecl functionName="uitos" lineNumber="4104"/>
+    <functiondecl functionName="rtos" lineNumber="4109"/>
+    <functiondecl functionName="rtoss" lineNumber="4114"/>
+    <functiondecl functionName="rpad" lineNumber="4120"/>
+    <functiondecl functionName="lpad" lineNumber="4131"/>
+    <functiondecl functionName="sprintf" lineNumber="4146"/>
+    <functiondecl functionName="quote" lineNumber="4407"/>
+    <functiondecl functionName="unquote" lineNumber="4411"/>
+    <functiondecl functionName="RTR" lineNumber="4439"/>
+    <functiondecl functionName="built_in_strtod &lt; char &gt;" lineNumber="1906"/>
+    <functiondecl functionName="built_in_strtod &lt; wchar_t &gt;" lineNumber="1906"/>
+    <functiondecl functionName="is_symbol" lineNumber="67"/>
+    <functiondecl functionName="select_word" lineNumber="71"/>
+    <functiondecl functionName="get_data" lineNumber="121"/>
+    <functiondecl functionName="copy_from" lineNumber="135"/>
+    <functiondecl functionName="copy_from" lineNumber="156"/>
+    <functiondecl functionName="copy_from" lineNumber="185"/>
+    <functiondecl functionName="copy_from_unchecked" lineNumber="211"/>
+    <functiondecl functionName="copy_from" lineNumber="222"/>
+    <functiondecl functionName="nocasecmp_to" lineNumber="461"/>
+    <functiondecl functionName="casecmp_to" lineNumber="491"/>
+    <functiondecl functionName="naturalnocasecmp_to" lineNumber="521"/>
+    <functiondecl functionName="erase" lineNumber="583"/>
+    <functiondecl functionName="capitalize" lineNumber="588"/>
+    <functiondecl functionName="camelcase_to_underscore" lineNumber="607"/>
+    <functiondecl functionName="get_with_code_lines" lineNumber="649"/>
+    <functiondecl functionName="get_slice_count" lineNumber="660"/>
+    <functiondecl functionName="get_slice" lineNumber="679"/>
+    <functiondecl functionName="get_slicec" lineNumber="717"/>
+    <functiondecl functionName="split_spaces" lineNumber="748"/>
+    <functiondecl functionName="split" lineNumber="785"/>
+    <functiondecl functionName="rsplit" lineNumber="821"/>
+    <functiondecl functionName="split_floats" lineNumber="857"/>
+    <functiondecl functionName="split_floats_mk" lineNumber="880"/>
+    <functiondecl functionName="split_ints" lineNumber="910"/>
+    <functiondecl functionName="split_ints_mk" lineNumber="933"/>
+    <functiondecl functionName="join" lineNumber="962"/>
+    <functiondecl functionName="char_uppercase" lineNumber="973"/>
+    <functiondecl functionName="char_lowercase" lineNumber="978"/>
+    <functiondecl functionName="to_upper" lineNumber="983"/>
+    <functiondecl functionName="to_lower" lineNumber="998"/>
+    <functiondecl functionName="c_str" lineNumber="1013"/>
+    <functiondecl functionName="md5" lineNumber="1020"/>
+    <functiondecl functionName="hex_encode_buffer" lineNumber="1024"/>
+    <functiondecl functionName="chr" lineNumber="1040"/>
+    <functiondecl functionName="num" lineNumber="1045"/>
+    <functiondecl functionName="num_int64" lineNumber="1202"/>
+    <functiondecl functionName="num_uint64" lineNumber="1239"/>
+    <functiondecl functionName="num_real" lineNumber="1269"/>
+    <functiondecl functionName="num_scientific" lineNumber="1350"/>
+    <functiondecl functionName="ascii" lineNumber="1381"/>
+    <functiondecl functionName="utf8" lineNumber="1395"/>
+    <functiondecl functionName="parse_utf8" lineNumber="1403"/>
+    <functiondecl functionName="utf8" lineNumber="1559"/>
+    <functiondecl functionName="hex_to_int" lineNumber="1666"/>
+    <functiondecl functionName="hex_to_int64" lineNumber="1708"/>
+    <functiondecl functionName="bin_to_int64" lineNumber="1750"/>
+    <functiondecl functionName="to_int" lineNumber="1790"/>
+    <functiondecl functionName="to_int64" lineNumber="1818"/>
+    <functiondecl functionName="to_int" lineNumber="1846"/>
+    <functiondecl functionName="is_numeric" lineNumber="1878"/>
+    <functiondecl functionName="to_double" lineNumber="2121"/>
+    <functiondecl functionName="to_float" lineNumber="2131"/>
+    <functiondecl functionName="to_double" lineNumber="2136"/>
+    <functiondecl functionName="to_int" lineNumber="2141"/>
+    <functiondecl functionName="to_double" lineNumber="2200"/>
+    <functiondecl functionName="hash" lineNumber="2228"/>
+    <functiondecl functionName="hash" lineNumber="2239"/>
+    <functiondecl functionName="hash" lineNumber="2248"/>
+    <functiondecl functionName="hash" lineNumber="2257"/>
+    <functiondecl functionName="hash" lineNumber="2268"/>
+    <functiondecl functionName="hash64" lineNumber="2282"/>
+    <functiondecl functionName="md5_text" lineNumber="2296"/>
+    <functiondecl functionName="sha1_text" lineNumber="2304"/>
+    <functiondecl functionName="sha256_text" lineNumber="2311"/>
+    <functiondecl functionName="md5_buffer" lineNumber="2318"/>
+    <functiondecl functionName="sha1_buffer" lineNumber="2332"/>
+    <functiondecl functionName="sha256_buffer" lineNumber="2346"/>
+    <functiondecl functionName="insert" lineNumber="2359"/>
+    <functiondecl functionName="substr" lineNumber="2377"/>
+    <functiondecl functionName="find_last" lineNumber="2400"/>
+    <functiondecl functionName="find" lineNumber="2414"/>
+    <functiondecl functionName="find" lineNumber="2455"/>
+    <functiondecl functionName="find_char" lineNumber="2511"/>
+    <functiondecl functionName="findmk" lineNumber="2515"/>
+    <functiondecl functionName="findn" lineNumber="2569"/>
+    <functiondecl functionName="rfind" lineNumber="2610"/>
+    <functiondecl functionName="rfindn" lineNumber="2656"/>
+    <functiondecl functionName="ends_with" lineNumber="2706"/>
+    <functiondecl functionName="begins_with" lineNumber="2714"/>
+    <functiondecl functionName="begins_with" lineNumber="2736"/>
+    <functiondecl functionName="is_enclosed_in" lineNumber="2756"/>
+    <functiondecl functionName="is_subsequence_of" lineNumber="2761"/>
+    <functiondecl functionName="is_subsequence_ofi" lineNumber="2766"/>
+    <functiondecl functionName="is_quoted" lineNumber="2771"/>
+    <functiondecl functionName="_count" lineNumber="2776"/>
+    <functiondecl functionName="count" lineNumber="2813"/>
+    <functiondecl functionName="countn" lineNumber="2817"/>
+    <functiondecl functionName="_base_is_subsequence_of" lineNumber="2821"/>
+    <functiondecl functionName="bigrams" lineNumber="2856"/>
+    <functiondecl functionName="similarity" lineNumber="2870"/>
+    <functiondecl functionName="_wildcard_match" lineNumber="2900"/>
+    <functiondecl functionName="match" lineNumber="2914"/>
+    <functiondecl functionName="matchn" lineNumber="2922"/>
+    <functiondecl functionName="format" lineNumber="2929"/>
+    <functiondecl functionName="replace" lineNumber="3001"/>
+    <functiondecl functionName="replace" lineNumber="3024"/>
+    <functiondecl functionName="replace_first" lineNumber="3050"/>
+    <functiondecl functionName="replacen" lineNumber="3059"/>
+    <functiondecl functionName="repeat" lineNumber="3081"/>
+    <functiondecl functionName="left" lineNumber="3097"/>
+    <functiondecl functionName="right" lineNumber="3108"/>
+    <functiondecl functionName="ord_at" lineNumber="3119"/>
+    <functiondecl functionName="dedent" lineNumber="3125"/>
+    <functiondecl functionName="strip_edges" lineNumber="3167"/>
+    <functiondecl functionName="strip_escapes" lineNumber="3198"/>
+    <functiondecl functionName="lstrip" lineNumber="3212"/>
+    <functiondecl functionName="rstrip" lineNumber="3229"/>
+    <functiondecl functionName="simplify_path" lineNumber="3246"/>
+    <functiondecl functionName="_humanize_digits" lineNumber="3318"/>
+    <functiondecl functionName="humanize_size" lineNumber="3328"/>
+    <functiondecl functionName="is_abs_path" lineNumber="3352"/>
+    <functiondecl functionName="is_valid_identifier" lineNumber="3362"/>
+    <functiondecl functionName="word_wrap" lineNumber="3389"/>
+    <functiondecl functionName="http_escape" lineNumber="3420"/>
+    <functiondecl functionName="http_unescape" lineNumber="3444"/>
+    <functiondecl functionName="c_unescape" lineNumber="3466"/>
+    <functiondecl functionName="c_escape" lineNumber="3484"/>
+    <functiondecl functionName="c_escape_multiline" lineNumber="3502"/>
+    <functiondecl functionName="json_escape" lineNumber="3511"/>
+    <functiondecl functionName="xml_escape" lineNumber="3526"/>
+    <functiondecl functionName="_xml_unescape" lineNumber="3545"/>
+    <functiondecl functionName="xml_unescape" lineNumber="3633"/>
+    <functiondecl functionName="pad_decimals" lineNumber="3646"/>
+    <functiondecl functionName="pad_zeros" lineNumber="3673"/>
+    <functiondecl functionName="trim_prefix" lineNumber="3703"/>
+    <functiondecl functionName="trim_suffix" lineNumber="3712"/>
+    <functiondecl functionName="is_valid_integer" lineNumber="3721"/>
+    <functiondecl functionName="is_valid_hex_number" lineNumber="3741"/>
+    <functiondecl functionName="is_valid_float" lineNumber="3773"/>
+    <functiondecl functionName="path_to_file" lineNumber="3812"/>
+    <functiondecl functionName="path_to" lineNumber="3824"/>
+    <functiondecl functionName="is_valid_html_color" lineNumber="3899"/>
+    <functiondecl functionName="is_valid_filename" lineNumber="3904"/>
+    <functiondecl functionName="is_valid_ip_address" lineNumber="3918"/>
+    <functiondecl functionName="is_resource_file" lineNumber="3956"/>
+    <functiondecl functionName="is_rel_path" lineNumber="3961"/>
+    <functiondecl functionName="get_base_dir" lineNumber="3966"/>
+    <functiondecl functionName="get_file" lineNumber="3992"/>
+    <functiondecl functionName="get_extension" lineNumber="4001"/>
+    <functiondecl functionName="plus_file" lineNumber="4010"/>
+    <functiondecl functionName="percent_encode" lineNumber="4018"/>
+    <functiondecl functionName="percent_decode" lineNumber="4040"/>
+    <functiondecl functionName="property_name_encode" lineNumber="4077"/>
+    <functiondecl functionName="get_basename" lineNumber="4090"/>
+    <functiondecl functionName="itos" lineNumber="4099"/>
+    <functiondecl functionName="uitos" lineNumber="4104"/>
+    <functiondecl functionName="rtos" lineNumber="4109"/>
+    <functiondecl functionName="rtoss" lineNumber="4114"/>
+    <functiondecl functionName="rpad" lineNumber="4120"/>
+    <functiondecl functionName="lpad" lineNumber="4131"/>
+    <functiondecl functionName="sprintf" lineNumber="4146"/>
+    <functiondecl functionName="quote" lineNumber="4407"/>
+    <functiondecl functionName="unquote" lineNumber="4411"/>
+    <functiondecl functionName="TTR" lineNumber="4420"/>
+    <functiondecl functionName="DTR" lineNumber="4428"/>
+    <functiondecl functionName="RTR" lineNumber="4439"/>
+    <functiondecl functionName="built_in_strtod &lt; char &gt;" lineNumber="1906"/>
+    <functiondecl functionName="built_in_strtod &lt; wchar_t &gt;" lineNumber="1906"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="CharProxy &lt; char &gt;"/>
+    <functioncall functionName="CharProxy &lt; wchar_t &gt;"/>
+    <functioncall functionName="CharString"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="RTR"/>
+    <functioncall functionName="StrRange"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_base_is_subsequence_of"/>
+    <functioncall functionName="_count"/>
+    <functioncall functionName="_cowdata"/>
+    <functioncall functionName="_div"/>
+    <functioncall functionName="_find_lower"/>
+    <functioncall functionName="_find_upper"/>
+    <functioncall functionName="_humanize_digits"/>
+    <functioncall functionName="_index"/>
+    <functioncall functionName="_ref"/>
+    <functioncall functionName="_snprintf_s"/>
+    <functioncall functionName="_wildcard_match"/>
+    <functioncall functionName="_xml_unescape"/>
+    <functioncall functionName="ascii"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="beg"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bigrams"/>
+    <functioncall functionName="binary"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="built_in_strtod &lt; char &gt;"/>
+    <functioncall functionName="built_in_strtod &lt; wchar_t &gt;"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c_escape_multiline"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="camelcase_to_underscore"/>
+    <functioncall functionName="capitalize"/>
+    <functioncall functionName="case_insensitive"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="character"/>
+    <functioncall functionName="chars"/>
+    <functioncall functionName="chr"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="common_parent"/>
+    <functioncall functionName="compare"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copy_from"/>
+    <functioncall functionName="copy_from_unchecked"/>
+    <functioncall functionName="cowdata"/>
+    <functioncall functionName="cstr_size"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="decimal"/>
+    <functioncall functionName="dedent"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="digits"/>
+    <functioncall functionName="divisor"/>
+    <functioncall functionName="doc_translate"/>
+    <functioncall functionName="done"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="ends_with"/>
+    <functioncall functionName="exp"/>
+    <functioncall functionName="expSign"/>
+    <functioncall functionName="exponent_found"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_char"/>
+    <functioncall functionName="find_last"/>
+    <functioncall functionName="findfrom"/>
+    <functioncall functionName="findmk"/>
+    <functioncall functionName="findn"/>
+    <functioncall functionName="findres"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="fmt"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="frac2"/>
+    <functioncall functionName="fraction"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slice_count"/>
+    <functioncall functionName="get_slicec"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="h_Val"/>
+    <functioncall functionName="has_bom"/>
+    <functioncall functionName="has_indent"/>
+    <functioncall functionName="has_text"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hashv"/>
+    <functioncall functionName="hex"/>
+    <functioncall functionName="hex_encode_buffer"/>
+    <functioncall functionName="hex_to_int"/>
+    <functioncall functionName="html_is_valid"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_as_str"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in_decimals"/>
+    <functioncall functionName="in_format"/>
+    <functioncall functionName="indent_stop"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="inside"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="integer"/>
+    <functioncall functionName="intn"/>
+    <functioncall functionName="invert"/>
+    <functioncall functionName="is_abs_path"/>
+    <functioncall functionName="is_enclosed_in"/>
+    <functioncall functionName="is_num"/>
+    <functioncall functionName="is_quoted"/>
+    <functioncall functionName="is_str_less"/>
+    <functioncall functionName="is_symbol"/>
+    <functioncall functionName="is_valid_hex_number"/>
+    <functioncall functionName="is_valid_integer"/>
+    <functioncall functionName="is_valid_ip_address"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="last_space"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="left_edge"/>
+    <functioncall functionName="left_justified"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="limit"/>
+    <functioncall functionName="line_start"/>
+    <functioncall functionName="lpad"/>
+    <functioncall functionName="mantSize"/>
+    <functioncall functionName="match"/>
+    <functioncall functionName="maxExponent"/>
+    <functioncall functionName="md5"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="min_chars"/>
+    <functioncall functionName="min_decimals"/>
+    <functioncall functionName="mod"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n_pairs"/>
+    <functioncall functionName="naturalnocasecmp_to"/>
+    <functioncall functionName="neg"/>
+    <functioncall functionName="new_string"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nocasecmp_to"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="num_int64"/>
+    <functioncall functionName="num_scientific"/>
+    <functioncall functionName="num_uint64"/>
+    <functioncall functionName="number"/>
+    <functioncall functionName="number_len"/>
+    <functioncall functionName="operator&lt;"/>
+    <functioncall functionName="operator=="/>
+    <functioncall functionName="operatorT"/>
+    <functioncall functionName="operator[]"/>
+    <functioncall functionName="operatorconstchar*"/>
+    <functioncall functionName="ord"/>
+    <functioncall functionName="ord1"/>
+    <functioncall functionName="ord2"/>
+    <functioncall functionName="ord_at"/>
+    <functioncall functionName="other"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pExp"/>
+    <functioncall functionName="p_at_pos"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_c_str"/>
+    <functioncall functionName="p_case_sensitive"/>
+    <functioncall functionName="p_char"/>
+    <functioncall functionName="p_chars"/>
+    <functioncall functionName="p_chr"/>
+    <functioncall functionName="p_clip_to_len"/>
+    <functioncall functionName="p_col"/>
+    <functioncall functionName="p_cstr"/>
+    <functioncall functionName="p_decimals"/>
+    <functioncall functionName="p_dst"/>
+    <functioncall functionName="p_elem"/>
+    <functioncall functionName="p_escape_quotes"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_len"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_maxsplit"/>
+    <functioncall functionName="p_md5"/>
+    <functioncall functionName="p_num"/>
+    <functioncall functionName="p_pattern"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_prefix"/>
+    <functioncall functionName="p_s"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_splitter"/>
+    <functioncall functionName="p_splitters"/>
+    <functioncall functionName="p_src_len"/>
+    <functioncall functionName="p_str"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_suffix"/>
+    <functioncall functionName="p_text"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_utf8"/>
+    <functioncall functionName="p_val"/>
+    <functioncall functionName="p_with_prefix"/>
+    <functioncall functionName="pad_char"/>
+    <functioncall functionName="pad_decimals"/>
+    <functioncall functionName="padding"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="path_to"/>
+    <functioncall functionName="period"/>
+    <functioncall functionName="placeholder"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="post"/>
+    <functioncall functionName="powersOf10"/>
+    <functioncall functionName="prefix_idx"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prev_pos"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quotechar"/>
+    <functioncall functionName="r_end"/>
+    <functioncall functionName="r_key"/>
+    <functioncall functionName="read_pos"/>
+    <functioncall functionName="reading"/>
+    <functioncall functionName="remaining_len"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="replace_first"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rfind"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="rpad"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sd"/>
+    <functioncall functionName="search_from"/>
+    <functioncall functionName="sep"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="sha1"/>
+    <functioncall functionName="sha256"/>
+    <functioncall functionName="should_split"/>
+    <functioncall functionName="sign"/>
+    <functioncall functionName="sign_found"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="slen"/>
+    <functioncall functionName="spl_len"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="sprintf"/>
+    <functioncall functionName="src_begin"/>
+    <functioncall functionName="src_len"/>
+    <functioncall functionName="start_index"/>
+    <functioncall functionName="str_size"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="strtol"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="substr_start"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="text"/>
+    <functioncall functionName="tgt_size"/>
+    <functioncall functionName="that_str"/>
+    <functioncall functionName="this_int"/>
+    <functioncall functionName="this_str"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_double"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="tool_translate"/>
+    <functioncall functionName="translate"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="unichar"/>
+    <functioncall functionName="unlikely"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="v_key"/>
+    <functioncall functionName="v_val"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="valid_char"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="value_index"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="was_precedent_number"/>
+    <functioncall functionName="wchar_t"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zero"/>
+  </FileInfo>
+</analyzerinfo>

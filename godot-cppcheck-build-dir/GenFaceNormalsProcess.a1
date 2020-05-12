@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2743032424">
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;GenMeshFaceNormals&apos; argument 1 names different: declaration &apos;pcMesh&apos; definition &apos;pMesh&apos;." verbose="Function &apos;GenMeshFaceNormals&apos; argument 1 names different: declaration &apos;pcMesh&apos; definition &apos;pMesh&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/GenFaceNormalsProcess.cpp" line="106" column="57"/>
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/GenFaceNormalsProcess.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/GenFaceNormalsProcess.h" line="81" column="37"/>
+            <symbol>GenMeshFaceNormals</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/GenFaceNormalsProcess.h:81:10" my-argnr="1" my-argname="pMesh" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/GenFaceNormalsProcess.cpp" line="108" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="IsActive" lineNumber="75"/>
+    <functiondecl functionName="Execute" lineNumber="82"/>
+    <functiondecl functionName="GenMeshFaceNormals" lineNumber="106"/>
+    <functioncall functionName="ASSIMP_LOG_DEBUG"/>
+    <functioncall functionName="ASSIMP_LOG_INFO"/>
+    <functioncall functionName="DeadlyImportError"/>
+    <functioncall functionName="GenFaceNormalsProcess"/>
+    <functioncall functionName="GenMeshFaceNormals"/>
+    <functioncall functionName="NormalizeSafe"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aiPrimitiveType_POLYGON"/>
+    <functioncall functionName="aiVector3D"/>
+    <functioncall functionName="bHas"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_"/>
+    <functioncall functionName="get_qnan"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="mNormals"/>
+    <functioncall functionName="mNumFaces"/>
+    <functioncall functionName="mNumIndices"/>
+    <functioncall functionName="mNumMeshes"/>
+    <functioncall functionName="mNumVertices"/>
+    <functioncall functionName="qnan"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="vNor"/>
+  </FileInfo>
+</analyzerinfo>

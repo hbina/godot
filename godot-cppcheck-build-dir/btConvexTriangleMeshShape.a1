@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="7504445">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;LocalSupportVertexCallback&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;LocalSupportVertexCallback&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp" line="40" column="2"/>
+            <symbol>LocalSupportVertexCallback</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;InertiaCallback&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;InertiaCallback&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp" line="232" column="3"/>
+            <symbol>InertiaCallback</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h" line="156" column="41"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;center&apos; can be declared with const" verbose="Parameter &apos;center&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp" line="232" column="30"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp:236:16" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp" line="241" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp:236:16" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp" line="241" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="internalProcessTriangleIndex" lineNumber="47"/>
+    <functiondecl functionName="GetSupportVertexLocal" lineNumber="63"/>
+    <functiondecl functionName="internalProcessTriangleIndex" lineNumber="198"/>
+    <functiondecl functionName="getCenter" lineNumber="215"/>
+    <functiondecl functionName="getVolume" lineNumber="220"/>
+    <functiondecl functionName="internalProcessTriangleIndex" lineNumber="236"/>
+    <functiondecl functionName="getInertia" lineNumber="263"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BT_DECLARE_ALIGNED_ALLOCATOR"/>
+    <functioncall functionName="BT_LARGE_FLOAT"/>
+    <functioncall functionName="CONVEX_TRIANGLEMESH_SHAPE_PROXYTYPE"/>
+    <functioncall functionName="GetSupportVertexLocal"/>
+    <functioncall functionName="INVALID_SHAPE_PROXYTYPE"/>
+    <functioncall functionName="InternalProcessAllTriangles"/>
+    <functioncall functionName="LocalSupportVertexCallback"/>
+    <functioncall functionName="aabbMax"/>
+    <functioncall functionName="aabbMin"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btCollisionShape"/>
+    <functioncall functionName="btCollisionShapeData"/>
+    <functioncall functionName="btConvexInternalShape"/>
+    <functioncall functionName="btConvexInternalShapeData"/>
+    <functioncall functionName="btConvexShape"/>
+    <functioncall functionName="btConvexTriangleMeshShape"/>
+    <functioncall functionName="btFabs"/>
+    <functioncall functionName="btPolyhedralConvexAabbCachingShape"/>
+    <functioncall functionName="btPolyhedralConvexShape"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btSqrt"/>
+    <functioncall functionName="btTransformAabb"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="calcAabb"/>
+    <functioncall functionName="calculateLocalInertia"/>
+    <functioncall functionName="calculateSerializeBufferSize"/>
+    <functioncall functionName="calculateTemporalAabb"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="centerCallback"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="dataBuffer"/>
+    <functioncall functionName="defaultMarginMultiplier"/>
+    <functioncall functionName="diagonalize"/>
+    <functioncall functionName="dimensions"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getAabb"/>
+    <functioncall functionName="getAabbSlow"/>
+    <functioncall functionName="getAngularMotionDisc"/>
+    <functioncall functionName="getAnisotropicRollingFrictionDirection"/>
+    <functioncall functionName="getBasis"/>
+    <functioncall functionName="getBoundingSphere"/>
+    <functioncall functionName="getCenter"/>
+    <functioncall functionName="getContactBreakingThreshold"/>
+    <functioncall functionName="getInertia"/>
+    <functioncall functionName="getLocalScaling"/>
+    <functioncall functionName="getMargin"/>
+    <functioncall functionName="getName"/>
+    <functioncall functionName="getScaling"/>
+    <functioncall functionName="getShapeType"/>
+    <functioncall functionName="getUserIndex"/>
+    <functioncall functionName="getUserPointer"/>
+    <functioncall functionName="getVolume"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i00"/>
+    <functioncall functionName="i11"/>
+    <functioncall functionName="i22"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="inertiaCallback"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="isCompound"/>
+    <functioncall functionName="isConcave"/>
+    <functioncall functionName="isConvex"/>
+    <functioncall functionName="isConvex2d"/>
+    <functioncall functionName="isInfinite"/>
+    <functioncall functionName="isNonMoving"/>
+    <functioncall functionName="isPolyhedral"/>
+    <functioncall functionName="isSoftBody"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="lenSqr"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="localGetSupportingVertexWithoutMargin"/>
+    <functioncall functionName="m_collisionMargin"/>
+    <functioncall functionName="m_collisionShapeData"/>
+    <functioncall functionName="m_implicitShapeDimensions"/>
+    <functioncall functionName="m_isLocalAabbValid"/>
+    <functioncall functionName="m_localAabbMax"/>
+    <functioncall functionName="m_localAabbMin"/>
+    <functioncall functionName="m_localScaling"/>
+    <functioncall functionName="m_maxDot"/>
+    <functioncall functionName="m_shapeType"/>
+    <functioncall functionName="m_stridingMesh"/>
+    <functioncall functionName="m_supportVecLocal"/>
+    <functioncall functionName="m_supportVertexLocal"/>
+    <functioncall functionName="m_userIndex"/>
+    <functioncall functionName="m_userPointer"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="meshInterface"/>
+    <functioncall functionName="minAxis"/>
+    <functioncall functionName="minDimension"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="partId"/>
+    <functioncall functionName="penetrationVector"/>
+    <functioncall functionName="recalcLocalAabb"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="safeMargin"/>
+    <functioncall functionName="scaling"/>
+    <functioncall functionName="serialize"/>
+    <functioncall functionName="serializeFloat"/>
+    <functioncall functionName="serializeSingleShape"/>
+    <functioncall functionName="serializer"/>
+    <functioncall functionName="setLocalScaling"/>
+    <functioncall functionName="setMargin"/>
+    <functioncall functionName="setOrigin"/>
+    <functioncall functionName="setSafeMargin"/>
+    <functioncall functionName="setScaling"/>
+    <functioncall functionName="setUserIndex"/>
+    <functioncall functionName="setUserPointer"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="supVec"/>
+    <functioncall functionName="supportCallback"/>
+    <functioncall functionName="supportVecLocal"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="trans"/>
+    <functioncall functionName="triangleIndex"/>
+    <functioncall functionName="triple"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="userPtr"/>
+    <functioncall functionName="vec"/>
+    <functioncall functionName="vec0"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="volume"/>
+  </FileInfo>
+</analyzerinfo>

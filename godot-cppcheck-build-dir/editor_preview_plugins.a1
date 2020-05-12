@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3386436890">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;EditorMaterialPreviewPlugin::preview_done&apos; is not initialized in the constructor." verbose="Member variable &apos;EditorMaterialPreviewPlugin::preview_done&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/editor_preview_plugins.cpp" line="359" column="30"/>
+            <symbol>EditorMaterialPreviewPlugin::preview_done</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;EditorMeshPreviewPlugin::preview_done&apos; is not initialized in the constructor." verbose="Member variable &apos;EditorMeshPreviewPlugin::preview_done&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/editor_preview_plugins.cpp" line="760" column="26"/>
+            <symbol>EditorMeshPreviewPlugin::preview_done</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;EditorFontPreviewPlugin::preview_done&apos; is not initialized in the constructor." verbose="Member variable &apos;EditorFontPreviewPlugin::preview_done&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/editor_preview_plugins.cpp" line="892" column="26"/>
+            <symbol>EditorFontPreviewPlugin::preview_done</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;scenario&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;scenario&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/editor_preview_plugins.cpp" line="361" column="2"/>
+            <symbol>scenario</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;scenario&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;scenario&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/editor_preview_plugins.cpp" line="762" column="2"/>
+            <symbol>scenario</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;viewport&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;viewport&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/editor_preview_plugins.cpp" line="894" column="2"/>
+            <symbol>viewport</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="post_process_preview" lineNumber="45"/>
+    <functiondecl functionName="handles" lineNumber="73"/>
+    <functiondecl functionName="generate_small_preview_automatically" lineNumber="78"/>
+    <functiondecl functionName="generate" lineNumber="82"/>
+    <functiondecl functionName="handles" lineNumber="145"/>
+    <functiondecl functionName="generate" lineNumber="150"/>
+    <functiondecl functionName="generate_small_preview_automatically" lineNumber="188"/>
+    <functiondecl functionName="handles" lineNumber="193"/>
+    <functiondecl functionName="generate" lineNumber="198"/>
+    <functiondecl functionName="generate_small_preview_automatically" lineNumber="252"/>
+    <functiondecl functionName="handles" lineNumber="261"/>
+    <functiondecl functionName="generate" lineNumber="266"/>
+    <functiondecl functionName="generate_from_path" lineNumber="271"/>
+    <functiondecl functionName="_preview_done" lineNumber="305"/>
+    <functiondecl functionName="_bind_methods" lineNumber="310"/>
+    <functiondecl functionName="handles" lineNumber="315"/>
+    <functiondecl functionName="generate_small_preview_automatically" lineNumber="320"/>
+    <functiondecl functionName="generate" lineNumber="324"/>
+    <functiondecl functionName="_is_text_char" lineNumber="479"/>
+    <functiondecl functionName="handles" lineNumber="484"/>
+    <functiondecl functionName="generate" lineNumber="489"/>
+    <functiondecl functionName="handles" lineNumber="602"/>
+    <functiondecl functionName="generate" lineNumber="607"/>
+    <functiondecl functionName="_preview_done" lineNumber="690"/>
+    <functiondecl functionName="_bind_methods" lineNumber="695"/>
+    <functiondecl functionName="handles" lineNumber="699"/>
+    <functiondecl functionName="generate" lineNumber="704"/>
+    <functiondecl functionName="_preview_done" lineNumber="809"/>
+    <functiondecl functionName="_bind_methods" lineNumber="814"/>
+    <functiondecl functionName="handles" lineNumber="819"/>
+    <functiondecl functionName="generate_from_path" lineNumber="824"/>
+    <functiondecl functionName="generate" lineNumber="883"/>
+    <functioncall functionName="ARRAY_MAX"/>
+    <functioncall functionName="ARRAY_NORMAL"/>
+    <functioncall functionName="ARRAY_TANGENT"/>
+    <functioncall functionName="ARRAY_TEX_UV"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="Basis"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="EditorAudioStreamPreviewPlugin"/>
+    <functioncall functionName="EditorBitmapPreviewPlugin"/>
+    <functioncall functionName="EditorFontPreviewPlugin"/>
+    <functioncall functionName="EditorImagePreviewPlugin"/>
+    <functioncall functionName="EditorMaterialPreviewPlugin"/>
+    <functioncall functionName="EditorMeshPreviewPlugin"/>
+    <functioncall functionName="EditorPackedScenePreviewPlugin"/>
+    <functioncall functionName="EditorResourcePreviewGenerator"/>
+    <functioncall functionName="EditorScriptPreviewPlugin"/>
+    <functioncall functionName="EditorTexturePreviewPlugin"/>
+    <functioncall functionName="FORMAT_L8"/>
+    <functioncall functionName="FORMAT_RGB8"/>
+    <functioncall functionName="FORMAT_RGBA8"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INTERPOLATE_CUBIC"/>
+    <functioncall functionName="ImageTexture"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="Point2i"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VIEWPORT_UPDATE_DISABLED"/>
+    <functioncall functionName="VIEWPORT_UPDATE_ONCE"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_is_text_char"/>
+    <functioncall functionName="_preview_done"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="atan2"/>
+    <functioncall functionName="basis"/>
+    <functioncall functionName="bg_color"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="blend"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cache_base"/>
+    <functioncall functionName="camera"/>
+    <functioncall functionName="camera_create"/>
+    <functioncall functionName="camera_set_orthogonal"/>
+    <functioncall functionName="camera_set_perspective"/>
+    <functioncall functionName="camera_set_transform"/>
+    <functioncall functionName="canvas"/>
+    <functioncall functionName="canvas_create"/>
+    <functioncall functionName="canvas_item"/>
+    <functioncall functionName="canvas_item_clear"/>
+    <functioncall functionName="canvas_item_create"/>
+    <functioncall functionName="canvas_item_set_parent"/>
+    <functioncall functionName="clear_mipmaps"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="convert"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_from_image"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="decompress"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="directional_light_create"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="draw"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame_length"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="generate_from_path"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_aabb"/>
+    <functioncall functionName="get_atlas"/>
+    <functioncall functionName="get_bit"/>
+    <functioncall functionName="get_cache_dir"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_format"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_language"/>
+    <functioncall functionName="get_length"/>
+    <functioncall functionName="get_mix_rate"/>
+    <functioncall functionName="get_outline_color"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_rect"/>
+    <functioncall functionName="get_region"/>
+    <functioncall functionName="get_reserved_words"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_shader_mode"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_source_code"/>
+    <functioncall functionName="get_string_size"/>
+    <functioncall functionName="get_width"/>
+    <functioncall functionName="globalize_path"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="imgdata"/>
+    <functioncall functionName="in_keyword"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instance_create"/>
+    <functioncall functionName="instance_create2"/>
+    <functioncall functionName="instance_playback"/>
+    <functioncall functionName="instance_set_base"/>
+    <functioncall functionName="instance_set_scenario"/>
+    <functioncall functionName="instance_set_transform"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_compressed"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="keyword_color"/>
+    <functioncall functionName="kwors"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="lat0"/>
+    <functioncall functionName="lat1"/>
+    <functioncall functionName="lats"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="light"/>
+    <functioncall functionName="light2"/>
+    <functioncall functionName="light_instance"/>
+    <functioncall functionName="light_instance2"/>
+    <functioncall functionName="light_set_color"/>
+    <functioncall functionName="lng0"/>
+    <functioncall functionName="lng1"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="lons"/>
+    <functioncall functionName="looking_at"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="md5_text"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mesh_add_surface_from_arrays"/>
+    <functioncall functionName="mesh_create"/>
+    <functioncall functionName="mesh_instance"/>
+    <functioncall functionName="mesh_surface_set_material"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="mix"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normals"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="post_process_preview"/>
+    <functioncall functionName="preview_done"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="request_frame_drawn_callback"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rotated"/>
+    <functioncall functionName="sampled_font"/>
+    <functioncall functionName="sampled_text"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="scenario"/>
+    <functioncall functionName="scenario_create"/>
+    <functioncall functionName="set_font_data"/>
+    <functioncall functionName="set_outline_color"/>
+    <functioncall functionName="set_pixel"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sphere"/>
+    <functioncall functionName="sphere_instance"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="symbol_color"/>
+    <functioncall functionName="tangents"/>
+    <functioncall functionName="text_color"/>
+    <functioncall functionName="texture_2d_get"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thumbnail_size"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_image"/>
+    <functioncall functionName="transparent"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="ul"/>
+    <functioncall functionName="uv"/>
+    <functioncall functionName="uvs"/>
+    <functioncall functionName="vertices"/>
+    <functioncall functionName="viewport"/>
+    <functioncall functionName="viewport_attach_camera"/>
+    <functioncall functionName="viewport_attach_canvas"/>
+    <functioncall functionName="viewport_create"/>
+    <functioncall functionName="viewport_get_texture"/>
+    <functioncall functionName="viewport_set_active"/>
+    <functioncall functionName="viewport_set_scenario"/>
+    <functioncall functionName="viewport_set_size"/>
+    <functioncall functionName="viewport_set_transparent_background"/>
+    <functioncall functionName="viewport_set_update_mode"/>
+    <functioncall functionName="viewport_texture"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="word"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x0"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="z0"/>
+    <functioncall functionName="z1"/>
+  </FileInfo>
+</analyzerinfo>

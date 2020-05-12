@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="75073041">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mask&apos; can be reduced." verbose="The scope of the variable &apos;mask&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="636" column="11"/>
+            <symbol>mask</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mask_&apos; can be reduced." verbose="The scope of the variable &apos;mask_&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="637" column="11"/>
+            <symbol>mask_</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mask_ignore&apos; can be reduced." verbose="The scope of the variable &apos;mask_ignore&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="638" column="11"/>
+            <symbol>mask_ignore</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;upper_bound&apos; can be reduced." verbose="The scope of the variable &apos;upper_bound&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="660" column="12"/>
+            <symbol>upper_bound</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:200:7" call-funcname="tile_set_shape" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="156" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:206:7" call-funcname="tile_set_shape_offset" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="164" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:203:7" call-funcname="tile_set_shape_transform" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="172" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:209:7" call-funcname="tile_set_shape_one_way" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="180" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:212:7" call-funcname="tile_set_shape_one_way_margin" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="188" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:201:15" call-funcname="tile_get_shape" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="295" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:207:10" call-funcname="tile_get_shape_offset" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="297" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:204:14" call-funcname="tile_get_shape_transform" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="299" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:210:7" call-funcname="tile_get_shape_one_way" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="301" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:213:8" call-funcname="tile_get_shape_one_way_margin" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="303" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:204:14" call-funcname="tile_get_shape_transform" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="795" col="50" call-argexpr="p_shape_id" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="164" col="30" info="Calling function 'tile_set_shape_offset', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:203:7" call-funcname="tile_set_shape_transform" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="797" col="26" call-argexpr="p_shape_id" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="164" col="30" info="Calling function 'tile_set_shape_offset', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:204:14" call-funcname="tile_get_shape_transform" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="801" col="33" call-argexpr="p_shape_id" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="297" col="37" info="Calling function 'tile_get_shape_offset', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:204:14" call-funcname="tile_get_shape_transform" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="988" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/tile_set.h:210:7" call-funcname="tile_get_shape_one_way" call-argnr="2" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="989" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/tile_set.h:197:10" my-argnr="3" my-argname="p_tilemap_node" file="/home/hbina/git/godot/scene/resources/tile_set.cpp" line="622" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_set" lineNumber="35"/>
+    <functiondecl functionName="_get" lineNumber="208"/>
+    <functiondecl functionName="_get_property_list" lineNumber="322"/>
+    <functiondecl functionName="create_tile" lineNumber="369"/>
+    <functiondecl functionName="autotile_set_bitmask_mode" lineNumber="377"/>
+    <functiondecl functionName="autotile_get_bitmask_mode" lineNumber="384"/>
+    <functiondecl functionName="tile_set_texture" lineNumber="390"/>
+    <functiondecl functionName="tile_get_texture" lineNumber="398"/>
+    <functiondecl functionName="tile_set_normal_map" lineNumber="404"/>
+    <functiondecl functionName="tile_get_normal_map" lineNumber="411"/>
+    <functiondecl functionName="tile_set_material" lineNumber="417"/>
+    <functiondecl functionName="tile_get_material" lineNumber="424"/>
+    <functiondecl functionName="tile_set_modulate" lineNumber="430"/>
+    <functiondecl functionName="tile_get_modulate" lineNumber="438"/>
+    <functiondecl functionName="tile_set_texture_offset" lineNumber="444"/>
+    <functiondecl functionName="tile_get_texture_offset" lineNumber="451"/>
+    <functiondecl functionName="tile_set_region" lineNumber="457"/>
+    <functiondecl functionName="tile_get_region" lineNumber="465"/>
+    <functiondecl functionName="tile_set_tile_mode" lineNumber="471"/>
+    <functiondecl functionName="tile_get_tile_mode" lineNumber="478"/>
+    <functiondecl functionName="autotile_set_icon_coordinate" lineNumber="484"/>
+    <functiondecl functionName="autotile_get_icon_coordinate" lineNumber="491"/>
+    <functiondecl functionName="autotile_set_spacing" lineNumber="497"/>
+    <functiondecl functionName="autotile_get_spacing" lineNumber="505"/>
+    <functiondecl functionName="autotile_set_size" lineNumber="511"/>
+    <functiondecl functionName="autotile_get_size" lineNumber="518"/>
+    <functiondecl functionName="autotile_clear_bitmask_map" lineNumber="524"/>
+    <functiondecl functionName="autotile_set_subtile_priority" lineNumber="530"/>
+    <functiondecl functionName="autotile_get_subtile_priority" lineNumber="537"/>
+    <functiondecl functionName="autotile_get_priority_map" lineNumber="547"/>
+    <functiondecl functionName="autotile_set_z_index" lineNumber="554"/>
+    <functiondecl functionName="autotile_get_z_index" lineNumber="561"/>
+    <functiondecl functionName="autotile_get_z_index_map" lineNumber="571"/>
+    <functiondecl functionName="autotile_set_bitmask" lineNumber="578"/>
+    <functiondecl functionName="autotile_get_bitmask" lineNumber="589"/>
+    <functiondecl functionName="autotile_get_bitmask_map" lineNumber="598"/>
+    <functiondecl functionName="autotile_get_subtile_for_bitmask" lineNumber="618"/>
+    <functiondecl functionName="atlastile_get_subtile_by_priority" lineNumber="680"/>
+    <functiondecl functionName="tile_set_name" lineNumber="710"/>
+    <functiondecl functionName="tile_get_name" lineNumber="718"/>
+    <functiondecl functionName="tile_clear_shapes" lineNumber="724"/>
+    <functiondecl functionName="tile_add_shape" lineNumber="730"/>
+    <functiondecl functionName="tile_get_shape_count" lineNumber="743"/>
+    <functiondecl functionName="tile_set_shape" lineNumber="749"/>
+    <functiondecl functionName="tile_get_shape" lineNumber="761"/>
+    <functiondecl functionName="tile_set_shape_transform" lineNumber="772"/>
+    <functiondecl functionName="tile_get_shape_transform" lineNumber="783"/>
+    <functiondecl functionName="tile_set_shape_offset" lineNumber="794"/>
+    <functiondecl functionName="tile_get_shape_offset" lineNumber="800"/>
+    <functiondecl functionName="tile_set_shape_one_way" lineNumber="804"/>
+    <functiondecl functionName="tile_get_shape_one_way" lineNumber="815"/>
+    <functiondecl functionName="tile_set_shape_one_way_margin" lineNumber="826"/>
+    <functiondecl functionName="tile_get_shape_one_way_margin" lineNumber="837"/>
+    <functiondecl functionName="tile_set_light_occluder" lineNumber="848"/>
+    <functiondecl functionName="tile_get_light_occluder" lineNumber="854"/>
+    <functiondecl functionName="autotile_set_light_occluder" lineNumber="860"/>
+    <functiondecl functionName="autotile_get_light_occluder" lineNumber="871"/>
+    <functiondecl functionName="tile_set_navigation_polygon_offset" lineNumber="882"/>
+    <functiondecl functionName="tile_get_navigation_polygon_offset" lineNumber="888"/>
+    <functiondecl functionName="tile_set_navigation_polygon" lineNumber="894"/>
+    <functiondecl functionName="tile_get_navigation_polygon" lineNumber="900"/>
+    <functiondecl functionName="autotile_get_light_oclusion_map" lineNumber="906"/>
+    <functiondecl functionName="autotile_set_navigation_polygon" lineNumber="913"/>
+    <functiondecl functionName="autotile_get_navigation_polygon" lineNumber="925"/>
+    <functiondecl functionName="autotile_get_navigation_map" lineNumber="935"/>
+    <functiondecl functionName="tile_set_occluder_offset" lineNumber="942"/>
+    <functiondecl functionName="tile_get_occluder_offset" lineNumber="948"/>
+    <functiondecl functionName="tile_set_shapes" lineNumber="954"/>
+    <functiondecl functionName="tile_get_shapes" lineNumber="964"/>
+    <functiondecl functionName="tile_get_z_index" lineNumber="971"/>
+    <functiondecl functionName="tile_set_z_index" lineNumber="977"/>
+    <functiondecl functionName="_tile_set_shapes" lineNumber="984"/>
+    <functiondecl functionName="_tile_get_shapes" lineNumber="1045"/>
+    <functiondecl functionName="_get_tiles_ids" lineNumber="1064"/>
+    <functiondecl functionName="_decompose_convex_shape" lineNumber="1075"/>
+    <functiondecl functionName="get_tile_list" lineNumber="1095"/>
+    <functiondecl functionName="has_tile" lineNumber="1103"/>
+    <functiondecl functionName="is_tile_bound" lineNumber="1108"/>
+    <functiondecl functionName="remove_tile" lineNumber="1123"/>
+    <functiondecl functionName="get_last_unused_tile_id" lineNumber="1131"/>
+    <functiondecl functionName="find_tile_by_name" lineNumber="1139"/>
+    <functiondecl functionName="clear" lineNumber="1149"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1156"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="ATLAS_TILE"/>
+    <functioncall functionName="AUTO_TILE"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="AutotileBindings"/>
+    <functioncall functionName="AutotileData"/>
+    <functioncall functionName="BIND_BOTTOM"/>
+    <functioncall functionName="BIND_BOTTOMLEFT"/>
+    <functioncall functionName="BIND_BOTTOMRIGHT"/>
+    <functioncall functionName="BIND_CENTER"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BIND_IGNORE_BOTTOM"/>
+    <functioncall functionName="BIND_LEFT"/>
+    <functioncall functionName="BIND_RIGHT"/>
+    <functioncall functionName="BIND_TOP"/>
+    <functioncall functionName="BIND_TOPLEFT"/>
+    <functioncall functionName="BIND_TOPRIGHT"/>
+    <functioncall functionName="BIND_VMETHOD"/>
+    <functioncall functionName="BITMASK_2X2"/>
+    <functioncall functionName="BITMASK_3X3"/>
+    <functioncall functionName="BITMASK_3X3_MINIMAL"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="BitmaskMode"/>
+    <functioncall functionName="CANVAS_ITEM_Z_MAX"/>
+    <functioncall functionName="CANVAS_ITEM_Z_MIN"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ConvexPolygonShape2D"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="Map"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PROPERTY_USAGE_NOEDITOR"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RECT2"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SINGLE_TILE"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="ShapeData"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TileData"/>
+    <functioncall functionName="TileMode"/>
+    <functioncall functionName="TileSet"/>
+    <functioncall functionName="Transform2D"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_convex"/>
+    <functioncall functionName="_decompose_convex_shape"/>
+    <functioncall functionName="_get_tiles_ids"/>
+    <functioncall functionName="_tile_get_shapes"/>
+    <functioncall functionName="_tile_set_shapes"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="autotile_clear_bitmask_map"/>
+    <functioncall functionName="autotile_coord"/>
+    <functioncall functionName="autotile_get_bitmask"/>
+    <functioncall functionName="autotile_get_bitmask_mode"/>
+    <functioncall functionName="autotile_get_icon_coordinate"/>
+    <functioncall functionName="autotile_get_light_occluder"/>
+    <functioncall functionName="autotile_get_navigation_polygon"/>
+    <functioncall functionName="autotile_get_size"/>
+    <functioncall functionName="autotile_get_spacing"/>
+    <functioncall functionName="autotile_get_subtile_priority"/>
+    <functioncall functionName="autotile_get_z_index"/>
+    <functioncall functionName="autotile_set_bitmask"/>
+    <functioncall functionName="autotile_set_bitmask_mode"/>
+    <functioncall functionName="autotile_set_icon_coordinate"/>
+    <functioncall functionName="autotile_set_light_occluder"/>
+    <functioncall functionName="autotile_set_navigation_polygon"/>
+    <functioncall functionName="autotile_set_size"/>
+    <functioncall functionName="autotile_set_spacing"/>
+    <functioncall functionName="autotile_set_subtile_priority"/>
+    <functioncall functionName="autotile_set_z_index"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bitmask_mode"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="coord"/>
+    <functioncall functionName="create_tile"/>
+    <functioncall functionName="decompose_polygon_in_convex"/>
+    <functioncall functionName="default_autotile_coord"/>
+    <functioncall functionName="default_one_way"/>
+    <functioncall functionName="default_transform"/>
+    <functioncall functionName="dummy"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_tile_by_name"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_class_name"/>
+    <functioncall functionName="get_last_unused_tile_id"/>
+    <functioncall functionName="get_origin"/>
+    <functioncall functionName="get_points"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icon_coord"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_array"/>
+    <functioncall functionName="is_autotile"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_num"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="last_coord"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="mask_ignore"/>
+    <functioncall functionName="material"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="modulate"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="navigation_polygon"/>
+    <functioncall functionName="navigation_polygon_offset"/>
+    <functioncall functionName="navpoly_map"/>
+    <functioncall functionName="new_data"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normal_map"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="occluder"/>
+    <functioncall functionName="occluder_map"/>
+    <functioncall functionName="occluder_offset"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="one_way_collision"/>
+    <functioncall functionName="one_way_collision_margin"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_autotile_coord"/>
+    <functioncall functionName="p_bitmask"/>
+    <functioncall functionName="p_coord"/>
+    <functioncall functionName="p_drawn_id"/>
+    <functioncall functionName="p_flag"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_light_occluder"/>
+    <functioncall functionName="p_margin"/>
+    <functioncall functionName="p_material"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_modulate"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_navigation_polygon"/>
+    <functioncall functionName="p_neighbor_id"/>
+    <functioncall functionName="p_normal_map"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_one_way"/>
+    <functioncall functionName="p_priority"/>
+    <functioncall functionName="p_region"/>
+    <functioncall functionName="p_shape"/>
+    <functioncall functionName="p_shape_id"/>
+    <functioncall functionName="p_shapes"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_spacing"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_tile_location"/>
+    <functioncall functionName="p_tile_mode"/>
+    <functioncall functionName="p_tilemap_node"/>
+    <functioncall functionName="p_transform"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_z_index"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="priorities_E"/>
+    <functioncall functionName="priority"/>
+    <functioncall functionName="priority_map"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rand"/>
+    <functioncall functionName="random"/>
+    <functioncall functionName="region"/>
+    <functioncall functionName="remove_tile"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="set_meta"/>
+    <functioncall functionName="set_origin"/>
+    <functioncall functionName="set_points"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="shape_data"/>
+    <functioncall functionName="shape_transform"/>
+    <functioncall functionName="shapes_data"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="slash"/>
+    <functioncall functionName="spacing"/>
+    <functioncall functionName="sub_shapes"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="tile_add_shape"/>
+    <functioncall functionName="tile_get_light_occluder"/>
+    <functioncall functionName="tile_get_material"/>
+    <functioncall functionName="tile_get_modulate"/>
+    <functioncall functionName="tile_get_name"/>
+    <functioncall functionName="tile_get_navigation_polygon"/>
+    <functioncall functionName="tile_get_navigation_polygon_offset"/>
+    <functioncall functionName="tile_get_normal_map"/>
+    <functioncall functionName="tile_get_occluder_offset"/>
+    <functioncall functionName="tile_get_region"/>
+    <functioncall functionName="tile_get_shape"/>
+    <functioncall functionName="tile_get_shape_count"/>
+    <functioncall functionName="tile_get_shape_offset"/>
+    <functioncall functionName="tile_get_shape_one_way"/>
+    <functioncall functionName="tile_get_shape_one_way_margin"/>
+    <functioncall functionName="tile_get_shape_transform"/>
+    <functioncall functionName="tile_get_texture"/>
+    <functioncall functionName="tile_get_texture_offset"/>
+    <functioncall functionName="tile_get_tile_mode"/>
+    <functioncall functionName="tile_get_z_index"/>
+    <functioncall functionName="tile_mode"/>
+    <functioncall functionName="tile_set_light_occluder"/>
+    <functioncall functionName="tile_set_material"/>
+    <functioncall functionName="tile_set_modulate"/>
+    <functioncall functionName="tile_set_name"/>
+    <functioncall functionName="tile_set_navigation_polygon"/>
+    <functioncall functionName="tile_set_navigation_polygon_offset"/>
+    <functioncall functionName="tile_set_normal_map"/>
+    <functioncall functionName="tile_set_occluder_offset"/>
+    <functioncall functionName="tile_set_region"/>
+    <functioncall functionName="tile_set_shape"/>
+    <functioncall functionName="tile_set_shape_offset"/>
+    <functioncall functionName="tile_set_shape_one_way"/>
+    <functioncall functionName="tile_set_shape_one_way_margin"/>
+    <functioncall functionName="tile_set_shape_transform"/>
+    <functioncall functionName="tile_set_texture"/>
+    <functioncall functionName="tile_set_texture_offset"/>
+    <functioncall functionName="tile_set_tile_mode"/>
+    <functioncall functionName="tile_set_z_index"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="upper_bound"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="z_index"/>
+    <functioncall functionName="z_index_map"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="82078876">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;NetworkedMultiplayerENet::peer&apos; is not initialized in the constructor." verbose="Member variable &apos;NetworkedMultiplayerENet::peer&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="905" column="27"/>
+            <symbol>NetworkedMultiplayerENet::peer</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;NetworkedMultiplayerENet::host&apos; is not initialized in the constructor." verbose="Member variable &apos;NetworkedMultiplayerENet::host&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="905" column="27"/>
+            <symbol>NetworkedMultiplayerENet::host</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;transfer_mode&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;transfer_mode&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="914" column="2"/>
+            <symbol>transfer_mode</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;connection_status&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;connection_status&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="918" column="2"/>
+            <symbol>connection_status</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;bind_ip&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;bind_ip&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="925" column="2"/>
+            <symbol>bind_ip</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="690" column="35"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="743" column="35"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.h:145:16" my-argnr="1" my-argname="r_buffer" file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="536" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.h:145:16" my-argnr="1" my-argname="r_buffer" file="/home/hbina/git/godot/modules/enet/networked_multiplayer_enet.cpp" line="536" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_transfer_mode" lineNumber="36"/>
+    <functiondecl functionName="get_transfer_mode" lineNumber="40"/>
+    <functiondecl functionName="set_target_peer" lineNumber="45"/>
+    <functiondecl functionName="get_packet_peer" lineNumber="50"/>
+    <functiondecl functionName="get_packet_channel" lineNumber="58"/>
+    <functiondecl functionName="get_last_packet_channel" lineNumber="66"/>
+    <functiondecl functionName="create_server" lineNumber="74"/>
+    <functiondecl functionName="create_client" lineNumber="123"/>
+    <functiondecl functionName="poll" lineNumber="215"/>
+    <functiondecl functionName="is_server" lineNumber="448"/>
+    <functiondecl functionName="close_connection" lineNumber="454"/>
+    <functiondecl functionName="disconnect_peer" lineNumber="486"/>
+    <functiondecl functionName="get_available_packet_count" lineNumber="522"/>
+    <functiondecl functionName="get_packet" lineNumber="527"/>
+    <functiondecl functionName="put_packet" lineNumber="542"/>
+    <functiondecl functionName="get_max_packet_size" lineNumber="619"/>
+    <functiondecl functionName="_pop_current_packet" lineNumber="624"/>
+    <functiondecl functionName="get_connection_status" lineNumber="634"/>
+    <functiondecl functionName="_gen_unique_id" lineNumber="639"/>
+    <functiondecl functionName="get_unique_id" lineNumber="662"/>
+    <functiondecl functionName="set_refuse_new_connections" lineNumber="668"/>
+    <functiondecl functionName="is_refusing_new_connections" lineNumber="673"/>
+    <functiondecl functionName="set_compression_mode" lineNumber="678"/>
+    <functiondecl functionName="get_compression_mode" lineNumber="683"/>
+    <functiondecl functionName="enet_compress" lineNumber="688"/>
+    <functiondecl functionName="enet_decompress" lineNumber="741"/>
+    <functiondecl functionName="_setup_compressor" lineNumber="768"/>
+    <functiondecl functionName="enet_compressor_destroy" lineNumber="788"/>
+    <functiondecl functionName="get_peer_address" lineNumber="793"/>
+    <functiondecl functionName="get_peer_port" lineNumber="809"/>
+    <functiondecl functionName="set_transfer_channel" lineNumber="821"/>
+    <functiondecl functionName="get_transfer_channel" lineNumber="828"/>
+    <functiondecl functionName="set_channel_count" lineNumber="832"/>
+    <functiondecl functionName="get_channel_count" lineNumber="839"/>
+    <functiondecl functionName="set_always_ordered" lineNumber="843"/>
+    <functiondecl functionName="is_always_ordered" lineNumber="847"/>
+    <functiondecl functionName="set_server_relay_enabled" lineNumber="851"/>
+    <functiondecl functionName="is_server_relay_enabled" lineNumber="857"/>
+    <functiondecl functionName="_bind_methods" lineNumber="861"/>
+    <functiondecl functionName="set_bind_ip" lineNumber="940"/>
+    <functiondecl functionName="set_dtls_enabled" lineNumber="946"/>
+    <functiondecl functionName="is_dtls_enabled" lineNumber="951"/>
+    <functiondecl functionName="set_dtls_verify_enabled" lineNumber="955"/>
+    <functiondecl functionName="is_dtls_verify_enabled" lineNumber="960"/>
+    <functiondecl functionName="set_dtls_key" lineNumber="964"/>
+    <functiondecl functionName="set_dtls_certificate" lineNumber="969"/>
+    <functiondecl functionName="set_transfer_mode" lineNumber="36"/>
+    <functiondecl functionName="get_transfer_mode" lineNumber="40"/>
+    <functiondecl functionName="set_target_peer" lineNumber="45"/>
+    <functiondecl functionName="get_packet_peer" lineNumber="50"/>
+    <functiondecl functionName="get_packet_channel" lineNumber="58"/>
+    <functiondecl functionName="get_last_packet_channel" lineNumber="66"/>
+    <functiondecl functionName="create_server" lineNumber="74"/>
+    <functiondecl functionName="create_client" lineNumber="123"/>
+    <functiondecl functionName="poll" lineNumber="215"/>
+    <functiondecl functionName="is_server" lineNumber="448"/>
+    <functiondecl functionName="close_connection" lineNumber="454"/>
+    <functiondecl functionName="disconnect_peer" lineNumber="486"/>
+    <functiondecl functionName="get_available_packet_count" lineNumber="522"/>
+    <functiondecl functionName="get_packet" lineNumber="527"/>
+    <functiondecl functionName="put_packet" lineNumber="542"/>
+    <functiondecl functionName="get_max_packet_size" lineNumber="619"/>
+    <functiondecl functionName="_pop_current_packet" lineNumber="624"/>
+    <functiondecl functionName="get_connection_status" lineNumber="634"/>
+    <functiondecl functionName="_gen_unique_id" lineNumber="639"/>
+    <functiondecl functionName="get_unique_id" lineNumber="662"/>
+    <functiondecl functionName="set_refuse_new_connections" lineNumber="668"/>
+    <functiondecl functionName="is_refusing_new_connections" lineNumber="673"/>
+    <functiondecl functionName="set_compression_mode" lineNumber="678"/>
+    <functiondecl functionName="get_compression_mode" lineNumber="683"/>
+    <functiondecl functionName="enet_compress" lineNumber="688"/>
+    <functiondecl functionName="enet_decompress" lineNumber="741"/>
+    <functiondecl functionName="_setup_compressor" lineNumber="768"/>
+    <functiondecl functionName="enet_compressor_destroy" lineNumber="788"/>
+    <functiondecl functionName="get_peer_address" lineNumber="793"/>
+    <functiondecl functionName="get_peer_port" lineNumber="809"/>
+    <functiondecl functionName="set_transfer_channel" lineNumber="821"/>
+    <functiondecl functionName="get_transfer_channel" lineNumber="828"/>
+    <functiondecl functionName="set_channel_count" lineNumber="832"/>
+    <functiondecl functionName="get_channel_count" lineNumber="839"/>
+    <functiondecl functionName="set_always_ordered" lineNumber="843"/>
+    <functiondecl functionName="is_always_ordered" lineNumber="847"/>
+    <functiondecl functionName="set_server_relay_enabled" lineNumber="851"/>
+    <functiondecl functionName="is_server_relay_enabled" lineNumber="857"/>
+    <functiondecl functionName="_bind_methods" lineNumber="861"/>
+    <functiondecl functionName="set_bind_ip" lineNumber="940"/>
+    <functiondecl functionName="set_dtls_enabled" lineNumber="946"/>
+    <functiondecl functionName="is_dtls_enabled" lineNumber="951"/>
+    <functiondecl functionName="set_dtls_verify_enabled" lineNumber="955"/>
+    <functiondecl functionName="is_dtls_verify_enabled" lineNumber="960"/>
+    <functiondecl functionName="set_dtls_key" lineNumber="964"/>
+    <functiondecl functionName="set_dtls_certificate" lineNumber="969"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="COMPRESS_FASTLZ"/>
+    <functioncall functionName="COMPRESS_NONE"/>
+    <functioncall functionName="COMPRESS_RANGE_CODER"/>
+    <functioncall functionName="COMPRESS_ZLIB"/>
+    <functioncall functionName="COMPRESS_ZSTD"/>
+    <functioncall functionName="CONNECTION_CONNECTED"/>
+    <functioncall functionName="CONNECTION_CONNECTING"/>
+    <functioncall functionName="CONNECTION_DISCONNECTED"/>
+    <functioncall functionName="CompressionMode"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ENET_PACKET_FLAG_RELIABLE"/>
+    <functioncall functionName="ENET_PACKET_FLAG_UNSEQUENCED"/>
+    <functioncall functionName="ERR_ALREADY_IN_USE"/>
+    <functioncall functionName="ERR_BUG"/>
+    <functioncall functionName="ERR_CANT_CREATE"/>
+    <functioncall functionName="ERR_CANT_RESOLVE"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="IP_Address"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MODE_DEFLATE"/>
+    <functioncall functionName="MODE_FASTLZ"/>
+    <functioncall functionName="MODE_ZSTD"/>
+    <functioncall functionName="NetworkedMultiplayerENet"/>
+    <functioncall functionName="NetworkedMultiplayerPeer"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="SYSCH_CONFIG"/>
+    <functioncall functionName="SYSCH_MAX"/>
+    <functioncall functionName="SYSCH_RELIABLE"/>
+    <functioncall functionName="SYSCH_UNRELIABLE"/>
+    <functioncall functionName="SYSMSG_ADD_PEER"/>
+    <functioncall functionName="SYSMSG_REMOVE_PEER"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TRANSFER_MODE_RELIABLE"/>
+    <functioncall functionName="TYPE_IPV4"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="_gen_unique_id"/>
+    <functioncall functionName="_pop_current_packet"/>
+    <functioncall functionName="_setup_compressor"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="address"/>
+    <functioncall functionName="always_ordered"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c_client"/>
+    <functioncall functionName="channel"/>
+    <functioncall functionName="channelID"/>
+    <functioncall functionName="channel_count"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close_connection"/>
+    <functioncall functionName="compress"/>
+    <functioncall functionName="compression_mode"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="context"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="create_client"/>
+    <functioncall functionName="create_server"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dataLength"/>
+    <functioncall functionName="decode_uint32"/>
+    <functioncall functionName="decompress"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="disconnect_peer"/>
+    <functioncall functionName="dtls_enabled"/>
+    <functioncall functionName="dtls_verify"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="encode_uint32"/>
+    <functioncall functionName="enet_address_set_ip"/>
+    <functioncall functionName="enet_compress"/>
+    <functioncall functionName="enet_compressor"/>
+    <functioncall functionName="enet_compressor_destroy"/>
+    <functioncall functionName="enet_decompress"/>
+    <functioncall functionName="enet_host_broadcast"/>
+    <functioncall functionName="enet_host_compress"/>
+    <functioncall functionName="enet_host_compress_with_range_coder"/>
+    <functioncall functionName="enet_host_connect"/>
+    <functioncall functionName="enet_host_create"/>
+    <functioncall functionName="enet_host_destroy"/>
+    <functioncall functionName="enet_host_dtls_client_setup"/>
+    <functioncall functionName="enet_host_dtls_server_setup"/>
+    <functioncall functionName="enet_host_flush"/>
+    <functioncall functionName="enet_host_service"/>
+    <functioncall functionName="enet_packet_create"/>
+    <functioncall functionName="enet_packet_destroy"/>
+    <functioncall functionName="enet_peer_disconnect_later"/>
+    <functioncall functionName="enet_peer_disconnect_now"/>
+    <functioncall functionName="enet_peer_reset"/>
+    <functioncall functionName="enet_peer_send"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="event"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_channel_count"/>
+    <functioncall functionName="get_compression_mode"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_ipv4"/>
+    <functioncall functionName="get_ipv6"/>
+    <functioncall functionName="get_last_packet_channel"/>
+    <functioncall functionName="get_max_compressed_buffer_size"/>
+    <functioncall functionName="get_packet_channel"/>
+    <functioncall functionName="get_peer_address"/>
+    <functioncall functionName="get_peer_port"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_transfer_channel"/>
+    <functioncall functionName="get_unix_time"/>
+    <functioncall functionName="get_user_data_dir"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash64"/>
+    <functioncall functionName="hash_djb2_one_32"/>
+    <functioncall functionName="host"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inData"/>
+    <functioncall functionName="inLimit"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_always_ordered"/>
+    <functioncall functionName="is_dtls_enabled"/>
+    <functioncall functionName="is_dtls_verify_enabled"/>
+    <functioncall functionName="is_ipv4"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_server"/>
+    <functioncall functionName="is_server_relay_enabled"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_valid_ip_address"/>
+    <functioncall functionName="is_wildcard"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="new_id"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="now"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="outData"/>
+    <functioncall functionName="outLimit"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_address"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_buffer_size"/>
+    <functioncall functionName="p_cert"/>
+    <functioncall functionName="p_channel"/>
+    <functioncall functionName="p_client_port"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_in_bandwidth"/>
+    <functioncall functionName="p_ip"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_max_clients"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_ordered"/>
+    <functioncall functionName="p_out_bandwidth"/>
+    <functioncall functionName="p_peer"/>
+    <functioncall functionName="p_peer_id"/>
+    <functioncall functionName="p_port"/>
+    <functioncall functionName="packet"/>
+    <functioncall functionName="packet2"/>
+    <functioncall functionName="packet_flags"/>
+    <functioncall functionName="peer"/>
+    <functioncall functionName="peers_disconnected"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="port"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="req_size"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resolve_hostname"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="server"/>
+    <functioncall functionName="server_relay"/>
+    <functioncall functionName="set_always_ordered"/>
+    <functioncall functionName="set_bind_ip"/>
+    <functioncall functionName="set_channel_count"/>
+    <functioncall functionName="set_compression_mode"/>
+    <functioncall functionName="set_dtls_certificate"/>
+    <functioncall functionName="set_dtls_enabled"/>
+    <functioncall functionName="set_dtls_key"/>
+    <functioncall functionName="set_dtls_verify_enabled"/>
+    <functioncall functionName="set_ipv4"/>
+    <functioncall functionName="set_ipv6"/>
+    <functioncall functionName="set_server_relay_enabled"/>
+    <functioncall functionName="set_transfer_channel"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="target_peer"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_copy"/>
+    <functioncall functionName="total"/>
+    <functioncall functionName="transfer_channel"/>
+    <functioncall functionName="transfer_mode"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="unique_id"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="wait_usec"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -244,7 +244,7 @@ void AnimationPlayer::_ensure_node_caches(AnimationData *p_anim) {
 
 	for (int i = 0; i < a->get_track_count(); i++) {
 
-		p_anim->node_cache.write[i] = nullptr;
+		p_anim->node_cache[i] = nullptr;
 		RES resource;
 		Vector<StringName> leftover_path;
 		Node *child = parent->get_node_and_resource(a->track_get_path(i), resource, leftover_path);
@@ -274,7 +274,7 @@ void AnimationPlayer::_ensure_node_caches(AnimationData *p_anim) {
 		if (!node_cache_map.has(key))
 			node_cache_map[key] = TrackNodeCache();
 
-		p_anim->node_cache.write[i] = &node_cache_map[key];
+		p_anim->node_cache[i] = &node_cache_map[key];
 		p_anim->node_cache[i]->path = a->track_get_path(i);
 		p_anim->node_cache[i]->node = child;
 		p_anim->node_cache[i]->resource = resource;

@@ -168,7 +168,7 @@ void ScriptEditorDebugger::_file_selected(const String &p_file) {
 
 			// signatures
 			for (int i = 0; i < Performance::MONITOR_MAX; i++) {
-				line.write[i] = Performance::get_singleton()->get_monitor_name(Performance::Monitor(i));
+				line[i] = Performance::get_singleton()->get_monitor_name(Performance::Monitor(i));
 			}
 			file->store_csv_line(line);
 
@@ -179,7 +179,7 @@ void ScriptEditorDebugger::_file_selected(const String &p_file) {
 				Vector<float> &perf_data = E->get();
 				for (int i = 0; i < perf_data.size(); i++) {
 
-					line.write[i] = String::num_real(perf_data[i]);
+					line[i] = String::num_real(perf_data[i]);
 				}
 				file->store_csv_line(line);
 				E = E->prev();
@@ -203,7 +203,7 @@ void ScriptEditorDebugger::_file_selected(const String &p_file) {
 			Vector<String> headers;
 			headers.resize(vmem_tree->get_columns());
 			for (int i = 0; i < vmem_tree->get_columns(); ++i) {
-				headers.write[i] = vmem_tree->get_column_title(i);
+				headers[i] = vmem_tree->get_column_title(i);
 			}
 			file->store_csv_line(headers);
 
@@ -213,7 +213,7 @@ void ScriptEditorDebugger::_file_selected(const String &p_file) {
 					Vector<String> values;
 					values.resize(vmem_tree->get_columns());
 					for (int i = 0; i < vmem_tree->get_columns(); ++i) {
-						values.write[i] = ti->get_text(i);
+						values[i] = ti->get_text(i);
 					}
 					file->store_csv_line(values);
 
@@ -431,7 +431,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 		Vector<float> p;
 		p.resize(p_data.size());
 		for (int i = 0; i < p_data.size(); i++) {
-			p.write[i] = p_data[i];
+			p[i] = p_data[i];
 			if (i < perf_items.size()) {
 
 				const float value = p[i];
@@ -454,7 +454,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 				perf_items[i]->set_text(1, label);
 				perf_items[i]->set_tooltip(1, tooltip);
 				if (p[i] > perf_max[i])
-					perf_max.write[i] = p[i];
+					perf_max[i] = p[i];
 			}
 		}
 		perf_history.push_front(p);
@@ -658,7 +658,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 				item.signature = "categ::" + name + "::" + item.name;
 				item.name = item.name.capitalize();
 				c.total_time += item.total;
-				c.items.write[j] = item;
+				c.items[j] = item;
 			}
 			metric.categories.push_back(c);
 		}
@@ -699,7 +699,7 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 			item.calls = calls;
 			item.self = self;
 			item.total = total;
-			funcs.items.write[i] = item;
+			funcs.items[i] = item;
 		}
 
 		metric.categories.push_back(funcs);
@@ -943,7 +943,7 @@ void ScriptEditorDebugger::start(Ref<RemoteDebuggerPeer> p_peer) {
 	perf_history.clear();
 	for (int i = 0; i < Performance::MONITOR_MAX; i++) {
 
-		perf_max.write[i] = 0;
+		perf_max[i] = 0;
 	}
 
 	set_process(true);
@@ -1749,7 +1749,7 @@ ScriptEditorDebugger::ScriptEditorDebugger(EditorNode *p_editor) {
 			it->set_selectable(1, false);
 			it->set_text(0, name.capitalize());
 			perf_items.push_back(it);
-			perf_max.write[i] = 0;
+			perf_max[i] = 0;
 		}
 
 		info_message = memnew(Label);

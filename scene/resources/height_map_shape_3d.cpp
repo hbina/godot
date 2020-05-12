@@ -57,13 +57,13 @@ Vector<Vector3> HeightMapShape3D::get_debug_mesh_lines() {
 				height.y = r[r_offset++];
 
 				if (w != map_width - 1) {
-					points.write[w_offset++] = height;
-					points.write[w_offset++] = Vector3(height.x + 1.0, r[r_offset], height.z);
+					points[w_offset++] = height;
+					points[w_offset++] = Vector3(height.x + 1.0, r[r_offset], height.z);
 				}
 
 				if (d != map_depth - 1) {
-					points.write[w_offset++] = height;
-					points.write[w_offset++] = Vector3(height.x, r[r_offset + map_width - 1], height.z + 1.0);
+					points[w_offset++] = height;
+					points[w_offset++] = Vector3(height.x, r[r_offset + map_width - 1], height.z + 1.0);
 				}
 
 				height.x += 1.0;

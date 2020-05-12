@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1100393632">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PoolAllocator&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PoolAllocator&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/pool_allocator.cpp" file="/home/hbina/git/godot/core/pool_allocator.h" line="144" column="2"/>
+            <symbol>PoolAllocator</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/pool_allocator.cpp" line="448" column="20"/>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;!index_found&apos; to function ERR_FAIL_COND is always 1" verbose="Argument &apos;!index_found&apos; to function ERR_FAIL_COND is always 1" cwe="570">
+            <location file="/home/hbina/git/godot/core/pool_allocator.cpp" line="293" column="17" info="Argument &apos;!index_found&apos; to function ERR_FAIL_COND is always 1"/>
+            <location file="/home/hbina/git/godot/core/pool_allocator.cpp" line="290" column="6" info="Assuming that condition &apos;!index_found&apos; is not redundant"/>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;!e&apos; to function ERR_FAIL_COND is always 1" verbose="Argument &apos;!e&apos; to function ERR_FAIL_COND is always 1" cwe="570">
+            <location file="/home/hbina/git/godot/core/pool_allocator.cpp" line="542" column="17" info="Argument &apos;!e&apos; to function ERR_FAIL_COND is always 1"/>
+            <location file="/home/hbina/git/godot/core/pool_allocator.cpp" line="540" column="6" info="Assuming that condition &apos;!e&apos; is not redundant"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:113:7" call-funcname="find_hole" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="202" col="16" call-argexpr="&new_entry_indices_pos" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:113:7" call-funcname="find_hole" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="202" col="16" call-argexpr="new_entry_indices_pos" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:113:7" call-funcname="find_hole" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="207" col="17" call-argexpr="&new_entry_indices_pos" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:112:7" call-funcname="get_free_entry" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="215" col="40" call-argexpr="&new_entry_array_pos" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:112:7" call-funcname="get_free_entry" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="215" col="40" call-argexpr="new_entry_array_pos" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:113:7" call-funcname="find_hole" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="202" col="16" call-argexpr="&new_entry_indices_pos" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:113:7" call-funcname="find_hole" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="202" col="16" call-argexpr="new_entry_indices_pos" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:113:7" call-funcname="find_hole" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="207" col="17" call-argexpr="&new_entry_indices_pos" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:112:7" call-funcname="get_free_entry" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="215" col="40" call-argexpr="&new_entry_array_pos" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/pool_allocator.h:112:7" call-funcname="get_free_entry" call-argnr="1" file="/home/hbina/git/godot/core/pool_allocator.cpp" line="215" col="40" call-argexpr="new_entry_array_pos" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="mt_lock" lineNumber="49"/>
+    <functiondecl functionName="mt_unlock" lineNumber="52"/>
+    <functiondecl functionName="compact" lineNumber="113"/>
+    <functiondecl functionName="compact_up" lineNumber="138"/>
+    <functiondecl functionName="alloc" lineNumber="181"/>
+    <functiondecl functionName="get_used_mem" lineNumber="553"/>
+    <functiondecl functionName="get_free_peak" lineNumber="558"/>
+    <functiondecl functionName="get_free_mem" lineNumber="563"/>
+    <functiondecl functionName="create_pool" lineNumber="568"/>
+    <functiondecl functionName="mt_lock" lineNumber="49"/>
+    <functiondecl functionName="mt_unlock" lineNumber="52"/>
+    <functiondecl functionName="compact" lineNumber="113"/>
+    <functiondecl functionName="compact_up" lineNumber="138"/>
+    <functiondecl functionName="alloc" lineNumber="181"/>
+    <functiondecl functionName="get_used_mem" lineNumber="553"/>
+    <functiondecl functionName="get_free_peak" lineNumber="558"/>
+    <functiondecl functionName="get_free_mem" lineNumber="563"/>
+    <functiondecl functionName="create_pool" lineNumber="568"/>
+    <functioncall functionName="CHECK_MASK"/>
+    <functioncall functionName="DEFAULT_MAX_ALLOCS"/>
+    <functioncall functionName="ERR_ALREADY_IN_USE"/>
+    <functioncall functionName="ERR_BUG"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_OUT_OF_MEMORY"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="Entry"/>
+    <functioncall functionName="POOL_ALLOCATOR_INVALID_ID"/>
+    <functioncall functionName="PoolAllocator"/>
+    <functioncall functionName="_dst"/>
+    <functioncall functionName="_src"/>
+    <functioncall functionName="aligned"/>
+    <functioncall functionName="alloc_static"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="check"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="compact"/>
+    <functioncall functionName="compact_up"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create_pool"/>
+    <functioncall functionName="debug_break"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="entry"/>
+    <functioncall functionName="entry_array"/>
+    <functioncall functionName="entry_count"/>
+    <functioncall functionName="entry_end"/>
+    <functioncall functionName="entry_indices"/>
+    <functioncall functionName="entry_indices_pos"/>
+    <functioncall functionName="entry_max"/>
+    <functioncall functionName="entry_pos"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_entry_index"/>
+    <functioncall functionName="find_hole"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found_free_entry"/>
+    <functioncall functionName="free_mem"/>
+    <functioncall functionName="get_entry"/>
+    <functioncall functionName="get_free_entry"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="hole_size"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index_found"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="mem8"/>
+    <functioncall functionName="mem_ptr"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memdelete_arr"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="movemem"/>
+    <functioncall functionName="mt_lock"/>
+    <functioncall functionName="mt_unlock"/>
+    <functioncall functionName="needs_locking"/>
+    <functioncall functionName="new_entry_array_pos"/>
+    <functioncall functionName="new_entry_indices_pos"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_align"/>
+    <functioncall functionName="p_max_entries"/>
+    <functioncall functionName="p_mem"/>
+    <functioncall functionName="p_needs_locking"/>
+    <functioncall functionName="p_new_size"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="pool"/>
+    <functioncall functionName="pool_size"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="prev_entry_end_pos"/>
+    <functioncall functionName="rem"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size_to_alloc"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

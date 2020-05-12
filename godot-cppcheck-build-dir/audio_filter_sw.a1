@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1448318068">
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;AudioFilterSW::get_response&apos; can be const." verbose="The member function &apos;AudioFilterSW::get_response&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/servers/audio/audio_filter_sw.cpp" file="/home/hbina/git/godot/servers/audio/audio_filter_sw.h" line="85" column="8"/>
+            <location file="/home/hbina/git/godot/servers/audio/audio_filter_sw.cpp" line="205" column="22"/>
+            <symbol>AudioFilterSW::get_response</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/servers/audio/audio_filter_sw.h:67:8" call-funcname="set_filter" call-argnr="1" file="/home/hbina/git/godot/servers/audio/audio_filter_sw.cpp" line="241" col="12" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/audio/audio_filter_sw.h:85:8" my-argnr="2" my-argname="p_coeffs" file="/home/hbina/git/godot/servers/audio/audio_filter_sw.cpp" line="209" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_mode" lineNumber="33"/>
+    <functiondecl functionName="set_cutoff" lineNumber="37"/>
+    <functiondecl functionName="set_resonance" lineNumber="41"/>
+    <functiondecl functionName="set_gain" lineNumber="46"/>
+    <functiondecl functionName="set_sampling_rate" lineNumber="51"/>
+    <functiondecl functionName="prepare_coefficients" lineNumber="56"/>
+    <functiondecl functionName="set_stages" lineNumber="198"/>
+    <functiondecl functionName="get_response" lineNumber="205"/>
+    <functiondecl functionName="set_filter" lineNumber="244"/>
+    <functiondecl functionName="update_coeffs" lineNumber="252"/>
+    <functiondecl functionName="process" lineNumber="271"/>
+    <functioncall functionName="AudioFilterSW"/>
+    <functioncall functionName="BANDLIMIT"/>
+    <functioncall functionName="BANDPASS"/>
+    <functioncall functionName="Coeffs"/>
+    <functioncall functionName="HIGHPASS"/>
+    <functioncall functionName="HIGHSHELF"/>
+    <functioncall functionName="LOWPASS"/>
+    <functioncall functionName="LOWSHELF"/>
+    <functioncall functionName="NOTCH"/>
+    <functioncall functionName="PEAK"/>
+    <functioncall functionName="Processor"/>
+    <functioncall functionName="Q"/>
+    <functioncall functionName="a0"/>
+    <functioncall functionName="a1"/>
+    <functioncall functionName="a2"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="b0"/>
+    <functioncall functionName="b1"/>
+    <functioncall functionName="b2"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="centercutoff"/>
+    <functioncall functionName="coeffs"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cos_v"/>
+    <functioncall functionName="cutoff"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="filter"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="freq"/>
+    <functioncall functionName="gain"/>
+    <functioncall functionName="ha1"/>
+    <functioncall functionName="hb1"/>
+    <functioncall functionName="hicutoff"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="old_coeffs"/>
+    <functioncall functionName="omega"/>
+    <functioncall functionName="p_clear_history"/>
+    <functioncall functionName="p_cutoff"/>
+    <functioncall functionName="p_filter"/>
+    <functioncall functionName="p_gain"/>
+    <functioncall functionName="p_interp_buffer_len"/>
+    <functioncall functionName="p_interpolate"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_resonance"/>
+    <functioncall functionName="p_sample"/>
+    <functioncall functionName="p_srate"/>
+    <functioncall functionName="p_stages"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="pre"/>
+    <functioncall functionName="prepare_coefficients"/>
+    <functioncall functionName="process_one"/>
+    <functioncall functionName="process_one_interp"/>
+    <functioncall functionName="resonance"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sampling_rate"/>
+    <functioncall functionName="set_filter"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="sinh"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="sr_limit"/>
+    <functioncall functionName="stages"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tmpgain"/>
+    <functioncall functionName="tmpq"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

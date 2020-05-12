@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1600574370">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;len&apos; can be reduced." verbose="The scope of the variable &apos;len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" line="50" column="8"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;complexity&apos; can be reduced." verbose="The scope of the variable &apos;complexity&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" line="54" column="8"/>
+            <symbol>complexity</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/arch.h:58:25" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/opus/celt/arch.h" line="60" col="80" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/arch.h:58:25" my-argnr="2" my-argname="file" file="/home/hbina/git/godot/thirdparty/opus/celt/arch.h" line="60" col="68" value="0"/>
+  </FileInfo>
+        <error id="shiftNegativeLHS" severity="portability" msg="Shifting a negative value is technically undefined behaviour" verbose="Shifting a negative value is technically undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="148" column="11"/>
+        </error>
+        <error id="shiftNegativeLHS" severity="portability" msg="Shifting a negative value is technically undefined behaviour" verbose="Shifting a negative value is technically undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="170" column="11"/>
+        </error>
+        <error id="shiftNegative" severity="error" msg="Shifting by a negative value is undefined behaviour" verbose="Shifting by a negative value is undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="192" column="11"/>
+        </error>
+        <error id="shiftNegative" severity="error" msg="Shifting by a negative value is undefined behaviour" verbose="Shifting by a negative value is undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="214" column="11"/>
+        </error>
+        <error id="shiftTooManyBits" severity="warning" msg="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 141." verbose="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 141." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="148" column="11" info="Shift"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="141" column="29" info="Assuming that condition &apos;(shift)&lt;=32767&apos; is not redundant"/>
+        </error>
+        <error id="shiftTooManyBits" severity="warning" msg="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 163." verbose="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 163." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="170" column="11" info="Shift"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/opus_custom_demo.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="163" column="29" info="Assuming that condition &apos;(shift)&lt;=32767&apos; is not redundant"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functiondecl functionName="main" lineNumber="42"/>
+    <functioncall functionName="ADD32_"/>
+    <functioncall functionName="EXTRACT16_"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="OPUS_GET_LOOKAHEAD"/>
+    <functioncall functionName="OPUS_SET_COMPLEXITY"/>
+    <functioncall functionName="Q"/>
+    <functioncall functionName="SHR32"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="abort"/>
+    <functioncall functionName="argc"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="atoi"/>
+    <functioncall functionName="atol"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bytes_per_packet"/>
+    <functioncall functionName="celt_mips"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="complexity"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="enc"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="feof"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="fin"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="fout"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="frame_size"/>
+    <functioncall functionName="fread"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="fwrite"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="inFile"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="opus_custom_decode"/>
+    <functioncall functionName="opus_custom_decoder_create"/>
+    <functioncall functionName="opus_custom_decoder_ctl"/>
+    <functioncall functionName="opus_custom_decoder_destroy"/>
+    <functioncall functionName="opus_custom_encode"/>
+    <functioncall functionName="opus_custom_encoder_create"/>
+    <functioncall functionName="opus_custom_encoder_ctl"/>
+    <functioncall functionName="opus_custom_encoder_destroy"/>
+    <functioncall functionName="opus_custom_mode_create"/>
+    <functioncall functionName="opus_custom_mode_destroy"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_int64"/>
+    <functioncall functionName="opus_strerror"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="outFile"/>
+    <functioncall functionName="rand"/>
+    <functioncall functionName="rate"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

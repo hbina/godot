@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3341350726">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;device_ref&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;device_ref&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="40" column="2"/>
+            <symbol>device_ref</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;ff_device&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;ff_device&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="41" column="2"/>
+            <symbol>ff_device</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;ffservice&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;ffservice&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="44" column="2"/>
+            <symbol>ffservice</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;joypad::has_element&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;joypad::has_element&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" file="/home/hbina/git/godot/platform/osx/joypad_osx.h" line="80" column="7"/>
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="74" column="14"/>
+            <symbol>joypad::has_element</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;JoypadOSX::poll_joypads&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;JoypadOSX::poll_joypads&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" file="/home/hbina/git/godot/platform/osx/joypad_osx.h" line="108" column="7"/>
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="436" column="17"/>
+            <symbol>JoypadOSX::poll_joypads</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;JoypadOSX&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;JoypadOSX&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" file="/home/hbina/git/godot/platform/osx/joypad_osx.h" line="121" column="2"/>
+            <symbol>JoypadOSX</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="202" column="16"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;name&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;name&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="301" column="7" info="name is overwritten"/>
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="299" column="8" info="name is assigned"/>
+            <symbol>name</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;keys&apos; can be reduced." verbose="The scope of the variable &apos;keys&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="540" column="14"/>
+            <symbol>keys</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;vals&apos; can be reduced." verbose="The scope of the variable &apos;vals&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="541" column="14"/>
+            <symbol>vals</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/osx/joypad_osx.h:103:7" call-funcname="configure_joypad" call-argnr="2" file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="250" col="19" call-argexpr="&new_joypad" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/osx/joypad_osx.cpp:536:24" call-funcname="create_match_dictionary" call-argnr="3" file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="583" col="34" call-argexpr="&okay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/platform/osx/joypad_osx.cpp:536:24" call-funcname="create_match_dictionary" call-argnr="3" file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="584" col="34" call-argexpr="&okay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/platform/osx/joypad_osx.cpp:536:24" call-funcname="create_match_dictionary" call-argnr="3" file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="585" col="34" call-argexpr="&okay" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/osx/joypad_osx.h:103:7" my-argnr="2" my-argname="p_joy" file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="290" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/osx/joypad_osx.h:80:7" my-argnr="2" my-argname="p_list" file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="75" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/osx/joypad_osx.cpp:201:13" my-argnr="1" my-argname="p_value" file="/home/hbina/git/godot/platform/osx/joypad_osx.cpp" line="203" col="40" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="free" lineNumber="62"/>
+    <functiondecl functionName="has_element" lineNumber="74"/>
+    <functiondecl functionName="get_hid_element_state" lineNumber="83"/>
+    <functiondecl functionName="add_hid_element" lineNumber="101"/>
+    <functiondecl functionName="hid_element_added" lineNumber="201"/>
+    <functiondecl functionName="add_hid_elements" lineNumber="206"/>
+    <functiondecl functionName="joypad_removed_callback" lineNumber="211"/>
+    <functiondecl functionName="joypad_added_callback" lineNumber="215"/>
+    <functiondecl functionName="is_joypad" lineNumber="219"/>
+    <functiondecl functionName="_device_added" lineNumber="242"/>
+    <functiondecl functionName="_device_removed" lineNumber="266"/>
+    <functiondecl functionName="_hex_str" lineNumber="276"/>
+    <functiondecl functionName="configure_joypad" lineNumber="288"/>
+    <functiondecl functionName="config_force_feedback" lineNumber="348"/>
+    <functiondecl functionName="check_ff_features" lineNumber="370"/>
+    <functiondecl functionName="process_hat_value" lineNumber="396"/>
+    <functiondecl functionName="poll_joypads" lineNumber="436"/>
+    <functiondecl functionName="axis_correct" lineNumber="442"/>
+    <functiondecl functionName="process_joypads" lineNumber="458"/>
+    <functiondecl functionName="joypad_vibration_start" lineNumber="496"/>
+    <functiondecl functionName="joypad_vibration_stop" lineNumber="505"/>
+    <functiondecl functionName="get_joy_index" lineNumber="511"/>
+    <functiondecl functionName="get_joy_ref" lineNumber="519"/>
+    <functiondecl functionName="have_device" lineNumber="527"/>
+    <functiondecl functionName="create_match_dictionary" lineNumber="536"/>
+    <functiondecl functionName="config_hid_manager" lineNumber="561"/>
+    <functioncall functionName="CFArrayApplyFunction"/>
+    <functioncall functionName="CFArrayCreate"/>
+    <functioncall functionName="CFArrayGetCount"/>
+    <functioncall functionName="CFDictionaryCreate"/>
+    <functioncall functionName="CFGetTypeID"/>
+    <functioncall functionName="CFNumberCreate"/>
+    <functioncall functionName="CFNumberGetValue"/>
+    <functioncall functionName="CFNumberRef"/>
+    <functioncall functionName="CFRelease"/>
+    <functioncall functionName="CFRunLoopGetCurrent"/>
+    <functioncall functionName="CFRunLoopRunInMode"/>
+    <functioncall functionName="CFSTR"/>
+    <functioncall functionName="CFStringGetCString"/>
+    <functioncall functionName="CFStringRef"/>
+    <functioncall functionName="CFTypeRef"/>
+    <functioncall functionName="DWORD"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="FFCONSTANTFORCE"/>
+    <functioncall functionName="FFCreateDevice"/>
+    <functioncall functionName="FFDeviceCreateEffect"/>
+    <functioncall functionName="FFDeviceGetForceFeedbackCapabilities"/>
+    <functioncall functionName="FFDeviceGetForceFeedbackProperty"/>
+    <functioncall functionName="FFDeviceReleaseEffect"/>
+    <functioncall functionName="FFDeviceSendForceFeedbackCommand"/>
+    <functioncall functionName="FFEB_NOTRIGGER"/>
+    <functioncall functionName="FFEFF_OBJECTOFFSETS"/>
+    <functioncall functionName="FFEP_GAIN"/>
+    <functioncall functionName="FFEffectSetParameters"/>
+    <functioncall functionName="FFEffectStart"/>
+    <functioncall functionName="FFEffectStop"/>
+    <functioncall functionName="FFIsForceFeedback"/>
+    <functioncall functionName="FFPROP_FFGAIN"/>
+    <functioncall functionName="FFReleaseDevice"/>
+    <functioncall functionName="FFSFFC_RESET"/>
+    <functioncall functionName="FFSFFC_SETACTUATORSON"/>
+    <functioncall functionName="HAT_MASK_CENTER"/>
+    <functioncall functionName="HAT_MASK_DOWN"/>
+    <functioncall functionName="HAT_MASK_LEFT"/>
+    <functioncall functionName="HAT_MASK_RIGHT"/>
+    <functioncall functionName="HAT_MASK_UP"/>
+    <functioncall functionName="IOHIDDeviceCopyMatchingElements"/>
+    <functioncall functionName="IOHIDDeviceGetProperty"/>
+    <functioncall functionName="IOHIDDeviceGetService"/>
+    <functioncall functionName="IOHIDDeviceGetValue"/>
+    <functioncall functionName="IOHIDDeviceScheduleWithRunLoop"/>
+    <functioncall functionName="IOHIDDeviceUnscheduleFromRunLoop"/>
+    <functioncall functionName="IOHIDElementGetChildren"/>
+    <functioncall functionName="IOHIDElementGetCookie"/>
+    <functioncall functionName="IOHIDElementGetLogicalMax"/>
+    <functioncall functionName="IOHIDElementGetLogicalMin"/>
+    <functioncall functionName="IOHIDElementGetType"/>
+    <functioncall functionName="IOHIDElementGetTypeID"/>
+    <functioncall functionName="IOHIDElementGetUsage"/>
+    <functioncall functionName="IOHIDElementGetUsagePage"/>
+    <functioncall functionName="IOHIDElementRef"/>
+    <functioncall functionName="IOHIDManagerClose"/>
+    <functioncall functionName="IOHIDManagerCreate"/>
+    <functioncall functionName="IOHIDManagerOpen"/>
+    <functioncall functionName="IOHIDManagerRegisterDeviceMatchingCallback"/>
+    <functioncall functionName="IOHIDManagerRegisterDeviceRemovalCallback"/>
+    <functioncall functionName="IOHIDManagerScheduleWithRunLoop"/>
+    <functioncall functionName="IOHIDManagerSetDeviceMatchingMultiple"/>
+    <functioncall functionName="IOHIDManagerUnscheduleFromRunLoop"/>
+    <functioncall functionName="IOHIDValueGetIntegerValue"/>
+    <functioncall functionName="JoypadOSX"/>
+    <functioncall functionName="LONG"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="OSSwapHostToBigInt32"/>
+    <functioncall functionName="SInt32"/>
+    <functioncall functionName="TRUE"/>
+    <functioncall functionName="_device_added"/>
+    <functioncall functionName="_device_removed"/>
+    <functioncall functionName="_hex_str"/>
+    <functioncall functionName="add_hid_element"/>
+    <functioncall functionName="add_hid_elements"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="axis_correct"/>
+    <functioncall functionName="axis_elements"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="button_elements"/>
+    <functioncall functionName="c_name"/>
+    <functioncall functionName="check_ff_features"/>
+    <functioncall functionName="config_force_feedback"/>
+    <functioncall functionName="config_hid_manager"/>
+    <functioncall functionName="configure_joypad"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cookie"/>
+    <functioncall functionName="create_match_dictionary"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="device_ref"/>
+    <functioncall functionName="duration"/>
+    <functioncall functionName="elem"/>
+    <functioncall functionName="element"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="features"/>
+    <functioncall functionName="ff_axes"/>
+    <functioncall functionName="ff_constant_force"/>
+    <functioncall functionName="ff_device"/>
+    <functioncall functionName="ff_directions"/>
+    <functioncall functionName="ff_effect"/>
+    <functioncall functionName="ff_object"/>
+    <functioncall functionName="ff_timestamp"/>
+    <functioncall functionName="ffservice"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="gain"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_hid_element_state"/>
+    <functioncall functionName="get_joy_index"/>
+    <functioncall functionName="get_joy_ref"/>
+    <functioncall functionName="get_joy_vibration_duration"/>
+    <functioncall functionName="get_joy_vibration_strength"/>
+    <functioncall functionName="get_joy_vibration_timestamp"/>
+    <functioncall functionName="get_unused_joy_id"/>
+    <functioncall functionName="guid"/>
+    <functioncall functionName="has_element"/>
+    <functioncall functionName="hat_elements"/>
+    <functioncall functionName="hat_value"/>
+    <functioncall functionName="have_device"/>
+    <functioncall functionName="hid_element_added"/>
+    <functioncall functionName="hid_manager"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="ioHIDDeviceObject"/>
+    <functioncall functionName="ioservice"/>
+    <functioncall functionName="is_joypad"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="joy_axis"/>
+    <functioncall functionName="joy_button"/>
+    <functioncall functionName="joy_connection_changed"/>
+    <functioncall functionName="joy_hat"/>
+    <functioncall functionName="joypad"/>
+    <functioncall functionName="joypad_added_callback"/>
+    <functioncall functionName="joypad_removed_callback"/>
+    <functioncall functionName="joypad_vibration_start"/>
+    <functioncall functionName="joypad_vibration_stop"/>
+    <functioncall functionName="kCFAllocatorDefault"/>
+    <functioncall functionName="kCFNumberIntType"/>
+    <functioncall functionName="kCFNumberSInt32Type"/>
+    <functioncall functionName="kCFStringEncodingUTF8"/>
+    <functioncall functionName="kCFTypeArrayCallBacks"/>
+    <functioncall functionName="kCFTypeDictionaryKeyCallBacks"/>
+    <functioncall functionName="kCFTypeDictionaryValueCallBacks"/>
+    <functioncall functionName="kFFEffectType_ConstantForce_ID"/>
+    <functioncall functionName="kHIDPage_GenericDesktop"/>
+    <functioncall functionName="kHIDUsage_GD_GamePad"/>
+    <functioncall functionName="kHIDUsage_GD_Joystick"/>
+    <functioncall functionName="kHIDUsage_GD_MultiAxisController"/>
+    <functioncall functionName="kIOHIDDeviceUsageKey"/>
+    <functioncall functionName="kIOHIDDeviceUsagePageKey"/>
+    <functioncall functionName="kIOHIDManufacturerKey"/>
+    <functioncall functionName="kIOHIDOptionsTypeNone"/>
+    <functioncall functionName="kIOHIDPrimaryUsageKey"/>
+    <functioncall functionName="kIOHIDPrimaryUsagePageKey"/>
+    <functioncall functionName="kIOHIDProductIDKey"/>
+    <functioncall functionName="kIOHIDProductKey"/>
+    <functioncall functionName="kIOHIDVendorIDKey"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="list"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="n_elements"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_joypad"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="numFfAxes"/>
+    <functioncall functionName="num_axes"/>
+    <functioncall functionName="okay"/>
+    <functioncall functionName="p_array"/>
+    <functioncall functionName="p_device"/>
+    <functioncall functionName="p_device_ref"/>
+    <functioncall functionName="p_element"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_matching_array"/>
+    <functioncall functionName="p_max"/>
+    <functioncall functionName="p_min"/>
+    <functioncall functionName="p_parameter"/>
+    <functioncall functionName="p_service"/>
+    <functioncall functionName="p_timestamp"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="page"/>
+    <functioncall functionName="pageNumRef"/>
+    <functioncall functionName="poll_joypads"/>
+    <functioncall functionName="process_hat_value"/>
+    <functioncall functionName="product_id"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="range"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="refCF"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="retval"/>
+    <functioncall functionName="runloop"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sort_custom"/>
+    <functioncall functionName="sprintf"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="timestamp"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uid"/>
+    <functioncall functionName="usage"/>
+    <functioncall functionName="usageNumRef"/>
+    <functioncall functionName="usagePage"/>
+    <functioncall functionName="usage_page"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="vals"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="valueRef"/>
+    <functioncall functionName="vendor"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

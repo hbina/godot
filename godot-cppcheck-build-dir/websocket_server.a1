@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2398402480">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;bind_ip&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;bind_ip&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/websocket/websocket_server.cpp" line="37" column="2"/>
+            <symbol>bind_ip</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_bind_methods" lineNumber="43"/>
+    <functiondecl functionName="get_bind_ip" lineNumber="75"/>
+    <functiondecl functionName="set_bind_ip" lineNumber="79"/>
+    <functiondecl functionName="get_private_key" lineNumber="85"/>
+    <functiondecl functionName="set_private_key" lineNumber="89"/>
+    <functiondecl functionName="get_ssl_certificate" lineNumber="94"/>
+    <functiondecl functionName="set_ssl_certificate" lineNumber="98"/>
+    <functiondecl functionName="get_ca_chain" lineNumber="103"/>
+    <functiondecl functionName="set_ca_chain" lineNumber="107"/>
+    <functiondecl functionName="get_connection_status" lineNumber="112"/>
+    <functiondecl functionName="is_server" lineNumber="119"/>
+    <functiondecl functionName="_on_peer_packet" lineNumber="124"/>
+    <functiondecl functionName="_on_connect" lineNumber="133"/>
+    <functiondecl functionName="_on_disconnect" lineNumber="144"/>
+    <functiondecl functionName="_on_close_request" lineNumber="155"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="IP_Address"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NetworkedMultiplayerPeer"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PacketPeer"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="WRITE_MODE_BINARY"/>
+    <functioncall functionName="WRITE_MODE_TEXT"/>
+    <functioncall functionName="WebSocketMultiplayerPeer"/>
+    <functioncall functionName="WebSocketPeer"/>
+    <functioncall functionName="WebSocketServer"/>
+    <functioncall functionName="WriteMode"/>
+    <functioncall functionName="_create"/>
+    <functioncall functionName="_is_multiplayer"/>
+    <functioncall functionName="_process_multiplayer"/>
+    <functioncall functionName="_send_add"/>
+    <functioncall functionName="_send_del"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="disconnect_peer"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="get_bind_ip"/>
+    <functioncall functionName="get_ca_chain"/>
+    <functioncall functionName="get_peer"/>
+    <functioncall functionName="get_peer_address"/>
+    <functioncall functionName="get_peer_port"/>
+    <functioncall functionName="get_private_key"/>
+    <functioncall functionName="get_ssl_certificate"/>
+    <functioncall functionName="has_peer"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_listening"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_wildcard"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_bind_ip"/>
+    <functioncall functionName="p_ca_chain"/>
+    <functioncall functionName="p_cert"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_peer_id"/>
+    <functioncall functionName="p_protocol"/>
+    <functioncall functionName="p_reason"/>
+    <functioncall functionName="p_was_clean"/>
+    <functioncall functionName="protected:"/>
+    <functioncall functionName="set_bind_ip"/>
+    <functioncall functionName="set_ca_chain"/>
+    <functioncall functionName="set_private_key"/>
+    <functioncall functionName="set_ssl_certificate"/>
+    <functioncall functionName="stop"/>
+  </FileInfo>
+</analyzerinfo>

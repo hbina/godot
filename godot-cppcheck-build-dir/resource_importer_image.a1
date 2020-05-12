@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1010728845">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="83" column="15" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="79" column="34" info="Assignment &apos;f=FileAccess::open(p_source_file,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="81" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="88" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="79" column="34" info="Assignment &apos;f=FileAccess::open(p_source_file,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="81" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="97" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="92" column="22" info="Assignment &apos;f=FileAccess::open(p_save_path+&quot;.image&quot;,FileAccess::WRITE)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="93" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="99" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="92" column="22" info="Assignment &apos;f=FileAccess::open(p_save_path+&quot;.image&quot;,FileAccess::WRITE)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="93" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="101" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="92" column="22" info="Assignment &apos;f=FileAccess::open(p_save_path+&quot;.image&quot;,FileAccess::WRITE)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/import/resource_importer_image.cpp" line="93" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_importer_name" lineNumber="38"/>
+    <functiondecl functionName="get_visible_name" lineNumber="43"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="47"/>
+    <functiondecl functionName="get_save_extension" lineNumber="52"/>
+    <functiondecl functionName="get_resource_type" lineNumber="56"/>
+    <functiondecl functionName="get_option_visibility" lineNumber="61"/>
+    <functiondecl functionName="get_preset_count" lineNumber="66"/>
+    <functiondecl functionName="get_preset_name" lineNumber="69"/>
+    <functiondecl functionName="get_import_options" lineNumber="74"/>
+    <functiondecl functionName="import" lineNumber="77"/>
+    <functioncall functionName="ERR_CANT_CREATE"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="ResourceImporter"/>
+    <functioncall functionName="ResourceImporterImage"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_recognized_extensions"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_extensions"/>
+    <functioncall functionName="p_source_file"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="store_pascal_string"/>
+    <functioncall functionName="to_lower"/>
+  </FileInfo>
+</analyzerinfo>

@@ -145,11 +145,11 @@ void SurfaceTool::add_vertex(const Vector3 &p_vertex) {
 
 			for (int i = 0; i < expected_vertices; i++) {
 				if (total > 0) {
-					vtx.weights.write[i] = weights[i].weight / total;
+					vtx.weights[i] = weights[i].weight / total;
 				} else {
-					vtx.weights.write[i] = 0;
+					vtx.weights[i] = 0;
 				}
-				vtx.bones.write[i] = weights[i].index;
+				vtx.bones[i] = weights[i].index;
 			}
 		}
 	}
@@ -504,7 +504,7 @@ void SurfaceTool::deindex() {
 	int idx = 0;
 	for (List<Vertex>::Element *E = vertex_array.front(); E; E = E->next()) {
 
-		varr.write[idx++] = E->get();
+		varr[idx++] = E->get();
 	}
 	vertex_array.clear();
 	for (List<int>::Element *E = index_array.front(); E; E = E->next()) {
@@ -586,19 +586,19 @@ Vector<SurfaceTool::Vertex> SurfaceTool::create_vertex_array_from_triangle_array
 		if (lformat & RS::ARRAY_FORMAT_BONES) {
 			Vector<int> b;
 			b.resize(4);
-			b.write[0] = barr[i * 4 + 0];
-			b.write[1] = barr[i * 4 + 1];
-			b.write[2] = barr[i * 4 + 2];
-			b.write[3] = barr[i * 4 + 3];
+			b[0] = barr[i * 4 + 0];
+			b[1] = barr[i * 4 + 1];
+			b[2] = barr[i * 4 + 2];
+			b[3] = barr[i * 4 + 3];
 			v.bones = b;
 		}
 		if (lformat & RS::ARRAY_FORMAT_WEIGHTS) {
 			Vector<float> w;
 			w.resize(4);
-			w.write[0] = warr[i * 4 + 0];
-			w.write[1] = warr[i * 4 + 1];
-			w.write[2] = warr[i * 4 + 2];
-			w.write[3] = warr[i * 4 + 3];
+			w[0] = warr[i * 4 + 0];
+			w[1] = warr[i * 4 + 1];
+			w[2] = warr[i * 4 + 2];
+			w[3] = warr[i * 4 + 3];
 			v.weights = w;
 		}
 
@@ -669,19 +669,19 @@ void SurfaceTool::_create_list_from_arrays(Array arr, List<Vertex> *r_vertex, Li
 		if (lformat & RS::ARRAY_FORMAT_BONES) {
 			Vector<int> b;
 			b.resize(4);
-			b.write[0] = barr[i * 4 + 0];
-			b.write[1] = barr[i * 4 + 1];
-			b.write[2] = barr[i * 4 + 2];
-			b.write[3] = barr[i * 4 + 3];
+			b[0] = barr[i * 4 + 0];
+			b[1] = barr[i * 4 + 1];
+			b[2] = barr[i * 4 + 2];
+			b[3] = barr[i * 4 + 3];
 			v.bones = b;
 		}
 		if (lformat & RS::ARRAY_FORMAT_WEIGHTS) {
 			Vector<float> w;
 			w.resize(4);
-			w.write[0] = warr[i * 4 + 0];
-			w.write[1] = warr[i * 4 + 1];
-			w.write[2] = warr[i * 4 + 2];
-			w.write[3] = warr[i * 4 + 3];
+			w[0] = warr[i * 4 + 0];
+			w[1] = warr[i * 4 + 1];
+			w[2] = warr[i * 4 + 2];
+			w[3] = warr[i * 4 + 3];
 			v.weights = w;
 		}
 
@@ -891,14 +891,14 @@ void SurfaceTool::generate_tangents() {
 	triangle_data.vertices.resize(vertex_array.size());
 	int idx = 0;
 	for (List<Vertex>::Element *E = vertex_array.front(); E; E = E->next()) {
-		triangle_data.vertices.write[idx++] = E;
+		triangle_data.vertices[idx++] = E;
 		E->get().binormal = Vector3();
 		E->get().tangent = Vector3();
 	}
 	triangle_data.indices.resize(index_array.size());
 	idx = 0;
 	for (List<int>::Element *E = index_array.front(); E; E = E->next()) {
-		triangle_data.indices.write[idx++] = E;
+		triangle_data.indices[idx++] = E;
 	}
 	msc.m_pUserData = &triangle_data;
 

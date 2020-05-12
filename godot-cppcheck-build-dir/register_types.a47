@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="185431969">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;ctx&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;ctx&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="70" column="4"/>
+            <symbol>ctx</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." verbose="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="53" column="15" info="Derived variable &apos;WSLClient::_peer&apos;"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="45" column="21" info="Parent variable &apos;WebSocketClient::_peer&apos;"/>
+            <symbol>WSLClient</symbol>
+            <symbol>_peer</symbol>
+            <symbol>WebSocketClient</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;disconnect_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;disconnect_peer&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/emws_server.h" line="53" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/register_types.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_server.h" line="63" column="15" info="Virtual function in base class"/>
+            <symbol>disconnect_peer</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="register_websocket_types" lineNumber="44"/>
+    <functiondecl functionName="unregister_websocket_types" lineNumber="77"/>
+    <functiondecl functionName="register_websocket_types" lineNumber="44"/>
+    <functiondecl functionName="unregister_websocket_types" lineNumber="77"/>
+    <functioncall functionName="EMWSClient"/>
+    <functioncall functionName="EMWSPeer"/>
+    <functioncall functionName="EMWSServer"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_DEF"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="NetworkedMultiplayerPeer"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PacketPeer"/>
+    <functioncall functionName="PeerData"/>
+    <functioncall functionName="PendingPeer"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="WRITE_MODE_BINARY"/>
+    <functioncall functionName="WRITE_MODE_TEXT"/>
+    <functioncall functionName="WSLClient"/>
+    <functioncall functionName="WSLPeer"/>
+    <functioncall functionName="WSLServer"/>
+    <functioncall functionName="WebSocketClient"/>
+    <functioncall functionName="WebSocketMultiplayerPeer"/>
+    <functioncall functionName="WebSocketPeer"/>
+    <functioncall functionName="WebSocketServer"/>
+    <functioncall functionName="WriteMode"/>
+    <functioncall functionName="_create"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="make_default"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="protected:"/>
+    <functioncall functionName="register_custom_instance_class"/>
+    <functioncall functionName="register_virtual_class"/>
+    <functioncall functionName="set_custom_property_info"/>
+    <functioncall functionName="size"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="256302143">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;MemberNode::precision&apos; is not initialized in the constructor." verbose="Member variable &apos;MemberNode::precision&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="555" column="3"/>
+            <symbol>MemberNode::precision</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Uniform::scope&apos; is not initialized in the constructor." verbose="Member variable &apos;Uniform::scope&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="680" column="4"/>
+            <symbol>Uniform::scope</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ShaderLanguage::_get_tkpos&apos; can be const." verbose="The member function &apos;ShaderLanguage::_get_tkpos&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="813" column="8"/>
+            <symbol>ShaderLanguage::_get_tkpos</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ShaderTypes::get_functions&apos; can be const." verbose="The member function &apos;ShaderTypes::get_functions&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_types.h" line="55" column="55"/>
+            <location file="/home/hbina/git/godot/servers/rendering/shader_types.cpp" line="33" column="67"/>
+            <symbol>ShaderTypes::get_functions</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ShaderTypes::get_modes&apos; can be const." verbose="The member function &apos;ShaderTypes::get_modes&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_types.h" line="56" column="28"/>
+            <location file="/home/hbina/git/godot/servers/rendering/shader_types.cpp" line="38" column="40"/>
+            <symbol>ShaderTypes::get_modes</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ShaderTypes::get_types&apos; can be const." verbose="The member function &apos;ShaderTypes::get_types&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_types.h" line="57" column="21"/>
+            <location file="/home/hbina/git/godot/servers/rendering/shader_types.cpp" line="43" column="33"/>
+            <symbol>ShaderTypes::get_types</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;Node&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;Node&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="352" column="3"/>
+            <symbol>Node</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;BuiltInInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;BuiltInInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="775" column="3"/>
+            <symbol>BuiltInInfo</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="374" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="349" column="20" info="Virtual function in base class"/>
+            <symbol>get_datatype</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="375" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="350" column="18" info="Virtual function in base class"/>
+            <symbol>get_datatype_name</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="389" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="349" column="20" info="Virtual function in base class"/>
+            <symbol>get_datatype</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="390" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="350" column="18" info="Virtual function in base class"/>
+            <symbol>get_datatype_name</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="411" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="349" column="20" info="Virtual function in base class"/>
+            <symbol>get_datatype</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="428" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="349" column="20" info="Virtual function in base class"/>
+            <symbol>get_datatype</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="429" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="350" column="18" info="Virtual function in base class"/>
+            <symbol>get_datatype_name</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="463" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="349" column="20" info="Virtual function in base class"/>
+            <symbol>get_datatype</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="483" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="349" column="20" info="Virtual function in base class"/>
+            <symbol>get_datatype</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="552" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="349" column="20" info="Virtual function in base class"/>
+            <symbol>get_datatype</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_datatype_name&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="553" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/shader_types.cpp" file="/home/hbina/git/godot/servers/rendering/shader_language.h" line="350" column="18" info="Virtual function in base class"/>
+            <symbol>get_datatype_name</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_functions" lineNumber="33"/>
+    <functiondecl functionName="get_modes" lineNumber="38"/>
+    <functiondecl functionName="get_types" lineNumber="43"/>
+    <functiondecl functionName="constt" lineNumber="49"/>
+    <functioncall functionName="ARGUMENT_QUALIFIER_IN"/>
+    <functioncall functionName="ARGUMENT_QUALIFIER_INOUT"/>
+    <functioncall functionName="ARGUMENT_QUALIFIER_OUT"/>
+    <functioncall functionName="ArrayConstructNode"/>
+    <functioncall functionName="ArrayDeclarationNode"/>
+    <functioncall functionName="ArrayNode"/>
+    <functioncall functionName="BLOCK_TYPE_CASE"/>
+    <functioncall functionName="BLOCK_TYPE_DEFAULT"/>
+    <functioncall functionName="BLOCK_TYPE_FOR"/>
+    <functioncall functionName="BLOCK_TYPE_STANDART"/>
+    <functioncall functionName="BLOCK_TYPE_SWITCH"/>
+    <functioncall functionName="BlockNode"/>
+    <functioncall functionName="BuiltInInfo"/>
+    <functioncall functionName="COMPLETION_CALL_ARGUMENTS"/>
+    <functioncall functionName="COMPLETION_FUNCTION_CALL"/>
+    <functioncall functionName="COMPLETION_IDENTIFIER"/>
+    <functioncall functionName="COMPLETION_INDEX"/>
+    <functioncall functionName="COMPLETION_MAIN_FUNCTION"/>
+    <functioncall functionName="COMPLETION_NONE"/>
+    <functioncall functionName="COMPLETION_RENDER_MODE"/>
+    <functioncall functionName="COMPLETION_STRUCT"/>
+    <functioncall functionName="Constant"/>
+    <functioncall functionName="ConstantNode"/>
+    <functioncall functionName="ControlFlowNode"/>
+    <functioncall functionName="FILTER_DEFAULT"/>
+    <functioncall functionName="FILTER_LINEAR"/>
+    <functioncall functionName="FILTER_LINEAR_MIPMAP"/>
+    <functioncall functionName="FILTER_LINEAR_MIPMAP_ANISO"/>
+    <functioncall functionName="FILTER_NEAREST"/>
+    <functioncall functionName="FILTER_NEAREST_MIPMAP"/>
+    <functioncall functionName="FILTER_NEAREST_MIPMAP_ANISO"/>
+    <functioncall functionName="FLOW_OP_BREAK"/>
+    <functioncall functionName="FLOW_OP_CASE"/>
+    <functioncall functionName="FLOW_OP_CONTINUE"/>
+    <functioncall functionName="FLOW_OP_DEFAULT"/>
+    <functioncall functionName="FLOW_OP_DISCARD"/>
+    <functioncall functionName="FLOW_OP_DO"/>
+    <functioncall functionName="FLOW_OP_FOR"/>
+    <functioncall functionName="FLOW_OP_IF"/>
+    <functioncall functionName="FLOW_OP_RETURN"/>
+    <functioncall functionName="FLOW_OP_SWITCH"/>
+    <functioncall functionName="FLOW_OP_WHILE"/>
+    <functioncall functionName="FunctionInfo"/>
+    <functioncall functionName="FunctionNode"/>
+    <functioncall functionName="HINT_ALBEDO"/>
+    <functioncall functionName="HINT_ANISO"/>
+    <functioncall functionName="HINT_BLACK"/>
+    <functioncall functionName="HINT_BLACK_ALBEDO"/>
+    <functioncall functionName="HINT_COLOR"/>
+    <functioncall functionName="HINT_MAX"/>
+    <functioncall functionName="HINT_NONE"/>
+    <functioncall functionName="HINT_NORMAL"/>
+    <functioncall functionName="HINT_RANGE"/>
+    <functioncall functionName="HINT_ROUGHNESS_A"/>
+    <functioncall functionName="HINT_ROUGHNESS_B"/>
+    <functioncall functionName="HINT_ROUGHNESS_G"/>
+    <functioncall functionName="HINT_ROUGHNESS_GRAY"/>
+    <functioncall functionName="HINT_ROUGHNESS_NORMAL"/>
+    <functioncall functionName="HINT_ROUGHNESS_R"/>
+    <functioncall functionName="HINT_WHITE"/>
+    <functioncall functionName="IDENTIFIER_BUILTIN_VAR"/>
+    <functioncall functionName="IDENTIFIER_CONSTANT"/>
+    <functioncall functionName="IDENTIFIER_FUNCTION"/>
+    <functioncall functionName="IDENTIFIER_FUNCTION_ARGUMENT"/>
+    <functioncall functionName="IDENTIFIER_LOCAL_VAR"/>
+    <functioncall functionName="IDENTIFIER_UNIFORM"/>
+    <functioncall functionName="IDENTIFIER_VARYING"/>
+    <functioncall functionName="INTERPOLATION_FLAT"/>
+    <functioncall functionName="INTERPOLATION_SMOOTH"/>
+    <functioncall functionName="MAX_ARGS"/>
+    <functioncall functionName="MemberNode"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="OP_ADD"/>
+    <functioncall functionName="OP_AND"/>
+    <functioncall functionName="OP_ASSIGN"/>
+    <functioncall functionName="OP_ASSIGN_ADD"/>
+    <functioncall functionName="OP_ASSIGN_BIT_AND"/>
+    <functioncall functionName="OP_ASSIGN_BIT_OR"/>
+    <functioncall functionName="OP_ASSIGN_BIT_XOR"/>
+    <functioncall functionName="OP_ASSIGN_DIV"/>
+    <functioncall functionName="OP_ASSIGN_MOD"/>
+    <functioncall functionName="OP_ASSIGN_MUL"/>
+    <functioncall functionName="OP_ASSIGN_SHIFT_LEFT"/>
+    <functioncall functionName="OP_ASSIGN_SHIFT_RIGHT"/>
+    <functioncall functionName="OP_ASSIGN_SUB"/>
+    <functioncall functionName="OP_BIT_AND"/>
+    <functioncall functionName="OP_BIT_INVERT"/>
+    <functioncall functionName="OP_BIT_OR"/>
+    <functioncall functionName="OP_BIT_XOR"/>
+    <functioncall functionName="OP_CALL"/>
+    <functioncall functionName="OP_CONSTRUCT"/>
+    <functioncall functionName="OP_DECREMENT"/>
+    <functioncall functionName="OP_DIV"/>
+    <functioncall functionName="OP_EQUAL"/>
+    <functioncall functionName="OP_GREATER"/>
+    <functioncall functionName="OP_GREATER_EQUAL"/>
+    <functioncall functionName="OP_INCREMENT"/>
+    <functioncall functionName="OP_INDEX"/>
+    <functioncall functionName="OP_LESS"/>
+    <functioncall functionName="OP_LESS_EQUAL"/>
+    <functioncall functionName="OP_MAX"/>
+    <functioncall functionName="OP_MOD"/>
+    <functioncall functionName="OP_MUL"/>
+    <functioncall functionName="OP_NEGATE"/>
+    <functioncall functionName="OP_NOT"/>
+    <functioncall functionName="OP_NOT_EQUAL"/>
+    <functioncall functionName="OP_OR"/>
+    <functioncall functionName="OP_POST_DECREMENT"/>
+    <functioncall functionName="OP_POST_INCREMENT"/>
+    <functioncall functionName="OP_SELECT_ELSE"/>
+    <functioncall functionName="OP_SELECT_IF"/>
+    <functioncall functionName="OP_SHIFT_LEFT"/>
+    <functioncall functionName="OP_SHIFT_RIGHT"/>
+    <functioncall functionName="OP_STRUCT"/>
+    <functioncall functionName="OP_SUB"/>
+    <functioncall functionName="OperatorNode"/>
+    <functioncall functionName="PRECISION_DEFAULT"/>
+    <functioncall functionName="PRECISION_HIGHP"/>
+    <functioncall functionName="PRECISION_LOWP"/>
+    <functioncall functionName="PRECISION_MEDIUMP"/>
+    <functioncall functionName="REPEAT_DEFAULT"/>
+    <functioncall functionName="REPEAT_DISABLE"/>
+    <functioncall functionName="REPEAT_ENABLE"/>
+    <functioncall functionName="SCOPE_GLOBAL"/>
+    <functioncall functionName="SCOPE_INSTANCE"/>
+    <functioncall functionName="SCOPE_LOCAL"/>
+    <functioncall functionName="SHADER_CANVAS_ITEM"/>
+    <functioncall functionName="SHADER_PARTICLES"/>
+    <functioncall functionName="SHADER_SKY"/>
+    <functioncall functionName="SHADER_SPATIAL"/>
+    <functioncall functionName="ShaderLanguage"/>
+    <functioncall functionName="ShaderNode"/>
+    <functioncall functionName="ShaderTypes"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="Struct"/>
+    <functioncall functionName="StructNode"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="TAG_ARRAY"/>
+    <functioncall functionName="TAG_GLOBAL"/>
+    <functioncall functionName="TK_ARG_IN"/>
+    <functioncall functionName="TK_ARG_INOUT"/>
+    <functioncall functionName="TK_ARG_OUT"/>
+    <functioncall functionName="TK_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_BRACKET_OPEN"/>
+    <functioncall functionName="TK_CF_BREAK"/>
+    <functioncall functionName="TK_CF_CASE"/>
+    <functioncall functionName="TK_CF_CONTINUE"/>
+    <functioncall functionName="TK_CF_DEFAULT"/>
+    <functioncall functionName="TK_CF_DISCARD"/>
+    <functioncall functionName="TK_CF_DO"/>
+    <functioncall functionName="TK_CF_ELSE"/>
+    <functioncall functionName="TK_CF_FOR"/>
+    <functioncall functionName="TK_CF_IF"/>
+    <functioncall functionName="TK_CF_RETURN"/>
+    <functioncall functionName="TK_CF_SWITCH"/>
+    <functioncall functionName="TK_CF_WHILE"/>
+    <functioncall functionName="TK_COLON"/>
+    <functioncall functionName="TK_COMMA"/>
+    <functioncall functionName="TK_CONST"/>
+    <functioncall functionName="TK_CURLY_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_CURLY_BRACKET_OPEN"/>
+    <functioncall functionName="TK_CURSOR"/>
+    <functioncall functionName="TK_EMPTY"/>
+    <functioncall functionName="TK_EOF"/>
+    <functioncall functionName="TK_ERROR"/>
+    <functioncall functionName="TK_FALSE"/>
+    <functioncall functionName="TK_FILTER_LINEAR"/>
+    <functioncall functionName="TK_FILTER_LINEAR_MIPMAP"/>
+    <functioncall functionName="TK_FILTER_LINEAR_MIPMAP_ANISO"/>
+    <functioncall functionName="TK_FILTER_NEAREST"/>
+    <functioncall functionName="TK_FILTER_NEAREST_MIPMAP"/>
+    <functioncall functionName="TK_FILTER_NEAREST_MIPMAP_ANISO"/>
+    <functioncall functionName="TK_GLOBAL"/>
+    <functioncall functionName="TK_HINT_ALBEDO_TEXTURE"/>
+    <functioncall functionName="TK_HINT_ANISO_TEXTURE"/>
+    <functioncall functionName="TK_HINT_BLACK_ALBEDO_TEXTURE"/>
+    <functioncall functionName="TK_HINT_BLACK_TEXTURE"/>
+    <functioncall functionName="TK_HINT_COLOR"/>
+    <functioncall functionName="TK_HINT_INSTANCE_INDEX"/>
+    <functioncall functionName="TK_HINT_NORMAL_TEXTURE"/>
+    <functioncall functionName="TK_HINT_RANGE"/>
+    <functioncall functionName="TK_HINT_ROUGHNESS_A"/>
+    <functioncall functionName="TK_HINT_ROUGHNESS_B"/>
+    <functioncall functionName="TK_HINT_ROUGHNESS_G"/>
+    <functioncall functionName="TK_HINT_ROUGHNESS_GRAY"/>
+    <functioncall functionName="TK_HINT_ROUGHNESS_NORMAL_TEXTURE"/>
+    <functioncall functionName="TK_HINT_ROUGHNESS_R"/>
+    <functioncall functionName="TK_HINT_WHITE_TEXTURE"/>
+    <functioncall functionName="TK_IDENTIFIER"/>
+    <functioncall functionName="TK_INSTANCE"/>
+    <functioncall functionName="TK_INTERPOLATION_FLAT"/>
+    <functioncall functionName="TK_INTERPOLATION_SMOOTH"/>
+    <functioncall functionName="TK_INT_CONSTANT"/>
+    <functioncall functionName="TK_MAX"/>
+    <functioncall functionName="TK_OP_ADD"/>
+    <functioncall functionName="TK_OP_AND"/>
+    <functioncall functionName="TK_OP_ASSIGN"/>
+    <functioncall functionName="TK_OP_ASSIGN_ADD"/>
+    <functioncall functionName="TK_OP_ASSIGN_BIT_AND"/>
+    <functioncall functionName="TK_OP_ASSIGN_BIT_OR"/>
+    <functioncall functionName="TK_OP_ASSIGN_BIT_XOR"/>
+    <functioncall functionName="TK_OP_ASSIGN_DIV"/>
+    <functioncall functionName="TK_OP_ASSIGN_MOD"/>
+    <functioncall functionName="TK_OP_ASSIGN_MUL"/>
+    <functioncall functionName="TK_OP_ASSIGN_SHIFT_LEFT"/>
+    <functioncall functionName="TK_OP_ASSIGN_SHIFT_RIGHT"/>
+    <functioncall functionName="TK_OP_ASSIGN_SUB"/>
+    <functioncall functionName="TK_OP_BIT_AND"/>
+    <functioncall functionName="TK_OP_BIT_INVERT"/>
+    <functioncall functionName="TK_OP_BIT_OR"/>
+    <functioncall functionName="TK_OP_BIT_XOR"/>
+    <functioncall functionName="TK_OP_DECREMENT"/>
+    <functioncall functionName="TK_OP_DIV"/>
+    <functioncall functionName="TK_OP_EQUAL"/>
+    <functioncall functionName="TK_OP_GREATER"/>
+    <functioncall functionName="TK_OP_GREATER_EQUAL"/>
+    <functioncall functionName="TK_OP_INCREMENT"/>
+    <functioncall functionName="TK_OP_LESS"/>
+    <functioncall functionName="TK_OP_LESS_EQUAL"/>
+    <functioncall functionName="TK_OP_MOD"/>
+    <functioncall functionName="TK_OP_MUL"/>
+    <functioncall functionName="TK_OP_NOT"/>
+    <functioncall functionName="TK_OP_NOT_EQUAL"/>
+    <functioncall functionName="TK_OP_OR"/>
+    <functioncall functionName="TK_OP_SHIFT_LEFT"/>
+    <functioncall functionName="TK_OP_SHIFT_RIGHT"/>
+    <functioncall functionName="TK_OP_SUB"/>
+    <functioncall functionName="TK_PARENTHESIS_CLOSE"/>
+    <functioncall functionName="TK_PARENTHESIS_OPEN"/>
+    <functioncall functionName="TK_PERIOD"/>
+    <functioncall functionName="TK_PRECISION_HIGH"/>
+    <functioncall functionName="TK_PRECISION_LOW"/>
+    <functioncall functionName="TK_PRECISION_MID"/>
+    <functioncall functionName="TK_QUESTION"/>
+    <functioncall functionName="TK_REAL_CONSTANT"/>
+    <functioncall functionName="TK_RENDER_MODE"/>
+    <functioncall functionName="TK_REPEAT_DISABLE"/>
+    <functioncall functionName="TK_REPEAT_ENABLE"/>
+    <functioncall functionName="TK_SEMICOLON"/>
+    <functioncall functionName="TK_SHADER_TYPE"/>
+    <functioncall functionName="TK_STRUCT"/>
+    <functioncall functionName="TK_TRUE"/>
+    <functioncall functionName="TK_TYPE_BOOL"/>
+    <functioncall functionName="TK_TYPE_BVEC2"/>
+    <functioncall functionName="TK_TYPE_BVEC3"/>
+    <functioncall functionName="TK_TYPE_BVEC4"/>
+    <functioncall functionName="TK_TYPE_FLOAT"/>
+    <functioncall functionName="TK_TYPE_INT"/>
+    <functioncall functionName="TK_TYPE_ISAMPLER2D"/>
+    <functioncall functionName="TK_TYPE_ISAMPLER2DARRAY"/>
+    <functioncall functionName="TK_TYPE_ISAMPLER3D"/>
+    <functioncall functionName="TK_TYPE_IVEC2"/>
+    <functioncall functionName="TK_TYPE_IVEC3"/>
+    <functioncall functionName="TK_TYPE_IVEC4"/>
+    <functioncall functionName="TK_TYPE_MAT2"/>
+    <functioncall functionName="TK_TYPE_MAT3"/>
+    <functioncall functionName="TK_TYPE_MAT4"/>
+    <functioncall functionName="TK_TYPE_SAMPLER2D"/>
+    <functioncall functionName="TK_TYPE_SAMPLER2DARRAY"/>
+    <functioncall functionName="TK_TYPE_SAMPLER3D"/>
+    <functioncall functionName="TK_TYPE_SAMPLERCUBE"/>
+    <functioncall functionName="TK_TYPE_UINT"/>
+    <functioncall functionName="TK_TYPE_USAMPLER2D"/>
+    <functioncall functionName="TK_TYPE_USAMPLER2DARRAY"/>
+    <functioncall functionName="TK_TYPE_USAMPLER3D"/>
+    <functioncall functionName="TK_TYPE_UVEC2"/>
+    <functioncall functionName="TK_TYPE_UVEC3"/>
+    <functioncall functionName="TK_TYPE_UVEC4"/>
+    <functioncall functionName="TK_TYPE_VEC2"/>
+    <functioncall functionName="TK_TYPE_VEC3"/>
+    <functioncall functionName="TK_TYPE_VEC4"/>
+    <functioncall functionName="TK_TYPE_VOID"/>
+    <functioncall functionName="TK_UNIFORM"/>
+    <functioncall functionName="TK_VARYING"/>
+    <functioncall functionName="TYPE_ARRAY"/>
+    <functioncall functionName="TYPE_ARRAY_CONSTRUCT"/>
+    <functioncall functionName="TYPE_ARRAY_DECLARATION"/>
+    <functioncall functionName="TYPE_BLOCK"/>
+    <functioncall functionName="TYPE_BOOL"/>
+    <functioncall functionName="TYPE_BVEC2"/>
+    <functioncall functionName="TYPE_BVEC3"/>
+    <functioncall functionName="TYPE_BVEC4"/>
+    <functioncall functionName="TYPE_CONSTANT"/>
+    <functioncall functionName="TYPE_CONTROL_FLOW"/>
+    <functioncall functionName="TYPE_FLOAT"/>
+    <functioncall functionName="TYPE_FUNCTION"/>
+    <functioncall functionName="TYPE_INT"/>
+    <functioncall functionName="TYPE_ISAMPLER2D"/>
+    <functioncall functionName="TYPE_ISAMPLER2DARRAY"/>
+    <functioncall functionName="TYPE_ISAMPLER3D"/>
+    <functioncall functionName="TYPE_IVEC2"/>
+    <functioncall functionName="TYPE_IVEC3"/>
+    <functioncall functionName="TYPE_IVEC4"/>
+    <functioncall functionName="TYPE_MAT2"/>
+    <functioncall functionName="TYPE_MAT3"/>
+    <functioncall functionName="TYPE_MAT4"/>
+    <functioncall functionName="TYPE_MAX"/>
+    <functioncall functionName="TYPE_MEMBER"/>
+    <functioncall functionName="TYPE_OPERATOR"/>
+    <functioncall functionName="TYPE_SAMPLER2D"/>
+    <functioncall functionName="TYPE_SAMPLER2DARRAY"/>
+    <functioncall functionName="TYPE_SAMPLER3D"/>
+    <functioncall functionName="TYPE_SAMPLERCUBE"/>
+    <functioncall functionName="TYPE_SHADER"/>
+    <functioncall functionName="TYPE_STRUCT"/>
+    <functioncall functionName="TYPE_UINT"/>
+    <functioncall functionName="TYPE_USAMPLER2D"/>
+    <functioncall functionName="TYPE_USAMPLER2DARRAY"/>
+    <functioncall functionName="TYPE_USAMPLER3D"/>
+    <functioncall functionName="TYPE_UVEC2"/>
+    <functioncall functionName="TYPE_UVEC3"/>
+    <functioncall functionName="TYPE_UVEC4"/>
+    <functioncall functionName="TYPE_VARIABLE"/>
+    <functioncall functionName="TYPE_VARIABLE_DECLARATION"/>
+    <functioncall functionName="TYPE_VEC2"/>
+    <functioncall functionName="TYPE_VEC3"/>
+    <functioncall functionName="TYPE_VEC4"/>
+    <functioncall functionName="TYPE_VOID"/>
+    <functioncall functionName="Type"/>
+    <functioncall functionName="Uniform"/>
+    <functioncall functionName="Variable"/>
+    <functioncall functionName="VariableDeclarationNode"/>
+    <functioncall functionName="VariableNode"/>
+    <functioncall functionName="Varying"/>
+    <functioncall functionName="array_size"/>
+    <functioncall functionName="basetype"/>
+    <functioncall functionName="basetype_const"/>
+    <functioncall functionName="block_tag"/>
+    <functioncall functionName="block_type"/>
+    <functioncall functionName="body"/>
+    <functioncall functionName="call_expression"/>
+    <functioncall functionName="can_discard"/>
+    <functioncall functionName="char_idx"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constant"/>
+    <functioncall functionName="constt"/>
+    <functioncall functionName="datatype"/>
+    <functioncall functionName="datatype_cache"/>
+    <functioncall functionName="error_set"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="filter"/>
+    <functioncall functionName="flow_op"/>
+    <functioncall functionName="functions"/>
+    <functioncall functionName="has_swizzling_duplicates"/>
+    <functioncall functionName="hint"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index_expression"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance_index"/>
+    <functioncall functionName="interpolation"/>
+    <functioncall functionName="is_const"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="modes"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="nodes"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="p_constant"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_str"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="parent_block"/>
+    <functioncall functionName="parent_function"/>
+    <functioncall functionName="precision"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="repeat"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="return_cache"/>
+    <functioncall functionName="return_precision"/>
+    <functioncall functionName="return_precision_cache"/>
+    <functioncall functionName="return_type"/>
+    <functioncall functionName="single_statement"/>
+    <functioncall functionName="struct_name"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="texture_order"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tk_line"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+  </FileInfo>
+</analyzerinfo>

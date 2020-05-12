@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3200251376">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;btActivatingCollisionAlgorithm&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;btActivatingCollisionAlgorithm&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.h" line="28" column="2"/>
+            <symbol>btActivatingCollisionAlgorithm</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;CreateCollisionAlgorithm&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;CreateCollisionAlgorithm&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.h" line="100" column="33" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h" line="36" column="32" info="Virtual function in base class"/>
+            <symbol>CreateCollisionAlgorithm</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;CreateCollisionAlgorithm&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;CreateCollisionAlgorithm&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.h" line="109" column="33" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionCreateFunc.h" line="36" column="32" info="Virtual function in base class"/>
+            <symbol>CreateCollisionAlgorithm</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;poly&apos; is assigned a value that is never used." verbose="Variable &apos;poly&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp" line="219" column="36"/>
+            <symbol>poly</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp:314:16" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp" line="325" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="processTriangle" lineNumber="314"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BT_CLOSEST_POINT_ALGORITHMS"/>
+    <functioncall functionName="BT_CONTACT_POINT_ALGORITHMS"/>
+    <functioncall functionName="BT_PROFILE"/>
+    <functioncall functionName="LocalTriangleSphereCastCallback"/>
+    <functioncall functionName="SIMD_EPSILON"/>
+    <functioncall functionName="TestTriangleAgainstAabb2"/>
+    <functioncall functionName="addContactPoint"/>
+    <functioncall functionName="allocateCollisionAlgorithm"/>
+    <functioncall functionName="body0"/>
+    <functioncall functionName="body0Wrap"/>
+    <functioncall functionName="body1"/>
+    <functioncall functionName="body1Wrap"/>
+    <functioncall functionName="btActivatingCollisionAlgorithm"/>
+    <functioncall functionName="btCollisionAlgorithm"/>
+    <functioncall functionName="btCollisionAlgorithmCreateFunc"/>
+    <functioncall functionName="btConvexConcaveCollisionAlgorithm"/>
+    <functioncall functionName="btConvexTriangleCallback"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="calcTimeOfImpact"/>
+    <functioncall functionName="castResult"/>
+    <functioncall functionName="ccdRadius0"/>
+    <functioncall functionName="ccdSphereRadius"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="clearCache"/>
+    <functioncall functionName="clearManifold"/>
+    <functioncall functionName="clearWrapperData"/>
+    <functioncall functionName="colAlgo"/>
+    <functioncall functionName="collisionMarginTriangle"/>
+    <functioncall functionName="convex"/>
+    <functioncall functionName="convexBodyWrap"/>
+    <functioncall functionName="convexCaster"/>
+    <functioncall functionName="convexFromLocal"/>
+    <functioncall functionName="convexInTriangleSpace"/>
+    <functioncall functionName="convexToLocal"/>
+    <functioncall functionName="curHitFraction"/>
+    <functioncall functionName="dispatchInfo"/>
+    <functioncall functionName="dispatcher"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="extra"/>
+    <functioncall functionName="extraMargin"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="findAlgorithm"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="freeCollisionAlgorithm"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="getAabb"/>
+    <functioncall functionName="getAabbMax"/>
+    <functioncall functionName="getAabbMin"/>
+    <functioncall functionName="getBasis"/>
+    <functioncall functionName="getBody0Internal"/>
+    <functioncall functionName="getBody0Wrap"/>
+    <functioncall functionName="getBody1Wrap"/>
+    <functioncall functionName="getCcdSquareMotionThreshold"/>
+    <functioncall functionName="getCcdSweptSphereRadius"/>
+    <functioncall functionName="getCollisionObject"/>
+    <functioncall functionName="getCollisionShape"/>
+    <functioncall functionName="getHitFraction"/>
+    <functioncall functionName="getInterpolationWorldTransform"/>
+    <functioncall functionName="getMargin"/>
+    <functioncall functionName="getNewManifold"/>
+    <functioncall functionName="getNumVertices"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getRadius"/>
+    <functioncall functionName="getShapeType"/>
+    <functioncall functionName="getVertex"/>
+    <functioncall functionName="getWorldTransform"/>
+    <functioncall functionName="hitFraction"/>
+    <functioncall functionName="ident"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="invXform"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="isConcave"/>
+    <functioncall functionName="isConvex"/>
+    <functioncall functionName="isPolyhedral"/>
+    <functioncall functionName="isSwapped"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="m_aabbMax"/>
+    <functioncall functionName="m_aabbMin"/>
+    <functioncall functionName="m_btConvexTriangleCallback"/>
+    <functioncall functionName="m_ccdSphereFromTrans"/>
+    <functioncall functionName="m_ccdSphereRadius"/>
+    <functioncall functionName="m_ccdSphereToTrans"/>
+    <functioncall functionName="m_closestPointDistanceThreshold"/>
+    <functioncall functionName="m_collisionMarginTriangle"/>
+    <functioncall functionName="m_convexBodyWrap"/>
+    <functioncall functionName="m_dispatchInfoPtr"/>
+    <functioncall functionName="m_dispatcher"/>
+    <functioncall functionName="m_dispatcher1"/>
+    <functioncall functionName="m_fraction"/>
+    <functioncall functionName="m_hitFraction"/>
+    <functioncall functionName="m_isSwapped"/>
+    <functioncall functionName="m_manifoldPtr"/>
+    <functioncall functionName="m_resultOut"/>
+    <functioncall functionName="m_swapped"/>
+    <functioncall functionName="m_triBodyWrap"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalLocal"/>
+    <functioncall functionName="partId"/>
+    <functioncall functionName="pointShape"/>
+    <functioncall functionName="processAllTriangles"/>
+    <functioncall functionName="processCollision"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="queryPoint"/>
+    <functioncall functionName="rayAabbMax"/>
+    <functioncall functionName="rayAabbMin"/>
+    <functioncall functionName="raycastCallback"/>
+    <functioncall functionName="refreshContactPoints"/>
+    <functioncall functionName="releaseManifold"/>
+    <functioncall functionName="resultOut"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="safeNormalize"/>
+    <functioncall functionName="setBodies"/>
+    <functioncall functionName="setBody0Wrap"/>
+    <functioncall functionName="setBody1Wrap"/>
+    <functioncall functionName="setHitFraction"/>
+    <functioncall functionName="setIdentity"/>
+    <functioncall functionName="setMargin"/>
+    <functioncall functionName="setMax"/>
+    <functioncall functionName="setMin"/>
+    <functioncall functionName="setPersistentManifold"/>
+    <functioncall functionName="setShapeIdentifiersA"/>
+    <functioncall functionName="setShapeIdentifiersB"/>
+    <functioncall functionName="setTimeStepAndCounters"/>
+    <functioncall functionName="simplexSolver"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="tm"/>
+    <functioncall functionName="tmpWrap"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="triBody"/>
+    <functioncall functionName="triBodyWrap"/>
+    <functioncall functionName="triObWrap"/>
+    <functioncall functionName="triShape"/>
+    <functioncall functionName="triangle"/>
+    <functioncall functionName="triangleIndex"/>
+    <functioncall functionName="triangleMesh"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vtx"/>
+    <functioncall functionName="vtxInSdf"/>
+    <functioncall functionName="vtxWorldSpace"/>
+  </FileInfo>
+</analyzerinfo>

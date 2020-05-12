@@ -34,12 +34,8 @@
 #include "core/print_string.h"
 
 Error ImageLoaderTGA::decode_tga_rle(const uint8_t *p_compressed_buffer, size_t p_pixel_size, uint8_t *p_uncompressed_buffer, size_t p_output_size) {
-	Error error;
-
 	Vector<uint8_t> pixels;
-	error = pixels.resize(p_pixel_size);
-	if (error != OK)
-		return error;
+	pixels.resize(p_pixel_size);
 
 	uint8_t *pixels_w = pixels.ptrw();
 

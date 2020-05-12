@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3168947426">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;GraphEditFilter&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;GraphEditFilter&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/gui/graph_edit.cpp" file="/home/hbina/git/godot/scene/gui/graph_edit.h" line="53" column="2"/>
+            <symbol>GraphEditFilter</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.cpp:631:31" call-funcname="_bezier_interp" call-argnr="1" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="645" col="30" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="34" info="Calling function '_bake_segment2d', 3rd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="3" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="659" col="18" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="34" info="Calling function '_bake_segment2d', 3rd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="3" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="9" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="15" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="17" call-argexpr="lines" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="681" col="14" info="Assignment 'lines=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/gui/graph_edit.h:201:7" my-argnr="1" my-argname="r_connections" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="107" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/gui/graph_edit.h:175:7" my-argnr="1" my-argname="p_control" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="581" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/gui/graph_edit.h:121:7" my-argnr="1" my-argname="p_where" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="694" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.cpp:631:31" call-funcname="_bezier_interp" call-argnr="1" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="645" col="30" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="34" info="Calling function '_bake_segment2d', 3rd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="3" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="659" col="18" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="34" info="Calling function '_bake_segment2d', 3rd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="3" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="9" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/gui/graph_edit.h:119:7" call-funcname="_bake_segment2d" call-argnr="15" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="687" col="17" call-argexpr="lines" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="681" col="14" info="Assignment 'lines=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/gui/graph_edit.h:201:7" my-argnr="1" my-argname="r_connections" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="107" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/gui/graph_edit.h:175:7" my-argnr="1" my-argname="p_control" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="581" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/gui/graph_edit.h:121:7" my-argnr="1" my-argname="p_where" file="/home/hbina/git/godot/scene/gui/graph_edit.cpp" line="692" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="has_point" lineNumber="46"/>
+    <functiondecl functionName="connect_node" lineNumber="56"/>
+    <functiondecl functionName="is_node_connected" lineNumber="74"/>
+    <functiondecl functionName="disconnect_node" lineNumber="85"/>
+    <functiondecl functionName="clips_input" lineNumber="100"/>
+    <functiondecl functionName="get_connection_list" lineNumber="105"/>
+    <functiondecl functionName="set_scroll_ofs" lineNumber="110"/>
+    <functiondecl functionName="get_scroll_ofs" lineNumber="119"/>
+    <functiondecl functionName="_scroll_moved" lineNumber="124"/>
+    <functiondecl functionName="_update_scroll_offset" lineNumber="138"/>
+    <functiondecl functionName="_update_scroll" lineNumber="161"/>
+    <functiondecl functionName="_graph_node_raised" lineNumber="220"/>
+    <functiondecl functionName="_graph_node_moved" lineNumber="243"/>
+    <functiondecl functionName="add_child_notify" lineNumber="252"/>
+    <functiondecl functionName="remove_child_notify" lineNumber="268"/>
+    <functiondecl functionName="_notification" lineNumber="281"/>
+    <functiondecl functionName="_filter_input" lineNumber="358"/>
+    <functiondecl functionName="_top_layer_input" lineNumber="387"/>
+    <functiondecl functionName="_check_clickable_control" lineNumber="579"/>
+    <functiondecl functionName="is_in_hot_zone" lineNumber="601"/>
+    <functiondecl functionName="_bake_segment2d" lineNumber="642"/>
+    <functiondecl functionName="_draw_cos_line" lineNumber="664"/>
+    <functiondecl functionName="_connections_layer_draw" lineNumber="698"/>
+    <functiondecl functionName="_top_layer_draw" lineNumber="752"/>
+    <functiondecl functionName="set_selected" lineNumber="792"/>
+    <functiondecl functionName="_gui_input" lineNumber="804"/>
+    <functiondecl functionName="set_connection_activity" lineNumber="1091"/>
+    <functiondecl functionName="clear_connections" lineNumber="1108"/>
+    <functiondecl functionName="set_zoom" lineNumber="1115"/>
+    <functiondecl functionName="set_zoom_custom" lineNumber="1120"/>
+    <functiondecl functionName="get_zoom" lineNumber="1147"/>
+    <functiondecl functionName="set_right_disconnects" lineNumber="1151"/>
+    <functiondecl functionName="is_right_disconnects_enabled" lineNumber="1156"/>
+    <functiondecl functionName="add_valid_right_disconnect_type" lineNumber="1161"/>
+    <functiondecl functionName="remove_valid_right_disconnect_type" lineNumber="1166"/>
+    <functiondecl functionName="add_valid_left_disconnect_type" lineNumber="1171"/>
+    <functiondecl functionName="remove_valid_left_disconnect_type" lineNumber="1176"/>
+    <functiondecl functionName="_get_connection_list" lineNumber="1181"/>
+    <functiondecl functionName="_zoom_minus" lineNumber="1197"/>
+    <functiondecl functionName="_zoom_reset" lineNumber="1201"/>
+    <functiondecl functionName="_zoom_plus" lineNumber="1206"/>
+    <functiondecl functionName="add_valid_connection_type" lineNumber="1211"/>
+    <functiondecl functionName="remove_valid_connection_type" lineNumber="1220"/>
+    <functiondecl functionName="is_valid_connection_type" lineNumber="1229"/>
+    <functiondecl functionName="set_use_snap" lineNumber="1238"/>
+    <functiondecl functionName="is_using_snap" lineNumber="1244"/>
+    <functiondecl functionName="get_snap" lineNumber="1249"/>
+    <functiondecl functionName="set_snap" lineNumber="1254"/>
+    <functiondecl functionName="_snap_toggled" lineNumber="1260"/>
+    <functiondecl functionName="_snap_value_changed" lineNumber="1264"/>
+    <functiondecl functionName="get_zoom_hbox" lineNumber="1269"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1273"/>
+    <functiondecl functionName="has_point" lineNumber="46"/>
+    <functiondecl functionName="connect_node" lineNumber="56"/>
+    <functiondecl functionName="is_node_connected" lineNumber="74"/>
+    <functiondecl functionName="disconnect_node" lineNumber="85"/>
+    <functiondecl functionName="clips_input" lineNumber="100"/>
+    <functiondecl functionName="get_connection_list" lineNumber="105"/>
+    <functiondecl functionName="set_scroll_ofs" lineNumber="110"/>
+    <functiondecl functionName="get_scroll_ofs" lineNumber="119"/>
+    <functiondecl functionName="_scroll_moved" lineNumber="124"/>
+    <functiondecl functionName="_update_scroll_offset" lineNumber="138"/>
+    <functiondecl functionName="_update_scroll" lineNumber="161"/>
+    <functiondecl functionName="_graph_node_raised" lineNumber="220"/>
+    <functiondecl functionName="_graph_node_moved" lineNumber="243"/>
+    <functiondecl functionName="add_child_notify" lineNumber="252"/>
+    <functiondecl functionName="remove_child_notify" lineNumber="268"/>
+    <functiondecl functionName="_notification" lineNumber="281"/>
+    <functiondecl functionName="_filter_input" lineNumber="358"/>
+    <functiondecl functionName="_top_layer_input" lineNumber="387"/>
+    <functiondecl functionName="_check_clickable_control" lineNumber="579"/>
+    <functiondecl functionName="is_in_hot_zone" lineNumber="601"/>
+    <functiondecl functionName="_bake_segment2d" lineNumber="642"/>
+    <functiondecl functionName="_draw_cos_line" lineNumber="664"/>
+    <functiondecl functionName="_connections_layer_draw" lineNumber="698"/>
+    <functiondecl functionName="_top_layer_draw" lineNumber="752"/>
+    <functiondecl functionName="set_selected" lineNumber="792"/>
+    <functiondecl functionName="_gui_input" lineNumber="804"/>
+    <functiondecl functionName="set_connection_activity" lineNumber="1091"/>
+    <functiondecl functionName="clear_connections" lineNumber="1108"/>
+    <functiondecl functionName="set_zoom" lineNumber="1115"/>
+    <functiondecl functionName="set_zoom_custom" lineNumber="1120"/>
+    <functiondecl functionName="get_zoom" lineNumber="1147"/>
+    <functiondecl functionName="set_right_disconnects" lineNumber="1151"/>
+    <functiondecl functionName="is_right_disconnects_enabled" lineNumber="1156"/>
+    <functiondecl functionName="add_valid_right_disconnect_type" lineNumber="1161"/>
+    <functiondecl functionName="remove_valid_right_disconnect_type" lineNumber="1166"/>
+    <functiondecl functionName="add_valid_left_disconnect_type" lineNumber="1171"/>
+    <functiondecl functionName="remove_valid_left_disconnect_type" lineNumber="1176"/>
+    <functiondecl functionName="_get_connection_list" lineNumber="1181"/>
+    <functiondecl functionName="_zoom_minus" lineNumber="1197"/>
+    <functiondecl functionName="_zoom_reset" lineNumber="1201"/>
+    <functiondecl functionName="_zoom_plus" lineNumber="1206"/>
+    <functiondecl functionName="add_valid_connection_type" lineNumber="1211"/>
+    <functiondecl functionName="remove_valid_connection_type" lineNumber="1220"/>
+    <functiondecl functionName="is_valid_connection_type" lineNumber="1229"/>
+    <functiondecl functionName="set_use_snap" lineNumber="1238"/>
+    <functiondecl functionName="is_using_snap" lineNumber="1244"/>
+    <functiondecl functionName="get_snap" lineNumber="1249"/>
+    <functiondecl functionName="set_snap" lineNumber="1254"/>
+    <functiondecl functionName="_snap_toggled" lineNumber="1260"/>
+    <functiondecl functionName="_snap_value_changed" lineNumber="1264"/>
+    <functiondecl functionName="get_zoom_hbox" lineNumber="1269"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1273"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ANCHOR_BEGIN"/>
+    <functioncall functionName="ANCHOR_END"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="ConnType"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FOCUS_ALL"/>
+    <functioncall functionName="FOCUS_NONE"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GraphEdit"/>
+    <functioncall functionName="GraphEditFilter"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HScrollBar"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="KEY_CONTROL"/>
+    <functioncall functionName="KEY_SHIFT"/>
+    <functioncall functionName="KEY_SPACE"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MOUSE_FILTER_IGNORE"/>
+    <functioncall functionName="MOUSE_FILTER_PASS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PRESET_WIDE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RTR"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="SpinBox"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="ToolButton"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="VScrollBar"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_bake_segment2d"/>
+    <functioncall functionName="_bezier_interp"/>
+    <functioncall functionName="_check_clickable_control"/>
+    <functioncall functionName="_connections_layer_draw"/>
+    <functioncall functionName="_draw_cos_line"/>
+    <functioncall functionName="_filter_input"/>
+    <functioncall functionName="_get_connection_list"/>
+    <functioncall functionName="_graph_node_moved"/>
+    <functioncall functionName="_graph_node_raised"/>
+    <functioncall functionName="_gui_input"/>
+    <functioncall functionName="_scroll_moved"/>
+    <functioncall functionName="_snap_toggled"/>
+    <functioncall functionName="_snap_value_changed"/>
+    <functioncall functionName="_top_layer_draw"/>
+    <functioncall functionName="_top_layer_input"/>
+    <functioncall functionName="_update_scroll"/>
+    <functioncall functionName="_update_scroll_offset"/>
+    <functioncall functionName="_zoom_minus"/>
+    <functioncall functionName="_zoom_plus"/>
+    <functioncall functionName="_zoom_reset"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="accept_event"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="activity"/>
+    <functioncall functionName="activity_color"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_child_notify"/>
+    <functioncall functionName="add_valid_connection_type"/>
+    <functioncall functionName="add_valid_left_disconnect_type"/>
+    <functioncall functionName="add_valid_right_disconnect_type"/>
+    <functioncall functionName="awaiting_scroll_offset_update"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="base_ofs"/>
+    <functioncall functionName="beg"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="box_selecting"/>
+    <functioncall functionName="box_selecting_rect"/>
+    <functioncall functionName="box_selection_mode_additive"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c1"/>
+    <functioncall functionName="c2"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_connections"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="colors"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="connect_node"/>
+    <functioncall functionName="connecting"/>
+    <functioncall functionName="connecting_color"/>
+    <functioncall functionName="connecting_from"/>
+    <functioncall functionName="connecting_index"/>
+    <functioncall functionName="connecting_out"/>
+    <functioncall functionName="connecting_target"/>
+    <functioncall functionName="connecting_target_index"/>
+    <functioncall functionName="connecting_target_to"/>
+    <functioncall functionName="connecting_to"/>
+    <functioncall functionName="connecting_type"/>
+    <functioncall functionName="connections"/>
+    <functioncall functionName="connections_layer"/>
+    <functioncall functionName="conns"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cp_len"/>
+    <functioncall functionName="cp_neg_len"/>
+    <functioncall functionName="ct"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="diff"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="disconnect_node"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="drag_accum"/>
+    <functioncall functionName="drag_origin"/>
+    <functioncall functionName="draw_line"/>
+    <functioncall functionName="draw_polyline_colors"/>
+    <functioncall functionName="draw_rect"/>
+    <functioncall functionName="draw_style_box"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first_not_comment"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fr"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="from_port"/>
+    <functioncall functionName="from_slot"/>
+    <functioncall functionName="fromn"/>
+    <functioncall functionName="fromnp"/>
+    <functioncall functionName="frompos"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_button_index"/>
+    <functioncall functionName="get_button_mask"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_combined_minimum_size"/>
+    <functioncall functionName="get_command"/>
+    <functioncall functionName="get_connection_input_color"/>
+    <functioncall functionName="get_connection_input_count"/>
+    <functioncall functionName="get_connection_input_position"/>
+    <functioncall functionName="get_connection_input_type"/>
+    <functioncall functionName="get_connection_list"/>
+    <functioncall functionName="get_connection_output_color"/>
+    <functioncall functionName="get_connection_output_count"/>
+    <functioncall functionName="get_connection_output_position"/>
+    <functioncall functionName="get_connection_output_type"/>
+    <functioncall functionName="get_control"/>
+    <functioncall functionName="get_delta"/>
+    <functioncall functionName="get_drag_from"/>
+    <functioncall functionName="get_factor"/>
+    <functioncall functionName="get_global_position"/>
+    <functioncall functionName="get_keycode"/>
+    <functioncall functionName="get_local_mouse_position"/>
+    <functioncall functionName="get_max"/>
+    <functioncall functionName="get_min"/>
+    <functioncall functionName="get_mouse_filter"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_offset"/>
+    <functioncall functionName="get_page"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_rect"/>
+    <functioncall functionName="get_relative"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_scroll_ofs"/>
+    <functioncall functionName="get_shift"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_snap"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_constant"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_theme_stylebox"/>
+    <functioncall functionName="get_value"/>
+    <functioncall functionName="get_zoom"/>
+    <functioncall functionName="get_zoom_hbox"/>
+    <functioncall functionName="gfrom"/>
+    <functioncall functionName="gn"/>
+    <functioncall functionName="gn2"/>
+    <functioncall functionName="gn_selected"/>
+    <functioncall functionName="grid_major"/>
+    <functioncall functionName="grid_minor"/>
+    <functioncall functionName="gto"/>
+    <functioncall functionName="h_scroll"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_point"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in_box"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="intersects"/>
+    <functioncall functionName="is_comment"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_in_hot_zone"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_key_pressed"/>
+    <functioncall functionName="is_node_connected"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_resizing"/>
+    <functioncall functionName="is_right_disconnects_enabled"/>
+    <functioncall functionName="is_selected"/>
+    <functioncall functionName="is_set_as_toplevel"/>
+    <functioncall functionName="is_using_snap"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_valid_connection_type"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="just_disconnected"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="lines"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="move_child"/>
+    <functioncall functionName="mp"/>
+    <functioncall functionName="mpos"/>
+    <functioncall functionName="nb"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="o_gn"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_activity"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_begin"/>
+    <functioncall functionName="p_center"/>
+    <functioncall functionName="p_child"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_edit"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_end"/>
+    <functioncall functionName="p_ev"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_from_port"/>
+    <functioncall functionName="p_gn"/>
+    <functioncall functionName="p_in"/>
+    <functioncall functionName="p_max_depth"/>
+    <functioncall functionName="p_min_depth"/>
+    <functioncall functionName="p_mouse_pos"/>
+    <functioncall functionName="p_out"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_snap"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_to_color"/>
+    <functioncall functionName="p_to_port"/>
+    <functioncall functionName="p_tol"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_with_type"/>
+    <functioncall functionName="p_zoom"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="port_grab_distance_horizontal"/>
+    <functioncall functionName="port_grab_distance_vertical"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rad2deg"/>
+    <functioncall functionName="raise"/>
+    <functioncall functionName="remove_child_notify"/>
+    <functioncall functionName="remove_valid_connection_type"/>
+    <functioncall functionName="remove_valid_left_disconnect_type"/>
+    <functioncall functionName="remove_valid_right_disconnect_type"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_anchor_and_margin"/>
+    <functioncall functionName="set_anchors_and_margins_preset"/>
+    <functioncall functionName="set_block_minimum_size_adjust"/>
+    <functioncall functionName="set_clip_contents"/>
+    <functioncall functionName="set_connection_activity"/>
+    <functioncall functionName="set_disable_visibility_clip"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_drag"/>
+    <functioncall functionName="set_focus_mode"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_max"/>
+    <functioncall functionName="set_min"/>
+    <functioncall functionName="set_mouse_filter"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_offset"/>
+    <functioncall functionName="set_page"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_right_disconnects"/>
+    <functioncall functionName="set_scale"/>
+    <functioncall functionName="set_scroll_ofs"/>
+    <functioncall functionName="set_selected"/>
+    <functioncall functionName="set_snap"/>
+    <functioncall functionName="set_step"/>
+    <functioncall functionName="set_toggle_mode"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_use_snap"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="set_zoom"/>
+    <functioncall functionName="set_zoom_custom"/>
+    <functioncall functionName="setting_scroll_ofs"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="snap"/>
+    <functioncall functionName="snap_amount"/>
+    <functioncall functionName="snap_button"/>
+    <functioncall functionName="snapped"/>
+    <functioncall functionName="subchild"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_port"/>
+    <functioncall functionName="to_slot"/>
+    <functioncall functionName="tocolor"/>
+    <functioncall functionName="tonp"/>
+    <functioncall functionName="top_layer"/>
+    <functioncall functionName="topos"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="updating"/>
+    <functioncall functionName="v_scroll"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="zoom"/>
+    <functioncall functionName="zoom_hb"/>
+    <functioncall functionName="zoom_minus"/>
+    <functioncall functionName="zoom_plus"/>
+    <functioncall functionName="zoom_reset"/>
+  </FileInfo>
+</analyzerinfo>

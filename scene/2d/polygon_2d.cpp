@@ -150,7 +150,7 @@ void Polygon2D::_notification(int p_what) {
 
 				const Vector2 *polyr = polygon.ptr();
 				for (int i = 0; i < len; i++) {
-					points.write[i] = polyr[i] + offset;
+					points[i] = polyr[i] + offset;
 				}
 			}
 
@@ -190,18 +190,18 @@ void Polygon2D::_notification(int p_what) {
 					SWAP(ep[1], ep[4]);
 					SWAP(ep[2], ep[3]);
 					SWAP(ep[5], ep[0]);
-					SWAP(ep[6], points.write[highest_idx]);
+					SWAP(ep[6], points[highest_idx]);
 				}
 
 				points.resize(points.size() + 7);
 				for (int i = points.size() - 1; i >= highest_idx + 7; i--) {
 
-					points.write[i] = points[i - 7];
+					points[i] = points[i - 7];
 				}
 
 				for (int i = 0; i < 7; i++) {
 
-					points.write[highest_idx + i + 1] = ep[i];
+					points[highest_idx + i + 1] = ep[i];
 				}
 
 				len = points.size();
@@ -220,12 +220,12 @@ void Polygon2D::_notification(int p_what) {
 					const Vector2 *uvr = uv.ptr();
 
 					for (int i = 0; i < len; i++) {
-						uvs.write[i] = texmat.xform(uvr[i]) / tex_size;
+						uvs[i] = texmat.xform(uvr[i]) / tex_size;
 					}
 
 				} else {
 					for (int i = 0; i < len; i++) {
-						uvs.write[i] = texmat.xform(points[i]) / tex_size;
+						uvs[i] = texmat.xform(points[i]) / tex_size;
 					}
 				}
 			}
@@ -298,7 +298,7 @@ void Polygon2D::_notification(int p_what) {
 				colors.resize(len);
 				const Color *color_r = vertex_colors.ptr();
 				for (int i = 0; i < len; i++) {
-					colors.write[i] = color_r[i];
+					colors[i] = color_r[i];
 				}
 			} else {
 				colors.push_back(color);
@@ -325,7 +325,7 @@ void Polygon2D::_notification(int p_what) {
 					for (int j = 0; j < ic; j++) {
 						int idx = r[j];
 						ERR_CONTINUE(idx < 0 || idx >= points.size());
-						tmp_points.write[j] = points[r[j]];
+						tmp_points[j] = points[r[j]];
 					}
 					Vector<int> indices = Geometry::triangulate_polygon(tmp_points);
 					int ic2 = indices.size();
@@ -579,12 +579,12 @@ void Polygon2D::clear_bones() {
 
 void Polygon2D::set_bone_weights(int p_index, const Vector<float> &p_weights) {
 	ERR_FAIL_INDEX(p_index, bone_weights.size());
-	bone_weights.write[p_index].weights = p_weights;
+	bone_weights[p_index].weights = p_weights;
 	update();
 }
 void Polygon2D::set_bone_path(int p_index, const NodePath &p_path) {
 	ERR_FAIL_INDEX(p_index, bone_weights.size());
-	bone_weights.write[p_index].path = p_path;
+	bone_weights[p_index].path = p_path;
 	update();
 }
 

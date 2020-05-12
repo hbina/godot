@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3350588679">
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;+&apos;" verbose="Found suspicious operator &apos;+&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="76" column="53"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;+&apos;" verbose="Found suspicious operator &apos;+&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="77" column="58"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;+&apos;" verbose="Found suspicious operator &apos;+&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="79" column="52"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;-&apos;" verbose="Found suspicious operator &apos;-&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="80" column="65"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;+&apos;" verbose="Found suspicious operator &apos;+&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="140" column="48"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;+&apos;" verbose="Found suspicious operator &apos;+&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="186" column="53"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;&amp;&apos;" verbose="Found suspicious operator &apos;&amp;&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="188" column="53"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;-&apos;" verbose="Found suspicious operator &apos;-&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="241" column="56"/>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;-&apos;" verbose="Found suspicious operator &apos;-&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="244" column="60"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c:44:6" my-argnr="1" my-argname="l" file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="54" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c:158:6" my-argnr="1" my-argname="l" file="/home/hbina/git/godot/thirdparty/opus/celt/arm/celt_ne10_mdct.c" line="168" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="clt_mdct_forward_neon" lineNumber="44"/>
+    <functiondecl functionName="clt_mdct_backward_neon" lineNumber="158"/>
+    <functioncall functionName="ALLOC"/>
+    <functioncall functionName="MULT16_32_Q15"/>
+    <functioncall functionName="N2"/>
+    <functioncall functionName="N4"/>
+    <functioncall functionName="RESTORE_STACK"/>
+    <functioncall functionName="SAVE_STACK"/>
+    <functioncall functionName="S_MUL"/>
+    <functioncall functionName="VARDECL"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="f2"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fp"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="im"/>
+    <functioncall functionName="kiss_fft_cpx"/>
+    <functioncall functionName="kiss_fft_scalar"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="opus_fft"/>
+    <functioncall functionName="opus_ifft"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="re"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="st"/>
+    <functioncall functionName="t0"/>
+    <functioncall functionName="t1"/>
+    <functioncall functionName="trig"/>
+    <functioncall functionName="window"/>
+    <functioncall functionName="x1"/>
+    <functioncall functionName="x2"/>
+    <functioncall functionName="yc"/>
+    <functioncall functionName="yi"/>
+    <functioncall functionName="yr"/>
+  </FileInfo>
+</analyzerinfo>

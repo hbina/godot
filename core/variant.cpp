@@ -2540,7 +2540,7 @@ Variant::operator Vector<RID>() const {
 	Vector<RID> rids;
 	rids.resize(va.size());
 	for (int i = 0; i < rids.size(); i++)
-		rids.write[i] = va[i];
+		rids[i] = va[i];
 	return rids;
 }
 
@@ -2602,7 +2602,7 @@ Variant::operator Vector<StringName>() const {
 	to.resize(len);
 	for (int i = 0; i < len; i++) {
 
-		to.write[i] = from[i];
+		to[i] = from[i];
 	}
 	return to;
 }

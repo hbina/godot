@@ -1936,8 +1936,8 @@ Expression::ENode *Expression::_parse_expression() {
 				op->op = expression[i].op;
 				op->nodes[0] = expression[i + 1].node;
 				op->nodes[1] = nullptr;
-				expression.write[i].is_op = false;
-				expression.write[i].node = op;
+				expression[i].is_op = false;
+				expression[i].node = op;
 				expression.remove(i + 1);
 			}
 
@@ -1971,7 +1971,7 @@ Expression::ENode *Expression::_parse_expression() {
 			op->nodes[1] = expression[next_op + 1].node; //next expression goes as right
 
 			//replace all 3 nodes by this operator and make it an expression
-			expression.write[next_op - 1].node = op;
+			expression[next_op - 1].node = op;
 			expression.remove(next_op);
 			expression.remove(next_op);
 		}
@@ -2157,8 +2157,8 @@ bool Expression::_execute(const Array &p_inputs, Object *p_instance, Expression:
 
 				if (ret)
 					return true;
-				arr.write[i] = value;
-				argp.write[i] = &arr[i];
+				arr[i] = value;
+				argp[i] = &arr[i];
 			}
 
 			Callable::CallError ce;
@@ -2185,8 +2185,8 @@ bool Expression::_execute(const Array &p_inputs, Object *p_instance, Expression:
 				bool ret = _execute(p_inputs, p_instance, bifunc->arguments[i], value, r_error_str);
 				if (ret)
 					return true;
-				arr.write[i] = value;
-				argp.write[i] = &arr[i];
+				arr[i] = value;
+				argp[i] = &arr[i];
 			}
 
 			Callable::CallError ce;
@@ -2220,8 +2220,8 @@ bool Expression::_execute(const Array &p_inputs, Object *p_instance, Expression:
 
 				if (ret)
 					return true;
-				arr.write[i] = value;
-				argp.write[i] = &arr[i];
+				arr[i] = value;
+				argp[i] = &arr[i];
 			}
 
 			Callable::CallError ce;

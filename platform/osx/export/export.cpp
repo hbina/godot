@@ -166,8 +166,8 @@ void _rgba8_to_packbits_encode(int p_ch, int p_size, Vector<uint8_t> &p_source, 
 
 			if ((p_source.ptr()[(i + 1) * 4 + p_ch] == cur) && (p_source.ptr()[(i + 2) * 4 + p_ch] == cur)) {
 				if (buf_size > 0) {
-					result.write[res_size++] = (uint8_t)(buf_size - 1);
-					copymem(&result.write[res_size], &buf, buf_size);
+					result[res_size++] = (uint8_t)(buf_size - 1);
+					copymem(&result[res_size], &buf, buf_size);
 					res_size += buf_size;
 					buf_size = 0;
 				}
@@ -179,29 +179,29 @@ void _rgba8_to_packbits_encode(int p_ch, int p_size, Vector<uint8_t> &p_source, 
 					if (p_source.ptr()[(i + j) * 4 + p_ch] != cur) {
 						hit_lim = false;
 						i = i + j - 1;
-						result.write[res_size++] = (uint8_t)(j - 3 + 0x80);
-						result.write[res_size++] = cur;
+						result[res_size++] = (uint8_t)(j - 3 + 0x80);
+						result[res_size++] = cur;
 						break;
 					}
 				}
 				if (hit_lim) {
-					result.write[res_size++] = (uint8_t)(lim - 3 + 0x80);
-					result.write[res_size++] = cur;
+					result[res_size++] = (uint8_t)(lim - 3 + 0x80);
+					result[res_size++] = cur;
 					i = i + lim;
 				}
 			} else {
 				buf[buf_size++] = cur;
 				if (buf_size == 128) {
-					result.write[res_size++] = (uint8_t)(buf_size - 1);
-					copymem(&result.write[res_size], &buf, buf_size);
+					result[res_size++] = (uint8_t)(buf_size - 1);
+					copymem(&result[res_size], &buf, buf_size);
 					res_size += buf_size;
 					buf_size = 0;
 				}
 			}
 		} else {
 			buf[buf_size++] = cur;
-			result.write[res_size++] = (uint8_t)(buf_size - 1);
-			copymem(&result.write[res_size], &buf, buf_size);
+			result[res_size++] = (uint8_t)(buf_size - 1);
+			copymem(&result[res_size], &buf, buf_size);
 			res_size += buf_size;
 			buf_size = 0;
 		}
@@ -211,7 +211,7 @@ void _rgba8_to_packbits_encode(int p_ch, int p_size, Vector<uint8_t> &p_source, 
 
 	int ofs = p_dest.size();
 	p_dest.resize(p_dest.size() + res_size);
-	copymem(&p_dest.write[ofs], result.ptr(), res_size);
+	copymem(&p_dest[ofs], result.ptr(), res_size);
 }
 
 void EditorExportPlatformOSX::_make_icon(const Ref<Image> &p_icon, Vector<uint8_t> &p_data) {
@@ -221,10 +221,10 @@ void EditorExportPlatformOSX::_make_icon(const Ref<Image> &p_icon, Vector<uint8_
 	Vector<uint8_t> data;
 
 	data.resize(8);
-	data.write[0] = 'i';
-	data.write[1] = 'c';
-	data.write[2] = 'n';
-	data.write[3] = 's';
+	data[0] = 'i';
+	data[1] = 'c';
+	data[2] = 'n';
+	data[3] = 's';
 
 	struct MacOSIconInfo {
 		const char *name;
@@ -267,12 +267,12 @@ void EditorExportPlatformOSX::_make_icon(const Ref<Image> &p_icon, Vector<uint8_
 			int ofs = data.size();
 			uint32_t len = f->get_len();
 			data.resize(data.size() + len + 8);
-			f->get_buffer(&data.write[ofs + 8], len);
+			f->get_buffer(&data[ofs + 8], len);
 			memdelete(f);
 			len += 8;
 			len = BSWAP32(len);
-			copymem(&data.write[ofs], icon_infos[i].name, 4);
-			encode_uint32(len, &data.write[ofs + 4]);
+			copymem(&data[ofs], icon_infos[i].name, 4);
+			encode_uint32(len, &data[ofs + 4]);
 
 			// Clean up generated file.
 			DirAccess::remove_file_or_error(path);
@@ -291,8 +291,8 @@ void EditorExportPlatformOSX::_make_icon(const Ref<Image> &p_icon, Vector<uint8_
 
 				int len = data.size() - ofs;
 				len = BSWAP32(len);
-				copymem(&data.write[ofs], icon_infos[i].name, 4);
-				encode_uint32(len, &data.write[ofs + 4]);
+				copymem(&data[ofs], icon_infos[i].name, 4);
+				encode_uint32(len, &data[ofs + 4]);
 			}
 
 			//encode 8bit mask uncompressed icon
@@ -302,19 +302,19 @@ void EditorExportPlatformOSX::_make_icon(const Ref<Image> &p_icon, Vector<uint8_
 				data.resize(data.size() + len + 8);
 
 				for (int j = 0; j < len; j++) {
-					data.write[ofs + 8 + j] = src_data.ptr()[j * 4 + 3];
+					data[ofs + 8 + j] = src_data.ptr()[j * 4 + 3];
 				}
 				len += 8;
 				len = BSWAP32(len);
-				copymem(&data.write[ofs], icon_infos[i].mask_name, 4);
-				encode_uint32(len, &data.write[ofs + 4]);
+				copymem(&data[ofs], icon_infos[i].mask_name, 4);
+				encode_uint32(len, &data[ofs + 4]);
 			}
 		}
 	}
 
 	uint32_t total_len = data.size();
 	total_len = BSWAP32(total_len);
-	encode_uint32(total_len, &data.write[4]);
+	encode_uint32(total_len, &data[4]);
 
 	p_data = data;
 }
@@ -358,7 +358,7 @@ void EditorExportPlatformOSX::_fix_plist(const Ref<EditorExportPreset> &p_preset
 	CharString cs = strnew.utf8();
 	plist.resize(cs.size() - 1);
 	for (int i = 0; i < cs.size() - 1; i++) {
-		plist.write[i] = cs[i];
+		plist[i] = cs[i];
 	}
 }
 
@@ -598,7 +598,7 @@ Error EditorExportPlatformOSX::export_project(const Ref<EditorExportPreset> &p_p
 					FileAccess *icon = FileAccess::open(iconpath, FileAccess::READ);
 					if (icon) {
 						data.resize(icon->get_len());
-						icon->get_buffer(&data.write[0], icon->get_len());
+						icon->get_buffer(&data[0], icon->get_len());
 						icon->close();
 						memdelete(icon);
 					}

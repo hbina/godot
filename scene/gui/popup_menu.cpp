@@ -553,7 +553,7 @@ void PopupMenu::_draw() {
 			font->draw(ci, item_ofs + Point2(0, Math::floor((h - font_h) / 2.0)), text2, i == mouse_over ? font_color_hover : font_color_accel);
 		}
 
-		items.write[i]._ofs_cache = ofs.y;
+		items[i]._ofs_cache = ofs.y;
 
 		ofs.y += h;
 	}
@@ -575,7 +575,7 @@ void PopupMenu::_notification(int p_what) {
 		case NOTIFICATION_TRANSLATION_CHANGED: {
 
 			for (int i = 0; i < items.size(); i++) {
-				items.write[i].xl_text = tr(items[i].text);
+				items[i].xl_text = tr(items[i].text);
 			}
 
 			child_controls_changed();
@@ -820,8 +820,8 @@ void PopupMenu::add_submenu_item(const String &p_label, const String &p_submenu,
 void PopupMenu::set_item_text(int p_idx, const String &p_text) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].text = p_text;
-	items.write[p_idx].xl_text = tr(p_text);
+	items[p_idx].text = p_text;
+	items[p_idx].xl_text = tr(p_text);
 
 	control->update();
 	child_controls_changed();
@@ -829,7 +829,7 @@ void PopupMenu::set_item_text(int p_idx, const String &p_text) {
 void PopupMenu::set_item_icon(int p_idx, const Ref<Texture2D> &p_icon) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].icon = p_icon;
+	items[p_idx].icon = p_icon;
 
 	control->update();
 	child_controls_changed();
@@ -838,7 +838,7 @@ void PopupMenu::set_item_checked(int p_idx, bool p_checked) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
 
-	items.write[p_idx].checked = p_checked;
+	items[p_idx].checked = p_checked;
 
 	control->update();
 	child_controls_changed();
@@ -846,7 +846,7 @@ void PopupMenu::set_item_checked(int p_idx, bool p_checked) {
 void PopupMenu::set_item_id(int p_idx, int p_id) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].id = p_id;
+	items[p_idx].id = p_id;
 
 	control->update();
 	child_controls_changed();
@@ -855,7 +855,7 @@ void PopupMenu::set_item_id(int p_idx, int p_id) {
 void PopupMenu::set_item_accelerator(int p_idx, uint32_t p_accel) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].accel = p_accel;
+	items[p_idx].accel = p_accel;
 
 	control->update();
 	child_controls_changed();
@@ -864,7 +864,7 @@ void PopupMenu::set_item_accelerator(int p_idx, uint32_t p_accel) {
 void PopupMenu::set_item_metadata(int p_idx, const Variant &p_meta) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].metadata = p_meta;
+	items[p_idx].metadata = p_meta;
 	control->update();
 	child_controls_changed();
 }
@@ -872,7 +872,7 @@ void PopupMenu::set_item_metadata(int p_idx, const Variant &p_meta) {
 void PopupMenu::set_item_disabled(int p_idx, bool p_disabled) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].disabled = p_disabled;
+	items[p_idx].disabled = p_disabled;
 	control->update();
 	child_controls_changed();
 }
@@ -880,7 +880,7 @@ void PopupMenu::set_item_disabled(int p_idx, bool p_disabled) {
 void PopupMenu::set_item_submenu(int p_idx, const String &p_submenu) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].submenu = p_submenu;
+	items[p_idx].submenu = p_submenu;
 	control->update();
 	child_controls_changed();
 }
@@ -888,7 +888,7 @@ void PopupMenu::set_item_submenu(int p_idx, const String &p_submenu) {
 void PopupMenu::toggle_item_checked(int p_idx) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].checked = !items[p_idx].checked;
+	items[p_idx].checked = !items[p_idx].checked;
 	control->update();
 	child_controls_changed();
 }
@@ -982,7 +982,7 @@ int PopupMenu::get_item_state(int p_idx) const {
 void PopupMenu::set_item_as_separator(int p_idx, bool p_separator) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].separator = p_separator;
+	items[p_idx].separator = p_separator;
 	control->update();
 }
 
@@ -994,21 +994,21 @@ bool PopupMenu::is_item_separator(int p_idx) const {
 void PopupMenu::set_item_as_checkable(int p_idx, bool p_checkable) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].checkable_type = p_checkable ? Item::CHECKABLE_TYPE_CHECK_BOX : Item::CHECKABLE_TYPE_NONE;
+	items[p_idx].checkable_type = p_checkable ? Item::CHECKABLE_TYPE_CHECK_BOX : Item::CHECKABLE_TYPE_NONE;
 	control->update();
 }
 
 void PopupMenu::set_item_as_radio_checkable(int p_idx, bool p_radio_checkable) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].checkable_type = p_radio_checkable ? Item::CHECKABLE_TYPE_RADIO_BUTTON : Item::CHECKABLE_TYPE_NONE;
+	items[p_idx].checkable_type = p_radio_checkable ? Item::CHECKABLE_TYPE_RADIO_BUTTON : Item::CHECKABLE_TYPE_NONE;
 	control->update();
 }
 
 void PopupMenu::set_item_tooltip(int p_idx, const String &p_tooltip) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].tooltip = p_tooltip;
+	items[p_idx].tooltip = p_tooltip;
 	control->update();
 }
 
@@ -1017,8 +1017,8 @@ void PopupMenu::set_item_shortcut(int p_idx, const Ref<ShortCut> &p_shortcut, bo
 	if (items[p_idx].shortcut.is_valid()) {
 		_unref_shortcut(items[p_idx].shortcut);
 	}
-	items.write[p_idx].shortcut = p_shortcut;
-	items.write[p_idx].shortcut_is_global = p_global;
+	items[p_idx].shortcut = p_shortcut;
+	items[p_idx].shortcut_is_global = p_global;
 
 	if (items[p_idx].shortcut.is_valid()) {
 		_ref_shortcut(items[p_idx].shortcut);
@@ -1030,7 +1030,7 @@ void PopupMenu::set_item_shortcut(int p_idx, const Ref<ShortCut> &p_shortcut, bo
 void PopupMenu::set_item_h_offset(int p_idx, int p_offset) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].h_ofs = p_offset;
+	items[p_idx].h_ofs = p_offset;
 	control->update();
 	child_controls_changed();
 }
@@ -1038,14 +1038,14 @@ void PopupMenu::set_item_h_offset(int p_idx, int p_offset) {
 void PopupMenu::set_item_multistate(int p_idx, int p_state) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].state = p_state;
+	items[p_idx].state = p_state;
 	control->update();
 }
 
 void PopupMenu::set_item_shortcut_disabled(int p_idx, bool p_disabled) {
 
 	ERR_FAIL_INDEX(p_idx, items.size());
-	items.write[p_idx].shortcut_is_disabled = p_disabled;
+	items[p_idx].shortcut_is_disabled = p_disabled;
 	control->update();
 }
 
@@ -1056,9 +1056,9 @@ void PopupMenu::toggle_item_multistate(int p_idx) {
 		return;
 	}
 
-	++items.write[p_idx].state;
-	if (items.write[p_idx].max_states <= items[p_idx].state)
-		items.write[p_idx].state = 0;
+	++items[p_idx].state;
+	if (items[p_idx].max_states <= items[p_idx].state)
+		items[p_idx].state = 0;
 
 	control->update();
 }

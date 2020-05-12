@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="879150811">
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~FileAccessUnix()&apos; at line 365. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~FileAccessUnix()&apos; at line 365. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/drivers/unix/file_access_unix.cpp" file="/home/hbina/git/godot/drivers/unix/file_access_unix.h" line="59" column="15" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/drivers/unix/file_access_unix.cpp" line="365" column="2" info="Calling close"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/unix/file_access_unix.h:73:14" my-argnr="1" my-argname="p_dst" file="/home/hbina/git/godot/drivers/unix/file_access_unix.cpp" line="253" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/unix/file_access_unix.h:73:14" my-argnr="1" my-argname="p_dst" file="/home/hbina/git/godot/drivers/unix/file_access_unix.cpp" line="253" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="check_errors" lineNumber="65"/>
+    <functiondecl functionName="_open" lineNumber="75"/>
+    <functiondecl functionName="close" lineNumber="152"/>
+    <functiondecl functionName="is_open" lineNumber="176"/>
+    <functiondecl functionName="get_path" lineNumber="181"/>
+    <functiondecl functionName="get_path_absolute" lineNumber="186"/>
+    <functiondecl functionName="seek" lineNumber="191"/>
+    <functiondecl functionName="seek_end" lineNumber="200"/>
+    <functiondecl functionName="get_position" lineNumber="208"/>
+    <functiondecl functionName="get_len" lineNumber="220"/>
+    <functiondecl functionName="eof_reached" lineNumber="234"/>
+    <functiondecl functionName="get_8" lineNumber="239"/>
+    <functiondecl functionName="get_buffer" lineNumber="250"/>
+    <functiondecl functionName="get_error" lineNumber="258"/>
+    <functiondecl functionName="flush" lineNumber="263"/>
+    <functiondecl functionName="store_8" lineNumber="269"/>
+    <functiondecl functionName="store_buffer" lineNumber="275"/>
+    <functiondecl functionName="file_exists" lineNumber="282"/>
+    <functiondecl functionName="_get_modified_time" lineNumber="312"/>
+    <functiondecl functionName="_get_unix_permissions" lineNumber="325"/>
+    <functiondecl functionName="_set_unix_permissions" lineNumber="338"/>
+    <functiondecl functionName="create_libc" lineNumber="350"/>
+    <functiondecl functionName="check_errors" lineNumber="65"/>
+    <functiondecl functionName="_open" lineNumber="75"/>
+    <functiondecl functionName="close" lineNumber="152"/>
+    <functiondecl functionName="is_open" lineNumber="176"/>
+    <functiondecl functionName="get_path" lineNumber="181"/>
+    <functiondecl functionName="get_path_absolute" lineNumber="186"/>
+    <functiondecl functionName="seek" lineNumber="191"/>
+    <functiondecl functionName="seek_end" lineNumber="200"/>
+    <functiondecl functionName="get_position" lineNumber="208"/>
+    <functiondecl functionName="get_len" lineNumber="220"/>
+    <functiondecl functionName="eof_reached" lineNumber="234"/>
+    <functiondecl functionName="get_8" lineNumber="239"/>
+    <functiondecl functionName="get_buffer" lineNumber="250"/>
+    <functiondecl functionName="get_error" lineNumber="258"/>
+    <functiondecl functionName="flush" lineNumber="263"/>
+    <functiondecl functionName="store_8" lineNumber="269"/>
+    <functiondecl functionName="store_buffer" lineNumber="275"/>
+    <functiondecl functionName="file_exists" lineNumber="282"/>
+    <functiondecl functionName="_get_modified_time" lineNumber="312"/>
+    <functiondecl functionName="_get_unix_permissions" lineNumber="325"/>
+    <functiondecl functionName="_set_unix_permissions" lineNumber="338"/>
+    <functiondecl functionName="create_libc" lineNumber="350"/>
+    <functioncall functionName="ERR_ALREADY_IN_USE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_FILE_CANT_OPEN"/>
+    <functioncall functionName="ERR_FILE_EOF"/>
+    <functioncall functionName="ERR_FILE_NOT_FOUND"/>
+    <functioncall functionName="FD_CLOEXEC"/>
+    <functioncall functionName="FIOCLEX"/>
+    <functioncall functionName="F_GETFD"/>
+    <functioncall functionName="F_OK"/>
+    <functioncall functionName="F_SETFD"/>
+    <functioncall functionName="FileAccessUnix"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="SEEK_END"/>
+    <functioncall functionName="SEEK_SET"/>
+    <functioncall functionName="access"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="check_errors"/>
+    <functioncall functionName="chmod"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="close_fail_notify"/>
+    <functioncall functionName="close_notification_func"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="errno"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fcntl"/>
+    <functioncall functionName="fd"/>
+    <functioncall functionName="feof"/>
+    <functioncall functionName="fflush"/>
+    <functioncall functionName="fileno"/>
+    <functioncall functionName="fix_path"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="fread"/>
+    <functioncall functionName="fseek"/>
+    <functioncall functionName="ftell"/>
+    <functioncall functionName="fwrite"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="ioctl"/>
+    <functioncall functionName="is_backup_save_enabled"/>
+    <functioncall functionName="last_error"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mode_string"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_dest"/>
+    <functioncall functionName="p_dst"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_mode_flags"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_permissions"/>
+    <functioncall functionName="p_position"/>
+    <functioncall functionName="p_src"/>
+    <functioncall functionName="par"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="rename"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="save_path"/>
+    <functioncall functionName="st"/>
+    <functioncall functionName="st_mtime"/>
+    <functioncall functionName="stat"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="utf8"/>
+  </FileInfo>
+</analyzerinfo>

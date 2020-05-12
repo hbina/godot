@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3516661634">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ResourceFormatLoaderPluginScript&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ResourceFormatLoaderPluginScript&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h" line="46" column="2"/>
+            <symbol>ResourceFormatLoaderPluginScript</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ResourceFormatSaverPluginScript&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ResourceFormatSaverPluginScript&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h" line="58" column="2"/>
+            <symbol>ResourceFormatSaverPluginScript</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PluginScriptLanguage&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PluginScriptLanguage&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_language.h" line="128" column="2"/>
+            <symbol>PluginScriptLanguage</symbol>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h:48:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.cpp" line="65" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h:48:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.cpp" line="65" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="load" lineNumber="42"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="64"/>
+    <functiondecl functionName="handles_type" lineNumber="68"/>
+    <functiondecl functionName="get_resource_type" lineNumber="72"/>
+    <functiondecl functionName="save" lineNumber="83"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="103"/>
+    <functiondecl functionName="recognize" lineNumber="110"/>
+    <functiondecl functionName="load" lineNumber="42"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="64"/>
+    <functiondecl functionName="handles_type" lineNumber="68"/>
+    <functiondecl functionName="get_resource_type" lineNumber="72"/>
+    <functiondecl functionName="save" lineNumber="83"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="103"/>
+    <functiondecl functionName="recognize" lineNumber="110"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FILE_CANT_OPEN"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="PluginScript"/>
+    <functioncall functionName="PluginScriptLanguage"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RES"/>
+    <functioncall functionName="ResourceFormatLoaderPluginScript"/>
+    <functioncall functionName="ResourceFormatSaverPluginScript"/>
+    <functioncall functionName="Script"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="_language"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="get_error"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_source_code"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="language"/>
+    <functioncall functionName="load_source_code"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_original_path"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="reload"/>
+    <functioncall functionName="script"/>
+    <functioncall functionName="scriptres"/>
+    <functioncall functionName="set_path"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="store_string"/>
+    <functioncall functionName="to_lower"/>
+  </FileInfo>
+</analyzerinfo>

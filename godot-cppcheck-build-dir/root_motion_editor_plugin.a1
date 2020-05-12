@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3438819670">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!target_node&apos; is redundant or there is possible null pointer dereference: target_node." verbose="Either the condition &apos;!target_node&apos; is redundant or there is possible null pointer dereference: target_node." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/plugins/root_motion_editor_plugin.cpp" line="233" column="19" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/plugins/root_motion_editor_plugin.cpp" line="230" column="41" info="Assignment &apos;target_node=base_node-&gt;get_node(p)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/plugins/root_motion_editor_plugin.cpp" line="231" column="16" info="Assuming that condition &apos;!target_node&apos; is not redundant"/>
+            <symbol>target_node</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_confirmed" lineNumber="35"/>
+    <functiondecl functionName="_node_assign" lineNumber="47"/>
+    <functiondecl functionName="_node_clear" lineNumber="196"/>
+    <functiondecl functionName="update_property" lineNumber="202"/>
+    <functiondecl functionName="setup" lineNumber="237"/>
+    <functiondecl functionName="_notification" lineNumber="242"/>
+    <functiondecl functionName="_bind_methods" lineNumber="250"/>
+    <functiondecl functionName="can_handle" lineNumber="283"/>
+    <functiondecl functionName="parse_begin" lineNumber="287"/>
+    <functiondecl functionName="parse_property" lineNumber="291"/>
+    <functiondecl functionName="parse_end" lineNumber="305"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="EditorInspectorPlugin"/>
+    <functioncall functionName="EditorInspectorRootMotionPlugin"/>
+    <functioncall functionName="EditorProperty"/>
+    <functioncall functionName="EditorPropertyRootMotion"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Tree"/>
+    <functioncall functionName="_confirmed"/>
+    <functioncall functionName="_node_assign"/>
+    <functioncall functionName="_node_clear"/>
+    <functioncall functionName="accum"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_property_editor"/>
+    <functioncall functionName="animations"/>
+    <functioncall functionName="assign"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="base_hint"/>
+    <functioncall functionName="bone"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="concat"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_item"/>
+    <functioncall functionName="editor"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="ensure_cursor_is_visible"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="filter_dialog"/>
+    <functioncall functionName="filters"/>
+    <functioncall functionName="find_bone"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_animation"/>
+    <functioncall functionName="get_animation_list"/>
+    <functioncall functionName="get_animation_player"/>
+    <functioncall functionName="get_bone_name"/>
+    <functioncall functionName="get_bone_parent"/>
+    <functioncall functionName="get_concatenated_subnames"/>
+    <functioncall functionName="get_edited_object"/>
+    <functioncall functionName="get_edited_property"/>
+    <functioncall functionName="get_metadata"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_name_count"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_object_icon"/>
+    <functioncall functionName="get_root"/>
+    <functioncall functionName="get_selected"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_subname_count"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_track_count"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_node"/>
+    <functioncall functionName="hbc"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_base_hint"/>
+    <functioncall functionName="p_hint_text"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="player"/>
+    <functioncall functionName="popup_centered_ratio"/>
+    <functioncall functionName="push_front"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="set_clip_text"/>
+    <functioncall functionName="set_editable"/>
+    <functioncall functionName="set_flat"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_hide_root"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_metadata"/>
+    <functioncall functionName="set_selectable"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="show_warning"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="target_node"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="ti"/>
+    <functioncall functionName="track_get_path"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update_property"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

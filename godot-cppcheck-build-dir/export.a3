@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="778238811">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/javascript/export/export.cpp" line="614" column="39"/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/javascript/export/export.cpp:232:15" my-argnr="1" my-argname="r_features" file="/home/hbina/git/godot/platform/javascript/export/export.cpp" line="234" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/javascript/export/export.cpp:214:15" my-argnr="1" my-argname="r_options" file="/home/hbina/git/godot/platform/javascript/export/export.cpp" line="287" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_clear_client" lineNumber="51"/>
+    <functiondecl functionName="stop" lineNumber="64"/>
+    <functiondecl functionName="listen" lineNumber="69"/>
+    <functiondecl functionName="is_listening" lineNumber="73"/>
+    <functiondecl functionName="_send_response" lineNumber="77"/>
+    <functiondecl functionName="poll" lineNumber="150"/>
+    <functiondecl functionName="get_option_label" lineNumber="226"/>
+    <functiondecl functionName="get_option_tooltip" lineNumber="227"/>
+    <functiondecl functionName="get_platform_features" lineNumber="232"/>
+    <functiondecl functionName="resolve_platform_feature_priorities" lineNumber="238"/>
+    <functiondecl functionName="_fix_html" lineNumber="245"/>
+    <functiondecl functionName="get_preset_features" lineNumber="268"/>
+    <functiondecl functionName="get_export_options" lineNumber="285"/>
+    <functiondecl functionName="get_name" lineNumber="295"/>
+    <functiondecl functionName="get_os_name" lineNumber="300"/>
+    <functiondecl functionName="get_logo" lineNumber="305"/>
+    <functiondecl functionName="can_export" lineNumber="310"/>
+    <functiondecl functionName="get_binary_extensions" lineNumber="352"/>
+    <functiondecl functionName="export_project" lineNumber="359"/>
+    <functiondecl functionName="poll_export" lineNumber="525"/>
+    <functiondecl functionName="get_option_icon" lineNumber="551"/>
+    <functiondecl functionName="get_options_count" lineNumber="555"/>
+    <functiondecl functionName="run" lineNumber="560"/>
+    <functiondecl functionName="get_run_icon" lineNumber="608"/>
+    <functiondecl functionName="_server_thread_poll" lineNumber="613"/>
+    <functiondecl functionName="register_javascript_exporter" lineNumber="654"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="EDITOR_DEF"/>
+    <functioncall functionName="EDITOR_GET"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="EditorExportPlatform"/>
+    <functioncall functionName="EditorExportPlatformJavaScript"/>
+    <functioncall functionName="ExportOption"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="PROPERTY_HINT_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_MULTILINE_TEXT"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="_clear_client"/>
+    <functioncall functionName="_fix_html"/>
+    <functioncall functionName="_javascript_logo"/>
+    <functioncall functionName="_javascript_run_icon"/>
+    <functioncall functionName="_send_response"/>
+    <functioncall functionName="_server_thread_poll"/>
+    <functioncall functionName="add_export_platform"/>
+    <functioncall functionName="add_property_hint"/>
+    <functioncall functionName="bind_host"/>
+    <functioncall functionName="bind_ip"/>
+    <functioncall functionName="bind_port"/>
+    <functioncall functionName="boot_splash_png"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_from_image"/>
+    <functioncall functionName="custom_debug"/>
+    <functioncall functionName="custom_html"/>
+    <functioncall functionName="custom_release"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dvalid"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="exists_export_template"/>
+    <functioncall functionName="export_project"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="favicon_path"/>
+    <functioncall functionName="favicon_png_path"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="filepath"/>
+    <functioncall functionName="find_export_template"/>
+    <functioncall functionName="fname"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_basename"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_cache_dir"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_editor_theme"/>
+    <functioncall functionName="get_export_preset"/>
+    <functioncall functionName="get_export_preset_count"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_icon"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_option_icon"/>
+    <functioncall functionName="get_os_name"/>
+    <functioncall functionName="get_partial_data"/>
+    <functioncall functionName="get_platform"/>
+    <functioncall functionName="get_setting"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_status"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="is_connection_available"/>
+    <functioncall functionName="is_listening"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_runnable"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_valid_ip_address"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="menu_options"/>
+    <functioncall functionName="notifier"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_address"/>
+    <functioncall functionName="p_debug"/>
+    <functioncall functionName="p_debug_flags"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_port"/>
+    <functioncall functionName="p_preset"/>
+    <functioncall functionName="pck_path"/>
+    <functioncall functionName="pkg"/>
+    <functioncall functionName="platform"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="put_data"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="remove_file_or_error"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="req_buf"/>
+    <functioncall functionName="req_pos"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resolve_hostname"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rvalid"/>
+    <functioncall functionName="save_pack"/>
+    <functioncall functionName="save_png"/>
+    <functioncall functionName="server_lock"/>
+    <functioncall functionName="server_quit"/>
+    <functioncall functionName="server_thread"/>
+    <functioncall functionName="shell_open"/>
+    <functioncall functionName="show_warning"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="splash_path"/>
+    <functioncall functionName="splash_png_path"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="src_f"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="stop_icon"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="take_connection"/>
+    <functioncall functionName="template_path"/>
+    <functioncall functionName="test_etc2"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uncompressed_size"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="unzClose"/>
+    <functioncall functionName="unzCloseCurrentFile"/>
+    <functioncall functionName="unzGetCurrentFileInfo"/>
+    <functioncall functionName="unzGoToFirstFile"/>
+    <functioncall functionName="unzGoToNextFile"/>
+    <functioncall functionName="unzOpen2"/>
+    <functioncall functionName="unzOpenCurrentFile"/>
+    <functioncall functionName="unzReadCurrentFile"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zipio_create_io_from_file"/>
+  </FileInfo>
+</analyzerinfo>

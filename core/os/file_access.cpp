@@ -291,7 +291,7 @@ class CharBuffer {
 
 			for (int i = 0; i < written; i++) {
 
-				vector.write[i] = stack_buffer[i];
+				vector[i] = stack_buffer[i];
 			}
 		}
 

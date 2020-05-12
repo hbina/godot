@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3213451171">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;PluginScriptInstance::_owner&apos; is not initialized in the constructor." verbose="Member variable &apos;PluginScriptInstance::_owner&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" line="150" column="23"/>
+            <symbol>PluginScriptInstance::_owner</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;PluginScriptInstance::_data&apos; is not initialized in the constructor." verbose="Member variable &apos;PluginScriptInstance::_data&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" line="150" column="23"/>
+            <symbol>PluginScriptInstance::_data</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;PluginScriptInstance::_desc&apos; is not initialized in the constructor." verbose="Member variable &apos;PluginScriptInstance::_desc&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" line="150" column="23"/>
+            <symbol>PluginScriptInstance::_desc</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ResourceFormatLoaderPluginScript&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ResourceFormatLoaderPluginScript&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h" line="46" column="2"/>
+            <symbol>ResourceFormatLoaderPluginScript</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ResourceFormatSaverPluginScript&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ResourceFormatSaverPluginScript&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_loader.h" line="58" column="2"/>
+            <symbol>ResourceFormatSaverPluginScript</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PluginScriptLanguage&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PluginScriptLanguage&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_language.h" line="128" column="2"/>
+            <symbol>PluginScriptLanguage</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;get_rpc_method_id&apos; argument 1 names different: declaration &apos;p_method&apos; definition &apos;p_variable&apos;." verbose="Function &apos;get_rpc_method_id&apos; argument 1 names different: declaration &apos;p_method&apos; definition &apos;p_variable&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" line="100" column="68"/>
+            <location file0="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.cpp" file="/home/hbina/git/godot/modules/gdnative/pluginscript/pluginscript_instance.h" line="81" column="55"/>
+            <symbol>get_rpc_method_id</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set" lineNumber="41"/>
+    <functiondecl functionName="get" lineNumber="45"/>
+    <functiondecl functionName="get_script" lineNumber="49"/>
+    <functiondecl functionName="get_language" lineNumber="53"/>
+    <functiondecl functionName="get_property_type" lineNumber="57"/>
+    <functiondecl functionName="get_property_list" lineNumber="70"/>
+    <functiondecl functionName="get_method_list" lineNumber="74"/>
+    <functiondecl functionName="has_method" lineNumber="78"/>
+    <functiondecl functionName="call" lineNumber="82"/>
+    <functiondecl functionName="notification" lineNumber="92"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="96"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="100"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="104"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="108"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="112"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="116"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="120"/>
+    <functiondecl functionName="get_rset_property" lineNumber="124"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="128"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="132"/>
+    <functiondecl functionName="refcount_incremented" lineNumber="136"/>
+    <functiondecl functionName="refcount_decremented" lineNumber="142"/>
+    <functiondecl functionName="init" lineNumber="153"/>
+    <functiondecl functionName="set" lineNumber="41"/>
+    <functiondecl functionName="get" lineNumber="45"/>
+    <functiondecl functionName="get_script" lineNumber="49"/>
+    <functiondecl functionName="get_language" lineNumber="53"/>
+    <functiondecl functionName="get_property_type" lineNumber="57"/>
+    <functiondecl functionName="get_property_list" lineNumber="70"/>
+    <functiondecl functionName="get_method_list" lineNumber="74"/>
+    <functiondecl functionName="has_method" lineNumber="78"/>
+    <functiondecl functionName="call" lineNumber="82"/>
+    <functiondecl functionName="notification" lineNumber="92"/>
+    <functiondecl functionName="get_rpc_methods" lineNumber="96"/>
+    <functiondecl functionName="get_rpc_method_id" lineNumber="100"/>
+    <functiondecl functionName="get_rpc_method" lineNumber="104"/>
+    <functiondecl functionName="get_rpc_mode_by_id" lineNumber="108"/>
+    <functiondecl functionName="get_rpc_mode" lineNumber="112"/>
+    <functiondecl functionName="get_rset_properties" lineNumber="116"/>
+    <functiondecl functionName="get_rset_property_id" lineNumber="120"/>
+    <functiondecl functionName="get_rset_property" lineNumber="124"/>
+    <functiondecl functionName="get_rset_mode_by_id" lineNumber="128"/>
+    <functiondecl functionName="get_rset_mode" lineNumber="132"/>
+    <functiondecl functionName="refcount_incremented" lineNumber="136"/>
+    <functiondecl functionName="refcount_decremented" lineNumber="142"/>
+    <functiondecl functionName="init" lineNumber="153"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="PluginScript"/>
+    <functioncall functionName="PluginScriptInstance"/>
+    <functioncall functionName="PluginScriptLanguage"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Script"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="_data"/>
+    <functioncall functionName="_owner"/>
+    <functioncall functionName="call_method"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finish"/>
+    <functioncall functionName="get_language"/>
+    <functioncall functionName="get_prop"/>
+    <functioncall functionName="get_property_info"/>
+    <functioncall functionName="get_rpc_method"/>
+    <functioncall functionName="get_rpc_method_id"/>
+    <functioncall functionName="get_rpc_methods"/>
+    <functioncall functionName="get_rpc_mode"/>
+    <functioncall functionName="get_rpc_mode_by_id"/>
+    <functioncall functionName="get_rset_mode"/>
+    <functioncall functionName="get_rset_mode_by_id"/>
+    <functioncall functionName="get_rset_properties"/>
+    <functioncall functionName="get_rset_property"/>
+    <functioncall functionName="get_rset_property_id"/>
+    <functioncall functionName="get_script_method_list"/>
+    <functioncall functionName="get_script_property_list"/>
+    <functioncall functionName="godot_variant_destroy"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="has_property"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="instance_desc"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="notification"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_list"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_notification"/>
+    <functioncall functionName="p_owner"/>
+    <functioncall functionName="p_properties"/>
+    <functioncall functionName="p_script"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variable"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="r_is_valid"/>
+    <functioncall functionName="r_ret"/>
+    <functioncall functionName="refcount_decremented"/>
+    <functioncall functionName="refcount_incremented"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="set_prop"/>
+    <functioncall functionName="set_script_instance"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="unlock"/>
+  </FileInfo>
+</analyzerinfo>

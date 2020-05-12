@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3159257999">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="105" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="106" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="179" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="180" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="245" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="43" column="8"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="43" column="11"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r&apos; can be reduced." verbose="The scope of the variable &apos;r&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="44" column="15"/>
+            <symbol>r</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;celt_fir_c&apos; argument 1 names different: declaration &apos;x&apos; definition &apos;_x&apos;." verbose="Function &apos;celt_fir_c&apos; argument 1 names different: declaration &apos;x&apos; definition &apos;_x&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="92" column="28"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h" line="43" column="28"/>
+            <symbol>celt_fir_c</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;celt_fir_c&apos; argument 3 names different: declaration &apos;y&apos; definition &apos;_y&apos;." verbose="Function &apos;celt_fir_c&apos; argument 3 names different: declaration &apos;y&apos; definition &apos;_y&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="94" column="22"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h" line="45" column="22"/>
+            <symbol>celt_fir_c</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;celt_iir&apos; argument 1 names different: declaration &apos;x&apos; definition &apos;_x&apos;." verbose="Function &apos;celt_iir&apos; argument 1 names different: declaration &apos;x&apos; definition &apos;_x&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="147" column="33"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h" line="56" column="33"/>
+            <symbol>celt_iir</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;celt_iir&apos; argument 3 names different: declaration &apos;y&apos; definition &apos;_y&apos;." verbose="Function &apos;celt_iir&apos; argument 3 names different: declaration &apos;y&apos; definition &apos;_y&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="149" column="22"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h" line="58" column="22"/>
+            <symbol>celt_iir</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="130" col="7" call-argexpr="sum" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="195" col="7" call-argexpr="sum" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:195:1" call-funcname="celt_pitch_xcorr" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="284" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:64:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:40:6" my-argnr="2" my-argname="ac" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="45" col="23" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:40:6" my-argnr="2" my-argname="ac" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="45" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="130" col="7" call-argexpr="rnum" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="130" col="7" call-argexpr="sum" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="195" col="7" call-argexpr="rden" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="195" col="7" call-argexpr="sum" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:195:1" call-funcname="celt_pitch_xcorr" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="284" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:64:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:40:6" my-argnr="2" my-argname="ac" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="45" col="23" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:40:6" my-argnr="2" my-argname="ac" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="45" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="130" col="7" call-argexpr="sum" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" call-funcname="xcorr_kernel_c" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="195" col="7" call-argexpr="sum" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:195:1" call-funcname="celt_pitch_xcorr" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="284" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:64:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:40:6" my-argnr="2" my-argname="ac" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="45" col="23" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.h:40:6" my-argnr="2" my-argname="ac" file="/home/hbina/git/godot/thirdparty/opus/celt/celt_lpc.c" line="45" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_celt_lpc" lineNumber="37"/>
+    <functiondecl functionName="celt_fir_c" lineNumber="91"/>
+    <functiondecl functionName="celt_iir" lineNumber="147"/>
+    <functiondecl functionName="_celt_autocorr" lineNumber="228"/>
+    <functiondecl functionName="_celt_lpc" lineNumber="37"/>
+    <functiondecl functionName="celt_fir_c" lineNumber="91"/>
+    <functiondecl functionName="celt_iir" lineNumber="147"/>
+    <functiondecl functionName="_celt_autocorr" lineNumber="228"/>
+    <functiondecl functionName="_celt_lpc" lineNumber="37"/>
+    <functiondecl functionName="celt_fir_c" lineNumber="91"/>
+    <functiondecl functionName="celt_iir" lineNumber="147"/>
+    <functiondecl functionName="_celt_autocorr" lineNumber="228"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="_lpc"/>
+    <functioncall functionName="ac"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="celt_pitch_xcorr"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="ec_ilog"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="fastN"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="lag"/>
+    <functioncall functionName="lpc"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="maxval"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minval"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="opus_alloc"/>
+    <functioncall functionName="ord"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rden"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rng"/>
+    <functioncall functionName="rnum"/>
+    <functioncall functionName="rr"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp1"/>
+    <functioncall functionName="tmp2"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xcorr_kernel_c"/>
+    <functioncall functionName="xptr"/>
+    <functioncall functionName="xx"/>
+    <functioncall functionName="xy"/>
+    <functioncall functionName="xy01"/>
+    <functioncall functionName="xy02"/>
+    <functioncall functionName="y_0"/>
+    <functioncall functionName="y_1"/>
+    <functioncall functionName="y_2"/>
+    <functioncall functionName="y_3"/>
+  </FileInfo>
+</analyzerinfo>

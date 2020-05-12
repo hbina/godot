@@ -1,0 +1,471 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2897165688">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ENode::type&apos; is not initialized in the constructor." verbose="Member variable &apos;ENode::type&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="222" column="3"/>
+            <symbol>ENode::type</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InputNode::index&apos; is not initialized in the constructor." verbose="Member variable &apos;InputNode::index&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="244" column="3"/>
+            <symbol>InputNode::index</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OperatorNode::nodes&apos; is not initialized in the constructor." verbose="Member variable &apos;OperatorNode::nodes&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="263" column="3"/>
+            <symbol>OperatorNode::nodes</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;IndexNode::base&apos; is not initialized in the constructor." verbose="Member variable &apos;IndexNode::base&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="279" column="3"/>
+            <symbol>IndexNode::base</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;IndexNode::index&apos; is not initialized in the constructor." verbose="Member variable &apos;IndexNode::index&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="279" column="3"/>
+            <symbol>IndexNode::index</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;NamedIndexNode::base&apos; is not initialized in the constructor." verbose="Member variable &apos;NamedIndexNode::base&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="288" column="3"/>
+            <symbol>NamedIndexNode::base</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CallNode::base&apos; is not initialized in the constructor." verbose="Member variable &apos;CallNode::base&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="307" column="3"/>
+            <symbol>CallNode::base</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;BuiltinFuncNode::func&apos; is not initialized in the constructor." verbose="Member variable &apos;BuiltinFuncNode::func&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/expression.cpp" file="/home/hbina/git/godot/core/math/expression.h" line="329" column="3"/>
+            <symbol>BuiltinFuncNode::func</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/math/expression.h:348:7" call-funcname="_execute" call-argnr="2" file="/home/hbina/git/godot/core/math/expression.cpp" line="2275" col="13" my-id="/home/hbina/git/godot/core/math/expression.h:355:10" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="find_function" lineNumber="112"/>
+    <functiondecl functionName="get_func_name" lineNumber="122"/>
+    <functiondecl functionName="get_func_argument_count" lineNumber="128"/>
+    <functiondecl functionName="exec_func" lineNumber="219"/>
+    <functiondecl functionName="_is_number" lineNumber="824"/>
+    <functiondecl functionName="_get_token" lineNumber="828"/>
+    <functiondecl functionName="_parse_expression" lineNumber="1305"/>
+    <functiondecl functionName="_compile_expression" lineNumber="1983"/>
+    <functiondecl functionName="parse" lineNumber="2240"/>
+    <functiondecl functionName="execute" lineNumber="2268"/>
+    <functiondecl functionName="has_execute_failed" lineNumber="2285"/>
+    <functiondecl functionName="get_error_text" lineNumber="2289"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2293"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="ArrayNode"/>
+    <functioncall functionName="BYTES_TO_VAR"/>
+    <functioncall functionName="BuiltinFunc"/>
+    <functioncall functionName="BuiltinFuncNode"/>
+    <functioncall functionName="CALL_ERROR_INVALID_ARGUMENT"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="COLORN"/>
+    <functioncall functionName="CallNode"/>
+    <functioncall functionName="ConstantNode"/>
+    <functioncall functionName="ConstructorNode"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="DictionaryNode"/>
+    <functioncall functionName="ENode"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="Expression"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FUNC_FUNCREF"/>
+    <functioncall functionName="FUNC_MAX"/>
+    <functioncall functionName="FuncRef"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="IndexNode"/>
+    <functioncall functionName="Input"/>
+    <functioncall functionName="InputNode"/>
+    <functioncall functionName="LOGIC_CLAMP"/>
+    <functioncall functionName="LOGIC_MAX"/>
+    <functioncall functionName="LOGIC_MIN"/>
+    <functioncall functionName="LOGIC_NEAREST_PO2"/>
+    <functioncall functionName="MATH_ABS"/>
+    <functioncall functionName="MATH_ACOS"/>
+    <functioncall functionName="MATH_ASIN"/>
+    <functioncall functionName="MATH_ATAN"/>
+    <functioncall functionName="MATH_ATAN2"/>
+    <functioncall functionName="MATH_CARTESIAN2POLAR"/>
+    <functioncall functionName="MATH_CEIL"/>
+    <functioncall functionName="MATH_COS"/>
+    <functioncall functionName="MATH_COSH"/>
+    <functioncall functionName="MATH_DB2LINEAR"/>
+    <functioncall functionName="MATH_DECTIME"/>
+    <functioncall functionName="MATH_DEG2RAD"/>
+    <functioncall functionName="MATH_EASE"/>
+    <functioncall functionName="MATH_EXP"/>
+    <functioncall functionName="MATH_FLOOR"/>
+    <functioncall functionName="MATH_FMOD"/>
+    <functioncall functionName="MATH_FPOSMOD"/>
+    <functioncall functionName="MATH_INVERSE_LERP"/>
+    <functioncall functionName="MATH_ISINF"/>
+    <functioncall functionName="MATH_ISNAN"/>
+    <functioncall functionName="MATH_LERP"/>
+    <functioncall functionName="MATH_LERP_ANGLE"/>
+    <functioncall functionName="MATH_LINEAR2DB"/>
+    <functioncall functionName="MATH_LOG"/>
+    <functioncall functionName="MATH_MOVE_TOWARD"/>
+    <functioncall functionName="MATH_POLAR2CARTESIAN"/>
+    <functioncall functionName="MATH_POSMOD"/>
+    <functioncall functionName="MATH_POW"/>
+    <functioncall functionName="MATH_RAD2DEG"/>
+    <functioncall functionName="MATH_RAND"/>
+    <functioncall functionName="MATH_RANDF"/>
+    <functioncall functionName="MATH_RANDOM"/>
+    <functioncall functionName="MATH_RANDOMIZE"/>
+    <functioncall functionName="MATH_RANDSEED"/>
+    <functioncall functionName="MATH_RANGE_LERP"/>
+    <functioncall functionName="MATH_ROUND"/>
+    <functioncall functionName="MATH_SEED"/>
+    <functioncall functionName="MATH_SIGN"/>
+    <functioncall functionName="MATH_SIN"/>
+    <functioncall functionName="MATH_SINH"/>
+    <functioncall functionName="MATH_SMOOTHSTEP"/>
+    <functioncall functionName="MATH_SQRT"/>
+    <functioncall functionName="MATH_STEPIFY"/>
+    <functioncall functionName="MATH_STEP_DECIMALS"/>
+    <functioncall functionName="MATH_TAN"/>
+    <functioncall functionName="MATH_TANH"/>
+    <functioncall functionName="MATH_WRAP"/>
+    <functioncall functionName="MATH_WRAPF"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="Math_INF"/>
+    <functioncall functionName="Math_NAN"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="Math_TAU"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="NamedIndexNode"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="OBJ_WEAKREF"/>
+    <functioncall functionName="OP_ADD"/>
+    <functioncall functionName="OP_AND"/>
+    <functioncall functionName="OP_BIT_AND"/>
+    <functioncall functionName="OP_BIT_NEGATE"/>
+    <functioncall functionName="OP_BIT_OR"/>
+    <functioncall functionName="OP_BIT_XOR"/>
+    <functioncall functionName="OP_DIVIDE"/>
+    <functioncall functionName="OP_EQUAL"/>
+    <functioncall functionName="OP_GREATER"/>
+    <functioncall functionName="OP_GREATER_EQUAL"/>
+    <functioncall functionName="OP_IN"/>
+    <functioncall functionName="OP_LESS"/>
+    <functioncall functionName="OP_LESS_EQUAL"/>
+    <functioncall functionName="OP_MAX"/>
+    <functioncall functionName="OP_MODULE"/>
+    <functioncall functionName="OP_MULTIPLY"/>
+    <functioncall functionName="OP_NEGATE"/>
+    <functioncall functionName="OP_NOT"/>
+    <functioncall functionName="OP_NOT_EQUAL"/>
+    <functioncall functionName="OP_OR"/>
+    <functioncall functionName="OP_SHIFT_LEFT"/>
+    <functioncall functionName="OP_SHIFT_RIGHT"/>
+    <functioncall functionName="OP_SUBTRACT"/>
+    <functioncall functionName="OperatorNode"/>
+    <functioncall functionName="PACKED_BYTE_ARRAY"/>
+    <functioncall functionName="RTR"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="STR_TO_VAR"/>
+    <functioncall functionName="SelfNode"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TEXT_CHAR"/>
+    <functioncall functionName="TEXT_ORD"/>
+    <functioncall functionName="TEXT_PRINT"/>
+    <functioncall functionName="TEXT_PRINTERR"/>
+    <functioncall functionName="TEXT_PRINTRAW"/>
+    <functioncall functionName="TEXT_STR"/>
+    <functioncall functionName="TK_BASIC_TYPE"/>
+    <functioncall functionName="TK_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_BRACKET_OPEN"/>
+    <functioncall functionName="TK_BUILTIN_FUNC"/>
+    <functioncall functionName="TK_COLON"/>
+    <functioncall functionName="TK_COMMA"/>
+    <functioncall functionName="TK_CONSTANT"/>
+    <functioncall functionName="TK_CURLY_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_CURLY_BRACKET_OPEN"/>
+    <functioncall functionName="TK_EOF"/>
+    <functioncall functionName="TK_ERROR"/>
+    <functioncall functionName="TK_IDENTIFIER"/>
+    <functioncall functionName="TK_INPUT"/>
+    <functioncall functionName="TK_MAX"/>
+    <functioncall functionName="TK_OP_ADD"/>
+    <functioncall functionName="TK_OP_AND"/>
+    <functioncall functionName="TK_OP_BIT_AND"/>
+    <functioncall functionName="TK_OP_BIT_INVERT"/>
+    <functioncall functionName="TK_OP_BIT_OR"/>
+    <functioncall functionName="TK_OP_BIT_XOR"/>
+    <functioncall functionName="TK_OP_DIV"/>
+    <functioncall functionName="TK_OP_EQUAL"/>
+    <functioncall functionName="TK_OP_GREATER"/>
+    <functioncall functionName="TK_OP_GREATER_EQUAL"/>
+    <functioncall functionName="TK_OP_IN"/>
+    <functioncall functionName="TK_OP_LESS"/>
+    <functioncall functionName="TK_OP_LESS_EQUAL"/>
+    <functioncall functionName="TK_OP_MOD"/>
+    <functioncall functionName="TK_OP_MUL"/>
+    <functioncall functionName="TK_OP_NOT"/>
+    <functioncall functionName="TK_OP_NOT_EQUAL"/>
+    <functioncall functionName="TK_OP_OR"/>
+    <functioncall functionName="TK_OP_SHIFT_LEFT"/>
+    <functioncall functionName="TK_OP_SHIFT_RIGHT"/>
+    <functioncall functionName="TK_OP_SUB"/>
+    <functioncall functionName="TK_PARENTHESIS_CLOSE"/>
+    <functioncall functionName="TK_PARENTHESIS_OPEN"/>
+    <functioncall functionName="TK_PERIOD"/>
+    <functioncall functionName="TK_SELF"/>
+    <functioncall functionName="TYPE_ARRAY"/>
+    <functioncall functionName="TYPE_BUILTIN_FUNC"/>
+    <functioncall functionName="TYPE_CALL"/>
+    <functioncall functionName="TYPE_CONSTANT"/>
+    <functioncall functionName="TYPE_CONSTRUCTOR"/>
+    <functioncall functionName="TYPE_CONVERT"/>
+    <functioncall functionName="TYPE_DICTIONARY"/>
+    <functioncall functionName="TYPE_EXISTS"/>
+    <functioncall functionName="TYPE_INDEX"/>
+    <functioncall functionName="TYPE_INPUT"/>
+    <functioncall functionName="TYPE_NAMED_INDEX"/>
+    <functioncall functionName="TYPE_OF"/>
+    <functioncall functionName="TYPE_OPERATOR"/>
+    <functioncall functionName="TYPE_SELF"/>
+    <functioncall functionName="Type"/>
+    <functioncall functionName="VAR_TO_BYTES"/>
+    <functioncall functionName="VAR_TO_STR"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="WeakRef"/>
+    <functioncall functionName="_execute"/>
+    <functioncall functionName="_get_token"/>
+    <functioncall functionName="_is_number"/>
+    <functioncall functionName="_parse_expression"/>
+    <functioncall functionName="_set_error"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="alloc_node &lt; ArrayNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; BuiltinFuncNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; CallNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; ConstantNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; ConstructorNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; DictionaryNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; IndexNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; InputNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; NamedIndexNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; OperatorNode &gt;"/>
+    <functioncall functionName="alloc_node &lt; SelfNode &gt;"/>
+    <functioncall functionName="allow_objects"/>
+    <functioncall functionName="an"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="asin"/>
+    <functioncall functionName="atan"/>
+    <functioncall functionName="atan2"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="barr"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="bifunc"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bt"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="cchar"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="ceil"/>
+    <functioncall functionName="chr"/>
+    <functioncall functionName="class_exists"/>
+    <functioncall functionName="cofs"/>
+    <functioncall functionName="cofs2"/>
+    <functioncall functionName="cofs3"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constant"/>
+    <functioncall functionName="construct"/>
+    <functioncall functionName="constructor"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cosh"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data_type"/>
+    <functioncall functionName="db2linear"/>
+    <functioncall functionName="decode_variant"/>
+    <functioncall functionName="dectime"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="dn"/>
+    <functioncall functionName="done"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="ease"/>
+    <functioncall functionName="encode_variant"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="error_set"/>
+    <functioncall functionName="error_str"/>
+    <functioncall functionName="error_txt"/>
+    <functioncall functionName="errs"/>
+    <functioncall functionName="evaluate"/>
+    <functioncall functionName="exec_func"/>
+    <functioncall functionName="execute"/>
+    <functioncall functionName="execution_error"/>
+    <functioncall functionName="exp"/>
+    <functioncall functionName="exp_beg"/>
+    <functioncall functionName="expected_args"/>
+    <functioncall functionName="expr"/>
+    <functioncall functionName="expr_pos"/>
+    <functioncall functionName="expression_dirty"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_function"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="fmod"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fposmod"/>
+    <functioncall functionName="fr"/>
+    <functioncall functionName="full_objects"/>
+    <functioncall functionName="func"/>
+    <functioncall functionName="func_call"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_error_text"/>
+    <functioncall functionName="get_func_argument_count"/>
+    <functioncall functionName="get_func_name"/>
+    <functioncall functionName="get_named"/>
+    <functioncall functionName="get_operator_name"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_type_name"/>
+    <functioncall functionName="has_execute_failed"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="identifier"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="input_index"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="inverse_lerp"/>
+    <functioncall functionName="is_float"/>
+    <functioncall functionName="is_inf"/>
+    <functioncall functionName="is_nan"/>
+    <functioncall functionName="is_num"/>
+    <functioncall functionName="is_op"/>
+    <functioncall functionName="is_ref"/>
+    <functioncall functionName="is_unary"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="lerp_angle"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="linear2db"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="move_toward"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="named"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_char"/>
+    <functioncall functionName="next_op"/>
+    <functioncall functionName="next_power_of_2"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="nodes"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="output_type"/>
+    <functioncall functionName="p_base"/>
+    <functioncall functionName="p_err"/>
+    <functioncall functionName="p_expression"/>
+    <functioncall functionName="p_func"/>
+    <functioncall functionName="p_input_names"/>
+    <functioncall functionName="p_inputs"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_show_error"/>
+    <functioncall functionName="parse"/>
+    <functioncall functionName="posmod"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="print"/>
+    <functioncall functionName="print_error"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="priority"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="r_error_str"/>
+    <functioncall functionName="r_ret"/>
+    <functioncall functionName="rad2deg"/>
+    <functioncall functionName="rand"/>
+    <functioncall functionName="rand_from_seed"/>
+    <functioncall functionName="randf"/>
+    <functioncall functionName="random"/>
+    <functioncall functionName="randomize"/>
+    <functioncall functionName="range_lerp"/>
+    <functioncall functionName="reading"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="reta"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="round"/>
+    <functioncall functionName="seed"/>
+    <functioncall functionName="self"/>
+    <functioncall functionName="self_node"/>
+    <functioncall functionName="sequenced"/>
+    <functioncall functionName="set_function"/>
+    <functioncall functionName="set_instance"/>
+    <functioncall functionName="set_obj"/>
+    <functioncall functionName="set_ref"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="sinh"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="smoothstep"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="ss"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="step_decimals"/>
+    <functioncall functionName="stepify"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="str_ofs"/>
+    <functioncall functionName="subexpr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tan"/>
+    <functioncall functionName="tanh"/>
+    <functioncall functionName="th"/>
+    <functioncall functionName="tk"/>
+    <functioncall functionName="to_double"/>
+    <functioncall functionName="to_int64"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="unary"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vars"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="what"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wrapf"/>
+    <functioncall functionName="wrapi"/>
+    <functioncall functionName="wref"/>
+    <functioncall functionName="write_to_string"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

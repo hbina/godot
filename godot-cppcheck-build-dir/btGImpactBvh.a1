@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1739271338">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GIM_TRIANGLE_CONTACT::m_point_count&apos; is not initialized in the constructor." verbose="Member variable &apos;GIM_TRIANGLE_CONTACT::m_point_count&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.h" line="55" column="2"/>
+            <symbol>GIM_TRIANGLE_CONTACT::m_point_count</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GIM_PAIR::m_index1&apos; is not initialized in the constructor." verbose="Member variable &apos;GIM_PAIR::m_index1&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/gim_pair.h" line="10" column="9"/>
+            <symbol>GIM_PAIR::m_index1</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GIM_PAIR::m_index2&apos; is not initialized in the constructor." verbose="Member variable &apos;GIM_PAIR::m_index2&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/gim_pair.h" line="10" column="9"/>
+            <symbol>GIM_PAIR::m_index2</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;btBvhTree::_sort_and_calc_splitting_index&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;btBvhTree::_sort_and_calc_splitting_index&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="68" column="6"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="95" column="16"/>
+            <symbol>btBvhTree::_sort_and_calc_splitting_index</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;btBvhTree::_calc_splitting_axis&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;btBvhTree::_calc_splitting_axis&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="72" column="6"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="65" column="16"/>
+            <symbol>btBvhTree::_calc_splitting_axis</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;btBvhTree::getLeftNode&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;btBvhTree::getLeftNode&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="119" column="24"/>
+            <symbol>btBvhTree::getLeftNode</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;btGImpactBvh::hasHierarchy&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;btGImpactBvh::hasHierarchy&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="237" column="25"/>
+            <symbol>btGImpactBvh::hasHierarchy</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;btGImpactBvh&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;btGImpactBvh&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="185" column="2"/>
+            <symbol>btGImpactBvh</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;m&apos; can be reduced." verbose="The scope of the variable &apos;m&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="11"/>
+            <symbol>m</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="14"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;o&apos; can be reduced." verbose="The scope of the variable &apos;o&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="17"/>
+            <symbol>o</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="20"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="funcArgOrderDifferent" severity="warning" msg="Function &apos;find_collision&apos; argument order different: declaration &apos;boxset1, trans1, boxset2, trans2, collision_pairs&apos; definition &apos;boxset0, trans0, boxset1, trans1, collision_pairs&apos;" verbose="Function &apos;find_collision&apos; argument order different: declaration &apos;boxset1, trans1, boxset2, trans2, collision_pairs&apos; definition &apos;boxset0, trans0, boxset1, trans1, collision_pairs&apos;" cwe="683">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="444" column="49"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="304" column="43"/>
+            <symbol>find_collision</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;primitive_boxes&apos; can be declared with const" verbose="Parameter &apos;primitive_boxes&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="66" column="22"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h:144:28" call-funcname="bt_mat3_dot_col" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="525" col="23" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h:144:28" call-funcname="bt_mat3_dot_col" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="526" col="24" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:43:24" call-funcname="bt_plane_clip_polygon_collect" call-argnr="6" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="142" col="31" call-argexpr="clipped_count" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="127" col="22" info="Assignment 'clipped_count=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h:265:25" call-funcname="getNodeBound" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="193" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h:74:7" call-funcname="_build_sub_tree" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="208" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="21" call-argexpr="node0" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="460" col="39" info="Calling function '_find_collision_pairs_recursive', 5th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="6" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="21" call-argexpr="complete_primitive_tests" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="384" col="41" info="Calling function '_find_collision_pairs_recursive', 7th argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="381" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="387" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="398" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="405" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="414" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="421" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="428" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="435" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="458" col="33" call-argexpr="&collision_pairs" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="458" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="6" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="458" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="6" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="6" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:70:23" my-argnr="2" my-argname="polygon_points" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="79" col="54" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" my-argnr="1" my-argname="boxset0" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="348" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" my-argnr="2" my-argname="boxset1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="350" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h:304:14" my-argnr="1" my-argname="boxset0" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="448" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h:144:28" call-funcname="bt_mat3_dot_col" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="525" col="23" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h:144:28" call-funcname="bt_mat3_dot_col" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="526" col="24" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:43:24" call-funcname="bt_plane_clip_polygon_collect" call-argnr="6" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="142" col="31" call-argexpr="clipped_count" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="127" col="22" info="Assignment 'clipped_count=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h:265:25" call-funcname="getNodeBound" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h" line="193" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h:74:7" call-funcname="_build_sub_tree" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="208" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="21" call-argexpr="node0" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="460" col="39" info="Calling function '_find_collision_pairs_recursive', 5th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="6" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="21" call-argexpr="complete_primitive_tests" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="384" col="41" info="Calling function '_find_collision_pairs_recursive', 7th argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="381" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="387" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="398" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="405" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="414" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="421" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="428" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="7" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="435" col="35" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="458" col="33" call-argexpr="&collision_pairs" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="458" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" call-funcname="_find_collision_pairs_recursive" call-argnr="6" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="458" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="6" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" call-funcname="_node_collision" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="364" col="6" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:358:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:70:23" my-argnr="2" my-argname="polygon_points" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="79" col="54" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" my-argnr="1" my-argname="boxset0" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="348" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp:342:24" my-argnr="2" my-argname="boxset1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="350" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.h:304:14" my-argnr="1" my-argname="boxset0" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btGImpactBvh.cpp" line="448" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_calc_splitting_axis" lineNumber="65"/>
+    <functiondecl functionName="_sort_and_calc_splitting_index" lineNumber="95"/>
+    <functiondecl functionName="_build_sub_tree" lineNumber="153"/>
+    <functiondecl functionName="build_tree" lineNumber="200"/>
+    <functiondecl functionName="refit" lineNumber="213"/>
+    <functiondecl functionName="buildSet" lineNumber="253"/>
+    <functiondecl functionName="boxQuery" lineNumber="269"/>
+    <functiondecl functionName="rayQuery" lineNumber="305"/>
+    <functiondecl functionName="_node_collision" lineNumber="342"/>
+    <functiondecl functionName="_find_collision_pairs_recursive" lineNumber="358"/>
+    <functiondecl functionName="find_collision" lineNumber="444"/>
+    <functiondecl functionName="bt_begin_gim02_tree_time" lineNumber="33"/>
+    <functiondecl functionName="bt_end_gim02_tree_time" lineNumber="38"/>
+    <functiondecl functionName="getAverageTreeCollisionTime" lineNumber="45"/>
+    <functiondecl functionName="_calc_splitting_axis" lineNumber="65"/>
+    <functiondecl functionName="_sort_and_calc_splitting_index" lineNumber="95"/>
+    <functiondecl functionName="_build_sub_tree" lineNumber="153"/>
+    <functiondecl functionName="build_tree" lineNumber="200"/>
+    <functiondecl functionName="refit" lineNumber="213"/>
+    <functiondecl functionName="buildSet" lineNumber="253"/>
+    <functiondecl functionName="boxQuery" lineNumber="269"/>
+    <functiondecl functionName="rayQuery" lineNumber="305"/>
+    <functiondecl functionName="_node_collision" lineNumber="342"/>
+    <functiondecl functionName="_find_collision_pairs_recursive" lineNumber="358"/>
+    <functiondecl functionName="find_collision" lineNumber="444"/>
+    <functioncall functionName="AD"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BD"/>
+    <functioncall functionName="BT_BOX_BOX_TRANSFORM_CACHE"/>
+    <functioncall functionName="BT_CONST_COLLIDE_PLANE"/>
+    <functioncall functionName="BT_CONST_FRONT_PLANE"/>
+    <functioncall functionName="Dx"/>
+    <functioncall functionName="Dy"/>
+    <functioncall functionName="Dz"/>
+    <functioncall functionName="GIM_PAIR"/>
+    <functioncall functionName="GIM_TRIANGLE_CONTACT"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="SIMD_INFINITY"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="_M"/>
+    <functioncall functionName="_build_sub_tree"/>
+    <functioncall functionName="_calc_splitting_axis"/>
+    <functioncall functionName="_classif"/>
+    <functioncall functionName="_dotdir"/>
+    <functioncall functionName="_fMaximumExtent"/>
+    <functioncall functionName="_find_collision_pairs_recursive"/>
+    <functioncall functionName="_fmax"/>
+    <functioncall functionName="_fmin"/>
+    <functioncall functionName="_node_collision"/>
+    <functioncall functionName="_scalar"/>
+    <functioncall functionName="_sort_and_calc_splitting_index"/>
+    <functioncall functionName="absolute"/>
+    <functioncall functionName="appy_transform"/>
+    <functioncall functionName="appy_transform_trans_cache"/>
+    <functioncall functionName="blend_factor"/>
+    <functioncall functionName="blendfactor"/>
+    <functioncall functionName="bound"/>
+    <functioncall functionName="box"/>
+    <functioncall functionName="box0"/>
+    <functioncall functionName="box1"/>
+    <functioncall functionName="boxQuery"/>
+    <functioncall functionName="boxset0"/>
+    <functioncall functionName="boxset1"/>
+    <functioncall functionName="btAABB"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btFabs"/>
+    <functioncall functionName="btGImpactBvh"/>
+    <functioncall functionName="btPrimitiveTriangle"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btTriangleShape"/>
+    <functioncall functionName="btTriangleShapeEx"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="bt_begin_gim02_tree_time"/>
+    <functioncall functionName="bt_closest_point_on_segment"/>
+    <functioncall functionName="bt_distance_point_plane"/>
+    <functioncall functionName="bt_edge_plane"/>
+    <functioncall functionName="bt_end_gim02_tree_time"/>
+    <functioncall functionName="bt_line_plane_collision"/>
+    <functioncall functionName="bt_mat3_dot_col"/>
+    <functioncall functionName="bt_plane_clip_polygon_collect"/>
+    <functioncall functionName="bt_vec_blend"/>
+    <functioncall functionName="build_tree"/>
+    <functioncall functionName="ca"/>
+    <functioncall functionName="calc_absolute_matrix"/>
+    <functioncall functionName="calc_from_full_invert"/>
+    <functioncall functionName="calc_from_homogenic"/>
+    <functioncall functionName="calc_from_triangle"/>
+    <functioncall functionName="calc_from_triangle_margin"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="child_node"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clipped"/>
+    <functioncall functionName="clipped_count"/>
+    <functioncall functionName="colindex"/>
+    <functioncall functionName="collide_plane"/>
+    <functioncall functionName="collide_ray"/>
+    <functioncall functionName="collide_triangle_exact"/>
+    <functioncall functionName="collided_results"/>
+    <functioncall functionName="collision_pairs"/>
+    <functioncall functionName="complete_primitive_tests"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="copy_from"/>
+    <functioncall functionName="copy_with_margin"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="curIndex"/>
+    <functioncall functionName="diff"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="dist0"/>
+    <functioncall functionName="dist1"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dot3"/>
+    <functioncall functionName="e0"/>
+    <functioncall functionName="e1"/>
+    <functioncall functionName="e2"/>
+    <functioncall functionName="ea"/>
+    <functioncall functionName="eb"/>
+    <functioncall functionName="edge_index"/>
+    <functioncall functionName="endIndex"/>
+    <functioncall functionName="extends"/>
+    <functioncall functionName="extents"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_intersection"/>
+    <functioncall functionName="firstdist"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fulltest"/>
+    <functioncall functionName="g_accum_tree_collision_time"/>
+    <functioncall functionName="g_count_traversing"/>
+    <functioncall functionName="getBasis"/>
+    <functioncall functionName="getDataIndex"/>
+    <functioncall functionName="getEscapeIndex"/>
+    <functioncall functionName="getEscapeNodeIndex"/>
+    <functioncall functionName="getLeftNode"/>
+    <functioncall functionName="getNodeBound"/>
+    <functioncall functionName="getNodeCount"/>
+    <functioncall functionName="getNodeData"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getRightNode"/>
+    <functioncall functionName="getRow"/>
+    <functioncall functionName="getTimeMicroseconds"/>
+    <functioncall functionName="get_center_extend"/>
+    <functioncall functionName="get_node_pointer"/>
+    <functioncall functionName="get_primitive_box"/>
+    <functioncall functionName="get_primitive_count"/>
+    <functioncall functionName="get_primitive_triangle"/>
+    <functioncall functionName="has_collision"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="increment_margin"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="index1"/>
+    <functioncall functionName="index2"/>
+    <functioncall functionName="invalidate"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="isLeafNode"/>
+    <functioncall functionName="is_trimesh"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="leafbox"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="m_AR"/>
+    <functioncall functionName="m_R1to0"/>
+    <functioncall functionName="m_T1to0"/>
+    <functioncall functionName="m_bound"/>
+    <functioncall functionName="m_collisionMargin"/>
+    <functioncall functionName="m_data"/>
+    <functioncall functionName="m_escapeIndexOrDataIndex"/>
+    <functioncall functionName="m_index1"/>
+    <functioncall functionName="m_index2"/>
+    <functioncall functionName="m_margin"/>
+    <functioncall functionName="m_max"/>
+    <functioncall functionName="m_min"/>
+    <functioncall functionName="m_num_nodes"/>
+    <functioncall functionName="m_penetration_depth"/>
+    <functioncall functionName="m_plane"/>
+    <functioncall functionName="m_point_count"/>
+    <functioncall functionName="m_separating_normal"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="maxAxis"/>
+    <functioncall functionName="means"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="merge_point"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="node0"/>
+    <functioncall functionName="node1"/>
+    <functioncall functionName="node_bound"/>
+    <functioncall functionName="nodecount"/>
+    <functioncall functionName="nodeindex"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="numIndices"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="olddist"/>
+    <functioncall functionName="other"/>
+    <functioncall functionName="overlapping_trans_cache"/>
+    <functioncall functionName="overlapping_trans_conservative"/>
+    <functioncall functionName="overlapping_trans_conservative2"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="plane"/>
+    <functioncall functionName="plane_classify"/>
+    <functioncall functionName="planenormal"/>
+    <functioncall functionName="pmax"/>
+    <functioncall functionName="pmin"/>
+    <functioncall functionName="point0"/>
+    <functioncall functionName="point1"/>
+    <functioncall functionName="point2"/>
+    <functioncall functionName="primitive_boxes"/>
+    <functioncall functionName="primitive_manager"/>
+    <functioncall functionName="projection_interval"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_pair"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rad"/>
+    <functioncall functionName="rangeBalancedIndices"/>
+    <functioncall functionName="ray_dir"/>
+    <functioncall functionName="ray_origin"/>
+    <functioncall functionName="refit"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="reset"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="setDataIndex"/>
+    <functioncall functionName="setEscapeIndex"/>
+    <functioncall functionName="setNodeBound"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="splitAxis"/>
+    <functioncall functionName="splitIndex"/>
+    <functioncall functionName="startIndex"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="t2"/>
+    <functioncall functionName="tbox"/>
+    <functioncall functionName="temp_box"/>
+    <functioncall functionName="textends"/>
+    <functioncall functionName="tmax"/>
+    <functioncall functionName="tmin"/>
+    <functioncall functionName="totalbox"/>
+    <functioncall functionName="tp"/>
+    <functioncall functionName="tparam"/>
+    <functioncall functionName="trans"/>
+    <functioncall functionName="trans0"/>
+    <functioncall functionName="trans1"/>
+    <functioncall functionName="trans1_to_0"/>
+    <functioncall functionName="trans_cache_1to0"/>
+    <functioncall functionName="transbox"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="triangle"/>
+    <functioncall functionName="triangle_plane"/>
+    <functioncall functionName="trianglebox"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tv0"/>
+    <functioncall functionName="tv1"/>
+    <functioncall functionName="tv2"/>
+    <functioncall functionName="unbalanced"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="v3"/>
+    <functioncall functionName="vA1"/>
+    <functioncall functionName="vA2"/>
+    <functioncall functionName="vB1"/>
+    <functioncall functionName="vB2"/>
+    <functioncall functionName="vPoint"/>
+    <functioncall functionName="vPointA"/>
+    <functioncall functionName="vPointB"/>
+    <functioncall functionName="variance"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2715792329">
+        <error id="noConstructor" severity="style" msg="The class &apos;RIDBullet&apos; does not have a constructor although it has private member variables." verbose="The class &apos;RIDBullet&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/rid_bullet.h" line="42" column="1"/>
+            <symbol>RIDBullet</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GodotRestInfoContactResultCallback::m_rest_info_collision_object&apos; is not initialized in the constructor." verbose="Member variable &apos;GodotRestInfoContactResultCallback::m_rest_info_collision_object&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/godot_result_callbacks.h" line="200" column="2"/>
+            <symbol>GodotRestInfoContactResultCallback::m_rest_info_collision_object</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::get_delta_time&apos; can be const." verbose="The member function &apos;SpaceBullet::get_delta_time&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="125" column="9"/>
+            <symbol>SpaceBullet::get_delta_time</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::is_using_soft_world&apos; can be const." verbose="The member function &apos;SpaceBullet::is_using_soft_world&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="131" column="22"/>
+            <symbol>SpaceBullet::is_using_soft_world</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::get_debug_contacts&apos; can be const." verbose="The member function &apos;SpaceBullet::get_debug_contacts&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="176" column="33"/>
+            <symbol>SpaceBullet::get_debug_contacts</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;SpaceBullet::get_debug_contact_count&apos; can be const." verbose="The member function &apos;SpaceBullet::get_debug_contact_count&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/bullet/joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="177" column="21"/>
+            <symbol>SpaceBullet::get_debug_contact_count</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;BulletPhysicsDirectSpaceState&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;BulletPhysicsDirectSpaceState&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/bullet/joint_bullet.cpp" file="/home/hbina/git/godot/modules/bullet/space_bullet.h" line="77" column="2"/>
+            <symbol>BulletPhysicsDirectSpaceState</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="BulletPhysicsDirectSpaceState"/>
+    <functioncall functionName="ClosestConvexResultCallback"/>
+    <functioncall functionName="ClosestRayResultCallback"/>
+    <functioncall functionName="ConstraintBullet"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GodotAllContactResultCallback"/>
+    <functioncall functionName="GodotAllConvexResultCallback"/>
+    <functioncall functionName="GodotClosestConvexResultCallback"/>
+    <functioncall functionName="GodotContactPairContactResultCallback"/>
+    <functioncall functionName="GodotDeepPenetrationContactResultCallback"/>
+    <functioncall functionName="GodotKinClosestConvexResultCallback"/>
+    <functioncall functionName="GodotRestInfoContactResultCallback"/>
+    <functioncall functionName="JointBullet"/>
+    <functioncall functionName="PhysicsDirectSpaceState3D"/>
+    <functioncall functionName="RecoverResult"/>
+    <functioncall functionName="addSingleResult"/>
+    <functioncall functionName="body0Wrap"/>
+    <functioncall functionName="body1Wrap"/>
+    <functioncall functionName="btManifoldResult"/>
+    <functioncall functionName="collide_with_areas"/>
+    <functioncall functionName="collide_with_bodies"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="convexFromWorld"/>
+    <functioncall functionName="convexToWorld"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="hasPenetration"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="local_shape_most_recovered"/>
+    <functioncall functionName="m_collided"/>
+    <functioncall functionName="m_count"/>
+    <functioncall functionName="m_exclude"/>
+    <functioncall functionName="m_infinite_inertia"/>
+    <functioncall functionName="m_localShapeInfo"/>
+    <functioncall functionName="m_min_distance"/>
+    <functioncall functionName="m_other_compound_shape_index"/>
+    <functioncall functionName="m_penetration_distance"/>
+    <functioncall functionName="m_pickRay"/>
+    <functioncall functionName="m_result"/>
+    <functioncall functionName="m_resultMax"/>
+    <functioncall functionName="m_results"/>
+    <functioncall functionName="m_self_object"/>
+    <functioncall functionName="m_shapeId"/>
+    <functioncall functionName="m_triangleIndex"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalInWorldSpace"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="other_collision_object"/>
+    <functioncall functionName="other_compound_shape_index"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_collide_with_areas"/>
+    <functioncall functionName="p_collide_with_bodies"/>
+    <functioncall functionName="p_contact"/>
+    <functioncall functionName="p_exclude"/>
+    <functioncall functionName="p_infinite_inertia"/>
+    <functioncall functionName="p_physicsServer"/>
+    <functioncall functionName="p_result"/>
+    <functioncall functionName="p_resultMax"/>
+    <functioncall functionName="p_results"/>
+    <functioncall functionName="p_self"/>
+    <functioncall functionName="p_self_object"/>
+    <functioncall functionName="penetration_distance"/>
+    <functioncall functionName="pointWorld"/>
+    <functioncall functionName="rayFromWorld"/>
+    <functioncall functionName="rayResult"/>
+    <functioncall functionName="rayToWorld"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2389352009">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverOpenSL::buffer_size&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverOpenSL::buffer_size&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="359" column="20"/>
+            <symbol>AudioDriverOpenSL::buffer_size</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverOpenSL::buffers&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverOpenSL::buffers&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="359" column="20"/>
+            <symbol>AudioDriverOpenSL::buffers</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverOpenSL::mixdown_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverOpenSL::mixdown_buffer&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="359" column="20"/>
+            <symbol>AudioDriverOpenSL::mixdown_buffer</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioDriverOpenSL::last_free&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioDriverOpenSL::last_free&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="359" column="20"/>
+            <symbol>AudioDriverOpenSL::last_free</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="81" column="26"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="220" column="26"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;res&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;res&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="200" column="6" info="res is overwritten"/>
+            <location file="/home/hbina/git/godot/platform/android/audio_driver_opensl.cpp" line="197" column="7" info="res is assigned"/>
+            <symbol>res</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_buffer_callback" lineNumber="40"/>
+    <functiondecl functionName="_buffer_callbacks" lineNumber="77"/>
+    <functiondecl functionName="get_name" lineNumber="88"/>
+    <functiondecl functionName="init" lineNumber="93"/>
+    <functiondecl functionName="start" lineNumber="108"/>
+    <functiondecl functionName="_record_buffer_callback" lineNumber="206"/>
+    <functiondecl functionName="_record_buffer_callbacks" lineNumber="218"/>
+    <functiondecl functionName="capture_init_device" lineNumber="225"/>
+    <functiondecl functionName="capture_start" lineNumber="293"/>
+    <functiondecl functionName="capture_stop" lineNumber="302"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="319"/>
+    <functiondecl functionName="get_speaker_mode" lineNumber="324"/>
+    <functiondecl functionName="lock" lineNumber="329"/>
+    <functiondecl functionName="unlock" lineNumber="335"/>
+    <functiondecl functionName="finish" lineNumber="341"/>
+    <functiondecl functionName="set_pause" lineNumber="346"/>
+    <functiondecl functionName="_buffer_callback" lineNumber="40"/>
+    <functiondecl functionName="_buffer_callbacks" lineNumber="77"/>
+    <functiondecl functionName="get_name" lineNumber="88"/>
+    <functiondecl functionName="init" lineNumber="93"/>
+    <functiondecl functionName="start" lineNumber="108"/>
+    <functiondecl functionName="_record_buffer_callback" lineNumber="206"/>
+    <functiondecl functionName="_record_buffer_callbacks" lineNumber="218"/>
+    <functiondecl functionName="capture_init_device" lineNumber="225"/>
+    <functiondecl functionName="capture_start" lineNumber="293"/>
+    <functiondecl functionName="capture_stop" lineNumber="302"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="319"/>
+    <functiondecl functionName="get_speaker_mode" lineNumber="324"/>
+    <functiondecl functionName="lock" lineNumber="329"/>
+    <functiondecl functionName="unlock" lineNumber="335"/>
+    <functiondecl functionName="finish" lineNumber="341"/>
+    <functiondecl functionName="set_pause" lineNumber="346"/>
+    <functioncall functionName="AudioDriverOpenSL"/>
+    <functioncall functionName="BUFFER_COUNT"/>
+    <functioncall functionName="Clear"/>
+    <functioncall functionName="CreateAudioPlayer"/>
+    <functioncall functionName="CreateAudioRecorder"/>
+    <functioncall functionName="CreateOutputMix"/>
+    <functioncall functionName="Destroy"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="EngineItf"/>
+    <functioncall functionName="EngineOption"/>
+    <functioncall functionName="Enqueue"/>
+    <functioncall functionName="GetInterface"/>
+    <functioncall functionName="GetRecordState"/>
+    <functioncall functionName="OutputMix"/>
+    <functioncall functionName="Realize"/>
+    <functioncall functionName="RegisterCallback"/>
+    <functioncall functionName="SL_BOOLEAN_FALSE"/>
+    <functioncall functionName="SL_BOOLEAN_TRUE"/>
+    <functioncall functionName="SL_BYTEORDER_BIGENDIAN"/>
+    <functioncall functionName="SL_BYTEORDER_LITTLEENDIAN"/>
+    <functioncall functionName="SL_DATAFORMAT_PCM"/>
+    <functioncall functionName="SL_DATALOCATOR_ANDROIDSIMPLEBUFFERQUEUE"/>
+    <functioncall functionName="SL_DATALOCATOR_IODEVICE"/>
+    <functioncall functionName="SL_DATALOCATOR_OUTPUTMIX"/>
+    <functioncall functionName="SL_DEFAULTDEVICEID_AUDIOINPUT"/>
+    <functioncall functionName="SL_ENGINEOPTION_THREADSAFE"/>
+    <functioncall functionName="SL_IID_ANDROIDCONFIGURATION"/>
+    <functioncall functionName="SL_IID_ANDROIDSIMPLEBUFFERQUEUE"/>
+    <functioncall functionName="SL_IID_BUFFERQUEUE"/>
+    <functioncall functionName="SL_IID_EFFECTSEND"/>
+    <functioncall functionName="SL_IID_ENGINE"/>
+    <functioncall functionName="SL_IID_ENVIRONMENTALREVERB"/>
+    <functioncall functionName="SL_IID_PLAY"/>
+    <functioncall functionName="SL_IID_RECORD"/>
+    <functioncall functionName="SL_IODEVICE_AUDIOINPUT"/>
+    <functioncall functionName="SL_PCMSAMPLEFORMAT_FIXED_16"/>
+    <functioncall functionName="SL_PLAYSTATE_PAUSED"/>
+    <functioncall functionName="SL_PLAYSTATE_PLAYING"/>
+    <functioncall functionName="SL_RECORDSTATE_RECORDING"/>
+    <functioncall functionName="SL_RECORDSTATE_STOPPED"/>
+    <functioncall functionName="SL_SAMPLINGRATE_44_1"/>
+    <functioncall functionName="SL_SPEAKER_FRONT_CENTER"/>
+    <functioncall functionName="SL_SPEAKER_FRONT_RIGHT"/>
+    <functioncall functionName="SLuint32"/>
+    <functioncall functionName="SetPlayState"/>
+    <functioncall functionName="SetRecordState"/>
+    <functioncall functionName="_buffer_callback"/>
+    <functioncall functionName="_buffer_callbacks"/>
+    <functioncall functionName="_record_buffer_callback"/>
+    <functioncall functionName="_record_buffer_callbacks"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="audioSink"/>
+    <functioncall functionName="audioSource"/>
+    <functioncall functionName="audio_server_process"/>
+    <functioncall functionName="bufferQueueItf"/>
+    <functioncall functionName="buffer_size"/>
+    <functioncall functionName="capture_init_device"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format_pcm"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="ids"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="input_buffer_init"/>
+    <functioncall functionName="input_buffer_write"/>
+    <functioncall functionName="int16_t"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="last_free"/>
+    <functioncall functionName="loc_bq"/>
+    <functioncall functionName="loc_bufq"/>
+    <functioncall functionName="loc_dev"/>
+    <functioncall functionName="locator_outputmix"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mix"/>
+    <functioncall functionName="mixdown_buffer"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="pContext"/>
+    <functioncall functionName="p_pause"/>
+    <functioncall functionName="pause"/>
+    <functioncall functionName="pcm"/>
+    <functioncall functionName="playItf"/>
+    <functioncall functionName="player"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="queueItf"/>
+    <functioncall functionName="recSnk"/>
+    <functioncall functionName="recSource"/>
+    <functioncall functionName="rec_buffer_frames"/>
+    <functioncall functionName="recordBufferQueueItf"/>
+    <functioncall functionName="recordItf"/>
+    <functioncall functionName="recorder"/>
+    <functioncall functionName="req"/>
+    <functioncall functionName="request_permission"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="sample"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sl"/>
+    <functioncall functionName="slCreateEngine"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="try_lock"/>
+    <functioncall functionName="unlock"/>
+  </FileInfo>
+</analyzerinfo>

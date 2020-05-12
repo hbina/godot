@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1476889442">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;XRServer::last_process_usec&apos; is not initialized in the constructor." verbose="Member variable &apos;XRServer::last_process_usec&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/xr_server.cpp" line="369" column="11"/>
+            <symbol>XRServer::last_process_usec</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;XRServer::last_commit_usec&apos; is not initialized in the constructor." verbose="Member variable &apos;XRServer::last_commit_usec&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/xr_server.cpp" line="369" column="11"/>
+            <symbol>XRServer::last_commit_usec</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;XRServer::last_frame_usec&apos; is not initialized in the constructor." verbose="Member variable &apos;XRServer::last_frame_usec&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/xr_server.cpp" line="369" column="11"/>
+            <symbol>XRServer::last_frame_usec</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;world_scale&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;world_scale&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/xr_server.cpp" line="371" column="2"/>
+            <symbol>world_scale</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_singleton" lineNumber="38"/>
+    <functiondecl functionName="_bind_methods" lineNumber="42"/>
+    <functiondecl functionName="get_world_scale" lineNumber="85"/>
+    <functiondecl functionName="set_world_scale" lineNumber="89"/>
+    <functiondecl functionName="get_world_origin" lineNumber="99"/>
+    <functiondecl functionName="set_world_origin" lineNumber="103"/>
+    <functiondecl functionName="get_reference_frame" lineNumber="107"/>
+    <functiondecl functionName="center_on_hmd" lineNumber="111"/>
+    <functiondecl functionName="get_hmd_transform" lineNumber="143"/>
+    <functiondecl functionName="add_interface" lineNumber="151"/>
+    <functiondecl functionName="remove_interface" lineNumber="166"/>
+    <functiondecl functionName="get_interface_count" lineNumber="187"/>
+    <functiondecl functionName="get_interface" lineNumber="191"/>
+    <functiondecl functionName="find_interface" lineNumber="197"/>
+    <functiondecl functionName="get_interfaces" lineNumber="213"/>
+    <functiondecl functionName="is_tracker_id_in_use_for_type" lineNumber="241"/>
+    <functiondecl functionName="get_free_tracker_id_for_type" lineNumber="252"/>
+    <functiondecl functionName="add_tracker" lineNumber="268"/>
+    <functiondecl functionName="remove_tracker" lineNumber="275"/>
+    <functiondecl functionName="get_tracker_count" lineNumber="294"/>
+    <functiondecl functionName="get_tracker" lineNumber="298"/>
+    <functiondecl functionName="find_by_type_and_id" lineNumber="304"/>
+    <functiondecl functionName="get_primary_interface" lineNumber="316"/>
+    <functiondecl functionName="set_primary_interface" lineNumber="320"/>
+    <functiondecl functionName="clear_primary_interface_if" lineNumber="326"/>
+    <functiondecl functionName="get_last_process_usec" lineNumber="333"/>
+    <functiondecl functionName="get_last_commit_usec" lineNumber="337"/>
+    <functiondecl functionName="get_last_frame_usec" lineNumber="341"/>
+    <functiondecl functionName="_process" lineNumber="345"/>
+    <functiondecl functionName="_mark_commit" lineNumber="361"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="Basis"/>
+    <functioncall functionName="Capabilities"/>
+    <functioncall functionName="DONT_RESET_ROTATION"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="EYE_LEFT"/>
+    <functioncall functionName="EYE_MONO"/>
+    <functioncall functionName="EYE_RIGHT"/>
+    <functioncall functionName="Eyes"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RESET_BUT_KEEP_TILT"/>
+    <functioncall functionName="RESET_FULL_ROTATION"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="RotationMode"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="TRACKER_ANCHOR"/>
+    <functioncall functionName="TRACKER_ANY"/>
+    <functioncall functionName="TRACKER_ANY_KNOWN"/>
+    <functioncall functionName="TRACKER_BASESTATION"/>
+    <functioncall functionName="TRACKER_CONTROLLER"/>
+    <functioncall functionName="TRACKER_HAND_UNKNOWN"/>
+    <functioncall functionName="TRACKER_LEFT_HAND"/>
+    <functioncall functionName="TRACKER_RIGHT_HAND"/>
+    <functioncall functionName="TRACKER_UNKNOWN"/>
+    <functioncall functionName="TrackerHand"/>
+    <functioncall functionName="TrackerType"/>
+    <functioncall functionName="Tracking_status"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="XRInterface"/>
+    <functioncall functionName="XRPositionalTracker"/>
+    <functioncall functionName="XRServer"/>
+    <functioncall functionName="XR_EXCESSIVE_MOTION"/>
+    <functioncall functionName="XR_INSUFFICIENT_FEATURES"/>
+    <functioncall functionName="XR_NORMAL_TRACKING"/>
+    <functioncall functionName="XR_NOT_TRACKING"/>
+    <functioncall functionName="XR_UNKNOWN_TRACKING"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="center_on_hmd"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="find_interface"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_hmd_transform"/>
+    <functioncall functionName="get_interface"/>
+    <functioncall functionName="get_interface_count"/>
+    <functioncall functionName="get_interfaces"/>
+    <functioncall functionName="get_last_commit_usec"/>
+    <functioncall functionName="get_last_frame_usec"/>
+    <functioncall functionName="get_last_process_usec"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_primary_interface"/>
+    <functioncall functionName="get_reference_frame"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_tracker"/>
+    <functioncall functionName="get_tracker_count"/>
+    <functioncall functionName="get_tracker_id"/>
+    <functioncall functionName="get_transform_for_eye"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_world_scale"/>
+    <functioncall functionName="hmd_transform"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="iface_info"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="is_initialized"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_tracker_id_in_use_for_type"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="last_process_usec"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_interface"/>
+    <functioncall functionName="p_keep_height"/>
+    <functioncall functionName="p_primary_interface"/>
+    <functioncall functionName="p_tracker"/>
+    <functioncall functionName="p_tracker_type"/>
+    <functioncall functionName="p_world_origin"/>
+    <functioncall functionName="p_world_scale"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="process"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_axis"/>
+    <functioncall functionName="set_primary_interface"/>
+    <functioncall functionName="set_world_scale"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tracker_id"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

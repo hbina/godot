@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2029512468">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="298" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="299" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="329" column="7"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="162" column="11"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="430" column="11"/>
+            <symbol>c</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" call-funcname="ec_enc_bit_logp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="169" col="22" call-argexpr="intra" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="336" col="63" info="Calling function 'quant_coarse_energy_impl', 13th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/laplace.h:39:6" call-funcname="ec_laplace_encode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="231" col="30" call-argexpr="&qi" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" call-funcname="ec_enc_icdf" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="237" col="24" call-argexpr="small_energy_icdf" call-argvaluetype="7" call-argvalue="3"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" call-funcname="ec_range_bytes" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="323" col="36" call-argexpr="&enc_start_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" call-funcname="ec_range_bytes" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="324" col="36" call-argexpr="&enc_intra_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" call-funcname="ec_get_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="325" col="32" call-argexpr="&enc_intra_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="13" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="335" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="385" col="21" call-argexpr="q2" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="384" col="18" info="Assignment 'q2=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:82:5" call-funcname="ec_dec_icdf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="470" col="29" call-argexpr="small_energy_icdf" call-argvaluetype="7" call-argvalue="3"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" call-funcname="ec_enc_bit_logp" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="169" col="7" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" my-argnr="10"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:142:19" call-funcname="loss_distortion" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="21" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:142:19" call-funcname="loss_distortion" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="21" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="335" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" call-funcname="ec_tell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="281" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="385" col="10" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:56:6" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="414" col="13" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:58:6" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:98:13" call-funcname="ec_dec_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="504" col="15" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:62:6" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:98:13" call-funcname="ec_dec_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="530" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:64:6" my-argnr="8"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="71" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="14" my-argname="delayedIntra" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="278" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:60:6" my-argnr="6" my-argname="dec" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="446" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="71" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="14" my-argname="delayedIntra" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="278" col="39" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" call-funcname="ec_enc_bit_logp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="169" col="22" call-argexpr="intra" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="336" col="63" info="Calling function 'quant_coarse_energy_impl', 13th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/laplace.h:39:6" call-funcname="ec_laplace_encode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="231" col="30" call-argexpr="&qi" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" call-funcname="ec_enc_icdf" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="237" col="24" call-argexpr="small_energy_icdf" call-argvaluetype="7" call-argvalue="3"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="304" col="42" call-argexpr="oldEBands_intra" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="304" col="42" call-argexpr="error_intra" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" call-funcname="ec_range_bytes" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="323" col="36" call-argexpr="&enc_start_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" call-funcname="ec_range_bytes" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="324" col="36" call-argexpr="&enc_intra_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" call-funcname="ec_get_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="325" col="32" call-argexpr="&enc_intra_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="13" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="335" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="385" col="21" call-argexpr="q2" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="384" col="18" info="Assignment 'q2=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:82:5" call-funcname="ec_dec_icdf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="470" col="29" call-argexpr="small_energy_icdf" call-argvaluetype="7" call-argvalue="3"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" call-funcname="ec_enc_bit_logp" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="169" col="7" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" my-argnr="10"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:142:19" call-funcname="loss_distortion" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="21" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:142:19" call-funcname="loss_distortion" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="21" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="335" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" call-funcname="ec_tell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="281" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="385" col="10" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:56:6" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="414" col="13" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:58:6" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:98:13" call-funcname="ec_dec_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="504" col="15" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:62:6" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:98:13" call-funcname="ec_dec_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="530" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:64:6" my-argnr="8"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="71" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="14" my-argname="delayedIntra" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="278" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:60:6" my-argnr="6" my-argname="dec" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="446" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="71" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="14" my-argname="delayedIntra" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="278" col="39" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" call-funcname="ec_enc_bit_logp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="169" col="22" call-argexpr="intra" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="336" col="63" info="Calling function 'quant_coarse_energy_impl', 13th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/laplace.h:39:6" call-funcname="ec_laplace_encode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="231" col="30" call-argexpr="&qi" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" call-funcname="ec_enc_icdf" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="237" col="24" call-argexpr="small_energy_icdf" call-argvaluetype="7" call-argvalue="3"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" call-funcname="ec_range_bytes" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="323" col="36" call-argexpr="&enc_start_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" call-funcname="ec_range_bytes" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="324" col="36" call-argexpr="&enc_intra_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" call-funcname="ec_get_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="325" col="32" call-argexpr="&enc_intra_state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="13" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="335" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="385" col="21" call-argexpr="q2" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="384" col="18" info="Assignment 'q2=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:82:5" call-funcname="ec_dec_icdf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="470" col="29" call-argexpr="small_energy_icdf" call-argvaluetype="7" call-argvalue="3"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" call-funcname="ec_enc_bit_logp" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="169" col="7" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" my-argnr="10"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:142:19" call-funcname="loss_distortion" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="21" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:142:19" call-funcname="loss_distortion" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="21" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c:156:12" call-funcname="quant_coarse_energy_impl" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="335" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" call-funcname="ec_tell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="281" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="385" col="10" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:56:6" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" call-funcname="ec_enc_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="414" col="13" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:58:6" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:98:13" call-funcname="ec_dec_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="504" col="15" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:62:6" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entdec.h:98:13" call-funcname="ec_dec_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="530" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:64:6" my-argnr="8"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="71" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="14" my-argname="delayedIntra" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="278" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:60:6" my-argnr="6" my-argname="dec" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="446" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="279" col="71" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.h:50:6" my-argnr="14" my-argname="delayedIntra" file="/home/hbina/git/godot/thirdparty/opus/celt/quant_bands.c" line="278" col="39" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="loss_distortion" lineNumber="142"/>
+    <functiondecl functionName="quant_coarse_energy_impl" lineNumber="156"/>
+    <functiondecl functionName="quant_coarse_energy" lineNumber="261"/>
+    <functiondecl functionName="quant_fine_energy" lineNumber="361"/>
+    <functiondecl functionName="quant_energy_finalise" lineNumber="398"/>
+    <functiondecl functionName="unquant_coarse_energy" lineNumber="427"/>
+    <functiondecl functionName="unquant_fine_energy" lineNumber="492"/>
+    <functiondecl functionName="unquant_energy_finalise" lineNumber="515"/>
+    <functiondecl functionName="amp2Log2" lineNumber="543"/>
+    <functiondecl functionName="loss_distortion" lineNumber="142"/>
+    <functiondecl functionName="quant_coarse_energy_impl" lineNumber="156"/>
+    <functiondecl functionName="quant_coarse_energy" lineNumber="261"/>
+    <functiondecl functionName="quant_fine_energy" lineNumber="361"/>
+    <functiondecl functionName="quant_energy_finalise" lineNumber="398"/>
+    <functiondecl functionName="unquant_coarse_energy" lineNumber="427"/>
+    <functiondecl functionName="unquant_fine_energy" lineNumber="492"/>
+    <functiondecl functionName="unquant_energy_finalise" lineNumber="515"/>
+    <functiondecl functionName="amp2Log2" lineNumber="543"/>
+    <functiondecl functionName="loss_distortion" lineNumber="142"/>
+    <functiondecl functionName="quant_coarse_energy_impl" lineNumber="156"/>
+    <functiondecl functionName="quant_coarse_energy" lineNumber="261"/>
+    <functiondecl functionName="quant_fine_energy" lineNumber="361"/>
+    <functiondecl functionName="quant_energy_finalise" lineNumber="398"/>
+    <functiondecl functionName="unquant_coarse_energy" lineNumber="427"/>
+    <functiondecl functionName="unquant_fine_energy" lineNumber="492"/>
+    <functiondecl functionName="unquant_energy_finalise" lineNumber="515"/>
+    <functiondecl functionName="amp2Log2" lineNumber="543"/>
+    <functioncall functionName="C"/>
+    <functioncall functionName="LM"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="badness"/>
+    <functioncall functionName="band"/>
+    <functioncall functionName="beta"/>
+    <functioncall functionName="beta_intra"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="budget"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="coef"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="eBands"/>
+    <functioncall functionName="ec_dec_bit_logp"/>
+    <functioncall functionName="ec_dec_bits"/>
+    <functioncall functionName="ec_dec_icdf"/>
+    <functioncall functionName="ec_enc_bit_logp"/>
+    <functioncall functionName="ec_enc_bits"/>
+    <functioncall functionName="ec_enc_icdf"/>
+    <functioncall functionName="ec_get_buffer"/>
+    <functioncall functionName="ec_ilog"/>
+    <functioncall functionName="ec_laplace_decode"/>
+    <functioncall functionName="ec_laplace_encode"/>
+    <functioncall functionName="ec_range_bytes"/>
+    <functioncall functionName="ec_tell"/>
+    <functioncall functionName="ec_tell_frac"/>
+    <functioncall functionName="effEnd"/>
+    <functioncall functionName="enc"/>
+    <functioncall functionName="enc_intra_state"/>
+    <functioncall functionName="enc_start_state"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="error_intra"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="hi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="intra"/>
+    <functioncall functionName="intra_bias"/>
+    <functioncall functionName="intra_bits"/>
+    <functioncall functionName="intra_buf"/>
+    <functioncall functionName="lfe"/>
+    <functioncall functionName="lo"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="loss_distortion"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="max_decay"/>
+    <functioncall functionName="maxval"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="minval"/>
+    <functioncall functionName="nbEBands"/>
+    <functioncall functionName="new_distortion"/>
+    <functioncall functionName="nstart_bytes"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="oldE"/>
+    <functioncall functionName="oldEBands"/>
+    <functioncall functionName="oldEBands_intra"/>
+    <functioncall functionName="opus_alloc"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="pi"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="pulses"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="q2"/>
+    <functioncall functionName="qi"/>
+    <functioncall functionName="quant_coarse_energy_impl"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rng"/>
+    <functioncall functionName="save_bytes"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="small_energy_icdf"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="tell"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

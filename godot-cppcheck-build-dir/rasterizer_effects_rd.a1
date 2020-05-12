@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="515869548">
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_get_uniform_set_from_image&apos; argument 1 names different: declaration &apos;p_texture&apos; definition &apos;p_image&apos;." verbose="Function &apos;_get_uniform_set_from_image&apos; argument 1 names different: declaration &apos;p_texture&apos; definition &apos;p_image&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" line="63" column="58"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.h" line="558" column="38"/>
+            <symbol>_get_uniform_set_from_image</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_get_compute_uniform_set_from_texture_pair&apos; argument 1 names different: declaration &apos;p_texture&apos; definition &apos;p_texture1&apos;." verbose="Function &apos;_get_compute_uniform_set_from_texture_pair&apos; argument 1 names different: declaration &apos;p_texture&apos; definition &apos;p_texture1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" line="133" column="73"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.h" line="561" column="53"/>
+            <symbol>_get_compute_uniform_set_from_texture_pair</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_get_compute_uniform_set_from_image_pair&apos; argument 1 names different: declaration &apos;p_texture&apos; definition &apos;p_texture1&apos;." verbose="Function &apos;_get_compute_uniform_set_from_image_pair&apos; argument 1 names different: declaration &apos;p_texture&apos; definition &apos;p_texture1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" line="171" column="71"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.h" line="562" column="51"/>
+            <symbol>_get_compute_uniform_set_from_image_pair</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;copy_depth_to_rect&apos; argument 2 names different: declaration &apos;p_dest_framebuffer&apos; definition &apos;p_dest_texture&apos;." verbose="Function &apos;copy_depth_to_rect&apos; argument 2 names different: declaration &apos;p_dest_framebuffer&apos; definition &apos;p_dest_texture&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" line="313" column="75"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.h" line="567" column="55"/>
+            <symbol>copy_depth_to_rect</symbol>
+        </error>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp:38:28" my-argnr="2" my-argname="p_array" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" line="39" col="2" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp:38:28" my-argnr="2" my-argname="p_array" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" line="39" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.h:624:7" my-argnr="6" my-argname="p_pipeline" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_effects_rd.cpp" line="1202" col="65" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="store_transform_3x3" lineNumber="38"/>
+    <functiondecl functionName="store_camera" lineNumber="53"/>
+    <functiondecl functionName="_get_uniform_set_from_image" lineNumber="63"/>
+    <functiondecl functionName="_get_uniform_set_from_texture" lineNumber="85"/>
+    <functiondecl functionName="_get_compute_uniform_set_from_texture" lineNumber="109"/>
+    <functiondecl functionName="_get_compute_uniform_set_from_texture_pair" lineNumber="133"/>
+    <functiondecl functionName="_get_compute_uniform_set_from_image_pair" lineNumber="171"/>
+    <functiondecl functionName="copy_to_atlas_fb" lineNumber="207"/>
+    <functiondecl functionName="copy_to_fb_rect" lineNumber="229"/>
+    <functiondecl functionName="copy_to_rect" lineNumber="251"/>
+    <functiondecl functionName="copy_depth_to_rect_and_linearize" lineNumber="285"/>
+    <functiondecl functionName="copy_depth_to_rect" lineNumber="313"/>
+    <functiondecl functionName="gaussian_blur" lineNumber="339"/>
+    <functiondecl functionName="gaussian_glow" lineNumber="375"/>
+    <functiondecl functionName="merge_specular" lineNumber="600"/>
+    <functiondecl functionName="make_mipmap" lineNumber="633"/>
+    <functiondecl functionName="copy_cubemap_to_dp" lineNumber="654"/>
+    <functiondecl functionName="tonemapper" lineNumber="678"/>
+    <functiondecl functionName="luminance_reduction" lineNumber="721"/>
+    <functiondecl functionName="generate_ssao" lineNumber="929"/>
+    <functiondecl functionName="roughness_limit" lineNumber="1085"/>
+    <functiondecl functionName="cubemap_roughness" lineNumber="1106"/>
+    <functiondecl functionName="cubemap_downsample" lineNumber="1132"/>
+    <functiondecl functionName="cubemap_filter" lineNumber="1151"/>
+    <functiondecl functionName="render_sky" lineNumber="1181"/>
+    <functioncall functionName="BLEND_FACTOR_ONE"/>
+    <functioncall functionName="BLEND_OP_ADD"/>
+    <functioncall functionName="BOKEH_COMPOSITE"/>
+    <functioncall functionName="BOKEH_GEN_BLUR_SIZE"/>
+    <functioncall functionName="BOKEH_GEN_BOKEH_BOX"/>
+    <functioncall functionName="BOKEH_GEN_BOKEH_CIRCULAR"/>
+    <functioncall functionName="BOKEH_GEN_BOKEH_HEXAGONAL"/>
+    <functioncall functionName="BOKEH_MAX"/>
+    <functioncall functionName="BokehPushConstant"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="COPY_FLAG_GLOW_FIRST_PASS"/>
+    <functioncall functionName="COPY_FLAG_HORIZONTAL"/>
+    <functioncall functionName="COPY_MODE_GAUSSIAN_COPY"/>
+    <functioncall functionName="COPY_MODE_GAUSSIAN_COPY_8BIT"/>
+    <functioncall functionName="COPY_MODE_GAUSSIAN_GLOW"/>
+    <functioncall functionName="COPY_MODE_GAUSSIAN_GLOW_AUTO_EXPOSURE"/>
+    <functioncall functionName="COPY_MODE_LINEARIZE_DEPTH"/>
+    <functioncall functionName="COPY_MODE_MAX"/>
+    <functioncall functionName="COPY_MODE_MIPMAP"/>
+    <functioncall functionName="COPY_MODE_SIMPLY_COPY"/>
+    <functioncall functionName="COPY_MODE_SIMPLY_COPY_8BIT"/>
+    <functioncall functionName="COPY_MODE_SIMPLY_COPY_DEPTH"/>
+    <functioncall functionName="COPY_TO_FB_COPY"/>
+    <functioncall functionName="COPY_TO_FB_COPY_PANORAMA_TO_DP"/>
+    <functioncall functionName="COPY_TO_FB_MAX"/>
+    <functioncall functionName="CopyPushConstant"/>
+    <functioncall functionName="CopyToDPPushConstant"/>
+    <functioncall functionName="CopyToFbPushConstant"/>
+    <functioncall functionName="CubemapDownsamplerPushConstant"/>
+    <functioncall functionName="CubemapRoughnessPushConstant"/>
+    <functioncall functionName="ENV_TONE_MAPPER_LINEAR"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="FILTER_MODE_HIGH_QUALITY"/>
+    <functioncall functionName="FILTER_MODE_HIGH_QUALITY_ARRAY"/>
+    <functioncall functionName="FILTER_MODE_LOW_QUALITY"/>
+    <functioncall functionName="FILTER_MODE_LOW_QUALITY_ARRAY"/>
+    <functioncall functionName="FILTER_MODE_MAX"/>
+    <functioncall functionName="FINAL_ACTION_DISCARD"/>
+    <functioncall functionName="FINAL_ACTION_READ"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="GLOW_MODE_ADD"/>
+    <functioncall functionName="GLOW_MODE_MIX"/>
+    <functioncall functionName="GLOW_MODE_REPLACE"/>
+    <functioncall functionName="GLOW_MODE_SCREEN"/>
+    <functioncall functionName="GLOW_MODE_SOFTLIGHT"/>
+    <functioncall functionName="INDEX_BUFFER_FORMAT_UINT32"/>
+    <functioncall functionName="INITIAL_ACTION_DROP"/>
+    <functioncall functionName="INITIAL_ACTION_KEEP"/>
+    <functioncall functionName="INVALID_ID"/>
+    <functioncall functionName="LUMINANCE_REDUCE"/>
+    <functioncall functionName="LUMINANCE_REDUCE_MAX"/>
+    <functioncall functionName="LUMINANCE_REDUCE_READ"/>
+    <functioncall functionName="LUMINANCE_REDUCE_WRITE"/>
+    <functioncall functionName="LuminanceReducePushConstant"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="PipelineDepthStencilState"/>
+    <functioncall functionName="PipelineMultisampleState"/>
+    <functioncall functionName="PipelineRasterizationState"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="RENDER_PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="RasterizerEffectsRD"/>
+    <functioncall functionName="RoughnessLimiterPushConstant"/>
+    <functioncall functionName="SAMPLER_FILTER_LINEAR"/>
+    <functioncall functionName="SCREEN_SPACE_REFLECTION_FILTER_HORIZONTAL"/>
+    <functioncall functionName="SCREEN_SPACE_REFLECTION_FILTER_MAX"/>
+    <functioncall functionName="SCREEN_SPACE_REFLECTION_FILTER_VERTICAL"/>
+    <functioncall functionName="SCREEN_SPACE_REFLECTION_MAX"/>
+    <functioncall functionName="SCREEN_SPACE_REFLECTION_NORMAL"/>
+    <functioncall functionName="SCREEN_SPACE_REFLECTION_ROUGH"/>
+    <functioncall functionName="SPECULAR_MERGE_ADD"/>
+    <functioncall functionName="SPECULAR_MERGE_ADDITIVE_ADD"/>
+    <functioncall functionName="SPECULAR_MERGE_ADDITIVE_SSR"/>
+    <functioncall functionName="SPECULAR_MERGE_MAX"/>
+    <functioncall functionName="SPECULAR_MERGE_SSR"/>
+    <functioncall functionName="SSAOBlurPushConstant"/>
+    <functioncall functionName="SSAOGatherPushConstant"/>
+    <functioncall functionName="SSAOMinifyPushConstant"/>
+    <functioncall functionName="SSAO_BLUR_PASS"/>
+    <functioncall functionName="SSAO_BLUR_PASS_HALF"/>
+    <functioncall functionName="SSAO_BLUR_UPSCALE"/>
+    <functioncall functionName="SSAO_GATHER_HIGH"/>
+    <functioncall functionName="SSAO_GATHER_HIGH_HALF"/>
+    <functioncall functionName="SSAO_GATHER_LOW"/>
+    <functioncall functionName="SSAO_GATHER_LOW_HALF"/>
+    <functioncall functionName="SSAO_GATHER_MEDIUM"/>
+    <functioncall functionName="SSAO_GATHER_MEDIUM_HALF"/>
+    <functioncall functionName="SSAO_GATHER_ULTRA"/>
+    <functioncall functionName="SSAO_GATHER_ULTRA_HALF"/>
+    <functioncall functionName="SSAO_MAX"/>
+    <functioncall functionName="SSAO_MINIFY_FIRST"/>
+    <functioncall functionName="SSAO_MINIFY_MIPMAP"/>
+    <functioncall functionName="ScreenSpaceReflectionFilterPushConstant"/>
+    <functioncall functionName="ScreenSpaceReflectionPushConstant"/>
+    <functioncall functionName="ScreenSpaceReflectionScalePushConstant"/>
+    <functioncall functionName="SkyPushConstant"/>
+    <functioncall functionName="SubSurfaceScatteringPushConstant"/>
+    <functioncall functionName="TONEMAP_MODE_BICUBIC_GLOW_FILTER"/>
+    <functioncall functionName="TONEMAP_MODE_MAX"/>
+    <functioncall functionName="TONEMAP_MODE_NORMAL"/>
+    <functioncall functionName="TonemapPushConstant"/>
+    <functioncall functionName="UNIFORM_TYPE_IMAGE"/>
+    <functioncall functionName="UNIFORM_TYPE_SAMPLER_WITH_TEXTURE"/>
+    <functioncall functionName="UNIFORM_TYPE_STORAGE_BUFFER"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="_get_compute_uniform_set_from_image_pair"/>
+    <functioncall functionName="_get_compute_uniform_set_from_texture"/>
+    <functioncall functionName="_get_compute_uniform_set_from_texture_pair"/>
+    <functioncall functionName="_get_uniform_set_from_image"/>
+    <functioncall functionName="_get_uniform_set_from_texture"/>
+    <functioncall functionName="auto_exposure_grey"/>
+    <functioncall functionName="ba"/>
+    <functioncall functionName="base_flags"/>
+    <functioncall functionName="blend_additive"/>
+    <functioncall functionName="blend_state"/>
+    <functioncall functionName="blur_push_constant"/>
+    <functioncall functionName="blur_shader_version"/>
+    <functioncall functionName="bokeh_modes"/>
+    <functioncall functionName="brightness"/>
+    <functioncall functionName="buffer_update"/>
+    <functioncall functionName="coefficient_buffer"/>
+    <functioncall functionName="color_correction_texture"/>
+    <functioncall functionName="compute_list"/>
+    <functioncall functionName="compute_list_add_barrier"/>
+    <functioncall functionName="compute_list_begin"/>
+    <functioncall functionName="compute_list_bind_compute_pipeline"/>
+    <functioncall functionName="compute_list_bind_uniform_set"/>
+    <functioncall functionName="compute_list_dispatch"/>
+    <functioncall functionName="compute_list_end"/>
+    <functioncall functionName="compute_list_set_push_constant"/>
+    <functioncall functionName="compute_pipeline_create"/>
+    <functioncall functionName="contrast"/>
+    <functioncall functionName="copy_mode"/>
+    <functioncall functionName="copy_modes"/>
+    <functioncall functionName="create_disabled"/>
+    <functioncall functionName="cubemap_downsampler_modes"/>
+    <functioncall functionName="cubemap_filter_modes"/>
+    <functioncall functionName="cubemap_roughness_modes"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="default_mipmap_sampler"/>
+    <functioncall functionName="default_sampler"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="draw_list"/>
+    <functioncall functionName="draw_list_begin"/>
+    <functioncall functionName="draw_list_bind_index_array"/>
+    <functioncall functionName="draw_list_bind_render_pipeline"/>
+    <functioncall functionName="draw_list_bind_uniform_set"/>
+    <functioncall functionName="draw_list_draw"/>
+    <functioncall functionName="draw_list_end"/>
+    <functioncall functionName="draw_list_set_push_constant"/>
+    <functioncall functionName="exposure"/>
+    <functioncall functionName="exposure_texture"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fb_format"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="framebuffer_get_format"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="gather_push_constant"/>
+    <functioncall functionName="gather_shader_version"/>
+    <functioncall functionName="get_pixels_per_meter"/>
+    <functioncall functionName="get_render_pipeline"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_z_far"/>
+    <functioncall functionName="get_z_near"/>
+    <functioncall functionName="glow_intensity"/>
+    <functioncall functionName="glow_level_flags"/>
+    <functioncall functionName="glow_mode"/>
+    <functioncall functionName="glow_texture"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="high_quality_coeffs"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image_uniform_set"/>
+    <functioncall functionName="index_array"/>
+    <functioncall functionName="index_array_create"/>
+    <functioncall functionName="index_buffer"/>
+    <functioncall functionName="index_buffer_create"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="is_orthogonal"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="low_quality_coeffs"/>
+    <functioncall functionName="luminance_reduce_modes"/>
+    <functioncall functionName="minify_push_constant"/>
+    <functioncall functionName="minify_shader_version"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="orientation"/>
+    <functioncall functionName="p_adjust"/>
+    <functioncall functionName="p_all_source"/>
+    <functioncall functionName="p_alpha_to_zero"/>
+    <functioncall functionName="p_ao1"/>
+    <functioncall functionName="p_ao2"/>
+    <functioncall functionName="p_auto_exposure"/>
+    <functioncall functionName="p_auto_exposure_grey"/>
+    <functioncall functionName="p_back_texture"/>
+    <functioncall functionName="p_base"/>
+    <functioncall functionName="p_base_texture"/>
+    <functioncall functionName="p_bias"/>
+    <functioncall functionName="p_bloom"/>
+    <functioncall functionName="p_blur"/>
+    <functioncall functionName="p_blur_radius"/>
+    <functioncall functionName="p_blur_radius2"/>
+    <functioncall functionName="p_bokeh_size"/>
+    <functioncall functionName="p_cam_orthogonal"/>
+    <functioncall functionName="p_cam_zfar"/>
+    <functioncall functionName="p_cam_znear"/>
+    <functioncall functionName="p_camera"/>
+    <functioncall functionName="p_curve"/>
+    <functioncall functionName="p_depth"/>
+    <functioncall functionName="p_depth_buffer"/>
+    <functioncall functionName="p_depth_mipmaps_texture"/>
+    <functioncall functionName="p_depth_scale"/>
+    <functioncall functionName="p_depth_texture"/>
+    <functioncall functionName="p_dest_cubemap"/>
+    <functioncall functionName="p_dest_framebuffer"/>
+    <functioncall functionName="p_dest_texture"/>
+    <functioncall functionName="p_diffuse"/>
+    <functioncall functionName="p_diffuse2"/>
+    <functioncall functionName="p_dof_far"/>
+    <functioncall functionName="p_dof_far_begin"/>
+    <functioncall functionName="p_dof_far_size"/>
+    <functioncall functionName="p_dof_near"/>
+    <functioncall functionName="p_dof_near_begin"/>
+    <functioncall functionName="p_dof_near_size"/>
+    <functioncall functionName="p_dp_flip"/>
+    <functioncall functionName="p_draw_list"/>
+    <functioncall functionName="p_dst_framebuffer"/>
+    <functioncall functionName="p_edge_sharpness"/>
+    <functioncall functionName="p_exposure"/>
+    <functioncall functionName="p_face_id"/>
+    <functioncall functionName="p_fade_in"/>
+    <functioncall functionName="p_fade_out"/>
+    <functioncall functionName="p_fb"/>
+    <functioncall functionName="p_flip_y"/>
+    <functioncall functionName="p_force_luminance"/>
+    <functioncall functionName="p_half_size"/>
+    <functioncall functionName="p_halfsize_texture1"/>
+    <functioncall functionName="p_halfsize_texture2"/>
+    <functioncall functionName="p_hdr_bleed_scale"/>
+    <functioncall functionName="p_hdr_bleed_treshold"/>
+    <functioncall functionName="p_image"/>
+    <functioncall functionName="p_lights"/>
+    <functioncall functionName="p_list"/>
+    <functioncall functionName="p_luminance_cap"/>
+    <functioncall functionName="p_max_luminance"/>
+    <functioncall functionName="p_max_steps"/>
+    <functioncall functionName="p_metallic"/>
+    <functioncall functionName="p_min_luminance"/>
+    <functioncall functionName="p_multiplier"/>
+    <functioncall functionName="p_normal"/>
+    <functioncall functionName="p_normal_buffer"/>
+    <functioncall functionName="p_orientation"/>
+    <functioncall functionName="p_output"/>
+    <functioncall functionName="p_output_blur"/>
+    <functioncall functionName="p_prev_luminance"/>
+    <functioncall functionName="p_quality"/>
+    <functioncall functionName="p_radius"/>
+    <functioncall functionName="p_rect"/>
+    <functioncall functionName="p_reflection"/>
+    <functioncall functionName="p_roughness"/>
+    <functioncall functionName="p_sample_count"/>
+    <functioncall functionName="p_samplers"/>
+    <functioncall functionName="p_scale"/>
+    <functioncall functionName="p_scale_depth"/>
+    <functioncall functionName="p_scale_normal"/>
+    <functioncall functionName="p_secondary_texture"/>
+    <functioncall functionName="p_set"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_source_color"/>
+    <functioncall functionName="p_source_cubemap"/>
+    <functioncall functionName="p_source_normal"/>
+    <functioncall functionName="p_source_rd_texture"/>
+    <functioncall functionName="p_source_texture"/>
+    <functioncall functionName="p_specular"/>
+    <functioncall functionName="p_strength"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_texture1"/>
+    <functioncall functionName="p_texture2"/>
+    <functioncall functionName="p_texture_set"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_tolerance"/>
+    <functioncall functionName="p_uniform_set"/>
+    <functioncall functionName="p_upscale_buffer"/>
+    <functioncall functionName="p_use_jitter"/>
+    <functioncall functionName="p_z_far"/>
+    <functioncall functionName="p_z_near"/>
+    <functioncall functionName="pipeline"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="projection"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_constant"/>
+    <functioncall functionName="pv"/>
+    <functioncall functionName="randf"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="sampler"/>
+    <functioncall functionName="sampler_create"/>
+    <functioncall functionName="saturation"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="shader_modes"/>
+    <functioncall functionName="shader_version"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sky_push_constant"/>
+    <functioncall functionName="specular_modes"/>
+    <functioncall functionName="ssao_modes"/>
+    <functioncall functionName="ssr_filter_modes"/>
+    <functioncall functionName="ssr_modes"/>
+    <functioncall functionName="ssr_scale_modes"/>
+    <functioncall functionName="sss_modes"/>
+    <functioncall functionName="storage_buffer_create"/>
+    <functioncall functionName="store_camera"/>
+    <functioncall functionName="store_transform_3x3"/>
+    <functioncall functionName="texture1"/>
+    <functioncall functionName="texture2"/>
+    <functioncall functionName="tonemap_mode"/>
+    <functioncall functionName="tonemap_modes"/>
+    <functioncall functionName="tp"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="uniform_set"/>
+    <functioncall functionName="uniform_set_create"/>
+    <functioncall functionName="uniform_set_is_valid"/>
+    <functioncall functionName="uniforms"/>
+    <functioncall functionName="unit_size"/>
+    <functioncall functionName="use_auto_exposure"/>
+    <functioncall functionName="use_bcs"/>
+    <functioncall functionName="use_color_correction"/>
+    <functioncall functionName="use_fxaa"/>
+    <functioncall functionName="use_glow"/>
+    <functioncall functionName="use_high_quality"/>
+    <functioncall functionName="version_create"/>
+    <functioncall functionName="version_free"/>
+    <functioncall functionName="version_get_shader"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="white"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x_groups"/>
+    <functioncall functionName="xform4"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_groups"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zeromem"/>
+  </FileInfo>
+</analyzerinfo>

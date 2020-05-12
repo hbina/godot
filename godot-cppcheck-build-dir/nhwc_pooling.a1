@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="260609475">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/cpu_primitive.hpp" line="37" column="5"/>
+            <symbol>cpu_primitive_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;nhwc_pooling_bwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;nhwc_pooling_bwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.hpp" line="191" column="5"/>
+            <symbol>nhwc_pooling_bwd_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;nhwc_pooling_fwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;nhwc_pooling_fwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.hpp" line="73" column="5"/>
+            <symbol>nhwc_pooling_fwd_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.hpp" line="201" column="38"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/nhwc_pooling.hpp" line="153" column="38"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="strided_offset" lineNumber="47"/>
+    <functiondecl functionName="execute_backward" lineNumber="234"/>
+    <functiondecl functionName="execute_forward" lineNumber="82"/>
+    <functiondecl functionName="strided_offset" lineNumber="47"/>
+    <functiondecl functionName="execute_backward" lineNumber="234"/>
+    <functiondecl functionName="execute_forward" lineNumber="82"/>
+    <functioncall functionName="C"/>
+    <functioncall functionName="DECLARE_COMMON_PD_T"/>
+    <functioncall functionName="ID"/>
+    <functioncall functionName="IH"/>
+    <functioncall functionName="IW"/>
+    <functioncall functionName="KD"/>
+    <functioncall functionName="KH"/>
+    <functioncall functionName="KSD"/>
+    <functioncall functionName="KSH"/>
+    <functioncall functionName="KSW"/>
+    <functioncall functionName="KW"/>
+    <functioncall functionName="MB"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_DST"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_DST"/>
+    <functioncall functionName="MKLDNN_ARG_SCRATCHPAD"/>
+    <functioncall functionName="MKLDNN_ARG_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_WORKSPACE"/>
+    <functioncall functionName="OC"/>
+    <functioncall functionName="OD"/>
+    <functioncall functionName="OH"/>
+    <functioncall functionName="OW"/>
+    <functioncall functionName="PRAGMA_OMP_SIMD"/>
+    <functioncall functionName="SD"/>
+    <functioncall functionName="SH"/>
+    <functioncall functionName="SW"/>
+    <functioncall functionName="alg_kind"/>
+    <functioncall functionName="apd"/>
+    <functioncall functionName="apply_offset"/>
+    <functioncall functionName="array_add"/>
+    <functioncall functionName="array_div_by_const"/>
+    <functioncall functionName="array_nhwc_initialize"/>
+    <functioncall functionName="array_nhwc_max"/>
+    <functioncall functionName="array_set"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="blocking_desc"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="compare_ws"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cpu_primitive_t"/>
+    <functioncall functionName="create_scratchpad"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="current_value"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data_type_t"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="desired_fmt_tag"/>
+    <functioncall functionName="diff_dst_d"/>
+    <functioncall functionName="diff_dst_d_stride"/>
+    <functioncall functionName="diff_dst_h_stride"/>
+    <functioncall functionName="diff_dst_md"/>
+    <functioncall functionName="diff_dst_n_stride"/>
+    <functioncall functionName="diff_dst_w_stride"/>
+    <functioncall functionName="diff_src_d"/>
+    <functioncall functionName="diff_src_d_stride"/>
+    <functioncall functionName="diff_src_h_stride"/>
+    <functioncall functionName="diff_src_md"/>
+    <functioncall functionName="diff_src_n_stride"/>
+    <functioncall functionName="diff_src_w_stride"/>
+    <functioncall functionName="dst_d"/>
+    <functioncall functionName="dst_d_stride"/>
+    <functioncall functionName="dst_h_stride"/>
+    <functioncall functionName="dst_md"/>
+    <functioncall functionName="dst_n_stride"/>
+    <functioncall functionName="dst_offset_init"/>
+    <functioncall functionName="dst_w_stride"/>
+    <functioncall functionName="everyone_is"/>
+    <functioncall functionName="execute_backward"/>
+    <functioncall functionName="execute_forward"/>
+    <functioncall functionName="f32"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="ftmp"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="global_scratchpad_"/>
+    <functioncall functionName="grantor"/>
+    <functioncall functionName="has_default_values"/>
+    <functioncall functionName="hint_fwd_pd_"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="id_start"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ih"/>
+    <functioncall functionName="ih_start"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="init_default_ws"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_3d"/>
+    <functioncall functionName="is_fwd"/>
+    <functioncall functionName="iw"/>
+    <functioncall functionName="iw_start"/>
+    <functioncall functionName="kd"/>
+    <functioncall functionName="kh"/>
+    <functioncall functionName="kw"/>
+    <functioncall functionName="library"/>
+    <functioncall functionName="lowest"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="mb"/>
+    <functioncall functionName="memory_desc_matches_tag"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="mv"/>
+    <functioncall functionName="ncdhw"/>
+    <functioncall functionName="nchw"/>
+    <functioncall functionName="ndhwc"/>
+    <functioncall functionName="ndims"/>
+    <functioncall functionName="nhwc"/>
+    <functioncall functionName="nhwc_pooling_bwd_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="nhwc_pooling_fwd_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="num_summands"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="od"/>
+    <functioncall functionName="od_left"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="oh"/>
+    <functioncall functionName="oh_left"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="one_of"/>
+    <functioncall functionName="out_round"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="ow"/>
+    <functioncall functionName="ow_left"/>
+    <functioncall functionName="padF"/>
+    <functioncall functionName="padFront"/>
+    <functioncall functionName="padL"/>
+    <functioncall functionName="padT"/>
+    <functioncall functionName="parallel_nd"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="pooling_avg_exclude_padding"/>
+    <functioncall functionName="pooling_avg_include_padding"/>
+    <functioncall functionName="pooling_max"/>
+    <functioncall functionName="primitive_t"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="scratchpad_buffer_"/>
+    <functioncall functionName="scratchpad_registry"/>
+    <functioncall functionName="scratchpad_size"/>
+    <functioncall functionName="set_default_params"/>
+    <functioncall functionName="src_d"/>
+    <functioncall functionName="src_d_stride"/>
+    <functioncall functionName="src_h_stride"/>
+    <functioncall functionName="src_md"/>
+    <functioncall functionName="src_n_stride"/>
+    <functioncall functionName="src_offset_init"/>
+    <functioncall functionName="src_w_stride"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strided_offset"/>
+    <functioncall functionName="undef"/>
+    <functioncall functionName="use_global_scratchpad"/>
+    <functioncall functionName="use_workspace"/>
+    <functioncall functionName="workspace_md"/>
+    <functioncall functionName="ws"/>
+    <functioncall functionName="ws_d"/>
+    <functioncall functionName="ws_d_stride"/>
+    <functioncall functionName="ws_dt"/>
+    <functioncall functionName="ws_h_stride"/>
+    <functioncall functionName="ws_n_stride"/>
+    <functioncall functionName="ws_offset_init"/>
+    <functioncall functionName="ws_w_stride"/>
+  </FileInfo>
+</analyzerinfo>

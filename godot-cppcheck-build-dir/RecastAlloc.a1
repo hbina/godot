@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="396862708">
+        <error id="CastIntegerToAddressAtReturn" severity="portability" msg="Returning an integer in a function with pointer return type is not portable." verbose="Returning an integer (int/long/etc) in a function with pointer return type is not portable across different platforms and compilers. For example in 32-bit Windows and Linux they are same width, but in 64-bit Windows and Linux they are of different width. In worst case you end up casting 64-bit integer down to 32-bit pointer. The safe way is to always return a pointer." cwe="758">
+            <location file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastAlloc.cpp" line="47" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="rcAllocDefault" lineNumber="24"/>
+    <functiondecl functionName="rcFreeDefault" lineNumber="29"/>
+    <functiondecl functionName="rcAllocSetCustom" lineNumber="38"/>
+    <functiondecl functionName="rcAlloc" lineNumber="45"/>
+    <functiondecl functionName="rcFree" lineNumber="56"/>
+    <functioncall functionName="allocFunc"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="freeFunc"/>
+    <functioncall functionName="hint"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="rcAllocDefault"/>
+    <functioncall functionName="rcAllocHint"/>
+    <functioncall functionName="rcFreeDefault"/>
+    <functioncall functionName="sRecastAllocFunc"/>
+    <functioncall functionName="sRecastFreeFunc"/>
+    <functioncall functionName="size"/>
+  </FileInfo>
+</analyzerinfo>

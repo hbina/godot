@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2690082379">
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Assimp::MinMaxChooser &lt; float &gt;::operator()&apos; can be const." verbose="The member function &apos;Assimp::MinMaxChooser &lt; float &gt;::operator()&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="158" column="10"/>
+            <symbol>Assimp::MinMaxChooser &lt; float &gt;::operator()</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Assimp::MinMaxChooser &lt; double &gt;::operator()&apos; can be const." verbose="The member function &apos;Assimp::MinMaxChooser &lt; double &gt;::operator()&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="163" column="10"/>
+            <symbol>Assimp::MinMaxChooser &lt; double &gt;::operator()</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Assimp::MinMaxChooser &lt; unsigned int &gt;::operator()&apos; can be const." verbose="The member function &apos;Assimp::MinMaxChooser &lt; unsigned int &gt;::operator()&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="168" column="10"/>
+            <symbol>Assimp::MinMaxChooser &lt; unsigned int &gt;::operator()</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;nullptr!=prop&apos; is redundant or there is possible null pointer dereference: prop." verbose="Either the condition &apos;nullptr!=prop&apos; is redundant or there is possible null pointer dereference: prop." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="593" column="24" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="591" column="58" info="Assignment &apos;prop=pMaterial-&gt;mProperties[i]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="592" column="27" info="Assuming that condition &apos;nullptr!=prop&apos; is not redundant"/>
+            <symbol>prop</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;DoValidation&apos; argument 1 names different: declaration &apos;array&apos; definition &apos;parray&apos;." verbose="Function &apos;DoValidation&apos; argument 1 names different: declaration &apos;array&apos; definition &apos;parray&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="123" column="42"/>
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h" line="175" column="34"/>
+            <symbol>DoValidation</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;DoValidationEx&apos; argument 1 names different: declaration &apos;array&apos; definition &apos;parray&apos;." verbose="Function &apos;DoValidationEx&apos; argument 1 names different: declaration &apos;array&apos; definition &apos;parray&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="146" column="51"/>
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h" line="180" column="36"/>
+            <symbol>DoValidationEx</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Validate&apos; argument 2 names different: declaration &apos;pBoneAnim&apos; definition &apos;pNodeAnim&apos;." verbose="Function &apos;Validate&apos; argument 2 names different: declaration &apos;pBoneAnim&apos; definition &apos;pNodeAnim&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="818" column="24"/>
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h" line="152" column="27"/>
+            <symbol>Validate</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;min&apos; can be declared with const" verbose="Parameter &apos;min&apos; can be declared with const" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="196" column="35"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;max&apos; can be declared with const" verbose="Parameter &apos;max&apos; can be declared with const" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="196" column="52"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;min&apos; can be declared with const" verbose="Parameter &apos;min&apos; can be declared with const" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="201" column="33"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;max&apos; can be declared with const" verbose="Parameter &apos;max&apos; can be declared with const" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="201" column="48"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;min&apos; can be declared with const" verbose="Parameter &apos;min&apos; can be declared with const" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="207" column="38"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;max&apos; can be declared with const" verbose="Parameter &apos;max&apos; can be declared with const" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="207" column="58"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:92:25" call-funcname="ReportError" call-argnr="2" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="129" col="13" my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:175:17" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:92:25" call-funcname="ReportError" call-argnr="3" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="129" col="13" my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:175:17" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:92:25" call-funcname="ReportError" call-argnr="2" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="153" col="13" my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:180:17" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:92:25" call-funcname="ReportError" call-argnr="3" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="153" col="13" my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:180:17" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:180:17" call-funcname="DoValidationEx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="184" col="5" my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:186:17" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:180:17" call-funcname="DoValidationEx" call-argnr="3" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="184" col="5" my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:186:17" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:180:17" call-funcname="DoValidationEx" call-argnr="4" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="184" col="5" my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:186:17" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h:348:10" my-argnr="1" my-argname="pScene" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ProcessHelper.h" line="353" col="56" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp:112:5" my-argnr="2" my-argname="node" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="113" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:140:10" my-argnr="1" my-argname="pLight" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="277" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:145:10" my-argnr="1" my-argname="pCamera" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="299" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:128:10" my-argnr="1" my-argname="pMaterial" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="590" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:121:10" my-argnr="1" my-argname="pMaterial" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="693" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:134:10" my-argnr="1" my-argname="pTexture" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="783" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.h:169:10" my-argnr="1" my-argname="pString" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/ValidateDataStructure.cpp" line="1014" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="IsActive" lineNumber="74"/>
+    <functiondecl functionName="ReportError" lineNumber="79"/>
+    <functiondecl functionName="ReportWarning" lineNumber="95"/>
+    <functiondecl functionName="HasNameMatch" lineNumber="112"/>
+    <functiondecl functionName="Execute" lineNumber="202"/>
+    <functiondecl functionName="Validate" lineNumber="275"/>
+    <functiondecl functionName="Validate" lineNumber="297"/>
+    <functiondecl functionName="Validate" lineNumber="309"/>
+    <functiondecl functionName="Validate" lineNumber="516"/>
+    <functiondecl functionName="Validate" lineNumber="537"/>
+    <functiondecl functionName="SearchForInvalidTextures" lineNumber="577"/>
+    <functiondecl functionName="Validate" lineNumber="690"/>
+    <functiondecl functionName="Validate" lineNumber="780"/>
+    <functiondecl functionName="Validate" lineNumber="817"/>
+    <functiondecl functionName="Validate" lineNumber="919"/>
+    <functiondecl functionName="Validate" lineNumber="962"/>
+    <functiondecl functionName="Validate" lineNumber="1012"/>
+    <functioncall functionName="AI_MATH_PI"/>
+    <functioncall functionName="AI_MATKEY_OPACITY"/>
+    <functioncall functionName="AI_MATKEY_SHADING_MODEL"/>
+    <functioncall functionName="AI_MATKEY_SHININESS"/>
+    <functioncall functionName="AI_MATKEY_SHININESS_STRENGTH"/>
+    <functioncall functionName="AI_MAX_BONE_WEIGHTS"/>
+    <functioncall functionName="AI_MAX_FACES"/>
+    <functioncall functionName="AI_MAX_FACE_INDICES"/>
+    <functioncall functionName="AI_MAX_VERTICES"/>
+    <functioncall functionName="AI_SPP_SPATIAL_SORT"/>
+    <functioncall functionName="AI_WONT_RETURN_SUFFIX"/>
+    <functioncall functionName="ASSIMP_LOG_DEBUG"/>
+    <functioncall functionName="ASSIMP_LOG_WARN"/>
+    <functioncall functionName="AddProperty"/>
+    <functioncall functionName="C_Str"/>
+    <functioncall functionName="ComputePositionEpsilon"/>
+    <functioncall functionName="DeadlyImportError"/>
+    <functioncall functionName="DoValidation"/>
+    <functioncall functionName="DoValidationEx"/>
+    <functioncall functionName="DoValidationWithNameCheck"/>
+    <functioncall functionName="Fill"/>
+    <functioncall functionName="HasNameMatch"/>
+    <functioncall functionName="HasTextureCoords"/>
+    <functioncall functionName="HasVertexColors"/>
+    <functioncall functionName="IsBlack"/>
+    <functioncall functionName="MAXLEN"/>
+    <functioncall functionName="MinMaxChooser"/>
+    <functioncall functionName="MinMaxChooser &lt; double &gt;"/>
+    <functioncall functionName="MinMaxChooser &lt; float &gt;"/>
+    <functioncall functionName="MinMaxChooser &lt; unsigned int &gt;"/>
+    <functioncall functionName="MinMaxChooser&lt;aiQuaternion&gt;"/>
+    <functioncall functionName="MinMaxChooser&lt;aiVector3D&gt;"/>
+    <functioncall functionName="RemoveProperty"/>
+    <functioncall functionName="ReportError"/>
+    <functioncall functionName="ReportWarning"/>
+    <functioncall functionName="SearchForInvalidTextures"/>
+    <functioncall functionName="TextureTypeToString"/>
+    <functioncall functionName="Validate"/>
+    <functioncall functionName="ValidateDSProcess"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="achFormatHint"/>
+    <functioncall functionName="afSum"/>
+    <functioncall functionName="aiColor4t"/>
+    <functioncall functionName="aiGetMaterialFloat"/>
+    <functioncall functionName="aiGetMaterialInteger"/>
+    <functioncall functionName="aiProcess_JoinIdenticalVertices"/>
+    <functioncall functionName="aiQuatKey"/>
+    <functioncall functionName="aiQuaterniont"/>
+    <functioncall functionName="aiShadingMode"/>
+    <functioncall functionName="aiString"/>
+    <functioncall functionName="aiTextureMapping"/>
+    <functioncall functionName="aiTextureType_AMBIENT"/>
+    <functioncall functionName="aiTextureType_DIFFUSE"/>
+    <functioncall functionName="aiTextureType_DISPLACEMENT"/>
+    <functioncall functionName="aiTextureType_EMISSIVE"/>
+    <functioncall functionName="aiTextureType_HEIGHT"/>
+    <functioncall functionName="aiTextureType_LIGHTMAP"/>
+    <functioncall functionName="aiTextureType_NORMALS"/>
+    <functioncall functionName="aiTextureType_OPACITY"/>
+    <functioncall functionName="aiTextureType_REFLECTION"/>
+    <functioncall functionName="aiTextureType_SHININESS"/>
+    <functioncall functionName="aiTextureType_SPECULAR"/>
+    <functioncall functionName="aiUVTransform"/>
+    <functioncall functionName="aiVector2t"/>
+    <functioncall functionName="aiVector3D"/>
+    <functioncall functionName="aiVector3t"/>
+    <functioncall functionName="aiVectorKey"/>
+    <functioncall functionName="aiVertexWeight"/>
+    <functioncall functionName="ai_assert"/>
+    <functioncall functionName="ai_real"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bNoSpecified"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="dLast"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="fTemp"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="firstName"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iChannels"/>
+    <functioncall functionName="iIndex"/>
+    <functioncall functionName="iLen"/>
+    <functioncall functionName="iNumIndices"/>
+    <functioncall functionName="iShading"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="mAngleInnerCone"/>
+    <functioncall functionName="mAngleOuterCone"/>
+    <functioncall functionName="mAnimations"/>
+    <functioncall functionName="mAttenuationQuadratic"/>
+    <functioncall functionName="mBones"/>
+    <functioncall functionName="mCameras"/>
+    <functioncall functionName="mChildren"/>
+    <functioncall functionName="mClipPlaneNear"/>
+    <functioncall functionName="mData"/>
+    <functioncall functionName="mDataLength"/>
+    <functioncall functionName="mDuration"/>
+    <functioncall functionName="mFlags"/>
+    <functioncall functionName="mHeight"/>
+    <functioncall functionName="mHorizontalFOV"/>
+    <functioncall functionName="mIndex"/>
+    <functioncall functionName="mIndices"/>
+    <functioncall functionName="mKeys"/>
+    <functioncall functionName="mLights"/>
+    <functioncall functionName="mMaterialIndex"/>
+    <functioncall functionName="mMaterials"/>
+    <functioncall functionName="mMeshes"/>
+    <functioncall functionName="mName"/>
+    <functioncall functionName="mNodeName"/>
+    <functioncall functionName="mNumAnimations"/>
+    <functioncall functionName="mNumBones"/>
+    <functioncall functionName="mNumCameras"/>
+    <functioncall functionName="mNumChannels"/>
+    <functioncall functionName="mNumChildren"/>
+    <functioncall functionName="mNumFaces"/>
+    <functioncall functionName="mNumIndices"/>
+    <functioncall functionName="mNumKeys"/>
+    <functioncall functionName="mNumLights"/>
+    <functioncall functionName="mNumMaterials"/>
+    <functioncall functionName="mNumMeshes"/>
+    <functioncall functionName="mNumMorphMeshChannels"/>
+    <functioncall functionName="mNumPositionKeys"/>
+    <functioncall functionName="mNumProperties"/>
+    <functioncall functionName="mNumRotationKeys"/>
+    <functioncall functionName="mNumScalingKeys"/>
+    <functioncall functionName="mNumTextures"/>
+    <functioncall functionName="mNumVertices"/>
+    <functioncall functionName="mNumWeights"/>
+    <functioncall functionName="mParent"/>
+    <functioncall functionName="mPositionKeys"/>
+    <functioncall functionName="mPrimitiveTypes"/>
+    <functioncall functionName="mRootNode"/>
+    <functioncall functionName="mRotationKeys"/>
+    <functioncall functionName="mScalingKeys"/>
+    <functioncall functionName="mScene"/>
+    <functioncall functionName="mTextures"/>
+    <functioncall functionName="mTime"/>
+    <functioncall functionName="mType"/>
+    <functioncall functionName="mValue"/>
+    <functioncall functionName="mVertexId"/>
+    <functioncall functionName="mVertices"/>
+    <functioncall functionName="mWeight"/>
+    <functioncall functionName="mWidth"/>
+    <functioncall functionName="mappings"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nodeName"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pAnimation"/>
+    <functioncall functionName="pMaterial"/>
+    <functioncall functionName="pMesh"/>
+    <functioncall functionName="pNode"/>
+    <functioncall functionName="pScene"/>
+    <functioncall functionName="parray"/>
+    <functioncall functionName="pcData"/>
+    <functioncall functionName="prop"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="reset"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="secondName"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="szBuffer"/>
+    <functioncall functionName="szType"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="va_end"/>
+    <functioncall functionName="va_start"/>
+    <functioncall functionName="vector"/>
+    <functioncall functionName="vsprintf"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

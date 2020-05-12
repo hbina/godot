@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="61182568">
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;_open&apos; is called from constructor &apos;FileAccessZip(const String&amp;p_path,const PackedData::PackedFile&amp;p_file)&apos; at line 374. Dynamic binding is not used." verbose="Virtual function &apos;_open&apos; is called from constructor &apos;FileAccessZip(const String&amp;p_path,const PackedData::PackedFile&amp;p_file)&apos; at line 374. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/core/io/file_access_zip.cpp" file="/home/hbina/git/godot/core/io/file_access_zip.h" line="94" column="16" info="_open is a virtual function"/>
+            <location file="/home/hbina/git/godot/core/io/file_access_zip.cpp" line="374" column="2" info="Calling _open"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~FileAccessZip()&apos; at line 379. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~FileAccessZip()&apos; at line 379. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/core/io/file_access_zip.cpp" file="/home/hbina/git/godot/core/io/file_access_zip.h" line="95" column="15" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/core/io/file_access_zip.cpp" line="379" column="2" info="Calling close"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/file_access_zip.h:106:14" call-funcname="get_buffer" call-argnr="1" file="/home/hbina/git/godot/core/io/file_access_zip.cpp" line="327" col="12" call-argexpr="&ret" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/file_access_zip.h:78:14" my-argnr="2" my-argname="p_file" file="/home/hbina/git/godot/core/io/file_access_zip.cpp" line="231" col="39" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/file_access_zip.h:78:14" my-argnr="2" my-argname="p_file" file="/home/hbina/git/godot/core/io/file_access_zip.cpp" line="231" col="39" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="godot_open" lineNumber="42"/>
+    <functiondecl functionName="godot_read" lineNumber="54"/>
+    <functiondecl functionName="godot_write" lineNumber="61"/>
+    <functiondecl functionName="godot_tell" lineNumber="66"/>
+    <functiondecl functionName="godot_seek" lineNumber="72"/>
+    <functiondecl functionName="godot_close" lineNumber="93"/>
+    <functiondecl functionName="godot_testerror" lineNumber="100"/>
+    <functiondecl functionName="godot_alloc" lineNumber="106"/>
+    <functiondecl functionName="godot_free" lineNumber="111"/>
+    <functiondecl functionName="close_handle" lineNumber="118"/>
+    <functiondecl functionName="get_file_handle" lineNumber="127"/>
+    <functiondecl functionName="try_open_pack" lineNumber="163"/>
+    <functiondecl functionName="file_exists" lineNumber="224"/>
+    <functiondecl functionName="get_file" lineNumber="229"/>
+    <functiondecl functionName="get_singleton" lineNumber="234"/>
+    <functiondecl functionName="_open" lineNumber="261"/>
+    <functiondecl functionName="close" lineNumber="277"/>
+    <functiondecl functionName="is_open" lineNumber="288"/>
+    <functiondecl functionName="seek" lineNumber="293"/>
+    <functiondecl functionName="seek_end" lineNumber="299"/>
+    <functiondecl functionName="get_position" lineNumber="305"/>
+    <functiondecl functionName="get_len" lineNumber="311"/>
+    <functiondecl functionName="eof_reached" lineNumber="317"/>
+    <functiondecl functionName="get_8" lineNumber="324"/>
+    <functiondecl functionName="get_buffer" lineNumber="331"/>
+    <functiondecl functionName="get_error" lineNumber="344"/>
+    <functiondecl functionName="flush" lineNumber="357"/>
+    <functiondecl functionName="store_8" lineNumber="362"/>
+    <functiondecl functionName="file_exists" lineNumber="367"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="File"/>
+    <functioncall functionName="FileAccessZip"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="ZipArchive"/>
+    <functioncall functionName="_open"/>
+    <functioncall functionName="add_path"/>
+    <functioncall functionName="address"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="at_eof"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="close_handle"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="eof_reached"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fa"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file_exists"/>
+    <functioncall functionName="file_info"/>
+    <functioncall functionName="file_pos"/>
+    <functioncall functionName="filename"/>
+    <functioncall functionName="filename_inzip"/>
+    <functioncall functionName="fname"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_error"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_file_handle"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="gi"/>
+    <functioncall functionName="godot_alloc"/>
+    <functioncall functionName="godot_close"/>
+    <functioncall functionName="godot_free"/>
+    <functioncall functionName="godot_open"/>
+    <functioncall functionName="godot_read"/>
+    <functioncall functionName="godot_seek"/>
+    <functioncall functionName="godot_tell"/>
+    <functioncall functionName="godot_testerror"/>
+    <functioncall functionName="godot_write"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="is_open"/>
+    <functioncall functionName="md5"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="nocasecmp_to"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="number_entry"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="opaque"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="p_dst"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_fname"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_position"/>
+    <functioncall functionName="p_replace_files"/>
+    <functioncall functionName="package"/>
+    <functioncall functionName="pkg"/>
+    <functioncall functionName="pkg_num"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uncompressed_size"/>
+    <functioncall functionName="unzClose"/>
+    <functioncall functionName="unzCloseCurrentFile"/>
+    <functioncall functionName="unzGetCurrentFileInfo64"/>
+    <functioncall functionName="unzGetFilePos"/>
+    <functioncall functionName="unzGetGlobalInfo64"/>
+    <functioncall functionName="unzGetOpaque"/>
+    <functioncall functionName="unzGoToFilePos"/>
+    <functioncall functionName="unzGoToNextFile"/>
+    <functioncall functionName="unzOpen2"/>
+    <functioncall functionName="unzOpenCurrentFile"/>
+    <functioncall functionName="unzReadCurrentFile"/>
+    <functioncall functionName="unzSeekCurrentFile"/>
+    <functioncall functionName="unzeof"/>
+    <functioncall functionName="unztell"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="zeromem"/>
+    <functioncall functionName="zfile"/>
+  </FileInfo>
+</analyzerinfo>

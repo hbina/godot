@@ -2663,19 +2663,19 @@ void RasterizerSceneHighEndRD::_update_render_base_uniform_set() {
 				if (gi_probe_is_anisotropic()) {
 					if (probe.is_null()) {
 						RID empty_tex = storage->texture_rd_get_default(RasterizerStorageRD::DEFAULT_RD_TEXTURE_3D_WHITE);
-						u.ids.write[i * 3 + 0] = empty_tex;
-						u.ids.write[i * 3 + 1] = empty_tex;
-						u.ids.write[i * 3 + 2] = empty_tex;
+						u.ids[i * 3 + 0] = empty_tex;
+						u.ids[i * 3 + 1] = empty_tex;
+						u.ids[i * 3 + 2] = empty_tex;
 					} else {
-						u.ids.write[i * 3 + 0] = gi_probe_instance_get_texture(probe);
-						u.ids.write[i * 3 + 1] = gi_probe_instance_get_aniso_texture(probe, 0);
-						u.ids.write[i * 3 + 2] = gi_probe_instance_get_aniso_texture(probe, 1);
+						u.ids[i * 3 + 0] = gi_probe_instance_get_texture(probe);
+						u.ids[i * 3 + 1] = gi_probe_instance_get_aniso_texture(probe, 0);
+						u.ids[i * 3 + 2] = gi_probe_instance_get_aniso_texture(probe, 1);
 					}
 				} else {
 					if (probe.is_null()) {
-						u.ids.write[i] = storage->texture_rd_get_default(RasterizerStorageRD::DEFAULT_RD_TEXTURE_3D_WHITE);
+						u.ids[i] = storage->texture_rd_get_default(RasterizerStorageRD::DEFAULT_RD_TEXTURE_3D_WHITE);
 					} else {
-						u.ids.write[i] = gi_probe_instance_get_texture(probe);
+						u.ids[i] = gi_probe_instance_get_texture(probe);
 					}
 				}
 			}

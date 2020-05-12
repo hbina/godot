@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3984097876">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;channel_for_roughness&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;channel_for_roughness&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/import/resource_importer_layered_texture.cpp" file="/home/hbina/git/godot/editor/import/resource_importer_texture.h" line="69" column="4"/>
+            <symbol>channel_for_roughness</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="COMPRESS_BASIS_UNIVERSAL"/>
+    <functioncall functionName="COMPRESS_LOSSLESS"/>
+    <functioncall functionName="COMPRESS_LOSSY"/>
+    <functioncall functionName="COMPRESS_VRAM_COMPRESSED"/>
+    <functioncall functionName="COMPRESS_VRAM_UNCOMPRESSED"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="MakeInfo"/>
+    <functioncall functionName="PRESET_2D"/>
+    <functioncall functionName="PRESET_2D_PIXEL"/>
+    <functioncall functionName="PRESET_3D"/>
+    <functioncall functionName="PRESET_DETECT"/>
+    <functioncall functionName="ResourceImporter"/>
+    <functioncall functionName="ResourceImporterTexture"/>
+    <functioncall functionName="TEXTURE_DETECT_ROUGNHESS_R"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+  </FileInfo>
+</analyzerinfo>

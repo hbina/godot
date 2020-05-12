@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2482946713">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;factor&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;factor&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/core/input/input_event.cpp" line="1240" column="2"/>
+            <symbol>factor</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;delta&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;delta&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/core/input/input_event.cpp" line="1284" column="2"/>
+            <symbol>delta</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/input/input_event.cpp" line="49" column="68"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/input/input_event.cpp" line="55" column="82"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/input/input_event.cpp" line="62" column="82"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/input/input_event.cpp" line="70" column="82"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/input/input_event.cpp" line="86" column="25"/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/input/input_event.h:264:7" my-argnr="1" my-argname="event" file="/home/hbina/git/godot/core/input/input_event.cpp" line="209" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/input/input_event.h:264:7" my-argnr="1" my-argname="event" file="/home/hbina/git/godot/core/input/input_event.cpp" line="209" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_device" lineNumber="39"/>
+    <functiondecl functionName="get_device" lineNumber="43"/>
+    <functiondecl functionName="is_action" lineNumber="47"/>
+    <functiondecl functionName="is_action_pressed" lineNumber="52"/>
+    <functiondecl functionName="is_action_released" lineNumber="59"/>
+    <functiondecl functionName="get_action_strength" lineNumber="66"/>
+    <functiondecl functionName="is_pressed" lineNumber="74"/>
+    <functiondecl functionName="is_echo" lineNumber="79"/>
+    <functiondecl functionName="xformed_by" lineNumber="84"/>
+    <functiondecl functionName="as_text" lineNumber="89"/>
+    <functiondecl functionName="action_match" lineNumber="94"/>
+    <functiondecl functionName="shortcut_match" lineNumber="99"/>
+    <functiondecl functionName="is_action_type" lineNumber="104"/>
+    <functiondecl functionName="_bind_methods" lineNumber="109"/>
+    <functiondecl functionName="_bind_methods" lineNumber="141"/>
+    <functiondecl functionName="set_window_id" lineNumber="148"/>
+    <functiondecl functionName="get_window_id" lineNumber="151"/>
+    <functiondecl functionName="set_shift" lineNumber="161"/>
+    <functiondecl functionName="get_shift" lineNumber="166"/>
+    <functiondecl functionName="set_alt" lineNumber="171"/>
+    <functiondecl functionName="get_alt" lineNumber="175"/>
+    <functiondecl functionName="set_control" lineNumber="180"/>
+    <functiondecl functionName="get_control" lineNumber="184"/>
+    <functiondecl functionName="set_metakey" lineNumber="189"/>
+    <functiondecl functionName="get_metakey" lineNumber="193"/>
+    <functiondecl functionName="set_command" lineNumber="198"/>
+    <functiondecl functionName="get_command" lineNumber="202"/>
+    <functiondecl functionName="set_modifiers_from_event" lineNumber="207"/>
+    <functiondecl functionName="_bind_methods" lineNumber="215"/>
+    <functiondecl functionName="set_pressed" lineNumber="249"/>
+    <functiondecl functionName="is_pressed" lineNumber="254"/>
+    <functiondecl functionName="set_keycode" lineNumber="259"/>
+    <functiondecl functionName="get_keycode" lineNumber="264"/>
+    <functiondecl functionName="set_physical_keycode" lineNumber="269"/>
+    <functiondecl functionName="get_physical_keycode" lineNumber="274"/>
+    <functiondecl functionName="set_unicode" lineNumber="279"/>
+    <functiondecl functionName="get_unicode" lineNumber="284"/>
+    <functiondecl functionName="set_echo" lineNumber="289"/>
+    <functiondecl functionName="is_echo" lineNumber="294"/>
+    <functiondecl functionName="get_keycode_with_modifiers" lineNumber="299"/>
+    <functiondecl functionName="get_physical_keycode_with_modifiers" lineNumber="314"/>
+    <functiondecl functionName="as_text" lineNumber="329"/>
+    <functiondecl functionName="action_match" lineNumber="350"/>
+    <functiondecl functionName="shortcut_match" lineNumber="377"/>
+    <functiondecl functionName="_bind_methods" lineNumber="389"/>
+    <functiondecl functionName="set_button_mask" lineNumber="425"/>
+    <functiondecl functionName="get_button_mask" lineNumber="429"/>
+    <functiondecl functionName="set_position" lineNumber="434"/>
+    <functiondecl functionName="get_position" lineNumber="438"/>
+    <functiondecl functionName="set_global_position" lineNumber="443"/>
+    <functiondecl functionName="get_global_position" lineNumber="447"/>
+    <functiondecl functionName="_bind_methods" lineNumber="452"/>
+    <functiondecl functionName="set_factor" lineNumber="475"/>
+    <functiondecl functionName="get_factor" lineNumber="480"/>
+    <functiondecl functionName="set_button_index" lineNumber="485"/>
+    <functiondecl functionName="get_button_index" lineNumber="489"/>
+    <functiondecl functionName="set_pressed" lineNumber="494"/>
+    <functiondecl functionName="is_pressed" lineNumber="498"/>
+    <functiondecl functionName="set_doubleclick" lineNumber="503"/>
+    <functiondecl functionName="is_doubleclick" lineNumber="507"/>
+    <functiondecl functionName="xformed_by" lineNumber="512"/>
+    <functiondecl functionName="action_match" lineNumber="536"/>
+    <functiondecl functionName="as_text" lineNumber="553"/>
+    <functiondecl functionName="_bind_methods" lineNumber="591"/>
+    <functiondecl functionName="set_tilt" lineNumber="621"/>
+    <functiondecl functionName="get_tilt" lineNumber="626"/>
+    <functiondecl functionName="set_pressure" lineNumber="631"/>
+    <functiondecl functionName="get_pressure" lineNumber="636"/>
+    <functiondecl functionName="set_relative" lineNumber="641"/>
+    <functiondecl functionName="get_relative" lineNumber="646"/>
+    <functiondecl functionName="set_speed" lineNumber="651"/>
+    <functiondecl functionName="get_speed" lineNumber="656"/>
+    <functiondecl functionName="xformed_by" lineNumber="661"/>
+    <functiondecl functionName="as_text" lineNumber="688"/>
+    <functiondecl functionName="accumulate" lineNumber="714"/>
+    <functiondecl functionName="_bind_methods" lineNumber="756"/>
+    <functiondecl functionName="set_axis" lineNumber="783"/>
+    <functiondecl functionName="get_axis" lineNumber="788"/>
+    <functiondecl functionName="set_axis_value" lineNumber="793"/>
+    <functiondecl functionName="get_axis_value" lineNumber="798"/>
+    <functiondecl functionName="is_pressed" lineNumber="803"/>
+    <functiondecl functionName="action_match" lineNumber="808"/>
+    <functiondecl functionName="as_text" lineNumber="835"/>
+    <functiondecl functionName="_bind_methods" lineNumber="840"/>
+    <functiondecl functionName="set_button_index" lineNumber="859"/>
+    <functiondecl functionName="get_button_index" lineNumber="864"/>
+    <functiondecl functionName="set_pressed" lineNumber="869"/>
+    <functiondecl functionName="is_pressed" lineNumber="873"/>
+    <functiondecl functionName="set_pressure" lineNumber="878"/>
+    <functiondecl functionName="get_pressure" lineNumber="882"/>
+    <functiondecl functionName="action_match" lineNumber="887"/>
+    <functiondecl functionName="shortcut_match" lineNumber="904"/>
+    <functiondecl functionName="as_text" lineNumber="913"/>
+    <functiondecl functionName="_bind_methods" lineNumber="918"/>
+    <functiondecl functionName="set_index" lineNumber="943"/>
+    <functiondecl functionName="get_index" lineNumber="947"/>
+    <functiondecl functionName="set_position" lineNumber="952"/>
+    <functiondecl functionName="get_position" lineNumber="956"/>
+    <functiondecl functionName="set_pressed" lineNumber="961"/>
+    <functiondecl functionName="is_pressed" lineNumber="965"/>
+    <functiondecl functionName="xformed_by" lineNumber="970"/>
+    <functiondecl functionName="as_text" lineNumber="983"/>
+    <functiondecl functionName="_bind_methods" lineNumber="988"/>
+    <functiondecl functionName="set_index" lineNumber="1012"/>
+    <functiondecl functionName="get_index" lineNumber="1017"/>
+    <functiondecl functionName="set_position" lineNumber="1022"/>
+    <functiondecl functionName="get_position" lineNumber="1026"/>
+    <functiondecl functionName="set_relative" lineNumber="1031"/>
+    <functiondecl functionName="get_relative" lineNumber="1035"/>
+    <functiondecl functionName="set_speed" lineNumber="1040"/>
+    <functiondecl functionName="get_speed" lineNumber="1044"/>
+    <functiondecl functionName="xformed_by" lineNumber="1049"/>
+    <functiondecl functionName="as_text" lineNumber="1066"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1071"/>
+    <functiondecl functionName="set_action" lineNumber="1097"/>
+    <functiondecl functionName="get_action" lineNumber="1101"/>
+    <functiondecl functionName="set_pressed" lineNumber="1106"/>
+    <functiondecl functionName="is_pressed" lineNumber="1110"/>
+    <functiondecl functionName="set_strength" lineNumber="1115"/>
+    <functiondecl functionName="get_strength" lineNumber="1119"/>
+    <functiondecl functionName="shortcut_match" lineNumber="1123"/>
+    <functiondecl functionName="is_action" lineNumber="1130"/>
+    <functiondecl functionName="action_match" lineNumber="1135"/>
+    <functiondecl functionName="as_text" lineNumber="1151"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1156"/>
+    <functiondecl functionName="set_position" lineNumber="1180"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1185"/>
+    <functiondecl functionName="get_position" lineNumber="1193"/>
+    <functiondecl functionName="set_factor" lineNumber="1199"/>
+    <functiondecl functionName="get_factor" lineNumber="1204"/>
+    <functiondecl functionName="xformed_by" lineNumber="1209"/>
+    <functiondecl functionName="as_text" lineNumber="1225"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1230"/>
+    <functiondecl functionName="set_delta" lineNumber="1244"/>
+    <functiondecl functionName="get_delta" lineNumber="1249"/>
+    <functiondecl functionName="xformed_by" lineNumber="1253"/>
+    <functiondecl functionName="as_text" lineNumber="1269"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1274"/>
+    <functiondecl functionName="set_channel" lineNumber="1288"/>
+    <functiondecl functionName="get_channel" lineNumber="1293"/>
+    <functiondecl functionName="set_message" lineNumber="1297"/>
+    <functiondecl functionName="get_message" lineNumber="1302"/>
+    <functiondecl functionName="set_pitch" lineNumber="1306"/>
+    <functiondecl functionName="get_pitch" lineNumber="1311"/>
+    <functiondecl functionName="set_velocity" lineNumber="1315"/>
+    <functiondecl functionName="get_velocity" lineNumber="1320"/>
+    <functiondecl functionName="set_instrument" lineNumber="1324"/>
+    <functiondecl functionName="get_instrument" lineNumber="1329"/>
+    <functiondecl functionName="set_pressure" lineNumber="1333"/>
+    <functiondecl functionName="get_pressure" lineNumber="1338"/>
+    <functiondecl functionName="set_controller_number" lineNumber="1342"/>
+    <functiondecl functionName="get_controller_number" lineNumber="1347"/>
+    <functiondecl functionName="set_controller_value" lineNumber="1351"/>
+    <functiondecl functionName="get_controller_value" lineNumber="1356"/>
+    <functiondecl functionName="as_text" lineNumber="1360"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1365"/>
+    <functiondecl functionName="set_device" lineNumber="39"/>
+    <functiondecl functionName="get_device" lineNumber="43"/>
+    <functiondecl functionName="is_action" lineNumber="47"/>
+    <functiondecl functionName="is_action_pressed" lineNumber="52"/>
+    <functiondecl functionName="is_action_released" lineNumber="59"/>
+    <functiondecl functionName="get_action_strength" lineNumber="66"/>
+    <functiondecl functionName="is_pressed" lineNumber="74"/>
+    <functiondecl functionName="is_echo" lineNumber="79"/>
+    <functiondecl functionName="xformed_by" lineNumber="84"/>
+    <functiondecl functionName="as_text" lineNumber="89"/>
+    <functiondecl functionName="action_match" lineNumber="94"/>
+    <functiondecl functionName="shortcut_match" lineNumber="99"/>
+    <functiondecl functionName="is_action_type" lineNumber="104"/>
+    <functiondecl functionName="_bind_methods" lineNumber="109"/>
+    <functiondecl functionName="_bind_methods" lineNumber="141"/>
+    <functiondecl functionName="set_window_id" lineNumber="148"/>
+    <functiondecl functionName="get_window_id" lineNumber="151"/>
+    <functiondecl functionName="set_shift" lineNumber="161"/>
+    <functiondecl functionName="get_shift" lineNumber="166"/>
+    <functiondecl functionName="set_alt" lineNumber="171"/>
+    <functiondecl functionName="get_alt" lineNumber="175"/>
+    <functiondecl functionName="set_control" lineNumber="180"/>
+    <functiondecl functionName="get_control" lineNumber="184"/>
+    <functiondecl functionName="set_metakey" lineNumber="189"/>
+    <functiondecl functionName="get_metakey" lineNumber="193"/>
+    <functiondecl functionName="set_command" lineNumber="198"/>
+    <functiondecl functionName="get_command" lineNumber="202"/>
+    <functiondecl functionName="set_modifiers_from_event" lineNumber="207"/>
+    <functiondecl functionName="_bind_methods" lineNumber="215"/>
+    <functiondecl functionName="set_pressed" lineNumber="249"/>
+    <functiondecl functionName="is_pressed" lineNumber="254"/>
+    <functiondecl functionName="set_keycode" lineNumber="259"/>
+    <functiondecl functionName="get_keycode" lineNumber="264"/>
+    <functiondecl functionName="set_physical_keycode" lineNumber="269"/>
+    <functiondecl functionName="get_physical_keycode" lineNumber="274"/>
+    <functiondecl functionName="set_unicode" lineNumber="279"/>
+    <functiondecl functionName="get_unicode" lineNumber="284"/>
+    <functiondecl functionName="set_echo" lineNumber="289"/>
+    <functiondecl functionName="is_echo" lineNumber="294"/>
+    <functiondecl functionName="get_keycode_with_modifiers" lineNumber="299"/>
+    <functiondecl functionName="get_physical_keycode_with_modifiers" lineNumber="314"/>
+    <functiondecl functionName="as_text" lineNumber="329"/>
+    <functiondecl functionName="action_match" lineNumber="350"/>
+    <functiondecl functionName="shortcut_match" lineNumber="377"/>
+    <functiondecl functionName="_bind_methods" lineNumber="389"/>
+    <functiondecl functionName="set_button_mask" lineNumber="425"/>
+    <functiondecl functionName="get_button_mask" lineNumber="429"/>
+    <functiondecl functionName="set_position" lineNumber="434"/>
+    <functiondecl functionName="get_position" lineNumber="438"/>
+    <functiondecl functionName="set_global_position" lineNumber="443"/>
+    <functiondecl functionName="get_global_position" lineNumber="447"/>
+    <functiondecl functionName="_bind_methods" lineNumber="452"/>
+    <functiondecl functionName="set_factor" lineNumber="475"/>
+    <functiondecl functionName="get_factor" lineNumber="480"/>
+    <functiondecl functionName="set_button_index" lineNumber="485"/>
+    <functiondecl functionName="get_button_index" lineNumber="489"/>
+    <functiondecl functionName="set_pressed" lineNumber="494"/>
+    <functiondecl functionName="is_pressed" lineNumber="498"/>
+    <functiondecl functionName="set_doubleclick" lineNumber="503"/>
+    <functiondecl functionName="is_doubleclick" lineNumber="507"/>
+    <functiondecl functionName="xformed_by" lineNumber="512"/>
+    <functiondecl functionName="action_match" lineNumber="536"/>
+    <functiondecl functionName="as_text" lineNumber="553"/>
+    <functiondecl functionName="_bind_methods" lineNumber="591"/>
+    <functiondecl functionName="set_tilt" lineNumber="621"/>
+    <functiondecl functionName="get_tilt" lineNumber="626"/>
+    <functiondecl functionName="set_pressure" lineNumber="631"/>
+    <functiondecl functionName="get_pressure" lineNumber="636"/>
+    <functiondecl functionName="set_relative" lineNumber="641"/>
+    <functiondecl functionName="get_relative" lineNumber="646"/>
+    <functiondecl functionName="set_speed" lineNumber="651"/>
+    <functiondecl functionName="get_speed" lineNumber="656"/>
+    <functiondecl functionName="xformed_by" lineNumber="661"/>
+    <functiondecl functionName="as_text" lineNumber="688"/>
+    <functiondecl functionName="accumulate" lineNumber="714"/>
+    <functiondecl functionName="_bind_methods" lineNumber="756"/>
+    <functiondecl functionName="set_axis" lineNumber="783"/>
+    <functiondecl functionName="get_axis" lineNumber="788"/>
+    <functiondecl functionName="set_axis_value" lineNumber="793"/>
+    <functiondecl functionName="get_axis_value" lineNumber="798"/>
+    <functiondecl functionName="is_pressed" lineNumber="803"/>
+    <functiondecl functionName="action_match" lineNumber="808"/>
+    <functiondecl functionName="as_text" lineNumber="835"/>
+    <functiondecl functionName="_bind_methods" lineNumber="840"/>
+    <functiondecl functionName="set_button_index" lineNumber="859"/>
+    <functiondecl functionName="get_button_index" lineNumber="864"/>
+    <functiondecl functionName="set_pressed" lineNumber="869"/>
+    <functiondecl functionName="is_pressed" lineNumber="873"/>
+    <functiondecl functionName="set_pressure" lineNumber="878"/>
+    <functiondecl functionName="get_pressure" lineNumber="882"/>
+    <functiondecl functionName="action_match" lineNumber="887"/>
+    <functiondecl functionName="shortcut_match" lineNumber="904"/>
+    <functiondecl functionName="as_text" lineNumber="913"/>
+    <functiondecl functionName="_bind_methods" lineNumber="918"/>
+    <functiondecl functionName="set_index" lineNumber="943"/>
+    <functiondecl functionName="get_index" lineNumber="947"/>
+    <functiondecl functionName="set_position" lineNumber="952"/>
+    <functiondecl functionName="get_position" lineNumber="956"/>
+    <functiondecl functionName="set_pressed" lineNumber="961"/>
+    <functiondecl functionName="is_pressed" lineNumber="965"/>
+    <functiondecl functionName="xformed_by" lineNumber="970"/>
+    <functiondecl functionName="as_text" lineNumber="983"/>
+    <functiondecl functionName="_bind_methods" lineNumber="988"/>
+    <functiondecl functionName="set_index" lineNumber="1012"/>
+    <functiondecl functionName="get_index" lineNumber="1017"/>
+    <functiondecl functionName="set_position" lineNumber="1022"/>
+    <functiondecl functionName="get_position" lineNumber="1026"/>
+    <functiondecl functionName="set_relative" lineNumber="1031"/>
+    <functiondecl functionName="get_relative" lineNumber="1035"/>
+    <functiondecl functionName="set_speed" lineNumber="1040"/>
+    <functiondecl functionName="get_speed" lineNumber="1044"/>
+    <functiondecl functionName="xformed_by" lineNumber="1049"/>
+    <functiondecl functionName="as_text" lineNumber="1066"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1071"/>
+    <functiondecl functionName="set_action" lineNumber="1097"/>
+    <functiondecl functionName="get_action" lineNumber="1101"/>
+    <functiondecl functionName="set_pressed" lineNumber="1106"/>
+    <functiondecl functionName="is_pressed" lineNumber="1110"/>
+    <functiondecl functionName="set_strength" lineNumber="1115"/>
+    <functiondecl functionName="get_strength" lineNumber="1119"/>
+    <functiondecl functionName="shortcut_match" lineNumber="1123"/>
+    <functiondecl functionName="is_action" lineNumber="1130"/>
+    <functiondecl functionName="action_match" lineNumber="1135"/>
+    <functiondecl functionName="as_text" lineNumber="1151"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1156"/>
+    <functiondecl functionName="set_position" lineNumber="1180"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1185"/>
+    <functiondecl functionName="get_position" lineNumber="1193"/>
+    <functiondecl functionName="set_factor" lineNumber="1199"/>
+    <functiondecl functionName="get_factor" lineNumber="1204"/>
+    <functiondecl functionName="xformed_by" lineNumber="1209"/>
+    <functiondecl functionName="as_text" lineNumber="1225"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1230"/>
+    <functiondecl functionName="set_delta" lineNumber="1244"/>
+    <functiondecl functionName="get_delta" lineNumber="1249"/>
+    <functiondecl functionName="xformed_by" lineNumber="1253"/>
+    <functiondecl functionName="as_text" lineNumber="1269"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1274"/>
+    <functiondecl functionName="set_channel" lineNumber="1288"/>
+    <functiondecl functionName="get_channel" lineNumber="1293"/>
+    <functiondecl functionName="set_message" lineNumber="1297"/>
+    <functiondecl functionName="get_message" lineNumber="1302"/>
+    <functiondecl functionName="set_pitch" lineNumber="1306"/>
+    <functiondecl functionName="get_pitch" lineNumber="1311"/>
+    <functiondecl functionName="set_velocity" lineNumber="1315"/>
+    <functiondecl functionName="get_velocity" lineNumber="1320"/>
+    <functiondecl functionName="set_instrument" lineNumber="1324"/>
+    <functiondecl functionName="get_instrument" lineNumber="1329"/>
+    <functiondecl functionName="set_pressure" lineNumber="1333"/>
+    <functiondecl functionName="get_pressure" lineNumber="1338"/>
+    <functiondecl functionName="set_controller_number" lineNumber="1342"/>
+    <functiondecl functionName="get_controller_number" lineNumber="1347"/>
+    <functiondecl functionName="set_controller_value" lineNumber="1351"/>
+    <functiondecl functionName="get_controller_value" lineNumber="1356"/>
+    <functiondecl functionName="as_text" lineNumber="1360"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1365"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="InputEvent"/>
+    <functioncall functionName="InputEventAction"/>
+    <functioncall functionName="InputEventFromWindow"/>
+    <functioncall functionName="InputEventGesture"/>
+    <functioncall functionName="InputEventJoypadButton"/>
+    <functioncall functionName="InputEventJoypadMotion"/>
+    <functioncall functionName="InputEventKey"/>
+    <functioncall functionName="InputEventMIDI"/>
+    <functioncall functionName="InputEventMagnifyGesture"/>
+    <functioncall functionName="InputEventMouse"/>
+    <functioncall functionName="InputEventMouseButton"/>
+    <functioncall functionName="InputEventMouseMotion"/>
+    <functioncall functionName="InputEventPanGesture"/>
+    <functioncall functionName="InputEventScreenDrag"/>
+    <functioncall functionName="InputEventScreenTouch"/>
+    <functioncall functionName="InputEventWithModifiers"/>
+    <functioncall functionName="JOY_AXIS_0"/>
+    <functioncall functionName="JOY_AXIS_1"/>
+    <functioncall functionName="JOY_AXIS_2"/>
+    <functioncall functionName="JOY_AXIS_3"/>
+    <functioncall functionName="JOY_AXIS_4"/>
+    <functioncall functionName="JOY_AXIS_6"/>
+    <functioncall functionName="JOY_AXIS_7"/>
+    <functioncall functionName="JOY_BUTTON_0"/>
+    <functioncall functionName="JOY_BUTTON_1"/>
+    <functioncall functionName="JOY_BUTTON_10"/>
+    <functioncall functionName="JOY_BUTTON_11"/>
+    <functioncall functionName="JOY_BUTTON_12"/>
+    <functioncall functionName="JOY_BUTTON_13"/>
+    <functioncall functionName="JOY_BUTTON_14"/>
+    <functioncall functionName="JOY_BUTTON_15"/>
+    <functioncall functionName="JOY_BUTTON_2"/>
+    <functioncall functionName="JOY_BUTTON_3"/>
+    <functioncall functionName="JOY_BUTTON_4"/>
+    <functioncall functionName="JOY_BUTTON_5"/>
+    <functioncall functionName="JOY_BUTTON_6"/>
+    <functioncall functionName="JOY_BUTTON_7"/>
+    <functioncall functionName="JOY_BUTTON_8"/>
+    <functioncall functionName="JOY_BUTTON_9"/>
+    <functioncall functionName="KEY_ALT"/>
+    <functioncall functionName="KEY_CONTROL"/>
+    <functioncall functionName="KEY_META"/>
+    <functioncall functionName="KEY_SHIFT"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="accumulate"/>
+    <functioncall functionName="action"/>
+    <functioncall functionName="as_text"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="axis_value"/>
+    <functioncall functionName="basis_xform"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="button_index"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="doubleclick"/>
+    <functioncall functionName="event_get_action_status"/>
+    <functioncall functionName="event_is_action"/>
+    <functioncall functionName="factor"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_keycode_name"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get_action"/>
+    <functioncall functionName="get_action_strength"/>
+    <functioncall functionName="get_alt"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_axis_value"/>
+    <functioncall functionName="get_button_index"/>
+    <functioncall functionName="get_button_mask"/>
+    <functioncall functionName="get_channel"/>
+    <functioncall functionName="get_command"/>
+    <functioncall functionName="get_control"/>
+    <functioncall functionName="get_controller_number"/>
+    <functioncall functionName="get_controller_value"/>
+    <functioncall functionName="get_delta"/>
+    <functioncall functionName="get_device"/>
+    <functioncall functionName="get_factor"/>
+    <functioncall functionName="get_global_position"/>
+    <functioncall functionName="get_index"/>
+    <functioncall functionName="get_instrument"/>
+    <functioncall functionName="get_keycode"/>
+    <functioncall functionName="get_keycode_with_modifiers"/>
+    <functioncall functionName="get_message"/>
+    <functioncall functionName="get_metakey"/>
+    <functioncall functionName="get_physical_keycode"/>
+    <functioncall functionName="get_physical_keycode_with_modifiers"/>
+    <functioncall functionName="get_pitch"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_pressure"/>
+    <functioncall functionName="get_relative"/>
+    <functioncall functionName="get_shift"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_speed"/>
+    <functioncall functionName="get_strength"/>
+    <functioncall functionName="get_tilt"/>
+    <functioncall functionName="get_unicode"/>
+    <functioncall functionName="get_velocity"/>
+    <functioncall functionName="get_window_id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="inverse_lerp"/>
+    <functioncall functionName="is_action"/>
+    <functioncall functionName="is_action_pressed"/>
+    <functioncall functionName="is_action_released"/>
+    <functioncall functionName="is_action_type"/>
+    <functioncall functionName="is_doubleclick"/>
+    <functioncall functionName="is_echo"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="kc"/>
+    <functioncall functionName="keycode"/>
+    <functioncall functionName="keycode_get_string"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="match"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_action"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_channel"/>
+    <functioncall functionName="p_controller_number"/>
+    <functioncall functionName="p_controller_value"/>
+    <functioncall functionName="p_deadzone"/>
+    <functioncall functionName="p_delta"/>
+    <functioncall functionName="p_device"/>
+    <functioncall functionName="p_doubleclick"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_factor"/>
+    <functioncall functionName="p_global_pos"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_instrument"/>
+    <functioncall functionName="p_keycode"/>
+    <functioncall functionName="p_local_ofs"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_message"/>
+    <functioncall functionName="p_pitch"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_pressed"/>
+    <functioncall functionName="p_pressure"/>
+    <functioncall functionName="p_relative"/>
+    <functioncall functionName="p_speed"/>
+    <functioncall functionName="p_strength"/>
+    <functioncall functionName="p_tilt"/>
+    <functioncall functionName="p_unicode"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_velocity"/>
+    <functioncall functionName="physical_keycode"/>
+    <functioncall functionName="pressed"/>
+    <functioncall functionName="pressure"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="relative"/>
+    <functioncall functionName="rtos"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="set_action"/>
+    <functioncall functionName="set_alt"/>
+    <functioncall functionName="set_axis"/>
+    <functioncall functionName="set_axis_value"/>
+    <functioncall functionName="set_button_index"/>
+    <functioncall functionName="set_button_mask"/>
+    <functioncall functionName="set_channel"/>
+    <functioncall functionName="set_command"/>
+    <functioncall functionName="set_control"/>
+    <functioncall functionName="set_controller_number"/>
+    <functioncall functionName="set_controller_value"/>
+    <functioncall functionName="set_delta"/>
+    <functioncall functionName="set_device"/>
+    <functioncall functionName="set_doubleclick"/>
+    <functioncall functionName="set_echo"/>
+    <functioncall functionName="set_factor"/>
+    <functioncall functionName="set_global_position"/>
+    <functioncall functionName="set_index"/>
+    <functioncall functionName="set_instrument"/>
+    <functioncall functionName="set_keycode"/>
+    <functioncall functionName="set_message"/>
+    <functioncall functionName="set_metakey"/>
+    <functioncall functionName="set_modifiers_from_event"/>
+    <functioncall functionName="set_physical_keycode"/>
+    <functioncall functionName="set_pitch"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_pressure"/>
+    <functioncall functionName="set_relative"/>
+    <functioncall functionName="set_shift"/>
+    <functioncall functionName="set_speed"/>
+    <functioncall functionName="set_strength"/>
+    <functioncall functionName="set_tilt"/>
+    <functioncall functionName="set_unicode"/>
+    <functioncall functionName="set_velocity"/>
+    <functioncall functionName="set_window_id"/>
+    <functioncall functionName="shortcut_match"/>
+    <functioncall functionName="speed"/>
+    <functioncall functionName="strength"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="xformed_by"/>
+  </FileInfo>
+</analyzerinfo>

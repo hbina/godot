@@ -405,7 +405,7 @@ void EditorExportPlatformIOS::_fix_config_file(const Ref<EditorExportPreset> &p_
 	CharString cs = strnew.utf8();
 	pfile.resize(cs.size() - 1);
 	for (int i = 0; i < cs.size() - 1; i++) {
-		pfile.write[i] = cs[i];
+		pfile[i] = cs[i];
 	}
 }
 
@@ -746,7 +746,7 @@ private:
 		ret.resize(sizeof(num) * 2);
 		for (uint64_t i = 0; i < sizeof(num) * 2; ++i) {
 			uint8_t four_bits = (num >> (sizeof(num) * 8 - (i + 1) * 4)) & 0xF;
-			ret.write[i] = _hex_char(four_bits);
+			ret[i] = _hex_char(four_bits);
 		}
 		return String::utf8(ret.ptr(), ret.size());
 	}
@@ -869,7 +869,7 @@ void EditorExportPlatformIOS::_add_assets_to_project(const Ref<EditorExportPrese
 	CharString cs = str.utf8();
 	p_project_data.resize(cs.size() - 1);
 	for (int i = 0; i < cs.size() - 1; i++) {
-		p_project_data.write[i] = cs[i];
+		p_project_data[i] = cs[i];
 	}
 }
 
@@ -931,7 +931,7 @@ Error EditorExportPlatformIOS::_export_additional_assets(const String &p_out_dir
 
 		Vector<String> project_static_libs = export_plugins[i]->get_ios_project_static_libs();
 		for (int j = 0; j < project_static_libs.size(); j++)
-			project_static_libs.write[j] = project_static_libs[j].get_file(); // Only the file name as it's copied to the project
+			project_static_libs[j] = project_static_libs[j].get_file(); // Only the file name as it's copied to the project
 		err = _export_additional_assets(p_out_dir, project_static_libs, true, r_exported_assets);
 		ERR_FAIL_COND_V(err, err);
 

@@ -1,0 +1,451 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3678435990">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!psc&apos; is redundant or there is possible null pointer dereference: psc." verbose="Either the condition &apos;!psc&apos; is redundant or there is possible null pointer dereference: psc." cwe="476">
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="540" column="31" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="537" column="45" info="Assignment &apos;psc=path_send_cache.getptr(path)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="538" column="20" info="Assuming that condition &apos;!psc&apos; is not redundant"/>
+            <symbol>psc</symbol>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;ofs+4&apos; to function resize is always 5" verbose="Argument &apos;ofs+4&apos; to function resize is always 5" cwe="570">
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="837" column="3" info="Argument &apos;ofs+4&apos; to function resize is always 5"/>
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="810" column="2" info="Compound assignment &apos;+=&apos;, assigned value is 1"/>
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="789" column="12" info="Assignment &apos;ofs=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;p_offset&apos; is assigned a value that is never used." verbose="Variable &apos;p_offset&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="414" column="12"/>
+            <symbol>p_offset</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ofs&apos; is assigned a value that is never used." verbose="Variable &apos;ofs&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="593" column="7"/>
+            <symbol>ofs</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:83:8" call-funcname="_decode_and_decompress_variant" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="421" col="46" call-argexpr="&vlen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:83:8" call-funcname="_decode_and_decompress_variant" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="421" col="46" call-argexpr="vlen" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:83:8" call-funcname="_decode_and_decompress_variant" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="460" col="44" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="2" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="867" col="43" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="3" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="867" col="43" call-argexpr="len" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="866" col="11" info="Assignment 'len=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="2" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="912" col="45" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="3" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="912" col="45" call-argexpr="len" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="911" col="13" info="Assignment 'len=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1047" col="12" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="2" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1144" col="11" call-argexpr="p_peer_id" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1093" col="16" info="Assuming that condition 'p_peer_id==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="6" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1144" col="11" call-argexpr="&vptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="6" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1047" col="3" my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:124:7" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:71:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="219" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:75:7" my-argnr="4" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="382" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:73:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="526" col="34" value="1"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:77:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1173" col="18" value="1"/>
+    </array-index>
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:72:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="479" col="40" value="1"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:73:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="526" col="34" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:71:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="219" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:75:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="368" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:75:7" my-argnr="4" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="382" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:76:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="444" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" my-argnr="1" my-argname="p_from" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="772" col="59" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:124:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1017" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:126:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1085" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:83:8" call-funcname="_decode_and_decompress_variant" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="421" col="46" call-argexpr="&vlen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:83:8" call-funcname="_decode_and_decompress_variant" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="421" col="46" call-argexpr="vlen" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:83:8" call-funcname="_decode_and_decompress_variant" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="460" col="44" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="2" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="867" col="43" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="3" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="867" col="43" call-argexpr="len" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="866" col="11" info="Assignment 'len=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="2" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="912" col="45" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:82:8" call-funcname="_encode_and_compress_variant" call-argnr="3" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="912" col="45" call-argexpr="len" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="911" col="13" info="Assignment 'len=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="4" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1047" col="12" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="2" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1144" col="11" call-argexpr="p_peer_id" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1093" col="16" info="Assuming that condition 'p_peer_id==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="6" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1144" col="11" call-argexpr="&vptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" call-funcname="_send_rpc" call-argnr="6" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1047" col="3" my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:124:7" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:71:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="219" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:75:7" my-argnr="4" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="382" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:73:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="526" col="34" value="1"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:77:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1173" col="18" value="1"/>
+    </array-index>
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:72:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="479" col="40" value="1"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:73:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="526" col="34" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:71:7" my-argnr="2" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="219" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:75:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="368" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:75:7" my-argnr="4" my-argname="p_packet" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="382" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:76:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="444" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:79:7" my-argnr="1" my-argname="p_from" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="772" col="59" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:124:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1017" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/multiplayer_api.h:126:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/core/io/multiplayer_api.cpp" line="1085" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_should_call_local" lineNumber="46"/>
+    <functiondecl functionName="_can_call_mode" lineNumber="78"/>
+    <functiondecl functionName="poll" lineNumber="101"/>
+    <functiondecl functionName="clear" lineNumber="133"/>
+    <functiondecl functionName="set_root_node" lineNumber="141"/>
+    <functiondecl functionName="set_network_peer" lineNumber="145"/>
+    <functiondecl functionName="get_network_peer" lineNumber="173"/>
+    <functiondecl functionName="get_packet_len" lineNumber="200"/>
+    <functiondecl functionName="_process_packet" lineNumber="209"/>
+    <functiondecl functionName="_process_get_node" lineNumber="323"/>
+    <functiondecl functionName="_process_rpc" lineNumber="363"/>
+    <functiondecl functionName="_process_rset" lineNumber="439"/>
+    <functiondecl functionName="_process_simplify_path" lineNumber="473"/>
+    <functiondecl functionName="_process_confirm_path" lineNumber="522"/>
+    <functiondecl functionName="_send_confirm_path" lineNumber="545"/>
+    <functiondecl functionName="_encode_and_compress_variant" lineNumber="620"/>
+    <functiondecl functionName="_decode_and_decompress_variant" lineNumber="694"/>
+    <functiondecl functionName="_send_rpc" lineNumber="756"/>
+    <functiondecl functionName="_add_peer" lineNumber="978"/>
+    <functiondecl functionName="_del_peer" lineNumber="984"/>
+    <functiondecl functionName="_connected_to_server" lineNumber="999"/>
+    <functiondecl functionName="_connection_failed" lineNumber="1004"/>
+    <functiondecl functionName="_server_disconnected" lineNumber="1009"/>
+    <functiondecl functionName="rpcp" lineNumber="1014"/>
+    <functiondecl functionName="rsetp" lineNumber="1082"/>
+    <functiondecl functionName="send_bytes" lineNumber="1147"/>
+    <functiondecl functionName="_process_raw" lineNumber="1164"/>
+    <functiondecl functionName="get_network_unique_id" lineNumber="1178"/>
+    <functiondecl functionName="is_network_server" lineNumber="1184"/>
+    <functiondecl functionName="set_refuse_new_network_connections" lineNumber="1191"/>
+    <functiondecl functionName="is_refusing_new_network_connections" lineNumber="1197"/>
+    <functiondecl functionName="get_network_connected_peers" lineNumber="1203"/>
+    <functiondecl functionName="set_allow_object_decoding" lineNumber="1215"/>
+    <functiondecl functionName="is_object_decoding_allowed" lineNumber="1220"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1225"/>
+    <functiondecl functionName="_should_call_local" lineNumber="46"/>
+    <functiondecl functionName="_can_call_mode" lineNumber="78"/>
+    <functiondecl functionName="poll" lineNumber="101"/>
+    <functiondecl functionName="clear" lineNumber="133"/>
+    <functiondecl functionName="set_root_node" lineNumber="141"/>
+    <functiondecl functionName="set_network_peer" lineNumber="145"/>
+    <functiondecl functionName="get_network_peer" lineNumber="173"/>
+    <functiondecl functionName="_profile_node_data" lineNumber="178"/>
+    <functiondecl functionName="_profile_bandwidth_data" lineNumber="187"/>
+    <functiondecl functionName="get_packet_len" lineNumber="200"/>
+    <functiondecl functionName="_process_packet" lineNumber="209"/>
+    <functiondecl functionName="_process_get_node" lineNumber="323"/>
+    <functiondecl functionName="_process_rpc" lineNumber="363"/>
+    <functiondecl functionName="_process_rset" lineNumber="439"/>
+    <functiondecl functionName="_process_simplify_path" lineNumber="473"/>
+    <functiondecl functionName="_process_confirm_path" lineNumber="522"/>
+    <functiondecl functionName="_send_confirm_path" lineNumber="545"/>
+    <functiondecl functionName="_encode_and_compress_variant" lineNumber="620"/>
+    <functiondecl functionName="_decode_and_decompress_variant" lineNumber="694"/>
+    <functiondecl functionName="_send_rpc" lineNumber="756"/>
+    <functiondecl functionName="_add_peer" lineNumber="978"/>
+    <functiondecl functionName="_del_peer" lineNumber="984"/>
+    <functiondecl functionName="_connected_to_server" lineNumber="999"/>
+    <functiondecl functionName="_connection_failed" lineNumber="1004"/>
+    <functiondecl functionName="_server_disconnected" lineNumber="1009"/>
+    <functiondecl functionName="rpcp" lineNumber="1014"/>
+    <functiondecl functionName="rsetp" lineNumber="1082"/>
+    <functiondecl functionName="send_bytes" lineNumber="1147"/>
+    <functiondecl functionName="_process_raw" lineNumber="1164"/>
+    <functiondecl functionName="get_network_unique_id" lineNumber="1178"/>
+    <functiondecl functionName="is_network_server" lineNumber="1184"/>
+    <functiondecl functionName="set_refuse_new_network_connections" lineNumber="1191"/>
+    <functiondecl functionName="is_refusing_new_network_connections" lineNumber="1197"/>
+    <functiondecl functionName="get_network_connected_peers" lineNumber="1203"/>
+    <functiondecl functionName="set_allow_object_decoding" lineNumber="1215"/>
+    <functiondecl functionName="is_object_decoding_allowed" lineNumber="1220"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1225"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_PROPERTY_DEFAULT"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="CRASH_COND"/>
+    <functioncall functionName="CRASH_NOW"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_INVALID_DATA"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="MultiplayerAPI"/>
+    <functioncall functionName="NETWORK_COMMAND_CONFIRM_PATH"/>
+    <functioncall functionName="NETWORK_COMMAND_RAW"/>
+    <functioncall functionName="NETWORK_COMMAND_REMOTE_CALL"/>
+    <functioncall functionName="NETWORK_COMMAND_REMOTE_SET"/>
+    <functioncall functionName="NETWORK_COMMAND_SIMPLIFY_PATH"/>
+    <functioncall functionName="NETWORK_NAME_ID_COMPRESSION_16"/>
+    <functioncall functionName="NETWORK_NAME_ID_COMPRESSION_8"/>
+    <functioncall functionName="NETWORK_NODE_ID_COMPRESSION_16"/>
+    <functioncall functionName="NETWORK_NODE_ID_COMPRESSION_32"/>
+    <functioncall functionName="NETWORK_NODE_ID_COMPRESSION_8"/>
+    <functioncall functionName="NodeInfo"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PACKED_BYTE_ARRAY"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PathGetCache"/>
+    <functioncall functionName="PathSentCache"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RPCMode"/>
+    <functioncall functionName="RPC_MODE_DISABLED"/>
+    <functioncall functionName="RPC_MODE_MASTER"/>
+    <functioncall functionName="RPC_MODE_MASTERSYNC"/>
+    <functioncall functionName="RPC_MODE_PUPPET"/>
+    <functioncall functionName="RPC_MODE_PUPPETSYNC"/>
+    <functioncall functionName="RPC_MODE_REMOTE"/>
+    <functioncall functionName="RPC_MODE_REMOTESYNC"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TARGET_PEER_BROADCAST"/>
+    <functioncall functionName="TRANSFER_MODE_RELIABLE"/>
+    <functioncall functionName="TRANSFER_MODE_UNRELIABLE"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="_add_peer"/>
+    <functioncall functionName="_can_call_mode"/>
+    <functioncall functionName="_connected_to_server"/>
+    <functioncall functionName="_connection_failed"/>
+    <functioncall functionName="_decode_and_decompress_variant"/>
+    <functioncall functionName="_del_peer"/>
+    <functioncall functionName="_encode_and_compress_variant"/>
+    <functioncall functionName="_process_confirm_path"/>
+    <functioncall functionName="_process_get_node"/>
+    <functioncall functionName="_process_packet"/>
+    <functioncall functionName="_process_raw"/>
+    <functioncall functionName="_process_rpc"/>
+    <functioncall functionName="_process_rset"/>
+    <functioncall functionName="_process_simplify_path"/>
+    <functioncall functionName="_profile_bandwidth_data"/>
+    <functioncall functionName="_profile_node_data"/>
+    <functioncall functionName="_send_confirm_path"/>
+    <functioncall functionName="_send_rpc"/>
+    <functioncall functionName="_server_disconnected"/>
+    <functioncall functionName="_should_call_local"/>
+    <functioncall functionName="allow_object_decoding"/>
+    <functioncall functionName="argc"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="byte_only"/>
+    <functioncall functionName="byte_only_or_no_args"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_local_native"/>
+    <functioncall functionName="call_local_script"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="can_call"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="command_type"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="decode_uint16"/>
+    <functioncall functionName="decode_uint32"/>
+    <functioncall functionName="decode_uint64"/>
+    <functioncall functionName="decode_variant"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="encode_cstring"/>
+    <functioncall functionName="encode_uint16"/>
+    <functioncall functionName="encode_uint32"/>
+    <functioncall functionName="encode_uint64"/>
+    <functioncall functionName="encode_variant"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="from_path"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_available_packet_count"/>
+    <functioncall functionName="get_call_error_text"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_connection_status"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_network_connected_peers"/>
+    <functioncall functionName="get_network_master"/>
+    <functioncall functionName="get_network_peer"/>
+    <functioncall functionName="get_network_unique_id"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_node_rpc_method"/>
+    <functioncall functionName="get_node_rpc_method_id"/>
+    <functioncall functionName="get_node_rpc_mode"/>
+    <functioncall functionName="get_node_rpc_mode_by_id"/>
+    <functioncall functionName="get_node_rset_mode"/>
+    <functioncall functionName="get_node_rset_mode_by_id"/>
+    <functioncall functionName="get_node_rset_property"/>
+    <functioncall functionName="get_node_rset_property_id"/>
+    <functioncall functionName="get_packet"/>
+    <functioncall functionName="get_packet_len"/>
+    <functioncall functionName="get_packet_peer"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_rpc_md5"/>
+    <functioncall functionName="get_rpc_method"/>
+    <functioncall functionName="get_rpc_method_id"/>
+    <functioncall functionName="get_rpc_mode"/>
+    <functioncall functionName="get_rpc_mode_by_id"/>
+    <functioncall functionName="get_rpc_sender_id"/>
+    <functioncall functionName="get_rset_mode"/>
+    <functioncall functionName="get_rset_mode_by_id"/>
+    <functioncall functionName="get_rset_property"/>
+    <functioncall functionName="get_rset_property_id"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_ticks_msec"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_unique_id"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_all_peers"/>
+    <functioncall functionName="has_network_peer"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="is_empty"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_master"/>
+    <functioncall functionName="is_network_master"/>
+    <functioncall functionName="is_network_server"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_object_decoding_allowed"/>
+    <functioncall functionName="is_profiling"/>
+    <functioncall functionName="is_refusing_new_connections"/>
+    <functioncall functionName="is_refusing_new_network_connections"/>
+    <functioncall functionName="is_server"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="method_id"/>
+    <functioncall functionName="methods_md5_len"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="name_id"/>
+    <functioncall functionName="name_id_compression"/>
+    <functioncall functionName="name_id_offset"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="ni"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="node_id"/>
+    <functioncall functionName="node_id_compression"/>
+    <functioncall functionName="node_target"/>
+    <functioncall functionName="np"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="operatorbool"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="p_arg"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_inout"/>
+    <functioncall functionName="p_len"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_node_target"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_packet"/>
+    <functioncall functionName="p_packet_len"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_peer"/>
+    <functioncall functionName="p_peer_id"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_refuse"/>
+    <functioncall functionName="p_rpc_method_id"/>
+    <functioncall functionName="p_rpc_property_id"/>
+    <functioncall functionName="p_set"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_target"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_unreliable"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="packet"/>
+    <functioncall functionName="packet_len"/>
+    <functioncall functionName="packet_min_size"/>
+    <functioncall functionName="packet_type"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="path_len"/>
+    <functioncall functionName="paths"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="profiler_add_frame_data"/>
+    <functioncall functionName="property_id"/>
+    <functioncall functionName="psc"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="pure_data"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="put_packet"/>
+    <functioncall functionName="r_buffer"/>
+    <functioncall functionName="r_len"/>
+    <functioncall functionName="r_variant"/>
+    <functioncall functionName="rel_path_to"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rpc_mode"/>
+    <functioncall functionName="rpc_sender_id"/>
+    <functioncall functionName="rset_mode"/>
+    <functioncall functionName="send_bytes"/>
+    <functioncall functionName="sender"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_allow_object_decoding"/>
+    <functioncall functionName="set_local"/>
+    <functioncall functionName="set_network_peer"/>
+    <functioncall functionName="set_refuse_new_connections"/>
+    <functioncall functionName="set_refuse_new_network_connections"/>
+    <functioncall functionName="set_root_node"/>
+    <functioncall functionName="set_target_peer"/>
+    <functioncall functionName="set_transfer_mode"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip_rpc"/>
+    <functioncall functionName="skip_rset"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="temp_id"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="valid_rpc_checksum"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="vlen"/>
+    <functioncall functionName="vptr"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

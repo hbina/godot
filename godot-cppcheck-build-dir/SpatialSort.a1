@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="298920699">
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;-42==(~42+1)&apos; is always true" verbose="Condition &apos;-42==(~42+1)&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/Common/SpatialSort.cpp" line="223" column="18" info="Condition &apos;-42==(~42+1)&apos; is always true"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;-42==~42&apos; is always false" verbose="Condition &apos;-42==~42&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/Common/SpatialSort.cpp" line="226" column="24" info="Condition &apos;-42==~42&apos; is always false"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;-42==(42|-0)&apos; is always false" verbose="Condition &apos;-42==(42|-0)&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/Common/SpatialSort.cpp" line="229" column="23" info="Condition &apos;-42==(42|-0)&apos; is always false"/>
+        </error>
+        <error id="duplicateBranch" severity="style" msg="Found duplicate branches for &apos;if&apos; and &apos;else&apos;." verbose="Finding the same code in an &apos;if&apos; and related &apos;else&apos; branch is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/Common/SpatialSort.cpp" line="229" column="14"/>
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/Common/SpatialSort.cpp" line="231" column="9"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ToBinary" lineNumber="190"/>
+    <functiondecl functionName="ToBinary" lineNumber="190"/>
+    <functiondecl functionName="ToBinary" lineNumber="190"/>
+    <functioncall functionName="Append"/>
+    <functioncall functionName="Entry"/>
+    <functioncall functionName="Fill"/>
+    <functioncall functionName="Finalize"/>
+    <functioncall functionName="Normalize"/>
+    <functioncall functionName="SpatialSort"/>
+    <functioncall functionName="SquareLength"/>
+    <functioncall functionName="ToBinary"/>
+    <functioncall functionName="UINT_MAX"/>
+    <functioncall functionName="ai_assert"/>
+    <functioncall functionName="ai_int"/>
+    <functioncall functionName="ai_real"/>
+    <functioncall functionName="asBin"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="binValue"/>
+    <functioncall functionName="binaryStepSize"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="distance"/>
+    <functioncall functionName="distanceToleranceInULPs"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="initial"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="mDistance"/>
+    <functioncall functionName="mIndex"/>
+    <functioncall functionName="mPlaneNormal"/>
+    <functioncall functionName="mPosition"/>
+    <functioncall functionName="minDist"/>
+    <functioncall functionName="minDistBinary"/>
+    <functioncall functionName="oldpos"/>
+    <functioncall functionName="pElementOffset"/>
+    <functioncall functionName="pFinalize"/>
+    <functioncall functionName="pNumPositions"/>
+    <functioncall functionName="pPosition"/>
+    <functioncall functionName="pPositions"/>
+    <functioncall functionName="pRadius"/>
+    <functioncall functionName="pValue"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="static_assert"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

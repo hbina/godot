@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2807920334">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;s&apos; can be reduced." verbose="The scope of the variable &apos;s&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/loopfilter_8_neon.c" line="273" column="14"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;s&apos; can be reduced." verbose="The scope of the variable &apos;s&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/loopfilter_8_neon.c" line="329" column="14"/>
+            <symbol>s</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="mbloop_filter_neon" lineNumber="15"/>
+    <functiondecl functionName="vpx_lpf_horizontal_8_neon" lineNumber="266"/>
+    <functiondecl functionName="vpx_lpf_vertical_8_neon" lineNumber="322"/>
+    <functioncall functionName="blimit"/>
+    <functioncall functionName="d0u8"/>
+    <functioncall functionName="d16u8"/>
+    <functioncall functionName="d17u8"/>
+    <functioncall functionName="d18u8"/>
+    <functioncall functionName="d19u8"/>
+    <functioncall functionName="d1u8"/>
+    <functioncall functionName="d20u8"/>
+    <functioncall functionName="d21s8"/>
+    <functioncall functionName="d21u8"/>
+    <functioncall functionName="d22u8"/>
+    <functioncall functionName="d23u8"/>
+    <functioncall functionName="d24s8"/>
+    <functioncall functionName="d24u8"/>
+    <functioncall functionName="d25s8"/>
+    <functioncall functionName="d25u8"/>
+    <functioncall functionName="d26s8"/>
+    <functioncall functionName="d26u8"/>
+    <functioncall functionName="d27u8"/>
+    <functioncall functionName="d28s8"/>
+    <functioncall functionName="d28u8"/>
+    <functioncall functionName="d29s8"/>
+    <functioncall functionName="d29u8"/>
+    <functioncall functionName="d2Result"/>
+    <functioncall functionName="d2u8"/>
+    <functioncall functionName="d30s8"/>
+    <functioncall functionName="d30u8"/>
+    <functioncall functionName="d31u8"/>
+    <functioncall functionName="d3u8"/>
+    <functioncall functionName="d4Result"/>
+    <functioncall functionName="d4u8"/>
+    <functioncall functionName="d5u8"/>
+    <functioncall functionName="d6u8"/>
+    <functioncall functionName="d7u8"/>
+    <functioncall functionName="dblimit"/>
+    <functioncall functionName="dlimit"/>
+    <functioncall functionName="dthresh"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="limit"/>
+    <functioncall functionName="mbloop_filter_neon"/>
+    <functioncall functionName="q10u16"/>
+    <functioncall functionName="q14u16"/>
+    <functioncall functionName="q15s16"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="thresh"/>
+    <functioncall functionName="vabd_u8"/>
+    <functioncall functionName="vaddl_u8"/>
+    <functioncall functionName="vaddw_s8"/>
+    <functioncall functionName="vaddw_u8"/>
+    <functioncall functionName="vand_s8"/>
+    <functioncall functionName="vand_u8"/>
+    <functioncall functionName="vbic_s8"/>
+    <functioncall functionName="vbsl_u8"/>
+    <functioncall functionName="vcge_u8"/>
+    <functioncall functionName="vcgt_u8"/>
+    <functioncall functionName="vcombine_u16"/>
+    <functioncall functionName="vdup_n_u8"/>
+    <functioncall functionName="veor_u8"/>
+    <functioncall functionName="vget_lane_u32"/>
+    <functioncall functionName="vld1_u8"/>
+    <functioncall functionName="vmax_u8"/>
+    <functioncall functionName="vmlal_u8"/>
+    <functioncall functionName="vmull_s8"/>
+    <functioncall functionName="vorr_u8"/>
+    <functioncall functionName="vqadd_s8"/>
+    <functioncall functionName="vqadd_u8"/>
+    <functioncall functionName="vqmovn_s16"/>
+    <functioncall functionName="vqrshrn_n_u16"/>
+    <functioncall functionName="vqsub_s8"/>
+    <functioncall functionName="vreinterpret_s8_u8"/>
+    <functioncall functionName="vreinterpret_u16_u32"/>
+    <functioncall functionName="vreinterpret_u16_u8"/>
+    <functioncall functionName="vreinterpret_u32_u8"/>
+    <functioncall functionName="vreinterpret_u8_s8"/>
+    <functioncall functionName="vreinterpret_u8_u16"/>
+    <functioncall functionName="vrshr_n_s8"/>
+    <functioncall functionName="vshr_n_s8"/>
+    <functioncall functionName="vshr_n_u8"/>
+    <functioncall functionName="vshrn_n_u16"/>
+    <functioncall functionName="vst1_u8"/>
+    <functioncall functionName="vst2_lane_u8"/>
+    <functioncall functionName="vst4_lane_u8"/>
+    <functioncall functionName="vsub_s8"/>
+    <functioncall functionName="vsubw_u8"/>
+    <functioncall functionName="vtrn_u16"/>
+    <functioncall functionName="vtrn_u32"/>
+    <functioncall functionName="vtrn_u8"/>
+  </FileInfo>
+</analyzerinfo>

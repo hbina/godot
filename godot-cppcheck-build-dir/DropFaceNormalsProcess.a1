@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2610438107">
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;DropMeshFaceNormals&apos; argument 1 names different: declaration &apos;pcMesh&apos; definition &apos;pMesh&apos;." verbose="Function &apos;DropMeshFaceNormals&apos; argument 1 names different: declaration &apos;pcMesh&apos; definition &apos;pMesh&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/DropFaceNormalsProcess.cpp" line="101" column="59"/>
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/DropFaceNormalsProcess.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/DropFaceNormalsProcess.h" line="78" column="38"/>
+            <symbol>DropMeshFaceNormals</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/DropFaceNormalsProcess.h:78:10" my-argnr="1" my-argname="pMesh" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/DropFaceNormalsProcess.cpp" line="102" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="IsActive" lineNumber="73"/>
+    <functiondecl functionName="Execute" lineNumber="79"/>
+    <functiondecl functionName="DropMeshFaceNormals" lineNumber="101"/>
+    <functioncall functionName="ASSIMP_LOG_DEBUG"/>
+    <functioncall functionName="ASSIMP_LOG_INFO"/>
+    <functioncall functionName="DeadlyImportError"/>
+    <functioncall functionName="DropFaceNormalsProcess"/>
+    <functioncall functionName="DropMeshFaceNormals"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="bHas"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="mNormals"/>
+    <functioncall functionName="mNumMeshes"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="return"/>
+  </FileInfo>
+</analyzerinfo>

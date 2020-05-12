@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="365519803">
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Assimp::FBX::FBXExportProperty::size&apos; can be const." verbose="The member function &apos;Assimp::FBX::FBXExportProperty::size&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.h" line="111" column="12"/>
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="170" column="27"/>
+            <symbol>Assimp::FBX::FBXExportProperty::size</symbol>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="82" column="6"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and double * which have an incompatible binary data representation." verbose="Casting between unsigned char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="89" column="6"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="198" column="29"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and double * which have an incompatible binary data representation." verbose="Casting between unsigned char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="199" column="29"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="233" column="26"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and double * which have an incompatible binary data representation." verbose="Casting between unsigned char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="243" column="26"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="275" column="22"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and double * which have an incompatible binary data representation." verbose="Casting between unsigned char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="276" column="22"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="351" column="19"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and double * which have an incompatible binary data representation." verbose="Casting between unsigned char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="367" column="19"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;DumpAscii&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;outstream&apos;." verbose="Function &apos;DumpAscii&apos; argument 1 names different: declaration &apos;s&apos; definition &apos;outstream&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" line="254" column="59"/>
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/FBX/FBXExportProperty.h" line="115" column="44"/>
+            <symbol>DumpAscii</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="size" lineNumber="170"/>
+    <functiondecl functionName="DumpBinary" lineNumber="190"/>
+    <functiondecl functionName="DumpAscii" lineNumber="254"/>
+    <functiondecl functionName="DumpAscii" lineNumber="262"/>
+    <functioncall functionName="DeadlyExportError"/>
+    <functioncall functionName="DumpAscii"/>
+    <functioncall functionName="FBXExportProperty"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="PutF4"/>
+    <functioncall functionName="PutF8"/>
+    <functioncall functionName="PutI2"/>
+    <functioncall functionName="PutI4"/>
+    <functioncall functionName="PutI8"/>
+    <functioncall functionName="PutString"/>
+    <functioncall functionName="PutU1"/>
+    <functioncall functionName="PutU4"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="classic"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="imbue"/>
+    <functioncall functionName="indent"/>
+    <functioncall functionName="precision"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="raw"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="runtime_error"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="ss"/>
+    <functioncall functionName="static_assert"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="v"/>
+  </FileInfo>
+</analyzerinfo>

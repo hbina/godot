@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3587024271">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btUsageBitfield::unused1&apos; is not initialized in the constructor." verbose="Member variable &apos;btUsageBitfield::unused1&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.h" line="34" column="2"/>
+            <symbol>btUsageBitfield::unused1</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btUsageBitfield::unused2&apos; is not initialized in the constructor." verbose="Member variable &apos;btUsageBitfield::unused2&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.h" line="34" column="2"/>
+            <symbol>btUsageBitfield::unused2</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btUsageBitfield::unused3&apos; is not initialized in the constructor." verbose="Member variable &apos;btUsageBitfield::unused3&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.h" line="34" column="2"/>
+            <symbol>btUsageBitfield::unused3</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btUsageBitfield::unused4&apos; is not initialized in the constructor." verbose="Member variable &apos;btUsageBitfield::unused4&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.h" line="34" column="2"/>
+            <symbol>btUsageBitfield::unused4</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;btSubSimplexClosestResult::isValid&apos; can be const." verbose="The member function &apos;btSubSimplexClosestResult::isValid&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.h" line="72" column="7"/>
+            <symbol>btSubSimplexClosestResult::isValid</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;calcPenDepth&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;calcPenDepth&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.h" line="31" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btConvexPenetrationDepthSolver.h" line="29" column="15" info="Virtual function in base class"/>
+            <symbol>calcPenDepth</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="calcPenDepth" lineNumber="23"/>
+    <functiondecl functionName="calcPenDepth" lineNumber="23"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BT_DECLARE_ALIGNED_ALLOCATOR"/>
+    <functioncall functionName="Distance"/>
+    <functioncall functionName="Penetration"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="addVertex"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="backup_closest"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btUsageBitfield"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="btVoronoiSimplexSolver"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="closest"/>
+    <functioncall functionName="closestPtPointTetrahedron"/>
+    <functioncall functionName="closestPtPointTriangle"/>
+    <functioncall functionName="compute_points"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="debugDraw"/>
+    <functioncall functionName="emptySimplex"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fullSimplex"/>
+    <functioncall functionName="getEqualVertexThreshold"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getSimplex"/>
+    <functioncall functionName="guessVector"/>
+    <functioncall functionName="guessVectors"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inSimplex"/>
+    <functioncall functionName="m_equalVertexThreshold"/>
+    <functioncall functionName="maxVertex"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="numVertices"/>
+    <functioncall functionName="pConvexA"/>
+    <functioncall functionName="pConvexB"/>
+    <functioncall functionName="pointOutsideOfPlane"/>
+    <functioncall functionName="private:"/>
+    <functioncall functionName="reduceVertices"/>
+    <functioncall functionName="removeVertex"/>
+    <functioncall functionName="reset"/>
+    <functioncall functionName="results"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="safeNormalize"/>
+    <functioncall functionName="setBarycentricCoordinates"/>
+    <functioncall functionName="setEqualVertexThreshold"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="simplexSolver"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="threshold"/>
+    <functioncall functionName="transformA"/>
+    <functioncall functionName="transformB"/>
+    <functioncall functionName="updateClosestVectorAndPoints"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="void"/>
+  </FileInfo>
+</analyzerinfo>

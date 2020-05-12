@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="829016275">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Joypad::key_map&apos; is not initialized in the constructor." verbose="Member variable &apos;Joypad::key_map&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="52" column="22"/>
+            <symbol>Joypad::key_map</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Joypad::abs_map&apos; is not initialized in the constructor." verbose="Member variable &apos;Joypad::abs_map&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="52" column="22"/>
+            <symbol>Joypad::abs_map</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Joypad::force_feedback&apos; is not initialized in the constructor." verbose="Member variable &apos;Joypad::force_feedback&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="52" column="22"/>
+            <symbol>Joypad::force_feedback</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Joypad::ff_effect_id&apos; is not initialized in the constructor." verbose="Member variable &apos;Joypad::ff_effect_id&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="52" column="22"/>
+            <symbol>Joypad::ff_effect_id</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Joypad::ff_effect_timestamp&apos; is not initialized in the constructor." verbose="Member variable &apos;Joypad::ff_effect_timestamp&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="52" column="22"/>
+            <symbol>Joypad::ff_effect_timestamp</symbol>
+        </error>
+        <error id="unusedPrivateFunction" severity="style" msg="Unused private function: &apos;JoypadLinux::get_joy_from_path&apos;" verbose="Unused private function: &apos;JoypadLinux::get_joy_from_path&apos;" cwe="398">
+            <location file0="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h" line="83" column="6"/>
+            <symbol>JoypadLinux::get_joy_from_path</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;devpath&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;devpath&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="55" column="2"/>
+            <symbol>devpath</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;JoypadLinux::axis_correct&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;JoypadLinux::axis_correct&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h" line="98" column="17"/>
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="439" column="29"/>
+            <symbol>JoypadLinux::axis_correct</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;JoypadLinux&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;JoypadLinux&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h" line="44" column="2"/>
+            <symbol>JoypadLinux</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="99" column="22"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:93:7" call-funcname="open_joypad" call-argnr="1" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="210" col="17" call-argexpr="fname" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:86:7" call-funcname="close_joypad" call-argnr="1" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="233" col="16" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:98:17" my-argnr="1" my-argname="p_abs" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="441" col="12" value="0"/>
+  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dev&apos; can be reduced." verbose="The scope of the variable &apos;dev&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="121" column="15"/>
+            <symbol>dev</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:88:7" call-funcname="enumerate_joypads" call-argnr="1" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="108" col="19" call-argexpr="_udev" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="107" col="16" info="Assuming that condition '!_udev' is not redundant"/>
+  <path file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="106" col="24" info="Assignment '_udev=udev_new()', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:89:7" call-funcname="monitor_joypads" call-argnr="1" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="109" col="17" call-argexpr="_udev" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="107" col="16" info="Assuming that condition '!_udev' is not redundant"/>
+  <path file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="106" col="24" info="Assignment '_udev=udev_new()', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:93:7" call-funcname="open_joypad" call-argnr="1" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="210" col="17" call-argexpr="fname" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:86:7" call-funcname="close_joypad" call-argnr="1" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="233" col="16" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.h:98:17" my-argnr="1" my-argname="p_abs" file="/home/hbina/git/godot/platform/linuxbsd/joypad_linux.cpp" line="441" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="reset" lineNumber="70"/>
+    <functiondecl functionName="joy_thread_func" lineNumber="96"/>
+    <functiondecl functionName="run_joypad_thread" lineNumber="104"/>
+    <functiondecl functionName="monitor_joypads" lineNumber="200"/>
+    <functiondecl functionName="get_joy_from_path" lineNumber="218"/>
+    <functiondecl functionName="close_joypad" lineNumber="229"/>
+    <functiondecl functionName="_hex_str" lineNumber="250"/>
+    <functiondecl functionName="setup_joypad_properties" lineNumber="262"/>
+    <functiondecl functionName="open_joypad" lineNumber="317"/>
+    <functiondecl functionName="joypad_vibration_start" lineNumber="392"/>
+    <functiondecl functionName="joypad_vibration_stop" lineNumber="425"/>
+    <functiondecl functionName="axis_correct" lineNumber="439"/>
+    <functiondecl functionName="process_joypads" lineNumber="459"/>
+    <functiondecl functionName="reset" lineNumber="70"/>
+    <functiondecl functionName="joy_thread_func" lineNumber="96"/>
+    <functiondecl functionName="run_joypad_thread" lineNumber="104"/>
+    <functiondecl functionName="enumerate_joypads" lineNumber="117"/>
+    <functiondecl functionName="monitor_joypads" lineNumber="147"/>
+    <functiondecl functionName="monitor_joypads" lineNumber="200"/>
+    <functiondecl functionName="get_joy_from_path" lineNumber="218"/>
+    <functiondecl functionName="close_joypad" lineNumber="229"/>
+    <functiondecl functionName="_hex_str" lineNumber="250"/>
+    <functiondecl functionName="setup_joypad_properties" lineNumber="262"/>
+    <functiondecl functionName="open_joypad" lineNumber="317"/>
+    <functiondecl functionName="joypad_vibration_start" lineNumber="392"/>
+    <functiondecl functionName="joypad_vibration_stop" lineNumber="425"/>
+    <functiondecl functionName="axis_correct" lineNumber="439"/>
+    <functiondecl functionName="process_joypads" lineNumber="459"/>
+    <functioncall functionName="ABS_GAS"/>
+    <functioncall functionName="ABS_HAT0X"/>
+    <functioncall functionName="ABS_HAT3Y"/>
+    <functioncall functionName="ABS_RUDDER"/>
+    <functioncall functionName="ABS_RX"/>
+    <functioncall functionName="ABS_RY"/>
+    <functioncall functionName="ABS_X"/>
+    <functioncall functionName="ABS_Y"/>
+    <functioncall functionName="BSWAP16"/>
+    <functioncall functionName="BTN_1"/>
+    <functioncall functionName="BTN_A"/>
+    <functioncall functionName="BTN_JOYSTICK"/>
+    <functioncall functionName="BTN_MISC"/>
+    <functioncall functionName="BTN_THUMBL"/>
+    <functioncall functionName="BTN_TRIGGER"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="EVIOCGABS"/>
+    <functioncall functionName="EVIOCGBIT"/>
+    <functioncall functionName="EVIOCGID"/>
+    <functioncall functionName="EVIOCGNAME"/>
+    <functioncall functionName="EVIOCRMFF"/>
+    <functioncall functionName="EVIOCSFF"/>
+    <functioncall functionName="EV_ABS"/>
+    <functioncall functionName="EV_FF"/>
+    <functioncall functionName="EV_KEY"/>
+    <functioncall functionName="FD_ISSET"/>
+    <functioncall functionName="FD_SET"/>
+    <functioncall functionName="FD_ZERO"/>
+    <functioncall functionName="FF_RUMBLE"/>
+    <functioncall functionName="HAT_MASK_DOWN"/>
+    <functioncall functionName="HAT_MASK_RIGHT"/>
+    <functioncall functionName="JOYPADS_MAX"/>
+    <functioncall functionName="Joypad"/>
+    <functioncall functionName="JoypadLinux"/>
+    <functioncall functionName="MAX_ABS"/>
+    <functioncall functionName="MAX_KEY"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="O_NONBLOCK"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="_hex_str"/>
+    <functioncall functionName="_udev"/>
+    <functioncall functionName="absbit"/>
+    <functioncall functionName="action"/>
+    <functioncall functionName="axis_correct"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bustype"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="close_joypad"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dev"/>
+    <functioncall functionName="dev_list_entry"/>
+    <functioncall functionName="devices"/>
+    <functioncall functionName="devnode"/>
+    <functioncall functionName="devpath"/>
+    <functioncall functionName="dpad"/>
+    <functioncall functionName="duration"/>
+    <functioncall functionName="effect"/>
+    <functioncall functionName="enumerate"/>
+    <functioncall functionName="enumerate_joypads"/>
+    <functioncall functionName="evbit"/>
+    <functioncall functionName="events"/>
+    <functioncall functionName="exit_udev"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fd"/>
+    <functioncall functionName="fds"/>
+    <functioncall functionName="ff_effect_id"/>
+    <functioncall functionName="ff_effect_timestamp"/>
+    <functioncall functionName="ffbit"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="fname"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_feedback"/>
+    <functioncall functionName="get_joy_from_path"/>
+    <functioncall functionName="get_joy_vibration_duration"/>
+    <functioncall functionName="get_joy_vibration_strength"/>
+    <functioncall functionName="get_joy_vibration_timestamp"/>
+    <functioncall functionName="get_unused_joy_id"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ignore_str"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="inpid"/>
+    <functioncall functionName="input_absinfo"/>
+    <functioncall functionName="ioctl"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="joy_axis"/>
+    <functioncall functionName="joy_button"/>
+    <functioncall functionName="joy_connection_changed"/>
+    <functioncall functionName="joy_hat"/>
+    <functioncall functionName="joy_mutex"/>
+    <functioncall functionName="joy_num"/>
+    <functioncall functionName="joy_thread"/>
+    <functioncall functionName="joy_thread_func"/>
+    <functioncall functionName="joypad_vibration_start"/>
+    <functioncall functionName="joypad_vibration_stop"/>
+    <functioncall functionName="jx"/>
+    <functioncall functionName="keybit"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="maximum"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="minimum"/>
+    <functioncall functionName="mon"/>
+    <functioncall functionName="monitor_joypads"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="namebuf"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_joypad"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_timestamp"/>
+    <functioncall functionName="p_udev"/>
+    <functioncall functionName="p_user"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="play"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="product"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="reset"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="run_joypad_thread"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="setup_joypad_properties"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sprintf"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="timestamp"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="try_lock"/>
+    <functioncall functionName="tv"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="udev_device_get_action"/>
+    <functioncall functionName="udev_device_get_devnode"/>
+    <functioncall functionName="udev_device_new_from_syspath"/>
+    <functioncall functionName="udev_device_unref"/>
+    <functioncall functionName="udev_enumerate_add_match_subsystem"/>
+    <functioncall functionName="udev_enumerate_get_list_entry"/>
+    <functioncall functionName="udev_enumerate_new"/>
+    <functioncall functionName="udev_enumerate_scan_devices"/>
+    <functioncall functionName="udev_enumerate_unref"/>
+    <functioncall functionName="udev_list_entry_foreach"/>
+    <functioncall functionName="udev_list_entry_get_name"/>
+    <functioncall functionName="udev_monitor_enable_receiving"/>
+    <functioncall functionName="udev_monitor_filter_add_match_subsystem_devtype"/>
+    <functioncall functionName="udev_monitor_get_fd"/>
+    <functioncall functionName="udev_monitor_new_from_netlink"/>
+    <functioncall functionName="udev_monitor_receive_device"/>
+    <functioncall functionName="udev_monitor_unref"/>
+    <functioncall functionName="udev_new"/>
+    <functioncall functionName="udev_unref"/>
+    <functioncall functionName="uid"/>
+    <functioncall functionName="uidname"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="usleep"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vendor"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="write"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

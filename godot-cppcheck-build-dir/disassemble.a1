@@ -1,0 +1,498 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3555648005">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SpirvStream::size&apos; is not initialized in the constructor." verbose="Member variable &apos;SpirvStream::size&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="83" column="5"/>
+            <symbol>SpirvStream::size</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SpirvStream::bound&apos; is not initialized in the constructor." verbose="Member variable &apos;SpirvStream::bound&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="83" column="5"/>
+            <symbol>SpirvStream::bound</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SpirvStream::schema&apos; is not initialized in the constructor." verbose="Member variable &apos;SpirvStream::schema&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="83" column="5"/>
+            <symbol>SpirvStream::schema</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wordString&apos; can be reduced." verbose="The scope of the variable &apos;wordString&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="300" column="17"/>
+            <symbol>wordString</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="196" col="23" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="21" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="2" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="234" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="236" col="12" info="Assuming that condition 'id!=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="249" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="22" info="Calling function 'outputTypeId', 1st argument 'typeId' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="454" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="455" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="467" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="468" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="196" col="23" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="21" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="2" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="234" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="236" col="12" info="Assuming that condition 'id!=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="249" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="22" info="Calling function 'outputTypeId', 1st argument 'typeId' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="454" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="455" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="467" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="468" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;spv::SpvBuildLogger::tbdFunctionality&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;spv::SpvBuildLogger::tbdFunctionality&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/Logger.h" line="50" column="10"/>
+            <symbol>spv::SpvBuildLogger::tbdFunctionality</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;spv::SpvBuildLogger::missingFunctionality&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;spv::SpvBuildLogger::missingFunctionality&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/Logger.h" line="51" column="10"/>
+            <symbol>spv::SpvBuildLogger::missingFunctionality</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;spv::SpvBuildLogger::warning&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;spv::SpvBuildLogger::warning&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/Logger.h" line="52" column="10"/>
+            <symbol>spv::SpvBuildLogger::warning</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;spv::SpvBuildLogger::getAllMessages&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;spv::SpvBuildLogger::getAllMessages&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/Logger.h" line="54" column="17"/>
+            <symbol>spv::SpvBuildLogger::getAllMessages</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="196" col="23" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="21" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="2" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="234" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="236" col="12" info="Assuming that condition 'id!=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="249" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="22" info="Calling function 'outputTypeId', 1st argument 'typeId' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="454" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="455" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="467" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="468" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="196" col="23" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="21" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="resultId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="187" col="23" info="Assignment 'resultId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:104:10" call-funcname="disassembleInstruction" call-argnr="2" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="201" col="31" call-argexpr="typeId" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="234" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="236" col="12" info="Assuming that condition 'id!=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:96:10" call-funcname="formatId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="249" col="13" call-argexpr="id" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="180" col="21" info="Assignment 'typeId=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="197" col="22" info="Calling function 'outputTypeId', 1st argument 'typeId' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="454" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="455" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:97:10" call-funcname="outputResultId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="467" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:98:10" call-funcname="outputTypeId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="468" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp:1436:13" my-argnr="2" my-argname="hasResult" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp" line="1437" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp:1436:13" my-argnr="3" my-argname="hasResultType" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp" line="1437" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:66:13" my-argnr="2" my-argname="message" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="68" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:63:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="633" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp:64:20" my-argnr="1" my-argname="name" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/disassemble.cpp" line="675" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Kill" lineNumber="66"/>
+    <functiondecl functionName="getOpCode" lineNumber="92"/>
+    <functiondecl functionName="validate" lineNumber="126"/>
+    <functiondecl functionName="processInstructions" lineNumber="159"/>
+    <functiondecl functionName="outputIndent" lineNumber="210"/>
+    <functiondecl functionName="formatId" lineNumber="216"/>
+    <functiondecl functionName="outputResultId" lineNumber="230"/>
+    <functiondecl functionName="outputTypeId" lineNumber="245"/>
+    <functiondecl functionName="outputId" lineNumber="253"/>
+    <functiondecl functionName="outputMask" lineNumber="263"/>
+    <functiondecl functionName="disassembleImmediates" lineNumber="275"/>
+    <functiondecl functionName="disassembleIds" lineNumber="284"/>
+    <functiondecl functionName="disassembleString" lineNumber="294"/>
+    <functiondecl functionName="disassembleInstruction" lineNumber="320"/>
+    <functiondecl functionName="GLSLstd450GetDebugNames" lineNumber="544"/>
+    <functiondecl functionName="GLSLextAMDGetDebugNames" lineNumber="631"/>
+    <functiondecl functionName="GLSLextNVGetDebugNames" lineNumber="673"/>
+    <functiondecl functionName="Disassemble" lineNumber="727"/>
+    <functiondecl functionName="Kill" lineNumber="66"/>
+    <functiondecl functionName="getOpCode" lineNumber="92"/>
+    <functiondecl functionName="validate" lineNumber="126"/>
+    <functiondecl functionName="processInstructions" lineNumber="159"/>
+    <functiondecl functionName="outputIndent" lineNumber="210"/>
+    <functiondecl functionName="formatId" lineNumber="216"/>
+    <functiondecl functionName="outputResultId" lineNumber="230"/>
+    <functiondecl functionName="outputTypeId" lineNumber="245"/>
+    <functiondecl functionName="outputId" lineNumber="253"/>
+    <functiondecl functionName="outputMask" lineNumber="263"/>
+    <functiondecl functionName="disassembleImmediates" lineNumber="275"/>
+    <functiondecl functionName="disassembleIds" lineNumber="284"/>
+    <functiondecl functionName="disassembleString" lineNumber="294"/>
+    <functiondecl functionName="disassembleInstruction" lineNumber="320"/>
+    <functiondecl functionName="GLSLstd450GetDebugNames" lineNumber="544"/>
+    <functiondecl functionName="GLSLextAMDGetDebugNames" lineNumber="631"/>
+    <functiondecl functionName="GLSLextNVGetDebugNames" lineNumber="673"/>
+    <functiondecl functionName="Disassemble" lineNumber="727"/>
+    <functiondecl functionName="Kill" lineNumber="66"/>
+    <functiondecl functionName="getOpCode" lineNumber="92"/>
+    <functiondecl functionName="validate" lineNumber="126"/>
+    <functiondecl functionName="processInstructions" lineNumber="159"/>
+    <functiondecl functionName="outputIndent" lineNumber="210"/>
+    <functiondecl functionName="formatId" lineNumber="216"/>
+    <functiondecl functionName="outputResultId" lineNumber="230"/>
+    <functiondecl functionName="outputTypeId" lineNumber="245"/>
+    <functiondecl functionName="outputId" lineNumber="253"/>
+    <functiondecl functionName="outputMask" lineNumber="263"/>
+    <functiondecl functionName="disassembleImmediates" lineNumber="275"/>
+    <functiondecl functionName="disassembleIds" lineNumber="284"/>
+    <functiondecl functionName="disassembleString" lineNumber="294"/>
+    <functiondecl functionName="disassembleInstruction" lineNumber="320"/>
+    <functiondecl functionName="GLSLstd450GetDebugNames" lineNumber="544"/>
+    <functiondecl functionName="GLSLextAMDGetDebugNames" lineNumber="631"/>
+    <functiondecl functionName="GLSLextNVGetDebugNames" lineNumber="673"/>
+    <functiondecl functionName="Disassemble" lineNumber="727"/>
+    <functiondecl functionName="Kill" lineNumber="66"/>
+    <functiondecl functionName="getOpCode" lineNumber="92"/>
+    <functiondecl functionName="validate" lineNumber="126"/>
+    <functiondecl functionName="processInstructions" lineNumber="159"/>
+    <functiondecl functionName="outputIndent" lineNumber="210"/>
+    <functiondecl functionName="formatId" lineNumber="216"/>
+    <functiondecl functionName="outputResultId" lineNumber="230"/>
+    <functiondecl functionName="outputTypeId" lineNumber="245"/>
+    <functiondecl functionName="outputId" lineNumber="253"/>
+    <functiondecl functionName="outputMask" lineNumber="263"/>
+    <functiondecl functionName="disassembleImmediates" lineNumber="275"/>
+    <functiondecl functionName="disassembleIds" lineNumber="284"/>
+    <functiondecl functionName="disassembleString" lineNumber="294"/>
+    <functiondecl functionName="disassembleInstruction" lineNumber="320"/>
+    <functiondecl functionName="GLSLstd450GetDebugNames" lineNumber="544"/>
+    <functiondecl functionName="GLSLextAMDGetDebugNames" lineNumber="631"/>
+    <functiondecl functionName="GLSLextNVGetDebugNames" lineNumber="673"/>
+    <functiondecl functionName="Disassemble" lineNumber="727"/>
+    <functioncall functionName="AccessQualifierString"/>
+    <functioncall functionName="BuiltInString"/>
+    <functioncall functionName="Dim"/>
+    <functioncall functionName="DimensionString"/>
+    <functioncall functionName="E_ARB_shader_viewport_layer_array"/>
+    <functioncall functionName="E_SPV_AMD_gcn_shader"/>
+    <functioncall functionName="E_SPV_AMD_shader_ballot"/>
+    <functioncall functionName="E_SPV_AMD_shader_explicit_vertex_parameter"/>
+    <functioncall functionName="E_SPV_AMD_shader_trinary_minmax"/>
+    <functioncall functionName="E_SPV_NVX_multiview_per_view_attributes"/>
+    <functioncall functionName="E_SPV_NV_fragment_shader_barycentric"/>
+    <functioncall functionName="E_SPV_NV_geometry_shader_passthrough"/>
+    <functioncall functionName="E_SPV_NV_mesh_shader"/>
+    <functioncall functionName="E_SPV_NV_sample_mask_override_coverage"/>
+    <functioncall functionName="E_SPV_NV_shader_image_footprint"/>
+    <functioncall functionName="E_SPV_NV_viewport_array2"/>
+    <functioncall functionName="FPFastMathModeMask"/>
+    <functioncall functionName="FunctionControlMask"/>
+    <functioncall functionName="GLSL450Inst"/>
+    <functioncall functionName="GLSLextAMDGetDebugNames"/>
+    <functioncall functionName="GLSLextAMDInst"/>
+    <functioncall functionName="GLSLextNVGetDebugNames"/>
+    <functioncall functionName="GLSLextNVInst"/>
+    <functioncall functionName="GLSLstd450Acos"/>
+    <functioncall functionName="GLSLstd450Acosh"/>
+    <functioncall functionName="GLSLstd450Asin"/>
+    <functioncall functionName="GLSLstd450Asinh"/>
+    <functioncall functionName="GLSLstd450Atan"/>
+    <functioncall functionName="GLSLstd450Atan2"/>
+    <functioncall functionName="GLSLstd450Atanh"/>
+    <functioncall functionName="GLSLstd450Ceil"/>
+    <functioncall functionName="GLSLstd450Cos"/>
+    <functioncall functionName="GLSLstd450Cosh"/>
+    <functioncall functionName="GLSLstd450Count"/>
+    <functioncall functionName="GLSLstd450Cross"/>
+    <functioncall functionName="GLSLstd450Degrees"/>
+    <functioncall functionName="GLSLstd450Determinant"/>
+    <functioncall functionName="GLSLstd450Distance"/>
+    <functioncall functionName="GLSLstd450Exp"/>
+    <functioncall functionName="GLSLstd450Exp2"/>
+    <functioncall functionName="GLSLstd450FAbs"/>
+    <functioncall functionName="GLSLstd450FClamp"/>
+    <functioncall functionName="GLSLstd450FMax"/>
+    <functioncall functionName="GLSLstd450FMin"/>
+    <functioncall functionName="GLSLstd450FMix"/>
+    <functioncall functionName="GLSLstd450FSign"/>
+    <functioncall functionName="GLSLstd450FaceForward"/>
+    <functioncall functionName="GLSLstd450FindILsb"/>
+    <functioncall functionName="GLSLstd450FindSMsb"/>
+    <functioncall functionName="GLSLstd450FindUMsb"/>
+    <functioncall functionName="GLSLstd450Floor"/>
+    <functioncall functionName="GLSLstd450Fma"/>
+    <functioncall functionName="GLSLstd450Fract"/>
+    <functioncall functionName="GLSLstd450Frexp"/>
+    <functioncall functionName="GLSLstd450FrexpStruct"/>
+    <functioncall functionName="GLSLstd450GetDebugNames"/>
+    <functioncall functionName="GLSLstd450InterpolateAtCentroid"/>
+    <functioncall functionName="GLSLstd450InterpolateAtOffset"/>
+    <functioncall functionName="GLSLstd450InterpolateAtSample"/>
+    <functioncall functionName="GLSLstd450InverseSqrt"/>
+    <functioncall functionName="GLSLstd450Ldexp"/>
+    <functioncall functionName="GLSLstd450Length"/>
+    <functioncall functionName="GLSLstd450Log"/>
+    <functioncall functionName="GLSLstd450Log2"/>
+    <functioncall functionName="GLSLstd450MatrixInverse"/>
+    <functioncall functionName="GLSLstd450Modf"/>
+    <functioncall functionName="GLSLstd450ModfStruct"/>
+    <functioncall functionName="GLSLstd450NClamp"/>
+    <functioncall functionName="GLSLstd450NMax"/>
+    <functioncall functionName="GLSLstd450NMin"/>
+    <functioncall functionName="GLSLstd450Normalize"/>
+    <functioncall functionName="GLSLstd450PackDouble2x32"/>
+    <functioncall functionName="GLSLstd450PackHalf2x16"/>
+    <functioncall functionName="GLSLstd450PackSnorm2x16"/>
+    <functioncall functionName="GLSLstd450PackSnorm4x8"/>
+    <functioncall functionName="GLSLstd450PackUnorm2x16"/>
+    <functioncall functionName="GLSLstd450PackUnorm4x8"/>
+    <functioncall functionName="GLSLstd450Pow"/>
+    <functioncall functionName="GLSLstd450Radians"/>
+    <functioncall functionName="GLSLstd450Reflect"/>
+    <functioncall functionName="GLSLstd450Refract"/>
+    <functioncall functionName="GLSLstd450Round"/>
+    <functioncall functionName="GLSLstd450RoundEven"/>
+    <functioncall functionName="GLSLstd450SAbs"/>
+    <functioncall functionName="GLSLstd450SClamp"/>
+    <functioncall functionName="GLSLstd450SMax"/>
+    <functioncall functionName="GLSLstd450SMin"/>
+    <functioncall functionName="GLSLstd450SSign"/>
+    <functioncall functionName="GLSLstd450Sin"/>
+    <functioncall functionName="GLSLstd450Sinh"/>
+    <functioncall functionName="GLSLstd450SmoothStep"/>
+    <functioncall functionName="GLSLstd450Sqrt"/>
+    <functioncall functionName="GLSLstd450Step"/>
+    <functioncall functionName="GLSLstd450Tan"/>
+    <functioncall functionName="GLSLstd450Tanh"/>
+    <functioncall functionName="GLSLstd450Trunc"/>
+    <functioncall functionName="GLSLstd450UClamp"/>
+    <functioncall functionName="GLSLstd450UMax"/>
+    <functioncall functionName="GLSLstd450UMin"/>
+    <functioncall functionName="GLSLstd450UnpackDouble2x32"/>
+    <functioncall functionName="GLSLstd450UnpackHalf2x16"/>
+    <functioncall functionName="GLSLstd450UnpackSnorm2x16"/>
+    <functioncall functionName="GLSLstd450UnpackSnorm4x8"/>
+    <functioncall functionName="GLSLstd450UnpackUnorm2x16"/>
+    <functioncall functionName="GLSLstd450UnpackUnorm4x8"/>
+    <functioncall functionName="GcnShaderCountAMD"/>
+    <functioncall functionName="GlslStd450DebugNames"/>
+    <functioncall functionName="ImageFormat"/>
+    <functioncall functionName="ImageFormatString"/>
+    <functioncall functionName="ImageOperandsMask"/>
+    <functioncall functionName="KernelProfilingInfoMask"/>
+    <functioncall functionName="Kill"/>
+    <functioncall functionName="LoopControlMask"/>
+    <functioncall functionName="MemoryAccessMask"/>
+    <functioncall functionName="MemorySemanticsMask"/>
+    <functioncall functionName="Op"/>
+    <functioncall functionName="OpClassAnnotate"/>
+    <functioncall functionName="OpClassArithmetic"/>
+    <functioncall functionName="OpClassAtomic"/>
+    <functioncall functionName="OpClassBarrier"/>
+    <functioncall functionName="OpClassBit"/>
+    <functioncall functionName="OpClassComposite"/>
+    <functioncall functionName="OpClassConstant"/>
+    <functioncall functionName="OpClassConvert"/>
+    <functioncall functionName="OpClassCount"/>
+    <functioncall functionName="OpClassDebug"/>
+    <functioncall functionName="OpClassDerivative"/>
+    <functioncall functionName="OpClassDeviceSideEnqueue"/>
+    <functioncall functionName="OpClassExtension"/>
+    <functioncall functionName="OpClassFlowControl"/>
+    <functioncall functionName="OpClassFunction"/>
+    <functioncall functionName="OpClassGroup"/>
+    <functioncall functionName="OpClassImage"/>
+    <functioncall functionName="OpClassMemory"/>
+    <functioncall functionName="OpClassMisc"/>
+    <functioncall functionName="OpClassMissing"/>
+    <functioncall functionName="OpClassMode"/>
+    <functioncall functionName="OpClassPipe"/>
+    <functioncall functionName="OpClassPrimitive"/>
+    <functioncall functionName="OpClassRelationalLogical"/>
+    <functioncall functionName="OpClassType"/>
+    <functioncall functionName="OpNop"/>
+    <functioncall functionName="OpcodeString"/>
+    <functioncall functionName="OpenCLExtInst"/>
+    <functioncall functionName="OperandAccessQualifier"/>
+    <functioncall functionName="OperandAddressing"/>
+    <functioncall functionName="OperandBuiltIn"/>
+    <functioncall functionName="OperandCapability"/>
+    <functioncall functionName="OperandCount"/>
+    <functioncall functionName="OperandDecoration"/>
+    <functioncall functionName="OperandDimensionality"/>
+    <functioncall functionName="OperandExecutionMode"/>
+    <functioncall functionName="OperandExecutionModel"/>
+    <functioncall functionName="OperandFPFastMath"/>
+    <functioncall functionName="OperandFPRoundingMode"/>
+    <functioncall functionName="OperandFuncParamAttr"/>
+    <functioncall functionName="OperandFunction"/>
+    <functioncall functionName="OperandGroupOperation"/>
+    <functioncall functionName="OperandId"/>
+    <functioncall functionName="OperandImageChannelDataType"/>
+    <functioncall functionName="OperandImageChannelOrder"/>
+    <functioncall functionName="OperandImageOperands"/>
+    <functioncall functionName="OperandKernelEnqueueFlags"/>
+    <functioncall functionName="OperandKernelProfilingInfo"/>
+    <functioncall functionName="OperandLinkageType"/>
+    <functioncall functionName="OperandLiteralNumber"/>
+    <functioncall functionName="OperandLiteralString"/>
+    <functioncall functionName="OperandLoop"/>
+    <functioncall functionName="OperandMemory"/>
+    <functioncall functionName="OperandMemoryAccess"/>
+    <functioncall functionName="OperandMemorySemantics"/>
+    <functioncall functionName="OperandNone"/>
+    <functioncall functionName="OperandOpcode"/>
+    <functioncall functionName="OperandOptionalLiteral"/>
+    <functioncall functionName="OperandOptionalLiteralString"/>
+    <functioncall functionName="OperandSamplerAddressingMode"/>
+    <functioncall functionName="OperandSamplerFilterMode"/>
+    <functioncall functionName="OperandSamplerImageFormat"/>
+    <functioncall functionName="OperandScope"/>
+    <functioncall functionName="OperandSelect"/>
+    <functioncall functionName="OperandSource"/>
+    <functioncall functionName="OperandStorage"/>
+    <functioncall functionName="OperandVariableIdLiteral"/>
+    <functioncall functionName="OperandVariableIds"/>
+    <functioncall functionName="OperandVariableLiteralId"/>
+    <functioncall functionName="OperandVariableLiterals"/>
+    <functioncall functionName="Parameterize"/>
+    <functioncall functionName="SelectionControlMask"/>
+    <functioncall functionName="ShaderBallotCountAMD"/>
+    <functioncall functionName="ShaderExplicitVertexParameterCountAMD"/>
+    <functioncall functionName="ShaderTrinaryMinMaxCountAMD"/>
+    <functioncall functionName="SpirvStream"/>
+    <functioncall functionName="SpvOptions"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bitmask"/>
+    <functioncall functionName="bound"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="ceil"/>
+    <functioncall functionName="ceiling"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="content"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="disableOptimizer"/>
+    <functioncall functionName="disassemble"/>
+    <functioncall functionName="disassembleIds"/>
+    <functioncall functionName="disassembleImmediates"/>
+    <functioncall functionName="disassembleInstruction"/>
+    <functioncall functionName="disassembleString"/>
+    <functioncall functionName="done"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="entrypoint"/>
+    <functioncall functionName="enumParams"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="formatId"/>
+    <functioncall functionName="generateDebugInfo"/>
+    <functioncall functionName="getClass"/>
+    <functioncall functionName="getName"/>
+    <functioncall functionName="getNum"/>
+    <functioncall functionName="hasResult"/>
+    <functioncall functionName="hasType"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idStream"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instructionStart"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nextInst"/>
+    <functioncall functionName="nextNestedControl"/>
+    <functioncall functionName="numOperands"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="opClass"/>
+    <functioncall functionName="opCode"/>
+    <functioncall functionName="opDesc"/>
+    <functioncall functionName="opcode"/>
+    <functioncall functionName="operandClass"/>
+    <functioncall functionName="operandParams"/>
+    <functioncall functionName="opt"/>
+    <functioncall functionName="optimizeSize"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="outputId"/>
+    <functioncall functionName="outputIndent"/>
+    <functioncall functionName="outputMask"/>
+    <functioncall functionName="outputResultId"/>
+    <functioncall functionName="outputTypeId"/>
+    <functioncall functionName="pop"/>
+    <functioncall functionName="processInstructions"/>
+    <functioncall functionName="push"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resultId"/>
+    <functioncall functionName="resultPresent"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="setw"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="startWord"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="strstr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="top"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="typeId"/>
+    <functioncall functionName="typePresent"/>
+    <functioncall functionName="validate"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="word"/>
+    <functioncall functionName="wordCount"/>
+  </FileInfo>
+</analyzerinfo>

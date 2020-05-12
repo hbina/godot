@@ -214,7 +214,7 @@ void Sprite2DEditor::_update_mesh_data() {
 
 	Size2 img_size = Vector2(image->get_width(), image->get_height());
 	for (int i = 0; i < lines.size(); i++) {
-		lines.write[i] = expand(lines[i], rect, epsilon);
+		lines[i] = expand(lines[i], rect, epsilon);
 	}
 
 	if (selected_menu_item == MENU_OPTION_CONVERT_TO_MESH_2D) {
@@ -272,7 +272,7 @@ void Sprite2DEditor::_update_mesh_data() {
 			for (int i = 0; i < lines[pi].size(); i++) {
 				Vector2 vtx = lines[pi][i];
 
-				ol.write[i] = vtx;
+				ol[i] = vtx;
 
 				vtx -= rect.position; //offset by rect position
 
@@ -285,11 +285,11 @@ void Sprite2DEditor::_update_mesh_data() {
 				if (node->is_centered())
 					vtx -= rect.size / 2.0;
 
-				col.write[i] = vtx;
+				col[i] = vtx;
 			}
 
-			outline_lines.write[pi] = ol;
-			computed_outline_lines.write[pi] = col;
+			outline_lines[pi] = ol;
+			computed_outline_lines[pi] = col;
 		}
 	}
 

@@ -1,0 +1,635 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="622184480">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3249" column="10"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i32&apos; can be reduced." verbose="The scope of the variable &apos;i32&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3249" column="13"/>
+            <symbol>i32</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;zero&apos; is assigned a value that is never used." verbose="Variable &apos;zero&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="456" column="22"/>
+            <symbol>zero</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;zero&apos; is assigned a value that is never used." verbose="Variable &apos;zero&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="527" column="22"/>
+            <symbol>zero</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;zero&apos; is assigned a value that is never used." verbose="Variable &apos;zero&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1181" column="22"/>
+            <symbol>zero</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;zero&apos; is assigned a value that is never used." verbose="Variable &apos;zero&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1305" column="22"/>
+            <symbol>zero</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;zero&apos; is assigned a value that is never used." verbose="Variable &apos;zero&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3133" column="24"/>
+            <symbol>zero</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;zero&apos; is assigned a value that is never used." verbose="Variable &apos;zero&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3462" column="22"/>
+            <symbol>zero</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:173:20" call-funcname="transpose_4x4" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="189" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:181:6" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:173:20" call-funcname="transpose_4x4" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="227" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:217:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:155:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="167" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:454:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="514" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:524:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="536" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:799:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="930" col="19" value="0"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:24:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="130" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:155:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="161" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:173:20" my-argnr="1" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="174" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:524:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="530" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:546:6" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="563" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1302:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1308" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1321:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1356" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1791:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1816" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:3459:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3465" col="34" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:155:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="161" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:524:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="530" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1302:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1308" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:3459:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3465" col="34" value="0"/>
+  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3497" column="10"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3613" column="10"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3714" column="10"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3818" column="10"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3932" column="10"/>
+            <symbol>j</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:181:6" call-funcname="idct4_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3527" col="15" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:173:20" call-funcname="transpose_4x4" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3538" col="20" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:181:6" call-funcname="idct4_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3563" col="15" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:546:6" call-funcname="idct8_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3644" col="15" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:546:6" call-funcname="idct8_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3681" col="15" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:546:6" call-funcname="idct8_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3746" col="15" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:546:6" call-funcname="idct8_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3785" col="15" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:2135:6" call-funcname="idct16_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3852" col="16" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:2135:6" call-funcname="idct16_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3894" col="16" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:2135:6" call-funcname="idct16_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3968" col="16" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:2135:6" call-funcname="idct16_sse2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="4013" col="16" call-argexpr="inptr" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:173:20" call-funcname="transpose_4x4" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="189" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:181:6" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:173:20" call-funcname="transpose_4x4" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="227" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:217:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:155:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="167" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:454:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="514" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:524:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="536" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:799:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="930" col="19" value="0"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:24:6" my-argnr="2" my-argname="dest" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="130" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:155:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="161" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:173:20" my-argnr="1" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="174" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:524:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="530" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:546:6" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="563" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1302:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1308" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1321:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1356" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1791:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1816" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:3459:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3465" col="34" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:155:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="161" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:524:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="530" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:1302:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="1308" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c:3459:6" my-argnr="1" my-argname="input" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/inv_txfm_sse2.c" line="3465" col="34" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="vpx_idct4x4_16_add_sse2" lineNumber="24"/>
+    <functiondecl functionName="vpx_idct4x4_1_add_sse2" lineNumber="155"/>
+    <functiondecl functionName="transpose_4x4" lineNumber="173"/>
+    <functiondecl functionName="idct4_sse2" lineNumber="181"/>
+    <functiondecl functionName="iadst4_sse2" lineNumber="217"/>
+    <functiondecl functionName="vpx_idct8x8_64_add_sse2" lineNumber="454"/>
+    <functiondecl functionName="vpx_idct8x8_1_add_sse2" lineNumber="524"/>
+    <functiondecl functionName="idct8_sse2" lineNumber="546"/>
+    <functiondecl functionName="iadst8_sse2" lineNumber="571"/>
+    <functiondecl functionName="vpx_idct8x8_12_add_sse2" lineNumber="799"/>
+    <functiondecl functionName="vpx_idct16x16_256_add_sse2" lineNumber="1177"/>
+    <functiondecl functionName="vpx_idct16x16_1_add_sse2" lineNumber="1302"/>
+    <functiondecl functionName="iadst16_8col" lineNumber="1321"/>
+    <functiondecl functionName="idct16_8col" lineNumber="1791"/>
+    <functiondecl functionName="idct16_sse2" lineNumber="2135"/>
+    <functiondecl functionName="iadst16_sse2" lineNumber="2141"/>
+    <functiondecl functionName="vpx_idct16x16_10_add_sse2" lineNumber="2147"/>
+    <functiondecl functionName="vpx_idct32x32_34_add_sse2" lineNumber="3024"/>
+    <functiondecl functionName="vpx_idct32x32_1024_add_sse2" lineNumber="3183"/>
+    <functiondecl functionName="vpx_idct32x32_1_add_sse2" lineNumber="3459"/>
+    <functiondecl functionName="vpx_idct4x4_16_add_sse2" lineNumber="24"/>
+    <functiondecl functionName="vpx_idct4x4_1_add_sse2" lineNumber="155"/>
+    <functiondecl functionName="transpose_4x4" lineNumber="173"/>
+    <functiondecl functionName="idct4_sse2" lineNumber="181"/>
+    <functiondecl functionName="iadst4_sse2" lineNumber="217"/>
+    <functiondecl functionName="vpx_idct8x8_64_add_sse2" lineNumber="454"/>
+    <functiondecl functionName="vpx_idct8x8_1_add_sse2" lineNumber="524"/>
+    <functiondecl functionName="idct8_sse2" lineNumber="546"/>
+    <functiondecl functionName="iadst8_sse2" lineNumber="571"/>
+    <functiondecl functionName="vpx_idct8x8_12_add_sse2" lineNumber="799"/>
+    <functiondecl functionName="vpx_idct16x16_256_add_sse2" lineNumber="1177"/>
+    <functiondecl functionName="vpx_idct16x16_1_add_sse2" lineNumber="1302"/>
+    <functiondecl functionName="iadst16_8col" lineNumber="1321"/>
+    <functiondecl functionName="idct16_8col" lineNumber="1791"/>
+    <functiondecl functionName="idct16_sse2" lineNumber="2135"/>
+    <functiondecl functionName="iadst16_sse2" lineNumber="2141"/>
+    <functiondecl functionName="vpx_idct16x16_10_add_sse2" lineNumber="2147"/>
+    <functiondecl functionName="vpx_idct32x32_34_add_sse2" lineNumber="3024"/>
+    <functiondecl functionName="vpx_idct32x32_1024_add_sse2" lineNumber="3183"/>
+    <functiondecl functionName="vpx_idct32x32_1_add_sse2" lineNumber="3459"/>
+    <functiondecl functionName="clamp_high_sse2" lineNumber="3480"/>
+    <functiondecl functionName="vpx_highbd_idct4x4_16_add_sse2" lineNumber="3493"/>
+    <functiondecl functionName="vpx_highbd_idct8x8_64_add_sse2" lineNumber="3609"/>
+    <functiondecl functionName="vpx_highbd_idct8x8_10_add_sse2" lineNumber="3710"/>
+    <functiondecl functionName="vpx_highbd_idct16x16_256_add_sse2" lineNumber="3814"/>
+    <functiondecl functionName="vpx_highbd_idct16x16_10_add_sse2" lineNumber="3928"/>
+    <functioncall functionName="CONVERT_TO_SHORTPTR"/>
+    <functioncall functionName="DCT_CONST_BITS"/>
+    <functioncall functionName="DCT_CONST_ROUNDING"/>
+    <functioncall functionName="RECON_AND_STORE"/>
+    <functioncall functionName="ROUND_POWER_OF_TWO"/>
+    <functioncall functionName="TRANSPOSE_8X4"/>
+    <functioncall functionName="_mm_add_epi16"/>
+    <functioncall functionName="_mm_add_epi32"/>
+    <functioncall functionName="_mm_adds_epi16"/>
+    <functioncall functionName="_mm_and_si128"/>
+    <functioncall functionName="_mm_andnot_si128"/>
+    <functioncall functionName="_mm_cmpeq_epi32"/>
+    <functioncall functionName="_mm_cmpgt_epi16"/>
+    <functioncall functionName="_mm_cmplt_epi16"/>
+    <functioncall functionName="_mm_cvtsi128_si32"/>
+    <functioncall functionName="_mm_cvtsi32_si128"/>
+    <functioncall functionName="_mm_loadl_epi64"/>
+    <functioncall functionName="_mm_loadu_si128"/>
+    <functioncall functionName="_mm_madd_epi16"/>
+    <functioncall functionName="_mm_max_epi16"/>
+    <functioncall functionName="_mm_min_epi16"/>
+    <functioncall functionName="_mm_movemask_epi8"/>
+    <functioncall functionName="_mm_or_si128"/>
+    <functioncall functionName="_mm_packs_epi32"/>
+    <functioncall functionName="_mm_packus_epi16"/>
+    <functioncall functionName="_mm_set1_epi16"/>
+    <functioncall functionName="_mm_set1_epi32"/>
+    <functioncall functionName="_mm_setr_epi16"/>
+    <functioncall functionName="_mm_setzero_si128"/>
+    <functioncall functionName="_mm_shuffle_epi32"/>
+    <functioncall functionName="_mm_shufflehi_epi16"/>
+    <functioncall functionName="_mm_shufflelo_epi16"/>
+    <functioncall functionName="_mm_slli_epi16"/>
+    <functioncall functionName="_mm_slli_epi32"/>
+    <functioncall functionName="_mm_srai_epi16"/>
+    <functioncall functionName="_mm_srai_epi32"/>
+    <functioncall functionName="_mm_srli_si128"/>
+    <functioncall functionName="_mm_storel_epi64"/>
+    <functioncall functionName="_mm_storeu_si128"/>
+    <functioncall functionName="_mm_sub_epi16"/>
+    <functioncall functionName="_mm_sub_epi32"/>
+    <functioncall functionName="_mm_subs_epi16"/>
+    <functioncall functionName="_mm_unpackhi_epi16"/>
+    <functioncall functionName="_mm_unpackhi_epi32"/>
+    <functioncall functionName="_mm_unpackhi_epi64"/>
+    <functioncall functionName="_mm_unpacklo_epi16"/>
+    <functioncall functionName="_mm_unpacklo_epi32"/>
+    <functioncall functionName="_mm_unpacklo_epi64"/>
+    <functioncall functionName="_mm_unpacklo_epi8"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="array_transpose_16x16"/>
+    <functioncall functionName="array_transpose_4X8"/>
+    <functioncall functionName="array_transpose_8x8"/>
+    <functioncall functionName="bd"/>
+    <functioncall functionName="clamp_high_sse2"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cospi_10_64"/>
+    <functioncall functionName="cospi_11_64"/>
+    <functioncall functionName="cospi_12_64"/>
+    <functioncall functionName="cospi_13_64"/>
+    <functioncall functionName="cospi_14_64"/>
+    <functioncall functionName="cospi_15_64"/>
+    <functioncall functionName="cospi_16_64"/>
+    <functioncall functionName="cospi_17_64"/>
+    <functioncall functionName="cospi_18_64"/>
+    <functioncall functionName="cospi_19_64"/>
+    <functioncall functionName="cospi_1_64"/>
+    <functioncall functionName="cospi_20_64"/>
+    <functioncall functionName="cospi_21_64"/>
+    <functioncall functionName="cospi_22_64"/>
+    <functioncall functionName="cospi_23_64"/>
+    <functioncall functionName="cospi_24_64"/>
+    <functioncall functionName="cospi_25_64"/>
+    <functioncall functionName="cospi_26_64"/>
+    <functioncall functionName="cospi_27_64"/>
+    <functioncall functionName="cospi_28_64"/>
+    <functioncall functionName="cospi_29_64"/>
+    <functioncall functionName="cospi_2_64"/>
+    <functioncall functionName="cospi_30_64"/>
+    <functioncall functionName="cospi_31_64"/>
+    <functioncall functionName="cospi_3_64"/>
+    <functioncall functionName="cospi_4_64"/>
+    <functioncall functionName="cospi_5_64"/>
+    <functioncall functionName="cospi_6_64"/>
+    <functioncall functionName="cospi_7_64"/>
+    <functioncall functionName="cospi_8_64"/>
+    <functioncall functionName="cospi_9_64"/>
+    <functioncall functionName="cst"/>
+    <functioncall functionName="d0"/>
+    <functioncall functionName="d2"/>
+    <functioncall functionName="dc_value"/>
+    <functioncall functionName="dct_const_round_shift"/>
+    <functioncall functionName="dest"/>
+    <functioncall functionName="dest8"/>
+    <functioncall functionName="eight"/>
+    <functioncall functionName="final_rounding"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="hi_04"/>
+    <functioncall functionName="hi_0_16"/>
+    <functioncall functionName="hi_0_8"/>
+    <functioncall functionName="hi_10_13"/>
+    <functioncall functionName="hi_10_22"/>
+    <functioncall functionName="hi_10_6"/>
+    <functioncall functionName="hi_11_12"/>
+    <functioncall functionName="hi_13_19"/>
+    <functioncall functionName="hi_13_3"/>
+    <functioncall functionName="hi_17"/>
+    <functioncall functionName="hi_17_15"/>
+    <functioncall functionName="hi_17_30"/>
+    <functioncall functionName="hi_18_14"/>
+    <functioncall functionName="hi_18_29"/>
+    <functioncall functionName="hi_19_28"/>
+    <functioncall functionName="hi_1_15"/>
+    <functioncall functionName="hi_1_31"/>
+    <functioncall functionName="hi_20_12"/>
+    <functioncall functionName="hi_20_27"/>
+    <functioncall functionName="hi_21_11"/>
+    <functioncall functionName="hi_21_26"/>
+    <functioncall functionName="hi_22_25"/>
+    <functioncall functionName="hi_23_24"/>
+    <functioncall functionName="hi_25_7"/>
+    <functioncall functionName="hi_26"/>
+    <functioncall functionName="hi_26_6"/>
+    <functioncall functionName="hi_29_3"/>
+    <functioncall functionName="hi_2_14"/>
+    <functioncall functionName="hi_2_30"/>
+    <functioncall functionName="hi_35"/>
+    <functioncall functionName="hi_4_12"/>
+    <functioncall functionName="hi_4_28"/>
+    <functioncall functionName="hi_56"/>
+    <functioncall functionName="hi_5_11"/>
+    <functioncall functionName="hi_5_27"/>
+    <functioncall functionName="hi_6_5"/>
+    <functioncall functionName="hi_8_24"/>
+    <functioncall functionName="hi_9_14"/>
+    <functioncall functionName="hi_9_23"/>
+    <functioncall functionName="hi_9_7"/>
+    <functioncall functionName="highbd_clip_pixel_add"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iadst16_8col"/>
+    <functioncall functionName="idct16_8col"/>
+    <functioncall functionName="idct16_sse2"/>
+    <functioncall functionName="idct4_sse2"/>
+    <functioncall functionName="idct8_sse2"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="in0"/>
+    <functioncall functionName="in1"/>
+    <functioncall functionName="in2"/>
+    <functioncall functionName="in3"/>
+    <functioncall functionName="in4"/>
+    <functioncall functionName="in5"/>
+    <functioncall functionName="in6"/>
+    <functioncall functionName="in7"/>
+    <functioncall functionName="inptr"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="input0"/>
+    <functioncall functionName="input1"/>
+    <functioncall functionName="input2"/>
+    <functioncall functionName="input3"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int16_t"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="kZero"/>
+    <functioncall functionName="k__DCT_CONST_ROUNDING"/>
+    <functioncall functionName="k__const_0"/>
+    <functioncall functionName="k__cospi_m08_p24"/>
+    <functioncall functionName="k__cospi_m12_p20"/>
+    <functioncall functionName="k__cospi_m16_m16"/>
+    <functioncall functionName="k__cospi_m16_p16"/>
+    <functioncall functionName="k__cospi_m24_m08"/>
+    <functioncall functionName="k__cospi_m24_p08"/>
+    <functioncall functionName="k__cospi_m28_p04"/>
+    <functioncall functionName="k__cospi_p01_p31"/>
+    <functioncall functionName="k__cospi_p02_p30"/>
+    <functioncall functionName="k__cospi_p03_m29"/>
+    <functioncall functionName="k__cospi_p04_p28"/>
+    <functioncall functionName="k__cospi_p05_p27"/>
+    <functioncall functionName="k__cospi_p06_m26"/>
+    <functioncall functionName="k__cospi_p07_m25"/>
+    <functioncall functionName="k__cospi_p08_p24"/>
+    <functioncall functionName="k__cospi_p09_p23"/>
+    <functioncall functionName="k__cospi_p10_p22"/>
+    <functioncall functionName="k__cospi_p11_m21"/>
+    <functioncall functionName="k__cospi_p12_m20"/>
+    <functioncall functionName="k__cospi_p13_p19"/>
+    <functioncall functionName="k__cospi_p14_m18"/>
+    <functioncall functionName="k__cospi_p15_m17"/>
+    <functioncall functionName="k__cospi_p16_m16"/>
+    <functioncall functionName="k__cospi_p16_p16"/>
+    <functioncall functionName="k__cospi_p17_p15"/>
+    <functioncall functionName="k__cospi_p18_p14"/>
+    <functioncall functionName="k__cospi_p19_m13"/>
+    <functioncall functionName="k__cospi_p20_p12"/>
+    <functioncall functionName="k__cospi_p21_p11"/>
+    <functioncall functionName="k__cospi_p22_m10"/>
+    <functioncall functionName="k__cospi_p23_m09"/>
+    <functioncall functionName="k__cospi_p24_m08"/>
+    <functioncall functionName="k__cospi_p24_p08"/>
+    <functioncall functionName="k__cospi_p25_p07"/>
+    <functioncall functionName="k__cospi_p26_p06"/>
+    <functioncall functionName="k__cospi_p27_m05"/>
+    <functioncall functionName="k__cospi_p28_m04"/>
+    <functioncall functionName="k__cospi_p29_p03"/>
+    <functioncall functionName="k__cospi_p30_m02"/>
+    <functioncall functionName="k__cospi_p31_m01"/>
+    <functioncall functionName="k__sinpi_p01_p04"/>
+    <functioncall functionName="k__sinpi_p02_m01"/>
+    <functioncall functionName="k__sinpi_p03_m04"/>
+    <functioncall functionName="k__sinpi_p03_p02"/>
+    <functioncall functionName="k__sinpi_p03_p03"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="lo_04"/>
+    <functioncall functionName="lo_0_16"/>
+    <functioncall functionName="lo_0_8"/>
+    <functioncall functionName="lo_10_13"/>
+    <functioncall functionName="lo_10_22"/>
+    <functioncall functionName="lo_10_6"/>
+    <functioncall functionName="lo_11_12"/>
+    <functioncall functionName="lo_13_19"/>
+    <functioncall functionName="lo_13_3"/>
+    <functioncall functionName="lo_17"/>
+    <functioncall functionName="lo_17_15"/>
+    <functioncall functionName="lo_17_30"/>
+    <functioncall functionName="lo_18_14"/>
+    <functioncall functionName="lo_18_29"/>
+    <functioncall functionName="lo_19_28"/>
+    <functioncall functionName="lo_1_15"/>
+    <functioncall functionName="lo_1_31"/>
+    <functioncall functionName="lo_20_12"/>
+    <functioncall functionName="lo_20_27"/>
+    <functioncall functionName="lo_21_11"/>
+    <functioncall functionName="lo_21_26"/>
+    <functioncall functionName="lo_22_25"/>
+    <functioncall functionName="lo_23_24"/>
+    <functioncall functionName="lo_25_7"/>
+    <functioncall functionName="lo_26"/>
+    <functioncall functionName="lo_26_6"/>
+    <functioncall functionName="lo_29_3"/>
+    <functioncall functionName="lo_2_14"/>
+    <functioncall functionName="lo_2_30"/>
+    <functioncall functionName="lo_35"/>
+    <functioncall functionName="lo_4_12"/>
+    <functioncall functionName="lo_4_28"/>
+    <functioncall functionName="lo_56"/>
+    <functioncall functionName="lo_5_11"/>
+    <functioncall functionName="lo_5_27"/>
+    <functioncall functionName="lo_6_5"/>
+    <functioncall functionName="lo_8_24"/>
+    <functioncall functionName="lo_9_14"/>
+    <functioncall functionName="lo_9_23"/>
+    <functioncall functionName="lo_9_7"/>
+    <functioncall functionName="load_input_data"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="max_input"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="min_input"/>
+    <functioncall functionName="one"/>
+    <functioncall functionName="optimised_cols"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="outptr"/>
+    <functioncall functionName="pair_set_epi16"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="retval"/>
+    <functioncall functionName="rounding"/>
+    <functioncall functionName="s0"/>
+    <functioncall functionName="s1"/>
+    <functioncall functionName="s2"/>
+    <functioncall functionName="s3"/>
+    <functioncall functionName="s4"/>
+    <functioncall functionName="s5"/>
+    <functioncall functionName="s6"/>
+    <functioncall functionName="s7"/>
+    <functioncall functionName="sign_bits"/>
+    <functioncall functionName="sinpi_1_9"/>
+    <functioncall functionName="sinpi_2_9"/>
+    <functioncall functionName="sinpi_3_9"/>
+    <functioncall functionName="sinpi_4_9"/>
+    <functioncall functionName="sixteen"/>
+    <functioncall functionName="stg1_0"/>
+    <functioncall functionName="stg1_1"/>
+    <functioncall functionName="stg1_10"/>
+    <functioncall functionName="stg1_11"/>
+    <functioncall functionName="stg1_12"/>
+    <functioncall functionName="stg1_13"/>
+    <functioncall functionName="stg1_14"/>
+    <functioncall functionName="stg1_15"/>
+    <functioncall functionName="stg1_2"/>
+    <functioncall functionName="stg1_3"/>
+    <functioncall functionName="stg1_4"/>
+    <functioncall functionName="stg1_5"/>
+    <functioncall functionName="stg1_6"/>
+    <functioncall functionName="stg1_7"/>
+    <functioncall functionName="stg1_8"/>
+    <functioncall functionName="stg1_9"/>
+    <functioncall functionName="stg2_0"/>
+    <functioncall functionName="stg2_1"/>
+    <functioncall functionName="stg2_2"/>
+    <functioncall functionName="stg2_3"/>
+    <functioncall functionName="stg2_4"/>
+    <functioncall functionName="stg2_5"/>
+    <functioncall functionName="stg2_6"/>
+    <functioncall functionName="stg2_7"/>
+    <functioncall functionName="stg3_0"/>
+    <functioncall functionName="stg3_1"/>
+    <functioncall functionName="stg3_10"/>
+    <functioncall functionName="stg3_2"/>
+    <functioncall functionName="stg3_3"/>
+    <functioncall functionName="stg3_4"/>
+    <functioncall functionName="stg3_5"/>
+    <functioncall functionName="stg3_6"/>
+    <functioncall functionName="stg3_8"/>
+    <functioncall functionName="stg3_9"/>
+    <functioncall functionName="stg4_0"/>
+    <functioncall functionName="stg4_1"/>
+    <functioncall functionName="stg4_2"/>
+    <functioncall functionName="stg4_3"/>
+    <functioncall functionName="stg4_4"/>
+    <functioncall functionName="stg4_5"/>
+    <functioncall functionName="stg4_6"/>
+    <functioncall functionName="stg4_7"/>
+    <functioncall functionName="stg6_0"/>
+    <functioncall functionName="stp1_0"/>
+    <functioncall functionName="stp1_1"/>
+    <functioncall functionName="stp1_10"/>
+    <functioncall functionName="stp1_11"/>
+    <functioncall functionName="stp1_12"/>
+    <functioncall functionName="stp1_12_0"/>
+    <functioncall functionName="stp1_13"/>
+    <functioncall functionName="stp1_14"/>
+    <functioncall functionName="stp1_15"/>
+    <functioncall functionName="stp1_16"/>
+    <functioncall functionName="stp1_17"/>
+    <functioncall functionName="stp1_18"/>
+    <functioncall functionName="stp1_19"/>
+    <functioncall functionName="stp1_2"/>
+    <functioncall functionName="stp1_20"/>
+    <functioncall functionName="stp1_21"/>
+    <functioncall functionName="stp1_22"/>
+    <functioncall functionName="stp1_23"/>
+    <functioncall functionName="stp1_24"/>
+    <functioncall functionName="stp1_25"/>
+    <functioncall functionName="stp1_26"/>
+    <functioncall functionName="stp1_27"/>
+    <functioncall functionName="stp1_28"/>
+    <functioncall functionName="stp1_29"/>
+    <functioncall functionName="stp1_3"/>
+    <functioncall functionName="stp1_30"/>
+    <functioncall functionName="stp1_31"/>
+    <functioncall functionName="stp1_4"/>
+    <functioncall functionName="stp1_5"/>
+    <functioncall functionName="stp1_6"/>
+    <functioncall functionName="stp1_7"/>
+    <functioncall functionName="stp1_8"/>
+    <functioncall functionName="stp1_8_0"/>
+    <functioncall functionName="stp1_9"/>
+    <functioncall functionName="stp2_0"/>
+    <functioncall functionName="stp2_1"/>
+    <functioncall functionName="stp2_10"/>
+    <functioncall functionName="stp2_11"/>
+    <functioncall functionName="stp2_12"/>
+    <functioncall functionName="stp2_13"/>
+    <functioncall functionName="stp2_14"/>
+    <functioncall functionName="stp2_15"/>
+    <functioncall functionName="stp2_16"/>
+    <functioncall functionName="stp2_17"/>
+    <functioncall functionName="stp2_18"/>
+    <functioncall functionName="stp2_19"/>
+    <functioncall functionName="stp2_2"/>
+    <functioncall functionName="stp2_20"/>
+    <functioncall functionName="stp2_21"/>
+    <functioncall functionName="stp2_22"/>
+    <functioncall functionName="stp2_23"/>
+    <functioncall functionName="stp2_24"/>
+    <functioncall functionName="stp2_25"/>
+    <functioncall functionName="stp2_26"/>
+    <functioncall functionName="stp2_27"/>
+    <functioncall functionName="stp2_28"/>
+    <functioncall functionName="stp2_29"/>
+    <functioncall functionName="stp2_3"/>
+    <functioncall functionName="stp2_30"/>
+    <functioncall functionName="stp2_31"/>
+    <functioncall functionName="stp2_4"/>
+    <functioncall functionName="stp2_5"/>
+    <functioncall functionName="stp2_6"/>
+    <functioncall functionName="stp2_7"/>
+    <functioncall functionName="stp2_8"/>
+    <functioncall functionName="stp2_9"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="temp1"/>
+    <functioncall functionName="temp2"/>
+    <functioncall functionName="temp_in"/>
+    <functioncall functionName="temp_mm"/>
+    <functioncall functionName="temp_out"/>
+    <functioncall functionName="test"/>
+    <functioncall functionName="tmp0"/>
+    <functioncall functionName="tmp1"/>
+    <functioncall functionName="tmp2"/>
+    <functioncall functionName="tmp3"/>
+    <functioncall functionName="tmp4"/>
+    <functioncall functionName="tmp5"/>
+    <functioncall functionName="tmp6"/>
+    <functioncall functionName="tmp7"/>
+    <functioncall functionName="tr0_0"/>
+    <functioncall functionName="tr0_1"/>
+    <functioncall functionName="tr0_2"/>
+    <functioncall functionName="tr0_3"/>
+    <functioncall functionName="tr0_4"/>
+    <functioncall functionName="tr0_5"/>
+    <functioncall functionName="tr0_6"/>
+    <functioncall functionName="tr0_7"/>
+    <functioncall functionName="tr1_0"/>
+    <functioncall functionName="tr1_1"/>
+    <functioncall functionName="tr1_2"/>
+    <functioncall functionName="tr1_3"/>
+    <functioncall functionName="tr1_4"/>
+    <functioncall functionName="tr1_5"/>
+    <functioncall functionName="tr1_6"/>
+    <functioncall functionName="tr1_7"/>
+    <functioncall functionName="transpose_4x4"/>
+    <functioncall functionName="u0"/>
+    <functioncall functionName="u1"/>
+    <functioncall functionName="u10"/>
+    <functioncall functionName="u11"/>
+    <functioncall functionName="u12"/>
+    <functioncall functionName="u13"/>
+    <functioncall functionName="u14"/>
+    <functioncall functionName="u15"/>
+    <functioncall functionName="u2"/>
+    <functioncall functionName="u3"/>
+    <functioncall functionName="u4"/>
+    <functioncall functionName="u5"/>
+    <functioncall functionName="u6"/>
+    <functioncall functionName="u7"/>
+    <functioncall functionName="u8"/>
+    <functioncall functionName="u9"/>
+    <functioncall functionName="ubounded"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v10"/>
+    <functioncall functionName="v11"/>
+    <functioncall functionName="v12"/>
+    <functioncall functionName="v13"/>
+    <functioncall functionName="v14"/>
+    <functioncall functionName="v15"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="v3"/>
+    <functioncall functionName="v4"/>
+    <functioncall functionName="v5"/>
+    <functioncall functionName="v6"/>
+    <functioncall functionName="v7"/>
+    <functioncall functionName="v8"/>
+    <functioncall functionName="v9"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vpx_highbd_idct16_c"/>
+    <functioncall functionName="vpx_highbd_idct4_c"/>
+    <functioncall functionName="vpx_highbd_idct8_c"/>
+    <functioncall functionName="w0"/>
+    <functioncall functionName="w1"/>
+    <functioncall functionName="w10"/>
+    <functioncall functionName="w11"/>
+    <functioncall functionName="w12"/>
+    <functioncall functionName="w13"/>
+    <functioncall functionName="w14"/>
+    <functioncall functionName="w15"/>
+    <functioncall functionName="w2"/>
+    <functioncall functionName="w3"/>
+    <functioncall functionName="w4"/>
+    <functioncall functionName="w5"/>
+    <functioncall functionName="w6"/>
+    <functioncall functionName="w7"/>
+    <functioncall functionName="w8"/>
+    <functioncall functionName="w9"/>
+    <functioncall functionName="zero"/>
+  </FileInfo>
+</analyzerinfo>

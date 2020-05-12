@@ -86,7 +86,7 @@ Error FileAccessEncrypted::open_and_parse(FileAccess *p_base, const Vector<uint8
 
 		for (size_t i = 0; i < ds; i += 16) {
 
-			ctx.decrypt_ecb(&data.write[i], &data.write[i]);
+			ctx.decrypt_ecb(&data[i], &data[i]);
 		}
 
 		data.resize(length);
@@ -110,7 +110,7 @@ Error FileAccessEncrypted::open_and_parse_password(FileAccess *p_base, const Str
 	key.resize(32);
 	for (int i = 0; i < 32; i++) {
 
-		key.write[i] = cs[i];
+		key[i] = cs[i];
 	}
 
 	return open_and_parse(p_base, key, p_mode);
@@ -139,7 +139,7 @@ void FileAccessEncrypted::close() {
 		compressed.resize(len);
 		zeromem(compressed.ptrw(), len);
 		for (int i = 0; i < data.size(); i++) {
-			compressed.write[i] = data[i];
+			compressed[i] = data[i];
 		}
 
 		CryptoCore::AESContext ctx;
@@ -147,7 +147,7 @@ void FileAccessEncrypted::close() {
 
 		for (size_t i = 0; i < len; i += 16) {
 
-			ctx.encrypt_ecb(&compressed.write[i], &compressed.write[i]);
+			ctx.encrypt_ecb(&compressed[i], &compressed[i]);
 		}
 
 		file->store_32(COMP_MAGIC);
@@ -268,7 +268,7 @@ void FileAccessEncrypted::store_buffer(const uint8_t *p_src, int p_length) {
 		data.resize(pos + p_length);
 		for (int i = 0; i < p_length; i++) {
 
-			data.write[pos + i] = p_src[i];
+			data[pos + i] = p_src[i];
 		}
 		pos += p_length;
 	}
@@ -285,7 +285,7 @@ void FileAccessEncrypted::store_8(uint8_t p_dest) {
 	ERR_FAIL_COND_MSG(!writing, "File has not been opened in read mode.");
 
 	if (pos < data.size()) {
-		data.write[pos] = p_dest;
+		data[pos] = p_dest;
 		pos++;
 	} else if (pos == data.size()) {
 		data.push_back(p_dest);

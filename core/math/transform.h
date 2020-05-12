@@ -214,9 +214,6 @@ Vector<Vector3> Transform::xform(const Vector<Vector3> &p_array) const {
 	Vector<Vector3> array;
 	array.resize(p_array.size());
 
-	const Vector3 *r = p_array.ptr();
-	Vector3 *w = array.ptrw();
-
 	for (int i = 0; i < p_array.size(); ++i) {
 		w[i] = xform(r[i]);
 	}

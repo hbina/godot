@@ -76,7 +76,7 @@ void Array::_unref() const {
 
 Variant &Array::operator[](int p_idx) {
 
-	return _p->array.write[p_idx];
+	return _p->array[p_idx];
 }
 
 const Variant &Array::operator[](int p_idx) const {
@@ -137,11 +137,11 @@ void Array::_assign(const Array &p_array) {
 			for (int i = 0; i < p_array._p->array.size(); i++) {
 				Variant src_val = p_array._p->array[i];
 				if (src_val.get_type() == _p->typed.type) {
-					new_array.write[i] = src_val;
+					new_array[i] = src_val;
 				} else if (Variant::can_convert_strict(src_val.get_type(), _p->typed.type)) {
 					Variant *ptr = &src_val;
 					Callable::CallError ce;
-					new_array.write[i] = Variant::construct(_p->typed.type, (const Variant **)&ptr, 1, ce, true);
+					new_array[i] = Variant::construct(_p->typed.type, (const Variant **)&ptr, 1, ce, true);
 					if (ce.error != Callable::CallError::CALL_OK) {
 						ERR_FAIL_MSG("Unable to convert array index " + itos(i) + " from '" + Variant::get_type_name(src_val.get_type()) + "' to '" + Variant::get_type_name(_p->typed.type) + "'.");
 					}

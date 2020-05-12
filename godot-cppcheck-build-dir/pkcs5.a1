@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3773103759">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="225" column="9"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;use_len&apos; can be reduced." verbose="The scope of the variable &apos;use_len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="230" column="12"/>
+            <symbol>use_len</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:58:12" call-funcname="pkcs5_parse_pbkdf2_params" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="152" col="42" call-argexpr="&iterations" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:58:12" call-funcname="pkcs5_parse_pbkdf2_params" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="152" col="42" call-argexpr="&keylen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:220:5" call-funcname="mbedtls_pkcs5_pbkdf2_hmac" call-argnr="8" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="196" col="42" call-argexpr="key" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:220:5" call-funcname="mbedtls_pkcs5_pbkdf2_hmac" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="196" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:113:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:58:12" my-argnr="1" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="64" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:113:5" my-argnr="1" my-argname="pbe_params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="131" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:220:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="229" col="50" value="0"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="35" column="0"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:220:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="229" col="50" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:220:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="229" col="50" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:220:5" call-funcname="mbedtls_pkcs5_pbkdf2_hmac" call-argnr="8" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="383" col="40" call-argexpr="key" call-argvaluetype="7" call-argvalue="64"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c:220:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs5.c" line="229" col="50" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="pkcs5_parse_pbkdf2_params" lineNumber="58"/>
+    <functiondecl functionName="mbedtls_pkcs5_pbes2" lineNumber="113"/>
+    <functiondecl functionName="mbedtls_pkcs5_pbkdf2_hmac" lineNumber="220"/>
+    <functiondecl functionName="mbedtls_pkcs5_pbkdf2_hmac" lineNumber="220"/>
+    <functiondecl functionName="mbedtls_pkcs5_pbkdf2_hmac" lineNumber="220"/>
+    <functiondecl functionName="mbedtls_pkcs5_self_test" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_pkcs5_pbkdf2_hmac" lineNumber="220"/>
+    <functiondecl functionName="mbedtls_pkcs5_self_test" lineNumber="356"/>
+    <functioncall functionName="MBEDTLS_ASN1_OCTET_STRING"/>
+    <functioncall functionName="MBEDTLS_ASN1_SEQUENCE"/>
+    <functioncall functionName="MBEDTLS_ERR_ASN1_LENGTH_MISMATCH"/>
+    <functioncall functionName="MBEDTLS_ERR_ASN1_UNEXPECTED_TAG"/>
+    <functioncall functionName="MBEDTLS_ERR_PKCS5_FEATURE_UNAVAILABLE"/>
+    <functioncall functionName="MBEDTLS_ERR_PKCS5_INVALID_FORMAT"/>
+    <functioncall functionName="MBEDTLS_ERR_PKCS5_PASSWORD_MISMATCH"/>
+    <functioncall functionName="MBEDTLS_MD_MAX_SIZE"/>
+    <functioncall functionName="MBEDTLS_MD_SHA1"/>
+    <functioncall functionName="MBEDTLS_OID_CMP"/>
+    <functioncall functionName="MBEDTLS_OID_PKCS5_PBKDF2"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cipher_alg"/>
+    <functioncall functionName="cipher_ctx"/>
+    <functioncall functionName="cipher_info"/>
+    <functioncall functionName="counter"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="datalen"/>
+    <functioncall functionName="enc_scheme_oid"/>
+    <functioncall functionName="enc_scheme_params"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="info_sha1"/>
+    <functioncall functionName="iterations"/>
+    <functioncall functionName="iv"/>
+    <functioncall functionName="iv_size"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="kdf_alg_oid"/>
+    <functioncall functionName="kdf_alg_params"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="key_length"/>
+    <functioncall functionName="keylen"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="mbedtls_asn1_get_alg"/>
+    <functioncall functionName="mbedtls_asn1_get_alg_null"/>
+    <functioncall functionName="mbedtls_asn1_get_int"/>
+    <functioncall functionName="mbedtls_asn1_get_tag"/>
+    <functioncall functionName="mbedtls_cipher_crypt"/>
+    <functioncall functionName="mbedtls_cipher_free"/>
+    <functioncall functionName="mbedtls_cipher_info_from_type"/>
+    <functioncall functionName="mbedtls_cipher_init"/>
+    <functioncall functionName="mbedtls_cipher_setkey"/>
+    <functioncall functionName="mbedtls_cipher_setup"/>
+    <functioncall functionName="mbedtls_md_free"/>
+    <functioncall functionName="mbedtls_md_get_size"/>
+    <functioncall functionName="mbedtls_md_hmac_finish"/>
+    <functioncall functionName="mbedtls_md_hmac_starts"/>
+    <functioncall functionName="mbedtls_md_hmac_update"/>
+    <functioncall functionName="mbedtls_md_info_from_type"/>
+    <functioncall functionName="mbedtls_md_init"/>
+    <functioncall functionName="mbedtls_md_setup"/>
+    <functioncall functionName="mbedtls_oid_get_cipher_alg"/>
+    <functioncall functionName="mbedtls_oid_get_md_hmac"/>
+    <functioncall functionName="mbedtls_operation_t"/>
+    <functioncall functionName="mbedtls_pkcs5_pbkdf2_hmac"/>
+    <functioncall functionName="md1"/>
+    <functioncall functionName="md_ctx"/>
+    <functioncall functionName="md_info"/>
+    <functioncall functionName="md_size"/>
+    <functioncall functionName="md_type"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="olen"/>
+    <functioncall functionName="out_p"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="password"/>
+    <functioncall functionName="pkcs5_parse_pbkdf2_params"/>
+    <functioncall functionName="plen"/>
+    <functioncall functionName="prf_alg_oid"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="pwd"/>
+    <functioncall functionName="pwdlen"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="salt"/>
+    <functioncall functionName="sha1_ctx"/>
+    <functioncall functionName="slen"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="use_len"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="work"/>
+  </FileInfo>
+</analyzerinfo>

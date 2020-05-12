@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="109796321">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;color&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;color&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/canvas_modulate.cpp" line="98" column="2"/>
+            <symbol>color</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_notification" lineNumber="33"/>
+    <functiondecl functionName="_bind_methods" lineNumber="62"/>
+    <functiondecl functionName="set_color" lineNumber="70"/>
+    <functiondecl functionName="get_color" lineNumber="77"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="82"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="CanvasModulate"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="Node2D"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="add_to_group"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="canvas_set_modulate"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="get_canvas"/>
+    <functioncall functionName="get_color"/>
+    <functioncall functionName="get_id"/>
+    <functioncall functionName="get_nodes_in_group"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="nodes"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="remove_from_group"/>
+    <functioncall functionName="set_color"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="update_configuration_warning"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3447217398">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::body_shape&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::body_shape&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/scene/2d/ray_cast_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="157" column="3"/>
+            <symbol>ShapePair::body_shape</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::local_shape&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::local_shape&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/scene/2d/ray_cast_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="157" column="3"/>
+            <symbol>ShapePair::local_shape</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/scene/2d/ray_cast_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="157" column="3"/>
+            <symbol>ShapePair::tagged</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/2d/ray_cast_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="158" column="3"/>
+            <symbol>ShapePair::tagged</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cast_to&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cast_to&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/ray_cast_2d.cpp" line="346" column="2"/>
+            <symbol>cast_to</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PhysicsBody2D&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PhysicsBody2D&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/2d/ray_cast_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="53" column="2"/>
+            <symbol>PhysicsBody2D</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_cast_to" lineNumber="38"/>
+    <functiondecl functionName="get_cast_to" lineNumber="45"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="50"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="55"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="60"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="70"/>
+    <functiondecl functionName="is_colliding" lineNumber="75"/>
+    <functiondecl functionName="get_collider" lineNumber="79"/>
+    <functiondecl functionName="get_collider_shape" lineNumber="87"/>
+    <functiondecl functionName="get_collision_point" lineNumber="91"/>
+    <functiondecl functionName="get_collision_normal" lineNumber="95"/>
+    <functiondecl functionName="set_enabled" lineNumber="100"/>
+    <functiondecl functionName="is_enabled" lineNumber="110"/>
+    <functiondecl functionName="set_exclude_parent_body" lineNumber="115"/>
+    <functiondecl functionName="get_exclude_parent_body" lineNumber="133"/>
+    <functiondecl functionName="_notification" lineNumber="138"/>
+    <functiondecl functionName="_update_raycast_state" lineNumber="204"/>
+    <functiondecl functionName="force_raycast_update" lineNumber="233"/>
+    <functiondecl functionName="add_exception_rid" lineNumber="237"/>
+    <functiondecl functionName="add_exception" lineNumber="242"/>
+    <functiondecl functionName="remove_exception_rid" lineNumber="251"/>
+    <functiondecl functionName="remove_exception" lineNumber="256"/>
+    <functiondecl functionName="clear_exceptions" lineNumber="265"/>
+    <functiondecl functionName="set_collide_with_areas" lineNumber="270"/>
+    <functiondecl functionName="is_collide_with_areas_enabled" lineNumber="275"/>
+    <functiondecl functionName="set_collide_with_bodies" lineNumber="280"/>
+    <functiondecl functionName="is_collide_with_bodies_enabled" lineNumber="285"/>
+    <functiondecl functionName="_bind_methods" lineNumber="290"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="BodyMode"/>
+    <functioncall functionName="BodyState"/>
+    <functioncall functionName="CCDMode"/>
+    <functioncall functionName="CCD_MODE_CAST_RAY"/>
+    <functioncall functionName="CCD_MODE_CAST_SHAPE"/>
+    <functioncall functionName="CCD_MODE_DISABLED"/>
+    <functioncall functionName="CollisionObject2D"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="KinematicBody2D"/>
+    <functioncall functionName="KinematicCollision2D"/>
+    <functioncall functionName="MODE_CHARACTER"/>
+    <functioncall functionName="MODE_KINEMATIC"/>
+    <functioncall functionName="MODE_RIGID"/>
+    <functioncall functionName="MODE_STATIC"/>
+    <functioncall functionName="Mode"/>
+    <functioncall functionName="Node2D"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_2D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_PHYSICS"/>
+    <functioncall functionName="PhysicsBody2D"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RayCast2D"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="RigidBody2D"/>
+    <functioncall functionName="ShapeData"/>
+    <functioncall functionName="ShapePair"/>
+    <functioncall functionName="StaticBody2D"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_update_raycast_state"/>
+    <functioncall functionName="add_exception"/>
+    <functioncall functionName="add_exception_rid"/>
+    <functioncall functionName="against"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="body_shape"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_exceptions"/>
+    <functioncall functionName="co"/>
+    <functioncall functionName="collide_with_areas"/>
+    <functioncall functionName="collide_with_bodies"/>
+    <functioncall functionName="collider_id"/>
+    <functioncall functionName="collision_mask"/>
+    <functioncall functionName="cols"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="draw_col"/>
+    <functioncall functionName="draw_line"/>
+    <functioncall functionName="draw_primitive"/>
+    <functioncall functionName="dss"/>
+    <functioncall functionName="enabled"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exclude"/>
+    <functioncall functionName="exclude_parent_body"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_raycast_update"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get_cast_to"/>
+    <functioncall functionName="get_collider"/>
+    <functioncall functionName="get_collider_shape"/>
+    <functioncall functionName="get_collision_mask"/>
+    <functioncall functionName="get_collision_mask_bit"/>
+    <functioncall functionName="get_collision_normal"/>
+    <functioncall functionName="get_collision_point"/>
+    <functioncall functionName="get_debug_collisions_color"/>
+    <functioncall functionName="get_exclude_parent_body"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_origin"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_space"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_v"/>
+    <functioncall functionName="get_world_2d"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="intersect_ray"/>
+    <functioncall functionName="is_collide_with_areas_enabled"/>
+    <functioncall functionName="is_collide_with_bodies_enabled"/>
+    <functioncall functionName="is_colliding"/>
+    <functioncall functionName="is_debugging_collisions_hint"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_enabled"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="local_shape"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_bs"/>
+    <functioncall functionName="p_clip"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_exclude_parent_body"/>
+    <functioncall functionName="p_ls"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_rid"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="pts"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="remove_exception"/>
+    <functioncall functionName="remove_exception_rid"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rotate"/>
+    <functioncall functionName="rr"/>
+    <functioncall functionName="set_cast_to"/>
+    <functioncall functionName="set_collide_with_areas"/>
+    <functioncall functionName="set_collide_with_bodies"/>
+    <functioncall functionName="set_collision_mask"/>
+    <functioncall functionName="set_collision_mask_bit"/>
+    <functioncall functionName="set_enabled"/>
+    <functioncall functionName="set_exclude_parent_body"/>
+    <functioncall functionName="set_physics_process_internal"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="space_get_direct_state"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="translate"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tsize"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="xform"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3381145225">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;A_Q12&apos; can be reduced." verbose="The scope of the variable &apos;A_Q12&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="135" column="26"/>
+            <symbol>A_Q12</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;B_Q14&apos; can be reduced." verbose="The scope of the variable &apos;B_Q14&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="135" column="34"/>
+            <symbol>B_Q14</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;AR_shp_Q13&apos; can be reduced." verbose="The scope of the variable &apos;AR_shp_Q13&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="135" column="42"/>
+            <symbol>AR_shp_Q13</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;psDD&apos; can be reduced." verbose="The scope of the variable &apos;psDD&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="649" column="26"/>
+            <symbol>psDD</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h:67:25" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h" line="69" col="80" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h:67:25" my-argnr="2" my-argname="file" file="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h" line="69" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="42" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+        <error id="syntaxError" severity="error" msg="Code &apos;classMain{&apos; is invalid C code. Use --std or --language to configure the language." verbose="Code &apos;classMain{&apos; is invalid C code. Use --std or --language to configure the language.">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" file="/home/hbina/git/godot/main/main.h" line="38" column="1"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:34:25" my-argnr="1" my-argname="out" file="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h" line="36" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:34:25" my-argnr="2" my-argname="in" file="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h" line="36" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:34:25" my-argnr="2" my-argname="in" file="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h" line="36" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:34:25" call-funcname="silk_short_prediction_create_arch_coef_neon" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="367" col="5" call-argexpr="a_Q12_arch" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:79:12" call-funcname="silk_noise_shape_quantizer_short_prediction_neon" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="413" col="28" call-argexpr="a_Q12_arch" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:34:25" my-argnr="1" my-argname="out" file="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h" line="36" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:34:25" my-argnr="2" my-argname="in" file="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h" line="36" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h:34:25" my-argnr="2" my-argname="in" file="/home/hbina/git/godot/thirdparty/opus/silk/arm/NSQ_neon.h" line="36" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="Gains_Q16" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" call-funcname="silk_nsq_del_dec_scale_states" call-argnr="12" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="260" col="38" call-argexpr="pitchL" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:85:25" call-funcname="silk_noise_shape_quantizer_del_dec" call-argnr="20" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="263" col="43" call-argexpr="subfr++" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="245" col="29" info="Assignment 'subfr=0', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="2" my-argname="coef16" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="1" my-argname="data0" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="73" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="2" my-argname="data1" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="74" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:67:31" my-argnr="3" my-argname="coef" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="78" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="154" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="149" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:271:6" my-argnr="3" my-argname="psIndices" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="167" col="51" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="1" my-argname="psEncC" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="664" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c:65:25" my-argnr="2" my-argname="NSQ" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ_del_dec.c" line="656" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h:35:31" my-argnr="1" my-argname="buf32" file="/home/hbina/git/godot/thirdparty/opus/silk/NSQ.h" line="42" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functiondecl functionName="silk_NSQ_del_dec_c" lineNumber="115"/>
+    <functiondecl functionName="silk_noise_shape_quantizer_del_dec" lineNumber="313"/>
+    <functiondecl functionName="silk_nsq_del_dec_scale_states" lineNumber="630"/>
+    <functioncall functionName="ALLOC"/>
+    <functioncall functionName="AR_shp_Q13"/>
+    <functioncall functionName="A_Q12"/>
+    <functioncall functionName="B_Q14"/>
+    <functioncall functionName="EC_ILOG"/>
+    <functioncall functionName="Gain_Q10"/>
+    <functioncall functionName="Gain_Q16"/>
+    <functioncall functionName="Gains_Q16"/>
+    <functioncall functionName="HarmShapeFIRPacked_Q14"/>
+    <functioncall functionName="LF_AR_Q14"/>
+    <functioncall functionName="LF_shp_Q14"/>
+    <functioncall functionName="LPC_exc_Q14"/>
+    <functioncall functionName="LPC_pred_Q14"/>
+    <functioncall functionName="LSF_interpolation_flag"/>
+    <functioncall functionName="LTP_pred_Q14"/>
+    <functioncall functionName="LTP_scale_Q14"/>
+    <functioncall functionName="Lambda_Q10"/>
+    <functioncall functionName="NSQ"/>
+    <functioncall functionName="Q_Q10"/>
+    <functioncall functionName="Qres"/>
+    <functioncall functionName="RD_Q10"/>
+    <functioncall functionName="RDmax_ind"/>
+    <functioncall functionName="RDmin_ind"/>
+    <functioncall functionName="RESTORE_STACK"/>
+    <functioncall functionName="SAVE_STACK"/>
+    <functioncall functionName="Seed"/>
+    <functioncall functionName="SeedInit"/>
+    <functioncall functionName="SigProcFIX_CLZ16"/>
+    <functioncall functionName="Tilt_Q14"/>
+    <functioncall functionName="VARDECL"/>
+    <functioncall functionName="Winner_ind"/>
+    <functioncall functionName="_ASSERTE"/>
+    <functioncall functionName="_silk_fatal"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a16"/>
+    <functioncall functionName="a32"/>
+    <functioncall functionName="a32_nrm"/>
+    <functioncall functionName="a64"/>
+    <functioncall functionName="a_Q12"/>
+    <functioncall functionName="a_Q12_arch"/>
+    <functioncall functionName="a_headrm"/>
+    <functioncall functionName="abort"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b16"/>
+    <functioncall functionName="b32"/>
+    <functioncall functionName="b32_inv"/>
+    <functioncall functionName="b32_nrm"/>
+    <functioncall functionName="b64"/>
+    <functioncall functionName="b_headrm"/>
+    <functioncall functionName="c16"/>
+    <functioncall functionName="c32"/>
+    <functioncall functionName="decisionDelay"/>
+    <functioncall functionName="delayedGain_Q10"/>
+    <functioncall functionName="err_Q32"/>
+    <functioncall functionName="exc_Q14"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="frac_Q7"/>
+    <functioncall functionName="frame_length"/>
+    <functioncall functionName="gain_adj_Q16"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="in32"/>
+    <functioncall functionName="in_upper"/>
+    <functioncall functionName="inv_gain_Q23"/>
+    <functioncall functionName="inv_gain_Q31"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="lag"/>
+    <functioncall functionName="lagPrev"/>
+    <functioncall functionName="last_smple_idx"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="limit1"/>
+    <functioncall functionName="limit2"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="lshift"/>
+    <functioncall functionName="ltp_mem_length"/>
+    <functioncall functionName="lz"/>
+    <functioncall functionName="lzeros"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="nStatesDelayedDecision"/>
+    <functioncall functionName="n_AR_Q14"/>
+    <functioncall functionName="n_LF_Q14"/>
+    <functioncall functionName="n_LTP_Q14"/>
+    <functioncall functionName="nb_subfr"/>
+    <functioncall functionName="offset_Q10"/>
+    <functioncall functionName="ops_count"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_int64"/>
+    <functioncall functionName="opus_int8"/>
+    <functioncall functionName="opus_uint32"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="pitchL"/>
+    <functioncall functionName="predictLPCOrder"/>
+    <functioncall functionName="prev_gain_Q16"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="psDelDec"/>
+    <functioncall functionName="psEncC"/>
+    <functioncall functionName="psLPC_Q14"/>
+    <functioncall functionName="psSampleState"/>
+    <functioncall functionName="pulses"/>
+    <functioncall functionName="pxq"/>
+    <functioncall functionName="q1_Q0"/>
+    <functioncall functionName="q1_Q10"/>
+    <functioncall functionName="q2_Q10"/>
+    <functioncall functionName="quantOffsetType"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_Q10"/>
+    <functioncall functionName="rd1_Q10"/>
+    <functioncall functionName="rd2_Q10"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rewhite_flag"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="rr_Q10"/>
+    <functioncall functionName="sAR2_Q14"/>
+    <functioncall functionName="sLF_AR_shp_Q14"/>
+    <functioncall functionName="sLPC_Q14"/>
+    <functioncall functionName="sLTP"/>
+    <functioncall functionName="sLTP_Q15"/>
+    <functioncall functionName="sLTP_buf_idx"/>
+    <functioncall functionName="sLTP_shp_Q14"/>
+    <functioncall functionName="sLTP_shp_buf_idx"/>
+    <functioncall functionName="shapingLPCOrder"/>
+    <functioncall functionName="signalType"/>
+    <functioncall functionName="silk_ADD32"/>
+    <functioncall functionName="silk_CLZ32"/>
+    <functioncall functionName="silk_CLZ32_armv5"/>
+    <functioncall functionName="silk_CLZ_FRAC"/>
+    <functioncall functionName="silk_DIV32_varQ"/>
+    <functioncall functionName="silk_INVERSE32_varQ"/>
+    <functioncall functionName="silk_LIMIT_32"/>
+    <functioncall functionName="silk_LPC_analysis_filter"/>
+    <functioncall functionName="silk_LSHIFT32"/>
+    <functioncall functionName="silk_MLA"/>
+    <functioncall functionName="silk_ROR32"/>
+    <functioncall functionName="silk_RSHIFT32"/>
+    <functioncall functionName="silk_RSHIFT_ROUND"/>
+    <functioncall functionName="silk_SAT16"/>
+    <functioncall functionName="silk_SMLABB"/>
+    <functioncall functionName="silk_SMLABB_armv5e"/>
+    <functioncall functionName="silk_SMLAWB"/>
+    <functioncall functionName="silk_SMLAWB_armv5e"/>
+    <functioncall functionName="silk_SMLAWT"/>
+    <functioncall functionName="silk_SMLAWT_armv5e"/>
+    <functioncall functionName="silk_SMLAWW_armv4"/>
+    <functioncall functionName="silk_SMULBB"/>
+    <functioncall functionName="silk_SMULBB_armv5e"/>
+    <functioncall functionName="silk_SMULWB"/>
+    <functioncall functionName="silk_SMULWB_armv4"/>
+    <functioncall functionName="silk_SMULWB_armv5e"/>
+    <functioncall functionName="silk_SMULWT_armv4"/>
+    <functioncall functionName="silk_SMULWW"/>
+    <functioncall functionName="silk_SMULWW_armv4"/>
+    <functioncall functionName="silk_SUB32"/>
+    <functioncall functionName="silk_SUB_LSHIFT32"/>
+    <functioncall functionName="silk_max"/>
+    <functioncall functionName="silk_min_int"/>
+    <functioncall functionName="silk_noise_shape_quantizer_del_dec"/>
+    <functioncall functionName="silk_noise_shape_quantizer_short_prediction_c"/>
+    <functioncall functionName="silk_noise_shape_quantizer_short_prediction_neon"/>
+    <functioncall functionName="silk_nsq_del_dec_scale_states"/>
+    <functioncall functionName="silk_short_prediction_create_arch_coef_neon"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="smpl_buf_idx"/>
+    <functioncall functionName="start_idx"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="subfr"/>
+    <functioncall functionName="subfr_length"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp1"/>
+    <functioncall functionName="tmp2"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="warping_Q16"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x_Q3"/>
+    <functioncall functionName="x_sc_Q10"/>
+    <functioncall functionName="xq"/>
+    <functioncall functionName="xq_Q14"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

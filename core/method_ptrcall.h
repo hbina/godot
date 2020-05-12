@@ -204,7 +204,7 @@ struct PtrToArg<ObjectID> {
 			{                                                                            \
 				const m_type *r = dvs->ptr();                                            \
 				for (int i = 0; i < len; i++) {                                          \
-					ret.write[i] = r[i];                                                 \
+					ret[i] = r[i];                                                       \
 				}                                                                        \
 			}                                                                            \
 			return ret;                                                                  \
@@ -231,7 +231,7 @@ struct PtrToArg<ObjectID> {
 			{                                                                            \
 				const m_type *r = dvs->ptr();                                            \
 				for (int i = 0; i < len; i++) {                                          \
-					ret.write[i] = r[i];                                                 \
+					ret[i] = r[i];                                                       \
 				}                                                                        \
 			}                                                                            \
 			return ret;                                                                  \
@@ -249,7 +249,7 @@ struct PtrToArg<ObjectID> {
 			{                                                                            \
 				const m_type *r = dvs->ptr();                                            \
 				for (int i = 0; i < len; i++) {                                          \
-					ret.write[i] = r[i];                                                 \
+					ret[i] = r[i];                                                       \
 				}                                                                        \
 			}                                                                            \
 			return ret;                                                                  \
@@ -272,12 +272,9 @@ struct PtrToArg<ObjectID> {
 			const Vector<m_type> *dvs = reinterpret_cast<const Vector<m_type> *>(p_ptr); \
 			Vector<m_type_alt> ret;                                                      \
 			int len = dvs->size();                                                       \
-			ret.resize(len);                                                             \
-			{                                                                            \
-				const m_type *r = dvs->ptr();                                            \
-				for (int i = 0; i < len; i++) {                                          \
-					ret.write[i] = r[i];                                                 \
-				}                                                                        \
+			ret.reserve(len);                                                            \
+			for (const auto &x : *dvs) {                                                 \
+				ret.push_back(x);                                                        \
 			}                                                                            \
 			return ret;                                                                  \
 		}                                                                                \
@@ -303,7 +300,7 @@ MAKE_VECARG_ALT(String, StringName);
 			int len = arr->size();                                             \
 			ret.resize(len);                                                   \
 			for (int i = 0; i < len; i++) {                                    \
-				ret.write[i] = (*arr)[i];                                      \
+				ret[i] = (*arr)[i];                                            \
 			}                                                                  \
 			return ret;                                                        \
 		}                                                                      \
@@ -324,7 +321,7 @@ MAKE_VECARG_ALT(String, StringName);
 			int len = arr->size();                                             \
 			ret.resize(len);                                                   \
 			for (int i = 0; i < len; i++) {                                    \
-				ret.write[i] = (*arr)[i];                                      \
+				ret[i] = (*arr)[i];                                            \
 			}                                                                  \
 			return ret;                                                        \
 		}                                                                      \

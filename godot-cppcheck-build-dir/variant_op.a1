@@ -1,0 +1,680 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1806309014">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_bool&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_bool&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_bool</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_int&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_int&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_int</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_float&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_float&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_float</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_transform2d&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_transform2d&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_transform2d</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_aabb&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_aabb&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_aabb</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_basis&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_basis&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_basis</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_transform&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_transform&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_transform</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::packed_array&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::packed_array&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::packed_array</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_ptr&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_ptr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_ptr</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Variant::_mem&apos; is not initialized in the constructor." verbose="Member variable &apos;Variant::_mem&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="473" column="17"/>
+            <symbol>Variant::_mem</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;Variant::operator=&apos; should return &apos;Variant &amp;&apos;." verbose="The Variant::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;Variant &amp;Variant::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="471" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Variant::_get_obj&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Variant::_get_obj&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="194" column="33"/>
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="507" column="34"/>
+            <symbol>Variant::_get_obj</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="306" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="307" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="308" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="314" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="315" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="316" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="317" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="318" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="319" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="320" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="321" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="322" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="323" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="324" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="325" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="326" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="327" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="328" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="329" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="330" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="331" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="332" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="333" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="334" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="335" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="336" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="337" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="338" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="339" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="340" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="341" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="342" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="343" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="344" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="345" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="347" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="348" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="349" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="350" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="351" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="352" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="353" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="354" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="355" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="356" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="357" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="359" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="360" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="361" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="362" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="364" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; uint8_t &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; uint8_t &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; uint8_t &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; int32_t &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; int32_t &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; int32_t &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; int64_t &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; int64_t &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; int64_t &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; float &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; float &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; float &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; double &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; double &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; String &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; String &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; String &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; Vector2 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; Vector2 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; Vector2 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; Vector3 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; Vector3 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; Vector3 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PackedArrayRef &lt; Color &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PackedArrayRef &lt; Color &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="183" column="18"/>
+            <symbol>PackedArrayRef &lt; Color &gt;</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;iter_init&apos; argument 2 names different: declaration &apos;r_valid&apos; definition &apos;valid&apos;." verbose="Function &apos;iter_init&apos; argument 2 names different: declaration &apos;r_valid&apos; definition &apos;valid&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/variant_op.cpp" line="3487" column="48"/>
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="442" column="40"/>
+            <symbol>iter_init</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;iter_next&apos; argument 2 names different: declaration &apos;r_valid&apos; definition &apos;valid&apos;." verbose="Function &apos;iter_next&apos; argument 2 names different: declaration &apos;r_valid&apos; definition &apos;valid&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/variant_op.cpp" line="3681" column="48"/>
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="443" column="40"/>
+            <symbol>iter_next</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/variant.h:404:14" call-funcname="evaluate" call-argnr="1" file="/home/hbina/git/godot/core/variant.h" line="409" col="11" call-argexpr="p_op" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/variant_op.cpp" line="3153" col="19" info="Calling function 'evaluate', 1st argument 'OP_EQUAL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/variant.h:438:7" call-funcname="set" call-argnr="3" file="/home/hbina/git/godot/core/variant_op.cpp" line="1789" col="7" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/variant.h:405:32" call-funcname="evaluate" call-argnr="1" file="/home/hbina/git/godot/core/variant_op.cpp" line="3153" col="18" call-argexpr="OP_EQUAL" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/variant.h:158:30" my-argnr="1" my-argname="p_array" file="/home/hbina/git/godot/core/variant.h" line="159" col="8" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/variant.h:404:14" call-funcname="evaluate" call-argnr="1" file="/home/hbina/git/godot/core/variant.h" line="409" col="11" call-argexpr="p_op" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/variant_op.cpp" line="3153" col="19" info="Calling function 'evaluate', 1st argument 'OP_EQUAL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/variant.h:438:7" call-funcname="set" call-argnr="3" file="/home/hbina/git/godot/core/variant_op.cpp" line="1789" col="7" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/variant.h:405:32" call-funcname="evaluate" call-argnr="1" file="/home/hbina/git/godot/core/variant_op.cpp" line="3153" col="18" call-argexpr="OP_EQUAL" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/variant.h:158:30" my-argnr="1" my-argname="p_array" file="/home/hbina/git/godot/core/variant.h" line="159" col="8" value="0"/>
+  </FileInfo>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="310" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Variant&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/variant_op.cpp" file="/home/hbina/git/godot/core/variant.h" line="311" column="2"/>
+            <symbol>Variant</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/variant.h:404:14" call-funcname="evaluate" call-argnr="1" file="/home/hbina/git/godot/core/variant.h" line="409" col="11" call-argexpr="p_op" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/variant_op.cpp" line="3153" col="19" info="Calling function 'evaluate', 1st argument 'OP_EQUAL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/variant.h:438:7" call-funcname="set" call-argnr="3" file="/home/hbina/git/godot/core/variant_op.cpp" line="1789" col="7" call-argexpr="&valid" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/variant.h:405:32" call-funcname="evaluate" call-argnr="1" file="/home/hbina/git/godot/core/variant_op.cpp" line="3153" col="18" call-argexpr="OP_EQUAL" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/variant.h:158:30" my-argnr="1" my-argname="p_array" file="/home/hbina/git/godot/core/variant.h" line="159" col="8" value="0"/>
+  </FileInfo>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error">
+            <location file="/home/hbina/git/godot/core/variant_op.cpp" line="465" column="2"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="booleanize" lineNumber="168"/>
+    <functiondecl functionName="evaluate" lineNumber="462"/>
+    <functiondecl functionName="set_named" lineNumber="1420"/>
+    <functiondecl functionName="get_named" lineNumber="1798"/>
+    <functiondecl functionName="set" lineNumber="2056"/>
+    <functiondecl functionName="get" lineNumber="2637"/>
+    <functiondecl functionName="in" lineNumber="3093"/>
+    <functiondecl functionName="get_property_list" lineNumber="3336"/>
+    <functiondecl functionName="iter_init" lineNumber="3487"/>
+    <functiondecl functionName="iter_next" lineNumber="3681"/>
+    <functiondecl functionName="iter_get" lineNumber="3918"/>
+    <functiondecl functionName="duplicate" lineNumber="4106"/>
+    <functiondecl functionName="blend" lineNumber="4128"/>
+    <functiondecl functionName="interpolate" lineNumber="4239"/>
+    <functiondecl functionName="get_operator_name" lineNumber="4638"/>
+    <functiondecl functionName="booleanize" lineNumber="168"/>
+    <functiondecl functionName="evaluate" lineNumber="462"/>
+    <functiondecl functionName="set_named" lineNumber="1420"/>
+    <functiondecl functionName="get_named" lineNumber="1798"/>
+    <functiondecl functionName="set" lineNumber="2056"/>
+    <functiondecl functionName="get" lineNumber="2637"/>
+    <functiondecl functionName="in" lineNumber="3093"/>
+    <functiondecl functionName="get_property_list" lineNumber="3336"/>
+    <functiondecl functionName="iter_init" lineNumber="3487"/>
+    <functiondecl functionName="iter_next" lineNumber="3681"/>
+    <functiondecl functionName="iter_get" lineNumber="3918"/>
+    <functiondecl functionName="duplicate" lineNumber="4106"/>
+    <functiondecl functionName="blend" lineNumber="4128"/>
+    <functiondecl functionName="interpolate" lineNumber="4239"/>
+    <functiondecl functionName="get_operator_name" lineNumber="4638"/>
+    <functiondecl functionName="booleanize" lineNumber="168"/>
+    <functiondecl functionName="evaluate" lineNumber="462"/>
+    <functiondecl functionName="set_named" lineNumber="1420"/>
+    <functiondecl functionName="get_named" lineNumber="1798"/>
+    <functiondecl functionName="set" lineNumber="2056"/>
+    <functiondecl functionName="get" lineNumber="2637"/>
+    <functiondecl functionName="in" lineNumber="3093"/>
+    <functiondecl functionName="get_property_list" lineNumber="3336"/>
+    <functiondecl functionName="iter_init" lineNumber="3487"/>
+    <functiondecl functionName="iter_next" lineNumber="3681"/>
+    <functiondecl functionName="iter_get" lineNumber="3918"/>
+    <functiondecl functionName="duplicate" lineNumber="4106"/>
+    <functiondecl functionName="blend" lineNumber="4128"/>
+    <functiondecl functionName="interpolate" lineNumber="4239"/>
+    <functiondecl functionName="get_operator_name" lineNumber="4638"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="BASIS"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CALLABLE"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="DICTIONARY"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="NODE_PATH"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="OP_ADD"/>
+    <functioncall functionName="OP_AND"/>
+    <functioncall functionName="OP_BIT_AND"/>
+    <functioncall functionName="OP_BIT_NEGATE"/>
+    <functioncall functionName="OP_BIT_OR"/>
+    <functioncall functionName="OP_BIT_XOR"/>
+    <functioncall functionName="OP_DIVIDE"/>
+    <functioncall functionName="OP_EQUAL"/>
+    <functioncall functionName="OP_GREATER"/>
+    <functioncall functionName="OP_GREATER_EQUAL"/>
+    <functioncall functionName="OP_IN"/>
+    <functioncall functionName="OP_LESS"/>
+    <functioncall functionName="OP_LESS_EQUAL"/>
+    <functioncall functionName="OP_MAX"/>
+    <functioncall functionName="OP_MODULE"/>
+    <functioncall functionName="OP_MULTIPLY"/>
+    <functioncall functionName="OP_NEGATE"/>
+    <functioncall functionName="OP_NOT"/>
+    <functioncall functionName="OP_NOT_EQUAL"/>
+    <functioncall functionName="OP_OR"/>
+    <functioncall functionName="OP_POSITIVE"/>
+    <functioncall functionName="OP_SHIFT_LEFT"/>
+    <functioncall functionName="OP_SHIFT_RIGHT"/>
+    <functioncall functionName="OP_STRING_CONCAT"/>
+    <functioncall functionName="OP_SUBTRACT"/>
+    <functioncall functionName="OP_XOR"/>
+    <functioncall functionName="ObjData"/>
+    <functioncall functionName="PACKED_BYTE_ARRAY"/>
+    <functioncall functionName="PACKED_COLOR_ARRAY"/>
+    <functioncall functionName="PACKED_FLOAT32_ARRAY"/>
+    <functioncall functionName="PACKED_FLOAT64_ARRAY"/>
+    <functioncall functionName="PACKED_INT32_ARRAY"/>
+    <functioncall functionName="PACKED_INT64_ARRAY"/>
+    <functioncall functionName="PACKED_STRING_ARRAY"/>
+    <functioncall functionName="PACKED_VECTOR2_ARRAY"/>
+    <functioncall functionName="PACKED_VECTOR3_ARRAY"/>
+    <functioncall functionName="PLANE"/>
+    <functioncall functionName="PackedArrayRef &lt; Color &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; String &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; Vector2 &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; Vector3 &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; double &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; float &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; int32_t &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; int64_t &gt;"/>
+    <functioncall functionName="PackedArrayRef &lt; uint8_t &gt;"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="QUAT"/>
+    <functioncall functionName="RECT2"/>
+    <functioncall functionName="RECT2I"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Rect2i"/>
+    <functioncall functionName="SIGNAL"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="TRANSFORM"/>
+    <functioncall functionName="TRANSFORM2D"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VARIANT_MAX"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="VECTOR2I"/>
+    <functioncall functionName="VECTOR3"/>
+    <functioncall functionName="VECTOR3I"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector2i"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="Vector3i"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_RID"/>
+    <functioncall functionName="_aabb"/>
+    <functioncall functionName="_basis"/>
+    <functioncall functionName="_bool"/>
+    <functioncall functionName="_dummy"/>
+    <functioncall functionName="_float"/>
+    <functioncall functionName="_get_obj"/>
+    <functioncall functionName="_int"/>
+    <functioncall functionName="_iter_get"/>
+    <functioncall functionName="_iter_init"/>
+    <functioncall functionName="_iter_next"/>
+    <functioncall functionName="_mem"/>
+    <functioncall functionName="_transform"/>
+    <functioncall functionName="_transform2d"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a8"/>
+    <functioncall functionName="a_len"/>
+    <functioncall functionName="append_array"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="array_a"/>
+    <functioncall functionName="array_b"/>
+    <functioncall functionName="asize"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b8"/>
+    <functioncall functionName="basis"/>
+    <functioncall functionName="booleanize"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bsize"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="chr"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="csize"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="deep"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="evaluate"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="g8"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_array"/>
+    <functioncall functionName="get_array_ptr"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_h"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_s"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_v"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="getvar"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash_compare"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="interpolate"/>
+    <functioncall functionName="interpolate_with"/>
+    <functioncall functionName="is_active"/>
+    <functioncall functionName="is_num"/>
+    <functioncall functionName="is_reference"/>
+    <functioncall functionName="is_zero"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="new_a"/>
+    <functioncall functionName="new_b"/>
+    <functioncall functionName="new_g"/>
+    <functioncall functionName="new_r"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="operator::AABB"/>
+    <functioncall functionName="operatorArray"/>
+    <functioncall functionName="operatorArray().duplicate"/>
+    <functioncall functionName="operatorBasis"/>
+    <functioncall functionName="operatorCallable"/>
+    <functioncall functionName="operatorCharType"/>
+    <functioncall functionName="operatorColor"/>
+    <functioncall functionName="operatorControl*"/>
+    <functioncall functionName="operatorDictionary"/>
+    <functioncall functionName="operatorDictionary().duplicate"/>
+    <functioncall functionName="operatorIP_Address"/>
+    <functioncall functionName="operatorMargin"/>
+    <functioncall functionName="operatorNode*"/>
+    <functioncall functionName="operatorNodePath"/>
+    <functioncall functionName="operatorObject*"/>
+    <functioncall functionName="operatorObjectID"/>
+    <functioncall functionName="operatorOrientation"/>
+    <functioncall functionName="operatorPlane"/>
+    <functioncall functionName="operatorQuat"/>
+    <functioncall functionName="operatorRID"/>
+    <functioncall functionName="operatorRect2"/>
+    <functioncall functionName="operatorRect2i"/>
+    <functioncall functionName="operatorSignal"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="operatorStringName"/>
+    <functioncall functionName="operatorTransform"/>
+    <functioncall functionName="operatorTransform2D"/>
+    <functioncall functionName="operatorVector2"/>
+    <functioncall functionName="operatorVector2i"/>
+    <functioncall functionName="operatorVector3"/>
+    <functioncall functionName="operatorVector3i"/>
+    <functioncall functionName="operatorVector&lt;Color&gt;"/>
+    <functioncall functionName="operatorVector&lt;Face3&gt;"/>
+    <functioncall functionName="operatorVector&lt;Plane&gt;"/>
+    <functioncall functionName="operatorVector&lt;RID&gt;"/>
+    <functioncall functionName="operatorVector&lt;String&gt;"/>
+    <functioncall functionName="operatorVector&lt;StringName&gt;"/>
+    <functioncall functionName="operatorVector&lt;Variant&gt;"/>
+    <functioncall functionName="operatorVector&lt;Vector2&gt;"/>
+    <functioncall functionName="operatorVector&lt;Vector3&gt;"/>
+    <functioncall functionName="operatorVector&lt;double&gt;"/>
+    <functioncall functionName="operatorVector&lt;float&gt;"/>
+    <functioncall functionName="operatorVector&lt;int32_t&gt;"/>
+    <functioncall functionName="operatorVector&lt;int64_t&gt;"/>
+    <functioncall functionName="operatorVector&lt;uint8_t&gt;"/>
+    <functioncall functionName="operator[]"/>
+    <functioncall functionName="operatorbool"/>
+    <functioncall functionName="operatorchar"/>
+    <functioncall functionName="operatordouble"/>
+    <functioncall functionName="operatorfloat"/>
+    <functioncall functionName="operatorint"/>
+    <functioncall functionName="operatorint64_t"/>
+    <functioncall functionName="operatorlong"/>
+    <functioncall functionName="operatorshort"/>
+    <functioncall functionName="operatoruint64_t"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_array"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_base"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_list"/>
+    <functioncall functionName="p_op"/>
+    <functioncall functionName="p_rhs"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="packed_array"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r8"/>
+    <functioncall functionName="r_iter"/>
+    <functioncall functionName="r_valid"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="reference"/>
+    <functioncall functionName="refp"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="round"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sa_len"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_axis"/>
+    <functioncall functionName="set_hsv"/>
+    <functioncall functionName="setvar"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="slerp"/>
+    <functioncall functionName="sprintf"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="sz"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="va"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="vref"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

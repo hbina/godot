@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4161695612">
+        <error id="returnTempReference" severity="error" msg="Reference to temporary returned." verbose="Reference to temporary returned." cwe="562">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2231" column="76"/>
+        </error>
+        <error id="returnTempReference" severity="error" msg="Reference to temporary returned." verbose="Reference to temporary returned." cwe="562">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2232" column="64"/>
+        </error>
+        <error id="returnTempReference" severity="error" msg="Reference to temporary returned." verbose="Reference to temporary returned." cwe="562">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2523" column="71"/>
+        </error>
+        <error id="returnTempReference" severity="error" msg="Reference to temporary returned." verbose="Reference to temporary returned." cwe="562">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2524" column="59"/>
+        </error>
+        <error id="returnTempReference" severity="error" msg="Reference to temporary returned." verbose="Reference to temporary returned." cwe="562">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2748" column="66"/>
+        </error>
+        <error id="returnTempReference" severity="error" msg="Reference to temporary returned." verbose="Reference to temporary returned." cwe="562">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2749" column="54"/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;huff2D::m_bits_per_sym&apos; is not initialized in the constructor." verbose="Member variable &apos;huff2D::m_bits_per_sym&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1964" column="3"/>
+            <symbol>huff2D::m_bits_per_sym</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;huff2D::m_total_syms_per_group&apos; is not initialized in the constructor." verbose="Member variable &apos;huff2D::m_total_syms_per_group&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1964" column="3"/>
+            <symbol>huff2D::m_total_syms_per_group</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;huff2D::m_cur_sym_bits&apos; is not initialized in the constructor." verbose="Member variable &apos;huff2D::m_cur_sym_bits&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1964" column="3"/>
+            <symbol>huff2D::m_cur_sym_bits</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;huff2D::m_cur_num_syms&apos; is not initialized in the constructor." verbose="Member variable &apos;huff2D::m_cur_num_syms&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1964" column="3"/>
+            <symbol>huff2D::m_cur_num_syms</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;huff2D::m_next_decoder_group_index&apos; is not initialized in the constructor." verbose="Member variable &apos;huff2D::m_next_decoder_group_index&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1964" column="3"/>
+            <symbol>huff2D::m_next_decoder_group_index</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;huff2D::m_decode_syms_remaining&apos; is not initialized in the constructor." verbose="Member variable &apos;huff2D::m_decode_syms_remaining&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1964" column="3"/>
+            <symbol>huff2D::m_decode_syms_remaining</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;basist::bitwise_decoder::stop&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;basist::bitwise_decoder::stop&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h" line="276" column="7"/>
+            <symbol>basist::bitwise_decoder::stop</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;basist::approx_move_to_front::operator[]&apos; can be const." verbose="The member function &apos;basist::approx_move_to_front::operator[]&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h" line="532" column="6"/>
+            <symbol>basist::approx_move_to_front::operator[]</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;approx_move_to_front&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;approx_move_to_front&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h" line="517" column="2"/>
+            <symbol>approx_move_to_front</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;job_pool&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;job_pool&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="361" column="3"/>
+            <symbol>job_pool</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;color_rgba&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;color_rgba&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="445" column="10"/>
+            <symbol>color_rgba</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;rand&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;rand&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="849" column="3"/>
+            <symbol>rand</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;sep&lt;0&apos; is always true" verbose="Condition &apos;sep&lt;0&apos; is always true" cwe="571">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="639" column="11" info="Condition &apos;sep&lt;0&apos; is always true"/>
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="635" column="14" info="Assignment &apos;sep=-1&apos;, assigned value is -1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;sep&lt;0&apos; is always true" verbose="Condition &apos;sep&lt;0&apos; is always true" cwe="571">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="658" column="11" info="Condition &apos;sep&lt;0&apos; is always true"/>
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="654" column="14" info="Assignment &apos;sep=-1&apos;, assigned value is -1"/>
+        </error>
+        <error id="shadowFunction" severity="style" msg="Local variable &apos;total_bits&apos; shadows outer function" verbose="Local variable &apos;total_bits&apos; shadows outer function" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1928" column="13" info="Shadow variable"/>
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h" line="148" column="18" info="Shadowed declaration"/>
+            <symbol>total_bits</symbol>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h" line="574" column="44" info="Shift"/>
+        </error>
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/basis_universal/basisu_ssim.cpp" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="44" column="45" info="Shift"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h:660:18" call-funcname="get_selector" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h" line="641" col="30" call-argexpr="x" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="485" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="494" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="497" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="503" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="504" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="505" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="506" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="512" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="513" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="514" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:694:15" call-funcname="strcpy_safe" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="743" col="14" call-argexpr="dirtmp" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:694:15" call-funcname="strcpy_safe" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="744" col="14" call-argexpr="nametmp" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="&temp_drive" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="&temp_path" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="5" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="&filename" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="5" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="&temp_ext" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:853:7" call-funcname="irand" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="857" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:120:7" call-funcname="debug_printf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1645" col="15" call-argexpr="limit_clusterizers" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1643" col="25" info="Assignment 'limit_clusterizers=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:1706:8" call-funcname="init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1699" col="38" call-argexpr="size" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:1850:19" call-funcname="put_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1897" col="12" call-argexpr="x&1" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2231" col="87" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2231" col="118" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2232" col="75" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2232" col="106" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2236" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2237" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2243" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2244" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2523" col="82" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2523" col="113" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2524" col="70" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2524" col="101" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2528" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2529" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2535" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2536" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2648:7" call-funcname="save_png" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2649" col="147" call-argexpr="image_save_flags" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2648:7" call-funcname="save_png" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2649" col="147" call-argexpr="grayscale_comp" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2653:7" call-funcname="write_data_to_file" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2655" col="162" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:694:15" call-funcname="strcpy_safe" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="743" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="812" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="812" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="813" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="8" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:824:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="8" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:833:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2653:7" call-funcname="write_data_to_file" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2655" col="95" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2655:14" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="800" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="1" my-argname="pFilename" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="2" my-argname="pMode" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:343:35" my-argnr="3" my-argname="pKeys" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="351" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="1" my-argname="pFilename" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="2" my-argname="pMode" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h:660:18" call-funcname="get_selector" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h" line="641" col="30" call-argexpr="x" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="485" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="494" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="497" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="503" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="504" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="505" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="506" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="512" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="513" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="514" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="&temp_drive" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="&temp_path" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="5" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="&filename" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="5" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="&temp_ext" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:853:7" call-funcname="irand" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="857" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:120:7" call-funcname="debug_printf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1645" col="15" call-argexpr="limit_clusterizers" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1643" col="25" info="Assignment 'limit_clusterizers=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:1706:8" call-funcname="init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1699" col="38" call-argexpr="size" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:1850:19" call-funcname="put_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1897" col="12" call-argexpr="x&1" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2231" col="87" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2231" col="118" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2232" col="75" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2232" col="106" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2236" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2237" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2243" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2244" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2523" col="82" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2523" col="113" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2524" col="70" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2524" col="101" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2528" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2529" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2535" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2536" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2648:7" call-funcname="save_png" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2649" col="147" call-argexpr="image_save_flags" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2648:7" call-funcname="save_png" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2649" col="147" call-argexpr="grayscale_comp" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2653:7" call-funcname="write_data_to_file" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2655" col="162" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="812" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="812" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="813" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="8" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:824:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="8" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:833:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2653:7" call-funcname="write_data_to_file" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2655" col="95" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2655:14" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="800" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="1" my-argname="pFilename" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="2" my-argname="pMode" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:343:35" my-argnr="3" my-argname="pKeys" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="351" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="1" my-argname="pFilename" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="2" my-argname="pMode" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2798" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h:660:18" call-funcname="get_selector" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu_transcoder_internal.h" line="641" col="30" call-argexpr="x" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="485" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="494" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="497" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="503" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="504" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="505" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="506" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="512" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="513" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="514" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:694:15" call-funcname="strcpy_safe" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="743" col="14" call-argexpr="dirtmp" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:694:15" call-funcname="strcpy_safe" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="744" col="14" call-argexpr="nametmp" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="&temp_drive" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="&temp_path" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="5" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="&filename" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="5" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="25" call-argexpr="&temp_ext" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:853:7" call-funcname="irand" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="857" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:120:7" call-funcname="debug_printf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1645" col="15" call-argexpr="limit_clusterizers" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1643" col="25" info="Assignment 'limit_clusterizers=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:1706:8" call-funcname="init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1699" col="38" call-argexpr="size" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:1850:19" call-funcname="put_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="1897" col="12" call-argexpr="x&1" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2231" col="87" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2231" col="118" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2232" col="75" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2232" col="106" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2236" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2237" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2243" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2244" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2523" col="82" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2523" col="113" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2524" col="70" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2524" col="101" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2528" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2529" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2535" col="48" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/transcoder/basisu.h:132:0" call-funcname="clamp < int >" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2536" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2648:7" call-funcname="save_png" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2649" col="147" call-argexpr="image_save_flags" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2648:7" call-funcname="save_png" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2649" col="147" call-argexpr="grayscale_comp" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2653:7" call-funcname="write_data_to_file" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2655" col="162" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:694:15" call-funcname="strcpy_safe" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="743" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="812" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="812" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="813" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="2" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="3" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:810:14" call-funcname="string_combine_path" call-argnr="4" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="818" col="3" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:816:14" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="827" col="8" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:824:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:720:14" call-funcname="string_split_path" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="836" col="8" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:833:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2653:7" call-funcname="write_data_to_file" call-argnr="1" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2655" col="95" my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2655:14" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:798:14" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="800" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="1" my-argname="pFilename" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2795" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="2" my-argname="pMode" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2795" col="30" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:343:35" my-argnr="3" my-argname="pKeys" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="351" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="1" my-argname="pFilename" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2795" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h:2791:15" my-argnr="2" my-argname="pMode" file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_enc.h" line="2795" col="30" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="gauss" lineNumber="23"/>
+    <functiondecl functionName="compute_gaussian_kernel" lineNumber="31"/>
+    <functiondecl functionName="gaussian_filter" lineNumber="92"/>
+    <functiondecl functionName="pow_image" lineNumber="138"/>
+    <functiondecl functionName="mul_image" lineNumber="157"/>
+    <functiondecl functionName="scale_image" lineNumber="172"/>
+    <functiondecl functionName="add_weighted_image" lineNumber="193"/>
+    <functiondecl functionName="add_image" lineNumber="214"/>
+    <functiondecl functionName="adds_image" lineNumber="231"/>
+    <functiondecl functionName="mul_image" lineNumber="247"/>
+    <functiondecl functionName="div_image" lineNumber="273"/>
+    <functiondecl functionName="avg_image" lineNumber="301"/>
+    <functiondecl functionName="compute_ssim" lineNumber="321"/>
+    <functiondecl functionName="compute_ssim" lineNumber="368"/>
+    <functiondecl functionName="gauss" lineNumber="23"/>
+    <functiondecl functionName="compute_gaussian_kernel" lineNumber="31"/>
+    <functiondecl functionName="gaussian_filter" lineNumber="92"/>
+    <functiondecl functionName="pow_image" lineNumber="138"/>
+    <functiondecl functionName="mul_image" lineNumber="157"/>
+    <functiondecl functionName="scale_image" lineNumber="172"/>
+    <functiondecl functionName="add_weighted_image" lineNumber="193"/>
+    <functiondecl functionName="add_image" lineNumber="214"/>
+    <functiondecl functionName="adds_image" lineNumber="231"/>
+    <functiondecl functionName="mul_image" lineNumber="247"/>
+    <functiondecl functionName="div_image" lineNumber="273"/>
+    <functiondecl functionName="avg_image" lineNumber="301"/>
+    <functiondecl functionName="compute_ssim" lineNumber="321"/>
+    <functiondecl functionName="compute_ssim" lineNumber="368"/>
+    <functiondecl functionName="gauss" lineNumber="23"/>
+    <functiondecl functionName="compute_gaussian_kernel" lineNumber="31"/>
+    <functiondecl functionName="gaussian_filter" lineNumber="92"/>
+    <functiondecl functionName="pow_image" lineNumber="138"/>
+    <functiondecl functionName="mul_image" lineNumber="157"/>
+    <functiondecl functionName="scale_image" lineNumber="172"/>
+    <functiondecl functionName="add_weighted_image" lineNumber="193"/>
+    <functiondecl functionName="add_image" lineNumber="214"/>
+    <functiondecl functionName="adds_image" lineNumber="231"/>
+    <functiondecl functionName="mul_image" lineNumber="247"/>
+    <functiondecl functionName="div_image" lineNumber="273"/>
+    <functiondecl functionName="avg_image" lineNumber="301"/>
+    <functiondecl functionName="compute_ssim" lineNumber="321"/>
+    <functiondecl functionName="compute_ssim" lineNumber="368"/>
+    <functioncall functionName="BASISU_PATH_SEPERATOR_CHAR"/>
+    <functioncall functionName="C1"/>
+    <functioncall functionName="C2"/>
+    <functioncall functionName="H"/>
+    <functioncall functionName="L"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="R"/>
+    <functioncall functionName="_MAX_DIR"/>
+    <functioncall functionName="_MAX_DRIVE"/>
+    <functioncall functionName="_MAX_EXT"/>
+    <functioncall functionName="_MAX_FNAME"/>
+    <functioncall functionName="_splitpath_s"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a1"/>
+    <functioncall functionName="a_sq"/>
+    <functioncall functionName="add_image"/>
+    <functioncall functionName="add_training_vec"/>
+    <functioncall functionName="add_weighted_image"/>
+    <functioncall functionName="adds_image"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="append_byte"/>
+    <functioncall functionName="append_vector"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="avg"/>
+    <functioncall functionName="avg_image"/>
+    <functioncall functionName="axb"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b1"/>
+    <functioncall functionName="b_sq"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="background"/>
+    <functioncall functionName="basename"/>
+    <functioncall functionName="basisd_rand"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="bits_per_sym"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buf_size"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cA32"/>
+    <functioncall functionName="cABGR4444"/>
+    <functioncall functionName="cASTC4x4"/>
+    <functioncall functionName="cASTC_4x4"/>
+    <functioncall functionName="cATC_RGB"/>
+    <functioncall functionName="cATC_RGBA_INTERPOLATED_ALPHA"/>
+    <functioncall functionName="cBC1"/>
+    <functioncall functionName="cBC3"/>
+    <functioncall functionName="cBC4"/>
+    <functioncall functionName="cBC5"/>
+    <functioncall functionName="cBC7"/>
+    <functioncall functionName="cBC7_M5_ALPHA"/>
+    <functioncall functionName="cBC7_M5_COLOR"/>
+    <functioncall functionName="cBC7_M6_OPAQUE_ONLY"/>
+    <functioncall functionName="cBGR565"/>
+    <functioncall functionName="cComputeGaussianFlagNormalize"/>
+    <functioncall functionName="cETC1"/>
+    <functioncall functionName="cETC1S"/>
+    <functioncall functionName="cETC2_ALPHA"/>
+    <functioncall functionName="cETC2_EAC_A8"/>
+    <functioncall functionName="cETC2_EAC_R11"/>
+    <functioncall functionName="cETC2_R11_EAC"/>
+    <functioncall functionName="cETC2_RG11_EAC"/>
+    <functioncall functionName="cETC2_RGB"/>
+    <functioncall functionName="cETC2_RGBA"/>
+    <functioncall functionName="cFXT1_RGB"/>
+    <functioncall functionName="cHuffmanBigRepeatCode"/>
+    <functioncall functionName="cHuffmanBigRepeatExtraBits"/>
+    <functioncall functionName="cHuffmanBigRepeatSizeMin"/>
+    <functioncall functionName="cHuffmanBigZeroRunCode"/>
+    <functioncall functionName="cHuffmanBigZeroRunExtraBits"/>
+    <functioncall functionName="cHuffmanBigZeroRunSizeMin"/>
+    <functioncall functionName="cHuffmanFastLookupBits"/>
+    <functioncall functionName="cHuffmanFastLookupSize"/>
+    <functioncall functionName="cHuffmanMaxSupportedCodeSize"/>
+    <functioncall functionName="cHuffmanMaxSymsLog2"/>
+    <functioncall functionName="cHuffmanSmallRepeatCode"/>
+    <functioncall functionName="cHuffmanSmallRepeatExtraBits"/>
+    <functioncall functionName="cHuffmanSmallRepeatSizeMin"/>
+    <functioncall functionName="cHuffmanSmallZeroRunCode"/>
+    <functioncall functionName="cHuffmanSmallZeroRunExtraBits"/>
+    <functioncall functionName="cHuffmanSmallZeroRunSizeMin"/>
+    <functioncall functionName="cHuffmanTotalCodelengthCodes"/>
+    <functioncall functionName="cIndices"/>
+    <functioncall functionName="cNoClamp"/>
+    <functioncall functionName="cPVRTC1_4_RGB"/>
+    <functioncall functionName="cPVRTC1_4_RGBA"/>
+    <functioncall functionName="cPVRTC2_4_RGB"/>
+    <functioncall functionName="cPVRTC2_4_RGBA"/>
+    <functioncall functionName="cRGB32"/>
+    <functioncall functionName="cRGB565"/>
+    <functioncall functionName="cRGBA32"/>
+    <functioncall functionName="cRGBA4444"/>
+    <functioncall functionName="cRGBA4444_ALPHA"/>
+    <functioncall functionName="cRGBA4444_COLOR"/>
+    <functioncall functionName="cRGBA4444_COLOR_OPAQUE"/>
+    <functioncall functionName="cTotalBlockFormats"/>
+    <functioncall functionName="cZero"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="cb2"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="child_index"/>
+    <functioncall functionName="chunk_bits"/>
+    <functioncall functionName="chunk_size"/>
+    <functioncall functionName="clamp"/>
+    <functioncall functionName="clamp &lt; float &gt;"/>
+    <functioncall functionName="clamp &lt; int &gt;"/>
+    <functioncall functionName="clamp255"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_obj"/>
+    <functioncall functionName="clear_vector"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="code_length_code_sizes"/>
+    <functioncall functionName="code_length_table"/>
+    <functioncall functionName="code_size"/>
+    <functioncall functionName="code_size_limit"/>
+    <functioncall functionName="code_sizes"/>
+    <functioncall functionName="color32"/>
+    <functioncall functionName="color_distance"/>
+    <functioncall functionName="color_rgba"/>
+    <functioncall functionName="color_rgba_i16"/>
+    <functioncall functionName="compute_gaussian_kernel"/>
+    <functioncall functionName="compute_ssim"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cr2"/>
+    <functioncall functionName="crop"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="cur"/>
+    <functioncall functionName="cur_s"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="debug_printf"/>
+    <functioncall functionName="decode_huffman"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delete"/>
+    <functioncall functionName="delta_axis"/>
+    <functioncall functionName="dir_buf"/>
+    <functioncall functionName="dirname"/>
+    <functioncall functionName="dirtmp"/>
+    <functioncall functionName="div_image"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="down_heap"/>
+    <functioncall functionName="drive_buf"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_height"/>
+    <functioncall functionName="dst_len"/>
+    <functioncall functionName="dst_width"/>
+    <functioncall functionName="e1"/>
+    <functioncall functionName="e2"/>
+    <functioncall functionName="eNoClamp"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="expf"/>
+    <functioncall functionName="ext_buf"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="filename"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_last_of"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="first_index"/>
+    <functioncall functionName="first_priority"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="floor_log2i"/>
+    <functioncall functionName="flush"/>
+    <functioncall functionName="fmt"/>
+    <functioncall functionName="fname_buf"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="fopen_s"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fta"/>
+    <functioncall functionName="ftb"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="g1"/>
+    <functioncall functionName="g_black_color"/>
+    <functioncall functionName="g_huffman_sorted_codelength_codes"/>
+    <functioncall functionName="gauss"/>
+    <functioncall functionName="gaussian_filter"/>
+    <functioncall functionName="generate_hierarchical_codebook_threaded_internal"/>
+    <functioncall functionName="get_601_luma"/>
+    <functioncall functionName="get_709_luma"/>
+    <functioncall functionName="get_bits"/>
+    <functioncall functionName="get_block_height"/>
+    <functioncall functionName="get_block_width"/>
+    <functioncall functionName="get_bytes_per_block"/>
+    <functioncall functionName="get_clamped"/>
+    <functioncall functionName="get_clamped_or_wrapped"/>
+    <functioncall functionName="get_code_sizes"/>
+    <functioncall functionName="get_codes"/>
+    <functioncall functionName="get_elapsed_secs"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_luma"/>
+    <functioncall functionName="get_ptr"/>
+    <functioncall functionName="get_selector"/>
+    <functioncall functionName="get_total"/>
+    <functioncall functionName="get_total_pixels"/>
+    <functioncall functionName="get_total_training_vecs"/>
+    <functioncall functionName="get_training_vecs"/>
+    <functioncall functionName="get_width"/>
+    <functioncall functionName="grayscale_comp"/>
+    <functioncall functionName="group_codebook"/>
+    <functioncall functionName="group_index"/>
+    <functioncall functionName="group_parent_codebook"/>
+    <functioncall functionName="group_quant"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="heap_index"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="height_divisor"/>
+    <functioncall functionName="high"/>
+    <functioncall functionName="huff2D"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image"/>
+    <functioncall functionName="image_metrics"/>
+    <functioncall functionName="image_save_flags"/>
+    <functioncall functionName="imagef"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="inc"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int16_t"/>
+    <functioncall functionName="irand"/>
+    <functioncall functionName="is_path_separator"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="iter"/>
+    <functioncall functionName="ix"/>
+    <functioncall functionName="iy"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="job_pool"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="kernel"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="l1"/>
+    <functioncall functionName="l2"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="limit_clusterizers"/>
+    <functioncall functionName="load_png"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="luma"/>
+    <functioncall functionName="luma_601"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="m_bit_buf"/>
+    <functioncall functionName="m_bit_buf_size"/>
+    <functioncall functionName="m_bit_buffer"/>
+    <functioncall functionName="m_bit_buffer_size"/>
+    <functioncall functionName="m_buf_size"/>
+    <functioncall functionName="m_bytes"/>
+    <functioncall functionName="m_code_sizes"/>
+    <functioncall functionName="m_codes"/>
+    <functioncall functionName="m_cur_num_syms"/>
+    <functioncall functionName="m_cur_sym_bits"/>
+    <functioncall functionName="m_decode_syms_remaining"/>
+    <functioncall functionName="m_encoding_table"/>
+    <functioncall functionName="m_entries_picked"/>
+    <functioncall functionName="m_entries_to_do"/>
+    <functioncall functionName="m_height"/>
+    <functioncall functionName="m_hist"/>
+    <functioncall functionName="m_histogram"/>
+    <functioncall functionName="m_index"/>
+    <functioncall functionName="m_indices"/>
+    <functioncall functionName="m_lookup"/>
+    <functioncall functionName="m_max"/>
+    <functioncall functionName="m_mean"/>
+    <functioncall functionName="m_mt"/>
+    <functioncall functionName="m_pBuf"/>
+    <functioncall functionName="m_pBuf_end"/>
+    <functioncall functionName="m_pBuf_start"/>
+    <functioncall functionName="m_pitch"/>
+    <functioncall functionName="m_pixels"/>
+    <functioncall functionName="m_priority"/>
+    <functioncall functionName="m_psnr"/>
+    <functioncall functionName="m_remap_table"/>
+    <functioncall functionName="m_rms"/>
+    <functioncall functionName="m_size"/>
+    <functioncall functionName="m_total_bits"/>
+    <functioncall functionName="m_total_count_to_picked"/>
+    <functioncall functionName="m_total_syms_per_group"/>
+    <functioncall functionName="m_total_weight"/>
+    <functioncall functionName="m_tree"/>
+    <functioncall functionName="m_values"/>
+    <functioncall functionName="m_width"/>
+    <functioncall functionName="make_pair"/>
+    <functioncall functionName="max_code_size"/>
+    <functioncall functionName="max_codebook_size"/>
+    <functioncall functionName="max_parent_codebook_size"/>
+    <functioncall functionName="max_sum"/>
+    <functioncall functionName="max_threads"/>
+    <functioncall functionName="maximum"/>
+    <functioncall functionName="maxv"/>
+    <functioncall functionName="mean"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mid_x"/>
+    <functioncall functionName="mid_y"/>
+    <functioncall functionName="minimum"/>
+    <functioncall functionName="mu1"/>
+    <functioncall functionName="mu1_mu2"/>
+    <functioncall functionName="mu1_sq"/>
+    <functioncall functionName="mu2"/>
+    <functioncall functionName="mu2_sq"/>
+    <functioncall functionName="mul_image"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="na"/>
+    <functioncall functionName="nametmp"/>
+    <functioncall functionName="new_height"/>
+    <functioncall functionName="new_value"/>
+    <functioncall functionName="new_width"/>
+    <functioncall functionName="next_v"/>
+    <functioncall functionName="norm"/>
+    <functioncall functionName="normalize_in_place"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_bits"/>
+    <functioncall functionName="num_codelength_codes"/>
+    <functioncall functionName="num_indices"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="odd_filter_width"/>
+    <functioncall functionName="oldVals"/>
+    <functioncall functionName="orig_h"/>
+    <functioncall functionName="orig_index"/>
+    <functioncall functionName="orig_priority"/>
+    <functioncall functionName="orig_w"/>
+    <functioncall functionName="other"/>
+    <functioncall functionName="ox"/>
+    <functioncall functionName="oy"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pBaseName"/>
+    <functioncall functionName="pBuf"/>
+    <functioncall functionName="pCode_sizes"/>
+    <functioncall functionName="pDir"/>
+    <functioncall functionName="pDirName"/>
+    <functioncall functionName="pDrive"/>
+    <functioncall functionName="pDst"/>
+    <functioncall functionName="pExt"/>
+    <functioncall functionName="pFile"/>
+    <functioncall functionName="pFilename"/>
+    <functioncall functionName="pFmt"/>
+    <functioncall functionName="pIndices"/>
+    <functioncall functionName="pJob_pool"/>
+    <functioncall functionName="pKeys"/>
+    <functioncall functionName="pMode"/>
+    <functioncall functionName="pObjs"/>
+    <functioncall functionName="pPrefix"/>
+    <functioncall functionName="pSrc"/>
+    <functioncall functionName="parent_index"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="peek_bits"/>
+    <functioncall functionName="perceptual"/>
+    <functioncall functionName="posmod"/>
+    <functioncall functionName="pow_image"/>
+    <functioncall functionName="powf"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prev_axis"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="priority"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="put_bits"/>
+    <functioncall functionName="put_code"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r1"/>
+    <functioncall functionName="rand"/>
+    <functioncall functionName="remove_bits"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="reserve_size"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rev_code"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="s12"/>
+    <functioncall functionName="s1_sq"/>
+    <functioncall functionName="s2_sq"/>
+    <functioncall functionName="sa"/>
+    <functioncall functionName="save_png"/>
+    <functioncall functionName="sb"/>
+    <functioncall functionName="scale_image"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="seed"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_clipped"/>
+    <functioncall functionName="set_noclamp_rgba"/>
+    <functioncall functionName="sg"/>
+    <functioncall functionName="sigma_sqr"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="size_y"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="smap"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="sqrtf"/>
+    <functioncall functionName="sr"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src1"/>
+    <functioncall functionName="src2"/>
+    <functioncall functionName="src_len_plus_terminator"/>
+    <functioncall functionName="start_bits"/>
+    <functioncall functionName="static_assert"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="status"/>
+    <functioncall functionName="stddev"/>
+    <functioncall functionName="strcpy_safe"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="string_combine_path"/>
+    <functioncall functionName="string_ends_with"/>
+    <functioncall functionName="string_find_right"/>
+    <functioncall functionName="string_get_extension"/>
+    <functioncall functionName="string_remove_extension"/>
+    <functioncall functionName="string_split_path"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="sx"/>
+    <functioncall functionName="sy"/>
+    <functioncall functionName="sym"/>
+    <functioncall functionName="sym_index"/>
+    <functioncall functionName="syms_using_codesize"/>
+    <functioncall functionName="t1"/>
+    <functioncall functionName="t2"/>
+    <functioncall functionName="t3"/>
+    <functioncall functionName="ta"/>
+    <functioncall functionName="tb"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="temp_drive"/>
+    <functioncall functionName="temp_ext"/>
+    <functioncall functionName="temp_path"/>
+    <functioncall functionName="ticks"/>
+    <functioncall functionName="ticks_to_secs"/>
+    <functioncall functionName="tolower"/>
+    <functioncall functionName="total"/>
+    <functioncall functionName="total_syms"/>
+    <functioncall functionName="total_syms_per_group"/>
+    <functioncall functionName="total_used_syms"/>
+    <functioncall functionName="training_vec_indices"/>
+    <functioncall functionName="tree_next"/>
+    <functioncall functionName="trial_axis"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="urand32"/>
+    <functioncall functionName="used_syms"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="va"/>
+    <functioncall functionName="va_end"/>
+    <functioncall functionName="va_start"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vb"/>
+    <functioncall functionName="vec"/>
+    <functioncall functionName="vec4F"/>
+    <functioncall functionName="vector2D &lt; float &gt;"/>
+    <functioncall functionName="vector_set_all"/>
+    <functioncall functionName="vg"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vr"/>
+    <functioncall functionName="vsnprintf"/>
+    <functioncall functionName="vsprintf_s"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="weighted_block_group"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="width_divisor"/>
+    <functioncall functionName="wrapping"/>
+    <functioncall functionName="write_data_to_file"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xd"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="yd"/>
+  </FileInfo>
+</analyzerinfo>

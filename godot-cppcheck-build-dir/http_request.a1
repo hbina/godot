@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3836612232">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GroupData::group&apos; is not initialized in the constructor." verbose="Member variable &apos;GroupData::group&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/main/http_request.cpp" file="/home/hbina/git/godot/scene/main/node.h" line="86" column="3"/>
+            <symbol>GroupData::group</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/scene/main/http_request.cpp" line="133" column="20"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/main/node.h:358:7" call-funcname="set_process_internal" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="160" col="23" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="283" col="26" call-argexpr="&ret_value" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="283" col="26" call-argexpr="ret_value" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="323" col="25" call-argexpr="&ret_value" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="323" col="25" call-argexpr="ret_value" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/main/node.h:358:7" call-funcname="set_process_internal" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="414" col="24" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="1" my-argname="p_a" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="98" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="2" my-argname="p_b" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="68" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:71:8" my-argnr="2" my-argname="p_b" file="/home/hbina/git/godot/scene/main/node.h" line="71" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="1" my-argname="p_a" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="98" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="2" my-argname="p_b" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="68" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/main/node.h:358:7" call-funcname="set_process_internal" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="160" col="23" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="283" col="26" call-argexpr="&ret_value" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="283" col="26" call-argexpr="ret_value" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="323" col="25" call-argexpr="&ret_value" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/main/http_request.h:101:7" call-funcname="_handle_response" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="323" col="25" call-argexpr="ret_value" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/main/node.h:358:7" call-funcname="set_process_internal" call-argnr="1" file="/home/hbina/git/godot/scene/main/http_request.cpp" line="414" col="24" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="1" my-argname="p_a" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="98" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="2" my-argname="p_b" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="68" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:71:8" my-argnr="2" my-argname="p_b" file="/home/hbina/git/godot/scene/main/node.h" line="71" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="1" my-argname="p_a" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="98" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/main/node.h:76:8" my-argnr="2" my-argname="p_b" file="/home/hbina/git/godot/scene/main/node.h" line="76" col="68" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_redirect_request" lineNumber="33"/>
+    <functiondecl functionName="_request" lineNumber="36"/>
+    <functiondecl functionName="_parse_url" lineNumber="41"/>
+    <functiondecl functionName="request" lineNumber="87"/>
+    <functiondecl functionName="_thread_func" lineNumber="131"/>
+    <functiondecl functionName="cancel_request" lineNumber="152"/>
+    <functiondecl functionName="_handle_response" lineNumber="180"/>
+    <functiondecl functionName="_update_connection" lineNumber="245"/>
+    <functiondecl functionName="_request_done" lineNumber="399"/>
+    <functiondecl functionName="_notification" lineNumber="405"/>
+    <functiondecl functionName="set_use_threads" lineNumber="426"/>
+    <functiondecl functionName="is_using_threads" lineNumber="432"/>
+    <functiondecl functionName="set_body_size_limit" lineNumber="437"/>
+    <functiondecl functionName="get_body_size_limit" lineNumber="444"/>
+    <functiondecl functionName="set_download_file" lineNumber="449"/>
+    <functiondecl functionName="get_download_file" lineNumber="456"/>
+    <functiondecl functionName="set_download_chunk_size" lineNumber="461"/>
+    <functiondecl functionName="get_download_chunk_size" lineNumber="468"/>
+    <functiondecl functionName="get_http_client_status" lineNumber="472"/>
+    <functiondecl functionName="set_max_redirects" lineNumber="476"/>
+    <functiondecl functionName="get_max_redirects" lineNumber="481"/>
+    <functiondecl functionName="get_downloaded_bytes" lineNumber="486"/>
+    <functiondecl functionName="get_body_size" lineNumber="490"/>
+    <functiondecl functionName="set_timeout" lineNumber="494"/>
+    <functiondecl functionName="get_timeout" lineNumber="500"/>
+    <functiondecl functionName="_timeout" lineNumber="505"/>
+    <functiondecl functionName="_bind_methods" lineNumber="511"/>
+    <functiondecl functionName="_redirect_request" lineNumber="33"/>
+    <functiondecl functionName="_request" lineNumber="36"/>
+    <functiondecl functionName="_parse_url" lineNumber="41"/>
+    <functiondecl functionName="request" lineNumber="87"/>
+    <functiondecl functionName="_thread_func" lineNumber="131"/>
+    <functiondecl functionName="cancel_request" lineNumber="152"/>
+    <functiondecl functionName="_handle_response" lineNumber="180"/>
+    <functiondecl functionName="_update_connection" lineNumber="245"/>
+    <functiondecl functionName="_request_done" lineNumber="399"/>
+    <functiondecl functionName="_notification" lineNumber="405"/>
+    <functiondecl functionName="set_use_threads" lineNumber="426"/>
+    <functiondecl functionName="is_using_threads" lineNumber="432"/>
+    <functiondecl functionName="set_body_size_limit" lineNumber="437"/>
+    <functiondecl functionName="get_body_size_limit" lineNumber="444"/>
+    <functiondecl functionName="set_download_file" lineNumber="449"/>
+    <functiondecl functionName="get_download_file" lineNumber="456"/>
+    <functiondecl functionName="set_download_chunk_size" lineNumber="461"/>
+    <functiondecl functionName="get_download_chunk_size" lineNumber="468"/>
+    <functiondecl functionName="get_http_client_status" lineNumber="472"/>
+    <functiondecl functionName="set_max_redirects" lineNumber="476"/>
+    <functiondecl functionName="get_max_redirects" lineNumber="481"/>
+    <functiondecl functionName="get_downloaded_bytes" lineNumber="486"/>
+    <functiondecl functionName="get_body_size" lineNumber="490"/>
+    <functiondecl functionName="set_timeout" lineNumber="494"/>
+    <functiondecl functionName="get_timeout" lineNumber="500"/>
+    <functiondecl functionName="_timeout" lineNumber="505"/>
+    <functiondecl functionName="_bind_methods" lineNumber="511"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="DUPLICATE_SCRIPTS"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="DuplicateFlags"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_BUSY"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GroupData"/>
+    <functioncall functionName="HTTPRequest"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="METHOD_GET"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NAME_CASING_CAMEL_CASE"/>
+    <functioncall functionName="NAME_CASING_PASCAL_CASE"/>
+    <functioncall functionName="NAME_CASING_SNAKE_CASE"/>
+    <functioncall functionName="NOTIFICATION_APP_PAUSED"/>
+    <functioncall functionName="NOTIFICATION_APP_RESUMED"/>
+    <functioncall functionName="NOTIFICATION_CRASH"/>
+    <functioncall functionName="NOTIFICATION_OS_IME_UPDATE"/>
+    <functioncall functionName="NOTIFICATION_OS_MEMORY_WARNING"/>
+    <functioncall functionName="NOTIFICATION_TRANSLATION_CHANGED"/>
+    <functioncall functionName="NOTIFICATION_WM_ABOUT"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="OBJ_CATEGORY"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="PACKED_BYTE_ARRAY"/>
+    <functioncall functionName="PACKED_STRING_ARRAY"/>
+    <functioncall functionName="PAUSE_MODE_INHERIT"/>
+    <functioncall functionName="PAUSE_MODE_PROCESS"/>
+    <functioncall functionName="PAUSE_MODE_STOP"/>
+    <functioncall functionName="PROPERTY_HINT_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PackedByteArray"/>
+    <functioncall functionName="PackedStringArray"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RESULT_BODY_SIZE_LIMIT_EXCEEDED"/>
+    <functioncall functionName="RESULT_CANT_CONNECT"/>
+    <functioncall functionName="RESULT_CANT_RESOLVE"/>
+    <functioncall functionName="RESULT_CHUNKED_BODY_SIZE_MISMATCH"/>
+    <functioncall functionName="RESULT_CONNECTION_ERROR"/>
+    <functioncall functionName="RESULT_DOWNLOAD_FILE_CANT_OPEN"/>
+    <functioncall functionName="RESULT_DOWNLOAD_FILE_WRITE_ERROR"/>
+    <functioncall functionName="RESULT_NO_RESPONSE"/>
+    <functioncall functionName="RESULT_REDIRECT_LIMIT_REACHED"/>
+    <functioncall functionName="RESULT_REQUEST_FAILED"/>
+    <functioncall functionName="RESULT_SSL_HANDSHAKE_ERROR"/>
+    <functioncall functionName="RESULT_SUCCESS"/>
+    <functioncall functionName="RESULT_TIMEOUT"/>
+    <functioncall functionName="Result"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="Timer"/>
+    <functioncall functionName="VARIANT_ARG_LIST"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="_handle_response"/>
+    <functioncall functionName="_parse_url"/>
+    <functioncall functionName="_redirect_request"/>
+    <functioncall functionName="_request"/>
+    <functioncall functionName="_request_done"/>
+    <functioncall functionName="_thread_func"/>
+    <functioncall functionName="_timeout"/>
+    <functioncall functionName="_update_connection"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="append_array"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="body"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cancel_request"/>
+    <functioncall functionName="chunk"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="colon_pos"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="connect_to_host"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="done"/>
+    <functioncall functionName="download_to_file"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="findn"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_body_size"/>
+    <functioncall functionName="get_body_size_limit"/>
+    <functioncall functionName="get_download_chunk_size"/>
+    <functioncall functionName="get_download_file"/>
+    <functioncall functionName="get_downloaded_bytes"/>
+    <functioncall functionName="get_error"/>
+    <functioncall functionName="get_http_client_status"/>
+    <functioncall functionName="get_max_redirects"/>
+    <functioncall functionName="get_read_chunk_size"/>
+    <functioncall functionName="get_response_body_length"/>
+    <functioncall functionName="get_response_code"/>
+    <functioncall functionName="get_response_headers"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_status"/>
+    <functioncall functionName="get_timeout"/>
+    <functioncall functionName="got_response"/>
+    <functioncall functionName="has_response"/>
+    <functioncall functionName="headers"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inside_tree"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_greater_than"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_response_chunked"/>
+    <functioncall functionName="is_using_threads"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="new_redirs"/>
+    <functioncall functionName="new_request"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_bytes"/>
+    <functioncall functionName="p_chunk_size"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_custom_headers"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_max"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_request_data"/>
+    <functioncall functionName="p_ssl_validate_domain"/>
+    <functioncall functionName="p_status"/>
+    <functioncall functionName="p_timeout"/>
+    <functioncall functionName="p_url"/>
+    <functioncall functionName="p_use"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="port"/>
+    <functioncall functionName="process_priority"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="read_response_body_chunk"/>
+    <functioncall functionName="request"/>
+    <functioncall functionName="request_data"/>
+    <functioncall functionName="request_sent"/>
+    <functioncall functionName="request_string"/>
+    <functioncall functionName="requesting"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="response_code"/>
+    <functioncall functionName="response_headers"/>
+    <functioncall functionName="ret_value"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rheaders"/>
+    <functioncall functionName="set_blocking_mode"/>
+    <functioncall functionName="set_body_size_limit"/>
+    <functioncall functionName="set_download_chunk_size"/>
+    <functioncall functionName="set_download_file"/>
+    <functioncall functionName="set_max_redirects"/>
+    <functioncall functionName="set_one_shot"/>
+    <functioncall functionName="set_process_internal"/>
+    <functioncall functionName="set_read_chunk_size"/>
+    <functioncall functionName="set_timeout"/>
+    <functioncall functionName="set_use_threads"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="slash_pos"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread"/>
+    <functioncall functionName="thread_request_quit"/>
+    <functioncall functionName="timeout"/>
+    <functioncall functionName="timer"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="url"/>
+    <functioncall functionName="use_ssl"/>
+    <functioncall functionName="use_threads"/>
+    <functioncall functionName="validate_ssl"/>
+    <functioncall functionName="viewport"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

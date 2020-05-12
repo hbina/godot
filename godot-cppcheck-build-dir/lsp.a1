@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3797465214">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="311" column="16"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="366" column="16"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="405" column="13"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="406" column="13"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="407" column="14"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="408" column="14"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;delta&apos; can be reduced." verbose="The scope of the variable &apos;delta&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="315" column="20"/>
+            <symbol>delta</symbol>
+        </error>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:297:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="298" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c:285:13" my-argnr="1" my-argname="g" file="/home/hbina/git/godot/thirdparty/libvorbis/lsp.c" line="288" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functiondecl functionName="vorbis_lsp_to_curve" lineNumber="247"/>
+    <functiondecl functionName="cheby" lineNumber="285"/>
+    <functiondecl functionName="comp" lineNumber="297"/>
+    <functiondecl functionName="Laguerre_With_Deflation" lineNumber="309"/>
+    <functiondecl functionName="Newton_Raphson" lineNumber="363"/>
+    <functiondecl functionName="vorbis_lpc_to_lsp" lineNumber="402"/>
+    <functioncall functionName="Laguerre_With_Deflation"/>
+    <functioncall functionName="Newton_Raphson"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="_mm_cvtsd_si32"/>
+    <functioncall functionName="_mm_load_sd"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="ampoffset"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cheby"/>
+    <functioncall functionName="comp"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="denom"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="exp"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpu"/>
+    <functioncall functionName="g1"/>
+    <functioncall functionName="g1_order"/>
+    <functioncall functionName="g1r"/>
+    <functioncall functionName="g2"/>
+    <functioncall functionName="g2_order"/>
+    <functioncall functionName="g2r"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="ln"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="ord"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pp"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="qsort"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

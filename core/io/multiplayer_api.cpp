@@ -409,8 +409,8 @@ void MultiplayerAPI::_process_rpc(Node *p_node, const uint16_t p_rpc_method_id, 
 		const int len = p_packet_len - p_offset;
 		pure_data.resize(len);
 		memcpy(pure_data.ptrw(), &p_packet[p_offset], len);
-		args.write[0] = pure_data;
-		argp.write[0] = &args[0];
+		args[0] = pure_data;
+		argp[0] = &args[0];
 		p_offset += len;
 	} else {
 		for (int i = 0; i < argc; i++) {
@@ -418,10 +418,10 @@ void MultiplayerAPI::_process_rpc(Node *p_node, const uint16_t p_rpc_method_id, 
 			ERR_FAIL_COND_MSG(p_offset >= p_packet_len, "Invalid packet received. Size too small.");
 
 			int vlen;
-			Error err = _decode_and_decompress_variant(args.write[i], &p_packet[p_offset], p_packet_len - p_offset, &vlen);
+			Error err = _decode_and_decompress_variant(args[i], &p_packet[p_offset], p_packet_len - p_offset, &vlen);
 			ERR_FAIL_COND_MSG(err != OK, "Invalid packet received. Unable to decode RPC argument.");
 
-			argp.write[i] = &args[i];
+			argp[i] = &args[i];
 			p_offset += vlen;
 		}
 	}
@@ -510,9 +510,9 @@ void MultiplayerAPI::_process_simplify_path(int p_from, const uint8_t *p_packet,
 	Vector<uint8_t> packet;
 
 	packet.resize(1 + 1 + len);
-	packet.write[0] = NETWORK_COMMAND_CONFIRM_PATH;
-	packet.write[1] = valid_rpc_checksum;
-	encode_cstring(pname.get_data(), &packet.write[2]);
+	packet[0] = NETWORK_COMMAND_CONFIRM_PATH;
+	packet[1] = valid_rpc_checksum;
+	encode_cstring(pname.get_data(), &packet[2]);
 
 	network_peer->set_transfer_mode(NetworkedMultiplayerPeer::TRANSFER_MODE_RELIABLE);
 	network_peer->set_target_peer(p_from);
@@ -583,14 +583,14 @@ bool MultiplayerAPI::_send_confirm_path(Node *p_node, NodePath p_path, PathSentC
 		packet.resize(1 + 4 + path_len + methods_md5_len);
 		int ofs = 0;
 
-		packet.write[ofs] = NETWORK_COMMAND_SIMPLIFY_PATH;
+		packet[ofs] = NETWORK_COMMAND_SIMPLIFY_PATH;
 		ofs += 1;
 
-		ofs += encode_cstring(methods_md5.utf8().get_data(), &packet.write[ofs]);
+		ofs += encode_cstring(methods_md5.utf8().get_data(), &packet[ofs]);
 
-		ofs += encode_uint32(psc->id, &packet.write[ofs]);
+		ofs += encode_uint32(psc->id, &packet[ofs]);
 
-		ofs += encode_cstring(path.get_data(), &packet.write[ofs]);
+		ofs += encode_cstring(path.get_data(), &packet[ofs]);
 
 		for (List<int>::Element *E = peers_to_add.front(); E; E = E->next()) {
 
@@ -806,7 +806,7 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 
 	MAKE_ROOM(1);
 	// The meta is composed along the way, so just set 0 for now.
-	packet_cache.write[0] = 0;
+	packet_cache[0] = 0;
 	ofs += 1;
 
 	// Encode Node ID.
@@ -816,26 +816,26 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 			// We can encode the id in 1 byte
 			node_id_compression = NETWORK_NODE_ID_COMPRESSION_8;
 			MAKE_ROOM(ofs + 1);
-			packet_cache.write[ofs] = static_cast<uint8_t>(psc->id);
+			packet_cache[ofs] = static_cast<uint8_t>(psc->id);
 			ofs += 1;
 		} else if (psc->id >= 0 && psc->id <= 65535) {
 			// We can encode the id in 2 bytes
 			node_id_compression = NETWORK_NODE_ID_COMPRESSION_16;
 			MAKE_ROOM(ofs + 2);
-			encode_uint16(static_cast<uint16_t>(psc->id), &(packet_cache.write[ofs]));
+			encode_uint16(static_cast<uint16_t>(psc->id), &(packet_cache[ofs]));
 			ofs += 2;
 		} else {
 			// Too big, let's use 4 bytes.
 			node_id_compression = NETWORK_NODE_ID_COMPRESSION_32;
 			MAKE_ROOM(ofs + 4);
-			encode_uint32(psc->id, &(packet_cache.write[ofs]));
+			encode_uint32(psc->id, &(packet_cache[ofs]));
 			ofs += 4;
 		}
 	} else {
 		// The targets doesn't know the node yet, so we need to use 32 bits int.
 		node_id_compression = NETWORK_NODE_ID_COMPRESSION_32;
 		MAKE_ROOM(ofs + 4);
-		encode_uint32(psc->id, &(packet_cache.write[ofs]));
+		encode_uint32(psc->id, &(packet_cache[ofs]));
 		ofs += 4;
 	}
 
@@ -852,13 +852,13 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 			// The ID fits in 1 byte
 			name_id_compression = NETWORK_NAME_ID_COMPRESSION_8;
 			MAKE_ROOM(ofs + 1);
-			packet_cache.write[ofs] = static_cast<uint8_t>(property_id);
+			packet_cache[ofs] = static_cast<uint8_t>(property_id);
 			ofs += 1;
 		} else {
 			// The ID is larger, let's use 2 bytes
 			name_id_compression = NETWORK_NAME_ID_COMPRESSION_16;
 			MAKE_ROOM(ofs + 2);
-			encode_uint16(property_id, &(packet_cache.write[ofs]));
+			encode_uint16(property_id, &(packet_cache[ofs]));
 			ofs += 2;
 		}
 
@@ -867,7 +867,7 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 		Error err = _encode_and_compress_variant(*p_arg[0], nullptr, len);
 		ERR_FAIL_COND_MSG(err != OK, "Unable to encode RSET value. THIS IS LIKELY A BUG IN THE ENGINE!");
 		MAKE_ROOM(ofs + len);
-		_encode_and_compress_variant(*p_arg[0], &(packet_cache.write[ofs]), len);
+		_encode_and_compress_variant(*p_arg[0], &(packet_cache[ofs]), len);
 		ofs += len;
 
 	} else {
@@ -883,13 +883,13 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 			// The ID fits in 1 byte
 			name_id_compression = NETWORK_NAME_ID_COMPRESSION_8;
 			MAKE_ROOM(ofs + 1);
-			packet_cache.write[ofs] = static_cast<uint8_t>(method_id);
+			packet_cache[ofs] = static_cast<uint8_t>(method_id);
 			ofs += 1;
 		} else {
 			// The ID is larger, let's use 2 bytes
 			name_id_compression = NETWORK_NAME_ID_COMPRESSION_16;
 			MAKE_ROOM(ofs + 2);
-			encode_uint16(method_id, &(packet_cache.write[ofs]));
+			encode_uint16(method_id, &(packet_cache[ofs]));
 			ofs += 2;
 		}
 
@@ -900,19 +900,19 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 			// Special optimization when only the byte vector is sent.
 			const Vector<uint8_t> data = *p_arg[0];
 			MAKE_ROOM(ofs + data.size());
-			copymem(&(packet_cache.write[ofs]), data.ptr(), sizeof(uint8_t) * data.size());
+			copymem(&(packet_cache[ofs]), data.ptr(), sizeof(uint8_t) * data.size());
 			ofs += data.size();
 		} else {
 			// Arguments
 			MAKE_ROOM(ofs + 1);
-			packet_cache.write[ofs] = p_argcount;
+			packet_cache[ofs] = p_argcount;
 			ofs += 1;
 			for (int i = 0; i < p_argcount; i++) {
 				int len(0);
 				Error err = _encode_and_compress_variant(*p_arg[i], nullptr, len);
 				ERR_FAIL_COND_MSG(err != OK, "Unable to encode RPC argument. THIS IS LIKELY A BUG IN THE ENGINE!");
 				MAKE_ROOM(ofs + len);
-				_encode_and_compress_variant(*p_arg[i], &(packet_cache.write[ofs]), len);
+				_encode_and_compress_variant(*p_arg[i], &(packet_cache[ofs]), len);
 				ofs += len;
 			}
 		}
@@ -923,7 +923,7 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 	ERR_FAIL_COND(name_id_compression > 1);
 
 	// We can now set the meta
-	packet_cache.write[0] = command_type + (node_id_compression << NODE_ID_COMPRESSION_SHIFT) + (name_id_compression << NAME_ID_COMPRESSION_SHIFT) + ((byte_only_or_no_args ? 1 : 0) << BYTE_ONLY_OR_NO_ARGS_SHIFT);
+	packet_cache[0] = command_type + (node_id_compression << NODE_ID_COMPRESSION_SHIFT) + (name_id_compression << NAME_ID_COMPRESSION_SHIFT) + ((byte_only_or_no_args ? 1 : 0) << BYTE_ONLY_OR_NO_ARGS_SHIFT);
 
 #ifdef DEBUG_ENABLED
 	_profile_bandwidth_data("out", ofs);
@@ -947,7 +947,7 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 		CharString pname = String(from_path).utf8();
 		int path_len = encode_cstring(pname.get_data(), nullptr);
 		MAKE_ROOM(ofs + path_len);
-		encode_cstring(pname.get_data(), &(packet_cache.write[ofs]));
+		encode_cstring(pname.get_data(), &(packet_cache[ofs]));
 
 		for (Set<int>::Element *E = connected_peers.front(); E; E = E->next()) {
 
@@ -964,11 +964,11 @@ void MultiplayerAPI::_send_rpc(Node *p_from, int p_to, bool p_unreliable, bool p
 
 			if (F->get()) {
 				// This one confirmed path, so use id.
-				encode_uint32(psc->id, &(packet_cache.write[1]));
+				encode_uint32(psc->id, &(packet_cache[1]));
 				network_peer->put_packet(packet_cache.ptr(), ofs);
 			} else {
 				// This one did not confirm path yet, so use entire path (sorry!).
-				encode_uint32(0x80000000 | ofs, &(packet_cache.write[1])); // Offset to path and flag.
+				encode_uint32(0x80000000 | ofs, &(packet_cache[1])); // Offset to path and flag.
 				network_peer->put_packet(packet_cache.ptr(), ofs + path_len);
 			}
 		}
@@ -1152,8 +1152,8 @@ Error MultiplayerAPI::send_bytes(Vector<uint8_t> p_data, int p_to, NetworkedMult
 
 	MAKE_ROOM(p_data.size() + 1);
 	const uint8_t *r = p_data.ptr();
-	packet_cache.write[0] = NETWORK_COMMAND_RAW;
-	memcpy(&packet_cache.write[1], &r[0], p_data.size());
+	packet_cache[0] = NETWORK_COMMAND_RAW;
+	memcpy(&packet_cache[1], &r[0], p_data.size());
 
 	network_peer->set_target_peer(p_to);
 	network_peer->set_transfer_mode(p_mode);

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3109683463">
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;nthr&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;nthr&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="161" column="10" info="nthr is overwritten"/>
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="156" column="10" info="nthr is assigned"/>
+            <symbol>nthr</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:61:6" my-argnr="5" my-argname="nthrs_m" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="121" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:61:6" my-argnr="6" my-argname="nthrs_n" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="122" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:61:6" my-argnr="7" my-argname="nthrs_k" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="123" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:61:6" my-argnr="8" my-argname="BM" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="125" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:61:6" my-argnr="9" my-argname="BN" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="126" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:61:6" my-argnr="10" my-argname="BK" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="127" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:57:6" my-argnr="5" my-argname="nthrs_m" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="297" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:57:6" my-argnr="6" my-argname="nthrs_n" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="298" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:57:6" my-argnr="7" my-argname="nthrs_k" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="299" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:57:6" my-argnr="8" my-argname="BM" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="301" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:57:6" my-argnr="9" my-argname="BN" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="302" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.hpp:57:6" my-argnr="10" my-argname="BK" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/f32/gemm_utils_f32.cpp" line="303" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="calc_nthr_nocopy_avx" lineNumber="39"/>
+    <functiondecl functionName="calc_nthr_nocopy_avx512_common" lineNumber="150"/>
+    <functiondecl functionName="partition_unit_diff" lineNumber="316"/>
+    <functiondecl functionName="sum_two_matrices &lt; float &gt;" lineNumber="348"/>
+    <functiondecl functionName="sum_two_matrices &lt; double &gt;" lineNumber="348"/>
+    <functioncall functionName="KB"/>
+    <functioncall functionName="MB"/>
+    <functioncall functionName="NB"/>
+    <functioncall functionName="band"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="isTransA"/>
+    <functioncall functionName="isTransB"/>
+    <functioncall functionName="mkldnn_thr_syncable"/>
+    <functioncall functionName="nthr"/>
+    <functioncall functionName="nthr_k"/>
+    <functioncall functionName="nthr_m"/>
+    <functioncall functionName="nthr_m_gt_n"/>
+    <functioncall functionName="nthr_n"/>
+    <functioncall functionName="nthr_other"/>
+    <functioncall functionName="nthrs"/>
+    <functioncall functionName="ratio_float"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="tail"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

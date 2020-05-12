@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3457093144">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;ctx&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;ctx&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_client.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="70" column="4"/>
+            <symbol>ctx</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;disconnect_from_host&apos; is called from constructor &apos;WSLClient()&apos; at line 346. Dynamic binding is not used." verbose="Virtual function &apos;disconnect_from_host&apos; is called from constructor &apos;WSLClient()&apos; at line 346. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_client.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="78" column="15" info="disconnect_from_host is a virtual function"/>
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_client.cpp" line="346" column="2" info="Calling disconnect_from_host"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;disconnect_from_host&apos; is called from destructor &apos;~WSLClient()&apos; at line 353. Dynamic binding is not used." verbose="Virtual function &apos;disconnect_from_host&apos; is called from destructor &apos;~WSLClient()&apos; at line 353. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_client.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="78" column="15" info="disconnect_from_host is a virtual function"/>
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_client.cpp" line="353" column="2" info="Calling disconnect_from_host"/>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." verbose="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_client.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="53" column="15" info="Derived variable &apos;WSLClient::_peer&apos;"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_client.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="45" column="21" info="Parent variable &apos;WebSocketClient::_peer&apos;"/>
+            <symbol>WSLClient</symbol>
+            <symbol>_peer</symbol>
+            <symbol>WebSocketClient</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_do_handshake" lineNumber="37"/>
+    <functiondecl functionName="_verify_headers" lineNumber="102"/>
+    <functiondecl functionName="get_max_packet_size" lineNumber="218"/>
+    <functiondecl functionName="poll" lineNumber="222"/>
+    <functiondecl functionName="get_peer" lineNumber="280"/>
+    <functiondecl functionName="get_connection_status" lineNumber="287"/>
+    <functiondecl functionName="disconnect_from_host" lineNumber="298"/>
+    <functiondecl functionName="get_connected_host" lineNumber="316"/>
+    <functiondecl functionName="get_connected_port" lineNumber="322"/>
+    <functiondecl functionName="set_buffers" lineNumber="328"/>
+    <functioncall functionName="ERR_ALREADY_IN_USE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="IP_Address"/>
+    <functioncall functionName="NetworkedMultiplayerPeer"/>
+    <functioncall functionName="PROTO_SIZE"/>
+    <functioncall functionName="PacketPeer"/>
+    <functioncall functionName="PeerData"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="StreamPeerTCP"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="WRITE_MODE_BINARY"/>
+    <functioncall functionName="WRITE_MODE_TEXT"/>
+    <functioncall functionName="WSLClient"/>
+    <functioncall functionName="WSLPeer"/>
+    <functioncall functionName="WebSocketClient"/>
+    <functioncall functionName="WebSocketMultiplayerPeer"/>
+    <functioncall functionName="WebSocketPeer"/>
+    <functioncall functionName="WriteMode"/>
+    <functioncall functionName="_connection"/>
+    <functioncall functionName="_create"/>
+    <functioncall functionName="_do_handshake"/>
+    <functioncall functionName="_host"/>
+    <functioncall functionName="_in_buf_size"/>
+    <functioncall functionName="_in_pkt_size"/>
+    <functioncall functionName="_key"/>
+    <functioncall functionName="_on_connect"/>
+    <functioncall functionName="_on_disconnect"/>
+    <functioncall functionName="_on_error"/>
+    <functioncall functionName="_out_buf_size"/>
+    <functioncall functionName="_out_pkt_size"/>
+    <functioncall functionName="_requested"/>
+    <functioncall functionName="_resp_buf"/>
+    <functioncall functionName="_resp_pos"/>
+    <functioncall functionName="_tcp"/>
+    <functioncall functionName="_use_ssl"/>
+    <functioncall functionName="_verify_headers"/>
+    <functioncall functionName="addr"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="close_now"/>
+    <functioncall functionName="compute_key_response"/>
+    <functioncall functionName="connect_to_host"/>
+    <functioncall functionName="connect_to_stream"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="disconnect_from_host"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="generate_key"/>
+    <functioncall functionName="get_connected_host"/>
+    <functioncall functionName="get_connected_port"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_partial_data"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_status"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="invalidate"/>
+    <functioncall functionName="is_connected_to_host"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_valid_ip_address"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="make_context"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nearest_shift"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_host"/>
+    <functioncall functionName="p_port"/>
+    <functioncall functionName="p_reason"/>
+    <functioncall functionName="p_ssl"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="protected:"/>
+    <functioncall functionName="protocol"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="put_partial_data"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resolve_hostname"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sent"/>
+    <functioncall functionName="set_blocking_handshake_enabled"/>
+    <functioncall functionName="set_no_delay"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="ssl"/>
+    <functioncall functionName="ssl_cert"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="verify_ssl"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

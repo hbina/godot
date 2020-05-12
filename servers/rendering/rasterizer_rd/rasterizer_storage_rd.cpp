@@ -2066,7 +2066,7 @@ void RasterizerStorageRD::mesh_add_surface(RID p_mesh, const RS::SurfaceData &p_
 		mesh->aabb = p_surface.aabb;
 	} else {
 		for (int i = 0; i < p_surface.bone_aabbs.size(); i++) {
-			mesh->bone_aabbs.write[i].merge_with(p_surface.bone_aabbs[i]);
+			mesh->bone_aabbs[i].merge_with(p_surface.bone_aabbs[i]);
 		}
 		mesh->aabb.merge_with(p_surface.aabb);
 	}
@@ -2485,7 +2485,7 @@ void RasterizerStorageRD::_mesh_surface_generate_version_for_input_mask(Mesh::Su
 	//update final stride
 	for (int i = 0; i < attributes.size(); i++) {
 		if (attributes[i].stride == 1) {
-			attributes.write[i].stride = stride;
+			attributes[i].stride = stride;
 		}
 	}
 
@@ -4592,7 +4592,7 @@ void RasterizerStorageRD::_update_decal_atlas() {
 
 		int idx = 0;
 		while ((K = decal_atlas.textures.next(K))) {
-			DecalAtlas::SortItem &si = itemsv.write[idx];
+			DecalAtlas::SortItem &si = itemsv[idx];
 
 			Texture *src_tex = texture_owner.getornull(*K);
 

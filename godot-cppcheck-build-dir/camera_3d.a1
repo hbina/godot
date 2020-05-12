@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4142512246">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;camera&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;camera&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/camera_3d.cpp" line="682" column="2"/>
+            <symbol>camera</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_update_audio_listener_state" lineNumber="38"/>
+    <functiondecl functionName="_request_camera_update" lineNumber="41"/>
+    <functiondecl functionName="_update_camera_mode" lineNumber="46"/>
+    <functiondecl functionName="_validate_property" lineNumber="64"/>
+    <functiondecl functionName="_update_camera" lineNumber="80"/>
+    <functiondecl functionName="_notification" lineNumber="103"/>
+    <functiondecl functionName="get_camera_transform" lineNumber="158"/>
+    <functiondecl functionName="set_perspective" lineNumber="166"/>
+    <functiondecl functionName="set_orthogonal" lineNumber="180"/>
+    <functiondecl functionName="set_frustum" lineNumber="196"/>
+    <functiondecl functionName="get_camera" lineNumber="220"/>
+    <functiondecl functionName="make_current" lineNumber="225"/>
+    <functiondecl functionName="clear_current" lineNumber="237"/>
+    <functiondecl functionName="set_current" lineNumber="252"/>
+    <functiondecl functionName="is_current" lineNumber="260"/>
+    <functiondecl functionName="_can_gizmo_scale" lineNumber="269"/>
+    <functiondecl functionName="project_ray_normal" lineNumber="274"/>
+    <functiondecl functionName="project_local_ray_normal" lineNumber="280"/>
+    <functiondecl functionName="project_ray_origin" lineNumber="301"/>
+    <functiondecl functionName="is_position_behind" lineNumber="333"/>
+    <functiondecl functionName="get_near_plane_points" lineNumber="340"/>
+    <functiondecl functionName="unproject_position" lineNumber="363"/>
+    <functiondecl functionName="project_position" lineNumber="388"/>
+    <functiondecl functionName="set_environment" lineNumber="416"/>
+    <functiondecl functionName="get_environment" lineNumber="426"/>
+    <functiondecl functionName="set_effects" lineNumber="431"/>
+    <functiondecl functionName="get_effects" lineNumber="441"/>
+    <functiondecl functionName="set_keep_aspect_mode" lineNumber="446"/>
+    <functiondecl functionName="get_keep_aspect_mode" lineNumber="453"/>
+    <functiondecl functionName="set_doppler_tracking" lineNumber="458"/>
+    <functiondecl functionName="get_doppler_tracking" lineNumber="473"/>
+    <functiondecl functionName="_bind_methods" lineNumber="477"/>
+    <functiondecl functionName="get_fov" lineNumber="554"/>
+    <functiondecl functionName="get_size" lineNumber="559"/>
+    <functiondecl functionName="get_znear" lineNumber="564"/>
+    <functiondecl functionName="get_frustum_offset" lineNumber="569"/>
+    <functiondecl functionName="get_zfar" lineNumber="573"/>
+    <functiondecl functionName="get_projection" lineNumber="578"/>
+    <functiondecl functionName="set_fov" lineNumber="583"/>
+    <functiondecl functionName="set_size" lineNumber="590"/>
+    <functiondecl functionName="set_znear" lineNumber="597"/>
+    <functiondecl functionName="set_frustum_offset" lineNumber="602"/>
+    <functiondecl functionName="set_zfar" lineNumber="607"/>
+    <functiondecl functionName="set_cull_mask" lineNumber="612"/>
+    <functiondecl functionName="get_cull_mask" lineNumber="618"/>
+    <functiondecl functionName="set_cull_mask_bit" lineNumber="623"/>
+    <functiondecl functionName="get_cull_mask_bit" lineNumber="632"/>
+    <functiondecl functionName="get_frustum" lineNumber="637"/>
+    <functiondecl functionName="set_v_offset" lineNumber="651"/>
+    <functiondecl functionName="get_v_offset" lineNumber="657"/>
+    <functiondecl functionName="set_h_offset" lineNumber="662"/>
+    <functiondecl functionName="get_h_offset" lineNumber="667"/>
+    <functiondecl functionName="get_doppler_tracked_velocity" lineNumber="672"/>
+    <functiondecl functionName="set_margin" lineNumber="712"/>
+    <functiondecl functionName="get_margin" lineNumber="715"/>
+    <functiondecl functionName="set_process_mode" lineNumber="718"/>
+    <functiondecl functionName="get_process_mode" lineNumber="727"/>
+    <functiondecl functionName="get_camera_transform" lineNumber="731"/>
+    <functiondecl functionName="_notification" lineNumber="738"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="799"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="804"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="809"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="819"/>
+    <functiondecl functionName="add_exception_rid" lineNumber="824"/>
+    <functiondecl functionName="add_exception" lineNumber="829"/>
+    <functiondecl functionName="remove_exception_rid" lineNumber="838"/>
+    <functiondecl functionName="remove_exception" lineNumber="843"/>
+    <functiondecl functionName="clear_exceptions" lineNumber="852"/>
+    <functiondecl functionName="get_clip_offset" lineNumber="857"/>
+    <functiondecl functionName="set_clip_to_areas" lineNumber="862"/>
+    <functiondecl functionName="is_clip_to_areas_enabled" lineNumber="867"/>
+    <functiondecl functionName="set_clip_to_bodies" lineNumber="872"/>
+    <functiondecl functionName="is_clip_to_bodies_enabled" lineNumber="877"/>
+    <functiondecl functionName="_bind_methods" lineNumber="882"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="AXIS_Z"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CLIP_PROCESS_IDLE"/>
+    <functioncall functionName="CLIP_PROCESS_PHYSICS"/>
+    <functioncall functionName="Camera3D"/>
+    <functioncall functionName="ClippedCamera3D"/>
+    <functioncall functionName="CollisionObject3D"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="DOPPLER_TRACKING_DISABLED"/>
+    <functioncall functionName="DOPPLER_TRACKING_IDLE_STEP"/>
+    <functioncall functionName="DOPPLER_TRACKING_PHYSICS_STEP"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="DopplerTracking"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="KEEP_HEIGHT"/>
+    <functioncall functionName="KEEP_WIDTH"/>
+    <functioncall functionName="KeepAspect"/>
+    <functioncall functionName="Node3D"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROJECTION_FRUSTUM"/>
+    <functioncall functionName="PROJECTION_ORTHOGONAL"/>
+    <functioncall functionName="PROJECTION_PERSPECTIVE"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_RENDER"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_NOEDITOR"/>
+    <functioncall functionName="ProcessMode"/>
+    <functioncall functionName="Projection"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="SHAPE_CONVEX_POLYGON"/>
+    <functioncall functionName="ShapeData"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_camera_add"/>
+    <functioncall functionName="_camera_make_next_current"/>
+    <functioncall functionName="_camera_remove"/>
+    <functioncall functionName="_camera_set"/>
+    <functioncall functionName="_camera_transform_changed_notify"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_register_camera"/>
+    <functioncall functionName="_remove_camera"/>
+    <functioncall functionName="_request_camera_update"/>
+    <functioncall functionName="_update_camera"/>
+    <functioncall functionName="_update_camera_mode"/>
+    <functioncall functionName="add_exception"/>
+    <functioncall functionName="add_exception_rid"/>
+    <functioncall functionName="all_equal"/>
+    <functioncall functionName="aspect"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cam_fw"/>
+    <functioncall functionName="cam_pos"/>
+    <functioncall functionName="camera"/>
+    <functioncall functionName="camera_create"/>
+    <functioncall functionName="camera_set_camera_effects"/>
+    <functioncall functionName="camera_set_cull_mask"/>
+    <functioncall functionName="camera_set_environment"/>
+    <functioncall functionName="camera_set_frustum"/>
+    <functioncall functionName="camera_set_orthogonal"/>
+    <functioncall functionName="camera_set_perspective"/>
+    <functioncall functionName="camera_set_transform"/>
+    <functioncall functionName="camera_set_use_vertical_aspect"/>
+    <functioncall functionName="cast_motion"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_current"/>
+    <functioncall functionName="clear_exceptions"/>
+    <functioncall functionName="clip_to_areas"/>
+    <functioncall functionName="clip_to_bodies"/>
+    <functioncall functionName="co"/>
+    <functioncall functionName="collision_mask"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="csafe"/>
+    <functioncall functionName="cunsafe"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dspace"/>
+    <functioncall functionName="endpoints"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exclude"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="far"/>
+    <functioncall functionName="find_world_3d"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fov"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="frustum_offset"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_camera"/>
+    <functioncall functionName="get_camera_coords"/>
+    <functioncall functionName="get_camera_rect_size"/>
+    <functioncall functionName="get_camera_transform"/>
+    <functioncall functionName="get_clip_offset"/>
+    <functioncall functionName="get_collision_mask"/>
+    <functioncall functionName="get_collision_mask_bit"/>
+    <functioncall functionName="get_cull_mask"/>
+    <functioncall functionName="get_cull_mask_bit"/>
+    <functioncall functionName="get_direct_space_state"/>
+    <functioncall functionName="get_doppler_tracking"/>
+    <functioncall functionName="get_effects"/>
+    <functioncall functionName="get_endpoints"/>
+    <functioncall functionName="get_environment"/>
+    <functioncall functionName="get_fov"/>
+    <functioncall functionName="get_frustum"/>
+    <functioncall functionName="get_frustum_offset"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_h_offset"/>
+    <functioncall functionName="get_keep_aspect_mode"/>
+    <functioncall functionName="get_margin"/>
+    <functioncall functionName="get_near_plane_points"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_process_mode"/>
+    <functioncall functionName="get_projection"/>
+    <functioncall functionName="get_projection_planes"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_tracked_linear_velocity"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_v_offset"/>
+    <functioncall functionName="get_viewport"/>
+    <functioncall functionName="get_viewport_half_extents"/>
+    <functioncall functionName="get_visible_rect"/>
+    <functioncall functionName="get_world_3d"/>
+    <functioncall functionName="get_zfar"/>
+    <functioncall functionName="get_znear"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="is_clip_to_areas_enabled"/>
+    <functioncall functionName="is_clip_to_bodies_enabled"/>
+    <functioncall functionName="is_current"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_inside_world"/>
+    <functioncall functionName="is_node_being_edited"/>
+    <functioncall functionName="is_point_over"/>
+    <functioncall functionName="is_position_behind"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="layers"/>
+    <functioncall functionName="local_points"/>
+    <functioncall functionName="make_current"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="near"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="orthonormalize"/>
+    <functioncall functionName="orthonormalized"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_aspect"/>
+    <functioncall functionName="p_clip"/>
+    <functioncall functionName="p_current"/>
+    <functioncall functionName="p_effects"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enable_next"/>
+    <functioncall functionName="p_environment"/>
+    <functioncall functionName="p_fov"/>
+    <functioncall functionName="p_fovy_degrees"/>
+    <functioncall functionName="p_layer"/>
+    <functioncall functionName="p_layers"/>
+    <functioncall functionName="p_margin"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_rid"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_tracking"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_z_depth"/>
+    <functioncall functionName="p_z_far"/>
+    <functioncall functionName="p_z_near"/>
+    <functioncall functionName="p_zfar"/>
+    <functioncall functionName="p_znear"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="parent_plane"/>
+    <functioncall functionName="parent_pos"/>
+    <functioncall functionName="project"/>
+    <functioncall functionName="project_local_ray_normal"/>
+    <functioncall functionName="project_position"/>
+    <functioncall functionName="project_ray_normal"/>
+    <functioncall functionName="project_ray_origin"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="pyramid_shape"/>
+    <functioncall functionName="ray"/>
+    <functioncall functionName="ray_from"/>
+    <functioncall functionName="remove_exception"/>
+    <functioncall functionName="remove_exception_rid"/>
+    <functioncall functionName="reset"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_clip_to_areas"/>
+    <functioncall functionName="set_clip_to_bodies"/>
+    <functioncall functionName="set_collision_mask"/>
+    <functioncall functionName="set_collision_mask_bit"/>
+    <functioncall functionName="set_cull_mask"/>
+    <functioncall functionName="set_cull_mask_bit"/>
+    <functioncall functionName="set_current"/>
+    <functioncall functionName="set_disable_scale"/>
+    <functioncall functionName="set_doppler_tracking"/>
+    <functioncall functionName="set_effects"/>
+    <functioncall functionName="set_environment"/>
+    <functioncall functionName="set_fov"/>
+    <functioncall functionName="set_frustum"/>
+    <functioncall functionName="set_frustum_offset"/>
+    <functioncall functionName="set_h_offset"/>
+    <functioncall functionName="set_keep_aspect_mode"/>
+    <functioncall functionName="set_margin"/>
+    <functioncall functionName="set_notify_local_transform"/>
+    <functioncall functionName="set_notify_transform"/>
+    <functioncall functionName="set_orthogonal"/>
+    <functioncall functionName="set_perspective"/>
+    <functioncall functionName="set_physics_process_internal"/>
+    <functioncall functionName="set_process_internal"/>
+    <functioncall functionName="set_process_mode"/>
+    <functioncall functionName="set_projection"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="set_track_physics_step"/>
+    <functioncall functionName="set_v_offset"/>
+    <functioncall functionName="set_zfar"/>
+    <functioncall functionName="set_znear"/>
+    <functioncall functionName="shape_create"/>
+    <functioncall functionName="shape_set_data"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unproject_position"/>
+    <functioncall functionName="update_gizmo"/>
+    <functioncall functionName="update_position"/>
+    <functioncall functionName="viewport"/>
+    <functioncall functionName="viewport_size"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xf"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="xform4"/>
+    <functioncall functionName="xform_inv"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

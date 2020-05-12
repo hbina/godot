@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3302045429">
+        <error id="duplicateCondition" severity="style" msg="The if condition is the same as the previous if condition" verbose="The if condition is the same as the previous if condition" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="694" column="14" info="Second condition"/>
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="666" column="14" info="First condition"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;omp_overhead_small_core&gt;0&apos; is always true" verbose="Condition &apos;omp_overhead_small_core&gt;0&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="970" column="48" info="Condition &apos;omp_overhead_small_core&gt;0&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="961" column="39" info="Assignment &apos;omp_overhead_small_core=3.0e+3&apos;, assigned value is 3000.0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;omp_intercept_big_core&apos; can be reduced." verbose="The scope of the variable &apos;omp_intercept_big_core&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="962" column="12"/>
+            <symbol>omp_intercept_big_core</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="399" col="43" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="12" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="399" col="43" call-argexpr="NO_OFFSET" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="31" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="12" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="31" call-argexpr="NO_OFFSET" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="722" col="25" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="722" col="25" call-argexpr="&block" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="754" col="25" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="754" col="25" call-argexpr="&block" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="9" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&m_disp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="10" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&m_band" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&n_disp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="12" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&n_band" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:243:21" call-funcname="align" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="872" col="39" call-argexpr="mem" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="875" col="9" info="Assuming that condition '!mem' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:958:20" call-funcname="get_omp_thread_count" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1019" col="25" call-argexpr="&nthr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" call-funcname="set_thread_opts_avx512" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1046" col="35" call-argexpr="&nthrs" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" call-funcname="set_thread_opts_avx512" call-argnr="2" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1046" col="35" call-argexpr="&thread_info" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" call-funcname="set_thread_opts_avx512" call-argnr="2" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1046" col="35" call-argexpr="thread_info" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="2" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&nthrs" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="3" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&m" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&n" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&k" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="6" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&a" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="7" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&b" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="8" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&c" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="9" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&co" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="10" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&thread_info" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:826:12" call-funcname="parallel_a_copy" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1062" col="40" call-argexpr="&shared_mem" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:1109:13" call-funcname="jit_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1401" col="13" call-argexpr="&args" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:1009:12" call-funcname="gemm_threading_driver" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1402" col="39" call-argexpr="&args" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="13" my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:428:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="9" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="13" my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:428:12" my-argnr="10"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:44:20" my-argnr="1" my-argname="rounded_val" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="56" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" my-argnr="13" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="121" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:248:12" my-argnr="8" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="252" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:428:12" my-argnr="11" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="433" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="1" my-argname="p_nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="531" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="2" my-argname="thread_info" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="535" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="3" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="532" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" my-argnr="4" my-argname="t_offset" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="611" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" my-argnr="2" my-argname="nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="664" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" my-argnr="10" my-argname="thread_info" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="717" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" my-argnr="11" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="713" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:826:12" my-argnr="10" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="831" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:958:20" my-argnr="5" my-argname="nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="967" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:1009:12" my-argnr="1" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1011" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="1" my-argname="transA" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1360" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="2" my-argname="transB" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1361" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="3" my-argname="offsetC" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1362" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="4" my-argname="m" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1367" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="5" my-argname="n" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1368" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="6" my-argname="k" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1369" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="9" my-argname="lda" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1372" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="10" my-argname="oa" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1389" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="12" my-argname="ldb" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1374" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="13" my-argname="ob" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1390" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="16" my-argname="ldc" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1377" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="1" my-argname="p_nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="531" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:958:20" my-argnr="5" my-argname="nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="967" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="1" my-argname="transA" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1360" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="2" my-argname="transB" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1361" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="3" my-argname="offsetC" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1362" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="4" my-argname="m" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1367" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="5" my-argname="n" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1368" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="6" my-argname="k" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1369" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="9" my-argname="lda" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1372" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="10" my-argname="oa" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1389" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="12" my-argname="ldb" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1374" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="13" my-argname="ob" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1390" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="16" my-argname="ldc" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1377" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="399" col="43" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="12" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="399" col="43" call-argexpr="NO_OFFSET" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="31" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="12" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="31" call-argexpr="NO_OFFSET" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="722" col="25" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="722" col="25" call-argexpr="&block" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="754" col="25" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" call-funcname="partition_1d" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="754" col="25" call-argexpr="&block" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="9" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&m_disp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="10" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&m_band" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&n_disp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" call-funcname="partition_2d" call-argnr="12" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="794" col="25" call-argexpr="&n_band" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:243:21" call-funcname="align" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="872" col="39" call-argexpr="mem" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="875" col="9" info="Assuming that condition '!mem' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:958:20" call-funcname="get_omp_thread_count" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1019" col="25" call-argexpr="&nthr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" call-funcname="set_thread_opts_avx512" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1046" col="35" call-argexpr="&nthrs" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" call-funcname="set_thread_opts_avx512" call-argnr="2" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1046" col="35" call-argexpr="&thread_info" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" call-funcname="set_thread_opts_avx512" call-argnr="2" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1046" col="35" call-argexpr="thread_info" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="2" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&nthrs" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="3" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&m" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&n" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="5" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&k" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="6" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&a" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="7" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&b" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="8" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&c" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="9" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&co" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" call-funcname="decompose_matrices" call-argnr="10" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1055" col="31" call-argexpr="&thread_info" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:826:12" call-funcname="parallel_a_copy" call-argnr="11" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1062" col="40" call-argexpr="&shared_mem" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:1109:13" call-funcname="jit_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1401" col="13" call-argexpr="&args" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:1009:12" call-funcname="gemm_threading_driver" call-argnr="1" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1402" col="39" call-argexpr="&args" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="4" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="13" my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:428:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" call-funcname="igemm_inner_kernel" call-argnr="9" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="505" col="13" my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:428:12" my-argnr="10"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:44:20" my-argnr="1" my-argname="rounded_val" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="56" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:116:6" my-argnr="13" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="121" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:248:12" my-argnr="8" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="252" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:428:12" my-argnr="11" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="433" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="1" my-argname="p_nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="531" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="2" my-argname="thread_info" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="535" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="3" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="532" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:596:20" my-argnr="4" my-argname="t_offset" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="611" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:621:20" my-argnr="2" my-argname="nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="664" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" my-argnr="10" my-argname="thread_info" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="717" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:709:20" my-argnr="11" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="713" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:826:12" my-argnr="10" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="831" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:958:20" my-argnr="5" my-argname="nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="967" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:1009:12" my-argnr="1" my-argname="arg" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1011" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="1" my-argname="transA" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1360" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="2" my-argname="transB" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1361" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="3" my-argname="offsetC" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1362" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="4" my-argname="m" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1367" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="5" my-argname="n" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1368" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="6" my-argname="k" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1369" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="9" my-argname="lda" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1372" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="10" my-argname="oa" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1389" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="12" my-argname="ldb" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1374" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="13" my-argname="ob" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1390" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="16" my-argname="ldc" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1377" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:528:20" my-argnr="1" my-argname="p_nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="531" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp:958:20" my-argnr="5" my-argname="nthrs" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="967" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="1" my-argname="transA" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1360" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="2" my-argname="transB" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1361" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="3" my-argname="offsetC" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1362" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="4" my-argname="m" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1367" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="5" my-argname="n" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1368" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="6" my-argname="k" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1369" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="9" my-argname="lda" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1372" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="10" my-argname="oa" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1389" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="12" my-argname="ldb" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1374" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="13" my-argname="ob" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1390" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.hpp:27:17" my-argnr="16" my-argname="ldc" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm/s8x8s32/jit_avx512_core_gemm_s8u8s32.cpp" line="1377" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="round_to_nearest" lineNumber="44"/>
+    <functiondecl functionName="add_results" lineNumber="59"/>
+    <functiondecl functionName="ld_padd" lineNumber="110"/>
+    <functiondecl functionName="igemm_inner_kernel" lineNumber="116"/>
+    <functiondecl functionName="align" lineNumber="243"/>
+    <functiondecl functionName="gemm_kernel_driver" lineNumber="248"/>
+    <functiondecl functionName="kernel_driver_parallel_acopiedbcopy" lineNumber="428"/>
+    <functiondecl functionName="set_thread_opts_avx512" lineNumber="528"/>
+    <functiondecl functionName="partition_1d" lineNumber="596"/>
+    <functiondecl functionName="partition_2d" lineNumber="621"/>
+    <functiondecl functionName="decompose_matrices" lineNumber="709"/>
+    <functiondecl functionName="parallel_a_copy" lineNumber="826"/>
+    <functiondecl functionName="get_omp_thread_count" lineNumber="958"/>
+    <functiondecl functionName="gemm_threading_driver" lineNumber="1009"/>
+    <functiondecl functionName="jit_init" lineNumber="1109"/>
+    <functiondecl functionName="jit_avx512_core_gemm_s8u8s32" lineNumber="1353"/>
+    <functiondecl functionName="round_to_nearest" lineNumber="44"/>
+    <functiondecl functionName="add_results" lineNumber="59"/>
+    <functiondecl functionName="ld_padd" lineNumber="110"/>
+    <functiondecl functionName="igemm_inner_kernel" lineNumber="116"/>
+    <functiondecl functionName="align" lineNumber="243"/>
+    <functiondecl functionName="gemm_kernel_driver" lineNumber="248"/>
+    <functiondecl functionName="kernel_driver_parallel_acopiedbcopy" lineNumber="428"/>
+    <functiondecl functionName="set_thread_opts_avx512" lineNumber="528"/>
+    <functiondecl functionName="partition_1d" lineNumber="596"/>
+    <functiondecl functionName="partition_2d" lineNumber="621"/>
+    <functiondecl functionName="decompose_matrices" lineNumber="709"/>
+    <functiondecl functionName="parallel_a_copy" lineNumber="826"/>
+    <functiondecl functionName="get_omp_thread_count" lineNumber="958"/>
+    <functiondecl functionName="gemm_threading_driver" lineNumber="1009"/>
+    <functiondecl functionName="jit_init" lineNumber="1109"/>
+    <functiondecl functionName="jit_avx512_core_gemm_s8u8s32" lineNumber="1353"/>
+    <functioncall functionName="Bk"/>
+    <functioncall functionName="Bm"/>
+    <functioncall functionName="Bn"/>
+    <functioncall functionName="COL_OFFSET"/>
+    <functioncall functionName="COPY_A"/>
+    <functioncall functionName="COPY_NONE"/>
+    <functioncall functionName="DECLARE_CPU_JIT_AUX_FUNCTIONS"/>
+    <functioncall functionName="FIX_OFFSET"/>
+    <functioncall functionName="L"/>
+    <functioncall functionName="NO_OFFSET"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Opmask"/>
+    <functioncall functionName="PAGE_4K"/>
+    <functioncall functionName="PARTITION_1D_COL"/>
+    <functioncall functionName="PARTITION_1D_ROW"/>
+    <functioncall functionName="PARTITION_2D"/>
+    <functioncall functionName="PARTITION_2D_COL_MAJOR"/>
+    <functioncall functionName="ROW_OFFSET"/>
+    <functioncall functionName="Reg64"/>
+    <functioncall functionName="Um"/>
+    <functioncall functionName="Um_forA"/>
+    <functioncall functionName="Xmm"/>
+    <functioncall functionName="Zmm"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a_block"/>
+    <functioncall functionName="a_block_copied"/>
+    <functioncall functionName="a_buf_nelems"/>
+    <functioncall functionName="a_row_sum"/>
+    <functioncall functionName="a_row_sum_nelems"/>
+    <functioncall functionName="add_results"/>
+    <functioncall functionName="align"/>
+    <functioncall functionName="alignment"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="ao"/>
+    <functioncall functionName="arg"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="avx512_core_vnni"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b_block"/>
+    <functioncall functionName="b_buf_nelems"/>
+    <functioncall functionName="b_col_sum"/>
+    <functioncall functionName="b_col_sum_nelems"/>
+    <functioncall functionName="band"/>
+    <functioncall functionName="beta"/>
+    <functioncall functionName="beta_saved"/>
+    <functioncall functionName="bk"/>
+    <functioncall functionName="bk_traditional"/>
+    <functioncall functionName="block"/>
+    <functioncall functionName="blocking_small_k"/>
+    <functioncall functionName="bm"/>
+    <functioncall functionName="bn"/>
+    <functioncall functionName="bn_small_k"/>
+    <functioncall functionName="bo"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bufferA"/>
+    <functioncall functionName="bufferB"/>
+    <functioncall functionName="bufferC"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c_block"/>
+    <functioncall functionName="c_float"/>
+    <functioncall functionName="call_once"/>
+    <functioncall functionName="co"/>
+    <functioncall functionName="co_stride"/>
+    <functioncall functionName="col_offset"/>
+    <functioncall functionName="col_req"/>
+    <functioncall functionName="copyA"/>
+    <functioncall functionName="copyAn"/>
+    <functioncall functionName="copyAt"/>
+    <functioncall functionName="copyB"/>
+    <functioncall functionName="copyBn"/>
+    <functioncall functionName="copyBt"/>
+    <functioncall functionName="copySumAn"/>
+    <functioncall functionName="copySumAt"/>
+    <functioncall functionName="copySumBn"/>
+    <functioncall functionName="copySumBt"/>
+    <functioncall functionName="copy_type"/>
+    <functioncall functionName="ctemp"/>
+    <functioncall functionName="decompose_matrices"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="firstmgroup"/>
+    <functioncall functionName="firstmval"/>
+    <functioncall functionName="firstngroup"/>
+    <functioncall functionName="firstnval"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fp_per_cycle"/>
+    <functioncall functionName="fp_val"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="gemm_kernel_driver"/>
+    <functioncall functionName="gemm_s8u8s32_jump_to_gemv_s8u8s32"/>
+    <functioncall functionName="gemm_threading_driver"/>
+    <functioncall functionName="gemv_s8u8s32_kern"/>
+    <functioncall functionName="gemv_u8s8s32_kern"/>
+    <functioncall functionName="generate"/>
+    <functioncall functionName="getCode"/>
+    <functioncall functionName="get_omp_thread_count"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="igemm_inner_kernel"/>
+    <functioncall functionName="initialized"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="ithr"/>
+    <functioncall functionName="ithr_i"/>
+    <functioncall functionName="ithr_j"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="jit_avx512_core_gemm_s8u8s32_kern"/>
+    <functioncall functionName="jit_avx512_core_gemv_s8u8s32_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_an_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_at_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_bn_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_bt_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_sum_an_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_sum_at_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_sum_bn_kern"/>
+    <functioncall functionName="jit_avx512_core_u8_copy_sum_bt_kern"/>
+    <functioncall functionName="jit_generator"/>
+    <functioncall functionName="jit_init"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="k_padd"/>
+    <functioncall functionName="kern"/>
+    <functioncall functionName="kern_b"/>
+    <functioncall functionName="kern_b0"/>
+    <functioncall functionName="kern_b0_b"/>
+    <functioncall functionName="kern_b0_c"/>
+    <functioncall functionName="kern_b0_r"/>
+    <functioncall functionName="kern_c"/>
+    <functioncall functionName="kern_r"/>
+    <functioncall functionName="kernel"/>
+    <functioncall functionName="kernel_b"/>
+    <functioncall functionName="kernel_b0"/>
+    <functioncall functionName="kernel_b0_b"/>
+    <functioncall functionName="kernel_b0_c"/>
+    <functioncall functionName="kernel_b0_r"/>
+    <functioncall functionName="kernel_c"/>
+    <functioncall functionName="kernel_driver_parallel_acopiedbcopy"/>
+    <functioncall functionName="kernel_r"/>
+    <functioncall functionName="label"/>
+    <functioncall functionName="ld_padd"/>
+    <functioncall functionName="lda"/>
+    <functioncall functionName="ldb"/>
+    <functioncall functionName="ldc"/>
+    <functioncall functionName="ldc_buf"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="m_band"/>
+    <functioncall functionName="m_bandt"/>
+    <functioncall functionName="m_disp"/>
+    <functioncall functionName="m_padd"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="max_unroll_n"/>
+    <functioncall functionName="mayiuse"/>
+    <functioncall functionName="mdiv"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="mem_size"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="mkldnn_get_max_threads"/>
+    <functioncall functionName="mkldnn_in_parallel"/>
+    <functioncall functionName="mkldnn_out_of_memory"/>
+    <functioncall functionName="mkldnn_success"/>
+    <functioncall functionName="mkldnn_thr_barrier"/>
+    <functioncall functionName="mkldnn_thr_syncable"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n_band"/>
+    <functioncall functionName="n_bandt"/>
+    <functioncall functionName="n_disp"/>
+    <functioncall functionName="n_padd"/>
+    <functioncall functionName="ndiv"/>
+    <functioncall functionName="need_c_buffer"/>
+    <functioncall functionName="nthr"/>
+    <functioncall functionName="nthrs"/>
+    <functioncall functionName="nthrs_m"/>
+    <functioncall functionName="nthrs_n"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="offsetc"/>
+    <functioncall functionName="omp_overhead_small_core"/>
+    <functioncall functionName="parallel"/>
+    <functioncall functionName="parallel_a_copy"/>
+    <functioncall functionName="partition"/>
+    <functioncall functionName="partition_1d"/>
+    <functioncall functionName="partition_2d"/>
+    <functioncall functionName="prefetcht0"/>
+    <functioncall functionName="prefetchw"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="results"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rnd_up"/>
+    <functioncall functionName="round_to_nearest"/>
+    <functioncall functionName="row_offset"/>
+    <functioncall functionName="row_req"/>
+    <functioncall functionName="set_thread_opts_avx512"/>
+    <functioncall functionName="shared_mem"/>
+    <functioncall functionName="sizeK"/>
+    <functioncall functionName="sizeM"/>
+    <functioncall functionName="sizeN"/>
+    <functioncall functionName="sizeUM"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tail"/>
+    <functioncall functionName="thread_info"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uk"/>
+    <functioncall functionName="um"/>
+    <functioncall functionName="un"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3418104179">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;default_video_mode&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;default_video_mode&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="245" column="2"/>
+            <symbol>default_video_mode</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!fbc&apos; is redundant or there is possible null pointer dereference: fbc." verbose="Either the condition &apos;!fbc&apos; is redundant or there is possible null pointer dereference: fbc." cwe="476">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="160" column="46" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="157" column="39" info="Assignment &apos;fbc=glXChooseFBConfig(x11_display,DefaultScreen(x11_display),visual_attribs,&amp;fbcount)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="158" column="19" info="Assuming that condition &apos;!fbc&apos; is not redundant"/>
+            <symbol>fbc</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!fbc&apos; is redundant or there is possible null pointer dereference: fbc." verbose="Either the condition &apos;!fbc&apos; is redundant or there is possible null pointer dereference: fbc." cwe="476">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="162" column="14" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="157" column="39" info="Assignment &apos;fbc=glXChooseFBConfig(x11_display,DefaultScreen(x11_display),visual_attribs,&amp;fbcount)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="158" column="19" info="Assuming that condition &apos;!fbc&apos; is not redundant"/>
+            <symbol>fbc</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;visual_attribs&apos; can be reduced." verbose="The scope of the variable &apos;visual_attribs&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="95" column="13"/>
+            <symbol>visual_attribs</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;visual_attribs_layered&apos; can be reduced." verbose="The scope of the variable &apos;visual_attribs_layered&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/platform/linuxbsd/context_gl_x11.cpp" line="106" column="13"/>
+            <symbol>visual_attribs_layered</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="release_current" lineNumber="53"/>
+    <functiondecl functionName="make_current" lineNumber="58"/>
+    <functiondecl functionName="swap_buffers" lineNumber="63"/>
+    <functiondecl functionName="ctxErrorHandler" lineNumber="69"/>
+    <functiondecl functionName="set_class_hint" lineNumber="74"/>
+    <functiondecl functionName="initialize" lineNumber="87"/>
+    <functiondecl functionName="get_window_width" lineNumber="194"/>
+    <functiondecl functionName="get_window_height" lineNumber="202"/>
+    <functiondecl functionName="set_use_vsync" lineNumber="209"/>
+    <functiondecl functionName="is_using_vsync" lineNumber="237"/>
+    <functioncall functionName="AllocNone"/>
+    <functioncall functionName="CWEventMask"/>
+    <functioncall functionName="ContextGL_X11"/>
+    <functioncall functionName="ContextGL_X11_Private"/>
+    <functioncall functionName="DefaultScreen"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="False"/>
+    <functioncall functionName="GLES_2_0_COMPATIBLE"/>
+    <functioncall functionName="GLX_ALPHA_SIZE"/>
+    <functioncall functionName="GLX_BLUE_SIZE"/>
+    <functioncall functionName="GLX_DEPTH_SIZE"/>
+    <functioncall functionName="GLX_DOUBLEBUFFER"/>
+    <functioncall functionName="GLX_DRAWABLE_TYPE"/>
+    <functioncall functionName="GLX_GREEN_SIZE"/>
+    <functioncall functionName="GLX_RED_SIZE"/>
+    <functioncall functionName="GLX_RENDER_TYPE"/>
+    <functioncall functionName="GLX_RGBA_BIT"/>
+    <functioncall functionName="GLX_RGBA_TYPE"/>
+    <functioncall functionName="GLX_WINDOW_BIT"/>
+    <functioncall functionName="InputOutput"/>
+    <functioncall functionName="None"/>
+    <functioncall functionName="PFNGLXSWAPINTERVALEXTPROC"/>
+    <functioncall functionName="PFNGLXSWAPINTERVALSGIPROC"/>
+    <functioncall functionName="RootWindow"/>
+    <functioncall functionName="StructureNotifyMask"/>
+    <functioncall functionName="XAllocClassHint"/>
+    <functioncall functionName="XCreateColormap"/>
+    <functioncall functionName="XCreateWindow"/>
+    <functioncall functionName="XFree"/>
+    <functioncall functionName="XGetWindowAttributes"/>
+    <functioncall functionName="XMapWindow"/>
+    <functioncall functionName="XRenderFindVisualFormat"/>
+    <functioncall functionName="XSetClassHint"/>
+    <functioncall functionName="XSetErrorHandler"/>
+    <functioncall functionName="XStoreName"/>
+    <functioncall functionName="XSync"/>
+    <functioncall functionName="alphaMask"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="classHint"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="context_type"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="ctxErrorHandler"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="drawable"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fbc"/>
+    <functioncall functionName="fbconfig"/>
+    <functioncall functionName="fbcount"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_video_mode"/>
+    <functioncall functionName="glXChooseFBConfig"/>
+    <functioncall functionName="glXCreateContextAttribsARB"/>
+    <functioncall functionName="glXCreateNewContext"/>
+    <functioncall functionName="glXDestroyContext"/>
+    <functioncall functionName="glXGetCurrentDrawable"/>
+    <functioncall functionName="glXGetProcAddress"/>
+    <functioncall functionName="glXGetProcAddressARB"/>
+    <functioncall functionName="glXGetVisualFromFBConfig"/>
+    <functioncall functionName="glXMakeCurrent"/>
+    <functioncall functionName="glXQueryExtensionsString"/>
+    <functioncall functionName="glXSwapBuffers"/>
+    <functioncall functionName="glXSwapIntervalEXT"/>
+    <functioncall functionName="glXSwapIntervalMESA"/>
+    <functioncall functionName="glXSwapIntervalSGI"/>
+    <functioncall functionName="glx_context"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_layered_allowed"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oldHandler"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_context_type"/>
+    <functioncall functionName="p_default_video_mode"/>
+    <functioncall functionName="p_display"/>
+    <functioncall functionName="p_use"/>
+    <functioncall functionName="p_window"/>
+    <functioncall functionName="p_x11_display"/>
+    <functioncall functionName="p_x11_window"/>
+    <functioncall functionName="pict_format"/>
+    <functioncall functionName="release_current"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="screen"/>
+    <functioncall functionName="set_class_hint"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="swa"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="valuemask"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="visual"/>
+    <functioncall functionName="visual_attribs"/>
+    <functioncall functionName="visual_attribs_layered"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x11_display"/>
+    <functioncall functionName="x11_window"/>
+    <functioncall functionName="xwa"/>
+  </FileInfo>
+</analyzerinfo>

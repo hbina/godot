@@ -2324,7 +2324,7 @@ Vector<uint8_t> String::md5_buffer() const {
 	Vector<uint8_t> ret;
 	ret.resize(16);
 	for (int i = 0; i < 16; i++) {
-		ret.write[i] = hash[i];
+		ret[i] = hash[i];
 	}
 	return ret;
 };
@@ -2337,7 +2337,7 @@ Vector<uint8_t> String::sha1_buffer() const {
 	Vector<uint8_t> ret;
 	ret.resize(20);
 	for (int i = 0; i < 20; i++) {
-		ret.write[i] = hash[i];
+		ret[i] = hash[i];
 	}
 
 	return ret;
@@ -2351,7 +2351,7 @@ Vector<uint8_t> String::sha256_buffer() const {
 	Vector<uint8_t> ret;
 	ret.resize(32);
 	for (int i = 0; i < 32; i++) {
-		ret.write[i] = hash[i];
+		ret[i] = hash[i];
 	}
 	return ret;
 }
@@ -2861,7 +2861,7 @@ Vector<String> String::bigrams() const {
 	}
 	b.resize(n_pairs);
 	for (int i = 0; i < n_pairs; i++) {
-		b.write[i] = substr(i, 2);
+		b[i] = substr(i, 2);
 	}
 	return b;
 }

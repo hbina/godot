@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="255323873">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;color&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;color&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/gui/color_rect.cpp" line="61" column="2"/>
+            <symbol>color</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_frame_color" lineNumber="33"/>
+    <functiondecl functionName="get_frame_color" lineNumber="39"/>
+    <functiondecl functionName="_notification" lineNumber="44"/>
+    <functiondecl functionName="_bind_methods" lineNumber="51"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ColorRect"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="draw_rect"/>
+    <functioncall functionName="get_frame_color"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="set_frame_color"/>
+    <functioncall functionName="update"/>
+  </FileInfo>
+</analyzerinfo>

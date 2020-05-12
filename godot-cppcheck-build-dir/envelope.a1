@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="950780500">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="104" column="14"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="identicalConditionAfterEarlyExit" severity="warning" msg="Identical condition &apos;j&gt;=testW&apos;, second condition is always false" verbose="Identical condition &apos;j&gt;=testW&apos;, second condition is always false" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="318" column="15" info="Testing identical condition &apos;j&gt;=testW&apos;"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="272" column="11" info="If condition &apos;j&gt;=testW&apos; is true, the function will return/exit"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="144" col="15" call-argexpr="&decay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="152" col="13" call-argexpr="&val" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="36" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="32" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="1" my-argname="ve" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="2" my-argname="gi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="109" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="5" my-argname="filters" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="127" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:74:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="216" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:75:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="356" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="144" col="15" call-argexpr="&decay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="152" col="13" call-argexpr="&val" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="36" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="32" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="1" my-argname="ve" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="2" my-argname="gi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="109" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="5" my-argname="filters" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="127" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:74:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="216" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:75:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="356" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="144" col="15" call-argexpr="&decay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="152" col="13" call-argexpr="&val" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="36" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="32" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="1" my-argname="ve" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="2" my-argname="gi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="109" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="5" my-argname="filters" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="127" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:74:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="216" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:75:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="356" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="144" col="15" call-argexpr="&decay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="152" col="13" call-argexpr="&val" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="36" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="32" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="1" my-argname="ve" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="2" my-argname="gi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="109" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="5" my-argname="filters" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="127" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:74:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="216" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:75:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="356" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="144" col="15" call-argexpr="&decay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="152" col="13" call-argexpr="&val" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="36" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="32" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="1" my-argname="ve" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="2" my-argname="gi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="109" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="5" my-argname="filters" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="127" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:74:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="216" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:75:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="356" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="144" col="15" call-argexpr="&decay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="152" col="13" call-argexpr="&val" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="36" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="32" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="1" my-argname="ve" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="2" my-argname="gi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="109" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="5" my-argname="filters" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="127" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:74:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="216" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:75:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="356" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="144" col="15" call-argexpr="&decay" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" call-funcname="todB" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="152" col="13" call-argexpr="&val" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="36" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:72:13" my-argnr="2" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="32" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="1" my-argname="ve" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="2" my-argname="gi" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="109" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c:89:12" my-argnr="5" my-argname="filters" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="127" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:74:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="216" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/envelope.h:75:13" my-argnr="1" my-argname="e" file="/home/hbina/git/godot/thirdparty/libvorbis/envelope.c" line="356" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/scales.h:43:21" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/scales.h" line="48" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_ve_envelope_init" lineNumber="31"/>
+    <functiondecl functionName="_ve_envelope_clear" lineNumber="75"/>
+    <functiondecl functionName="_ve_amp" lineNumber="89"/>
+    <functiondecl functionName="_ve_envelope_search" lineNumber="215"/>
+    <functiondecl functionName="_ve_envelope_mark" lineNumber="329"/>
+    <functiondecl functionName="_ve_envelope_shift" lineNumber="355"/>
+    <functiondecl functionName="_ve_envelope_init" lineNumber="31"/>
+    <functiondecl functionName="_ve_envelope_clear" lineNumber="75"/>
+    <functiondecl functionName="_ve_amp" lineNumber="89"/>
+    <functiondecl functionName="_ve_envelope_search" lineNumber="215"/>
+    <functiondecl functionName="_ve_envelope_mark" lineNumber="329"/>
+    <functiondecl functionName="_ve_envelope_shift" lineNumber="355"/>
+    <functiondecl functionName="_ve_envelope_init" lineNumber="31"/>
+    <functiondecl functionName="_ve_envelope_clear" lineNumber="75"/>
+    <functiondecl functionName="_ve_amp" lineNumber="89"/>
+    <functiondecl functionName="_ve_envelope_search" lineNumber="215"/>
+    <functiondecl functionName="_ve_envelope_mark" lineNumber="329"/>
+    <functiondecl functionName="_ve_envelope_shift" lineNumber="355"/>
+    <functiondecl functionName="_ve_envelope_init" lineNumber="31"/>
+    <functiondecl functionName="_ve_envelope_clear" lineNumber="75"/>
+    <functiondecl functionName="_ve_amp" lineNumber="89"/>
+    <functiondecl functionName="_ve_envelope_search" lineNumber="215"/>
+    <functiondecl functionName="_ve_envelope_mark" lineNumber="329"/>
+    <functiondecl functionName="_ve_envelope_shift" lineNumber="355"/>
+    <functiondecl functionName="_ve_envelope_init" lineNumber="31"/>
+    <functiondecl functionName="_ve_envelope_clear" lineNumber="75"/>
+    <functiondecl functionName="_ve_amp" lineNumber="89"/>
+    <functiondecl functionName="_ve_envelope_search" lineNumber="215"/>
+    <functiondecl functionName="_ve_envelope_mark" lineNumber="329"/>
+    <functiondecl functionName="_ve_envelope_shift" lineNumber="355"/>
+    <functiondecl functionName="_ve_envelope_init" lineNumber="31"/>
+    <functiondecl functionName="_ve_envelope_clear" lineNumber="75"/>
+    <functiondecl functionName="_ve_amp" lineNumber="89"/>
+    <functiondecl functionName="_ve_envelope_search" lineNumber="215"/>
+    <functiondecl functionName="_ve_envelope_mark" lineNumber="329"/>
+    <functiondecl functionName="_ve_envelope_shift" lineNumber="355"/>
+    <functiondecl functionName="_ve_envelope_init" lineNumber="31"/>
+    <functiondecl functionName="_ve_envelope_clear" lineNumber="75"/>
+    <functiondecl functionName="_ve_amp" lineNumber="89"/>
+    <functiondecl functionName="_ve_envelope_search" lineNumber="215"/>
+    <functiondecl functionName="_ve_envelope_mark" lineNumber="329"/>
+    <functiondecl functionName="_ve_envelope_shift" lineNumber="355"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="W"/>
+    <functioncall functionName="_VDBG_free"/>
+    <functioncall functionName="_VDBG_malloc"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="_mm_cvtsd_si32"/>
+    <functioncall functionName="_mm_load_sd"/>
+    <functioncall functionName="_ogg_calloc"/>
+    <functioncall functionName="_ogg_free"/>
+    <functioncall functionName="_ogg_malloc"/>
+    <functioncall functionName="_ogg_realloc"/>
+    <functioncall functionName="_ve_amp"/>
+    <functioncall functionName="acc"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="ampptr"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="backend_state"/>
+    <functioncall functionName="band"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="centerW"/>
+    <functioncall functionName="ch"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="codec_setup"/>
+    <functioncall functionName="cursor"/>
+    <functioncall functionName="decay"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="filter"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpu"/>
+    <functioncall functionName="gi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="lW"/>
+    <functioncall functionName="mark"/>
+    <functioncall functionName="mdct"/>
+    <functioncall functionName="mdct_clear"/>
+    <functioncall functionName="mdct_forward"/>
+    <functioncall functionName="mdct_init"/>
+    <functioncall functionName="mdct_win"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minV"/>
+    <functioncall functionName="minenergy"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nW"/>
+    <functioncall functionName="nearptr"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pcm"/>
+    <functioncall functionName="penalty"/>
+    <functioncall functionName="preecho_minenergy"/>
+    <functioncall functionName="premax"/>
+    <functioncall functionName="premin"/>
+    <functioncall functionName="psy_g_param"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="searchstep"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="smallshift"/>
+    <functioncall functionName="storage"/>
+    <functioncall functionName="stretch"/>
+    <functioncall functionName="stretch_penalty"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="todB"/>
+    <functioncall functionName="total"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="valmax"/>
+    <functioncall functionName="ve"/>
+    <functioncall functionName="vec"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="window"/>
+    <functioncall functionName="winlength"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

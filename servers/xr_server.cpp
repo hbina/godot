@@ -353,7 +353,7 @@ void XRServer::_process() {
 		if (!interfaces[i].is_valid()) {
 			// ignore, not a valid reference
 		} else if (interfaces[i]->is_initialized()) {
-			interfaces.write[i]->process();
+			interfaces[i]->process();
 		};
 	};
 };

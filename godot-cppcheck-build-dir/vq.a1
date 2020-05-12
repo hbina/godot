@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2159200630">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="182" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="183" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="184" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="339" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="378" column="8"/>
+            <symbol>i</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:70:13" call-funcname="exp_rotation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="186" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:54:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:44:6" call-funcname="encode_pulses" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="315" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:54:10" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" call-funcname="normalise_residual" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="341" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:68:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:46:12" call-funcname="decode_pulses" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="340" col="10" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:68:10" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:160:31" call-funcname="celt_inner_prod_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="359" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" my-argnr="1" my-argname="iy" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="135" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" my-argnr="2" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="135" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:44:6" call-funcname="encode_pulses" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="315" col="17" call-argexpr="iy" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:139:17" call-funcname="extract_collapse_mask" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="322" col="41" call-argexpr="iy" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:46:12" call-funcname="decode_pulses" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="340" col="23" call-argexpr="iy" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" call-funcname="normalise_residual" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="341" col="22" call-argexpr="iy" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:139:17" call-funcname="extract_collapse_mask" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="343" col="41" call-argexpr="iy" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:70:13" call-funcname="exp_rotation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="186" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:54:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:44:6" call-funcname="encode_pulses" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="315" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:54:10" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" call-funcname="normalise_residual" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="341" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:68:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:46:12" call-funcname="decode_pulses" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="340" col="10" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:68:10" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:160:31" call-funcname="celt_inner_prod_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="359" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" my-argnr="1" my-argname="iy" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="135" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" my-argnr="2" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="135" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:70:13" call-funcname="exp_rotation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="186" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:54:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:44:6" call-funcname="encode_pulses" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="315" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:54:10" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" call-funcname="normalise_residual" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="341" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:68:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/cwrs.h:46:12" call-funcname="decode_pulses" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="340" col="10" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:68:10" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:160:31" call-funcname="celt_inner_prod_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="359" col="18" my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" my-argnr="1" my-argname="iy" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="135" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.c:117:13" my-argnr="2" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/vq.c" line="135" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="exp_rotation1" lineNumber="43"/>
+    <functiondecl functionName="exp_rotation" lineNumber="70"/>
+    <functiondecl functionName="normalise_residual" lineNumber="117"/>
+    <functiondecl functionName="extract_collapse_mask" lineNumber="139"/>
+    <functiondecl functionName="alg_quant" lineNumber="161"/>
+    <functiondecl functionName="alg_unquant" lineNumber="329"/>
+    <functiondecl functionName="renormalise_vector" lineNumber="349"/>
+    <functiondecl functionName="stereo_itheta" lineNumber="376"/>
+    <functiondecl functionName="exp_rotation1" lineNumber="43"/>
+    <functiondecl functionName="exp_rotation" lineNumber="70"/>
+    <functiondecl functionName="normalise_residual" lineNumber="117"/>
+    <functiondecl functionName="extract_collapse_mask" lineNumber="139"/>
+    <functiondecl functionName="alg_quant" lineNumber="161"/>
+    <functiondecl functionName="alg_unquant" lineNumber="329"/>
+    <functiondecl functionName="renormalise_vector" lineNumber="349"/>
+    <functiondecl functionName="stereo_itheta" lineNumber="376"/>
+    <functiondecl functionName="exp_rotation1" lineNumber="43"/>
+    <functiondecl functionName="exp_rotation" lineNumber="70"/>
+    <functiondecl functionName="normalise_residual" lineNumber="117"/>
+    <functiondecl functionName="extract_collapse_mask" lineNumber="139"/>
+    <functiondecl functionName="alg_quant" lineNumber="161"/>
+    <functiondecl functionName="alg_unquant" lineNumber="329"/>
+    <functiondecl functionName="renormalise_vector" lineNumber="349"/>
+    <functiondecl functionName="stereo_itheta" lineNumber="376"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="Emid"/>
+    <functioncall functionName="Eside"/>
+    <functioncall functionName="K"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="Rxy"/>
+    <functioncall functionName="Ryy"/>
+    <functioncall functionName="X"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="atan2"/>
+    <functioncall functionName="band"/>
+    <functioncall functionName="best_den"/>
+    <functioncall functionName="best_id"/>
+    <functioncall functionName="best_num"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="celt_inner_prod_c"/>
+    <functioncall functionName="celt_udiv"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="decode_pulses"/>
+    <functioncall functionName="ec_ilog"/>
+    <functioncall functionName="enc"/>
+    <functioncall functionName="encode_pulses"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="exp_rotation"/>
+    <functioncall functionName="exp_rotation1"/>
+    <functioncall functionName="extract_collapse_mask"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="gain"/>
+    <functioncall functionName="hi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="iy"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="lo"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="maxval"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="minval"/>
+    <functioncall functionName="ms"/>
+    <functioncall functionName="normalise_residual"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="opus_alloc"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="pulses"/>
+    <functioncall functionName="pulsesLeft"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rng"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="side"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="spread"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="stereo"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="stride2"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="theta"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x1"/>
+    <functioncall functionName="x2"/>
+    <functioncall functionName="xy"/>
+    <functioncall functionName="xy01"/>
+    <functioncall functionName="xy02"/>
+    <functioncall functionName="y_0"/>
+    <functioncall functionName="y_1"/>
+    <functioncall functionName="y_2"/>
+    <functioncall functionName="y_3"/>
+    <functioncall functionName="yy"/>
+  </FileInfo>
+</analyzerinfo>

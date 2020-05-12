@@ -640,8 +640,8 @@ void TileMap::update_dirty_quadrants() {
 								{
 									const Vector2 *vr = navigation_polygon_vertices.ptr();
 									for (int j = 0; j < vsize; j++) {
-										vertices.write[j] = vr[j];
-										colors.write[j] = debug_navigation_color;
+										vertices[j] = vr[j];
+										colors[j] = debug_navigation_color;
 									}
 								}
 

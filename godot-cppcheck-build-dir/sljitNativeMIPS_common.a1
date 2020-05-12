@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1749756803">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!ptr&apos; is redundant or there is possible null pointer dereference: ptr." verbose="Either the condition &apos;!ptr&apos; is redundant or there is possible null pointer dereference: ptr." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="296" column="3" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="294" column="19" info="Assignment &apos;ptr=(sljit_u32*)ensure_buf(compiler,sizeof(sljit_u32))&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="295" column="10" info="Assuming that condition &apos;!ptr&apos; is not redundant"/>
+            <symbol>ptr</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." verbose="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." cwe="476" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="642" column="2" info="Null pointer dereference"/>
+            <location file0="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="631" column="9" info="Assignment &apos;jump=(struct sljit_jump*)ensure_abuf(compiler,sizeof(struct sljit_jump))&apos;, assigned value is 0"/>
+            <location file0="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="632" column="14" info="Assuming that condition &apos;!jump&apos; is not redundant"/>
+            <symbol>jump</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." verbose="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." cwe="476" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="644" column="2" info="Null pointer dereference"/>
+            <location file0="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="631" column="9" info="Assignment &apos;jump=(struct sljit_jump*)ensure_abuf(compiler,sizeof(struct sljit_jump))&apos;, assigned value is 0"/>
+            <location file0="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="632" column="14" info="Assuming that condition &apos;!jump&apos; is not redundant"/>
+            <symbol>jump</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." verbose="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1873" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1827" column="9" info="Assignment &apos;jump=(struct sljit_jump*)ensure_abuf(compiler,sizeof(struct sljit_jump))&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1828" column="14" info="Assuming that condition &apos;!jump&apos; is not redundant"/>
+            <symbol>jump</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." verbose="Either the condition &apos;!jump&apos; is redundant or there is possible null pointer dereference: jump." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2056" column="3" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2053" column="10" info="Assignment &apos;jump=(struct sljit_jump*)ensure_abuf(compiler,sizeof(struct sljit_jump))&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2054" column="11" info="Assuming that condition &apos;!jump&apos; is not redundant"/>
+            <symbol>jump</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf_end&apos; can be reduced." verbose="The scope of the variable &apos;buf_end&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="507" column="13"/>
+            <symbol>buf_end</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:514:31" call-funcname="emit_const" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="640" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:910:18" call-funcname="getput_arg_fast" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1043" col="21" call-argexpr="flags" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1738" col="31" info="Calling function 'emit_op_mem', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:951:18" call-funcname="getput_arg" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1080" col="19" call-argexpr="arg2" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1552" col="75" info="Calling function 'emit_op_mem2', 6th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:160:31" call-funcname="emit_single_op" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1203" col="24" call-argexpr="dst_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1175" col="14" info="Assignment 'dst_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:160:31" call-funcname="emit_single_op" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1203" col="24" call-argexpr="src1_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1149" col="13" info="Assignment 'src1_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:951:18" call-funcname="getput_arg" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1210" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:951:18" call-funcname="getput_arg" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1210" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1230" col="19" call-argexpr="(0<<26)|0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1275" col="20" call-argexpr="(0<<26)|0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1276" col="20" call-argexpr="(0<<26)|0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1348" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1348" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1354" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1361" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1365" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1368" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1371" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1374" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1377" col="17" call-argexpr="flags" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1324" col="20" info="Assignment 'flags=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1377" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1380" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1383" col="17" call-argexpr="flags" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1324" col="20" info="Assignment 'flags=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1383" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1515" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1515" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1552" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1552" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1572" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1572" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1642" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1642" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1719" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1719" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:739:31" call-funcname="emit_op_mem" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1738" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1753" col="18" call-argexpr="(0<<26)|0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:514:31" call-funcname="emit_const" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1880" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1890" col="23" call-argexpr="(0<<26)|0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1935" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1935" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:514:31" call-funcname="emit_const" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2025" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2028" col="23" call-argexpr="(0<<26)|0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:514:31" call-funcname="emit_const" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2061" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2072" col="19" call-argexpr="(0<<26)|0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2162" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2162" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2163" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2256" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2256" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2256" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2283" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2283" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1083:18" call-funcname="emit_op" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="2283" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="38" col="10" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:29:18" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="171" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:160:31" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="516" col="10" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:514:31" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="609" col="13" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:548:18" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="918" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:910:18" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:910:18" call-funcname="getput_arg_fast" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1043" col="6" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:739:31" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:910:18" call-funcname="getput_arg_fast" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1078" col="6" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1505" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1494:31" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:290:18" call-funcname="push_inst" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1535" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1522:31" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1076:31" call-funcname="emit_op_mem2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1567" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1560:31" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c:548:18" my-argnr="3" my-argname="ins_ptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_64.c" line="617" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c:1597:36" my-argnr="1" my-argname="compiler" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitNativeMIPS_common.c" line="1604" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="sljit_get_platform_name" lineNumber="34"/>
+    <functiondecl functionName="push_inst" lineNumber="290"/>
+    <functiondecl functionName="invert_branch" lineNumber="302"/>
+    <functiondecl functionName="detect_jump_type" lineNumber="313"/>
+    <functiondecl functionName="sljit_cache_flush" lineNumber="446"/>
+    <functiondecl functionName="sljit_generate_code" lineNumber="501"/>
+    <functiondecl functionName="sljit_has_cpu_feature" lineNumber="672"/>
+    <functiondecl functionName="sljit_emit_enter" lineNumber="747"/>
+    <functiondecl functionName="sljit_set_context" lineNumber="806"/>
+    <functiondecl functionName="sljit_emit_return" lineNumber="823"/>
+    <functiondecl functionName="getput_arg_fast" lineNumber="910"/>
+    <functiondecl functionName="can_cache" lineNumber="928"/>
+    <functiondecl functionName="getput_arg" lineNumber="951"/>
+    <functiondecl functionName="emit_op_mem" lineNumber="1039"/>
+    <functiondecl functionName="emit_op_mem2" lineNumber="1076"/>
+    <functiondecl functionName="emit_op" lineNumber="1083"/>
+    <functiondecl functionName="sljit_emit_op0" lineNumber="1216"/>
+    <functiondecl functionName="sljit_emit_op1" lineNumber="1317"/>
+    <functiondecl functionName="sljit_emit_op2" lineNumber="1394"/>
+    <functiondecl functionName="sljit_get_register_index" lineNumber="1466"/>
+    <functiondecl functionName="sljit_get_float_register_index" lineNumber="1472"/>
+    <functiondecl functionName="sljit_emit_op_custom" lineNumber="1478"/>
+    <functiondecl functionName="sljit_emit_fop1_conv_sw_from_f64" lineNumber="1494"/>
+    <functiondecl functionName="sljit_emit_fop1_conv_f64_from_sw" lineNumber="1522"/>
+    <functiondecl functionName="sljit_emit_fop1_cmp" lineNumber="1560"/>
+    <functiondecl functionName="sljit_emit_fop1" lineNumber="1597"/>
+    <functiondecl functionName="sljit_emit_fop2" lineNumber="1646"/>
+    <functiondecl functionName="sljit_emit_fast_enter" lineNumber="1728"/>
+    <functiondecl functionName="sljit_emit_fast_return" lineNumber="1741"/>
+    <functiondecl functionName="sljit_emit_label" lineNumber="1760"/>
+    <functiondecl functionName="sljit_emit_jump" lineNumber="1817"/>
+    <functiondecl functionName="sljit_emit_cmp" lineNumber="1914"/>
+    <functiondecl functionName="sljit_emit_ijump" lineNumber="2044"/>
+    <functiondecl functionName="sljit_emit_op_flags" lineNumber="2076"/>
+    <functiondecl functionName="sljit_emit_cmov" lineNumber="2166"/>
+    <functiondecl functionName="sljit_emit_const" lineNumber="2239"/>
+    <functiondecl functionName="sljit_emit_put_label" lineNumber="2261"/>
+    <functioncall functionName="ADJUST_LOCAL_OFFSET"/>
+    <functioncall functionName="CHECK"/>
+    <functioncall functionName="CHECK_ERROR"/>
+    <functioncall functionName="CHECK_ERROR_PTR"/>
+    <functioncall functionName="CHECK_PTR"/>
+    <functioncall functionName="CHECK_REG_INDEX"/>
+    <functioncall functionName="FAIL_IF"/>
+    <functioncall functionName="FAST_IS_REG"/>
+    <functioncall functionName="FCSR_FCC"/>
+    <functioncall functionName="GET_ALL_FLAGS"/>
+    <functioncall functionName="GET_FLAG_TYPE"/>
+    <functioncall functionName="GET_OPCODE"/>
+    <functioncall functionName="GET_SAVED_REGISTERS_SIZE"/>
+    <functioncall functionName="HAS_FLAGS"/>
+    <functioncall functionName="IS_BIT16_COND"/>
+    <functioncall functionName="IS_BIT26_COND"/>
+    <functioncall functionName="IS_CALL"/>
+    <functioncall functionName="IS_JAL"/>
+    <functioncall functionName="MOVABLE_INS"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="OFFS_REG"/>
+    <functioncall functionName="PTR_FAIL_IF"/>
+    <functioncall functionName="PTR_FAIL_WITH_EXEC_IF"/>
+    <functioncall functionName="SELECT_FOP1_OPERATION_WITH_CHECKS"/>
+    <functioncall functionName="SLJIT_ADD_EXEC_OFFSET"/>
+    <functioncall functionName="SLJIT_ASSERT"/>
+    <functioncall functionName="SLJIT_CACHE_FLUSH"/>
+    <functioncall functionName="SLJIT_COMPILE_ASSERT"/>
+    <functioncall functionName="SLJIT_EQUAL"/>
+    <functioncall functionName="SLJIT_ERR_COMPILED"/>
+    <functioncall functionName="SLJIT_EXEC_OFFSET"/>
+    <functioncall functionName="SLJIT_FIRST_SAVED_REG"/>
+    <functioncall functionName="SLJIT_FR0"/>
+    <functioncall functionName="SLJIT_IMM"/>
+    <functioncall functionName="SLJIT_LOCALS_OFFSET"/>
+    <functioncall functionName="SLJIT_MALLOC_EXEC"/>
+    <functioncall functionName="SLJIT_MEM"/>
+    <functioncall functionName="SLJIT_MOV"/>
+    <functioncall functionName="SLJIT_MOV_S16"/>
+    <functioncall functionName="SLJIT_MOV_S32"/>
+    <functioncall functionName="SLJIT_MOV_S8"/>
+    <functioncall functionName="SLJIT_MOV_U16"/>
+    <functioncall functionName="SLJIT_MOV_U32"/>
+    <functioncall functionName="SLJIT_MOV_U8"/>
+    <functioncall functionName="SLJIT_NOT_EQUAL"/>
+    <functioncall functionName="SLJIT_R0"/>
+    <functioncall functionName="SLJIT_R1"/>
+    <functioncall functionName="SLJIT_S0"/>
+    <functioncall functionName="SLJIT_S1"/>
+    <functioncall functionName="SLJIT_S2"/>
+    <functioncall functionName="SLJIT_SET_CARRY"/>
+    <functioncall functionName="SLJIT_SP"/>
+    <functioncall functionName="SLJIT_SUCCESS"/>
+    <functioncall functionName="SLJIT_UNLIKELY"/>
+    <functioncall functionName="SLJIT_UNREACHABLE"/>
+    <functioncall functionName="UNMOVABLE_INS"/>
+    <functioncall functionName="addr"/>
+    <functioncall functionName="arg"/>
+    <functioncall functionName="arg1"/>
+    <functioncall functionName="arg1w"/>
+    <functioncall functionName="arg2"/>
+    <functioncall functionName="arg2w"/>
+    <functioncall functionName="arg_count"/>
+    <functioncall functionName="arg_types"/>
+    <functioncall functionName="argw"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="bad_div_opcode_assignments"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buf_ptr"/>
+    <functioncall functionName="cache_arg"/>
+    <functioncall functionName="cache_argw"/>
+    <functioncall functionName="call_with_args"/>
+    <functioncall functionName="can_cache"/>
+    <functioncall functionName="check_sljit_emit_call"/>
+    <functioncall functionName="check_sljit_emit_cmov"/>
+    <functioncall functionName="check_sljit_emit_cmp"/>
+    <functioncall functionName="check_sljit_emit_const"/>
+    <functioncall functionName="check_sljit_emit_enter"/>
+    <functioncall functionName="check_sljit_emit_fast_enter"/>
+    <functioncall functionName="check_sljit_emit_fast_return"/>
+    <functioncall functionName="check_sljit_emit_fop2"/>
+    <functioncall functionName="check_sljit_emit_icall"/>
+    <functioncall functionName="check_sljit_emit_ijump"/>
+    <functioncall functionName="check_sljit_emit_jump"/>
+    <functioncall functionName="check_sljit_emit_label"/>
+    <functioncall functionName="check_sljit_emit_op0"/>
+    <functioncall functionName="check_sljit_emit_op1"/>
+    <functioncall functionName="check_sljit_emit_op2"/>
+    <functioncall functionName="check_sljit_emit_op_custom"/>
+    <functioncall functionName="check_sljit_emit_op_flags"/>
+    <functioncall functionName="check_sljit_emit_put_label"/>
+    <functioncall functionName="check_sljit_emit_return"/>
+    <functioncall functionName="check_sljit_generate_code"/>
+    <functioncall functionName="check_sljit_get_float_register_index"/>
+    <functioncall functionName="check_sljit_get_register_index"/>
+    <functioncall functionName="check_sljit_set_context"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="code_ptr"/>
+    <functioncall functionName="compiler"/>
+    <functioncall functionName="compute_next_addr"/>
+    <functioncall functionName="const_"/>
+    <functioncall functionName="consts"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delay_slot"/>
+    <functioncall functionName="detect_jump_type"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_ar"/>
+    <functioncall functionName="dst_r"/>
+    <functioncall functionName="dst_reg"/>
+    <functioncall functionName="dstw"/>
+    <functioncall functionName="emit_const"/>
+    <functioncall functionName="emit_mov_before_return"/>
+    <functioncall functionName="emit_op"/>
+    <functioncall functionName="emit_op_mem"/>
+    <functioncall functionName="emit_op_mem2"/>
+    <functioncall functionName="emit_single_op"/>
+    <functioncall functionName="ensure_abuf"/>
+    <functioncall functionName="ensure_buf"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="executable_offset"/>
+    <functioncall functionName="feature_type"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="float_arg_count"/>
+    <functioncall functionName="float_transfer_bit_error"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fsaveds"/>
+    <functioncall functionName="fscratches"/>
+    <functioncall functionName="get_arg_count"/>
+    <functioncall functionName="getput_arg"/>
+    <functioncall functionName="getput_arg_fast"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="imm"/>
+    <functioncall functionName="init_value"/>
+    <functioncall functionName="ins"/>
+    <functioncall functionName="inst"/>
+    <functioncall functionName="instruction"/>
+    <functioncall functionName="inv"/>
+    <functioncall functionName="invert_branch"/>
+    <functioncall functionName="is_carry"/>
+    <functioncall functionName="is_handled"/>
+    <functioncall functionName="is_overflow"/>
+    <functioncall functionName="jump"/>
+    <functioncall functionName="jumps"/>
+    <functioncall functionName="label"/>
+    <functioncall functionName="labels"/>
+    <functioncall functionName="last_label"/>
+    <functioncall functionName="load_immediate"/>
+    <functioncall functionName="local_size"/>
+    <functioncall functionName="mem_type"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="prev_ins"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_inst"/>
+    <functioncall functionName="put_label"/>
+    <functioncall functionName="put_label_set"/>
+    <functioncall functionName="put_labels"/>
+    <functioncall functionName="reg"/>
+    <functioncall functionName="reg_ar"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="reverse_buf"/>
+    <functioncall functionName="saved_op"/>
+    <functioncall functionName="saveds"/>
+    <functioncall functionName="scratches"/>
+    <functioncall functionName="set_const"/>
+    <functioncall functionName="set_emit_enter"/>
+    <functioncall functionName="set_jump"/>
+    <functioncall functionName="set_label"/>
+    <functioncall functionName="set_put_label"/>
+    <functioncall functionName="set_set_context"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="shift2"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sljit_cache_flush"/>
+    <functioncall functionName="sljit_emit_cmov_generic"/>
+    <functioncall functionName="sljit_s16"/>
+    <functioncall functionName="sljit_s32"/>
+    <functioncall functionName="sljit_s8"/>
+    <functioncall functionName="sljit_sw"/>
+    <functioncall functionName="sljit_u16"/>
+    <functioncall functionName="sljit_u32"/>
+    <functioncall functionName="sljit_u8"/>
+    <functioncall functionName="sljit_uw"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src1"/>
+    <functioncall functionName="src1_r"/>
+    <functioncall functionName="src1w"/>
+    <functioncall functionName="src2"/>
+    <functioncall functionName="src2_r"/>
+    <functioncall functionName="src2w"/>
+    <functioncall functionName="src_ar"/>
+    <functioncall functionName="srcw"/>
+    <functioncall functionName="sugg_src2_r"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp_ar"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="types"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="word_arg_count"/>
+  </FileInfo>
+</analyzerinfo>

@@ -37,149 +37,137 @@
  * Vector container. Regular Vector Container. Use with care and for smaller arrays when possible. Use Vector for large arrays.
 */
 
-#include "core/cowdata.h"
+#include <algorithm>
+#include <vector>
+
 #include "core/error_macros.h"
 #include "core/os/memory.h"
 #include "core/sort_array.h"
 
 template <class T>
-class VectorWriteProxy {
-public:
-	_FORCE_INLINE_ T &operator[](int p_index) {
-		CRASH_BAD_INDEX(p_index, ((Vector<T> *)(this))->_cowdata.size());
-
-		return ((Vector<T> *)(this))->_cowdata.ptrw()[p_index];
-	}
-};
-
-template <class T>
 class Vector {
-	friend class VectorWriteProxy<T>;
-
-public:
-	VectorWriteProxy<T> write;
 
 private:
-	CowData<T> _cowdata;
+	std::vector<T> data;
 
 public:
-	bool push_back(T p_elem);
-	_FORCE_INLINE_ bool append(const T &p_elem) { return push_back(p_elem); } //alias
-
-	void remove(int p_index) { _cowdata.remove(p_index); }
+	void push_back(const T &p_elem) {
+		data.push_back(p_elem);
+	};
+	void append(const T &p_elem) { push_back(p_elem); } //alias
+	void remove(const int &p_index) { data.erase(std::next(std::begin(data), p_index)); }
 	void erase(const T &p_val) {
-		int idx = find(p_val);
-		if (idx >= 0)
-			remove(idx);
+		std::remove(std::begin(data),
+				std::end(data), p_val);
 	}
-	void invert();
+	void invert() {
+		std::reverse(std::begin(data), std::end(data));
+	}
+	void clear() { data.clear(); }
+	bool empty() const { return data.empty(); }
 
-	_FORCE_INLINE_ T *ptrw() { return _cowdata.ptrw(); }
-	_FORCE_INLINE_ const T *ptr() const { return _cowdata.ptr(); }
-	_FORCE_INLINE_ void clear() { resize(0); }
-	_FORCE_INLINE_ bool empty() const { return _cowdata.empty(); }
+	std::vector<T>::iterator begin() {
+		return std::begin(data);
+	}
+	std::vector<T>::iterator end() {
+		return std::end(data);
+	}
 
-	_FORCE_INLINE_ T get(int p_index) { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ const T get(int p_index) const { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ void set(int p_index, const T &p_elem) { _cowdata.set(p_index, p_elem); }
-	_FORCE_INLINE_ int size() const { return _cowdata.size(); }
-	Error resize(int p_size) { return _cowdata.resize(p_size); }
-	_FORCE_INLINE_ const T &operator[](int p_index) const { return _cowdata.get(p_index); }
-	Error insert(int p_pos, T p_val) { return _cowdata.insert(p_pos, p_val); }
-	int find(const T &p_val, int p_from = 0) const { return _cowdata.find(p_val, p_from); }
+	std::vector<T>::const_iterator cbegin() const {
+		return std::cbegin(data);
+	}
+	std::vector<T>::const_iterator cend() const {
+		return std::cend(data);
+	}
 
-	void append_array(Vector<T> p_other);
-
-	template <class C>
+	T get(const int &p_index) { return data[p_index]; }
+	const T get(const int &p_index) const { return data[p_index]; }
+	void set(const int &p_index, const T &p_elem) { data[p_index] = p_elem; }
+	int size() const { return static_cast<int>(data.size()); }
+	Error resize(const int &p_size) {
+		data.resize(p_size);
+		return OK;
+	}
+	void reserve(const int &p_size) {
+		data.reserve(p_size);
+		return OK;
+	}
+	const T &operator[](const int &p_index) const { return data[p_index]; }
+	T &operator[](const int &p_index) { return data[p_index]; }
+	Error insert(const int &p_pos, T p_val) {
+		data.insert(std::next(std::begin(data), p_pos), p_val);
+		return OK;
+	}
+	int find(const T &p_val, const int &p_from = 0) const {
+		return std::distance(std::cbegin(data),
+				std::find(std::next(std::cbegin(data), p_from),
+						std::cend(data), p_val));
+	}
+	void append_array(const Vector<T> &p_other) {
+		data.reserve(data.size() + p_other.size());
+		for (const auto &x : p_other.data) {
+			data.emplace_back(x);
+		}
+	}
+	template <class F>
 	void sort_custom() {
-
-		int len = _cowdata.size();
-		if (len == 0)
-			return;
-
-		T *data = ptrw();
-		SortArray<T, C> sorter;
-		sorter.sort(data, len);
+		std::sort(std::begin(data), std::end(data), F{});
 	}
-
+	template <class F>
+	void sort_custom(const F &f) {
+		std::sort(std::begin(data), std::end(data), f);
+	}
 	void sort() {
-
-		sort_custom<_DefaultComparator<T>>();
+		std::sort(std::begin(data), std::end(data));
 	}
 
 	void ordered_insert(const T &p_val) {
-		int i;
-		for (i = 0; i < _cowdata.size(); i++) {
-
-			if (p_val < operator[](i)) {
-				break;
-			};
-		};
-		insert(i, p_val);
+		data.insert(std::distance(
+							std::cbegin(data),
+							std::find_if(
+									std::cbegin(data),
+									std::cend(data),
+									[](const T &lhs, const T &rhs) {
+										return lhs < rhs;
+									})),
+				p_val);
 	}
 
-	_FORCE_INLINE_ Vector() {}
-	_FORCE_INLINE_ Vector(const Vector &p_from) { _cowdata._ref(p_from._cowdata); }
-	inline Vector &operator=(const Vector &p_from) {
-		_cowdata._ref(p_from._cowdata);
+	Vector() {}
+	Vector(const Vector &p_from) {
+		if (this != &p_from) {
+			data = p_from.data;
+		}
+	}
+	Vector &operator=(const Vector &p_from) {
+		if (this != &p_from) {
+			data = p_from.data;
+		}
 		return *this;
 	}
 
 	Vector<T> subarray(int p_from, int p_to) const {
+		if (p_from >= p_to || p_from >= data.size() || p_to <= 0) {
+			return Vector<T>();
+		}
 
 		if (p_from < 0) {
-			p_from = size() + p_from;
+			p_from = 0;
 		}
-		if (p_to < 0) {
-			p_to = size() + p_to;
+		if (p_to > data.size()) {
+			p_to = data.size();
 		}
-
-		ERR_FAIL_INDEX_V(p_from, size(), Vector<T>());
-		ERR_FAIL_INDEX_V(p_to, size(), Vector<T>());
 
 		Vector<T> slice;
-		int span = 1 + p_to - p_from;
-		slice.resize(span);
-		const T *r = ptr();
-		T *w = slice.ptrw();
-		for (int i = 0; i < span; ++i) {
-			w[i] = r[p_from + i];
+		slice.reserve(p_to - p_from);
+		for (const auto &x : data) {
+			slice.push_back(x);
 		}
 
 		return slice;
 	}
 
-	_FORCE_INLINE_ ~Vector() {}
+	~Vector() {}
 };
-
-template <class T>
-void Vector<T>::invert() {
-
-	for (int i = 0; i < size() / 2; i++) {
-		T *p = ptrw();
-		SWAP(p[i], p[size() - i - 1]);
-	}
-}
-
-template <class T>
-void Vector<T>::append_array(Vector<T> p_other) {
-	const int ds = p_other.size();
-	if (ds == 0)
-		return;
-	const int bs = size();
-	resize(bs + ds);
-	for (int i = 0; i < ds; ++i)
-		ptrw()[bs + i] = p_other[i];
-}
-
-template <class T>
-bool Vector<T>::push_back(T p_elem) {
-
-	Error err = resize(size() + 1);
-	ERR_FAIL_COND_V(err, true);
-	set(size() - 1, p_elem);
-
-	return false;
-}
 
 #endif // VECTOR_H

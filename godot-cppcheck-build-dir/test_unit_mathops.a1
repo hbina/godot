@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1486861629">
+        <error id="shiftTooManyBitsSigned" severity="portability" msg="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour. See condition at line 275." verbose="Shifting signed 32-bit value by 31 bits is implementation-defined behaviour. See condition at line 275." cwe="758">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_mathops.c" line="280" column="12" info="Shift"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_mathops.c" line="274" column="22" info="Assignment &apos;lg=celt_ilog2(x)&apos;, assigned value is 31"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_mathops.c" line="275" column="21" info="Assuming that condition &apos;lg&gt;=31&apos; is not redundant"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="testdiv" lineNumber="88"/>
+    <functiondecl functionName="testsqrt" lineNumber="109"/>
+    <functiondecl functionName="testbitexactcos" lineNumber="127"/>
+    <functiondecl functionName="testbitexactlog2tan" lineNumber="151"/>
+    <functiondecl functionName="testlog2" lineNumber="181"/>
+    <functiondecl functionName="testexp2" lineNumber="195"/>
+    <functiondecl functionName="testexp2log2" lineNumber="209"/>
+    <functiondecl functionName="main" lineNumber="291"/>
+    <functiondecl functionName="testdiv" lineNumber="88"/>
+    <functiondecl functionName="testsqrt" lineNumber="109"/>
+    <functiondecl functionName="testbitexactcos" lineNumber="127"/>
+    <functiondecl functionName="testbitexactlog2tan" lineNumber="151"/>
+    <functiondecl functionName="testlog2" lineNumber="223"/>
+    <functiondecl functionName="testexp2" lineNumber="237"/>
+    <functiondecl functionName="testexp2log2" lineNumber="252"/>
+    <functiondecl functionName="testilog2" lineNumber="266"/>
+    <functiondecl functionName="main" lineNumber="291"/>
+    <functioncall functionName="bitexact_cos"/>
+    <functioncall functionName="bitexact_log2tan"/>
+    <functioncall functionName="celt_exp2"/>
+    <functioncall functionName="celt_ilog2"/>
+    <functioncall functionName="celt_log2"/>
+    <functioncall functionName="celt_rcp"/>
+    <functioncall functionName="celt_sqrt"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="error1"/>
+    <functioncall functionName="error2"/>
+    <functioncall functionName="exp"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="lg"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="prod"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="ratio"/>
+    <functioncall functionName="side"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="testbitexactcos"/>
+    <functioncall functionName="testbitexactlog2tan"/>
+    <functioncall functionName="testdiv"/>
+    <functioncall functionName="testexp2"/>
+    <functioncall functionName="testexp2log2"/>
+    <functioncall functionName="testilog2"/>
+    <functioncall functionName="testlog2"/>
+    <functioncall functionName="testsqrt"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

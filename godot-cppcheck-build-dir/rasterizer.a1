@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3874155862">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InstanceBase::mirror&apos; is not initialized in the constructor." verbose="Member variable &apos;InstanceBase::mirror&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="223" column="3"/>
+            <symbol>InstanceBase::mirror</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InstanceBase::depth&apos; is not initialized in the constructor." verbose="Member variable &apos;InstanceBase::depth&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="223" column="3"/>
+            <symbol>InstanceBase::depth</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Light::radius_cache&apos; is not initialized in the constructor." verbose="Member variable &apos;Light::radius_cache&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="807" column="3"/>
+            <symbol>Light::radius_cache</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Light::shadows_next_ptr&apos; is not initialized in the constructor." verbose="Member variable &apos;Light::shadows_next_ptr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="807" column="3"/>
+            <symbol>Light::shadows_next_ptr</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CommandNinePatch::margin&apos; is not initialized in the constructor." verbose="Member variable &apos;CommandNinePatch::margin&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="960" column="4"/>
+            <symbol>CommandNinePatch::margin</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CommandPrimitive::point_count&apos; is not initialized in the constructor." verbose="Member variable &apos;CommandPrimitive::point_count&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="985" column="4"/>
+            <symbol>CommandPrimitive::point_count</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;base_type&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;base_type&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="226" column="4"/>
+            <symbol>base_type</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cast_shadows&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cast_shadows&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="227" column="4"/>
+            <symbol>cast_shadows</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;color&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;color&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="810" column="4"/>
+            <symbol>color</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;final_modulate&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;final_modulate&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="1277" column="4"/>
+            <symbol>final_modulate</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cull_cache&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cull_cache&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="1324" column="4"/>
+            <symbol>cull_cache</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="instance_notify_changed" lineNumber="38"/>
+    <functiondecl functionName="instance_notify_deleted" lineNumber="43"/>
+    <functiondecl functionName="create" lineNumber="65"/>
+    <functiondecl functionName="instance_notify_changed" lineNumber="38"/>
+    <functiondecl functionName="instance_notify_deleted" lineNumber="43"/>
+    <functiondecl functionName="create" lineNumber="65"/>
+    <functioncall functionName="CANVAS_LIGHT_FILTER_NONE"/>
+    <functioncall functionName="CANVAS_LIGHT_MODE_ADD"/>
+    <functioncall functionName="CANVAS_OCCLUDER_POLYGON_CULL_DISABLED"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="Command"/>
+    <functioncall functionName="CommandClipIgnore"/>
+    <functioncall functionName="CommandMesh"/>
+    <functioncall functionName="CommandMultiMesh"/>
+    <functioncall functionName="CommandNinePatch"/>
+    <functioncall functionName="CommandParticles"/>
+    <functioncall functionName="CommandPolygon"/>
+    <functioncall functionName="CommandPrimitive"/>
+    <functioncall functionName="CommandRect"/>
+    <functioncall functionName="CommandTransform"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ENV_AMBIENT_SOURCE_BG"/>
+    <functioncall functionName="ENV_REFLECTION_SOURCE_BG"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="INSTANCE_NONE"/>
+    <functioncall functionName="InstanceBase"/>
+    <functioncall functionName="InstanceShaderParameter"/>
+    <functioncall functionName="Item"/>
+    <functioncall functionName="LIGHT_DIRECTIONAL"/>
+    <functioncall functionName="LIGHT_OMNI"/>
+    <functioncall functionName="LIGHT_SPOT"/>
+    <functioncall functionName="Light"/>
+    <functioncall functionName="LightOccluderInstance"/>
+    <functioncall functionName="MAX_SIZE"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="RENDER_TARGET_DIRECT_TO_SCREEN"/>
+    <functioncall functionName="RENDER_TARGET_FLAG_MAX"/>
+    <functioncall functionName="RENDER_TARGET_TRANSPARENT"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="RasterizerCanvas"/>
+    <functioncall functionName="RasterizerStorage"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="SHADOW_CASTING_SETTING_ON"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="TYPE_CLIP_IGNORE"/>
+    <functioncall functionName="TYPE_MESH"/>
+    <functioncall functionName="TYPE_MULTIMESH"/>
+    <functioncall functionName="TYPE_NINEPATCH"/>
+    <functioncall functionName="TYPE_PARTICLES"/>
+    <functioncall functionName="TYPE_POLYGON"/>
+    <functioncall functionName="TYPE_PRIMITIVE"/>
+    <functioncall functionName="TYPE_RECT"/>
+    <functioncall functionName="TYPE_TRANSFORM"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_create_func"/>
+    <functioncall functionName="binding_id"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_dependencies"/>
+    <functioncall functionName="command"/>
+    <functioncall functionName="commands"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copy_back_buffer"/>
+    <functioncall functionName="current_block"/>
+    <functioncall functionName="custom_data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dep"/>
+    <functioncall functionName="dependency_changed"/>
+    <functioncall functionName="dependency_deleted"/>
+    <functioncall functionName="dependency_item"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found_xform"/>
+    <functioncall functionName="free_polygon"/>
+    <functioncall functionName="free_texture_binding"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance_version"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="light_create"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memnew_placement"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="mesh_get_aabb"/>
+    <functioncall functionName="multimesh"/>
+    <functioncall functionName="multimesh_get_aabb"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_bones"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_colors"/>
+    <functioncall functionName="p_deleted"/>
+    <functioncall functionName="p_dependencies"/>
+    <functioncall functionName="p_dependency"/>
+    <functioncall functionName="p_filter"/>
+    <functioncall functionName="p_indices"/>
+    <functioncall functionName="p_item_filter"/>
+    <functioncall functionName="p_item_repeat"/>
+    <functioncall functionName="p_multimesh"/>
+    <functioncall functionName="p_normalmap"/>
+    <functioncall functionName="p_points"/>
+    <functioncall functionName="p_repeat"/>
+    <functioncall functionName="p_specular"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_uvs"/>
+    <functioncall functionName="p_weights"/>
+    <functioncall functionName="particles"/>
+    <functioncall functionName="particles_get_aabb"/>
+    <functioncall functionName="point_count"/>
+    <functioncall functionName="polygon_id"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="rect_cache"/>
+    <functioncall functionName="request_polygon"/>
+    <functioncall functionName="request_texture_binding"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="unlikely"/>
+    <functioncall functionName="update_when_visible"/>
+    <functioncall functionName="usage"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

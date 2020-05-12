@@ -2331,7 +2331,7 @@ bool ShaderLanguage::_validate_function_call(BlockNode *p_block, const Map<Strin
 						conversion->values.resize(1);
 
 						convert_constant(constant, builtin_func_defs[idx].args[i], conversion->values.ptrw());
-						p_func->arguments.write[i + 1] = conversion;
+						p_func->arguments[i + 1] = conversion;
 					}
 
 					if (r_ret_type)
@@ -2442,7 +2442,7 @@ bool ShaderLanguage::_validate_function_call(BlockNode *p_block, const Map<Strin
 				conversion->values.resize(1);
 
 				convert_constant(constant, pfunc->arguments[k].type, conversion->values.ptrw());
-				p_func->arguments.write[k + 1] = conversion;
+				p_func->arguments[k + 1] = conversion;
 			}
 
 			if (r_ret_type) {
@@ -3137,7 +3137,7 @@ bool ShaderLanguage::_propagate_function_call_sampler_uniform_settings(StringNam
 		if (shader->functions[i].name == p_name) {
 
 			ERR_FAIL_INDEX_V(p_argument, shader->functions[i].function->arguments.size(), false);
-			FunctionNode::Argument *arg = &shader->functions[i].function->arguments.write[p_argument];
+			FunctionNode::Argument *arg = &shader->functions[i].function->arguments[p_argument];
 			if (arg->tex_builtin_check) {
 				_set_error("Sampler argument #" + itos(p_argument) + " of function '" + String(p_name) + "' called more than once using both built-ins and uniform textures, this is not supported (use either one or the other).");
 				return false;
@@ -3173,7 +3173,7 @@ bool ShaderLanguage::_propagate_function_call_sampler_builtin_reference(StringNa
 		if (shader->functions[i].name == p_name) {
 
 			ERR_FAIL_INDEX_V(p_argument, shader->functions[i].function->arguments.size(), false);
-			FunctionNode::Argument *arg = &shader->functions[i].function->arguments.write[p_argument];
+			FunctionNode::Argument *arg = &shader->functions[i].function->arguments[p_argument];
 			if (arg->tex_argument_check) {
 				_set_error("Sampler argument #" + itos(p_argument) + " of function '" + String(p_name) + "' called more than once using both built-ins and uniform textures, this is not supported (use either one or the other).");
 				return false;
@@ -3556,7 +3556,7 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 							//add to current function as dependency
 							for (int j = 0; j < shader->functions.size(); j++) {
 								if (shader->functions[j].name == current_function) {
-									shader->functions.write[j].uses_function.insert(name);
+									shader->functions[j].uses_function.insert(name);
 									break;
 								}
 							}
@@ -3674,9 +3674,9 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 											for (int j = 0; j < base_function->arguments.size(); j++) {
 												if (base_function->arguments[j].name == varname) {
 													if (!base_function->arguments[j].tex_argument_connect.has(call_function->name)) {
-														base_function->arguments.write[j].tex_argument_connect[call_function->name] = Set<int>();
+														base_function->arguments[j].tex_argument_connect[call_function->name] = Set<int>();
 													}
-													base_function->arguments.write[j].tex_argument_connect[call_function->name].insert(i);
+													base_function->arguments[j].tex_argument_connect[call_function->name].insert(i);
 													found = true;
 													break;
 												}
@@ -4647,8 +4647,8 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 				}
 				op->arguments.push_back(expression[i + 1].node);
 
-				expression.write[i].is_op = false;
-				expression.write[i].node = op;
+				expression[i].is_op = false;
+				expression[i].node = op;
 
 				if (!_validate_operator(op, &op->return_cache)) {
 
@@ -4682,8 +4682,8 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 			op->arguments.push_back(expression[next_op + 1].node);
 			op->arguments.push_back(expression[next_op + 3].node);
 
-			expression.write[next_op - 1].is_op = false;
-			expression.write[next_op - 1].node = op;
+			expression[next_op - 1].is_op = false;
+			expression[next_op - 1].node = op;
 			if (!_validate_operator(op, &op->return_cache)) {
 
 				String at;
@@ -4737,7 +4737,7 @@ ShaderLanguage::Node *ShaderLanguage::_parse_expression(BlockNode *p_block, cons
 
 			op->arguments.push_back(expression[next_op - 1].node); //expression goes as left
 			op->arguments.push_back(expression[next_op + 1].node); //next expression goes as right
-			expression.write[next_op - 1].node = op;
+			expression[next_op - 1].node = op;
 
 			//replace all 3 nodes by this operator and make it an expression
 
@@ -4785,7 +4785,7 @@ ShaderLanguage::Node *ShaderLanguage::_reduce_expression(BlockNode *p_block, Sha
 
 		for (int i = 1; i < op->arguments.size(); i++) {
 
-			op->arguments.write[i] = _reduce_expression(p_block, op->arguments[i]);
+			op->arguments[i] = _reduce_expression(p_block, op->arguments[i]);
 			if (op->arguments[i]->type == Node::TYPE_CONSTANT) {
 				ConstantNode *cn = static_cast<ConstantNode *>(op->arguments[i]);
 
@@ -4839,7 +4839,7 @@ ShaderLanguage::Node *ShaderLanguage::_reduce_expression(BlockNode *p_block, Sha
 		return cn;
 	} else if (op->op == OP_NEGATE) {
 
-		op->arguments.write[0] = _reduce_expression(p_block, op->arguments[0]);
+		op->arguments[0] = _reduce_expression(p_block, op->arguments[0]);
 		if (op->arguments[0]->type == Node::TYPE_CONSTANT) {
 
 			ConstantNode *cn = static_cast<ConstantNode *>(op->arguments[0]);

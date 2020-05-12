@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3783330691">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PathMD5&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PathMD5&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/io/file_access_pack.cpp" file="/home/hbina/git/godot/core/io/file_access_pack.h" line="90" column="3"/>
+            <symbol>PathMD5</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;try_open_pack&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;try_open_pack&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/core/io/file_access_pack.cpp" file="/home/hbina/git/godot/core/io/file_access_pack.h" line="136" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/core/io/file_access_pack.cpp" file="/home/hbina/git/godot/core/io/file_access_pack.h" line="128" column="15" info="Virtual function in base class"/>
+            <symbol>try_open_pack</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_file&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_file&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/core/io/file_access_pack.cpp" file="/home/hbina/git/godot/core/io/file_access_pack.h" line="137" column="22" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/core/io/file_access_pack.cpp" file="/home/hbina/git/godot/core/io/file_access_pack.h" line="129" column="22" info="Virtual function in base class"/>
+            <symbol>get_file</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;to_read&apos; is less than zero." verbose="The unsigned expression &apos;to_read&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file="/home/hbina/git/godot/core/io/file_access_pack.cpp" line="290" column="14" info="Unsigned less than zero"/>
+            <symbol>to_read</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/file_access_pack.h:106:7" my-argnr="1" my-argname="p_dir" file="/home/hbina/git/godot/core/io/file_access_pack.cpp" line="120" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/file_access_pack.h:137:22" my-argnr="2" my-argname="p_file" file="/home/hbina/git/godot/core/io/file_access_pack.cpp" line="216" col="40" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/file_access_pack.h:137:22" my-argnr="2" my-argname="p_file" file="/home/hbina/git/godot/core/io/file_access_pack.cpp" line="216" col="40" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="add_pack" lineNumber="37"/>
+    <functiondecl functionName="add_path" lineNumber="50"/>
+    <functiondecl functionName="add_pack_source" lineNumber="99"/>
+    <functiondecl functionName="_free_packed_dirs" lineNumber="118"/>
+    <functiondecl functionName="try_open_pack" lineNumber="135"/>
+    <functiondecl functionName="get_file" lineNumber="214"/>
+    <functiondecl functionName="_open" lineNumber="221"/>
+    <functiondecl functionName="close" lineNumber="227"/>
+    <functiondecl functionName="is_open" lineNumber="232"/>
+    <functiondecl functionName="seek" lineNumber="237"/>
+    <functiondecl functionName="seek_end" lineNumber="248"/>
+    <functiondecl functionName="get_position" lineNumber="252"/>
+    <functiondecl functionName="get_len" lineNumber="256"/>
+    <functiondecl functionName="eof_reached" lineNumber="261"/>
+    <functiondecl functionName="get_8" lineNumber="266"/>
+    <functiondecl functionName="get_buffer" lineNumber="277"/>
+    <functiondecl functionName="set_endian_swap" lineNumber="297"/>
+    <functiondecl functionName="get_error" lineNumber="302"/>
+    <functiondecl functionName="flush" lineNumber="309"/>
+    <functiondecl functionName="store_8" lineNumber="314"/>
+    <functiondecl functionName="store_buffer" lineNumber="319"/>
+    <functiondecl functionName="file_exists" lineNumber="324"/>
+    <functiondecl functionName="list_dir_begin" lineNumber="349"/>
+    <functiondecl functionName="get_next" lineNumber="367"/>
+    <functiondecl functionName="current_is_dir" lineNumber="383"/>
+    <functiondecl functionName="current_is_hidden" lineNumber="387"/>
+    <functiondecl functionName="list_dir_end" lineNumber="391"/>
+    <functiondecl functionName="get_drive_count" lineNumber="397"/>
+    <functiondecl functionName="get_drive" lineNumber="401"/>
+    <functiondecl functionName="change_dir" lineNumber="406"/>
+    <functiondecl functionName="get_current_dir" lineNumber="458"/>
+    <functiondecl functionName="file_exists" lineNumber="471"/>
+    <functiondecl functionName="dir_exists" lineNumber="478"/>
+    <functiondecl functionName="make_dir" lineNumber="485"/>
+    <functiondecl functionName="rename" lineNumber="490"/>
+    <functiondecl functionName="remove" lineNumber="494"/>
+    <functiondecl functionName="get_space_left" lineNumber="499"/>
+    <functiondecl functionName="get_filesystem_type" lineNumber="504"/>
+    <functioncall functionName="DirAccessPack"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="FileAccessPack"/>
+    <functioncall functionName="PackedData"/>
+    <functioncall functionName="PackedDir"/>
+    <functioncall functionName="PackedFile"/>
+    <functioncall functionName="PackedSourcePCK"/>
+    <functioncall functionName="PathMD5"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="_free_packed_dirs"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="absolute"/>
+    <functioncall functionName="add_pack_source"/>
+    <functioncall functionName="add_path"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="cd"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="eof"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="filename"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="fix_path"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_32"/>
+    <functioncall functionName="get_64"/>
+    <functioncall functionName="get_8"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="is_open"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="md5"/>
+    <functioncall functionName="md5_buffer"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_dir"/>
+    <functioncall functionName="p_disabled"/>
+    <functioncall functionName="p_dst"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_position"/>
+    <functioncall functionName="p_replace_files"/>
+    <functioncall functionName="p_source"/>
+    <functioncall functionName="p_src"/>
+    <functioncall functionName="p_swap"/>
+    <functioncall functionName="pack"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="pf"/>
+    <functioncall functionName="pkg_path"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="pmd5"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="replace_first"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="seek_end"/>
+    <functioncall functionName="set_endian_swap"/>
+    <functioncall functionName="simplify_path"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sl"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_read"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="try_open_pack"/>
+    <functioncall functionName="ver_major"/>
+    <functioncall functionName="ver_minor"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

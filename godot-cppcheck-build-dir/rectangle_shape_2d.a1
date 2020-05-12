@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="703203954">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;extents&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;extents&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/rectangle_shape_2d.cpp" line="77" column="2"/>
+            <symbol>extents</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_update_shape" lineNumber="35"/>
+    <functiondecl functionName="set_extents" lineNumber="41"/>
+    <functiondecl functionName="get_extents" lineNumber="47"/>
+    <functiondecl functionName="draw" lineNumber="52"/>
+    <functiondecl functionName="get_rect" lineNumber="57"/>
+    <functiondecl functionName="get_enclosing_radius" lineNumber="62"/>
+    <functiondecl functionName="_bind_methods" lineNumber="66"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="RectangleShape2D"/>
+    <functioncall functionName="Shape2D"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_update_shape"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="canvas_item_add_rect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="extents"/>
+    <functioncall functionName="get_extents"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_extents"/>
+    <functioncall functionName="p_to_rid"/>
+    <functioncall functionName="rectangle_shape_create"/>
+    <functioncall functionName="set_extents"/>
+    <functioncall functionName="shape_set_data"/>
+  </FileInfo>
+</analyzerinfo>

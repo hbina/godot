@@ -298,7 +298,7 @@ void unregister_gdnative_types() {
 			continue;
 		}
 
-		singleton_gdnatives.write[i]->terminate();
+		singleton_gdnatives[i]->terminate();
 	}
 	singleton_gdnatives.clear();
 

@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="186628155">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;GPUParticles3DEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;GPUParticles3DEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.h" line="117" column="2"/>
+            <symbol>GPUParticles3DEditorPlugin</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="70" column="16" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="68" column="64" info="Assignment &apos;E=triangle_area_map.find_closest(areapos)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="69" column="20" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="371" column="15"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="400" column="16"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;image&apos; is assigned a value that is never used." verbose="Variable &apos;image&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="379" column="19"/>
+            <symbol>image</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;image2&apos; is assigned a value that is never used." verbose="Variable &apos;image2&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="408" column="21"/>
+            <symbol>image2</symbol>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.h:114:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/editor/plugins/gpu_particles_3d_editor_plugin.cpp" line="465" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_generate" lineNumber="38"/>
+    <functiondecl functionName="_node_selected" lineNumber="164"/>
+    <functiondecl functionName="_bind_methods" lineNumber="205"/>
+    <functiondecl functionName="_node_removed" lineNumber="236"/>
+    <functiondecl functionName="_notification" lineNumber="244"/>
+    <functiondecl functionName="_menu_option" lineNumber="252"/>
+    <functiondecl functionName="_generate_aabb" lineNumber="301"/>
+    <functiondecl functionName="edit" lineNumber="343"/>
+    <functiondecl functionName="_generate_emission_points" lineNumber="349"/>
+    <functiondecl functionName="_bind_methods" lineNumber="422"/>
+    <functiondecl functionName="edit" lineNumber="458"/>
+    <functiondecl functionName="handles" lineNumber="463"/>
+    <functiondecl functionName="make_visible" lineNumber="468"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="CPUParticles3D"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EMISSION_SHAPE_DIRECTED_POINTS"/>
+    <functioncall functionName="EMISSION_SHAPE_POINTS"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="FACES_SOLID"/>
+    <functioncall functionName="FORMAT_RGBF"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GPUParticles3DEditor"/>
+    <functioncall functionName="GPUParticles3DEditorBase"/>
+    <functioncall functionName="GPUParticles3DEditorPlugin"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="MENU_OPTION_CLEAR_EMISSION_VOLUME"/>
+    <functioncall functionName="MENU_OPTION_CONVERT_TO_CPU_PARTICLES"/>
+    <functioncall functionName="MENU_OPTION_CREATE_EMISSION_VOLUME_FROM_NODE"/>
+    <functioncall functionName="MENU_OPTION_GENERATE_AABB"/>
+    <functioncall functionName="MENU_OPTION_RESTART"/>
+    <functioncall functionName="MenuButton"/>
+    <functioncall functionName="OptionButton"/>
+    <functioncall functionName="SceneTreeDialog"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="SpinBox"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_generate"/>
+    <functioncall functionName="_generate_aabb"/>
+    <functioncall functionName="_generate_emission_points"/>
+    <functioncall functionName="_menu_option"/>
+    <functioncall functionName="_node_removed"/>
+    <functioncall functionName="_node_selected"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_control_to_menu_panel"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_do_reference"/>
+    <functioncall functionName="add_item"/>
+    <functioncall functionName="add_margin_child"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="add_undo_reference"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="area_accum"/>
+    <functioncall functionName="areapos"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="capture"/>
+    <functioncall functionName="capture_aabb"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convert_from_particles"/>
+    <functioncall functionName="cpu_particles"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="edit"/>
+    <functioncall functionName="emd_vb"/>
+    <functioncall functionName="emission_amount"/>
+    <functioncall functionName="emission_dialog"/>
+    <functioncall functionName="emission_fill"/>
+    <functioncall functionName="emission_tree_dialog"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_closest"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="gen_time"/>
+    <functioncall functionName="generate_aabb"/>
+    <functioncall functionName="generate_seconds"/>
+    <functioncall functionName="genvb"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_area"/>
+    <functioncall functionName="get_faces"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_lifetime"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_ok"/>
+    <functioncall functionName="get_pause_mode"/>
+    <functioncall functionName="get_plane"/>
+    <functioncall functionName="get_popup"/>
+    <functioncall functionName="get_process_material"/>
+    <functioncall functionName="get_random_point_inside"/>
+    <functioncall functionName="get_scene_tree_dock"/>
+    <functioncall functionName="get_selected"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_value"/>
+    <functioncall functionName="get_viewport"/>
+    <functioncall functionName="get_visibility_aabb"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="intersects_segment"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_emitting"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="iw"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="merge_with"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normals"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="ofsv"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_option"/>
+    <functioncall functionName="p_particles"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_visible"/>
+    <functioncall functionName="particles_editor"/>
+    <functioncall functionName="particles_editor_hb"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="point_count"/>
+    <functioncall functionName="point_img"/>
+    <functioncall functionName="point_img2"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="popup_centered_ratio"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rand"/>
+    <functioncall functionName="randf"/>
+    <functioncall functionName="random"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="restart"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="running"/>
+    <functioncall functionName="sel"/>
+    <functioncall functionName="set_emission_normal_texture"/>
+    <functioncall functionName="set_emission_point_count"/>
+    <functioncall functionName="set_emission_point_texture"/>
+    <functioncall functionName="set_emission_shape"/>
+    <functioncall functionName="set_emitting"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_max"/>
+    <functioncall functionName="set_min"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_pause_mode"/>
+    <functioncall functionName="set_switch_on_hover"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_transform"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="set_visible"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="show_warning"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tex"/>
+    <functioncall functionName="tex2"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="ticks"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="trunc"/>
+    <functioncall functionName="use_normals"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="was_emitting"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zeromem"/>
+  </FileInfo>
+</analyzerinfo>

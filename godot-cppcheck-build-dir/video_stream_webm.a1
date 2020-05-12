@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="70267062">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;MkvReader&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;MkvReader&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/modules/webm/video_stream_webm.cpp" line="53" column="2"/>
+            <symbol>MkvReader</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;video_frame&apos; can be declared with const" verbose="Parameter &apos;video_frame&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/modules/webm/video_stream_webm.cpp" line="409" column="57"/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/webm/video_stream_webm.h:132:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/webm/video_stream_webm.cpp" line="503" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Read" lineNumber="65"/>
+    <functiondecl functionName="Length" lineNumber="77"/>
+    <functiondecl functionName="open_file" lineNumber="123"/>
+    <functiondecl functionName="stop" lineNumber="159"/>
+    <functiondecl functionName="play" lineNumber="183"/>
+    <functiondecl functionName="is_playing" lineNumber="193"/>
+    <functiondecl functionName="set_paused" lineNumber="198"/>
+    <functiondecl functionName="is_paused" lineNumber="202"/>
+    <functiondecl functionName="set_loop" lineNumber="207"/>
+    <functiondecl functionName="has_loop" lineNumber="211"/>
+    <functiondecl functionName="get_length" lineNumber="216"/>
+    <functiondecl functionName="get_playback_position" lineNumber="223"/>
+    <functiondecl functionName="seek" lineNumber="227"/>
+    <functiondecl functionName="set_audio_track" lineNumber="232"/>
+    <functiondecl functionName="get_texture" lineNumber="237"/>
+    <functiondecl functionName="update" lineNumber="242"/>
+    <functiondecl functionName="set_mix_callback" lineNumber="379"/>
+    <functiondecl functionName="get_channels" lineNumber="384"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="390"/>
+    <functiondecl functionName="has_enough_video_frames" lineNumber="397"/>
+    <functiondecl functionName="should_process" lineNumber="409"/>
+    <functiondecl functionName="delete_pointers" lineNumber="417"/>
+    <functiondecl functionName="instance_playback" lineNumber="444"/>
+    <functiondecl functionName="set_file" lineNumber="453"/>
+    <functiondecl functionName="get_file" lineNumber="457"/>
+    <functiondecl functionName="_bind_methods" lineNumber="462"/>
+    <functiondecl functionName="set_audio_track" lineNumber="470"/>
+    <functiondecl functionName="load" lineNumber="477"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="501"/>
+    <functiondecl functionName="handles_type" lineNumber="506"/>
+    <functiondecl functionName="get_resource_type" lineNumber="511"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="FORMAT_RGBA8"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="ImageTexture"/>
+    <functioncall functionName="MkvReader"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="OpusVorbisDecoder"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RES"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="VPXDecoder"/>
+    <functioncall functionName="VideoStream"/>
+    <functioncall functionName="VideoStreamPlayback"/>
+    <functioncall functionName="VideoStreamPlaybackWebm"/>
+    <functioncall functionName="VideoStreamWebm"/>
+    <functioncall functionName="WebMDemuxer"/>
+    <functioncall functionName="WebMFrame"/>
+    <functioncall functionName="audio"/>
+    <functioncall functionName="audio_frame"/>
+    <functioncall functionName="audio_track"/>
+    <functioncall functionName="available"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="converted"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_from_image"/>
+    <functioncall functionName="decode"/>
+    <functioncall functionName="delay_compensation"/>
+    <functioncall functionName="delete_pointers"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="file_name"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame_data"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="getBufferSamples"/>
+    <functioncall functionName="getChannels"/>
+    <functioncall functionName="getHeight"/>
+    <functioncall functionName="getImage"/>
+    <functioncall functionName="getLength"/>
+    <functioncall functionName="getPCMF"/>
+    <functioncall functionName="getSampleRate"/>
+    <functioncall functionName="getWidth"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_processor_count"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has_enough_video_frames"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="isEOS"/>
+    <functioncall functionName="isOpen"/>
+    <functioncall functionName="isValid"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memrealloc"/>
+    <functioncall functionName="mix_callback"/>
+    <functioncall functionName="mix_udata"/>
+    <functioncall functionName="mixed"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_decoded_samples"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_file"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_paused"/>
+    <functioncall functionName="p_track"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="paused"/>
+    <functioncall functionName="pcm"/>
+    <functioncall functionName="playing"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="readFrame"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="samples_offset"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="set_audio_track"/>
+    <functioncall functionName="set_file"/>
+    <functioncall functionName="should_process"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="to_read"/>
+    <functioncall functionName="total"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="video"/>
+    <functioncall functionName="video_frame"/>
+    <functioncall functionName="video_frame_delay"/>
+    <functioncall functionName="video_frame_done"/>
+    <functioncall functionName="video_frames"/>
+    <functioncall functionName="video_frames_capacity"/>
+    <functioncall functionName="video_frames_new"/>
+    <functioncall functionName="video_frames_pos"/>
+    <functioncall functionName="video_pos"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="webm"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="yuv420_2_rgb8888"/>
+    <functioncall functionName="yuv422_2_rgb8888"/>
+    <functioncall functionName="yuv444_2_rgb8888"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="602596358">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="556" column="26"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:100:8" call-funcname="audio_device_init" call-argnr="1" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="317" col="31" call-argexpr="&audio_output" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:100:8" call-funcname="audio_device_init" call-argnr="2" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="317" col="31" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:100:8" call-funcname="audio_device_init" call-argnr="1" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="356" col="31" call-argexpr="&audio_input" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:101:8" call-funcname="audio_device_finish" call-argnr="1" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="389" col="28" call-argexpr="&audio_output" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:101:8" call-funcname="audio_device_finish" call-argnr="1" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="394" col="28" call-argexpr="&audio_input" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:102:8" call-funcname="audio_device_get_list" call-argnr="1" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="474" col="30" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:100:8" my-argnr="1" my-argname="p_device" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="154" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.h:101:8" my-argnr="1" my-argname="p_device" file="/home/hbina/git/godot/drivers/wasapi/audio_driver_wasapi.cpp" line="372" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="AddRef" lineNumber="86"/>
+    <functiondecl functionName="Release" lineNumber="90"/>
+    <functiondecl functionName="QueryInterface" lineNumber="98"/>
+    <functiondecl functionName="OnDeviceAdded" lineNumber="112"/>
+    <functiondecl functionName="OnDeviceRemoved" lineNumber="116"/>
+    <functiondecl functionName="OnDeviceStateChanged" lineNumber="120"/>
+    <functiondecl functionName="OnDefaultDeviceChanged" lineNumber="124"/>
+    <functiondecl functionName="OnPropertyValueChanged" lineNumber="136"/>
+    <functiondecl functionName="audio_device_init" lineNumber="143"/>
+    <functiondecl functionName="init_render_device" lineNumber="315"/>
+    <functiondecl functionName="init_capture_device" lineNumber="354"/>
+    <functiondecl functionName="audio_device_finish" lineNumber="370"/>
+    <functiondecl functionName="finish_render_device" lineNumber="387"/>
+    <functiondecl functionName="finish_capture_device" lineNumber="392"/>
+    <functiondecl functionName="init" lineNumber="397"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="414"/>
+    <functiondecl functionName="get_speaker_mode" lineNumber="419"/>
+    <functiondecl functionName="audio_device_get_list" lineNumber="424"/>
+    <functiondecl functionName="get_device_list" lineNumber="472"/>
+    <functiondecl functionName="get_device" lineNumber="477"/>
+    <functiondecl functionName="set_device" lineNumber="486"/>
+    <functiondecl functionName="read_sample" lineNumber="493"/>
+    <functiondecl functionName="write_sample" lineNumber="526"/>
+    <functiondecl functionName="thread_func" lineNumber="554"/>
+    <functiondecl functionName="start" lineNumber="770"/>
+    <functiondecl functionName="lock" lineNumber="782"/>
+    <functiondecl functionName="unlock" lineNumber="787"/>
+    <functiondecl functionName="finish" lineNumber="792"/>
+    <functiondecl functionName="capture_start" lineNumber="806"/>
+    <functiondecl functionName="capture_stop" lineNumber="823"/>
+    <functiondecl functionName="capture_set_device" lineNumber="835"/>
+    <functiondecl functionName="capture_get_device_list" lineNumber="842"/>
+    <functiondecl functionName="capture_get_device" lineNumber="847"/>
+    <functioncall functionName="AUDCLNT_SHAREMODE_SHARED"/>
+    <functioncall functionName="Activate"/>
+    <functioncall functionName="AddRef"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="AudioDeviceWASAPI"/>
+    <functioncall functionName="AudioDriverWASAPI"/>
+    <functioncall functionName="CLSCTX_ALL"/>
+    <functioncall functionName="CLSID_MMDeviceEnumerator"/>
+    <functioncall functionName="CoCreateInstance"/>
+    <functioncall functionName="CoInitialize"/>
+    <functioncall functionName="CoTaskMemFree"/>
+    <functioncall functionName="DEFAULT_MIX_RATE"/>
+    <functioncall functionName="DEVICE_STATE_ACTIVE"/>
+    <functioncall functionName="DWORD"/>
+    <functioncall functionName="ERR_BREAK"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="EnumAudioEndpoints"/>
+    <functioncall functionName="GLOBAL_DEF_RST"/>
+    <functioncall functionName="GetBuffer"/>
+    <functioncall functionName="GetBufferSize"/>
+    <functioncall functionName="GetCount"/>
+    <functioncall functionName="GetCurrentPadding"/>
+    <functioncall functionName="GetDefaultAudioEndpoint"/>
+    <functioncall functionName="GetDevice"/>
+    <functioncall functionName="GetId"/>
+    <functioncall functionName="GetMixFormat"/>
+    <functioncall functionName="GetNextPacketSize"/>
+    <functioncall functionName="GetService"/>
+    <functioncall functionName="GetValue"/>
+    <functioncall functionName="IAudioCaptureClient"/>
+    <functioncall functionName="IAudioClient"/>
+    <functioncall functionName="IAudioRenderClient"/>
+    <functioncall functionName="IID_IAudioCaptureClient"/>
+    <functioncall functionName="IID_IAudioClient"/>
+    <functioncall functionName="IID_IAudioRenderClient"/>
+    <functioncall functionName="IID_IMMDeviceEnumerator"/>
+    <functioncall functionName="IMMDeviceEnumerator"/>
+    <functioncall functionName="IMMNotificationClient"/>
+    <functioncall functionName="Initialize"/>
+    <functioncall functionName="InterlockedDecrement"/>
+    <functioncall functionName="InterlockedIncrement"/>
+    <functioncall functionName="IsFormatSupported"/>
+    <functioncall functionName="Item"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MMDeviceEnumerator"/>
+    <functioncall functionName="OpenPropertyStore"/>
+    <functioncall functionName="PKEY_Device_FriendlyName"/>
+    <functioncall functionName="PropVariantClear"/>
+    <functioncall functionName="PropVariantInit"/>
+    <functioncall functionName="RegisterEndpointNotificationCallback"/>
+    <functioncall functionName="Release"/>
+    <functioncall functionName="ReleaseBuffer"/>
+    <functioncall functionName="STGM_READ"/>
+    <functioncall functionName="Start"/>
+    <functioncall functionName="Stop"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="WAVE_FORMAT_IEEE_FLOAT"/>
+    <functioncall functionName="WAVE_FORMAT_PCM"/>
+    <functioncall functionName="__uuidof"/>
+    <functioncall functionName="_cRef"/>
+    <functioncall functionName="_pEnumerator"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="audio_client"/>
+    <functioncall functionName="audio_device_finish"/>
+    <functioncall functionName="audio_device_get_list"/>
+    <functioncall functionName="audio_device_init"/>
+    <functioncall functionName="audio_input"/>
+    <functioncall functionName="audio_output"/>
+    <functioncall functionName="audio_server_process"/>
+    <functioncall functionName="avail_frames"/>
+    <functioncall functionName="bits_per_sample"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="buffer_frames"/>
+    <functioncall functionName="capture_client"/>
+    <functioncall functionName="capture_start"/>
+    <functioncall functionName="cbSize"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="closest"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="cur_frames"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="device_name"/>
+    <functioncall functionName="devices"/>
+    <functioncall functionName="eCapture"/>
+    <functioncall functionName="eConsole"/>
+    <functioncall functionName="eRender"/>
+    <functioncall functionName="enumerator"/>
+    <functioncall functionName="exit_thread"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finish_capture_device"/>
+    <functioncall functionName="finish_render_device"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format_tag"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="frame_size"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_speaker_mode_by_total_channels"/>
+    <functioncall functionName="hr"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init_capture_device"/>
+    <functioncall functionName="init_render_device"/>
+    <functioncall functionName="input_buffer_init"/>
+    <functioncall functionName="input_buffer_write"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="invalidated"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="max_frames"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="mix_rate"/>
+    <functioncall functionName="nAvgBytesPerSec"/>
+    <functioncall functionName="nBlockAlign"/>
+    <functioncall functionName="nChannels"/>
+    <functioncall functionName="nSamplesPerSec"/>
+    <functioncall functionName="new_device"/>
+    <functioncall functionName="notif_client"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_frames_available"/>
+    <functioncall functionName="num_uint64"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_capture"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_udata"/>
+    <functioncall functionName="packet_length"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="props"/>
+    <functioncall functionName="propvar"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="pwfex"/>
+    <functioncall functionName="pwszVal"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="read_sample"/>
+    <functioncall functionName="reinit"/>
+    <functioncall functionName="render_client"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="sample"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_counting_ticks"/>
+    <functioncall functionName="stop_counting_ticks"/>
+    <functioncall functionName="strId"/>
+    <functioncall functionName="streamflags"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread"/>
+    <functioncall functionName="thread_func"/>
+    <functioncall functionName="tmp_device"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="wBitsPerSample"/>
+    <functioncall functionName="wFormatTag"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="write_frames"/>
+    <functioncall functionName="write_sample"/>
+  </FileInfo>
+</analyzerinfo>

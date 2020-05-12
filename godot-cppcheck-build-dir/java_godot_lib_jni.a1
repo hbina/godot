@@ -1,0 +1,500 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4068773659">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="399" column="30"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="400" column="31"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;obj&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;obj&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" file="/home/hbina/git/godot/platform/android/jni_utils.h" line="43" column="14"/>
+            <symbol>obj</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!obj&apos; is redundant or there is possible null pointer dereference: obj." verbose="Either the condition &apos;!obj&apos; is redundant or there is possible null pointer dereference: obj." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="414" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="390" column="38" info="Assignment &apos;obj=ObjectDB::get_instance(ObjectID((uint64_t)ID))&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="391" column="16" info="Assuming that condition &apos;!obj&apos; is not redundant"/>
+            <symbol>obj</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!obj&apos; is redundant or there is possible null pointer dereference: obj." verbose="Either the condition &apos;!obj&apos; is redundant or there is possible null pointer dereference: obj." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="441" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="422" column="38" info="Assignment &apos;obj=ObjectDB::get_instance(ObjectID((uint64_t)ID))&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="423" column="16" info="Assuming that condition &apos;!obj&apos; is not redundant"/>
+            <symbol>obj</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;obj&apos; shadows outer variable" verbose="Local variable &apos;obj&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="403" column="11" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="390" column="10" info="Shadowed declaration"/>
+            <symbol>obj</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;obj&apos; shadows outer variable" verbose="Local variable &apos;obj&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="435" column="11" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="422" column="10" info="Shadowed declaration"/>
+            <symbol>obj</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="331" col="17" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:55:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="383" col="14" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:63:27" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="447" col="22" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:67:24" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:40:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="85" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:64:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="393" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:65:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="425" col="12" value="0"/>
+  </FileInfo>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file0="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" file="/home/hbina/git/godot/platform/android/api/jni_singleton.h" line="87" column="18"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;instance&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;instance&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" file="/home/hbina/git/godot/platform/android/api/jni_singleton.h" line="237" column="3"/>
+            <symbol>instance</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="331" col="17" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:55:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="383" col="14" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:63:27" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="447" col="22" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:67:24" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:40:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="85" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:64:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="393" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:65:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="425" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="331" col="17" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:55:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="383" col="14" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:63:27" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="447" col="22" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:67:24" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:40:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="85" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:64:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="393" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:65:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="425" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="331" col="17" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:55:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="383" col="14" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:63:27" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="447" col="22" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:67:24" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:40:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="85" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:64:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="393" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:65:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="425" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="331" col="17" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:55:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="383" col="14" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:63:27" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/platform/android/string_android.h:43:22" call-funcname="jstring_to_string" call-argnr="2" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="447" col="22" my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:67:24" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:40:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="85" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:64:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="393" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/java_godot_lib_jni.h:65:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/java_godot_lib_jni.cpp" line="425" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setVirtualKeyboardHeight" lineNumber="74"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_initialize" lineNumber="80"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_ondestroy" lineNumber="113"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setup" lineNumber="126"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_resize" lineNumber="169"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_newcontext" lineNumber="175"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_back" lineNumber="193"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_step" lineNumber="200"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_touch" lineNumber="233"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_hover" lineNumber="257"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_doubletap" lineNumber="264"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_scroll" lineNumber="271"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joybutton" lineNumber="278"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyaxis" lineNumber="291"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyhat" lineNumber="304"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyconnectionchanged" lineNumber="329"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_key" lineNumber="336"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_accelerometer" lineNumber="343"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gravity" lineNumber="347"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_magnetometer" lineNumber="351"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gyroscope" lineNumber="355"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusin" lineNumber="359"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusout" lineNumber="367"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_audio" lineNumber="375"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_getGlobal" lineNumber="381"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_callobject" lineNumber="388"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_calldeferred" lineNumber="420"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_requestPermissionResult" lineNumber="446"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererResumed" lineNumber="457"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererPaused" lineNumber="466"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setVirtualKeyboardHeight" lineNumber="74"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_initialize" lineNumber="80"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_ondestroy" lineNumber="113"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setup" lineNumber="126"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_resize" lineNumber="169"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_newcontext" lineNumber="175"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_back" lineNumber="193"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_step" lineNumber="200"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_touch" lineNumber="233"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_hover" lineNumber="257"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_doubletap" lineNumber="264"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_scroll" lineNumber="271"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joybutton" lineNumber="278"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyaxis" lineNumber="291"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyhat" lineNumber="304"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyconnectionchanged" lineNumber="329"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_key" lineNumber="336"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_accelerometer" lineNumber="343"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gravity" lineNumber="347"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_magnetometer" lineNumber="351"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gyroscope" lineNumber="355"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusin" lineNumber="359"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusout" lineNumber="367"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_audio" lineNumber="375"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_getGlobal" lineNumber="381"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_callobject" lineNumber="388"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_calldeferred" lineNumber="420"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_requestPermissionResult" lineNumber="446"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererResumed" lineNumber="457"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererPaused" lineNumber="466"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setVirtualKeyboardHeight" lineNumber="74"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_initialize" lineNumber="80"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_ondestroy" lineNumber="113"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setup" lineNumber="126"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_resize" lineNumber="169"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_newcontext" lineNumber="175"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_back" lineNumber="193"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_step" lineNumber="200"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_touch" lineNumber="233"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_hover" lineNumber="257"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_doubletap" lineNumber="264"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_scroll" lineNumber="271"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joybutton" lineNumber="278"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyaxis" lineNumber="291"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyhat" lineNumber="304"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyconnectionchanged" lineNumber="329"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_key" lineNumber="336"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_accelerometer" lineNumber="343"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gravity" lineNumber="347"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_magnetometer" lineNumber="351"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gyroscope" lineNumber="355"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusin" lineNumber="359"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusout" lineNumber="367"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_audio" lineNumber="375"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_getGlobal" lineNumber="381"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_callobject" lineNumber="388"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_calldeferred" lineNumber="420"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_requestPermissionResult" lineNumber="446"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererResumed" lineNumber="457"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererPaused" lineNumber="466"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setVirtualKeyboardHeight" lineNumber="74"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_initialize" lineNumber="80"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_ondestroy" lineNumber="113"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setup" lineNumber="126"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_resize" lineNumber="169"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_newcontext" lineNumber="175"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_back" lineNumber="193"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_step" lineNumber="200"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_touch" lineNumber="233"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_hover" lineNumber="257"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_doubletap" lineNumber="264"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_scroll" lineNumber="271"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joybutton" lineNumber="278"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyaxis" lineNumber="291"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyhat" lineNumber="304"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyconnectionchanged" lineNumber="329"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_key" lineNumber="336"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_accelerometer" lineNumber="343"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gravity" lineNumber="347"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_magnetometer" lineNumber="351"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gyroscope" lineNumber="355"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusin" lineNumber="359"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusout" lineNumber="367"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_audio" lineNumber="375"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_getGlobal" lineNumber="381"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_callobject" lineNumber="388"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_calldeferred" lineNumber="420"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_requestPermissionResult" lineNumber="446"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererResumed" lineNumber="457"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererPaused" lineNumber="466"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setVirtualKeyboardHeight" lineNumber="74"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_initialize" lineNumber="80"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_ondestroy" lineNumber="113"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_setup" lineNumber="126"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_resize" lineNumber="169"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_newcontext" lineNumber="175"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_back" lineNumber="193"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_step" lineNumber="200"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_touch" lineNumber="233"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_hover" lineNumber="257"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_doubletap" lineNumber="264"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_scroll" lineNumber="271"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joybutton" lineNumber="278"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyaxis" lineNumber="291"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyhat" lineNumber="304"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_joyconnectionchanged" lineNumber="329"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_key" lineNumber="336"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_accelerometer" lineNumber="343"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gravity" lineNumber="347"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_magnetometer" lineNumber="351"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_gyroscope" lineNumber="355"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusin" lineNumber="359"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_focusout" lineNumber="367"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_audio" lineNumber="375"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_getGlobal" lineNumber="381"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_callobject" lineNumber="388"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_calldeferred" lineNumber="420"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_requestPermissionResult" lineNumber="446"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererResumed" lineNumber="457"/>
+    <functiondecl functionName="Java_org_godotengine_godot_GodotLib_onRendererPaused" lineNumber="466"/>
+    <functioncall functionName="AAssetManager_fromJava"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ANativeWindow_fromSurface"/>
+    <functioncall functionName="ARG_NUMBER_CLASS_BIT"/>
+    <functioncall functionName="ARG_TYPE_BOOLEAN"/>
+    <functioncall functionName="ARG_TYPE_BYTE"/>
+    <functioncall functionName="ARG_TYPE_CHAR"/>
+    <functioncall functionName="ARG_TYPE_CLASS"/>
+    <functioncall functionName="ARG_TYPE_DOUBLE"/>
+    <functioncall functionName="ARG_TYPE_FLOAT"/>
+    <functioncall functionName="ARG_TYPE_INT"/>
+    <functioncall functionName="ARG_TYPE_LONG"/>
+    <functioncall functionName="ARG_TYPE_SHORT"/>
+    <functioncall functionName="ARG_TYPE_STRING"/>
+    <functioncall functionName="ARG_TYPE_VOID"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="AudioDriverAndroid"/>
+    <functioncall functionName="AudioDriverOpenSL"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="BUFFER_COUNT"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="CallBooleanMethodA"/>
+    <functioncall functionName="CallFloatMethodA"/>
+    <functioncall functionName="CallIntMethodA"/>
+    <functioncall functionName="CallObjectMethodA"/>
+    <functioncall functionName="CallVoidMethodA"/>
+    <functioncall functionName="DeleteLocalRef"/>
+    <functioncall functionName="DirAccessJAndroid"/>
+    <functioncall functionName="DisplayServerAndroid"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FileAccessAndroid"/>
+    <functioncall functionName="FileAccessJAndroid"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GetArrayLength"/>
+    <functioncall functionName="GetFloatArrayRegion"/>
+    <functioncall functionName="GetIntArrayRegion"/>
+    <functioncall functionName="GetJavaVM"/>
+    <functioncall functionName="GetObjectArrayElement"/>
+    <functioncall functionName="GetStringUTFChars"/>
+    <functioncall functionName="GodotIOJavaWrapper"/>
+    <functioncall functionName="GodotJavaWrapper"/>
+    <functioncall functionName="ID"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="JNISingleton"/>
+    <functioncall functionName="JOY_EVENT_AXIS"/>
+    <functioncall functionName="JOY_EVENT_BUTTON"/>
+    <functioncall functionName="JOY_EVENT_HAT"/>
+    <functioncall functionName="JavaClass"/>
+    <functioncall functionName="JavaClassWrapper"/>
+    <functioncall functionName="JavaObject"/>
+    <functioncall functionName="MAIN_WINDOW_ID"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MethodData"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="NOTIFICATION_APP_PAUSED"/>
+    <functioncall functionName="NOTIFICATION_APP_RESUMED"/>
+    <functioncall functionName="NetSocketAndroid"/>
+    <functioncall functionName="NewGlobalRef"/>
+    <functioncall functionName="NewStringUTF"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="OS_Android"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PACKED_BYTE_ARRAY"/>
+    <functioncall functionName="PACKED_FLOAT32_ARRAY"/>
+    <functioncall functionName="PACKED_INT32_ARRAY"/>
+    <functioncall functionName="PACKED_STRING_ARRAY"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PopLocalFrame"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="PushLocalFrame"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="ReleaseStringUTFChars"/>
+    <functioncall functionName="SCREEN_OF_MAIN_WINDOW"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="Size2i"/>
+    <functioncall functionName="ThreadAndroid"/>
+    <functioncall functionName="VARIANT_ARG_MAX"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_jobject_to_variant"/>
+    <functioncall functionName="_variant_to_jvalue"/>
+    <functioncall functionName="accelerometer"/>
+    <functioncall functionName="activity"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="amgr"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="call_error"/>
+    <functioncall functionName="can_convert"/>
+    <functioncall functionName="capture_start"/>
+    <functioncall functionName="cmdlen"/>
+    <functioncall functionName="cmdline"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="env"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="ev"/>
+    <functioncall functionName="fCount"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_quit"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_activity"/>
+    <functioncall functionName="get_caller_id"/>
+    <functioncall functionName="get_env"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_main_loop"/>
+    <functioncall functionName="get_member_object"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="getcwd"/>
+    <functioncall functionName="godot_io_java"/>
+    <functioncall functionName="godot_java"/>
+    <functioncall functionName="gravity"/>
+    <functioncall functionName="gyroscope"/>
+    <functioncall functionName="hat"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="j_cmdline"/>
+    <functioncall functionName="jevent"/>
+    <functioncall functionName="jfloatArray"/>
+    <functioncall functionName="jintArray"/>
+    <functioncall functionName="jobjectArray"/>
+    <functioncall functionName="joy_connection_changed"/>
+    <functioncall functionName="js"/>
+    <functioncall functionName="jstring"/>
+    <functioncall functionName="jstring_to_string"/>
+    <functioncall functionName="jvalret"/>
+    <functioncall functionName="jvalue"/>
+    <functioncall functionName="jvm"/>
+    <functioncall functionName="magnetometer"/>
+    <functioncall functionName="main_loop_begin"/>
+    <functioncall functionName="main_loop_end"/>
+    <functioncall functionName="main_loop_focusin"/>
+    <functioncall functionName="main_loop_focusout"/>
+    <functioncall functionName="main_loop_iterate"/>
+    <functioncall functionName="main_loop_request_go_back"/>
+    <functioncall functionName="make_default"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="md"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memnew_placement"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="native_window"/>
+    <functioncall functionName="notification"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="on_godot_main_loop_started"/>
+    <functioncall functionName="on_video_init"/>
+    <functioncall functionName="operatorString().utf8().get_data"/>
+    <functioncall functionName="os_android"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_32_bits"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_asset_manager"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_button"/>
+    <functioncall functionName="p_cmdline"/>
+    <functioncall functionName="p_connected"/>
+    <functioncall functionName="p_device"/>
+    <functioncall functionName="p_height"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_keycode"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_permission"/>
+    <functioncall functionName="p_pressed"/>
+    <functioncall functionName="p_ret_type"/>
+    <functioncall functionName="p_scancode"/>
+    <functioncall functionName="p_sig"/>
+    <functioncall functionName="p_surface"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_unicode_char"/>
+    <functioncall functionName="p_use_apk_expansion"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_x"/>
+    <functioncall functionName="p_y"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="permission"/>
+    <functioncall functionName="pointer"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="positions"/>
+    <functioncall functionName="process_accelerometer"/>
+    <functioncall functionName="process_double_tap"/>
+    <functioncall functionName="process_gravity"/>
+    <functioncall functionName="process_gyroscope"/>
+    <functioncall functionName="process_hover"/>
+    <functioncall functionName="process_joy_event"/>
+    <functioncall functionName="process_key_event"/>
+    <functioncall functionName="process_magnetometer"/>
+    <functioncall functionName="process_scroll"/>
+    <functioncall functionName="process_touch"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="rawString"/>
+    <functioncall functionName="register_class"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="restart"/>
+    <functioncall functionName="ret_type"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sarr"/>
+    <functioncall functionName="set_context_is_16_bits"/>
+    <functioncall functionName="set_display_size"/>
+    <functioncall functionName="set_native_window"/>
+    <functioncall functionName="set_vk_height"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="setup2"/>
+    <functioncall functionName="setup_thread"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="source_utf8"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="str_method"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="thread_func"/>
+    <functioncall functionName="tp"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="vptr"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="wd"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

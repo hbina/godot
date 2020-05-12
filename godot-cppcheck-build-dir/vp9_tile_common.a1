@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2996885511">
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:24:6" call-funcname="vp9_tile_set_row" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="35" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:34:6" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:24:6" call-funcname="vp9_tile_set_row" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="35" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:34:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:24:6" my-argnr="1" my-argname="tile" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="25" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:24:6" my-argnr="2" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="25" col="45" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:29:6" my-argnr="1" my-argname="tile" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="30" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:29:6" my-argnr="2" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="30" col="45" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:53:6" my-argnr="2" my-argname="min_log2_tile_cols" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="56" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:53:6" my-argnr="3" my-argname="max_log2_tile_cols" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="57" col="4" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:24:6" my-argnr="2" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="25" col="45" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c:29:6" my-argnr="2" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_tile_common.c" line="30" col="45" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_tile_offset" lineNumber="18"/>
+    <functiondecl functionName="vp9_tile_set_row" lineNumber="24"/>
+    <functiondecl functionName="vp9_tile_set_col" lineNumber="29"/>
+    <functiondecl functionName="vp9_tile_init" lineNumber="34"/>
+    <functiondecl functionName="get_min_log2_tile_cols" lineNumber="39"/>
+    <functiondecl functionName="get_max_log2_tile_cols" lineNumber="46"/>
+    <functiondecl functionName="vp9_get_tile_n_bits" lineNumber="53"/>
+    <functioncall functionName="VPXMIN"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="cm"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="get_max_log2_tile_cols"/>
+    <functioncall functionName="get_min_log2_tile_cols"/>
+    <functioncall functionName="get_tile_offset"/>
+    <functioncall functionName="log2_tile_cols"/>
+    <functioncall functionName="log2_tile_rows"/>
+    <functioncall functionName="mi_cols"/>
+    <functioncall functionName="mi_cols_aligned_to_sb"/>
+    <functioncall functionName="mi_rows"/>
+    <functioncall functionName="mis"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="row"/>
+    <functioncall functionName="sb64_cols"/>
+    <functioncall functionName="tile"/>
+    <functioncall functionName="vp9_tile_set_col"/>
+    <functioncall functionName="vp9_tile_set_row"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

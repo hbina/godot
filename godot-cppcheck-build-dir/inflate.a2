@@ -1,0 +1,1065 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1920565941">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dist&apos; can be reduced." verbose="The scope of the variable &apos;dist&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="402" column="14"/>
+            <symbol>dist</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dictid&apos; can be reduced." verbose="The scope of the variable &apos;dictid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1320" column="19"/>
+            <symbol>dictid</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;buf&apos; can be reduced." verbose="The scope of the variable &apos;buf&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1405" column="19"/>
+            <symbol>buf</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;wsize&apos; can be reduced." verbose="The scope of the variable &apos;wsize&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1468" column="14"/>
+            <symbol>wsize</symbol>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="702" column="40"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" call-funcname="fixedtables" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="347" col="16" call-argexpr="&state" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" call-funcname="fixedtables" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="347" col="16" call-argexpr="state" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="668" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="722" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="730" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="740" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="750" col="21" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inftrees.h:60:19" call-funcname="inflate_table" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="949" col="32" call-argexpr="CODES" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1332" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="z_inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="z_inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="668" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="722" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="730" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="740" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="750" col="21" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="z_crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inftrees.h:60:19" call-funcname="z_inflate_table" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="949" col="32" call-argexpr="CODES" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="z_inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="z_inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="z_adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1332" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="668" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="722" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="730" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="740" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="750" col="21" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inftrees.h:60:19" call-funcname="inflate_table" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="949" col="32" call-argexpr="CODES" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1332" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="668" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="722" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="730" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="740" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="750" col="21" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inftrees.h:60:19" call-funcname="inflate_table" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="949" col="32" call-argexpr="CODES" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1332" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="667" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="668" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="701" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="722" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="730" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="740" col="17" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="750" col="21" call-argexpr="hbuf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1725:23" call-funcname="crc32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="833" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="847" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inftrees.h:60:19" call-funcname="inflate_table" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="949" col="32" call-argexpr="CODES" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0L" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1331" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1688:23" call-funcname="adler32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1332" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" call-funcname="syncsearch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1425" col="19" call-argexpr="buf" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="124" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1894:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="149" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:957:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="165" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:967:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1772:21" call-funcname="inflateInit2_" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="244" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1766:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="254" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:981:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="645" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1281" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:520:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1299" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:907:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1324" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:884:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1356" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1030:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1409" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:922:21" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1456" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1889:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1471" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:941:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1514" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1891:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1532" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1892:32" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1546" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1002:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:95:11" call-funcname="inflateStateCheck" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1558" col="9" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1893:32" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:96:12" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="315" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/inflate.c:102:16" my-argnr="1" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/inflate.c" line="1385" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="makefixed" lineNumber="342"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="z_inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="z_inflateReset" lineNumber="144"/>
+    <functiondecl functionName="z_inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="z_inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="z_inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="z_inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="z_inflate" lineNumber="622"/>
+    <functiondecl functionName="z_inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="z_inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="z_inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="z_inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="z_inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="z_inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="z_inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="z_inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="z_inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="z_inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="z_inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="z_inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="z_inflateReset" lineNumber="144"/>
+    <functiondecl functionName="z_inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="z_inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="z_inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="z_inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="z_inflate" lineNumber="622"/>
+    <functiondecl functionName="z_inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="z_inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="z_inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="z_inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="z_inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="z_inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="z_inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="z_inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="z_inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="z_inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="z_inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functiondecl functionName="inflateStateCheck" lineNumber="105"/>
+    <functiondecl functionName="inflateResetKeep" lineNumber="119"/>
+    <functiondecl functionName="inflateReset" lineNumber="144"/>
+    <functiondecl functionName="inflateReset2" lineNumber="157"/>
+    <functiondecl functionName="inflateInit2_" lineNumber="195"/>
+    <functiondecl functionName="inflateInit_" lineNumber="239"/>
+    <functiondecl functionName="inflatePrime" lineNumber="247"/>
+    <functiondecl functionName="fixedtables" lineNumber="278"/>
+    <functiondecl functionName="updatewindow" lineNumber="396"/>
+    <functiondecl functionName="inflate" lineNumber="622"/>
+    <functiondecl functionName="inflateEnd" lineNumber="1277"/>
+    <functiondecl functionName="inflateGetDictionary" lineNumber="1291"/>
+    <functiondecl functionName="inflateSetDictionary" lineNumber="1314"/>
+    <functiondecl functionName="inflateGetHeader" lineNumber="1349"/>
+    <functiondecl functionName="syncsearch" lineNumber="1377"/>
+    <functiondecl functionName="inflateSync" lineNumber="1400"/>
+    <functiondecl functionName="inflateSyncPoint" lineNumber="1451"/>
+    <functiondecl functionName="inflateCopy" lineNumber="1461"/>
+    <functiondecl functionName="inflateUndermine" lineNumber="1508"/>
+    <functiondecl functionName="inflateValidate" lineNumber="1526"/>
+    <functiondecl functionName="inflateMark" lineNumber="1541"/>
+    <functiondecl functionName="inflateCodesUsed" lineNumber="1554"/>
+    <functioncall functionName="BAD"/>
+    <functioncall functionName="Byte"/>
+    <functioncall functionName="CHECK"/>
+    <functioncall functionName="CODELENS"/>
+    <functioncall functionName="CODES"/>
+    <functioncall functionName="COMMENT"/>
+    <functioncall functionName="COPY"/>
+    <functioncall functionName="COPY_"/>
+    <functioncall functionName="DICT"/>
+    <functioncall functionName="DICTID"/>
+    <functioncall functionName="DIST"/>
+    <functioncall functionName="DISTEXT"/>
+    <functioncall functionName="DISTS"/>
+    <functioncall functionName="DONE"/>
+    <functioncall functionName="EXLEN"/>
+    <functioncall functionName="EXTRA"/>
+    <functioncall functionName="FLAGS"/>
+    <functioncall functionName="HCRC"/>
+    <functioncall functionName="HEAD"/>
+    <functioncall functionName="LEN"/>
+    <functioncall functionName="LENEXT"/>
+    <functioncall functionName="LENGTH"/>
+    <functioncall functionName="LENLENS"/>
+    <functioncall functionName="LENS"/>
+    <functioncall functionName="LEN_"/>
+    <functioncall functionName="LIT"/>
+    <functioncall functionName="MATCH"/>
+    <functioncall functionName="MEM"/>
+    <functioncall functionName="NAME"/>
+    <functioncall functionName="OS"/>
+    <functioncall functionName="STORED"/>
+    <functioncall functionName="SYNC"/>
+    <functioncall functionName="TABLE"/>
+    <functioncall functionName="TIME"/>
+    <functioncall functionName="TYPE"/>
+    <functioncall functionName="TYPEDO"/>
+    <functioncall functionName="adler32"/>
+    <functioncall functionName="avail_in"/>
+    <functioncall functionName="avail_out"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="check"/>
+    <functioncall functionName="codes"/>
+    <functioncall functionName="comm_max"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="crc32"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dest"/>
+    <functioncall functionName="dictLength"/>
+    <functioncall functionName="dictid"/>
+    <functioncall functionName="dictionary"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="distbits"/>
+    <functioncall functionName="distfix"/>
+    <functioncall functionName="dmax"/>
+    <functioncall functionName="extra"/>
+    <functioncall functionName="fixed"/>
+    <functioncall functionName="fixedtables"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="got"/>
+    <functioncall functionName="have"/>
+    <functioncall functionName="hbuf"/>
+    <functioncall functionName="head"/>
+    <functioncall functionName="here"/>
+    <functioncall functionName="hold"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="inf_leave"/>
+    <functioncall functionName="inflateInit2_"/>
+    <functioncall functionName="inflateReset"/>
+    <functioncall functionName="inflateReset2"/>
+    <functioncall functionName="inflateResetKeep"/>
+    <functioncall functionName="inflateStateCheck"/>
+    <functioncall functionName="inflate_fast"/>
+    <functioncall functionName="inflate_table"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="lenbits"/>
+    <functioncall functionName="lenfix"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lens"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="name_max"/>
+    <functioncall functionName="ncode"/>
+    <functioncall functionName="ndist"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_in"/>
+    <functioncall functionName="next_out"/>
+    <functioncall functionName="nlen"/>
+    <functioncall functionName="off_t"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="opaque"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="put"/>
+    <functioncall functionName="putchar"/>
+    <functioncall functionName="puts"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sane"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="stream_size"/>
+    <functioncall functionName="strm"/>
+    <functioncall functionName="subvert"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="syncsearch"/>
+    <functioncall functionName="total_in"/>
+    <functioncall functionName="total_out"/>
+    <functioncall functionName="updatewindow"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="virgin"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="wbits"/>
+    <functioncall functionName="whave"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="window"/>
+    <functioncall functionName="windowBits"/>
+    <functioncall functionName="wnext"/>
+    <functioncall functionName="work"/>
+    <functioncall functionName="wrap"/>
+    <functioncall functionName="wsize"/>
+    <functioncall functionName="z_adler32"/>
+    <functioncall functionName="z_crc32"/>
+    <functioncall functionName="z_inflateInit2_"/>
+    <functioncall functionName="z_inflateReset"/>
+    <functioncall functionName="z_inflateReset2"/>
+    <functioncall functionName="z_inflateResetKeep"/>
+    <functioncall functionName="z_inflate_fast"/>
+    <functioncall functionName="z_inflate_table"/>
+    <functioncall functionName="z_verbose"/>
+    <functioncall functionName="z_zcalloc"/>
+    <functioncall functionName="z_zcfree"/>
+    <functioncall functionName="zalloc"/>
+    <functioncall functionName="zcalloc"/>
+    <functioncall functionName="zcfree"/>
+    <functioncall functionName="zfree"/>
+    <functioncall functionName="zmemcpy"/>
+  </FileInfo>
+</analyzerinfo>

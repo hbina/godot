@@ -76,7 +76,7 @@ void RasterizerSceneRD::_update_reflection_data(ReflectionData &rd, int p_size, 
 			layer.mipmaps.resize(mipmaps);
 			layer.views.resize(mipmaps);
 			for (int j = 0; j < mipmaps; j++) {
-				ReflectionData::Layer::Mipmap &mm = layer.mipmaps.write[j];
+				ReflectionData::Layer::Mipmap &mm = layer.mipmaps[j];
 				mm.size.width = mmw;
 				mm.size.height = mmh;
 				for (int k = 0; k < 6; k++) {
@@ -86,7 +86,7 @@ void RasterizerSceneRD::_update_reflection_data(ReflectionData &rd, int p_size, 
 					mm.framebuffers[k] = RD::get_singleton()->framebuffer_create(fbtex);
 				}
 
-				layer.views.write[j] = RD::get_singleton()->texture_create_shared_from_slice(RD::TextureView(), p_base_cube, p_base_layer + i * 6, j, RD::TEXTURE_SLICE_CUBEMAP);
+				layer.views[j] = RD::get_singleton()->texture_create_shared_from_slice(RD::TextureView(), p_base_cube, p_base_layer + i * 6, j, RD::TEXTURE_SLICE_CUBEMAP);
 
 				mmw = MAX(1, mmw >> 1);
 				mmh = MAX(1, mmh >> 1);
@@ -104,7 +104,7 @@ void RasterizerSceneRD::_update_reflection_data(ReflectionData &rd, int p_size, 
 		layer.mipmaps.resize(mipmaps);
 		layer.views.resize(mipmaps);
 		for (int j = 0; j < mipmaps; j++) {
-			ReflectionData::Layer::Mipmap &mm = layer.mipmaps.write[j];
+			ReflectionData::Layer::Mipmap &mm = layer.mipmaps[j];
 			mm.size.width = mmw;
 			mm.size.height = mmh;
 			for (int k = 0; k < 6; k++) {
@@ -114,7 +114,7 @@ void RasterizerSceneRD::_update_reflection_data(ReflectionData &rd, int p_size, 
 				mm.framebuffers[k] = RD::get_singleton()->framebuffer_create(fbtex);
 			}
 
-			layer.views.write[j] = RD::get_singleton()->texture_create_shared_from_slice(RD::TextureView(), p_base_cube, p_base_layer, j, RD::TEXTURE_SLICE_CUBEMAP);
+			layer.views[j] = RD::get_singleton()->texture_create_shared_from_slice(RD::TextureView(), p_base_cube, p_base_layer, j, RD::TEXTURE_SLICE_CUBEMAP);
 
 			mmw = MAX(1, mmw >> 1);
 			mmh = MAX(1, mmh >> 1);
@@ -140,7 +140,7 @@ void RasterizerSceneRD::_update_reflection_data(ReflectionData &rd, int p_size, 
 		uint32_t mmh = 64;
 		rd.downsampled_layer.mipmaps.resize(7);
 		for (int j = 0; j < rd.downsampled_layer.mipmaps.size(); j++) {
-			ReflectionData::DownsampleLayer::Mipmap &mm = rd.downsampled_layer.mipmaps.write[j];
+			ReflectionData::DownsampleLayer::Mipmap &mm = rd.downsampled_layer.mipmaps[j];
 			mm.size.width = mmw;
 			mm.size.height = mmh;
 			mm.view = RD::get_singleton()->texture_create_shared_from_slice(RD::TextureView(), rd.downsampled_radiance_cubemap, 0, j, RD::TEXTURE_SLICE_CUBEMAP);
@@ -1367,7 +1367,7 @@ void RasterizerSceneRD::reflection_atlas_set_size(RID p_ref_atlas, int p_reflect
 		ra->depth_buffer = RID();
 
 		for (int i = 0; i < ra->reflections.size(); i++) {
-			_clear_reflection_data(ra->reflections.write[i].data);
+			_clear_reflection_data(ra->reflections[i].data);
 			if (ra->reflections[i].owner.is_null()) {
 				continue;
 			}
@@ -1405,7 +1405,7 @@ void RasterizerSceneRD::reflection_probe_release_atlas_index(RID p_instance) {
 	ReflectionAtlas *atlas = reflection_atlas_owner.getornull(rpi->atlas);
 	ERR_FAIL_COND(!atlas);
 	ERR_FAIL_INDEX(rpi->atlas_index, atlas->reflections.size());
-	atlas->reflections.write[rpi->atlas_index].owner = RID();
+	atlas->reflections[rpi->atlas_index].owner = RID();
 	rpi->atlas_index = -1;
 	rpi->atlas = RID();
 }
@@ -1494,12 +1494,12 @@ bool RasterizerSceneRD::reflection_probe_instance_begin_render(RID p_instance, R
 		}
 		atlas->reflections.resize(atlas->count);
 		for (int i = 0; i < atlas->count; i++) {
-			_update_reflection_data(atlas->reflections.write[i].data, atlas->size, mipmaps, false, atlas->reflection, i * 6, storage->reflection_probe_get_update_mode(rpi->probe) == RS::REFLECTION_PROBE_UPDATE_ALWAYS);
+			_update_reflection_data(atlas->reflections[i].data, atlas->size, mipmaps, false, atlas->reflection, i * 6, storage->reflection_probe_get_update_mode(rpi->probe) == RS::REFLECTION_PROBE_UPDATE_ALWAYS);
 			for (int j = 0; j < 6; j++) {
 				Vector<RID> fb;
-				fb.push_back(atlas->reflections.write[i].data.layers[0].mipmaps[0].views[j]);
+				fb.push_back(atlas->reflections[i].data.layers[0].mipmaps[0].views[j]);
 				fb.push_back(atlas->depth_buffer);
-				atlas->reflections.write[i].fbs[j] = RD::get_singleton()->framebuffer_create(fb);
+				atlas->reflections[i].fbs[j] = RD::get_singleton()->framebuffer_create(fb);
 			}
 		}
 
@@ -1555,7 +1555,7 @@ bool RasterizerSceneRD::reflection_probe_instance_postprocess_step(RID p_instanc
 
 	if (storage->reflection_probe_get_update_mode(rpi->probe) == RS::REFLECTION_PROBE_UPDATE_ALWAYS) {
 		// Using real time reflections, all roughness is done in one step
-		_create_reflection_fast_filter(atlas->reflections.write[rpi->atlas_index].data, false);
+		_create_reflection_fast_filter(atlas->reflections[rpi->atlas_index].data, false);
 		rpi->rendering = false;
 		rpi->processing_side = 0;
 		rpi->processing_layer = 1;
@@ -1563,7 +1563,7 @@ bool RasterizerSceneRD::reflection_probe_instance_postprocess_step(RID p_instanc
 	}
 
 	if (rpi->processing_layer > 1) {
-		_create_reflection_importance_sample(atlas->reflections.write[rpi->atlas_index].data, false, 10, rpi->processing_layer);
+		_create_reflection_importance_sample(atlas->reflections[rpi->atlas_index].data, false, 10, rpi->processing_layer);
 		rpi->processing_layer++;
 		if (rpi->processing_layer == atlas->reflections[rpi->atlas_index].data.layers[0].mipmaps.size()) {
 			rpi->rendering = false;
@@ -1574,7 +1574,7 @@ bool RasterizerSceneRD::reflection_probe_instance_postprocess_step(RID p_instanc
 		return false;
 
 	} else {
-		_create_reflection_importance_sample(atlas->reflections.write[rpi->atlas_index].data, false, rpi->processing_side, rpi->processing_layer);
+		_create_reflection_importance_sample(atlas->reflections[rpi->atlas_index].data, false, rpi->processing_side, rpi->processing_layer);
 	}
 
 	rpi->processing_side++;
@@ -1842,7 +1842,7 @@ bool RasterizerSceneRD::shadow_atlas_update_light(RID p_atlas, RID p_light_intan
 		bool should_redraw = shadow_atlas->quadrants[q].shadows[s].version != p_light_version;
 
 		if (!should_realloc) {
-			shadow_atlas->quadrants[q].shadows.write[s].version = p_light_version;
+			shadow_atlas->quadrants[q].shadows[s].version = p_light_version;
 			//already existing, see if it should redraw or it's just OK
 			return should_redraw;
 		}
@@ -1852,7 +1852,7 @@ bool RasterizerSceneRD::shadow_atlas_update_light(RID p_atlas, RID p_light_intan
 		//find a better place
 		if (_shadow_atlas_find_shadow(shadow_atlas, valid_quadrants, valid_quadrant_count, shadow_atlas->quadrants[q].subdivision, tick, new_quadrant, new_shadow)) {
 			//found a better place!
-			ShadowAtlas::Quadrant::Shadow *sh = &shadow_atlas->quadrants[new_quadrant].shadows.write[new_shadow];
+			ShadowAtlas::Quadrant::Shadow *sh = &shadow_atlas->quadrants[new_quadrant].shadows[new_shadow];
 			if (sh->owner.is_valid()) {
 				//is taken, but is invalid, erasing it
 				shadow_atlas->shadow_owners.erase(sh->owner);
@@ -1861,8 +1861,8 @@ bool RasterizerSceneRD::shadow_atlas_update_light(RID p_atlas, RID p_light_intan
 			}
 
 			//erase previous
-			shadow_atlas->quadrants[q].shadows.write[s].version = 0;
-			shadow_atlas->quadrants[q].shadows.write[s].owner = RID();
+			shadow_atlas->quadrants[q].shadows[s].version = 0;
+			shadow_atlas->quadrants[q].shadows[s].owner = RID();
 
 			sh->owner = p_light_intance;
 			sh->alloc_tick = tick;
@@ -1882,7 +1882,7 @@ bool RasterizerSceneRD::shadow_atlas_update_light(RID p_atlas, RID p_light_intan
 
 		//already existing, see if it should redraw or it's just OK
 
-		shadow_atlas->quadrants[q].shadows.write[s].version = p_light_version;
+		shadow_atlas->quadrants[q].shadows[s].version = p_light_version;
 
 		return should_redraw;
 	}
@@ -1892,7 +1892,7 @@ bool RasterizerSceneRD::shadow_atlas_update_light(RID p_atlas, RID p_light_intan
 	//find a better place
 	if (_shadow_atlas_find_shadow(shadow_atlas, valid_quadrants, valid_quadrant_count, -1, tick, new_quadrant, new_shadow)) {
 		//found a better place!
-		ShadowAtlas::Quadrant::Shadow *sh = &shadow_atlas->quadrants[new_quadrant].shadows.write[new_shadow];
+		ShadowAtlas::Quadrant::Shadow *sh = &shadow_atlas->quadrants[new_quadrant].shadows[new_shadow];
 		if (sh->owner.is_valid()) {
 			//is taken, but is invalid, erasing it
 			shadow_atlas->shadow_owners.erase(sh->owner);
@@ -2179,7 +2179,7 @@ RID RasterizerSceneRD::gi_probe_instance_create(RID p_base) {
 	gi_probe.slot = index;
 	gi_probe.probe = p_base;
 	RID rid = gi_probe_instance_owner.make_rid(gi_probe);
-	gi_probe_slots.write[index] = rid;
+	gi_probe_slots[index] = rid;
 
 	return rid;
 }
@@ -3421,7 +3421,7 @@ void RasterizerSceneRD::_render_buffers_post_process_and_tonemap(RID p_render_bu
 		storage->get_effects()->luminance_reduction(rb->texture, Size2i(rb->width, rb->height), rb->luminance.reduce, rb->luminance.current, env->min_luminance, env->max_luminance, step, set_immediate);
 
 		//swap final reduce with prev luminance
-		SWAP(rb->luminance.current, rb->luminance.reduce.write[rb->luminance.reduce.size() - 1]);
+		SWAP(rb->luminance.current, rb->luminance.reduce[rb->luminance.reduce.size() - 1]);
 		RenderingServerRaster::redraw_request(); //redraw all the time if auto exposure rendering is on
 	}
 
@@ -3990,7 +3990,7 @@ bool RasterizerSceneRD::free(RID p_rid) {
 			RD::get_singleton()->free(gi_probe->dynamic_maps[i].depth);
 		}
 
-		gi_probe_slots.write[gi_probe->slot] = RID();
+		gi_probe_slots[gi_probe->slot] = RID();
 
 		gi_probe_instance_owner.free(p_rid);
 	} else if (sky_owner.owns(p_rid)) {
@@ -4035,7 +4035,7 @@ bool RasterizerSceneRD::free(RID p_rid) {
 			uint32_t q = (key >> ShadowAtlas::QUADRANT_SHIFT) & 0x3;
 			uint32_t s = key & ShadowAtlas::SHADOW_INDEX_MASK;
 
-			shadow_atlas->quadrants[q].shadows.write[s].owner = RID();
+			shadow_atlas->quadrants[q].shadows[s].owner = RID();
 			shadow_atlas->shadow_owners.erase(p_rid);
 		}
 

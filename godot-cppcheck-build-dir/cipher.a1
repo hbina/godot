@@ -1,0 +1,523 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3543118954">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;def&apos; can be reduced." verbose="The scope of the variable &apos;def&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="97" column="40"/>
+            <symbol>def</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;type&apos; can be reduced." verbose="The scope of the variable &apos;type&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="98" column="10"/>
+            <symbol>type</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="352" column="9"/>
+            <symbol>ret</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:79:12" call-funcname="mbedtls_constant_time_memcmp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="958" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:79:12" call-funcname="mbedtls_constant_time_memcmp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="980" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;check_tag&apos; can be reduced." verbose="The scope of the variable &apos;check_tag&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="932" column="19"/>
+            <symbol>check_tag</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="933" column="9"/>
+            <symbol>ret</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:79:12" call-funcname="mbedtls_constant_time_memcmp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="980" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:79:12" call-funcname="mbedtls_constant_time_memcmp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="980" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:79:12" call-funcname="mbedtls_constant_time_memcmp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="958" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;copy_len&apos; is assigned a value that is never used." verbose="Variable &apos;copy_len&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="412" column="25"/>
+            <symbol>copy_len</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;prev_done&apos; can be reduced." verbose="The scope of the variable &apos;prev_done&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="644" column="29"/>
+            <symbol>prev_done</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:629:13" my-argnr="1" my-argname="output" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="635" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;prev_done&apos; can be reduced." verbose="The scope of the variable &apos;prev_done&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="721" column="29"/>
+            <symbol>prev_done</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:79:12" call-funcname="mbedtls_constant_time_memcmp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="958" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="&finish_olen" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c:756:5" call-funcname="mbedtls_cipher_finish" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="1017" col="38" call-argexpr="finish_olen" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/cipher.c" line="29" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_auth_encrypt" lineNumber="1029"/>
+    <functiondecl functionName="mbedtls_cipher_auth_decrypt" lineNumber="1084"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_constant_time_memcmp" lineNumber="79"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update_ad" lineNumber="308"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_write_tag" lineNumber="897"/>
+    <functiondecl functionName="mbedtls_cipher_check_tag" lineNumber="929"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_constant_time_memcmp" lineNumber="79"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update_ad" lineNumber="308"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_write_tag" lineNumber="897"/>
+    <functiondecl functionName="mbedtls_cipher_check_tag" lineNumber="929"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_constant_time_memcmp" lineNumber="79"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update_ad" lineNumber="308"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_write_tag" lineNumber="897"/>
+    <functiondecl functionName="mbedtls_cipher_check_tag" lineNumber="929"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_auth_encrypt" lineNumber="1029"/>
+    <functiondecl functionName="mbedtls_cipher_auth_decrypt" lineNumber="1084"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_auth_encrypt" lineNumber="1029"/>
+    <functiondecl functionName="mbedtls_cipher_auth_decrypt" lineNumber="1084"/>
+    <functiondecl functionName="mbedtls_constant_time_memcmp" lineNumber="79"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update_ad" lineNumber="308"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_write_tag" lineNumber="897"/>
+    <functiondecl functionName="mbedtls_cipher_check_tag" lineNumber="929"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_auth_encrypt" lineNumber="1029"/>
+    <functiondecl functionName="mbedtls_cipher_auth_decrypt" lineNumber="1084"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="get_no_padding" lineNumber="744"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_set_padding_mode" lineNumber="847"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="add_one_and_zeros_padding" lineNumber="629"/>
+    <functiondecl functionName="get_one_and_zeros_padding" lineNumber="640"/>
+    <functiondecl functionName="get_no_padding" lineNumber="744"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_set_padding_mode" lineNumber="847"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="add_pkcs_padding" lineNumber="589"/>
+    <functiondecl functionName="get_pkcs_padding" lineNumber="599"/>
+    <functiondecl functionName="get_no_padding" lineNumber="744"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_set_padding_mode" lineNumber="847"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="add_zeros_padding" lineNumber="708"/>
+    <functiondecl functionName="get_zeros_padding" lineNumber="717"/>
+    <functiondecl functionName="get_no_padding" lineNumber="744"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_set_padding_mode" lineNumber="847"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="add_zeros_and_len_padding" lineNumber="668"/>
+    <functiondecl functionName="get_zeros_and_len_padding" lineNumber="679"/>
+    <functiondecl functionName="get_no_padding" lineNumber="744"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_set_padding_mode" lineNumber="847"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functiondecl functionName="mbedtls_constant_time_memcmp" lineNumber="79"/>
+    <functiondecl functionName="mbedtls_cipher_list" lineNumber="95"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_type" lineNumber="116"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_string" lineNumber="127"/>
+    <functiondecl functionName="mbedtls_cipher_info_from_values" lineNumber="141"/>
+    <functiondecl functionName="mbedtls_cipher_init" lineNumber="156"/>
+    <functiondecl functionName="mbedtls_cipher_free" lineNumber="162"/>
+    <functiondecl functionName="mbedtls_cipher_setup" lineNumber="182"/>
+    <functiondecl functionName="mbedtls_cipher_setkey" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_cipher_set_iv" lineNumber="249"/>
+    <functiondecl functionName="mbedtls_cipher_reset" lineNumber="296"/>
+    <functiondecl functionName="mbedtls_cipher_update_ad" lineNumber="308"/>
+    <functiondecl functionName="mbedtls_cipher_update" lineNumber="349"/>
+    <functiondecl functionName="mbedtls_cipher_finish" lineNumber="756"/>
+    <functiondecl functionName="mbedtls_cipher_write_tag" lineNumber="897"/>
+    <functiondecl functionName="mbedtls_cipher_check_tag" lineNumber="929"/>
+    <functiondecl functionName="mbedtls_cipher_crypt" lineNumber="994"/>
+    <functioncall functionName="MBEDTLS_CHACHAPOLY_DECRYPT"/>
+    <functioncall functionName="MBEDTLS_CHACHAPOLY_ENCRYPT"/>
+    <functioncall functionName="MBEDTLS_ERR_CIPHER_ALLOC_FAILED"/>
+    <functioncall functionName="MBEDTLS_ERR_CIPHER_AUTH_FAILED"/>
+    <functioncall functionName="MBEDTLS_ERR_CIPHER_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_CIPHER_FEATURE_UNAVAILABLE"/>
+    <functioncall functionName="MBEDTLS_ERR_CIPHER_FULL_BLOCK_EXPECTED"/>
+    <functioncall functionName="MBEDTLS_ERR_CIPHER_INVALID_CONTEXT"/>
+    <functioncall functionName="MBEDTLS_GCM_ENCRYPT"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE_RET"/>
+    <functioncall functionName="MBEDTLS_PADDING_NONE"/>
+    <functioncall functionName="MBEDTLS_PADDING_PKCS7"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="actual_iv_size"/>
+    <functioncall functionName="ad"/>
+    <functioncall functionName="ad_len"/>
+    <functioncall functionName="add_one_and_zeros_padding"/>
+    <functioncall functionName="add_padding"/>
+    <functioncall functionName="add_pkcs_padding"/>
+    <functioncall functionName="add_zeros_and_len_padding"/>
+    <functioncall functionName="add_zeros_padding"/>
+    <functioncall functionName="block_size"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cbc_func"/>
+    <functioncall functionName="cfb_func"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="check_tag"/>
+    <functioncall functionName="cipher_ctx"/>
+    <functioncall functionName="cipher_info"/>
+    <functioncall functionName="cipher_name"/>
+    <functioncall functionName="cmac_ctx"/>
+    <functioncall functionName="copy_len"/>
+    <functioncall functionName="ctr_func"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="ctx_alloc_func"/>
+    <functioncall functionName="ctx_free_func"/>
+    <functioncall functionName="data_len"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="diff"/>
+    <functioncall functionName="done"/>
+    <functioncall functionName="ecb_func"/>
+    <functioncall functionName="finish_olen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get_no_padding"/>
+    <functioncall functionName="get_one_and_zeros_padding"/>
+    <functioncall functionName="get_padding"/>
+    <functioncall functionName="get_pkcs_padding"/>
+    <functioncall functionName="get_zeros_and_len_padding"/>
+    <functioncall functionName="get_zeros_padding"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ilen"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="input_len"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="iv"/>
+    <functioncall functionName="iv_len"/>
+    <functioncall functionName="iv_size"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="key_bitlen"/>
+    <functioncall functionName="mbedtls_ccm_auth_decrypt"/>
+    <functioncall functionName="mbedtls_ccm_encrypt_and_tag"/>
+    <functioncall functionName="mbedtls_chacha20_starts"/>
+    <functioncall functionName="mbedtls_chachapoly_auth_decrypt"/>
+    <functioncall functionName="mbedtls_chachapoly_encrypt_and_tag"/>
+    <functioncall functionName="mbedtls_chachapoly_finish"/>
+    <functioncall functionName="mbedtls_chachapoly_starts"/>
+    <functioncall functionName="mbedtls_chachapoly_update"/>
+    <functioncall functionName="mbedtls_chachapoly_update_aad"/>
+    <functioncall functionName="mbedtls_cipher_context_t"/>
+    <functioncall functionName="mbedtls_cipher_definitions"/>
+    <functioncall functionName="mbedtls_cipher_finish"/>
+    <functioncall functionName="mbedtls_cipher_get_block_size"/>
+    <functioncall functionName="mbedtls_cipher_get_iv_size"/>
+    <functioncall functionName="mbedtls_cipher_reset"/>
+    <functioncall functionName="mbedtls_cipher_set_iv"/>
+    <functioncall functionName="mbedtls_cipher_set_padding_mode"/>
+    <functioncall functionName="mbedtls_cipher_supported"/>
+    <functioncall functionName="mbedtls_cipher_update"/>
+    <functioncall functionName="mbedtls_cmac_context_t"/>
+    <functioncall functionName="mbedtls_constant_time_memcmp"/>
+    <functioncall functionName="mbedtls_gcm_auth_decrypt"/>
+    <functioncall functionName="mbedtls_gcm_crypt_and_tag"/>
+    <functioncall functionName="mbedtls_gcm_finish"/>
+    <functioncall functionName="mbedtls_gcm_starts"/>
+    <functioncall functionName="mbedtls_gcm_update"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="ofb_func"/>
+    <functioncall functionName="olen"/>
+    <functioncall functionName="operation"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="padding_len"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="setkey_dec_func"/>
+    <functioncall functionName="setkey_enc_func"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="stream_func"/>
+    <functioncall functionName="supported_init"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="tag_len"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="unprocessed_data"/>
+    <functioncall functionName="unprocessed_len"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="xts_func"/>
+  </FileInfo>
+</analyzerinfo>

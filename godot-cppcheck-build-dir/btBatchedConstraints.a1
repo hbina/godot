@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="367197943">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;PreallocatedMemoryHelper &lt; 10 &gt;::m_chunks&apos; is not initialized in the constructor." verbose="Member variable &apos;PreallocatedMemoryHelper &lt; 10 &gt;::m_chunks&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="619" column="2"/>
+            <symbol>PreallocatedMemoryHelper &lt; 10 &gt;::m_chunks</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;AssignConstraintsToGridBatchesLoop&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;AssignConstraintsToGridBatchesLoop&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="778" column="2"/>
+            <symbol>AssignConstraintsToGridBatchesLoop</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;inParallel&apos; is always true" verbose="Condition &apos;inParallel&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="239" column="6" info="Condition &apos;inParallel&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="238" column="20" info="Assignment &apos;inParallel=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;useRunLengthEncoding&apos; is always true" verbose="Condition &apos;useRunLengthEncoding&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="258" column="6" info="Condition &apos;useRunLengthEncoding&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="257" column="30" info="Assignment &apos;useRunLengthEncoding=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;inParallel&apos; is always true" verbose="Condition &apos;inParallel&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="498" column="6" info="Condition &apos;inParallel&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="497" column="20" info="Assignment &apos;inParallel=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;inParallel&apos; is always true" verbose="Condition &apos;inParallel&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="991" column="7" info="Condition &apos;inParallel&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="990" column="21" info="Assignment &apos;inParallel=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="shadowArgument" severity="style" msg="Local variable &apos;numConstraints&apos; shadows outer argument" verbose="Local variable &apos;numConstraints&apos; shadows outer argument" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="558" column="9" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="532" column="12" info="Shadowed declaration"/>
+            <symbol>numConstraints</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;minNumBatchesPerPhase&apos; is assigned a value that is never used." verbose="Variable &apos;minNumBatchesPerPhase&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="832" column="28"/>
+            <symbol>minNumBatchesPerPhase</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:705:13" call-funcname="assignConstraintsToGridBatches" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="999" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:101:13" call-funcname="debugDrawSingleBatch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="140" col="4" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:124:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:124:13" call-funcname="debugDrawPhase" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="170" col="4" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:145:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:489:13" call-funcname="writeOutConstraintIndicesMt" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="575" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:530:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:530:13" call-funcname="writeOutBatches" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="1032" col="2" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:816:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:816:13" call-funcname="setupSpatialGridBatchesMt" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="1074" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.h:53:7" my-argnr="6"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:175:13" my-argnr="1" my-argname="outBodyDynamicFlags" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="178" col="50" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:331:13" my-argnr="1" my-argname="outConInfos" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="334" col="61" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:515:13" my-argnr="1" my-argname="bc" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="518" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:530:13" my-argnr="1" my-argname="bc" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="540" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:1036:13" my-argnr="1" my-argname="bc" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="1043" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:234:12" my-argnr="2" my-argname="constraints" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="237" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:331:13" my-argnr="2" my-argname="constraints" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="335" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:816:13" my-argnr="2" my-argname="scratchMemory" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="855" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp:816:13" my-argnr="3" my-argname="constraints" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="827" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.h:53:7" my-argnr="1" my-argname="constraints" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btBatchedConstraints.cpp" line="1071" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="validate" lineNumber="46"/>
+    <functiondecl functionName="debugDrawSingleBatch" lineNumber="101"/>
+    <functiondecl functionName="debugDrawPhase" lineNumber="124"/>
+    <functiondecl functionName="debugDrawAllBatches" lineNumber="145"/>
+    <functiondecl functionName="initBatchedBodyDynamicFlags" lineNumber="175"/>
+    <functiondecl functionName="runLengthEncodeConstraintInfo" lineNumber="187"/>
+    <functiondecl functionName="forLoop" lineNumber="220"/>
+    <functiondecl functionName="initBatchedConstraintInfo" lineNumber="234"/>
+    <functiondecl functionName="expandConstraintRowsInPlace" lineNumber="265"/>
+    <functiondecl functionName="expandConstraintRows" lineNumber="286"/>
+    <functiondecl functionName="forLoop" lineNumber="317"/>
+    <functiondecl functionName="expandConstraintRowsMt" lineNumber="323"/>
+    <functiondecl functionName="initBatchedConstraintInfoArray" lineNumber="331"/>
+    <functiondecl functionName="mergeSmallBatches" lineNumber="342"/>
+    <functiondecl functionName="updateConstraintBatchIdsForMerges" lineNumber="388"/>
+    <functiondecl functionName="forLoop" lineNumber="417"/>
+    <functiondecl functionName="updateConstraintBatchIdsForMergesMt" lineNumber="424"/>
+    <functiondecl functionName="BatchCompare" lineNumber="432"/>
+    <functiondecl functionName="writeOutConstraintIndicesForRangeOfBatches" lineNumber="439"/>
+    <functiondecl functionName="forLoop" lineNumber="475"/>
+    <functiondecl functionName="writeOutConstraintIndicesMt" lineNumber="489"/>
+    <functiondecl functionName="writeGrainSizes" lineNumber="515"/>
+    <functiondecl functionName="writeOutBatches" lineNumber="530"/>
+    <functiondecl functionName="findMaxDynamicConstraintExtent" lineNumber="653"/>
+    <functiondecl functionName="assignConstraintsToGridBatches" lineNumber="705"/>
+    <functiondecl functionName="forLoop" lineNumber="782"/>
+    <functiondecl functionName="setupSpatialGridBatchesMt" lineNumber="816"/>
+    <functiondecl functionName="setupSingleBatch" lineNumber="1036"/>
+    <functiondecl functionName="setup" lineNumber="1063"/>
+    <functiondecl functionName="addChunk" lineNumber="620"/>
+    <functiondecl functionName="getSizeToAllocate" lineNumber="631"/>
+    <functiondecl functionName="setChunkPointers" lineNumber="640"/>
+    <functioncall functionName="AssignConstraintsToGridBatchesLoop"/>
+    <functioncall functionName="AssignConstraintsToGridBatchesParams"/>
+    <functioncall functionName="BATCHING_METHOD_COUNT"/>
+    <functioncall functionName="BATCHING_METHOD_SPATIAL_GRID_2D"/>
+    <functioncall functionName="BATCHING_METHOD_SPATIAL_GRID_3D"/>
+    <functioncall functionName="BT_LARGE_FLOAT"/>
+    <functioncall functionName="BT_PROFILE"/>
+    <functioncall functionName="BatchCompare"/>
+    <functioncall functionName="ExpandConstraintRowsLoop"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Range"/>
+    <functioncall functionName="ReadSolverConstraintsLoop"/>
+    <functioncall functionName="UpdateConstraintBatchIdsForMergesLoop"/>
+    <functioncall functionName="WriteOutConstraintIndicesLoop"/>
+    <functioncall functionName="_beg"/>
+    <functioncall functionName="_end"/>
+    <functioncall functionName="absolute"/>
+    <functioncall functionName="addChunk"/>
+    <functioncall functionName="assignConstraintsToGridBatches"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="batchBegin"/>
+    <functioncall functionName="batchEnd"/>
+    <functioncall functionName="batchWork"/>
+    <functioncall functionName="batchedConstraints"/>
+    <functioncall functionName="batches"/>
+    <functioncall functionName="bboxMin"/>
+    <functioncall functionName="bc"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bodies"/>
+    <functioncall functionName="bodyDynamicFlags"/>
+    <functioncall functionName="bodyGridCoords"/>
+    <functioncall functionName="bodyPos"/>
+    <functioncall functionName="bodyPositions"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btBatchInfo"/>
+    <functioncall functionName="btBatchedConstraintInfo"/>
+    <functioncall functionName="btBatchedConstraints"/>
+    <functioncall functionName="btClamp"/>
+    <functioncall functionName="btGetTaskScheduler"/>
+    <functioncall functionName="btIntVec3"/>
+    <functioncall functionName="btMax"/>
+    <functioncall functionName="btMin"/>
+    <functioncall functionName="btParallelFor"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="capacity"/>
+    <functioncall functionName="chunkPtr"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="collapseAxis"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="color0"/>
+    <functioncall functionName="color1"/>
+    <functioncall functionName="conInfos"/>
+    <functioncall functionName="consExtent"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constraintBatchIds"/>
+    <functioncall functionName="constraintIdPerBatch"/>
+    <functioncall functionName="constraintIndex"/>
+    <functioncall functionName="constraintRowBatchIds"/>
+    <functioncall functionName="constraints"/>
+    <functioncall functionName="coordMin"/>
+    <functioncall functionName="coordOffset"/>
+    <functioncall functionName="curBatchBegin"/>
+    <functioncall functionName="curPhaseBegin"/>
+    <functioncall functionName="debugDrawAllBatches"/>
+    <functioncall functionName="debugDrawPhase"/>
+    <functioncall functionName="debugDrawSingleBatch"/>
+    <functioncall functionName="destConstraintBatchIds"/>
+    <functioncall functionName="drawLine"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="expandConstraintRows"/>
+    <functioncall functionName="expandConstraintRowsMt"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="findMaxDynamicConstraintExtent"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getNumThreads"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getSizeToAllocate"/>
+    <functioncall functionName="getWorldTransform"/>
+    <functioncall functionName="grainSize"/>
+    <functioncall functionName="gridCellSize"/>
+    <functioncall functionName="gridChunkDim"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iAxisToCollapse"/>
+    <functioncall functionName="iBatch"/>
+    <functioncall functionName="iBegin"/>
+    <functioncall functionName="iBeginBatch"/>
+    <functioncall functionName="iBody"/>
+    <functioncall functionName="iBody0"/>
+    <functioncall functionName="iBody1"/>
+    <functioncall functionName="iCon"/>
+    <functioncall functionName="iConBegin"/>
+    <functioncall functionName="iCons"/>
+    <functioncall functionName="iConstraint"/>
+    <functioncall functionName="iDest"/>
+    <functioncall functionName="iDestBatch"/>
+    <functioncall functionName="iDestCon"/>
+    <functioncall functionName="iEnd"/>
+    <functioncall functionName="iEndBatch"/>
+    <functioncall functionName="iMergeDest"/>
+    <functioncall functionName="iNext"/>
+    <functioncall functionName="iPhase"/>
+    <functioncall functionName="iSrc"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="iiCon"/>
+    <functioncall functionName="iiCons"/>
+    <functioncall functionName="inParallel"/>
+    <functioncall functionName="initBatchedConstraintInfo"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="internalGetInvMass"/>
+    <functioncall functionName="isDynamic"/>
+    <functioncall functionName="isZero"/>
+    <functioncall functionName="kNoMerge"/>
+    <functioncall functionName="kUnassignedBatch"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="loop"/>
+    <functioncall functionName="m_batchedConstraints"/>
+    <functioncall functionName="m_batches"/>
+    <functioncall functionName="m_constraintBatchIds"/>
+    <functioncall functionName="m_constraintIdPerBatch"/>
+    <functioncall functionName="m_destConstraintBatchIds"/>
+    <functioncall functionName="m_numBatches"/>
+    <functioncall functionName="m_numChunks"/>
+    <functioncall functionName="m_numConstraintRows"/>
+    <functioncall functionName="m_numConstraints"/>
+    <functioncall functionName="m_solverBodyIdA"/>
+    <functioncall functionName="m_solverBodyIdB"/>
+    <functioncall functionName="maxBatchSize"/>
+    <functioncall functionName="maxGridChunkCount"/>
+    <functioncall functionName="maxNumBatchesPerPhase"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="memPtr"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mergeIndex"/>
+    <functioncall functionName="mergeSmallBatches"/>
+    <functioncall functionName="minBatchSize"/>
+    <functioncall functionName="newSize"/>
+    <functioncall functionName="numBatches"/>
+    <functioncall functionName="numConstraintRows"/>
+    <functioncall functionName="numConstraints"/>
+    <functioncall functionName="numGridChunks"/>
+    <functioncall functionName="numPhases"/>
+    <functioncall functionName="numThreads"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="outConInfos"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="phaseMask"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="pos0"/>
+    <functioncall functionName="pos1"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quickSortInternal"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resizeNoInitialize"/>
+    <functioncall functionName="runLengthEncodeConstraintInfo"/>
+    <functioncall functionName="s_debugDrawBatches"/>
+    <functioncall functionName="scratchMemory"/>
+    <functioncall functionName="scratchSize"/>
+    <functioncall functionName="setChunkPointers"/>
+    <functioncall functionName="setMax"/>
+    <functioncall functionName="setMin"/>
+    <functioncall functionName="setupSingleBatch"/>
+    <functioncall functionName="setupSpatialGridBatchesMt"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="srcConstraintBatchIds"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="sz"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="totalSize"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tt"/>
+    <functioncall functionName="updateConstraintBatchIdsForMerges"/>
+    <functioncall functionName="updateConstraintBatchIdsForMergesMt"/>
+    <functioncall functionName="use2DGrid"/>
+    <functioncall functionName="useRunLengthEncoding"/>
+    <functioncall functionName="validate"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="writeGrainSizes"/>
+    <functioncall functionName="writeOutBatches"/>
+    <functioncall functionName="writeOutConstraintIndicesForRangeOfBatches"/>
+    <functioncall functionName="writeOutConstraintIndicesMt"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

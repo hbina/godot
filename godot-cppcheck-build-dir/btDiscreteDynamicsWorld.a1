@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2627464750">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;if(body0)&apos; is redundant or there is possible null pointer dereference: body0." verbose="Either the condition &apos;if(body0)&apos; is redundant or there is possible null pointer dereference: body0." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1078" column="34" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1081" column="9" info="Assuming that condition &apos;if(body0)&apos; is not redundant"/>
+            <symbol>body0</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;if(body1)&apos; is redundant or there is possible null pointer dereference: body1." verbose="Either the condition &apos;if(body1)&apos; is redundant or there is possible null pointer dereference: body1." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1079" column="34" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1083" column="9" info="Assuming that condition &apos;if(body1)&apos; is not redundant"/>
+            <symbol>body1</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1414" column="40"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="295" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;tr&apos; shadows outer variable" verbose="Local variable &apos;tr&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1331" column="17" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1325" column="16" info="Shadowed declaration"/>
+            <symbol>tr</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;other&apos; can be declared with const" verbose="Parameter &apos;other&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="104" column="70"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="73" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="72" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:794:15" my-argnr="1" my-argname="proxy0" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="797" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" my-argnr="1" my-argname="lhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="60" col="38" value="0"/>
+  </FileInfo>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="1410" column="41"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="73" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="72" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:794:15" my-argnr="1" my-argname="proxy0" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="797" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" my-argnr="1" my-argname="lhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="60" col="38" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="73" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="72" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:794:15" my-argnr="1" my-argname="proxy0" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="797" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" my-argnr="1" my-argname="lhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="60" col="38" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="73" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" call-funcname="btGetConstraintIslandId" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="72" col="16" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:69:7" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:794:15" my-argnr="1" my-argname="proxy0" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="797" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp:56:23" my-argnr="1" my-argname="lhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btDiscreteDynamicsWorld.cpp" line="60" col="38" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="btGetConstraintIslandId" lineNumber="56"/>
+    <functiondecl functionName="setup" lineNumber="111"/>
+    <functiondecl functionName="processIsland" lineNumber="123"/>
+    <functiondecl functionName="processConstraints" lineNumber="178"/>
+    <functiondecl functionName="addSingleResult" lineNumber="773"/>
+    <functiondecl functionName="needsCollision" lineNumber="794"/>
+    <functiondecl functionName="btGetConstraintIslandId" lineNumber="56"/>
+    <functiondecl functionName="setup" lineNumber="111"/>
+    <functiondecl functionName="processIsland" lineNumber="123"/>
+    <functiondecl functionName="processConstraints" lineNumber="178"/>
+    <functiondecl functionName="addSingleResult" lineNumber="773"/>
+    <functiondecl functionName="needsCollision" lineNumber="794"/>
+    <functiondecl functionName="btGetConstraintIslandId" lineNumber="56"/>
+    <functiondecl functionName="setup" lineNumber="111"/>
+    <functiondecl functionName="processIsland" lineNumber="123"/>
+    <functiondecl functionName="processConstraints" lineNumber="178"/>
+    <functiondecl functionName="addSingleResult" lineNumber="773"/>
+    <functiondecl functionName="needsCollision" lineNumber="794"/>
+    <functiondecl functionName="needsCollision" lineNumber="877"/>
+    <functiondecl functionName="btGetConstraintIslandId" lineNumber="56"/>
+    <functiondecl functionName="setup" lineNumber="111"/>
+    <functiondecl functionName="processIsland" lineNumber="123"/>
+    <functiondecl functionName="processConstraints" lineNumber="178"/>
+    <functiondecl functionName="addSingleResult" lineNumber="773"/>
+    <functiondecl functionName="needsCollision" lineNumber="794"/>
+    <functiondecl functionName="needsCollision" lineNumber="979"/>
+    <functioncall functionName="ACTIVE_TAG"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="AllFilter"/>
+    <functioncall functionName="BT_CONSTRAINT_CODE"/>
+    <functioncall functionName="BT_DISABLE_WORLD_GRAVITY"/>
+    <functioncall functionName="BT_DYNAMICSWORLD_CODE"/>
+    <functioncall functionName="BT_PROFILE"/>
+    <functioncall functionName="BT_RIGIDBODY_CODE"/>
+    <functioncall functionName="CO_RIGID_BODY"/>
+    <functioncall functionName="ClosestConvexResultCallback"/>
+    <functioncall functionName="DBG_DrawConstraintLimits"/>
+    <functioncall functionName="DBG_DrawConstraints"/>
+    <functioncall functionName="DBG_DrawNormals"/>
+    <functioncall functionName="DBG_NoDeactivation"/>
+    <functioncall functionName="DefaultFilter"/>
+    <functioncall functionName="GetPointForAngle"/>
+    <functioncall functionName="ISLAND_SLEEPING"/>
+    <functioncall functionName="Increment_Frame_Counter"/>
+    <functioncall functionName="InplaceSolverIslandCallback"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Reset"/>
+    <functioncall functionName="SIMD_2_PI"/>
+    <functioncall functionName="SIMD_PI"/>
+    <functioncall functionName="StaticFilter"/>
+    <functioncall functionName="WANTS_DEACTIVATION"/>
+    <functioncall functionName="a_max"/>
+    <functioncall functionName="a_min"/>
+    <functioncall functionName="action"/>
+    <functioncall functionName="addAction"/>
+    <functioncall functionName="addCollisionObject"/>
+    <functioncall functionName="addConstraintRef"/>
+    <functioncall functionName="addManifoldPoint"/>
+    <functioncall functionName="addSingleResult"/>
+    <functioncall functionName="allSolved"/>
+    <functioncall functionName="allocate"/>
+    <functioncall functionName="applyDamping"/>
+    <functioncall functionName="applyGravity"/>
+    <functioncall functionName="applyImpulse"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="axis1"/>
+    <functioncall functionName="ay"/>
+    <functioncall functionName="az"/>
+    <functioncall functionName="bbMax"/>
+    <functioncall functionName="bbMin"/>
+    <functioncall functionName="bodies"/>
+    <functioncall functionName="body"/>
+    <functioncall functionName="body0"/>
+    <functioncall functionName="body1"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="broadphase"/>
+    <functioncall functionName="btAlignedAlloc"/>
+    <functioncall functionName="btAlignedFree"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btClosestNotMeConvexResultCallback"/>
+    <functioncall functionName="btCollisionWorld"/>
+    <functioncall functionName="btConstraintSolver"/>
+    <functioncall functionName="btCos"/>
+    <functioncall functionName="btDiscreteDynamicsWorld"/>
+    <functioncall functionName="btDynamicsWorld"/>
+    <functioncall functionName="btDynamicsWorldDoubleData"/>
+    <functioncall functionName="btDynamicsWorldFloatData"/>
+    <functioncall functionName="btFuzzyZero"/>
+    <functioncall functionName="btGetConstraintIslandId"/>
+    <functioncall functionName="btMutexLock"/>
+    <functioncall functionName="btMutexUnlock"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btSequentialImpulseConstraintSolver"/>
+    <functioncall functionName="btSimulationIslandManager"/>
+    <functioncall functionName="btSin"/>
+    <functioncall functionName="btSortConstraintOnIslandPredicate"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="buildAndProcessIslands"/>
+    <functioncall functionName="calculateSerializeBufferSize"/>
+    <functioncall functionName="calculateSimulationIslands"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="character"/>
+    <functioncall functionName="chunk"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clearForces"/>
+    <functioncall functionName="colObj"/>
+    <functioncall functionName="colObj0"/>
+    <functioncall functionName="colObj1"/>
+    <functioncall functionName="collides"/>
+    <functioncall functionName="collisionConfiguration"/>
+    <functioncall functionName="collisionFilterGroup"/>
+    <functioncall functionName="collisionFilterMask"/>
+    <functioncall functionName="collisionObject"/>
+    <functioncall functionName="combinedRestitution"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constraint"/>
+    <functioncall functionName="constraintSolver"/>
+    <functioncall functionName="constraints"/>
+    <functioncall functionName="constraintsPtr"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convexResult"/>
+    <functioncall functionName="convexSweepTest"/>
+    <functioncall functionName="createPredictiveContacts"/>
+    <functioncall functionName="createPredictiveContactsInternal"/>
+    <functioncall functionName="dbgDrawSize"/>
+    <functioncall functionName="debugDraw"/>
+    <functioncall functionName="debugDrawConstraint"/>
+    <functioncall functionName="debugDrawWorld"/>
+    <functioncall functionName="debugDrawer"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="disableCollisionsBetweenLinkedBodies"/>
+    <functioncall functionName="dispatcher"/>
+    <functioncall functionName="distVec"/>
+    <functioncall functionName="distance"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="drawArc"/>
+    <functioncall functionName="drawBox"/>
+    <functioncall functionName="drawConstraints"/>
+    <functioncall functionName="drawFrames"/>
+    <functioncall functionName="drawLimits"/>
+    <functioncall functionName="drawLine"/>
+    <functioncall functionName="drawSect"/>
+    <functioncall functionName="drawSpherePatch"/>
+    <functioncall functionName="drawTransform"/>
+    <functioncall functionName="enable"/>
+    <functioncall functionName="fAngleInRadians"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finalizeChunk"/>
+    <functioncall functionName="finishSerialization"/>
+    <functioncall functionName="fixedTimeStep"/>
+    <functioncall functionName="flushLines"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fromA"/>
+    <functioncall functionName="gCalculateCombinedFrictionCallback"/>
+    <functioncall functionName="gCalculateCombinedRestitutionCallback"/>
+    <functioncall functionName="getAFrame"/>
+    <functioncall functionName="getActivationState"/>
+    <functioncall functionName="getAngle"/>
+    <functioncall functionName="getBFrame"/>
+    <functioncall functionName="getBasis"/>
+    <functioncall functionName="getBody0"/>
+    <functioncall functionName="getBody1"/>
+    <functioncall functionName="getBroadphase"/>
+    <functioncall functionName="getBroadphaseHandle"/>
+    <functioncall functionName="getBroadphaseProxy"/>
+    <functioncall functionName="getCalculatedTransformA"/>
+    <functioncall functionName="getCalculatedTransformB"/>
+    <functioncall functionName="getCcdSquareMotionThreshold"/>
+    <functioncall functionName="getCcdSweptSphereRadius"/>
+    <functioncall functionName="getCenterOfMassTransform"/>
+    <functioncall functionName="getCollisionShape"/>
+    <functioncall functionName="getCollisionWorld"/>
+    <functioncall functionName="getColumn"/>
+    <functioncall functionName="getConstraint"/>
+    <functioncall functionName="getConstraintType"/>
+    <functioncall functionName="getContactPoint"/>
+    <functioncall functionName="getDbgDrawSize"/>
+    <functioncall functionName="getDebugDrawer"/>
+    <functioncall functionName="getDebugMode"/>
+    <functioncall functionName="getDispatchInfo"/>
+    <functioncall functionName="getDispatcher"/>
+    <functioncall functionName="getFlags"/>
+    <functioncall functionName="getHitFraction"/>
+    <functioncall functionName="getInternalType"/>
+    <functioncall functionName="getInterpolationAngularVelocity"/>
+    <functioncall functionName="getInterpolationLinearVelocity"/>
+    <functioncall functionName="getInterpolationWorldTransform"/>
+    <functioncall functionName="getInvMass"/>
+    <functioncall functionName="getIslandTag"/>
+    <functioncall functionName="getLowerAngLimit"/>
+    <functioncall functionName="getLowerLimit"/>
+    <functioncall functionName="getLowerLinLimit"/>
+    <functioncall functionName="getMotionState"/>
+    <functioncall functionName="getNewManifold"/>
+    <functioncall functionName="getNumCollisionObjects"/>
+    <functioncall functionName="getNumConstraints"/>
+    <functioncall functionName="getNumContacts"/>
+    <functioncall functionName="getNumManifolds"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getOverlapFilterCallback"/>
+    <functioncall functionName="getOverlappingPairCache"/>
+    <functioncall functionName="getPivotInA"/>
+    <functioncall functionName="getPivotInB"/>
+    <functioncall functionName="getPositionWorldOnA"/>
+    <functioncall functionName="getPositionWorldOnB"/>
+    <functioncall functionName="getRigidBodyA"/>
+    <functioncall functionName="getRigidBodyB"/>
+    <functioncall functionName="getRotationalLimitMotor"/>
+    <functioncall functionName="getSimulationIslandManager"/>
+    <functioncall functionName="getSolverInfo"/>
+    <functioncall functionName="getTranslationalLimitMotor"/>
+    <functioncall functionName="getTwistAngle"/>
+    <functioncall functionName="getTwistSpan"/>
+    <functioncall functionName="getUnionFind"/>
+    <functioncall functionName="getUpperAngLimit"/>
+    <functioncall functionName="getUpperLimit"/>
+    <functioncall functionName="getUpperLinLimit"/>
+    <functioncall functionName="getUseLinearReferenceFrameA"/>
+    <functioncall functionName="getWorldTransform"/>
+    <functioncall functionName="gravity"/>
+    <functioncall functionName="group"/>
+    <functioncall functionName="hasContactResponse"/>
+    <functioncall functionName="hasHit"/>
+    <functioncall functionName="hasLimit"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="imp"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="integrateTransform"/>
+    <functioncall functionName="integrateTransforms"/>
+    <functioncall functionName="integrateTransformsInternal"/>
+    <functioncall functionName="internalSingleStepSimulation"/>
+    <functioncall functionName="interpolatedTransform"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="isActive"/>
+    <functioncall functionName="isConvex"/>
+    <functioncall functionName="isEnabled"/>
+    <functioncall functionName="isKinematicObject"/>
+    <functioncall functionName="isPreTick"/>
+    <functioncall functionName="isPredictive"/>
+    <functioncall functionName="isStaticObject"/>
+    <functioncall functionName="isStaticOrKinematicObject"/>
+    <functioncall functionName="latencyInterpolation"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="lhs"/>
+    <functioncall functionName="li_max"/>
+    <functioncall functionName="li_min"/>
+    <functioncall functionName="linVelB"/>
+    <functioncall functionName="localPointB"/>
+    <functioncall functionName="m_allowedCcdPenetration"/>
+    <functioncall functionName="m_allowedPenetration"/>
+    <functioncall functionName="m_applySpeculativeContactRestitution"/>
+    <functioncall functionName="m_clientObject"/>
+    <functioncall functionName="m_closestHitFraction"/>
+    <functioncall functionName="m_collisionFilterGroup"/>
+    <functioncall functionName="m_collisionFilterMask"/>
+    <functioncall functionName="m_constraintSolver"/>
+    <functioncall functionName="m_convexFromWorld"/>
+    <functioncall functionName="m_damping"/>
+    <functioncall functionName="m_debugDrawer"/>
+    <functioncall functionName="m_dispatcher"/>
+    <functioncall functionName="m_erp"/>
+    <functioncall functionName="m_erp2"/>
+    <functioncall functionName="m_fixedTimeStep"/>
+    <functioncall functionName="m_friction"/>
+    <functioncall functionName="m_globalCfm"/>
+    <functioncall functionName="m_gravity"/>
+    <functioncall functionName="m_hiLimit"/>
+    <functioncall functionName="m_hitCollisionObject"/>
+    <functioncall functionName="m_hitNormalWorld"/>
+    <functioncall functionName="m_internalPreTickCallback"/>
+    <functioncall functionName="m_internalTickCallback"/>
+    <functioncall functionName="m_islandManager"/>
+    <functioncall functionName="m_latencyMotionStateInterpolation"/>
+    <functioncall functionName="m_linearSlop"/>
+    <functioncall functionName="m_loLimit"/>
+    <functioncall functionName="m_localTime"/>
+    <functioncall functionName="m_lowerLimit"/>
+    <functioncall functionName="m_maxErrorReduction"/>
+    <functioncall functionName="m_maxGyroscopicForce"/>
+    <functioncall functionName="m_me"/>
+    <functioncall functionName="m_minimumSolverBatchSize"/>
+    <functioncall functionName="m_numConstraints"/>
+    <functioncall functionName="m_numIterations"/>
+    <functioncall functionName="m_oldPtr"/>
+    <functioncall functionName="m_ownsConstraintSolver"/>
+    <functioncall functionName="m_ownsIslandManager"/>
+    <functioncall functionName="m_pairCache"/>
+    <functioncall functionName="m_predictiveManifoldsMutex"/>
+    <functioncall functionName="m_profileTimings"/>
+    <functioncall functionName="m_restingContactRestitutionThreshold"/>
+    <functioncall functionName="m_restitution"/>
+    <functioncall functionName="m_singleAxisRollingFrictionThreshold"/>
+    <functioncall functionName="m_solver"/>
+    <functioncall functionName="m_solverInfo"/>
+    <functioncall functionName="m_solverIslandCallback"/>
+    <functioncall functionName="m_solverMode"/>
+    <functioncall functionName="m_sor"/>
+    <functioncall functionName="m_sortedConstraints"/>
+    <functioncall functionName="m_splitImpulse"/>
+    <functioncall functionName="m_splitImpulsePenetrationThreshold"/>
+    <functioncall functionName="m_splitImpulseTurnErp"/>
+    <functioncall functionName="m_synchronizeAllMotionStates"/>
+    <functioncall functionName="m_tau"/>
+    <functioncall functionName="m_timeStep"/>
+    <functioncall functionName="m_upperLimit"/>
+    <functioncall functionName="m_warmstartingFactor"/>
+    <functioncall functionName="m_worldUserInfo"/>
+    <functioncall functionName="manifold"/>
+    <functioncall functionName="manifolds"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="maxAng"/>
+    <functioncall functionName="maxFi"/>
+    <functioncall functionName="maxPs"/>
+    <functioncall functionName="maxSubSteps"/>
+    <functioncall functionName="maxTh"/>
+    <functioncall functionName="me"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minAng"/>
+    <functioncall functionName="minFi"/>
+    <functioncall functionName="minPs"/>
+    <functioncall functionName="minTh"/>
+    <functioncall functionName="modifiedPredictedTrans"/>
+    <functioncall functionName="nSegments"/>
+    <functioncall functionName="needsBroadphaseCollision"/>
+    <functioncall functionName="needsCollision"/>
+    <functioncall functionName="needsResponse"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="newPoint"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalInWorldSpace"/>
+    <functioncall functionName="numBodies"/>
+    <functioncall functionName="numConstraints"/>
+    <functioncall functionName="numCurConstraints"/>
+    <functioncall functionName="numManifolds"/>
+    <functioncall functionName="numSimulationSubSteps"/>
+    <functioncall functionName="numTasks"/>
+    <functioncall functionName="other"/>
+    <functioncall functionName="otherObj"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pCur"/>
+    <functioncall functionName="pPrev"/>
+    <functioncall functionName="pairCache"/>
+    <functioncall functionName="performDiscreteCollisionDetection"/>
+    <functioncall functionName="pivot"/>
+    <functioncall functionName="predictIntegratedTransform"/>
+    <functioncall functionName="predictUnconstraintMotion"/>
+    <functioncall functionName="predictedTrans"/>
+    <functioncall functionName="prepareSolve"/>
+    <functioncall functionName="proceedToTransform"/>
+    <functioncall functionName="processConstraints"/>
+    <functioncall functionName="proxy0"/>
+    <functioncall functionName="proxy1"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quickSort"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="rel_pos0"/>
+    <functioncall functionName="rel_pos1"/>
+    <functioncall functionName="relativeVelocity"/>
+    <functioncall functionName="releaseManifold"/>
+    <functioncall functionName="releasePredictiveContacts"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="removeAction"/>
+    <functioncall functionName="removeCollisionObject"/>
+    <functioncall functionName="removeConstraintRef"/>
+    <functioncall functionName="removeRigidBody"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rhs"/>
+    <functioncall functionName="saveKinematicState"/>
+    <functioncall functionName="serialize"/>
+    <functioncall functionName="serializeCollisionObjects"/>
+    <functioncall functionName="serializeContactManifolds"/>
+    <functioncall functionName="serializeDynamicsWorldInfo"/>
+    <functioncall functionName="serializeRigidBodies"/>
+    <functioncall functionName="serializer"/>
+    <functioncall functionName="setActivationState"/>
+    <functioncall functionName="setAngularVelocity"/>
+    <functioncall functionName="setBasis"/>
+    <functioncall functionName="setGravity"/>
+    <functioncall functionName="setHitFraction"/>
+    <functioncall functionName="setIdentity"/>
+    <functioncall functionName="setLinearVelocity"/>
+    <functioncall functionName="setOrigin"/>
+    <functioncall functionName="setWorldTransform"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="solveConstraints"/>
+    <functioncall functionName="solveGroup"/>
+    <functioncall functionName="solver"/>
+    <functioncall functionName="solverInfo"/>
+    <functioncall functionName="sortedConstraints"/>
+    <functioncall functionName="startConstraint"/>
+    <functioncall functionName="startProfiling"/>
+    <functioncall functionName="startSerialization"/>
+    <functioncall functionName="storeIslandActivationState"/>
+    <functioncall functionName="structType"/>
+    <functioncall functionName="sweepResults"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="synchronizeAll"/>
+    <functioncall functionName="synchronizeMotionStates"/>
+    <functioncall functionName="synchronizeSingleMotionState"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="timeStep"/>
+    <functioncall functionName="tmpSphere"/>
+    <functioncall functionName="toA"/>
+    <functioncall functionName="tr"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tws"/>
+    <functioncall functionName="unite"/>
+    <functioncall functionName="up"/>
+    <functioncall functionName="upcast"/>
+    <functioncall functionName="updateAction"/>
+    <functioncall functionName="updateActions"/>
+    <functioncall functionName="updateActivationState"/>
+    <functioncall functionName="updateDeactivation"/>
+    <functioncall functionName="useFrameB"/>
+    <functioncall functionName="vehicle"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="wantsSleeping"/>
+    <functioncall functionName="worldInfo"/>
+    <functioncall functionName="worldPointB"/>
+    <functioncall functionName="worldUserInfo"/>
+  </FileInfo>
+</analyzerinfo>

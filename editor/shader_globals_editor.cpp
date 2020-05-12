@@ -266,10 +266,10 @@ static Variant create_var(RS::GlobalVariableType p_type) {
 		case RS::GLOBAL_VAR_TYPE_IVEC4: {
 			Vector<int> v4;
 			v4.resize(4);
-			v4.write[0] = 0;
-			v4.write[1] = 0;
-			v4.write[2] = 0;
-			v4.write[3] = 0;
+			v4[0] = 0;
+			v4[1] = 0;
+			v4[2] = 0;
+			v4[3] = 0;
 			return v4;
 		}
 		case RS::GLOBAL_VAR_TYPE_RECT2I: {
@@ -308,10 +308,10 @@ static Variant create_var(RS::GlobalVariableType p_type) {
 		case RS::GLOBAL_VAR_TYPE_MAT2: {
 			Vector<real_t> xform;
 			xform.resize(4);
-			xform.write[0] = 1;
-			xform.write[1] = 0;
-			xform.write[2] = 0;
-			xform.write[3] = 1;
+			xform[0] = 1;
+			xform[1] = 0;
+			xform[2] = 0;
+			xform[3] = 1;
 			return xform;
 		}
 		case RS::GLOBAL_VAR_TYPE_MAT3: {
@@ -326,25 +326,25 @@ static Variant create_var(RS::GlobalVariableType p_type) {
 		case RS::GLOBAL_VAR_TYPE_MAT4: {
 			Vector<real_t> xform;
 			xform.resize(4);
-			xform.write[0] = 1;
-			xform.write[1] = 0;
-			xform.write[2] = 0;
-			xform.write[3] = 0;
+			xform[0] = 1;
+			xform[1] = 0;
+			xform[2] = 0;
+			xform[3] = 0;
 
-			xform.write[4] = 0;
-			xform.write[5] = 1;
-			xform.write[6] = 0;
-			xform.write[7] = 0;
+			xform[4] = 0;
+			xform[5] = 1;
+			xform[6] = 0;
+			xform[7] = 0;
 
-			xform.write[8] = 0;
-			xform.write[9] = 0;
-			xform.write[10] = 1;
-			xform.write[11] = 0;
+			xform[8] = 0;
+			xform[9] = 0;
+			xform[10] = 1;
+			xform[11] = 0;
 
-			xform.write[12] = 0;
-			xform.write[13] = 0;
-			xform.write[14] = 0;
-			xform.write[15] = 1;
+			xform[12] = 0;
+			xform[13] = 0;
+			xform[14] = 0;
+			xform[15] = 1;
 
 			return xform;
 		}

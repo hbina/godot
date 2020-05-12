@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="167286845">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;x0&apos; can be reduced." verbose="The scope of the variable &apos;x0&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt.c" line="159" column="15"/>
+            <symbol>x0</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;x0&apos; can be reduced." verbose="The scope of the variable &apos;x0&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/celt.c" line="190" column="15"/>
+            <symbol>x0</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt.c:156:6" my-argnr="2" my-argname="x" file="/home/hbina/git/godot/thirdparty/opus/celt/celt.c" line="161" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/celt.h:216:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/celt.c" line="258" col="15" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="resampling_factor" lineNumber="62"/>
+    <functiondecl functionName="comb_filter_const_c" lineNumber="156"/>
+    <functiondecl functionName="comb_filter" lineNumber="183"/>
+    <functiondecl functionName="init_caps" lineNumber="255"/>
+    <functiondecl functionName="opus_strerror" lineNumber="268"/>
+    <functiondecl functionName="opus_get_version_string" lineNumber="286"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="T0"/>
+    <functioncall functionName="T1"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="band"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="comb_filter_const_c"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="ec_ilog"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="g0"/>
+    <functioncall functionName="g00"/>
+    <functioncall functionName="g01"/>
+    <functioncall functionName="g02"/>
+    <functioncall functionName="g1"/>
+    <functioncall functionName="g10"/>
+    <functioncall functionName="g11"/>
+    <functioncall functionName="g12"/>
+    <functioncall functionName="hi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="lo"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="maxval"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="minval"/>
+    <functioncall functionName="nbEBands"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="opus_alloc"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="overlap"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="pulses"/>
+    <functioncall functionName="rate"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rng"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tapset0"/>
+    <functioncall functionName="tapset1"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x0"/>
+    <functioncall functionName="x1"/>
+    <functioncall functionName="x2"/>
+    <functioncall functionName="x3"/>
+    <functioncall functionName="x4"/>
+    <functioncall functionName="xy"/>
+    <functioncall functionName="xy01"/>
+    <functioncall functionName="xy02"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_0"/>
+    <functioncall functionName="y_1"/>
+    <functioncall functionName="y_2"/>
+    <functioncall functionName="y_3"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3415133697">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;data!=NULL&apos; is redundant or there is possible null pointer dereference: data." verbose="Either the condition &apos;data!=NULL&apos; is redundant or there is possible null pointer dereference: data." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="227" column="30" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="232" column="15" info="Assuming that condition &apos;data!=NULL&apos; is not redundant"/>
+            <symbol>data</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;data!=NULL&apos; is redundant or there is possible null pointer dereference: data." verbose="Either the condition &apos;data!=NULL&apos; is redundant or there is possible null pointer dereference: data." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="228" column="31" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="232" column="15" info="Assuming that condition &apos;data!=NULL&apos; is not redundant"/>
+            <symbol>data</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:54:22" call-funcname="ParseRIFF" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="305" col="21" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:54:22" call-funcname="ParseRIFF" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="305" col="21" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:54:22" call-funcname="ParseRIFF" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="305" col="21" call-argexpr="have_all_data" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="292" col="47" info="Assignment 'have_all_data=(headers!=NULL)?headers->have_all_data:0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&found_vp8x" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&canvas_width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&canvas_height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:146:22" call-funcname="ParseOptionalChunks" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="345" col="33" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:146:22" call-funcname="ParseOptionalChunks" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="345" col="33" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" call-funcname="ParseVP8Header" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="353" col="26" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" call-funcname="ParseVP8Header" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="353" col="26" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="&has_animation" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="689" col="30" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:447:22" call-funcname="DecodeInto" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="544" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="552" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:550:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="552" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:550:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="557" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:555:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="557" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:555:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="562" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:560:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="562" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:560:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="567" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:565:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="567" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:565:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="572" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:570:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="572" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:570:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:447:22" call-funcname="DecodeInto" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="596" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:575:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:698:5" call-funcname="WebPGetInfo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="616" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:633:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:633:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:633:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:638:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:638:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:638:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:643:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:643:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:643:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:648:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:648:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:648:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:653:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:653:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:653:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="662" col="24" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:658:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="662" col="24" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:658:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="662" col="24" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:658:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:681:22" call-funcname="GetFeatures" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="702" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:698:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:681:22" call-funcname="GetFeatures" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="742" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:733:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:681:22" call-funcname="GetFeatures" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="754" col="12" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:745:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" my-argnr="1" my-argname="data_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="226" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:788:5" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="790" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" my-argnr="1" my-argname="data_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="226" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:54:22" call-funcname="ParseRIFF" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="305" col="21" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:54:22" call-funcname="ParseRIFF" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="305" col="21" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:54:22" call-funcname="ParseRIFF" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="305" col="21" call-argexpr="have_all_data" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="292" col="47" info="Assignment 'have_all_data=(headers!=NULL)?headers->have_all_data:0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&found_vp8x" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&canvas_width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&canvas_height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:93:22" call-funcname="ParseVP8X" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="314" col="23" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:146:22" call-funcname="ParseOptionalChunks" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="345" col="33" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:146:22" call-funcname="ParseOptionalChunks" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="345" col="33" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" call-funcname="ParseVP8Header" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="353" col="26" call-argexpr="&data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" call-funcname="ParseVP8Header" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="353" col="26" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="&has_animation" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="420" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="16" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:277:22" call-funcname="ParseHeadersInternal" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="689" col="30" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:447:22" call-funcname="DecodeInto" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="544" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="552" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:550:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="552" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:550:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="557" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:555:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="557" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:555:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="562" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:560:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="562" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:560:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="567" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:565:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="567" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:565:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="572" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:570:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:526:17" call-funcname="DecodeIntoRGBABuffer" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="572" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:570:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:447:22" call-funcname="DecodeInto" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="596" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:575:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:698:5" call-funcname="WebPGetInfo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="616" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:633:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:633:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="635" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:633:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:638:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:638:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="640" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:638:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:643:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:643:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="645" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:643:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:648:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:648:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="650" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:648:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:653:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:653:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="655" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:653:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="662" col="24" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:658:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="662" col="24" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:658:10" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:604:17" call-funcname="Decode" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="662" col="24" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:658:10" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:681:22" call-funcname="GetFeatures" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="702" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:698:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:681:22" call-funcname="GetFeatures" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="742" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:733:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:681:22" call-funcname="GetFeatures" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="754" col="12" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:745:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" my-argnr="1" my-argname="data_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="226" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:788:5" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="790" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c:222:22" my-argnr="1" my-argname="data_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/webp_dec.c" line="226" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ParseRIFF" lineNumber="54"/>
+    <functiondecl functionName="ParseVP8X" lineNumber="93"/>
+    <functiondecl functionName="ParseOptionalChunks" lineNumber="146"/>
+    <functiondecl functionName="ParseVP8Header" lineNumber="222"/>
+    <functiondecl functionName="ParseHeadersInternal" lineNumber="277"/>
+    <functiondecl functionName="WebPParseHeaders" lineNumber="414"/>
+    <functiondecl functionName="WebPResetDecParams" lineNumber="437"/>
+    <functiondecl functionName="DecodeInto" lineNumber="447"/>
+    <functiondecl functionName="DecodeIntoRGBABuffer" lineNumber="526"/>
+    <functiondecl functionName="WebPDecodeRGBInto" lineNumber="550"/>
+    <functiondecl functionName="WebPDecodeRGBAInto" lineNumber="555"/>
+    <functiondecl functionName="WebPDecodeARGBInto" lineNumber="560"/>
+    <functiondecl functionName="WebPDecodeBGRInto" lineNumber="565"/>
+    <functiondecl functionName="WebPDecodeBGRAInto" lineNumber="570"/>
+    <functiondecl functionName="WebPDecodeYUVInto" lineNumber="575"/>
+    <functiondecl functionName="Decode" lineNumber="604"/>
+    <functiondecl functionName="WebPDecodeRGB" lineNumber="633"/>
+    <functiondecl functionName="WebPDecodeRGBA" lineNumber="638"/>
+    <functiondecl functionName="WebPDecodeARGB" lineNumber="643"/>
+    <functiondecl functionName="WebPDecodeBGR" lineNumber="648"/>
+    <functiondecl functionName="WebPDecodeBGRA" lineNumber="653"/>
+    <functiondecl functionName="WebPDecodeYUV" lineNumber="658"/>
+    <functiondecl functionName="DefaultFeatures" lineNumber="676"/>
+    <functiondecl functionName="GetFeatures" lineNumber="681"/>
+    <functiondecl functionName="WebPGetInfo" lineNumber="698"/>
+    <functiondecl functionName="WebPInitDecoderConfigInternal" lineNumber="719"/>
+    <functiondecl functionName="WebPGetFeaturesInternal" lineNumber="733"/>
+    <functiondecl functionName="WebPDecode" lineNumber="745"/>
+    <functiondecl functionName="WebPIoInitFromOptions" lineNumber="788"/>
+    <functiondecl functionName="ParseRIFF" lineNumber="54"/>
+    <functiondecl functionName="ParseVP8X" lineNumber="93"/>
+    <functiondecl functionName="ParseOptionalChunks" lineNumber="146"/>
+    <functiondecl functionName="ParseVP8Header" lineNumber="222"/>
+    <functiondecl functionName="ParseHeadersInternal" lineNumber="277"/>
+    <functiondecl functionName="WebPParseHeaders" lineNumber="414"/>
+    <functiondecl functionName="WebPResetDecParams" lineNumber="437"/>
+    <functiondecl functionName="DecodeInto" lineNumber="447"/>
+    <functiondecl functionName="DecodeIntoRGBABuffer" lineNumber="526"/>
+    <functiondecl functionName="WebPDecodeRGBInto" lineNumber="550"/>
+    <functiondecl functionName="WebPDecodeRGBAInto" lineNumber="555"/>
+    <functiondecl functionName="WebPDecodeARGBInto" lineNumber="560"/>
+    <functiondecl functionName="WebPDecodeBGRInto" lineNumber="565"/>
+    <functiondecl functionName="WebPDecodeBGRAInto" lineNumber="570"/>
+    <functiondecl functionName="WebPDecodeYUVInto" lineNumber="575"/>
+    <functiondecl functionName="Decode" lineNumber="604"/>
+    <functiondecl functionName="WebPDecodeRGB" lineNumber="633"/>
+    <functiondecl functionName="WebPDecodeRGBA" lineNumber="638"/>
+    <functiondecl functionName="WebPDecodeARGB" lineNumber="643"/>
+    <functiondecl functionName="WebPDecodeBGR" lineNumber="648"/>
+    <functiondecl functionName="WebPDecodeBGRA" lineNumber="653"/>
+    <functiondecl functionName="WebPDecodeYUV" lineNumber="658"/>
+    <functiondecl functionName="DefaultFeatures" lineNumber="676"/>
+    <functiondecl functionName="GetFeatures" lineNumber="681"/>
+    <functiondecl functionName="WebPGetInfo" lineNumber="698"/>
+    <functiondecl functionName="WebPInitDecoderConfigInternal" lineNumber="719"/>
+    <functiondecl functionName="WebPGetFeaturesInternal" lineNumber="733"/>
+    <functiondecl functionName="WebPDecode" lineNumber="745"/>
+    <functiondecl functionName="WebPIoInitFromOptions" lineNumber="788"/>
+    <functioncall functionName="CHUNK_HEADER_SIZE"/>
+    <functioncall functionName="Decode"/>
+    <functioncall functionName="DecodeInto"/>
+    <functioncall functionName="DecodeIntoRGBABuffer"/>
+    <functioncall functionName="DefaultFeatures"/>
+    <functioncall functionName="GetFeatures"/>
+    <functioncall functionName="GetLE24"/>
+    <functioncall functionName="GetLE32"/>
+    <functioncall functionName="H"/>
+    <functioncall functionName="MODE_ARGB"/>
+    <functioncall functionName="MODE_BGR"/>
+    <functioncall functionName="MODE_BGRA"/>
+    <functioncall functionName="MODE_RGB"/>
+    <functioncall functionName="MODE_RGBA"/>
+    <functioncall functionName="MODE_YUV"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="ParseHeadersInternal"/>
+    <functioncall functionName="ParseOptionalChunks"/>
+    <functioncall functionName="ParseRIFF"/>
+    <functioncall functionName="ParseVP8Header"/>
+    <functioncall functionName="ParseVP8X"/>
+    <functioncall functionName="ReturnWidthHeight"/>
+    <functioncall functionName="TAG_SIZE"/>
+    <functioncall functionName="VP8Decode"/>
+    <functioncall functionName="VP8Delete"/>
+    <functioncall functionName="VP8GetHeaders"/>
+    <functioncall functionName="VP8GetInfo"/>
+    <functioncall functionName="VP8GetThreadMethod"/>
+    <functioncall functionName="VP8InitDithering"/>
+    <functioncall functionName="VP8InitIo"/>
+    <functioncall functionName="VP8LCheckSignature"/>
+    <functioncall functionName="VP8LDecodeHeader"/>
+    <functioncall functionName="VP8LDecodeImage"/>
+    <functioncall functionName="VP8LDelete"/>
+    <functioncall functionName="VP8LGetInfo"/>
+    <functioncall functionName="VP8LNew"/>
+    <functioncall functionName="VP8New"/>
+    <functioncall functionName="VP8X_CHUNK_SIZE"/>
+    <functioncall functionName="VP8_STATUS_NOT_ENOUGH_DATA"/>
+    <functioncall functionName="VP8_STATUS_OK"/>
+    <functioncall functionName="VP8_STATUS_UNSUPPORTED_FEATURE"/>
+    <functioncall functionName="W"/>
+    <functioncall functionName="WEBP_ABI_IS_INCOMPATIBLE"/>
+    <functioncall functionName="WEBP_DECODER_ABI_VERSION"/>
+    <functioncall functionName="WebPAllocateDecBuffer"/>
+    <functioncall functionName="WebPAvoidSlowMemory"/>
+    <functioncall functionName="WebPCopyDecBuffer"/>
+    <functioncall functionName="WebPCopyDecBufferPixels"/>
+    <functioncall functionName="WebPFlipBuffer"/>
+    <functioncall functionName="WebPFreeDecBuffer"/>
+    <functioncall functionName="WebPGetInfo"/>
+    <functioncall functionName="WebPInitCustomIo"/>
+    <functioncall functionName="WebPInitDecBuffer"/>
+    <functioncall functionName="WebPIsRGBMode"/>
+    <functioncall functionName="WebPParseHeaders"/>
+    <functioncall functionName="WebPRescalerGetScaledDimensions"/>
+    <functioncall functionName="WebPResetDecParams"/>
+    <functioncall functionName="YUVA"/>
+    <functioncall functionName="alpha_data"/>
+    <functioncall functionName="alpha_data_size"/>
+    <functioncall functionName="animation_present"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buf_size"/>
+    <functioncall functionName="bypass_filtering"/>
+    <functioncall functionName="canvas_height"/>
+    <functioncall functionName="canvas_width"/>
+    <functioncall functionName="chunk_size"/>
+    <functioncall functionName="colorspace"/>
+    <functioncall functionName="compressed_size"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="crop_height"/>
+    <functioncall functionName="crop_left"/>
+    <functioncall functionName="crop_top"/>
+    <functioncall functionName="crop_width"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_size"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="features"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="flip"/>
+    <functioncall functionName="format"/>
+    <functioncall functionName="found_vp8x"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has_alpha"/>
+    <functioncall functionName="has_animation"/>
+    <functioncall functionName="have_all_data"/>
+    <functioncall functionName="hdrs"/>
+    <functioncall functionName="headers"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image_height"/>
+    <functioncall functionName="image_width"/>
+    <functioncall functionName="in_mem_buffer"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="is_lossless"/>
+    <functioncall functionName="is_vp8l"/>
+    <functioncall functionName="keep_info"/>
+    <functioncall functionName="luma"/>
+    <functioncall functionName="luma_size"/>
+    <functioncall functionName="luma_stride"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minimal_size"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="no_fancy_upsampling"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="rgba"/>
+    <functioncall functionName="riff_size"/>
+    <functioncall functionName="scaled_height"/>
+    <functioncall functionName="scaled_width"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src_colorspace"/>
+    <functioncall functionName="status_"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="total_size"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="u_size"/>
+    <functioncall functionName="u_stride"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="use_cropping"/>
+    <functioncall functionName="use_scaling"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v_size"/>
+    <functioncall functionName="v_stride"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_stride"/>
+  </FileInfo>
+</analyzerinfo>

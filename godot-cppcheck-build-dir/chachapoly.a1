@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="571915797">
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:134:5" call-funcname="mbedtls_chachapoly_starts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="309" col="36" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:240:5" call-funcname="mbedtls_chachapoly_finish" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="321" col="36" call-argexpr="tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="343" col="37" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="9" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="343" col="37" call-argexpr="tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="368" col="41" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="9" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="368" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:134:5" call-funcname="mbedtls_chachapoly_starts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="309" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:174:5" call-funcname="mbedtls_chachapoly_update_aad" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="313" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:189:5" call-funcname="mbedtls_chachapoly_update" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="317" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:189:5" call-funcname="mbedtls_chachapoly_update" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="317" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="8"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:63:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="65" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:83:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="85" col="47" value="0"/>
+  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="495" column="9"/>
+            <symbol>ret</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:134:5" call-funcname="mbedtls_chachapoly_starts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="309" col="36" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:240:5" call-funcname="mbedtls_chachapoly_finish" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="321" col="36" call-argexpr="tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="343" col="37" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="9" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="343" col="37" call-argexpr="tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="368" col="41" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="9" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="368" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:327:5" call-funcname="mbedtls_chachapoly_encrypt_and_tag" call-argnr="7" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="509" col="49" call-argexpr="output" call-argvaluetype="7" call-argvalue="200"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:327:5" call-funcname="mbedtls_chachapoly_encrypt_and_tag" call-argnr="8" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="509" col="49" call-argexpr="mac" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:134:5" call-funcname="mbedtls_chachapoly_starts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="309" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:174:5" call-funcname="mbedtls_chachapoly_update_aad" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="313" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:189:5" call-funcname="mbedtls_chachapoly_update" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="317" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:189:5" call-funcname="mbedtls_chachapoly_update" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="317" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="8"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:63:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="65" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:83:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="85" col="47" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:134:5" call-funcname="mbedtls_chachapoly_starts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="309" col="36" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:240:5" call-funcname="mbedtls_chachapoly_finish" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="321" col="36" call-argexpr="tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="343" col="37" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="9" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="343" col="37" call-argexpr="tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="368" col="41" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" call-funcname="chachapoly_crypt_and_tag" call-argnr="9" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="368" col="41" call-argexpr="check_tag" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:327:5" call-funcname="mbedtls_chachapoly_encrypt_and_tag" call-argnr="7" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="509" col="49" call-argexpr="output" call-argvaluetype="7" call-argvalue="200"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:327:5" call-funcname="mbedtls_chachapoly_encrypt_and_tag" call-argnr="8" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="509" col="49" call-argexpr="mac" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:134:5" call-funcname="mbedtls_chachapoly_starts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="309" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:174:5" call-funcname="mbedtls_chachapoly_update_aad" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="313" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:189:5" call-funcname="mbedtls_chachapoly_update" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="317" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:189:5" call-funcname="mbedtls_chachapoly_update" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="317" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:297:12" my-argnr="8"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:63:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="65" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c:83:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="85" col="47" value="0"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/chachapoly.c" line="26" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="chachapoly_pad_aad" lineNumber="63"/>
+    <functiondecl functionName="chachapoly_pad_ciphertext" lineNumber="83"/>
+    <functiondecl functionName="mbedtls_chachapoly_init" lineNumber="97"/>
+    <functiondecl functionName="mbedtls_chachapoly_free" lineNumber="109"/>
+    <functiondecl functionName="mbedtls_chachapoly_setkey" lineNumber="122"/>
+    <functiondecl functionName="mbedtls_chachapoly_starts" lineNumber="134"/>
+    <functiondecl functionName="mbedtls_chachapoly_update_aad" lineNumber="174"/>
+    <functiondecl functionName="mbedtls_chachapoly_update" lineNumber="189"/>
+    <functiondecl functionName="mbedtls_chachapoly_finish" lineNumber="240"/>
+    <functiondecl functionName="chachapoly_crypt_and_tag" lineNumber="297"/>
+    <functiondecl functionName="mbedtls_chachapoly_encrypt_and_tag" lineNumber="327"/>
+    <functiondecl functionName="mbedtls_chachapoly_auth_decrypt" lineNumber="348"/>
+    <functiondecl functionName="chachapoly_pad_aad" lineNumber="63"/>
+    <functiondecl functionName="chachapoly_pad_ciphertext" lineNumber="83"/>
+    <functiondecl functionName="mbedtls_chachapoly_init" lineNumber="97"/>
+    <functiondecl functionName="mbedtls_chachapoly_free" lineNumber="109"/>
+    <functiondecl functionName="mbedtls_chachapoly_setkey" lineNumber="122"/>
+    <functiondecl functionName="mbedtls_chachapoly_starts" lineNumber="134"/>
+    <functiondecl functionName="mbedtls_chachapoly_update_aad" lineNumber="174"/>
+    <functiondecl functionName="mbedtls_chachapoly_update" lineNumber="189"/>
+    <functiondecl functionName="mbedtls_chachapoly_finish" lineNumber="240"/>
+    <functiondecl functionName="chachapoly_crypt_and_tag" lineNumber="297"/>
+    <functiondecl functionName="mbedtls_chachapoly_encrypt_and_tag" lineNumber="327"/>
+    <functiondecl functionName="mbedtls_chachapoly_auth_decrypt" lineNumber="348"/>
+    <functiondecl functionName="mbedtls_chachapoly_self_test" lineNumber="491"/>
+    <functiondecl functionName="chachapoly_pad_aad" lineNumber="63"/>
+    <functiondecl functionName="chachapoly_pad_ciphertext" lineNumber="83"/>
+    <functiondecl functionName="mbedtls_chachapoly_init" lineNumber="97"/>
+    <functiondecl functionName="mbedtls_chachapoly_free" lineNumber="109"/>
+    <functiondecl functionName="mbedtls_chachapoly_setkey" lineNumber="122"/>
+    <functiondecl functionName="mbedtls_chachapoly_starts" lineNumber="134"/>
+    <functiondecl functionName="mbedtls_chachapoly_update_aad" lineNumber="174"/>
+    <functiondecl functionName="mbedtls_chachapoly_update" lineNumber="189"/>
+    <functiondecl functionName="mbedtls_chachapoly_finish" lineNumber="240"/>
+    <functiondecl functionName="chachapoly_crypt_and_tag" lineNumber="297"/>
+    <functiondecl functionName="mbedtls_chachapoly_encrypt_and_tag" lineNumber="327"/>
+    <functiondecl functionName="mbedtls_chachapoly_auth_decrypt" lineNumber="348"/>
+    <functiondecl functionName="mbedtls_chachapoly_self_test" lineNumber="491"/>
+    <functioncall functionName="MBEDTLS_CHACHAPOLY_DECRYPT"/>
+    <functioncall functionName="MBEDTLS_CHACHAPOLY_ENCRYPT"/>
+    <functioncall functionName="MBEDTLS_ERR_CHACHAPOLY_AUTH_FAILED"/>
+    <functioncall functionName="MBEDTLS_ERR_CHACHAPOLY_BAD_STATE"/>
+    <functioncall functionName="MBEDTLS_ERR_POLY1305_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE_RET"/>
+    <functioncall functionName="aad"/>
+    <functioncall functionName="aad_len"/>
+    <functioncall functionName="chacha20_ctx"/>
+    <functioncall functionName="chachapoly_crypt_and_tag"/>
+    <functioncall functionName="chachapoly_pad_aad"/>
+    <functioncall functionName="chachapoly_pad_ciphertext"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="check_tag"/>
+    <functioncall functionName="ciphertext_len"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="len_block"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="mac"/>
+    <functioncall functionName="mbedtls_chacha20_free"/>
+    <functioncall functionName="mbedtls_chacha20_init"/>
+    <functioncall functionName="mbedtls_chacha20_setkey"/>
+    <functioncall functionName="mbedtls_chacha20_starts"/>
+    <functioncall functionName="mbedtls_chacha20_update"/>
+    <functioncall functionName="mbedtls_chachapoly_encrypt_and_tag"/>
+    <functioncall functionName="mbedtls_chachapoly_finish"/>
+    <functioncall functionName="mbedtls_chachapoly_free"/>
+    <functioncall functionName="mbedtls_chachapoly_init"/>
+    <functioncall functionName="mbedtls_chachapoly_setkey"/>
+    <functioncall functionName="mbedtls_chachapoly_starts"/>
+    <functioncall functionName="mbedtls_chachapoly_update"/>
+    <functioncall functionName="mbedtls_chachapoly_update_aad"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="mbedtls_poly1305_finish"/>
+    <functioncall functionName="mbedtls_poly1305_free"/>
+    <functioncall functionName="mbedtls_poly1305_init"/>
+    <functioncall functionName="mbedtls_poly1305_starts"/>
+    <functioncall functionName="mbedtls_poly1305_update"/>
+    <functioncall functionName="mbedtls_printf"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="nonce"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="partial_block_len"/>
+    <functioncall functionName="poly1305_ctx"/>
+    <functioncall functionName="poly1305_key"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zeroes"/>
+  </FileInfo>
+</analyzerinfo>

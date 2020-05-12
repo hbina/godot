@@ -314,7 +314,7 @@ void RenderingServerCanvas::canvas_set_item_mirroring(RID p_canvas, RID p_item, 
 
 	int idx = canvas->find_item(canvas_item);
 	ERR_FAIL_COND(idx == -1);
-	canvas->child_items.write[idx].mirror = p_mirroring;
+	canvas->child_items[idx].mirror = p_mirroring;
 }
 void RenderingServerCanvas::canvas_set_modulate(RID p_canvas, const Color &p_color) {
 
@@ -580,21 +580,21 @@ void RenderingServerCanvas::canvas_item_add_polyline(RID p_item, const Vector<Po
 			Vector2 tangent = ((t + prev_t).normalized()) * p_width * 0.5;
 
 			if (p_antialiased) {
-				pline->lines.write[i] = p_points[i] + tangent;
-				pline->lines.write[p_points.size() * 2 - i - 1] = p_points[i] - tangent;
+				pline->lines[i] = p_points[i] + tangent;
+				pline->lines[p_points.size() * 2 - i - 1] = p_points[i] - tangent;
 				if (pline->line_colors.size() > 1) {
-					pline->line_colors.write[i] = p_colors[i];
-					pline->line_colors.write[p_points.size() * 2 - i - 1] = p_colors[i];
+					pline->line_colors[i] = p_colors[i];
+					pline->line_colors[p_points.size() * 2 - i - 1] = p_colors[i];
 				}
 			}
 
-			pline->triangles.write[i * 2 + 0] = p_points[i] + tangent;
-			pline->triangles.write[i * 2 + 1] = p_points[i] - tangent;
+			pline->triangles[i * 2 + 0] = p_points[i] + tangent;
+			pline->triangles[i * 2 + 1] = p_points[i] - tangent;
 
 			if (pline->triangle_colors.size() > 1) {
 
-				pline->triangle_colors.write[i * 2 + 0] = p_colors[i];
-				pline->triangle_colors.write[i * 2 + 1] = p_colors[i];
+				pline->triangle_colors[i * 2 + 0] = p_colors[i];
+				pline->triangle_colors[i * 2 + 1] = p_colors[i];
 			}
 
 			prev_t = t;
@@ -656,16 +656,16 @@ void RenderingServerCanvas::canvas_item_add_circle(RID p_item, const Point2 &p_p
 	points.resize(circle_points);
 	for (int i = 0; i < circle_points; i++) {
 		float angle = (i / float(circle_points)) * 2 * Math_PI;
-		points.write[i].x = Math::cos(angle) * p_radius;
-		points.write[i].y = Math::sin(angle) * p_radius;
-		points.write[i] += p_pos;
+		points[i].x = Math::cos(angle) * p_radius;
+		points[i].y = Math::sin(angle) * p_radius;
+		points[i] += p_pos;
 	}
 	indices.resize((circle_points - 2) * 3);
 
 	for (int i = 0; i < circle_points - 2; i++) {
-		indices.write[i * 3 + 0] = 0;
-		indices.write[i * 3 + 1] = i + 1;
-		indices.write[i * 3 + 2] = i + 2;
+		indices[i * 3 + 0] = 0;
+		indices[i * 3 + 1] = i + 1;
+		indices[i * 3 + 2] = i + 2;
 	}
 
 	Vector<Color> color;

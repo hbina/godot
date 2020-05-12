@@ -94,7 +94,7 @@ RenderingDevice::FramebufferFormatID RenderingDevice::_framebuffer_format_create
 	for (int i = 0; i < p_attachments.size(); i++) {
 		Ref<RDAttachmentFormat> af = p_attachments[i];
 		ERR_FAIL_COND_V(af.is_null(), INVALID_FORMAT_ID);
-		attachments.write[i] = af->base;
+		attachments[i] = af->base;
 	}
 	return framebuffer_format_create(attachments);
 }
@@ -119,7 +119,7 @@ RenderingDevice::VertexFormatID RenderingDevice::_vertex_format_create(const Typ
 	for (int i = 0; i < p_vertex_formats.size(); i++) {
 		Ref<RDVertexAttribute> af = p_vertex_formats[i];
 		ERR_FAIL_COND_V(af.is_null(), INVALID_FORMAT_ID);
-		descriptions.write[i] = af->base;
+		descriptions[i] = af->base;
 	}
 	return vertex_format_create(descriptions);
 }
@@ -174,7 +174,7 @@ RID RenderingDevice::_uniform_set_create(const Array &p_uniforms, RID p_shader, 
 	for (int i = 0; i < p_uniforms.size(); i++) {
 		Ref<RDUniform> uniform = p_uniforms[i];
 		ERR_FAIL_COND_V(!uniform.is_valid(), RID());
-		uniforms.write[i] = uniform->base;
+		uniforms[i] = uniform->base;
 	}
 	return uniform_set_create(uniforms, p_shader, p_shader_set);
 }
@@ -228,7 +228,7 @@ Vector<int64_t> RenderingDevice::_draw_list_begin_split(RID p_framebuffer, uint3
 	Vector<int64_t> split_ids;
 	split_ids.resize(splits.size());
 	for (int i = 0; i < splits.size(); i++) {
-		split_ids.write[i] = splits[i];
+		split_ids[i] = splits[i];
 	}
 
 	return split_ids;

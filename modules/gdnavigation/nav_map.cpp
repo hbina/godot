@@ -123,8 +123,8 @@ Vector<Vector3> NavMap::get_path(Vector3 p_origin, Vector3 p_destination, bool p
 
 		Vector<Vector3> path;
 		path.resize(2);
-		path.write[0] = begin_point;
-		path.write[1] = end_point;
+		path[0] = begin_point;
+		path[1] = end_point;
 		return path;
 	}
 

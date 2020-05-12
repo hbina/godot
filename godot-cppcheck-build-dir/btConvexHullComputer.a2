@@ -1,0 +1,1134 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="246351308">
+        <error id="noConstructor" severity="style" msg="The class &apos;btConvexHullInternal&apos; does not have a constructor although it has private member variables." verbose="The class &apos;btConvexHullInternal&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="58" column="1"/>
+            <symbol>btConvexHullInternal</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Point32::x&apos; is not initialized in the constructor." verbose="Member variable &apos;Point32::x&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="91" column="9"/>
+            <symbol>Point32::x</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Point32::y&apos; is not initialized in the constructor." verbose="Member variable &apos;Point32::y&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="91" column="9"/>
+            <symbol>Point32::y</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Point32::z&apos; is not initialized in the constructor." verbose="Member variable &apos;Point32::z&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="91" column="9"/>
+            <symbol>Point32::z</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Point32::index&apos; is not initialized in the constructor." verbose="Member variable &apos;Point32::index&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="91" column="9"/>
+            <symbol>Point32::index</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;VHACD::btConvexHullInternal::findEdgeForCoplanarFaces&apos; can be const." verbose="The member function &apos;VHACD::btConvexHullInternal::findEdgeForCoplanarFaces&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="770" column="10"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1373" column="28"/>
+            <symbol>VHACD::btConvexHullInternal::findEdgeForCoplanarFaces</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VHACD::btConvexHullInternal::mergeProjection&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VHACD::btConvexHullInternal::mergeProjection&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="808" column="10"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="992" column="28"/>
+            <symbol>VHACD::btConvexHullInternal::mergeProjection</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;VHACD::btConvexHullInternal::toBtVector&apos; can be const." verbose="The member function &apos;VHACD::btConvexHullInternal::toBtVector&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="812" column="15"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1878" column="33"/>
+            <symbol>VHACD::btConvexHullInternal::toBtVector</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;VHACD::btConvexHullInternal::getCoordinates&apos; can be const." verbose="The member function &apos;VHACD::btConvexHullInternal::getCoordinates&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="823" column="15"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1892" column="33"/>
+            <symbol>VHACD::btConvexHullInternal::getCoordinates</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VHACD::btConvexHullInternal::Point64::isZero&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VHACD::btConvexHullInternal::Point64::isZero&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="73" column="14"/>
+            <symbol>VHACD::btConvexHullInternal::Point64::isZero</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VHACD::btConvexHullInternal::Point64::dot&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VHACD::btConvexHullInternal::Point64::dot&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="78" column="17"/>
+            <symbol>VHACD::btConvexHullInternal::Point64::dot</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;VHACD::btConvexHullInternal::Point32::isZero&apos; can be const." verbose="The member function &apos;VHACD::btConvexHullInternal::Point32::isZero&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="113" column="14"/>
+            <symbol>VHACD::btConvexHullInternal::Point32::isZero</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VHACD::btConvexHullInternal::Int128::getSign&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VHACD::btConvexHullInternal::Int128::getSign&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="251" column="17"/>
+            <symbol>VHACD::btConvexHullInternal::Int128::getSign</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VHACD::btConvexHullInternal::Int128::ucmp&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VHACD::btConvexHullInternal::Int128::ucmp&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="261" column="17"/>
+            <symbol>VHACD::btConvexHullInternal::Int128::ucmp</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;VHACD::btConvexHullInternal::Face::getNormal&apos; can be const." verbose="The member function &apos;VHACD::btConvexHullInternal::Face::getNormal&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="565" column="17"/>
+            <symbol>VHACD::btConvexHullInternal::Face::getNormal</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Int128&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Int128&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="164" column="9"/>
+            <symbol>Int128</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Int128&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Int128&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="170" column="9"/>
+            <symbol>Int128</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Rational128&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Rational128&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="338" column="9"/>
+            <symbol>Rational128</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PoolArray &lt; Vertex &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PoolArray &lt; Vertex &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="668" column="9"/>
+            <symbol>PoolArray &lt; Vertex &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PoolArray &lt; Edge &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PoolArray &lt; Edge &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="668" column="9"/>
+            <symbol>PoolArray &lt; Edge &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PoolArray &lt; Face &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PoolArray &lt; Face &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="668" column="9"/>
+            <symbol>PoolArray &lt; Face &gt;</symbol>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const signed char * and const double * which have an incompatible binary data representation." verbose="Casting between const signed char * and const double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1777" column="31"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const signed char * and const float * which have an incompatible binary data representation." verbose="Casting between const signed char * and const float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1786" column="30"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const signed char * and const double * which have an incompatible binary data representation." verbose="Casting between const signed char * and const double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1825" column="31"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const signed char * and const float * which have an incompatible binary data representation." verbose="Casting between const signed char * and const float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1837" column="30"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1238" col="20" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="21" info="Calling function 'computeInternal', 1st argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" call-funcname="findMaxAngle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1618" col="34" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" call-funcname="getBtNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2008" col="27" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:816:10" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:480:14" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="488" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:518:14" my-argnr="1" my-argname="n" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="520" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:774:10" my-argnr="1" my-argname="edge" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="776" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="1" my-argname="prev" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="2" my-argname="next" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" my-argnr="2" my-argname="start" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1336" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="1" my-argname="c0" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="2" my-argname="c1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" my-argnr="1" my-argname="face" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1889" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:2377:16" my-argnr="1" my-argname="vertex" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2379" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:823:15" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1895" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1238" col="20" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="21" info="Calling function 'computeInternal', 1st argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" call-funcname="findMaxAngle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1618" col="34" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" call-funcname="getBtNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2008" col="27" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:816:10" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:480:14" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="488" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:518:14" my-argnr="1" my-argname="n" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="520" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:774:10" my-argnr="1" my-argname="edge" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="776" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="1" my-argname="prev" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="2" my-argname="next" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" my-argnr="2" my-argname="start" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1334" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="1" my-argname="c0" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="2" my-argname="c1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" my-argnr="1" my-argname="face" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1889" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:2377:16" my-argnr="1" my-argname="vertex" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2379" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:823:15" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1895" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1238" col="20" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="21" info="Calling function 'computeInternal', 1st argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" call-funcname="findMaxAngle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1618" col="34" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" call-funcname="getBtNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2008" col="27" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:816:10" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:480:14" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="488" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:518:14" my-argnr="1" my-argname="n" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="520" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:774:10" my-argnr="1" my-argname="edge" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="776" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="1" my-argname="prev" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="2" my-argname="next" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" my-argnr="2" my-argname="start" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1334" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="1" my-argname="c0" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="2" my-argname="c1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" my-argnr="1" my-argname="face" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1889" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:2377:16" my-argnr="1" my-argname="vertex" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2379" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:823:15" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1895" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1238" col="20" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="21" info="Calling function 'computeInternal', 1st argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" call-funcname="findMaxAngle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1618" col="34" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" call-funcname="getBtNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2008" col="27" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:816:10" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:480:14" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="488" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:518:14" my-argnr="1" my-argname="n" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="520" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:774:10" my-argnr="1" my-argname="edge" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="776" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="1" my-argname="prev" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="2" my-argname="next" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" my-argnr="2" my-argname="start" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1336" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="1" my-argname="c0" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="2" my-argname="c1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" my-argnr="1" my-argname="face" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1889" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:2377:16" my-argnr="1" my-argname="vertex" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2379" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:823:15" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1895" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1238" col="20" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="21" info="Calling function 'computeInternal', 1st argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" call-funcname="findMaxAngle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1618" col="34" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" call-funcname="getBtNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2008" col="27" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:816:10" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:480:14" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="488" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:518:14" my-argnr="1" my-argname="n" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="520" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:774:10" my-argnr="1" my-argname="edge" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="776" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="1" my-argname="prev" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="2" my-argname="next" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" my-argnr="2" my-argname="start" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1336" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="1" my-argname="c0" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="2" my-argname="c1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" my-argnr="1" my-argname="face" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1889" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:2377:16" my-argnr="1" my-argname="vertex" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2379" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:823:15" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1895" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+  </FileInfo>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;sign&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;sign&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="358" column="13"/>
+            <symbol>sign</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;VHACD::btConvexHullInternal::Point64::isZero&apos; can be const." verbose="The member function &apos;VHACD::btConvexHullInternal::Point64::isZero&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="73" column="14"/>
+            <symbol>VHACD::btConvexHullInternal::Point64::isZero</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1238" col="20" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="21" info="Calling function 'computeInternal', 1st argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" call-funcname="findMaxAngle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1618" col="34" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" call-funcname="getBtNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2008" col="27" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:816:10" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:480:14" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="488" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:518:14" my-argnr="1" my-argname="n" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="520" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:774:10" my-argnr="1" my-argname="edge" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="776" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="1" my-argname="prev" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="2" my-argname="next" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" my-argnr="2" my-argname="start" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1336" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="1" my-argname="c0" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="2" my-argname="c1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" my-argnr="1" my-argname="face" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1889" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:2377:16" my-argnr="1" my-argname="vertex" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2379" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:823:15" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1895" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+  </FileInfo>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Int128::low&apos; is not initialized in the constructor." verbose="Member variable &apos;Int128::low&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="154" column="9"/>
+            <symbol>Int128::low</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Int128::high&apos; is not initialized in the constructor." verbose="Member variable &apos;Int128::high&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="154" column="9"/>
+            <symbol>Int128::high</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1238" col="20" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="21" info="Calling function 'computeInternal', 1st argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1587" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" call-funcname="findMaxAngle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1618" col="34" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="5" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" call-funcname="findEdgeForCoplanarFaces" call-argnr="6" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1666" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:806:10" call-funcname="computeInternal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1871" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" call-funcname="getBtNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2008" col="27" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:816:10" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:480:14" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="488" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:518:14" my-argnr="1" my-argname="n" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="520" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:774:10" my-argnr="1" my-argname="edge" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="776" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="1" my-argname="prev" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:768:24" my-argnr="2" my-argname="next" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1309" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:769:11" my-argnr="2" my-argname="start" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1336" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="1" my-argname="c0" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:770:10" my-argnr="2" my-argname="c1" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1379" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:814:15" my-argnr="1" my-argname="face" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1889" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:2377:16" my-argnr="1" my-argname="vertex" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="2379" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="554" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:550:14" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="555" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:823:15" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="1895" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp:747:14" my-argnr="1" my-argname="object" file="/home/hbina/git/godot/thirdparty/vhacd/src/btConvexHullComputer.cpp" line="749" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="isZero" lineNumber="73"/>
+    <functiondecl functionName="dot" lineNumber="78"/>
+    <functiondecl functionName="isZero" lineNumber="113"/>
+    <functiondecl functionName="cross" lineNumber="118"/>
+    <functiondecl functionName="cross" lineNumber="123"/>
+    <functiondecl functionName="dot" lineNumber="128"/>
+    <functiondecl functionName="dot" lineNumber="133"/>
+    <functiondecl functionName="toScalar" lineNumber="245"/>
+    <functiondecl functionName="getSign" lineNumber="251"/>
+    <functiondecl functionName="ucmp" lineNumber="261"/>
+    <functiondecl functionName="isNegativeInfinity" lineNumber="312"/>
+    <functiondecl functionName="isNaN" lineNumber="317"/>
+    <functiondecl functionName="toScalar" lineNumber="324"/>
+    <functiondecl functionName="toScalar" lineNumber="380"/>
+    <functiondecl functionName="xvalue" lineNumber="405"/>
+    <functiondecl functionName="yvalue" lineNumber="410"/>
+    <functiondecl functionName="zvalue" lineNumber="415"/>
+    <functiondecl functionName="dot" lineNumber="459"/>
+    <functiondecl functionName="xvalue" lineNumber="465"/>
+    <functiondecl functionName="yvalue" lineNumber="470"/>
+    <functiondecl functionName="zvalue" lineNumber="475"/>
+    <functiondecl functionName="receiveNearbyFaces" lineNumber="480"/>
+    <functiondecl functionName="link" lineNumber="518"/>
+    <functiondecl functionName="init" lineNumber="550"/>
+    <functiondecl functionName="getNormal" lineNumber="565"/>
+    <functiondecl functionName="removeEdgePair" lineNumber="774"/>
+    <functiondecl functionName="mul" lineNumber="841"/>
+    <functiondecl functionName="mul" lineNumber="866"/>
+    <functiondecl functionName="compare" lineNumber="883"/>
+    <functiondecl functionName="compare" lineNumber="925"/>
+    <functiondecl functionName="compare" lineNumber="948"/>
+    <functiondecl functionName="newEdgePair" lineNumber="972"/>
+    <functiondecl functionName="mergeProjection" lineNumber="992"/>
+    <functiondecl functionName="computeInternal" lineNumber="1149"/>
+    <functiondecl functionName="getOrientation" lineNumber="1307"/>
+    <functiondecl functionName="findMaxAngle" lineNumber="1329"/>
+    <functiondecl functionName="findEdgeForCoplanarFaces" lineNumber="1373"/>
+    <functiondecl functionName="merge" lineNumber="1526"/>
+    <functiondecl functionName="pointCmp" lineNumber="1766"/>
+    <functiondecl functionName="compute" lineNumber="1771"/>
+    <functiondecl functionName="toBtVector" lineNumber="1878"/>
+    <functiondecl functionName="getBtNormal" lineNumber="1887"/>
+    <functiondecl functionName="getCoordinates" lineNumber="1892"/>
+    <functiondecl functionName="shrink" lineNumber="1901"/>
+    <functiondecl functionName="shiftFace" lineNumber="2006"/>
+    <functiondecl functionName="getVertexCopy" lineNumber="2377"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="isZero" lineNumber="73"/>
+    <functiondecl functionName="dot" lineNumber="78"/>
+    <functiondecl functionName="isZero" lineNumber="113"/>
+    <functiondecl functionName="cross" lineNumber="118"/>
+    <functiondecl functionName="cross" lineNumber="123"/>
+    <functiondecl functionName="dot" lineNumber="128"/>
+    <functiondecl functionName="dot" lineNumber="133"/>
+    <functiondecl functionName="toScalar" lineNumber="245"/>
+    <functiondecl functionName="getSign" lineNumber="251"/>
+    <functiondecl functionName="ucmp" lineNumber="261"/>
+    <functiondecl functionName="isNegativeInfinity" lineNumber="312"/>
+    <functiondecl functionName="isNaN" lineNumber="317"/>
+    <functiondecl functionName="toScalar" lineNumber="324"/>
+    <functiondecl functionName="toScalar" lineNumber="380"/>
+    <functiondecl functionName="xvalue" lineNumber="405"/>
+    <functiondecl functionName="yvalue" lineNumber="410"/>
+    <functiondecl functionName="zvalue" lineNumber="415"/>
+    <functiondecl functionName="print" lineNumber="446"/>
+    <functiondecl functionName="dot" lineNumber="459"/>
+    <functiondecl functionName="xvalue" lineNumber="465"/>
+    <functiondecl functionName="yvalue" lineNumber="470"/>
+    <functiondecl functionName="zvalue" lineNumber="475"/>
+    <functiondecl functionName="receiveNearbyFaces" lineNumber="480"/>
+    <functiondecl functionName="link" lineNumber="518"/>
+    <functiondecl functionName="print" lineNumber="526"/>
+    <functiondecl functionName="init" lineNumber="550"/>
+    <functiondecl functionName="getNormal" lineNumber="565"/>
+    <functiondecl functionName="removeEdgePair" lineNumber="774"/>
+    <functiondecl functionName="mul" lineNumber="841"/>
+    <functiondecl functionName="mul" lineNumber="866"/>
+    <functiondecl functionName="compare" lineNumber="883"/>
+    <functiondecl functionName="compare" lineNumber="925"/>
+    <functiondecl functionName="compare" lineNumber="948"/>
+    <functiondecl functionName="newEdgePair" lineNumber="972"/>
+    <functiondecl functionName="mergeProjection" lineNumber="992"/>
+    <functiondecl functionName="computeInternal" lineNumber="1149"/>
+    <functiondecl functionName="print" lineNumber="1254"/>
+    <functiondecl functionName="printGraph" lineNumber="1284"/>
+    <functiondecl functionName="getOrientation" lineNumber="1307"/>
+    <functiondecl functionName="findMaxAngle" lineNumber="1329"/>
+    <functiondecl functionName="findEdgeForCoplanarFaces" lineNumber="1373"/>
+    <functiondecl functionName="merge" lineNumber="1526"/>
+    <functiondecl functionName="pointCmp" lineNumber="1766"/>
+    <functiondecl functionName="compute" lineNumber="1771"/>
+    <functiondecl functionName="toBtVector" lineNumber="1878"/>
+    <functiondecl functionName="getBtNormal" lineNumber="1887"/>
+    <functiondecl functionName="getCoordinates" lineNumber="1892"/>
+    <functiondecl functionName="shrink" lineNumber="1901"/>
+    <functiondecl functionName="shiftFace" lineNumber="2006"/>
+    <functiondecl functionName="getVertexCopy" lineNumber="2377"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="isZero" lineNumber="73"/>
+    <functiondecl functionName="dot" lineNumber="78"/>
+    <functiondecl functionName="isZero" lineNumber="113"/>
+    <functiondecl functionName="cross" lineNumber="118"/>
+    <functiondecl functionName="cross" lineNumber="123"/>
+    <functiondecl functionName="dot" lineNumber="128"/>
+    <functiondecl functionName="dot" lineNumber="133"/>
+    <functiondecl functionName="toScalar" lineNumber="245"/>
+    <functiondecl functionName="getSign" lineNumber="251"/>
+    <functiondecl functionName="ucmp" lineNumber="261"/>
+    <functiondecl functionName="isNegativeInfinity" lineNumber="312"/>
+    <functiondecl functionName="isNaN" lineNumber="317"/>
+    <functiondecl functionName="toScalar" lineNumber="324"/>
+    <functiondecl functionName="toScalar" lineNumber="380"/>
+    <functiondecl functionName="xvalue" lineNumber="405"/>
+    <functiondecl functionName="yvalue" lineNumber="410"/>
+    <functiondecl functionName="zvalue" lineNumber="415"/>
+    <functiondecl functionName="print" lineNumber="446"/>
+    <functiondecl functionName="dot" lineNumber="459"/>
+    <functiondecl functionName="xvalue" lineNumber="465"/>
+    <functiondecl functionName="yvalue" lineNumber="470"/>
+    <functiondecl functionName="zvalue" lineNumber="475"/>
+    <functiondecl functionName="receiveNearbyFaces" lineNumber="480"/>
+    <functiondecl functionName="link" lineNumber="518"/>
+    <functiondecl functionName="print" lineNumber="526"/>
+    <functiondecl functionName="init" lineNumber="550"/>
+    <functiondecl functionName="getNormal" lineNumber="565"/>
+    <functiondecl functionName="removeEdgePair" lineNumber="774"/>
+    <functiondecl functionName="mul" lineNumber="841"/>
+    <functiondecl functionName="mul" lineNumber="866"/>
+    <functiondecl functionName="compare" lineNumber="883"/>
+    <functiondecl functionName="compare" lineNumber="925"/>
+    <functiondecl functionName="compare" lineNumber="948"/>
+    <functiondecl functionName="newEdgePair" lineNumber="972"/>
+    <functiondecl functionName="mergeProjection" lineNumber="992"/>
+    <functiondecl functionName="computeInternal" lineNumber="1149"/>
+    <functiondecl functionName="print" lineNumber="1254"/>
+    <functiondecl functionName="printGraph" lineNumber="1284"/>
+    <functiondecl functionName="getOrientation" lineNumber="1307"/>
+    <functiondecl functionName="findMaxAngle" lineNumber="1329"/>
+    <functiondecl functionName="findEdgeForCoplanarFaces" lineNumber="1373"/>
+    <functiondecl functionName="merge" lineNumber="1526"/>
+    <functiondecl functionName="pointCmp" lineNumber="1766"/>
+    <functiondecl functionName="compute" lineNumber="1771"/>
+    <functiondecl functionName="toBtVector" lineNumber="1878"/>
+    <functiondecl functionName="getBtNormal" lineNumber="1887"/>
+    <functiondecl functionName="getCoordinates" lineNumber="1892"/>
+    <functiondecl functionName="shrink" lineNumber="1901"/>
+    <functiondecl functionName="shiftFace" lineNumber="2006"/>
+    <functiondecl functionName="getVertexCopy" lineNumber="2377"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="isZero" lineNumber="73"/>
+    <functiondecl functionName="dot" lineNumber="78"/>
+    <functiondecl functionName="isZero" lineNumber="113"/>
+    <functiondecl functionName="cross" lineNumber="118"/>
+    <functiondecl functionName="cross" lineNumber="123"/>
+    <functiondecl functionName="dot" lineNumber="128"/>
+    <functiondecl functionName="dot" lineNumber="133"/>
+    <functiondecl functionName="toScalar" lineNumber="245"/>
+    <functiondecl functionName="getSign" lineNumber="251"/>
+    <functiondecl functionName="ucmp" lineNumber="261"/>
+    <functiondecl functionName="isNegativeInfinity" lineNumber="312"/>
+    <functiondecl functionName="isNaN" lineNumber="317"/>
+    <functiondecl functionName="toScalar" lineNumber="324"/>
+    <functiondecl functionName="toScalar" lineNumber="380"/>
+    <functiondecl functionName="xvalue" lineNumber="405"/>
+    <functiondecl functionName="yvalue" lineNumber="410"/>
+    <functiondecl functionName="zvalue" lineNumber="415"/>
+    <functiondecl functionName="dot" lineNumber="459"/>
+    <functiondecl functionName="xvalue" lineNumber="465"/>
+    <functiondecl functionName="yvalue" lineNumber="470"/>
+    <functiondecl functionName="zvalue" lineNumber="475"/>
+    <functiondecl functionName="receiveNearbyFaces" lineNumber="480"/>
+    <functiondecl functionName="link" lineNumber="518"/>
+    <functiondecl functionName="init" lineNumber="550"/>
+    <functiondecl functionName="getNormal" lineNumber="565"/>
+    <functiondecl functionName="removeEdgePair" lineNumber="774"/>
+    <functiondecl functionName="mul" lineNumber="841"/>
+    <functiondecl functionName="mul" lineNumber="866"/>
+    <functiondecl functionName="compare" lineNumber="883"/>
+    <functiondecl functionName="compare" lineNumber="925"/>
+    <functiondecl functionName="compare" lineNumber="948"/>
+    <functiondecl functionName="newEdgePair" lineNumber="972"/>
+    <functiondecl functionName="mergeProjection" lineNumber="992"/>
+    <functiondecl functionName="computeInternal" lineNumber="1149"/>
+    <functiondecl functionName="getOrientation" lineNumber="1307"/>
+    <functiondecl functionName="findMaxAngle" lineNumber="1329"/>
+    <functiondecl functionName="findEdgeForCoplanarFaces" lineNumber="1373"/>
+    <functiondecl functionName="merge" lineNumber="1526"/>
+    <functiondecl functionName="pointCmp" lineNumber="1766"/>
+    <functiondecl functionName="compute" lineNumber="1771"/>
+    <functiondecl functionName="toBtVector" lineNumber="1878"/>
+    <functiondecl functionName="getBtNormal" lineNumber="1887"/>
+    <functiondecl functionName="getCoordinates" lineNumber="1892"/>
+    <functiondecl functionName="shrink" lineNumber="1901"/>
+    <functiondecl functionName="shiftFace" lineNumber="2006"/>
+    <functiondecl functionName="getVertexCopy" lineNumber="2377"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="isZero" lineNumber="73"/>
+    <functiondecl functionName="dot" lineNumber="78"/>
+    <functiondecl functionName="isZero" lineNumber="113"/>
+    <functiondecl functionName="cross" lineNumber="118"/>
+    <functiondecl functionName="cross" lineNumber="123"/>
+    <functiondecl functionName="dot" lineNumber="128"/>
+    <functiondecl functionName="dot" lineNumber="133"/>
+    <functiondecl functionName="toScalar" lineNumber="245"/>
+    <functiondecl functionName="getSign" lineNumber="251"/>
+    <functiondecl functionName="ucmp" lineNumber="261"/>
+    <functiondecl functionName="isNegativeInfinity" lineNumber="312"/>
+    <functiondecl functionName="isNaN" lineNumber="317"/>
+    <functiondecl functionName="toScalar" lineNumber="324"/>
+    <functiondecl functionName="toScalar" lineNumber="380"/>
+    <functiondecl functionName="xvalue" lineNumber="405"/>
+    <functiondecl functionName="yvalue" lineNumber="410"/>
+    <functiondecl functionName="zvalue" lineNumber="415"/>
+    <functiondecl functionName="dot" lineNumber="459"/>
+    <functiondecl functionName="xvalue" lineNumber="465"/>
+    <functiondecl functionName="yvalue" lineNumber="470"/>
+    <functiondecl functionName="zvalue" lineNumber="475"/>
+    <functiondecl functionName="receiveNearbyFaces" lineNumber="480"/>
+    <functiondecl functionName="link" lineNumber="518"/>
+    <functiondecl functionName="init" lineNumber="550"/>
+    <functiondecl functionName="getNormal" lineNumber="565"/>
+    <functiondecl functionName="removeEdgePair" lineNumber="774"/>
+    <functiondecl functionName="mul" lineNumber="841"/>
+    <functiondecl functionName="mul" lineNumber="866"/>
+    <functiondecl functionName="compare" lineNumber="883"/>
+    <functiondecl functionName="compare" lineNumber="925"/>
+    <functiondecl functionName="compare" lineNumber="948"/>
+    <functiondecl functionName="newEdgePair" lineNumber="972"/>
+    <functiondecl functionName="mergeProjection" lineNumber="992"/>
+    <functiondecl functionName="computeInternal" lineNumber="1149"/>
+    <functiondecl functionName="getOrientation" lineNumber="1307"/>
+    <functiondecl functionName="findMaxAngle" lineNumber="1329"/>
+    <functiondecl functionName="findEdgeForCoplanarFaces" lineNumber="1373"/>
+    <functiondecl functionName="merge" lineNumber="1526"/>
+    <functiondecl functionName="pointCmp" lineNumber="1766"/>
+    <functiondecl functionName="compute" lineNumber="1771"/>
+    <functiondecl functionName="toBtVector" lineNumber="1878"/>
+    <functiondecl functionName="getBtNormal" lineNumber="1887"/>
+    <functiondecl functionName="getCoordinates" lineNumber="1892"/>
+    <functiondecl functionName="shrink" lineNumber="1901"/>
+    <functiondecl functionName="shiftFace" lineNumber="2006"/>
+    <functiondecl functionName="getVertexCopy" lineNumber="2377"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="isZero" lineNumber="73"/>
+    <functiondecl functionName="dot" lineNumber="78"/>
+    <functiondecl functionName="isZero" lineNumber="113"/>
+    <functiondecl functionName="cross" lineNumber="118"/>
+    <functiondecl functionName="cross" lineNumber="123"/>
+    <functiondecl functionName="dot" lineNumber="128"/>
+    <functiondecl functionName="dot" lineNumber="133"/>
+    <functiondecl functionName="toScalar" lineNumber="245"/>
+    <functiondecl functionName="getSign" lineNumber="251"/>
+    <functiondecl functionName="ucmp" lineNumber="261"/>
+    <functiondecl functionName="isNegativeInfinity" lineNumber="312"/>
+    <functiondecl functionName="isNaN" lineNumber="317"/>
+    <functiondecl functionName="toScalar" lineNumber="324"/>
+    <functiondecl functionName="toScalar" lineNumber="380"/>
+    <functiondecl functionName="xvalue" lineNumber="405"/>
+    <functiondecl functionName="yvalue" lineNumber="410"/>
+    <functiondecl functionName="zvalue" lineNumber="415"/>
+    <functiondecl functionName="dot" lineNumber="459"/>
+    <functiondecl functionName="xvalue" lineNumber="465"/>
+    <functiondecl functionName="yvalue" lineNumber="470"/>
+    <functiondecl functionName="zvalue" lineNumber="475"/>
+    <functiondecl functionName="receiveNearbyFaces" lineNumber="480"/>
+    <functiondecl functionName="link" lineNumber="518"/>
+    <functiondecl functionName="init" lineNumber="550"/>
+    <functiondecl functionName="getNormal" lineNumber="565"/>
+    <functiondecl functionName="removeEdgePair" lineNumber="774"/>
+    <functiondecl functionName="mul" lineNumber="841"/>
+    <functiondecl functionName="mul" lineNumber="866"/>
+    <functiondecl functionName="compare" lineNumber="883"/>
+    <functiondecl functionName="compare" lineNumber="925"/>
+    <functiondecl functionName="compare" lineNumber="948"/>
+    <functiondecl functionName="newEdgePair" lineNumber="972"/>
+    <functiondecl functionName="mergeProjection" lineNumber="992"/>
+    <functiondecl functionName="computeInternal" lineNumber="1149"/>
+    <functiondecl functionName="getOrientation" lineNumber="1307"/>
+    <functiondecl functionName="findMaxAngle" lineNumber="1329"/>
+    <functiondecl functionName="findEdgeForCoplanarFaces" lineNumber="1373"/>
+    <functiondecl functionName="merge" lineNumber="1526"/>
+    <functiondecl functionName="pointCmp" lineNumber="1766"/>
+    <functiondecl functionName="compute" lineNumber="1771"/>
+    <functiondecl functionName="toBtVector" lineNumber="1878"/>
+    <functiondecl functionName="getBtNormal" lineNumber="1887"/>
+    <functiondecl functionName="getCoordinates" lineNumber="1892"/>
+    <functiondecl functionName="shrink" lineNumber="1901"/>
+    <functiondecl functionName="shiftFace" lineNumber="2006"/>
+    <functiondecl functionName="getVertexCopy" lineNumber="2377"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="isZero" lineNumber="73"/>
+    <functiondecl functionName="dot" lineNumber="78"/>
+    <functiondecl functionName="isZero" lineNumber="113"/>
+    <functiondecl functionName="cross" lineNumber="118"/>
+    <functiondecl functionName="cross" lineNumber="123"/>
+    <functiondecl functionName="dot" lineNumber="128"/>
+    <functiondecl functionName="dot" lineNumber="133"/>
+    <functiondecl functionName="toScalar" lineNumber="245"/>
+    <functiondecl functionName="getSign" lineNumber="251"/>
+    <functiondecl functionName="ucmp" lineNumber="261"/>
+    <functiondecl functionName="isNegativeInfinity" lineNumber="312"/>
+    <functiondecl functionName="isNaN" lineNumber="317"/>
+    <functiondecl functionName="toScalar" lineNumber="324"/>
+    <functiondecl functionName="toScalar" lineNumber="380"/>
+    <functiondecl functionName="xvalue" lineNumber="405"/>
+    <functiondecl functionName="yvalue" lineNumber="410"/>
+    <functiondecl functionName="zvalue" lineNumber="415"/>
+    <functiondecl functionName="dot" lineNumber="459"/>
+    <functiondecl functionName="xvalue" lineNumber="465"/>
+    <functiondecl functionName="yvalue" lineNumber="470"/>
+    <functiondecl functionName="zvalue" lineNumber="475"/>
+    <functiondecl functionName="receiveNearbyFaces" lineNumber="480"/>
+    <functiondecl functionName="link" lineNumber="518"/>
+    <functiondecl functionName="init" lineNumber="550"/>
+    <functiondecl functionName="getNormal" lineNumber="565"/>
+    <functiondecl functionName="removeEdgePair" lineNumber="774"/>
+    <functiondecl functionName="mul" lineNumber="841"/>
+    <functiondecl functionName="mul" lineNumber="866"/>
+    <functiondecl functionName="compare" lineNumber="883"/>
+    <functiondecl functionName="compare" lineNumber="925"/>
+    <functiondecl functionName="compare" lineNumber="948"/>
+    <functiondecl functionName="newEdgePair" lineNumber="972"/>
+    <functiondecl functionName="mergeProjection" lineNumber="992"/>
+    <functiondecl functionName="computeInternal" lineNumber="1149"/>
+    <functiondecl functionName="getOrientation" lineNumber="1307"/>
+    <functiondecl functionName="findMaxAngle" lineNumber="1329"/>
+    <functiondecl functionName="findEdgeForCoplanarFaces" lineNumber="1373"/>
+    <functiondecl functionName="merge" lineNumber="1526"/>
+    <functiondecl functionName="pointCmp" lineNumber="1766"/>
+    <functiondecl functionName="compute" lineNumber="1771"/>
+    <functiondecl functionName="toBtVector" lineNumber="1878"/>
+    <functiondecl functionName="getBtNormal" lineNumber="1887"/>
+    <functiondecl functionName="getCoordinates" lineNumber="1892"/>
+    <functiondecl functionName="shrink" lineNumber="1901"/>
+    <functiondecl functionName="shiftFace" lineNumber="2006"/>
+    <functiondecl functionName="getVertexCopy" lineNumber="2377"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="reset" lineNumber="717"/>
+    <functiondecl functionName="setArraySize" lineNumber="723"/>
+    <functiondecl functionName="newObject" lineNumber="728"/>
+    <functiondecl functionName="freeObject" lineNumber="747"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="high" lineNumber="574"/>
+    <functiondecl functionName="low" lineNumber="579"/>
+    <functiondecl functionName="mul" lineNumber="584"/>
+    <functiondecl functionName="shlHalf" lineNumber="589"/>
+    <functiondecl functionName="high" lineNumber="594"/>
+    <functiondecl functionName="low" lineNumber="599"/>
+    <functiondecl functionName="mul" lineNumber="604"/>
+    <functiondecl functionName="shlHalf" lineNumber="609"/>
+    <functiondecl functionName="mul" lineNumber="616"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functiondecl functionName="init" lineNumber="680"/>
+    <functioncall functionName="CLOCKWISE"/>
+    <functioncall functionName="COUNTER_CLOCKWISE"/>
+    <functioncall functionName="Edge"/>
+    <functioncall functionName="Face"/>
+    <functioncall functionName="Int128"/>
+    <functioncall functionName="IntermediateHull"/>
+    <functioncall functionName="NONE"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Point32"/>
+    <functioncall functionName="Point64"/>
+    <functioncall functionName="PointR128"/>
+    <functioncall functionName="PoolArray &lt; Edge &gt;"/>
+    <functioncall functionName="PoolArray &lt; Face &gt;"/>
+    <functioncall functionName="PoolArray &lt; Vertex &gt;"/>
+    <functioncall functionName="Rational128"/>
+    <functioncall functionName="Rational64"/>
+    <functioncall functionName="SIMD_INFINITY"/>
+    <functioncall functionName="Vertex"/>
+    <functioncall functionName="__int32"/>
+    <functioncall functionName="__int64"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="amount"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="arraySize"/>
+    <functioncall functionName="arrays"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="btAlignedAlloc"/>
+    <functioncall functionName="btAlignedFree"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btAtan"/>
+    <functioncall functionName="btMin"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btSwap"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c0"/>
+    <functioncall functionName="c1"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="clampAmount"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="cmp"/>
+    <functioncall functionName="compare"/>
+    <functioncall functionName="compute"/>
+    <functioncall functionName="computeInternal"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="coords"/>
+    <functioncall functionName="copied"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="cot"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="dbnHigh"/>
+    <functioncall functionName="dbnLow"/>
+    <functioncall functionName="deeper"/>
+    <functioncall functionName="denominator"/>
+    <functioncall functionName="det"/>
+    <functioncall functionName="dir0"/>
+    <functioncall functionName="dir1"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="doubleCoords"/>
+    <functioncall functionName="dx"/>
+    <functioncall functionName="dx0"/>
+    <functioncall functionName="dx1"/>
+    <functioncall functionName="dxn"/>
+    <functioncall functionName="dy"/>
+    <functioncall functionName="dy0"/>
+    <functioncall functionName="dy1"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="e0"/>
+    <functioncall functionName="e1"/>
+    <functioncall functionName="edge"/>
+    <functioncall functionName="edges"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="et0"/>
+    <functioncall functionName="et1"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="f0"/>
+    <functioncall functionName="f1"/>
+    <functioncall functionName="face"/>
+    <functioncall functionName="faceEdge"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="findEdgeForCoplanarFaces"/>
+    <functioncall functionName="findMaxAngle"/>
+    <functioncall functionName="firstCopy"/>
+    <functioncall functionName="firstEdge"/>
+    <functioncall functionName="firstFaceEdge"/>
+    <functioncall functionName="firstIntersection"/>
+    <functioncall functionName="firstNearbyFace"/>
+    <functioncall functionName="firstNew1"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="freeObject"/>
+    <functioncall functionName="freeObjects"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="getBtNormal"/>
+    <functioncall functionName="getCoordinates"/>
+    <functioncall functionName="getNormal"/>
+    <functioncall functionName="getOrientation"/>
+    <functioncall functionName="getSign"/>
+    <functioncall functionName="getTargetVertex"/>
+    <functioncall functionName="getVertexCopy"/>
+    <functioncall functionName="h0"/>
+    <functioncall functionName="h1"/>
+    <functioncall functionName="high"/>
+    <functioncall functionName="hull"/>
+    <functioncall functionName="hull1"/>
+    <functioncall functionName="hullCenter"/>
+    <functioncall functionName="hullCenterX"/>
+    <functioncall functionName="hullCenterY"/>
+    <functioncall functionName="hullCenterZ"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="intersection"/>
+    <functioncall functionName="isInt64"/>
+    <functioncall functionName="isNaN"/>
+    <functioncall functionName="isNegativeInfinity"/>
+    <functioncall functionName="isZero"/>
+    <functioncall functionName="kept"/>
+    <functioncall functionName="lastNearbyFace"/>
+    <functioncall functionName="link"/>
+    <functioncall functionName="lo"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="m00"/>
+    <functioncall functionName="m01"/>
+    <functioncall functionName="m10"/>
+    <functioncall functionName="m11"/>
+    <functioncall functionName="m_denominator"/>
+    <functioncall functionName="m_numerator"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="maxAxis"/>
+    <functioncall functionName="maxDot0"/>
+    <functioncall functionName="maxUsedEdgePairs"/>
+    <functioncall functionName="maxXy"/>
+    <functioncall functionName="maxYx"/>
+    <functioncall functionName="medAxis"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="mergeProjection"/>
+    <functioncall functionName="mergeStamp"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="min0"/>
+    <functioncall functionName="min1"/>
+    <functioncall functionName="minAxis"/>
+    <functioncall functionName="minCot"/>
+    <functioncall functionName="minCot0"/>
+    <functioncall functionName="minCot1"/>
+    <functioncall functionName="minEdge"/>
+    <functioncall functionName="minXy"/>
+    <functioncall functionName="minYx"/>
+    <functioncall functionName="mul"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n0"/>
+    <functioncall functionName="n1"/>
+    <functioncall functionName="nbdHigh"/>
+    <functioncall functionName="nbdLow"/>
+    <functioncall functionName="nearbyVertex"/>
+    <functioncall functionName="negative"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="newEdgePair"/>
+    <functioncall functionName="newObject"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nextArray"/>
+    <functioncall functionName="nextWithSameNearbyVertex"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="numerator"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="object"/>
+    <functioncall functionName="oldVertices"/>
+    <functioncall functionName="optDot"/>
+    <functioncall functionName="origDot"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p00"/>
+    <functioncall functionName="p01"/>
+    <functioncall functionName="p0110"/>
+    <functioncall functionName="p10"/>
+    <functioncall functionName="p11"/>
+    <functioncall functionName="pendingHead0"/>
+    <functioncall functionName="pendingHead1"/>
+    <functioncall functionName="pendingTail0"/>
+    <functioncall functionName="pendingTail1"/>
+    <functioncall functionName="perp"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="pointCmp"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prevCmp"/>
+    <functioncall functionName="prevFaceEdge"/>
+    <functioncall functionName="print"/>
+    <functioncall functionName="printGraph"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quickSort"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="receiveNearbyFaces"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="removeEdgePair"/>
+    <functioncall functionName="removed"/>
+    <functioncall functionName="reset"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="reverse"/>
+    <functioncall functionName="rxs"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="setArraySize"/>
+    <functioncall functionName="setMax"/>
+    <functioncall functionName="setMin"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="shiftFace"/>
+    <functioncall functionName="shiftedDot"/>
+    <functioncall functionName="shiftedOrigin"/>
+    <functioncall functionName="shlHalf"/>
+    <functioncall functionName="shrink"/>
+    <functioncall functionName="shrinkClamp"/>
+    <functioncall functionName="sign"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="split0"/>
+    <functioncall functionName="split1"/>
+    <functioncall functionName="stack"/>
+    <functioncall functionName="stamp"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start0"/>
+    <functioncall functionName="start1"/>
+    <functioncall functionName="startEdge"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="sxrxs"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="toBtVector"/>
+    <functioncall functionName="toPrev0"/>
+    <functioncall functionName="toPrev1"/>
+    <functioncall functionName="toScalar"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ucmp"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="usedEdgePairs"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v00"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v10"/>
+    <functioncall functionName="v1n"/>
+    <functioncall functionName="v1p"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vertex"/>
+    <functioncall functionName="vertexList"/>
+    <functioncall functionName="volume"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="w0"/>
+    <functioncall functionName="w1"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xvalue"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="yvalue"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zvalue"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2109152168">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::lerp&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::lerp&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="189" column="7"/>
+            <symbol>EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::lerp</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::catmull_rom&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::catmull_rom&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="196" column="7"/>
+            <symbol>EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::catmull_rom</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::bezier&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::bezier&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="203" column="7"/>
+            <symbol>EditorSceneImporterAssetImportInterpolate &lt; Quat &gt;::bezier</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::lerp&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::lerp&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="160" column="4"/>
+            <symbol>EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::lerp</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::catmull_rom&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::catmull_rom&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="165" column="4"/>
+            <symbol>EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::catmull_rom</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::bezier&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::bezier&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="173" column="4"/>
+            <symbol>EditorSceneImporterAssetImportInterpolate &lt; Vector3 &gt;::bezier</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;ai_light==nullptr&apos; is redundant or there is possible null pointer dereference: ai_light." verbose="Either the condition &apos;ai_light==nullptr&apos; is redundant or there is possible null pointer dereference: ai_light." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="316" column="52" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="314" column="37" info="Assignment &apos;ai_light=scene-&gt;mLights[l]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="315" column="25" info="Assuming that condition &apos;ai_light==nullptr&apos; is not redundant"/>
+            <symbol>ai_light</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;ai_camera==nullptr&apos; is redundant or there is possible null pointer dereference: ai_camera." verbose="Either the condition &apos;ai_camera==nullptr&apos; is redundant or there is possible null pointer dereference: ai_camera." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="323" column="53" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="321" column="40" info="Assignment &apos;ai_camera=scene-&gt;mCameras[c]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="322" column="26" info="Assuming that condition &apos;ai_camera==nullptr&apos; is not redundant"/>
+            <symbol>ai_camera</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!bone&apos; is redundant or there is possible null pointer dereference: bone." verbose="Either the condition &apos;!bone&apos; is redundant or there is possible null pointer dereference: bone." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="430" column="32" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="425" column="31" info="Assignment &apos;bone=element-&gt;get()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="427" column="21" info="Assuming that condition &apos;!bone&apos; is not redundant"/>
+            <symbol>bone</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!bone&apos; is redundant or there is possible null pointer dereference: bone." verbose="Either the condition &apos;!bone&apos; is redundant or there is possible null pointer dereference: bone." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="433" column="24" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="425" column="31" info="Assignment &apos;bone=element-&gt;get()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="427" column="21" info="Assuming that condition &apos;!bone&apos; is not redundant"/>
+            <symbol>bone</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!bone&apos; is redundant or there is possible null pointer dereference: bone." verbose="Either the condition &apos;!bone&apos; is redundant or there is possible null pointer dereference: bone." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="436" column="64" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="425" column="31" info="Assignment &apos;bone=element-&gt;get()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="427" column="21" info="Assuming that condition &apos;!bone&apos; is not redundant"/>
+            <symbol>bone</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;mesh_template==nullptr&apos; is redundant or there is possible null pointer dereference: mesh_template." verbose="Either the condition &apos;mesh_template==nullptr&apos; is redundant or there is possible null pointer dereference: mesh_template." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="476" column="24" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="471" column="49" info="Assignment &apos;mesh_template=key_value_pair-&gt;value()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="474" column="31" info="Assuming that condition &apos;mesh_template==nullptr&apos; is not redundant"/>
+            <symbol>mesh_template</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;assimp_node==nullptr&apos; is redundant or there is possible null pointer dereference: assimp_node." verbose="Either the condition &apos;assimp_node==nullptr&apos; is redundant or there is possible null pointer dereference: assimp_node." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="487" column="54" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="470" column="51" info="Assignment &apos;assimp_node=key_value_pair-&gt;key()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="473" column="29" info="Assuming that condition &apos;assimp_node==nullptr&apos; is not redundant"/>
+            <symbol>assimp_node</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;assimp_node==nullptr&apos; is redundant or there is possible null pointer dereference: assimp_node." verbose="Either the condition &apos;assimp_node==nullptr&apos; is redundant or there is possible null pointer dereference: assimp_node." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="488" column="68" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="470" column="51" info="Assignment &apos;assimp_node=key_value_pair-&gt;key()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="473" column="29" info="Assuming that condition &apos;assimp_node==nullptr&apos; is not redundant"/>
+            <symbol>assimp_node</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;assimp_node==nullptr&apos; is redundant or there is possible null pointer dereference: assimp_node." verbose="Either the condition &apos;assimp_node==nullptr&apos; is redundant or there is possible null pointer dereference: assimp_node." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="490" column="8" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="470" column="51" info="Assignment &apos;assimp_node=key_value_pair-&gt;key()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="473" column="29" info="Assuming that condition &apos;assimp_node==nullptr&apos; is not redundant"/>
+            <symbol>assimp_node</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;mesh_instance==nullptr&apos; is redundant or there is possible null pointer dereference: mesh_instance." verbose="Either the condition &apos;mesh_instance==nullptr&apos; is redundant or there is possible null pointer dereference: mesh_instance." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="813" column="20" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="808" column="72" info="Assignment &apos;mesh_instance=Object::cast_to&lt;MeshInstance3D&gt;(item)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="809" column="30" info="Assuming that condition &apos;mesh_instance==nullptr&apos; is not redundant"/>
+            <symbol>mesh_instance</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." verbose="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1418" column="6" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1415" column="53" info="Assignment &apos;assimp_light=state.assimp_scene-&gt;mLights[state.light_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1416" column="18" info="Assuming that condition &apos;!assimp_light&apos; is not redundant"/>
+            <symbol>assimp_light</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." verbose="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1420" column="13" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1415" column="53" info="Assignment &apos;assimp_light=state.assimp_scene-&gt;mLights[state.light_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1416" column="18" info="Assuming that condition &apos;!assimp_light&apos; is not redundant"/>
+            <symbol>assimp_light</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." verbose="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1422" column="13" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1415" column="53" info="Assignment &apos;assimp_light=state.assimp_scene-&gt;mLights[state.light_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1416" column="18" info="Assuming that condition &apos;!assimp_light&apos; is not redundant"/>
+            <symbol>assimp_light</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." verbose="Either the condition &apos;!assimp_light&apos; is redundant or there is possible null pointer dereference: assimp_light." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1427" column="6" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1415" column="53" info="Assignment &apos;assimp_light=state.assimp_scene-&gt;mLights[state.light_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1416" column="18" info="Assuming that condition &apos;!assimp_light&apos; is not redundant"/>
+            <symbol>assimp_light</symbol>
+        </error>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: light" verbose="Possible null pointer dereference: light" cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1447" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1414" column="19" info="Assignment &apos;light=nullptr&apos;, assigned value is 0"/>
+            <symbol>light</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." verbose="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1465" column="15" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1460" column="49" info="Assignment &apos;camera=state.assimp_scene-&gt;mCameras[state.camera_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1461" column="18" info="Assuming that condition &apos;!camera&apos; is not redundant"/>
+            <symbol>camera</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!camera_node&apos; is redundant or there is possible null pointer dereference: camera_node." verbose="Either the condition &apos;!camera_node&apos; is redundant or there is possible null pointer dereference: camera_node." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1469" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1463" column="32" info="Assignment &apos;camera_node=memnew(Camera3D)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1464" column="18" info="Assuming that condition &apos;!camera_node&apos; is not redundant"/>
+            <symbol>camera_node</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." verbose="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1469" column="45" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1460" column="49" info="Assignment &apos;camera=state.assimp_scene-&gt;mCameras[state.camera_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1461" column="18" info="Assuming that condition &apos;!camera&apos; is not redundant"/>
+            <symbol>camera</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." verbose="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1470" column="24" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1460" column="49" info="Assignment &apos;camera=state.assimp_scene-&gt;mCameras[state.camera_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1461" column="18" info="Assuming that condition &apos;!camera&apos; is not redundant"/>
+            <symbol>camera</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." verbose="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1471" column="28" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1460" column="49" info="Assignment &apos;camera=state.assimp_scene-&gt;mCameras[state.camera_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1461" column="18" info="Assuming that condition &apos;!camera&apos; is not redundant"/>
+            <symbol>camera</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." verbose="Either the condition &apos;!camera&apos; is redundant or there is possible null pointer dereference: camera." cwe="476">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1472" column="23" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1460" column="49" info="Assignment &apos;camera=state.assimp_scene-&gt;mCameras[state.camera_cache[node_name]]&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1461" column="18" info="Assuming that condition &apos;!camera&apos; is not redundant"/>
+            <symbol>camera</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/assimp/import_utils.h:260:14" call-funcname="find_texture_path" call-argnr="4" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="326" col="21" call-argexpr="r_found" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="323" col="8" info="Assuming that condition 'r_found' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/modules/assimp/import_utils.h:304:14" call-funcname="find_texture_path" call-argnr="3" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="432" col="20" call-argexpr="found" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="431" col="16" info="Assignment 'found=false', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/import_utils.h:101:14" my-argnr="1" my-argname="ai_mesh" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="102" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/import_utils.h:101:14" my-argnr="5" my-argname="w" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="110" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp:50:9" my-argnr="1" my-argname="scene" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="51" col="43" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/import_utils.h:449:14" my-argnr="2" my-argname="ai_material" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="457" col="21" value="0"/>
+  </FileInfo>
+        <error id="constParameter" severity="style" msg="Parameter &apos;state&apos; can be declared with const" verbose="Parameter &apos;state&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1411" column="16"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;state&apos; can be declared with const" verbose="Parameter &apos;state&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1457" column="16"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/assimp/import_utils.h:260:14" call-funcname="find_texture_path" call-argnr="4" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="326" col="21" call-argexpr="r_found" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="323" col="8" info="Assuming that condition 'r_found' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/modules/assimp/import_utils.h:304:14" call-funcname="find_texture_path" call-argnr="3" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="432" col="20" call-argexpr="found" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="431" col="16" info="Assignment 'found=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.h:115:10" call-funcname="_generate_scene" call-argnr="2" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="154" col="24" call-argexpr="scene" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="152" col="28" info="Assuming that condition 'scene==nullptr' is not redundant"/>
+  <path file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="150" col="19" info="Assignment 'scene=(aiScene*)importer.ReadFile(s_path.c_str(),post_process_Steps)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.h:107:7" call-funcname="_insert_animation_track" call-argnr="10" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="789" col="28" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.h:119:7" call-funcname="_register_project_setting_import" call-argnr="4" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="80" col="3" my-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.h:139:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/import_utils.h:101:14" my-argnr="1" my-argname="ai_mesh" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="102" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/import_utils.h:101:14" my-argnr="5" my-argname="w" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="110" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp:50:9" my-argnr="1" my-argname="scene" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="51" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.h:107:7" my-argnr="2" my-argname="assimp_anim" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="564" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.h:146:7" my-argnr="2" my-argname="mesh" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="692" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.h:104:18" my-argnr="2" my-argname="assimp_node" file="/home/hbina/git/godot/modules/assimp/editor_scene_importer_assimp.cpp" line="1313" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/assimp/import_utils.h:449:14" my-argnr="2" my-argname="ai_material" file="/home/hbina/git/godot/modules/assimp/import_utils.h" line="457" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_bone_by_name" lineNumber="50"/>
+    <functiondecl functionName="lerp" lineNumber="189"/>
+    <functiondecl functionName="catmull_rom" lineNumber="196"/>
+    <functiondecl functionName="bezier" lineNumber="203"/>
+    <functiondecl functionName="lerp" lineNumber="160"/>
+    <functiondecl functionName="catmull_rom" lineNumber="165"/>
+    <functiondecl functionName="bezier" lineNumber="173"/>
+    <functiondecl functionName="get_bone_by_name" lineNumber="50"/>
+    <functiondecl functionName="get_extensions" lineNumber="68"/>
+    <functiondecl functionName="_register_project_setting_import" lineNumber="85"/>
+    <functiondecl functionName="get_import_flags" lineNumber="97"/>
+    <functiondecl functionName="_bind_methods" lineNumber="101"/>
+    <functiondecl functionName="import_scene" lineNumber="104"/>
+    <functiondecl functionName="lerp" lineNumber="189"/>
+    <functiondecl functionName="catmull_rom" lineNumber="196"/>
+    <functiondecl functionName="bezier" lineNumber="203"/>
+    <functiondecl functionName="get_bone_from_stack" lineNumber="285"/>
+    <functiondecl functionName="_generate_scene" lineNumber="301"/>
+    <functiondecl functionName="_insert_animation_track" lineNumber="560"/>
+    <functiondecl functionName="get_node_by_name" lineNumber="654"/>
+    <functiondecl functionName="RegenerateBoneStack" lineNumber="668"/>
+    <functiondecl functionName="RegenerateBoneStack" lineNumber="689"/>
+    <functiondecl functionName="_import_animation" lineNumber="702"/>
+    <functiondecl functionName="_generate_mesh_from_surface_indices" lineNumber="843"/>
+    <functiondecl functionName="create_mesh" lineNumber="1303"/>
+    <functiondecl functionName="create_light" lineNumber="1410"/>
+    <functiondecl functionName="create_camera" lineNumber="1456"/>
+    <functiondecl functionName="_generate_node" lineNumber="1482"/>
+    <functiondecl functionName="lerp" lineNumber="160"/>
+    <functiondecl functionName="catmull_rom" lineNumber="165"/>
+    <functiondecl functionName="bezier" lineNumber="173"/>
+    <functioncall functionName="AI_CONFIG_IMPORT_FBX_PRESERVE_PIVOTS"/>
+    <functioncall functionName="AI_CONFIG_PP_FD_REMOVE"/>
+    <functioncall functionName="AI_CONFIG_PP_SBP_REMOVE"/>
+    <functioncall functionName="AI_MATKEY_COLOR_DIFFUSE"/>
+    <functioncall functionName="AI_MATKEY_NAME"/>
+    <functioncall functionName="AI_MATKEY_TWOSIDED"/>
+    <functioncall functionName="ARRAY_COLOR"/>
+    <functioncall functionName="ARRAY_INDEX"/>
+    <functioncall functionName="ARRAY_MAX"/>
+    <functioncall functionName="ARRAY_NORMAL"/>
+    <functioncall functionName="ARRAY_TANGENT"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="AnimationPlayer"/>
+    <functioncall functionName="AssimpStream"/>
+    <functioncall functionName="BLEND_SHAPE_MODE_NORMALIZED"/>
+    <functioncall functionName="CULL_BACK"/>
+    <functioncall functionName="CULL_DISABLED"/>
+    <functioncall functionName="C_Str"/>
+    <functioncall functionName="Camera3D"/>
+    <functioncall functionName="CheckFormat"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="CreateAssimpTexture"/>
+    <functioncall functionName="DirectionalLight3D"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_CONTINUE_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="EditorSceneImporter"/>
+    <functioncall functionName="EditorSceneImporterAssimp"/>
+    <functioncall functionName="FEATURE_AMBIENT_OCCLUSION"/>
+    <functioncall functionName="FEATURE_EMISSION"/>
+    <functioncall functionName="FEATURE_NORMAL_MAPPING"/>
+    <functioncall functionName="FORMAT_RGBA8"/>
+    <functioncall functionName="Get"/>
+    <functioncall functionName="GetAssimpTexture"/>
+    <functioncall functionName="GetErrorString"/>
+    <functioncall functionName="GetTexture"/>
+    <functioncall functionName="HasNormals"/>
+    <functioncall functionName="HasPositions"/>
+    <functioncall functionName="HasTangentsAndBitangents"/>
+    <functioncall functionName="HasTextureCoords"/>
+    <functioncall functionName="HasVertexColors"/>
+    <functioncall functionName="INTERPOLATION_LINEAR"/>
+    <functioncall functionName="INTERP_CATMULLROMSPLINE"/>
+    <functioncall functionName="INTERP_CUBIC_SPLINE"/>
+    <functioncall functionName="INTERP_LINEAR"/>
+    <functioncall functionName="INTERP_STEP"/>
+    <functioncall functionName="ImportFormat"/>
+    <functioncall functionName="MeshInstance3D"/>
+    <functioncall functionName="Node3D"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="OmniLight3D"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="Quat"/>
+    <functioncall functionName="ReadFile"/>
+    <functioncall functionName="RecursiveState"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="RegenerateBoneStack"/>
+    <functioncall functionName="SetPropertyBool"/>
+    <functioncall functionName="SetPropertyInteger"/>
+    <functioncall functionName="Skeleton3D"/>
+    <functioncall functionName="SpotLight3D"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TEXTURE_ALBEDO"/>
+    <functioncall functionName="TEXTURE_AMBIENT_OCCLUSION"/>
+    <functioncall functionName="TEXTURE_EMISSION"/>
+    <functioncall functionName="TEXTURE_METALLIC"/>
+    <functioncall functionName="TEXTURE_NORMAL"/>
+    <functioncall functionName="TEXTURE_ROUGHNESS"/>
+    <functioncall functionName="TRANSPARENCY_ALPHA_DEPTH_PRE_PASS"/>
+    <functioncall functionName="TYPE_TRANSFORM"/>
+    <functioncall functionName="TYPE_VALUE"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VERBOSE"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="Warn"/>
+    <functioncall functionName="_GLOBAL_DEF"/>
+    <functioncall functionName="_assimp_node"/>
+    <functioncall functionName="_bone"/>
+    <functioncall functionName="_generate_mesh_from_surface_indices"/>
+    <functioncall functionName="_generate_node"/>
+    <functioncall functionName="_generate_scene"/>
+    <functioncall functionName="_import_animation"/>
+    <functioncall functionName="_insert_animation_track"/>
+    <functioncall functionName="_interpolate_track &lt; Quat &gt;"/>
+    <functioncall functionName="_interpolate_track &lt; Vector3 &gt;"/>
+    <functioncall functionName="_jpg_mem_loader_func"/>
+    <functioncall functionName="_new_node"/>
+    <functioncall functionName="_node_name"/>
+    <functioncall functionName="_node_transform"/>
+    <functioncall functionName="_parent_node"/>
+    <functioncall functionName="_png_mem_loader_func"/>
+    <functioncall functionName="_register_project_setting_import"/>
+    <functioncall functionName="_skeleton"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a1"/>
+    <functioncall functionName="a2"/>
+    <functioncall functionName="a3"/>
+    <functioncall functionName="a4"/>
+    <functioncall functionName="add_animation"/>
+    <functioncall functionName="add_bind"/>
+    <functioncall functionName="add_blend_shape"/>
+    <functioncall functionName="add_bone"/>
+    <functioncall functionName="add_bones"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_color"/>
+    <functioncall functionName="add_index"/>
+    <functioncall functionName="add_normal"/>
+    <functioncall functionName="add_surface_from_arrays"/>
+    <functioncall functionName="add_tangent"/>
+    <functioncall functionName="add_track"/>
+    <functioncall functionName="add_uv"/>
+    <functioncall functionName="add_uv2"/>
+    <functioncall functionName="add_vertex"/>
+    <functioncall functionName="add_weights"/>
+    <functioncall functionName="aiPrimitiveType_POINT"/>
+    <functioncall functionName="aiString"/>
+    <functioncall functionName="aiTextureType_AMBIENT_OCCLUSION"/>
+    <functioncall functionName="aiTextureType_BASE_COLOR"/>
+    <functioncall functionName="aiTextureType_DIFFUSE"/>
+    <functioncall functionName="aiTextureType_DIFFUSE_ROUGHNESS"/>
+    <functioncall functionName="aiTextureType_EMISSION_COLOR"/>
+    <functioncall functionName="aiTextureType_EMISSIVE"/>
+    <functioncall functionName="aiTextureType_METALNESS"/>
+    <functioncall functionName="aiTextureType_NORMALS"/>
+    <functioncall functionName="aiTextureType_NORMAL_CAMERA"/>
+    <functioncall functionName="aiTextureType_SPECULAR"/>
+    <functioncall functionName="aiTextureType_UNKNOWN"/>
+    <functioncall functionName="ai_anim_mesh_name"/>
+    <functioncall functionName="ai_filename"/>
+    <functioncall functionName="ai_material"/>
+    <functioncall functionName="ai_mesh"/>
+    <functioncall functionName="allocated_node"/>
+    <functioncall functionName="anim"/>
+    <functioncall functionName="anim_fps"/>
+    <functioncall functionName="animation"/>
+    <functioncall functionName="animation_player"/>
+    <functioncall functionName="armature"/>
+    <functioncall functionName="armature_for_bone"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="array_copy"/>
+    <functioncall functionName="array_mesh"/>
+    <functioncall functionName="assimp_light"/>
+    <functioncall functionName="assimp_matrix_transform"/>
+    <functioncall functionName="assimp_node"/>
+    <functioncall functionName="assimp_scene"/>
+    <functioncall functionName="attachStream"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b1"/>
+    <functioncall functionName="b2"/>
+    <functioncall functionName="b3"/>
+    <functioncall functionName="b4"/>
+    <functioncall functionName="base_color"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bezier"/>
+    <functioncall functionName="bi"/>
+    <functioncall functionName="bind_count"/>
+    <functioncall functionName="bone"/>
+    <functioncall functionName="boneId"/>
+    <functioncall functionName="boneIdx"/>
+    <functioncall functionName="boneIndex"/>
+    <functioncall functionName="bone_index"/>
+    <functioncall functionName="bone_name"/>
+    <functioncall functionName="bones"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c1"/>
+    <functioncall functionName="c2"/>
+    <functioncall functionName="c3"/>
+    <functioncall functionName="c4"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="calc_tangent_from_mesh"/>
+    <functioncall functionName="camera"/>
+    <functioncall functionName="camera_node"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="catmull_rom"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="childId"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clr_diffuse"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="color_set"/>
+    <functioncall functionName="commit_to_arrays"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_camera"/>
+    <functioncall functionName="create_from_image"/>
+    <functioncall functionName="create_light"/>
+    <functioncall functionName="create_mesh"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="current_bone_id"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="detect_alpha"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="element"/>
+    <functioncall functionName="element_assimp_node"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="ends_with"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="extension"/>
+    <functioncall functionName="extensions"/>
+    <functioncall functionName="exts"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file_exists"/>
+    <functioncall functionName="filename"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_bone"/>
+    <functioncall functionName="find_texture_path"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="frame_rate"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="generate_tangents"/>
+    <functioncall functionName="generic"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_anim_string_from_assimp"/>
+    <functioncall functionName="get_assimp_string"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_basename"/>
+    <functioncall functionName="get_blend_shape_count"/>
+    <functioncall functionName="get_blend_shape_name"/>
+    <functioncall functionName="get_bone_by_name"/>
+    <functioncall functionName="get_bone_count"/>
+    <functioncall functionName="get_bone_from_stack"/>
+    <functioncall functionName="get_bone_pose"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_fbx_fps"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_length"/>
+    <functioncall functionName="get_mesh"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_node_by_name"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_path_to"/>
+    <functioncall functionName="get_raw_string_from_assimp"/>
+    <functioncall functionName="get_recognized_extensions"/>
+    <functioncall functionName="get_rotation_quat"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_track_count"/>
+    <functioncall functionName="globalize_path"/>
+    <functioncall functionName="godot_bitangent"/>
+    <functioncall functionName="godot_normal"/>
+    <functioncall functionName="godot_pos"/>
+    <functioncall functionName="godot_tangent"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image"/>
+    <functioncall functionName="image_data"/>
+    <functioncall functionName="image_state"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="import"/>
+    <functioncall functionName="import_setting_string"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="is_default"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_normalized"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="iter"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="key_value_pair"/>
+    <functioncall functionName="kill"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="last_valid_parent"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="load_image"/>
+    <functioncall functionName="look_at"/>
+    <functioncall functionName="mArmature"/>
+    <functioncall functionName="mClipPlaneFar"/>
+    <functioncall functionName="mClipPlaneNear"/>
+    <functioncall functionName="mFilename"/>
+    <functioncall functionName="mHeight"/>
+    <functioncall functionName="mHorizontalFOV"/>
+    <functioncall functionName="mMaterialIndex"/>
+    <functioncall functionName="mName"/>
+    <functioncall functionName="mNode"/>
+    <functioncall functionName="mNodeName"/>
+    <functioncall functionName="mNumAnimMeshes"/>
+    <functioncall functionName="mNumAnimations"/>
+    <functioncall functionName="mNumBones"/>
+    <functioncall functionName="mNumCameras"/>
+    <functioncall functionName="mNumChannels"/>
+    <functioncall functionName="mNumChildren"/>
+    <functioncall functionName="mNumFaces"/>
+    <functioncall functionName="mNumIndices"/>
+    <functioncall functionName="mNumKeys"/>
+    <functioncall functionName="mNumLights"/>
+    <functioncall functionName="mNumMeshes"/>
+    <functioncall functionName="mNumMorphMeshChannels"/>
+    <functioncall functionName="mNumPositionKeys"/>
+    <functioncall functionName="mNumRotationKeys"/>
+    <functioncall functionName="mNumScalingKeys"/>
+    <functioncall functionName="mNumTextures"/>
+    <functioncall functionName="mNumValuesAndWeights"/>
+    <functioncall functionName="mNumVertices"/>
+    <functioncall functionName="mNumWeights"/>
+    <functioncall functionName="mOffsetMatrix"/>
+    <functioncall functionName="mParent"/>
+    <functioncall functionName="mRootNode"/>
+    <functioncall functionName="mTicksPerSecond"/>
+    <functioncall functionName="mTransformation"/>
+    <functioncall functionName="mValue"/>
+    <functioncall functionName="mVertexId"/>
+    <functioncall functionName="mWeight"/>
+    <functioncall functionName="mWidth"/>
+    <functioncall functionName="map_mode"/>
+    <functioncall functionName="mat"/>
+    <functioncall functionName="mat_name"/>
+    <functioncall functionName="mat_two_sided"/>
+    <functioncall functionName="match"/>
+    <functioncall functionName="max_bone_weights"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="mesh_id"/>
+    <functioncall functionName="mesh_idx"/>
+    <functioncall functionName="mesh_index"/>
+    <functioncall functionName="mesh_instance"/>
+    <functioncall functionName="mesh_key"/>
+    <functioncall functionName="mesh_name"/>
+    <functioncall functionName="mesh_node"/>
+    <functioncall functionName="mesh_template"/>
+    <functioncall functionName="message"/>
+    <functioncall functionName="morphs"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="near"/>
+    <functioncall functionName="new_colors"/>
+    <functioncall functionName="new_node"/>
+    <functioncall functionName="new_normals"/>
+    <functioncall functionName="new_tangents"/>
+    <functioncall functionName="new_vertices"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node_name"/>
+    <functioncall functionName="node_path"/>
+    <functioncall functionName="node_transform"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_vertices"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p3"/>
+    <functioncall functionName="p_animation_index"/>
+    <functioncall functionName="p_bake_fps"/>
+    <functioncall functionName="p_current_node"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_interp"/>
+    <functioncall functionName="p_matrix"/>
+    <functioncall functionName="p_max_bone_weights"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="parent_assimp_node"/>
+    <functioncall functionName="parent_bone_id"/>
+    <functioncall functionName="parent_lookup"/>
+    <functioncall functionName="parent_name"/>
+    <functioncall functionName="parent_node"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pbr_emission"/>
+    <functioncall functionName="pcData"/>
+    <functioncall functionName="pform"/>
+    <functioncall functionName="plane_tangent"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="pos_times"/>
+    <functioncall functionName="pos_values"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="post_process_Steps"/>
+    <functioncall functionName="primitive"/>
+    <functioncall functionName="print_error"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_extensions"/>
+    <functioncall functionName="r_found"/>
+    <functioncall functionName="r_p_path"/>
+    <functioncall functionName="r_path"/>
+    <functioncall functionName="rad2deg"/>
+    <functioncall functionName="raw_image"/>
+    <functioncall functionName="remove_child"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="replaced_name"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="rot_times"/>
+    <functioncall functionName="rot_values"/>
+    <functioncall functionName="s_path"/>
+    <functioncall functionName="sc"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="scale_times"/>
+    <functioncall functionName="scale_values"/>
+    <functioncall functionName="scene"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_albedo"/>
+    <functioncall functionName="set_bind_bone"/>
+    <functioncall functionName="set_blend_shape_mode"/>
+    <functioncall functionName="set_bone_parent"/>
+    <functioncall functionName="set_bone_pose"/>
+    <functioncall functionName="set_bone_rest"/>
+    <functioncall functionName="set_color"/>
+    <functioncall functionName="set_cull_mode"/>
+    <functioncall functionName="set_emission"/>
+    <functioncall functionName="set_feature"/>
+    <functioncall functionName="set_global_transform"/>
+    <functioncall functionName="set_length"/>
+    <functioncall functionName="set_look_at"/>
+    <functioncall functionName="set_loop"/>
+    <functioncall functionName="set_mesh"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_owner"/>
+    <functioncall functionName="set_perspective"/>
+    <functioncall functionName="set_quat_scale"/>
+    <functioncall functionName="set_skeleton_path"/>
+    <functioncall functionName="set_skin"/>
+    <functioncall functionName="set_texture"/>
+    <functioncall functionName="set_texture_mapping_mode"/>
+    <functioncall functionName="set_transparency"/>
+    <functioncall functionName="severity"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skeleton"/>
+    <functioncall functionName="skeleton_assigned"/>
+    <functioncall functionName="skeleton_bone"/>
+    <functioncall functionName="skin"/>
+    <functioncall functionName="slerp"/>
+    <functioncall functionName="spatial"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="surface_indices"/>
+    <functioncall functionName="surface_set_material"/>
+    <functioncall functionName="surface_set_name"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tex_ao_map"/>
+    <functioncall functionName="tex_diffuse"/>
+    <functioncall functionName="tex_emission_color"/>
+    <functioncall functionName="tex_emissive"/>
+    <functioncall functionName="tex_metalness"/>
+    <functioncall functionName="tex_normal"/>
+    <functioncall functionName="tex_normal_camera"/>
+    <functioncall functionName="tex_roughness"/>
+    <functioncall functionName="tex_specular"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="texture_emissive_path"/>
+    <functioncall functionName="texture_idx"/>
+    <functioncall functionName="texture_path"/>
+    <functioncall functionName="texture_type"/>
+    <functioncall functionName="ticks_per_second"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="time_mode"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="track_id"/>
+    <functioncall functionName="track_idx"/>
+    <functioncall functionName="track_insert_key"/>
+    <functioncall functionName="track_set_interpolation_type"/>
+    <functioncall functionName="track_set_path"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="transform_track_insert_key"/>
+    <functioncall functionName="tri_index"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="up"/>
+    <functioncall functionName="use_generic"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vertex_index"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="weight"/>
+    <functioncall functionName="weights"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

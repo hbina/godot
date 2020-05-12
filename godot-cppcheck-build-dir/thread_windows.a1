@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2428622839">
+        <error id="uninitMemberVarPrivate" severity="warning" msg="Member variable &apos;ThreadWindows::user&apos; is not initialized in the constructor." verbose="Member variable &apos;ThreadWindows::user&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/drivers/windows/thread_windows.cpp" line="93" column="16"/>
+            <symbol>ThreadWindows::user</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!tp&apos; is redundant or there is possible null pointer dereference: tp." verbose="Either the condition &apos;!tp&apos; is redundant or there is possible null pointer dereference: tp." cwe="476">
+            <location file="/home/hbina/git/godot/drivers/windows/thread_windows.cpp" line="81" column="22" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/drivers/windows/thread_windows.cpp" line="79" column="50" info="Assignment &apos;tp=static_cast&lt;ThreadWindows*&gt;(p_thread)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/drivers/windows/thread_windows.cpp" line="80" column="16" info="Assuming that condition &apos;!tp&apos; is not redundant"/>
+            <symbol>tp</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!tp&apos; is redundant or there is possible null pointer dereference: tp." verbose="Either the condition &apos;!tp&apos; is redundant or there is possible null pointer dereference: tp." cwe="476">
+            <location file="/home/hbina/git/godot/drivers/windows/thread_windows.cpp" line="82" column="14" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/drivers/windows/thread_windows.cpp" line="79" column="50" info="Assignment &apos;tp=static_cast&lt;ThreadWindows*&gt;(p_thread)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/drivers/windows/thread_windows.cpp" line="80" column="16" info="Assuming that condition &apos;!tp&apos; is not redundant"/>
+            <symbol>tp</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_id" lineNumber="37"/>
+    <functiondecl functionName="create_thread_windows" lineNumber="42"/>
+    <functiondecl functionName="thread_callback" lineNumber="47"/>
+    <functiondecl functionName="create_func_windows" lineNumber="62"/>
+    <functiondecl functionName="get_thread_id_func_windows" lineNumber="73"/>
+    <functiondecl functionName="wait_to_finish_func_windows" lineNumber="77"/>
+    <functiondecl functionName="make_default" lineNumber="86"/>
+    <functioncall functionName="CloseHandle"/>
+    <functioncall functionName="CreateEvent"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="FALSE"/>
+    <functioncall functionName="GetCurrentThreadId"/>
+    <functioncall functionName="ID"/>
+    <functioncall functionName="INFINITE"/>
+    <functioncall functionName="QueueUserWorkItem"/>
+    <functioncall functionName="SetEvent"/>
+    <functioncall functionName="TRUE"/>
+    <functioncall functionName="ThreadWindows"/>
+    <functioncall functionName="WT_EXECUTELONGFUNCTION"/>
+    <functioncall functionName="WaitForSingleObject"/>
+    <functioncall functionName="callback"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create_func_windows"/>
+    <functioncall functionName="get_thread_id_func_windows"/>
+    <functioncall functionName="handle"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_thread"/>
+    <functioncall functionName="p_user"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="thread_callback"/>
+    <functioncall functionName="thread_enter"/>
+    <functioncall functionName="thread_exit"/>
+    <functioncall functionName="tp"/>
+    <functioncall functionName="tr"/>
+    <functioncall functionName="user"/>
+    <functioncall functionName="userdata"/>
+    <functioncall functionName="wait_to_finish_func_windows"/>
+  </FileInfo>
+</analyzerinfo>

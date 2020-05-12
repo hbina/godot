@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="375335188">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;filter_level&apos; can be reduced." verbose="The scope of the variable &apos;filter_level&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="203" column="9"/>
+            <symbol>filter_level</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;filter_level&apos; can be reduced." verbose="The scope of the variable &apos;filter_level&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="261" column="9"/>
+            <symbol>filter_level</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;u_ptr&apos; is assigned a value that is never used." verbose="Variable &apos;u_ptr&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="298" column="15"/>
+            <symbol>u_ptr</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;v_ptr&apos; is assigned a value that is never used." verbose="Variable &apos;v_ptr&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="299" column="15"/>
+            <symbol>v_ptr</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="328" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="474" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:80:6" call-funcname="vp8_loop_filter_frame_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="584" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:84:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="309" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:91:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="453" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/loopfilter.h:87:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/vp8_loopfilter.c" line="560" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functiondecl functionName="lf_init_lut" lineNumber="19"/>
+    <functiondecl functionName="vp8_loop_filter_update_sharpness" lineNumber="61"/>
+    <functiondecl functionName="vp8_loop_filter_init" lineNumber="92"/>
+    <functiondecl functionName="vp8_loop_filter_frame_init" lineNumber="111"/>
+    <functiondecl functionName="vp8_loop_filter_row_normal" lineNumber="197"/>
+    <functiondecl functionName="vp8_loop_filter_row_simple" lineNumber="255"/>
+    <functiondecl functionName="vp8_loop_filter_frame" lineNumber="305"/>
+    <functiondecl functionName="vp8_loop_filter_frame_yonly" lineNumber="446"/>
+    <functiondecl functionName="vp8_loop_filter_partial_frame" lineNumber="553"/>
+    <functioncall functionName="ABOVE4X4"/>
+    <functioncall functionName="B_DC_PRED"/>
+    <functioncall functionName="B_HD_PRED"/>
+    <functioncall functionName="B_HE_PRED"/>
+    <functioncall functionName="B_HU_PRED"/>
+    <functioncall functionName="B_LD_PRED"/>
+    <functioncall functionName="B_MODE_COUNT"/>
+    <functioncall functionName="B_PRED"/>
+    <functioncall functionName="B_RD_PRED"/>
+    <functioncall functionName="B_TM_PRED"/>
+    <functioncall functionName="B_VE_PRED"/>
+    <functioncall functionName="B_VL_PRED"/>
+    <functioncall functionName="B_VR_PRED"/>
+    <functioncall functionName="DC_PRED"/>
+    <functioncall functionName="DECLARE_ALIGNED"/>
+    <functioncall functionName="H_PRED"/>
+    <functioncall functionName="INTER_FRAME"/>
+    <functioncall functionName="INTRA_FRAME"/>
+    <functioncall functionName="KEY_FRAME"/>
+    <functioncall functionName="LEFT4X4"/>
+    <functioncall functionName="MAX_REF_FRAMES"/>
+    <functioncall functionName="MB_LVL_ALT_LF"/>
+    <functioncall functionName="MB_LVL_MAX"/>
+    <functioncall functionName="MB_MODE_COUNT"/>
+    <functioncall functionName="MVPcount"/>
+    <functioncall functionName="MVPshort"/>
+    <functioncall functionName="MVPsign"/>
+    <functioncall functionName="NEARESTMV"/>
+    <functioncall functionName="NEARMV"/>
+    <functioncall functionName="NEW4X4"/>
+    <functioncall functionName="NEWMV"/>
+    <functioncall functionName="SPLITMV"/>
+    <functioncall functionName="TM_PRED"/>
+    <functioncall functionName="V_PRED"/>
+    <functioncall functionName="ZERO4X4"/>
+    <functioncall functionName="ZEROMV"/>
+    <functioncall functionName="blim"/>
+    <functioncall functionName="block_inside_limit"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="cm"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="default_filt_lvl"/>
+    <functioncall functionName="filt_lvl"/>
+    <functioncall functionName="filter_level"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame_to_show"/>
+    <functioncall functionName="frame_type"/>
+    <functioncall functionName="hev_index"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="lf_info"/>
+    <functioncall functionName="lf_init_lut"/>
+    <functioncall functionName="lfi"/>
+    <functioncall functionName="lvl_mode"/>
+    <functioncall functionName="lvl_ref"/>
+    <functioncall functionName="lvl_seg"/>
+    <functioncall functionName="mb_col"/>
+    <functioncall functionName="mb_cols"/>
+    <functioncall functionName="mb_row"/>
+    <functioncall functionName="mb_rows"/>
+    <functioncall functionName="mb_skip_coeff"/>
+    <functioncall functionName="mbd"/>
+    <functioncall functionName="mblim"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mi"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="mode_index"/>
+    <functioncall functionName="mode_ref_lf_delta_enabled"/>
+    <functioncall functionName="mvlong_width"/>
+    <functioncall functionName="post_uv_stride"/>
+    <functioncall functionName="post_uvstride"/>
+    <functioncall functionName="post_y_stride"/>
+    <functioncall functionName="post_ystride"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="ref_frame"/>
+    <functioncall functionName="seg"/>
+    <functioncall functionName="segment_id"/>
+    <functioncall functionName="segmentation_enabled"/>
+    <functioncall functionName="sharpness_level"/>
+    <functioncall functionName="sharpness_lvl"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="skip_lf"/>
+    <functioncall functionName="u_buffer"/>
+    <functioncall functionName="u_ptr"/>
+    <functioncall functionName="uv_stride"/>
+    <functioncall functionName="uv_width"/>
+    <functioncall functionName="v_buffer"/>
+    <functioncall functionName="v_ptr"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vp8_loop_filter_bh"/>
+    <functioncall functionName="vp8_loop_filter_bv"/>
+    <functioncall functionName="vp8_loop_filter_frame_init"/>
+    <functioncall functionName="vp8_loop_filter_mbh"/>
+    <functioncall functionName="vp8_loop_filter_mbv"/>
+    <functioncall functionName="vp8_loop_filter_simple_bh"/>
+    <functioncall functionName="vp8_loop_filter_simple_bv"/>
+    <functioncall functionName="vp8_loop_filter_simple_mbh"/>
+    <functioncall functionName="vp8_loop_filter_simple_mbv"/>
+    <functioncall functionName="vp8_loop_filter_update_sharpness"/>
+    <functioncall functionName="y_buffer"/>
+    <functioncall functionName="y_ptr"/>
+    <functioncall functionName="y_stride"/>
+    <functioncall functionName="y_width"/>
+  </FileInfo>
+</analyzerinfo>

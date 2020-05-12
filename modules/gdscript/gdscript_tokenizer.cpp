@@ -1242,15 +1242,15 @@ Error GDScriptTokenizerBuffer::set_code_buffer(const Vector<uint8_t> &p_buffer) 
 		Vector<uint8_t> cs;
 		cs.resize(len);
 		for (int j = 0; j < len; j++) {
-			cs.write[j] = b[j] ^ 0xb6;
+			cs[j] = b[j] ^ 0xb6;
 		}
 
-		cs.write[cs.size() - 1] = 0;
+		cs[cs.size() - 1] = 0;
 		String s;
 		s.parse_utf8((const char *)cs.ptr());
 		b += len;
 		total_len -= len + 4;
-		identifiers.write[i] = s;
+		identifiers[i] = s;
 	}
 
 	constants.resize(constant_count);
@@ -1264,7 +1264,7 @@ Error GDScriptTokenizerBuffer::set_code_buffer(const Vector<uint8_t> &p_buffer) 
 			return err;
 		b += len;
 		total_len -= len;
-		constants.write[i] = v;
+		constants[i] = v;
 	}
 
 	ERR_FAIL_COND_V(line_count * 8 > total_len, ERR_INVALID_DATA);
@@ -1289,10 +1289,10 @@ Error GDScriptTokenizerBuffer::set_code_buffer(const Vector<uint8_t> &p_buffer) 
 		if ((*b) & TOKEN_BYTE_MASK) { //little endian always
 			ERR_FAIL_COND_V(total_len < 4, ERR_INVALID_DATA);
 
-			tokens.write[i] = decode_uint32(b) & ~TOKEN_BYTE_MASK;
+			tokens[i] = decode_uint32(b) & ~TOKEN_BYTE_MASK;
 			b += 4;
 		} else {
-			tokens.write[i] = *b;
+			tokens[i] = *b;
 			b += 1;
 			total_len--;
 		}
@@ -1392,15 +1392,15 @@ Vector<uint8_t> GDScriptTokenizerBuffer::parse_code_string(const String &p_code)
 
 	//save header
 	buf.resize(24);
-	buf.write[0] = 'G';
-	buf.write[1] = 'D';
-	buf.write[2] = 'S';
-	buf.write[3] = 'C';
-	encode_uint32(BYTECODE_VERSION, &buf.write[4]);
-	encode_uint32(identifier_map.size(), &buf.write[8]);
-	encode_uint32(constant_map.size(), &buf.write[12]);
-	encode_uint32(line_map.size(), &buf.write[16]);
-	encode_uint32(token_array.size(), &buf.write[20]);
+	buf[0] = 'G';
+	buf[1] = 'D';
+	buf[2] = 'S';
+	buf[3] = 'C';
+	encode_uint32(BYTECODE_VERSION, &buf[4]);
+	encode_uint32(identifier_map.size(), &buf[8]);
+	encode_uint32(constant_map.size(), &buf[12]);
+	encode_uint32(line_map.size(), &buf[16]);
+	encode_uint32(token_array.size(), &buf[20]);
 
 	//save identifiers
 
@@ -1433,7 +1433,7 @@ Vector<uint8_t> GDScriptTokenizerBuffer::parse_code_string(const String &p_code)
 		ERR_FAIL_COND_V_MSG(err != OK, Vector<uint8_t>(), "Error when trying to encode Variant.");
 		int pos = buf.size();
 		buf.resize(pos + len);
-		encode_variant(E->get(), &buf.write[pos], len, false);
+		encode_variant(E->get(), &buf[pos], len, false);
 	}
 
 	for (Map<int, uint32_t>::Element *E = rev_line_map.front(); E; E = E->next()) {

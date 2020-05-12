@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2881593448">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;silk_ret&apos; can be reduced." verbose="The scope of the variable &apos;silk_ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="205" column="11"/>
+            <symbol>silk_ret</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="225" column="8"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;silence&apos; can be reduced." verbose="The scope of the variable &apos;silence&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="493" column="21"/>
+            <symbol>silence</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="762" column="13"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;nb_samples&apos; can be reduced." verbose="The scope of the variable &apos;nb_samples&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="763" column="8"/>
+            <symbol>nb_samples</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="275" col="40" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="275" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="275" col="40" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="321" col="24" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="321" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="321" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="464" col="24" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="464" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="464" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="618" col="33" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="618" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="618" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="636" col="34" call-argexpr="&toc" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="636" col="34" call-argexpr="toc" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="636" col="34" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="636" col="34" call-argexpr="size" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="636" col="34" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="636" col="34" call-argexpr="offset" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="649" col="35" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="649" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="649" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="649" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="649" col="35" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="654" col="34" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="654" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="654" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="654" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="654" col="34" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:200:12" call-funcname="opus_decode_frame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="692" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="782" col="28" call-argexpr="data" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="772" col="13" info="Assuming that condition 'data!=NULL' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="782" col="28" call-argexpr="len" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="772" col="28" info="Assuming that condition 'len>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="782" col="28" call-argexpr="decode_fec" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="772" col="35" info="Assuming that condition '!decode_fec' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="782" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="782" col="28" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="797" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="797" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="797" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="636" col="12" my-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:977:5" call-funcname="opus_decoder_get_nb_samples" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="774" col="20" my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:758:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="797" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:792:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="797" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:792:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:108:5" call-funcname="opus_decode_native" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="797" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:792:5" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:185:12" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="188" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:921:5" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="924" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:939:5" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="941" col="12" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:977:5" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="980" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:185:12" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="188" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:921:5" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="924" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:939:5" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="941" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c:977:5" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/opus/opus_decoder.c" line="980" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="opus_decoder_get_size" lineNumber="82"/>
+    <functiondecl functionName="opus_decoder_init" lineNumber="96"/>
+    <functiondecl functionName="opus_decoder_create" lineNumber="139"/>
+    <functiondecl functionName="smooth_fade" lineNumber="168"/>
+    <functiondecl functionName="opus_packet_get_mode" lineNumber="185"/>
+    <functiondecl functionName="opus_decode_frame" lineNumber="200"/>
+    <functiondecl functionName="opus_decode_native" lineNumber="598"/>
+    <functiondecl functionName="opus_decode" lineNumber="758"/>
+    <functiondecl functionName="opus_decode_float" lineNumber="792"/>
+    <functiondecl functionName="opus_decoder_ctl" lineNumber="802"/>
+    <functiondecl functionName="opus_decoder_destroy" lineNumber="915"/>
+    <functiondecl functionName="opus_packet_get_bandwidth" lineNumber="921"/>
+    <functiondecl functionName="opus_packet_get_nb_channels" lineNumber="939"/>
+    <functiondecl functionName="opus_packet_get_nb_frames" lineNumber="944"/>
+    <functiondecl functionName="opus_packet_get_nb_samples" lineNumber="960"/>
+    <functiondecl functionName="opus_decoder_get_nb_samples" lineNumber="977"/>
+    <functioncall functionName="ALLOC"/>
+    <functioncall functionName="ALLOC_NONE"/>
+    <functioncall functionName="ALLOC_STACK"/>
+    <functioncall functionName="CELT_GET_MODE"/>
+    <functioncall functionName="CELT_SET_CHANNELS"/>
+    <functioncall functionName="CELT_SET_END_BAND"/>
+    <functioncall functionName="CELT_SET_SIGNALLING"/>
+    <functioncall functionName="CELT_SET_START_BAND"/>
+    <functioncall functionName="DecControl"/>
+    <functioncall functionName="F10"/>
+    <functioncall functionName="F20"/>
+    <functioncall functionName="F2_5"/>
+    <functioncall functionName="F5"/>
+    <functioncall functionName="FLOAT2INT16"/>
+    <functioncall functionName="Fs"/>
+    <functioncall functionName="IMAX"/>
+    <functioncall functionName="IMIN"/>
+    <functioncall functionName="MAC16_16"/>
+    <functioncall functionName="MULT16_16"/>
+    <functioncall functionName="MULT16_16_P15"/>
+    <functioncall functionName="MULT16_16_Q15"/>
+    <functioncall functionName="MULT16_32_P16"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="OPUS_ALLOC_FAIL"/>
+    <functioncall functionName="OPUS_BAD_ARG"/>
+    <functioncall functionName="OPUS_BANDWIDTH_FULLBAND"/>
+    <functioncall functionName="OPUS_BANDWIDTH_NARROWBAND"/>
+    <functioncall functionName="OPUS_BANDWIDTH_SUPERWIDEBAND"/>
+    <functioncall functionName="OPUS_CHECK_ARRAY"/>
+    <functioncall functionName="OPUS_CLEAR"/>
+    <functioncall functionName="OPUS_GET_FINAL_RANGE"/>
+    <functioncall functionName="OPUS_GET_PITCH"/>
+    <functioncall functionName="OPUS_OK"/>
+    <functioncall functionName="OPUS_PRINT_INT"/>
+    <functioncall functionName="OPUS_RESET_STATE"/>
+    <functioncall functionName="OPUS_UNIMPLEMENTED"/>
+    <functioncall functionName="OpusDecoder"/>
+    <functioncall functionName="QCONST16"/>
+    <functioncall functionName="RESTORE_STACK"/>
+    <functioncall functionName="SATURATE"/>
+    <functioncall functionName="SHR32"/>
+    <functioncall functionName="VARDECL"/>
+    <functioncall functionName="align"/>
+    <functioncall functionName="alignment"/>
+    <functioncall functionName="ap"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="audiosize"/>
+    <functioncall functionName="bad_arg"/>
+    <functioncall functionName="bandwidth"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="celtDecSizeBytes"/>
+    <functioncall functionName="celt_accum"/>
+    <functioncall functionName="celt_assert"/>
+    <functioncall functionName="celt_dec"/>
+    <functioncall functionName="celt_dec_offset"/>
+    <functioncall functionName="celt_decode_with_ec"/>
+    <functioncall functionName="celt_decoder_ctl"/>
+    <functioncall functionName="celt_decoder_get_size"/>
+    <functioncall functionName="celt_decoder_init"/>
+    <functioncall functionName="celt_exp2"/>
+    <functioncall functionName="celt_frame_size"/>
+    <functioncall functionName="celt_mode"/>
+    <functioncall functionName="celt_ret"/>
+    <functioncall functionName="celt_to_silk"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="decode_fec"/>
+    <functioncall functionName="decode_gain"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="duration_copy"/>
+    <functioncall functionName="ec_dec_bit_logp"/>
+    <functioncall functionName="ec_dec_init"/>
+    <functioncall functionName="ec_dec_uint"/>
+    <functioncall functionName="ec_tell"/>
+    <functioncall functionName="endband"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="first_frame"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame_size"/>
+    <functioncall functionName="gain"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="last_packet_duration"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="lost_flag"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="nb_samples"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="offsetof"/>
+    <functioncall functionName="opus_alloc"/>
+    <functioncall functionName="opus_decode_frame"/>
+    <functioncall functionName="opus_decode_native"/>
+    <functioncall functionName="opus_decoder_get_nb_samples"/>
+    <functioncall functionName="opus_decoder_get_size"/>
+    <functioncall functionName="opus_decoder_init"/>
+    <functioncall functionName="opus_free"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_packet_get_bandwidth"/>
+    <functioncall functionName="opus_packet_get_mode"/>
+    <functioncall functionName="opus_packet_get_nb_channels"/>
+    <functioncall functionName="opus_packet_get_nb_frames"/>
+    <functioncall functionName="opus_packet_get_nb_samples"/>
+    <functioncall functionName="opus_packet_get_samples_per_frame"/>
+    <functioncall functionName="opus_packet_parse_impl"/>
+    <functioncall functionName="opus_pcm_soft_clip"/>
+    <functioncall functionName="opus_select_arch"/>
+    <functioncall functionName="opus_val16"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="packet"/>
+    <functioncall functionName="packet_bandwidth"/>
+    <functioncall functionName="packet_frame_size"/>
+    <functioncall functionName="packet_mode"/>
+    <functioncall functionName="packet_offset"/>
+    <functioncall functionName="packet_stream_channels"/>
+    <functioncall functionName="pcm"/>
+    <functioncall functionName="pcm_count"/>
+    <functioncall functionName="pcm_ptr"/>
+    <functioncall functionName="pcm_silk"/>
+    <functioncall functionName="pcm_silk_size"/>
+    <functioncall functionName="pcm_transition"/>
+    <functioncall functionName="pcm_transition_celt"/>
+    <functioncall functionName="pcm_transition_celt_size"/>
+    <functioncall functionName="pcm_transition_silk"/>
+    <functioncall functionName="pcm_transition_silk_size"/>
+    <functioncall functionName="prevPitchLag"/>
+    <functioncall functionName="prev_mode"/>
+    <functioncall functionName="prev_redundancy"/>
+    <functioncall functionName="rangeFinal"/>
+    <functioncall functionName="redundancy"/>
+    <functioncall functionName="redundancy_bytes"/>
+    <functioncall functionName="redundant_audio"/>
+    <functioncall functionName="redundant_audio_size"/>
+    <functioncall functionName="redundant_rng"/>
+    <functioncall functionName="request"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="self_delimited"/>
+    <functioncall functionName="silence"/>
+    <functioncall functionName="silkDecSizeBytes"/>
+    <functioncall functionName="silk_Decode"/>
+    <functioncall functionName="silk_Get_Decoder_Size"/>
+    <functioncall functionName="silk_InitDecoder"/>
+    <functioncall functionName="silk_assert"/>
+    <functioncall functionName="silk_dec"/>
+    <functioncall functionName="silk_dec_offset"/>
+    <functioncall functionName="silk_frame_size"/>
+    <functioncall functionName="silk_ret"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="smooth_fade"/>
+    <functioncall functionName="soft_clip"/>
+    <functioncall functionName="softclip_mem"/>
+    <functioncall functionName="st"/>
+    <functioncall functionName="start_band"/>
+    <functioncall functionName="stream_channels"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="toc"/>
+    <functioncall functionName="transition"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="va_arg"/>
+    <functioncall functionName="va_end"/>
+    <functioncall functionName="va_start"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="window"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

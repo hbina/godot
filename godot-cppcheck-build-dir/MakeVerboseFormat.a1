@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3032463587">
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;p&apos; shadows outer variable" verbose="Local variable &apos;p&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.cpp" line="160" column="26" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.cpp" line="111" column="18" info="Shadowed declaration"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;a&apos; shadows outer variable" verbose="Local variable &apos;a&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.cpp" line="135" column="35" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.cpp" line="127" column="23" info="Shadowed declaration"/>
+            <symbol>a</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.cpp:230:6" my-argnr="1" my-argname="mesh" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.cpp" line="232" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.h:103:17" my-argnr="1" my-argname="pScene" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/MakeVerboseFormat.cpp" line="248" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Execute" lineNumber="65"/>
+    <functiondecl functionName="MakeVerboseFormat" lineNumber="87"/>
+    <functiondecl functionName="IsMeshInVerboseFormat" lineNumber="230"/>
+    <functiondecl functionName="IsVerboseFormat" lineNumber="247"/>
+    <functioncall functionName="AI_MAX_NUMBER_OF_COLOR_SETS"/>
+    <functioncall functionName="AI_MAX_NUMBER_OF_TEXTURECOORDS"/>
+    <functioncall functionName="ASSIMP_LOG_DEBUG"/>
+    <functioncall functionName="ASSIMP_LOG_INFO"/>
+    <functioncall functionName="HasNormals"/>
+    <functioncall functionName="HasTangentsAndBitangents"/>
+    <functioncall functionName="HasTextureCoords"/>
+    <functioncall functionName="HasVertexColors"/>
+    <functioncall functionName="IsMeshInVerboseFormat"/>
+    <functioncall functionName="MakeVerboseFormat"/>
+    <functioncall functionName="MakeVerboseFormatProcess"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aiVertexWeight"/>
+    <functioncall functionName="ai_assert"/>
+    <functioncall functionName="bHas"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iIndex"/>
+    <functioncall functionName="iNumVerts"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="mBitangents"/>
+    <functioncall functionName="mNormals"/>
+    <functioncall functionName="mNumBones"/>
+    <functioncall functionName="mNumFaces"/>
+    <functioncall functionName="mNumIndices"/>
+    <functioncall functionName="mNumMeshes"/>
+    <functioncall functionName="mNumVertices"/>
+    <functioncall functionName="mNumWeights"/>
+    <functioncall functionName="mTangents"/>
+    <functioncall functionName="mVertexId"/>
+    <functioncall functionName="mVertices"/>
+    <functioncall functionName="mWeight"/>
+    <functioncall functionName="mWeights"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="pvBitangents"/>
+    <functioncall functionName="pvNormals"/>
+    <functioncall functionName="pvPositions"/>
+    <functioncall functionName="pvTangents"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="seen"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="wNew"/>
+    <functioncall functionName="weightToCopy"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -803,7 +803,7 @@ Error GDScript::load_byte_code(const String &p_path) {
 		Vector<uint8_t> key;
 		key.resize(32);
 		for (int i = 0; i < key.size(); i++) {
-			key.write[i] = script_encryption_key[i];
+			key[i] = script_encryption_key[i];
 		}
 
 		Error err = fae->open_and_parse(fa, key, FileAccessEncrypted::MODE_READ);
@@ -1129,13 +1129,13 @@ bool GDScriptInstance::set(const StringName &p_name, const Variant &p_value) {
 					const Variant *value = &p_value;
 					Variant converted = Variant::construct(member->data_type.builtin_type, &value, 1, ce);
 					if (ce.error == Callable::CallError::CALL_OK) {
-						members.write[member->index] = converted;
+						members[member->index] = converted;
 						return true;
 					} else {
 						return false;
 					}
 				} else {
-					members.write[member->index] = p_value;
+					members[member->index] = p_value;
 				}
 			}
 			return true;
@@ -1484,7 +1484,7 @@ void GDScriptInstance::reload_members() {
 
 		if (member_indices_cache.has(E->key())) {
 			Variant value = members[member_indices_cache[E->key()]];
-			new_members.write[E->get().index] = value;
+			new_members[E->get().index] = value;
 		}
 	}
 
@@ -1535,7 +1535,7 @@ void GDScriptLanguage::_add_global(const StringName &p_name, const Variant &p_va
 
 	if (globals.has(p_name)) {
 		//overwrite existing
-		global_array.write[globals[p_name]] = p_value;
+		global_array[globals[p_name]] = p_value;
 		return;
 	}
 	globals[p_name] = global_array.size();

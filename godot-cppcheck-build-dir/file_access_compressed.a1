@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3724685291">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;FileAccessCompressed::write_pos&apos; is not initialized in the constructor." verbose="Member variable &apos;FileAccessCompressed::write_pos&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/core/io/file_access_compressed.cpp" line="392" column="23"/>
+            <symbol>FileAccessCompressed::write_pos</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~FileAccessCompressed()&apos; at line 414. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~FileAccessCompressed()&apos; at line 414. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/core/io/file_access_compressed.cpp" file="/home/hbina/git/godot/core/io/file_access_compressed.h" line="73" column="15" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/core/io/file_access_compressed.cpp" line="414" column="3" info="Calling close"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="configure" lineNumber="35"/>
+    <functiondecl functionName="open_after_magic" lineNumber="61"/>
+    <functiondecl functionName="_open" lineNumber="100"/>
+    <functiondecl functionName="close" lineNumber="141"/>
+    <functiondecl functionName="is_open" lineNumber="193"/>
+    <functiondecl functionName="seek" lineNumber="198"/>
+    <functiondecl functionName="seek_end" lineNumber="230"/>
+    <functiondecl functionName="get_position" lineNumber="241"/>
+    <functiondecl functionName="get_len" lineNumber="252"/>
+    <functiondecl functionName="eof_reached" lineNumber="263"/>
+    <functiondecl functionName="get_8" lineNumber="273"/>
+    <functiondecl functionName="get_buffer" lineNumber="304"/>
+    <functiondecl functionName="get_error" lineNumber="341"/>
+    <functiondecl functionName="flush" lineNumber="346"/>
+    <functiondecl functionName="store_8" lineNumber="353"/>
+    <functiondecl functionName="file_exists" lineNumber="362"/>
+    <functiondecl functionName="_get_modified_time" lineNumber="371"/>
+    <functiondecl functionName="_get_unix_permissions" lineNumber="379"/>
+    <functiondecl functionName="_set_unix_permissions" lineNumber="385"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_FILE_CORRUPT"/>
+    <functioncall functionName="ERR_FILE_EOF"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="FileAccessCompressed"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MODE_ZSTD"/>
+    <functioncall functionName="Mode"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="_get_unix_permissions"/>
+    <functioncall functionName="_set_unix_permissions"/>
+    <functioncall functionName="acc_ofs"/>
+    <functioncall functionName="ascii"/>
+    <functioncall functionName="at_end"/>
+    <functioncall functionName="bc"/>
+    <functioncall functionName="bl"/>
+    <functioncall functionName="block_idx"/>
+    <functioncall functionName="block_size"/>
+    <functioncall functionName="bp"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="cmode"/>
+    <functioncall functionName="compress"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="csize"/>
+    <functioncall functionName="decompress"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fa"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_32"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_max_compressed_buffer_size"/>
+    <functioncall functionName="get_modified_time"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="magic"/>
+    <functioncall functionName="max_bs"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="next_power_of_2"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_after_magic"/>
+    <functioncall functionName="p_base"/>
+    <functioncall functionName="p_block_size"/>
+    <functioncall functionName="p_dest"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_mode_flags"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_permissions"/>
+    <functioncall functionName="p_position"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rb"/>
+    <functioncall functionName="read_block"/>
+    <functioncall functionName="read_block_count"/>
+    <functioncall functionName="read_block_size"/>
+    <functioncall functionName="read_eof"/>
+    <functioncall functionName="read_pos"/>
+    <functioncall functionName="read_ptr"/>
+    <functioncall functionName="read_total"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rmagic"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="seek_end"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="store_32"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="write_buffer_size"/>
+    <functioncall functionName="write_max"/>
+    <functioncall functionName="write_ptr"/>
+    <functioncall functionName="writing"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1360276993">
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;EditorHistory::get_history_pos&apos; can be const." verbose="The member function &apos;EditorHistory::get_history_pos&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/editor_data.cpp" file="/home/hbina/git/godot/editor/editor_data.h" line="88" column="6"/>
+            <location file="/home/hbina/git/godot/editor/editor_data.cpp" line="147" column="20"/>
+            <symbol>EditorHistory::get_history_pos</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;EditorData::script_class_is_parent&apos; can be const." verbose="The member function &apos;EditorData::script_class_is_parent&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/editor_data.cpp" file="/home/hbina/git/godot/editor/editor_data.h" line="218" column="7"/>
+            <location file="/home/hbina/git/godot/editor/editor_data.cpp" line="873" column="18"/>
+            <symbol>EditorData::script_class_is_parent</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/editor_data.cpp" file="/home/hbina/git/godot/editor/editor_node.h" line="549" column="20"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="689" col="51" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="711" col="48" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="713" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_data.h:171:7" my-argnr="1" my-argname="p_plugin" file="/home/hbina/git/godot/editor/editor_data.cpp" line="467" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_data.h:170:7" my-argnr="1" my-argname="p_plugin" file="/home/hbina/git/godot/editor/editor_data.cpp" line="473" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_data.h:213:7" my-argnr="2" my-argname="p_history" file="/home/hbina/git/godot/editor/editor_data.cpp" line="828" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_data.h:214:13" my-argnr="2" my-argname="p_history" file="/home/hbina/git/godot/editor/editor_data.cpp" line="839" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_data.h:159:7" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/editor/editor_data.cpp" line="313" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_data.h:213:7" my-argnr="1" my-argname="p_selection" file="/home/hbina/git/godot/editor/editor_data.cpp" line="827" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_data.h:214:13" my-argnr="1" my-argname="p_selection" file="/home/hbina/git/godot/editor/editor_data.cpp" line="842" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="cleanup_history" lineNumber="41"/>
+    <functiondecl functionName="_add_object" lineNumber="81"/>
+    <functiondecl functionName="add_object_inspector_only" lineNumber="124"/>
+    <functiondecl functionName="add_object" lineNumber="129"/>
+    <functiondecl functionName="add_object" lineNumber="134"/>
+    <functiondecl functionName="add_object" lineNumber="139"/>
+    <functiondecl functionName="get_history_len" lineNumber="144"/>
+    <functiondecl functionName="get_history_pos" lineNumber="147"/>
+    <functiondecl functionName="is_history_obj_inspector_only" lineNumber="151"/>
+    <functiondecl functionName="get_history_obj" lineNumber="158"/>
+    <functiondecl functionName="is_at_beginning" lineNumber="164"/>
+    <functiondecl functionName="is_at_end" lineNumber="167"/>
+    <functiondecl functionName="next" lineNumber="172"/>
+    <functiondecl functionName="previous" lineNumber="184"/>
+    <functiondecl functionName="is_current_inspector_only" lineNumber="196"/>
+    <functiondecl functionName="get_current" lineNumber="204"/>
+    <functiondecl functionName="get_path_size" lineNumber="217"/>
+    <functiondecl functionName="get_path_object" lineNumber="226"/>
+    <functiondecl functionName="get_path_property" lineNumber="242"/>
+    <functiondecl functionName="clear" lineNumber="254"/>
+    <functiondecl functionName="get_editor" lineNumber="265"/>
+    <functiondecl functionName="get_subeditor" lineNumber="276"/>
+    <functiondecl functionName="get_subeditors" lineNumber="287"/>
+    <functiondecl functionName="get_editor" lineNumber="297"/>
+    <functiondecl functionName="copy_object_params" lineNumber="308"/>
+    <functiondecl functionName="get_editor_breakpoints" lineNumber="327"/>
+    <functiondecl functionName="get_editor_states" lineNumber="335"/>
+    <functiondecl functionName="get_scene_editor_states" lineNumber="349"/>
+    <functiondecl functionName="set_editor_states" lineNumber="355"/>
+    <functiondecl functionName="notify_edited_scene_changed" lineNumber="379"/>
+    <functiondecl functionName="notify_resource_saved" lineNumber="388"/>
+    <functiondecl functionName="clear_editor_states" lineNumber="396"/>
+    <functiondecl functionName="save_editor_external_data" lineNumber="404"/>
+    <functiondecl functionName="apply_changes_in_editors" lineNumber="412"/>
+    <functiondecl functionName="save_editor_global_states" lineNumber="420"/>
+    <functiondecl functionName="restore_editor_global_states" lineNumber="428"/>
+    <functiondecl functionName="paste_object_params" lineNumber="436"/>
+    <functiondecl functionName="call_build" lineNumber="448"/>
+    <functiondecl functionName="get_undo_redo" lineNumber="460"/>
+    <functiondecl functionName="remove_editor_plugin" lineNumber="465"/>
+    <functiondecl functionName="add_editor_plugin" lineNumber="471"/>
+    <functiondecl functionName="get_editor_plugin_count" lineNumber="477"/>
+    <functiondecl functionName="get_editor_plugin" lineNumber="480"/>
+    <functiondecl functionName="add_custom_type" lineNumber="486"/>
+    <functiondecl functionName="instance_custom_type" lineNumber="500"/>
+    <functiondecl functionName="remove_custom_type" lineNumber="522"/>
+    <functiondecl functionName="add_edited_scene" lineNumber="538"/>
+    <functiondecl functionName="move_edited_scene_index" lineNumber="559"/>
+    <functiondecl functionName="remove_scene" lineNumber="566"/>
+    <functiondecl functionName="_find_updated_instances" lineNumber="586"/>
+    <functiondecl functionName="check_and_update_scene" lineNumber="625"/>
+    <functiondecl functionName="get_edited_scene" lineNumber="671"/>
+    <functiondecl functionName="set_edited_scene" lineNumber="675"/>
+    <functiondecl functionName="get_edited_scene_root" lineNumber="681"/>
+    <functiondecl functionName="set_edited_scene_root" lineNumber="690"/>
+    <functiondecl functionName="get_edited_scene_count" lineNumber="702"/>
+    <functiondecl functionName="get_edited_scenes" lineNumber="707"/>
+    <functiondecl functionName="set_edited_scene_version" lineNumber="718"/>
+    <functiondecl functionName="get_edited_scene_version" lineNumber="728"/>
+    <functiondecl functionName="get_scene_version" lineNumber="733"/>
+    <functiondecl functionName="get_scene_type" lineNumber="738"/>
+    <functiondecl functionName="move_edited_scene_to_index" lineNumber="745"/>
+    <functiondecl functionName="get_scene_root_script" lineNumber="756"/>
+    <functiondecl functionName="get_scene_title" lineNumber="772"/>
+    <functiondecl functionName="set_scene_path" lineNumber="786"/>
+    <functiondecl functionName="get_scene_path" lineNumber="796"/>
+    <functiondecl functionName="set_edited_scene_live_edit_root" lineNumber="810"/>
+    <functiondecl functionName="get_edited_scene_live_edit_root" lineNumber="815"/>
+    <functiondecl functionName="save_edited_scene_state" lineNumber="822"/>
+    <functiondecl functionName="restore_edited_scene_state" lineNumber="834"/>
+    <functiondecl functionName="clear_edited_scenes" lineNumber="851"/>
+    <functiondecl functionName="set_plugin_window_layout" lineNumber="861"/>
+    <functiondecl functionName="get_plugin_window_layout" lineNumber="867"/>
+    <functiondecl functionName="script_class_is_parent" lineNumber="873"/>
+    <functiondecl functionName="script_class_get_base" lineNumber="894"/>
+    <functiondecl functionName="script_class_instance" lineNumber="908"/>
+    <functiondecl functionName="script_class_load_script" lineNumber="921"/>
+    <functiondecl functionName="script_class_set_icon_path" lineNumber="930"/>
+    <functiondecl functionName="script_class_get_icon_path" lineNumber="934"/>
+    <functiondecl functionName="script_class_get_name" lineNumber="950"/>
+    <functiondecl functionName="script_class_set_name" lineNumber="954"/>
+    <functiondecl functionName="script_class_save_icon_paths" lineNumber="958"/>
+    <functiondecl functionName="script_class_load_icon_paths" lineNumber="972"/>
+    <functiondecl functionName="_node_removed" lineNumber="999"/>
+    <functiondecl functionName="add_node" lineNumber="1012"/>
+    <functiondecl functionName="remove_node" lineNumber="1036"/>
+    <functiondecl functionName="is_selected" lineNumber="1052"/>
+    <functiondecl functionName="_get_transformable_selected_nodes" lineNumber="1057"/>
+    <functiondecl functionName="get_selected_nodes" lineNumber="1069"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1081"/>
+    <functiondecl functionName="add_editor_plugin" lineNumber="1092"/>
+    <functiondecl functionName="_update_nl" lineNumber="1097"/>
+    <functiondecl functionName="update" lineNumber="1125"/>
+    <functiondecl functionName="_emit_change" lineNumber="1138"/>
+    <functiondecl functionName="get_selected_node_list" lineNumber="1143"/>
+    <functiondecl functionName="get_full_selected_node_list" lineNumber="1152"/>
+    <functiondecl functionName="clear" lineNumber="1162"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="CONNECT_ONESHOT"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BR"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UR"/>
+    <functioncall functionName="DOCK_SLOT_MAX"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BR"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UR"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="Dictionary"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITOR_3D"/>
+    <functioncall functionName="EDITOR_ASSETLIB"/>
+    <functioncall functionName="EDITOR_OPEN_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCRIPT"/>
+    <functioncall functionName="EDIT_REDO"/>
+    <functioncall functionName="EDIT_REVERT"/>
+    <functioncall functionName="EDIT_UNDO"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="EditorData"/>
+    <functioncall functionName="EditorHistory"/>
+    <functioncall functionName="EditorNode"/>
+    <functioncall functionName="EditorPluginList"/>
+    <functioncall functionName="EditorProgress"/>
+    <functioncall functionName="EditorProgressBG"/>
+    <functioncall functionName="EditorSelection"/>
+    <functioncall functionName="EditorSettings"/>
+    <functioncall functionName="FILE_CLOSE"/>
+    <functioncall functionName="FILE_CLOSE_ALL"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_QUIT"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="FILE_CLOSE_OTHERS"/>
+    <functioncall functionName="FILE_CLOSE_RIGHT"/>
+    <functioncall functionName="FILE_EXPLORE_ANDROID_BUILD_TEMPLATES"/>
+    <functioncall functionName="FILE_EXPORT_MESH_LIBRARY"/>
+    <functioncall functionName="FILE_EXPORT_PROJECT"/>
+    <functioncall functionName="FILE_EXPORT_TILESET"/>
+    <functioncall functionName="FILE_EXTERNAL_OPEN_SCENE"/>
+    <functioncall functionName="FILE_IMPORT_SUBSCENE"/>
+    <functioncall functionName="FILE_INSTALL_ANDROID_SOURCE"/>
+    <functioncall functionName="FILE_NEW_INHERITED_SCENE"/>
+    <functioncall functionName="FILE_NEW_SCENE"/>
+    <functioncall functionName="FILE_OPEN_OLD_SCENE"/>
+    <functioncall functionName="FILE_OPEN_PREV"/>
+    <functioncall functionName="FILE_OPEN_RECENT"/>
+    <functioncall functionName="FILE_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCRIPT"/>
+    <functioncall functionName="FILE_QUIT"/>
+    <functioncall functionName="FILE_SAVE_ALL_SCENES"/>
+    <functioncall functionName="FILE_SAVE_AND_RUN"/>
+    <functioncall functionName="FILE_SAVE_AS_SCENE"/>
+    <functioncall functionName="FILE_SAVE_BEFORE_RUN"/>
+    <functioncall functionName="FILE_SAVE_OPTIMIZED"/>
+    <functioncall functionName="FILE_SAVE_SCENE"/>
+    <functioncall functionName="FILE_SHOW_IN_FILESYSTEM"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GEN_EDIT_STATE_MAIN"/>
+    <functioncall functionName="GLOBAL_NEW_WINDOW"/>
+    <functioncall functionName="GLOBAL_SCENE"/>
+    <functioncall functionName="HELP_ABOUT"/>
+    <functioncall functionName="HELP_COMMUNITY"/>
+    <functioncall functionName="HELP_DOCS"/>
+    <functioncall functionName="HELP_QA"/>
+    <functioncall functionName="HELP_REPORT_A_BUG"/>
+    <functioncall functionName="HELP_SEARCH"/>
+    <functioncall functionName="HELP_SEND_DOCS_FEEDBACK"/>
+    <functioncall functionName="MAX_BUILD_CALLBACKS"/>
+    <functioncall functionName="MAX_INIT_CALLBACKS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="REF"/>
+    <functioncall functionName="RESOURCE_SAVE"/>
+    <functioncall functionName="RESOURCE_SAVE_AS"/>
+    <functioncall functionName="RUN_PLAY"/>
+    <functioncall functionName="RUN_PLAY_CUSTOM_SCENE"/>
+    <functioncall functionName="RUN_PLAY_NATIVE"/>
+    <functioncall functionName="RUN_PLAY_SCENE"/>
+    <functioncall functionName="RUN_PROJECT_DATA_FOLDER"/>
+    <functioncall functionName="RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="RUN_SCENE_SETTINGS"/>
+    <functioncall functionName="RUN_SETTINGS"/>
+    <functioncall functionName="RUN_STOP"/>
+    <functioncall functionName="RUN_VCS_SETTINGS"/>
+    <functioncall functionName="RUN_VCS_SHUT_DOWN"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SCENE_TAB_CLOSE"/>
+    <functioncall functionName="SETTINGS_EDITOR_CONFIG_FOLDER"/>
+    <functioncall functionName="SETTINGS_EDITOR_DATA_FOLDER"/>
+    <functioncall functionName="SETTINGS_HELP"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DEFAULT"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DELETE"/>
+    <functioncall functionName="SETTINGS_LAYOUT_SAVE"/>
+    <functioncall functionName="SETTINGS_MANAGE_EXPORT_TEMPLATES"/>
+    <functioncall functionName="SETTINGS_MANAGE_FEATURE_PROFILES"/>
+    <functioncall functionName="SETTINGS_PICK_MAIN_SCENE"/>
+    <functioncall functionName="SETTINGS_PREFERENCES"/>
+    <functioncall functionName="SETTINGS_TOGGLE_CONSOLE"/>
+    <functioncall functionName="SETTINGS_TOGGLE_FULLSCREEN"/>
+    <functioncall functionName="SETTINGS_UPDATE_ALWAYS"/>
+    <functioncall functionName="SETTINGS_UPDATE_CHANGES"/>
+    <functioncall functionName="SETTINGS_UPDATE_CONTINUOUSLY"/>
+    <functioncall functionName="SETTINGS_UPDATE_SPINNER_HIDE"/>
+    <functioncall functionName="SETTINGS_UPDATE_WHEN_CHANGED"/>
+    <functioncall functionName="SET_VIDEO_DRIVER_SAVE_AND_RESTART"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TOOLS_CUSTOM"/>
+    <functioncall functionName="TOOLS_ORPHAN_RESOURCES"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="VariantContainer"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="_EDITOR_DEF"/>
+    <functioncall functionName="_add_object"/>
+    <functioncall functionName="_cleanup_scene"/>
+    <functioncall functionName="_edit_current"/>
+    <functioncall functionName="_editor_select"/>
+    <functioncall functionName="_emit_change"/>
+    <functioncall functionName="_find_updated_instances"/>
+    <functioncall functionName="_get_transformable_selected_nodes"/>
+    <functioncall functionName="_menu_option_confirm"/>
+    <functioncall functionName="_node_removed"/>
+    <functioncall functionName="_save_scene"/>
+    <functioncall functionName="_save_scene_with_preview"/>
+    <functioncall functionName="_set"/>
+    <functioncall functionName="_set_only"/>
+    <functioncall functionName="_update_nl"/>
+    <functioncall functionName="add_do_property"/>
+    <functioncall functionName="add_node"/>
+    <functioncall functionName="add_undo_property"/>
+    <functioncall functionName="apply_changes"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="build"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="checked_paths"/>
+    <functioncall functionName="checked_scenes"/>
+    <functioncall functionName="class_exists"/>
+    <functioncall functionName="cleanup_history"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="ct"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="current_edited_scene"/>
+    <functioncall functionName="custom_state"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="edit_resource"/>
+    <functioncall functionName="edited_scene_changed"/>
+    <functioncall functionName="editor_data"/>
+    <functioncall functionName="editor_folding"/>
+    <functioncall functionName="editor_states"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="emitted"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="es"/>
+    <functioncall functionName="fail"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_addon_area"/>
+    <functioncall functionName="get_base_script"/>
+    <functioncall functionName="get_basename"/>
+    <functioncall functionName="get_breakpoints"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_custom_types"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_editor_states"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_filename"/>
+    <functioncall functionName="get_full_selected_node_list"/>
+    <functioncall functionName="get_global_class_base"/>
+    <functioncall functionName="get_global_class_name"/>
+    <functioncall functionName="get_global_class_native_base"/>
+    <functioncall functionName="get_global_class_path"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_instance_base_type"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_language"/>
+    <functioncall functionName="get_last_modified_time"/>
+    <functioncall functionName="get_modified_time"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_parent_control"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_path_to"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_scene_inherited_state"/>
+    <functioncall functionName="get_scene_instance_state"/>
+    <functioncall functionName="get_script"/>
+    <functioncall functionName="get_script_create_dialog"/>
+    <functioncall functionName="get_selected_nodes"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_state"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_window_layout"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="handles"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_child_process"/>
+    <functioncall functionName="has_default_value"/>
+    <functioncall functionName="has_main_screen"/>
+    <functioncall functionName="has_prev"/>
+    <functioncall functionName="has_setting"/>
+    <functioncall functionName="hide_from_editor"/>
+    <functioncall functionName="history"/>
+    <functioncall functionName="history_current"/>
+    <functioncall functionName="history_stored"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="inspector_only"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_global_class"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="level"/>
+    <functioncall functionName="live_edit_root"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="menu_hb"/>
+    <functioncall functionName="meta"/>
+    <functioncall functionName="must_reload"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_node"/>
+    <functioncall functionName="new_scene"/>
+    <functioncall functionName="new_selection"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nl_changed"/>
+    <functioncall functionName="notify_resource_saved"/>
+    <functioncall functionName="notify_scene_changed"/>
+    <functioncall functionName="notify_scene_closed"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="ob"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="object"/>
+    <functioncall functionName="open_resource"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_at_pos"/>
+    <functioncall functionName="p_breakpoints"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_can_cancel"/>
+    <functioncall functionName="p_class"/>
+    <functioncall functionName="p_custom"/>
+    <functioncall functionName="p_emit_signal"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_force_refresh"/>
+    <functioncall functionName="p_icon"/>
+    <functioncall functionName="p_icon_path"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_inherits"/>
+    <functioncall functionName="p_inspector_only"/>
+    <functioncall functionName="p_label"/>
+    <functioncall functionName="p_layout"/>
+    <functioncall functionName="p_level_change"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_obj"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_old"/>
+    <functioncall functionName="p_order"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_plugin"/>
+    <functioncall functionName="p_plugins_list"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_relevel"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_root"/>
+    <functioncall functionName="p_scene_idx"/>
+    <functioncall functionName="p_script"/>
+    <functioncall functionName="p_setting"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_subprop"/>
+    <functioncall functionName="p_table"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="p_to_idx"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="p_with_preview"/>
+    <functioncall functionName="pack"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="pinfo"/>
+    <functioncall functionName="pr"/>
+    <functioncall functionName="progress_add_task"/>
+    <functioncall functionName="progress_add_task_bg"/>
+    <functioncall functionName="progress_end_task"/>
+    <functioncall functionName="progress_end_task_bg"/>
+    <functioncall functionName="progress_task_step"/>
+    <functioncall functionName="progress_task_step_bg"/>
+    <functioncall functionName="property"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_node"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="restart_if_changed"/>
+    <functioncall functionName="restore_global_state"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="save_external_data"/>
+    <functioncall functionName="save_global_state"/>
+    <functioncall functionName="script"/>
+    <functioncall functionName="script_class_clear_icon_paths"/>
+    <functioncall functionName="script_class_get_base"/>
+    <functioncall functionName="script_class_load_icon_paths"/>
+    <functioncall functionName="script_class_load_script"/>
+    <functioncall functionName="script_class_set_name"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_editor_states"/>
+    <functioncall functionName="set_filename"/>
+    <functioncall functionName="set_script"/>
+    <functioncall functionName="set_state"/>
+    <functioncall functionName="set_window_layout"/>
+    <functioncall functionName="show_ext"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="top_split"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="undo_redo"/>
+    <functioncall functionName="unsaved_cache"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="update_keying"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="variant"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

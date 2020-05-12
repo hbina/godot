@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="399506832">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AnimatedSprite3D::centered&apos; is not initialized in the constructor." verbose="Member variable &apos;AnimatedSprite3D::centered&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/sprite_3d.cpp" line="1136" column="19"/>
+            <symbol>AnimatedSprite3D::centered</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AnimatedSprite3D::hflip&apos; is not initialized in the constructor." verbose="Member variable &apos;AnimatedSprite3D::hflip&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/sprite_3d.cpp" line="1136" column="19"/>
+            <symbol>AnimatedSprite3D::hflip</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AnimatedSprite3D::vflip&apos; is not initialized in the constructor." verbose="Member variable &apos;AnimatedSprite3D::vflip&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/sprite_3d.cpp" line="1136" column="19"/>
+            <symbol>AnimatedSprite3D::vflip</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;animation&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;animation&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/sprite_3d.cpp" line="1140" column="2"/>
+            <symbol>animation</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/3d/sprite_3d.h:217:7" call-funcname="_set_playing" call-argnr="1" file="/home/hbina/git/godot/scene/3d/sprite_3d.cpp" line="1060" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/3d/sprite_3d.h:237:7" call-funcname="set_frame" call-argnr="1" file="/home/hbina/git/godot/scene/3d/sprite_3d.cpp" line="1092" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_get_color_accum" lineNumber="36"/>
+    <functiondecl functionName="_propagate_color_changed" lineNumber="54"/>
+    <functiondecl functionName="_notification" lineNumber="68"/>
+    <functiondecl functionName="set_centered" lineNumber="92"/>
+    <functiondecl functionName="is_centered" lineNumber="98"/>
+    <functiondecl functionName="set_offset" lineNumber="103"/>
+    <functiondecl functionName="get_offset" lineNumber="108"/>
+    <functiondecl functionName="set_flip_h" lineNumber="113"/>
+    <functiondecl functionName="is_flipped_h" lineNumber="118"/>
+    <functiondecl functionName="set_flip_v" lineNumber="123"/>
+    <functiondecl functionName="is_flipped_v" lineNumber="128"/>
+    <functiondecl functionName="set_modulate" lineNumber="133"/>
+    <functiondecl functionName="get_modulate" lineNumber="140"/>
+    <functiondecl functionName="set_pixel_size" lineNumber="145"/>
+    <functiondecl functionName="get_pixel_size" lineNumber="150"/>
+    <functiondecl functionName="set_opacity" lineNumber="155"/>
+    <functiondecl functionName="get_opacity" lineNumber="160"/>
+    <functiondecl functionName="set_axis" lineNumber="165"/>
+    <functiondecl functionName="get_axis" lineNumber="171"/>
+    <functiondecl functionName="_im_update" lineNumber="176"/>
+    <functiondecl functionName="_queue_update" lineNumber="183"/>
+    <functiondecl functionName="get_aabb" lineNumber="195"/>
+    <functiondecl functionName="get_faces" lineNumber="199"/>
+    <functiondecl functionName="generate_triangle_mesh" lineNumber="204"/>
+    <functiondecl functionName="set_draw_flag" lineNumber="262"/>
+    <functiondecl functionName="get_draw_flag" lineNumber="269"/>
+    <functiondecl functionName="set_alpha_cut_mode" lineNumber="274"/>
+    <functiondecl functionName="get_alpha_cut_mode" lineNumber="281"/>
+    <functiondecl functionName="set_billboard_mode" lineNumber="286"/>
+    <functiondecl functionName="get_billboard_mode" lineNumber="293"/>
+    <functiondecl functionName="_bind_methods" lineNumber="298"/>
+    <functiondecl functionName="_draw" lineNumber="391"/>
+    <functiondecl functionName="_texture_changed" lineNumber="525"/>
+    <functiondecl functionName="set_texture" lineNumber="529"/>
+    <functiondecl functionName="get_texture" lineNumber="543"/>
+    <functiondecl functionName="set_region" lineNumber="548"/>
+    <functiondecl functionName="is_region" lineNumber="557"/>
+    <functiondecl functionName="set_region_rect" lineNumber="562"/>
+    <functiondecl functionName="get_region_rect" lineNumber="571"/>
+    <functiondecl functionName="set_frame" lineNumber="576"/>
+    <functiondecl functionName="get_frame" lineNumber="589"/>
+    <functiondecl functionName="set_frame_coords" lineNumber="594"/>
+    <functiondecl functionName="get_frame_coords" lineNumber="601"/>
+    <functiondecl functionName="set_vframes" lineNumber="605"/>
+    <functiondecl functionName="get_vframes" lineNumber="612"/>
+    <functiondecl functionName="set_hframes" lineNumber="617"/>
+    <functiondecl functionName="get_hframes" lineNumber="624"/>
+    <functiondecl functionName="get_item_rect" lineNumber="629"/>
+    <functiondecl functionName="_validate_property" lineNumber="658"/>
+    <functiondecl functionName="_bind_methods" lineNumber="671"/>
+    <functiondecl functionName="_draw" lineNumber="717"/>
+    <functiondecl functionName="_validate_property" lineNumber="863"/>
+    <functiondecl functionName="_notification" lineNumber="905"/>
+    <functiondecl functionName="set_sprite_frames" lineNumber="952"/>
+    <functiondecl functionName="get_sprite_frames" lineNumber="972"/>
+    <functiondecl functionName="set_frame" lineNumber="977"/>
+    <functiondecl functionName="get_frame" lineNumber="1001"/>
+    <functiondecl functionName="get_item_rect" lineNumber="1006"/>
+    <functiondecl functionName="_res_changed" lineNumber="1029"/>
+    <functiondecl functionName="_set_playing" lineNumber="1037"/>
+    <functiondecl functionName="_is_playing" lineNumber="1046"/>
+    <functiondecl functionName="play" lineNumber="1051"/>
+    <functiondecl functionName="stop" lineNumber="1058"/>
+    <functiondecl functionName="is_playing" lineNumber="1063"/>
+    <functiondecl functionName="_reset_timeout" lineNumber="1068"/>
+    <functiondecl functionName="set_animation" lineNumber="1085"/>
+    <functiondecl functionName="get_animation" lineNumber="1096"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="1101"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1110"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_PROPERTYI"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ALPHA_CUT_DISABLED"/>
+    <functioncall functionName="ALPHA_CUT_DISCARD"/>
+    <functioncall functionName="ALPHA_CUT_OPAQUE_PREPASS"/>
+    <functioncall functionName="AXIS_Z"/>
+    <functioncall functionName="AlphaCutMode"/>
+    <functioncall functionName="AnimatedSprite3D"/>
+    <functioncall functionName="BILLBOARD_DISABLED"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="DrawFlags"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="FLAG_DOUBLE_SIDED"/>
+    <functioncall functionName="FLAG_MAX"/>
+    <functioncall functionName="FLAG_SHADED"/>
+    <functioncall functionName="FLAG_TRANSPARENT"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GeometryInstance3D"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_EDITOR"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RECT2"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="Sprite3D"/>
+    <functioncall functionName="SpriteBase3D"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TriangleMesh"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_draw"/>
+    <functioncall functionName="_get_color_accum"/>
+    <functioncall functionName="_im_update"/>
+    <functioncall functionName="_is_playing"/>
+    <functioncall functionName="_propagate_color_changed"/>
+    <functioncall functionName="_queue_update"/>
+    <functioncall functionName="_res_changed"/>
+    <functioncall functionName="_reset_timeout"/>
+    <functioncall functionName="_set_playing"/>
+    <functioncall functionName="_texture_changed"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="animation"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="centered"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="color_dirty"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="current_found"/>
+    <functioncall functionName="dest_offset"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="dst_rect"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="faces"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="final_dst_rect"/>
+    <functioncall functionName="final_rect"/>
+    <functioncall functionName="final_src_rect"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="frame_changed"/>
+    <functioncall functionName="frame_offset"/>
+    <functioncall functionName="frame_size"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="generate_triangle_mesh"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_alpha_cut_mode"/>
+    <functioncall functionName="get_animation"/>
+    <functioncall functionName="get_animation_list"/>
+    <functioncall functionName="get_animation_loop"/>
+    <functioncall functionName="get_animation_speed"/>
+    <functioncall functionName="get_atlas"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_billboard_mode"/>
+    <functioncall functionName="get_draw_flag"/>
+    <functioncall functionName="get_frame"/>
+    <functioncall functionName="get_frame_coords"/>
+    <functioncall functionName="get_frame_count"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_hframes"/>
+    <functioncall functionName="get_immediate"/>
+    <functioncall functionName="get_item_rect"/>
+    <functioncall functionName="get_material_rid_for_2d"/>
+    <functioncall functionName="get_modulate"/>
+    <functioncall functionName="get_offset"/>
+    <functioncall functionName="get_opacity"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_pixel_size"/>
+    <functioncall functionName="get_process_delta_time"/>
+    <functioncall functionName="get_rect_region"/>
+    <functioncall functionName="get_region_rect"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_sprite_frames"/>
+    <functioncall functionName="get_texture"/>
+    <functioncall functionName="get_vframes"/>
+    <functioncall functionName="get_width"/>
+    <functioncall functionName="has_animation"/>
+    <functioncall functionName="hframes"/>
+    <functioncall functionName="hint_string"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="immediate"/>
+    <functioncall functionName="immediate_begin"/>
+    <functioncall functionName="immediate_clear"/>
+    <functioncall functionName="immediate_color"/>
+    <functioncall functionName="immediate_create"/>
+    <functioncall functionName="immediate_end"/>
+    <functioncall functionName="immediate_normal"/>
+    <functioncall functionName="immediate_set_material"/>
+    <functioncall functionName="immediate_tangent"/>
+    <functioncall functionName="immediate_uv"/>
+    <functioncall functionName="immediate_vertex"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="is_centered"/>
+    <functioncall functionName="is_flipped_h"/>
+    <functioncall functionName="is_flipped_v"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_playing"/>
+    <functioncall functionName="is_processing"/>
+    <functioncall functionName="is_region"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="mat"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="names"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="pI"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_animation"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_center"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_flag"/>
+    <functioncall functionName="p_flip"/>
+    <functioncall functionName="p_frame"/>
+    <functioncall functionName="p_frames"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_playing"/>
+    <functioncall functionName="p_region"/>
+    <functioncall functionName="p_region_rect"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="parent_sprite"/>
+    <functioncall functionName="pending_update"/>
+    <functioncall functionName="play"/>
+    <functioncall functionName="playing"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="region"/>
+    <functioncall functionName="region_rect"/>
+    <functioncall functionName="remaining"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="set_aabb"/>
+    <functioncall functionName="set_alpha_cut_mode"/>
+    <functioncall functionName="set_animation"/>
+    <functioncall functionName="set_axis"/>
+    <functioncall functionName="set_base"/>
+    <functioncall functionName="set_billboard_mode"/>
+    <functioncall functionName="set_centered"/>
+    <functioncall functionName="set_draw_flag"/>
+    <functioncall functionName="set_flip_h"/>
+    <functioncall functionName="set_flip_v"/>
+    <functioncall functionName="set_frame"/>
+    <functioncall functionName="set_frame_coords"/>
+    <functioncall functionName="set_hframes"/>
+    <functioncall functionName="set_modulate"/>
+    <functioncall functionName="set_offset"/>
+    <functioncall functionName="set_opacity"/>
+    <functioncall functionName="set_pixel_size"/>
+    <functioncall functionName="set_process_internal"/>
+    <functioncall functionName="set_region"/>
+    <functioncall functionName="set_region_rect"/>
+    <functioncall functionName="set_sprite_frames"/>
+    <functioncall functionName="set_texture"/>
+    <functioncall functionName="set_vframes"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sort_custom"/>
+    <functioncall functionName="speed"/>
+    <functioncall functionName="src_rect"/>
+    <functioncall functionName="src_tsize"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tangent"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="timeout"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tsize"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="update_configuration_warning"/>
+    <functioncall functionName="update_gizmo"/>
+    <functioncall functionName="vframes"/>
+    <functioncall functionName="vtx"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x_axis"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_axis"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="973659774">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;UDPServer::bind_port&apos; is not initialized in the constructor." verbose="Member variable &apos;UDPServer::bind_port&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/core/io/udp_server.cpp" line="112" column="12"/>
+            <symbol>UDPServer::bind_port</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;stop&apos; is called from destructor &apos;~UDPServer()&apos; at line 118. Dynamic binding is not used." verbose="Virtual function &apos;stop&apos; is called from destructor &apos;~UDPServer()&apos; at line 118. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/core/io/udp_server.cpp" file="/home/hbina/git/godot/core/io/udp_server.h" line="52" column="15" info="stop is a virtual function"/>
+            <location file="/home/hbina/git/godot/core/io/udp_server.cpp" line="118" column="2" info="Calling stop"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_bind_methods" lineNumber="33"/>
+    <functiondecl functionName="listen" lineNumber="42"/>
+    <functiondecl functionName="is_listening" lineNumber="72"/>
+    <functiondecl functionName="is_connection_available" lineNumber="78"/>
+    <functiondecl functionName="take_connection" lineNumber="89"/>
+    <functiondecl functionName="stop" lineNumber="103"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_ALREADY_IN_USE"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="IP_Address"/>
+    <functioncall functionName="POLL_TYPE_IN"/>
+    <functioncall functionName="PacketPeerUDP"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="TYPE_ANY"/>
+    <functioncall functionName="TYPE_IPV4"/>
+    <functioncall functionName="TYPE_IPV6"/>
+    <functioncall functionName="TYPE_UDP"/>
+    <functioncall functionName="UDPServer"/>
+    <functioncall functionName="_sock"/>
+    <functioncall functionName="bind"/>
+    <functioncall functionName="bind_address"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bind_port"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="connect_socket"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ip_type"/>
+    <functioncall functionName="is_connection_available"/>
+    <functioncall functionName="is_ipv4"/>
+    <functioncall functionName="is_listening"/>
+    <functioncall functionName="is_open"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_wildcard"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="p_bind_address"/>
+    <functioncall functionName="p_port"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_blocking_enabled"/>
+    <functioncall functionName="set_reuse_address_enabled"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="take_connection"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

@@ -162,7 +162,7 @@ float AnimationNode::blend_input(int p_input, float p_time, bool p_seek, float p
 
 	Ref<AnimationNode> node = blend_tree->get_node(node_name);
 
-	//inputs.write[p_input].last_pass = state->last_pass;
+	//inputs[p_input].last_pass = state->last_pass;
 	float activity = 0;
 	float ret = _blend_node(node_name, blend_tree->get_node_connection_array(node_name), nullptr, node, p_time, p_seek, p_blend, p_filter, p_optimize, &activity);
 
@@ -327,7 +327,7 @@ void AnimationNode::add_input(const String &p_name) {
 void AnimationNode::set_input_name(int p_input, const String &p_name) {
 	ERR_FAIL_INDEX(p_input, inputs.size());
 	ERR_FAIL_COND(p_name.find(".") != -1 || p_name.find("/") != -1);
-	inputs.write[p_input].name = p_name;
+	inputs[p_input].name = p_name;
 	emit_changed();
 }
 

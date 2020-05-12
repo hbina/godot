@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="426870259">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;RotatedFileLogger&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;RotatedFileLogger&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/io/logger.cpp" file="/home/hbina/git/godot/core/io/logger.h" line="89" column="2"/>
+            <symbol>RotatedFileLogger</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;CompositeLogger&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;CompositeLogger&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/io/logger.cpp" file="/home/hbina/git/godot/core/io/logger.h" line="100" column="2"/>
+            <symbol>CompositeLogger</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;log_error&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;log_error&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/core/io/logger.cpp" file="/home/hbina/git/godot/core/io/logger.h" line="103" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/core/io/logger.cpp" file="/home/hbina/git/godot/core/io/logger.h" line="53" column="15" info="Virtual function in base class"/>
+            <symbol>log_error</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!should_log(true)&apos; is always false" verbose="Condition &apos;!should_log(true)&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/core/io/logger.cpp" line="46" column="6" info="Condition &apos;!should_log(true)&apos; is always false"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!should_log(false)&apos; is always false" verbose="Condition &apos;!should_log(false)&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/core/io/logger.cpp" line="80" column="6" info="Condition &apos;!should_log(false)&apos; is always false"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!should_log(true)&apos; is always false" verbose="Condition &apos;!should_log(true)&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/core/io/logger.cpp" line="93" column="6" info="Condition &apos;!should_log(true)&apos; is always false"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!should_log(true)&apos; is always false" verbose="Condition &apos;!should_log(true)&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/core/io/logger.cpp" line="259" column="6" info="Condition &apos;!should_log(true)&apos; is always false"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="80" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="189" col="17" call-argexpr="p_err" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/logger.cpp" line="214" col="6" info="Assuming that condition 'if(need_flush)' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/io/logger.cpp" line="212" col="21" info="Assignment from 'p_err'"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="225" col="17" call-argexpr="p_err" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/logger.cpp" line="229" col="5" info="Assuming that condition 'if(p_err)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/logger.h:56:7" call-funcname="logf_error" call-argnr="2" file="/home/hbina/git/godot/core/io/logger.cpp" line="76" col="2" my-id="/home/hbina/git/godot/core/io/logger.h:53:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/io/logger.h:56:7" call-funcname="logf_error" call-argnr="3" file="/home/hbina/git/godot/core/io/logger.cpp" line="76" col="2" my-id="/home/hbina/git/godot/core/io/logger.h:53:15" my-argnr="2"/>
+  </FileInfo>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;need_flush&apos; is always true" verbose="Condition &apos;need_flush&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/core/io/logger.cpp" line="214" column="7" info="Condition &apos;need_flush&apos; is always true"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="80" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="225" col="17" call-argexpr="p_err" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/logger.cpp" line="229" col="5" info="Assuming that condition 'if(p_err)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/logger.h:56:7" call-funcname="logf_error" call-argnr="2" file="/home/hbina/git/godot/core/io/logger.cpp" line="76" col="2" my-id="/home/hbina/git/godot/core/io/logger.h:53:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/io/logger.h:56:7" call-funcname="logf_error" call-argnr="3" file="/home/hbina/git/godot/core/io/logger.cpp" line="76" col="2" my-id="/home/hbina/git/godot/core/io/logger.h:53:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="80" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="189" col="17" call-argexpr="p_err" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/logger.cpp" line="214" col="6" info="Assuming that condition 'if(need_flush)' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/io/logger.cpp" line="212" col="21" info="Assignment from 'p_err'"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/logger.h:42:7" call-funcname="should_log" call-argnr="1" file="/home/hbina/git/godot/core/io/logger.cpp" line="225" col="17" call-argexpr="p_err" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/logger.cpp" line="229" col="5" info="Assuming that condition 'if(p_err)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/logger.h:56:7" call-funcname="logf_error" call-argnr="2" file="/home/hbina/git/godot/core/io/logger.cpp" line="76" col="2" my-id="/home/hbina/git/godot/core/io/logger.h:53:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/io/logger.h:56:7" call-funcname="logf_error" call-argnr="3" file="/home/hbina/git/godot/core/io/logger.cpp" line="76" col="2" my-id="/home/hbina/git/godot/core/io/logger.h:53:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="should_log" lineNumber="41"/>
+    <functiondecl functionName="log_error" lineNumber="45"/>
+    <functiondecl functionName="logf" lineNumber="79"/>
+    <functiondecl functionName="logf_error" lineNumber="92"/>
+    <functiondecl functionName="close_file" lineNumber="107"/>
+    <functiondecl functionName="clear_old_backups" lineNumber="114"/>
+    <functiondecl functionName="rotate_file" lineNumber="148"/>
+    <functiondecl functionName="logv" lineNumber="188"/>
+    <functiondecl functionName="logv" lineNumber="224"/>
+    <functiondecl functionName="logv" lineNumber="245"/>
+    <functiondecl functionName="log_error" lineNumber="258"/>
+    <functiondecl functionName="add_logger" lineNumber="268"/>
+    <functiondecl functionName="should_log" lineNumber="41"/>
+    <functiondecl functionName="log_error" lineNumber="45"/>
+    <functiondecl functionName="logf" lineNumber="79"/>
+    <functiondecl functionName="logf_error" lineNumber="92"/>
+    <functiondecl functionName="close_file" lineNumber="107"/>
+    <functiondecl functionName="clear_old_backups" lineNumber="114"/>
+    <functiondecl functionName="rotate_file" lineNumber="148"/>
+    <functiondecl functionName="logv" lineNumber="188"/>
+    <functiondecl functionName="logv" lineNumber="224"/>
+    <functiondecl functionName="logv" lineNumber="245"/>
+    <functiondecl functionName="log_error" lineNumber="258"/>
+    <functiondecl functionName="add_logger" lineNumber="268"/>
+    <functiondecl functionName="should_log" lineNumber="41"/>
+    <functiondecl functionName="log_error" lineNumber="45"/>
+    <functiondecl functionName="logf" lineNumber="79"/>
+    <functiondecl functionName="logf_error" lineNumber="92"/>
+    <functiondecl functionName="close_file" lineNumber="107"/>
+    <functiondecl functionName="clear_old_backups" lineNumber="114"/>
+    <functiondecl functionName="rotate_file" lineNumber="148"/>
+    <functiondecl functionName="logv" lineNumber="188"/>
+    <functiondecl functionName="logv" lineNumber="224"/>
+    <functiondecl functionName="logv" lineNumber="245"/>
+    <functiondecl functionName="log_error" lineNumber="258"/>
+    <functiondecl functionName="add_logger" lineNumber="268"/>
+    <functioncall functionName="ACCESS_USERDATA"/>
+    <functioncall functionName="CompositeLogger"/>
+    <functioncall functionName="ERR_ERROR"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_SCRIPT"/>
+    <functioncall functionName="ERR_SHADER"/>
+    <functioncall functionName="ERR_WARNING"/>
+    <functioncall functionName="RotatedFileLogger"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="_PRINTF_FORMAT_ATTRIBUTE_2_0"/>
+    <functioncall functionName="_PRINTF_FORMAT_ATTRIBUTE_2_3"/>
+    <functioncall functionName="alloc_static"/>
+    <functioncall functionName="argp"/>
+    <functioncall functionName="backup_name"/>
+    <functioncall functionName="base_path"/>
+    <functioncall functionName="basename"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="clear_old_backups"/>
+    <functioncall functionName="close_file"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="current_is_dir"/>
+    <functioncall functionName="da"/>
+    <functioncall functionName="day"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="err_details"/>
+    <functioncall functionName="err_type"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fflush"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="flush"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free_static"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_basename"/>
+    <functioncall functionName="get_date"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_next"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_time"/>
+    <functioncall functionName="hour"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="list_copy"/>
+    <functioncall functionName="list_dir_begin"/>
+    <functioncall functionName="list_dir_end"/>
+    <functioncall functionName="log_error"/>
+    <functioncall functionName="logf_error"/>
+    <functioncall functionName="loggers"/>
+    <functioncall functionName="logv"/>
+    <functioncall functionName="make_dir_recursive"/>
+    <functioncall functionName="max_backups"/>
+    <functioncall functionName="max_files"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="month"/>
+    <functioncall functionName="need_flush"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_err"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_format"/>
+    <functioncall functionName="p_function"/>
+    <functioncall functionName="p_line"/>
+    <functioncall functionName="p_list"/>
+    <functioncall functionName="p_logger"/>
+    <functioncall functionName="p_loggers"/>
+    <functioncall functionName="p_max_files"/>
+    <functioncall functionName="p_rationale"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rotate_file"/>
+    <functioncall functionName="sec"/>
+    <functioncall functionName="should_log"/>
+    <functioncall functionName="simplify_path"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sprintf"/>
+    <functioncall functionName="sprintf_s"/>
+    <functioncall functionName="static_buf"/>
+    <functioncall functionName="static_buf_size"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="stdout"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="timestamp"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="va_copy"/>
+    <functioncall functionName="va_end"/>
+    <functioncall functionName="va_start"/>
+    <functioncall functionName="vfprintf"/>
+    <functioncall functionName="vprintf"/>
+    <functioncall functionName="vsnprintf"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="year"/>
+  </FileInfo>
+</analyzerinfo>

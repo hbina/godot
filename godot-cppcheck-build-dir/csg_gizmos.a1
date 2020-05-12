@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3193592072">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Build2DFaces::vertex_snap2&apos; is not initialized in the constructor." verbose="Member variable &apos;Build2DFaces::vertex_snap2&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" file="/home/hbina/git/godot/modules/csg/csg.h" line="186" column="3"/>
+            <symbol>Build2DFaces::vertex_snap2</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CSGShape3D::Vector3Hasher::hash&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CSGShape3D::Vector3Hasher::hash&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" file="/home/hbina/git/godot/modules/csg/csg_shape.h" line="74" column="28"/>
+            <symbol>CSGShape3D::Vector3Hasher::hash</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;EditorPluginCSG&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;EditorPluginCSG&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" file="/home/hbina/git/godot/modules/csg/csg_gizmos.h" line="61" column="2"/>
+            <symbol>EditorPluginCSG</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg_gizmos.h:49:17" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" line="54" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg_gizmos.h:50:18" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" line="81" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg_gizmos.h:51:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" line="118" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg_gizmos.h:51:15" my-argnr="3" my-argname="p_camera" file="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" line="124" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg_gizmos.h:52:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" line="221" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg_gizmos.h:47:15" my-argnr="1" my-argname="p_gizmo" file="/home/hbina/git/godot/modules/csg/csg_gizmos.cpp" line="341" col="47" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_handle_name" lineNumber="52"/>
+    <functiondecl functionName="get_handle_value" lineNumber="79"/>
+    <functiondecl functionName="set_handle" lineNumber="116"/>
+    <functiondecl functionName="commit_handle" lineNumber="219"/>
+    <functiondecl functionName="has_gizmo" lineNumber="323"/>
+    <functiondecl functionName="get_name" lineNumber="327"/>
+    <functiondecl functionName="get_priority" lineNumber="331"/>
+    <functiondecl functionName="is_selectable_when_hidden" lineNumber="335"/>
+    <functiondecl functionName="redraw" lineNumber="339"/>
+    <functioncall functionName="ARRAY_MAX"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="ArrayMesh"/>
+    <functioncall functionName="Build2DFaces"/>
+    <functioncall functionName="CSGBox3D"/>
+    <functioncall functionName="CSGCombiner3D"/>
+    <functioncall functionName="CSGCylinder3D"/>
+    <functioncall functionName="CSGMesh3D"/>
+    <functioncall functionName="CSGPolygon3D"/>
+    <functioncall functionName="CSGPrimitive3D"/>
+    <functioncall functionName="CSGShape3D"/>
+    <functioncall functionName="CSGShape3DGizmoPlugin"/>
+    <functioncall functionName="CSGSphere3D"/>
+    <functioncall functionName="CSGTorus3D"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="EDITOR_DEF"/>
+    <functioncall functionName="EditorNode3DGizmoPlugin"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="EditorPluginCSG"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GeometryInstance3D"/>
+    <functioncall functionName="MODE_DEPTH"/>
+    <functioncall functionName="MODE_PATH"/>
+    <functioncall functionName="MODE_SPIN"/>
+    <functioncall functionName="OPERATION_INTERSECTION"/>
+    <functioncall functionName="OPERATION_SUBSTRACTION"/>
+    <functioncall functionName="OPERATION_SUBTRACTION"/>
+    <functioncall functionName="OPERATION_UNION"/>
+    <functioncall functionName="PATH_ROTATION_PATH"/>
+    <functioncall functionName="PATH_ROTATION_PATH_FOLLOW"/>
+    <functioncall functionName="PATH_ROTATION_POLYGON"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="VertexKeyHash"/>
+    <functioncall functionName="add_collision_segments"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_gizmo_plugin"/>
+    <functioncall functionName="add_handles"/>
+    <functioncall functionName="add_lines"/>
+    <functioncall functionName="add_mesh"/>
+    <functioncall functionName="add_surface_from_arrays"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="create_handle_material"/>
+    <functioncall functionName="create_material"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="faces"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_brush_faces"/>
+    <functioncall functionName="get_closest_points_between_segments"/>
+    <functioncall functionName="get_depth"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_inner_radius"/>
+    <functioncall functionName="get_material"/>
+    <functioncall functionName="get_operation"/>
+    <functioncall functionName="get_outer_radius"/>
+    <functioncall functionName="get_radius"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_spatial_node"/>
+    <functioncall functionName="get_translate_snap"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_width"/>
+    <functioncall functionName="gizmo_color"/>
+    <functioncall functionName="gizmo_plugin"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="handles"/>
+    <functioncall functionName="handles_material"/>
+    <functioncall functionName="hash_djb2_one_32"/>
+    <functioncall functionName="hash_djb2_one_float"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="invert"/>
+    <functioncall functionName="is_selected"/>
+    <functioncall functionName="is_snap_enabled"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="j_n"/>
+    <functioncall functionName="lines"/>
+    <functioncall functionName="material"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_cancel"/>
+    <functioncall functionName="p_gizmo"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_restore"/>
+    <functioncall functionName="p_spatial"/>
+    <functioncall functionName="project_ray_normal"/>
+    <functioncall functionName="project_ray_origin"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="ra"/>
+    <functioncall functionName="ray_from"/>
+    <functioncall functionName="rb"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="set_depth"/>
+    <functioncall functionName="set_height"/>
+    <functioncall functionName="set_inner_radius"/>
+    <functioncall functionName="set_outer_radius"/>
+    <functioncall functionName="set_radius"/>
+    <functioncall functionName="set_width"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="solid_material"/>
+    <functioncall functionName="stepify"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

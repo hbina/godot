@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="130474350">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Assimp::ScenePreprocessor::ProcessMesh&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Assimp::ScenePreprocessor::ProcessMesh&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/Common/ScenePreprocessor.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/ScenePreprocessor.h" line="114" column="10"/>
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/Common/ScenePreprocessor.cpp" line="95" column="25"/>
+            <symbol>Assimp::ScenePreprocessor::ProcessMesh</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ScenePreprocessor&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ScenePreprocessor&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/Common/ScenePreprocessor.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/ScenePreprocessor.h" line="81" column="5"/>
+            <symbol>ScenePreprocessor</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/Common/ScenePreprocessor.h:107:10" my-argnr="1" my-argname="anim" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/ScenePreprocessor.cpp" line="172" col="34" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ProcessScene" lineNumber="52"/>
+    <functiondecl functionName="ProcessMesh" lineNumber="95"/>
+    <functiondecl functionName="ProcessAnimation" lineNumber="169"/>
+    <functioncall functionName="AI_DEFAULT_MATERIAL_NAME"/>
+    <functioncall functionName="AI_MATKEY_COLOR_DIFFUSE"/>
+    <functioncall functionName="AI_MATKEY_NAME"/>
+    <functioncall functionName="ASSIMP_LOG_DEBUG"/>
+    <functioncall functionName="ASSIMP_LOG_WARN"/>
+    <functioncall functionName="AddProperty"/>
+    <functioncall functionName="Decompose"/>
+    <functioncall functionName="FindNode"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="ProcessAnimation"/>
+    <functioncall functionName="ProcessMesh"/>
+    <functioncall functionName="ScenePreprocessor"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="_scene"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aiMaterial"/>
+    <functioncall functionName="ai_assert"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="clr"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="mBitangents"/>
+    <functioncall functionName="mNodeName"/>
+    <functioncall functionName="mNumAnimations"/>
+    <functioncall functionName="mNumChannels"/>
+    <functioncall functionName="mNumFaces"/>
+    <functioncall functionName="mNumIndices"/>
+    <functioncall functionName="mNumMaterials"/>
+    <functioncall functionName="mNumMeshes"/>
+    <functioncall functionName="mNumPositionKeys"/>
+    <functioncall functionName="mNumRotationKeys"/>
+    <functioncall functionName="mNumScalingKeys"/>
+    <functioncall functionName="mNumVertices"/>
+    <functioncall functionName="mPrimitiveTypes"/>
+    <functioncall functionName="mTime"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="rotation"/>
+    <functioncall functionName="sc"/>
+    <functioncall functionName="scaling"/>
+    <functioncall functionName="scene"/>
+    <functioncall functionName="switch"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3711449892">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VHACD::MyHACD_API::releaseHull&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VHACD::MyHACD_API::releaseHull&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="118" column="7"/>
+            <symbol>VHACD::MyHACD_API::releaseHull</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;Cancel&apos; is called from destructor &apos;~MyHACD_API()&apos; at line 31. Dynamic binding is not used." verbose="Virtual function &apos;Cancel&apos; is called from destructor &apos;~MyHACD_API()&apos; at line 31. Dynamic binding is not used.">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="160" column="15" info="Cancel is a virtual function"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="31" column="3" info="Calling Cancel"/>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;ComputeCenterOfMass&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;ComputeCenterOfMass&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="284" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" file="/home/hbina/git/godot/thirdparty/vhacd/public/VHACD.h" line="136" column="15" info="Virtual function in base class"/>
+            <symbol>ComputeCenterOfMass</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:36:15" call-funcname="Compute" call-argnr="3" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="195" col="15" my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:176:15" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:36:15" my-argnr="1" my-argname="_points" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="50" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:36:15" my-argnr="3" my-argname="_triangles" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="51" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:229:15" my-argnr="4" my-argname="stage" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="240" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:229:15" my-argnr="5" my-argname="operation" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="241" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:245:15" my-argnr="1" my-argname="msg" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="249" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:36:15" my-argnr="1" my-argname="_points" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="50" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp:36:15" my-argnr="3" my-argname="_triangles" file="/home/hbina/git/godot/thirdparty/vhacd/src/VHACD-ASYNC.cpp" line="51" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Compute" lineNumber="36"/>
+    <functiondecl functionName="ComputeNow" lineNumber="65"/>
+    <functiondecl functionName="releaseHull" lineNumber="118"/>
+    <functiondecl functionName="GetConvexHull" lineNumber="126"/>
+    <functiondecl functionName="releaseHACD" lineNumber="134"/>
+    <functiondecl functionName="release" lineNumber="150"/>
+    <functiondecl functionName="getHullCount" lineNumber="155"/>
+    <functiondecl functionName="Cancel" lineNumber="160"/>
+    <functiondecl functionName="Compute" lineNumber="176"/>
+    <functiondecl functionName="GetNConvexHulls" lineNumber="200"/>
+    <functiondecl functionName="Clean" lineNumber="206"/>
+    <functiondecl functionName="Release" lineNumber="213"/>
+    <functiondecl functionName="OCLInit" lineNumber="218"/>
+    <functiondecl functionName="OCLRelease" lineNumber="224"/>
+    <functiondecl functionName="Update" lineNumber="229"/>
+    <functiondecl functionName="Log" lineNumber="245"/>
+    <functiondecl functionName="IsReady" lineNumber="253"/>
+    <functiondecl functionName="processPendingMessages" lineNumber="262"/>
+    <functiondecl functionName="ComputeCenterOfMass" lineNumber="284"/>
+    <functiondecl functionName="CreateVHACD_ASYNC" lineNumber="326"/>
+    <functioncall functionName="Cancel"/>
+    <functioncall functionName="Clean"/>
+    <functioncall functionName="Compute"/>
+    <functioncall functionName="ComputeCenterOfMass"/>
+    <functioncall functionName="ComputeNow"/>
+    <functioncall functionName="CreateVHACD"/>
+    <functioncall functionName="GetConvexHull"/>
+    <functioncall functionName="GetNConvexHulls"/>
+    <functioncall functionName="Init"/>
+    <functioncall functionName="IsReady"/>
+    <functioncall functionName="Log"/>
+    <functioncall functionName="OCLInit"/>
+    <functioncall functionName="OCLRelease"/>
+    <functioncall functionName="Release"/>
+    <functioncall functionName="Update"/>
+    <functioncall functionName="_desc"/>
+    <functioncall functionName="_points"/>
+    <functioncall functionName="_triangles"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="centerOfMass"/>
+    <functioncall functionName="countPoints"/>
+    <functioncall functionName="countTriangles"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="join"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="logger"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="mCancel"/>
+    <functioncall functionName="mIndices"/>
+    <functioncall functionName="mOperationProgress"/>
+    <functioncall functionName="mOverallProgress"/>
+    <functioncall functionName="mRunning"/>
+    <functioncall functionName="mStageProgress"/>
+    <functioncall functionName="mThread"/>
+    <functioncall functionName="mVertices"/>
+    <functioncall functionName="m_callback"/>
+    <functioncall functionName="m_logger"/>
+    <functioncall functionName="m_nPoints"/>
+    <functioncall functionName="m_nTriangles"/>
+    <functioncall functionName="m_points"/>
+    <functioncall functionName="m_triangles"/>
+    <functioncall functionName="m_volume"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oclDevice"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="operation"/>
+    <functioncall functionName="operationProgress"/>
+    <functioncall functionName="overallProgress"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="processPendingMessages"/>
+    <functioncall functionName="releaseHACD"/>
+    <functioncall functionName="releaseHull"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stage"/>
+    <functioncall functionName="stageProgress"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread"/>
+    <functioncall functionName="triangles"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="vertices"/>
+    <functioncall functionName="vhull"/>
+  </FileInfo>
+</analyzerinfo>

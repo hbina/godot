@@ -290,7 +290,7 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 			vd.location = RS::ARRAY_VERTEX;
 			vd.stride = stride * sizeof(float);
 
-			descriptions.write[0] = vd;
+			descriptions[0] = vd;
 
 			const Vector2 *points_ptr = p_points.ptr();
 
@@ -310,7 +310,7 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 			vd.location = RS::ARRAY_COLOR;
 			vd.stride = stride * sizeof(float);
 
-			descriptions.write[1] = vd;
+			descriptions[1] = vd;
 
 			if (p_colors.size() == 1) {
 				Color color = p_colors[0];
@@ -338,8 +338,8 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 			vd.location = RS::ARRAY_COLOR;
 			vd.stride = 0;
 
-			descriptions.write[1] = vd;
-			buffers.write[1] = storage->mesh_get_default_rd_buffer(RasterizerStorageRD::DEFAULT_RD_BUFFER_COLOR);
+			descriptions[1] = vd;
+			buffers[1] = storage->mesh_get_default_rd_buffer(RasterizerStorageRD::DEFAULT_RD_BUFFER_COLOR);
 		}
 
 		//uvs
@@ -350,7 +350,7 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 			vd.location = RS::ARRAY_TEX_UV;
 			vd.stride = stride * sizeof(float);
 
-			descriptions.write[2] = vd;
+			descriptions[2] = vd;
 
 			const Vector2 *uv_ptr = p_uvs.ptr();
 
@@ -366,8 +366,8 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 			vd.location = RS::ARRAY_TEX_UV;
 			vd.stride = 0;
 
-			descriptions.write[2] = vd;
-			buffers.write[2] = storage->mesh_get_default_rd_buffer(RasterizerStorageRD::DEFAULT_RD_BUFFER_TEX_UV);
+			descriptions[2] = vd;
+			buffers[2] = storage->mesh_get_default_rd_buffer(RasterizerStorageRD::DEFAULT_RD_BUFFER_TEX_UV);
 		}
 
 		//bones
@@ -378,7 +378,7 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 			vd.location = RS::ARRAY_BONES;
 			vd.stride = stride * sizeof(float);
 
-			descriptions.write[3] = vd;
+			descriptions[3] = vd;
 
 			const int *bone_ptr = p_bones.ptr();
 			const float *weight_ptr = p_weights.ptr();
@@ -407,8 +407,8 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 			vd.location = RS::ARRAY_BONES;
 			vd.stride = 0;
 
-			descriptions.write[3] = vd;
-			buffers.write[3] = storage->mesh_get_default_rd_buffer(RasterizerStorageRD::DEFAULT_RD_BUFFER_BONES);
+			descriptions[3] = vd;
+			buffers[3] = storage->mesh_get_default_rd_buffer(RasterizerStorageRD::DEFAULT_RD_BUFFER_BONES);
 		}
 
 		//check that everything is as it should be
@@ -422,7 +422,7 @@ RasterizerCanvas::PolygonID RasterizerCanvasRD::request_polygon(const Vector<int
 	pb.vertex_buffer = RD::get_singleton()->vertex_buffer_create(polygon_buffer.size(), polygon_buffer);
 	for (int i = 0; i < descriptions.size(); i++) {
 		if (buffers[i] == RID()) { //if put in vertex, use as vertex
-			buffers.write[i] = pb.vertex_buffer;
+			buffers[i] = pb.vertex_buffer;
 		}
 	}
 

@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3542509452">
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:16:6" my-argnr="3" my-argname="_blimit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="31" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:16:6" my-argnr="4" my-argname="_limit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="29" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:16:6" my-argnr="5" my-argname="_thresh" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="27" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:404:6" my-argnr="3" my-argname="_blimit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="423" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:404:6" my-argnr="4" my-argname="_limit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="421" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:404:6" my-argnr="5" my-argname="_thresh" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="419" col="37" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:16:6" my-argnr="3" my-argname="_blimit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="31" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:16:6" my-argnr="4" my-argname="_limit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="29" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:16:6" my-argnr="5" my-argname="_thresh" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="27" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:404:6" my-argnr="3" my-argname="_blimit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="423" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:404:6" my-argnr="4" my-argname="_limit" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="421" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c:404:6" my-argnr="5" my-argname="_thresh" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/x86/loopfilter_avx2.c" line="419" col="37" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="vpx_lpf_horizontal_edge_8_avx2" lineNumber="16"/>
+    <functiondecl functionName="vpx_lpf_horizontal_edge_16_avx2" lineNumber="404"/>
+    <functioncall functionName="DECLARE_ALIGNED"/>
+    <functioncall functionName="_mm256_add_epi16"/>
+    <functioncall functionName="_mm256_broadcast_pd"/>
+    <functioncall functionName="_mm256_castpd_si256"/>
+    <functioncall functionName="_mm256_castsi256_si128"/>
+    <functioncall functionName="_mm256_load_si256"/>
+    <functioncall functionName="_mm256_packus_epi16"/>
+    <functioncall functionName="_mm256_permute4x64_epi64"/>
+    <functioncall functionName="_mm256_set1_epi16"/>
+    <functioncall functionName="_mm256_shuffle_epi8"/>
+    <functioncall functionName="_mm256_srli_epi16"/>
+    <functioncall functionName="_mm256_sub_epi16"/>
+    <functioncall functionName="_mm_add_epi16"/>
+    <functioncall functionName="_mm_adds_epi16"/>
+    <functioncall functionName="_mm_adds_epi8"/>
+    <functioncall functionName="_mm_adds_epu8"/>
+    <functioncall functionName="_mm_and_si128"/>
+    <functioncall functionName="_mm_andnot_si128"/>
+    <functioncall functionName="_mm_broadcastb_epi8"/>
+    <functioncall functionName="_mm_castps_si128"/>
+    <functioncall functionName="_mm_castsi128_ps"/>
+    <functioncall functionName="_mm_cmpeq_epi8"/>
+    <functioncall functionName="_mm_cmpgt_epi8"/>
+    <functioncall functionName="_mm_cvtsi32_si128"/>
+    <functioncall functionName="_mm_loadh_pi"/>
+    <functioncall functionName="_mm_loadl_epi64"/>
+    <functioncall functionName="_mm_max_epu8"/>
+    <functioncall functionName="_mm_or_si128"/>
+    <functioncall functionName="_mm_packs_epi16"/>
+    <functioncall functionName="_mm_packus_epi16"/>
+    <functioncall functionName="_mm_set1_epi16"/>
+    <functioncall functionName="_mm_set1_epi8"/>
+    <functioncall functionName="_mm_shuffle_epi32"/>
+    <functioncall functionName="_mm_srai_epi16"/>
+    <functioncall functionName="_mm_srli_epi16"/>
+    <functioncall functionName="_mm_srli_si128"/>
+    <functioncall functionName="_mm_storeh_pi"/>
+    <functioncall functionName="_mm_storel_epi64"/>
+    <functioncall functionName="_mm_storeu_si128"/>
+    <functioncall functionName="_mm_sub_epi16"/>
+    <functioncall functionName="_mm_subs_epi16"/>
+    <functioncall functionName="_mm_subs_epi8"/>
+    <functioncall functionName="_mm_subs_epu8"/>
+    <functioncall functionName="_mm_unpackhi_epi8"/>
+    <functioncall functionName="_mm_unpacklo_epi8"/>
+    <functioncall functionName="_mm_xor_si128"/>
+    <functioncall functionName="abs_p0q0"/>
+    <functioncall functionName="abs_p1p0"/>
+    <functioncall functionName="abs_p1q1"/>
+    <functioncall functionName="abs_q1q0"/>
+    <functioncall functionName="blimit"/>
+    <functioncall functionName="eight"/>
+    <functioncall functionName="fe"/>
+    <functioncall functionName="ff"/>
+    <functioncall functionName="filt"/>
+    <functioncall functionName="filt_loopfilter_avx2"/>
+    <functioncall functionName="filter"/>
+    <functioncall functionName="filter1"/>
+    <functioncall functionName="filter2"/>
+    <functioncall functionName="flat"/>
+    <functioncall functionName="flat2"/>
+    <functioncall functionName="flat2_p0"/>
+    <functioncall functionName="flat2_p1"/>
+    <functioncall functionName="flat2_p2"/>
+    <functioncall functionName="flat2_p3"/>
+    <functioncall functionName="flat2_p4"/>
+    <functioncall functionName="flat2_p5"/>
+    <functioncall functionName="flat2_p6"/>
+    <functioncall functionName="flat2_q0"/>
+    <functioncall functionName="flat2_q0p0"/>
+    <functioncall functionName="flat2_q1"/>
+    <functioncall functionName="flat2_q1p1"/>
+    <functioncall functionName="flat2_q2"/>
+    <functioncall functionName="flat2_q2p2"/>
+    <functioncall functionName="flat2_q3"/>
+    <functioncall functionName="flat2_q3p3"/>
+    <functioncall functionName="flat2_q4"/>
+    <functioncall functionName="flat2_q4p4"/>
+    <functioncall functionName="flat2_q5"/>
+    <functioncall functionName="flat2_q5p5"/>
+    <functioncall functionName="flat2_q6"/>
+    <functioncall functionName="flat2_q6p6"/>
+    <functioncall functionName="flat_p0"/>
+    <functioncall functionName="flat_p1"/>
+    <functioncall functionName="flat_p2"/>
+    <functioncall functionName="flat_q0"/>
+    <functioncall functionName="flat_q0p0"/>
+    <functioncall functionName="flat_q1"/>
+    <functioncall functionName="flat_q1p1"/>
+    <functioncall functionName="flat_q2"/>
+    <functioncall functionName="flat_q2p2"/>
+    <functioncall functionName="four"/>
+    <functioncall functionName="hev"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="limit"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="one"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p0_16"/>
+    <functioncall functionName="p0q0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p1_16"/>
+    <functioncall functionName="p1q1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p256_0"/>
+    <functioncall functionName="p256_1"/>
+    <functioncall functionName="p256_2"/>
+    <functioncall functionName="p256_3"/>
+    <functioncall functionName="p256_4"/>
+    <functioncall functionName="p256_5"/>
+    <functioncall functionName="p256_6"/>
+    <functioncall functionName="p256_7"/>
+    <functioncall functionName="p2_16"/>
+    <functioncall functionName="p3"/>
+    <functioncall functionName="p3_16"/>
+    <functioncall functionName="p4"/>
+    <functioncall functionName="p4_16"/>
+    <functioncall functionName="p5"/>
+    <functioncall functionName="p5_16"/>
+    <functioncall functionName="p6"/>
+    <functioncall functionName="p6_16"/>
+    <functioncall functionName="p7"/>
+    <functioncall functionName="p7_16"/>
+    <functioncall functionName="pixelFilter_p"/>
+    <functioncall functionName="pixelFilter_q"/>
+    <functioncall functionName="pixetFilter_p2p1p0"/>
+    <functioncall functionName="pixetFilter_q2q1q0"/>
+    <functioncall functionName="ps0"/>
+    <functioncall functionName="ps1"/>
+    <functioncall functionName="q0"/>
+    <functioncall functionName="q0_16"/>
+    <functioncall functionName="q0p0"/>
+    <functioncall functionName="q1"/>
+    <functioncall functionName="q1_16"/>
+    <functioncall functionName="q1p1"/>
+    <functioncall functionName="q2"/>
+    <functioncall functionName="q256_0"/>
+    <functioncall functionName="q256_1"/>
+    <functioncall functionName="q256_2"/>
+    <functioncall functionName="q256_3"/>
+    <functioncall functionName="q256_4"/>
+    <functioncall functionName="q256_5"/>
+    <functioncall functionName="q256_6"/>
+    <functioncall functionName="q256_7"/>
+    <functioncall functionName="q2_16"/>
+    <functioncall functionName="q2p2"/>
+    <functioncall functionName="q3"/>
+    <functioncall functionName="q3_16"/>
+    <functioncall functionName="q3p3"/>
+    <functioncall functionName="q4"/>
+    <functioncall functionName="q4_16"/>
+    <functioncall functionName="q4p4"/>
+    <functioncall functionName="q5"/>
+    <functioncall functionName="q5_16"/>
+    <functioncall functionName="q5p5"/>
+    <functioncall functionName="q6"/>
+    <functioncall functionName="q6_16"/>
+    <functioncall functionName="q6p6"/>
+    <functioncall functionName="q7"/>
+    <functioncall functionName="q7_16"/>
+    <functioncall functionName="q7p7"/>
+    <functioncall functionName="qs0"/>
+    <functioncall functionName="qs0ps0"/>
+    <functioncall functionName="qs1"/>
+    <functioncall functionName="qs1ps1"/>
+    <functioncall functionName="res_p"/>
+    <functioncall functionName="res_q"/>
+    <functioncall functionName="sum_p3"/>
+    <functioncall functionName="sum_p7"/>
+    <functioncall functionName="sum_q3"/>
+    <functioncall functionName="sum_q7"/>
+    <functioncall functionName="t1"/>
+    <functioncall functionName="t1f"/>
+    <functioncall functionName="t3"/>
+    <functioncall functionName="t4"/>
+    <functioncall functionName="t7f"/>
+    <functioncall functionName="t80"/>
+    <functioncall functionName="te0"/>
+    <functioncall functionName="thresh"/>
+    <functioncall functionName="work"/>
+    <functioncall functionName="work_a"/>
+    <functioncall functionName="zero"/>
+  </FileInfo>
+</analyzerinfo>

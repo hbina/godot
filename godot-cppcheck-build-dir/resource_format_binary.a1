@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2964042004">
+        <error id="noConstructor" severity="style" msg="The class &apos;ResourceFormatSaverBinaryInstance&apos; does not have a constructor although it has private member variables." verbose="The class &apos;ResourceFormatSaverBinaryInstance&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/core/io/resource_format_binary.cpp" file="/home/hbina/git/godot/core/io/resource_format_binary.h" line="116" column="1"/>
+            <symbol>ResourceFormatSaverBinaryInstance</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ResourceLoaderBinary::get_resource&apos; can be const." verbose="The member function &apos;ResourceLoaderBinary::get_resource&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/io/resource_format_binary.cpp" file="/home/hbina/git/godot/core/io/resource_format_binary.h" line="92" column="16"/>
+            <location file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="656" column="37"/>
+            <symbol>ResourceLoaderBinary::get_resource</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1129" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1121" column="34" info="Assignment &apos;f=FileAccess::open(p_path,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1122" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting from float * to unsigned char * is not portable due to different binary data representations on different platforms." verbose="Casting from float * to unsigned char * is not portable due to different binary data representations on different platforms." cwe="704" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="516" column="18"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting from double * to unsigned char * is not portable due to different binary data representations on different platforms." verbose="Casting from double * to unsigned char * is not portable due to different binary data representations on different platforms." cwe="704" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="537" column="18"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: saver" verbose="Uninitialized variable: saver" cwe="908">
+            <location file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="2096" column="9"/>
+            <symbol>saver</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:97:7" call-funcname="open" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="859" col="6" call-argexpr="p_f" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1108" col="20" info="Assuming that condition '!f' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1107" col="34" info="Assignment 'f=FileAccess::open(p_path,FileAccess::READ)', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1114" col="26" info="Calling function 'get_dependencies', 1st argument 'f' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:97:7" call-funcname="open" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="859" col="2" my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:99:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:109:15" call-funcname="get_recognized_extensions" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1074" col="3" my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:108:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.cpp:825:13" my-argnr="1" my-argname="f" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="828" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.cpp:832:15" my-argnr="1" my-argname="f" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="834" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:171:15" my-argnr="2" my-argname="p_extensions" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="2107" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:97:7" call-funcname="open" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="859" col="6" call-argexpr="p_f" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1108" col="20" info="Assuming that condition '!f' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1107" col="34" info="Assignment 'f=FileAccess::open(p_path,FileAccess::READ)', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1114" col="26" info="Calling function 'get_dependencies', 1st argument 'f' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:97:7" call-funcname="open" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="859" col="2" my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:99:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:109:15" call-funcname="get_recognized_extensions" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1074" col="3" my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:108:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.cpp:825:13" my-argnr="1" my-argname="f" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="828" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.cpp:832:15" my-argnr="1" my-argname="f" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="834" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:171:15" my-argnr="2" my-argname="p_extensions" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="2107" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:97:7" call-funcname="open" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="859" col="6" call-argexpr="p_f" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1108" col="20" info="Assuming that condition '!f' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1107" col="34" info="Assignment 'f=FileAccess::open(p_path,FileAccess::READ)', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1114" col="26" info="Calling function 'get_dependencies', 1st argument 'f' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:97:7" call-funcname="open" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="859" col="2" my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:99:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/io/resource_format_binary.h:109:15" call-funcname="get_recognized_extensions" call-argnr="1" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="1074" col="3" my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:108:15" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.cpp:825:13" my-argnr="1" my-argname="f" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="828" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.cpp:832:15" my-argnr="1" my-argname="f" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="834" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/resource_format_binary.h:171:15" my-argnr="2" my-argname="p_extensions" file="/home/hbina/git/godot/core/io/resource_format_binary.cpp" line="2107" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_advance_padding" lineNumber="96"/>
+    <functiondecl functionName="_get_string" lineNumber="105"/>
+    <functiondecl functionName="parse_variant" lineNumber="124"/>
+    <functiondecl functionName="set_local_path" lineNumber="651"/>
+    <functiondecl functionName="get_resource" lineNumber="656"/>
+    <functiondecl functionName="load" lineNumber="660"/>
+    <functiondecl functionName="set_translation_remapped" lineNumber="820"/>
+    <functiondecl functionName="save_ustring" lineNumber="825"/>
+    <functiondecl functionName="get_ustring" lineNumber="832"/>
+    <functiondecl functionName="get_unicode_string" lineNumber="843"/>
+    <functiondecl functionName="get_dependencies" lineNumber="857"/>
+    <functiondecl functionName="open" lineNumber="875"/>
+    <functiondecl functionName="recognize" lineNumber="976"/>
+    <functiondecl functionName="load" lineNumber="1039"/>
+    <functiondecl functionName="get_recognized_extensions_for_type" lineNumber="1071"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1088"/>
+    <functiondecl functionName="handles_type" lineNumber="1100"/>
+    <functiondecl functionName="get_dependencies" lineNumber="1105"/>
+    <functiondecl functionName="rename_dependencies" lineNumber="1117"/>
+    <functiondecl functionName="get_resource_type" lineNumber="1318"/>
+    <functiondecl functionName="_pad_buffer" lineNumber="1337"/>
+    <functiondecl functionName="_write_variant" lineNumber="1346"/>
+    <functiondecl functionName="write_variant" lineNumber="1351"/>
+    <functiondecl functionName="_find_resources" lineNumber="1766"/>
+    <functiondecl functionName="save_unicode_string" lineNumber="1857"/>
+    <functiondecl functionName="get_string_index" lineNumber="1868"/>
+    <functiondecl functionName="save" lineNumber="1879"/>
+    <functiondecl functionName="save" lineNumber="2092"/>
+    <functiondecl functionName="recognize" lineNumber="2099"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="2104"/>
+    <functiondecl functionName="_advance_padding" lineNumber="96"/>
+    <functiondecl functionName="_get_string" lineNumber="105"/>
+    <functiondecl functionName="parse_variant" lineNumber="124"/>
+    <functiondecl functionName="set_local_path" lineNumber="651"/>
+    <functiondecl functionName="get_resource" lineNumber="656"/>
+    <functiondecl functionName="load" lineNumber="660"/>
+    <functiondecl functionName="set_translation_remapped" lineNumber="820"/>
+    <functiondecl functionName="save_ustring" lineNumber="825"/>
+    <functiondecl functionName="get_ustring" lineNumber="832"/>
+    <functiondecl functionName="get_unicode_string" lineNumber="843"/>
+    <functiondecl functionName="get_dependencies" lineNumber="857"/>
+    <functiondecl functionName="open" lineNumber="875"/>
+    <functiondecl functionName="recognize" lineNumber="976"/>
+    <functiondecl functionName="load" lineNumber="1039"/>
+    <functiondecl functionName="get_recognized_extensions_for_type" lineNumber="1071"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1088"/>
+    <functiondecl functionName="handles_type" lineNumber="1100"/>
+    <functiondecl functionName="get_dependencies" lineNumber="1105"/>
+    <functiondecl functionName="rename_dependencies" lineNumber="1117"/>
+    <functiondecl functionName="get_resource_type" lineNumber="1318"/>
+    <functiondecl functionName="_pad_buffer" lineNumber="1337"/>
+    <functiondecl functionName="_write_variant" lineNumber="1346"/>
+    <functiondecl functionName="write_variant" lineNumber="1351"/>
+    <functiondecl functionName="_find_resources" lineNumber="1766"/>
+    <functiondecl functionName="save_unicode_string" lineNumber="1857"/>
+    <functiondecl functionName="get_string_index" lineNumber="1868"/>
+    <functiondecl functionName="save" lineNumber="1879"/>
+    <functiondecl functionName="save" lineNumber="2092"/>
+    <functiondecl functionName="recognize" lineNumber="2099"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="2104"/>
+    <functiondecl functionName="_advance_padding" lineNumber="96"/>
+    <functiondecl functionName="_get_string" lineNumber="105"/>
+    <functiondecl functionName="parse_variant" lineNumber="124"/>
+    <functiondecl functionName="set_local_path" lineNumber="651"/>
+    <functiondecl functionName="get_resource" lineNumber="656"/>
+    <functiondecl functionName="load" lineNumber="660"/>
+    <functiondecl functionName="set_translation_remapped" lineNumber="820"/>
+    <functiondecl functionName="save_ustring" lineNumber="825"/>
+    <functiondecl functionName="get_ustring" lineNumber="832"/>
+    <functiondecl functionName="get_unicode_string" lineNumber="843"/>
+    <functiondecl functionName="get_dependencies" lineNumber="857"/>
+    <functiondecl functionName="open" lineNumber="875"/>
+    <functiondecl functionName="recognize" lineNumber="976"/>
+    <functiondecl functionName="load" lineNumber="1039"/>
+    <functiondecl functionName="get_recognized_extensions_for_type" lineNumber="1071"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="1088"/>
+    <functiondecl functionName="handles_type" lineNumber="1100"/>
+    <functiondecl functionName="get_dependencies" lineNumber="1105"/>
+    <functiondecl functionName="rename_dependencies" lineNumber="1117"/>
+    <functiondecl functionName="get_resource_type" lineNumber="1318"/>
+    <functiondecl functionName="_pad_buffer" lineNumber="1337"/>
+    <functiondecl functionName="_write_variant" lineNumber="1346"/>
+    <functiondecl functionName="write_variant" lineNumber="1351"/>
+    <functiondecl functionName="_find_resources" lineNumber="1766"/>
+    <functiondecl functionName="save_unicode_string" lineNumber="1857"/>
+    <functiondecl functionName="get_string_index" lineNumber="1868"/>
+    <functiondecl functionName="save" lineNumber="1879"/>
+    <functiondecl functionName="save" lineNumber="2092"/>
+    <functiondecl functionName="recognize" lineNumber="2099"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="2104"/>
+    <functioncall functionName="ACCESS_FILESYSTEM"/>
+    <functioncall functionName="ACCESS_RESOURCES"/>
+    <functioncall functionName="BSWAP32"/>
+    <functioncall functionName="BSWAP64"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CANT_CREATE"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_FILE_CANT_OPEN"/>
+    <functioncall functionName="ERR_FILE_CORRUPT"/>
+    <functioncall functionName="ERR_FILE_MISSING_DEPENDENCIES"/>
+    <functioncall functionName="ERR_FILE_UNRECOGNIZED"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FORMAT_VERSION"/>
+    <functioncall functionName="FileAccessCompressed"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="OBJECT_EMPTY"/>
+    <functioncall functionName="OBJECT_EXTERNAL_RESOURCE_INDEX"/>
+    <functioncall functionName="OBJECT_INTERNAL_RESOURCE"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="OP_EQUAL"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RES"/>
+    <functioncall functionName="ResourceData"/>
+    <functioncall functionName="ResourceFormatSaverBinary"/>
+    <functioncall functionName="ResourceLoaderBinary"/>
+    <functioncall functionName="Signal"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="VARIANT_AABB"/>
+    <functioncall functionName="VARIANT_ARRAY"/>
+    <functioncall functionName="VARIANT_BOOL"/>
+    <functioncall functionName="VARIANT_CALLABLE"/>
+    <functioncall functionName="VARIANT_COLOR"/>
+    <functioncall functionName="VARIANT_COLOR_ARRAY"/>
+    <functioncall functionName="VARIANT_DICTIONARY"/>
+    <functioncall functionName="VARIANT_DOUBLE"/>
+    <functioncall functionName="VARIANT_FLOAT"/>
+    <functioncall functionName="VARIANT_FLOAT32_ARRAY"/>
+    <functioncall functionName="VARIANT_FLOAT64_ARRAY"/>
+    <functioncall functionName="VARIANT_INT"/>
+    <functioncall functionName="VARIANT_INT32_ARRAY"/>
+    <functioncall functionName="VARIANT_INT64"/>
+    <functioncall functionName="VARIANT_INT64_ARRAY"/>
+    <functioncall functionName="VARIANT_MATRIX3"/>
+    <functioncall functionName="VARIANT_MATRIX32"/>
+    <functioncall functionName="VARIANT_NIL"/>
+    <functioncall functionName="VARIANT_NODE_PATH"/>
+    <functioncall functionName="VARIANT_OBJECT"/>
+    <functioncall functionName="VARIANT_PLANE"/>
+    <functioncall functionName="VARIANT_QUAT"/>
+    <functioncall functionName="VARIANT_RAW_ARRAY"/>
+    <functioncall functionName="VARIANT_RECT2"/>
+    <functioncall functionName="VARIANT_RECT2I"/>
+    <functioncall functionName="VARIANT_RID"/>
+    <functioncall functionName="VARIANT_SIGNAL"/>
+    <functioncall functionName="VARIANT_STRING"/>
+    <functioncall functionName="VARIANT_STRING_ARRAY"/>
+    <functioncall functionName="VARIANT_STRING_NAME"/>
+    <functioncall functionName="VARIANT_TRANSFORM"/>
+    <functioncall functionName="VARIANT_VECTOR2"/>
+    <functioncall functionName="VARIANT_VECTOR2I"/>
+    <functioncall functionName="VARIANT_VECTOR2_ARRAY"/>
+    <functioncall functionName="VARIANT_VECTOR3"/>
+    <functioncall functionName="VARIANT_VECTOR3I"/>
+    <functioncall functionName="VARIANT_VECTOR3_ARRAY"/>
+    <functioncall functionName="VERSION_MAJOR"/>
+    <functioncall functionName="VERSION_MINOR"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="_advance_padding"/>
+    <functioncall functionName="_find_resources"/>
+    <functioncall functionName="_get_string"/>
+    <functioncall functionName="_open"/>
+    <functioncall functionName="_pad_buffer"/>
+    <functioncall functionName="_write_variant"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="absolute"/>
+    <functioncall functionName="all_ok"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="big_endian"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bundle_resources"/>
+    <functioncall functionName="cache"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="class_get_default_property_value"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="configure"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="da"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="default_value"/>
+    <functioncall functionName="dep"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="eof_reached"/>
+    <functioncall functionName="er"/>
+    <functioncall functionName="erindex"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="evaluate"/>
+    <functioncall functionName="ext"/>
+    <functioncall functionName="ext_resources_size"/>
+    <functioncall functionName="extensions"/>
+    <functioncall functionName="external_resources"/>
+    <functioncall functionName="exttype"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fac"/>
+    <functioncall functionName="facw"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="fl"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="fw"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_16"/>
+    <functioncall functionName="get_32"/>
+    <functioncall functionName="get_64"/>
+    <functioncall functionName="get_8"/>
+    <functioncall functionName="get_abort_on_missing_resources"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_base_extension"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_compatibility_remapped_class"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_dependencies"/>
+    <functioncall functionName="get_double"/>
+    <functioncall functionName="get_error"/>
+    <functioncall functionName="get_extensions_for_type"/>
+    <functioncall functionName="get_id"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_name_count"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_real"/>
+    <functioncall functionName="get_recognized_extensions"/>
+    <functioncall functionName="get_resource"/>
+    <functioncall functionName="get_resource_base_extensions"/>
+    <functioncall functionName="get_save_class"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_string_index"/>
+    <functioncall functionName="get_subindex"/>
+    <functioncall functionName="get_subname"/>
+    <functioncall functionName="get_subname_count"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_unicode_string"/>
+    <functioncall functionName="get_ustring"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="importmd_ofs"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="int_resources_size"/>
+    <functioncall functionName="ir"/>
+    <functioncall functionName="is_absolute"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_rel_path"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="load_threaded_get"/>
+    <functioncall functionName="load_threaded_request"/>
+    <functioncall functionName="local_path"/>
+    <functioncall functionName="localize_path"/>
+    <functioncall functionName="magic"/>
+    <functioncall functionName="main"/>
+    <functioncall functionName="md_ofs"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="name_idx"/>
+    <functioncall functionName="names"/>
+    <functioncall functionName="new_subindex"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="notify_dependency_error"/>
+    <functioncall functionName="np"/>
+    <functioncall functionName="npk"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="objtype"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_after_magic"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_add_types"/>
+    <functioncall functionName="p_bit_on_len"/>
+    <functioncall functionName="p_dependencies"/>
+    <functioncall functionName="p_extensions"/>
+    <functioncall functionName="p_f"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_hint"/>
+    <functioncall functionName="p_local_path"/>
+    <functioncall functionName="p_map"/>
+    <functioncall functionName="p_no_cache"/>
+    <functioncall functionName="p_original_path"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_remapped"/>
+    <functioncall functionName="p_remaps"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_use_sub_threads"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="parse_variant"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="path_to_file"/>
+    <functioncall functionName="pi"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="progress"/>
+    <functioncall functionName="property"/>
+    <functioncall functionName="property_list"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="r_progress"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="recognize"/>
+    <functioncall functionName="relative"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="rename"/>
+    <functioncall functionName="replace_first"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="res_path"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resource"/>
+    <functioncall functionName="resource_set"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="save_unicode_string"/>
+    <functioncall functionName="save_ustring"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="seek_end"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_as_translation_remapped"/>
+    <functioncall functionName="set_edited"/>
+    <functioncall functionName="set_endian_swap"/>
+    <functioncall functionName="set_path"/>
+    <functioncall functionName="set_subindex"/>
+    <functioncall functionName="simplify_path"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="size_diff"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="snc"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="sres"/>
+    <functioncall functionName="store_16"/>
+    <functioncall functionName="store_32"/>
+    <functioncall functionName="store_64"/>
+    <functioncall functionName="store_8"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="store_double"/>
+    <functioncall functionName="store_real"/>
+    <functioncall functionName="string_map"/>
+    <functioncall functionName="string_table_size"/>
+    <functioncall functionName="subindex"/>
+    <functioncall functionName="subnames"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="takeover_paths"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="translation_remapped"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="use_nocache"/>
+    <functioncall functionName="use_real64"/>
+    <functioncall functionName="use_sub_threads"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="ver_format"/>
+    <functioncall functionName="ver_major"/>
+    <functioncall functionName="ver_minor"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="write_variant"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

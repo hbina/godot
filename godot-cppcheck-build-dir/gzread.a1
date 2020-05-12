@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3957927560">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;get&apos; can be reduced." verbose="The scope of the variable &apos;get&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="28" column="14"/>
+            <symbol>get</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="548" column="20"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;eol&apos; can be reduced." verbose="The scope of the variable &apos;eol&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="550" column="20"/>
+            <symbol>eol</symbol>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;size&apos; is redundant or there is division by zero at line 438." verbose="Either the condition &apos;size&apos; is redundant or there is division by zero at line 438." cwe="369">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" column="43" info="Division by zero"/>
+            <location file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="432" column="9" info="Assuming that condition &apos;size&apos; is not redundant"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" call-funcname="inflate" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="194" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="gz_error" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="gz_error" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:375:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:411:18" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="z_gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" call-funcname="z_inflate" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="194" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="z_gz_error" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="z_gz_error" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="z_gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" call-funcname="inflate" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="194" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="gz_error" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="gz_error" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:375:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:411:18" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:400:21" call-funcname="inflate" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="194" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="gz_error" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzguts.h:205:20" call-funcname="gz_error" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="649" col="13" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="73" col="20" call-argexpr="&got" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" call-funcname="gz_load" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="349" col="24" call-argexpr="&n" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="400" col="11" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1390:21" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:15:16" call-funcname="gz_read" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="438" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1420:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1510:21" call-funcname="gzgetc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="479" col="12" my-id="/home/hbina/git/godot/thirdparty/zlib/zlib.h:1822:21" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="1" my-argname="state" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="35" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/gzread.c:9:11" my-argnr="4" my-argname="have" file="/home/hbina/git/godot/thirdparty/zlib/gzread.c" line="30" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="z_gzread" lineNumber="375"/>
+    <functiondecl functionName="z_gzfread" lineNumber="411"/>
+    <functiondecl functionName="z_gzgetc" lineNumber="447"/>
+    <functiondecl functionName="z_gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="z_gzungetc" lineNumber="483"/>
+    <functiondecl functionName="z_gzgets" lineNumber="543"/>
+    <functiondecl functionName="z_gzdirect" lineNumber="607"/>
+    <functiondecl functionName="z_gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="z_gzread" lineNumber="375"/>
+    <functiondecl functionName="z_gzfread" lineNumber="411"/>
+    <functiondecl functionName="z_gzgetc" lineNumber="447"/>
+    <functiondecl functionName="z_gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="z_gzungetc" lineNumber="483"/>
+    <functiondecl functionName="z_gzgets" lineNumber="543"/>
+    <functiondecl functionName="z_gzdirect" lineNumber="607"/>
+    <functiondecl functionName="z_gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functiondecl functionName="gz_load" lineNumber="21"/>
+    <functiondecl functionName="gz_avail" lineNumber="56"/>
+    <functiondecl functionName="gz_look" lineNumber="91"/>
+    <functiondecl functionName="gz_decomp" lineNumber="175"/>
+    <functiondecl functionName="gz_fetch" lineNumber="229"/>
+    <functiondecl functionName="gz_skip" lineNumber="259"/>
+    <functiondecl functionName="gz_read" lineNumber="294"/>
+    <functiondecl functionName="gzread" lineNumber="375"/>
+    <functiondecl functionName="gzfread" lineNumber="411"/>
+    <functiondecl functionName="gzgetc" lineNumber="447"/>
+    <functiondecl functionName="gzgetc_" lineNumber="476"/>
+    <functiondecl functionName="gzungetc" lineNumber="483"/>
+    <functiondecl functionName="gzgets" lineNumber="543"/>
+    <functiondecl functionName="gzdirect" lineNumber="607"/>
+    <functiondecl functionName="gzclose_r" lineNumber="627"/>
+    <functioncall functionName="DWORD"/>
+    <functioncall functionName="GetLastError"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="__int64"/>
+    <functioncall functionName="_close"/>
+    <functioncall functionName="_read"/>
+    <functioncall functionName="avail_in"/>
+    <functioncall functionName="avail_out"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="dest"/>
+    <functioncall functionName="direct"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="errno"/>
+    <functioncall functionName="fd"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="got"/>
+    <functioncall functionName="gzFile"/>
+    <functioncall functionName="gz_avail"/>
+    <functioncall functionName="gz_decomp"/>
+    <functioncall functionName="gz_error"/>
+    <functioncall functionName="gz_fetch"/>
+    <functioncall functionName="gz_intmax"/>
+    <functioncall functionName="gz_load"/>
+    <functioncall functionName="gz_look"/>
+    <functioncall functionName="gz_read"/>
+    <functioncall functionName="gz_skip"/>
+    <functioncall functionName="gz_strwinerror"/>
+    <functioncall functionName="gzgetc"/>
+    <functioncall functionName="have"/>
+    <functioncall functionName="how"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="inflate"/>
+    <functioncall functionName="inflateEnd"/>
+    <functioncall functionName="inflateInit2"/>
+    <functioncall functionName="inflateInit2_"/>
+    <functioncall functionName="inflateReset"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="memchr"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_in"/>
+    <functioncall functionName="off_t"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="strerror"/>
+    <functioncall functionName="strm"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="want"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="z_gz_error"/>
+    <functioncall functionName="z_gz_intmax"/>
+    <functioncall functionName="z_gzgetc"/>
+    <functioncall functionName="z_inflate"/>
+    <functioncall functionName="z_inflateEnd"/>
+    <functioncall functionName="z_inflateInit2_"/>
+    <functioncall functionName="z_inflateReset"/>
+  </FileInfo>
+</analyzerinfo>

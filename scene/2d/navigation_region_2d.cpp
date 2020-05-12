@@ -103,7 +103,7 @@ void NavigationPolygon::_set_polygons(const TypedArray<Vector<int32_t>> &p_array
 	}
 	polygons.resize(p_array.size());
 	for (int i = 0; i < p_array.size(); i++) {
-		polygons.write[i].indices = p_array[i];
+		polygons[i].indices = p_array[i];
 	}
 }
 
@@ -122,7 +122,7 @@ void NavigationPolygon::_set_outlines(const TypedArray<Vector<Vector2>> &p_array
 
 	outlines.resize(p_array.size());
 	for (int i = 0; i < p_array.size(); i++) {
-		outlines.write[i] = p_array[i];
+		outlines[i] = p_array[i];
 	}
 	rect_cache_dirty = true;
 }
@@ -212,7 +212,7 @@ int NavigationPolygon::get_outline_count() const {
 
 void NavigationPolygon::set_outline(int p_idx, const Vector<Vector2> &p_outline) {
 	ERR_FAIL_INDEX(p_idx, outlines.size());
-	outlines.write[p_idx] = p_outline;
+	outlines[p_idx] = p_outline;
 	rect_cache_dirty = true;
 }
 
@@ -473,8 +473,8 @@ void NavigationRegion2D::_notification(int p_what) {
 				{
 					const Vector2 *vr = verts.ptr();
 					for (int i = 0; i < vsize; i++) {
-						vertices.write[i] = vr[i];
-						colors.write[i] = color;
+						vertices[i] = vr[i];
+						colors[i] = color;
 					}
 				}
 

@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2056027213">
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;set_seed&apos; argument 1 names different: declaration &apos;seed&apos; definition &apos;p_seed&apos;." verbose="Function &apos;set_seed&apos; argument 1 names different: declaration &apos;seed&apos; definition &apos;p_seed&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.cpp" line="55" column="37"/>
+            <location file0="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.cpp" file="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.h" line="63" column="20"/>
+            <symbol>set_seed</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.h:86:23" call-funcname="_get_octave_noise_2d" call-argnr="1" file="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.cpp" line="210" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.h:87:23" call-funcname="_get_octave_noise_3d" call-argnr="1" file="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.cpp" line="232" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.h:88:23" call-funcname="_get_octave_noise_4d" call-argnr="1" file="/home/hbina/git/godot/modules/opensimplex/open_simplex_noise.cpp" line="256" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_init_seeds" lineNumber="49"/>
+    <functiondecl functionName="set_seed" lineNumber="55"/>
+    <functiondecl functionName="get_seed" lineNumber="67"/>
+    <functiondecl functionName="set_octaves" lineNumber="72"/>
+    <functiondecl functionName="set_period" lineNumber="82"/>
+    <functiondecl functionName="set_persistence" lineNumber="89"/>
+    <functiondecl functionName="set_lacunarity" lineNumber="96"/>
+    <functiondecl functionName="get_image" lineNumber="103"/>
+    <functiondecl functionName="get_seamless_image" lineNumber="126"/>
+    <functiondecl functionName="_bind_methods" lineNumber="163"/>
+    <functiondecl functionName="get_noise_1d" lineNumber="198"/>
+    <functiondecl functionName="get_noise_2d" lineNumber="203"/>
+    <functiondecl functionName="get_noise_3d" lineNumber="224"/>
+    <functiondecl functionName="get_noise_4d" lineNumber="247"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FORMAT_RGBA8"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="OBJ_SAVE_TYPE"/>
+    <functioncall functionName="OpenSimplexNoise"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="_get_octave_noise_2d"/>
+    <functioncall functionName="_get_octave_noise_3d"/>
+    <functioncall functionName="_get_octave_noise_4d"/>
+    <functioncall functionName="_init_seeds"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_image"/>
+    <functioncall functionName="get_lacunarity"/>
+    <functioncall functionName="get_noise_1d"/>
+    <functioncall functionName="get_noise_2d"/>
+    <functioncall functionName="get_noise_2dv"/>
+    <functioncall functionName="get_noise_3d"/>
+    <functioncall functionName="get_noise_3dv"/>
+    <functioncall functionName="get_noise_4d"/>
+    <functioncall functionName="get_octaves"/>
+    <functioncall functionName="get_period"/>
+    <functioncall functionName="get_persistence"/>
+    <functioncall functionName="get_seamless_image"/>
+    <functioncall functionName="get_seed"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ii"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="jj"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="octave"/>
+    <functioncall functionName="open_simplex_noise"/>
+    <functioncall functionName="open_simplex_noise2"/>
+    <functioncall functionName="open_simplex_noise3"/>
+    <functioncall functionName="open_simplex_noise4"/>
+    <functioncall functionName="p_height"/>
+    <functioncall functionName="p_lacunarity"/>
+    <functioncall functionName="p_octaves"/>
+    <functioncall functionName="p_period"/>
+    <functioncall functionName="p_persistence"/>
+    <functioncall functionName="p_seed"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_width"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_lacunarity"/>
+    <functioncall functionName="set_octaves"/>
+    <functioncall functionName="set_period"/>
+    <functioncall functionName="set_persistence"/>
+    <functioncall functionName="set_seed"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

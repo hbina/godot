@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2672608743">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_convexShapeFrom&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_convexShapeFrom&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="123" column="2"/>
+            <symbol>m_convexShapeFrom</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_convexShapeTo&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_convexShapeTo&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="124" column="2"/>
+            <symbol>m_convexShapeTo</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_triangleToWorld&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_triangleToWorld&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="125" column="2"/>
+            <symbol>m_triangleToWorld</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_hitFraction&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_hitFraction&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="126" column="2"/>
+            <symbol>m_hitFraction</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_triangleCollisionMargin&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_triangleCollisionMargin&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="127" column="2"/>
+            <symbol>m_triangleCollisionMargin</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_allowedPenetration&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_allowedPenetration&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="128" column="2"/>
+            <symbol>m_allowedPenetration</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.h:49:15" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="37" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.h:67:15" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="133" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.h:49:15" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="37" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.h:67:15" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp" line="133" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="processTriangle" lineNumber="35"/>
+    <functiondecl functionName="processTriangle" lineNumber="131"/>
+    <functiondecl functionName="processTriangle" lineNumber="35"/>
+    <functiondecl functionName="processTriangle" lineNumber="131"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btTriangleConvexcastCallback"/>
+    <functioncall functionName="btTriangleRaycastCallback"/>
+    <functioncall functionName="calcTimeOfImpact"/>
+    <functioncall functionName="castResult"/>
+    <functioncall functionName="convexCaster"/>
+    <functioncall functionName="convexShape"/>
+    <functioncall functionName="convexShapeFrom"/>
+    <functioncall functionName="convexShapeTo"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="dist_a"/>
+    <functioncall functionName="dist_b"/>
+    <functioncall functionName="distance"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="gjkEpaPenetrationSolver"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="m_allowedPenetration"/>
+    <functioncall functionName="m_convexShape"/>
+    <functioncall functionName="m_convexShapeFrom"/>
+    <functioncall functionName="m_convexShapeTo"/>
+    <functioncall functionName="m_flags"/>
+    <functioncall functionName="m_fraction"/>
+    <functioncall functionName="m_from"/>
+    <functioncall functionName="m_hitFraction"/>
+    <functioncall functionName="m_hitPoint"/>
+    <functioncall functionName="m_normal"/>
+    <functioncall functionName="m_to"/>
+    <functioncall functionName="m_triangleCollisionMargin"/>
+    <functioncall functionName="m_triangleToWorld"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="partId"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="proj_length"/>
+    <functioncall functionName="reportHit"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="setInterpolate3"/>
+    <functioncall functionName="setMargin"/>
+    <functioncall functionName="simplexSolver"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="triangleCollisionMargin"/>
+    <functioncall functionName="triangleIndex"/>
+    <functioncall functionName="triangleNormal"/>
+    <functioncall functionName="triangleShape"/>
+    <functioncall functionName="triangleToWorld"/>
+    <functioncall functionName="v0p"/>
+    <functioncall functionName="v1p"/>
+    <functioncall functionName="v20"/>
+    <functioncall functionName="v2p"/>
+    <functioncall functionName="vert0"/>
+  </FileInfo>
+</analyzerinfo>

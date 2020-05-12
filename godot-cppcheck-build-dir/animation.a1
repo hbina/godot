@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2385062935">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Track::type&apos; is not initialized in the constructor." verbose="Member variable &apos;Track::type&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/animation.cpp" file="/home/hbina/git/godot/scene/resources/animation.h" line="74" column="3"/>
+            <symbol>Track::type</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ValueTrack::update_on_seek&apos; is not initialized in the constructor." verbose="Member variable &apos;ValueTrack::update_on_seek&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/animation.cpp" file="/home/hbina/git/godot/scene/resources/animation.h" line="124" column="3"/>
+            <symbol>ValueTrack::update_on_seek</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;middle&apos; can be reduced." verbose="The scope of the variable &apos;middle&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2422" column="8"/>
+            <symbol>middle</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:284:6" call-funcname="add_track" call-argnr="1" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="56" col="14" call-argexpr="TYPE_VALUE" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:311:7" call-funcname="track_remove_key" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="181" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:222:19" call-funcname="_interpolate" call-argnr="5" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1874" col="32" call-argexpr="&ok" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:222:19" call-funcname="_interpolate" call-argnr="5" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1900" col="28" call-argexpr="&ok" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:227:22" call-funcname="_value_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1967" col="41" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:206:13" call-funcname="_find" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2024" col="18" call-argexpr="from_time" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2067" col="54" info="Calling function '_track_get_key_indices_in_range', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2067" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2074" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2081" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2088" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2095" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2102" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:206:13" call-funcname="_find" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2178" col="18" call-argexpr="from_time" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2218" col="47" info="Calling function '_method_track_get_key_indices_in_range', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:228:22" call-funcname="_method_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2218" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:227:22" call-funcname="_value_track_get_key_indices_in_range" call-argnr="4" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1966" col="4" my-id="/home/hbina/git/godot/scene/resources/animation.h:351:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="4" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2066" col="6" my-id="/home/hbina/git/godot/scene/resources/animation.h:361:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:228:22" call-funcname="_method_track_get_key_indices_in_range" call-argnr="4" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2217" col="4" my-id="/home/hbina/git/godot/scene/resources/animation.h:355:7" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/animation.h:227:22" my-argnr="1" my-argname="vt" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1914" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/animation.h:228:22" my-argnr="1" my-argname="mt" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2167" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:284:6" call-funcname="add_track" call-argnr="1" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="56" col="14" call-argexpr="TYPE_VALUE" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:311:7" call-funcname="track_remove_key" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="181" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:222:19" call-funcname="_interpolate" call-argnr="5" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1874" col="32" call-argexpr="&ok" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:222:19" call-funcname="_interpolate" call-argnr="5" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1900" col="28" call-argexpr="&ok" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:227:22" call-funcname="_value_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1967" col="41" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:206:13" call-funcname="_find" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2024" col="18" call-argexpr="from_time" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2067" col="54" info="Calling function '_track_get_key_indices_in_range', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2067" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2074" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2081" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2088" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2095" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2102" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:206:13" call-funcname="_find" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2178" col="18" call-argexpr="from_time" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2218" col="47" info="Calling function '_method_track_get_key_indices_in_range', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:228:22" call-funcname="_method_track_get_key_indices_in_range" call-argnr="2" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2218" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:227:22" call-funcname="_value_track_get_key_indices_in_range" call-argnr="4" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1966" col="4" my-id="/home/hbina/git/godot/scene/resources/animation.h:351:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:225:22" call-funcname="_track_get_key_indices_in_range" call-argnr="4" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2066" col="6" my-id="/home/hbina/git/godot/scene/resources/animation.h:361:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/scene/resources/animation.h:228:22" call-funcname="_method_track_get_key_indices_in_range" call-argnr="4" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2217" col="4" my-id="/home/hbina/git/godot/scene/resources/animation.h:355:7" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/animation.h:227:22" my-argnr="1" my-argname="vt" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="1914" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/animation.h:228:22" my-argnr="1" my-argname="mt" file="/home/hbina/git/godot/scene/resources/animation.cpp" line="2167" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_set" lineNumber="38"/>
+    <functiondecl functionName="_get" lineNumber="333"/>
+    <functiondecl functionName="_get_property_list" lineNumber="613"/>
+    <functiondecl functionName="add_track" lineNumber="626"/>
+    <functiondecl functionName="remove_track" lineNumber="673"/>
+    <functiondecl functionName="get_track_count" lineNumber="724"/>
+    <functiondecl functionName="track_get_type" lineNumber="729"/>
+    <functiondecl functionName="track_set_path" lineNumber="735"/>
+    <functiondecl functionName="track_get_path" lineNumber="743"/>
+    <functiondecl functionName="find_track" lineNumber="749"/>
+    <functiondecl functionName="track_set_interpolation_type" lineNumber="759"/>
+    <functiondecl functionName="track_get_interpolation_type" lineNumber="767"/>
+    <functiondecl functionName="track_set_interpolation_loop_wrap" lineNumber="773"/>
+    <functiondecl functionName="track_get_interpolation_loop_wrap" lineNumber="779"/>
+    <functiondecl functionName="transform_track_get_key" lineNumber="844"/>
+    <functiondecl functionName="transform_track_insert_key" lineNumber="863"/>
+    <functiondecl functionName="track_remove_key_at_position" lineNumber="882"/>
+    <functiondecl functionName="track_remove_key" lineNumber="889"/>
+    <functiondecl functionName="track_find_key" lineNumber="942"/>
+    <functiondecl functionName="track_insert_key" lineNumber="1019"/>
+    <functiondecl functionName="track_get_key_count" lineNumber="1126"/>
+    <functiondecl functionName="track_get_key_value" lineNumber="1169"/>
+    <functiondecl functionName="track_get_key_time" lineNumber="1245"/>
+    <functiondecl functionName="track_set_key_time" lineNumber="1298"/>
+    <functiondecl functionName="track_get_key_transition" lineNumber="1370"/>
+    <functiondecl functionName="track_set_key_value" lineNumber="1414"/>
+    <functiondecl functionName="track_set_key_transition" lineNumber="1500"/>
+    <functiondecl functionName="_interpolate" lineNumber="1583"/>
+    <functiondecl functionName="_interpolate" lineNumber="1587"/>
+    <functiondecl functionName="_interpolate" lineNumber="1591"/>
+    <functiondecl functionName="_interpolate" lineNumber="1598"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1613"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1617"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1621"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1714"/>
+    <functiondecl functionName="transform_track_interpolate" lineNumber="1864"/>
+    <functiondecl functionName="value_track_interpolate" lineNumber="1891"/>
+    <functiondecl functionName="_value_track_get_key_indices_in_range" lineNumber="1910"/>
+    <functiondecl functionName="value_track_get_key_indices" lineNumber="1945"/>
+    <functiondecl functionName="value_track_set_update_mode" lineNumber="1986"/>
+    <functiondecl functionName="value_track_get_update_mode" lineNumber="1997"/>
+    <functiondecl functionName="track_get_key_indices_in_range" lineNumber="2039"/>
+    <functiondecl functionName="_method_track_get_key_indices_in_range" lineNumber="2162"/>
+    <functiondecl functionName="method_track_get_key_indices" lineNumber="2193"/>
+    <functiondecl functionName="method_track_get_params" lineNumber="2236"/>
+    <functiondecl functionName="method_track_get_name" lineNumber="2250"/>
+    <functiondecl functionName="bezier_track_insert_key" lineNumber="2263"/>
+    <functiondecl functionName="bezier_track_set_key_value" lineNumber="2290"/>
+    <functiondecl functionName="bezier_track_set_key_in_handle" lineNumber="2304"/>
+    <functiondecl functionName="bezier_track_set_key_out_handle" lineNumber="2320"/>
+    <functiondecl functionName="bezier_track_get_key_value" lineNumber="2336"/>
+    <functiondecl functionName="bezier_track_get_key_in_handle" lineNumber="2348"/>
+    <functiondecl functionName="bezier_track_get_key_out_handle" lineNumber="2360"/>
+    <functiondecl functionName="_bezier_interp" lineNumber="2373"/>
+    <functiondecl functionName="bezier_track_interpolate" lineNumber="2384"/>
+    <functiondecl functionName="audio_track_insert_key" lineNumber="2451"/>
+    <functiondecl functionName="audio_track_set_key_stream" lineNumber="2476"/>
+    <functiondecl functionName="audio_track_set_key_start_offset" lineNumber="2491"/>
+    <functiondecl functionName="audio_track_set_key_end_offset" lineNumber="2509"/>
+    <functiondecl functionName="audio_track_get_key_stream" lineNumber="2527"/>
+    <functiondecl functionName="audio_track_get_key_start_offset" lineNumber="2539"/>
+    <functiondecl functionName="audio_track_get_key_end_offset" lineNumber="2551"/>
+    <functiondecl functionName="animation_track_insert_key" lineNumber="2566"/>
+    <functiondecl functionName="animation_track_set_key_animation" lineNumber="2585"/>
+    <functiondecl functionName="animation_track_get_key_animation" lineNumber="2600"/>
+    <functiondecl functionName="set_length" lineNumber="2613"/>
+    <functiondecl functionName="get_length" lineNumber="2621"/>
+    <functiondecl functionName="set_loop" lineNumber="2626"/>
+    <functiondecl functionName="has_loop" lineNumber="2631"/>
+    <functiondecl functionName="track_set_imported" lineNumber="2636"/>
+    <functiondecl functionName="track_is_imported" lineNumber="2642"/>
+    <functiondecl functionName="track_set_enabled" lineNumber="2648"/>
+    <functiondecl functionName="track_is_enabled" lineNumber="2655"/>
+    <functiondecl functionName="track_move_up" lineNumber="2661"/>
+    <functiondecl functionName="track_move_down" lineNumber="2672"/>
+    <functiondecl functionName="track_move_to" lineNumber="2683"/>
+    <functiondecl functionName="track_swap" lineNumber="2699"/>
+    <functiondecl functionName="set_step" lineNumber="2711"/>
+    <functiondecl functionName="get_step" lineNumber="2717"/>
+    <functiondecl functionName="copy_track" lineNumber="2722"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2739"/>
+    <functiondecl functionName="clear" lineNumber="2849"/>
+    <functiondecl functionName="_transform_track_optimize_key" lineNumber="2860"/>
+    <functiondecl functionName="_transform_track_optimize" lineNumber="3030"/>
+    <functiondecl functionName="optimize" lineNumber="3073"/>
+    <functiondecl functionName="_set" lineNumber="38"/>
+    <functiondecl functionName="_get" lineNumber="333"/>
+    <functiondecl functionName="_get_property_list" lineNumber="613"/>
+    <functiondecl functionName="add_track" lineNumber="626"/>
+    <functiondecl functionName="remove_track" lineNumber="673"/>
+    <functiondecl functionName="get_track_count" lineNumber="724"/>
+    <functiondecl functionName="track_get_type" lineNumber="729"/>
+    <functiondecl functionName="track_set_path" lineNumber="735"/>
+    <functiondecl functionName="track_get_path" lineNumber="743"/>
+    <functiondecl functionName="find_track" lineNumber="749"/>
+    <functiondecl functionName="track_set_interpolation_type" lineNumber="759"/>
+    <functiondecl functionName="track_get_interpolation_type" lineNumber="767"/>
+    <functiondecl functionName="track_set_interpolation_loop_wrap" lineNumber="773"/>
+    <functiondecl functionName="track_get_interpolation_loop_wrap" lineNumber="779"/>
+    <functiondecl functionName="transform_track_get_key" lineNumber="844"/>
+    <functiondecl functionName="transform_track_insert_key" lineNumber="863"/>
+    <functiondecl functionName="track_remove_key_at_position" lineNumber="882"/>
+    <functiondecl functionName="track_remove_key" lineNumber="889"/>
+    <functiondecl functionName="track_find_key" lineNumber="942"/>
+    <functiondecl functionName="track_insert_key" lineNumber="1019"/>
+    <functiondecl functionName="track_get_key_count" lineNumber="1126"/>
+    <functiondecl functionName="track_get_key_value" lineNumber="1169"/>
+    <functiondecl functionName="track_get_key_time" lineNumber="1245"/>
+    <functiondecl functionName="track_set_key_time" lineNumber="1298"/>
+    <functiondecl functionName="track_get_key_transition" lineNumber="1370"/>
+    <functiondecl functionName="track_set_key_value" lineNumber="1414"/>
+    <functiondecl functionName="track_set_key_transition" lineNumber="1500"/>
+    <functiondecl functionName="_interpolate" lineNumber="1583"/>
+    <functiondecl functionName="_interpolate" lineNumber="1587"/>
+    <functiondecl functionName="_interpolate" lineNumber="1591"/>
+    <functiondecl functionName="_interpolate" lineNumber="1598"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1613"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1617"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1621"/>
+    <functiondecl functionName="_cubic_interpolate" lineNumber="1714"/>
+    <functiondecl functionName="transform_track_interpolate" lineNumber="1864"/>
+    <functiondecl functionName="value_track_interpolate" lineNumber="1891"/>
+    <functiondecl functionName="_value_track_get_key_indices_in_range" lineNumber="1910"/>
+    <functiondecl functionName="value_track_get_key_indices" lineNumber="1945"/>
+    <functiondecl functionName="value_track_set_update_mode" lineNumber="1986"/>
+    <functiondecl functionName="value_track_get_update_mode" lineNumber="1997"/>
+    <functiondecl functionName="track_get_key_indices_in_range" lineNumber="2039"/>
+    <functiondecl functionName="_method_track_get_key_indices_in_range" lineNumber="2162"/>
+    <functiondecl functionName="method_track_get_key_indices" lineNumber="2193"/>
+    <functiondecl functionName="method_track_get_params" lineNumber="2236"/>
+    <functiondecl functionName="method_track_get_name" lineNumber="2250"/>
+    <functiondecl functionName="bezier_track_insert_key" lineNumber="2263"/>
+    <functiondecl functionName="bezier_track_set_key_value" lineNumber="2290"/>
+    <functiondecl functionName="bezier_track_set_key_in_handle" lineNumber="2304"/>
+    <functiondecl functionName="bezier_track_set_key_out_handle" lineNumber="2320"/>
+    <functiondecl functionName="bezier_track_get_key_value" lineNumber="2336"/>
+    <functiondecl functionName="bezier_track_get_key_in_handle" lineNumber="2348"/>
+    <functiondecl functionName="bezier_track_get_key_out_handle" lineNumber="2360"/>
+    <functiondecl functionName="_bezier_interp" lineNumber="2373"/>
+    <functiondecl functionName="bezier_track_interpolate" lineNumber="2384"/>
+    <functiondecl functionName="audio_track_insert_key" lineNumber="2451"/>
+    <functiondecl functionName="audio_track_set_key_stream" lineNumber="2476"/>
+    <functiondecl functionName="audio_track_set_key_start_offset" lineNumber="2491"/>
+    <functiondecl functionName="audio_track_set_key_end_offset" lineNumber="2509"/>
+    <functiondecl functionName="audio_track_get_key_stream" lineNumber="2527"/>
+    <functiondecl functionName="audio_track_get_key_start_offset" lineNumber="2539"/>
+    <functiondecl functionName="audio_track_get_key_end_offset" lineNumber="2551"/>
+    <functiondecl functionName="animation_track_insert_key" lineNumber="2566"/>
+    <functiondecl functionName="animation_track_set_key_animation" lineNumber="2585"/>
+    <functiondecl functionName="animation_track_get_key_animation" lineNumber="2600"/>
+    <functiondecl functionName="set_length" lineNumber="2613"/>
+    <functiondecl functionName="get_length" lineNumber="2621"/>
+    <functiondecl functionName="set_loop" lineNumber="2626"/>
+    <functiondecl functionName="has_loop" lineNumber="2631"/>
+    <functiondecl functionName="track_set_imported" lineNumber="2636"/>
+    <functiondecl functionName="track_is_imported" lineNumber="2642"/>
+    <functiondecl functionName="track_set_enabled" lineNumber="2648"/>
+    <functiondecl functionName="track_is_enabled" lineNumber="2655"/>
+    <functiondecl functionName="track_move_up" lineNumber="2661"/>
+    <functiondecl functionName="track_move_down" lineNumber="2672"/>
+    <functiondecl functionName="track_move_to" lineNumber="2683"/>
+    <functiondecl functionName="track_swap" lineNumber="2699"/>
+    <functiondecl functionName="set_step" lineNumber="2711"/>
+    <functiondecl functionName="get_step" lineNumber="2717"/>
+    <functiondecl functionName="copy_track" lineNumber="2722"/>
+    <functiondecl functionName="_bind_methods" lineNumber="2739"/>
+    <functiondecl functionName="clear" lineNumber="2849"/>
+    <functiondecl functionName="_transform_track_optimize_key" lineNumber="2860"/>
+    <functiondecl functionName="_transform_track_optimize" lineNumber="3030"/>
+    <functiondecl functionName="optimize" lineNumber="3073"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="Animation"/>
+    <functioncall functionName="AnimationTrack"/>
+    <functioncall functionName="AudioKey"/>
+    <functioncall functionName="AudioTrack"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="BezierTrack"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="INTERPOLATION_CUBIC"/>
+    <functioncall functionName="INTERPOLATION_LINEAR"/>
+    <functioncall functionName="INTERPOLATION_NEAREST"/>
+    <functioncall functionName="InterpolationType"/>
+    <functioncall functionName="Key"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="MethodTrack"/>
+    <functioncall functionName="NODE_PATH"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Quat"/>
+    <functioncall functionName="RES"/>
+    <functioncall functionName="RES_BASE_EXTENSION"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="TYPE_ANIMATION"/>
+    <functioncall functionName="TYPE_AUDIO"/>
+    <functioncall functionName="TYPE_BEZIER"/>
+    <functioncall functionName="TYPE_METHOD"/>
+    <functioncall functionName="TYPE_TRANSFORM"/>
+    <functioncall functionName="TYPE_VALUE"/>
+    <functioncall functionName="Track"/>
+    <functioncall functionName="TrackType"/>
+    <functioncall functionName="TransformTrack"/>
+    <functioncall functionName="UPDATE_CAPTURE"/>
+    <functioncall functionName="UPDATE_CONTINUOUS"/>
+    <functioncall functionName="UPDATE_DISCRETE"/>
+    <functioncall functionName="UPDATE_TRIGGER"/>
+    <functioncall functionName="UpdateMode"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="ValueTrack"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_bezier_interp"/>
+    <functioncall functionName="_clear"/>
+    <functioncall functionName="_cubic_interpolate"/>
+    <functioncall functionName="_find"/>
+    <functioncall functionName="_insert"/>
+    <functioncall functionName="_interpolate"/>
+    <functioncall functionName="_method_track_get_key_indices"/>
+    <functioncall functionName="_method_track_get_key_indices_in_range"/>
+    <functioncall functionName="_track_get_key_indices_in_range"/>
+    <functioncall functionName="_transform_track_interpolate"/>
+    <functioncall functionName="_transform_track_optimize"/>
+    <functioncall functionName="_transform_track_optimize_key"/>
+    <functioncall functionName="_value_track_get_key_indices"/>
+    <functioncall functionName="_value_track_get_key_indices_in_range"/>
+    <functioncall functionName="a01"/>
+    <functioncall functionName="a02"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="add_track"/>
+    <functioncall functionName="ak"/>
+    <functioncall functionName="animation_track_get_key_animation"/>
+    <functioncall functionName="animation_track_insert_key"/>
+    <functioncall functionName="animation_track_set_key_animation"/>
+    <functioncall functionName="audio_track_get_key_end_offset"/>
+    <functioncall functionName="audio_track_get_key_start_offset"/>
+    <functioncall functionName="audio_track_get_key_stream"/>
+    <functioncall functionName="audio_track_insert_key"/>
+    <functioncall functionName="audio_track_set_key_end_offset"/>
+    <functioncall functionName="audio_track_set_key_start_offset"/>
+    <functioncall functionName="audio_track_set_key_stream"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bezier_track_get_key_in_handle"/>
+    <functioncall functionName="bezier_track_get_key_out_handle"/>
+    <functioncall functionName="bezier_track_get_key_value"/>
+    <functioncall functionName="bezier_track_insert_key"/>
+    <functioncall functionName="bezier_track_interpolate"/>
+    <functioncall functionName="bezier_track_set_key_in_handle"/>
+    <functioncall functionName="bezier_track_set_key_out_handle"/>
+    <functioncall functionName="bezier_track_set_key_value"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clip"/>
+    <functioncall functionName="clips"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copy_track"/>
+    <functioncall functionName="cubic_interpolate"/>
+    <functioncall functionName="cubic_slerp"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d0"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delta"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_track"/>
+    <functioncall functionName="duration"/>
+    <functioncall functionName="ease"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="enabled"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="end_in"/>
+    <functioncall functionName="end_offset"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err_01"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_track"/>
+    <functioncall functionName="first_erased"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fposmod"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="from_time"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_axis_angle"/>
+    <functioncall functionName="get_closest_point_to_segment"/>
+    <functioncall functionName="get_length"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slicec"/>
+    <functioncall functionName="get_step"/>
+    <functioncall functionName="get_track_count"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_loop"/>
+    <functioncall functionName="high"/>
+    <functioncall functionName="high_pos"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="idxs"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="imported"/>
+    <functioncall functionName="in_handle"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="interpolate"/>
+    <functioncall functionName="interpolation"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="is_array"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_zero_approx"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="key_points"/>
+    <functioncall functionName="key_times"/>
+    <functioncall functionName="key_transitions"/>
+    <functioncall functionName="key_values"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="kk"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="loc"/>
+    <functioncall functionName="loop"/>
+    <functioncall functionName="loop_wrap"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="method_track_get_key_indices"/>
+    <functioncall functionName="method_track_get_name"/>
+    <functioncall functionName="method_track_get_params"/>
+    <functioncall functionName="methods"/>
+    <functioncall functionName="middle"/>
+    <functioncall functionName="mt"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="norm"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="operatorint"/>
+    <functioncall functionName="out_handle"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p3"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_allowed_angular_err"/>
+    <functioncall functionName="p_allowed_linear_err"/>
+    <functioncall functionName="p_animation"/>
+    <functioncall functionName="p_array"/>
+    <functioncall functionName="p_at_pos"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_c"/>
+    <functioncall functionName="p_delta"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_end_offset"/>
+    <functioncall functionName="p_handle"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_imported"/>
+    <functioncall functionName="p_in_handle"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_indices"/>
+    <functioncall functionName="p_interp"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_key_idx"/>
+    <functioncall functionName="p_keys"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_loc"/>
+    <functioncall functionName="p_max_optimizable_angle"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_norm"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_ok"/>
+    <functioncall functionName="p_out_handle"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_post_b"/>
+    <functioncall functionName="p_pre_a"/>
+    <functioncall functionName="p_rot"/>
+    <functioncall functionName="p_scale"/>
+    <functioncall functionName="p_start_offset"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_stream"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_to_index"/>
+    <functioncall functionName="p_track"/>
+    <functioncall functionName="p_transition"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_with_track"/>
+    <functioncall functionName="pa"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="post"/>
+    <functioncall functionName="pre"/>
+    <functioncall functionName="prev_erased"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="q1"/>
+    <functioncall functionName="q2"/>
+    <functioncall functionName="r_loc"/>
+    <functioncall functionName="r_rot"/>
+    <functioncall functionName="r_scale"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_track"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="set_length"/>
+    <functioncall functionName="set_loop"/>
+    <functioncall functionName="set_step"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="slerp"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_offset"/>
+    <functioncall functionName="start_out"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="t0"/>
+    <functioncall functionName="t1"/>
+    <functioncall functionName="t2"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="tkey"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="to_time"/>
+    <functioncall functionName="tr"/>
+    <functioncall functionName="track"/>
+    <functioncall functionName="track_find_key"/>
+    <functioncall functionName="track_get_interpolation_loop_wrap"/>
+    <functioncall functionName="track_get_interpolation_type"/>
+    <functioncall functionName="track_get_key_count"/>
+    <functioncall functionName="track_get_key_time"/>
+    <functioncall functionName="track_get_key_transition"/>
+    <functioncall functionName="track_get_key_value"/>
+    <functioncall functionName="track_get_path"/>
+    <functioncall functionName="track_get_type"/>
+    <functioncall functionName="track_insert_key"/>
+    <functioncall functionName="track_is_enabled"/>
+    <functioncall functionName="track_is_imported"/>
+    <functioncall functionName="track_move_down"/>
+    <functioncall functionName="track_move_to"/>
+    <functioncall functionName="track_move_up"/>
+    <functioncall functionName="track_remove_key"/>
+    <functioncall functionName="track_remove_key_at_position"/>
+    <functioncall functionName="track_set_enabled"/>
+    <functioncall functionName="track_set_imported"/>
+    <functioncall functionName="track_set_interpolation_loop_wrap"/>
+    <functioncall functionName="track_set_interpolation_type"/>
+    <functioncall functionName="track_set_key_time"/>
+    <functioncall functionName="track_set_key_transition"/>
+    <functioncall functionName="track_set_key_value"/>
+    <functioncall functionName="track_set_path"/>
+    <functioncall functionName="track_swap"/>
+    <functioncall functionName="tracks_changed"/>
+    <functioncall functionName="transform_track_get_key"/>
+    <functioncall functionName="transform_track_insert_key"/>
+    <functioncall functionName="transform_track_interpolate"/>
+    <functioncall functionName="transforms"/>
+    <functioncall functionName="transition"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tt"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="type_a"/>
+    <functioncall functionName="um"/>
+    <functioncall functionName="update_mode"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v01"/>
+    <functioncall functionName="v02"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="valcount"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="value_track_get_key_indices"/>
+    <functioncall functionName="value_track_get_update_mode"/>
+    <functioncall functionName="value_track_set_update_mode"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="vt"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>
