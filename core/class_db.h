@@ -52,9 +52,9 @@ struct MethodDefinition {
 	StringName name;
 	Vector<StringName> args;
 	MethodDefinition() {}
-	MethodDefinition(const char *p_name) :
+	explicit MethodDefinition(const char *p_name) :
 			name(p_name) {}
-	MethodDefinition(const StringName &p_name) :
+	explicit MethodDefinition(const StringName &p_name) :
 			name(p_name) {}
 };
 
@@ -234,7 +234,7 @@ public:
 
 		MethodBind *bind = create_method_bind(p_method);
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, nullptr, 0); //use static function, much smaller binary usage
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), nullptr, 0); //use static function, much smaller binary usage
 	}
 
 	template <class N, class M>
@@ -243,7 +243,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[1] = { &p_def1 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 1);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 1);
 	}
 
 	template <class N, class M>

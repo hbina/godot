@@ -180,8 +180,8 @@ private:
 			return &const_cast<PackedArrayRef<T> *>(static_cast<const PackedArrayRef<T> *>(p_base))->array;
 		}
 
-		_FORCE_INLINE_ PackedArrayRef(const Vector<T> &p_from) {
-			array = p_from;
+		_FORCE_INLINE_ PackedArrayRef(const Vector<T> &p_from) :
+				array(p_from) {
 			refcount.init();
 		}
 		_FORCE_INLINE_ PackedArrayRef() {

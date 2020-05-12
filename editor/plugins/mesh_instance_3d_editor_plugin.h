@@ -97,7 +97,7 @@ public:
 	virtual bool handles(Object *p_object) const override;
 	virtual void make_visible(bool p_visible) override;
 
-	MeshInstance3DEditorPlugin(EditorNode *p_node);
+	explicit MeshInstance3DEditorPlugin(EditorNode *p_node);
 	~MeshInstance3DEditorPlugin();
 };
 

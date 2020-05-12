@@ -114,7 +114,7 @@ public:
 	bool is_handle_clicked() { return handle_clicked; }
 	void set_handle_clicked(bool clicked) { handle_clicked = clicked; }
 
-	Path3DEditorPlugin(EditorNode *p_node);
+	explicit Path3DEditorPlugin(EditorNode *p_node);
 	~Path3DEditorPlugin();
 };
 

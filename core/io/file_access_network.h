@@ -165,7 +165,7 @@ public:
 	static void configure();
 
 	FileAccessNetwork();
-	~FileAccessNetwork();
+	virtual ~FileAccessNetwork();
 };
 
 #endif // FILE_ACCESS_NETWORK_H

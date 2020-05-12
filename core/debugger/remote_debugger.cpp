@@ -893,8 +893,8 @@ RemoteDebugger *RemoteDebugger::create_for_uri(const String &p_uri) {
 	return nullptr;
 }
 
-RemoteDebugger::RemoteDebugger(Ref<RemoteDebuggerPeer> p_peer) {
-	peer = p_peer;
+RemoteDebugger::RemoteDebugger(Ref<RemoteDebuggerPeer> p_peer) :
+		peer(p_peer) {
 	max_chars_per_second = GLOBAL_GET("network/limits/debugger/max_chars_per_second");
 	max_errors_per_second = GLOBAL_GET("network/limits/debugger/max_errors_per_second");
 	max_warnings_per_second = GLOBAL_GET("network/limits/debugger/max_warnings_per_second");

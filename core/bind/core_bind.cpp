@@ -653,7 +653,6 @@ struct _OSCoreBindImg {
 void _OS::print_all_textures_by_size() {
 
 	List<_OSCoreBindImg> imgs;
-	int total = 0;
 	{
 		List<Ref<Resource>> rsrc;
 		ResourceCache::get_cached_resources(&rsrc);
@@ -672,17 +671,10 @@ void _OS::print_all_textures_by_size() {
 			img.path = E->get()->get_path();
 			img.vram = Image::get_image_data_size(img.size.width, img.size.height, Image::Format(img.fmt));
 			img.id = E->get()->get_instance_id();
-			total += img.vram;
 			imgs.push_back(img);
 		}
 	}
-
 	imgs.sort();
-
-	for (List<_OSCoreBindImg>::Element *E = imgs.front(); E; E = E->next()) {
-
-		total -= E->get().vram;
-	}
 }
 
 void _OS::print_resources_by_type(const Vector<String> &p_types) {

@@ -2230,7 +2230,7 @@ Variant::operator Basis() const {
 	if (type == BASIS)
 		return *_data._basis;
 	else if (type == QUAT)
-		return *reinterpret_cast<const Quat *>(_data._mem);
+		return Basis(*reinterpret_cast<const Quat *>(_data._mem));
 	else if (type == VECTOR3) {
 		return Basis(*reinterpret_cast<const Vector3 *>(_data._mem));
 	} else if (type == TRANSFORM) // unexposed in Variant::can_convert?

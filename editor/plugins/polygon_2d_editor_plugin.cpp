@@ -1247,13 +1247,12 @@ Vector2 Polygon2DEditor::snap_point(Vector2 p_target) const {
 }
 
 Polygon2DEditor::Polygon2DEditor(EditorNode *p_editor) :
-		AbstractPolygon2DEditor(p_editor) {
-
-	node = nullptr;
-	snap_offset = EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "snap_offset", Vector2());
-	snap_step = EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "snap_step", Vector2(10, 10));
-	use_snap = EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "snap_enabled", false);
-	snap_show_grid = EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "show_grid", false);
+		AbstractPolygon2DEditor(p_editor),
+		node(nullptr),
+		use_snap(EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "snap_enabled", false)),
+		snap_show_grid(EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "show_grid", false)),
+		snap_offset(EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "snap_offset", Vector2())),
+		snap_step(EditorSettings::get_singleton()->get_project_metadata("polygon_2d_uv_editor", "snap_step", Vector2(10, 10))) {
 
 	button_uv = memnew(ToolButton);
 	add_child(button_uv);
