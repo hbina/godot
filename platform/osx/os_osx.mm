@@ -164,7 +164,7 @@ String OS_OSX::get_name() const {
 	return "macOS";
 }
 
-Error OS_OSX::open_dynamic_library(const String p_path, void *&p_library_handle, bool p_also_set_library_path) {
+Error OS_OSX::open_dynamic_library(const String &p_path, void *&p_library_handle, bool p_also_set_library_path) {
 	String path = p_path;
 
 	if (!FileAccess::exists(path)) {

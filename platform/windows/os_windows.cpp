@@ -248,7 +248,7 @@ void OS_Windows::finalize_core() {
 	NetSocketPosix::cleanup();
 }
 
-Error OS_Windows::open_dynamic_library(const String p_path, void *&p_library_handle, bool p_also_set_library_path) {
+Error OS_Windows::open_dynamic_library(const String &p_path, void *&p_library_handle, bool p_also_set_library_path) {
 
 	String path = p_path;
 
@@ -287,7 +287,7 @@ Error OS_Windows::close_dynamic_library(void *p_library_handle) {
 	return OK;
 }
 
-Error OS_Windows::get_dynamic_library_symbol_handle(void *p_library_handle, const String p_name, void *&p_symbol_handle, bool p_optional) {
+Error OS_Windows::get_dynamic_library_symbol_handle(void *p_library_handle, const String &p_name, void *&p_symbol_handle, bool p_optional) {
 	p_symbol_handle = (void *)GetProcAddress((HMODULE)p_library_handle, p_name.utf8().get_data());
 	if (!p_symbol_handle) {
 		if (!p_optional) {

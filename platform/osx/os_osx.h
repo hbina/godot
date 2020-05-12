@@ -72,7 +72,7 @@ protected:
 public:
 	virtual String get_name() const override;
 
-	virtual Error open_dynamic_library(const String p_path, void *&p_library_handle, bool p_also_set_library_path = false);
+	virtual Error open_dynamic_library(const String &p_path, void *&p_library_handle, bool p_also_set_library_path = false);
 
 	virtual MainLoop *get_main_loop() const;
 

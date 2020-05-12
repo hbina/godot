@@ -785,7 +785,7 @@ static String format_error_message(DWORD id) {
 	return msg;
 }
 
-Error OS_UWP::open_dynamic_library(const String p_path, void *&p_library_handle, bool p_also_set_library_path) {
+Error OS_UWP::open_dynamic_library(const String &p_path, void *&p_library_handle, bool p_also_set_library_path) {
 
 	String full_path = "game/" + p_path;
 	p_library_handle = (void *)LoadPackagedLibrary(full_path.c_str(), 0);
@@ -800,7 +800,7 @@ Error OS_UWP::close_dynamic_library(void *p_library_handle) {
 	return OK;
 }
 
-Error OS_UWP::get_dynamic_library_symbol_handle(void *p_library_handle, const String p_name, void *&p_symbol_handle, bool p_optional) {
+Error OS_UWP::get_dynamic_library_symbol_handle(void *p_library_handle, const String &p_name, void *&p_symbol_handle, bool p_optional) {
 	p_symbol_handle = (void *)GetProcAddress((HMODULE)p_library_handle, p_name.utf8().get_data());
 	if (!p_symbol_handle) {
 		if (!p_optional) {

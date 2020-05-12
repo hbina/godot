@@ -394,7 +394,7 @@ String OS_Unix::get_locale() const {
 	return locale;
 }
 
-Error OS_Unix::open_dynamic_library(const String p_path, void *&p_library_handle, bool p_also_set_library_path) {
+Error OS_Unix::open_dynamic_library(const String &p_path, void *&p_library_handle, bool p_also_set_library_path) {
 
 	String path = p_path;
 
@@ -426,7 +426,7 @@ Error OS_Unix::close_dynamic_library(void *p_library_handle) {
 	return OK;
 }
 
-Error OS_Unix::get_dynamic_library_symbol_handle(void *p_library_handle, const String p_name, void *&p_symbol_handle, bool p_optional) {
+Error OS_Unix::get_dynamic_library_symbol_handle(void *p_library_handle, const String &p_name, void *&p_symbol_handle, bool p_optional) {
 	const char *error;
 	dlerror(); // Clear existing errors
 

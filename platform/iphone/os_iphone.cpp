@@ -399,7 +399,7 @@ void OSIPhone::alert(const String &p_alert, const String &p_title) {
 	iOS::alert(utf8_alert.get_data(), utf8_title.get_data());
 }
 
-Error OSIPhone::open_dynamic_library(const String p_path, void *&p_library_handle, bool p_also_set_library_path) {
+Error OSIPhone::open_dynamic_library(const String &p_path, void *&p_library_handle, bool p_also_set_library_path) {
 	if (p_path.length() == 0) {
 		p_library_handle = RTLD_SELF;
 		return OK;
@@ -419,7 +419,7 @@ void register_dynamic_symbol(char *name, void *address) {
 	OSIPhone::dynamic_symbol_lookup_table[String(name)] = address;
 }
 
-Error OSIPhone::get_dynamic_library_symbol_handle(void *p_library_handle, const String p_name, void *&p_symbol_handle, bool p_optional) {
+Error OSIPhone::get_dynamic_library_symbol_handle(void *p_library_handle, const String &p_name, void *&p_symbol_handle, bool p_optional) {
 	if (p_library_handle == RTLD_SELF) {
 		void **ptr = OSIPhone::dynamic_symbol_lookup_table.getptr(p_name);
 		if (ptr) {

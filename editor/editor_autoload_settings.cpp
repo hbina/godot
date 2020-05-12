@@ -325,20 +325,20 @@ void EditorAutoloadSettings::_autoload_file_callback(const String &p_path) {
 	add_autoload->set_disabled(false);
 }
 
-void EditorAutoloadSettings::_autoload_text_entered(const String p_name) {
+void EditorAutoloadSettings::_autoload_text_entered(const String &p_name) {
 
 	if (autoload_add_path->get_text() != "" && _autoload_name_is_valid(p_name, nullptr)) {
 		_autoload_add();
 	}
 }
 
-void EditorAutoloadSettings::_autoload_path_text_changed(const String p_path) {
+void EditorAutoloadSettings::_autoload_path_text_changed(const String &p_path) {
 
 	add_autoload->set_disabled(
 			p_path == "" || !_autoload_name_is_valid(autoload_add_name->get_text(), nullptr));
 }
 
-void EditorAutoloadSettings::_autoload_text_changed(const String p_name) {
+void EditorAutoloadSettings::_autoload_text_changed(const String &p_name) {
 
 	add_autoload->set_disabled(
 			autoload_add_path->get_text() == "" || !_autoload_name_is_valid(p_name, nullptr));

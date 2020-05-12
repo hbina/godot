@@ -42,7 +42,7 @@ protected:
 	int max_queued_messages = 4096;
 
 public:
-	static Ref<RemoteDebuggerPeer> create_from_uri(const String p_uri);
+	static Ref<RemoteDebuggerPeer> create_from_uri(const String &p_uri);
 	virtual bool is_peer_connected() = 0;
 	virtual bool has_message() = 0;
 	virtual Error put_message(const Array &p_arr) = 0;

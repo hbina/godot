@@ -218,7 +218,7 @@ void RemoteDebuggerPeerTCP::_poll() {
 	}
 }
 
-Ref<RemoteDebuggerPeer> RemoteDebuggerPeer::create_from_uri(const String p_uri) {
+Ref<RemoteDebuggerPeer> RemoteDebuggerPeer::create_from_uri(const String &p_uri) {
 	if (!p_uri.begins_with("tcp://"))
 		return Ref<RemoteDebuggerPeer>(); // Only TCP supported for now, more to come.
 

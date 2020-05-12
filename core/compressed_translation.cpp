@@ -38,9 +38,9 @@ extern "C" {
 
 struct _PHashTranslationCmp {
 
-	int orig_len;
+	int orig_len = 0;
 	CharString compressed;
-	int offset;
+	int offset = 0;
 };
 
 void PHashTranslation::generate(const Ref<Translation> &p_from) {

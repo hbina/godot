@@ -1839,7 +1839,7 @@ static String _make_arguments_hint(const GDScriptParser::FunctionNode *p_functio
 	return arghint;
 }
 
-static void _find_enumeration_candidates(const String p_enum_hint, Map<String, ScriptCodeCompletionOption> &r_result) {
+static void _find_enumeration_candidates(const String &p_enum_hint, Map<String, ScriptCodeCompletionOption> &r_result) {
 
 	if (p_enum_hint.find(".") == -1) {
 		// Global constant
