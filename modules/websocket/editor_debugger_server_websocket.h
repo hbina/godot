@@ -49,12 +49,12 @@ public:
 	void _peer_connected(int p_peer, String p_protocol);
 	void _peer_disconnected(int p_peer, bool p_was_clean);
 
-	void poll();
-	Error start();
-	void stop();
-	bool is_active() const;
-	bool is_connection_available() const;
-	Ref<RemoteDebuggerPeer> take_connection();
+	virtual void poll() override;
+	virtual Error start() override;
+	virtual void stop() override;
+	virtual bool is_active() const override;
+	virtual bool is_connection_available() const override;
+	virtual Ref<RemoteDebuggerPeer> take_connection() override;
 
 	EditorDebuggerServerWebSocket();
 	~EditorDebuggerServerWebSocket();
