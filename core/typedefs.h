@@ -32,6 +32,7 @@
 #define TYPEDEFS_H
 
 #include <stddef.h>
+#include <type_traits>
 
 /**
  * Basic definitions and simple functions to be used everywhere.
@@ -111,7 +112,7 @@
 #ifndef SWAP
 #define SWAP(m_x, m_y) __swap_tmpl((m_x), (m_y))
 template <class T>
-inline void __swap_tmpl(T &x, T &y) {
+constexpr void __swap_tmpl(T &x, T &y) {
 	T aux = x;
 	x = y;
 	y = aux;
@@ -121,7 +122,7 @@ inline void __swap_tmpl(T &x, T &y) {
 /* Functions to handle powers of 2 and shifting. */
 
 // Function to find the next power of 2 to an integer.
-static _FORCE_INLINE_ unsigned int next_power_of_2(unsigned int x) {
+static constexpr unsigned int next_power_of_2(unsigned int x) {
 	if (x == 0) {
 		return 0;
 	}
@@ -137,7 +138,7 @@ static _FORCE_INLINE_ unsigned int next_power_of_2(unsigned int x) {
 }
 
 // Function to find the previous power of 2 to an integer.
-static _FORCE_INLINE_ unsigned int previous_power_of_2(unsigned int x) {
+static constexpr unsigned int previous_power_of_2(unsigned int x) {
 	x |= x >> 1;
 	x |= x >> 2;
 	x |= x >> 4;
@@ -147,15 +148,17 @@ static _FORCE_INLINE_ unsigned int previous_power_of_2(unsigned int x) {
 }
 
 // Function to find the closest power of 2 to an integer.
-static _FORCE_INLINE_ unsigned int closest_power_of_2(unsigned int x) {
+static constexpr unsigned int closest_power_of_2(unsigned int x) {
 	unsigned int nx = next_power_of_2(x);
 	unsigned int px = previous_power_of_2(x);
 	return (nx - x) > (x - px) ? px : nx;
 }
 
 // Get a shift value from a power of 2.
-static inline int get_shift_from_power_of_2(unsigned int p_bits) {
-	for (unsigned int i = 0; i < 32; i++) {
+template <typename T,
+		std::enable_if_t<std::is_integral<T>::value, int> = 0>
+static unsigned int get_shift_from_power_of_2(const T &p_bits) {
+	for (unsigned int i = 0; i < sizeof(T); i++) {
 		if (p_bits == (unsigned int)(1 << i)) {
 			return i;
 		}
@@ -165,7 +168,7 @@ static inline int get_shift_from_power_of_2(unsigned int p_bits) {
 }
 
 template <class T>
-static _FORCE_INLINE_ T nearest_power_of_2_templated(T x) {
+static constexpr T nearest_power_of_2_templated(T x) {
 	--x;
 
 	// The number of operations on x is the base two logarithm
@@ -183,7 +186,7 @@ static _FORCE_INLINE_ T nearest_power_of_2_templated(T x) {
 }
 
 // Function to find the nearest (bigger) power of 2 to an integer.
-static inline unsigned int nearest_shift(unsigned int p_number) {
+static constexpr unsigned int nearest_shift(unsigned int p_number) {
 	for (int i = 30; i >= 0; i--) {
 		if (p_number & (1 << i)) {
 			return i + 1;
@@ -199,15 +202,15 @@ static inline unsigned int nearest_shift(unsigned int p_number) {
 #define BSWAP32(x) __builtin_bswap32(x)
 #define BSWAP64(x) __builtin_bswap64(x)
 #else
-static inline uint16_t BSWAP16(uint16_t x) {
+static constexpr uint16_t BSWAP16(uint16_t x) {
 	return (x >> 8) | (x << 8);
 }
 
-static inline uint32_t BSWAP32(uint32_t x) {
+static constexpr uint32_t BSWAP32(uint32_t x) {
 	return ((x << 24) | ((x << 8) & 0x00FF0000) | ((x >> 8) & 0x0000FF00) | (x >> 24));
 }
 
-static inline uint64_t BSWAP64(uint64_t x) {
+static constexpr uint64_t BSWAP64(uint64_t x) {
 	x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
 	x = (x & 0x0000FFFF0000FFFF) << 16 | (x & 0xFFFF0000FFFF0000) >> 16;
 	x = (x & 0x00FF00FF00FF00FF) << 8 | (x & 0xFF00FF00FF00FF00) >> 8;
