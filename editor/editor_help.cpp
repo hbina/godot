@@ -1052,6 +1052,7 @@ void EditorHelp::_update_doc() {
 				class_desc->pop(); // color
 				class_desc->pop(); // font
 				class_desc->pop(); // cell
+				method_line[cd.properties[i].setter] = property_line[cd.properties[i].name];
 			}
 
 			if (cd.properties[i].getter != "") {
@@ -1069,6 +1070,7 @@ void EditorHelp::_update_doc() {
 				class_desc->pop(); //color
 				class_desc->pop(); //font
 				class_desc->pop(); //cell
+				method_line[cd.properties[i].getter] = property_line[cd.properties[i].name];
 			}
 
 			class_desc->pop(); // table
@@ -1495,7 +1497,8 @@ void EditorHelp::_notification(int p_what) {
 				_class_desc_resized();
 			}
 		} break;
-		default: break;
+		default:
+			break;
 	}
 }
 
@@ -1640,7 +1643,8 @@ void EditorHelpBit::_notification(int p_what) {
 
 			rich_text->add_theme_color_override("selection_color", get_theme_color("accent_color", "Editor") * Color(1, 1, 1, 0.4));
 		} break;
-		default: break;
+		default:
+			break;
 	}
 }
 
@@ -1784,7 +1788,8 @@ void FindBar::_update_results_count() {
 	results_count = 0;
 
 	String searched = search_text->get_text();
-	if (searched.empty()) return;
+	if (searched.empty())
+		return;
 
 	String full_text = rich_text_label->get_text();
 

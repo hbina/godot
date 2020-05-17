@@ -1197,8 +1197,12 @@ void GDScriptFunctions::call(Function p_func, const Variant **p_args, int p_arg_
 					return;
 				}
 			}
+			r_ret = gdscr->_new(nullptr, -1 /*skip initializer*/, r_error);
 
-			r_ret = gdscr->_new(nullptr, 0, r_error);
+			if (r_error.error != Callable::CallError::CALL_OK) {
+				r_ret = Variant();
+				return;
+			}
 
 			GDScriptInstance *ins = static_cast<GDScriptInstance *>(static_cast<Object *>(r_ret)->get_script_instance());
 			Ref<GDScript> gd_ref = ins->get_script();

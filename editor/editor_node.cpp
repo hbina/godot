@@ -1747,7 +1747,7 @@ void EditorNode::push_item(Object *p_object, const String &p_property, bool p_in
 
 void EditorNode::_save_default_environment() {
 
-	Ref<Environment> fallback = get_tree()->get_root()->get_world()->get_fallback_environment();
+	Ref<Environment> fallback = get_tree()->get_root()->get_world_3d()->get_fallback_environment();
 
 	if (fallback.is_valid() && fallback->get_path().is_resource_file()) {
 		Map<RES, bool> processed;
@@ -3082,7 +3082,8 @@ void EditorNode::_remove_edited_scene(bool p_change_tab) {
 		ScriptEditor::get_singleton()->close_builtin_scripts_from_scene(editor_data.get_scene_path(old_index));
 	}
 
-	if (p_change_tab) _scene_tab_changed(new_index);
+	if (p_change_tab)
+		_scene_tab_changed(new_index);
 	editor_data.remove_scene(old_index);
 	editor_data.get_undo_redo().clear_history(false);
 	_update_title();

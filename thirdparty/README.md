@@ -140,7 +140,7 @@ Use UI font variant if available, because it has tight vertical metrics and good
 ## freetype
 
 - Upstream: https://www.freetype.org
-- Version: 2.10.1 (2019)
+- Version: 2.10.2 (2020)
 - License: FreeType License (BSD-like)
 
 Files extracted from upstream source:
@@ -422,6 +422,7 @@ Collection of single-file libraries used in Godot components.
   * Upstream: https://github.com/nothings/stb
   * Version: 1.19
   * License: Public Domain (Unlicense) or MIT
+  * Modifications: `f->temp_offset += (sz+3)&~3;` changed to `f->temp_offset += (sz+7)&~7;` (needed until fixed upstream)
 
 
 ## nanosvg

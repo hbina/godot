@@ -34,17 +34,6 @@
 #include "core/os/os.h"
 #include "core/print_string.h"
 
-// va_copy was defined in the C99, but not in C++ standards before C++11.
-// When you compile C++ without --std=c++<XX> option, compilers still define
-// va_copy, otherwise you have to use the internal version (__va_copy).
-#if !defined(va_copy)
-#if defined(__GNUC__)
-#define va_copy(d, s) __va_copy((d), (s))
-#else
-#define va_copy(d, s) ((d) = (s))
-#endif
-#endif
-
 #if defined(MINGW_ENABLED) || defined(_MSC_VER)
 #define sprintf sprintf_s
 #endif
@@ -60,11 +49,21 @@ void Logger::log_error(const char *p_function, const char *p_file, int p_line, c
 
 	const char *err_type = "ERROR";
 	switch (p_type) {
-		case ERR_ERROR: err_type = "ERROR"; break;
-		case ERR_WARNING: err_type = "WARNING"; break;
-		case ERR_SCRIPT: err_type = "SCRIPT ERROR"; break;
-		case ERR_SHADER: err_type = "SHADER ERROR"; break;
-		default: ERR_PRINT("Unknown error type"); break;
+		case ERR_ERROR:
+			err_type = "ERROR";
+			break;
+		case ERR_WARNING:
+			err_type = "WARNING";
+			break;
+		case ERR_SCRIPT:
+			err_type = "SCRIPT ERROR";
+			break;
+		case ERR_SHADER:
+			err_type = "SHADER ERROR";
+			break;
+		default:
+			ERR_PRINT("Unknown error type");
+			break;
 	}
 
 	const char *err_details;

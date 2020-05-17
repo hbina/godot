@@ -1082,16 +1082,36 @@ static bool _guess_expression_type(GDScriptCompletionContext &p_context, const G
 
 					Variant::Operator vop = Variant::OP_MAX;
 					switch (op->op) {
-						case GDScriptParser::OperatorNode::OP_ADD: vop = Variant::OP_ADD; break;
-						case GDScriptParser::OperatorNode::OP_SUB: vop = Variant::OP_SUBTRACT; break;
-						case GDScriptParser::OperatorNode::OP_MUL: vop = Variant::OP_MULTIPLY; break;
-						case GDScriptParser::OperatorNode::OP_DIV: vop = Variant::OP_DIVIDE; break;
-						case GDScriptParser::OperatorNode::OP_MOD: vop = Variant::OP_MODULE; break;
-						case GDScriptParser::OperatorNode::OP_SHIFT_LEFT: vop = Variant::OP_SHIFT_LEFT; break;
-						case GDScriptParser::OperatorNode::OP_SHIFT_RIGHT: vop = Variant::OP_SHIFT_RIGHT; break;
-						case GDScriptParser::OperatorNode::OP_BIT_AND: vop = Variant::OP_BIT_AND; break;
-						case GDScriptParser::OperatorNode::OP_BIT_OR: vop = Variant::OP_BIT_OR; break;
-						case GDScriptParser::OperatorNode::OP_BIT_XOR: vop = Variant::OP_BIT_XOR; break;
+						case GDScriptParser::OperatorNode::OP_ADD:
+							vop = Variant::OP_ADD;
+							break;
+						case GDScriptParser::OperatorNode::OP_SUB:
+							vop = Variant::OP_SUBTRACT;
+							break;
+						case GDScriptParser::OperatorNode::OP_MUL:
+							vop = Variant::OP_MULTIPLY;
+							break;
+						case GDScriptParser::OperatorNode::OP_DIV:
+							vop = Variant::OP_DIVIDE;
+							break;
+						case GDScriptParser::OperatorNode::OP_MOD:
+							vop = Variant::OP_MODULE;
+							break;
+						case GDScriptParser::OperatorNode::OP_SHIFT_LEFT:
+							vop = Variant::OP_SHIFT_LEFT;
+							break;
+						case GDScriptParser::OperatorNode::OP_SHIFT_RIGHT:
+							vop = Variant::OP_SHIFT_RIGHT;
+							break;
+						case GDScriptParser::OperatorNode::OP_BIT_AND:
+							vop = Variant::OP_BIT_AND;
+							break;
+						case GDScriptParser::OperatorNode::OP_BIT_OR:
+							vop = Variant::OP_BIT_OR;
+							break;
+						case GDScriptParser::OperatorNode::OP_BIT_XOR:
+							vop = Variant::OP_BIT_XOR;
+							break;
 						default: {
 						}
 					}
@@ -1427,6 +1447,7 @@ static bool _guess_identifier_type_from_base(GDScriptCompletionContext &p_contex
 									// Variable used in the same expression
 									return false;
 								}
+
 								if (_guess_expression_type(p_context, m.expression, r_type)) {
 									return true;
 								}
@@ -3487,6 +3508,17 @@ Error GDScriptLanguage::lookup_code(const String &p_code, const String &p_symbol
 			GDScriptParser::DataType base_type = context._class->base_type;
 
 			if (_lookup_symbol_from_base(base_type, p_symbol, true, r_result) == OK) {
+				return OK;
+			}
+		} break;
+		case GDScriptParser::COMPLETION_TYPE_HINT: {
+
+			GDScriptParser::DataType base_type = context._class->base_type;
+			base_type.has_type = true;
+			base_type.kind = GDScriptParser::DataType::CLASS;
+			base_type.class_type = const_cast<GDScriptParser::ClassNode *>(context._class);
+
+			if (_lookup_symbol_from_base(base_type, p_symbol, false, r_result) == OK) {
 				return OK;
 			}
 		} break;

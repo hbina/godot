@@ -504,7 +504,7 @@ bool SceneTree::idle(float p_time) {
 		String env_path = ProjectSettings::get_singleton()->get("rendering/environment/default_environment");
 		env_path = env_path.strip_edges(); //user may have added a space or two
 		String cpath;
-		Ref<Environment> fallback = get_root()->get_world()->get_fallback_environment();
+		Ref<Environment> fallback = get_root()->get_world_3d()->get_fallback_environment();
 		if (fallback.is_valid()) {
 			cpath = fallback->get_path();
 		}
@@ -519,7 +519,7 @@ bool SceneTree::idle(float p_time) {
 			} else {
 				fallback.unref();
 			}
-			get_root()->get_world()->set_fallback_environment(fallback);
+			get_root()->get_world_3d()->set_fallback_environment(fallback);
 		}
 	}
 
@@ -1372,7 +1372,8 @@ void SceneTree::get_argument_options(const StringName &p_function, int p_idx, Li
 
 SceneTree::SceneTree() {
 
-	if (singleton == nullptr) singleton = this;
+	if (singleton == nullptr)
+		singleton = this;
 	_quit = false;
 	accept_quit = true;
 	quit_on_go_back = true;
@@ -1409,8 +1410,8 @@ SceneTree::SceneTree() {
 
 	root = memnew(Window);
 	root->set_name("root");
-	if (!root->get_world().is_valid())
-		root->set_world(Ref<World3D>(memnew(World3D)));
+	if (!root->get_world_3d().is_valid())
+		root->set_world_3d(Ref<World3D>(memnew(World3D)));
 
 	// Initialize network state
 	multiplayer_poll = true;
@@ -1422,11 +1423,11 @@ SceneTree::SceneTree() {
 	current_scene = nullptr;
 
 	int msaa_mode = GLOBAL_DEF("rendering/quality/screen_filters/msaa", 0);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/msaa", PropertyInfo(Variant::INT, "rendering/quality/screen_filters/msaa", PROPERTY_HINT_ENUM, "Disabled,2x,4x,8x,16x"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/msaa", PropertyInfo(Variant::INT, "rendering/quality/screen_filters/msaa", PROPERTY_HINT_ENUM, "Disabled (Fastest),2x (Fast),4x (Average),8x (Slow),16x (Slower)"));
 	root->set_msaa(Viewport::MSAA(msaa_mode));
 
 	int ssaa_mode = GLOBAL_DEF("rendering/quality/screen_filters/screen_space_aa", 0);
-	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_aa", PropertyInfo(Variant::INT, "rendering/quality/screen_filters/screen_space_aa", PROPERTY_HINT_ENUM, "Disabled,FXAA"));
+	ProjectSettings::get_singleton()->set_custom_property_info("rendering/quality/screen_filters/screen_space_aa", PropertyInfo(Variant::INT, "rendering/quality/screen_filters/screen_space_aa", PROPERTY_HINT_ENUM, "Disabled (Fastest),FXAA (Fast)"));
 	root->set_screen_space_aa(Viewport::ScreenSpaceAA(ssaa_mode));
 
 	{ //load default fallback environment
@@ -1447,7 +1448,7 @@ SceneTree::SceneTree() {
 		if (env_path != String()) {
 			Ref<Environment> env = ResourceLoader::load(env_path);
 			if (env.is_valid()) {
-				root->get_world()->set_fallback_environment(env);
+				root->get_world_3d()->set_fallback_environment(env);
 			} else {
 				if (Engine::get_singleton()->is_editor_hint()) {
 					//file was erased, clear the field.
@@ -1478,5 +1479,6 @@ SceneTree::~SceneTree() {
 		memdelete(root);
 	}
 
-	if (singleton == this) singleton = nullptr;
+	if (singleton == this)
+		singleton = nullptr;
 }

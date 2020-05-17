@@ -950,13 +950,13 @@ void AnimationPlayer::_animation_process(float p_delta) {
 				play(queued.front()->get());
 				String new_name = playback.assigned;
 				queued.pop_front();
-				if (end_notify || playback.seeked)
+				if (end_notify)
 					emit_signal(SceneStringNames::get_singleton()->animation_changed, old, new_name);
 			} else {
 				//stop();
 				playing = false;
 				_set_process(false);
-				if (end_notify || playback.seeked)
+				if (end_notify)
 					emit_signal(SceneStringNames::get_singleton()->animation_finished, playback.assigned);
 			}
 			end_reached = false;
@@ -1479,9 +1479,14 @@ void AnimationPlayer::_set_process(bool p_process, bool p_force) {
 
 	switch (animation_process_mode) {
 
-		case ANIMATION_PROCESS_PHYSICS: set_physics_process_internal(p_process && active); break;
-		case ANIMATION_PROCESS_IDLE: set_process_internal(p_process && active); break;
-		case ANIMATION_PROCESS_MANUAL: break;
+		case ANIMATION_PROCESS_PHYSICS:
+			set_physics_process_internal(p_process && active);
+			break;
+		case ANIMATION_PROCESS_IDLE:
+			set_process_internal(p_process && active);
+			break;
+		case ANIMATION_PROCESS_MANUAL:
+			break;
 	}
 
 	processing = p_process;

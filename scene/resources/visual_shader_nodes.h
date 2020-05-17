@@ -1457,6 +1457,8 @@ public:
 	void set_step(float p_value);
 	float get_step() const;
 
+	virtual bool is_qualifier_supported(Qualifier p_qual) const override;
+
 	virtual Vector<StringName> get_editable_properties() const override;
 
 	VisualShaderNodeFloatUniform();
@@ -1509,6 +1511,8 @@ public:
 	void set_step(int p_value);
 	int get_step() const;
 
+	virtual bool is_qualifier_supported(Qualifier p_qual) const override;
+
 	virtual Vector<StringName> get_editable_properties() const override;
 
 	VisualShaderNodeIntUniform();
@@ -1535,6 +1539,8 @@ public:
 	virtual String generate_global(Shader::Mode p_mode, VisualShader::Type p_type, int p_id) const override;
 	virtual String generate_code(Shader::Mode p_mode, VisualShader::Type p_type, int p_id, const String *p_input_vars, const String *p_output_vars, bool p_for_preview = false) const override; //if no output is connected, the output var passed will be empty. if no input is connected and input is NIL, the input var passed will be empty
 
+	virtual bool is_qualifier_supported(Qualifier p_qual) const override;
+
 	VisualShaderNodeBooleanUniform();
 };
 
@@ -1556,6 +1562,8 @@ public:
 
 	virtual String generate_global(Shader::Mode p_mode, VisualShader::Type p_type, int p_id) const override;
 	virtual String generate_code(Shader::Mode p_mode, VisualShader::Type p_type, int p_id, const String *p_input_vars, const String *p_output_vars, bool p_for_preview = false) const override; //if no output is connected, the output var passed will be empty. if no input is connected and input is NIL, the input var passed will be empty
+
+	virtual bool is_qualifier_supported(Qualifier p_qual) const override;
 
 	VisualShaderNodeColorUniform();
 };
@@ -1579,6 +1587,8 @@ public:
 	virtual String generate_global(Shader::Mode p_mode, VisualShader::Type p_type, int p_id) const override;
 	virtual String generate_code(Shader::Mode p_mode, VisualShader::Type p_type, int p_id, const String *p_input_vars, const String *p_output_vars, bool p_for_preview = false) const override; //if no output is connected, the output var passed will be empty. if no input is connected and input is NIL, the input var passed will be empty
 
+	virtual bool is_qualifier_supported(Qualifier p_qual) const override;
+
 	VisualShaderNodeVec3Uniform();
 };
 
@@ -1600,6 +1610,8 @@ public:
 
 	virtual String generate_global(Shader::Mode p_mode, VisualShader::Type p_type, int p_id) const override;
 	virtual String generate_code(Shader::Mode p_mode, VisualShader::Type p_type, int p_id, const String *p_input_vars, const String *p_output_vars, bool p_for_preview = false) const override; //if no output is connected, the output var passed will be empty. if no input is connected and input is NIL, the input var passed will be empty
+
+	virtual bool is_qualifier_supported(Qualifier p_qual) const override;
 
 	VisualShaderNodeTransformUniform();
 };
@@ -1651,6 +1663,8 @@ public:
 
 	void set_color_default(ColorDefault p_default);
 	ColorDefault get_color_default() const;
+
+	virtual bool is_qualifier_supported(Qualifier p_qual) const override;
 
 	VisualShaderNodeTextureUniform();
 };

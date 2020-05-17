@@ -95,8 +95,8 @@ void Camera3D::_update_camera() {
 
 	get_viewport()->_camera_transform_changed_notify();
 
-	if (get_world().is_valid()) {
-		get_world()->_update_camera(this);
+	if (get_world_3d().is_valid()) {
+		get_world_3d()->_update_camera(this);
 	}
 }
 
@@ -144,12 +144,12 @@ void Camera3D::_notification(int p_what) {
 		} break;
 		case NOTIFICATION_BECAME_CURRENT: {
 			if (viewport) {
-				viewport->find_world()->_register_camera(this);
+				viewport->find_world_3d()->_register_camera(this);
 			}
 		} break;
 		case NOTIFICATION_LOST_CURRENT: {
 			if (viewport) {
-				viewport->find_world()->_remove_camera(this);
+				viewport->find_world_3d()->_remove_camera(this);
 			}
 		} break;
 	}
@@ -689,7 +689,7 @@ Camera3D::Camera3D() {
 	viewport = nullptr;
 	force_change = false;
 	mode = PROJECTION_PERSPECTIVE;
-	set_perspective(70.0, 0.05, 100.0);
+	set_perspective(75.0, 0.05, 100.0);
 	keep_aspect = KEEP_HEIGHT;
 	layers = 0xfffff;
 	v_offset = 0;
@@ -743,7 +743,7 @@ void ClippedCamera3D::_notification(int p_what) {
 			return;
 		}
 
-		PhysicsDirectSpaceState3D *dspace = get_world()->get_direct_space_state();
+		PhysicsDirectSpaceState3D *dspace = get_world_3d()->get_direct_space_state();
 		ERR_FAIL_COND(!dspace); // most likely physics set to threads
 
 		Vector3 cam_fw = -get_global_transform().basis.get_axis(Vector3::AXIS_Z).normalized();

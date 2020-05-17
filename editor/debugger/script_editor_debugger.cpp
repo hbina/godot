@@ -31,6 +31,7 @@
 #include "script_editor_debugger.h"
 
 #include "core/debugger/debugger_marshalls.h"
+#include "core/debugger/remote_debugger.h"
 #include "core/io/marshalls.h"
 #include "core/project_settings.h"
 #include "core/ustring.h"
@@ -73,7 +74,8 @@ void ScriptEditorDebugger::_put_msg(String p_message, Array p_data) {
 
 void ScriptEditorDebugger::debug_copy() {
 	String msg = reason->get_text();
-	if (msg == "") return;
+	if (msg == "")
+		return;
 	DisplayServer::get_singleton()->clipboard_set(msg);
 }
 
@@ -129,10 +131,12 @@ void ScriptEditorDebugger::update_tabs() {
 		tabs->set_tab_icon(errors_tab->get_index(), Ref<Texture2D>());
 	} else {
 		errors_tab->set_name(TTR("Errors") + " (" + itos(error_count + warning_count) + ")");
-		if (error_count == 0) {
-			tabs->set_tab_icon(errors_tab->get_index(), get_theme_icon("Warning", "EditorIcons"));
-		} else {
+		if (error_count >= 1 && warning_count >= 1) {
+			tabs->set_tab_icon(errors_tab->get_index(), get_theme_icon("ErrorWarning", "EditorIcons"));
+		} else if (error_count >= 1) {
 			tabs->set_tab_icon(errors_tab->get_index(), get_theme_icon("Error", "EditorIcons"));
+		} else {
+			tabs->set_tab_icon(errors_tab->get_index(), get_theme_icon("Warning", "EditorIcons"));
 		}
 	}
 }
@@ -396,10 +400,33 @@ void ScriptEditorDebugger::_parse_message(const String &p_msg, const Array &p_da
 		inspector->add_stack_variable(p_data);
 
 	} else if (p_msg == "output") {
-		ERR_FAIL_COND(p_data.size() < 1);
+		ERR_FAIL_COND(p_data.size() != 2);
+
 		ERR_FAIL_COND(p_data[0].get_type() != Variant::PACKED_STRING_ARRAY);
-		Vector<String> strings = p_data[0];
-		EditorNode::get_log()->add_message(String("\n").join(strings));
+		Vector<String> output_strings = p_data[0];
+
+		ERR_FAIL_COND(p_data[1].get_type() != Variant::PACKED_INT32_ARRAY);
+		Vector<int> output_types = p_data[1];
+
+		ERR_FAIL_COND(output_strings.size() != output_types.size());
+
+		for (int i = 0; i < output_strings.size(); i++) {
+			RemoteDebugger::MessageType type = (RemoteDebugger::MessageType)(int)(output_types[i]);
+			EditorLog::MessageType msg_type;
+			switch (type) {
+				case RemoteDebugger::MESSAGE_TYPE_LOG: {
+					msg_type = EditorLog::MSG_TYPE_STD;
+				} break;
+				case RemoteDebugger::MESSAGE_TYPE_ERROR: {
+					msg_type = EditorLog::MSG_TYPE_ERROR;
+				} break;
+				default: {
+					WARN_PRINT("Unhandled script debugger message type: " + itos(type));
+					msg_type = EditorLog::MSG_TYPE_STD;
+				} break;
+			}
+			EditorNode::get_log()->add_message(output_strings[i], msg_type);
+		}
 	} else if (p_msg == "performance:profile_frame") {
 		Vector<float> p;
 		p.resize(p_data.size());
