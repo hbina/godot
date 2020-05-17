@@ -46,7 +46,7 @@
 template <class T>
 class VectorWriteProxy {
 public:
-	_FORCE_INLINE_ T &operator[](int p_index) {
+	constexpr T &operator[](int p_index) {
 		CRASH_BAD_INDEX(p_index, ((Vector<T> *)(this))->_cowdata.size());
 
 		return ((Vector<T> *)(this))->_cowdata.ptrw()[p_index];
@@ -64,8 +64,8 @@ private:
 	CowData<T> _cowdata;
 
 public:
-	bool push_back(T p_elem);
-	_FORCE_INLINE_ bool append(const T &p_elem) { return push_back(p_elem); } //alias
+	constexpr bool push_back(T p_elem);
+	constexpr bool append(const T &p_elem) { return push_back(p_elem); } //alias
 
 	void remove(int p_index) { _cowdata.remove(p_index); }
 	void erase(const T &p_val) {
@@ -74,26 +74,26 @@ public:
 			remove(idx);
 		}
 	}
-	void invert();
+	constexpr void invert();
 
-	_FORCE_INLINE_ T *ptrw() { return _cowdata.ptrw(); }
-	_FORCE_INLINE_ const T *ptr() const { return _cowdata.ptr(); }
-	_FORCE_INLINE_ void clear() { resize(0); }
-	_FORCE_INLINE_ bool empty() const { return _cowdata.empty(); }
+	constexpr T *ptrw() { return _cowdata.ptrw(); }
+	constexpr const T *ptr() const { return _cowdata.ptr(); }
+	constexpr void clear() { resize(0); }
+	constexpr bool empty() const { return _cowdata.empty(); }
 
-	_FORCE_INLINE_ T get(int p_index) { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ const T get(int p_index) const { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ void set(int p_index, const T &p_elem) { _cowdata.set(p_index, p_elem); }
-	_FORCE_INLINE_ int size() const { return _cowdata.size(); }
-	Error resize(int p_size) { return _cowdata.resize(p_size); }
-	_FORCE_INLINE_ const T &operator[](int p_index) const { return _cowdata.get(p_index); }
-	Error insert(int p_pos, T p_val) { return _cowdata.insert(p_pos, p_val); }
-	int find(const T &p_val, int p_from = 0) const { return _cowdata.find(p_val, p_from); }
+	constexpr T get(int p_index) { return _cowdata.get(p_index); }
+	constexpr const T get(int p_index) const { return _cowdata.get(p_index); }
+	constexpr void set(int p_index, const T &p_elem) { _cowdata.set(p_index, p_elem); }
+	constexpr int size() const { return _cowdata.size(); }
+	constexpr Error resize(int p_size) { return _cowdata.resize(p_size); }
+	constexpr const T &operator[](int p_index) const { return _cowdata.get(p_index); }
+	constexpr Error insert(int p_pos, T p_val) { return _cowdata.insert(p_pos, p_val); }
+	constexpr int find(const T &p_val, int p_from = 0) const { return _cowdata.find(p_val, p_from); }
 
-	void append_array(Vector<T> p_other);
+	constexpr void append_array(Vector<T> p_other);
 
 	template <class C>
-	void sort_custom() {
+	constexpr void sort_custom() {
 		int len = _cowdata.size();
 		if (len == 0) {
 			return;
@@ -104,12 +104,12 @@ public:
 		sorter.sort(data, len);
 	}
 
-	void sort() {
+	constexpr void sort() {
 		sort_custom<_DefaultComparator<T>>();
 	}
 
-	void ordered_insert(const T &p_val) {
-		int i;
+	constexpr void ordered_insert(const T &p_val) {
+		int i = 0;
 		for (i = 0; i < _cowdata.size(); i++) {
 			if (p_val < operator[](i)) {
 				break;
@@ -118,7 +118,7 @@ public:
 		insert(i, p_val);
 	}
 
-	inline Vector &operator=(const Vector &p_from) {
+	constexpr Vector &operator=(const Vector &p_from) {
 		_cowdata._ref(p_from._cowdata);
 		return *this;
 	}
@@ -130,7 +130,7 @@ public:
 		return ret;
 	}
 
-	Vector<T> subarray(int p_from, int p_to) const {
+	constexpr Vector<T> subarray(int p_from, int p_to) const {
 		if (p_from < 0) {
 			p_from = size() + p_from;
 		}
@@ -153,14 +153,14 @@ public:
 		return slice;
 	}
 
-	_FORCE_INLINE_ Vector() {}
-	_FORCE_INLINE_ Vector(const Vector &p_from) { _cowdata._ref(p_from._cowdata); }
+	constexpr Vector() {}
+	constexpr Vector(const Vector &p_from) { _cowdata._ref(p_from._cowdata); }
 
-	_FORCE_INLINE_ ~Vector() {}
+	~Vector() {}
 };
 
 template <class T>
-void Vector<T>::invert() {
+constexpr void Vector<T>::invert() {
 	for (int i = 0; i < size() / 2; i++) {
 		T *p = ptrw();
 		SWAP(p[i], p[size() - i - 1]);
@@ -168,7 +168,7 @@ void Vector<T>::invert() {
 }
 
 template <class T>
-void Vector<T>::append_array(Vector<T> p_other) {
+constexpr void Vector<T>::append_array(Vector<T> p_other) {
 	const int ds = p_other.size();
 	if (ds == 0) {
 		return;
@@ -181,7 +181,7 @@ void Vector<T>::append_array(Vector<T> p_other) {
 }
 
 template <class T>
-bool Vector<T>::push_back(T p_elem) {
+constexpr bool Vector<T>::push_back(T p_elem) {
 	Error err = resize(size() + 1);
 	ERR_FAIL_COND_V(err, true);
 	set(size() - 1, p_elem);

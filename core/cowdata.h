@@ -58,7 +58,7 @@ private:
 
 	// internal helpers
 
-	_FORCE_INLINE_ uint32_t *_get_refcount() const {
+	constexpr uint32_t *_get_refcount() const {
 		if (!_ptr) {
 			return nullptr;
 		}
@@ -66,7 +66,7 @@ private:
 		return reinterpret_cast<uint32_t *>(_ptr) - 2;
 	}
 
-	_FORCE_INLINE_ uint32_t *_get_size() const {
+	constexpr uint32_t *_get_size() const {
 		if (!_ptr) {
 			return nullptr;
 		}
@@ -74,21 +74,21 @@ private:
 		return reinterpret_cast<uint32_t *>(_ptr) - 1;
 	}
 
-	_FORCE_INLINE_ T *_get_data() const {
+	constexpr T *_get_data() const {
 		if (!_ptr) {
 			return nullptr;
 		}
 		return reinterpret_cast<T *>(_ptr);
 	}
 
-	_FORCE_INLINE_ size_t _get_alloc_size(size_t p_elements) const {
+	constexpr size_t _get_alloc_size(size_t p_elements) const {
 		return next_power_of_2(p_elements * sizeof(T));
 	}
 
-	_FORCE_INLINE_ bool _get_alloc_size_checked(size_t p_elements, size_t *out) const {
+	constexpr bool _get_alloc_size_checked(size_t p_elements, size_t *out) const {
 #if defined(__GNUC__)
-		size_t o;
-		size_t p;
+		size_t o = 0;
+		size_t p = 0;
 		if (__builtin_mul_overflow(p_elements, sizeof(T), &o)) {
 			*out = 0;
 			return false;
@@ -106,24 +106,24 @@ private:
 #endif
 	}
 
-	void _unref(void *p_data);
-	void _ref(const CowData *p_from);
-	void _ref(const CowData &p_from);
-	void _copy_on_write();
+	constexpr void _unref(void *p_data);
+	constexpr void _ref(const CowData *p_from);
+	constexpr void _ref(const CowData &p_from);
+	constexpr void _copy_on_write();
 
 public:
-	void operator=(const CowData<T> &p_from) { _ref(p_from); }
+	constexpr void operator=(const CowData<T> &p_from) { _ref(p_from); }
 
-	_FORCE_INLINE_ T *ptrw() {
+	constexpr T *ptrw() {
 		_copy_on_write();
 		return (T *)_get_data();
 	}
 
-	_FORCE_INLINE_ const T *ptr() const {
+	constexpr const T *ptr() const {
 		return _get_data();
 	}
 
-	_FORCE_INLINE_ int size() const {
+	constexpr int size() const {
 		uint32_t *size = (uint32_t *)_get_size();
 		if (size) {
 			return *size;
@@ -132,30 +132,30 @@ public:
 		}
 	}
 
-	_FORCE_INLINE_ void clear() { resize(0); }
-	_FORCE_INLINE_ bool empty() const { return _ptr == nullptr; }
+	constexpr void clear() { resize(0); }
+	constexpr bool empty() const { return _ptr == nullptr; }
 
-	_FORCE_INLINE_ void set(int p_index, const T &p_elem) {
+	constexpr void set(int p_index, const T &p_elem) {
 		CRASH_BAD_INDEX(p_index, size());
 		_copy_on_write();
 		_get_data()[p_index] = p_elem;
 	}
 
-	_FORCE_INLINE_ T &get_m(int p_index) {
+	constexpr T &get_m(int p_index) {
 		CRASH_BAD_INDEX(p_index, size());
 		_copy_on_write();
 		return _get_data()[p_index];
 	}
 
-	_FORCE_INLINE_ const T &get(int p_index) const {
+	constexpr const T &get(int p_index) const {
 		CRASH_BAD_INDEX(p_index, size());
 
 		return _get_data()[p_index];
 	}
 
-	Error resize(int p_size);
+	constexpr Error resize(int p_size);
 
-	_FORCE_INLINE_ void remove(int p_index) {
+	constexpr void remove(int p_index) {
 		ERR_FAIL_INDEX(p_index, size());
 		T *p = ptrw();
 		int len = size();
@@ -166,7 +166,7 @@ public:
 		resize(len - 1);
 	};
 
-	Error insert(int p_pos, const T &p_val) {
+	constexpr Error insert(int p_pos, const T &p_val) {
 		ERR_FAIL_INDEX_V(p_pos, size() + 1, ERR_INVALID_PARAMETER);
 		resize(size() + 1);
 		for (int i = (size() - 1); i > p_pos; i--) {
@@ -177,15 +177,15 @@ public:
 		return OK;
 	};
 
-	int find(const T &p_val, int p_from = 0) const;
+	constexpr int find(const T &p_val, int p_from = 0) const;
 
-	_FORCE_INLINE_ CowData() {}
-	_FORCE_INLINE_ ~CowData();
-	_FORCE_INLINE_ CowData(CowData<T> &p_from) { _ref(p_from); };
+	constexpr CowData() {}
+	~CowData();
+	constexpr CowData(CowData<T> &p_from) { _ref(p_from); };
 };
 
 template <class T>
-void CowData<T>::_unref(void *p_data) {
+constexpr void CowData<T>::_unref(void *p_data) {
 	if (!p_data) {
 		return;
 	}
@@ -212,7 +212,7 @@ void CowData<T>::_unref(void *p_data) {
 }
 
 template <class T>
-void CowData<T>::_copy_on_write() {
+constexpr void CowData<T>::_copy_on_write() {
 	if (!_ptr) {
 		return;
 	}
@@ -246,7 +246,7 @@ void CowData<T>::_copy_on_write() {
 }
 
 template <class T>
-Error CowData<T>::resize(int p_size) {
+constexpr Error CowData<T>::resize(int p_size) {
 	ERR_FAIL_COND_V(p_size < 0, ERR_INVALID_PARAMETER);
 
 	int current_size = size();
@@ -266,7 +266,7 @@ Error CowData<T>::resize(int p_size) {
 	_copy_on_write();
 
 	size_t current_alloc_size = _get_alloc_size(current_size);
-	size_t alloc_size;
+	size_t alloc_size = 0;
 	ERR_FAIL_COND_V(!_get_alloc_size_checked(p_size, &alloc_size), ERR_OUT_OF_MEMORY);
 
 	if (p_size > current_size) {
@@ -322,7 +322,7 @@ Error CowData<T>::resize(int p_size) {
 }
 
 template <class T>
-int CowData<T>::find(const T &p_val, int p_from) const {
+constexpr int CowData<T>::find(const T &p_val, int p_from) const {
 	int ret = -1;
 
 	if (p_from < 0 || size() == 0) {
@@ -340,12 +340,12 @@ int CowData<T>::find(const T &p_val, int p_from) const {
 }
 
 template <class T>
-void CowData<T>::_ref(const CowData *p_from) {
+constexpr void CowData<T>::_ref(const CowData *p_from) {
 	_ref(*p_from);
 }
 
 template <class T>
-void CowData<T>::_ref(const CowData &p_from) {
+constexpr void CowData<T>::_ref(const CowData &p_from) {
 	if (_ptr == p_from._ptr) {
 		return; // self assign, do nothing.
 	}

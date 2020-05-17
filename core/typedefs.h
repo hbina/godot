@@ -68,7 +68,7 @@
 #ifdef DISABLE_FORCED_INLINE
 #define _FORCE_INLINE_ inline
 #else
-#define _FORCE_INLINE_ _ALWAYS_INLINE_
+#define _FORCE_INLINE_ constexpr
 #endif
 #endif
 
