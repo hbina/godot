@@ -260,7 +260,7 @@ private:
 
 #define GDCLASS(m_class, m_inherits)                                                                                                             \
 private:                                                                                                                                         \
-	void operator=(const m_class &p_rval) {}                                                                                                     \
+	m_class &operator=(const m_class &p_rval) = delete;                                                                                          \
 	mutable StringName _class_name;                                                                                                              \
 	friend class ClassDB;                                                                                                                        \
                                                                                                                                                  \
