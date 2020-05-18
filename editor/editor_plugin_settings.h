@@ -56,7 +56,7 @@ class EditorPluginSettings : public VBoxContainer {
 	void _cell_button_pressed(Object *p_item, int p_column, int p_id);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	static void _bind_methods();
 

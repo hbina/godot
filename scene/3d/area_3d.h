@@ -138,7 +138,7 @@ private:
 	void _validate_property(PropertyInfo &property) const override;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

@@ -72,7 +72,7 @@ class AudioStreamPreviewGenerator : public Node {
 	void _update_emit(ObjectID p_id);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

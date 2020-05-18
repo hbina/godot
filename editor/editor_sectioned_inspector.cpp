@@ -38,7 +38,7 @@ class SectionedInspectorFilter : public Object {
 	String section;
 	bool allow_sub;
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 
 		if (!edited)
 			return false;
@@ -53,7 +53,7 @@ class SectionedInspectorFilter : public Object {
 		return valid;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
+	virtual bool _get(const StringName &p_name, Variant &r_property) const override {
 
 		if (!edited)
 			return false;
@@ -65,10 +65,10 @@ class SectionedInspectorFilter : public Object {
 
 		bool valid = false;
 
-		r_ret = edited->get(name, &valid);
+		r_property = edited->get(name, &valid);
 		return valid;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 
 		if (!edited)
 			return;

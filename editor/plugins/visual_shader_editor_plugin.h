@@ -271,7 +271,7 @@ class VisualShaderEditor : public VBoxContainer {
 	void _update_created_node(GraphNode *node);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -350,7 +350,7 @@ class VisualShaderNodePortPreview : public Control {
 	int port;
 	void _shader_changed(); //must regen
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

@@ -90,7 +90,7 @@ public:
 
 	virtual float get_frames_per_second() const { return _fps; }
 
-	uint64_t get_frames_drawn();
+	uint64_t get_frames_drawn() const;
 
 	uint64_t get_physics_frames() const { return _physics_frames; }
 	uint64_t get_idle_frames() const { return _idle_frames; }

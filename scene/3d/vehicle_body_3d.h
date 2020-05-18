@@ -94,7 +94,7 @@ class VehicleWheel3D : public Node3D {
 	void _update(PhysicsDirectBodyState3D *s);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

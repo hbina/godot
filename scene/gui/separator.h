@@ -38,7 +38,7 @@ class Separator : public Control {
 
 protected:
 	Orientation orientation;
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	virtual Size2 get_minimum_size() const override;

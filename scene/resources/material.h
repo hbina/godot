@@ -79,9 +79,9 @@ class ShaderMaterial : public Material {
 	Ref<Shader> shader;
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 	bool property_can_revert(const String &p_name);
 	Variant property_get_revert(const String &p_name);
 
@@ -730,7 +730,7 @@ class StandardMaterial3D : public BaseMaterial3D {
 protected:
 #ifndef DISABLE_DEPRECATED
 	// Kept for compatibility from 3.x to 4.0.
-	bool _set(const StringName &p_name, const Variant &p_value);
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
 #endif
 
 public:

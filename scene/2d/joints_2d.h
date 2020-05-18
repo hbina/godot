@@ -51,7 +51,7 @@ class Joint2D : public Node2D {
 protected:
 	void _update_joint(bool p_only_free = false);
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual RID _configure_joint(PhysicsBody2D *body_a, PhysicsBody2D *body_b) = 0;
 
 	static void _bind_methods();
@@ -80,7 +80,7 @@ class PinJoint2D : public Joint2D {
 	real_t softness;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual RID _configure_joint(PhysicsBody2D *body_a, PhysicsBody2D *body_b) override;
 	static void _bind_methods();
 
@@ -99,7 +99,7 @@ class GrooveJoint2D : public Joint2D {
 	real_t initial_offset;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual RID _configure_joint(PhysicsBody2D *body_a, PhysicsBody2D *body_b) override;
 	static void _bind_methods();
 
@@ -123,7 +123,7 @@ class DampedSpringJoint2D : public Joint2D {
 	real_t length;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual RID _configure_joint(PhysicsBody2D *body_a, PhysicsBody2D *body_b) override;
 	static void _bind_methods();
 

@@ -77,7 +77,7 @@ class ImportDock : public VBoxContainer {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	void set_edit_path(const String &p_path);

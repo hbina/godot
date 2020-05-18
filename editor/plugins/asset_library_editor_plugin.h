@@ -71,7 +71,7 @@ class EditorAssetLibraryItem : public PanelContainer {
 	void set_image(int p_type, int p_index, const Ref<Texture2D> &p_image);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -113,7 +113,7 @@ class EditorAssetLibraryItemDescription : public ConfirmationDialog {
 	void _preview_click(int p_id);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -159,7 +159,7 @@ class EditorAssetLibraryItemDownload : public PanelContainer {
 	void _http_download_completed(int p_status, int p_code, const PackedStringArray &headers, const PackedByteArray &p_data);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -299,7 +299,7 @@ class EditorAssetLibrary : public PanelContainer {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _unhandled_input(const Ref<InputEvent> &p_event);
 
 public:

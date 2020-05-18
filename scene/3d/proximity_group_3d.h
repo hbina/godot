@@ -48,7 +48,7 @@ public:
 	void clear_groups();
 	void update_groups();
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	DispatchMode dispatch_mode;
 

@@ -75,7 +75,7 @@ class ResourcePreloaderEditor : public PanelContainer {
 	void drop_data_fw(const Point2 &p_point, const Variant &p_data, Control *p_from);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _gui_input(Ref<InputEvent> p_event);
 	static void _bind_methods();
 

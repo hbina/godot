@@ -43,8 +43,8 @@ class EditorPropertyArrayObject : public Reference {
 	Variant array;
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
 
 public:
 	void set_array(const Variant &p_array);
@@ -62,8 +62,8 @@ class EditorPropertyDictionaryObject : public Reference {
 	Dictionary dict;
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
 
 public:
 	void set_dict(const Dictionary &p_dict);
@@ -116,7 +116,7 @@ class EditorPropertyArray : public EditorProperty {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	void setup(Variant::Type p_array_type, const String &p_hint_string = "");
@@ -151,7 +151,7 @@ class EditorPropertyDictionary : public EditorProperty {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	virtual void update_property() override;

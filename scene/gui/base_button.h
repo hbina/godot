@@ -79,7 +79,7 @@ protected:
 	static void _bind_methods();
 	virtual void _gui_input(Ref<InputEvent> p_event);
 	virtual void _unhandled_input(Ref<InputEvent> p_event);
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	enum DrawMode {

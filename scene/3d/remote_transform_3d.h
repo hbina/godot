@@ -50,7 +50,7 @@ class RemoteTransform3D : public Node3D {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	void set_remote_node(const NodePath &p_remote_node);

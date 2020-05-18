@@ -43,7 +43,7 @@ public:
 	Set<StringName> checked;
 	bool checking;
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 
 		if (values.has(p_name)) {
 			values[p_name] = p_value;
@@ -57,16 +57,16 @@ public:
 		return false;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
+	virtual bool _get(const StringName &p_name, Variant &r_property) const override {
 
 		if (values.has(p_name)) {
-			r_ret = values[p_name];
+			r_property = values[p_name];
 			return true;
 		}
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 
 		for (const List<PropertyInfo>::Element *E = properties.front(); E; E = E->next()) {
 			if (!importer->get_option_visibility(E->get().name, values))

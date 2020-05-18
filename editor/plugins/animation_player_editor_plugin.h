@@ -220,7 +220,7 @@ class AnimationPlayerEditor : public VBoxContainer {
 	~AnimationPlayerEditor();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _node_removed(Node *p_node);
 	static void _bind_methods();
 
@@ -251,7 +251,7 @@ class AnimationPlayerEditorPlugin : public EditorPlugin {
 	EditorNode *editor;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	virtual Dictionary get_state() const override { return anim_editor->get_state(); }

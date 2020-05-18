@@ -78,7 +78,7 @@ private:
 	void _update_light_visibility();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

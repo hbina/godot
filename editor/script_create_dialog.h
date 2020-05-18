@@ -126,7 +126,7 @@ class ScriptCreateDialog : public ConfirmationDialog {
 
 protected:
 	void _theme_changed();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

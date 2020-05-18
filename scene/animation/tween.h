@@ -145,10 +145,10 @@ private:
 	void _build_interpolation(InterpolateType p_interpolation_type, Object *p_object, NodePath *p_property, StringName *p_method, Variant p_initial_val, Variant p_final_val, real_t p_duration, TransitionType p_trans_type, EaseType p_ease_type, real_t p_delay);
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
-	void _notification(int p_what);
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
+	virtual void _notification(int p_what) override;
 
 	static void _bind_methods();
 

@@ -48,7 +48,7 @@ class EditorRunNative : public HBoxContainer {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	bool is_deploy_debug_remote_enabled() const;

@@ -88,7 +88,7 @@ private:
 
 protected:
 	Color _get_color_accum();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 	virtual void _draw() = 0;
 	_FORCE_INLINE_ void set_aabb(const AABB &p_aabb) { aabb = p_aabb; }
@@ -220,7 +220,7 @@ class AnimatedSprite3D : public SpriteBase3D {
 protected:
 	virtual void _draw() override;
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual void _validate_property(PropertyInfo &property) const override;
 
 public:

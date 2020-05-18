@@ -63,7 +63,7 @@ class CanvasLayer : public Node {
 	void _update_follow_viewport(bool p_force_exit = false);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

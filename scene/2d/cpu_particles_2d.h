@@ -190,7 +190,7 @@ private:
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual void _validate_property(PropertyInfo &property) const override;
 
 public:

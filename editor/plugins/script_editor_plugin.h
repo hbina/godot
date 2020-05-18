@@ -65,7 +65,7 @@ class ScriptEditorQuickOpen : public ConfirmationDialog {
 	void _text_changed(const String &p_newtext);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -402,7 +402,7 @@ class ScriptEditor : public PanelContainer {
 	static ScriptEditor *script_editor;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

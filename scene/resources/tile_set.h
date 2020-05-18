@@ -139,9 +139,9 @@ private:
 	Map<int, TileData> tile_map;
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 	void _tile_set_shapes(int p_id, const Array &p_shapes);
 	Array _tile_get_shapes(int p_id) const;
 	Array _get_tiles_ids() const;

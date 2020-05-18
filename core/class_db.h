@@ -52,9 +52,9 @@ struct MethodDefinition {
 	StringName name;
 	Vector<StringName> args;
 	MethodDefinition() {}
-	MethodDefinition(const char *p_name) :
+	explicit MethodDefinition(const char *p_name) :
 			name(p_name) {}
-	MethodDefinition(const StringName &p_name) :
+	explicit MethodDefinition(const StringName &p_name) :
 			name(p_name) {}
 };
 
@@ -234,7 +234,7 @@ public:
 
 		MethodBind *bind = create_method_bind(p_method);
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, nullptr, 0); //use static function, much smaller binary usage
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), nullptr, 0); //use static function, much smaller binary usage
 	}
 
 	template <class N, class M>
@@ -243,7 +243,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[1] = { &p_def1 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 1);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 1);
 	}
 
 	template <class N, class M>
@@ -252,7 +252,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[2] = { &p_def1, &p_def2 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 2);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 2);
 	}
 
 	template <class N, class M>
@@ -261,7 +261,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[3] = { &p_def1, &p_def2, &p_def3 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 3);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 3);
 	}
 
 	template <class N, class M>
@@ -270,7 +270,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[4] = { &p_def1, &p_def2, &p_def3, &p_def4 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 4);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 4);
 	}
 
 	template <class N, class M>
@@ -279,7 +279,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[5] = { &p_def1, &p_def2, &p_def3, &p_def4, &p_def5 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 5);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 5);
 	}
 
 	template <class N, class M>
@@ -288,7 +288,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[6] = { &p_def1, &p_def2, &p_def3, &p_def4, &p_def5, &p_def6 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 6);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 6);
 	}
 
 	template <class N, class M>
@@ -297,7 +297,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[7] = { &p_def1, &p_def2, &p_def3, &p_def4, &p_def5, &p_def6, &p_def7 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 7);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 7);
 	}
 
 	template <class N, class M>
@@ -306,7 +306,7 @@ public:
 		MethodBind *bind = create_method_bind(p_method);
 		const Variant *ptr[8] = { &p_def1, &p_def2, &p_def3, &p_def4, &p_def5, &p_def6, &p_def7, &p_def8 };
 
-		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, p_method_name, ptr, 8);
+		return bind_methodfi(METHOD_FLAGS_DEFAULT, bind, MethodDefinition(p_method_name), ptr, 8);
 	}
 
 	template <class M>

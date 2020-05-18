@@ -51,7 +51,7 @@ class Joint3D : public Node3D {
 protected:
 	void _update_joint(bool p_only_free = false);
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	virtual RID _configure_joint(PhysicsBody3D *body_a, PhysicsBody3D *body_b) = 0;
 

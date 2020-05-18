@@ -72,7 +72,7 @@ class CollisionObject3D : public Node3D {
 protected:
 	CollisionObject3D(RID p_rid, bool p_area);
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 	friend class Viewport;
 	virtual void _input_event(Node *p_camera, const Ref<InputEvent> &p_input_event, const Vector3 &p_pos, const Vector3 &p_normal, int p_shape);

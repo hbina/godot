@@ -61,9 +61,9 @@ class Theme : public Resource {
 	Vector<String> _get_type_list(const String &p_type) const;
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 	static Ref<Theme> project_default_theme;
 	static Ref<Theme> default_theme;

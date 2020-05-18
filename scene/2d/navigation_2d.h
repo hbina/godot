@@ -44,7 +44,7 @@ class Navigation2D : public Node2D {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	RID get_rid() const {

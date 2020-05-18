@@ -286,11 +286,11 @@ private:
 	bool playing;
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
 	virtual void _validate_property(PropertyInfo &property) const override;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
-	void _notification(int p_what);
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
+	virtual void _notification(int p_what) override;
 
 	static void _bind_methods();
 

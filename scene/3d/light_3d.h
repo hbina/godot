@@ -91,7 +91,7 @@ protected:
 	virtual bool _can_gizmo_scale() const;
 
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual void _validate_property(PropertyInfo &property) const override;
 
 	Light3D(RenderingServer::LightType p_type);

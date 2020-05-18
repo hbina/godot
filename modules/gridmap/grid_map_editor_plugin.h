@@ -237,7 +237,7 @@ class GridMapEditor : public VBoxContainer {
 	friend class GridMapEditorPlugin;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _node_removed(Node *p_node);
 	static void _bind_methods();
 
@@ -258,7 +258,7 @@ class GridMapEditorPlugin : public EditorPlugin {
 	EditorNode *editor;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	virtual bool forward_spatial_gui_input(Camera3D *p_camera, const Ref<InputEvent> &p_event) override { return grid_map_editor->forward_spatial_input_event(p_camera, p_event); }

@@ -139,7 +139,7 @@ protected:
 	virtual void _post_popup() {}
 	virtual Size2 _get_contents_minimum_size() const;
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	virtual void add_child_notify(Node *p_child) override;
 	virtual void remove_child_notify(Node *p_child) override;

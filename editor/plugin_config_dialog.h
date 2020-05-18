@@ -58,7 +58,7 @@ class PluginConfigDialog : public ConfirmationDialog {
 	void _on_required_text_changed(const String &p_text);
 
 protected:
-	virtual void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

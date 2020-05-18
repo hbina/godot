@@ -80,7 +80,7 @@ class ExportTemplateManager : public ConfirmationDialog {
 	void _window_template_downloader_closed();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

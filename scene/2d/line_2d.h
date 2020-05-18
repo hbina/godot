@@ -114,7 +114,7 @@ public:
 	bool get_antialiased() const;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _draw();
 
 	static void _bind_methods();

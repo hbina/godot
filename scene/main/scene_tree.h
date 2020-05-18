@@ -214,7 +214,7 @@ private:
 	void _call_input_pause(const StringName &p_group, const StringName &p_method, const Ref<InputEvent> &p_input, Viewport *p_viewport);
 
 protected:
-	void _notification(int p_notification);
+	virtual void _notification(int p_notification) override;
 	static void _bind_methods();
 
 public:

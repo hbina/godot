@@ -48,7 +48,7 @@ class XRCamera3D : public Camera3D {
 	GDCLASS(XRCamera3D, Camera3D);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	String get_configuration_warning() const override;
@@ -79,7 +79,7 @@ private:
 	Ref<Mesh> mesh;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -120,7 +120,7 @@ private:
 	Ref<Mesh> mesh;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -157,7 +157,7 @@ private:
 	XRCamera3D *tracked_camera;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

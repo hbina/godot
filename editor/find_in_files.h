@@ -62,7 +62,7 @@ public:
 	float get_progress() const;
 
 protected:
-	void _notification(int p_notification);
+	virtual void _notification(int p_notification) override;
 
 	static void _bind_methods();
 
@@ -120,7 +120,7 @@ public:
 	Set<String> get_filter() const;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	void _visibility_changed();
 	virtual void custom_action(const String &p_action) override;
@@ -175,7 +175,7 @@ public:
 protected:
 	static void _bind_methods();
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 private:
 	void _on_result_found(String fpath, int line_number, int begin, int end, String text);

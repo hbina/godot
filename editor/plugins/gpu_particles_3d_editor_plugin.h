@@ -91,7 +91,7 @@ class GPUParticles3DEditor : public GPUParticles3DEditorBase {
 	virtual void _generate_emission_points() override;
 
 protected:
-	void _notification(int p_notification);
+	virtual void _notification(int p_notification) override;
 	void _node_removed(Node *p_node);
 	static void _bind_methods();
 

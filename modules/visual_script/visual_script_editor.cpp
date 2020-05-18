@@ -67,7 +67,7 @@ protected:
 		emit_signal("changed");
 	}
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 
 		if (sig == StringName())
 			return false;
@@ -133,7 +133,7 @@ protected:
 		return false;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override {
 
 		if (sig == StringName())
 			return false;
@@ -158,7 +158,8 @@ protected:
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 
 		if (sig == StringName())
 			return;
@@ -213,7 +214,7 @@ protected:
 		emit_signal("changed");
 	}
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 
 		if (var == StringName())
 			return false;
@@ -279,7 +280,7 @@ protected:
 		return false;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override {
 
 		if (var == StringName())
 			return false;
@@ -311,7 +312,8 @@ protected:
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 
 		if (var == StringName())
 			return;

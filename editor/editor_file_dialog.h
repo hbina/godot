@@ -201,7 +201,7 @@ private:
 	bool _is_open_should_be_disabled();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 	//bind helpers
 public:

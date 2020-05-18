@@ -181,7 +181,7 @@ protected:
 	void _body_inout(int p_status, ObjectID p_instance, int p_body_shape, int p_local_shape);
 	virtual void _direct_state_changed(Object *p_state);
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -302,7 +302,7 @@ private:
 	Ref<KinematicCollision3D> _get_slide_collision(int p_bounce);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 	virtual void _direct_state_changed(Object *p_state);
@@ -380,7 +380,7 @@ public:
 
 	struct JointData {
 		virtual JointType get_joint_type() { return JOINT_TYPE_NONE; }
-
+		
 		/// "j" is used to set the parameter inside the PhysicsServer3D
 		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
 		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
@@ -390,11 +390,11 @@ public:
 	};
 
 	struct PinJointData : public JointData {
-		virtual JointType get_joint_type() { return JOINT_TYPE_PIN; }
+		virtual JointType get_joint_type() override { return JOINT_TYPE_PIN; }
 
-		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
-		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID()) override;
+		virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+		virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 		real_t bias;
 		real_t damping;
@@ -407,11 +407,11 @@ public:
 	};
 
 	struct ConeJointData : public JointData {
-		virtual JointType get_joint_type() { return JOINT_TYPE_CONE; }
+		virtual JointType get_joint_type() override { return JOINT_TYPE_CONE; }
 
-		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
-		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID()) override;
+		virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+		virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 		real_t swing_span;
 		real_t twist_span;
@@ -428,11 +428,11 @@ public:
 	};
 
 	struct HingeJointData : public JointData {
-		virtual JointType get_joint_type() { return JOINT_TYPE_HINGE; }
+		virtual JointType get_joint_type() override { return JOINT_TYPE_HINGE; }
 
-		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
-		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID()) override;
+		virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+		virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 		bool angular_limit_enabled;
 		real_t angular_limit_upper;
@@ -451,11 +451,11 @@ public:
 	};
 
 	struct SliderJointData : public JointData {
-		virtual JointType get_joint_type() { return JOINT_TYPE_SLIDER; }
+		virtual JointType get_joint_type() override { return JOINT_TYPE_SLIDER; }
 
-		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
-		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID()) override;
+		virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+		virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 		real_t linear_limit_upper;
 		real_t linear_limit_lower;
@@ -529,11 +529,11 @@ public:
 					angular_equilibrium_point(0) {}
 		};
 
-		virtual JointType get_joint_type() { return JOINT_TYPE_6DOF; }
+		virtual JointType get_joint_type() override { return JOINT_TYPE_6DOF; }
 
-		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID());
-		virtual bool _get(const StringName &p_name, Variant &r_ret) const;
-		virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+		virtual bool _set(const StringName &p_name, const Variant &p_value, RID j = RID()) override;
+		virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+		virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 		SixDOFAxisData axis_data[3];
 
@@ -567,10 +567,10 @@ private:
 	bool can_sleep;
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
-	void _notification(int p_what);
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
+	virtual void _notification(int p_what) override;
 	void _direct_state_changed(Object *p_state);
 
 	static void _bind_methods();

@@ -47,7 +47,7 @@ private:
 	static Set<String> _find_singletons_recursive(EditorFileSystemDirectory *p_dir);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 	void _discover_singletons();

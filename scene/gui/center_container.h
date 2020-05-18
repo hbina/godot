@@ -40,7 +40,7 @@ class CenterContainer : public Container {
 	bool use_top_left;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

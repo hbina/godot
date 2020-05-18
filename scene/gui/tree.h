@@ -392,7 +392,7 @@ private:
 	void popup_select(int p_option);
 
 	void _gui_input(Ref<InputEvent> p_event);
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	virtual Size2 get_minimum_size() const override;
 

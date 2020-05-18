@@ -37,7 +37,7 @@ class MarginContainer : public Container {
 	GDCLASS(MarginContainer, Container);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	virtual Size2 get_minimum_size() const  override;

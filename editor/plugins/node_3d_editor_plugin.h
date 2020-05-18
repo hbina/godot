@@ -166,7 +166,7 @@ class ViewportRotationControl : public Control {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _gui_input(Ref<InputEvent> p_event);
 	void _draw();
 	void _draw_axis(const Axis2D &p_axis);
@@ -463,7 +463,7 @@ private:
 	void drop_data_fw(const Point2 &p_point, const Variant &p_data, Control *p_from);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -540,7 +540,7 @@ private:
 	void _gui_input(const Ref<InputEvent> &p_event);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -744,7 +744,7 @@ private:
 	void _refresh_menu_icons();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	//void _gui_input(InputEvent p_event);
 	void _unhandled_key_input(Ref<InputEvent> p_event);
 

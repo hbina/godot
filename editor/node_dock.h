@@ -50,7 +50,7 @@ class NodeDock : public VBoxContainer {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	static NodeDock *singleton;

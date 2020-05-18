@@ -75,7 +75,7 @@ protected:
 		ADD_SIGNAL(MethodInfo("var_changed"));
 	}
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 		Variant existing = RS::get_singleton()->global_variable_get(p_name);
 
 		if (existing.get_type() == Variant::NIL) {
@@ -114,11 +114,12 @@ protected:
 		return true;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
-		r_ret = RS::get_singleton()->global_variable_get(p_name);
-		return r_ret.get_type() != Variant::NIL;
+	virtual bool _get(const StringName &p_name, Variant &r_property) const override {
+		r_property = RS::get_singleton()->global_variable_get(p_name);
+		return r_property.get_type() != Variant::NIL;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 		Vector<StringName> variables;
 		variables = RS::get_singleton()->global_variable_get_list();
 		for (int i = 0; i < variables.size(); i++) {

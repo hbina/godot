@@ -449,7 +449,7 @@ protected:
 	Size2i _get_size_2d_override() const;
 	bool _is_size_allocated() const;
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 	virtual void _validate_property(PropertyInfo &property) const override;
 
@@ -608,7 +608,7 @@ protected:
 	static void _bind_methods();
 	virtual DisplayServer::WindowID get_window_id() const override;
 	Transform2D _stretch_transform();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	void set_size(const Size2i &p_size);

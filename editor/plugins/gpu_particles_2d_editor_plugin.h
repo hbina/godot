@@ -83,7 +83,7 @@ class GPUParticles2DEditorPlugin : public EditorPlugin {
 	void _generate_emission_mask();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

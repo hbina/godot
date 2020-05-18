@@ -404,7 +404,7 @@ private:
 	int fixed_width;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	String get_text();

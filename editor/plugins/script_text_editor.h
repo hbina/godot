@@ -164,7 +164,7 @@ protected:
 	void _error_pressed();
 	void _warning_clicked(Variant p_line);
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 	Map<String, SyntaxHighlighter *> highlighters;

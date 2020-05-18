@@ -616,7 +616,7 @@ public:
 		}
 		return String();
 	}
-	
+
 	void _gui_input(const Ref<InputEvent> &p_ev) {
 		Ref<InputEventMouseButton> mb = p_ev;
 		if (mb.is_valid() && mb->get_button_index() == BUTTON_LEFT && mb->is_pressed()) {
@@ -635,8 +635,8 @@ public:
 		}
 	}
 
-	void _notification(int p_what) {
-		if (p_what == NOTIFICATION_DRAW) {
+	virtual void _notification(int p_notification) override {
+		if (p_notification == NOTIFICATION_DRAW) {
 
 			Rect2 rect;
 			rect.size = get_size();

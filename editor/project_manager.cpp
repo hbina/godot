@@ -656,9 +656,9 @@ private:
 			msg->show();
 	}
 
-	void _notification(int p_what) {
+	virtual void _notification(int p_notification) override {
 
-		if (p_what == NOTIFICATION_WM_CLOSE_REQUEST)
+		if (p_notification == NOTIFICATION_WM_CLOSE_REQUEST)
 			_remove_created_folder();
 	}
 
@@ -965,8 +965,8 @@ public:
 		favorite_button->set_modulate(fav ? Color(1, 1, 1, 1) : Color(1, 1, 1, 0.2));
 	}
 
-	void _notification(int p_what) {
-		switch (p_what) {
+	virtual void _notification(int p_notification) override {
+		switch (p_notification) {
 			case NOTIFICATION_MOUSE_ENTER: {
 				hover = true;
 				update();
@@ -1069,7 +1069,7 @@ public:
 
 private:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	void _panel_draw(Node *p_hb);
 	void _panel_input(const Ref<InputEvent> &p_ev, Node *p_hb);

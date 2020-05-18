@@ -205,7 +205,7 @@ protected:
 	void _block() { data.blocked++; }
 	void _unblock() { data.blocked--; }
 
-	void _notification(int p_notification);
+	virtual void _notification(int p_notification) override;
 
 	virtual void add_child_notify(Node *p_child);
 	virtual void remove_child_notify(Node *p_child);

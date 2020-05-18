@@ -119,7 +119,7 @@ class TextureRegionEditor : public VBoxContainer {
 	void _update_autoslice();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _node_removed(Object *p_obj);
 	static void _bind_methods();
 

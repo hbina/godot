@@ -57,7 +57,7 @@ private:
 	};
 
 	void _update_debug_options();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _select_run_count(int p_index);
 	void _menu_option(int p_option);
 

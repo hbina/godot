@@ -57,7 +57,7 @@ class EditorSubScene : public ConfirmationDialog {
 	virtual void ok_pressed() override;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 	void _path_browse();
 	void _path_selected(const String &p_path);

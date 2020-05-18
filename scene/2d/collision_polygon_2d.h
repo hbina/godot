@@ -63,7 +63,7 @@ protected:
 	void _update_in_shape_owner(bool p_xform_only = false);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

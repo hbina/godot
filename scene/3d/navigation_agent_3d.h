@@ -70,7 +70,7 @@ class NavigationAgent3D : public Node {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	NavigationAgent3D();

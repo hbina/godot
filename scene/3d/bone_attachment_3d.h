@@ -45,7 +45,7 @@ class BoneAttachment3D : public Node3D {
 
 protected:
 	virtual void _validate_property(PropertyInfo &property) const override;
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	static void _bind_methods();
 

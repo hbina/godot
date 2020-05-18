@@ -44,9 +44,9 @@ class ItemListPlugin : public Object {
 	GDCLASS(ItemListPlugin, Object);
 
 protected:
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 public:
 	enum Flags {
@@ -223,7 +223,7 @@ class ItemListEditor : public HBoxContainer {
 	void _node_removed(Node *p_node);
 
 protected:
-	void _notification(int p_notification);
+	virtual void _notification(int p_notification) override;
 	static void _bind_methods();
 
 public:

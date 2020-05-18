@@ -507,10 +507,10 @@ protected:
 
 	static String _get_category() { return ""; }
 	static void _bind_methods();
-	bool _set(const StringName &p_name, const Variant &p_property) { return false; };
-	bool _get(const StringName &p_name, Variant &r_property) const { return false; };
-	void _get_property_list(List<PropertyInfo> *p_list) const {};
-	void _notification(int p_notification){};
+	virtual bool _set(const StringName &p_name, const Variant &p_property) { return false; };
+	virtual bool _get(const StringName &p_name, Variant &r_property) const { return false; };
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const {};
+	virtual void _notification(int p_notification){};
 
 	_FORCE_INLINE_ static void (*_get_bind_methods())() {
 		return &Object::_bind_methods;
@@ -569,14 +569,14 @@ public:
 			((Object *)(E->get()))->_changed_callback(this, p_property);
 	}
 #else
-	_FORCE_INLINE_ void _change_notify(const char *p_what = "") {}
+	virtual _FORCE_INLINE_ void _change_notify(const char *p_what = "") {}
 #endif
 	static void *get_class_ptr_static() {
 		static int ptr;
 		return &ptr;
 	}
 
-	bool _is_gpl_reversed() const { return false; }
+	virtual bool _is_gpl_reversed() const { return false; }
 
 	_FORCE_INLINE_ ObjectID get_instance_id() const { return _instance_id; }
 	// this is used for editors

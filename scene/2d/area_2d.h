@@ -131,7 +131,7 @@ private:
 	StringName audio_bus;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 	void _validate_property(PropertyInfo &property) const override;
 

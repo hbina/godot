@@ -63,7 +63,7 @@ class TextureLayeredEditor : public Control {
 	void _texture_rect_draw();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _gui_input(Ref<InputEvent> p_event);
 	virtual void _changed_callback(Object *p_changed, const char *p_prop) override;
 	static void _bind_methods();

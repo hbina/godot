@@ -117,7 +117,7 @@ class ProjectManager : public Control {
 	void _on_filter_option_changed();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -148,7 +148,7 @@ private:
 	void _filter_option_selected(int p_idx);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

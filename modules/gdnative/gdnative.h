@@ -66,9 +66,9 @@ public:
 	GDNativeLibrary();
 	~GDNativeLibrary();
 
-	virtual bool _set(const StringName &p_name, const Variant &p_property);
-	virtual bool _get(const StringName &p_name, Variant &r_property) const;
-	virtual void _get_property_list(List<PropertyInfo> *p_list) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_property) override;
+	virtual bool _get(const StringName &p_name, Variant &r_property) const  override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 	_FORCE_INLINE_ Ref<ConfigFile> get_config_file() { return config_file; }
 

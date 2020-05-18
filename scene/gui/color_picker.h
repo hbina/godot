@@ -103,7 +103,7 @@ private:
 	void _html_focus_exit();
 
 protected:
-	void _notification(int);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -155,7 +155,7 @@ class ColorPickerButton : public Button {
 	void _update_picker();
 
 protected:
-	void _notification(int);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

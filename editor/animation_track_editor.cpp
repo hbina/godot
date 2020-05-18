@@ -103,7 +103,7 @@ public:
 		notify_change();
 	}
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 
 		int key = animation->track_find_key(track, key_ofs, true);
 		ERR_FAIL_COND_V(key == -1, false);
@@ -408,7 +408,7 @@ public:
 		return false;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override {
 
 		int key = animation->track_find_key(track, key_ofs, true);
 		ERR_FAIL_COND_V(key == -1, false);
@@ -537,7 +537,7 @@ public:
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 
 		if (animation.is_null())
 			return;
@@ -776,7 +776,7 @@ public:
 		}
 	}
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 
 		bool update_obj = false;
 		bool change_notify_deserved = false;
@@ -1061,7 +1061,7 @@ public:
 		return false;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override {
 
 		for (Map<int, List<float>>::Element *E = key_ofs_map.front(); E; E = E->next()) {
 
@@ -1200,7 +1200,7 @@ public:
 
 		return false;
 	}
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 
 		if (animation.is_null())
 			return;

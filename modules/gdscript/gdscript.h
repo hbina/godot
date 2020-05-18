@@ -45,7 +45,7 @@ class GDScriptNativeClass : public Reference {
 	StringName name;
 
 protected:
-	bool _get(const StringName &p_name, Variant &r_ret) const;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
 	static void _bind_methods();
 
 public:
@@ -140,9 +140,9 @@ class GDScript : public Script {
 	void _init_rpc_methods_properties();
 
 protected:
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	bool _set(const StringName &p_name, const Variant &p_value);
-	void _get_property_list(List<PropertyInfo> *p_properties) const;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual void _get_property_list(List<PropertyInfo> *p_properties) const override;
 
 	virtual Variant call(const StringName &p_method, const Variant **p_args, int p_argcount, Callable::CallError &r_error) override;
 	//void call_multilevel(const StringName& p_method,const Variant** p_args,int p_argcount);

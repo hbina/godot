@@ -59,7 +59,7 @@ class GIProbeEditorPlugin : public EditorPlugin {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	virtual String get_name() const override { return "GIProbe"; }

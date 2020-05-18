@@ -49,7 +49,7 @@ class PhysicsBody2D : public CollisionObject2D {
 	uint32_t _get_layers() const;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	PhysicsBody2D(PhysicsServer2D::BodyMode p_mode);
 
 	static void _bind_methods();
@@ -188,7 +188,7 @@ private:
 	bool _test_motion(const Vector2 &p_motion, bool p_infinite_inertia = true, float p_margin = 0.08, const Ref<PhysicsTestMotionResult2D> &p_result = Ref<PhysicsTestMotionResult2D>());
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:
@@ -312,7 +312,7 @@ private:
 	void _direct_state_changed(Object *p_state);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

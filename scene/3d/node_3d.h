@@ -109,7 +109,7 @@ protected:
 
 	_FORCE_INLINE_ void _update_local_transform() const;
 
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

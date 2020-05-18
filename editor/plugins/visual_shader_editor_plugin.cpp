@@ -2995,8 +2995,8 @@ class VisualShaderNodePluginInputEditor : public OptionButton {
 	Ref<VisualShaderNodeInput> input;
 
 public:
-	void _notification(int p_what) {
-		if (p_what == NOTIFICATION_READY) {
+	virtual void _notification(int p_notification) override {
+		if (p_notification == NOTIFICATION_READY) {
 			connect("item_selected", callable_mp(this, &VisualShaderNodePluginInputEditor::_item_selected));
 		}
 	}

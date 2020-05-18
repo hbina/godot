@@ -64,7 +64,7 @@ class ConnectDialogBinds : public Object {
 public:
 	Vector<Variant> params;
 
-	bool _set(const StringName &p_name, const Variant &p_value) {
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override {
 
 		String name = p_name;
 
@@ -78,7 +78,7 @@ public:
 		return true;
 	}
 
-	bool _get(const StringName &p_name, Variant &r_ret) const {
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override {
 
 		String name = p_name;
 
@@ -92,7 +92,7 @@ public:
 		return true;
 	}
 
-	void _get_property_list(List<PropertyInfo> *p_list) const {
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override {
 
 		for (int i = 0; i < params.size(); i++) {
 			p_list->push_back(PropertyInfo(params[i].get_type(), "bind/" + itos(i + 1)));

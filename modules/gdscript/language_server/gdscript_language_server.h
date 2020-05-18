@@ -48,7 +48,7 @@ class GDScriptLanguageServer : public EditorPlugin {
 	static void thread_main(void *p_userdata);
 
 private:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _iteration();
 
 public:

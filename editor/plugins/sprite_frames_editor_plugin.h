@@ -122,7 +122,7 @@ class SpriteFramesEditor : public HSplitContainer {
 	void _sheet_select_clear_all_frames();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _gui_input(Ref<InputEvent> p_event);
 	static void _bind_methods();
 

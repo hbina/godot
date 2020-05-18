@@ -102,7 +102,7 @@ class EditorAutoloadSettings : public VBoxContainer {
 	void _browse_autoload_add_path();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

@@ -61,7 +61,7 @@ class RayCast3D : public Node3D {
 	bool collide_with_bodies;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _update_raycast_state();
 	static void _bind_methods();
 

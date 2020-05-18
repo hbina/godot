@@ -55,7 +55,7 @@ class AudioStreamEditor : public ColorRect {
 	bool _dragging;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _preview_changed(ObjectID p_which);
 	void _play();
 	void _stop();

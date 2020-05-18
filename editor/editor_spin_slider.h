@@ -79,7 +79,7 @@ class EditorSpinSlider : public Range {
 	void _evaluate_input_text();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _gui_input(const Ref<InputEvent> &p_event);
 	static void _bind_methods();
 	void _grabber_mouse_entered();

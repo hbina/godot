@@ -97,7 +97,7 @@ protected:
 
 protected:
 	virtual Transform2D get_camera_transform();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

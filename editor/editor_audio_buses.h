@@ -127,7 +127,7 @@ class EditorAudioBus : public PanelContainer {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	void update_bus();
@@ -147,7 +147,7 @@ class EditorAudioBusDrop : public Control {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	EditorAudioBusDrop();
@@ -202,7 +202,7 @@ class EditorAudioBuses : public VBoxContainer {
 
 protected:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	void open_layout(const String &p_path);
@@ -257,7 +257,7 @@ public:
 
 private:
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	void _draw_audio_notches();
 
 public:

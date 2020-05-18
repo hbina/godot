@@ -169,7 +169,7 @@ protected:
 	virtual void _validate_property(PropertyInfo &property) const override;
 #ifndef DISABLE_DEPRECATED
 	// Kept for compatibility from 3.x to 4.0.
-	bool _set(const StringName &p_name, const Variant &p_value);
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
 #endif
 
 public:

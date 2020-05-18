@@ -165,7 +165,7 @@ protected:
 	_validate_property(PropertyInfo &property) const override;
 
 	static void _bind_methods();
-	virtual void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	SkeletonIK3D();

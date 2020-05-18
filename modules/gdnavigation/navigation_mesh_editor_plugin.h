@@ -58,7 +58,7 @@ class NavigationMeshEditor : public Control {
 protected:
 	void _node_removed(Node *p_node);
 	static void _bind_methods();
-	void _notification(int p_option);
+	virtual void _notification(int p_notification) override;
 
 public:
 	void edit(NavigationRegion3D *p_nav_region);

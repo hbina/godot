@@ -112,7 +112,7 @@ private:
 	static void _thread_func(void *p_userdata);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

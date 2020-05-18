@@ -64,7 +64,7 @@ int Engine::get_target_fps() const {
 	return _target_fps;
 }
 
-uint64_t Engine::get_frames_drawn() {
+uint64_t Engine::get_frames_drawn() const {
 
 	return frames_drawn;
 }

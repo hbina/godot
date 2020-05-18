@@ -178,7 +178,7 @@ protected:
 	static void _bind_methods();
 	virtual void add_child_notify(Node *p_child) override;
 	virtual void remove_child_notify(Node *p_child) override;
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	virtual bool clips_input() const override;
 
 public:

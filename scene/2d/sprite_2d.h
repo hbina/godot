@@ -63,7 +63,7 @@ class Sprite2D : public Node2D {
 	void _texture_changed();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	static void _bind_methods();
 

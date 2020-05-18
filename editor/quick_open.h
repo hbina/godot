@@ -59,7 +59,7 @@ class EditorQuickOpen : public ConfirmationDialog {
 	void _theme_changed();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

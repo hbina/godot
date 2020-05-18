@@ -93,7 +93,7 @@ class GroupDialog : public AcceptDialog {
 	void _load_nodes(Node *p_current);
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

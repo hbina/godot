@@ -70,7 +70,7 @@ protected:
 	virtual Size2 get_minimum_size() const override;
 
 	void _gui_input(const Ref<InputEvent> &p_gui_input);
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	void _scroll_moved(float);
 	static void _bind_methods();

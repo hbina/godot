@@ -227,7 +227,7 @@ private:
 protected:
 	virtual void _validate_property(PropertyInfo &property) const override;
 	static void _bind_methods();
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 public:
 	void set_light_data(const Ref<BakedLightmapData> &p_data);

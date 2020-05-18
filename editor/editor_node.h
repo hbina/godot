@@ -649,7 +649,7 @@ private:
 	Ref<ImageTexture> _load_custom_class_icon(const String &p_path) const;
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 
 	static void _bind_methods();
 

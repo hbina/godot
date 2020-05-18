@@ -47,7 +47,7 @@ class Array {
 	inline int _clamp_slice_index(int p_index) const;
 
 protected:
-	Array(const Array &p_base, uint32_t p_type, const StringName &p_class_name, const Variant &p_script);
+	Array(const Array &p_from, uint32_t p_type, const StringName &p_class_name, const Variant &p_script);
 	void _assign(const Array &p_array);
 
 public:
@@ -64,7 +64,7 @@ public:
 	bool operator==(const Array &p_array) const;
 
 	uint32_t hash() const;
-	void operator=(const Array &p_array);
+	Array &operator=(const Array &p_array);
 
 	void push_back(const Variant &p_value);
 	_FORCE_INLINE_ void append(const Variant &p_value) { push_back(p_value); } //for python compatibility

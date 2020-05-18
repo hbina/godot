@@ -106,7 +106,7 @@ class NavigationRegion2D : public Node2D {
 	void _navpoly_changed();
 
 protected:
-	void _notification(int p_what);
+	virtual void _notification(int p_what) override;
 	static void _bind_methods();
 
 public:

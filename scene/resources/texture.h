@@ -95,9 +95,9 @@ class ImageTexture : public Texture2D {
 protected:
 	virtual void reload_from_file() override;
 
-	bool _set(const StringName &p_name, const Variant &p_value);
-	bool _get(const StringName &p_name, Variant &r_ret) const;
-	void _get_property_list(List<PropertyInfo> *p_list) const;
+	virtual bool _set(const StringName &p_name, const Variant &p_value) override;
+	virtual bool _get(const StringName &p_name, Variant &r_ret) const override;
+	virtual void _get_property_list(List<PropertyInfo> *p_list) const override;
 
 	void _reload_hook(const RID &p_hook);
 	virtual void _resource_path_changed() override;
