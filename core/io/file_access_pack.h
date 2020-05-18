@@ -87,7 +87,7 @@ private:
 			a = b = 0;
 		};
 
-		PathMD5(const Vector<uint8_t> p_buf) {
+		explicit PathMD5(const Vector<uint8_t> &p_buf) {
 			a = *((uint64_t *)&p_buf[0]);
 			b = *((uint64_t *)&p_buf[8]);
 		};
@@ -133,8 +133,8 @@ public:
 class PackedSourcePCK : public PackSource {
 
 public:
-	virtual bool try_open_pack(const String &p_path, bool p_replace_files);
-	virtual FileAccess *get_file(const String &p_path, PackedData::PackedFile *p_file);
+	virtual bool try_open_pack(const String &p_path, bool p_replace_files) override;
+	virtual FileAccess *get_file(const String &p_path, PackedData::PackedFile *p_file) override;
 };
 
 class FileAccessPack : public FileAccess {
