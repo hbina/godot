@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="227173466">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/cpu_primitive.hpp" line="37" column="5"/>
+            <symbol>cpu_primitive_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ref_lrn_bwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ref_lrn_bwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.hpp" line="109" column="5"/>
+            <symbol>ref_lrn_bwd_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ref_lrn_fwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ref_lrn_fwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.hpp" line="58" column="5"/>
+            <symbol>ref_lrn_fwd_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.hpp" line="127" column="38"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_lrn.hpp" line="76" column="38"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="fast_negative_powf" lineNumber="30"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="C"/>
+    <functioncall functionName="DECLARE_COMMON_PD_T"/>
+    <functioncall functionName="H"/>
+    <functioncall functionName="MB"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_DST"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_DST"/>
+    <functioncall functionName="MKLDNN_ARG_SCRATCHPAD"/>
+    <functioncall functionName="MKLDNN_ARG_SRC"/>
+    <functioncall functionName="PRAGMA_OMP_SIMD"/>
+    <functioncall functionName="W"/>
+    <functioncall functionName="across_channels"/>
+    <functioncall functionName="alg_kind"/>
+    <functioncall functionName="apd"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="beta"/>
+    <functioncall functionName="blksize"/>
+    <functioncall functionName="blocking_desc"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c_st"/>
+    <functioncall functionName="cc"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cpu_primitive_t"/>
+    <functioncall functionName="create_scratchpad"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="dat_tag_"/>
+    <functioncall functionName="data_d"/>
+    <functioncall functionName="data_off"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="diff_src_md"/>
+    <functioncall functionName="div_up"/>
+    <functioncall functionName="everyone_is"/>
+    <functioncall functionName="execute_backward&lt;any&gt;"/>
+    <functioncall functionName="execute_backward&lt;nChw16c&gt;"/>
+    <functioncall functionName="execute_backward&lt;nChw8c&gt;"/>
+    <functioncall functionName="execute_backward&lt;nchw&gt;"/>
+    <functioncall functionName="execute_backward&lt;nhwc&gt;"/>
+    <functioncall functionName="execute_forward&lt;any&gt;"/>
+    <functioncall functionName="execute_forward&lt;nChw16c&gt;"/>
+    <functioncall functionName="execute_forward&lt;nChw8c&gt;"/>
+    <functioncall functionName="execute_forward&lt;nchw&gt;"/>
+    <functioncall functionName="execute_forward&lt;nhwc&gt;"/>
+    <functioncall functionName="f32"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fast_negative_powf"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="global_scratchpad_"/>
+    <functioncall functionName="grantor"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="h_st"/>
+    <functioncall functionName="half_ksize"/>
+    <functioncall functionName="has_default_values"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_st"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="is_fwd"/>
+    <functioncall functionName="ker"/>
+    <functioncall functionName="kernel_size"/>
+    <functioncall functionName="library"/>
+    <functioncall functionName="local_size"/>
+    <functioncall functionName="lrn_across_channels"/>
+    <functioncall functionName="lrn_alpha"/>
+    <functioncall functionName="lrn_beta"/>
+    <functioncall functionName="lrn_k"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="mb"/>
+    <functioncall functionName="memory_desc_matches_one_of_tag"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="nChw16c"/>
+    <functioncall functionName="nChw8c"/>
+    <functioncall functionName="nchw"/>
+    <functioncall functionName="nhwc"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="off"/>
+    <functioncall functionName="oh"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="omega"/>
+    <functioncall functionName="omega_mid"/>
+    <functioncall functionName="one_of"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="ow"/>
+    <functioncall functionName="parallel_nd"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="powf"/>
+    <functioncall functionName="primitive_t"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ref_lrn_bwd_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="ref_lrn_fwd_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="scratchpad_buffer_"/>
+    <functioncall functionName="scratchpad_registry"/>
+    <functioncall functionName="scratchpad_size"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sqrtf"/>
+    <functioncall functionName="src_md"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="summands"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="use_global_scratchpad"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="w_st"/>
+  </FileInfo>
+</analyzerinfo>

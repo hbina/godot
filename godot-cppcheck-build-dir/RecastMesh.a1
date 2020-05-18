@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1099046966">
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="178" column="12"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="47" column="18"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;numRemovedVerts&apos; is assigned a value that is never used." verbose="Variable &apos;numRemovedVerts&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="569" column="22"/>
+            <symbol>numRemovedVerts</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;numRemovedVerts&apos; is assigned a value that is never used." verbose="Variable &apos;numRemovedVerts&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="589" column="20"/>
+            <symbol>numRemovedVerts</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:128:12" call-funcname="computeVertexHash" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="140" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:270:13" call-funcname="inCone" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="289" col="15" call-argexpr="j" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="430" col="21" info="Assignment 'i1=0', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="433" col="28" info="Calling function 'diagonal', 2nd argument 'i1' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:164:12" call-funcname="prev" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="431" col="11" call-argexpr="i1" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="430" col="21" info="Assignment 'i1=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:287:13" call-funcname="diagonal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="433" col="15" call-argexpr="i1" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="430" col="21" info="Assignment 'i1=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:165:12" call-funcname="next" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="438" col="23" call-argexpr="i1" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="430" col="21" info="Assignment 'i1=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:558:13" call-funcname="pushBack" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="777" col="10" call-argexpr="nhole" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="691" col="14" info="Assignment 'nhole=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:558:13" call-funcname="pushBack" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="778" col="10" call-argexpr="nhreg" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="699" col="14" info="Assignment 'nhreg=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:558:13" call-funcname="pushBack" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="779" col="10" call-argexpr="nharea" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="707" col="15" info="Assignment 'nharea=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="185" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:183:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="185" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:183:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="185" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:183:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="190" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:188:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="190" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:188:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="190" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:188:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="195" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="195" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" call-funcname="area2" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="195" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" call-funcname="collinear" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="204" col="6" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" call-funcname="collinear" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="204" col="6" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" call-funcname="collinear" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="204" col="6" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" call-funcname="collinear" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="204" col="26" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" call-funcname="collinear" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="215" col="7" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:213:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" call-funcname="collinear" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="215" col="7" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:213:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:193:13" call-funcname="collinear" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="215" col="7" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:213:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" call-funcname="intersectProp" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="227" col="6" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:225:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" call-funcname="intersectProp" call-argnr="2" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="227" col="6" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:225:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" call-funcname="intersectProp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="227" col="6" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:225:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:201:13" call-funcname="intersectProp" call-argnr="4" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="227" col="6" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:225:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:270:13" call-funcname="inCone" call-argnr="4" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="289" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:287:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:270:13" call-funcname="inCone" call-argnr="5" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="289" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:287:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:318:13" call-funcname="inConeLoose" call-argnr="4" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="335" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:333:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:318:13" call-funcname="inConeLoose" call-argnr="5" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="335" col="9" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:333:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:287:13" call-funcname="diagonal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="349" col="7" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:339:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:287:13" call-funcname="diagonal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="349" col="7" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:339:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:453:12" call-funcname="countPolyVerts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="471" col="17" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:467:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:453:12" call-funcname="countPolyVerts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="472" col="17" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:467:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:453:12" call-funcname="countPolyVerts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="534" col="17" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:531:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:453:12" call-funcname="countPolyVerts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="535" col="17" my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:531:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="26" value="8"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:236:13" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="238" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:236:13" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="238" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:461:13" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="463" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:461:13" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="463" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:461:13" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="463" col="41" value="4"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:137:23" my-argnr="5" my-argname="firstVert" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="141" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:236:13" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="238" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:236:13" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="238" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:461:13" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="463" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:461:13" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="463" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:461:13" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="463" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:531:13" my-argnr="5" my-argname="tmp" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="538" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:558:13" my-argnr="2" my-argname="arr" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="560" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:167:12" my-argnr="3" my-argname="c" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="169" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:236:13" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="238" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:243:13" my-argnr="5" my-argname="indices" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="245" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:270:13" my-argnr="5" my-argname="indices" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="272" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:293:13" my-argnr="5" my-argname="indices" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="295" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp:318:13" my-argnr="5" my-argname="indices" file="/home/hbina/git/godot/thirdparty/recastnavigation/Recast/Source/RecastMesh.cpp" line="320" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="buildMeshAdjacency" lineNumber="34"/>
+    <functiondecl functionName="computeVertexHash" lineNumber="128"/>
+    <functiondecl functionName="addVertex" lineNumber="137"/>
+    <functiondecl functionName="prev" lineNumber="164"/>
+    <functiondecl functionName="next" lineNumber="165"/>
+    <functiondecl functionName="area2" lineNumber="167"/>
+    <functiondecl functionName="xorb" lineNumber="176"/>
+    <functiondecl functionName="left" lineNumber="183"/>
+    <functiondecl functionName="leftOn" lineNumber="188"/>
+    <functiondecl functionName="collinear" lineNumber="193"/>
+    <functiondecl functionName="intersectProp" lineNumber="201"/>
+    <functiondecl functionName="between" lineNumber="213"/>
+    <functiondecl functionName="intersect" lineNumber="225"/>
+    <functiondecl functionName="vequal" lineNumber="236"/>
+    <functiondecl functionName="diagonalie" lineNumber="243"/>
+    <functiondecl functionName="inCone" lineNumber="270"/>
+    <functiondecl functionName="diagonal" lineNumber="287"/>
+    <functiondecl functionName="diagonalieLoose" lineNumber="293"/>
+    <functiondecl functionName="inConeLoose" lineNumber="318"/>
+    <functiondecl functionName="diagonalLoose" lineNumber="333"/>
+    <functiondecl functionName="triangulate" lineNumber="339"/>
+    <functiondecl functionName="countPolyVerts" lineNumber="453"/>
+    <functiondecl functionName="uleft" lineNumber="461"/>
+    <functiondecl functionName="getPolyMergeValue" lineNumber="467"/>
+    <functiondecl functionName="mergePolyVerts" lineNumber="531"/>
+    <functiondecl functionName="pushFront" lineNumber="551"/>
+    <functiondecl functionName="pushBack" lineNumber="558"/>
+    <functiondecl functionName="canRemoveVertex" lineNumber="564"/>
+    <functiondecl functionName="removeVertex" lineNumber="666"/>
+    <functiondecl functionName="rcBuildPolyMesh" lineNumber="992"/>
+    <functiondecl functionName="rcMergePolyMeshes" lineNumber="1311"/>
+    <functiondecl functionName="rcCopyPolyMesh" lineNumber="1489"/>
+    <functioncall functionName="RC_ALLOC_PERM"/>
+    <functioncall functionName="RC_ALLOC_TEMP"/>
+    <functioncall functionName="RC_LOG_ERROR"/>
+    <functioncall functionName="RC_LOG_WARNING"/>
+    <functioncall functionName="RC_MESH_NULL_IDX"/>
+    <functioncall functionName="RC_MULTIPLE_REGS"/>
+    <functioncall functionName="RC_TIMER_BUILD_POLYMESH"/>
+    <functioncall functionName="RC_TIMER_MERGE_POLYMESH"/>
+    <functioncall functionName="VERTEX_BUCKET_COUNT"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="add"/>
+    <functioncall functionName="addVertex"/>
+    <functioncall functionName="an"/>
+    <functioncall functionName="area"/>
+    <functioncall functionName="area2"/>
+    <functioncall functionName="areas"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bestEa"/>
+    <functioncall functionName="bestEb"/>
+    <functioncall functionName="bestMergeVal"/>
+    <functioncall functionName="bestPa"/>
+    <functioncall functionName="bestPb"/>
+    <functioncall functionName="between"/>
+    <functioncall functionName="bmax"/>
+    <functioncall functionName="bmin"/>
+    <functioncall functionName="borderSize"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bucket"/>
+    <functioncall functionName="buildMeshAdjacency"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="canRemoveVertex"/>
+    <functioncall functionName="ch"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="collinear"/>
+    <functioncall functionName="computeVertexHash"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="countPolyVerts"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d0"/>
+    <functioncall functionName="d1"/>
+    <functioncall functionName="diagonal"/>
+    <functioncall functionName="diagonalLoose"/>
+    <functioncall functionName="diagonalie"/>
+    <functioncall functionName="diagonalieLoose"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="ea"/>
+    <functioncall functionName="eb"/>
+    <functioncall functionName="edgeCount"/>
+    <functioncall functionName="edges"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="firstEdge"/>
+    <functioncall functionName="firstVert"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="floorf"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getPolyMergeValue"/>
+    <functioncall functionName="harea"/>
+    <functioncall functionName="hasRem"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hole"/>
+    <functioncall functionName="hreg"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i1"/>
+    <functioncall functionName="i2"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inCone"/>
+    <functioncall functionName="inConeLoose"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="intersect"/>
+    <functioncall functionName="intersectProp"/>
+    <functioncall functionName="isMaxX"/>
+    <functioncall functionName="isMaxZ"/>
+    <functioncall functionName="isMinX"/>
+    <functioncall functionName="isMinZ"/>
+    <functioncall functionName="isOnBorder"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="k1"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="lastPoly"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="leftOn"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="match"/>
+    <functioncall functionName="maxEdgeCount"/>
+    <functioncall functionName="maxEdgeError"/>
+    <functioncall functionName="maxError"/>
+    <functioncall functionName="maxPolys"/>
+    <functioncall functionName="maxTris"/>
+    <functioncall functionName="maxVertices"/>
+    <functioncall functionName="maxVerts"/>
+    <functioncall functionName="maxVertsPerCont"/>
+    <functioncall functionName="maxVertsPerMesh"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mergePolyVerts"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="meshes"/>
+    <functioncall functionName="mini"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nconts"/>
+    <functioncall functionName="nedges"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nextVert"/>
+    <functioncall functionName="nharea"/>
+    <functioncall functionName="nhole"/>
+    <functioncall functionName="nhreg"/>
+    <functioncall functionName="nj"/>
+    <functioncall functionName="npolys"/>
+    <functioncall functionName="ntris"/>
+    <functioncall functionName="numOpenEdges"/>
+    <functioncall functionName="numRemoved"/>
+    <functioncall functionName="nv"/>
+    <functioncall functionName="nverts"/>
+    <functioncall functionName="nvp"/>
+    <functioncall functionName="ox"/>
+    <functioncall functionName="oz"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="pa"/>
+    <functioncall functionName="pareas"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="pi"/>
+    <functioncall functionName="pi1"/>
+    <functioncall functionName="pin1"/>
+    <functioncall functionName="pj"/>
+    <functioncall functionName="pk"/>
+    <functioncall functionName="polys"/>
+    <functioncall functionName="pregs"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="pushBack"/>
+    <functioncall functionName="pushFront"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rcAbs"/>
+    <functioncall functionName="rcAlloc"/>
+    <functioncall functionName="rcAssert"/>
+    <functioncall functionName="rcEdge"/>
+    <functioncall functionName="rcFree"/>
+    <functioncall functionName="rcMax"/>
+    <functioncall functionName="rcSwap"/>
+    <functioncall functionName="rcVcopy"/>
+    <functioncall functionName="rcVmax"/>
+    <functioncall functionName="rcVmin"/>
+    <functioncall functionName="reg"/>
+    <functioncall functionName="regs"/>
+    <functioncall functionName="rem"/>
+    <functioncall functionName="removeVertex"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="thole"/>
+    <functioncall functionName="timer"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmpPoly"/>
+    <functioncall functionName="triangulate"/>
+    <functioncall functionName="tris"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tverts"/>
+    <functioncall functionName="uleft"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="va0"/>
+    <functioncall functionName="va1"/>
+    <functioncall functionName="vb0"/>
+    <functioncall functionName="vb1"/>
+    <functioncall functionName="vequal"/>
+    <functioncall functionName="verts"/>
+    <functioncall functionName="vflags"/>
+    <functioncall functionName="vremap"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xorb"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

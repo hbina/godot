@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3142906796">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;b3HashedOverlappingPairCache::equalsPair&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;b3HashedOverlappingPairCache::equalsPair&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="176" column="23"/>
+            <symbol>b3HashedOverlappingPairCache::equalsPair</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;b3HashedOverlappingPairCache::getHash&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;b3HashedOverlappingPairCache::getHash&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="197" column="31"/>
+            <symbol>b3HashedOverlappingPairCache::getHash</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;RemovePairCallback&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;RemovePairCallback&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" line="92" column="3"/>
+            <symbol>RemovePairCallback</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;RemovePairCallback&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;RemovePairCallback&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" line="540" column="3"/>
+            <symbol>RemovePairCallback</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;removeOverlappingPairsContainingProxy&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;removeOverlappingPairsContainingProxy&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="98" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="82" column="15" info="Virtual function in base class"/>
+            <symbol>removeOverlappingPairsContainingProxy</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;removeOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;removeOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="100" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="81" column="16" info="Virtual function in base class"/>
+            <symbol>removeOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;addOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;addOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="115" column="28" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="80" column="28" info="Virtual function in base class"/>
+            <symbol>addOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cleanProxyFromPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cleanProxyFromPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="125" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="68" column="15" info="Virtual function in base class"/>
+            <symbol>cleanProxyFromPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;processAllOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;processAllOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="127" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="72" column="15" info="Virtual function in base class"/>
+            <symbol>processAllOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="129" column="28" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="58" column="28" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArrayPtr</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="134" column="26" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="60" column="34" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArrayPtr</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArray&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArray&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="139" column="25" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="62" column="33" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArray</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cleanOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cleanOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="149" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="64" column="15" info="Virtual function in base class"/>
+            <symbol>cleanOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;findPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;findPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="151" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="74" column="28" info="Virtual function in base class"/>
+            <symbol>findPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;setOverlapFilterCallback&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;setOverlapFilterCallback&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="161" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="70" column="15" info="Virtual function in base class"/>
+            <symbol>setOverlapFilterCallback</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getNumOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getNumOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="166" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="66" column="14" info="Virtual function in base class"/>
+            <symbol>getNumOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;hasDeferredRemoval&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;hasDeferredRemoval&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="237" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="76" column="15" info="Virtual function in base class"/>
+            <symbol>hasDeferredRemoval</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;sortOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;sortOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="248" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="84" column="15" info="Virtual function in base class"/>
+            <symbol>sortOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;processAllOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;processAllOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="279" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="72" column="15" info="Virtual function in base class"/>
+            <symbol>processAllOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;removeOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;removeOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="281" column="8" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="81" column="16" info="Virtual function in base class"/>
+            <symbol>removeOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cleanOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cleanOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="283" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="64" column="15" info="Virtual function in base class"/>
+            <symbol>cleanOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;addOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;addOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="285" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="80" column="28" info="Virtual function in base class"/>
+            <symbol>addOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;findPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;findPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="287" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="74" column="28" info="Virtual function in base class"/>
+            <symbol>findPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cleanProxyFromPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cleanProxyFromPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="289" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="68" column="15" info="Virtual function in base class"/>
+            <symbol>cleanProxyFromPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;removeOverlappingPairsContainingProxy&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;removeOverlappingPairsContainingProxy&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="291" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="82" column="15" info="Virtual function in base class"/>
+            <symbol>removeOverlappingPairsContainingProxy</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArray&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArray&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="304" column="25" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="62" column="33" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArray</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="314" column="20" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="58" column="28" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArrayPtr</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="319" column="26" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="60" column="34" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArrayPtr</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getNumOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getNumOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="324" column="6" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="66" column="14" info="Virtual function in base class"/>
+            <symbol>getNumOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;setOverlapFilterCallback&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;setOverlapFilterCallback&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="334" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="70" column="15" info="Virtual function in base class"/>
+            <symbol>setOverlapFilterCallback</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;hasDeferredRemoval&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;hasDeferredRemoval&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="339" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="76" column="15" info="Virtual function in base class"/>
+            <symbol>hasDeferredRemoval</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;sortOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;sortOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="349" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="84" column="15" info="Virtual function in base class"/>
+            <symbol>sortOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="358" column="28" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="58" column="28" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArrayPtr</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArrayPtr&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="362" column="26" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="60" column="34" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArrayPtr</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getOverlappingPairArray&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getOverlappingPairArray&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="366" column="25" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="62" column="33" info="Virtual function in base class"/>
+            <symbol>getOverlappingPairArray</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cleanOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cleanOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="371" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="64" column="15" info="Virtual function in base class"/>
+            <symbol>cleanOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;getNumOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;getNumOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="375" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="66" column="14" info="Virtual function in base class"/>
+            <symbol>getNumOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cleanProxyFromPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cleanProxyFromPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="380" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="68" column="15" info="Virtual function in base class"/>
+            <symbol>cleanProxyFromPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;setOverlapFilterCallback&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;setOverlapFilterCallback&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="384" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="70" column="15" info="Virtual function in base class"/>
+            <symbol>setOverlapFilterCallback</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;processAllOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;processAllOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="388" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="72" column="15" info="Virtual function in base class"/>
+            <symbol>processAllOverlappingPairs</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;findPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;findPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="392" column="28" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="74" column="28" info="Virtual function in base class"/>
+            <symbol>findPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;hasDeferredRemoval&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;hasDeferredRemoval&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="397" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="76" column="15" info="Virtual function in base class"/>
+            <symbol>hasDeferredRemoval</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;addOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;addOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="407" column="28" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="80" column="28" info="Virtual function in base class"/>
+            <symbol>addOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;removeOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;removeOverlappingPair&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="412" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="81" column="16" info="Virtual function in base class"/>
+            <symbol>removeOverlappingPair</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;removeOverlappingPairsContainingProxy&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;removeOverlappingPairsContainingProxy&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="417" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="82" column="15" info="Virtual function in base class"/>
+            <symbol>removeOverlappingPairsContainingProxy</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;sortOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;sortOverlappingPairs&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="421" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h" line="84" column="15" info="Virtual function in base class"/>
+            <symbol>sortOverlappingPairs</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h:283:7" call-funcname="cleanOverlappingPair" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.cpp" line="397" col="4" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Collision/BroadPhaseCollision/b3OverlappingPairCache.h:281:8" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="cleanOverlappingPair" lineNumber="41"/>
+    <functiondecl functionName="cleanProxyFromPairs" lineNumber="54"/>
+    <functiondecl functionName="processOverlap" lineNumber="69"/>
+    <functiondecl functionName="removeOverlappingPairsContainingProxy" lineNumber="85"/>
+    <functiondecl functionName="processOverlap" lineNumber="96"/>
+    <functiondecl functionName="findPair" lineNumber="108"/>
+    <functiondecl functionName="growTables" lineNumber="144"/>
+    <functiondecl functionName="internalAddPair" lineNumber="181"/>
+    <functiondecl functionName="removeOverlappingPair" lineNumber="237"/>
+    <functiondecl functionName="processAllOverlappingPairs" lineNumber="336"/>
+    <functiondecl functionName="sortOverlappingPairs" lineNumber="357"/>
+    <functiondecl functionName="removeOverlappingPair" lineNumber="385"/>
+    <functiondecl functionName="addOverlappingPair" lineNumber="410"/>
+    <functiondecl functionName="findPair" lineNumber="433"/>
+    <functiondecl functionName="processAllOverlappingPairs" lineNumber="452"/>
+    <functiondecl functionName="cleanOverlappingPair" lineNumber="488"/>
+    <functiondecl functionName="cleanProxyFromPairs" lineNumber="502"/>
+    <functiondecl functionName="processOverlap" lineNumber="517"/>
+    <functiondecl functionName="removeOverlappingPairsContainingProxy" lineNumber="533"/>
+    <functiondecl functionName="processOverlap" lineNumber="544"/>
+    <functiondecl functionName="sortOverlappingPairs" lineNumber="556"/>
+    <functioncall functionName="B3_NULL_PAIR"/>
+    <functioncall functionName="addOverlappingPair"/>
+    <functioncall functionName="b3Assert"/>
+    <functioncall functionName="b3BroadphasePairSortPredicate"/>
+    <functioncall functionName="b3HashedOverlappingPairCache"/>
+    <functioncall functionName="b3MakeBroadphasePair"/>
+    <functioncall functionName="b3SortedOverlappingPairCache"/>
+    <functioncall functionName="b3Swap"/>
+    <functioncall functionName="callback"/>
+    <functioncall functionName="capacity"/>
+    <functioncall functionName="cleanOverlappingPair"/>
+    <functioncall functionName="cleanPairs"/>
+    <functioncall functionName="cleanProxy"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="dispatcher"/>
+    <functioncall functionName="equalsPair"/>
+    <functioncall functionName="expandNonInitializing"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="findIndex"/>
+    <functioncall functionName="findLinearSearch"/>
+    <functioncall functionName="findPair"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getHash"/>
+    <functioncall functionName="growTables"/>
+    <functioncall functionName="hasDeferredRemoval"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hashValue"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="initialAllocatedSize"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="internalAddPair"/>
+    <functioncall functionName="internalFindPair"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="lastHash"/>
+    <functioncall functionName="lastPairIndex"/>
+    <functioncall functionName="m_blockedForChanges"/>
+    <functioncall functionName="m_cleanProxy"/>
+    <functioncall functionName="m_dispatcher"/>
+    <functioncall functionName="m_hasDeferredRemoval"/>
+    <functioncall functionName="m_obsoleteProxy"/>
+    <functioncall functionName="m_overlapFilterCallback"/>
+    <functioncall functionName="m_pairCache"/>
+    <functioncall functionName="needBroadphaseCollision"/>
+    <functioncall functionName="needsBroadphaseCollision"/>
+    <functioncall functionName="newCapacity"/>
+    <functioncall functionName="obsoleteProxy"/>
+    <functioncall functionName="pair"/>
+    <functioncall functionName="pairCache"/>
+    <functioncall functionName="pairIndex"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="previous"/>
+    <functioncall functionName="processAllOverlappingPairs"/>
+    <functioncall functionName="processOverlap"/>
+    <functioncall functionName="proxy"/>
+    <functioncall functionName="proxy0"/>
+    <functioncall functionName="proxy1"/>
+    <functioncall functionName="proxyId1"/>
+    <functioncall functionName="proxyId2"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quickSort"/>
+    <functioncall functionName="removeCallback"/>
+    <functioncall functionName="removeOverlappingPair"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tmpPair"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xx"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="yy"/>
+  </FileInfo>
+</analyzerinfo>

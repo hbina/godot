@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="140301019">
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus.c:153:12" call-funcname="parse_size" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="241" col="25" call-argexpr="size" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="353" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="353" col="33" call-argexpr="frames" call-argvaluetype="7" call-argvalue="48"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="353" col="33" call-argexpr="size" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="353" col="33" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="353" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/opus.c:349:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="353" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/opus.c:349:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/opus_private.h:124:5" call-funcname="opus_packet_parse_impl" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="353" col="11" my-id="/home/hbina/git/godot/thirdparty/opus/opus.c:349:5" my-argnr="6"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus.c:173:5" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="177" col="8" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/opus.c:173:5" my-argnr="1" my-argname="data" file="/home/hbina/git/godot/thirdparty/opus/opus.c" line="177" col="8" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="opus_pcm_soft_clip" lineNumber="36"/>
+    <functiondecl functionName="encode_size" lineNumber="140"/>
+    <functiondecl functionName="parse_size" lineNumber="153"/>
+    <functiondecl functionName="opus_packet_get_samples_per_frame" lineNumber="173"/>
+    <functiondecl functionName="opus_packet_parse_impl" lineNumber="194"/>
+    <functiondecl functionName="opus_packet_parse" lineNumber="349"/>
+    <functioncall functionName="ABS16"/>
+    <functioncall functionName="MAX16"/>
+    <functioncall functionName="MIN16"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="alignment"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cbr"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="curr"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data0"/>
+    <functioncall functionName="declip_mem"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frames"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="last_size"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="offsetof"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_packet_get_samples_per_frame"/>
+    <functioncall functionName="opus_packet_parse_impl"/>
+    <functioncall functionName="out_toc"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="packet_offset"/>
+    <functioncall functionName="parse_size"/>
+    <functioncall functionName="payload_offset"/>
+    <functioncall functionName="peak_pos"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="self_delimited"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="toc"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

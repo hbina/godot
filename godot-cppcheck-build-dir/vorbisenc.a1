@@ -1,0 +1,861 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2254002535">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="193" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;k&apos; can be reduced." verbose="The scope of the variable &apos;k&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="193" column="9"/>
+            <symbol>k</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" call-funcname="vorbis_encode_psyset_setup" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="728" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" call-funcname="vorbis_encode_tonemask_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="752" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" call-funcname="vorbis_encode_compand_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="772" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" call-funcname="vorbis_encode_peak_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="788" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" call-funcname="vorbis_encode_noisebias_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="800" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" call-funcname="vorbis_encode_ath_setup" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="820" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="916" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1208" col="42" call-argexpr="&new_base" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:128:12" call-funcname="vorbis_encode_setup_vbr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="934" col="7" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:157:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:96:12" call-funcname="vorbis_encode_setup_managed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1006" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:59:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="197" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="232" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="4" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="235" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="260" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="2" my-argname="hi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="257" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="308" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="339" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="363" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="384" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="399" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="6" my-argname="guard" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="403" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="425" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:434:12" my-argnr="1" my-argname="ci" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="436" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="445" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="3" my-argname="shortb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="448" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="4" my-argname="longb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="449" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="459" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="591" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="3" my-argname="maps" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="593" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:617:15" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="618" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:191:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="682" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:860:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="864" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" call-funcname="vorbis_encode_psyset_setup" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="728" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" call-funcname="vorbis_encode_tonemask_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="752" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" call-funcname="vorbis_encode_compand_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="772" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" call-funcname="vorbis_encode_peak_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="788" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" call-funcname="vorbis_encode_noisebias_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="800" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" call-funcname="vorbis_encode_ath_setup" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="820" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="916" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1208" col="42" call-argexpr="&new_base" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:128:12" call-funcname="vorbis_encode_setup_vbr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="934" col="7" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:157:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:96:12" call-funcname="vorbis_encode_setup_managed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1006" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:59:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="197" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="232" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="4" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="235" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="260" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="2" my-argname="hi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="257" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="308" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="339" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="363" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="384" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="399" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="6" my-argname="guard" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="403" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="425" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:434:12" my-argnr="1" my-argname="ci" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="436" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="445" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="3" my-argname="shortb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="448" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="4" my-argname="longb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="449" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="459" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="591" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="3" my-argname="maps" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="593" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:617:15" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="618" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:191:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="682" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:860:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="864" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" call-funcname="vorbis_encode_psyset_setup" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="728" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" call-funcname="vorbis_encode_tonemask_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="752" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" call-funcname="vorbis_encode_compand_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="772" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" call-funcname="vorbis_encode_peak_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="788" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" call-funcname="vorbis_encode_noisebias_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="800" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" call-funcname="vorbis_encode_ath_setup" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="820" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="916" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1208" col="42" call-argexpr="&new_base" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:128:12" call-funcname="vorbis_encode_setup_vbr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="934" col="7" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:157:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:96:12" call-funcname="vorbis_encode_setup_managed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1006" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:59:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="197" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="232" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="4" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="235" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="260" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="2" my-argname="hi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="257" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="308" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="339" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="363" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="384" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="399" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="6" my-argname="guard" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="403" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="425" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:434:12" my-argnr="1" my-argname="ci" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="436" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="445" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="3" my-argname="shortb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="448" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="4" my-argname="longb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="449" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="459" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="591" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="3" my-argname="maps" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="593" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:617:15" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="618" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:191:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="682" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:860:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="864" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" call-funcname="vorbis_encode_psyset_setup" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="728" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" call-funcname="vorbis_encode_tonemask_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="752" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" call-funcname="vorbis_encode_compand_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="772" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" call-funcname="vorbis_encode_peak_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="788" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" call-funcname="vorbis_encode_noisebias_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="800" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" call-funcname="vorbis_encode_ath_setup" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="820" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="916" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1208" col="42" call-argexpr="&new_base" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:128:12" call-funcname="vorbis_encode_setup_vbr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="934" col="7" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:157:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:96:12" call-funcname="vorbis_encode_setup_managed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1006" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:59:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="197" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="232" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="4" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="235" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="260" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="2" my-argname="hi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="257" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="308" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="339" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="363" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="384" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="399" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="6" my-argname="guard" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="403" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="425" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:434:12" my-argnr="1" my-argname="ci" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="436" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="445" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="3" my-argname="shortb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="448" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="4" my-argname="longb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="449" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="459" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="591" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="3" my-argname="maps" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="593" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:617:15" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="618" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:191:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="682" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:860:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="864" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" call-funcname="vorbis_encode_psyset_setup" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="728" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" call-funcname="vorbis_encode_tonemask_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="752" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" call-funcname="vorbis_encode_compand_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="772" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" call-funcname="vorbis_encode_peak_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="788" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" call-funcname="vorbis_encode_noisebias_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="800" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" call-funcname="vorbis_encode_ath_setup" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="820" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="916" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1208" col="42" call-argexpr="&new_base" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:128:12" call-funcname="vorbis_encode_setup_vbr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="934" col="7" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:157:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:96:12" call-funcname="vorbis_encode_setup_managed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1006" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:59:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="197" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="232" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="4" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="235" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="260" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="2" my-argname="hi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="257" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="308" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="339" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="363" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="384" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="399" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="6" my-argname="guard" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="403" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="425" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:434:12" my-argnr="1" my-argname="ci" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="436" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="445" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="3" my-argname="shortb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="448" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="4" my-argname="longb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="449" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="459" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="591" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="3" my-argname="maps" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="593" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:617:15" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="618" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:191:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="682" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:860:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="864" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" call-funcname="vorbis_encode_psyset_setup" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="728" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" call-funcname="vorbis_encode_tonemask_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="752" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" call-funcname="vorbis_encode_compand_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="772" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" call-funcname="vorbis_encode_peak_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="788" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" call-funcname="vorbis_encode_noisebias_setup" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="800" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" call-funcname="vorbis_encode_ath_setup" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="820" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="916" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:632:20" call-funcname="get_setup_template" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1208" col="42" call-argexpr="&new_base" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:128:12" call-funcname="vorbis_encode_setup_vbr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="934" col="7" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:157:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:96:12" call-funcname="vorbis_encode_setup_managed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="1006" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:59:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="195" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:189:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="197" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="232" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:227:13" my-argnr="4" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="235" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="260" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:254:13" my-argnr="2" my-argname="hi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="257" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:303:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="308" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="339" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="363" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="384" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="399" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="6" my-argname="guard" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="403" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:424:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="425" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:434:12" my-argnr="1" my-argname="ci" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="436" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="445" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="3" my-argname="shortb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="448" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:442:13" my-argnr="4" my-argname="longb" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="449" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="459" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="591" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:588:13" my-argnr="3" my-argname="maps" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="593" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:617:15" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="618" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbis/vorbisenc.h:191:12" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="682" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:860:13" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="864" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="4" my-argname="att" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="344" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:333:13" my-argnr="5" my-argname="max" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="350" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:358:13" my-argnr="5" my-argname="x" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="366" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:380:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="387" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:392:13" my-argnr="4" my-argname="suppress" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="402" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c:455:13" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvorbis/vorbisenc.c" line="465" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="vorbis_encode_floor_setup" lineNumber="189"/>
+    <functiondecl functionName="vorbis_encode_global_psych_setup" lineNumber="227"/>
+    <functiondecl functionName="vorbis_encode_global_stereo" lineNumber="254"/>
+    <functiondecl functionName="vorbis_encode_psyset_setup" lineNumber="303"/>
+    <functiondecl functionName="vorbis_encode_tonemask_setup" lineNumber="333"/>
+    <functiondecl functionName="vorbis_encode_compand_setup" lineNumber="358"/>
+    <functiondecl functionName="vorbis_encode_peak_setup" lineNumber="380"/>
+    <functiondecl functionName="vorbis_encode_noisebias_setup" lineNumber="392"/>
+    <functiondecl functionName="vorbis_encode_ath_setup" lineNumber="424"/>
+    <functiondecl functionName="book_dup_or_new" lineNumber="434"/>
+    <functiondecl functionName="vorbis_encode_blocksize_setup" lineNumber="442"/>
+    <functiondecl functionName="vorbis_encode_residue_setup" lineNumber="455"/>
+    <functiondecl functionName="vorbis_encode_map_n_res_setup" lineNumber="588"/>
+    <functiondecl functionName="setting_to_approx_bitrate" lineNumber="617"/>
+    <functiondecl functionName="get_setup_template" lineNumber="632"/>
+    <functiondecl functionName="vorbis_encode_setup_init" lineNumber="680"/>
+    <functiondecl functionName="vorbis_encode_setup_setting" lineNumber="860"/>
+    <functiondecl functionName="vorbis_encode_setup_vbr" lineNumber="901"/>
+    <functiondecl functionName="vorbis_encode_init_vbr" lineNumber="926"/>
+    <functiondecl functionName="vorbis_encode_setup_managed" lineNumber="946"/>
+    <functiondecl functionName="vorbis_encode_init" lineNumber="998"/>
+    <functiondecl functionName="vorbis_encode_ctl" lineNumber="1021"/>
+    <functiondecl functionName="vorbis_encode_floor_setup" lineNumber="189"/>
+    <functiondecl functionName="vorbis_encode_global_psych_setup" lineNumber="227"/>
+    <functiondecl functionName="vorbis_encode_global_stereo" lineNumber="254"/>
+    <functiondecl functionName="vorbis_encode_psyset_setup" lineNumber="303"/>
+    <functiondecl functionName="vorbis_encode_tonemask_setup" lineNumber="333"/>
+    <functiondecl functionName="vorbis_encode_compand_setup" lineNumber="358"/>
+    <functiondecl functionName="vorbis_encode_peak_setup" lineNumber="380"/>
+    <functiondecl functionName="vorbis_encode_noisebias_setup" lineNumber="392"/>
+    <functiondecl functionName="vorbis_encode_ath_setup" lineNumber="424"/>
+    <functiondecl functionName="book_dup_or_new" lineNumber="434"/>
+    <functiondecl functionName="vorbis_encode_blocksize_setup" lineNumber="442"/>
+    <functiondecl functionName="vorbis_encode_residue_setup" lineNumber="455"/>
+    <functiondecl functionName="vorbis_encode_map_n_res_setup" lineNumber="588"/>
+    <functiondecl functionName="setting_to_approx_bitrate" lineNumber="617"/>
+    <functiondecl functionName="get_setup_template" lineNumber="632"/>
+    <functiondecl functionName="vorbis_encode_setup_init" lineNumber="680"/>
+    <functiondecl functionName="vorbis_encode_setup_setting" lineNumber="860"/>
+    <functiondecl functionName="vorbis_encode_setup_vbr" lineNumber="901"/>
+    <functiondecl functionName="vorbis_encode_init_vbr" lineNumber="926"/>
+    <functiondecl functionName="vorbis_encode_setup_managed" lineNumber="946"/>
+    <functiondecl functionName="vorbis_encode_init" lineNumber="998"/>
+    <functiondecl functionName="vorbis_encode_ctl" lineNumber="1021"/>
+    <functiondecl functionName="vorbis_encode_floor_setup" lineNumber="189"/>
+    <functiondecl functionName="vorbis_encode_global_psych_setup" lineNumber="227"/>
+    <functiondecl functionName="vorbis_encode_global_stereo" lineNumber="254"/>
+    <functiondecl functionName="vorbis_encode_psyset_setup" lineNumber="303"/>
+    <functiondecl functionName="vorbis_encode_tonemask_setup" lineNumber="333"/>
+    <functiondecl functionName="vorbis_encode_compand_setup" lineNumber="358"/>
+    <functiondecl functionName="vorbis_encode_peak_setup" lineNumber="380"/>
+    <functiondecl functionName="vorbis_encode_noisebias_setup" lineNumber="392"/>
+    <functiondecl functionName="vorbis_encode_ath_setup" lineNumber="424"/>
+    <functiondecl functionName="book_dup_or_new" lineNumber="434"/>
+    <functiondecl functionName="vorbis_encode_blocksize_setup" lineNumber="442"/>
+    <functiondecl functionName="vorbis_encode_residue_setup" lineNumber="455"/>
+    <functiondecl functionName="vorbis_encode_map_n_res_setup" lineNumber="588"/>
+    <functiondecl functionName="setting_to_approx_bitrate" lineNumber="617"/>
+    <functiondecl functionName="get_setup_template" lineNumber="632"/>
+    <functiondecl functionName="vorbis_encode_setup_init" lineNumber="680"/>
+    <functiondecl functionName="vorbis_encode_setup_setting" lineNumber="860"/>
+    <functiondecl functionName="vorbis_encode_setup_vbr" lineNumber="901"/>
+    <functiondecl functionName="vorbis_encode_init_vbr" lineNumber="926"/>
+    <functiondecl functionName="vorbis_encode_setup_managed" lineNumber="946"/>
+    <functiondecl functionName="vorbis_encode_init" lineNumber="998"/>
+    <functiondecl functionName="vorbis_encode_ctl" lineNumber="1021"/>
+    <functiondecl functionName="vorbis_encode_floor_setup" lineNumber="189"/>
+    <functiondecl functionName="vorbis_encode_global_psych_setup" lineNumber="227"/>
+    <functiondecl functionName="vorbis_encode_global_stereo" lineNumber="254"/>
+    <functiondecl functionName="vorbis_encode_psyset_setup" lineNumber="303"/>
+    <functiondecl functionName="vorbis_encode_tonemask_setup" lineNumber="333"/>
+    <functiondecl functionName="vorbis_encode_compand_setup" lineNumber="358"/>
+    <functiondecl functionName="vorbis_encode_peak_setup" lineNumber="380"/>
+    <functiondecl functionName="vorbis_encode_noisebias_setup" lineNumber="392"/>
+    <functiondecl functionName="vorbis_encode_ath_setup" lineNumber="424"/>
+    <functiondecl functionName="book_dup_or_new" lineNumber="434"/>
+    <functiondecl functionName="vorbis_encode_blocksize_setup" lineNumber="442"/>
+    <functiondecl functionName="vorbis_encode_residue_setup" lineNumber="455"/>
+    <functiondecl functionName="vorbis_encode_map_n_res_setup" lineNumber="588"/>
+    <functiondecl functionName="setting_to_approx_bitrate" lineNumber="617"/>
+    <functiondecl functionName="get_setup_template" lineNumber="632"/>
+    <functiondecl functionName="vorbis_encode_setup_init" lineNumber="680"/>
+    <functiondecl functionName="vorbis_encode_setup_setting" lineNumber="860"/>
+    <functiondecl functionName="vorbis_encode_setup_vbr" lineNumber="901"/>
+    <functiondecl functionName="vorbis_encode_init_vbr" lineNumber="926"/>
+    <functiondecl functionName="vorbis_encode_setup_managed" lineNumber="946"/>
+    <functiondecl functionName="vorbis_encode_init" lineNumber="998"/>
+    <functiondecl functionName="vorbis_encode_ctl" lineNumber="1021"/>
+    <functiondecl functionName="vorbis_encode_floor_setup" lineNumber="189"/>
+    <functiondecl functionName="vorbis_encode_global_psych_setup" lineNumber="227"/>
+    <functiondecl functionName="vorbis_encode_global_stereo" lineNumber="254"/>
+    <functiondecl functionName="vorbis_encode_psyset_setup" lineNumber="303"/>
+    <functiondecl functionName="vorbis_encode_tonemask_setup" lineNumber="333"/>
+    <functiondecl functionName="vorbis_encode_compand_setup" lineNumber="358"/>
+    <functiondecl functionName="vorbis_encode_peak_setup" lineNumber="380"/>
+    <functiondecl functionName="vorbis_encode_noisebias_setup" lineNumber="392"/>
+    <functiondecl functionName="vorbis_encode_ath_setup" lineNumber="424"/>
+    <functiondecl functionName="book_dup_or_new" lineNumber="434"/>
+    <functiondecl functionName="vorbis_encode_blocksize_setup" lineNumber="442"/>
+    <functiondecl functionName="vorbis_encode_residue_setup" lineNumber="455"/>
+    <functiondecl functionName="vorbis_encode_map_n_res_setup" lineNumber="588"/>
+    <functiondecl functionName="setting_to_approx_bitrate" lineNumber="617"/>
+    <functiondecl functionName="get_setup_template" lineNumber="632"/>
+    <functiondecl functionName="vorbis_encode_setup_init" lineNumber="680"/>
+    <functiondecl functionName="vorbis_encode_setup_setting" lineNumber="860"/>
+    <functiondecl functionName="vorbis_encode_setup_vbr" lineNumber="901"/>
+    <functiondecl functionName="vorbis_encode_init_vbr" lineNumber="926"/>
+    <functiondecl functionName="vorbis_encode_setup_managed" lineNumber="946"/>
+    <functiondecl functionName="vorbis_encode_init" lineNumber="998"/>
+    <functiondecl functionName="vorbis_encode_ctl" lineNumber="1021"/>
+    <functiondecl functionName="vorbis_encode_floor_setup" lineNumber="189"/>
+    <functiondecl functionName="vorbis_encode_global_psych_setup" lineNumber="227"/>
+    <functiondecl functionName="vorbis_encode_global_stereo" lineNumber="254"/>
+    <functiondecl functionName="vorbis_encode_psyset_setup" lineNumber="303"/>
+    <functiondecl functionName="vorbis_encode_tonemask_setup" lineNumber="333"/>
+    <functiondecl functionName="vorbis_encode_compand_setup" lineNumber="358"/>
+    <functiondecl functionName="vorbis_encode_peak_setup" lineNumber="380"/>
+    <functiondecl functionName="vorbis_encode_noisebias_setup" lineNumber="392"/>
+    <functiondecl functionName="vorbis_encode_ath_setup" lineNumber="424"/>
+    <functiondecl functionName="book_dup_or_new" lineNumber="434"/>
+    <functiondecl functionName="vorbis_encode_blocksize_setup" lineNumber="442"/>
+    <functiondecl functionName="vorbis_encode_residue_setup" lineNumber="455"/>
+    <functiondecl functionName="vorbis_encode_map_n_res_setup" lineNumber="588"/>
+    <functiondecl functionName="setting_to_approx_bitrate" lineNumber="617"/>
+    <functiondecl functionName="get_setup_template" lineNumber="632"/>
+    <functiondecl functionName="vorbis_encode_setup_init" lineNumber="680"/>
+    <functiondecl functionName="vorbis_encode_setup_setting" lineNumber="860"/>
+    <functiondecl functionName="vorbis_encode_setup_vbr" lineNumber="901"/>
+    <functiondecl functionName="vorbis_encode_init_vbr" lineNumber="926"/>
+    <functiondecl functionName="vorbis_encode_setup_managed" lineNumber="946"/>
+    <functiondecl functionName="vorbis_encode_init" lineNumber="998"/>
+    <functiondecl functionName="vorbis_encode_ctl" lineNumber="1021"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="_16c0_s_p1_0"/>
+    <functioncall functionName="_16c0_s_p3_0"/>
+    <functioncall functionName="_16c0_s_p4_0"/>
+    <functioncall functionName="_16c0_s_p5_0"/>
+    <functioncall functionName="_16c0_s_p6_0"/>
+    <functioncall functionName="_16c0_s_p7_0"/>
+    <functioncall functionName="_16c0_s_p7_1"/>
+    <functioncall functionName="_16c0_s_p8_0"/>
+    <functioncall functionName="_16c0_s_p8_1"/>
+    <functioncall functionName="_16c0_s_p9_0"/>
+    <functioncall functionName="_16c0_s_p9_1"/>
+    <functioncall functionName="_16c0_s_p9_2"/>
+    <functioncall functionName="_16c1_s_p1_0"/>
+    <functioncall functionName="_16c1_s_p3_0"/>
+    <functioncall functionName="_16c1_s_p4_0"/>
+    <functioncall functionName="_16c1_s_p5_0"/>
+    <functioncall functionName="_16c1_s_p6_0"/>
+    <functioncall functionName="_16c1_s_p7_0"/>
+    <functioncall functionName="_16c1_s_p7_1"/>
+    <functioncall functionName="_16c1_s_p8_0"/>
+    <functioncall functionName="_16c1_s_p8_1"/>
+    <functioncall functionName="_16c1_s_p9_0"/>
+    <functioncall functionName="_16c1_s_p9_1"/>
+    <functioncall functionName="_16c1_s_p9_2"/>
+    <functioncall functionName="_16c2_s_p1_0"/>
+    <functioncall functionName="_16c2_s_p2_0"/>
+    <functioncall functionName="_16c2_s_p3_0"/>
+    <functioncall functionName="_16c2_s_p4_0"/>
+    <functioncall functionName="_16c2_s_p5_0"/>
+    <functioncall functionName="_16c2_s_p5_1"/>
+    <functioncall functionName="_16c2_s_p6_0"/>
+    <functioncall functionName="_16c2_s_p6_1"/>
+    <functioncall functionName="_16c2_s_p7_0"/>
+    <functioncall functionName="_16c2_s_p7_1"/>
+    <functioncall functionName="_16c2_s_p8_0"/>
+    <functioncall functionName="_16c2_s_p8_1"/>
+    <functioncall functionName="_16c2_s_p9_0"/>
+    <functioncall functionName="_16c2_s_p9_1"/>
+    <functioncall functionName="_16c2_s_p9_2"/>
+    <functioncall functionName="_16u0__p1_0"/>
+    <functioncall functionName="_16u0__p2_0"/>
+    <functioncall functionName="_16u0__p3_0"/>
+    <functioncall functionName="_16u0__p4_0"/>
+    <functioncall functionName="_16u0__p5_0"/>
+    <functioncall functionName="_16u0__p6_0"/>
+    <functioncall functionName="_16u0__p6_1"/>
+    <functioncall functionName="_16u0__p7_0"/>
+    <functioncall functionName="_16u0__p7_1"/>
+    <functioncall functionName="_16u0__p7_2"/>
+    <functioncall functionName="_16u1__p1_0"/>
+    <functioncall functionName="_16u1__p2_0"/>
+    <functioncall functionName="_16u1__p3_0"/>
+    <functioncall functionName="_16u1__p4_0"/>
+    <functioncall functionName="_16u1__p5_0"/>
+    <functioncall functionName="_16u1__p6_0"/>
+    <functioncall functionName="_16u1__p7_0"/>
+    <functioncall functionName="_16u1__p7_1"/>
+    <functioncall functionName="_16u1__p8_0"/>
+    <functioncall functionName="_16u1__p8_1"/>
+    <functioncall functionName="_16u1__p9_0"/>
+    <functioncall functionName="_16u1__p9_1"/>
+    <functioncall functionName="_16u1__p9_2"/>
+    <functioncall functionName="_16u2_p1_0"/>
+    <functioncall functionName="_16u2_p2_0"/>
+    <functioncall functionName="_16u2_p3_0"/>
+    <functioncall functionName="_16u2_p4_0"/>
+    <functioncall functionName="_16u2_p5_0"/>
+    <functioncall functionName="_16u2_p5_1"/>
+    <functioncall functionName="_16u2_p6_0"/>
+    <functioncall functionName="_16u2_p6_1"/>
+    <functioncall functionName="_16u2_p7_0"/>
+    <functioncall functionName="_16u2_p7_1"/>
+    <functioncall functionName="_16u2_p8_0"/>
+    <functioncall functionName="_16u2_p8_1"/>
+    <functioncall functionName="_16u2_p9_0"/>
+    <functioncall functionName="_16u2_p9_1"/>
+    <functioncall functionName="_16u2_p9_2"/>
+    <functioncall functionName="_8c0_s_p1_0"/>
+    <functioncall functionName="_8c0_s_p3_0"/>
+    <functioncall functionName="_8c0_s_p4_0"/>
+    <functioncall functionName="_8c0_s_p5_0"/>
+    <functioncall functionName="_8c0_s_p6_0"/>
+    <functioncall functionName="_8c0_s_p7_0"/>
+    <functioncall functionName="_8c0_s_p7_1"/>
+    <functioncall functionName="_8c0_s_p8_0"/>
+    <functioncall functionName="_8c0_s_p8_1"/>
+    <functioncall functionName="_8c0_s_p9_0"/>
+    <functioncall functionName="_8c0_s_p9_1"/>
+    <functioncall functionName="_8c0_s_p9_2"/>
+    <functioncall functionName="_8c1_s_p1_0"/>
+    <functioncall functionName="_8c1_s_p3_0"/>
+    <functioncall functionName="_8c1_s_p4_0"/>
+    <functioncall functionName="_8c1_s_p5_0"/>
+    <functioncall functionName="_8c1_s_p6_0"/>
+    <functioncall functionName="_8c1_s_p7_0"/>
+    <functioncall functionName="_8c1_s_p7_1"/>
+    <functioncall functionName="_8c1_s_p8_0"/>
+    <functioncall functionName="_8c1_s_p8_1"/>
+    <functioncall functionName="_8c1_s_p9_0"/>
+    <functioncall functionName="_8c1_s_p9_1"/>
+    <functioncall functionName="_8c1_s_p9_2"/>
+    <functioncall functionName="_8u0__p1_0"/>
+    <functioncall functionName="_8u0__p2_0"/>
+    <functioncall functionName="_8u0__p3_0"/>
+    <functioncall functionName="_8u0__p4_0"/>
+    <functioncall functionName="_8u0__p5_0"/>
+    <functioncall functionName="_8u0__p6_0"/>
+    <functioncall functionName="_8u0__p6_1"/>
+    <functioncall functionName="_8u0__p7_0"/>
+    <functioncall functionName="_8u0__p7_1"/>
+    <functioncall functionName="_8u0__p7_2"/>
+    <functioncall functionName="_8u1__p1_0"/>
+    <functioncall functionName="_8u1__p2_0"/>
+    <functioncall functionName="_8u1__p3_0"/>
+    <functioncall functionName="_8u1__p4_0"/>
+    <functioncall functionName="_8u1__p5_0"/>
+    <functioncall functionName="_8u1__p6_0"/>
+    <functioncall functionName="_8u1__p7_0"/>
+    <functioncall functionName="_8u1__p7_1"/>
+    <functioncall functionName="_8u1__p8_0"/>
+    <functioncall functionName="_8u1__p8_1"/>
+    <functioncall functionName="_8u1__p9_0"/>
+    <functioncall functionName="_8u1__p9_1"/>
+    <functioncall functionName="_8u1__p9_2"/>
+    <functioncall functionName="_VDBG_malloc"/>
+    <functioncall functionName="_floor"/>
+    <functioncall functionName="_floor_books"/>
+    <functioncall functionName="_floor_mapping_11"/>
+    <functioncall functionName="_floor_mapping_11a"/>
+    <functioncall functionName="_floor_mapping_16"/>
+    <functioncall functionName="_floor_mapping_16a"/>
+    <functioncall functionName="_floor_mapping_16b"/>
+    <functioncall functionName="_floor_mapping_44"/>
+    <functioncall functionName="_floor_mapping_44a"/>
+    <functioncall functionName="_floor_mapping_44b"/>
+    <functioncall functionName="_floor_mapping_44c"/>
+    <functioncall functionName="_floor_mapping_8"/>
+    <functioncall functionName="_floor_mapping_8a"/>
+    <functioncall functionName="_global_mapping_16"/>
+    <functioncall functionName="_global_mapping_44"/>
+    <functioncall functionName="_global_mapping_8"/>
+    <functioncall functionName="_huff_book__16c0_s_single"/>
+    <functioncall functionName="_huff_book__16c1_s_long"/>
+    <functioncall functionName="_huff_book__16c1_s_short"/>
+    <functioncall functionName="_huff_book__16c2_s_long"/>
+    <functioncall functionName="_huff_book__16c2_s_short"/>
+    <functioncall functionName="_huff_book__16u0__single"/>
+    <functioncall functionName="_huff_book__16u1__long"/>
+    <functioncall functionName="_huff_book__16u1__short"/>
+    <functioncall functionName="_huff_book__16u2__long"/>
+    <functioncall functionName="_huff_book__16u2__short"/>
+    <functioncall functionName="_huff_book__8c0_s_single"/>
+    <functioncall functionName="_huff_book__8c1_s_single"/>
+    <functioncall functionName="_huff_book__8u0__single"/>
+    <functioncall functionName="_huff_book__8u1__single"/>
+    <functioncall functionName="_map_nominal"/>
+    <functioncall functionName="_map_nominal_u"/>
+    <functioncall functionName="_mapres_template_16_stereo"/>
+    <functioncall functionName="_mapres_template_16_uncoupled"/>
+    <functioncall functionName="_mapres_template_44_51"/>
+    <functioncall functionName="_mapres_template_44_stereo"/>
+    <functioncall functionName="_mapres_template_44_uncoupled"/>
+    <functioncall functionName="_mapres_template_8_stereo"/>
+    <functioncall functionName="_mapres_template_8_uncoupled"/>
+    <functioncall functionName="_mm_cvtsd_si32"/>
+    <functioncall functionName="_mm_load_sd"/>
+    <functioncall functionName="_mode_template"/>
+    <functioncall functionName="_noise_part_16"/>
+    <functioncall functionName="_noise_part_8"/>
+    <functioncall functionName="_noise_part_long_44"/>
+    <functioncall functionName="_noise_part_short_44"/>
+    <functioncall functionName="_noise_start_16"/>
+    <functioncall functionName="_noise_start_8"/>
+    <functioncall functionName="_noise_start_long_44"/>
+    <functioncall functionName="_noise_start_short_44"/>
+    <functioncall functionName="_noise_thresh_11"/>
+    <functioncall functionName="_noise_thresh_16"/>
+    <functioncall functionName="_noise_thresh_44"/>
+    <functioncall functionName="_noise_thresh_5only"/>
+    <functioncall functionName="_ogg_calloc"/>
+    <functioncall functionName="_ogg_malloc"/>
+    <functioncall functionName="_psy_ath_abs"/>
+    <functioncall functionName="_psy_ath_abs_16"/>
+    <functioncall functionName="_psy_ath_abs_8"/>
+    <functioncall functionName="_psy_ath_floater"/>
+    <functioncall functionName="_psy_ath_floater_16"/>
+    <functioncall functionName="_psy_ath_floater_8"/>
+    <functioncall functionName="_psy_compand_16_mapping"/>
+    <functioncall functionName="_psy_compand_44"/>
+    <functioncall functionName="_psy_compand_8"/>
+    <functioncall functionName="_psy_compand_8_mapping"/>
+    <functioncall functionName="_psy_compand_long_mapping"/>
+    <functioncall functionName="_psy_compand_short_mapping"/>
+    <functioncall functionName="_psy_global_44"/>
+    <functioncall functionName="_psy_info_template"/>
+    <functioncall functionName="_psy_lowpass_11"/>
+    <functioncall functionName="_psy_lowpass_16"/>
+    <functioncall functionName="_psy_lowpass_22"/>
+    <functioncall functionName="_psy_lowpass_32"/>
+    <functioncall functionName="_psy_lowpass_44"/>
+    <functioncall functionName="_psy_lowpass_8"/>
+    <functioncall functionName="_psy_noise_suppress"/>
+    <functioncall functionName="_psy_noisebias_11"/>
+    <functioncall functionName="_psy_noisebias_16"/>
+    <functioncall functionName="_psy_noisebias_16_impulse"/>
+    <functioncall functionName="_psy_noisebias_16_short"/>
+    <functioncall functionName="_psy_noisebias_8"/>
+    <functioncall functionName="_psy_noisebias_impulse"/>
+    <functioncall functionName="_psy_noisebias_long"/>
+    <functioncall functionName="_psy_noisebias_padding"/>
+    <functioncall functionName="_psy_noisebias_trans"/>
+    <functioncall functionName="_psy_noiseguards_16"/>
+    <functioncall functionName="_psy_noiseguards_44"/>
+    <functioncall functionName="_psy_noiseguards_8"/>
+    <functioncall functionName="_psy_stereo_modes_16"/>
+    <functioncall functionName="_psy_stereo_modes_44"/>
+    <functioncall functionName="_psy_stereo_modes_8"/>
+    <functioncall functionName="_psy_tone_0dB"/>
+    <functioncall functionName="_psy_tone_masteratt_11"/>
+    <functioncall functionName="_psy_tone_masteratt_16"/>
+    <functioncall functionName="_psy_tone_masteratt_44"/>
+    <functioncall functionName="_psy_tone_masteratt_8"/>
+    <functioncall functionName="_psy_tone_suppress"/>
+    <functioncall functionName="_res_16s_0"/>
+    <functioncall functionName="_res_16s_1"/>
+    <functioncall functionName="_res_16s_2"/>
+    <functioncall functionName="_res_16u_0"/>
+    <functioncall functionName="_res_16u_1"/>
+    <functioncall functionName="_res_16u_2"/>
+    <functioncall functionName="_res_8s_0"/>
+    <functioncall functionName="_res_8s_1"/>
+    <functioncall functionName="_res_8u_0"/>
+    <functioncall functionName="_res_8u_1"/>
+    <functioncall functionName="_resbook_16s_0"/>
+    <functioncall functionName="_resbook_16s_1"/>
+    <functioncall functionName="_resbook_16s_2"/>
+    <functioncall functionName="_resbook_16u_0"/>
+    <functioncall functionName="_resbook_16u_1"/>
+    <functioncall functionName="_resbook_16u_2"/>
+    <functioncall functionName="_resbook_8s_0"/>
+    <functioncall functionName="_resbook_8s_1"/>
+    <functioncall functionName="_resbook_8u_0"/>
+    <functioncall functionName="_resbook_8u_1"/>
+    <functioncall functionName="_residue_44_hi_un"/>
+    <functioncall functionName="_residue_44_high"/>
+    <functioncall functionName="_residue_44_low_un"/>
+    <functioncall functionName="_residue_44_mid"/>
+    <functioncall functionName="_residue_44_mid_un"/>
+    <functioncall functionName="_vp_tonemask_adj_11"/>
+    <functioncall functionName="_vp_tonemask_adj_16"/>
+    <functioncall functionName="_vp_tonemask_adj_8"/>
+    <functioncall functionName="_vp_tonemask_adj_longblock"/>
+    <functioncall functionName="_vp_tonemask_adj_otherblock"/>
+    <functioncall functionName="amplitude_track_dBpersec"/>
+    <functioncall functionName="arg"/>
+    <functioncall functionName="ath_absolute_dB"/>
+    <functioncall functionName="ath_floating_dB"/>
+    <functioncall functionName="base_quality"/>
+    <functioncall functionName="base_setting"/>
+    <functioncall functionName="bitrate_av"/>
+    <functioncall functionName="bitrate_av_damp"/>
+    <functioncall functionName="bitrate_av_hi"/>
+    <functioncall functionName="bitrate_average_damping"/>
+    <functioncall functionName="bitrate_average_kbps"/>
+    <functioncall functionName="bitrate_hard_max"/>
+    <functioncall functionName="bitrate_hard_min"/>
+    <functioncall functionName="bitrate_limit_max_kbps"/>
+    <functioncall functionName="bitrate_limit_min_kbps"/>
+    <functioncall functionName="bitrate_limit_reservoir_bias"/>
+    <functioncall functionName="bitrate_limit_reservoir_bits"/>
+    <functioncall functionName="bitrate_max"/>
+    <functioncall functionName="bitrate_min"/>
+    <functioncall functionName="bitrate_reservoir"/>
+    <functioncall functionName="bitrate_reservoir_bias"/>
+    <functioncall functionName="block"/>
+    <functioncall functionName="blocklong"/>
+    <functioncall functionName="blockshort"/>
+    <functioncall functionName="blocksize_11"/>
+    <functioncall functionName="blocksize_16_long"/>
+    <functioncall functionName="blocksize_16_short"/>
+    <functioncall functionName="blocksize_8"/>
+    <functioncall functionName="blocksize_long"/>
+    <functioncall functionName="blocksize_long_44"/>
+    <functioncall functionName="blocksize_short"/>
+    <functioncall functionName="blocksize_short_44"/>
+    <functioncall functionName="book_aux"/>
+    <functioncall functionName="book_aux_managed"/>
+    <functioncall functionName="book_dup_or_new"/>
+    <functioncall functionName="bookid"/>
+    <functioncall functionName="books"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="codec_setup"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="coupling_p"/>
+    <functioncall functionName="coupling_postpointamp"/>
+    <functioncall functionName="coupling_prepointamp"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="del"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="ds"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fixed"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="floor_books"/>
+    <functioncall functionName="floor_mappings"/>
+    <functioncall functionName="floor_params"/>
+    <functioncall functionName="floors"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fpu"/>
+    <functioncall functionName="freq"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get_setup_template"/>
+    <functioncall functionName="global_mapping"/>
+    <functioncall functionName="global_params"/>
+    <functioncall functionName="groupbook"/>
+    <functioncall functionName="grouping"/>
+    <functioncall functionName="hi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i0"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="impulse_block_p"/>
+    <functioncall functionName="impulse_noisetune"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="kHz"/>
+    <functioncall functionName="limit_type"/>
+    <functioncall functionName="lo"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="lowpass_altered"/>
+    <functioncall functionName="lowpass_kHz"/>
+    <functioncall functionName="managed"/>
+    <functioncall functionName="management_active"/>
+    <functioncall functionName="map"/>
+    <functioncall functionName="mappings"/>
+    <functioncall functionName="maps"/>
+    <functioncall functionName="max_bitrate"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="min_bitrate"/>
+    <functioncall functionName="modes"/>
+    <functioncall functionName="new_base"/>
+    <functioncall functionName="new_template"/>
+    <functioncall functionName="noise_bias_setting"/>
+    <functioncall functionName="noise_compand_setting"/>
+    <functioncall functionName="noise_normalize_p"/>
+    <functioncall functionName="nominal_bitrate"/>
+    <functioncall functionName="number"/>
+    <functioncall functionName="nyq"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="partitions"/>
+    <functioncall functionName="post"/>
+    <functioncall functionName="pre"/>
+    <functioncall functionName="psy_g_param"/>
+    <functioncall functionName="psy_noise_bias_impulse"/>
+    <functioncall functionName="psy_noise_bias_long"/>
+    <functioncall functionName="psy_noise_bias_padding"/>
+    <functioncall functionName="psy_noise_bias_trans"/>
+    <functioncall functionName="psy_noise_compand"/>
+    <functioncall functionName="psy_noise_compand_long_mapping"/>
+    <functioncall functionName="psy_noise_compand_short_mapping"/>
+    <functioncall functionName="psy_noise_dBsuppress"/>
+    <functioncall functionName="psy_noise_normal_thresh"/>
+    <functioncall functionName="psy_noiseguards"/>
+    <functioncall functionName="psy_tone_0dB"/>
+    <functioncall functionName="psy_tone_adj_impulse"/>
+    <functioncall functionName="psy_tone_adj_long"/>
+    <functioncall functionName="psy_tone_adj_other"/>
+    <functioncall functionName="psy_tone_dBsuppress"/>
+    <functioncall functionName="psy_tone_masteratt"/>
+    <functioncall functionName="psys"/>
+    <functioncall functionName="q_or_bitrate"/>
+    <functioncall functionName="quality"/>
+    <functioncall functionName="quality_mapping"/>
+    <functioncall functionName="quality_mapping_11"/>
+    <functioncall functionName="quality_mapping_16"/>
+    <functioncall functionName="quality_mapping_44"/>
+    <functioncall functionName="quality_mapping_8"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rate"/>
+    <functioncall functionName="rate_mapping"/>
+    <functioncall functionName="rate_mapping_11"/>
+    <functioncall functionName="rate_mapping_11_uncoupled"/>
+    <functioncall functionName="rate_mapping_16"/>
+    <functioncall functionName="rate_mapping_16_uncoupled"/>
+    <functioncall functionName="rate_mapping_22"/>
+    <functioncall functionName="rate_mapping_22_uncoupled"/>
+    <functioncall functionName="rate_mapping_32"/>
+    <functioncall functionName="rate_mapping_32_un"/>
+    <functioncall functionName="rate_mapping_44_stereo"/>
+    <functioncall functionName="rate_mapping_44_un"/>
+    <functioncall functionName="rate_mapping_44p51"/>
+    <functioncall functionName="rate_mapping_8"/>
+    <functioncall functionName="rate_mapping_8_uncoupled"/>
+    <functioncall functionName="rate_mapping_X"/>
+    <functioncall functionName="req"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="res_type"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="samplerate_max_restriction"/>
+    <functioncall functionName="set_in_stone"/>
+    <functioncall functionName="setting_to_approx_bitrate"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="singleblock"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stereo_modes"/>
+    <functioncall functionName="stereo_point_setting"/>
+    <functioncall functionName="submaps"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tnominal"/>
+    <functioncall functionName="tone_mask_setting"/>
+    <functioncall functionName="tone_peaklimit_setting"/>
+    <functioncall functionName="trigger_setting"/>
+    <functioncall functionName="ve_setup_11_stereo"/>
+    <functioncall functionName="ve_setup_11_uncoupled"/>
+    <functioncall functionName="ve_setup_16_stereo"/>
+    <functioncall functionName="ve_setup_16_uncoupled"/>
+    <functioncall functionName="ve_setup_22_stereo"/>
+    <functioncall functionName="ve_setup_22_uncoupled"/>
+    <functioncall functionName="ve_setup_32_stereo"/>
+    <functioncall functionName="ve_setup_32_uncoupled"/>
+    <functioncall functionName="ve_setup_44_51"/>
+    <functioncall functionName="ve_setup_44_stereo"/>
+    <functioncall functionName="ve_setup_44_uncoupled"/>
+    <functioncall functionName="ve_setup_8_stereo"/>
+    <functioncall functionName="ve_setup_8_uncoupled"/>
+    <functioncall functionName="ve_setup_XX_stereo"/>
+    <functioncall functionName="ve_setup_XX_uncoupled"/>
+    <functioncall functionName="ve_setup_X_stereo"/>
+    <functioncall functionName="ve_setup_X_uncoupled"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vorbis_encode_ath_setup"/>
+    <functioncall functionName="vorbis_encode_blocksize_setup"/>
+    <functioncall functionName="vorbis_encode_compand_setup"/>
+    <functioncall functionName="vorbis_encode_ctl"/>
+    <functioncall functionName="vorbis_encode_floor_setup"/>
+    <functioncall functionName="vorbis_encode_global_psych_setup"/>
+    <functioncall functionName="vorbis_encode_global_stereo"/>
+    <functioncall functionName="vorbis_encode_map_n_res_setup"/>
+    <functioncall functionName="vorbis_encode_noisebias_setup"/>
+    <functioncall functionName="vorbis_encode_peak_setup"/>
+    <functioncall functionName="vorbis_encode_psyset_setup"/>
+    <functioncall functionName="vorbis_encode_residue_setup"/>
+    <functioncall functionName="vorbis_encode_setup_init"/>
+    <functioncall functionName="vorbis_encode_setup_managed"/>
+    <functioncall functionName="vorbis_encode_setup_setting"/>
+    <functioncall functionName="vorbis_encode_setup_vbr"/>
+    <functioncall functionName="vorbis_encode_tonemask_setup"/>
+    <functioncall functionName="vorbis_info_clear"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

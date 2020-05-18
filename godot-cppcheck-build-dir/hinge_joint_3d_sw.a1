@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3367352140">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_rbAFrame&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_rbAFrame&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/joints/hinge_joint_3d_sw.cpp" line="77" column="2"/>
+            <symbol>m_rbAFrame</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_rbBFrame&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_rbBFrame&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/joints/hinge_joint_3d_sw.cpp" line="78" column="2"/>
+            <symbol>m_rbBFrame</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="plane_space" lineNumber="52"/>
+    <functiondecl functionName="setup" lineNumber="160"/>
+    <functiondecl functionName="solve" lineNumber="256"/>
+    <functiondecl functionName="atan2fast" lineNumber="376"/>
+    <functiondecl functionName="get_hinge_angle" lineNumber="391"/>
+    <functiondecl functionName="set_param" lineNumber="399"/>
+    <functiondecl functionName="get_param" lineNumber="432"/>
+    <functiondecl functionName="set_flag" lineNumber="459"/>
+    <functiondecl functionName="get_flag" lineNumber="472"/>
+    <functioncall functionName="Basis"/>
+    <functioncall functionName="CMP_EPSILON"/>
+    <functioncall functionName="HingeJoint3DSW"/>
+    <functioncall functionName="JacobianEntry3DSW"/>
+    <functioncall functionName="Joint3DSW"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="Quat"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_arr"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="abs_y"/>
+    <functioncall functionName="add_constraint"/>
+    <functioncall functionName="angBorthog"/>
+    <functioncall functionName="angVelA"/>
+    <functioncall functionName="angVelAroundHingeAxisA"/>
+    <functioncall functionName="angVelAroundHingeAxisB"/>
+    <functioncall functionName="angVelB"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="angularError"/>
+    <functioncall functionName="angularLimit"/>
+    <functioncall functionName="apply_impulse"/>
+    <functioncall functionName="apply_torque_impulse"/>
+    <functioncall functionName="atan2fast"/>
+    <functioncall functionName="axisA"/>
+    <functioncall functionName="axisB"/>
+    <functioncall functionName="axisInA"/>
+    <functioncall functionName="axisInB"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="clippedMotorImpulse"/>
+    <functioncall functionName="compute_angular_impulse_denominator"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="denom"/>
+    <functioncall functionName="denom2"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frameA"/>
+    <functioncall functionName="frameB"/>
+    <functioncall functionName="getDiagonal"/>
+    <functioncall functionName="get_angular_velocity"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_center_of_mass"/>
+    <functioncall functionName="get_hinge_angle"/>
+    <functioncall functionName="get_inv_inertia"/>
+    <functioncall functionName="get_inv_mass"/>
+    <functioncall functionName="get_principal_inertia_axes"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_velocity_in_local_point"/>
+    <functioncall functionName="hingeAngle"/>
+    <functioncall functionName="hingeAxisWorld"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="impulse"/>
+    <functioncall functionName="impulseMag"/>
+    <functioncall functionName="impulse_vector"/>
+    <functioncall functionName="is_zero_approx"/>
+    <functioncall functionName="jointAxis0"/>
+    <functioncall functionName="jointAxis0local"/>
+    <functioncall functionName="jointAxis1"/>
+    <functioncall functionName="jointAxis1local"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="len2"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="length_squared"/>
+    <functioncall functionName="m_accLimitImpulse"/>
+    <functioncall functionName="m_angularOnly"/>
+    <functioncall functionName="m_enableAngularMotor"/>
+    <functioncall functionName="m_linearJointAxis"/>
+    <functioncall functionName="m_maxMotorImpulse"/>
+    <functioncall functionName="m_motorTargetVelocity"/>
+    <functioncall functionName="m_solveLimit"/>
+    <functioncall functionName="memnew_placement"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normal2"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="p_flag"/>
+    <functioncall functionName="p_param"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="pivotAInW"/>
+    <functioncall functionName="pivotBInW"/>
+    <functioncall functionName="pivotInA"/>
+    <functioncall functionName="pivotInB"/>
+    <functioncall functionName="plane_space"/>
+    <functioncall functionName="projRelVel"/>
+    <functioncall functionName="rbA"/>
+    <functioncall functionName="rbAxisA1"/>
+    <functioncall functionName="rbAxisB1"/>
+    <functioncall functionName="rbB"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="refAxis0"/>
+    <functioncall functionName="refAxis1"/>
+    <functioncall functionName="rel_pos1"/>
+    <functioncall functionName="rel_pos2"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="transposed"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unclippedMotorImpulse"/>
+    <functioncall functionName="vel"/>
+    <functioncall functionName="vel2"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

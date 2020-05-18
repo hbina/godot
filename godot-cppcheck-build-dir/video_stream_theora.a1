@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2207910402">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::theora_eos&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::theora_eos&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::theora_eos</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::vorbis_eos&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::vorbis_eos&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::vorbis_eos</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::td&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::td&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::td</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::pp_inc&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::pp_inc&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::pp_inc</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::pp_level_max&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::pp_level_max&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::pp_level_max</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::pp_level&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::pp_level&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::pp_level</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::last_update_time&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::last_update_time&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::last_update_time</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;VideoStreamPlaybackTheora::time&apos; is not initialized in the constructor." verbose="Member variable &apos;VideoStreamPlaybackTheora::time&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="677" column="28"/>
+            <symbol>VideoStreamPlaybackTheora::time</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;texture&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;texture&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="689" column="2"/>
+            <symbol>texture</symbol>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/theora/video_stream_theora.h:191:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="756" col="2" value="0"/>
+  </FileInfo>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="656" column="34"/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/theora/video_stream_theora.h:191:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/theora/video_stream_theora.cpp" line="756" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="buffer_data" lineNumber="38"/>
+    <functiondecl functionName="queue_page" lineNumber="69"/>
+    <functiondecl functionName="video_write" lineNumber="83"/>
+    <functiondecl functionName="clear" lineNumber="118"/>
+    <functiondecl functionName="set_file" lineNumber="166"/>
+    <functiondecl functionName="get_time" lineNumber="369"/>
+    <functiondecl functionName="get_texture" lineNumber="376"/>
+    <functiondecl functionName="update" lineNumber="381"/>
+    <functiondecl functionName="play" lineNumber="558"/>
+    <functiondecl functionName="stop" lineNumber="571"/>
+    <functiondecl functionName="is_playing" lineNumber="582"/>
+    <functiondecl functionName="set_paused" lineNumber="587"/>
+    <functiondecl functionName="is_paused" lineNumber="592"/>
+    <functiondecl functionName="set_loop" lineNumber="597"/>
+    <functiondecl functionName="has_loop" lineNumber="601"/>
+    <functiondecl functionName="get_length" lineNumber="606"/>
+    <functiondecl functionName="get_stream_name" lineNumber="611"/>
+    <functiondecl functionName="get_loop_count" lineNumber="616"/>
+    <functiondecl functionName="get_playback_position" lineNumber="621"/>
+    <functiondecl functionName="seek" lineNumber="626"/>
+    <functiondecl functionName="set_mix_callback" lineNumber="631"/>
+    <functiondecl functionName="get_channels" lineNumber="637"/>
+    <functiondecl functionName="set_audio_track" lineNumber="642"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="647"/>
+    <functiondecl functionName="_bind_methods" lineNumber="720"/>
+    <functiondecl functionName="load" lineNumber="730"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="754"/>
+    <functiondecl functionName="handles_type" lineNumber="759"/>
+    <functiondecl functionName="get_resource_type" lineNumber="764"/>
+    <functiondecl functionName="buffer_data" lineNumber="38"/>
+    <functiondecl functionName="queue_page" lineNumber="69"/>
+    <functiondecl functionName="video_write" lineNumber="83"/>
+    <functiondecl functionName="clear" lineNumber="118"/>
+    <functiondecl functionName="set_file" lineNumber="166"/>
+    <functiondecl functionName="get_time" lineNumber="369"/>
+    <functiondecl functionName="get_texture" lineNumber="376"/>
+    <functiondecl functionName="update" lineNumber="381"/>
+    <functiondecl functionName="play" lineNumber="558"/>
+    <functiondecl functionName="stop" lineNumber="571"/>
+    <functiondecl functionName="is_playing" lineNumber="582"/>
+    <functiondecl functionName="set_paused" lineNumber="587"/>
+    <functiondecl functionName="is_paused" lineNumber="592"/>
+    <functiondecl functionName="set_loop" lineNumber="597"/>
+    <functiondecl functionName="has_loop" lineNumber="601"/>
+    <functiondecl functionName="get_length" lineNumber="606"/>
+    <functiondecl functionName="get_stream_name" lineNumber="611"/>
+    <functiondecl functionName="get_loop_count" lineNumber="616"/>
+    <functiondecl functionName="get_playback_position" lineNumber="621"/>
+    <functiondecl functionName="seek" lineNumber="626"/>
+    <functiondecl functionName="set_mix_callback" lineNumber="631"/>
+    <functiondecl functionName="get_channels" lineNumber="637"/>
+    <functiondecl functionName="set_audio_track" lineNumber="642"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="647"/>
+    <functiondecl functionName="_streaming_thread" lineNumber="654"/>
+    <functiondecl functionName="_bind_methods" lineNumber="720"/>
+    <functiondecl functionName="load" lineNumber="730"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="754"/>
+    <functiondecl functionName="handles_type" lineNumber="759"/>
+    <functiondecl functionName="get_resource_type" lineNumber="764"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="AUXBUF_LEN"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="FORMAT_RGBA8"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="ImageTexture"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RES"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="TH_DECCTL_GET_PPLEVEL_MAX"/>
+    <functioncall functionName="TH_DECCTL_SET_GRANPOS"/>
+    <functioncall functionName="TH_DECCTL_SET_PPLEVEL"/>
+    <functioncall functionName="VideoStream"/>
+    <functioncall functionName="VideoStreamPlayback"/>
+    <functioncall functionName="VideoStreamPlaybackTheora"/>
+    <functioncall functionName="VideoStreamTheora"/>
+    <functioncall functionName="_streaming_thread"/>
+    <functioncall functionName="audio_done"/>
+    <functioncall functionName="audio_track"/>
+    <functioncall functionName="audio_track_skip"/>
+    <functioncall functionName="aux_buffer"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="buffer_data"/>
+    <functioncall functionName="buffer_full"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_left"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delay_compensation"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="e_o_s"/>
+    <functioncall functionName="eof_reached"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="file_name"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="fps_numerator"/>
+    <functioncall functionName="frame_data"/>
+    <functioncall functionName="frame_done"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_time"/>
+    <functioncall functionName="granulepos"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mix_callback"/>
+    <functioncall functionName="mix_udata"/>
+    <functioncall functionName="nearest_shift"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="og"/>
+    <functioncall functionName="ogg_page_bos"/>
+    <functioncall functionName="ogg_page_serialno"/>
+    <functioncall functionName="ogg_stream_clear"/>
+    <functioncall functionName="ogg_stream_init"/>
+    <functioncall functionName="ogg_stream_packetout"/>
+    <functioncall functionName="ogg_stream_pagein"/>
+    <functioncall functionName="ogg_sync_buffer"/>
+    <functioncall functionName="ogg_sync_clear"/>
+    <functioncall functionName="ogg_sync_init"/>
+    <functioncall functionName="ogg_sync_pageout"/>
+    <functioncall functionName="ogg_sync_wrote"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="oy"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_paused"/>
+    <functioncall functionName="p_track"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="page"/>
+    <functioncall functionName="pcm"/>
+    <functioncall functionName="pixel_fmt"/>
+    <functioncall functionName="playing"/>
+    <functioncall functionName="post"/>
+    <functioncall functionName="pp_level"/>
+    <functioncall functionName="pp_level_max"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="queue_page"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="rate"/>
+    <functioncall functionName="rb_power"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_audio_track"/>
+    <functioncall functionName="set_file"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="space_left"/>
+    <functioncall functionName="stateflag"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tc"/>
+    <functioncall functionName="td"/>
+    <functioncall functionName="tdiff"/>
+    <functioncall functionName="test"/>
+    <functioncall functionName="th_comment_clear"/>
+    <functioncall functionName="th_comment_init"/>
+    <functioncall functionName="th_decode_alloc"/>
+    <functioncall functionName="th_decode_ctl"/>
+    <functioncall functionName="th_decode_free"/>
+    <functioncall functionName="th_decode_headerin"/>
+    <functioncall functionName="th_decode_packetin"/>
+    <functioncall functionName="th_decode_ycbcr_out"/>
+    <functioncall functionName="th_granule_time"/>
+    <functioncall functionName="th_info_clear"/>
+    <functioncall functionName="th_info_init"/>
+    <functioncall functionName="th_setup_free"/>
+    <functioncall functionName="theora_p"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread"/>
+    <functioncall functionName="thread_eof"/>
+    <functioncall functionName="thread_exit"/>
+    <functioncall functionName="thread_sem"/>
+    <functioncall functionName="ti"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="to_read"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ts"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="vb"/>
+    <functioncall functionName="vc"/>
+    <functioncall functionName="vd"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="video_write"/>
+    <functioncall functionName="videobuf_granulepos"/>
+    <functioncall functionName="videobuf_time"/>
+    <functioncall functionName="vo"/>
+    <functioncall functionName="vorbis_block_clear"/>
+    <functioncall functionName="vorbis_block_init"/>
+    <functioncall functionName="vorbis_comment_clear"/>
+    <functioncall functionName="vorbis_comment_init"/>
+    <functioncall functionName="vorbis_dsp_clear"/>
+    <functioncall functionName="vorbis_eos"/>
+    <functioncall functionName="vorbis_info_clear"/>
+    <functioncall functionName="vorbis_info_init"/>
+    <functioncall functionName="vorbis_p"/>
+    <functioncall functionName="vorbis_synthesis"/>
+    <functioncall functionName="vorbis_synthesis_blockin"/>
+    <functioncall functionName="vorbis_synthesis_headerin"/>
+    <functioncall functionName="vorbis_synthesis_init"/>
+    <functioncall functionName="vorbis_synthesis_pcmout"/>
+    <functioncall functionName="vorbis_synthesis_read"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="wait"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="write"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="yuv"/>
+    <functioncall functionName="yuv420_2_rgb8888"/>
+    <functioncall functionName="yuv422_2_rgb8888"/>
+    <functioncall functionName="yuv444_2_rgb8888"/>
+  </FileInfo>
+</analyzerinfo>

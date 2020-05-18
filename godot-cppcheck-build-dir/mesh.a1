@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1832190262">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="439" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="436" column="57" info="Assignment &apos;E=normal_accum.find(t)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="437" column="17" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="1546" column="50"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="617" column="20"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="631" column="20"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const unsigned char * and const float * which have an incompatible binary data representation." verbose="Casting between const unsigned char * and const float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="682" column="33"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_set_surfaces&apos; argument 1 names different: declaration &apos;p_data&apos; definition &apos;p_surfaces&apos;." verbose="Function &apos;_set_surfaces&apos; argument 1 names different: declaration &apos;p_data&apos; definition &apos;p_surfaces&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="910" column="44"/>
+            <location file0="/home/hbina/git/godot/scene/resources/mesh.cpp" file="/home/hbina/git/godot/scene/resources/mesh.h" line="160" column="34"/>
+            <symbol>_set_surfaces</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;what&apos; is assigned a value that is never used." verbose="Variable &apos;what&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="744" column="14"/>
+            <symbol>what</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/mesh.h:123:24" call-funcname="surface_get_primitive_type" call-argnr="1" file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="274" col="33" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="280" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/mesh.h:119:16" call-funcname="surface_get_arrays" call-argnr="1" file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="277" col="31" call-argexpr="i" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="280" col="9" info="Assuming that condition 'i==0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/mesh.h:196:7" call-funcname="add_surface" call-argnr="6" file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="821" col="15" call-argexpr="index_count" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="787" col="22" info="Assignment 'index_count=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/mesh.h:241:8" call-funcname="lightmap_unwrap_cached" call-argnr="1" file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="1376" col="31" call-argexpr="cache_data" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="1373" col="20" info="Assignment 'cache_data=nullptr', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/mesh.h:241:8" call-funcname="lightmap_unwrap_cached" call-argnr="2" file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="1376" col="31" call-argexpr="cache_size" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="1374" col="28" info="Assignment 'cache_size=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/mesh.h:241:8" call-funcname="lightmap_unwrap_cached" call-argnr="3" file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="1376" col="31" call-argexpr="use_cache" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/mesh.cpp" line="1375" col="19" info="Assignment 'use_cache=false', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="generate_triangle_mesh" lineNumber="42"/>
+    <functiondecl functionName="generate_debug_mesh_lines" lineNumber="108"/>
+    <functiondecl functionName="generate_debug_mesh_indices" lineNumber="144"/>
+    <functiondecl functionName="surface_is_softbody_friendly" lineNumber="158"/>
+    <functiondecl functionName="get_faces" lineNumber="163"/>
+    <functiondecl functionName="create_convex_shape" lineNumber="229"/>
+    <functiondecl functionName="create_trimesh_shape" lineNumber="246"/>
+    <functiondecl functionName="create_outline" lineNumber="268"/>
+    <functiondecl functionName="set_lightmap_size_hint" lineNumber="475"/>
+    <functiondecl functionName="get_lightmap_size_hint" lineNumber="479"/>
+    <functiondecl functionName="_bind_methods" lineNumber="483"/>
+    <functiondecl functionName="clear_cache" lineNumber="539"/>
+    <functiondecl functionName="convex_decompose" lineNumber="544"/>
+    <functiondecl functionName="_fix_array_compatibility" lineNumber="584"/>
+    <functiondecl functionName="_set" lineNumber="702"/>
+    <functiondecl functionName="_get_surfaces" lineNumber="841"/>
+    <functiondecl functionName="_create_if_empty" lineNumber="903"/>
+    <functiondecl functionName="_set_surfaces" lineNumber="910"/>
+    <functiondecl functionName="_get" lineNumber="1033"/>
+    <functiondecl functionName="_get_property_list" lineNumber="1068"/>
+    <functiondecl functionName="_recompute_aabb" lineNumber="1089"/>
+    <functiondecl functionName="add_surface_from_arrays" lineNumber="1139"/>
+    <functiondecl functionName="surface_get_arrays" lineNumber="1159"/>
+    <functiondecl functionName="surface_get_blend_shape_arrays" lineNumber="1164"/>
+    <functiondecl functionName="surface_get_lods" lineNumber="1169"/>
+    <functiondecl functionName="get_surface_count" lineNumber="1174"/>
+    <functiondecl functionName="add_blend_shape" lineNumber="1179"/>
+    <functiondecl functionName="get_blend_shape_count" lineNumber="1199"/>
+    <functiondecl functionName="get_blend_shape_name" lineNumber="1203"/>
+    <functiondecl functionName="clear_blend_shapes" lineNumber="1207"/>
+    <functiondecl functionName="set_blend_shape_mode" lineNumber="1214"/>
+    <functiondecl functionName="get_blend_shape_mode" lineNumber="1222"/>
+    <functiondecl functionName="surface_get_array_len" lineNumber="1227"/>
+    <functiondecl functionName="surface_get_array_index_len" lineNumber="1233"/>
+    <functiondecl functionName="surface_get_format" lineNumber="1239"/>
+    <functiondecl functionName="surface_get_primitive_type" lineNumber="1245"/>
+    <functiondecl functionName="surface_set_material" lineNumber="1251"/>
+    <functiondecl functionName="surface_find_by_name" lineNumber="1263"/>
+    <functiondecl functionName="surface_set_name" lineNumber="1272"/>
+    <functiondecl functionName="surface_get_name" lineNumber="1280"/>
+    <functiondecl functionName="surface_update_region" lineNumber="1286"/>
+    <functiondecl functionName="surface_set_custom_aabb" lineNumber="1293"/>
+    <functiondecl functionName="surface_get_material" lineNumber="1301"/>
+    <functiondecl functionName="get_rid" lineNumber="1307"/>
+    <functiondecl functionName="get_aabb" lineNumber="1312"/>
+    <functiondecl functionName="clear_surfaces" lineNumber="1317"/>
+    <functiondecl functionName="set_custom_aabb" lineNumber="1326"/>
+    <functiondecl functionName="get_custom_aabb" lineNumber="1334"/>
+    <functiondecl functionName="regen_normalmaps" lineNumber="1339"/>
+    <functiondecl functionName="lightmap_unwrap" lineNumber="1372"/>
+    <functiondecl functionName="lightmap_unwrap_cached" lineNumber="1379"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1561"/>
+    <functiondecl functionName="reload_from_file" lineNumber="1625"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="ARRAY_BONES"/>
+    <functioncall functionName="ARRAY_COLOR"/>
+    <functioncall functionName="ARRAY_COMPRESS_BASE"/>
+    <functioncall functionName="ARRAY_COMPRESS_COLOR"/>
+    <functioncall functionName="ARRAY_COMPRESS_DEFAULT"/>
+    <functioncall functionName="ARRAY_COMPRESS_INDEX"/>
+    <functioncall functionName="ARRAY_COMPRESS_NORMAL"/>
+    <functioncall functionName="ARRAY_COMPRESS_TANGENT"/>
+    <functioncall functionName="ARRAY_COMPRESS_TEX_UV"/>
+    <functioncall functionName="ARRAY_COMPRESS_TEX_UV2"/>
+    <functioncall functionName="ARRAY_FLAG_USE_2D_VERTICES"/>
+    <functioncall functionName="ARRAY_FORMAT_BONES"/>
+    <functioncall functionName="ARRAY_FORMAT_COLOR"/>
+    <functioncall functionName="ARRAY_FORMAT_INDEX"/>
+    <functioncall functionName="ARRAY_FORMAT_NORMAL"/>
+    <functioncall functionName="ARRAY_FORMAT_TANGENT"/>
+    <functioncall functionName="ARRAY_FORMAT_TEX_UV"/>
+    <functioncall functionName="ARRAY_FORMAT_TEX_UV2"/>
+    <functioncall functionName="ARRAY_FORMAT_VERTEX"/>
+    <functioncall functionName="ARRAY_FORMAT_WEIGHTS"/>
+    <functioncall functionName="ARRAY_INDEX"/>
+    <functioncall functionName="ARRAY_MAX"/>
+    <functioncall functionName="ARRAY_NORMAL"/>
+    <functioncall functionName="ARRAY_TANGENT"/>
+    <functioncall functionName="ARRAY_TEX_UV"/>
+    <functioncall functionName="ARRAY_TEX_UV2"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="ARRAY_WEIGHTS"/>
+    <functioncall functionName="ARRAY_WEIGHTS_SIZE"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="ArrayFormat"/>
+    <functioncall functionName="ArrayMesh"/>
+    <functioncall functionName="ArrayType"/>
+    <functioncall functionName="BIND_CONSTANT"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BLEND_SHAPE_MODE_NORMALIZED"/>
+    <functioncall functionName="BLEND_SHAPE_MODE_RELATIVE"/>
+    <functioncall functionName="BlendShapeMode"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="ConcavePolygonShape3D"/>
+    <functioncall functionName="ConvexPolygonShape3D"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="Dictionary"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_BUG"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="Face3"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="METHOD_FLAG_EDITOR"/>
+    <functioncall functionName="Mesh"/>
+    <functioncall functionName="NO_INDEX_ARRAY"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PACKED_STRING_ARRAY"/>
+    <functioncall functionName="PRIMITIVE_LINES"/>
+    <functioncall functionName="PRIMITIVE_LINE_STRIP"/>
+    <functioncall functionName="PRIMITIVE_MAX"/>
+    <functioncall functionName="PRIMITIVE_POINTS"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLE_STRIP"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_EDITOR"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="Pair"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="PrimitiveType"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RES_BASE_EXTENSION"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="SurfaceTool"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="TriangleMesh"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2I"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="Vertex"/>
+    <functioncall functionName="WARN_DEPRECATED_MSG"/>
+    <functioncall functionName="_2d"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_create_if_empty"/>
+    <functioncall functionName="_fix_array_compatibility"/>
+    <functioncall functionName="_get_surfaces"/>
+    <functioncall functionName="_is_generated"/>
+    <functioncall functionName="_recompute_aabb"/>
+    <functioncall functionName="_scs_create"/>
+    <functioncall functionName="_set_surfaces"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="add_blend_shape"/>
+    <functioncall functionName="add_bones"/>
+    <functioncall functionName="add_color"/>
+    <functioncall functionName="add_normal"/>
+    <functioncall functionName="add_surface"/>
+    <functioncall functionName="add_surface_from_arrays"/>
+    <functioncall functionName="add_tangent"/>
+    <functioncall functionName="add_uv"/>
+    <functioncall functionName="add_uv2"/>
+    <functioncall functionName="add_vertex"/>
+    <functioncall functionName="add_weights"/>
+    <functioncall functionName="append_array"/>
+    <functioncall functionName="array_data"/>
+    <functioncall functionName="array_index_data"/>
+    <functioncall functionName="array_length"/>
+    <functioncall functionName="array_mesh_lightmap_unwrap_callback"/>
+    <functioncall functionName="arrays"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="blend_shape_mode"/>
+    <functioncall functionName="blend_shapes"/>
+    <functioncall functionName="bone_8"/>
+    <functioncall functionName="bone_aabb"/>
+    <functioncall functionName="bone_aabbs"/>
+    <functioncall functionName="bones"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cache_data"/>
+    <functioncall functionName="cache_size"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_blend_shapes"/>
+    <functioncall functionName="clear_cache"/>
+    <functioncall functionName="clear_surfaces"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="commit"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convex_composition_function"/>
+    <functioncall functionName="convex_points"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_convex_shape"/>
+    <functioncall functionName="create_from"/>
+    <functioncall functionName="create_outline"/>
+    <functioncall functionName="create_trimesh_shape"/>
+    <functioncall functionName="create_vertex_array_from_triangle_arrays"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="custom_aabb"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="debug_lines"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="edge_length"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="face_points"/>
+    <functioncall functionName="facecount"/>
+    <functioncall functionName="faces"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="gen_index_count"/>
+    <functioncall functionName="gen_indices"/>
+    <functioncall functionName="gen_uvs"/>
+    <functioncall functionName="gen_vertex_count"/>
+    <functioncall functionName="gen_vertices"/>
+    <functioncall functionName="generate_tangents"/>
+    <functioncall functionName="generate_triangle_mesh"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_aabb"/>
+    <functioncall functionName="get_blend_shape_count"/>
+    <functioncall functionName="get_blend_shape_mode"/>
+    <functioncall functionName="get_blend_shape_name"/>
+    <functioncall functionName="get_class_static"/>
+    <functioncall functionName="get_custom_aabb"/>
+    <functioncall functionName="get_faces"/>
+    <functioncall functionName="get_indices"/>
+    <functioncall functionName="get_lightmap_size_hint"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slicec"/>
+    <functioncall functionName="get_surface_count"/>
+    <functioncall functionName="get_triangles"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_vertices"/>
+    <functioncall functionName="half_to_float"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_bones"/>
+    <functioncall functionName="has_indices"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="index_array_length"/>
+    <functioncall functionName="index_count"/>
+    <functioncall functionName="index_data"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="is_2d"/>
+    <functioncall functionName="is_degenerate"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="lightmap_unwrap"/>
+    <functioncall functionName="lightmap_unwrap_cached"/>
+    <functioncall functionName="lod"/>
+    <functioncall functionName="lods"/>
+    <functioncall functionName="looking_at"/>
+    <functioncall functionName="material"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="merge_with"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="mesh_add_surface"/>
+    <functioncall functionName="mesh_clear"/>
+    <functioncall functionName="mesh_create"/>
+    <functioncall functionName="mesh_create_from_surfaces"/>
+    <functioncall functionName="mesh_create_surface_data_from_arrays"/>
+    <functioncall functionName="mesh_get_surface"/>
+    <functioncall functionName="mesh_set_blend_shape_mode"/>
+    <functioncall functionName="mesh_set_custom_aabb"/>
+    <functioncall functionName="mesh_surface_get_arrays"/>
+    <functioncall functionName="mesh_surface_get_blend_shape_arrays"/>
+    <functioncall functionName="mesh_surface_get_lods"/>
+    <functioncall functionName="mesh_surface_set_material"/>
+    <functioncall functionName="mesh_surface_update_region"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_indices"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_array"/>
+    <functioncall functionName="p_arrays"/>
+    <functioncall functionName="p_base_transform"/>
+    <functioncall functionName="p_blend_shapes"/>
+    <functioncall functionName="p_bone_aabb"/>
+    <functioncall functionName="p_custom"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_elements"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_format"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_index_array"/>
+    <functioncall functionName="p_index_count"/>
+    <functioncall functionName="p_lods"/>
+    <functioncall functionName="p_material"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_primitive"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_src"/>
+    <functioncall functionName="p_surface"/>
+    <functioncall functionName="p_texel_size"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_vertex_count"/>
+    <functioncall functionName="primitive"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_cache_data"/>
+    <functioncall functionName="r_cache_size"/>
+    <functioncall functionName="r_used_cache"/>
+    <functioncall functionName="regen_normalmaps"/>
+    <functioncall functionName="reload_from_file"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sd"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_blend_shape_mode"/>
+    <functioncall functionName="set_custom_aabb"/>
+    <functioncall functionName="set_faces"/>
+    <functioncall functionName="set_lightmap_size_hint"/>
+    <functioncall functionName="set_material"/>
+    <functioncall functionName="set_method_flags"/>
+    <functioncall functionName="set_points"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="size_x"/>
+    <functioncall functionName="size_y"/>
+    <functioncall functionName="sk"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src_stride"/>
+    <functioncall functionName="st"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="surface"/>
+    <functioncall functionName="surface_data"/>
+    <functioncall functionName="surface_find_by_name"/>
+    <functioncall functionName="surface_get_array_index_len"/>
+    <functioncall functionName="surface_get_array_len"/>
+    <functioncall functionName="surface_get_arrays"/>
+    <functioncall functionName="surface_get_blend_shape_arrays"/>
+    <functioncall functionName="surface_get_format"/>
+    <functioncall functionName="surface_get_material"/>
+    <functioncall functionName="surface_get_name"/>
+    <functioncall functionName="surface_get_primitive_type"/>
+    <functioncall functionName="surface_set_material"/>
+    <functioncall functionName="surface_set_name"/>
+    <functioncall functionName="surface_update_region"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tangent"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="transposed"/>
+    <functioncall functionName="triangle_indices"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="use_cache"/>
+    <functioncall functionName="uv"/>
+    <functioncall functionName="uv2"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="vc"/>
+    <functioncall functionName="vertex"/>
+    <functioncall functionName="vertex_16bit"/>
+    <functioncall functionName="vertex_2d"/>
+    <functioncall functionName="vertex_count"/>
+    <functioncall functionName="vertex_data"/>
+    <functioncall functionName="vertex_ofs"/>
+    <functioncall functionName="vertices"/>
+    <functioncall functionName="vertices_size"/>
+    <functioncall functionName="weight"/>
+    <functioncall functionName="weight_32"/>
+    <functioncall functionName="weights"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

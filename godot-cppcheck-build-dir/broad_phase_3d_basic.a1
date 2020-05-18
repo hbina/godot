@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1334187094">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;current&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;current&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="220" column="2"/>
+            <symbol>current</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;unpair_callback&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;unpair_callback&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="221" column="2"/>
+            <symbol>unpair_callback</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;pair_callback&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;pair_callback&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="223" column="2"/>
+            <symbol>pair_callback</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cull_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cull_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.h" line="95" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_sw.h" line="61" column="14" info="Virtual function in base class"/>
+            <symbol>cull_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cull_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cull_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.h" line="96" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_sw.h" line="62" column="14" info="Virtual function in base class"/>
+            <symbol>cull_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cull_aabb&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cull_aabb&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.h" line="97" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_sw.h" line="63" column="14" info="Virtual function in base class"/>
+            <symbol>cull_aabb</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;update&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;update&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.h" line="102" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_sw.h" line="68" column="15" info="Virtual function in base class"/>
+            <symbol>update</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="54" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="52" column="49" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="53" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="60" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="58" column="49" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="59" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="92" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="90" column="55" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="91" column="18" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="98" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="96" column="55" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="97" column="18" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="104" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="102" column="55" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/broad_phase_3d_basic.cpp" line="103" column="18" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="create" lineNumber="35"/>
+    <functiondecl functionName="move" lineNumber="50"/>
+    <functiondecl functionName="set_static" lineNumber="56"/>
+    <functiondecl functionName="remove" lineNumber="62"/>
+    <functiondecl functionName="get_object" lineNumber="88"/>
+    <functiondecl functionName="is_static" lineNumber="94"/>
+    <functiondecl functionName="get_subindex" lineNumber="100"/>
+    <functiondecl functionName="cull_point" lineNumber="107"/>
+    <functiondecl functionName="cull_segment" lineNumber="127"/>
+    <functiondecl functionName="cull_aabb" lineNumber="146"/>
+    <functiondecl functionName="set_pair_callback" lineNumber="166"/>
+    <functiondecl functionName="set_unpair_callback" lineNumber="171"/>
+    <functiondecl functionName="update" lineNumber="177"/>
+    <functiondecl functionName="_create" lineNumber="213"/>
+    <functioncall functionName="BroadPhase3DBasic"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="Element"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="I"/>
+    <functioncall functionName="J"/>
+    <functioncall functionName="PairKey"/>
+    <functioncall functionName="_static"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="has_point"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="intersects"/>
+    <functioncall functionName="intersects_segment"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_pair_callback"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_static"/>
+    <functioncall functionName="p_subindex"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_unpair_callback"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="pair_callback"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rc"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="subindex"/>
+    <functioncall functionName="unpair_callback"/>
+    <functioncall functionName="unpair_userdata"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

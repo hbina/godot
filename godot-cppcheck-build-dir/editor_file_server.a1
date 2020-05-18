@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4220978340">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/fileserver/editor_file_server.cpp" line="58" column="19"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/fileserver/editor_file_server.cpp" line="276" column="27"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/fileserver/editor_file_server.h:62:14" my-argnr="1" my-argname="cd" file="/home/hbina/git/godot/editor/fileserver/editor_file_server.cpp" line="44" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_close_client" lineNumber="42"/>
+    <functiondecl functionName="_subthread_start" lineNumber="56"/>
+    <functiondecl functionName="_thread_start" lineNumber="274"/>
+    <functiondecl functionName="start" lineNumber="314"/>
+    <functiondecl functionName="is_active" lineNumber="322"/>
+    <functiondecl functionName="stop" lineNumber="327"/>
+    <functioncall functionName="CMD_ACTIVATE"/>
+    <functioncall functionName="CMD_NONE"/>
+    <functioncall functionName="CMD_STOP"/>
+    <functioncall functionName="ClientData"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FILE_NOT_FOUND"/>
+    <functioncall functionName="ERR_INVALID_DATA"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="EditorFileServer"/>
+    <functioncall functionName="EditorSettings"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RESPONSE_DATA"/>
+    <functioncall functionName="RESPONSE_FILE_EXISTS"/>
+    <functioncall functionName="RESPONSE_GET_MODTIME"/>
+    <functioncall functionName="RESPONSE_OPEN"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="VariantContainer"/>
+    <functioncall functionName="_EDITOR_DEF"/>
+    <functioncall functionName="_close_client"/>
+    <functioncall functionName="_set"/>
+    <functioncall functionName="_set_only"/>
+    <functioncall functionName="_subthread_start"/>
+    <functioncall functionName="_thread_start"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="blocklen"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf4"/>
+    <functioncall functionName="cd"/>
+    <functioncall functionName="cmd"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="decode_uint32"/>
+    <functioncall functionName="decode_uint64"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="disconnect_from_host"/>
+    <functioncall functionName="encode_uint32"/>
+    <functioncall functionName="encode_uint64"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="fa"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_modified_time"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_default_value"/>
+    <functioncall functionName="hide_from_editor"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="is_connection_available"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="namelen"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="p_emit_signal"/>
+    <functioncall functionName="p_order"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_setting"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="passlen"/>
+    <functioncall functionName="password"/>
+    <functioncall functionName="port"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="put_data"/>
+    <functioncall functionName="quit"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="restart_if_changed"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="s2"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="self"/>
+    <functioncall functionName="set_no_delay"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="take_connection"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thread"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="variant"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="wait_mutex"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

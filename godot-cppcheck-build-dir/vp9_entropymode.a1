@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3828877889">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="428" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;j&apos; shadows outer variable" verbose="Local variable &apos;j&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="382" column="9" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="338" column="10" info="Shadowed declaration"/>
+            <symbol>j</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:278:6" my-argnr="1" my-argname="tx_count_32x32p" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="280" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:278:6" my-argnr="2" my-argname="ct_32x32p" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="280" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:291:6" my-argnr="1" my-argname="tx_count_16x16p" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="293" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:291:6" my-argnr="2" my-argname="ct_16x16p" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="293" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:299:6" my-argnr="1" my-argname="tx_count_8x8p" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="301" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:299:6" my-argnr="2" my-argname="ct_8x8p" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="301" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:317:13" my-argnr="1" my-argname="fc" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="318" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:337:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="339" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c:410:13" my-argnr="1" my-argname="lf" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_entropymode.c" line="411" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="tx_counts_to_branch_counts_32x32" lineNumber="278"/>
+    <functiondecl functionName="tx_counts_to_branch_counts_16x16" lineNumber="291"/>
+    <functiondecl functionName="tx_counts_to_branch_counts_8x8" lineNumber="299"/>
+    <functiondecl functionName="init_mode_probs" lineNumber="317"/>
+    <functiondecl functionName="vp9_adapt_mode_probs" lineNumber="337"/>
+    <functiondecl functionName="set_default_lf_deltas" lineNumber="410"/>
+    <functiondecl functionName="vp9_setup_past_independence" lineNumber="423"/>
+    <functioncall functionName="ALTREF_FRAME"/>
+    <functioncall functionName="BLOCK_SIZE_GROUPS"/>
+    <functioncall functionName="COMP_INTER_CONTEXTS"/>
+    <functioncall functionName="D117_PRED"/>
+    <functioncall functionName="D135_PRED"/>
+    <functioncall functionName="D153_PRED"/>
+    <functioncall functionName="D207_PRED"/>
+    <functioncall functionName="D45_PRED"/>
+    <functioncall functionName="D63_PRED"/>
+    <functioncall functionName="DC_PRED"/>
+    <functioncall functionName="EIGHTTAP"/>
+    <functioncall functionName="EIGHTTAP_SHARP"/>
+    <functioncall functionName="EIGHTTAP_SMOOTH"/>
+    <functioncall functionName="GOLDEN_FRAME"/>
+    <functioncall functionName="H_PRED"/>
+    <functioncall functionName="INTER_MODES"/>
+    <functioncall functionName="INTER_MODE_CONTEXTS"/>
+    <functioncall functionName="INTER_OFFSET"/>
+    <functioncall functionName="INTRA_FRAME"/>
+    <functioncall functionName="INTRA_INTER_CONTEXTS"/>
+    <functioncall functionName="INTRA_MODES"/>
+    <functioncall functionName="LAST_FRAME"/>
+    <functioncall functionName="NEARESTMV"/>
+    <functioncall functionName="NEARMV"/>
+    <functioncall functionName="NEWMV"/>
+    <functioncall functionName="PARTITION_CONTEXTS"/>
+    <functioncall functionName="PARTITION_HORZ"/>
+    <functioncall functionName="PARTITION_NONE"/>
+    <functioncall functionName="PARTITION_SPLIT"/>
+    <functioncall functionName="PARTITION_TYPES"/>
+    <functioncall functionName="PARTITION_VERT"/>
+    <functioncall functionName="REF_CONTEXTS"/>
+    <functioncall functionName="SEGMENT_DELTADATA"/>
+    <functioncall functionName="SKIP_CONTEXTS"/>
+    <functioncall functionName="SWITCHABLE_FILTERS"/>
+    <functioncall functionName="SWITCHABLE_FILTER_CONTEXTS"/>
+    <functioncall functionName="TM_PRED"/>
+    <functioncall functionName="TREE_SIZE"/>
+    <functioncall functionName="TX_16X16"/>
+    <functioncall functionName="TX_32X32"/>
+    <functioncall functionName="TX_4X4"/>
+    <functioncall functionName="TX_8X8"/>
+    <functioncall functionName="V_PRED"/>
+    <functioncall functionName="ZEROMV"/>
+    <functioncall functionName="branch_ct_16x16p"/>
+    <functioncall functionName="branch_ct_32x32p"/>
+    <functioncall functionName="branch_ct_8x8p"/>
+    <functioncall functionName="cm"/>
+    <functioncall functionName="comp_inter_prob"/>
+    <functioncall functionName="comp_ref_prob"/>
+    <functioncall functionName="counts"/>
+    <functioncall functionName="current_frame_seg_map"/>
+    <functioncall functionName="default_comp_inter_p"/>
+    <functioncall functionName="default_comp_ref_p"/>
+    <functioncall functionName="default_if_uv_probs"/>
+    <functioncall functionName="default_if_y_probs"/>
+    <functioncall functionName="default_inter_mode_probs"/>
+    <functioncall functionName="default_intra_inter_p"/>
+    <functioncall functionName="default_partition_probs"/>
+    <functioncall functionName="default_single_ref_p"/>
+    <functioncall functionName="default_skip_probs"/>
+    <functioncall functionName="default_switchable_interp_prob"/>
+    <functioncall functionName="default_tx_probs"/>
+    <functioncall functionName="fc"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame_context_idx"/>
+    <functioncall functionName="frame_is_intra_only"/>
+    <functioncall functionName="frame_parallel_decode"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init_mode_probs"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="inter_mode_probs"/>
+    <functioncall functionName="intra_inter_prob"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="last_frame_seg_map"/>
+    <functioncall functionName="last_mode_deltas"/>
+    <functioncall functionName="last_ref_deltas"/>
+    <functioncall functionName="lf"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mi_cols"/>
+    <functioncall functionName="mode_mv_merge_probs"/>
+    <functioncall functionName="partition_prob"/>
+    <functioncall functionName="prev_mip"/>
+    <functioncall functionName="ref_frame_sign_bias"/>
+    <functioncall functionName="seg"/>
+    <functioncall functionName="set_default_lf_deltas"/>
+    <functioncall functionName="single_ref_prob"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip_probs"/>
+    <functioncall functionName="switchable_interp_prob"/>
+    <functioncall functionName="tx_counts_to_branch_counts_16x16"/>
+    <functioncall functionName="tx_counts_to_branch_counts_32x32"/>
+    <functioncall functionName="tx_counts_to_branch_counts_8x8"/>
+    <functioncall functionName="uv_mode_prob"/>
+    <functioncall functionName="vp9_clearall_segfeatures"/>
+    <functioncall functionName="vp9_copy"/>
+    <functioncall functionName="vp9_default_coef_probs"/>
+    <functioncall functionName="vp9_init_mv_probs"/>
+    <functioncall functionName="vp9_inter_mode_tree"/>
+    <functioncall functionName="vp9_intra_mode_tree"/>
+    <functioncall functionName="vp9_partition_tree"/>
+    <functioncall functionName="vp9_switchable_interp_tree"/>
+    <functioncall functionName="vp9_zero"/>
+    <functioncall functionName="vpx_tree_merge_probs"/>
+    <functioncall functionName="y_mode_prob"/>
+  </FileInfo>
+</analyzerinfo>

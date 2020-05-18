@@ -1,0 +1,906 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1935340406">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InstanceBase::mirror&apos; is not initialized in the constructor." verbose="Member variable &apos;InstanceBase::mirror&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="228" column="3"/>
+            <symbol>InstanceBase::mirror</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InstanceBase::depth&apos; is not initialized in the constructor." verbose="Member variable &apos;InstanceBase::depth&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="228" column="3"/>
+            <symbol>InstanceBase::depth</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Light::radius_cache&apos; is not initialized in the constructor." verbose="Member variable &apos;Light::radius_cache&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="808" column="3"/>
+            <symbol>Light::radius_cache</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Light::shadows_next_ptr&apos; is not initialized in the constructor." verbose="Member variable &apos;Light::shadows_next_ptr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="808" column="3"/>
+            <symbol>Light::shadows_next_ptr</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CommandNinePatch::margin&apos; is not initialized in the constructor." verbose="Member variable &apos;CommandNinePatch::margin&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="961" column="4"/>
+            <symbol>CommandNinePatch::margin</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CommandPrimitive::point_count&apos; is not initialized in the constructor." verbose="Member variable &apos;CommandPrimitive::point_count&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="986" column="4"/>
+            <symbol>CommandPrimitive::point_count</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Viewport::viewport_render_direct_to_screen&apos; is not initialized in the constructor." verbose="Member variable &apos;Viewport::viewport_render_direct_to_screen&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="123" column="3"/>
+            <symbol>Viewport::viewport_render_direct_to_screen</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Viewport::hide_scenario&apos; is not initialized in the constructor." verbose="Member variable &apos;Viewport::hide_scenario&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="123" column="3"/>
+            <symbol>Viewport::hide_scenario</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Viewport::hide_canvas&apos; is not initialized in the constructor." verbose="Member variable &apos;Viewport::hide_canvas&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="123" column="3"/>
+            <symbol>Viewport::hide_canvas</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InstanceReflectionProbeData::owner&apos; is not initialized in the constructor." verbose="Member variable &apos;InstanceReflectionProbeData::owner&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="282" column="3"/>
+            <symbol>InstanceReflectionProbeData::owner</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InstanceDecalData::owner&apos; is not initialized in the constructor." verbose="Member variable &apos;InstanceDecalData::owner&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="301" column="3"/>
+            <symbol>InstanceDecalData::owner</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;InstanceGIProbeData::owner&apos; is not initialized in the constructor." verbose="Member variable &apos;InstanceGIProbeData::owner&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="371" column="3"/>
+            <symbol>InstanceGIProbeData::owner</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;base_type&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;base_type&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="231" column="4"/>
+            <symbol>base_type</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cast_shadows&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cast_shadows&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="232" column="4"/>
+            <symbol>cast_shadows</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;color&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;color&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="811" column="4"/>
+            <symbol>color</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;final_modulate&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;final_modulate&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="1278" column="4"/>
+            <symbol>final_modulate</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cull_cache&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cull_cache&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="1325" column="4"/>
+            <symbol>cull_cache</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;canvas&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;canvas&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="104" column="5"/>
+            <symbol>canvas</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;update_mode&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;update_mode&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="124" column="4"/>
+            <symbol>update_mode</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;clear_mode&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;clear_mode&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="125" column="4"/>
+            <symbol>clear_mode</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;viewport_to_screen&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;viewport_to_screen&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="128" column="4"/>
+            <symbol>viewport_to_screen</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;debug_draw&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;debug_draw&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="132" column="4"/>
+            <symbol>debug_draw</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;msaa&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;msaa&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="133" column="4"/>
+            <symbol>msaa</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;screen_space_aa&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;screen_space_aa&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="134" column="4"/>
+            <symbol>screen_space_aa</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;modulate&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;modulate&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="64" column="4"/>
+            <symbol>modulate</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cull_mode&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cull_mode&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="107" column="4"/>
+            <symbol>cull_mode</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;modulate&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;modulate&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="151" column="4"/>
+            <symbol>modulate</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;offset&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;offset&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="91" column="4"/>
+            <symbol>offset</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;debug&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;debug&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="128" column="16"/>
+            <symbol>debug</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;octree_id&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;octree_id&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="202" column="4"/>
+            <symbol>octree_id</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;dependency_deleted&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;dependency_deleted&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="184" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="186" column="16" info="Virtual function in base class"/>
+            <symbol>dependency_deleted</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;dependency_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;dependency_changed&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rendering_server_scene.h" line="194" column="16" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/rendering_server_raster.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer.h" line="187" column="16" info="Virtual function in base class"/>
+            <symbol>dependency_changed</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:137:7" call-funcname="find_item" call-argnr="1" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="145" col="14" my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:144:8" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h:156:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="158" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h:156:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="159" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:88:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="90" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:88:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="90" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:137:7" call-funcname="find_item" call-argnr="1" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="145" col="14" my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:144:8" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h:156:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="158" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h:156:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_viewport.h" line="159" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:88:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="90" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:88:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="90" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h:80:23" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/servers/rendering/rendering_server_canvas.h" line="82" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="black_bars_set_margins" lineNumber="47"/>
+    <functiondecl functionName="black_bars_set_images" lineNumber="55"/>
+    <functiondecl functionName="_draw_margins" lineNumber="63"/>
+    <functiondecl functionName="free" lineNumber="70"/>
+    <functiondecl functionName="request_frame_drawn_callback" lineNumber="86"/>
+    <functiondecl functionName="draw" lineNumber="97"/>
+    <functiondecl functionName="sync" lineNumber="166"/>
+    <functiondecl functionName="has_changed" lineNumber="168"/>
+    <functiondecl functionName="init" lineNumber="172"/>
+    <functiondecl functionName="finish" lineNumber="176"/>
+    <functiondecl functionName="get_render_info" lineNumber="187"/>
+    <functiondecl functionName="get_video_adapter_name" lineNumber="192"/>
+    <functiondecl functionName="get_video_adapter_vendor" lineNumber="197"/>
+    <functiondecl functionName="set_frame_profiling_enabled" lineNumber="202"/>
+    <functiondecl functionName="get_frame_profile_frame" lineNumber="206"/>
+    <functiondecl functionName="get_frame_profile" lineNumber="210"/>
+    <functiondecl functionName="set_boot_image" lineNumber="216"/>
+    <functiondecl functionName="set_default_clear_color" lineNumber="221"/>
+    <functiondecl functionName="has_feature" lineNumber="225"/>
+    <functiondecl functionName="get_test_cube" lineNumber="230"/>
+    <functiondecl functionName="has_os_feature" lineNumber="237"/>
+    <functiondecl functionName="set_debug_generate_wireframes" lineNumber="242"/>
+    <functiondecl functionName="call_set_use_vsync" lineNumber="247"/>
+    <functiondecl functionName="is_low_end" lineNumber="251"/>
+    <functiondecl functionName="black_bars_set_margins" lineNumber="47"/>
+    <functiondecl functionName="black_bars_set_images" lineNumber="55"/>
+    <functiondecl functionName="_draw_margins" lineNumber="63"/>
+    <functiondecl functionName="free" lineNumber="70"/>
+    <functiondecl functionName="request_frame_drawn_callback" lineNumber="86"/>
+    <functiondecl functionName="draw" lineNumber="97"/>
+    <functiondecl functionName="sync" lineNumber="166"/>
+    <functiondecl functionName="has_changed" lineNumber="168"/>
+    <functiondecl functionName="init" lineNumber="172"/>
+    <functiondecl functionName="finish" lineNumber="176"/>
+    <functiondecl functionName="get_render_info" lineNumber="187"/>
+    <functiondecl functionName="get_video_adapter_name" lineNumber="192"/>
+    <functiondecl functionName="get_video_adapter_vendor" lineNumber="197"/>
+    <functiondecl functionName="set_frame_profiling_enabled" lineNumber="202"/>
+    <functiondecl functionName="get_frame_profile_frame" lineNumber="206"/>
+    <functiondecl functionName="get_frame_profile" lineNumber="210"/>
+    <functiondecl functionName="set_boot_image" lineNumber="216"/>
+    <functiondecl functionName="set_default_clear_color" lineNumber="221"/>
+    <functiondecl functionName="has_feature" lineNumber="225"/>
+    <functiondecl functionName="get_test_cube" lineNumber="230"/>
+    <functiondecl functionName="has_os_feature" lineNumber="237"/>
+    <functiondecl functionName="set_debug_generate_wireframes" lineNumber="242"/>
+    <functiondecl functionName="call_set_use_vsync" lineNumber="247"/>
+    <functiondecl functionName="is_low_end" lineNumber="251"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_DEFAULT"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_REPEAT_DEFAULT"/>
+    <functioncall functionName="CANVAS_LIGHT_FILTER_NONE"/>
+    <functioncall functionName="CANVAS_LIGHT_MODE_ADD"/>
+    <functioncall functionName="CANVAS_OCCLUDER_POLYGON_CULL_DISABLED"/>
+    <functioncall functionName="Camera"/>
+    <functioncall functionName="Canvas"/>
+    <functioncall functionName="CanvasData"/>
+    <functioncall functionName="CanvasKey"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="Command"/>
+    <functioncall functionName="CommandClipIgnore"/>
+    <functioncall functionName="CommandMesh"/>
+    <functioncall functionName="CommandMultiMesh"/>
+    <functioncall functionName="CommandNinePatch"/>
+    <functioncall functionName="CommandParticles"/>
+    <functioncall functionName="CommandPolygon"/>
+    <functioncall functionName="CommandPrimitive"/>
+    <functioncall functionName="CommandRect"/>
+    <functioncall functionName="CommandTransform"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ENV_AMBIENT_SOURCE_BG"/>
+    <functioncall functionName="ENV_REFLECTION_SOURCE_BG"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="EYE_MONO"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FRUSTUM"/>
+    <functioncall functionName="INSTANCE_NONE"/>
+    <functioncall functionName="INVALID_WINDOW_ID"/>
+    <functioncall functionName="Instance"/>
+    <functioncall functionName="InstanceBase"/>
+    <functioncall functionName="InstanceDecalData"/>
+    <functioncall functionName="InstanceGIProbeData"/>
+    <functioncall functionName="InstanceGeometryData"/>
+    <functioncall functionName="InstanceLightData"/>
+    <functioncall functionName="InstanceLightmapData"/>
+    <functioncall functionName="InstanceReflectionProbeData"/>
+    <functioncall functionName="InstanceShaderParameter"/>
+    <functioncall functionName="Item"/>
+    <functioncall functionName="LIGHT_DIRECTIONAL"/>
+    <functioncall functionName="LIGHT_OMNI"/>
+    <functioncall functionName="LIGHT_SPOT"/>
+    <functioncall functionName="Light"/>
+    <functioncall functionName="LightOccluderInstance"/>
+    <functioncall functionName="LightOccluderPolygon"/>
+    <functioncall functionName="MAIN_WINDOW_ID"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX_DECALS_CULLED"/>
+    <functioncall functionName="MAX_GI_PROBES_CULLED"/>
+    <functioncall functionName="MAX_INSTANCE_CULL"/>
+    <functioncall functionName="MAX_LIGHTS_CULLED"/>
+    <functioncall functionName="MAX_REFLECTION_PROBES_CULLED"/>
+    <functioncall functionName="MAX_SIZE"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="NINE_PATCH_STRETCH"/>
+    <functioncall functionName="ORTHOGONAL"/>
+    <functioncall functionName="OctreeElementID"/>
+    <functioncall functionName="PERSPECTIVE"/>
+    <functioncall functionName="RENDER_TARGET_DIRECT_TO_SCREEN"/>
+    <functioncall functionName="RENDER_TARGET_FLAG_MAX"/>
+    <functioncall functionName="RENDER_TARGET_TRANSPARENT"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="RasterizerCanvas"/>
+    <functioncall functionName="RasterizerStorage"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="RenderingServerCanvas"/>
+    <functioncall functionName="RenderingServerRaster"/>
+    <functioncall functionName="RenderingServerScene"/>
+    <functioncall functionName="RenderingServerViewport"/>
+    <functioncall functionName="SCENARIO_DEBUG_DISABLED"/>
+    <functioncall functionName="SHADOW_CASTING_SETTING_ON"/>
+    <functioncall functionName="Scenario"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="TYPE_CLIP_IGNORE"/>
+    <functioncall functionName="TYPE_MESH"/>
+    <functioncall functionName="TYPE_MULTIMESH"/>
+    <functioncall functionName="TYPE_NINEPATCH"/>
+    <functioncall functionName="TYPE_PARTICLES"/>
+    <functioncall functionName="TYPE_POLYGON"/>
+    <functioncall functionName="TYPE_PRIMITIVE"/>
+    <functioncall functionName="TYPE_RECT"/>
+    <functioncall functionName="TYPE_TRANSFORM"/>
+    <functioncall functionName="Transform2D"/>
+    <functioncall functionName="VIEWPORT_CLEAR_ALWAYS"/>
+    <functioncall functionName="VIEWPORT_DEBUG_DRAW_DISABLED"/>
+    <functioncall functionName="VIEWPORT_MSAA_DISABLED"/>
+    <functioncall functionName="VIEWPORT_RENDER_INFO_MAX"/>
+    <functioncall functionName="VIEWPORT_SCREEN_SPACE_AA_DISABLED"/>
+    <functioncall functionName="VIEWPORT_UPDATE_WHEN_VISIBLE"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Viewport"/>
+    <functioncall functionName="_changes_changed"/>
+    <functioncall functionName="_draw_margins"/>
+    <functioncall functionName="_instance_queue_update"/>
+    <functioncall functionName="_make_test_cube"/>
+    <functioncall functionName="_set_use_vsync"/>
+    <functioncall functionName="arg1"/>
+    <functioncall functionName="arg10"/>
+    <functioncall functionName="arg11"/>
+    <functioncall functionName="arg12"/>
+    <functioncall functionName="arg13"/>
+    <functioncall functionName="arg14"/>
+    <functioncall functionName="arg15"/>
+    <functioncall functionName="arg2"/>
+    <functioncall functionName="arg3"/>
+    <functioncall functionName="arg4"/>
+    <functioncall functionName="arg5"/>
+    <functioncall functionName="arg6"/>
+    <functioncall functionName="arg7"/>
+    <functioncall functionName="arg8"/>
+    <functioncall functionName="arg9"/>
+    <functioncall functionName="bake_render_uv2"/>
+    <functioncall functionName="base_cpu"/>
+    <functioncall functionName="base_data"/>
+    <functioncall functionName="base_gpu"/>
+    <functioncall functionName="begin_frame"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="binding_id"/>
+    <functioncall functionName="black_image"/>
+    <functioncall functionName="black_margin"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="camera_create"/>
+    <functioncall functionName="camera_effects_create"/>
+    <functioncall functionName="camera_effects_set_custom_exposure"/>
+    <functioncall functionName="camera_effects_set_dof_blur"/>
+    <functioncall functionName="camera_effects_set_dof_blur_bokeh_shape"/>
+    <functioncall functionName="camera_effects_set_dof_blur_quality"/>
+    <functioncall functionName="camera_set_camera_effects"/>
+    <functioncall functionName="camera_set_cull_mask"/>
+    <functioncall functionName="camera_set_environment"/>
+    <functioncall functionName="camera_set_frustum"/>
+    <functioncall functionName="camera_set_orthogonal"/>
+    <functioncall functionName="camera_set_perspective"/>
+    <functioncall functionName="camera_set_transform"/>
+    <functioncall functionName="camera_set_use_vertical_aspect"/>
+    <functioncall functionName="canvas"/>
+    <functioncall functionName="canvas_create"/>
+    <functioncall functionName="canvas_item_add_circle"/>
+    <functioncall functionName="canvas_item_add_clip_ignore"/>
+    <functioncall functionName="canvas_item_add_line"/>
+    <functioncall functionName="canvas_item_add_mesh"/>
+    <functioncall functionName="canvas_item_add_multiline"/>
+    <functioncall functionName="canvas_item_add_multimesh"/>
+    <functioncall functionName="canvas_item_add_nine_patch"/>
+    <functioncall functionName="canvas_item_add_particles"/>
+    <functioncall functionName="canvas_item_add_polygon"/>
+    <functioncall functionName="canvas_item_add_polyline"/>
+    <functioncall functionName="canvas_item_add_primitive"/>
+    <functioncall functionName="canvas_item_add_rect"/>
+    <functioncall functionName="canvas_item_add_set_transform"/>
+    <functioncall functionName="canvas_item_add_texture_rect"/>
+    <functioncall functionName="canvas_item_add_texture_rect_region"/>
+    <functioncall functionName="canvas_item_add_triangle_array"/>
+    <functioncall functionName="canvas_item_attach_skeleton"/>
+    <functioncall functionName="canvas_item_clear"/>
+    <functioncall functionName="canvas_item_create"/>
+    <functioncall functionName="canvas_item_set_clip"/>
+    <functioncall functionName="canvas_item_set_copy_to_backbuffer"/>
+    <functioncall functionName="canvas_item_set_custom_rect"/>
+    <functioncall functionName="canvas_item_set_default_texture_filter"/>
+    <functioncall functionName="canvas_item_set_default_texture_repeat"/>
+    <functioncall functionName="canvas_item_set_distance_field_mode"/>
+    <functioncall functionName="canvas_item_set_draw_behind_parent"/>
+    <functioncall functionName="canvas_item_set_draw_index"/>
+    <functioncall functionName="canvas_item_set_light_mask"/>
+    <functioncall functionName="canvas_item_set_material"/>
+    <functioncall functionName="canvas_item_set_modulate"/>
+    <functioncall functionName="canvas_item_set_parent"/>
+    <functioncall functionName="canvas_item_set_self_modulate"/>
+    <functioncall functionName="canvas_item_set_sort_children_by_y"/>
+    <functioncall functionName="canvas_item_set_transform"/>
+    <functioncall functionName="canvas_item_set_update_when_visible"/>
+    <functioncall functionName="canvas_item_set_use_parent_material"/>
+    <functioncall functionName="canvas_item_set_visible"/>
+    <functioncall functionName="canvas_item_set_z_as_relative_to_parent"/>
+    <functioncall functionName="canvas_item_set_z_index"/>
+    <functioncall functionName="canvas_light_attach_to_canvas"/>
+    <functioncall functionName="canvas_light_create"/>
+    <functioncall functionName="canvas_light_occluder_attach_to_canvas"/>
+    <functioncall functionName="canvas_light_occluder_create"/>
+    <functioncall functionName="canvas_light_occluder_set_enabled"/>
+    <functioncall functionName="canvas_light_occluder_set_light_mask"/>
+    <functioncall functionName="canvas_light_occluder_set_polygon"/>
+    <functioncall functionName="canvas_light_occluder_set_transform"/>
+    <functioncall functionName="canvas_light_set_color"/>
+    <functioncall functionName="canvas_light_set_enabled"/>
+    <functioncall functionName="canvas_light_set_energy"/>
+    <functioncall functionName="canvas_light_set_height"/>
+    <functioncall functionName="canvas_light_set_item_cull_mask"/>
+    <functioncall functionName="canvas_light_set_item_shadow_cull_mask"/>
+    <functioncall functionName="canvas_light_set_layer_range"/>
+    <functioncall functionName="canvas_light_set_mode"/>
+    <functioncall functionName="canvas_light_set_scale"/>
+    <functioncall functionName="canvas_light_set_shadow_buffer_size"/>
+    <functioncall functionName="canvas_light_set_shadow_color"/>
+    <functioncall functionName="canvas_light_set_shadow_enabled"/>
+    <functioncall functionName="canvas_light_set_shadow_filter"/>
+    <functioncall functionName="canvas_light_set_shadow_smooth"/>
+    <functioncall functionName="canvas_light_set_texture"/>
+    <functioncall functionName="canvas_light_set_texture_offset"/>
+    <functioncall functionName="canvas_light_set_transform"/>
+    <functioncall functionName="canvas_light_set_z_range"/>
+    <functioncall functionName="canvas_occluder_polygon_create"/>
+    <functioncall functionName="canvas_occluder_polygon_set_cull_mode"/>
+    <functioncall functionName="canvas_occluder_polygon_set_shape"/>
+    <functioncall functionName="canvas_occluder_polygon_set_shape_as_lines"/>
+    <functioncall functionName="canvas_set_disable_scale"/>
+    <functioncall functionName="canvas_set_item_mirroring"/>
+    <functioncall functionName="canvas_set_modulate"/>
+    <functioncall functionName="canvas_set_parent"/>
+    <functioncall functionName="capture_timestamps_begin"/>
+    <functioncall functionName="capturing_timestamps"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_dependencies"/>
+    <functioncall functionName="command"/>
+    <functioncall functionName="commands"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copy_back_buffer"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="current_block"/>
+    <functioncall functionName="custom_aabb"/>
+    <functioncall functionName="custom_data"/>
+    <functioncall functionName="decal_create"/>
+    <functioncall functionName="decal_set_albedo_mix"/>
+    <functioncall functionName="decal_set_cull_mask"/>
+    <functioncall functionName="decal_set_distance_fade"/>
+    <functioncall functionName="decal_set_emission_energy"/>
+    <functioncall functionName="decal_set_extents"/>
+    <functioncall functionName="decal_set_fade"/>
+    <functioncall functionName="decal_set_modulate"/>
+    <functioncall functionName="decal_set_normal_fade"/>
+    <functioncall functionName="decal_set_texture"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dep"/>
+    <functioncall functionName="dependency_item"/>
+    <functioncall functionName="directional_light_create"/>
+    <functioncall functionName="directional_shadow_atlas_set_size"/>
+    <functioncall functionName="directional_shadow_quality_set"/>
+    <functioncall functionName="draw_viewports"/>
+    <functioncall functionName="draw_window_margins"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="end_frame"/>
+    <functioncall functionName="environment_bake_panorama"/>
+    <functioncall functionName="environment_create"/>
+    <functioncall functionName="environment_glow_set_use_bicubic_upscale"/>
+    <functioncall functionName="environment_set_adjustment"/>
+    <functioncall functionName="environment_set_ambient_light"/>
+    <functioncall functionName="environment_set_background"/>
+    <functioncall functionName="environment_set_bg_color"/>
+    <functioncall functionName="environment_set_bg_energy"/>
+    <functioncall functionName="environment_set_canvas_max_layer"/>
+    <functioncall functionName="environment_set_fog"/>
+    <functioncall functionName="environment_set_fog_depth"/>
+    <functioncall functionName="environment_set_fog_height"/>
+    <functioncall functionName="environment_set_glow"/>
+    <functioncall functionName="environment_set_sky"/>
+    <functioncall functionName="environment_set_sky_custom_fov"/>
+    <functioncall functionName="environment_set_sky_orientation"/>
+    <functioncall functionName="environment_set_ssao"/>
+    <functioncall functionName="environment_set_ssao_quality"/>
+    <functioncall functionName="environment_set_ssr"/>
+    <functioncall functionName="environment_set_ssr_roughness_quality"/>
+    <functioncall functionName="environment_set_tonemap"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fdc"/>
+    <functioncall functionName="finalize"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_item"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found_xform"/>
+    <functioncall functionName="frame_step"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="free_polygon"/>
+    <functioncall functionName="free_texture_binding"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_call_error_text"/>
+    <functioncall functionName="get_canvas"/>
+    <functioncall functionName="get_captured_timestamp_cpu_time"/>
+    <functioncall functionName="get_captured_timestamp_gpu_time"/>
+    <functioncall functionName="get_captured_timestamp_name"/>
+    <functioncall functionName="get_captured_timestamps_count"/>
+    <functioncall functionName="get_captured_timestamps_frame"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_render_info"/>
+    <functioncall functionName="get_scene"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_storage"/>
+    <functioncall functionName="get_video_adapter_name"/>
+    <functioncall functionName="get_video_adapter_vendor"/>
+    <functioncall functionName="gi_probe_allocate"/>
+    <functioncall functionName="gi_probe_create"/>
+    <functioncall functionName="gi_probe_get_anisotropy_strength"/>
+    <functioncall functionName="gi_probe_get_ao"/>
+    <functioncall functionName="gi_probe_get_ao_size"/>
+    <functioncall functionName="gi_probe_get_bias"/>
+    <functioncall functionName="gi_probe_get_bounds"/>
+    <functioncall functionName="gi_probe_get_data_cells"/>
+    <functioncall functionName="gi_probe_get_distance_field"/>
+    <functioncall functionName="gi_probe_get_dynamic_range"/>
+    <functioncall functionName="gi_probe_get_energy"/>
+    <functioncall functionName="gi_probe_get_level_counts"/>
+    <functioncall functionName="gi_probe_get_normal_bias"/>
+    <functioncall functionName="gi_probe_get_octree_cells"/>
+    <functioncall functionName="gi_probe_get_octree_size"/>
+    <functioncall functionName="gi_probe_get_propagation"/>
+    <functioncall functionName="gi_probe_get_to_cell_xform"/>
+    <functioncall functionName="gi_probe_is_interior"/>
+    <functioncall functionName="gi_probe_is_using_two_bounces"/>
+    <functioncall functionName="gi_probe_set_anisotropy_strength"/>
+    <functioncall functionName="gi_probe_set_ao"/>
+    <functioncall functionName="gi_probe_set_ao_size"/>
+    <functioncall functionName="gi_probe_set_bias"/>
+    <functioncall functionName="gi_probe_set_dynamic_range"/>
+    <functioncall functionName="gi_probe_set_energy"/>
+    <functioncall functionName="gi_probe_set_interior"/>
+    <functioncall functionName="gi_probe_set_normal_bias"/>
+    <functioncall functionName="gi_probe_set_propagation"/>
+    <functioncall functionName="gi_probe_set_use_two_bounces"/>
+    <functioncall functionName="global_variable_add"/>
+    <functioncall functionName="global_variable_get"/>
+    <functioncall functionName="global_variable_get_list"/>
+    <functioncall functionName="global_variable_get_type"/>
+    <functioncall functionName="global_variable_remove"/>
+    <functioncall functionName="global_variable_set"/>
+    <functioncall functionName="global_variable_set_override"/>
+    <functioncall functionName="global_variables_clear"/>
+    <functioncall functionName="global_variables_load_settings"/>
+    <functioncall functionName="handle_timestamp"/>
+    <functioncall functionName="has_os_feature"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="immediate_begin"/>
+    <functioncall functionName="immediate_clear"/>
+    <functioncall functionName="immediate_color"/>
+    <functioncall functionName="immediate_create"/>
+    <functioncall functionName="immediate_end"/>
+    <functioncall functionName="immediate_get_material"/>
+    <functioncall functionName="immediate_normal"/>
+    <functioncall functionName="immediate_set_material"/>
+    <functioncall functionName="immediate_tangent"/>
+    <functioncall functionName="immediate_uv"/>
+    <functioncall functionName="immediate_uv2"/>
+    <functioncall functionName="immediate_vertex"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance_attach_object_instance_id"/>
+    <functioncall functionName="instance_attach_skeleton"/>
+    <functioncall functionName="instance_create"/>
+    <functioncall functionName="instance_geometry_get_shader_parameter"/>
+    <functioncall functionName="instance_geometry_get_shader_parameter_default_value"/>
+    <functioncall functionName="instance_geometry_get_shader_parameter_list"/>
+    <functioncall functionName="instance_geometry_set_as_instance_lod"/>
+    <functioncall functionName="instance_geometry_set_cast_shadows_setting"/>
+    <functioncall functionName="instance_geometry_set_draw_range"/>
+    <functioncall functionName="instance_geometry_set_flag"/>
+    <functioncall functionName="instance_geometry_set_lightmap"/>
+    <functioncall functionName="instance_geometry_set_material_override"/>
+    <functioncall functionName="instance_geometry_set_shader_parameter"/>
+    <functioncall functionName="instance_set_base"/>
+    <functioncall functionName="instance_set_blend_shape_weight"/>
+    <functioncall functionName="instance_set_custom_aabb"/>
+    <functioncall functionName="instance_set_exterior"/>
+    <functioncall functionName="instance_set_extra_visibility_margin"/>
+    <functioncall functionName="instance_set_layer_mask"/>
+    <functioncall functionName="instance_set_scenario"/>
+    <functioncall functionName="instance_set_surface_material"/>
+    <functioncall functionName="instance_set_transform"/>
+    <functioncall functionName="instance_set_visible"/>
+    <functioncall functionName="instance_version"/>
+    <functioncall functionName="instances_cull_aabb"/>
+    <functioncall functionName="instances_cull_convex"/>
+    <functioncall functionName="instances_cull_ray"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="light_create"/>
+    <functioncall functionName="light_directional_set_blend_splits"/>
+    <functioncall functionName="light_directional_set_shadow_depth_range_mode"/>
+    <functioncall functionName="light_directional_set_shadow_mode"/>
+    <functioncall functionName="light_omni_set_shadow_mode"/>
+    <functioncall functionName="light_set_color"/>
+    <functioncall functionName="light_set_cull_mask"/>
+    <functioncall functionName="light_set_negative"/>
+    <functioncall functionName="light_set_param"/>
+    <functioncall functionName="light_set_projector"/>
+    <functioncall functionName="light_set_reverse_cull_face_mode"/>
+    <functioncall functionName="light_set_shadow"/>
+    <functioncall functionName="light_set_shadow_color"/>
+    <functioncall functionName="light_set_use_gi"/>
+    <functioncall functionName="lightmap_create"/>
+    <functioncall functionName="lightmap_get_probe_capture_bsp_tree"/>
+    <functioncall functionName="lightmap_get_probe_capture_points"/>
+    <functioncall functionName="lightmap_get_probe_capture_sh"/>
+    <functioncall functionName="lightmap_get_probe_capture_tetrahedra"/>
+    <functioncall functionName="lightmap_set_probe_bounds"/>
+    <functioncall functionName="lightmap_set_probe_capture_data"/>
+    <functioncall functionName="lightmap_set_probe_capture_update_speed"/>
+    <functioncall functionName="lightmap_set_probe_interior"/>
+    <functioncall functionName="lightmap_set_textures"/>
+    <functioncall functionName="material_create"/>
+    <functioncall functionName="material_get_param"/>
+    <functioncall functionName="material_set_next_pass"/>
+    <functioncall functionName="material_set_param"/>
+    <functioncall functionName="material_set_render_priority"/>
+    <functioncall functionName="material_set_shader"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memnew_placement"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="mesh_add_surface"/>
+    <functioncall functionName="mesh_clear"/>
+    <functioncall functionName="mesh_create"/>
+    <functioncall functionName="mesh_get_aabb"/>
+    <functioncall functionName="mesh_get_blend_shape_count"/>
+    <functioncall functionName="mesh_get_blend_shape_mode"/>
+    <functioncall functionName="mesh_get_custom_aabb"/>
+    <functioncall functionName="mesh_get_surface"/>
+    <functioncall functionName="mesh_get_surface_count"/>
+    <functioncall functionName="mesh_set_blend_shape_mode"/>
+    <functioncall functionName="mesh_set_custom_aabb"/>
+    <functioncall functionName="mesh_surface_get_material"/>
+    <functioncall functionName="mesh_surface_set_material"/>
+    <functioncall functionName="mesh_surface_update_region"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="multimesh"/>
+    <functioncall functionName="multimesh_allocate"/>
+    <functioncall functionName="multimesh_create"/>
+    <functioncall functionName="multimesh_get_aabb"/>
+    <functioncall functionName="multimesh_get_buffer"/>
+    <functioncall functionName="multimesh_get_instance_count"/>
+    <functioncall functionName="multimesh_get_mesh"/>
+    <functioncall functionName="multimesh_get_visible_instances"/>
+    <functioncall functionName="multimesh_instance_get_color"/>
+    <functioncall functionName="multimesh_instance_get_custom_data"/>
+    <functioncall functionName="multimesh_instance_get_transform"/>
+    <functioncall functionName="multimesh_instance_get_transform_2d"/>
+    <functioncall functionName="multimesh_instance_set_color"/>
+    <functioncall functionName="multimesh_instance_set_custom_data"/>
+    <functioncall functionName="multimesh_instance_set_transform"/>
+    <functioncall functionName="multimesh_instance_set_transform_2d"/>
+    <functioncall functionName="multimesh_set_buffer"/>
+    <functioncall functionName="multimesh_set_mesh"/>
+    <functioncall functionName="multimesh_set_visible_instances"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_profile"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="object"/>
+    <functioncall functionName="omni_light_create"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_bones"/>
+    <functioncall functionName="p_bottom"/>
+    <functioncall functionName="p_canvas"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_colors"/>
+    <functioncall functionName="p_dependencies"/>
+    <functioncall functionName="p_dependency"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_feature"/>
+    <functioncall functionName="p_filter"/>
+    <functioncall functionName="p_generate"/>
+    <functioncall functionName="p_image"/>
+    <functioncall functionName="p_indices"/>
+    <functioncall functionName="p_info"/>
+    <functioncall functionName="p_item"/>
+    <functioncall functionName="p_item_filter"/>
+    <functioncall functionName="p_item_repeat"/>
+    <functioncall functionName="p_layer"/>
+    <functioncall functionName="p_left"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_multimesh"/>
+    <functioncall functionName="p_normalmap"/>
+    <functioncall functionName="p_points"/>
+    <functioncall functionName="p_repeat"/>
+    <functioncall functionName="p_rid"/>
+    <functioncall functionName="p_right"/>
+    <functioncall functionName="p_scale"/>
+    <functioncall functionName="p_specular"/>
+    <functioncall functionName="p_sublayer"/>
+    <functioncall functionName="p_swap_buffers"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_top"/>
+    <functioncall functionName="p_use_filter"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="p_uvs"/>
+    <functioncall functionName="p_weights"/>
+    <functioncall functionName="p_where"/>
+    <functioncall functionName="param"/>
+    <functioncall functionName="particles"/>
+    <functioncall functionName="particles_create"/>
+    <functioncall functionName="particles_get_aabb"/>
+    <functioncall functionName="particles_get_current_aabb"/>
+    <functioncall functionName="particles_get_emitting"/>
+    <functioncall functionName="particles_is_inactive"/>
+    <functioncall functionName="particles_request_process"/>
+    <functioncall functionName="particles_restart"/>
+    <functioncall functionName="particles_set_amount"/>
+    <functioncall functionName="particles_set_custom_aabb"/>
+    <functioncall functionName="particles_set_draw_order"/>
+    <functioncall functionName="particles_set_draw_pass_mesh"/>
+    <functioncall functionName="particles_set_draw_passes"/>
+    <functioncall functionName="particles_set_emission_transform"/>
+    <functioncall functionName="particles_set_emitting"/>
+    <functioncall functionName="particles_set_explosiveness_ratio"/>
+    <functioncall functionName="particles_set_fixed_fps"/>
+    <functioncall functionName="particles_set_fractional_delta"/>
+    <functioncall functionName="particles_set_lifetime"/>
+    <functioncall functionName="particles_set_one_shot"/>
+    <functioncall functionName="particles_set_pre_process_time"/>
+    <functioncall functionName="particles_set_process_material"/>
+    <functioncall functionName="particles_set_randomness_ratio"/>
+    <functioncall functionName="particles_set_speed_scale"/>
+    <functioncall functionName="particles_set_use_local_coordinates"/>
+    <functioncall functionName="point_count"/>
+    <functioncall functionName="polygon_id"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rasterizer"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="rect_cache"/>
+    <functioncall functionName="redraw_request"/>
+    <functioncall functionName="reflection_probe_create"/>
+    <functioncall functionName="reflection_probe_set_as_interior"/>
+    <functioncall functionName="reflection_probe_set_cull_mask"/>
+    <functioncall functionName="reflection_probe_set_enable_box_projection"/>
+    <functioncall functionName="reflection_probe_set_enable_shadows"/>
+    <functioncall functionName="reflection_probe_set_extents"/>
+    <functioncall functionName="reflection_probe_set_intensity"/>
+    <functioncall functionName="reflection_probe_set_interior_ambient"/>
+    <functioncall functionName="reflection_probe_set_interior_ambient_energy"/>
+    <functioncall functionName="reflection_probe_set_interior_ambient_probe_contribution"/>
+    <functioncall functionName="reflection_probe_set_max_distance"/>
+    <functioncall functionName="reflection_probe_set_origin_offset"/>
+    <functioncall functionName="reflection_probe_set_resolution"/>
+    <functioncall functionName="reflection_probe_set_update_mode"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="render_probes"/>
+    <functioncall functionName="request_polygon"/>
+    <functioncall functionName="request_texture_binding"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="scenario_create"/>
+    <functioncall functionName="scenario_item"/>
+    <functioncall functionName="scenario_set_camera_effects"/>
+    <functioncall functionName="scenario_set_debug"/>
+    <functioncall functionName="scenario_set_environment"/>
+    <functioncall functionName="scenario_set_fallback_environment"/>
+    <functioncall functionName="scene"/>
+    <functioncall functionName="screen_space_roughness_limiter_set_active"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="self"/>
+    <functioncall functionName="set_boot_image"/>
+    <functioncall functionName="set_debug_generate_wireframes"/>
+    <functioncall functionName="set_default_clear_color"/>
+    <functioncall functionName="shader_create"/>
+    <functioncall functionName="shader_get_code"/>
+    <functioncall functionName="shader_get_default_texture_param"/>
+    <functioncall functionName="shader_get_param_default"/>
+    <functioncall functionName="shader_get_param_list"/>
+    <functioncall functionName="shader_set_code"/>
+    <functioncall functionName="shader_set_default_texture_param"/>
+    <functioncall functionName="shadows_quality_set"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skeleton_allocate"/>
+    <functioncall functionName="skeleton_bone_get_transform"/>
+    <functioncall functionName="skeleton_bone_get_transform_2d"/>
+    <functioncall functionName="skeleton_bone_set_transform"/>
+    <functioncall functionName="skeleton_bone_set_transform_2d"/>
+    <functioncall functionName="skeleton_create"/>
+    <functioncall functionName="skeleton_get_bone_count"/>
+    <functioncall functionName="skeleton_set_base_transform_2d"/>
+    <functioncall functionName="sky_bake_panorama"/>
+    <functioncall functionName="sky_create"/>
+    <functioncall functionName="sky_set_material"/>
+    <functioncall functionName="sky_set_mode"/>
+    <functioncall functionName="sky_set_radiance_size"/>
+    <functioncall functionName="spot_light_create"/>
+    <functioncall functionName="stacking"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="sub_surface_scattering_set_quality"/>
+    <functioncall functionName="sub_surface_scattering_set_scale"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="test_cube"/>
+    <functioncall functionName="texture_2d_create"/>
+    <functioncall functionName="texture_2d_get"/>
+    <functioncall functionName="texture_2d_layer_get"/>
+    <functioncall functionName="texture_2d_layered_create"/>
+    <functioncall functionName="texture_2d_layered_placeholder_create"/>
+    <functioncall functionName="texture_2d_placeholder_create"/>
+    <functioncall functionName="texture_2d_update"/>
+    <functioncall functionName="texture_2d_update_immediate"/>
+    <functioncall functionName="texture_3d_create"/>
+    <functioncall functionName="texture_3d_placeholder_create"/>
+    <functioncall functionName="texture_3d_slice_get"/>
+    <functioncall functionName="texture_3d_update"/>
+    <functioncall functionName="texture_debug_usage"/>
+    <functioncall functionName="texture_get_path"/>
+    <functioncall functionName="texture_proxy_create"/>
+    <functioncall functionName="texture_proxy_update"/>
+    <functioncall functionName="texture_replace"/>
+    <functioncall functionName="texture_set_detect_3d_callback"/>
+    <functioncall functionName="texture_set_detect_normal_callback"/>
+    <functioncall functionName="texture_set_detect_roughness_callback"/>
+    <functioncall functionName="texture_set_force_redraw_if_visible"/>
+    <functioncall functionName="texture_set_path"/>
+    <functioncall functionName="texture_set_size_override"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="time_cpu"/>
+    <functioncall functionName="time_gpu"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="unlikely"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="update_dirty_instances"/>
+    <functioncall functionName="update_element"/>
+    <functioncall functionName="update_item"/>
+    <functioncall functionName="update_list"/>
+    <functioncall functionName="update_when_visible"/>
+    <functioncall functionName="usage"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="viewport"/>
+    <functioncall functionName="viewport_attach_camera"/>
+    <functioncall functionName="viewport_attach_canvas"/>
+    <functioncall functionName="viewport_attach_to_screen"/>
+    <functioncall functionName="viewport_create"/>
+    <functioncall functionName="viewport_get_measured_render_time_cpu"/>
+    <functioncall functionName="viewport_get_measured_render_time_gpu"/>
+    <functioncall functionName="viewport_get_render_info"/>
+    <functioncall functionName="viewport_get_texture"/>
+    <functioncall functionName="viewport_remove_canvas"/>
+    <functioncall functionName="viewport_set_active"/>
+    <functioncall functionName="viewport_set_canvas_stacking"/>
+    <functioncall functionName="viewport_set_canvas_transform"/>
+    <functioncall functionName="viewport_set_clear_mode"/>
+    <functioncall functionName="viewport_set_debug_draw"/>
+    <functioncall functionName="viewport_set_disable_environment"/>
+    <functioncall functionName="viewport_set_global_canvas_transform"/>
+    <functioncall functionName="viewport_set_hide_canvas"/>
+    <functioncall functionName="viewport_set_hide_scenario"/>
+    <functioncall functionName="viewport_set_measure_render_time"/>
+    <functioncall functionName="viewport_set_msaa"/>
+    <functioncall functionName="viewport_set_parent_viewport"/>
+    <functioncall functionName="viewport_set_render_direct_to_screen"/>
+    <functioncall functionName="viewport_set_scenario"/>
+    <functioncall functionName="viewport_set_screen_space_aa"/>
+    <functioncall functionName="viewport_set_shadow_atlas_quadrant_subdivision"/>
+    <functioncall functionName="viewport_set_shadow_atlas_size"/>
+    <functioncall functionName="viewport_set_size"/>
+    <functioncall functionName="viewport_set_transparent_background"/>
+    <functioncall functionName="viewport_set_update_mode"/>
+    <functioncall functionName="viewport_set_use_xr"/>
+    <functioncall functionName="viewport_set_vflip"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

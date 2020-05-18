@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2636028126">
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;buildIslands&apos; argument 2 names different: declaration &apos;colWorld&apos; definition &apos;collisionWorld&apos;." verbose="Function &apos;buildIslands&apos; argument 2 names different: declaration &apos;colWorld&apos; definition &apos;collisionWorld&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="264" column="92"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h" line="91" column="72"/>
+            <symbol>buildIslands</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;idx&apos; shadows outer variable" verbose="Local variable &apos;idx&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="316" column="8" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="291" column="7" info="Shadowed declaration"/>
+            <symbol>idx</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;idx&apos; shadows outer variable" verbose="Local variable &apos;idx&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="336" column="8" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="291" column="7" info="Shadowed declaration"/>
+            <symbol>idx</symbol>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;collisionObjects&apos; can be declared with const" verbose="Variable &apos;collisionObjects&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="268" column="26"/>
+        </error>
+        <error id="constVariable" severity="style" msg="Variable &apos;collisionObjects&apos; can be declared with const" verbose="Variable &apos;collisionObjects&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="364" column="26"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:29:23" call-funcname="calcBatchCost" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="43" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:29:23" call-funcname="calcBatchCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="43" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:36:23" call-funcname="calcBatchCost" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="82" col="15" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:80:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:36:23" call-funcname="calcBatchCost" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="83" col="15" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:80:7" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:91:15" call-funcname="buildIslands" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="633" col="2" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:86:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:36:23" my-argnr="1" my-argname="island" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="38" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:91:7" my-argnr="1" my-argname="lhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="93" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:91:7" my-argnr="2" my-argname="rhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="93" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:61:14" my-argnr="1" my-argname="islandsPtr" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="547" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:62:14" my-argnr="1" my-argname="islandsPtr" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="602" col="37" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:36:23" my-argnr="1" my-argname="island" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="38" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:60:12" my-argnr="1" my-argname="lhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="62" col="76" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp:68:23" my-argnr="1" my-argname="lhs" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="70" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:91:15" my-argnr="2" my-argname="collisionWorld" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="268" col="45" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:77:15" my-argnr="1" my-argname="collisionWorld" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="364" col="45" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:78:15" my-argnr="1" my-argname="dispatcher" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="410" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:58:14" my-argnr="1" my-argname="solver" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="532" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:62:14" my-argnr="1" my-argname="islandsPtr" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="602" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.h:86:15" my-argnr="2" my-argname="collisionWorld" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/Dynamics/btSimulationIslandManagerMt.cpp" line="631" col="45" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="calcBatchCost" lineNumber="29"/>
+    <functiondecl functionName="calcBatchCost" lineNumber="36"/>
+    <functiondecl functionName="getIslandId" lineNumber="60"/>
+    <functiondecl functionName="btGetConstraintIslandId1" lineNumber="68"/>
+    <functiondecl functionName="append" lineNumber="97"/>
+    <functiondecl functionName="btIsBodyInIsland" lineNumber="116"/>
+    <functiondecl functionName="initIslandPools" lineNumber="128"/>
+    <functiondecl functionName="getIsland" lineNumber="172"/>
+    <functiondecl functionName="allocateIsland" lineNumber="193"/>
+    <functiondecl functionName="buildIslands" lineNumber="264"/>
+    <functiondecl functionName="addBodiesToIslands" lineNumber="362"/>
+    <functiondecl functionName="addManifoldsToIslands" lineNumber="407"/>
+    <functiondecl functionName="addConstraintsToIslands" lineNumber="448"/>
+    <functiondecl functionName="mergeIslands" lineNumber="467"/>
+    <functiondecl functionName="solveIsland" lineNumber="528"/>
+    <functiondecl functionName="serialIslandDispatch" lineNumber="543"/>
+    <functiondecl functionName="forLoop" lineNumber="565"/>
+    <functiondecl functionName="parallelIslandDispatch" lineNumber="576"/>
+    <functiondecl functionName="buildAndProcessIslands" lineNumber="625"/>
+    <functioncall functionName="BT_PROFILE"/>
+    <functioncall functionName="ISLAND_SLEEPING"/>
+    <functioncall functionName="Island"/>
+    <functioncall functionName="IslandBatchSizeSortPredicate"/>
+    <functioncall functionName="IslandBodyCapacitySortPredicate"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="UpdateIslandDispatcher"/>
+    <functioncall functionName="WANTS_DEACTIVATION"/>
+    <functioncall functionName="activate"/>
+    <functioncall functionName="addBodiesToIslands"/>
+    <functioncall functionName="addConstraintsToIslands"/>
+    <functioncall functionName="addManifoldsToIslands"/>
+    <functioncall functionName="allSleeping"/>
+    <functioncall functionName="allocSize"/>
+    <functioncall functionName="allocateIsland"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btGetConstraintIslandId1"/>
+    <functioncall functionName="btParallelFor"/>
+    <functioncall functionName="btSimulationIslandManagerMt"/>
+    <functioncall functionName="buildIslands"/>
+    <functioncall functionName="calcBatchCost"/>
+    <functioncall functionName="cap"/>
+    <functioncall functionName="capacity"/>
+    <functioncall functionName="colObj"/>
+    <functioncall functionName="colObj0"/>
+    <functioncall functionName="colObj1"/>
+    <functioncall functionName="collisionWorld"/>
+    <functioncall functionName="constraint"/>
+    <functioncall functionName="constraints"/>
+    <functioncall functionName="constraintsPtr"/>
+    <functioncall functionName="destIslandIndex"/>
+    <functioncall functionName="dispatcher"/>
+    <functioncall functionName="endIslandIndex"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="firstIndex"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="func"/>
+    <functioncall functionName="getActivationState"/>
+    <functioncall functionName="getBody0"/>
+    <functioncall functionName="getBody1"/>
+    <functioncall functionName="getCollisionObjectArray"/>
+    <functioncall functionName="getElement"/>
+    <functioncall functionName="getInternalManifoldPointer"/>
+    <functioncall functionName="getIsland"/>
+    <functioncall functionName="getIslandId"/>
+    <functioncall functionName="getIslandTag"/>
+    <functioncall functionName="getManifoldByIndexInternal"/>
+    <functioncall functionName="getNumElements"/>
+    <functioncall functionName="getNumManifolds"/>
+    <functioncall functionName="getRigidBodyA"/>
+    <functioncall functionName="getRigidBodyB"/>
+    <functioncall functionName="getSplitIslands"/>
+    <functioncall functionName="getUnionFind"/>
+    <functioncall functionName="hasContactResponse"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iBegin"/>
+    <functioncall functionName="iElem"/>
+    <functioncall functionName="iFound"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initIslandPools"/>
+    <functioncall functionName="isActive"/>
+    <functioncall functionName="isEnabled"/>
+    <functioncall functionName="isKinematicObject"/>
+    <functioncall functionName="isSorted"/>
+    <functioncall functionName="island"/>
+    <functioncall functionName="islandId"/>
+    <functioncall functionName="islandSleeping"/>
+    <functioncall functionName="islandsPtr"/>
+    <functioncall functionName="lastIndex"/>
+    <functioncall functionName="lhs"/>
+    <functioncall functionName="m_activeIslands"/>
+    <functioncall functionName="m_batchIsland"/>
+    <functioncall functionName="m_debugDrawer"/>
+    <functioncall functionName="m_dispatcher"/>
+    <functioncall functionName="m_freeIslands"/>
+    <functioncall functionName="m_id"/>
+    <functioncall functionName="m_islandDispatch"/>
+    <functioncall functionName="m_islandsPtr"/>
+    <functioncall functionName="m_minimumSolverBatchSize"/>
+    <functioncall functionName="m_solverInfo"/>
+    <functioncall functionName="m_solverMt"/>
+    <functioncall functionName="m_solverParams"/>
+    <functioncall functionName="m_solverPool"/>
+    <functioncall functionName="m_sz"/>
+    <functioncall functionName="manifold"/>
+    <functioncall functionName="manifolds"/>
+    <functioncall functionName="maxNumManifolds"/>
+    <functioncall functionName="mergeIslands"/>
+    <functioncall functionName="needsResponse"/>
+    <functioncall functionName="numBodies"/>
+    <functioncall functionName="numConstraints"/>
+    <functioncall functionName="numElem"/>
+    <functioncall functionName="numManifolds"/>
+    <functioncall functionName="parallelIslandDispatch"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quickSort"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="rhs"/>
+    <functioncall functionName="setActivationState"/>
+    <functioncall functionName="setDeactivationTime"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="solveGroup"/>
+    <functioncall functionName="solveIsland"/>
+    <functioncall functionName="solver"/>
+    <functioncall functionName="solverParams"/>
+    <functioncall functionName="sortIslands"/>
+    <functioncall functionName="startIslandIndex"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="sz"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

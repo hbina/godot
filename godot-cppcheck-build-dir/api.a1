@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="192434919">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file0="/home/hbina/git/godot/platform/android/api/api.cpp" file="/home/hbina/git/godot/platform/android/api/jni_singleton.h" line="87" column="18"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;instance&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;instance&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/platform/android/api/api.cpp" file="/home/hbina/git/godot/platform/android/api/jni_singleton.h" line="237" column="3"/>
+            <symbol>instance</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="register_android_api" lineNumber="41"/>
+    <functiondecl functionName="unregister_android_api" lineNumber="56"/>
+    <functiondecl functionName="_bind_methods" lineNumber="63"/>
+    <functiondecl functionName="call" lineNumber="70"/>
+    <functiondecl functionName="call" lineNumber="77"/>
+    <functiondecl functionName="wrap" lineNumber="83"/>
+    <functiondecl functionName="register_android_api" lineNumber="41"/>
+    <functiondecl functionName="unregister_android_api" lineNumber="56"/>
+    <functiondecl functionName="_bind_methods" lineNumber="63"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ARG_NUMBER_CLASS_BIT"/>
+    <functioncall functionName="ARG_TYPE_BOOLEAN"/>
+    <functioncall functionName="ARG_TYPE_BYTE"/>
+    <functioncall functionName="ARG_TYPE_CHAR"/>
+    <functioncall functionName="ARG_TYPE_CLASS"/>
+    <functioncall functionName="ARG_TYPE_DOUBLE"/>
+    <functioncall functionName="ARG_TYPE_FLOAT"/>
+    <functioncall functionName="ARG_TYPE_INT"/>
+    <functioncall functionName="ARG_TYPE_LONG"/>
+    <functioncall functionName="ARG_TYPE_SHORT"/>
+    <functioncall functionName="ARG_TYPE_STRING"/>
+    <functioncall functionName="ARG_TYPE_VOID"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="CallBooleanMethodA"/>
+    <functioncall functionName="CallFloatMethodA"/>
+    <functioncall functionName="CallIntMethodA"/>
+    <functioncall functionName="CallObjectMethodA"/>
+    <functioncall functionName="CallVoidMethodA"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="DeleteLocalRef"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GetArrayLength"/>
+    <functioncall functionName="GetFloatArrayRegion"/>
+    <functioncall functionName="GetIntArrayRegion"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="JNISingleton"/>
+    <functioncall functionName="JavaClass"/>
+    <functioncall functionName="JavaClassWrapper"/>
+    <functioncall functionName="JavaObject"/>
+    <functioncall functionName="MethodData"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="PACKED_BYTE_ARRAY"/>
+    <functioncall functionName="PACKED_FLOAT32_ARRAY"/>
+    <functioncall functionName="PACKED_INT32_ARRAY"/>
+    <functioncall functionName="PACKED_STRING_ARRAY"/>
+    <functioncall functionName="PopLocalFrame"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="PushLocalFrame"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="Singleton"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="_jobject_to_variant"/>
+    <functioncall functionName="_variant_to_jvalue"/>
+    <functioncall functionName="add_singleton"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_error"/>
+    <functioncall functionName="can_convert"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="env"/>
+    <functioncall functionName="fCount"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_env"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="java_class_wrapper"/>
+    <functioncall functionName="jfloatArray"/>
+    <functioncall functionName="jintArray"/>
+    <functioncall functionName="jobjectArray"/>
+    <functioncall functionName="jstring"/>
+    <functioncall functionName="jstring_to_string"/>
+    <functioncall functionName="jvalue"/>
+    <functioncall functionName="md"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_ret_type"/>
+    <functioncall functionName="p_sig"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="register_class"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret_type"/>
+    <functioncall functionName="sarr"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wrap"/>
+  </FileInfo>
+</analyzerinfo>

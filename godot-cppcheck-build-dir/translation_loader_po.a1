@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1513269473">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="62" column="14" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="196" column="26" info="Calling function &apos;load_translation&apos;, 1st argument &apos;f&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="193" column="34" info="Assignment &apos;f=FileAccess::open(p_path,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="194" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="63" column="12" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="196" column="26" info="Calling function &apos;load_translation&apos;, 1st argument &apos;f&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="193" column="34" info="Assignment &apos;f=FileAccess::open(p_path,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="194" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/io/translation_loader_po.h:40:13" call-funcname="load_translation" call-argnr="1" file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="196" col="25" call-argexpr="f" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="194" col="22" info="Assuming that condition '!f' is not redundant"/>
+  <path file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="193" col="34" info="Assignment 'f=FileAccess::open(p_path,FileAccess::READ)', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/io/translation_loader_po.h:42:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/core/io/translation_loader_po.cpp" line="201" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="load_translation" lineNumber="36"/>
+    <functiondecl functionName="load" lineNumber="188"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="199"/>
+    <functiondecl functionName="handles_type" lineNumber="204"/>
+    <functiondecl functionName="get_resource_type" lineNumber="209"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_FILE_CORRUPT"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RES"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="STATUS_NONE"/>
+    <functioncall functionName="STATUS_READING_ID"/>
+    <functioncall functionName="STATUS_READING_STRING"/>
+    <functioncall functionName="Translation"/>
+    <functioncall functionName="TranslationLoaderPO"/>
+    <functioncall functionName="add_message"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c_unescape"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end_pos"/>
+    <functioncall functionName="eof_reached"/>
+    <functioncall functionName="escape_next"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_line"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_eof"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="load_translation"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="msg_id"/>
+    <functioncall functionName="msg_str"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_locale"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skip_next"/>
+    <functioncall functionName="skip_this"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

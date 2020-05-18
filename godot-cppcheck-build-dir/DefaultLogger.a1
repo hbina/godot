@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4001620935">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;FileLogStream&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;FileLogStream&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/Common/DefaultLogger.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/FileLogStream.h" line="60" column="5"/>
+            <symbol>FileLogStream</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h:71:10" my-argnr="1" my-argname="message" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h" line="93" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h:71:10" my-argnr="1" my-argname="message" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h" line="93" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h:71:10" my-argnr="1" my-argname="message" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h" line="93" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h:71:10" my-argnr="1" my-argname="message" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h" line="93" col="17" value="0"/>
+  </FileInfo>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;write&apos; argument 1 names different: declaration &apos;messgae&apos; definition &apos;message&apos;." verbose="Function &apos;write&apos; argument 1 names different: declaration &apos;messgae&apos; definition &apos;message&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/Common/DefaultLogger.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/Win32DebugLogStream.h" line="87" column="45"/>
+            <location file0="/home/hbina/git/godot/thirdparty/assimp/code/Common/DefaultLogger.cpp" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/Win32DebugLogStream.h" line="70" column="28"/>
+            <symbol>write</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h:71:10" my-argnr="1" my-argname="message" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h" line="93" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h:71:10" my-argnr="1" my-argname="message" file="/home/hbina/git/godot/thirdparty/assimp/code/Common/StdOStreamLogStream.h" line="93" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="Debugging"/>
+    <functioncall functionName="DefaultLogger"/>
+    <functioncall functionName="Err"/>
+    <functioncall functionName="FileLogStream"/>
+    <functioncall functionName="Flush"/>
+    <functioncall functionName="GetCurrentThreadId"/>
+    <functioncall functionName="GetThreadID"/>
+    <functioncall functionName="Info"/>
+    <functioncall functionName="LogStreamInfo"/>
+    <functioncall functionName="Logger"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="OnDebug"/>
+    <functioncall functionName="OnError"/>
+    <functioncall functionName="OnInfo"/>
+    <functioncall functionName="OnWarn"/>
+    <functioncall functionName="Open"/>
+    <functioncall functionName="OutputDebugStringA"/>
+    <functioncall functionName="SeverityAll"/>
+    <functioncall functionName="Size"/>
+    <functioncall functionName="StdOStreamLogStream"/>
+    <functioncall functionName="Warn"/>
+    <functioncall functionName="Win32DebugLogStream"/>
+    <functioncall functionName="Write"/>
+    <functioncall functionName="WriteToStreams"/>
+    <functioncall functionName="_ostream"/>
+    <functioncall functionName="aiDefaultLogStream_DEBUGGER"/>
+    <functioncall functionName="aiDefaultLogStream_FILE"/>
+    <functioncall functionName="aiDefaultLogStream_STDERR"/>
+    <functioncall functionName="aiDefaultLogStream_STDOUT"/>
+    <functioncall functionName="ai_assert"/>
+    <functioncall functionName="ai_snprintf"/>
+    <functioncall functionName="attachStream"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cerr"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="cout"/>
+    <functioncall functionName="createDefaultStream"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="flush"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="isNullLogger"/>
+    <functioncall functionName="it"/>
+    <functioncall functionName="lastLen"/>
+    <functioncall functionName="lastMsg"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="logger"/>
+    <functioncall functionName="loggerMutex"/>
+    <functioncall functionName="mOstream"/>
+    <functioncall functionName="m_pStream"/>
+    <functioncall functionName="m_uiErrorSeverity"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="message"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="noRepeatMsg"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="pInfo"/>
+    <functioncall functionName="pStream"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s_pNullLogger"/>
+    <functioncall functionName="severity"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="strcat"/>
+    <functioncall functionName="streams"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="strncmp"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uiErrorSev"/>
+    <functioncall functionName="write"/>
+  </FileInfo>
+</analyzerinfo>

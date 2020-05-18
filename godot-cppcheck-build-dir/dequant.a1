@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2861091036">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;qti&apos; can be reduced." verbose="The scope of the variable &apos;qti&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="33" column="18"/>
+            <symbol>qti</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;pli&apos; can be reduced." verbose="The scope of the variable &apos;pli&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="34" column="18"/>
+            <symbol>pli</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.c:24:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:48:6" call-funcname="oc_pack_read" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/dequant.c" line="38" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/dequant.h:23:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functiondecl functionName="oc_quant_params_unpack" lineNumber="24"/>
+    <functiondecl functionName="oc_quant_params_clear" lineNumber="146"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="OC_CS_ITU_REC_470BG"/>
+    <functioncall functionName="OC_CS_ITU_REC_470M"/>
+    <functioncall functionName="OC_CS_NSPACES"/>
+    <functioncall functionName="OC_CS_UNSPECIFIED"/>
+    <functioncall functionName="OC_PF_420"/>
+    <functioncall functionName="OC_PF_422"/>
+    <functioncall functionName="OC_PF_444"/>
+    <functioncall functionName="OC_PF_RSVD"/>
+    <functioncall functionName="TH_CS_ITU_REC_470BG"/>
+    <functioncall functionName="TH_CS_ITU_REC_470M"/>
+    <functioncall functionName="TH_CS_NSPACES"/>
+    <functioncall functionName="TH_CS_UNSPECIFIED"/>
+    <functioncall functionName="TH_NDCT_TOKENS"/>
+    <functioncall functionName="TH_NHUFFMAN_TABLES"/>
+    <functioncall functionName="TH_PF_420"/>
+    <functioncall functionName="TH_PF_422"/>
+    <functioncall functionName="TH_PF_444"/>
+    <functioncall functionName="TH_PF_NFORMATS"/>
+    <functioncall functionName="TH_PF_RSVD"/>
+    <functioncall functionName="_ogg_free"/>
+    <functioncall functionName="_ogg_malloc"/>
+    <functioncall functionName="_opb"/>
+    <functioncall functionName="base_matrices"/>
+    <functioncall functionName="base_mats"/>
+    <functioncall functionName="bmi"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="nbits"/>
+    <functioncall functionName="oc_ilog"/>
+    <functioncall functionName="oc_pack_read"/>
+    <functioncall functionName="oc_pack_read1"/>
+    <functioncall functionName="ogg_uint16_t"/>
+    <functioncall functionName="pli"/>
+    <functioncall functionName="plj"/>
+    <functioncall functionName="qi"/>
+    <functioncall functionName="qrbms"/>
+    <functioncall functionName="qri"/>
+    <functioncall functionName="qrsizes"/>
+    <functioncall functionName="qti"/>
+    <functioncall functionName="qtj"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sizes"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

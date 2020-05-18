@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2365818701">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;RvoAgent::map_update_id&apos; is not initialized in the constructor." verbose="Member variable &apos;RvoAgent::map_update_id&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gdnavigation/rvo_agent.cpp" line="39" column="11"/>
+            <symbol>RvoAgent::map_update_id</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;NavigationPoly&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;NavigationPoly&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnavigation/rvo_agent.cpp" file="/home/hbina/git/godot/modules/gdnavigation/nav_utils.h" line="142" column="2"/>
+            <symbol>NavigationPoly</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;obj==nullptr&apos; is redundant or there is possible null pointer dereference: obj." verbose="Either the condition &apos;obj==nullptr&apos; is redundant or there is possible null pointer dereference: obj." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/gdnavigation/rvo_agent.cpp" line="83" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/gdnavigation/rvo_agent.cpp" line="72" column="38" info="Assignment &apos;obj=ObjectDB::get_instance(callback.id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/gdnavigation/rvo_agent.cpp" line="73" column="10" info="Assuming that condition &apos;obj==nullptr&apos; is not redundant"/>
+            <symbol>obj</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_map" lineNumber="44"/>
+    <functiondecl functionName="is_map_changed" lineNumber="48"/>
+    <functiondecl functionName="set_callback" lineNumber="58"/>
+    <functiondecl functionName="has_callback" lineNumber="64"/>
+    <functiondecl functionName="dispatch_callback" lineNumber="68"/>
+    <functioncall functionName="Connection"/>
+    <functioncall functionName="Edge"/>
+    <functioncall functionName="EdgeKey"/>
+    <functioncall functionName="NavigationPoly"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PointKey"/>
+    <functioncall functionName="RvoAgent"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="argc"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back_navigation_edge"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_map_update_id"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="map"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="new_velocity"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="operator=="/>
+    <functioncall functionName="other"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_map"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_poly"/>
+    <functioncall functionName="p_self"/>
+    <functioncall functionName="p_udata"/>
+    <functioncall functionName="poly"/>
+    <functioncall functionName="prev_navigation_poly_id"/>
+    <functioncall functionName="responseCallError"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="self_id"/>
+    <functioncall functionName="traveled_distance"/>
+    <functioncall functionName="udata"/>
+    <functioncall functionName="vp"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

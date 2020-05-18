@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1974866859">
+        <error id="nullPointerArithmeticRedundantCheck" severity="warning" msg="Either the condition &apos;tokens!=NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." verbose="Either the condition &apos;tokens!=NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." cwe="682">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="329" column="49" info="Null pointer addition"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="333" column="17" info="Assuming that condition &apos;tokens!=NULL&apos; is not redundant"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:135:13" call-funcname="SetBitDepths" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="238" col="19" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:135:13" call-funcname="SetBitDepths" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="139" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:135:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:135:13" call-funcname="SetBitDepths" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="238" col="7" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:165:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:31:13" call-funcname="OptimizeHuffmanForRle" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="412" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:406:6" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:165:13" call-funcname="GenerateOptimalTree" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="413" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:406:6" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:135:13" my-argnr="1" my-argname="tree" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="138" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:326:5" my-argnr="1" my-argname="tree" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="330" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:406:6" my-argnr="3" my-argname="buf_rle" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="411" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c:406:6" my-argnr="5" my-argname="huff_code" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/huffman_encode_utils.c" line="410" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ValuesShouldBeCollapsedToStrideAverage" lineNumber="25"/>
+    <functiondecl functionName="OptimizeHuffmanForRle" lineNumber="31"/>
+    <functiondecl functionName="CompareHuffmanTrees" lineNumber="122"/>
+    <functiondecl functionName="SetBitDepths" lineNumber="135"/>
+    <functiondecl functionName="GenerateOptimalTree" lineNumber="165"/>
+    <functiondecl functionName="CodeRepeatedValues" lineNumber="261"/>
+    <functiondecl functionName="CodeRepeatedZeros" lineNumber="295"/>
+    <functiondecl functionName="VP8LCreateCompressedHuffmanTree" lineNumber="326"/>
+    <functiondecl functionName="ReverseBits" lineNumber="361"/>
+    <functiondecl functionName="ConvertBitDepthsToSymbols" lineNumber="374"/>
+    <functiondecl functionName="VP8LCreateHuffmanTree" lineNumber="406"/>
+    <functioncall functionName="CodeRepeatedValues"/>
+    <functioncall functionName="CodeRepeatedZeros"/>
+    <functioncall functionName="CompareHuffmanTrees"/>
+    <functioncall functionName="ConvertBitDepthsToSymbols"/>
+    <functioncall functionName="GenerateOptimalTree"/>
+    <functioncall functionName="OptimizeHuffmanForRle"/>
+    <functioncall functionName="ReverseBits"/>
+    <functioncall functionName="SetBitDepths"/>
+    <functioncall functionName="ValuesShouldBeCollapsedToStrideAverage"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bit_depths"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf_rle"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="code_length"/>
+    <functioncall functionName="code_lengths"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="count_min"/>
+    <functioncall functionName="ending_token"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="histogram"/>
+    <functioncall functionName="huff_code"/>
+    <functioncall functionName="huff_tree"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="level"/>
+    <functioncall functionName="limit"/>
+    <functioncall functionName="max_tokens"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="num_bits"/>
+    <functioncall functionName="num_symbols"/>
+    <functioncall functionName="pool"/>
+    <functioncall functionName="pool_index_left_"/>
+    <functioncall functionName="pool_index_right_"/>
+    <functioncall functionName="prev_value"/>
+    <functioncall functionName="ptr1"/>
+    <functioncall functionName="ptr2"/>
+    <functioncall functionName="qsort"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="runs"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="starting_token"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="tokens"/>
+    <functioncall functionName="total_count_"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="tree_depth_limit"/>
+    <functioncall functionName="tree_pool"/>
+    <functioncall functionName="tree_size"/>
+    <functioncall functionName="tree_size_orig"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="value_"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

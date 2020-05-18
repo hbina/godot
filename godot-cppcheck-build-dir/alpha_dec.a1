@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="656119596">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;io!=NULL&apos; is redundant or there is possible null pointer dereference: io." verbose="Either the condition &apos;io!=NULL&apos; is redundant or there is possible null pointer dereference: io." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="180" column="21" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="183" column="28" info="Assuming that condition &apos;io!=NULL&apos; is not redundant"/>
+            <symbol>io</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;io!=NULL&apos; is redundant or there is possible null pointer dereference: io." verbose="Either the condition &apos;io!=NULL&apos; is redundant or there is possible null pointer dereference: io." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="181" column="22" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="183" column="28" info="Assuming that condition &apos;io!=NULL&apos; is not redundant"/>
+            <symbol>io</symbol>
+        </error>
+        <error id="nullPointerArithmeticRedundantCheck" severity="warning" msg="Either the condition &apos;data!=NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." verbose="Either the condition &apos;data!=NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." cwe="682">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="52" column="42" info="Null pointer addition"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="57" column="15" info="Assuming that condition &apos;data!=NULL&apos; is not redundant"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c:48:12" my-argnr="4" my-argname="src_io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="61" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c:110:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="111" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c:150:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="154" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c:150:12" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="151" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c:177:16" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/alpha_dec.c" line="180" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ALPHNew" lineNumber="27"/>
+    <functiondecl functionName="ALPHDelete" lineNumber="33"/>
+    <functiondecl functionName="ALPHInit" lineNumber="48"/>
+    <functiondecl functionName="ALPHDecode" lineNumber="110"/>
+    <functiondecl functionName="AllocateAlphaPlane" lineNumber="150"/>
+    <functiondecl functionName="WebPDeallocateAlphaMemory" lineNumber="165"/>
+    <functiondecl functionName="VP8DecompressAlphaRows" lineNumber="177"/>
+    <functioncall functionName="ALPHA_HEADER_LEN"/>
+    <functioncall functionName="ALPHDecode"/>
+    <functioncall functionName="ALPHDelete"/>
+    <functioncall functionName="ALPHInit"/>
+    <functioncall functionName="ALPHNew"/>
+    <functioncall functionName="AllocateAlphaPlane"/>
+    <functioncall functionName="Error"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="VP8FiltersInit"/>
+    <functioncall functionName="VP8InitIo"/>
+    <functioncall functionName="VP8LDecodeAlphaHeader"/>
+    <functioncall functionName="VP8LDecodeAlphaImageStream"/>
+    <functioncall functionName="VP8LDelete"/>
+    <functioncall functionName="WEBP_FILTER_TYPE"/>
+    <functioncall functionName="WebPDeallocateAlphaMemory"/>
+    <functioncall functionName="WebPDequantizeLevels"/>
+    <functioncall functionName="WebPInitCustomIo"/>
+    <functioncall functionName="WebPSafeCalloc"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="alph_dec"/>
+    <functioncall functionName="alph_dec_"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="alpha_data"/>
+    <functioncall functionName="alpha_data_"/>
+    <functioncall functionName="alpha_data_size"/>
+    <functioncall functionName="alpha_data_size_"/>
+    <functioncall functionName="alpha_dithering_"/>
+    <functioncall functionName="alpha_plane_"/>
+    <functioncall functionName="alpha_plane_mem_"/>
+    <functioncall functionName="alpha_prev_line_"/>
+    <functioncall functionName="alpha_size"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="crop_bottom"/>
+    <functioncall functionName="crop_left"/>
+    <functioncall functionName="crop_right"/>
+    <functioncall functionName="crop_top"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="deltas"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="filter_"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="height_"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="io_"/>
+    <functioncall functionName="is_alpha_decoded_"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="method_"/>
+    <functioncall functionName="num_rows"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="pre_processing_"/>
+    <functioncall functionName="prev_line"/>
+    <functioncall functionName="row"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="use_cropping"/>
+    <functioncall functionName="vp8l_dec_"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="width_"/>
+  </FileInfo>
+</analyzerinfo>

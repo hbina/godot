@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4229427381">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Runner::iterator_doc&apos; is not initialized in the constructor." verbose="Member variable &apos;Runner::iterator_doc&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="597" column="27"/>
+            <symbol>Runner::iterator_doc</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Runner::iterator_match&apos; is not initialized in the constructor." verbose="Member variable &apos;Runner::iterator_match&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="597" column="27"/>
+            <symbol>Runner::iterator_match</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Runner::root_item&apos; is not initialized in the constructor." verbose="Member variable &apos;Runner::root_item&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="597" column="27"/>
+            <symbol>Runner::root_item</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Runner::matched_item&apos; is not initialized in the constructor." verbose="Member variable &apos;Runner::matched_item&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="597" column="27"/>
+            <symbol>Runner::matched_item</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/editor_help_search.cpp" file="/home/hbina/git/godot/editor/editor_node.h" line="550" column="20"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="690" col="51" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="712" col="48" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="714" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_help_search.h:143:12" call-funcname="_create_class_item" call-argnr="3" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="398" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:143:12" my-argnr="2" my-argname="p_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="484" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:144:12" my-argnr="2" my-argname="p_class_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="509" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:144:12" my-argnr="3" my-argname="p_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="509" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:145:12" my-argnr="2" my-argname="p_class_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="524" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:145:12" my-argnr="3" my-argname="p_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="524" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:146:12" my-argnr="2" my-argname="p_class_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="539" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:146:12" my-argnr="3" my-argname="p_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="539" col="45" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:147:12" my-argnr="2" my-argname="p_class_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="545" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:147:12" my-argnr="3" my-argname="p_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="545" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:148:12" my-argnr="2" my-argname="p_class_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="553" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_help_search.h:148:12" my-argnr="3" my-argname="p_doc" file="/home/hbina/git/godot/editor/editor_help_search.cpp" line="553" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_update_icons" lineNumber="38"/>
+    <functiondecl functionName="_update_results" lineNumber="50"/>
+    <functiondecl functionName="_search_box_gui_input" lineNumber="64"/>
+    <functiondecl functionName="_search_box_text_changed" lineNumber="81"/>
+    <functiondecl functionName="_filter_combo_item_selected" lineNumber="86"/>
+    <functiondecl functionName="_confirmed" lineNumber="91"/>
+    <functiondecl functionName="_notification" lineNumber="105"/>
+    <functiondecl functionName="_bind_methods" lineNumber="150"/>
+    <functiondecl functionName="popup_dialog" lineNumber="155"/>
+    <functiondecl functionName="popup_dialog" lineNumber="160"/>
+    <functiondecl functionName="_is_class_disabled_by_feature_profile" lineNumber="256"/>
+    <functiondecl functionName="_slice" lineNumber="279"/>
+    <functiondecl functionName="_phase_match_classes_init" lineNumber="316"/>
+    <functiondecl functionName="_phase_match_classes" lineNumber="325"/>
+    <functiondecl functionName="_phase_class_items_init" lineNumber="378"/>
+    <functiondecl functionName="_phase_class_items" lineNumber="389"/>
+    <functiondecl functionName="_phase_member_items_init" lineNumber="405"/>
+    <functiondecl functionName="_phase_member_items" lineNumber="412"/>
+    <functiondecl functionName="_phase_select_match" lineNumber="432"/>
+    <functiondecl functionName="_match_string" lineNumber="439"/>
+    <functiondecl functionName="_match_item" lineNumber="447"/>
+    <functiondecl functionName="_create_class_hierarchy" lineNumber="460"/>
+    <functiondecl functionName="_create_class_item" lineNumber="481"/>
+    <functiondecl functionName="_create_method_item" lineNumber="507"/>
+    <functiondecl functionName="_create_signal_item" lineNumber="522"/>
+    <functiondecl functionName="_create_constant_item" lineNumber="537"/>
+    <functiondecl functionName="_create_property_item" lineNumber="543"/>
+    <functiondecl functionName="_create_theme_property_item" lineNumber="551"/>
+    <functiondecl functionName="_create_member_item" lineNumber="557"/>
+    <functiondecl functionName="work" lineNumber="587"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="AcceptDialog"/>
+    <functioncall functionName="CLASS_OPTION_DISABLE_EDITOR"/>
+    <functioncall functionName="ClassDoc"/>
+    <functioncall functionName="ClassMatch"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BR"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UR"/>
+    <functioncall functionName="DOCK_SLOT_MAX"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BR"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UR"/>
+    <functioncall functionName="EDITOR_3D"/>
+    <functioncall functionName="EDITOR_ASSETLIB"/>
+    <functioncall functionName="EDITOR_OPEN_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCRIPT"/>
+    <functioncall functionName="EDIT_REDO"/>
+    <functioncall functionName="EDIT_RELOAD_SAVED_SCENE"/>
+    <functioncall functionName="EDIT_UNDO"/>
+    <functioncall functionName="EditorFeatureProfile"/>
+    <functioncall functionName="EditorFeatureProfileManager"/>
+    <functioncall functionName="EditorHelpSearch"/>
+    <functioncall functionName="EditorNode"/>
+    <functioncall functionName="EditorPluginList"/>
+    <functioncall functionName="EditorProgress"/>
+    <functioncall functionName="EditorProgressBG"/>
+    <functioncall functionName="FEATURE_3D"/>
+    <functioncall functionName="FEATURE_ASSET_LIB"/>
+    <functioncall functionName="FEATURE_FILESYSTEM_DOCK"/>
+    <functioncall functionName="FEATURE_IMPORT_DOCK"/>
+    <functioncall functionName="FEATURE_MAX"/>
+    <functioncall functionName="FEATURE_NODE_DOCK"/>
+    <functioncall functionName="FEATURE_SCENE_TREE"/>
+    <functioncall functionName="FEATURE_SCRIPT"/>
+    <functioncall functionName="FILE_CLOSE"/>
+    <functioncall functionName="FILE_CLOSE_ALL"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_QUIT"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="FILE_CLOSE_OTHERS"/>
+    <functioncall functionName="FILE_CLOSE_RIGHT"/>
+    <functioncall functionName="FILE_EXPLORE_ANDROID_BUILD_TEMPLATES"/>
+    <functioncall functionName="FILE_EXPORT_MESH_LIBRARY"/>
+    <functioncall functionName="FILE_EXPORT_PROJECT"/>
+    <functioncall functionName="FILE_EXPORT_TILESET"/>
+    <functioncall functionName="FILE_EXTERNAL_OPEN_SCENE"/>
+    <functioncall functionName="FILE_IMPORT_SUBSCENE"/>
+    <functioncall functionName="FILE_INSTALL_ANDROID_SOURCE"/>
+    <functioncall functionName="FILE_NEW_INHERITED_SCENE"/>
+    <functioncall functionName="FILE_NEW_SCENE"/>
+    <functioncall functionName="FILE_OPEN_OLD_SCENE"/>
+    <functioncall functionName="FILE_OPEN_PREV"/>
+    <functioncall functionName="FILE_OPEN_RECENT"/>
+    <functioncall functionName="FILE_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCRIPT"/>
+    <functioncall functionName="FILE_QUIT"/>
+    <functioncall functionName="FILE_SAVE_ALL_SCENES"/>
+    <functioncall functionName="FILE_SAVE_AND_RUN"/>
+    <functioncall functionName="FILE_SAVE_AS_SCENE"/>
+    <functioncall functionName="FILE_SAVE_BEFORE_RUN"/>
+    <functioncall functionName="FILE_SAVE_OPTIMIZED"/>
+    <functioncall functionName="FILE_SAVE_SCENE"/>
+    <functioncall functionName="FILE_SHOW_IN_FILESYSTEM"/>
+    <functioncall functionName="FOCUS_NONE"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_NEW_WINDOW"/>
+    <functioncall functionName="GLOBAL_SCENE"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HELP_ABOUT"/>
+    <functioncall functionName="HELP_COMMUNITY"/>
+    <functioncall functionName="HELP_DOCS"/>
+    <functioncall functionName="HELP_QA"/>
+    <functioncall functionName="HELP_REPORT_A_BUG"/>
+    <functioncall functionName="HELP_SEARCH"/>
+    <functioncall functionName="HELP_SEND_DOCS_FEEDBACK"/>
+    <functioncall functionName="LineEdit"/>
+    <functioncall functionName="MAX_BUILD_CALLBACKS"/>
+    <functioncall functionName="MAX_INIT_CALLBACKS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="OptionButton"/>
+    <functioncall functionName="PHASE_CLASS_ITEMS"/>
+    <functioncall functionName="PHASE_CLASS_ITEMS_INIT"/>
+    <functioncall functionName="PHASE_MATCH_CLASSES"/>
+    <functioncall functionName="PHASE_MATCH_CLASSES_INIT"/>
+    <functioncall functionName="PHASE_MAX"/>
+    <functioncall functionName="PHASE_MEMBER_ITEMS"/>
+    <functioncall functionName="PHASE_MEMBER_ITEMS_INIT"/>
+    <functioncall functionName="PHASE_SELECT_MATCH"/>
+    <functioncall functionName="PROFILE_CLEAR"/>
+    <functioncall functionName="PROFILE_ERASE"/>
+    <functioncall functionName="PROFILE_EXPORT"/>
+    <functioncall functionName="PROFILE_IMPORT"/>
+    <functioncall functionName="PROFILE_MAX"/>
+    <functioncall functionName="PROFILE_NEW"/>
+    <functioncall functionName="PROFILE_SET"/>
+    <functioncall functionName="RESOURCE_SAVE"/>
+    <functioncall functionName="RESOURCE_SAVE_AS"/>
+    <functioncall functionName="RUN_PLAY"/>
+    <functioncall functionName="RUN_PLAY_CUSTOM_SCENE"/>
+    <functioncall functionName="RUN_PLAY_SCENE"/>
+    <functioncall functionName="RUN_PROJECT_DATA_FOLDER"/>
+    <functioncall functionName="RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="RUN_SCENE_SETTINGS"/>
+    <functioncall functionName="RUN_SETTINGS"/>
+    <functioncall functionName="RUN_STOP"/>
+    <functioncall functionName="RUN_VCS_SETTINGS"/>
+    <functioncall functionName="RUN_VCS_SHUT_DOWN"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="Runner"/>
+    <functioncall functionName="SCENE_TAB_CLOSE"/>
+    <functioncall functionName="SEARCH_ALL"/>
+    <functioncall functionName="SEARCH_CLASSES"/>
+    <functioncall functionName="SEARCH_CONSTANTS"/>
+    <functioncall functionName="SEARCH_METHODS"/>
+    <functioncall functionName="SEARCH_PROPERTIES"/>
+    <functioncall functionName="SEARCH_SIGNALS"/>
+    <functioncall functionName="SEARCH_THEME_ITEMS"/>
+    <functioncall functionName="SELECT_ROW"/>
+    <functioncall functionName="SETTINGS_EDITOR_CONFIG_FOLDER"/>
+    <functioncall functionName="SETTINGS_EDITOR_DATA_FOLDER"/>
+    <functioncall functionName="SETTINGS_HELP"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DEFAULT"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DELETE"/>
+    <functioncall functionName="SETTINGS_LAYOUT_SAVE"/>
+    <functioncall functionName="SETTINGS_MANAGE_EXPORT_TEMPLATES"/>
+    <functioncall functionName="SETTINGS_MANAGE_FEATURE_PROFILES"/>
+    <functioncall functionName="SETTINGS_PICK_MAIN_SCENE"/>
+    <functioncall functionName="SETTINGS_PREFERENCES"/>
+    <functioncall functionName="SETTINGS_TOGGLE_CONSOLE"/>
+    <functioncall functionName="SETTINGS_TOGGLE_FULLSCREEN"/>
+    <functioncall functionName="SETTINGS_UPDATE_ALWAYS"/>
+    <functioncall functionName="SETTINGS_UPDATE_CHANGES"/>
+    <functioncall functionName="SETTINGS_UPDATE_CONTINUOUSLY"/>
+    <functioncall functionName="SETTINGS_UPDATE_SPINNER_HIDE"/>
+    <functioncall functionName="SETTINGS_UPDATE_WHEN_CHANGED"/>
+    <functioncall functionName="SET_VIDEO_DRIVER_SAVE_AND_RESTART"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TOOLS_CUSTOM"/>
+    <functioncall functionName="TOOLS_ORPHAN_RESOURCES"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TTRC"/>
+    <functioncall functionName="TTRGET"/>
+    <functioncall functionName="ToolButton"/>
+    <functioncall functionName="Tree"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_cleanup_scene"/>
+    <functioncall functionName="_confirmed"/>
+    <functioncall functionName="_create_class_hierarchy"/>
+    <functioncall functionName="_create_class_item"/>
+    <functioncall functionName="_create_constant_item"/>
+    <functioncall functionName="_create_member_item"/>
+    <functioncall functionName="_create_method_item"/>
+    <functioncall functionName="_create_property_item"/>
+    <functioncall functionName="_create_signal_item"/>
+    <functioncall functionName="_create_theme_property_item"/>
+    <functioncall functionName="_edit_current"/>
+    <functioncall functionName="_editor_select"/>
+    <functioncall functionName="_filter_combo_item_selected"/>
+    <functioncall functionName="_is_class_disabled_by_feature_profile"/>
+    <functioncall functionName="_match_item"/>
+    <functioncall functionName="_match_string"/>
+    <functioncall functionName="_menu_option_confirm"/>
+    <functioncall functionName="_phase_class_items"/>
+    <functioncall functionName="_phase_class_items_init"/>
+    <functioncall functionName="_phase_match_classes"/>
+    <functioncall functionName="_phase_match_classes_init"/>
+    <functioncall functionName="_phase_member_items"/>
+    <functioncall functionName="_phase_member_items_init"/>
+    <functioncall functionName="_phase_select_match"/>
+    <functioncall functionName="_save_scene"/>
+    <functioncall functionName="_save_scene_with_preview"/>
+    <functioncall functionName="_search_box_gui_input"/>
+    <functioncall functionName="_search_box_text_changed"/>
+    <functioncall functionName="_slice"/>
+    <functioncall functionName="_update_icons"/>
+    <functioncall functionName="_update_results"/>
+    <functioncall functionName="accept_event"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_item"/>
+    <functioncall functionName="add_separator"/>
+    <functioncall functionName="add_theme_icon_override"/>
+    <functioncall functionName="base_match"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="case_sensitive_button"/>
+    <functioncall functionName="casecmp_to"/>
+    <functioncall functionName="class_doc"/>
+    <functioncall functionName="class_exists"/>
+    <functioncall functionName="class_item"/>
+    <functioncall functionName="class_name"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="create_item"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="default_value"/>
+    <functioncall functionName="disabled_color"/>
+    <functioncall functionName="doc"/>
+    <functioncall functionName="edit_resource"/>
+    <functioncall functionName="editor_data"/>
+    <functioncall functionName="editor_folding"/>
+    <functioncall functionName="editor_get_scale"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty_icon"/>
+    <functioncall functionName="ends_with"/>
+    <functioncall functionName="ensure_cursor_is_visible"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="filter_combo"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get_addon_area"/>
+    <functioncall functionName="get_current_profile"/>
+    <functioncall functionName="get_doc_data"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_feature_name"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_keycode"/>
+    <functioncall functionName="get_metadata"/>
+    <functioncall functionName="get_ok"/>
+    <functioncall functionName="get_parent_class"/>
+    <functioncall functionName="get_parent_control"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_project_metadata"/>
+    <functioncall functionName="get_script_create_dialog"/>
+    <functioncall functionName="get_selected"/>
+    <functioncall functionName="get_selected_id"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_text"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="getter"/>
+    <functioncall functionName="grab_focus"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_child_process"/>
+    <functioncall functionName="has_theme_icon"/>
+    <functioncall functionName="hbox"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="hierarchy_button"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icon"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inherits"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_class_disabled"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_subsequence_of"/>
+    <functioncall functionName="is_subsequence_ofi"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="iterator_doc"/>
+    <functioncall functionName="iterator_match"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="match"/>
+    <functioncall functionName="matched_item"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="menu_hb"/>
+    <functioncall functionName="method_name"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nocasecmp_to"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="old_search"/>
+    <functioncall functionName="open_resource"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_can_cancel"/>
+    <functioncall functionName="p_class"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_feature"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_force_refresh"/>
+    <functioncall functionName="p_gray"/>
+    <functioncall functionName="p_icon"/>
+    <functioncall functionName="p_icon_service"/>
+    <functioncall functionName="p_item"/>
+    <functioncall functionName="p_label"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_old"/>
+    <functioncall functionName="p_parent"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_plugins_list"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_results_tree"/>
+    <functioncall functionName="p_search_flags"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_table"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="p_term"/>
+    <functioncall functionName="p_tooltip"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_with_preview"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="phase"/>
+    <functioncall functionName="phase_done"/>
+    <functioncall functionName="popup"/>
+    <functioncall functionName="popup_centered_ratio"/>
+    <functioncall functionName="popup_dialog"/>
+    <functioncall functionName="progress_add_task"/>
+    <functioncall functionName="progress_add_task_bg"/>
+    <functioncall functionName="progress_end_task"/>
+    <functioncall functionName="progress_end_task_bg"/>
+    <functioncall functionName="progress_task_step"/>
+    <functioncall functionName="progress_task_step_bg"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="register_text_enter"/>
+    <functioncall functionName="required"/>
+    <functioncall functionName="results_tree"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="root_item"/>
+    <functioncall functionName="saved_size"/>
+    <functioncall functionName="search_box"/>
+    <functioncall functionName="search_flags"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="select_all"/>
+    <functioncall functionName="set_clear_button_enabled"/>
+    <functioncall functionName="set_column_expand"/>
+    <functioncall functionName="set_column_min_width"/>
+    <functioncall functionName="set_column_title"/>
+    <functioncall functionName="set_columns"/>
+    <functioncall functionName="set_custom_color"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_focus_mode"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_hide_on_ok"/>
+    <functioncall functionName="set_hide_root"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_metadata"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_process"/>
+    <functioncall functionName="set_project_metadata"/>
+    <functioncall functionName="set_right_icon"/>
+    <functioncall functionName="set_select_mode"/>
+    <functioncall functionName="set_stretch_ratio"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_toggle_mode"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_visible_editor"/>
+    <functioncall functionName="setter"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="slot"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="term"/>
+    <functioncall functionName="text"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="tooltip"/>
+    <functioncall functionName="top_split"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="ui_service"/>
+    <functioncall functionName="unsaved_cache"/>
+    <functioncall functionName="update_keying"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="vbox"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="work"/>
+  </FileInfo>
+</analyzerinfo>

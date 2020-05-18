@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2171739055">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Comb::damp&apos; is not initialized in the constructor." verbose="Member variable &apos;Comb::damp&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/reverb.cpp" file="/home/hbina/git/godot/servers/audio/effects/reverb.h" line="69" column="3"/>
+            <symbol>Comb::damp</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Comb::extra_spread_frames&apos; is not initialized in the constructor." verbose="Member variable &apos;Comb::extra_spread_frames&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/reverb.cpp" file="/home/hbina/git/godot/servers/audio/effects/reverb.h" line="69" column="3"/>
+            <symbol>Comb::extra_spread_frames</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AllPass::extra_spread_frames&apos; is not initialized in the constructor." verbose="Member variable &apos;AllPass::extra_spread_frames&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/audio/effects/reverb.cpp" file="/home/hbina/git/godot/servers/audio/effects/reverb.h" line="84" column="3"/>
+            <symbol>AllPass::extra_spread_frames</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="process" lineNumber="57"/>
+    <functiondecl functionName="set_room_size" lineNumber="182"/>
+    <functiondecl functionName="set_damp" lineNumber="187"/>
+    <functiondecl functionName="set_wet" lineNumber="192"/>
+    <functiondecl functionName="set_dry" lineNumber="197"/>
+    <functiondecl functionName="set_predelay" lineNumber="202"/>
+    <functiondecl functionName="set_predelay_feedback" lineNumber="206"/>
+    <functiondecl functionName="set_highpass" lineNumber="211"/>
+    <functiondecl functionName="set_extra_spread" lineNumber="220"/>
+    <functiondecl functionName="set_mix_rate" lineNumber="225"/>
+    <functiondecl functionName="set_extra_spread_base" lineNumber="231"/>
+    <functiondecl functionName="configure_buffers" lineNumber="237"/>
+    <functiondecl functionName="update_parameters" lineNumber="285"/>
+    <functiondecl functionName="clear_buffers" lineNumber="307"/>
+    <functioncall functionName="AllPass"/>
+    <functioncall functionName="Comb"/>
+    <functioncall functionName="INPUT_BUFFER_MAX_SIZE"/>
+    <functioncall functionName="MAX_ALLPASS"/>
+    <functioncall functionName="MAX_COMBS"/>
+    <functioncall functionName="Reverb"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="clear_buffers"/>
+    <functioncall functionName="configure_buffers"/>
+    <functioncall functionName="damp"/>
+    <functioncall functionName="dry"/>
+    <functioncall functionName="echo_buffer"/>
+    <functioncall functionName="echo_buffer_pos"/>
+    <functioncall functionName="echo_buffer_size"/>
+    <functioncall functionName="expf"/>
+    <functioncall functionName="extra_spread"/>
+    <functioncall functionName="extra_spread_frames"/>
+    <functioncall functionName="feedback"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="hpaux"/>
+    <functioncall functionName="hpf"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="input_buffer"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="lrint"/>
+    <functioncall functionName="lrintf"/>
+    <functioncall functionName="memdelete_arr"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="mix_rate"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="p_damp"/>
+    <functioncall functionName="p_dry"/>
+    <functioncall functionName="p_frames"/>
+    <functioncall functionName="p_frq"/>
+    <functioncall functionName="p_mix_rate"/>
+    <functioncall functionName="p_predelay"/>
+    <functioncall functionName="p_predelay_fb"/>
+    <functioncall functionName="p_sec"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_spread"/>
+    <functioncall functionName="p_wet"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="predelay_frames"/>
+    <functioncall functionName="read_pos"/>
+    <functioncall functionName="room_offset"/>
+    <functioncall functionName="room_scale"/>
+    <functioncall functionName="undenormalise"/>
+    <functioncall functionName="update_parameters"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

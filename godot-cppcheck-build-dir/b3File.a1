@@ -1,0 +1,657 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="528299361">
+        <error id="bufferAccessOutOfBounds" severity="error" msg="Buffer is accessed out of bounds: m_headerString" verbose="Buffer is accessed out of bounds: m_headerString" cwe="788">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="133" column="18" info="Buffer overrun"/>
+        </error>
+        <error id="objectIndex" severity="error" msg="The address of local variable &apos;longValue&apos; is accessed at non-zero index." verbose="The address of local variable &apos;longValue&apos; is accessed at non-zero index." cwe="758">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="882" column="5"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="882" column="5" info="Address of variable taken here."/>
+        </error>
+        <error id="objectIndex" severity="error" msg="The address of local variable &apos;oldPtr&apos; is accessed at non-zero index." verbose="The address of local variable &apos;oldPtr&apos; is accessed at non-zero index." cwe="758">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1602" column="6"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1602" column="6" info="Address of variable taken here."/>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::code&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::code&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::code</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::len&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::len&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::len</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::oldPtr&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::oldPtr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::oldPtr</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::dna_nr&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::dna_nr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::dna_nr</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::nr&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::nr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::nr</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;bParse::bFile::getNextBlock&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;bParse::bFile::getNextBlock&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="78" column="6"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1526" column="12"/>
+            <symbol>bParse::bFile::getNextBlock</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bFile::swapData&apos; can be const." verbose="The member function &apos;bParse::bFile::swapData&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="96" column="7"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="821" column="13"/>
+            <symbol>bParse::bFile::swapData</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bFile::swapLen&apos; can be const." verbose="The member function &apos;bParse::bFile::swapLen&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="98" column="7"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="313" column="13"/>
+            <symbol>bParse::bFile::swapLen</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bFile::swapDNA&apos; can be const." verbose="The member function &apos;bParse::bFile::swapDNA&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="99" column="7"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="361" column="13"/>
+            <symbol>bParse::bFile::swapDNA</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bFile::ok&apos; can be const." verbose="The member function &apos;bParse::bFile::ok&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="133" column="7"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="175" column="13"/>
+            <symbol>bParse::bFile::ok</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bDNA::getArraySizeNew&apos; can be const." verbose="The member function &apos;bParse::bDNA::getArraySizeNew&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3DNA.h" line="40" column="6"/>
+            <symbol>bParse::bDNA::getArraySizeNew</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bDNA::getElementSize&apos; can be const." verbose="The member function &apos;bParse::bDNA::getElementSize&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3DNA.h" line="45" column="6"/>
+            <symbol>bParse::bDNA::getElementSize</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;parseHeader&apos; is called from constructor &apos;bFile(const char*filename,const char headerString[7])&apos; at line 82. Dynamic binding is not used." verbose="Virtual function &apos;parseHeader&apos; is called from constructor &apos;bFile(const char*filename,const char headerString[7])&apos; at line 82. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="81" column="15" info="parseHeader is a virtual function"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="82" column="3" info="Calling parseHeader"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;parseHeader&apos; is called from constructor &apos;bFile(char*memoryBuffer,int len,const char headerString[7])&apos; at line 104. Dynamic binding is not used." verbose="Virtual function &apos;parseHeader&apos; is called from constructor &apos;bFile(char*memoryBuffer,int len,const char headerString[7])&apos; at line 104. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="81" column="15" info="parseHeader is a virtual function"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="104" column="2" info="Calling parseHeader"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;VOID_IS_8&apos; is always true" verbose="Condition &apos;VOID_IS_8&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="316" column="6" info="Condition &apos;VOID_IS_8&apos; is always true"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;memName[1]==&apos;*&apos;&amp;&amp;ptrptr&apos; is redundant or there is possible null pointer dereference: ptrptr." verbose="Either the condition &apos;memName[1]==&apos;*&apos;&amp;&amp;ptrptr&apos; is redundant or there is possible null pointer dereference: ptrptr." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1197" column="18" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1214" column="28" info="Assuming that condition &apos;memName[1]==&apos;*&apos;&amp;&amp;ptrptr&apos; is not redundant"/>
+            <symbol>ptrptr</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;memName[1]==&apos;*&apos;&amp;&amp;ptrptr&apos; is redundant or there is possible null pointer dereference: ptrptr." verbose="Either the condition &apos;memName[1]==&apos;*&apos;&amp;&amp;ptrptr&apos; is redundant or there is possible null pointer dereference: ptrptr." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1213" column="8" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1214" column="28" info="Assuming that condition &apos;memName[1]==&apos;*&apos;&amp;&amp;ptrptr&apos; is not redundant"/>
+            <symbol>ptrptr</symbol>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between signed char * and float * which have an incompatible binary data representation." verbose="Casting between signed char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="813" column="3"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between signed char * and float * which have an incompatible binary data representation." verbose="Casting between signed char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="814" column="3"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between signed char * and double * which have an incompatible binary data representation." verbose="Casting between signed char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="815" column="3"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between signed char * and double * which have an incompatible binary data representation." verbose="Casting between signed char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="816" column="3"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting from double * to signed char * is not portable due to different binary data representations on different platforms." verbose="Casting from double * to signed char * is not portable due to different binary data representations on different platforms." cwe="704" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1325" column="53"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ignoreEndianFlag&apos; can be reduced." verbose="The scope of the variable &apos;ignoreEndianFlag&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" column="7"/>
+            <symbol>ignoreEndianFlag</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;curStruct&apos; can be reduced." verbose="The scope of the variable &apos;curStruct&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="597" column="22"/>
+            <symbol>curStruct</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;newType&apos; can be reduced." verbose="The scope of the variable &apos;newType&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="598" column="19"/>
+            <symbol>newType</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;curLen&apos; can be reduced." verbose="The scope of the variable &apos;curLen&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="599" column="15"/>
+            <symbol>curLen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;reverseOld&apos; can be reduced." verbose="The scope of the variable &apos;reverseOld&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="599" column="23"/>
+            <symbol>reverseOld</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;memType&apos; can be reduced." verbose="The scope of the variable &apos;memType&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="717" column="8"/>
+            <symbol>memType</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;memName&apos; can be reduced." verbose="The scope of the variable &apos;memName&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="717" column="18"/>
+            <symbol>memName</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;size&apos; can be reduced." verbose="The scope of the variable &apos;size&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="719" column="21"/>
+            <symbol>size</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;revType&apos; can be reduced." verbose="The scope of the variable &apos;revType&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="719" column="27"/>
+            <symbol>revType</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="836" column="9"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;memType&apos; can be reduced." verbose="The scope of the variable &apos;memType&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1153" column="8"/>
+            <symbol>memType</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;newtype&apos; can be reduced." verbose="The scope of the variable &apos;newtype&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1292" column="20"/>
+            <symbol>newtype</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;newtype&apos; can be reduced." verbose="The scope of the variable &apos;newtype&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1317" column="20"/>
+            <symbol>newtype</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;curStruct&apos; can be reduced." verbose="The scope of the variable &apos;curStruct&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1475" column="22"/>
+            <symbol>curStruct</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;newType&apos; can be reduced." verbose="The scope of the variable &apos;newType&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1476" column="19"/>
+            <symbol>newType</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;curLen&apos; can be reduced." verbose="The scope of the variable &apos;curLen&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1477" column="15"/>
+            <symbol>curLen</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;swap&apos; argument 2 names different: declaration &apos;ch&apos; definition &apos;dataChunk&apos;." verbose="Function &apos;swap&apos; argument 2 names different: declaration &apos;ch&apos; definition &apos;dataChunk&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="287" column="41"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="95" column="41"/>
+            <symbol>swap</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;readStruct&apos; argument 2 names different: declaration &apos;chunk&apos; definition &apos;dataChunk&apos;." verbose="Function &apos;readStruct&apos; argument 2 names different: declaration &apos;chunk&apos; definition &apos;dataChunk&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="587" column="48"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="101" column="48"/>
+            <symbol>readStruct</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getMatchingFileDNA&apos; argument 1 names different: declaration &apos;old&apos; definition &apos;dna_addr&apos;." verbose="Function &apos;getMatchingFileDNA&apos; argument 1 names different: declaration &apos;old&apos; definition &apos;dna_addr&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="908" column="39"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="92" column="33"/>
+            <symbol>getMatchingFileDNA</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;resolvePointersStructRecursive&apos; argument 2 names different: declaration &apos;old_dna&apos; definition &apos;dna_nr&apos;." verbose="Function &apos;resolvePointersStructRecursive&apos; argument 2 names different: declaration &apos;old_dna&apos; definition &apos;dna_nr&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1149" column="62"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="88" column="56"/>
+            <symbol>resolvePointersStructRecursive</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1049" column="14" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1032" column="11" info="Shadowed declaration"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;arrayLen&apos; shadows outer variable" verbose="Local variable &apos;arrayLen&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1242" column="9" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1171" column="7" info="Shadowed declaration"/>
+            <symbol>arrayLen</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;bytesRead&apos; is assigned a value that is never used." verbose="Variable &apos;bytesRead&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="77" column="13"/>
+            <symbol>bytesRead</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dataPtrHead&apos; is assigned a value that is never used." verbose="Variable &apos;dataPtrHead&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="542" column="20"/>
+            <symbol>dataPtrHead</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;cpo&apos; is assigned a value that is never used." verbose="Variable &apos;cpo&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="735" column="6"/>
+            <symbol>cpo</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;cpo&apos; is assigned a value that is never used." verbose="Variable &apos;cpo&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="770" column="9"/>
+            <symbol>cpo</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="202" col="20" call-argexpr="&dna" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="13" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="540" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="571" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="7" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:93:8" call-funcname="getFileElement" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="746" col="24" call-argexpr="&filePtrOld" call-argvaluetype="7" call-argvalue="2"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1044" col="15" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:96:7" call-funcname="swapData" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1061" col="12" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1240" col="17" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1300" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1329" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:101:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:99:7" my-argnr="1" my-argname="ptr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="365" col="16" value="20"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="2"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" my-argnr="1" my-argname="dataChunk" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1639" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="202" col="20" call-argexpr="&dna" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="13" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="540" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="571" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="7" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:93:8" call-funcname="getFileElement" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="746" col="24" call-argexpr="&filePtrOld" call-argvaluetype="7" call-argvalue="2"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1044" col="15" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:96:7" call-funcname="swapData" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1061" col="12" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1240" col="17" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1300" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1329" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:101:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:99:7" my-argnr="1" my-argname="ptr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="365" col="16" value="20"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="2"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" my-argnr="1" my-argname="dataChunk" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1639" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="202" col="20" call-argexpr="&dna" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="13" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="540" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="571" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="7" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:93:8" call-funcname="getFileElement" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="746" col="24" call-argexpr="&filePtrOld" call-argvaluetype="7" call-argvalue="2"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1044" col="15" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:96:7" call-funcname="swapData" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1061" col="12" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1240" col="17" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1300" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1329" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:101:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:99:7" my-argnr="1" my-argname="ptr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="365" col="16" value="20"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="2"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" my-argnr="1" my-argname="dataChunk" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1639" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="202" col="20" call-argexpr="&dna" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="13" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="540" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="571" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="7" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:93:8" call-funcname="getFileElement" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="746" col="24" call-argexpr="&filePtrOld" call-argvaluetype="7" call-argvalue="2"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:97:7" call-funcname="swapStruct" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1044" col="15" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:96:7" call-funcname="swapData" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1061" col="12" call-argexpr="ignoreEndianFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="589" col="26" info="Assignment 'ignoreEndianFlag=false', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="25" info="Calling function 'swap', 3rd argument 'ignoreEndianFlag' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="308" col="38" info="Calling function 'swapStruct', 3rd argument 'ignoreEndianFlag' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1240" col="17" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1300" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" call-funcname="getCleanName" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1329" col="21" call-argexpr="cleanName" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:95:7" call-funcname="swap" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="592" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:101:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:79:7" call-funcname="safeSwapPtr" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="943" col="5" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:99:7" my-argnr="1" my-argname="ptr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="365" col="16" value="20"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="2"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:92:7" my-argnr="1" my-argname="dna_addr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="914" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" my-argnr="1" my-argname="dataChunk" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="1639" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp:32:13" my-argnr="1" my-argname="memName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="34" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:107:2" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="68" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:154:7" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.cpp" line="508" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="getCleanName" lineNumber="32"/>
+    <functiondecl functionName="parseHeader" lineNumber="121"/>
+    <functiondecl functionName="ok" lineNumber="175"/>
+    <functiondecl functionName="parseInternal" lineNumber="181"/>
+    <functiondecl functionName="swap" lineNumber="287"/>
+    <functiondecl functionName="swapLen" lineNumber="313"/>
+    <functiondecl functionName="swapDNA" lineNumber="361"/>
+    <functiondecl functionName="writeFile" lineNumber="506"/>
+    <functiondecl functionName="preSwap" lineNumber="513"/>
+    <functiondecl functionName="readStruct" lineNumber="587"/>
+    <functiondecl functionName="parseStruct" lineNumber="701"/>
+    <functiondecl functionName="getElement" lineNumber="784"/>
+    <functiondecl functionName="swapData" lineNumber="821"/>
+    <functiondecl functionName="safeSwapPtr" lineNumber="852"/>
+    <functiondecl functionName="getMatchingFileDNA" lineNumber="908"/>
+    <functiondecl functionName="getFileElement" lineNumber="991"/>
+    <functiondecl functionName="swapStruct" lineNumber="1019"/>
+    <functiondecl functionName="resolvePointersMismatch" lineNumber="1067"/>
+    <functiondecl functionName="resolvePointersChunk" lineNumber="1133"/>
+    <functiondecl functionName="resolvePointersStructRecursive" lineNumber="1149"/>
+    <functiondecl functionName="resolvePointers" lineNumber="1358"/>
+    <functiondecl functionName="findLibPointer" lineNumber="1407"/>
+    <functiondecl functionName="updateOldPointers" lineNumber="1415"/>
+    <functiondecl functionName="writeChunks" lineNumber="1466"/>
+    <functiondecl functionName="getNextBlock" lineNumber="1526"/>
+    <functiondecl functionName="getCleanName" lineNumber="32"/>
+    <functiondecl functionName="parseHeader" lineNumber="121"/>
+    <functiondecl functionName="ok" lineNumber="175"/>
+    <functiondecl functionName="parseInternal" lineNumber="181"/>
+    <functiondecl functionName="swap" lineNumber="287"/>
+    <functiondecl functionName="swapLen" lineNumber="313"/>
+    <functiondecl functionName="swapDNA" lineNumber="361"/>
+    <functiondecl functionName="writeFile" lineNumber="506"/>
+    <functiondecl functionName="preSwap" lineNumber="513"/>
+    <functiondecl functionName="readStruct" lineNumber="587"/>
+    <functiondecl functionName="parseStruct" lineNumber="701"/>
+    <functiondecl functionName="getElement" lineNumber="784"/>
+    <functiondecl functionName="swapData" lineNumber="821"/>
+    <functiondecl functionName="safeSwapPtr" lineNumber="852"/>
+    <functiondecl functionName="getMatchingFileDNA" lineNumber="908"/>
+    <functiondecl functionName="getFileElement" lineNumber="991"/>
+    <functiondecl functionName="swapStruct" lineNumber="1019"/>
+    <functiondecl functionName="resolvePointersMismatch" lineNumber="1067"/>
+    <functiondecl functionName="resolvePointersChunk" lineNumber="1133"/>
+    <functiondecl functionName="resolvePointersStructRecursive" lineNumber="1149"/>
+    <functiondecl functionName="resolvePointers" lineNumber="1358"/>
+    <functiondecl functionName="findLibPointer" lineNumber="1407"/>
+    <functiondecl functionName="updateOldPointers" lineNumber="1415"/>
+    <functiondecl functionName="writeChunks" lineNumber="1466"/>
+    <functiondecl functionName="getNextBlock" lineNumber="1526"/>
+    <functiondecl functionName="getCleanName" lineNumber="32"/>
+    <functiondecl functionName="parseHeader" lineNumber="121"/>
+    <functiondecl functionName="ok" lineNumber="175"/>
+    <functiondecl functionName="parseInternal" lineNumber="181"/>
+    <functiondecl functionName="swap" lineNumber="287"/>
+    <functiondecl functionName="swapLen" lineNumber="313"/>
+    <functiondecl functionName="swapDNA" lineNumber="361"/>
+    <functiondecl functionName="writeFile" lineNumber="506"/>
+    <functiondecl functionName="preSwap" lineNumber="513"/>
+    <functiondecl functionName="readStruct" lineNumber="587"/>
+    <functiondecl functionName="parseStruct" lineNumber="701"/>
+    <functiondecl functionName="getElement" lineNumber="784"/>
+    <functiondecl functionName="swapData" lineNumber="821"/>
+    <functiondecl functionName="safeSwapPtr" lineNumber="852"/>
+    <functiondecl functionName="getMatchingFileDNA" lineNumber="908"/>
+    <functiondecl functionName="getFileElement" lineNumber="991"/>
+    <functiondecl functionName="swapStruct" lineNumber="1019"/>
+    <functiondecl functionName="resolvePointersMismatch" lineNumber="1067"/>
+    <functiondecl functionName="resolvePointersChunk" lineNumber="1133"/>
+    <functiondecl functionName="resolvePointersStructRecursive" lineNumber="1149"/>
+    <functiondecl functionName="resolvePointers" lineNumber="1358"/>
+    <functiondecl functionName="findLibPointer" lineNumber="1407"/>
+    <functiondecl functionName="updateOldPointers" lineNumber="1415"/>
+    <functiondecl functionName="writeChunks" lineNumber="1466"/>
+    <functiondecl functionName="getNextBlock" lineNumber="1526"/>
+    <functiondecl functionName="getCleanName" lineNumber="32"/>
+    <functiondecl functionName="parseHeader" lineNumber="121"/>
+    <functiondecl functionName="ok" lineNumber="175"/>
+    <functiondecl functionName="parseInternal" lineNumber="181"/>
+    <functiondecl functionName="swap" lineNumber="287"/>
+    <functiondecl functionName="swapLen" lineNumber="313"/>
+    <functiondecl functionName="swapDNA" lineNumber="361"/>
+    <functiondecl functionName="writeFile" lineNumber="506"/>
+    <functiondecl functionName="preSwap" lineNumber="513"/>
+    <functiondecl functionName="readStruct" lineNumber="587"/>
+    <functiondecl functionName="parseStruct" lineNumber="701"/>
+    <functiondecl functionName="getElement" lineNumber="784"/>
+    <functiondecl functionName="swapData" lineNumber="821"/>
+    <functiondecl functionName="safeSwapPtr" lineNumber="852"/>
+    <functiondecl functionName="getMatchingFileDNA" lineNumber="908"/>
+    <functiondecl functionName="getFileElement" lineNumber="991"/>
+    <functiondecl functionName="swapStruct" lineNumber="1019"/>
+    <functiondecl functionName="resolvePointersMismatch" lineNumber="1067"/>
+    <functiondecl functionName="resolvePointersChunk" lineNumber="1133"/>
+    <functiondecl functionName="resolvePointersStructRecursive" lineNumber="1149"/>
+    <functiondecl functionName="resolvePointers" lineNumber="1358"/>
+    <functiondecl functionName="findLibPointer" lineNumber="1407"/>
+    <functiondecl functionName="updateOldPointers" lineNumber="1415"/>
+    <functiondecl functionName="writeChunks" lineNumber="1466"/>
+    <functiondecl functionName="getNextBlock" lineNumber="1526"/>
+    <functioncall functionName="FDF_STRUCT_EQU"/>
+    <functioncall functionName="FDF_STRUCT_NEQU"/>
+    <functioncall functionName="FD_INVALID"/>
+    <functioncall functionName="SEEK_END"/>
+    <functioncall functionName="SEEK_SET"/>
+    <functioncall functionName="VOID_IS_8"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="addDataBlock"/>
+    <functioncall functionName="arrayLen"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="atoi"/>
+    <functioncall functionName="b3AlignPointer"/>
+    <functioncall functionName="b3GetVersion"/>
+    <functioncall functionName="b3Min"/>
+    <functioncall functionName="bChunkInd"/>
+    <functioncall functionName="bChunkPtr4"/>
+    <functioncall functionName="bChunkPtr8"/>
+    <functioncall functionName="bDNA"/>
+    <functioncall functionName="bFile"/>
+    <functioncall functionName="blenderBuf"/>
+    <functioncall functionName="blenderData"/>
+    <functioncall functionName="block"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="byteOffset"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="chunk"/>
+    <functioncall functionName="cleanName"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="codestr"/>
+    <functioncall functionName="cp"/>
+    <functioncall functionName="cpc"/>
+    <functioncall functionName="cpo"/>
+    <functioncall functionName="cur"/>
+    <functioncall functionName="curData"/>
+    <functioncall functionName="curLen"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dataAlloc"/>
+    <functioncall functionName="dataChunk"/>
+    <functioncall functionName="dataPtr"/>
+    <functioncall functionName="dataPtrHead"/>
+    <functioncall functionName="dbPtr"/>
+    <functioncall functionName="dna"/>
+    <functioncall functionName="dna_nr"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dtPtr"/>
+    <functioncall functionName="dumpTypeDefinitions"/>
+    <functioncall functionName="eleLen"/>
+    <functioncall functionName="elemPtr"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fileName"/>
+    <functioncall functionName="filePtrOld"/>
+    <functioncall functionName="fileStruct"/>
+    <functioncall functionName="filename"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="findLibPointer"/>
+    <functioncall functionName="firstStruct"/>
+    <functioncall functionName="fixupPointers"/>
+    <functioncall functionName="flagEqual"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="foundPos"/>
+    <functioncall functionName="fp"/>
+    <functioncall functionName="fread"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="fseek"/>
+    <functioncall functionName="ftell"/>
+    <functioncall functionName="fwrite"/>
+    <functioncall functionName="getArraySizeNew"/>
+    <functioncall functionName="getCleanName"/>
+    <functioncall functionName="getElement"/>
+    <functioncall functionName="getElementSize"/>
+    <functioncall functionName="getFileElement"/>
+    <functioncall functionName="getLength"/>
+    <functioncall functionName="getLibPointers"/>
+    <functioncall functionName="getMatchingFileDNA"/>
+    <functioncall functionName="getName"/>
+    <functioncall functionName="getNextBlock"/>
+    <functioncall functionName="getNumNames"/>
+    <functioncall functionName="getOffset"/>
+    <functioncall functionName="getPointerSize"/>
+    <functioncall functionName="getReverseType"/>
+    <functioncall functionName="getStruct"/>
+    <functioncall functionName="getType"/>
+    <functioncall functionName="head"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ignoreEndianFlag"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="initCmpFlags"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="intPtr"/>
+    <functioncall functionName="isIntegerType"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="lessThan"/>
+    <functioncall functionName="littleEndian"/>
+    <functioncall functionName="longValue"/>
+    <functioncall functionName="lookupName"/>
+    <functioncall functionName="lookupType"/>
+    <functioncall functionName="mDataStart"/>
+    <functioncall functionName="mFileBuffer"/>
+    <functioncall functionName="mFileDNA"/>
+    <functioncall functionName="mFileLen"/>
+    <functioncall functionName="mFlags"/>
+    <functioncall functionName="mMemoryDNA"/>
+    <functioncall functionName="mOwnsBuffer"/>
+    <functioncall functionName="mVersion"/>
+    <functioncall functionName="m_dim1"/>
+    <functioncall functionName="m_headerString"/>
+    <functioncall functionName="m_ptr"/>
+    <functioncall functionName="m_uniqueIds"/>
+    <functioncall functionName="m_uniqueInt"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="memDna"/>
+    <functioncall functionName="memDnaLength"/>
+    <functioncall functionName="memName"/>
+    <functioncall functionName="memType"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memoryBuffer"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="newPtr"/>
+    <functioncall functionName="newType"/>
+    <functioncall functionName="new_dna"/>
+    <functioncall functionName="new_nr"/>
+    <functioncall functionName="newtype"/>
+    <functioncall functionName="np"/>
+    <functioncall functionName="nr"/>
+    <functioncall functionName="numitems"/>
+    <functioncall functionName="old"/>
+    <functioncall functionName="oldPtr"/>
+    <functioncall functionName="oldType"/>
+    <functioncall functionName="old_dna"/>
+    <functioncall functionName="old_nr"/>
+    <functioncall functionName="onarray"/>
+    <functioncall functionName="onptr"/>
+    <functioncall functionName="parseData"/>
+    <functioncall functionName="parseHeader"/>
+    <functioncall functionName="parseStruct"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrFile"/>
+    <functioncall functionName="ptrMem"/>
+    <functioncall functionName="ptrptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="resolvePointers"/>
+    <functioncall functionName="resolvePointersChunk"/>
+    <functioncall functionName="resolvePointersMismatch"/>
+    <functioncall functionName="resolvePointersStructRecursive"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="revType"/>
+    <functioncall functionName="reverseOld"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="s_i"/>
+    <functioncall functionName="safeSwapPtr"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="shtPtr"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="slen"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="strcData"/>
+    <functioncall functionName="strcPtr"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="strncmp"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="swapDNA"/>
+    <functioncall functionName="swapData"/>
+    <functioncall functionName="swapInt"/>
+    <functioncall functionName="swapLen"/>
+    <functioncall functionName="swapShort"/>
+    <functioncall functionName="swapStruct"/>
+    <functioncall functionName="szs"/>
+    <functioncall functionName="tempBuffer"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmpBuf"/>
+    <functioncall functionName="tmpCpc"/>
+    <functioncall functionName="tmpCpo"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="typeName"/>
+    <functioncall functionName="updateOldPointers"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="varies"/>
+    <functioncall functionName="ver"/>
+    <functioncall functionName="verboseMode"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="467842269">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/editor_settings.cpp" line="1510" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/editor_settings.cpp" line="1507" column="63" info="Assignment &apos;E=shortcuts.find(p_name)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/editor_settings.cpp" line="1508" column="22" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;p_shortcut&apos; can be declared with const" verbose="Parameter &apos;p_shortcut&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_settings.cpp" line="1500" column="72"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ShortCutMapping::path&apos; is never used." verbose="struct member &apos;ShortCutMapping::path&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/editor/editor_settings.cpp" line="1544" column="14"/>
+            <symbol>ShortCutMapping::path</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ShortCutMapping::keycode&apos; is never used." verbose="struct member &apos;ShortCutMapping::keycode&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/editor/editor_settings.cpp" line="1545" column="11"/>
+            <symbol>ShortCutMapping::keycode</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;hints&apos; is assigned a value that is never used." verbose="Variable &apos;hints&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/editor/editor_settings.cpp" line="1208" column="21"/>
+            <symbol>hints</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_set" lineNumber="60"/>
+    <functiondecl functionName="_set_only" lineNumber="71"/>
+    <functiondecl functionName="_get" lineNumber="122"/>
+    <functiondecl functionName="_initial_set" lineNumber="159"/>
+    <functiondecl functionName="_get_property_list" lineNumber="176"/>
+    <functiondecl functionName="_add_property_info_bind" lineNumber="233"/>
+    <functiondecl functionName="has_default_value" lineNumber="253"/>
+    <functiondecl functionName="_load_defaults" lineNumber="262"/>
+    <functiondecl functionName="_load_default_text_editor_theme" lineNumber="669"/>
+    <functiondecl functionName="_save_text_editor_theme" lineNumber="709"/>
+    <functiondecl functionName="_is_default_text_editor_theme" lineNumber="729"/>
+    <functiondecl functionName="_get_builtin_script_templates" lineNumber="733"/>
+    <functiondecl functionName="_create_script_templates" lineNumber="753"/>
+    <functiondecl functionName="get_singleton" lineNumber="777"/>
+    <functiondecl functionName="create" lineNumber="782"/>
+    <functiondecl functionName="setup_language" lineNumber="988"/>
+    <functiondecl functionName="setup_network" lineNumber="1041"/>
+    <functiondecl functionName="save" lineNumber="1074"/>
+    <functiondecl functionName="destroy" lineNumber="1095"/>
+    <functiondecl functionName="set_optimize_save" lineNumber="1103"/>
+    <functiondecl functionName="set_setting" lineNumber="1110"/>
+    <functiondecl functionName="get_setting" lineNumber="1115"/>
+    <functiondecl functionName="has_setting" lineNumber="1120"/>
+    <functiondecl functionName="erase" lineNumber="1127"/>
+    <functiondecl functionName="raise_order" lineNumber="1134"/>
+    <functiondecl functionName="set_restart_if_changed" lineNumber="1141"/>
+    <functiondecl functionName="set_initial_value" lineNumber="1149"/>
+    <functiondecl functionName="_EDITOR_DEF" lineNumber="1162"/>
+    <functiondecl functionName="_EDITOR_GET" lineNumber="1179"/>
+    <functiondecl functionName="property_can_revert" lineNumber="1185"/>
+    <functiondecl functionName="property_get_revert" lineNumber="1196"/>
+    <functiondecl functionName="add_property_hint" lineNumber="1204"/>
+    <functiondecl functionName="get_data_dir" lineNumber="1213"/>
+    <functiondecl functionName="get_templates_dir" lineNumber="1218"/>
+    <functiondecl functionName="get_settings_dir" lineNumber="1225"/>
+    <functiondecl functionName="get_project_settings_dir" lineNumber="1230"/>
+    <functiondecl functionName="get_text_editor_themes_dir" lineNumber="1235"/>
+    <functiondecl functionName="get_script_templates_dir" lineNumber="1240"/>
+    <functiondecl functionName="get_project_script_templates_dir" lineNumber="1245"/>
+    <functiondecl functionName="get_cache_dir" lineNumber="1252"/>
+    <functiondecl functionName="get_feature_profiles_dir" lineNumber="1257"/>
+    <functiondecl functionName="set_project_metadata" lineNumber="1264"/>
+    <functiondecl functionName="get_project_metadata" lineNumber="1275"/>
+    <functiondecl functionName="set_favorites" lineNumber="1285"/>
+    <functiondecl functionName="get_favorites" lineNumber="1296"/>
+    <functiondecl functionName="set_recent_dirs" lineNumber="1301"/>
+    <functiondecl functionName="get_recent_dirs" lineNumber="1312"/>
+    <functiondecl functionName="load_favorites" lineNumber="1317"/>
+    <functiondecl functionName="is_dark_theme" lineNumber="1340"/>
+    <functiondecl functionName="list_text_editor_themes" lineNumber="1348"/>
+    <functiondecl functionName="load_text_editor_theme" lineNumber="1373"/>
+    <functiondecl functionName="import_text_editor_theme" lineNumber="1412"/>
+    <functiondecl functionName="save_text_editor_theme" lineNumber="1431"/>
+    <functiondecl functionName="save_text_editor_theme_as" lineNumber="1442"/>
+    <functiondecl functionName="is_default_text_editor_theme" lineNumber="1465"/>
+    <functiondecl functionName="get_script_templates" lineNumber="1470"/>
+    <functiondecl functionName="get_editor_layouts_config" lineNumber="1493"/>
+    <functiondecl functionName="add_shortcut" lineNumber="1500"/>
+    <functiondecl functionName="is_shortcut" lineNumber="1505"/>
+    <functiondecl functionName="get_shortcut" lineNumber="1513"/>
+    <functiondecl functionName="get_shortcut_list" lineNumber="1522"/>
+    <functiondecl functionName="ED_GET_SHORTCUT" lineNumber="1530"/>
+    <functiondecl functionName="ED_SHORTCUT" lineNumber="1548"/>
+    <functiondecl functionName="notify_changes" lineNumber="1595"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1613"/>
+    <functiondecl functionName="_set" lineNumber="60"/>
+    <functiondecl functionName="_set_only" lineNumber="71"/>
+    <functiondecl functionName="_get" lineNumber="122"/>
+    <functiondecl functionName="_initial_set" lineNumber="159"/>
+    <functiondecl functionName="_get_property_list" lineNumber="176"/>
+    <functiondecl functionName="_add_property_info_bind" lineNumber="233"/>
+    <functiondecl functionName="has_default_value" lineNumber="253"/>
+    <functiondecl functionName="_load_defaults" lineNumber="262"/>
+    <functiondecl functionName="_load_default_text_editor_theme" lineNumber="669"/>
+    <functiondecl functionName="_save_text_editor_theme" lineNumber="709"/>
+    <functiondecl functionName="_is_default_text_editor_theme" lineNumber="729"/>
+    <functiondecl functionName="_get_builtin_script_templates" lineNumber="733"/>
+    <functiondecl functionName="_create_script_templates" lineNumber="753"/>
+    <functiondecl functionName="get_singleton" lineNumber="777"/>
+    <functiondecl functionName="create" lineNumber="782"/>
+    <functiondecl functionName="setup_language" lineNumber="988"/>
+    <functiondecl functionName="setup_network" lineNumber="1041"/>
+    <functiondecl functionName="save" lineNumber="1074"/>
+    <functiondecl functionName="destroy" lineNumber="1095"/>
+    <functiondecl functionName="set_optimize_save" lineNumber="1103"/>
+    <functiondecl functionName="set_setting" lineNumber="1110"/>
+    <functiondecl functionName="get_setting" lineNumber="1115"/>
+    <functiondecl functionName="has_setting" lineNumber="1120"/>
+    <functiondecl functionName="erase" lineNumber="1127"/>
+    <functiondecl functionName="raise_order" lineNumber="1134"/>
+    <functiondecl functionName="set_restart_if_changed" lineNumber="1141"/>
+    <functiondecl functionName="set_initial_value" lineNumber="1149"/>
+    <functiondecl functionName="_EDITOR_DEF" lineNumber="1162"/>
+    <functiondecl functionName="_EDITOR_GET" lineNumber="1179"/>
+    <functiondecl functionName="property_can_revert" lineNumber="1185"/>
+    <functiondecl functionName="property_get_revert" lineNumber="1196"/>
+    <functiondecl functionName="add_property_hint" lineNumber="1204"/>
+    <functiondecl functionName="get_data_dir" lineNumber="1213"/>
+    <functiondecl functionName="get_templates_dir" lineNumber="1218"/>
+    <functiondecl functionName="get_settings_dir" lineNumber="1225"/>
+    <functiondecl functionName="get_project_settings_dir" lineNumber="1230"/>
+    <functiondecl functionName="get_text_editor_themes_dir" lineNumber="1235"/>
+    <functiondecl functionName="get_script_templates_dir" lineNumber="1240"/>
+    <functiondecl functionName="get_project_script_templates_dir" lineNumber="1245"/>
+    <functiondecl functionName="get_cache_dir" lineNumber="1252"/>
+    <functiondecl functionName="get_feature_profiles_dir" lineNumber="1257"/>
+    <functiondecl functionName="set_project_metadata" lineNumber="1264"/>
+    <functiondecl functionName="get_project_metadata" lineNumber="1275"/>
+    <functiondecl functionName="set_favorites" lineNumber="1285"/>
+    <functiondecl functionName="get_favorites" lineNumber="1296"/>
+    <functiondecl functionName="set_recent_dirs" lineNumber="1301"/>
+    <functiondecl functionName="get_recent_dirs" lineNumber="1312"/>
+    <functiondecl functionName="load_favorites" lineNumber="1317"/>
+    <functiondecl functionName="is_dark_theme" lineNumber="1340"/>
+    <functiondecl functionName="list_text_editor_themes" lineNumber="1348"/>
+    <functiondecl functionName="load_text_editor_theme" lineNumber="1373"/>
+    <functiondecl functionName="import_text_editor_theme" lineNumber="1412"/>
+    <functiondecl functionName="save_text_editor_theme" lineNumber="1431"/>
+    <functiondecl functionName="save_text_editor_theme_as" lineNumber="1442"/>
+    <functiondecl functionName="is_default_text_editor_theme" lineNumber="1465"/>
+    <functiondecl functionName="get_script_templates" lineNumber="1470"/>
+    <functiondecl functionName="get_editor_layouts_config" lineNumber="1493"/>
+    <functiondecl functionName="add_shortcut" lineNumber="1500"/>
+    <functiondecl functionName="is_shortcut" lineNumber="1505"/>
+    <functiondecl functionName="get_shortcut" lineNumber="1513"/>
+    <functiondecl functionName="get_shortcut_list" lineNumber="1522"/>
+    <functiondecl functionName="ED_GET_SHORTCUT" lineNumber="1530"/>
+    <functiondecl functionName="ED_SHORTCUT" lineNumber="1548"/>
+    <functiondecl functionName="notify_changes" lineNumber="1595"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1613"/>
+    <functiondecl functionName="_set" lineNumber="60"/>
+    <functiondecl functionName="_set_only" lineNumber="71"/>
+    <functiondecl functionName="_get" lineNumber="122"/>
+    <functiondecl functionName="_initial_set" lineNumber="159"/>
+    <functiondecl functionName="_get_property_list" lineNumber="176"/>
+    <functiondecl functionName="_add_property_info_bind" lineNumber="233"/>
+    <functiondecl functionName="has_default_value" lineNumber="253"/>
+    <functiondecl functionName="_load_defaults" lineNumber="262"/>
+    <functiondecl functionName="_load_default_text_editor_theme" lineNumber="669"/>
+    <functiondecl functionName="_save_text_editor_theme" lineNumber="709"/>
+    <functiondecl functionName="_is_default_text_editor_theme" lineNumber="729"/>
+    <functiondecl functionName="_get_builtin_script_templates" lineNumber="733"/>
+    <functiondecl functionName="_create_script_templates" lineNumber="753"/>
+    <functiondecl functionName="get_singleton" lineNumber="777"/>
+    <functiondecl functionName="create" lineNumber="782"/>
+    <functiondecl functionName="setup_language" lineNumber="988"/>
+    <functiondecl functionName="setup_network" lineNumber="1041"/>
+    <functiondecl functionName="save" lineNumber="1074"/>
+    <functiondecl functionName="destroy" lineNumber="1095"/>
+    <functiondecl functionName="set_optimize_save" lineNumber="1103"/>
+    <functiondecl functionName="set_setting" lineNumber="1110"/>
+    <functiondecl functionName="get_setting" lineNumber="1115"/>
+    <functiondecl functionName="has_setting" lineNumber="1120"/>
+    <functiondecl functionName="erase" lineNumber="1127"/>
+    <functiondecl functionName="raise_order" lineNumber="1134"/>
+    <functiondecl functionName="set_restart_if_changed" lineNumber="1141"/>
+    <functiondecl functionName="set_initial_value" lineNumber="1149"/>
+    <functiondecl functionName="_EDITOR_DEF" lineNumber="1162"/>
+    <functiondecl functionName="_EDITOR_GET" lineNumber="1179"/>
+    <functiondecl functionName="property_can_revert" lineNumber="1185"/>
+    <functiondecl functionName="property_get_revert" lineNumber="1196"/>
+    <functiondecl functionName="add_property_hint" lineNumber="1204"/>
+    <functiondecl functionName="get_data_dir" lineNumber="1213"/>
+    <functiondecl functionName="get_templates_dir" lineNumber="1218"/>
+    <functiondecl functionName="get_settings_dir" lineNumber="1225"/>
+    <functiondecl functionName="get_project_settings_dir" lineNumber="1230"/>
+    <functiondecl functionName="get_text_editor_themes_dir" lineNumber="1235"/>
+    <functiondecl functionName="get_script_templates_dir" lineNumber="1240"/>
+    <functiondecl functionName="get_project_script_templates_dir" lineNumber="1245"/>
+    <functiondecl functionName="get_cache_dir" lineNumber="1252"/>
+    <functiondecl functionName="get_feature_profiles_dir" lineNumber="1257"/>
+    <functiondecl functionName="set_project_metadata" lineNumber="1264"/>
+    <functiondecl functionName="get_project_metadata" lineNumber="1275"/>
+    <functiondecl functionName="set_favorites" lineNumber="1285"/>
+    <functiondecl functionName="get_favorites" lineNumber="1296"/>
+    <functiondecl functionName="set_recent_dirs" lineNumber="1301"/>
+    <functiondecl functionName="get_recent_dirs" lineNumber="1312"/>
+    <functiondecl functionName="load_favorites" lineNumber="1317"/>
+    <functiondecl functionName="is_dark_theme" lineNumber="1340"/>
+    <functiondecl functionName="list_text_editor_themes" lineNumber="1348"/>
+    <functiondecl functionName="load_text_editor_theme" lineNumber="1373"/>
+    <functiondecl functionName="import_text_editor_theme" lineNumber="1412"/>
+    <functiondecl functionName="save_text_editor_theme" lineNumber="1431"/>
+    <functiondecl functionName="save_text_editor_theme_as" lineNumber="1442"/>
+    <functiondecl functionName="is_default_text_editor_theme" lineNumber="1465"/>
+    <functiondecl functionName="get_script_templates" lineNumber="1470"/>
+    <functiondecl functionName="get_editor_layouts_config" lineNumber="1493"/>
+    <functiondecl functionName="add_shortcut" lineNumber="1500"/>
+    <functiondecl functionName="is_shortcut" lineNumber="1505"/>
+    <functiondecl functionName="get_shortcut" lineNumber="1513"/>
+    <functiondecl functionName="get_shortcut_list" lineNumber="1522"/>
+    <functiondecl functionName="ED_GET_SHORTCUT" lineNumber="1530"/>
+    <functiondecl functionName="ED_SHORTCUT" lineNumber="1548"/>
+    <functiondecl functionName="notify_changes" lineNumber="1595"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1613"/>
+    <functioncall functionName="ACCESS_FILESYSTEM"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="BIND_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ConfigFile"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="EditorSettings"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FileAccessMemory"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="KEY_BACKSPACE"/>
+    <functioncall functionName="MODE_DEFLATE"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NOTIFICATION_EDITOR_SETTINGS_CHANGED"/>
+    <functioncall functionName="PROPERTY_HINT_COLOR_NO_ALPHA"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_DIR"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_USAGE_DEFAULT"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PROPERTY_USAGE_RESTART_IF_CHANGED"/>
+    <functioncall functionName="PropertyHint"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="SYSTEM_DIR_DOCUMENTS"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="Type"/>
+    <functioncall functionName="VARIANT_MAX"/>
+    <functioncall functionName="VERSION_MAJOR"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="VariantContainer"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="_SYSTEM_CERTS_PATH"/>
+    <functioncall functionName="_add_property_info_bind"/>
+    <functioncall functionName="_create_script_templates"/>
+    <functioncall functionName="_doc_translations"/>
+    <functioncall functionName="_editor_translations"/>
+    <functioncall functionName="_get_builtin_script_templates"/>
+    <functioncall functionName="_initial_set"/>
+    <functioncall functionName="_is_default_text_editor_theme"/>
+    <functioncall functionName="_load_default_text_editor_theme"/>
+    <functioncall functionName="_load_defaults"/>
+    <functioncall functionName="_save_text_editor_theme"/>
+    <functioncall functionName="_set"/>
+    <functioncall functionName="_set_only"/>
+    <functioncall functionName="add_property_hint"/>
+    <functioncall functionName="add_shortcut"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="best"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cache_dir"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="change_dir"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="comp_size"/>
+    <functioncall functionName="config_dir"/>
+    <functioncall functionName="config_file_name"/>
+    <functioncall functionName="config_file_path"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_for_path"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_dir"/>
+    <functioncall functionName="decompress"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="ends_with"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exe_path"/>
+    <functioncall functionName="extra_config"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fa"/>
+    <functioncall functionName="fail"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="file_exists"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_basename"/>
+    <functioncall functionName="get_cache_path"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_config_path"/>
+    <functioncall functionName="get_current_dir"/>
+    <functioncall functionName="get_data_dir"/>
+    <functioncall functionName="get_data_path"/>
+    <functioncall functionName="get_environment"/>
+    <functioncall functionName="get_executable_path"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_favorites"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_godot_dir_name"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_line"/>
+    <functioncall functionName="get_local_addresses"/>
+    <functioncall functionName="get_locale"/>
+    <functioncall functionName="get_main_loop"/>
+    <functioncall functionName="get_meta"/>
+    <functioncall functionName="get_next"/>
+    <functioncall functionName="get_project_metadata"/>
+    <functioncall functionName="get_project_settings_dir"/>
+    <functioncall functionName="get_recent_dirs"/>
+    <functioncall functionName="get_resource_path"/>
+    <functioncall functionName="get_root"/>
+    <functioncall functionName="get_screen_count"/>
+    <functioncall functionName="get_script_templates_dir"/>
+    <functioncall functionName="get_section_keys"/>
+    <functioncall functionName="get_setting"/>
+    <functioncall functionName="get_settings_dir"/>
+    <functioncall functionName="get_shortcut"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slice"/>
+    <functioncall functionName="get_system_dir"/>
+    <functioncall functionName="get_text_editor_themes_dir"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_value"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_default_value"/>
+    <functioncall functionName="has_environment"/>
+    <functioncall functionName="has_meta"/>
+    <functioncall functionName="has_section"/>
+    <functioncall functionName="has_section_key"/>
+    <functioncall functionName="has_setting"/>
+    <functioncall functionName="hide_from_editor"/>
+    <functioncall functionName="hint"/>
+    <functioncall functionName="host_lang"/>
+    <functioncall functionName="html"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="ie"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initial"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="ip"/>
+    <functioncall functionName="is_dark_theme"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_shortcut"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_valid_html_color"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="lang"/>
+    <functioncall functionName="lang_code"/>
+    <functioncall functionName="lang_hint"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="list"/>
+    <functioncall functionName="list_dir_begin"/>
+    <functioncall functionName="list_dir_end"/>
+    <functioncall functionName="list_text_editor_themes"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="load_favorites"/>
+    <functioncall functionName="load_text_editor_theme"/>
+    <functioncall functionName="load_translation"/>
+    <functioncall functionName="local_ip"/>
+    <functioncall functionName="locale"/>
+    <functioncall functionName="make_dir"/>
+    <functioncall functionName="make_dir_recursive"/>
+    <functioncall functionName="md5_text"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_custom"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="operatorint"/>
+    <functioncall functionName="optimize_save"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="original"/>
+    <functioncall functionName="p_custom_path"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_default"/>
+    <functioncall functionName="p_emit_signal"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_favorites"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_hint"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_keycode"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_optimize"/>
+    <functioncall functionName="p_order"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_recent_dirs"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_restart"/>
+    <functioncall functionName="p_restart_if_changed"/>
+    <functioncall functionName="p_section"/>
+    <functioncall functionName="p_setting"/>
+    <functioncall functionName="p_shortcut"/>
+    <functioncall functionName="p_update_current"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pi"/>
+    <functioncall functionName="pinfo"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="project_config_dir"/>
+    <functioncall functionName="propagate_notification"/>
+    <functioncall functionName="property_can_revert"/>
+    <functioncall functionName="property_get_revert"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="register_class"/>
+    <functioncall functionName="reopen"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="restart_if_changed"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="save_changed_setting"/>
+    <functioncall functionName="sc"/>
+    <functioncall functionName="screen_hints"/>
+    <functioncall functionName="selected"/>
+    <functioncall functionName="self_contained"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_alt"/>
+    <functioncall functionName="set_control"/>
+    <functioncall functionName="set_doc_translation"/>
+    <functioncall functionName="set_favorites"/>
+    <functioncall functionName="set_initial_value"/>
+    <functioncall functionName="set_keycode"/>
+    <functioncall functionName="set_locale"/>
+    <functioncall functionName="set_manually"/>
+    <functioncall functionName="set_meta"/>
+    <functioncall functionName="set_metakey"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_project_metadata"/>
+    <functioncall functionName="set_recent_dirs"/>
+    <functioncall functionName="set_restart_if_changed"/>
+    <functioncall functionName="set_setting"/>
+    <functioncall functionName="set_shift"/>
+    <functioncall functionName="set_shortcut"/>
+    <functioncall functionName="set_tool_translation"/>
+    <functioncall functionName="set_unicode"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="setup_language"/>
+    <functioncall functionName="setup_network"/>
+    <functioncall functionName="shortcut"/>
+    <functioncall functionName="singleton"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sml"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="standardize_locale"/>
+    <functioncall functionName="store_line"/>
+    <functioncall functionName="store_string"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="template_dir"/>
+    <functioncall functionName="theme_name"/>
+    <functioncall functionName="theme_path"/>
+    <functioncall functionName="theme_section"/>
+    <functioncall functionName="themes"/>
+    <functioncall functionName="to_html"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="tr"/>
+    <functioncall functionName="trim_suffix"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uncomp_size"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="variant"/>
+    <functioncall functionName="vc"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

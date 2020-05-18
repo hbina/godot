@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="912592580">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="81" column="30"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;state&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;state&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="1758" column="2"/>
+            <symbol>state</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!node&apos; is redundant or there is possible null pointer dereference: node." verbose="Either the condition &apos;!node&apos; is redundant or there is possible null pointer dereference: node." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="134" column="5" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="127" column="28" info="Assignment &apos;node=sdata-&gt;instance(p_edit_state==GEN_EDIT_STATE_DISABLED?PackedScene::GEN_EDIT_STATE_DISABLED:PackedScene::GEN_EDIT_STATE_INSTANCE)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="128" column="22" info="Assuming that condition &apos;!node&apos; is not redundant"/>
+            <symbol>node</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/packed_scene.h:108:6" call-funcname="_find_base_scene_node_remap_key" call-argnr="1" file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="956" col="47" call-argexpr="idx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="955" col="12" info="Assuming that condition 'idx>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="954" col="56" info="Assignment 'idx=_get_base_scene_state()->find_node_by_path(p_node)', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/packed_scene.h:108:6" call-funcname="_find_base_scene_node_remap_key" call-argnr="1" file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="956" col="47" call-argexpr="idx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="955" col="12" info="Assuming that condition 'idx>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="954" col="56" info="Assignment 'idx=_get_base_scene_state()->find_node_by_path(p_node)', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/packed_scene.h:108:6" call-funcname="_find_base_scene_node_remap_key" call-argnr="1" file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="956" col="47" call-argexpr="idx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="955" col="12" info="Assuming that condition 'idx>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/scene/resources/packed_scene.cpp" line="954" col="56" info="Assignment 'idx=_get_base_scene_state()->find_node_by_path(p_node)', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="can_instance" lineNumber="44"/>
+    <functiondecl functionName="instance" lineNumber="49"/>
+    <functiondecl functionName="_nm_get_string" lineNumber="355"/>
+    <functiondecl functionName="_vm_get_variant" lineNumber="365"/>
+    <functiondecl functionName="_parse_node" lineNumber="375"/>
+    <functiondecl functionName="_parse_connections" lineNumber="676"/>
+    <functiondecl functionName="pack" lineNumber="856"/>
+    <functiondecl functionName="set_path" lineNumber="915"/>
+    <functiondecl functionName="get_path" lineNumber="920"/>
+    <functiondecl functionName="clear" lineNumber="925"/>
+    <functiondecl functionName="_get_base_scene_state" lineNumber="937"/>
+    <functiondecl functionName="find_node_by_path" lineNumber="950"/>
+    <functiondecl functionName="_find_base_scene_node_remap_key" lineNumber="982"/>
+    <functiondecl functionName="get_property_value" lineNumber="992"/>
+    <functiondecl functionName="is_node_in_group" lineNumber="1021"/>
+    <functiondecl functionName="set_disable_placeholders" lineNumber="1042"/>
+    <functiondecl functionName="is_connection" lineNumber="1047"/>
+    <functiondecl functionName="set_bundled_scene" lineNumber="1084"/>
+    <functiondecl functionName="get_bundled_scene" lineNumber="1206"/>
+    <functiondecl functionName="get_node_count" lineNumber="1293"/>
+    <functiondecl functionName="get_node_type" lineNumber="1298"/>
+    <functiondecl functionName="get_node_name" lineNumber="1306"/>
+    <functiondecl functionName="get_node_index" lineNumber="1312"/>
+    <functiondecl functionName="is_node_instance_placeholder" lineNumber="1317"/>
+    <functiondecl functionName="get_node_instance" lineNumber="1324"/>
+    <functiondecl functionName="get_node_instance_placeholder" lineNumber="1342"/>
+    <functiondecl functionName="get_node_groups" lineNumber="1353"/>
+    <functiondecl functionName="get_node_path" lineNumber="1362"/>
+    <functiondecl functionName="get_node_property_count" lineNumber="1407"/>
+    <functiondecl functionName="get_node_property_name" lineNumber="1412"/>
+    <functiondecl functionName="get_node_property_value" lineNumber="1417"/>
+    <functiondecl functionName="get_node_owner_path" lineNumber="1424"/>
+    <functiondecl functionName="get_connection_count" lineNumber="1436"/>
+    <functiondecl functionName="get_connection_source" lineNumber="1440"/>
+    <functiondecl functionName="get_connection_signal" lineNumber="1450"/>
+    <functiondecl functionName="get_connection_target" lineNumber="1455"/>
+    <functiondecl functionName="get_connection_method" lineNumber="1464"/>
+    <functiondecl functionName="get_connection_flags" lineNumber="1470"/>
+    <functiondecl functionName="get_connection_binds" lineNumber="1476"/>
+    <functiondecl functionName="has_connection" lineNumber="1486"/>
+    <functiondecl functionName="get_editable_instances" lineNumber="1525"/>
+    <functiondecl functionName="add_name" lineNumber="1530"/>
+    <functiondecl functionName="find_name" lineNumber="1536"/>
+    <functiondecl functionName="add_value" lineNumber="1546"/>
+    <functiondecl functionName="add_node_path" lineNumber="1552"/>
+    <functiondecl functionName="add_node" lineNumber="1557"/>
+    <functiondecl functionName="add_node_property" lineNumber="1571"/>
+    <functiondecl functionName="add_node_group" lineNumber="1582"/>
+    <functiondecl functionName="set_base_scene" lineNumber="1588"/>
+    <functiondecl functionName="add_connection" lineNumber="1593"/>
+    <functiondecl functionName="add_editable_instance" lineNumber="1610"/>
+    <functiondecl functionName="_get_node_groups" lineNumber="1615"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1626"/>
+    <functiondecl functionName="_set_bundled_scene" lineNumber="1664"/>
+    <functiondecl functionName="_get_bundled_scene" lineNumber="1669"/>
+    <functiondecl functionName="pack" lineNumber="1674"/>
+    <functiondecl functionName="clear" lineNumber="1679"/>
+    <functiondecl functionName="can_instance" lineNumber="1684"/>
+    <functiondecl functionName="instance" lineNumber="1689"/>
+    <functiondecl functionName="replace_state" lineNumber="1711"/>
+    <functiondecl functionName="recreate_state" lineNumber="1720"/>
+    <functiondecl functionName="get_state" lineNumber="1729"/>
+    <functiondecl functionName="set_path" lineNumber="1734"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1740"/>
+    <functiondecl functionName="can_instance" lineNumber="44"/>
+    <functiondecl functionName="instance" lineNumber="49"/>
+    <functiondecl functionName="_nm_get_string" lineNumber="355"/>
+    <functiondecl functionName="_vm_get_variant" lineNumber="365"/>
+    <functiondecl functionName="_parse_node" lineNumber="375"/>
+    <functiondecl functionName="_parse_connections" lineNumber="676"/>
+    <functiondecl functionName="pack" lineNumber="856"/>
+    <functiondecl functionName="set_path" lineNumber="915"/>
+    <functiondecl functionName="get_path" lineNumber="920"/>
+    <functiondecl functionName="clear" lineNumber="925"/>
+    <functiondecl functionName="_get_base_scene_state" lineNumber="937"/>
+    <functiondecl functionName="find_node_by_path" lineNumber="950"/>
+    <functiondecl functionName="_find_base_scene_node_remap_key" lineNumber="982"/>
+    <functiondecl functionName="get_property_value" lineNumber="992"/>
+    <functiondecl functionName="is_node_in_group" lineNumber="1021"/>
+    <functiondecl functionName="set_disable_placeholders" lineNumber="1042"/>
+    <functiondecl functionName="is_connection" lineNumber="1047"/>
+    <functiondecl functionName="set_bundled_scene" lineNumber="1084"/>
+    <functiondecl functionName="get_bundled_scene" lineNumber="1206"/>
+    <functiondecl functionName="get_node_count" lineNumber="1293"/>
+    <functiondecl functionName="get_node_type" lineNumber="1298"/>
+    <functiondecl functionName="get_node_name" lineNumber="1306"/>
+    <functiondecl functionName="get_node_index" lineNumber="1312"/>
+    <functiondecl functionName="is_node_instance_placeholder" lineNumber="1317"/>
+    <functiondecl functionName="get_node_instance" lineNumber="1324"/>
+    <functiondecl functionName="get_node_instance_placeholder" lineNumber="1342"/>
+    <functiondecl functionName="get_node_groups" lineNumber="1353"/>
+    <functiondecl functionName="get_node_path" lineNumber="1362"/>
+    <functiondecl functionName="get_node_property_count" lineNumber="1407"/>
+    <functiondecl functionName="get_node_property_name" lineNumber="1412"/>
+    <functiondecl functionName="get_node_property_value" lineNumber="1417"/>
+    <functiondecl functionName="get_node_owner_path" lineNumber="1424"/>
+    <functiondecl functionName="get_connection_count" lineNumber="1436"/>
+    <functiondecl functionName="get_connection_source" lineNumber="1440"/>
+    <functiondecl functionName="get_connection_signal" lineNumber="1450"/>
+    <functiondecl functionName="get_connection_target" lineNumber="1455"/>
+    <functiondecl functionName="get_connection_method" lineNumber="1464"/>
+    <functiondecl functionName="get_connection_flags" lineNumber="1470"/>
+    <functiondecl functionName="get_connection_binds" lineNumber="1476"/>
+    <functiondecl functionName="has_connection" lineNumber="1486"/>
+    <functiondecl functionName="get_editable_instances" lineNumber="1525"/>
+    <functiondecl functionName="add_name" lineNumber="1530"/>
+    <functiondecl functionName="find_name" lineNumber="1536"/>
+    <functiondecl functionName="add_value" lineNumber="1546"/>
+    <functiondecl functionName="add_node_path" lineNumber="1552"/>
+    <functiondecl functionName="add_node" lineNumber="1557"/>
+    <functiondecl functionName="add_node_property" lineNumber="1571"/>
+    <functiondecl functionName="add_node_group" lineNumber="1582"/>
+    <functiondecl functionName="set_base_scene" lineNumber="1588"/>
+    <functiondecl functionName="add_connection" lineNumber="1593"/>
+    <functiondecl functionName="add_editable_instance" lineNumber="1610"/>
+    <functiondecl functionName="_get_node_groups" lineNumber="1615"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1626"/>
+    <functiondecl functionName="_set_bundled_scene" lineNumber="1664"/>
+    <functiondecl functionName="_get_bundled_scene" lineNumber="1669"/>
+    <functiondecl functionName="pack" lineNumber="1674"/>
+    <functiondecl functionName="clear" lineNumber="1679"/>
+    <functiondecl functionName="can_instance" lineNumber="1684"/>
+    <functiondecl functionName="instance" lineNumber="1689"/>
+    <functiondecl functionName="replace_state" lineNumber="1711"/>
+    <functiondecl functionName="recreate_state" lineNumber="1720"/>
+    <functiondecl functionName="get_state" lineNumber="1729"/>
+    <functiondecl functionName="set_path" lineNumber="1734"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1740"/>
+    <functiondecl functionName="can_instance" lineNumber="44"/>
+    <functiondecl functionName="instance" lineNumber="49"/>
+    <functiondecl functionName="_nm_get_string" lineNumber="355"/>
+    <functiondecl functionName="_vm_get_variant" lineNumber="365"/>
+    <functiondecl functionName="_parse_node" lineNumber="375"/>
+    <functiondecl functionName="_parse_connections" lineNumber="676"/>
+    <functiondecl functionName="pack" lineNumber="856"/>
+    <functiondecl functionName="set_path" lineNumber="915"/>
+    <functiondecl functionName="get_path" lineNumber="920"/>
+    <functiondecl functionName="clear" lineNumber="925"/>
+    <functiondecl functionName="_get_base_scene_state" lineNumber="937"/>
+    <functiondecl functionName="find_node_by_path" lineNumber="950"/>
+    <functiondecl functionName="_find_base_scene_node_remap_key" lineNumber="982"/>
+    <functiondecl functionName="get_property_value" lineNumber="992"/>
+    <functiondecl functionName="is_node_in_group" lineNumber="1021"/>
+    <functiondecl functionName="set_disable_placeholders" lineNumber="1042"/>
+    <functiondecl functionName="is_connection" lineNumber="1047"/>
+    <functiondecl functionName="set_bundled_scene" lineNumber="1084"/>
+    <functiondecl functionName="get_bundled_scene" lineNumber="1206"/>
+    <functiondecl functionName="get_node_count" lineNumber="1293"/>
+    <functiondecl functionName="get_node_type" lineNumber="1298"/>
+    <functiondecl functionName="get_node_name" lineNumber="1306"/>
+    <functiondecl functionName="get_node_index" lineNumber="1312"/>
+    <functiondecl functionName="is_node_instance_placeholder" lineNumber="1317"/>
+    <functiondecl functionName="get_node_instance" lineNumber="1324"/>
+    <functiondecl functionName="get_node_instance_placeholder" lineNumber="1342"/>
+    <functiondecl functionName="get_node_groups" lineNumber="1353"/>
+    <functiondecl functionName="get_node_path" lineNumber="1362"/>
+    <functiondecl functionName="get_node_property_count" lineNumber="1407"/>
+    <functiondecl functionName="get_node_property_name" lineNumber="1412"/>
+    <functiondecl functionName="get_node_property_value" lineNumber="1417"/>
+    <functiondecl functionName="get_node_owner_path" lineNumber="1424"/>
+    <functiondecl functionName="get_connection_count" lineNumber="1436"/>
+    <functiondecl functionName="get_connection_source" lineNumber="1440"/>
+    <functiondecl functionName="get_connection_signal" lineNumber="1450"/>
+    <functiondecl functionName="get_connection_target" lineNumber="1455"/>
+    <functiondecl functionName="get_connection_method" lineNumber="1464"/>
+    <functiondecl functionName="get_connection_flags" lineNumber="1470"/>
+    <functiondecl functionName="get_connection_binds" lineNumber="1476"/>
+    <functiondecl functionName="has_connection" lineNumber="1486"/>
+    <functiondecl functionName="get_editable_instances" lineNumber="1525"/>
+    <functiondecl functionName="add_name" lineNumber="1530"/>
+    <functiondecl functionName="find_name" lineNumber="1536"/>
+    <functiondecl functionName="add_value" lineNumber="1546"/>
+    <functiondecl functionName="add_node_path" lineNumber="1552"/>
+    <functiondecl functionName="add_node" lineNumber="1557"/>
+    <functiondecl functionName="add_node_property" lineNumber="1571"/>
+    <functiondecl functionName="add_node_group" lineNumber="1582"/>
+    <functiondecl functionName="set_base_scene" lineNumber="1588"/>
+    <functiondecl functionName="add_connection" lineNumber="1593"/>
+    <functiondecl functionName="add_editable_instance" lineNumber="1610"/>
+    <functiondecl functionName="_get_node_groups" lineNumber="1615"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1626"/>
+    <functiondecl functionName="_set_bundled_scene" lineNumber="1664"/>
+    <functiondecl functionName="_get_bundled_scene" lineNumber="1669"/>
+    <functiondecl functionName="pack" lineNumber="1674"/>
+    <functiondecl functionName="clear" lineNumber="1679"/>
+    <functiondecl functionName="can_instance" lineNumber="1684"/>
+    <functiondecl functionName="instance" lineNumber="1689"/>
+    <functiondecl functionName="replace_state" lineNumber="1711"/>
+    <functiondecl functionName="recreate_state" lineNumber="1720"/>
+    <functiondecl functionName="get_state" lineNumber="1729"/>
+    <functiondecl functionName="set_path" lineNumber="1734"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1740"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="DICTIONARY"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FLAG_ID_IS_PATH"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GEN_EDIT_STATE_DISABLED"/>
+    <functioncall functionName="GEN_EDIT_STATE_INSTANCE"/>
+    <functioncall functionName="GEN_EDIT_STATE_MAIN"/>
+    <functioncall functionName="GenEditState"/>
+    <functioncall functionName="InstancePlaceholder"/>
+    <functioncall functionName="K"/>
+    <functioncall functionName="NAME_INDEX_BITS"/>
+    <functioncall functionName="NOTIFICATION_INSTANCED"/>
+    <functioncall functionName="NO_PARENT_SAVED"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="Node2D"/>
+    <functioncall functionName="Node3D"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="OP_EQUAL"/>
+    <functioncall functionName="PackState"/>
+    <functioncall functionName="PackedScene"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RES_BASE_EXTENSION"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SceneState"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TYPE_INSTANCED"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="VariantComparator"/>
+    <functioncall functionName="VariantHasher"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_add_child_nocheck"/>
+    <functioncall functionName="_find_base_scene_node_remap_key"/>
+    <functioncall functionName="_get_base_scene_state"/>
+    <functioncall functionName="_get_bundled_scene"/>
+    <functioncall functionName="_get_child_by_name"/>
+    <functioncall functionName="_get_node_groups"/>
+    <functioncall functionName="_nm_get_string"/>
+    <functioncall functionName="_parse_connections"/>
+    <functioncall functionName="_parse_node"/>
+    <functioncall functionName="_script"/>
+    <functioncall functionName="_set_bundled_scene"/>
+    <functioncall functionName="_set_name_nocheck"/>
+    <functioncall functionName="_set_owner_nocheck"/>
+    <functioncall functionName="_signals"/>
+    <functioncall functionName="_vm_get_variant"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="add_to_group"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="ascii"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="base2"/>
+    <functioncall functionName="base_scene_idx"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="binds"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="can_instance"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="cd"/>
+    <functioncall functionName="class_get_default_property_value"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="common_parent"/>
+    <functioncall functionName="configure_for_local_scene"/>
+    <functioncall functionName="conn_count"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="conns"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cto"/>
+    <functioncall functionName="default_value"/>
+    <functioncall functionName="disable_placeholders"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="duplicate_for_local_scene"/>
+    <functioncall functionName="ei"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="evaluate"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="exists2"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_common_parent_with"/>
+    <functioncall functionName="find_node_by_path"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="from_node"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_bundled_scene"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_connection_binds"/>
+    <functioncall functionName="get_connection_count"/>
+    <functioncall functionName="get_connection_flags"/>
+    <functioncall functionName="get_connection_method"/>
+    <functioncall functionName="get_connection_signal"/>
+    <functioncall functionName="get_connection_source"/>
+    <functioncall functionName="get_connection_target"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_filename"/>
+    <functioncall functionName="get_groups"/>
+    <functioncall functionName="get_index"/>
+    <functioncall functionName="get_last_modified_time"/>
+    <functioncall functionName="get_method"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_name_count"/>
+    <functioncall functionName="get_node_count"/>
+    <functioncall functionName="get_node_groups"/>
+    <functioncall functionName="get_node_index"/>
+    <functioncall functionName="get_node_instance"/>
+    <functioncall functionName="get_node_instance_placeholder"/>
+    <functioncall functionName="get_node_name"/>
+    <functioncall functionName="get_node_or_null"/>
+    <functioncall functionName="get_node_owner_path"/>
+    <functioncall functionName="get_node_path"/>
+    <functioncall functionName="get_node_property_count"/>
+    <functioncall functionName="get_node_property_name"/>
+    <functioncall functionName="get_node_property_value"/>
+    <functioncall functionName="get_node_type"/>
+    <functioncall functionName="get_object"/>
+    <functioncall functionName="get_owner"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_path_to"/>
+    <functioncall functionName="get_property_default_value"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_property_state"/>
+    <functioncall functionName="get_property_value"/>
+    <functioncall functionName="get_scene_inherited_state"/>
+    <functioncall functionName="get_scene_instance_load_placeholder"/>
+    <functioncall functionName="get_scene_instance_state"/>
+    <functioncall functionName="get_script"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_signal_connection_list"/>
+    <functioncall functionName="get_signal_list"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_state"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="groups"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_connection"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="ip"/>
+    <functioncall functionName="is_class_enabled"/>
+    <functioncall functionName="is_connection"/>
+    <functioncall functionName="is_editable_instance"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_local_to_scene"/>
+    <functioncall functionName="is_node_in_group"/>
+    <functioncall functionName="is_node_instance_placeholder"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="isdefault"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="local_dupe"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="move_child"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n2"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="name_index"/>
+    <functioncall functionName="name_map"/>
+    <functioncall functionName="namecount"/>
+    <functioncall functionName="nc"/>
+    <functioncall functionName="nd"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nid"/>
+    <functioncall functionName="nidx"/>
+    <functioncall functionName="nl"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="node_count"/>
+    <functioncall functionName="node_map"/>
+    <functioncall functionName="nodepath_map"/>
+    <functioncall functionName="notification"/>
+    <functioncall functionName="np"/>
+    <functioncall functionName="nparent"/>
+    <functioncall functionName="nprop_count"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="old_state"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="original"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="p_binds"/>
+    <functioncall functionName="p_by"/>
+    <functioncall functionName="p_disable"/>
+    <functioncall functionName="p_edit_state"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_for_parent"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_group"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_owner"/>
+    <functioncall functionName="p_parent"/>
+    <functioncall functionName="p_parent_idx"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_prop"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_scene"/>
+    <functioncall functionName="p_signal"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_take_over"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_to_method"/>
+    <functioncall functionName="p_to_node"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="pack"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="parent_node"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="persistent"/>
+    <functioncall functionName="plist"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prop"/>
+    <functioncall functionName="prop_count"/>
+    <functioncall functionName="ps"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rconns"/>
+    <functioncall functionName="reditable_instances"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resources_local_to_scene"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rkey"/>
+    <functioncall functionName="rnames"/>
+    <functioncall functionName="rnode_paths"/>
+    <functioncall functionName="rnodes"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="save_node"/>
+    <functioncall functionName="scene"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_bundled_scene"/>
+    <functioncall functionName="set_editable_instance"/>
+    <functioncall functionName="set_filename"/>
+    <functioncall functionName="set_instance_path"/>
+    <functioncall functionName="set_last_modified_time"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_path"/>
+    <functioncall functionName="set_scene_inherited_state"/>
+    <functioncall functionName="set_scene_instance_load_placeholder"/>
+    <functioncall functionName="set_scene_instance_state"/>
+    <functioncall functionName="setup_local_to_scene"/>
+    <functioncall functionName="sidx"/>
+    <functioncall functionName="signal"/>
+    <functioncall functionName="signal_from"/>
+    <functioncall functionName="signal_to"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="sname_count"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="src_id"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="sub_path"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="target_id"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_node"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="varcount"/>
+    <functioncall functionName="variant_map"/>
+    <functioncall functionName="variants"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3054705568">
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="128" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="128" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="129" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="130" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="131" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="133" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="133" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="134" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="135" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="136" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:126:13" call-funcname="chacha20_inner_block" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="156" col="29" call-argexpr="working_state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:207:5" call-funcname="mbedtls_chacha20_setkey" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="337" col="34" call-argexpr="key" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:232:5" call-funcname="mbedtls_chacha20_starts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="341" col="34" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/>  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ret&apos; can be reduced." verbose="The scope of the variable &apos;ret&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="539" column="9"/>
+            <symbol>ret</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="128" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="128" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="129" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="130" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="131" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="133" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="133" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="134" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="135" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="136" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:126:13" call-funcname="chacha20_inner_block" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="156" col="29" call-argexpr="working_state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:207:5" call-funcname="mbedtls_chacha20_setkey" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="337" col="34" call-argexpr="key" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:232:5" call-funcname="mbedtls_chacha20_starts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="341" col="34" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:320:5" call-funcname="mbedtls_chacha20_crypt" call-argnr="6" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="546" col="37" call-argexpr="output" call-argvaluetype="7" call-argvalue="381"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="128" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="128" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="129" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="130" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="131" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="133" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="133" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="134" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="135" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:91:20" call-funcname="chacha20_quarter_round" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="136" col="27" call-argexpr="state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:126:13" call-funcname="chacha20_inner_block" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="156" col="29" call-argexpr="working_state" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:207:5" call-funcname="mbedtls_chacha20_setkey" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="337" col="34" call-argexpr="key" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:232:5" call-funcname="mbedtls_chacha20_starts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="341" col="34" call-argexpr="nonce" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c:320:5" call-funcname="mbedtls_chacha20_crypt" call-argnr="6" file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="546" col="37" call-argexpr="output" call-argvaluetype="7" call-argvalue="381"/>  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/chacha20.c" line="29" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="chacha20_quarter_round" lineNumber="91"/>
+    <functiondecl functionName="chacha20_inner_block" lineNumber="126"/>
+    <functiondecl functionName="chacha20_block" lineNumber="145"/>
+    <functiondecl functionName="mbedtls_chacha20_init" lineNumber="188"/>
+    <functiondecl functionName="mbedtls_chacha20_free" lineNumber="199"/>
+    <functiondecl functionName="mbedtls_chacha20_setkey" lineNumber="207"/>
+    <functiondecl functionName="mbedtls_chacha20_starts" lineNumber="232"/>
+    <functiondecl functionName="mbedtls_chacha20_update" lineNumber="255"/>
+    <functiondecl functionName="mbedtls_chacha20_crypt" lineNumber="320"/>
+    <functiondecl functionName="chacha20_quarter_round" lineNumber="91"/>
+    <functiondecl functionName="chacha20_inner_block" lineNumber="126"/>
+    <functiondecl functionName="chacha20_block" lineNumber="145"/>
+    <functiondecl functionName="mbedtls_chacha20_init" lineNumber="188"/>
+    <functiondecl functionName="mbedtls_chacha20_free" lineNumber="199"/>
+    <functiondecl functionName="mbedtls_chacha20_setkey" lineNumber="207"/>
+    <functiondecl functionName="mbedtls_chacha20_starts" lineNumber="232"/>
+    <functiondecl functionName="mbedtls_chacha20_update" lineNumber="255"/>
+    <functiondecl functionName="mbedtls_chacha20_crypt" lineNumber="320"/>
+    <functiondecl functionName="mbedtls_chacha20_self_test" lineNumber="535"/>
+    <functiondecl functionName="chacha20_quarter_round" lineNumber="91"/>
+    <functiondecl functionName="chacha20_inner_block" lineNumber="126"/>
+    <functiondecl functionName="chacha20_block" lineNumber="145"/>
+    <functiondecl functionName="mbedtls_chacha20_init" lineNumber="188"/>
+    <functiondecl functionName="mbedtls_chacha20_free" lineNumber="199"/>
+    <functiondecl functionName="mbedtls_chacha20_setkey" lineNumber="207"/>
+    <functiondecl functionName="mbedtls_chacha20_starts" lineNumber="232"/>
+    <functiondecl functionName="mbedtls_chacha20_update" lineNumber="255"/>
+    <functiondecl functionName="mbedtls_chacha20_crypt" lineNumber="320"/>
+    <functiondecl functionName="mbedtls_chacha20_self_test" lineNumber="535"/>
+    <functioncall functionName="MBEDTLS_ERR_CHACHA20_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE_RET"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="chacha20_block"/>
+    <functioncall functionName="chacha20_inner_block"/>
+    <functioncall functionName="chacha20_quarter_round"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="counter"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data_len"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initial_state"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keystream8"/>
+    <functioncall functionName="keystream_bytes_used"/>
+    <functioncall functionName="mbedtls_chacha20_context"/>
+    <functioncall functionName="mbedtls_chacha20_crypt"/>
+    <functioncall functionName="mbedtls_chacha20_free"/>
+    <functioncall functionName="mbedtls_chacha20_init"/>
+    <functioncall functionName="mbedtls_chacha20_setkey"/>
+    <functioncall functionName="mbedtls_chacha20_starts"/>
+    <functioncall functionName="mbedtls_chacha20_update"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="mbedtls_printf"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="nonce"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="working_state"/>
+  </FileInfo>
+</analyzerinfo>

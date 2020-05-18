@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2720008881">
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="25" column="0"/>
+        </error>
+        <error id="duplicateBreak" severity="style" msg="Consecutive return, break, continue, goto or throw statements are unnecessary." verbose="Consecutive return, break, continue, goto or throw statements are unnecessary. The second statement can never be executed, and so should be removed." cwe="561" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1086" column="5"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ret&apos; is assigned a value that is never used." verbose="Variable &apos;ret&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1386" column="15"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: pk_info" verbose="Unused variable: pk_info" cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1224" column="30"/>
+            <symbol>pk_info</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;end2&apos; can be reduced." verbose="The scope of the variable &apos;end2&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="876" column="20"/>
+            <symbol>end2</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" call-funcname="pk_get_ecparams" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="922" col="40" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" call-funcname="pk_get_ecpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="954" col="40" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1500" col="41" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="193" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:461:12" my-argnr="1" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="466" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="506" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="193" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="506" col="46" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" call-funcname="pk_get_ecparams" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="922" col="40" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" call-funcname="pk_get_ecpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="954" col="40" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="193" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:461:12" my-argnr="1" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="466" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="506" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="193" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="506" col="46" value="0"/>
+  </FileInfo>
+        <error id="knownConditionTrueFalse" severity="style" msg="The expression &apos;ret == 0&apos; is always true." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="424" column="13"/>
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="391" column="15" info="&apos;ret&apos; is assigned value &apos;0&apos; here."/>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="419" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" call-funcname="pk_get_ecparams" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="922" col="40" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" call-funcname="pk_get_ecpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="954" col="40" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:244:12" call-funcname="pk_group_from_specified" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="441" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:433:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:389:12" call-funcname="pk_group_id_from_group" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="444" col="11" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:433:12" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="193" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:244:12" my-argnr="1" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="247" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:389:12" my-argnr="2" my-argname="grp_id" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="422" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:461:12" my-argnr="1" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="466" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="506" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:188:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="193" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:500:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="506" col="46" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:78:5" call-funcname="mbedtls_pk_load_file" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="140" col="37" call-argexpr="&buf" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:78:5" call-funcname="mbedtls_pk_load_file" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="140" col="37" call-argexpr="&n" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:78:5" call-funcname="mbedtls_pk_load_file" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="140" col="37" call-argexpr="n" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1219:5" call-funcname="mbedtls_pk_parse_key" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="144" col="35" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1219:5" call-funcname="mbedtls_pk_parse_key" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="144" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:78:5" call-funcname="mbedtls_pk_load_file" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="167" col="37" call-argexpr="&buf" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:78:5" call-funcname="mbedtls_pk_load_file" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="167" col="37" call-argexpr="&n" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:78:5" call-funcname="mbedtls_pk_load_file" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="167" col="37" call-argexpr="n" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1500" col="41" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1004:12" call-funcname="pk_parse_key_pkcs8_unencrypted_der" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1212" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1099:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1099:12" call-funcname="pk_parse_key_pkcs8_encrypted_der" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1333" col="21" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1219:5" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1500" col="41" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ret&apos; is assigned a value that is never used." verbose="Variable &apos;ret&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="556" column="15"/>
+            <symbol>ret</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="758" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="764" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="770" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="776" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="782" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="800" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="805" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="810" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:527:12" call-funcname="pk_get_rsapubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1471" col="38" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1500" col="41" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:527:12" call-funcname="pk_get_rsapubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1520" col="27" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1004:12" call-funcname="pk_parse_key_pkcs8_unencrypted_der" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1212" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1099:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1004:12" call-funcname="pk_parse_key_pkcs8_unencrypted_der" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1212" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1099:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1004:12" call-funcname="pk_parse_key_pkcs8_unencrypted_der" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1212" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:1099:12" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="758" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="764" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="770" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="776" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="782" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="816" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="817" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="818" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:527:12" call-funcname="pk_get_rsapubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1520" col="27" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="758" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="764" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="770" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="776" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="782" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="800" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="805" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:690:12" call-funcname="asn1_get_nonzero_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="810" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" call-funcname="pk_get_pk_alg" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1047" col="30" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:527:12" call-funcname="pk_get_rsapubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1520" col="27" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:615:5" call-funcname="mbedtls_pk_parse_subpubkey" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="1533" col="37" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c:582:12" my-argnr="4" my-argname="params" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkparse.c" line="589" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_ecparams" lineNumber="188"/>
+    <functiondecl functionName="pk_use_ecparams" lineNumber="461"/>
+    <functiondecl functionName="pk_get_ecpubkey" lineNumber="500"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_sec1_der" lineNumber="866"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_ecparams" lineNumber="188"/>
+    <functiondecl functionName="pk_use_ecparams" lineNumber="461"/>
+    <functiondecl functionName="pk_get_ecpubkey" lineNumber="500"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_sec1_der" lineNumber="866"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_ecparams" lineNumber="188"/>
+    <functiondecl functionName="pk_group_from_specified" lineNumber="244"/>
+    <functiondecl functionName="pk_group_id_from_group" lineNumber="389"/>
+    <functiondecl functionName="pk_group_id_from_specified" lineNumber="433"/>
+    <functiondecl functionName="pk_use_ecparams" lineNumber="461"/>
+    <functiondecl functionName="pk_get_ecpubkey" lineNumber="500"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_sec1_der" lineNumber="866"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="mbedtls_pk_load_file" lineNumber="78"/>
+    <functiondecl functionName="mbedtls_pk_parse_keyfile" lineNumber="130"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_keyfile" lineNumber="158"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_encrypted_der" lineNumber="1099"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_rsapubkey" lineNumber="527"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="asn1_get_nonzero_mpi" lineNumber="690"/>
+    <functiondecl functionName="pk_parse_key_pkcs1_der" lineNumber="709"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_encrypted_der" lineNumber="1099"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_encrypted_der" lineNumber="1099"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_encrypted_der" lineNumber="1099"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_rsapubkey" lineNumber="527"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="asn1_get_nonzero_mpi" lineNumber="690"/>
+    <functiondecl functionName="pk_parse_key_pkcs1_der" lineNumber="709"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functiondecl functionName="pk_get_rsapubkey" lineNumber="527"/>
+    <functiondecl functionName="pk_get_pk_alg" lineNumber="582"/>
+    <functiondecl functionName="mbedtls_pk_parse_subpubkey" lineNumber="615"/>
+    <functiondecl functionName="asn1_get_nonzero_mpi" lineNumber="690"/>
+    <functiondecl functionName="pk_parse_key_pkcs1_der" lineNumber="709"/>
+    <functiondecl functionName="pk_parse_key_pkcs8_unencrypted_der" lineNumber="1004"/>
+    <functiondecl functionName="mbedtls_pk_parse_key" lineNumber="1219"/>
+    <functiondecl functionName="mbedtls_pk_parse_public_key" lineNumber="1432"/>
+    <functioncall functionName="A"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="DP"/>
+    <functioncall functionName="DQ"/>
+    <functioncall functionName="G"/>
+    <functioncall functionName="MBEDTLS_ASN1_BIT_STRING"/>
+    <functioncall functionName="MBEDTLS_ASN1_INTEGER"/>
+    <functioncall functionName="MBEDTLS_ASN1_OCTET_STRING"/>
+    <functioncall functionName="MBEDTLS_ASN1_OID"/>
+    <functioncall functionName="MBEDTLS_ASN1_SEQUENCE"/>
+    <functioncall functionName="MBEDTLS_ERR_ASN1_LENGTH_MISMATCH"/>
+    <functioncall functionName="MBEDTLS_ERR_ASN1_OUT_OF_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_ASN1_UNEXPECTED_TAG"/>
+    <functioncall functionName="MBEDTLS_ERR_ECP_FEATURE_UNAVAILABLE"/>
+    <functioncall functionName="MBEDTLS_ERR_PEM_NO_HEADER_FOOTER_PRESENT"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_ALLOC_FAILED"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_FEATURE_UNAVAILABLE"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_FILE_IO_ERROR"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_INVALID_ALG"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_INVALID_PUBKEY"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_KEY_INVALID_FORMAT"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_KEY_INVALID_VERSION"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_PASSWORD_MISMATCH"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_PASSWORD_REQUIRED"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_UNKNOWN_NAMED_CURVE"/>
+    <functioncall functionName="MBEDTLS_ERR_PK_UNKNOWN_PK_ALG"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE_RET"/>
+    <functioncall functionName="MBEDTLS_MPI_CHK"/>
+    <functioncall functionName="MBEDTLS_OID_ANSI_X9_62_PRIME_FIELD"/>
+    <functioncall functionName="MBEDTLS_OID_CMP"/>
+    <functioncall functionName="MBEDTLS_OID_PKCS12_PBE_SHA1_RC4_128"/>
+    <functioncall functionName="MBEDTLS_OID_PKCS5_PBES2"/>
+    <functioncall functionName="MBEDTLS_OID_SIZE"/>
+    <functioncall functionName="MBEDTLS_PKCS12_PBE_DECRYPT"/>
+    <functioncall functionName="MBEDTLS_PKCS5_DECRYPT"/>
+    <functioncall functionName="MBEDTLS_PK_ECKEY"/>
+    <functioncall functionName="MBEDTLS_PK_NONE"/>
+    <functioncall functionName="MBEDTLS_PK_RSA"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="P"/>
+    <functioncall functionName="Q"/>
+    <functioncall functionName="QP"/>
+    <functioncall functionName="SEEK_END"/>
+    <functioncall functionName="SEEK_SET"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="X"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="Z"/>
+    <functioncall functionName="alg_oid"/>
+    <functioncall functionName="alg_params"/>
+    <functioncall functionName="asn1_get_nonzero_mpi"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buflen"/>
+    <functioncall functionName="calloc"/>
+    <functioncall functionName="cipher_alg"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="eck"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="end2"/>
+    <functioncall functionName="end_curve"/>
+    <functioncall functionName="end_field"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fread"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="fseek"/>
+    <functioncall functionName="ftell"/>
+    <functioncall functionName="grp"/>
+    <functioncall functionName="grp_id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="key_copy"/>
+    <functioncall functionName="keylen"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mbedtls_asn1_buf"/>
+    <functioncall functionName="mbedtls_asn1_get_alg"/>
+    <functioncall functionName="mbedtls_asn1_get_bitstring_null"/>
+    <functioncall functionName="mbedtls_asn1_get_int"/>
+    <functioncall functionName="mbedtls_asn1_get_mpi"/>
+    <functioncall functionName="mbedtls_asn1_get_tag"/>
+    <functioncall functionName="mbedtls_ecp_check_privkey"/>
+    <functioncall functionName="mbedtls_ecp_check_pubkey"/>
+    <functioncall functionName="mbedtls_ecp_group_free"/>
+    <functioncall functionName="mbedtls_ecp_group_init"/>
+    <functioncall functionName="mbedtls_ecp_group_load"/>
+    <functioncall functionName="mbedtls_ecp_grp_id_list"/>
+    <functioncall functionName="mbedtls_ecp_keypair_free"/>
+    <functioncall functionName="mbedtls_ecp_mul"/>
+    <functioncall functionName="mbedtls_ecp_point_read_binary"/>
+    <functioncall functionName="mbedtls_mpi_bitlen"/>
+    <functioncall functionName="mbedtls_mpi_cmp_int"/>
+    <functioncall functionName="mbedtls_mpi_cmp_mpi"/>
+    <functioncall functionName="mbedtls_mpi_copy"/>
+    <functioncall functionName="mbedtls_mpi_free"/>
+    <functioncall functionName="mbedtls_mpi_get_bit"/>
+    <functioncall functionName="mbedtls_mpi_init"/>
+    <functioncall functionName="mbedtls_mpi_lset"/>
+    <functioncall functionName="mbedtls_mpi_read_binary"/>
+    <functioncall functionName="mbedtls_mpi_size"/>
+    <functioncall functionName="mbedtls_oid_get_ec_grp"/>
+    <functioncall functionName="mbedtls_oid_get_pk_alg"/>
+    <functioncall functionName="mbedtls_oid_get_pkcs12_pbe_alg"/>
+    <functioncall functionName="mbedtls_pem_free"/>
+    <functioncall functionName="mbedtls_pem_init"/>
+    <functioncall functionName="mbedtls_pem_read_buffer"/>
+    <functioncall functionName="mbedtls_pk_ec"/>
+    <functioncall functionName="mbedtls_pk_free"/>
+    <functioncall functionName="mbedtls_pk_info_from_type"/>
+    <functioncall functionName="mbedtls_pk_init"/>
+    <functioncall functionName="mbedtls_pk_load_file"/>
+    <functioncall functionName="mbedtls_pk_parse_key"/>
+    <functioncall functionName="mbedtls_pk_parse_public_key"/>
+    <functioncall functionName="mbedtls_pk_parse_subpubkey"/>
+    <functioncall functionName="mbedtls_pk_rsa"/>
+    <functioncall functionName="mbedtls_pk_setup"/>
+    <functioncall functionName="mbedtls_pkcs12_pbe"/>
+    <functioncall functionName="mbedtls_pkcs12_pbe_sha1_rc4_128"/>
+    <functioncall functionName="mbedtls_pkcs5_pbes2"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="mbedtls_rsa_check_pubkey"/>
+    <functioncall functionName="mbedtls_rsa_complete"/>
+    <functioncall functionName="mbedtls_rsa_free"/>
+    <functioncall functionName="mbedtls_rsa_import"/>
+    <functioncall functionName="mbedtls_rsa_import_raw"/>
+    <functioncall functionName="md_alg"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pbe_alg_oid"/>
+    <functioncall functionName="pbe_params"/>
+    <functioncall functionName="pem"/>
+    <functioncall functionName="pk"/>
+    <functioncall functionName="pk_alg"/>
+    <functioncall functionName="pk_get_ecparams"/>
+    <functioncall functionName="pk_get_ecpubkey"/>
+    <functioncall functionName="pk_get_pk_alg"/>
+    <functioncall functionName="pk_get_rsapubkey"/>
+    <functioncall functionName="pk_group_from_specified"/>
+    <functioncall functionName="pk_group_id_from_group"/>
+    <functioncall functionName="pk_group_id_from_specified"/>
+    <functioncall functionName="pk_info"/>
+    <functioncall functionName="pk_parse_key_pkcs1_der"/>
+    <functioncall functionName="pk_parse_key_pkcs8_encrypted_der"/>
+    <functioncall functionName="pk_parse_key_pkcs8_unencrypted_der"/>
+    <functioncall functionName="pk_parse_key_sec1_der"/>
+    <functioncall functionName="pk_use_ecparams"/>
+    <functioncall functionName="pwd"/>
+    <functioncall functionName="pwdlen"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rsa"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="strstr"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="ver"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="void"/>
+  </FileInfo>
+</analyzerinfo>

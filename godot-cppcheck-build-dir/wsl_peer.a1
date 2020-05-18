@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3838660590">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;ctx&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;ctx&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="70" column="4"/>
+            <symbol>ctx</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~WSLPeer()&apos; at line 341. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~WSLPeer()&apos; at line 341. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_peer.h" line="104" column="15" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="341" column="2" info="Calling close"/>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." verbose="The class &apos;WSLClient&apos; defines member variable with name &apos;_peer&apos; also defined in its parent class &apos;WebSocketClient&apos;." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" file="/home/hbina/git/godot/modules/websocket/wsl_client.h" line="53" column="15" info="Derived variable &apos;WSLClient::_peer&apos;"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" file="/home/hbina/git/godot/modules/websocket/websocket_client.h" line="45" column="21" info="Parent variable &apos;WebSocketClient::_peer&apos;"/>
+            <symbol>WSLClient</symbol>
+            <symbol>_peer</symbol>
+            <symbol>WebSocketClient</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="148" column="18"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="154" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="157" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="185" column="25"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="188" column="25"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:82:14" call-funcname="_wsl_destroy" call-argnr="1" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="86" col="15" call-argexpr="&p_data" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:82:14" call-funcname="_wsl_destroy" call-argnr="1" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="292" col="14" call-argexpr="&_data" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:82:14" call-funcname="_wsl_destroy" call-argnr="1" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="343" col="14" call-argexpr="&_data" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:81:14" my-argnr="1" my-argname="p_data" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="76" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:115:8" my-argnr="1" my-argname="arg" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="174" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:82:14" call-funcname="_wsl_destroy" call-argnr="1" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="86" col="15" call-argexpr="&p_data" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:82:14" call-funcname="_wsl_destroy" call-argnr="1" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="292" col="14" call-argexpr="&_data" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:82:14" call-funcname="_wsl_destroy" call-argnr="1" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="343" col="14" call-argexpr="&_data" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:81:14" my-argnr="1" my-argname="p_data" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="76" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/websocket/wsl_peer.h:115:8" my-argnr="1" my-argname="arg" file="/home/hbina/git/godot/modules/websocket/wsl_peer.cpp" line="174" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="generate_key" lineNumber="42"/>
+    <functiondecl functionName="compute_key_response" lineNumber="56"/>
+    <functiondecl functionName="_wsl_destroy" lineNumber="62"/>
+    <functiondecl functionName="_wsl_poll" lineNumber="75"/>
+    <functiondecl functionName="wsl_recv_callback" lineNumber="92"/>
+    <functiondecl functionName="wsl_send_callback" lineNumber="113"/>
+    <functiondecl functionName="wsl_genmask_callback" lineNumber="133"/>
+    <functiondecl functionName="wsl_msg_recv_callback" lineNumber="143"/>
+    <functiondecl functionName="parse_message" lineNumber="172"/>
+    <functiondecl functionName="make_context" lineNumber="201"/>
+    <functiondecl functionName="set_write_mode" lineNumber="219"/>
+    <functiondecl functionName="get_write_mode" lineNumber="223"/>
+    <functiondecl functionName="poll" lineNumber="227"/>
+    <functiondecl functionName="put_packet" lineNumber="236"/>
+    <functiondecl functionName="get_packet" lineNumber="253"/>
+    <functiondecl functionName="get_available_packet_count" lineNumber="272"/>
+    <functiondecl functionName="was_string_packet" lineNumber="280"/>
+    <functiondecl functionName="is_connected_to_host" lineNumber="285"/>
+    <functiondecl functionName="close_now" lineNumber="290"/>
+    <functiondecl functionName="close" lineNumber="295"/>
+    <functiondecl functionName="get_connected_host" lineNumber="307"/>
+    <functiondecl functionName="get_connected_port" lineNumber="314"/>
+    <functiondecl functionName="set_no_delay" lineNumber="321"/>
+    <functiondecl functionName="invalidate" lineNumber="327"/>
+    <functiondecl functionName="generate_key" lineNumber="42"/>
+    <functiondecl functionName="compute_key_response" lineNumber="56"/>
+    <functiondecl functionName="_wsl_destroy" lineNumber="62"/>
+    <functiondecl functionName="_wsl_poll" lineNumber="75"/>
+    <functiondecl functionName="wsl_recv_callback" lineNumber="92"/>
+    <functiondecl functionName="wsl_send_callback" lineNumber="113"/>
+    <functiondecl functionName="wsl_genmask_callback" lineNumber="133"/>
+    <functiondecl functionName="wsl_msg_recv_callback" lineNumber="143"/>
+    <functiondecl functionName="parse_message" lineNumber="172"/>
+    <functiondecl functionName="make_context" lineNumber="201"/>
+    <functiondecl functionName="set_write_mode" lineNumber="219"/>
+    <functiondecl functionName="get_write_mode" lineNumber="223"/>
+    <functiondecl functionName="poll" lineNumber="227"/>
+    <functiondecl functionName="put_packet" lineNumber="236"/>
+    <functiondecl functionName="get_packet" lineNumber="253"/>
+    <functiondecl functionName="get_available_packet_count" lineNumber="272"/>
+    <functiondecl functionName="was_string_packet" lineNumber="280"/>
+    <functiondecl functionName="is_connected_to_host" lineNumber="285"/>
+    <functiondecl functionName="close_now" lineNumber="290"/>
+    <functiondecl functionName="close" lineNumber="295"/>
+    <functiondecl functionName="get_connected_host" lineNumber="307"/>
+    <functiondecl functionName="get_connected_port" lineNumber="314"/>
+    <functiondecl functionName="set_no_delay" lineNumber="321"/>
+    <functiondecl functionName="invalidate" lineNumber="327"/>
+    <functioncall functionName="ERR_BUG"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_OUT_OF_MEMORY"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="IP_Address"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="NetworkedMultiplayerPeer"/>
+    <functioncall functionName="PacketBuffer &lt; uint8_t &gt;"/>
+    <functioncall functionName="PacketPeer"/>
+    <functioncall functionName="PeerData"/>
+    <functioncall functionName="PendingPeer"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="WRITE_MODE_BINARY"/>
+    <functioncall functionName="WRITE_MODE_TEXT"/>
+    <functioncall functionName="WSLAY_BINARY_FRAME"/>
+    <functioncall functionName="WSLAY_ERR_CALLBACK_FAILURE"/>
+    <functioncall functionName="WSLAY_ERR_WOULDBLOCK"/>
+    <functioncall functionName="WSLAY_TEXT_FRAME"/>
+    <functioncall functionName="WSLClient"/>
+    <functioncall functionName="WSLPeer"/>
+    <functioncall functionName="WSLServer"/>
+    <functioncall functionName="WebSocketClient"/>
+    <functioncall functionName="WebSocketMultiplayerPeer"/>
+    <functioncall functionName="WebSocketPeer"/>
+    <functioncall functionName="WebSocketServer"/>
+    <functioncall functionName="WriteMode"/>
+    <functioncall functionName="_create"/>
+    <functioncall functionName="_data"/>
+    <functioncall functionName="_is_string"/>
+    <functioncall functionName="_on_close_request"/>
+    <functioncall functionName="_on_peer_packet"/>
+    <functioncall functionName="_wsl_destroy"/>
+    <functioncall functionName="_wsl_poll"/>
+    <functioncall functionName="arg"/>
+    <functioncall functionName="b64_encode_str"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="close_code"/>
+    <functioncall functionName="close_now"/>
+    <functioncall functionName="close_reason"/>
+    <functioncall functionName="closing"/>
+    <functioncall functionName="conn"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_left"/>
+    <functioncall functionName="decrease_write"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_connected_host"/>
+    <functioncall functionName="get_connected_port"/>
+    <functioncall functionName="get_partial_data"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_unix_time"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="invalidate"/>
+    <functioncall functionName="is_connected_to_host"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_server"/>
+    <functioncall functionName="is_string"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="msg_length"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_buf_shift"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_buffer_size"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_in_buf_size"/>
+    <functioncall functionName="p_in_pkt_size"/>
+    <functioncall functionName="p_info"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_out_buf_size"/>
+    <functioncall functionName="p_payload"/>
+    <functioncall functionName="p_pkt_shift"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="packets_left"/>
+    <functioncall functionName="parse_message"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="peer"/>
+    <functioncall functionName="polling"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="protected:"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="put_partial_data"/>
+    <functioncall functionName="r_info"/>
+    <functioncall functionName="r_payload"/>
+    <functioncall functionName="randi_range"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="read_packet"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rw"/>
+    <functioncall functionName="sent"/>
+    <functioncall functionName="set_no_delay"/>
+    <functioncall functionName="set_seed"/>
+    <functioncall functionName="sha1_buffer"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="space_left"/>
+    <functioncall functionName="status_code"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="user_data"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="write"/>
+    <functioncall functionName="write_packet"/>
+    <functioncall functionName="wsl_callbacks"/>
+    <functioncall functionName="wsl_genmask_callback"/>
+    <functioncall functionName="wsl_msg_recv_callback"/>
+    <functioncall functionName="wsl_recv_callback"/>
+    <functioncall functionName="wsl_send_callback"/>
+    <functioncall functionName="wslay_event_config_set_max_recv_msg_length"/>
+    <functioncall functionName="wslay_event_context_client_init"/>
+    <functioncall functionName="wslay_event_context_free"/>
+    <functioncall functionName="wslay_event_context_server_init"/>
+    <functioncall functionName="wslay_event_get_close_received"/>
+    <functioncall functionName="wslay_event_get_close_sent"/>
+    <functioncall functionName="wslay_event_queue_close"/>
+    <functioncall functionName="wslay_event_queue_msg"/>
+    <functioncall functionName="wslay_event_recv"/>
+    <functioncall functionName="wslay_event_send"/>
+    <functioncall functionName="wslay_event_set_error"/>
+  </FileInfo>
+</analyzerinfo>

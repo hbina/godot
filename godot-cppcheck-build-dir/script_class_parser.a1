@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="915938207">
+        <error id="noConstructor" severity="style" msg="The class &apos;ScriptClassParser&apos; does not have a constructor although it has private member variables." verbose="The class &apos;ScriptClassParser&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/mono/editor/script_class_parser.cpp" file="/home/hbina/git/godot/modules/mono/editor/script_class_parser.h" line="38" column="1"/>
+            <symbol>ScriptClassParser</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ScriptClassParser::get_error&apos; can be const." verbose="The member function &apos;ScriptClassParser::get_error&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/mono/editor/script_class_parser.cpp" file="/home/hbina/git/godot/modules/mono/editor/script_class_parser.h" line="105" column="9"/>
+            <location file="/home/hbina/git/godot/modules/mono/editor/script_class_parser.cpp" line="739" column="27"/>
+            <symbol>ScriptClassParser::get_error</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ScriptClassParser::get_classes&apos; can be const." verbose="The member function &apos;ScriptClassParser::get_classes&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/mono/editor/script_class_parser.cpp" file="/home/hbina/git/godot/modules/mono/editor/script_class_parser.h" line="107" column="20"/>
+            <location file="/home/hbina/git/godot/modules/mono/editor/script_class_parser.cpp" line="743" column="57"/>
+            <symbol>ScriptClassParser::get_classes</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_token_name" lineNumber="56"/>
+    <functiondecl functionName="get_token" lineNumber="62"/>
+    <functiondecl functionName="_skip_generic_type_params" lineNumber="270"/>
+    <functiondecl functionName="_parse_type_full_name" lineNumber="339"/>
+    <functiondecl functionName="_parse_class_base" lineNumber="372"/>
+    <functiondecl functionName="_parse_type_constraints" lineNumber="406"/>
+    <functiondecl functionName="_parse_namespace_name" lineNumber="472"/>
+    <functiondecl functionName="parse" lineNumber="499"/>
+    <functiondecl functionName="get_preprocessor_directive" lineNumber="644"/>
+    <functiondecl functionName="run_dummy_preprocessor" lineNumber="655"/>
+    <functiondecl functionName="parse_file" lineNumber="722"/>
+    <functiondecl functionName="get_error" lineNumber="739"/>
+    <functiondecl functionName="get_classes" lineNumber="743"/>
+    <functiondecl functionName="get_token_name" lineNumber="56"/>
+    <functiondecl functionName="get_token" lineNumber="62"/>
+    <functiondecl functionName="_skip_generic_type_params" lineNumber="270"/>
+    <functiondecl functionName="_parse_type_full_name" lineNumber="339"/>
+    <functiondecl functionName="_parse_class_base" lineNumber="372"/>
+    <functiondecl functionName="_parse_type_constraints" lineNumber="406"/>
+    <functiondecl functionName="_parse_namespace_name" lineNumber="472"/>
+    <functiondecl functionName="parse" lineNumber="499"/>
+    <functiondecl functionName="get_preprocessor_directive" lineNumber="644"/>
+    <functiondecl functionName="run_dummy_preprocessor" lineNumber="655"/>
+    <functiondecl functionName="parse_file" lineNumber="722"/>
+    <functiondecl functionName="get_error" lineNumber="739"/>
+    <functiondecl functionName="get_classes" lineNumber="743"/>
+    <functioncall functionName="CLASS_DECL"/>
+    <functioncall functionName="CRASH_COND"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="NAMESPACE_DECL"/>
+    <functioncall functionName="NameDecl"/>
+    <functioncall functionName="STRUCT_DECL"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TK_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_BRACKET_OPEN"/>
+    <functioncall functionName="TK_COLON"/>
+    <functioncall functionName="TK_COMMA"/>
+    <functioncall functionName="TK_CURLY_BRACKET_CLOSE"/>
+    <functioncall functionName="TK_CURLY_BRACKET_OPEN"/>
+    <functioncall functionName="TK_EOF"/>
+    <functioncall functionName="TK_ERROR"/>
+    <functioncall functionName="TK_IDENTIFIER"/>
+    <functioncall functionName="TK_MAX"/>
+    <functioncall functionName="TK_NUMBER"/>
+    <functioncall functionName="TK_OP_GREATER"/>
+    <functioncall functionName="TK_OP_LESS"/>
+    <functioncall functionName="TK_PERIOD"/>
+    <functioncall functionName="TK_STRING"/>
+    <functioncall functionName="TK_SYMBOL"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="_parse_class_base"/>
+    <functioncall functionName="_parse_namespace_name"/>
+    <functioncall functionName="_parse_type_constraints"/>
+    <functioncall functionName="_parse_type_full_name"/>
+    <functioncall functionName="_skip_generic_type_params"/>
+    <functioncall functionName="at_level"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="chr"/>
+    <functioncall functionName="class_decl"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="curly_stack"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="ferr"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="generic"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_preprocessor_directive"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_token"/>
+    <functioncall functionName="get_token_name"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="if_level"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_stdout_verbose"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="name_decl"/>
+    <functioncall functionName="namespace_"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="number"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_filepath"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_token"/>
+    <functioncall functionName="parse"/>
+    <functioncall functionName="print"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_base"/>
+    <functioncall functionName="r_curly_stack"/>
+    <functioncall functionName="r_full_name"/>
+    <functioncall functionName="r_name"/>
+    <functioncall functionName="read_all_file_utf8"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="rptr"/>
+    <functioncall functionName="run_dummy_preprocessor"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tk"/>
+    <functioncall functionName="tk_string"/>
+    <functioncall functionName="to_double"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type_curly_stack"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="verbatim"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

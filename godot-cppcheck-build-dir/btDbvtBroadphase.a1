@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1400149967">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btDbvtProxy::leaf&apos; is not initialized in the constructor." verbose="Member variable &apos;btDbvtProxy::leaf&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h" line="51" column="2"/>
+            <symbol>btDbvtProxy::leaf</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btDbvtProxy::stage&apos; is not initialized in the constructor." verbose="Member variable &apos;btDbvtProxy::stage&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h" line="51" column="2"/>
+            <symbol>btDbvtProxy::stage</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btDbvtTreeCollider::proxy&apos; is not initialized in the constructor." verbose="Member variable &apos;btDbvtTreeCollider::proxy&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="105" column="2"/>
+            <symbol>btDbvtTreeCollider::proxy</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_prediction&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_prediction&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="136" column="2"/>
+            <symbol>m_prediction</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_updates_ratio&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_updates_ratio&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="145" column="2"/>
+            <symbol>m_updates_ratio</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;btDbvtTreeCollider&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;btDbvtTreeCollider&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="105" column="2"/>
+            <symbol>btDbvtTreeCollider</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;BroadphaseRayTester&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;BroadphaseRayTester&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="229" column="2"/>
+            <symbol>BroadphaseRayTester</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;BroadphaseAabbTester&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;BroadphaseAabbTester&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="289" column="2"/>
+            <symbol>BroadphaseAabbTester</symbol>
+        </error>
+        <error id="duplicateCondition" severity="style" msg="The if condition is the same as the previous if condition" verbose="The if condition is the same as the previous if condition" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="575" column="7" info="Second condition"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="570" column="7" info="First condition"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="110" column="22"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="111" column="22"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="208" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="221" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="235" column="24"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="295" column="24"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="316" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="381" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="474" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="475" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="592" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="593" column="23"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;destroyProxy&apos; argument 1 names different: declaration &apos;proxy&apos; definition &apos;absproxy&apos;." verbose="Function &apos;destroyProxy&apos; argument 1 names different: declaration &apos;proxy&apos; definition &apos;absproxy&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="205" column="56"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h" line="111" column="47"/>
+            <symbol>destroyProxy</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;getAabb&apos; argument 1 names different: declaration &apos;proxy&apos; definition &apos;absproxy&apos;." verbose="Function &apos;getAabb&apos; argument 1 names different: declaration &apos;proxy&apos; definition &apos;absproxy&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="219" column="51"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h" line="116" column="42"/>
+            <symbol>getAabb</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;aabbTest&apos; argument 3 names different: declaration &apos;callback&apos; definition &apos;aabbCallback&apos;." verbose="Function &apos;aabbTest&apos; argument 3 names different: declaration &apos;callback&apos; definition &apos;aabbCallback&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="300" column="111"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h" line="114" column="102"/>
+            <symbol>aabbTest</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;setAabb&apos; argument 1 names different: declaration &apos;proxy&apos; definition &apos;absproxy&apos;." verbose="Function &apos;setAabb&apos; argument 1 names different: declaration &apos;proxy&apos; definition &apos;absproxy&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="311" column="51"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h" line="112" column="42"/>
+            <symbol>setAabb</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:106:7" call-funcname="Process" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="122" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:120:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:106:7" call-funcname="collide" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="419" col="2" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:117:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:54:20" my-argnr="1" my-argname="item" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="56" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:64:20" my-argnr="1" my-argname="item" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="66" col="6" value="0"/>
+  </FileInfo>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;stack&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;stack&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="255" column="9" info="stack is overwritten"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="243" column="49" info="stack is initialized"/>
+            <symbol>stack</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:106:7" call-funcname="Process" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="122" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:120:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:106:7" call-funcname="collide" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="419" col="2" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:117:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:54:20" my-argnr="1" my-argname="item" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="56" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:64:20" my-argnr="1" my-argname="item" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="66" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:106:7" call-funcname="Process" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="122" col="3" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:120:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:106:7" call-funcname="collide" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="419" col="2" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.h:117:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:54:20" my-argnr="1" my-argname="item" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="56" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp:64:20" my-argnr="1" my-argname="item" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp" line="66" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Process" lineNumber="106"/>
+    <functiondecl functionName="Process" lineNumber="120"/>
+    <functiondecl functionName="createProxy" lineNumber="175"/>
+    <functiondecl functionName="destroyProxy" lineNumber="205"/>
+    <functiondecl functionName="getAabb" lineNumber="219"/>
+    <functiondecl functionName="Process" lineNumber="233"/>
+    <functiondecl functionName="rayTest" lineNumber="240"/>
+    <functiondecl functionName="Process" lineNumber="293"/>
+    <functiondecl functionName="aabbTest" lineNumber="300"/>
+    <functiondecl functionName="setAabb" lineNumber="311"/>
+    <functiondecl functionName="setAabbForceUpdate" lineNumber="376"/>
+    <functiondecl functionName="calculateOverlappingPairs" lineNumber="417"/>
+    <functiondecl functionName="performDeferredRemoval" lineNumber="443"/>
+    <functiondecl functionName="collide" lineNumber="512"/>
+    <functiondecl functionName="optimize" lineNumber="627"/>
+    <functiondecl functionName="getOverlappingPairCache" lineNumber="634"/>
+    <functiondecl functionName="getOverlappingPairCache" lineNumber="640"/>
+    <functiondecl functionName="getBroadphaseAabb" lineNumber="646"/>
+    <functiondecl functionName="resetPool" lineNumber="665"/>
+    <functiondecl functionName="printStats" lineNumber="697"/>
+    <functiondecl functionName="benchmark" lineNumber="821"/>
+    <functiondecl functionName="Process" lineNumber="106"/>
+    <functiondecl functionName="Process" lineNumber="120"/>
+    <functiondecl functionName="createProxy" lineNumber="175"/>
+    <functiondecl functionName="destroyProxy" lineNumber="205"/>
+    <functiondecl functionName="getAabb" lineNumber="219"/>
+    <functiondecl functionName="Process" lineNumber="233"/>
+    <functiondecl functionName="rayTest" lineNumber="240"/>
+    <functiondecl functionName="Process" lineNumber="293"/>
+    <functiondecl functionName="aabbTest" lineNumber="300"/>
+    <functiondecl functionName="setAabb" lineNumber="311"/>
+    <functiondecl functionName="setAabbForceUpdate" lineNumber="376"/>
+    <functiondecl functionName="calculateOverlappingPairs" lineNumber="417"/>
+    <functiondecl functionName="performDeferredRemoval" lineNumber="443"/>
+    <functiondecl functionName="collide" lineNumber="512"/>
+    <functiondecl functionName="optimize" lineNumber="627"/>
+    <functiondecl functionName="getOverlappingPairCache" lineNumber="634"/>
+    <functiondecl functionName="getOverlappingPairCache" lineNumber="640"/>
+    <functiondecl functionName="getBroadphaseAabb" lineNumber="646"/>
+    <functiondecl functionName="resetPool" lineNumber="665"/>
+    <functiondecl functionName="printStats" lineNumber="697"/>
+    <functiondecl functionName="benchmark" lineNumber="821"/>
+    <functiondecl functionName="Process" lineNumber="106"/>
+    <functiondecl functionName="Process" lineNumber="120"/>
+    <functiondecl functionName="createProxy" lineNumber="175"/>
+    <functiondecl functionName="destroyProxy" lineNumber="205"/>
+    <functiondecl functionName="getAabb" lineNumber="219"/>
+    <functiondecl functionName="Process" lineNumber="233"/>
+    <functiondecl functionName="rayTest" lineNumber="240"/>
+    <functiondecl functionName="Process" lineNumber="293"/>
+    <functiondecl functionName="aabbTest" lineNumber="300"/>
+    <functiondecl functionName="setAabb" lineNumber="311"/>
+    <functiondecl functionName="setAabbForceUpdate" lineNumber="376"/>
+    <functiondecl functionName="calculateOverlappingPairs" lineNumber="417"/>
+    <functiondecl functionName="performDeferredRemoval" lineNumber="443"/>
+    <functiondecl functionName="collide" lineNumber="512"/>
+    <functiondecl functionName="optimize" lineNumber="627"/>
+    <functiondecl functionName="getOverlappingPairCache" lineNumber="634"/>
+    <functiondecl functionName="getOverlappingPairCache" lineNumber="640"/>
+    <functiondecl functionName="getBroadphaseAabb" lineNumber="646"/>
+    <functiondecl functionName="resetPool" lineNumber="665"/>
+    <functiondecl functionName="printStats" lineNumber="697"/>
+    <functiondecl functionName="benchmark" lineNumber="821"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BT_MAX_THREAD_COUNT"/>
+    <functioncall functionName="BroadphaseAabbTester"/>
+    <functioncall functionName="BroadphaseRayTester"/>
+    <functioncall functionName="FromCR"/>
+    <functioncall functionName="FromMM"/>
+    <functioncall functionName="Intersect"/>
+    <functioncall functionName="Maxs"/>
+    <functioncall functionName="Merge"/>
+    <functioncall functionName="Mins"/>
+    <functioncall functionName="Process"/>
+    <functioncall functionName="STAGECOUNT"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="aabbCallback"/>
+    <functioncall functionName="aabbMax"/>
+    <functioncall functionName="aabbMin"/>
+    <functioncall functionName="absproxy"/>
+    <functioncall functionName="addOverlappingPair"/>
+    <functioncall functionName="bounds"/>
+    <functioncall functionName="btAlignedAlloc"/>
+    <functioncall functionName="btAlignedFree"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btBroadphasePairSortPredicate"/>
+    <functioncall functionName="btBroadphaseProxy"/>
+    <functioncall functionName="btDbvtBroadphase"/>
+    <functioncall functionName="btDbvtProxy"/>
+    <functioncall functionName="btDbvtTreeCollider"/>
+    <functioncall functionName="btDbvtVolume"/>
+    <functioncall functionName="btGetCurrentThreadIndex"/>
+    <functioncall functionName="btHashedOverlappingPairCache"/>
+    <functioncall functionName="btMax"/>
+    <functioncall functionName="btMin"/>
+    <functioncall functionName="btOverlappingPairCache"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btSwap"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="callback"/>
+    <functioncall functionName="cleanOverlappingPair"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="collide"/>
+    <functioncall functionName="collideTTpersistentStack"/>
+    <functioncall functionName="collideTV"/>
+    <functioncall functionName="collider"/>
+    <functioncall functionName="collisionFilterGroup"/>
+    <functioncall functionName="collisionFilterMask"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="curAabb"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dispatcher"/>
+    <functioncall functionName="docollide"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="gDbvtMargin"/>
+    <functioncall functionName="getOverlappingPairArray"/>
+    <functioncall functionName="hasDeferredRemoval"/>
+    <functioncall functionName="hasOverlap"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="invalidPair"/>
+    <functioncall functionName="isDuplicate"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="leaf"/>
+    <functioncall functionName="list"/>
+    <functioncall functionName="listappend"/>
+    <functioncall functionName="listremove"/>
+    <functioncall functionName="localStack"/>
+    <functioncall functionName="m_aabbCallback"/>
+    <functioncall functionName="m_aabbMax"/>
+    <functioncall functionName="m_aabbMin"/>
+    <functioncall functionName="m_algorithm"/>
+    <functioncall functionName="m_deferedcollide"/>
+    <functioncall functionName="m_fixedleft"/>
+    <functioncall functionName="m_lambda_max"/>
+    <functioncall functionName="m_leaves"/>
+    <functioncall functionName="m_needcleanup"/>
+    <functioncall functionName="m_newpairs"/>
+    <functioncall functionName="m_pProxy0"/>
+    <functioncall functionName="m_pProxy1"/>
+    <functioncall functionName="m_paircache"/>
+    <functioncall functionName="m_rayCallback"/>
+    <functioncall functionName="m_rayDirectionInverse"/>
+    <functioncall functionName="m_releasepaircache"/>
+    <functioncall functionName="m_root"/>
+    <functioncall functionName="m_signs"/>
+    <functioncall functionName="m_stageCurrent"/>
+    <functioncall functionName="m_uniqueId"/>
+    <functioncall functionName="m_updates_call"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="needsRemoval"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="ni"/>
+    <functioncall functionName="optimizeIncremental"/>
+    <functioncall functionName="optimizeTopDown"/>
+    <functioncall functionName="orgCallback"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pa"/>
+    <functioncall functionName="pair"/>
+    <functioncall functionName="paircache"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="pbp"/>
+    <functioncall functionName="performDeferredRemoval"/>
+    <functioncall functionName="prediction"/>
+    <functioncall functionName="process"/>
+    <functioncall functionName="proxy"/>
+    <functioncall functionName="quickSort"/>
+    <functioncall functionName="rayCallback"/>
+    <functioncall functionName="rayFrom"/>
+    <functioncall functionName="rayTestInternal"/>
+    <functioncall functionName="rayTo"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="removeOverlappingPair"/>
+    <functioncall functionName="removeOverlappingPairsContainingProxy"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stage"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="threadIndex"/>
+    <functioncall functionName="totalObjects"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="userPtr"/>
+    <functioncall functionName="velocity"/>
+    <functioncall functionName="volume"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zerodummy"/>
+  </FileInfo>
+</analyzerinfo>

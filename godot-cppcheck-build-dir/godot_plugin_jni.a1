@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2521865362">
+        <error id="invalidLifetime" severity="error" msg="Using pointer to local variable &apos;variant&apos; that is out of scope." verbose="Using pointer to local variable &apos;variant&apos; that is out of scope." cwe="562">
+            <location file="/home/hbina/git/godot/platform/android/plugin/godot_plugin_jni.cpp" line="132" column="38"/>
+            <location file="/home/hbina/git/godot/platform/android/plugin/godot_plugin_jni.cpp" line="127" column="11" info="Variable created here."/>
+            <location file="/home/hbina/git/godot/platform/android/plugin/godot_plugin_jni.cpp" line="128" column="13" info="Address of variable taken here."/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/plugin/godot_plugin_jni.h:42:24" my-argnr="1" my-argname="env" file="/home/hbina/git/godot/platform/android/plugin/godot_plugin_jni.cpp" line="136" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Java_org_godotengine_godot_plugin_GodotPlugin_nativeRegisterSingleton" lineNumber="44"/>
+    <functiondecl functionName="Java_org_godotengine_godot_plugin_GodotPlugin_nativeRegisterMethod" lineNumber="55"/>
+    <functiondecl functionName="Java_org_godotengine_godot_plugin_GodotPlugin_nativeRegisterSignal" lineNumber="90"/>
+    <functiondecl functionName="Java_org_godotengine_godot_plugin_GodotPlugin_nativeEmitSignal" lineNumber="112"/>
+    <functiondecl functionName="Java_org_godotengine_godot_plugin_GodotPlugin_nativeRegisterGDNativeLibraries" lineNumber="135"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="DeleteLocalRef"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="GetArrayLength"/>
+    <functioncall functionName="GetMethodID"/>
+    <functioncall functionName="GetObjectArrayElement"/>
+    <functioncall functionName="GetObjectClass"/>
+    <functioncall functionName="NewGlobalRef"/>
+    <functioncall functionName="Singleton"/>
+    <functioncall functionName="_jobject_to_variant"/>
+    <functioncall functionName="add_method"/>
+    <functioncall functionName="add_signal"/>
+    <functioncall functionName="add_singleton"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="ascii"/>
+    <functioncall functionName="cls"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="env"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="gdnlib_paths"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_jni_sig"/>
+    <functioncall functionName="get_jni_type"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_setting"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="j_param"/>
+    <functioncall functionName="j_plugin_name"/>
+    <functioncall functionName="j_signal_name"/>
+    <functioncall functionName="j_signal_param_type"/>
+    <functioncall functionName="j_signal_param_types"/>
+    <functioncall functionName="j_signal_params"/>
+    <functioncall functionName="jstring"/>
+    <functioncall functionName="jstring_to_string"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="mname"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rawString"/>
+    <functioncall functionName="relative_path"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="retval"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_instance"/>
+    <functioncall functionName="signal_name"/>
+    <functioncall functionName="signal_param_type"/>
+    <functioncall functionName="singleton_name"/>
+    <functioncall functionName="singletons"/>
+    <functioncall functionName="singname"/>
+    <functioncall functionName="sname"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="types"/>
+    <functioncall functionName="variant"/>
+  </FileInfo>
+</analyzerinfo>

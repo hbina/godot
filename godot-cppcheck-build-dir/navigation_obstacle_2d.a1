@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="193243099">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;agent&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;agent&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="84" column="2"/>
+            <symbol>agent</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.h:53:7" call-funcname="set_navigation" call-argnr="1" file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="62" col="19" call-argexpr="nav" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="56" col="14" info="Assuming that condition 'nav!=nullptr' is not redundant"/>
+  <path file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="55" col="41" info="Assignment 'nav=Object::cast_to<Navigation2D>(p)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.h:53:7" call-funcname="set_navigation" call-argnr="1" file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="68" col="18" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.h:53:7" call-funcname="set_navigation" call-argnr="1" file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="103" col="16" call-argexpr="nav" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="102" col="20" info="Assuming that condition 'nav==nullptr' is not redundant"/>
+  <path file="/home/hbina/git/godot/scene/2d/navigation_obstacle_2d.cpp" line="101" col="51" info="Assignment 'nav=Object::cast_to<Navigation2D>(p_nav)', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_bind_methods" lineNumber="38"/>
+    <functiondecl functionName="_notification" lineNumber="44"/>
+    <functiondecl functionName="set_navigation" lineNumber="92"/>
+    <functiondecl functionName="set_navigation_node" lineNumber="100"/>
+    <functiondecl functionName="get_navigation_node" lineNumber="106"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="110"/>
+    <functiondecl functionName="update_agent_shape" lineNumber="118"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="NavigationObstacle2D"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="agent"/>
+    <functioncall functionName="agent_create"/>
+    <functioncall functionName="agent_set_map"/>
+    <functioncall functionName="agent_set_max_neighbors"/>
+    <functioncall functionName="agent_set_max_speed"/>
+    <functioncall functionName="agent_set_neighbor_dist"/>
+    <functioncall functionName="agent_set_position"/>
+    <functioncall functionName="agent_set_radius"/>
+    <functioncall functionName="agent_set_time_horizon"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_enclosing_radius"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_navigation_node"/>
+    <functioncall functionName="get_origin"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_shape"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="nav"/>
+    <functioncall functionName="navigation"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="node_2d"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_nav"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="radius"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_navigation"/>
+    <functioncall functionName="set_navigation_node"/>
+    <functioncall functionName="set_physics_process_internal"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update_agent_shape"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

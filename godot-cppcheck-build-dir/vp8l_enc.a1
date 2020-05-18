@@ -1,0 +1,638 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="966093842">
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;!use_delta_palette&apos; is always true" verbose="Condition &apos;!use_delta_palette&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1603" column="9" info="Condition &apos;!use_delta_palette&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1542" column="27" info="Assignment &apos;use_delta_palette=0&apos;, assigned value is 0"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." verbose="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="371" column="21" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="379" column="14" info="Assuming that condition &apos;pic!=NULL&apos; is not redundant"/>
+            <symbol>pic</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." verbose="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="372" column="22" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="379" column="14" info="Assuming that condition &apos;pic!=NULL&apos; is not redundant"/>
+            <symbol>pic</symbol>
+        </error>
+        <error id="nullPointerArithmeticRedundantCheck" severity="warning" msg="Either the condition &apos;huffman_codes!=NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." verbose="Either the condition &apos;huffman_codes!=NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." cwe="682">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="724" column="48" info="Null pointer addition"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1031" column="50" info="Calling function &apos;StoreImageToBitMask&apos;, 6th argument &apos;huffman_codes&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1044" column="23" info="Assuming that condition &apos;huffman_codes!=NULL&apos; is not redundant"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="206" column="9"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="truncLongCastAssignment" severity="style" msg="int result is assigned to long variable. If the variable is long to avoid loss of information, then you have loss of information." verbose="int result is assigned to long variable. If the variable is long to avoid loss of information, then there is loss of information. To avoid loss of information you must cast a calculation operand to long, for example &apos;l = a * b;&apos; =&gt; &apos;l = (long)a * b;&apos;." cwe="197">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1205" column="29"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:123:12" call-funcname="AnalyzeAndCreatePalette" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="382" col="30" call-argexpr="low_effort" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="390" col="6" info="Assuming that condition 'if(low_effort)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:335:12" call-funcname="GetHistoBits" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="386" col="34" call-argexpr="use_palette" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="392" col="50" info="Assuming that condition 'use_palette?kPalette:kSpatialSubGreen' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:449:12" call-funcname="GetHuffBitLengthsAndCodes" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="820" col="33" call-argexpr="huffman_codes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" call-funcname="StoreImageToBitMask" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="850" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" call-funcname="StoreImageToBitMask" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="850" col="28" call-argexpr="huffman_codes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" call-funcname="StoreImageToBitMask" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1030" col="30" call-argexpr="huffman_codes" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1044" col="23" info="Assuming that condition 'huffman_codes!=NULL' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1421:26" call-funcname="MapImageFromPalette" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1595" col="32" call-argexpr="use_delta_palette" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1542" col="27" info="Assignment 'use_delta_palette=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" call-funcname="EncodeImageInternal" call-argnr="14" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1635" col="30" call-argexpr="&hdr_size" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" call-funcname="EncodeImageInternal" call-argnr="15" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1635" col="30" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="crunch_configs" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="&num_crunch_configs_main" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="num_crunch_configs_main" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="&red_and_blue_always_zero" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" call-funcname="WriteImage" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1888" col="19" call-argexpr="&coded_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" call-funcname="WriteImage" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1888" col="19" call-argexpr="coded_size" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:585:13" call-funcname="StoreFullHuffmanCode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="688" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:653:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:585:13" call-funcname="StoreFullHuffmanCode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="688" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:653:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:692:25" call-funcname="WriteHuffmanCode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="740" col="9" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1126:26" call-funcname="WriteRiffHeader" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1167" col="9" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1474:21" call-funcname="VP8LEncoderNew" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1682" col="33" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1677:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1474:21" call-funcname="VP8LEncoderNew" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1682" col="33" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1677:19" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" my-argnr="5" my-argname="histogram_symbols" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="723" col="22" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="1" my-argname="col1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="63" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="2" my-argname="col2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="64" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:167:13" my-argnr="2" my-argname="r" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="169" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:167:13" my-argnr="3" my-argname="b" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="170" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="2" my-argname="a" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="176" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="3" my-argname="r" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="177" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="4" my-argname="g" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="178" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="5" my-argname="b" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="179" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="370" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:432:12" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="433" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:449:12" my-argnr="1" my-argname="histogram_image" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="456" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:545:13" my-argnr="1" my-argname="huffman_code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="549" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:585:13" my-argnr="4" my-argname="tree" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="591" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:653:13" my-argnr="4" my-argname="huffman_code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="664" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:692:25" my-argnr="2" my-argname="code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="695" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:700:25" my-argnr="2" my-argname="code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="706" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" my-argnr="5" my-argname="histogram_symbols" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="723" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" my-argnr="1" my-argname="bw" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="885" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" my-argnr="10" my-argname="config" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="916" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1069:13" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1073" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1076:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1081" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1103:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1107" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1140:12" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1142" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" my-argnr="3" my-argname="coded_size" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1182" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1191:13" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1192" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1202:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1210" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1248:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1250" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1421:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1424" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1452:26" my-argnr="3" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1456" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="1" my-argname="col1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="63" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="2" my-argname="col2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="64" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" my-argnr="1" my-argname="bw" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="885" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1126:26" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1134" col="8" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:123:12" call-funcname="AnalyzeAndCreatePalette" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="382" col="30" call-argexpr="low_effort" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="390" col="6" info="Assuming that condition 'if(low_effort)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:335:12" call-funcname="GetHistoBits" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="386" col="34" call-argexpr="use_palette" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="392" col="50" info="Assuming that condition 'use_palette?kPalette:kSpatialSubGreen' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:449:12" call-funcname="GetHuffBitLengthsAndCodes" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="820" col="33" call-argexpr="huffman_codes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" call-funcname="StoreImageToBitMask" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="850" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" call-funcname="StoreImageToBitMask" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="850" col="28" call-argexpr="huffman_codes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" call-funcname="StoreImageToBitMask" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1030" col="30" call-argexpr="huffman_codes" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1044" col="23" info="Assuming that condition 'huffman_codes!=NULL' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1421:26" call-funcname="MapImageFromPalette" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1595" col="32" call-argexpr="use_delta_palette" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1542" col="27" info="Assignment 'use_delta_palette=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" call-funcname="EncodeImageInternal" call-argnr="14" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1635" col="30" call-argexpr="&hdr_size" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" call-funcname="EncodeImageInternal" call-argnr="15" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1635" col="30" call-argexpr="&data_size" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="crunch_configs" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="&num_crunch_configs_main" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="num_crunch_configs_main" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" call-funcname="EncoderAnalyze" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1698" col="22" call-argexpr="&red_and_blue_always_zero" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" call-funcname="WriteImage" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1888" col="19" call-argexpr="&coded_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" call-funcname="WriteImage" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1888" col="19" call-argexpr="coded_size" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:585:13" call-funcname="StoreFullHuffmanCode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="688" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:653:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:585:13" call-funcname="StoreFullHuffmanCode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="688" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:653:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:692:25" call-funcname="WriteHuffmanCode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="740" col="9" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1126:26" call-funcname="WriteRiffHeader" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1167" col="9" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1474:21" call-funcname="VP8LEncoderNew" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1682" col="33" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1677:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1474:21" call-funcname="VP8LEncoderNew" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1682" col="33" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1677:19" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" my-argnr="5" my-argname="histogram_symbols" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="723" col="22" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="1" my-argname="col1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="63" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="2" my-argname="col2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="64" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:167:13" my-argnr="2" my-argname="r" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="169" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:167:13" my-argnr="3" my-argname="b" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="170" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="2" my-argname="a" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="176" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="3" my-argname="r" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="177" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="4" my-argname="g" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="178" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:173:13" my-argnr="5" my-argname="b" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="179" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:366:12" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="370" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:432:12" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="433" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:449:12" my-argnr="1" my-argname="histogram_image" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="456" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:545:13" my-argnr="1" my-argname="huffman_code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="549" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:585:13" my-argnr="4" my-argname="tree" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="591" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:653:13" my-argnr="4" my-argname="huffman_code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="664" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:692:25" my-argnr="2" my-argname="code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="695" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:700:25" my-argnr="2" my-argname="code" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="706" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:711:26" my-argnr="5" my-argname="histogram_symbols" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="723" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" my-argnr="1" my-argname="bw" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="885" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" my-argnr="10" my-argname="config" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="916" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1069:13" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1073" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1076:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1081" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1103:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1107" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1140:12" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1142" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1157:26" my-argnr="3" my-argname="coded_size" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1182" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1191:13" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1192" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1202:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1210" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1248:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1250" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1421:26" my-argnr="1" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1424" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1452:26" my-argnr="3" my-argname="enc" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1456" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="1" my-argname="col1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="63" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:62:25" my-argnr="2" my-argname="col2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="64" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:861:26" my-argnr="1" my-argname="bw" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="885" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c:1126:26" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/vp8l_enc.c" line="1134" col="8" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="PaletteCompareColorsForQsort" lineNumber="34"/>
+    <functiondecl functionName="PaletteComponentDistance" lineNumber="41"/>
+    <functiondecl functionName="PaletteColorDistance" lineNumber="50"/>
+    <functiondecl functionName="SwapColor" lineNumber="62"/>
+    <functiondecl functionName="GreedyMinimizeDeltas" lineNumber="68"/>
+    <functiondecl functionName="PaletteHasNonMonotonousDeltas" lineNumber="95"/>
+    <functiondecl functionName="AnalyzeAndCreatePalette" lineNumber="123"/>
+    <functiondecl functionName="AddSingleSubGreen" lineNumber="167"/>
+    <functiondecl functionName="AddSingle" lineNumber="173"/>
+    <functiondecl functionName="HashPix" lineNumber="182"/>
+    <functiondecl functionName="AnalyzeEntropy" lineNumber="188"/>
+    <functiondecl functionName="GetHistoBits" lineNumber="335"/>
+    <functiondecl functionName="GetTransformBits" lineNumber="348"/>
+    <functiondecl functionName="EncoderAnalyze" lineNumber="366"/>
+    <functiondecl functionName="EncoderInit" lineNumber="432"/>
+    <functiondecl functionName="GetHuffBitLengthsAndCodes" lineNumber="449"/>
+    <functiondecl functionName="StoreHuffmanTreeOfHuffmanTreeToBitMask" lineNumber="523"/>
+    <functiondecl functionName="ClearHuffmanTreeIfOnlyOneSymbol" lineNumber="545"/>
+    <functiondecl functionName="StoreHuffmanTreeToBitMask" lineNumber="561"/>
+    <functiondecl functionName="StoreFullHuffmanCode" lineNumber="585"/>
+    <functiondecl functionName="StoreHuffmanCode" lineNumber="653"/>
+    <functiondecl functionName="WriteHuffmanCode" lineNumber="692"/>
+    <functiondecl functionName="WriteHuffmanCodeWithExtraBits" lineNumber="700"/>
+    <functiondecl functionName="StoreImageToBitMask" lineNumber="711"/>
+    <functiondecl functionName="EncodeImageNoHuffman" lineNumber="772"/>
+    <functiondecl functionName="EncodeImageInternal" lineNumber="861"/>
+    <functiondecl functionName="ApplySubtractGreen" lineNumber="1069"/>
+    <functiondecl functionName="ApplyPredictFilter" lineNumber="1076"/>
+    <functiondecl functionName="ApplyCrossColorFilter" lineNumber="1103"/>
+    <functiondecl functionName="WriteRiffHeader" lineNumber="1126"/>
+    <functiondecl functionName="WriteImageSize" lineNumber="1140"/>
+    <functiondecl functionName="WriteRealAlphaAndVersion" lineNumber="1151"/>
+    <functiondecl functionName="WriteImage" lineNumber="1157"/>
+    <functiondecl functionName="ClearTransformBuffer" lineNumber="1191"/>
+    <functiondecl functionName="AllocateTransformBuffer" lineNumber="1202"/>
+    <functiondecl functionName="MakeInputImageCopy" lineNumber="1248"/>
+    <functiondecl functionName="SearchColorNoIdx" lineNumber="1275"/>
+    <functiondecl functionName="SearchColorGreedy" lineNumber="1293"/>
+    <functiondecl functionName="ApplyPaletteHash0" lineNumber="1305"/>
+    <functiondecl functionName="ApplyPaletteHash1" lineNumber="1313"/>
+    <functiondecl functionName="ApplyPaletteHash2" lineNumber="1319"/>
+    <functiondecl functionName="PrepareMapToPalette" lineNumber="1326"/>
+    <functiondecl functionName="ApplyPalette" lineNumber="1359"/>
+    <functiondecl functionName="MapImageFromPalette" lineNumber="1421"/>
+    <functiondecl functionName="EncodePalette" lineNumber="1452"/>
+    <functiondecl functionName="VP8LEncoderNew" lineNumber="1474"/>
+    <functiondecl functionName="VP8LEncoderDelete" lineNumber="1490"/>
+    <functiondecl functionName="EncodeStreamHook" lineNumber="1516"/>
+    <functiondecl functionName="VP8LEncodeStream" lineNumber="1677"/>
+    <functiondecl functionName="VP8LEncodeImage" lineNumber="1821"/>
+    <functiondecl functionName="PaletteCompareColorsForQsort" lineNumber="34"/>
+    <functiondecl functionName="PaletteComponentDistance" lineNumber="41"/>
+    <functiondecl functionName="PaletteColorDistance" lineNumber="50"/>
+    <functiondecl functionName="SwapColor" lineNumber="62"/>
+    <functiondecl functionName="GreedyMinimizeDeltas" lineNumber="68"/>
+    <functiondecl functionName="PaletteHasNonMonotonousDeltas" lineNumber="95"/>
+    <functiondecl functionName="AnalyzeAndCreatePalette" lineNumber="123"/>
+    <functiondecl functionName="AddSingleSubGreen" lineNumber="167"/>
+    <functiondecl functionName="AddSingle" lineNumber="173"/>
+    <functiondecl functionName="HashPix" lineNumber="182"/>
+    <functiondecl functionName="AnalyzeEntropy" lineNumber="188"/>
+    <functiondecl functionName="GetHistoBits" lineNumber="335"/>
+    <functiondecl functionName="GetTransformBits" lineNumber="348"/>
+    <functiondecl functionName="EncoderAnalyze" lineNumber="366"/>
+    <functiondecl functionName="EncoderInit" lineNumber="432"/>
+    <functiondecl functionName="GetHuffBitLengthsAndCodes" lineNumber="449"/>
+    <functiondecl functionName="StoreHuffmanTreeOfHuffmanTreeToBitMask" lineNumber="523"/>
+    <functiondecl functionName="ClearHuffmanTreeIfOnlyOneSymbol" lineNumber="545"/>
+    <functiondecl functionName="StoreHuffmanTreeToBitMask" lineNumber="561"/>
+    <functiondecl functionName="StoreFullHuffmanCode" lineNumber="585"/>
+    <functiondecl functionName="StoreHuffmanCode" lineNumber="653"/>
+    <functiondecl functionName="WriteHuffmanCode" lineNumber="692"/>
+    <functiondecl functionName="WriteHuffmanCodeWithExtraBits" lineNumber="700"/>
+    <functiondecl functionName="StoreImageToBitMask" lineNumber="711"/>
+    <functiondecl functionName="EncodeImageNoHuffman" lineNumber="772"/>
+    <functiondecl functionName="EncodeImageInternal" lineNumber="861"/>
+    <functiondecl functionName="ApplySubtractGreen" lineNumber="1069"/>
+    <functiondecl functionName="ApplyPredictFilter" lineNumber="1076"/>
+    <functiondecl functionName="ApplyCrossColorFilter" lineNumber="1103"/>
+    <functiondecl functionName="WriteRiffHeader" lineNumber="1126"/>
+    <functiondecl functionName="WriteImageSize" lineNumber="1140"/>
+    <functiondecl functionName="WriteRealAlphaAndVersion" lineNumber="1151"/>
+    <functiondecl functionName="WriteImage" lineNumber="1157"/>
+    <functiondecl functionName="ClearTransformBuffer" lineNumber="1191"/>
+    <functiondecl functionName="AllocateTransformBuffer" lineNumber="1202"/>
+    <functiondecl functionName="MakeInputImageCopy" lineNumber="1248"/>
+    <functiondecl functionName="SearchColorNoIdx" lineNumber="1275"/>
+    <functiondecl functionName="SearchColorGreedy" lineNumber="1293"/>
+    <functiondecl functionName="ApplyPaletteHash0" lineNumber="1305"/>
+    <functiondecl functionName="ApplyPaletteHash1" lineNumber="1313"/>
+    <functiondecl functionName="ApplyPaletteHash2" lineNumber="1319"/>
+    <functiondecl functionName="PrepareMapToPalette" lineNumber="1326"/>
+    <functiondecl functionName="ApplyPalette" lineNumber="1359"/>
+    <functiondecl functionName="MapImageFromPalette" lineNumber="1421"/>
+    <functiondecl functionName="EncodePalette" lineNumber="1452"/>
+    <functiondecl functionName="VP8LEncoderNew" lineNumber="1474"/>
+    <functiondecl functionName="VP8LEncoderDelete" lineNumber="1490"/>
+    <functiondecl functionName="EncodeStreamHook" lineNumber="1516"/>
+    <functiondecl functionName="VP8LEncodeStream" lineNumber="1677"/>
+    <functiondecl functionName="VP8LEncodeImage" lineNumber="1821"/>
+    <functioncall functionName="AddSingle"/>
+    <functioncall functionName="AddSingleSubGreen"/>
+    <functioncall functionName="AllocateTransformBuffer"/>
+    <functioncall functionName="AnalyzeAndCreatePalette"/>
+    <functioncall functionName="AnalyzeEntropy"/>
+    <functioncall functionName="ApplyCrossColorFilter"/>
+    <functioncall functionName="ApplyPalette"/>
+    <functioncall functionName="ApplyPaletteHash0"/>
+    <functioncall functionName="ApplyPaletteHash1"/>
+    <functioncall functionName="ApplyPaletteHash2"/>
+    <functioncall functionName="ApplyPredictFilter"/>
+    <functioncall functionName="ApplySubtractGreen"/>
+    <functioncall functionName="BitsLog2Floor"/>
+    <functioncall functionName="CODE_LENGTH_CODES"/>
+    <functioncall functionName="COLOR_INDEXING_TRANSFORM"/>
+    <functioncall functionName="CROSS_COLOR_TRANSFORM"/>
+    <functioncall functionName="ClearHuffmanTreeIfOnlyOneSymbol"/>
+    <functioncall functionName="ClearTransformBuffer"/>
+    <functioncall functionName="EncodeImageInternal"/>
+    <functioncall functionName="EncodeImageNoHuffman"/>
+    <functioncall functionName="EncodePalette"/>
+    <functioncall functionName="EncodeStreamHook"/>
+    <functioncall functionName="EncoderAnalyze"/>
+    <functioncall functionName="EncoderInit"/>
+    <functioncall functionName="End"/>
+    <functioncall functionName="EntropyIx"/>
+    <functioncall functionName="Error"/>
+    <functioncall functionName="Execute"/>
+    <functioncall functionName="GetHistoBits"/>
+    <functioncall functionName="GetHuffBitLengthsAndCodes"/>
+    <functioncall functionName="GetTransformBits"/>
+    <functioncall functionName="GreedyMinimizeDeltas"/>
+    <functioncall functionName="HashPix"/>
+    <functioncall functionName="Init"/>
+    <functioncall functionName="Launch"/>
+    <functioncall functionName="MAX_COLOR_CACHE_BITS"/>
+    <functioncall functionName="MAX_HUFFMAN_BITS"/>
+    <functioncall functionName="MAX_PALETTE_SIZE"/>
+    <functioncall functionName="MIN_HUFFMAN_BITS"/>
+    <functioncall functionName="MakeInputImageCopy"/>
+    <functioncall functionName="MapImageFromPalette"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="NUM_DISTANCE_CODES"/>
+    <functioncall functionName="PREDICTOR_TRANSFORM"/>
+    <functioncall functionName="PaletteColorDistance"/>
+    <functioncall functionName="PaletteCompareColorsForQsort"/>
+    <functioncall functionName="PaletteComponentDistance"/>
+    <functioncall functionName="PaletteHasNonMonotonousDeltas"/>
+    <functioncall functionName="PixOrCopyCacheIdx"/>
+    <functioncall functionName="PixOrCopyDistance"/>
+    <functioncall functionName="PixOrCopyIsCacheIdx"/>
+    <functioncall functionName="PixOrCopyIsLiteral"/>
+    <functioncall functionName="PixOrCopyLength"/>
+    <functioncall functionName="PixOrCopyLiteral"/>
+    <functioncall functionName="PrepareMapToPalette"/>
+    <functioncall functionName="PutLE32"/>
+    <functioncall functionName="Reset"/>
+    <functioncall functionName="SUBTRACT_GREEN"/>
+    <functioncall functionName="SearchColorGreedy"/>
+    <functioncall functionName="SearchColorNoIdx"/>
+    <functioncall functionName="StoreFullHuffmanCode"/>
+    <functioncall functionName="StoreHuffmanCode"/>
+    <functioncall functionName="StoreHuffmanTreeOfHuffmanTreeToBitMask"/>
+    <functioncall functionName="StoreHuffmanTreeToBitMask"/>
+    <functioncall functionName="StoreImageToBitMask"/>
+    <functioncall functionName="SwapColor"/>
+    <functioncall functionName="Sync"/>
+    <functioncall functionName="TAG_SIZE"/>
+    <functioncall functionName="TRANSFORM_PRESENT"/>
+    <functioncall functionName="UserAbort"/>
+    <functioncall functionName="VP8LAllocateHistogram"/>
+    <functioncall functionName="VP8LAllocateHistogramSet"/>
+    <functioncall functionName="VP8LBackwardRefsClear"/>
+    <functioncall functionName="VP8LBackwardRefsInit"/>
+    <functioncall functionName="VP8LBitWriterClone"/>
+    <functioncall functionName="VP8LBitWriterFinish"/>
+    <functioncall functionName="VP8LBitWriterInit"/>
+    <functioncall functionName="VP8LBitWriterNumBytes"/>
+    <functioncall functionName="VP8LBitWriterReset"/>
+    <functioncall functionName="VP8LBitWriterSwap"/>
+    <functioncall functionName="VP8LBitWriterWipeOut"/>
+    <functioncall functionName="VP8LBitsEntropy"/>
+    <functioncall functionName="VP8LBundleColorMap"/>
+    <functioncall functionName="VP8LColorSpaceTransform"/>
+    <functioncall functionName="VP8LCreateCompressedHuffmanTree"/>
+    <functioncall functionName="VP8LCreateHuffmanTree"/>
+    <functioncall functionName="VP8LEncDspInit"/>
+    <functioncall functionName="VP8LEncodeStream"/>
+    <functioncall functionName="VP8LEncoderDelete"/>
+    <functioncall functionName="VP8LEncoderNew"/>
+    <functioncall functionName="VP8LFastLog2"/>
+    <functioncall functionName="VP8LFreeHistogram"/>
+    <functioncall functionName="VP8LFreeHistogramSet"/>
+    <functioncall functionName="VP8LGetBackwardReferences"/>
+    <functioncall functionName="VP8LGetHistoImageSymbols"/>
+    <functioncall functionName="VP8LHashChainClear"/>
+    <functioncall functionName="VP8LHashChainFill"/>
+    <functioncall functionName="VP8LHashChainInit"/>
+    <functioncall functionName="VP8LHistogramNumCodes"/>
+    <functioncall functionName="VP8LHistogramSetClear"/>
+    <functioncall functionName="VP8LHistogramStoreRefs"/>
+    <functioncall functionName="VP8LPrefixEncode"/>
+    <functioncall functionName="VP8LPutBits"/>
+    <functioncall functionName="VP8LRefsCursorInit"/>
+    <functioncall functionName="VP8LRefsCursorNext"/>
+    <functioncall functionName="VP8LRefsCursorOk"/>
+    <functioncall functionName="VP8LResidualImage"/>
+    <functioncall functionName="VP8LSubPixels"/>
+    <functioncall functionName="VP8LSubSampleSize"/>
+    <functioncall functionName="VP8LSubtractGreenFromBlueAndRed"/>
+    <functioncall functionName="VP8L_IMAGE_SIZE_BITS"/>
+    <functioncall functionName="VP8L_MAGIC_BYTE"/>
+    <functioncall functionName="VP8L_SIGNATURE_SIZE"/>
+    <functioncall functionName="VP8L_VERSION"/>
+    <functioncall functionName="VP8L_VERSION_BITS"/>
+    <functioncall functionName="VP8_ENC_ERROR_BAD_WRITE"/>
+    <functioncall functionName="VP8_ENC_ERROR_NULL_PARAMETER"/>
+    <functioncall functionName="VP8_ENC_ERROR_OUT_OF_MEMORY"/>
+    <functioncall functionName="VP8_ENC_ERROR_USER_ABORT"/>
+    <functioncall functionName="VP8_ENC_OK"/>
+    <functioncall functionName="WEBP_ALIGN"/>
+    <functioncall functionName="WebPEncodingSetError"/>
+    <functioncall functionName="WebPGetColorPalette"/>
+    <functioncall functionName="WebPGetWorkerInterface"/>
+    <functioncall functionName="WebPMemToUint32"/>
+    <functioncall functionName="WebPPictureHasTransparency"/>
+    <functioncall functionName="WebPReportProgress"/>
+    <functioncall functionName="WebPSafeCalloc"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="WriteHuffmanCode"/>
+    <functioncall functionName="WriteHuffmanCodeWithExtraBits"/>
+    <functioncall functionName="WriteImage"/>
+    <functioncall functionName="WriteImageSize"/>
+    <functioncall functionName="WriteRealAlphaAndVersion"/>
+    <functioncall functionName="WriteRiffHeader"/>
+    <functioncall functionName="alpha_"/>
+    <functioncall functionName="argb"/>
+    <functioncall functionName="argb_"/>
+    <functioncall functionName="argb_scratch_"/>
+    <functioncall functionName="argb_scratch_size"/>
+    <functioncall functionName="argb_stride"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="best_ix"/>
+    <functioncall functionName="best_score"/>
+    <functioncall functionName="bit_array_size"/>
+    <functioncall functionName="bit_length"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="blue_"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf_rle"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="bw"/>
+    <functioncall functionName="bw_"/>
+    <functioncall functionName="bw_best"/>
+    <functioncall functionName="bw_init"/>
+    <functioncall functionName="bw_main"/>
+    <functioncall functionName="bw_side"/>
+    <functioncall functionName="byte_position"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cache_bits"/>
+    <functioncall functionName="cache_bits_"/>
+    <functioncall functionName="ccolor_transform_bits"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="code_index"/>
+    <functioncall functionName="code_length_bitdepth"/>
+    <functioncall functionName="code_length_bitdepth_symbols"/>
+    <functioncall functionName="coded_size"/>
+    <functioncall functionName="codes"/>
+    <functioncall functionName="codes_to_store"/>
+    <functioncall functionName="col1"/>
+    <functioncall functionName="col2"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="config_"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="crunch_configs"/>
+    <functioncall functionName="crunch_configs_"/>
+    <functioncall functionName="cur_pos"/>
+    <functioncall functionName="cur_score"/>
+    <functioncall functionName="curr_row"/>
+    <functioncall functionName="current_width_"/>
+    <functioncall functionName="data2"/>
+    <functioncall functionName="data_size"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="distance"/>
+    <functioncall functionName="distance_"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="enc"/>
+    <functioncall functionName="enc_"/>
+    <functioncall functionName="enc_main"/>
+    <functioncall functionName="enc_side"/>
+    <functioncall functionName="entropy_idx_"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="err_"/>
+    <functioncall functionName="error_"/>
+    <functioncall functionName="exact"/>
+    <functioncall functionName="extra_bits"/>
+    <functioncall functionName="extra_info"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="green"/>
+    <functioncall functionName="has_alpha"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash_chain"/>
+    <functioncall functionName="hash_chain_"/>
+    <functioncall functionName="hdr_size"/>
+    <functioncall functionName="hdr_size_tmp"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hi"/>
+    <functioncall functionName="histo"/>
+    <functioncall functionName="histo_bits"/>
+    <functioncall functionName="histo_bits_"/>
+    <functioncall functionName="histogram"/>
+    <functioncall functionName="histogram_argb"/>
+    <functioncall functionName="histogram_bits"/>
+    <functioncall functionName="histogram_image"/>
+    <functioncall functionName="histogram_image_size"/>
+    <functioncall functionName="histogram_image_xysize"/>
+    <functioncall functionName="histogram_symbols"/>
+    <functioncall functionName="huff_tree"/>
+    <functioncall functionName="huffman_code"/>
+    <functioncall functionName="huffman_codes"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="idx_map"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image_size"/>
+    <functioncall functionName="ind"/>
+    <functioncall functionName="init_byte_position"/>
+    <functioncall functionName="initial_size"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="ix"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="kDirect"/>
+    <functioncall functionName="kEncoderARGB"/>
+    <functioncall functionName="kEncoderNone"/>
+    <functioncall functionName="kEncoderPalette"/>
+    <functioncall functionName="kHistoAlpha"/>
+    <functioncall functionName="kHistoAlphaPred"/>
+    <functioncall functionName="kHistoBlue"/>
+    <functioncall functionName="kHistoBluePred"/>
+    <functioncall functionName="kHistoBluePredSubGreen"/>
+    <functioncall functionName="kHistoBlueSubGreen"/>
+    <functioncall functionName="kHistoGreen"/>
+    <functioncall functionName="kHistoGreenPred"/>
+    <functioncall functionName="kHistoPalette"/>
+    <functioncall functionName="kHistoRed"/>
+    <functioncall functionName="kHistoRedPred"/>
+    <functioncall functionName="kHistoRedPredSubGreen"/>
+    <functioncall functionName="kHistoRedSubGreen"/>
+    <functioncall functionName="kHistoTotal"/>
+    <functioncall functionName="kLZ77Box"/>
+    <functioncall functionName="kLZ77RLE"/>
+    <functioncall functionName="kNumEntropyIx"/>
+    <functioncall functionName="kPalette"/>
+    <functioncall functionName="kSpatial"/>
+    <functioncall functionName="kSpatialSubGreen"/>
+    <functioncall functionName="kSubGreen"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lengths"/>
+    <functioncall functionName="literal_"/>
+    <functioncall functionName="literal_ix"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="low_effort"/>
+    <functioncall functionName="lz77s_idx"/>
+    <functioncall functionName="lz77s_types_to_try_size_"/>
+    <functioncall functionName="max_index"/>
+    <functioncall functionName="max_num_symbols"/>
+    <functioncall functionName="max_tokens"/>
+    <functioncall functionName="max_transform_bits"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="mem_buf"/>
+    <functioncall functionName="mem_size"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="min_entropy_ix"/>
+    <functioncall functionName="n_bits"/>
+    <functioncall functionName="n_lz77s"/>
+    <functioncall functionName="near_lossless"/>
+    <functioncall functionName="near_lossless_strength"/>
+    <functioncall functionName="num_colors"/>
+    <functioncall functionName="num_crunch_configs"/>
+    <functioncall functionName="num_crunch_configs_"/>
+    <functioncall functionName="num_crunch_configs_main"/>
+    <functioncall functionName="num_crunch_configs_side"/>
+    <functioncall functionName="num_symbols"/>
+    <functioncall functionName="num_tokens"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="ok_main"/>
+    <functioncall functionName="ok_side"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="pad"/>
+    <functioncall functionName="pad_byte"/>
+    <functioncall functionName="palette"/>
+    <functioncall functionName="palette_"/>
+    <functioncall functionName="palette_code_bits_"/>
+    <functioncall functionName="palette_size"/>
+    <functioncall functionName="palette_size_"/>
+    <functioncall functionName="palette_sorted"/>
+    <functioncall functionName="param"/>
+    <functioncall functionName="params_main"/>
+    <functioncall functionName="params_side"/>
+    <functioncall functionName="percent"/>
+    <functioncall functionName="pic"/>
+    <functioncall functionName="pic_"/>
+    <functioncall functionName="picture"/>
+    <functioncall functionName="picture_"/>
+    <functioncall functionName="pix"/>
+    <functioncall functionName="pix_cnt"/>
+    <functioncall functionName="pix_diff"/>
+    <functioncall functionName="pix_prev"/>
+    <functioncall functionName="pred_bits"/>
+    <functioncall functionName="predict"/>
+    <functioncall functionName="prev_idx"/>
+    <functioncall functionName="qsort"/>
+    <functioncall functionName="quality"/>
+    <functioncall functionName="red_"/>
+    <functioncall functionName="red_and_blue_always_zero"/>
+    <functioncall functionName="red_and_blue_always_zero_"/>
+    <functioncall functionName="refs"/>
+    <functioncall functionName="refs_"/>
+    <functioncall functionName="refs_array"/>
+    <functioncall functionName="refs_best"/>
+    <functioncall functionName="refs_block_size"/>
+    <functioncall functionName="refs_tmp"/>
+    <functioncall functionName="refs_tmp1"/>
+    <functioncall functionName="refs_tmp2"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="riff"/>
+    <functioncall functionName="riff_size"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sorted"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src_stride"/>
+    <functioncall functionName="stats"/>
+    <functioncall functionName="stats_"/>
+    <functioncall functionName="stats_side"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="symbol"/>
+    <functioncall functionName="thread_level"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp_histo"/>
+    <functioncall functionName="tmp_palette"/>
+    <functioncall functionName="tmp_row"/>
+    <functioncall functionName="tokens"/>
+    <functioncall functionName="total_length_size"/>
+    <functioncall functionName="transform_bits"/>
+    <functioncall functionName="transform_bits_"/>
+    <functioncall functionName="transform_data_"/>
+    <functioncall functionName="transform_data_size"/>
+    <functioncall functionName="transform_height"/>
+    <functioncall functionName="transform_mem_"/>
+    <functioncall functionName="transform_mem_size_"/>
+    <functioncall functionName="transform_width"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="trimmed_length"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="use_LUT"/>
+    <functioncall functionName="use_cache"/>
+    <functioncall functionName="use_cache_"/>
+    <functioncall functionName="use_cross_color_"/>
+    <functioncall functionName="use_delta_palette"/>
+    <functioncall functionName="use_palette"/>
+    <functioncall functionName="use_palette_"/>
+    <functioncall functionName="use_predict_"/>
+    <functioncall functionName="use_subtract_green_"/>
+    <functioncall functionName="used_subtract_green"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vp8l_size"/>
+    <functioncall functionName="webpll_data"/>
+    <functioncall functionName="webpll_size"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="worker"/>
+    <functioncall functionName="worker_main"/>
+    <functioncall functionName="worker_side"/>
+    <functioncall functionName="write_histogram_image"/>
+    <functioncall functionName="write_trimmed_length"/>
+    <functioncall functionName="writer"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xbits"/>
+  </FileInfo>
+</analyzerinfo>

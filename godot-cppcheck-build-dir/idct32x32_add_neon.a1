@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1542405825">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;in&apos; can be reduced." verbose="The scope of the variable &apos;in&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="171" column="14"/>
+            <symbol>in</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;pass1&apos; is not assigned a value." verbose="Variable &apos;pass1&apos; is not assigned a value." cwe="665">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="463" column="13"/>
+            <symbol>pass1</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;pass2&apos; is not assigned a value." verbose="Variable &apos;pass2&apos; is not assigned a value." cwe="665">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="464" column="13"/>
+            <symbol>pass2</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c:168:20" call-funcname="idct32_transpose_pair" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="477" col="34" call-argexpr="trans_buf" call-argvaluetype="7" call-argvalue="512"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c:357:20" call-funcname="idct32_bands_end_2nd_pass" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="711" col="17" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c:457:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c:262:20" my-argnr="1" my-argname="out" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="278" col="5" value="1024"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c:357:20" my-argnr="1" my-argname="out" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="383" col="5" value="1920"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c:126:20" my-argnr="5" my-argname="qAs16" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="161" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c:126:20" my-argnr="6" my-argname="qBs16" file="/home/hbina/git/godot/thirdparty/libvpx/vpx_dsp/arm/idct32x32_add_neon.c" line="163" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="__STORE_COMBINE_CENTER_RESULTS" lineNumber="31"/>
+    <functiondecl functionName="__STORE_COMBINE_EXTREME_RESULTS" lineNumber="79"/>
+    <functiondecl functionName="DO_BUTTERFLY" lineNumber="126"/>
+    <functiondecl functionName="idct32_transpose_pair" lineNumber="168"/>
+    <functiondecl functionName="idct32_bands_end_1st_pass" lineNumber="262"/>
+    <functiondecl functionName="idct32_bands_end_2nd_pass" lineNumber="357"/>
+    <functiondecl functionName="vpx_idct32x32_1024_add_neon" lineNumber="457"/>
+    <functioncall functionName="DO_BUTTERFLY"/>
+    <functioncall functionName="__STORE_COMBINE_CENTER_RESULTS"/>
+    <functioncall functionName="__STORE_COMBINE_EXTREME_RESULTS"/>
+    <functioncall functionName="cospi_10_64"/>
+    <functioncall functionName="cospi_11_64"/>
+    <functioncall functionName="cospi_12_64"/>
+    <functioncall functionName="cospi_13_64"/>
+    <functioncall functionName="cospi_14_64"/>
+    <functioncall functionName="cospi_15_64"/>
+    <functioncall functionName="cospi_16_64"/>
+    <functioncall functionName="cospi_17_64"/>
+    <functioncall functionName="cospi_18_64"/>
+    <functioncall functionName="cospi_19_64"/>
+    <functioncall functionName="cospi_1_64"/>
+    <functioncall functionName="cospi_20_64"/>
+    <functioncall functionName="cospi_21_64"/>
+    <functioncall functionName="cospi_22_64"/>
+    <functioncall functionName="cospi_23_64"/>
+    <functioncall functionName="cospi_24_64"/>
+    <functioncall functionName="cospi_25_64"/>
+    <functioncall functionName="cospi_26_64"/>
+    <functioncall functionName="cospi_27_64"/>
+    <functioncall functionName="cospi_28_64"/>
+    <functioncall functionName="cospi_29_64"/>
+    <functioncall functionName="cospi_2_64"/>
+    <functioncall functionName="cospi_30_64"/>
+    <functioncall functionName="cospi_31_64"/>
+    <functioncall functionName="cospi_3_64"/>
+    <functioncall functionName="cospi_4_64"/>
+    <functioncall functionName="cospi_5_64"/>
+    <functioncall functionName="cospi_6_64"/>
+    <functioncall functionName="cospi_7_64"/>
+    <functioncall functionName="cospi_8_64"/>
+    <functioncall functionName="cospi_9_64"/>
+    <functioncall functionName="d10s16"/>
+    <functioncall functionName="d11s16"/>
+    <functioncall functionName="d16s16"/>
+    <functioncall functionName="d17s16"/>
+    <functioncall functionName="d18s16"/>
+    <functioncall functionName="d19s16"/>
+    <functioncall functionName="d20s16"/>
+    <functioncall functionName="d21s16"/>
+    <functioncall functionName="d22s16"/>
+    <functioncall functionName="d23s16"/>
+    <functioncall functionName="d24s16"/>
+    <functioncall functionName="d25s16"/>
+    <functioncall functionName="d26s16"/>
+    <functioncall functionName="d27s16"/>
+    <functioncall functionName="d28s16"/>
+    <functioncall functionName="d29s16"/>
+    <functioncall functionName="d30s16"/>
+    <functioncall functionName="d31s16"/>
+    <functioncall functionName="d4s16"/>
+    <functioncall functionName="d5s16"/>
+    <functioncall functionName="d6s16"/>
+    <functioncall functionName="d7s16"/>
+    <functioncall functionName="d8s16"/>
+    <functioncall functionName="d9s16"/>
+    <functioncall functionName="dAs16"/>
+    <functioncall functionName="dBs16"/>
+    <functioncall functionName="dCs16"/>
+    <functioncall functionName="dDs16"/>
+    <functioncall functionName="dest"/>
+    <functioncall functionName="first_const"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="idct32_bands_end_1st_pass"/>
+    <functioncall functionName="idct32_bands_end_2nd_pass"/>
+    <functioncall functionName="idct32_transpose_pair"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="pass1"/>
+    <functioncall functionName="pass2"/>
+    <functioncall functionName="q0s16"/>
+    <functioncall functionName="q10s16"/>
+    <functioncall functionName="q10s32"/>
+    <functioncall functionName="q11s16"/>
+    <functioncall functionName="q11s32"/>
+    <functioncall functionName="q12s16"/>
+    <functioncall functionName="q12s32"/>
+    <functioncall functionName="q13s16"/>
+    <functioncall functionName="q14s16"/>
+    <functioncall functionName="q15s16"/>
+    <functioncall functionName="q15s32"/>
+    <functioncall functionName="q1s16"/>
+    <functioncall functionName="q2s16"/>
+    <functioncall functionName="q3s16"/>
+    <functioncall functionName="q4s16"/>
+    <functioncall functionName="q5s16"/>
+    <functioncall functionName="q6s16"/>
+    <functioncall functionName="q7s16"/>
+    <functioncall functionName="q8s16"/>
+    <functioncall functionName="q8s32"/>
+    <functioncall functionName="q9s16"/>
+    <functioncall functionName="q9s32"/>
+    <functioncall functionName="r10"/>
+    <functioncall functionName="r6"/>
+    <functioncall functionName="r7"/>
+    <functioncall functionName="r9"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="second_const"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="t_buf"/>
+    <functioncall functionName="trans_buf"/>
+    <functioncall functionName="vaddq_s16"/>
+    <functioncall functionName="vaddq_s32"/>
+    <functioncall functionName="vaddw_u8"/>
+    <functioncall functionName="vcombine_s16"/>
+    <functioncall functionName="vdup_n_s16"/>
+    <functioncall functionName="vget_high_s16"/>
+    <functioncall functionName="vget_low_s16"/>
+    <functioncall functionName="vld1_s16"/>
+    <functioncall functionName="vld1q_s16"/>
+    <functioncall functionName="vmull_s16"/>
+    <functioncall functionName="vqmovun_s16"/>
+    <functioncall functionName="vqrshrn_n_s32"/>
+    <functioncall functionName="vreinterpret_s16_u8"/>
+    <functioncall functionName="vreinterpret_u8_s16"/>
+    <functioncall functionName="vreinterpretq_s16_s32"/>
+    <functioncall functionName="vreinterpretq_s16_u16"/>
+    <functioncall functionName="vreinterpretq_s32_s16"/>
+    <functioncall functionName="vreinterpretq_u16_s16"/>
+    <functioncall functionName="vrshrq_n_s16"/>
+    <functioncall functionName="vst1_s16"/>
+    <functioncall functionName="vst1q_s16"/>
+    <functioncall functionName="vsubq_s16"/>
+    <functioncall functionName="vsubq_s32"/>
+    <functioncall functionName="vtrnq_s16"/>
+    <functioncall functionName="vtrnq_s32"/>
+  </FileInfo>
+</analyzerinfo>

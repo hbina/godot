@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="749591242">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="137" column="7"/>
+            <symbol>j</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="&alpha" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="&num_rows" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="num_rows" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="&alpha" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="&num_rows" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="num_rows" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:25:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="28" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:25:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="26" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:47:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="50" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:47:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="48" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:130:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="132" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="155" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" my-argnr="3" my-argname="num_rows" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="156" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:179:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="181" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:205:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="207" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:257:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="258" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:257:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="260" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:276:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="280" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:297:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="300" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:297:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="298" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:355:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="357" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:378:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="379" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:466:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="468" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:482:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="484" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:482:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="483" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:642:6" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="643" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="&alpha" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="&num_rows" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="num_rows" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="&alpha" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="&num_rows" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="num_rows" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:25:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="28" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:25:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="26" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:47:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="50" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:47:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="48" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:62:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="63" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:130:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="132" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="155" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" my-argnr="3" my-argname="num_rows" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="156" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:179:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="181" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:205:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="207" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:257:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="258" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:257:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="260" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:276:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="280" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:297:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="300" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:297:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="298" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:355:12" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="357" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:378:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="379" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:466:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="468" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:482:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="484" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:482:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="483" col="41" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:642:6" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="643" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="&alpha" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="&num_rows" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="189" col="42" call-argexpr="num_rows" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="&alpha" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="&num_rows" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" call-funcname="GetAlphaSourceRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="213" col="42" call-argexpr="num_rows" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:25:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="28" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:25:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="26" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:47:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="50" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:47:12" my-argnr="2" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="48" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:130:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="132" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="155" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:153:12" my-argnr="3" my-argname="num_rows" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="156" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:179:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="181" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:205:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="207" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c:642:6" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/io_dec.c" line="643" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="EmitYUV" lineNumber="25"/>
+    <functiondecl functionName="EmitSampledRGB" lineNumber="47"/>
+    <functiondecl functionName="FillAlphaPlane" lineNumber="122"/>
+    <functiondecl functionName="EmitAlphaYUV" lineNumber="130"/>
+    <functiondecl functionName="GetAlphaSourceRow" lineNumber="153"/>
+    <functiondecl functionName="EmitAlphaRGB" lineNumber="179"/>
+    <functiondecl functionName="EmitAlphaRGBA4444" lineNumber="205"/>
+    <functiondecl functionName="Rescale" lineNumber="245"/>
+    <functiondecl functionName="EmitRescaledYUV" lineNumber="257"/>
+    <functiondecl functionName="EmitRescaledAlphaYUV" lineNumber="276"/>
+    <functiondecl functionName="InitYUVRescaler" lineNumber="297"/>
+    <functiondecl functionName="ExportRGB" lineNumber="355"/>
+    <functiondecl functionName="EmitRescaledRGB" lineNumber="378"/>
+    <functiondecl functionName="ExportAlpha" lineNumber="404"/>
+    <functiondecl functionName="ExportAlphaRGBA4444" lineNumber="431"/>
+    <functiondecl functionName="EmitRescaledAlphaRGB" lineNumber="466"/>
+    <functiondecl functionName="InitRGBRescaler" lineNumber="482"/>
+    <functiondecl functionName="CustomSetup" lineNumber="550"/>
+    <functiondecl functionName="CustomPut" lineNumber="613"/>
+    <functiondecl functionName="CustomTeardown" lineNumber="633"/>
+    <functiondecl functionName="WebPInitCustomIo" lineNumber="642"/>
+    <functiondecl functionName="EmitYUV" lineNumber="25"/>
+    <functiondecl functionName="EmitSampledRGB" lineNumber="47"/>
+    <functiondecl functionName="EmitFancyRGB" lineNumber="62"/>
+    <functiondecl functionName="FillAlphaPlane" lineNumber="122"/>
+    <functiondecl functionName="EmitAlphaYUV" lineNumber="130"/>
+    <functiondecl functionName="GetAlphaSourceRow" lineNumber="153"/>
+    <functiondecl functionName="EmitAlphaRGB" lineNumber="179"/>
+    <functiondecl functionName="EmitAlphaRGBA4444" lineNumber="205"/>
+    <functiondecl functionName="Rescale" lineNumber="245"/>
+    <functiondecl functionName="EmitRescaledYUV" lineNumber="257"/>
+    <functiondecl functionName="EmitRescaledAlphaYUV" lineNumber="276"/>
+    <functiondecl functionName="InitYUVRescaler" lineNumber="297"/>
+    <functiondecl functionName="ExportRGB" lineNumber="355"/>
+    <functiondecl functionName="EmitRescaledRGB" lineNumber="378"/>
+    <functiondecl functionName="ExportAlpha" lineNumber="404"/>
+    <functiondecl functionName="ExportAlphaRGBA4444" lineNumber="431"/>
+    <functiondecl functionName="EmitRescaledAlphaRGB" lineNumber="466"/>
+    <functiondecl functionName="InitRGBRescaler" lineNumber="482"/>
+    <functiondecl functionName="CustomSetup" lineNumber="550"/>
+    <functiondecl functionName="CustomPut" lineNumber="613"/>
+    <functiondecl functionName="CustomTeardown" lineNumber="633"/>
+    <functiondecl functionName="WebPInitCustomIo" lineNumber="642"/>
+    <functiondecl functionName="EmitYUV" lineNumber="25"/>
+    <functiondecl functionName="EmitSampledRGB" lineNumber="47"/>
+    <functiondecl functionName="FillAlphaPlane" lineNumber="122"/>
+    <functiondecl functionName="EmitAlphaYUV" lineNumber="130"/>
+    <functiondecl functionName="GetAlphaSourceRow" lineNumber="153"/>
+    <functiondecl functionName="EmitAlphaRGB" lineNumber="179"/>
+    <functiondecl functionName="EmitAlphaRGBA4444" lineNumber="205"/>
+    <functiondecl functionName="CustomSetup" lineNumber="550"/>
+    <functiondecl functionName="CustomPut" lineNumber="613"/>
+    <functiondecl functionName="CustomTeardown" lineNumber="633"/>
+    <functiondecl functionName="WebPInitCustomIo" lineNumber="642"/>
+    <functioncall functionName="CustomPut"/>
+    <functioncall functionName="CustomSetup"/>
+    <functioncall functionName="CustomTeardown"/>
+    <functioncall functionName="EmitAlphaRGB"/>
+    <functioncall functionName="EmitAlphaRGBA4444"/>
+    <functioncall functionName="EmitAlphaYUV"/>
+    <functioncall functionName="EmitFancyRGB"/>
+    <functioncall functionName="EmitRescaledAlphaRGB"/>
+    <functioncall functionName="EmitRescaledAlphaYUV"/>
+    <functioncall functionName="EmitRescaledRGB"/>
+    <functioncall functionName="EmitRescaledYUV"/>
+    <functioncall functionName="EmitSampledRGB"/>
+    <functioncall functionName="EmitYUV"/>
+    <functioncall functionName="ExportAlpha"/>
+    <functioncall functionName="ExportAlphaRGBA4444"/>
+    <functioncall functionName="ExportRGB"/>
+    <functioncall functionName="FillAlphaPlane"/>
+    <functioncall functionName="GetAlphaSourceRow"/>
+    <functioncall functionName="InitRGBRescaler"/>
+    <functioncall functionName="InitYUVRescaler"/>
+    <functioncall functionName="MODE_YUV"/>
+    <functioncall functionName="MODE_YUVA"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="RGBA"/>
+    <functioncall functionName="Rescale"/>
+    <functioncall functionName="WEBP_ALIGN"/>
+    <functioncall functionName="WEBP_ALIGN_CST"/>
+    <functioncall functionName="WebPApplyAlphaMultiply"/>
+    <functioncall functionName="WebPApplyAlphaMultiply4444"/>
+    <functioncall functionName="WebPDispatchAlpha"/>
+    <functioncall functionName="WebPInitAlphaProcessing"/>
+    <functioncall functionName="WebPInitSamplers"/>
+    <functioncall functionName="WebPInitUpsamplers"/>
+    <functioncall functionName="WebPInitYUV444Converters"/>
+    <functioncall functionName="WebPIoInitFromOptions"/>
+    <functioncall functionName="WebPIsAlphaMode"/>
+    <functioncall functionName="WebPIsPremultipliedMode"/>
+    <functioncall functionName="WebPIsRGBMode"/>
+    <functioncall functionName="WebPMultRows"/>
+    <functioncall functionName="WebPRescaleNeededLines"/>
+    <functioncall functionName="WebPRescalerExport"/>
+    <functioncall functionName="WebPRescalerExportRow"/>
+    <functioncall functionName="WebPRescalerHasPendingOutput"/>
+    <functioncall functionName="WebPRescalerImport"/>
+    <functioncall functionName="WebPRescalerInit"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="WebPSamplerProcessPlane"/>
+    <functioncall functionName="YUVA"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a_stride"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="alpha_first"/>
+    <functioncall functionName="alpha_value"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="base_rgba"/>
+    <functioncall functionName="colorspace"/>
+    <functioncall functionName="convert"/>
+    <functioncall functionName="crop_bottom"/>
+    <functioncall functionName="cur_u"/>
+    <functioncall functionName="cur_v"/>
+    <functioncall functionName="cur_y"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_a"/>
+    <functioncall functionName="dst_width"/>
+    <functioncall functionName="dst_y"/>
+    <functioncall functionName="emit"/>
+    <functioncall functionName="emit_alpha"/>
+    <functioncall functionName="emit_alpha_row"/>
+    <functioncall functionName="expected_num_lines_out"/>
+    <functioncall functionName="expected_num_out_lines"/>
+    <functioncall functionName="fancy_upsampling"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="has_alpha"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="is_alpha"/>
+    <functioncall functionName="is_rgb"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="lines_left"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mb_h"/>
+    <functioncall functionName="mb_w"/>
+    <functioncall functionName="mb_y"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="new_lines"/>
+    <functioncall functionName="num_lines_out"/>
+    <functioncall functionName="num_rows"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="opaque"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="out_height"/>
+    <functioncall functionName="out_width"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="rescaler_size"/>
+    <functioncall functionName="scaled_height"/>
+    <functioncall functionName="scaled_width"/>
+    <functioncall functionName="scaler"/>
+    <functioncall functionName="scaler_a"/>
+    <functioncall functionName="scaler_u"/>
+    <functioncall functionName="scaler_v"/>
+    <functioncall functionName="scaler_y"/>
+    <functioncall functionName="scalers"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src_stride"/>
+    <functioncall functionName="src_y"/>
+    <functioncall functionName="start_y"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="tmp_size"/>
+    <functioncall functionName="tmp_size1"/>
+    <functioncall functionName="tmp_u"/>
+    <functioncall functionName="tmp_v"/>
+    <functioncall functionName="tmp_y"/>
+    <functioncall functionName="top_u"/>
+    <functioncall functionName="top_v"/>
+    <functioncall functionName="total_size"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="u_stride"/>
+    <functioncall functionName="upsample"/>
+    <functioncall functionName="use_scaling"/>
+    <functioncall functionName="uv_in_height"/>
+    <functioncall functionName="uv_in_width"/>
+    <functioncall functionName="uv_j"/>
+    <functioncall functionName="uv_mb_h"/>
+    <functioncall functionName="uv_out_height"/>
+    <functioncall functionName="uv_out_width"/>
+    <functioncall functionName="uv_stride"/>
+    <functioncall functionName="uv_w"/>
+    <functioncall functionName="uv_width"/>
+    <functioncall functionName="uv_work_size"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v_lines_in"/>
+    <functioncall functionName="v_stride"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="work"/>
+    <functioncall functionName="work_size"/>
+    <functioncall functionName="wrk"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_accum"/>
+    <functioncall functionName="y_stride"/>
+  </FileInfo>
+</analyzerinfo>

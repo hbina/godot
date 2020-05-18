@@ -1,0 +1,773 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4095324976">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1268" column="7"/>
+            <symbol>i</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&w" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="w" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&h" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="h" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&a" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="a" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" call-funcname="AccumulateHCode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="241" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:248:12" call-funcname="ReadHuffmanCodeLengths" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="342" col="32" call-argexpr="code_length_code_lengths" call-argvaluetype="7" call-argvalue="76"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="&huffman_image" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" call-funcname="ReadHuffmanCode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="457" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" call-funcname="SetCropWindow" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="793" col="23" call-argexpr="&rows_data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1317" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1331" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_xsize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_ysize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" call-funcname="DecodeImageData" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1480" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1587" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="width" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="height" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&has_alpha" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="has_alpha" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1657" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:150:24" call-funcname="GetCopyDistance" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="164" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:161:24" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:202:24" my-argnr="1" my-argname="group" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="206" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" my-argnr="3" my-argname="code_lengths" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="316" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="545" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="537" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:590:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="593" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:660:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="661" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:675:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="678" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:694:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="697" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="717" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:744:32" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="746" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:757:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="760" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:780:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="781" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:826:12" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="828" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:840:13" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="843" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:856:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="859" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1005:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1008" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1090:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1091" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1099:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1100" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1113" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1260:13" my-argnr="1" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1261" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1267:12" my-argnr="2" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1269" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1540:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1541" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1616:5" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1617" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&w" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="w" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&h" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="h" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&a" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="a" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" call-funcname="AccumulateHCode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="241" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:248:12" call-funcname="ReadHuffmanCodeLengths" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="342" col="32" call-argexpr="code_length_code_lengths" call-argvaluetype="7" call-argvalue="76"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="&huffman_image" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" call-funcname="ReadHuffmanCode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="457" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" call-funcname="SetCropWindow" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="793" col="23" call-argexpr="&rows_data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1317" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1331" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_xsize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_ysize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" call-funcname="DecodeImageData" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1480" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1587" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="width" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="height" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&has_alpha" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="has_alpha" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1657" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:150:24" call-funcname="GetCopyDistance" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="164" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:161:24" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:202:24" my-argnr="1" my-argname="group" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="206" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" my-argnr="3" my-argname="code_lengths" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="316" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:660:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="661" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:675:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="678" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:694:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="697" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="717" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:744:32" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="746" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:757:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="760" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:780:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="781" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:826:12" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="828" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:840:13" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="843" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:856:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="859" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1005:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1008" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1090:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1091" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1099:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1100" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1113" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1260:13" my-argnr="1" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1261" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1267:12" my-argnr="2" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1269" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1540:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1541" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1616:5" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1617" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&w" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="w" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&h" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="h" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&a" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="a" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" call-funcname="AccumulateHCode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="241" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:248:12" call-funcname="ReadHuffmanCodeLengths" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="342" col="32" call-argexpr="code_length_code_lengths" call-argvaluetype="7" call-argvalue="76"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="&huffman_image" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" call-funcname="ReadHuffmanCode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="457" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" call-funcname="SetCropWindow" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="793" col="23" call-argexpr="&rows_data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1317" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1331" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_xsize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_ysize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" call-funcname="DecodeImageData" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1480" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1587" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="width" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="height" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&has_alpha" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="has_alpha" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1657" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:150:24" call-funcname="GetCopyDistance" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="164" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:161:24" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:202:24" my-argnr="1" my-argname="group" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="206" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" my-argnr="3" my-argname="code_lengths" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="316" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="545" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="537" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:590:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="593" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:660:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="661" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:675:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="678" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:694:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="697" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="717" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:744:32" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="746" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:757:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="760" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:780:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="781" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:826:12" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="828" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:840:13" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="843" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:856:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="859" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1005:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1008" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1090:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1091" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1099:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1100" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1113" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1260:13" my-argnr="1" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1261" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1267:12" my-argnr="2" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1269" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1540:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1541" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1616:5" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1617" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&w" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="w" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&h" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="h" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&a" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="a" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" call-funcname="AccumulateHCode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="241" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:248:12" call-funcname="ReadHuffmanCodeLengths" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="342" col="32" call-argexpr="code_length_code_lengths" call-argvaluetype="7" call-argvalue="76"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="&huffman_image" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" call-funcname="ReadHuffmanCode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="457" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" call-funcname="SetCropWindow" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="793" col="23" call-argexpr="&rows_data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1317" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1331" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_xsize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_ysize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" call-funcname="DecodeImageData" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1480" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1587" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="width" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="height" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&has_alpha" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="has_alpha" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1657" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:150:24" call-funcname="GetCopyDistance" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="164" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:161:24" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:202:24" my-argnr="1" my-argname="group" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="206" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" my-argnr="3" my-argname="code_lengths" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="316" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="545" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="537" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:590:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="593" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:660:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="661" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:675:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="678" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:694:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="697" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="717" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:744:32" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="746" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:757:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="760" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:780:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="781" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:826:12" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="828" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:840:13" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="843" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:856:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="859" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1005:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1008" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1090:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1091" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1099:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1100" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1113" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1260:13" my-argnr="1" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1261" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1267:12" my-argnr="2" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1269" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1540:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1541" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1616:5" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1617" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&w" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="w" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&h" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="h" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="&a" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="138" col="23" call-argexpr="a" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" call-funcname="AccumulateHCode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="241" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:248:12" call-funcname="ReadHuffmanCodeLengths" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="342" col="32" call-argexpr="code_length_code_lengths" call-argvaluetype="7" call-argvalue="76"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="381" col="27" call-argexpr="&huffman_image" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" call-funcname="ReadHuffmanCode" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="457" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" call-funcname="SetCropWindow" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="793" col="23" call-argexpr="&rows_data" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1317" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1331" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_xsize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1292:12" call-funcname="ReadTransform" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1429" col="25" call-argexpr="&transform_ysize" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" call-funcname="DecodeImageData" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1480" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1587" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&width" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="width" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&height" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="height" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="&has_alpha" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:117:12" call-funcname="ReadImageInfo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1649" col="21" call-argexpr="has_alpha" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:104:12" call-funcname="DecodeImageStream" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1657" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:150:24" call-funcname="GetCopyDistance" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="164" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:161:24" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:202:24" my-argnr="1" my-argname="group" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="206" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:309:12" my-argnr="3" my-argname="code_lengths" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="316" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="545" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:535:12" my-argnr="2" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="537" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:590:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="593" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:660:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="661" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:675:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="678" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:694:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="697" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:714:12" my-argnr="1" my-argname="io" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="717" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:744:32" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="746" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:757:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="760" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:780:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="781" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:826:12" my-argnr="1" my-argname="hdr" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="828" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:840:13" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="843" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:856:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="859" col="47" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1005:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1008" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1090:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1091" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1099:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1100" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1110:12" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1113" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1260:13" my-argnr="1" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1261" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1267:12" my-argnr="2" my-argname="transform" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1269" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1540:13" my-argnr="1" my-argname="dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1541" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:1616:5" my-argnr="1" my-argname="alph_dec" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="1617" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c:219:12" my-argnr="3" my-argname="huff" file="/home/hbina/git/godot/thirdparty/libwebp/src/dec/vp8l_dec.c" line="221" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="VP8LCheckSignature" lineNumber="111"/>
+    <functiondecl functionName="ReadImageInfo" lineNumber="117"/>
+    <functiondecl functionName="VP8LGetInfo" lineNumber="128"/>
+    <functiondecl functionName="GetCopyDistance" lineNumber="150"/>
+    <functiondecl functionName="GetCopyLength" lineNumber="161"/>
+    <functiondecl functionName="PlaneCodeToDistance" lineNumber="167"/>
+    <functiondecl functionName="ReadSymbol" lineNumber="183"/>
+    <functiondecl functionName="ReadPackedSymbols" lineNumber="202"/>
+    <functiondecl functionName="AccumulateHCode" lineNumber="219"/>
+    <functiondecl functionName="BuildPackedTable" lineNumber="227"/>
+    <functiondecl functionName="ReadHuffmanCodeLengths" lineNumber="248"/>
+    <functiondecl functionName="ReadHuffmanCode" lineNumber="309"/>
+    <functiondecl functionName="ReadHuffmanCodes" lineNumber="358"/>
+    <functiondecl functionName="AllocateAndInitRescaler" lineNumber="535"/>
+    <functiondecl functionName="Export" lineNumber="574"/>
+    <functiondecl functionName="EmitRescaledRowsRGBA" lineNumber="590"/>
+    <functiondecl functionName="EmitRows" lineNumber="617"/>
+    <functiondecl functionName="ConvertToYUVA" lineNumber="634"/>
+    <functiondecl functionName="ExportYUVA" lineNumber="660"/>
+    <functiondecl functionName="EmitRescaledRowsYUVA" lineNumber="675"/>
+    <functiondecl functionName="EmitRowsYUVA" lineNumber="694"/>
+    <functiondecl functionName="SetCropWindow" lineNumber="714"/>
+    <functiondecl functionName="GetMetaIndex" lineNumber="738"/>
+    <functiondecl functionName="GetHtreeGroupForPos" lineNumber="744"/>
+    <functiondecl functionName="ApplyInverseTransforms" lineNumber="757"/>
+    <functiondecl functionName="ProcessRows" lineNumber="780"/>
+    <functiondecl functionName="Is8bOptimizable" lineNumber="826"/>
+    <functiondecl functionName="AlphaApplyFilter" lineNumber="840"/>
+    <functiondecl functionName="ExtractPalettedAlphaRows" lineNumber="856"/>
+    <functiondecl functionName="Rotate8b" lineNumber="886"/>
+    <functiondecl functionName="CopySmallPattern8b" lineNumber="895"/>
+    <functiondecl functionName="CopyBlock8b" lineNumber="915"/>
+    <functiondecl functionName="CopySmallPattern32b" lineNumber="965"/>
+    <functiondecl functionName="CopyBlock32b" lineNumber="983"/>
+    <functiondecl functionName="DecodeAlphaData" lineNumber="1005"/>
+    <functiondecl functionName="SaveState" lineNumber="1090"/>
+    <functiondecl functionName="RestoreState" lineNumber="1099"/>
+    <functiondecl functionName="DecodeImageData" lineNumber="1110"/>
+    <functiondecl functionName="ClearTransform" lineNumber="1260"/>
+    <functiondecl functionName="ExpandColorMap" lineNumber="1267"/>
+    <functiondecl functionName="ReadTransform" lineNumber="1292"/>
+    <functiondecl functionName="InitMetadata" lineNumber="1348"/>
+    <functiondecl functionName="ClearMetadata" lineNumber="1353"/>
+    <functiondecl functionName="VP8LNew" lineNumber="1367"/>
+    <functiondecl functionName="VP8LClear" lineNumber="1378"/>
+    <functiondecl functionName="VP8LDelete" lineNumber="1397"/>
+    <functiondecl functionName="UpdateDecoder" lineNumber="1404"/>
+    <functiondecl functionName="DecodeImageStream" lineNumber="1414"/>
+    <functiondecl functionName="AllocateInternalBuffers32b" lineNumber="1505"/>
+    <functiondecl functionName="AllocateInternalBuffers8b" lineNumber="1526"/>
+    <functiondecl functionName="ExtractAlphaRows" lineNumber="1540"/>
+    <functiondecl functionName="VP8LDecodeAlphaHeader" lineNumber="1568"/>
+    <functiondecl functionName="VP8LDecodeAlphaImageStream" lineNumber="1616"/>
+    <functiondecl functionName="VP8LDecodeHeader" lineNumber="1637"/>
+    <functiondecl functionName="VP8LDecodeImage" lineNumber="1666"/>
+    <functiondecl functionName="VP8LCheckSignature" lineNumber="111"/>
+    <functiondecl functionName="ReadImageInfo" lineNumber="117"/>
+    <functiondecl functionName="VP8LGetInfo" lineNumber="128"/>
+    <functiondecl functionName="GetCopyDistance" lineNumber="150"/>
+    <functiondecl functionName="GetCopyLength" lineNumber="161"/>
+    <functiondecl functionName="PlaneCodeToDistance" lineNumber="167"/>
+    <functiondecl functionName="ReadSymbol" lineNumber="183"/>
+    <functiondecl functionName="ReadPackedSymbols" lineNumber="202"/>
+    <functiondecl functionName="AccumulateHCode" lineNumber="219"/>
+    <functiondecl functionName="BuildPackedTable" lineNumber="227"/>
+    <functiondecl functionName="ReadHuffmanCodeLengths" lineNumber="248"/>
+    <functiondecl functionName="ReadHuffmanCode" lineNumber="309"/>
+    <functiondecl functionName="ReadHuffmanCodes" lineNumber="358"/>
+    <functiondecl functionName="EmitRows" lineNumber="617"/>
+    <functiondecl functionName="ConvertToYUVA" lineNumber="634"/>
+    <functiondecl functionName="ExportYUVA" lineNumber="660"/>
+    <functiondecl functionName="EmitRescaledRowsYUVA" lineNumber="675"/>
+    <functiondecl functionName="EmitRowsYUVA" lineNumber="694"/>
+    <functiondecl functionName="SetCropWindow" lineNumber="714"/>
+    <functiondecl functionName="GetMetaIndex" lineNumber="738"/>
+    <functiondecl functionName="GetHtreeGroupForPos" lineNumber="744"/>
+    <functiondecl functionName="ApplyInverseTransforms" lineNumber="757"/>
+    <functiondecl functionName="ProcessRows" lineNumber="780"/>
+    <functiondecl functionName="Is8bOptimizable" lineNumber="826"/>
+    <functiondecl functionName="AlphaApplyFilter" lineNumber="840"/>
+    <functiondecl functionName="ExtractPalettedAlphaRows" lineNumber="856"/>
+    <functiondecl functionName="Rotate8b" lineNumber="886"/>
+    <functiondecl functionName="CopySmallPattern8b" lineNumber="895"/>
+    <functiondecl functionName="CopyBlock8b" lineNumber="915"/>
+    <functiondecl functionName="CopySmallPattern32b" lineNumber="965"/>
+    <functiondecl functionName="CopyBlock32b" lineNumber="983"/>
+    <functiondecl functionName="DecodeAlphaData" lineNumber="1005"/>
+    <functiondecl functionName="SaveState" lineNumber="1090"/>
+    <functiondecl functionName="RestoreState" lineNumber="1099"/>
+    <functiondecl functionName="DecodeImageData" lineNumber="1110"/>
+    <functiondecl functionName="ClearTransform" lineNumber="1260"/>
+    <functiondecl functionName="ExpandColorMap" lineNumber="1267"/>
+    <functiondecl functionName="ReadTransform" lineNumber="1292"/>
+    <functiondecl functionName="InitMetadata" lineNumber="1348"/>
+    <functiondecl functionName="ClearMetadata" lineNumber="1353"/>
+    <functiondecl functionName="VP8LNew" lineNumber="1367"/>
+    <functiondecl functionName="VP8LClear" lineNumber="1378"/>
+    <functiondecl functionName="VP8LDelete" lineNumber="1397"/>
+    <functiondecl functionName="UpdateDecoder" lineNumber="1404"/>
+    <functiondecl functionName="DecodeImageStream" lineNumber="1414"/>
+    <functiondecl functionName="AllocateInternalBuffers32b" lineNumber="1505"/>
+    <functiondecl functionName="AllocateInternalBuffers8b" lineNumber="1526"/>
+    <functiondecl functionName="ExtractAlphaRows" lineNumber="1540"/>
+    <functiondecl functionName="VP8LDecodeAlphaHeader" lineNumber="1568"/>
+    <functiondecl functionName="VP8LDecodeAlphaImageStream" lineNumber="1616"/>
+    <functiondecl functionName="VP8LDecodeHeader" lineNumber="1637"/>
+    <functiondecl functionName="VP8LDecodeImage" lineNumber="1666"/>
+    <functiondecl functionName="VP8LCheckSignature" lineNumber="111"/>
+    <functiondecl functionName="ReadImageInfo" lineNumber="117"/>
+    <functiondecl functionName="VP8LGetInfo" lineNumber="128"/>
+    <functiondecl functionName="GetCopyDistance" lineNumber="150"/>
+    <functiondecl functionName="GetCopyLength" lineNumber="161"/>
+    <functiondecl functionName="PlaneCodeToDistance" lineNumber="167"/>
+    <functiondecl functionName="ReadSymbol" lineNumber="183"/>
+    <functiondecl functionName="ReadPackedSymbols" lineNumber="202"/>
+    <functiondecl functionName="AccumulateHCode" lineNumber="219"/>
+    <functiondecl functionName="BuildPackedTable" lineNumber="227"/>
+    <functiondecl functionName="ReadHuffmanCodeLengths" lineNumber="248"/>
+    <functiondecl functionName="ReadHuffmanCode" lineNumber="309"/>
+    <functiondecl functionName="ReadHuffmanCodes" lineNumber="358"/>
+    <functiondecl functionName="AllocateAndInitRescaler" lineNumber="535"/>
+    <functiondecl functionName="Export" lineNumber="574"/>
+    <functiondecl functionName="EmitRescaledRowsRGBA" lineNumber="590"/>
+    <functiondecl functionName="EmitRows" lineNumber="617"/>
+    <functiondecl functionName="ConvertToYUVA" lineNumber="634"/>
+    <functiondecl functionName="ExportYUVA" lineNumber="660"/>
+    <functiondecl functionName="EmitRescaledRowsYUVA" lineNumber="675"/>
+    <functiondecl functionName="EmitRowsYUVA" lineNumber="694"/>
+    <functiondecl functionName="SetCropWindow" lineNumber="714"/>
+    <functiondecl functionName="GetMetaIndex" lineNumber="738"/>
+    <functiondecl functionName="GetHtreeGroupForPos" lineNumber="744"/>
+    <functiondecl functionName="ApplyInverseTransforms" lineNumber="757"/>
+    <functiondecl functionName="ProcessRows" lineNumber="780"/>
+    <functiondecl functionName="Is8bOptimizable" lineNumber="826"/>
+    <functiondecl functionName="AlphaApplyFilter" lineNumber="840"/>
+    <functiondecl functionName="ExtractPalettedAlphaRows" lineNumber="856"/>
+    <functiondecl functionName="Rotate8b" lineNumber="886"/>
+    <functiondecl functionName="CopySmallPattern8b" lineNumber="895"/>
+    <functiondecl functionName="CopyBlock8b" lineNumber="915"/>
+    <functiondecl functionName="CopySmallPattern32b" lineNumber="965"/>
+    <functiondecl functionName="CopyBlock32b" lineNumber="983"/>
+    <functiondecl functionName="DecodeAlphaData" lineNumber="1005"/>
+    <functiondecl functionName="SaveState" lineNumber="1090"/>
+    <functiondecl functionName="RestoreState" lineNumber="1099"/>
+    <functiondecl functionName="DecodeImageData" lineNumber="1110"/>
+    <functiondecl functionName="ClearTransform" lineNumber="1260"/>
+    <functiondecl functionName="ExpandColorMap" lineNumber="1267"/>
+    <functiondecl functionName="ReadTransform" lineNumber="1292"/>
+    <functiondecl functionName="InitMetadata" lineNumber="1348"/>
+    <functiondecl functionName="ClearMetadata" lineNumber="1353"/>
+    <functiondecl functionName="VP8LNew" lineNumber="1367"/>
+    <functiondecl functionName="VP8LClear" lineNumber="1378"/>
+    <functiondecl functionName="VP8LDelete" lineNumber="1397"/>
+    <functiondecl functionName="UpdateDecoder" lineNumber="1404"/>
+    <functiondecl functionName="DecodeImageStream" lineNumber="1414"/>
+    <functiondecl functionName="AllocateInternalBuffers32b" lineNumber="1505"/>
+    <functiondecl functionName="AllocateInternalBuffers8b" lineNumber="1526"/>
+    <functiondecl functionName="ExtractAlphaRows" lineNumber="1540"/>
+    <functiondecl functionName="VP8LDecodeAlphaHeader" lineNumber="1568"/>
+    <functiondecl functionName="VP8LDecodeAlphaImageStream" lineNumber="1616"/>
+    <functiondecl functionName="VP8LDecodeHeader" lineNumber="1637"/>
+    <functiondecl functionName="VP8LDecodeImage" lineNumber="1666"/>
+    <functiondecl functionName="VP8LCheckSignature" lineNumber="111"/>
+    <functiondecl functionName="ReadImageInfo" lineNumber="117"/>
+    <functiondecl functionName="VP8LGetInfo" lineNumber="128"/>
+    <functiondecl functionName="GetCopyDistance" lineNumber="150"/>
+    <functiondecl functionName="GetCopyLength" lineNumber="161"/>
+    <functiondecl functionName="PlaneCodeToDistance" lineNumber="167"/>
+    <functiondecl functionName="ReadSymbol" lineNumber="183"/>
+    <functiondecl functionName="ReadPackedSymbols" lineNumber="202"/>
+    <functiondecl functionName="AccumulateHCode" lineNumber="219"/>
+    <functiondecl functionName="BuildPackedTable" lineNumber="227"/>
+    <functiondecl functionName="ReadHuffmanCodeLengths" lineNumber="248"/>
+    <functiondecl functionName="ReadHuffmanCode" lineNumber="309"/>
+    <functiondecl functionName="ReadHuffmanCodes" lineNumber="358"/>
+    <functiondecl functionName="AllocateAndInitRescaler" lineNumber="535"/>
+    <functiondecl functionName="Export" lineNumber="574"/>
+    <functiondecl functionName="EmitRescaledRowsRGBA" lineNumber="590"/>
+    <functiondecl functionName="EmitRows" lineNumber="617"/>
+    <functiondecl functionName="ConvertToYUVA" lineNumber="634"/>
+    <functiondecl functionName="ExportYUVA" lineNumber="660"/>
+    <functiondecl functionName="EmitRescaledRowsYUVA" lineNumber="675"/>
+    <functiondecl functionName="EmitRowsYUVA" lineNumber="694"/>
+    <functiondecl functionName="SetCropWindow" lineNumber="714"/>
+    <functiondecl functionName="GetMetaIndex" lineNumber="738"/>
+    <functiondecl functionName="GetHtreeGroupForPos" lineNumber="744"/>
+    <functiondecl functionName="ApplyInverseTransforms" lineNumber="757"/>
+    <functiondecl functionName="ProcessRows" lineNumber="780"/>
+    <functiondecl functionName="Is8bOptimizable" lineNumber="826"/>
+    <functiondecl functionName="AlphaApplyFilter" lineNumber="840"/>
+    <functiondecl functionName="ExtractPalettedAlphaRows" lineNumber="856"/>
+    <functiondecl functionName="Rotate8b" lineNumber="886"/>
+    <functiondecl functionName="CopySmallPattern8b" lineNumber="895"/>
+    <functiondecl functionName="CopyBlock8b" lineNumber="915"/>
+    <functiondecl functionName="CopySmallPattern32b" lineNumber="965"/>
+    <functiondecl functionName="CopyBlock32b" lineNumber="983"/>
+    <functiondecl functionName="DecodeAlphaData" lineNumber="1005"/>
+    <functiondecl functionName="SaveState" lineNumber="1090"/>
+    <functiondecl functionName="RestoreState" lineNumber="1099"/>
+    <functiondecl functionName="DecodeImageData" lineNumber="1110"/>
+    <functiondecl functionName="ClearTransform" lineNumber="1260"/>
+    <functiondecl functionName="ExpandColorMap" lineNumber="1267"/>
+    <functiondecl functionName="ReadTransform" lineNumber="1292"/>
+    <functiondecl functionName="InitMetadata" lineNumber="1348"/>
+    <functiondecl functionName="ClearMetadata" lineNumber="1353"/>
+    <functiondecl functionName="VP8LNew" lineNumber="1367"/>
+    <functiondecl functionName="VP8LClear" lineNumber="1378"/>
+    <functiondecl functionName="VP8LDelete" lineNumber="1397"/>
+    <functiondecl functionName="UpdateDecoder" lineNumber="1404"/>
+    <functiondecl functionName="DecodeImageStream" lineNumber="1414"/>
+    <functiondecl functionName="AllocateInternalBuffers32b" lineNumber="1505"/>
+    <functiondecl functionName="AllocateInternalBuffers8b" lineNumber="1526"/>
+    <functiondecl functionName="ExtractAlphaRows" lineNumber="1540"/>
+    <functiondecl functionName="VP8LDecodeAlphaHeader" lineNumber="1568"/>
+    <functiondecl functionName="VP8LDecodeAlphaImageStream" lineNumber="1616"/>
+    <functiondecl functionName="VP8LDecodeHeader" lineNumber="1637"/>
+    <functiondecl functionName="VP8LDecodeImage" lineNumber="1666"/>
+    <functiondecl functionName="VP8LCheckSignature" lineNumber="111"/>
+    <functiondecl functionName="ReadImageInfo" lineNumber="117"/>
+    <functiondecl functionName="VP8LGetInfo" lineNumber="128"/>
+    <functiondecl functionName="GetCopyDistance" lineNumber="150"/>
+    <functiondecl functionName="GetCopyLength" lineNumber="161"/>
+    <functiondecl functionName="PlaneCodeToDistance" lineNumber="167"/>
+    <functiondecl functionName="ReadSymbol" lineNumber="183"/>
+    <functiondecl functionName="ReadPackedSymbols" lineNumber="202"/>
+    <functiondecl functionName="AccumulateHCode" lineNumber="219"/>
+    <functiondecl functionName="BuildPackedTable" lineNumber="227"/>
+    <functiondecl functionName="ReadHuffmanCodeLengths" lineNumber="248"/>
+    <functiondecl functionName="ReadHuffmanCode" lineNumber="309"/>
+    <functiondecl functionName="ReadHuffmanCodes" lineNumber="358"/>
+    <functiondecl functionName="AllocateAndInitRescaler" lineNumber="535"/>
+    <functiondecl functionName="Export" lineNumber="574"/>
+    <functiondecl functionName="EmitRescaledRowsRGBA" lineNumber="590"/>
+    <functiondecl functionName="EmitRows" lineNumber="617"/>
+    <functiondecl functionName="ConvertToYUVA" lineNumber="634"/>
+    <functiondecl functionName="ExportYUVA" lineNumber="660"/>
+    <functiondecl functionName="EmitRescaledRowsYUVA" lineNumber="675"/>
+    <functiondecl functionName="EmitRowsYUVA" lineNumber="694"/>
+    <functiondecl functionName="SetCropWindow" lineNumber="714"/>
+    <functiondecl functionName="GetMetaIndex" lineNumber="738"/>
+    <functiondecl functionName="GetHtreeGroupForPos" lineNumber="744"/>
+    <functiondecl functionName="ApplyInverseTransforms" lineNumber="757"/>
+    <functiondecl functionName="ProcessRows" lineNumber="780"/>
+    <functiondecl functionName="Is8bOptimizable" lineNumber="826"/>
+    <functiondecl functionName="AlphaApplyFilter" lineNumber="840"/>
+    <functiondecl functionName="ExtractPalettedAlphaRows" lineNumber="856"/>
+    <functiondecl functionName="Rotate8b" lineNumber="886"/>
+    <functiondecl functionName="CopySmallPattern8b" lineNumber="895"/>
+    <functiondecl functionName="CopyBlock8b" lineNumber="915"/>
+    <functiondecl functionName="CopySmallPattern32b" lineNumber="965"/>
+    <functiondecl functionName="CopyBlock32b" lineNumber="983"/>
+    <functiondecl functionName="DecodeAlphaData" lineNumber="1005"/>
+    <functiondecl functionName="SaveState" lineNumber="1090"/>
+    <functiondecl functionName="RestoreState" lineNumber="1099"/>
+    <functiondecl functionName="DecodeImageData" lineNumber="1110"/>
+    <functiondecl functionName="ClearTransform" lineNumber="1260"/>
+    <functiondecl functionName="ExpandColorMap" lineNumber="1267"/>
+    <functiondecl functionName="ReadTransform" lineNumber="1292"/>
+    <functiondecl functionName="InitMetadata" lineNumber="1348"/>
+    <functiondecl functionName="ClearMetadata" lineNumber="1353"/>
+    <functiondecl functionName="VP8LNew" lineNumber="1367"/>
+    <functiondecl functionName="VP8LClear" lineNumber="1378"/>
+    <functiondecl functionName="VP8LDelete" lineNumber="1397"/>
+    <functiondecl functionName="UpdateDecoder" lineNumber="1404"/>
+    <functiondecl functionName="DecodeImageStream" lineNumber="1414"/>
+    <functiondecl functionName="AllocateInternalBuffers32b" lineNumber="1505"/>
+    <functiondecl functionName="AllocateInternalBuffers8b" lineNumber="1526"/>
+    <functiondecl functionName="ExtractAlphaRows" lineNumber="1540"/>
+    <functiondecl functionName="VP8LDecodeAlphaHeader" lineNumber="1568"/>
+    <functiondecl functionName="VP8LDecodeAlphaImageStream" lineNumber="1616"/>
+    <functiondecl functionName="VP8LDecodeHeader" lineNumber="1637"/>
+    <functiondecl functionName="VP8LDecodeImage" lineNumber="1666"/>
+    <functioncall functionName="ALPHA"/>
+    <functioncall functionName="AccumulateHCode"/>
+    <functioncall functionName="AdvanceByOne"/>
+    <functioncall functionName="AllocateAndInitRescaler"/>
+    <functioncall functionName="AllocateInternalBuffers32b"/>
+    <functioncall functionName="AllocateInternalBuffers8b"/>
+    <functioncall functionName="AlphaApplyFilter"/>
+    <functioncall functionName="ApplyInverseTransforms"/>
+    <functioncall functionName="BLUE"/>
+    <functioncall functionName="BuildPackedTable"/>
+    <functioncall functionName="ClearMetadata"/>
+    <functioncall functionName="ClearTransform"/>
+    <functioncall functionName="ConvertToYUVA"/>
+    <functioncall functionName="Copy"/>
+    <functioncall functionName="CopyBlock32b"/>
+    <functioncall functionName="CopyBlock8b"/>
+    <functioncall functionName="CopySmallPattern32b"/>
+    <functioncall functionName="CopySmallPattern8b"/>
+    <functioncall functionName="DEFAULT_CODE_LENGTH"/>
+    <functioncall functionName="DIST"/>
+    <functioncall functionName="DecodeAlphaData"/>
+    <functioncall functionName="DecodeImageData"/>
+    <functioncall functionName="DecodeImageStream"/>
+    <functioncall functionName="EmitRescaledRowsRGBA"/>
+    <functioncall functionName="EmitRescaledRowsYUVA"/>
+    <functioncall functionName="EmitRows"/>
+    <functioncall functionName="EmitRowsYUVA"/>
+    <functioncall functionName="End"/>
+    <functioncall functionName="Err"/>
+    <functioncall functionName="Error"/>
+    <functioncall functionName="ExpandColorMap"/>
+    <functioncall functionName="Export"/>
+    <functioncall functionName="ExportYUVA"/>
+    <functioncall functionName="ExtractAlphaRows"/>
+    <functioncall functionName="ExtractPalettedAlphaRows"/>
+    <functioncall functionName="GREEN"/>
+    <functioncall functionName="GetCopyDistance"/>
+    <functioncall functionName="GetCopyLength"/>
+    <functioncall functionName="GetHtreeGroupForPos"/>
+    <functioncall functionName="GetMetaIndex"/>
+    <functioncall functionName="HUFFMAN_CODES_PER_META_CODE"/>
+    <functioncall functionName="HUFFMAN_TABLE_BITS"/>
+    <functioncall functionName="InitMetadata"/>
+    <functioncall functionName="Is8bOptimizable"/>
+    <functioncall functionName="LENGTHS_TABLE_BITS"/>
+    <functioncall functionName="LENGTHS_TABLE_MASK"/>
+    <functioncall functionName="MODE_BGRA"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="NUM_DISTANCE_CODES"/>
+    <functioncall functionName="NUM_LENGTH_CODES"/>
+    <functioncall functionName="NUM_LITERAL_CODES"/>
+    <functioncall functionName="PlaneCodeToDistance"/>
+    <functioncall functionName="ProcessRows"/>
+    <functioncall functionName="READ_DATA"/>
+    <functioncall functionName="READ_DIM"/>
+    <functioncall functionName="READ_HDR"/>
+    <functioncall functionName="RED"/>
+    <functioncall functionName="RGBA"/>
+    <functioncall functionName="ReadHuffmanCode"/>
+    <functioncall functionName="ReadHuffmanCodeLengths"/>
+    <functioncall functionName="ReadHuffmanCodes"/>
+    <functioncall functionName="ReadImageInfo"/>
+    <functioncall functionName="ReadPackedSymbols"/>
+    <functioncall functionName="ReadSymbol"/>
+    <functioncall functionName="ReadTransform"/>
+    <functioncall functionName="RestoreState"/>
+    <functioncall functionName="Rotate8b"/>
+    <functioncall functionName="SaveState"/>
+    <functioncall functionName="SetCropWindow"/>
+    <functioncall functionName="UpdateDecoder"/>
+    <functioncall functionName="VP8LBuildHuffmanTable"/>
+    <functioncall functionName="VP8LCheckSignature"/>
+    <functioncall functionName="VP8LClear"/>
+    <functioncall functionName="VP8LColorCacheClear"/>
+    <functioncall functionName="VP8LColorCacheCopy"/>
+    <functioncall functionName="VP8LColorCacheInit"/>
+    <functioncall functionName="VP8LColorCacheInsert"/>
+    <functioncall functionName="VP8LColorCacheLookup"/>
+    <functioncall functionName="VP8LColorIndexInverseTransformAlpha"/>
+    <functioncall functionName="VP8LConvertFromBGRA"/>
+    <functioncall functionName="VP8LDelete"/>
+    <functioncall functionName="VP8LDspInit"/>
+    <functioncall functionName="VP8LFillBitWindow"/>
+    <functioncall functionName="VP8LHtreeGroupsFree"/>
+    <functioncall functionName="VP8LHtreeGroupsNew"/>
+    <functioncall functionName="VP8LImageTransformType"/>
+    <functioncall functionName="VP8LInitBitReader"/>
+    <functioncall functionName="VP8LInverseTransform"/>
+    <functioncall functionName="VP8LIsEndOfStream"/>
+    <functioncall functionName="VP8LNew"/>
+    <functioncall functionName="VP8LPrefetchBits"/>
+    <functioncall functionName="VP8LReadBits"/>
+    <functioncall functionName="VP8LSetBitPos"/>
+    <functioncall functionName="VP8LSubSampleSize"/>
+    <functioncall functionName="VP8L_IMAGE_SIZE_BITS"/>
+    <functioncall functionName="VP8L_VERSION_BITS"/>
+    <functioncall functionName="VP8_STATUS_BITSTREAM_ERROR"/>
+    <functioncall functionName="VP8_STATUS_INVALID_PARAM"/>
+    <functioncall functionName="VP8_STATUS_OK"/>
+    <functioncall functionName="VP8_STATUS_OUT_OF_MEMORY"/>
+    <functioncall functionName="VP8_STATUS_SUSPENDED"/>
+    <functioncall functionName="WebPConvertARGBToUV"/>
+    <functioncall functionName="WebPConvertARGBToY"/>
+    <functioncall functionName="WebPExtractAlpha"/>
+    <functioncall functionName="WebPExtractGreen"/>
+    <functioncall functionName="WebPInitAlphaProcessing"/>
+    <functioncall functionName="WebPInitConvertARGBToYUV"/>
+    <functioncall functionName="WebPIoInitFromOptions"/>
+    <functioncall functionName="WebPIsPremultipliedMode"/>
+    <functioncall functionName="WebPIsRGBMode"/>
+    <functioncall functionName="WebPMultARGBRow"/>
+    <functioncall functionName="WebPMultARGBRows"/>
+    <functioncall functionName="WebPRescaleNeededLines"/>
+    <functioncall functionName="WebPRescalerExportRow"/>
+    <functioncall functionName="WebPRescalerHasPendingOutput"/>
+    <functioncall functionName="WebPRescalerImport"/>
+    <functioncall functionName="WebPRescalerInit"/>
+    <functioncall functionName="WebPSafeCalloc"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="YUVA"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a_stride"/>
+    <functioncall functionName="alph_dec"/>
+    <functioncall functionName="alphabet_size"/>
+    <functioncall functionName="argb_cache_"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="bits_"/>
+    <functioncall functionName="blue"/>
+    <functioncall functionName="br"/>
+    <functioncall functionName="br_"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cache_pixels"/>
+    <functioncall functionName="cache_pixs"/>
+    <functioncall functionName="cache_top_pixels"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="code_len"/>
+    <functioncall functionName="code_length_code_lengths"/>
+    <functioncall functionName="code_lengths"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="color_cache"/>
+    <functioncall functionName="color_cache_"/>
+    <functioncall functionName="color_cache_bits"/>
+    <functioncall functionName="color_cache_size_"/>
+    <functioncall functionName="colorspace"/>
+    <functioncall functionName="crop_bottom"/>
+    <functioncall functionName="crop_left"/>
+    <functioncall functionName="crop_right"/>
+    <functioncall functionName="crop_top"/>
+    <functioncall functionName="cur_row"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_"/>
+    <functioncall functionName="data_size"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="dist_code"/>
+    <functioncall functionName="dist_symbol"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_width"/>
+    <functioncall functionName="end_row"/>
+    <functioncall functionName="eos_"/>
+    <functioncall functionName="extra_bits"/>
+    <functioncall functionName="filter_"/>
+    <functioncall functionName="final_num_colors"/>
+    <functioncall functionName="final_width"/>
+    <functioncall functionName="first_row"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="group"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has_alpha"/>
+    <functioncall functionName="hash_bits_"/>
+    <functioncall functionName="hcode"/>
+    <functioncall functionName="hdr"/>
+    <functioncall functionName="hdr_"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="height_"/>
+    <functioncall functionName="htree_group"/>
+    <functioncall functionName="htree_groups"/>
+    <functioncall functionName="htree_groups_"/>
+    <functioncall functionName="htrees"/>
+    <functioncall functionName="huff"/>
+    <functioncall functionName="huffman_image"/>
+    <functioncall functionName="huffman_image_"/>
+    <functioncall functionName="huffman_mask_"/>
+    <functioncall functionName="huffman_precision"/>
+    <functioncall functionName="huffman_subsample_bits_"/>
+    <functioncall functionName="huffman_table"/>
+    <functioncall functionName="huffman_tables"/>
+    <functioncall functionName="huffman_tables_"/>
+    <functioncall functionName="huffman_xsize"/>
+    <functioncall functionName="huffman_xsize_"/>
+    <functioncall functionName="huffman_ysize"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="in_height"/>
+    <functioncall functionName="in_stride"/>
+    <functioncall functionName="in_width"/>
+    <functioncall functionName="incremental_"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="io_"/>
+    <functioncall functionName="is_level0"/>
+    <functioncall functionName="is_trivial_code"/>
+    <functioncall functionName="is_trivial_literal"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="kCodeLengthLiterals"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="last_out_row_"/>
+    <functioncall functionName="last_pixel"/>
+    <functioncall functionName="last_pixel_"/>
+    <functioncall functionName="last_row"/>
+    <functioncall functionName="last_row_"/>
+    <functioncall functionName="len_code_limit"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="length_nbits"/>
+    <functioncall functionName="length_sym"/>
+    <functioncall functionName="length_symbol"/>
+    <functioncall functionName="lines_left"/>
+    <functioncall functionName="literal_arb"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mapping"/>
+    <functioncall functionName="max_alphabet_size"/>
+    <functioncall functionName="max_symbol"/>
+    <functioncall functionName="mb_h"/>
+    <functioncall functionName="mb_w"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="memory_size"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="meta_index"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nbits"/>
+    <functioncall functionName="needed_lines"/>
+    <functioncall functionName="new_color_map"/>
+    <functioncall functionName="next_transform_"/>
+    <functioncall functionName="num_bits"/>
+    <functioncall functionName="num_channels"/>
+    <functioncall functionName="num_codes"/>
+    <functioncall functionName="num_colors"/>
+    <functioncall functionName="num_htree_groups"/>
+    <functioncall functionName="num_htree_groups_"/>
+    <functioncall functionName="num_htree_groups_max"/>
+    <functioncall functionName="num_lines_in"/>
+    <functioncall functionName="num_rows"/>
+    <functioncall functionName="num_rows_to_process"/>
+    <functioncall functionName="num_symbols"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="opaque"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="out_height"/>
+    <functioncall functionName="out_stride"/>
+    <functioncall functionName="out_width"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="output_"/>
+    <functioncall functionName="pattern"/>
+    <functioncall functionName="pixels_"/>
+    <functioncall functionName="plane_code"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="prev_code_len"/>
+    <functioncall functionName="prev_line"/>
+    <functioncall functionName="prev_line_"/>
+    <functioncall functionName="process_func"/>
+    <functioncall functionName="repeat"/>
+    <functioncall functionName="repeat_offset"/>
+    <functioncall functionName="rescaler"/>
+    <functioncall functionName="rescaler_memory"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rgba"/>
+    <functioncall functionName="row"/>
+    <functioncall functionName="row_in"/>
+    <functioncall functionName="row_out"/>
+    <functioncall functionName="rows"/>
+    <functioncall functionName="rows_data"/>
+    <functioncall functionName="rows_in"/>
+    <functioncall functionName="rows_out"/>
+    <functioncall functionName="saved_br_"/>
+    <functioncall functionName="saved_color_cache_"/>
+    <functioncall functionName="saved_last_pixel_"/>
+    <functioncall functionName="scaled_data"/>
+    <functioncall functionName="scaled_height"/>
+    <functioncall functionName="scaled_width"/>
+    <functioncall functionName="simple_code"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="slot"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src_width"/>
+    <functioncall functionName="start_row"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="symbol"/>
+    <functioncall functionName="table"/>
+    <functioncall functionName="top_row"/>
+    <functioncall functionName="total_num_pixels"/>
+    <functioncall functionName="total_size"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="transform_xsize"/>
+    <functioncall functionName="transform_ysize"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="u_stride"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="use_8b_decode_"/>
+    <functioncall functionName="use_packed_table"/>
+    <functioncall functionName="use_scaling"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v_stride"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vp8l_dec_"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="width_"/>
+    <functioncall functionName="work"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xoffset"/>
+    <functioncall functionName="xsize"/>
+    <functioncall functionName="xsize_"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_end"/>
+    <functioncall functionName="y_pos"/>
+    <functioncall functionName="y_start"/>
+    <functioncall functionName="y_stride"/>
+    <functioncall functionName="ysize"/>
+    <functioncall functionName="ysize_"/>
+  </FileInfo>
+</analyzerinfo>

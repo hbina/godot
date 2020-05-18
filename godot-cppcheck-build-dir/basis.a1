@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1724291972">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Basis::is_equal_approx&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Basis::is_equal_approx&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/math/basis.cpp" file="/home/hbina/git/godot/core/math/basis.h" line="135" column="7"/>
+            <symbol>Basis::is_equal_approx</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;Basis::rotate_sh&apos; can be const." verbose="The member function &apos;Basis::rotate_sh&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/math/basis.cpp" file="/home/hbina/git/godot/core/math/basis.h" line="162" column="7"/>
+            <location file="/home/hbina/git/godot/core/math/basis.cpp" line="882" column="13"/>
+            <symbol>Basis::rotate_sh</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Basis&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Basis&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/basis.cpp" file="/home/hbina/git/godot/core/math/basis.h" line="236" column="2"/>
+            <symbol>Basis</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Basis&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Basis&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/math/basis.cpp" file="/home/hbina/git/godot/core/math/basis.h" line="239" column="2"/>
+            <symbol>Basis</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/math/basis.h:64:22" call-funcname="set_axis" call-argnr="1" file="/home/hbina/git/godot/core/math/basis.h" line="182" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/basis.h:60:25" call-funcname="get_axis" call-argnr="1" file="/home/hbina/git/godot/core/math/basis.cpp" line="82" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/basis.h:64:22" call-funcname="set_axis" call-argnr="1" file="/home/hbina/git/godot/core/math/basis.cpp" line="92" col="10" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/basis.h:162:7" my-argnr="1" my-argname="p_values" file="/home/hbina/git/godot/core/math/basis.cpp" line="902" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/math/basis.h:64:22" call-funcname="set_axis" call-argnr="1" file="/home/hbina/git/godot/core/math/basis.h" line="182" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/basis.h:60:25" call-funcname="get_axis" call-argnr="1" file="/home/hbina/git/godot/core/math/basis.cpp" line="82" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/basis.h:64:22" call-funcname="set_axis" call-argnr="1" file="/home/hbina/git/godot/core/math/basis.cpp" line="92" col="10" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/basis.h:162:7" my-argnr="1" my-argname="p_values" file="/home/hbina/git/godot/core/math/basis.cpp" line="902" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="from_z" lineNumber="40"/>
+    <functiondecl functionName="invert" lineNumber="60"/>
+    <functiondecl functionName="orthonormalize" lineNumber="78"/>
+    <functiondecl functionName="orthonormalized" lineNumber="97"/>
+    <functiondecl functionName="is_orthogonal" lineNumber="104"/>
+    <functiondecl functionName="is_diagonal" lineNumber="111"/>
+    <functiondecl functionName="is_rotation" lineNumber="118"/>
+    <functiondecl functionName="is_symmetric" lineNumber="122"/>
+    <functiondecl functionName="diagonalize" lineNumber="134"/>
+    <functiondecl functionName="inverse" lineNumber="195"/>
+    <functiondecl functionName="transpose" lineNumber="202"/>
+    <functiondecl functionName="transposed" lineNumber="209"/>
+    <functiondecl functionName="scale" lineNumber="218"/>
+    <functiondecl functionName="scaled" lineNumber="231"/>
+    <functiondecl functionName="scale_local" lineNumber="237"/>
+    <functiondecl functionName="get_uniform_scale" lineNumber="243"/>
+    <functiondecl functionName="make_scale_uniform" lineNumber="247"/>
+    <functiondecl functionName="scaled_local" lineNumber="255"/>
+    <functiondecl functionName="get_scale_abs" lineNumber="262"/>
+    <functiondecl functionName="get_scale_local" lineNumber="270"/>
+    <functiondecl functionName="get_scale" lineNumber="276"/>
+    <functiondecl functionName="rotref_posscale_decomposition" lineNumber="307"/>
+    <functiondecl functionName="rotated" lineNumber="330"/>
+    <functiondecl functionName="rotate" lineNumber="334"/>
+    <functiondecl functionName="rotate_local" lineNumber="338"/>
+    <functiondecl functionName="rotated_local" lineNumber="343"/>
+    <functiondecl functionName="rotated" lineNumber="348"/>
+    <functiondecl functionName="rotate" lineNumber="352"/>
+    <functiondecl functionName="rotated" lineNumber="356"/>
+    <functiondecl functionName="rotate" lineNumber="360"/>
+    <functiondecl functionName="get_rotation_euler" lineNumber="364"/>
+    <functiondecl functionName="get_rotation_quat" lineNumber="378"/>
+    <functiondecl functionName="get_rotation_axis_angle" lineNumber="392"/>
+    <functiondecl functionName="get_rotation_axis_angle_local" lineNumber="406"/>
+    <functiondecl functionName="get_euler_xyz" lineNumber="432"/>
+    <functiondecl functionName="set_euler_xyz" lineNumber="476"/>
+    <functiondecl functionName="get_euler_yxz" lineNumber="499"/>
+    <functiondecl functionName="set_euler_yxz" lineNumber="548"/>
+    <functiondecl functionName="is_equal_approx" lineNumber="568"/>
+    <functiondecl functionName="is_equal_approx_ratio" lineNumber="573"/>
+    <functiondecl functionName="get_quat" lineNumber="619"/>
+    <functiondecl functionName="get_orthogonal_index" lineNumber="683"/>
+    <functiondecl functionName="set_orthogonal_index" lineNumber="711"/>
+    <functiondecl functionName="get_axis_angle" lineNumber="719"/>
+    <functiondecl functionName="set_quat" lineNumber="796"/>
+    <functiondecl functionName="set_axis_angle" lineNumber="809"/>
+    <functiondecl functionName="set_axis_angle_scale" lineNumber="839"/>
+    <functiondecl functionName="set_euler_scale" lineNumber="844"/>
+    <functiondecl functionName="set_quat_scale" lineNumber="849"/>
+    <functiondecl functionName="set_diagonal" lineNumber="854"/>
+    <functiondecl functionName="slerp" lineNumber="868"/>
+    <functiondecl functionName="rotate_sh" lineNumber="882"/>
+    <functiondecl functionName="from_z" lineNumber="40"/>
+    <functiondecl functionName="invert" lineNumber="60"/>
+    <functiondecl functionName="orthonormalize" lineNumber="78"/>
+    <functiondecl functionName="orthonormalized" lineNumber="97"/>
+    <functiondecl functionName="is_orthogonal" lineNumber="104"/>
+    <functiondecl functionName="is_diagonal" lineNumber="111"/>
+    <functiondecl functionName="is_rotation" lineNumber="118"/>
+    <functiondecl functionName="is_symmetric" lineNumber="122"/>
+    <functiondecl functionName="diagonalize" lineNumber="134"/>
+    <functiondecl functionName="inverse" lineNumber="195"/>
+    <functiondecl functionName="transpose" lineNumber="202"/>
+    <functiondecl functionName="transposed" lineNumber="209"/>
+    <functiondecl functionName="scale" lineNumber="218"/>
+    <functiondecl functionName="scaled" lineNumber="231"/>
+    <functiondecl functionName="scale_local" lineNumber="237"/>
+    <functiondecl functionName="get_uniform_scale" lineNumber="243"/>
+    <functiondecl functionName="make_scale_uniform" lineNumber="247"/>
+    <functiondecl functionName="scaled_local" lineNumber="255"/>
+    <functiondecl functionName="get_scale_abs" lineNumber="262"/>
+    <functiondecl functionName="get_scale_local" lineNumber="270"/>
+    <functiondecl functionName="get_scale" lineNumber="276"/>
+    <functiondecl functionName="rotref_posscale_decomposition" lineNumber="307"/>
+    <functiondecl functionName="rotated" lineNumber="330"/>
+    <functiondecl functionName="rotate" lineNumber="334"/>
+    <functiondecl functionName="rotate_local" lineNumber="338"/>
+    <functiondecl functionName="rotated_local" lineNumber="343"/>
+    <functiondecl functionName="rotated" lineNumber="348"/>
+    <functiondecl functionName="rotate" lineNumber="352"/>
+    <functiondecl functionName="rotated" lineNumber="356"/>
+    <functiondecl functionName="rotate" lineNumber="360"/>
+    <functiondecl functionName="get_rotation_euler" lineNumber="364"/>
+    <functiondecl functionName="get_rotation_quat" lineNumber="378"/>
+    <functiondecl functionName="get_rotation_axis_angle" lineNumber="392"/>
+    <functiondecl functionName="get_rotation_axis_angle_local" lineNumber="406"/>
+    <functiondecl functionName="get_euler_xyz" lineNumber="432"/>
+    <functiondecl functionName="set_euler_xyz" lineNumber="476"/>
+    <functiondecl functionName="get_euler_yxz" lineNumber="499"/>
+    <functiondecl functionName="set_euler_yxz" lineNumber="548"/>
+    <functiondecl functionName="is_equal_approx" lineNumber="568"/>
+    <functiondecl functionName="is_equal_approx_ratio" lineNumber="573"/>
+    <functiondecl functionName="get_quat" lineNumber="619"/>
+    <functiondecl functionName="get_orthogonal_index" lineNumber="683"/>
+    <functiondecl functionName="set_orthogonal_index" lineNumber="711"/>
+    <functiondecl functionName="get_axis_angle" lineNumber="719"/>
+    <functiondecl functionName="set_quat" lineNumber="796"/>
+    <functiondecl functionName="set_axis_angle" lineNumber="809"/>
+    <functiondecl functionName="set_axis_angle_scale" lineNumber="839"/>
+    <functiondecl functionName="set_euler_scale" lineNumber="844"/>
+    <functiondecl functionName="set_quat_scale" lineNumber="849"/>
+    <functiondecl functionName="set_diagonal" lineNumber="854"/>
+    <functiondecl functionName="slerp" lineNumber="868"/>
+    <functiondecl functionName="rotate_sh" lineNumber="882"/>
+    <functioncall functionName="Basis"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="Math_SQRT12"/>
+    <functioncall functionName="Quat"/>
+    <functioncall functionName="SGN"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="UNIT_EPSILON"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="asin"/>
+    <functioncall functionName="atan"/>
+    <functioncall functionName="atan2"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="axis_sq"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cosine"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d0"/>
+    <functioncall functionName="d1"/>
+    <functioncall functionName="d3"/>
+    <functioncall functionName="det"/>
+    <functioncall functionName="determinant"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="el01_2"/>
+    <functioncall functionName="el12_2"/>
+    <functioncall functionName="euler"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_axis_angle"/>
+    <functioncall functionName="get_euler"/>
+    <functioncall functionName="get_euler_yxz"/>
+    <functioncall functionName="get_quat"/>
+    <functioncall functionName="get_rotation_euler"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="identity"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="invert"/>
+    <functioncall functionName="is_diagonal"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_equal_approx_ratio"/>
+    <functioncall functionName="is_normalized"/>
+    <functioncall functionName="is_orthogonal"/>
+    <functioncall functionName="is_rotation"/>
+    <functioncall functionName="is_symmetric"/>
+    <functioncall functionName="is_zero_approx"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="length_squared"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="m01"/>
+    <functioncall functionName="m02"/>
+    <functioncall functionName="m11"/>
+    <functioncall functionName="m12"/>
+    <functioncall functionName="m21"/>
+    <functioncall functionName="m22"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="off_matrix_norm_2"/>
+    <functioncall functionName="operatorQuat"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="orthonormalize"/>
+    <functioncall functionName="orthonormalized"/>
+    <functioncall functionName="p_angle"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_epsilon"/>
+    <functioncall functionName="p_euler"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_phi"/>
+    <functioncall functionName="p_quat"/>
+    <functioncall functionName="p_scale"/>
+    <functioncall functionName="p_vector"/>
+    <functioncall functionName="p_x"/>
+    <functioncall functionName="p_y"/>
+    <functioncall functionName="p_z"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rotate"/>
+    <functioncall functionName="rotated"/>
+    <functioncall functionName="rotated_local"/>
+    <functioncall functionName="row0"/>
+    <functioncall functionName="row1"/>
+    <functioncall functionName="row2"/>
+    <functioncall functionName="rtos"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="s_c3"/>
+    <functioncall functionName="s_c4_div_c3"/>
+    <functioncall functionName="s_c4_div_c3_x2"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="scaled"/>
+    <functioncall functionName="scaled_local"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_axis"/>
+    <functioncall functionName="set_axis_angle"/>
+    <functioncall functionName="set_axis_angle_scale"/>
+    <functioncall functionName="set_diagonal"/>
+    <functioncall functionName="set_euler"/>
+    <functioncall functionName="set_euler_scale"/>
+    <functioncall functionName="set_euler_yxz"/>
+    <functioncall functionName="set_quat"/>
+    <functioncall functionName="set_quat_scale"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="slerp"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="sy"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="tdotx"/>
+    <functioncall functionName="tdoty"/>
+    <functioncall functionName="tdotz"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="trace"/>
+    <functioncall functionName="transpose"/>
+    <functioncall functionName="transposed"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wx"/>
+    <functioncall functionName="wy"/>
+    <functioncall functionName="wz"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xmat"/>
+    <functioncall functionName="xx"/>
+    <functioncall functionName="xy"/>
+    <functioncall functionName="xz"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="ymat"/>
+    <functioncall functionName="yx"/>
+    <functioncall functionName="yy"/>
+    <functioncall functionName="yz"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zero"/>
+    <functioncall functionName="zmat"/>
+    <functioncall functionName="zx"/>
+    <functioncall functionName="zy"/>
+    <functioncall functionName="zyxs"/>
+    <functioncall functionName="zz"/>
+  </FileInfo>
+</analyzerinfo>

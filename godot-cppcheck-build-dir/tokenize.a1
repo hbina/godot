@@ -1,0 +1,609 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3841332944">
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;l_ref==ref&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" verbose="Boolean expression &apos;l_ref==ref&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="731" column="30"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;(u_ref==ref)&lt;&lt;2&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" verbose="Boolean expression &apos;(u_ref==ref)&lt;&lt;2&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="731" column="47"/>
+        </error>
+        <error id="bitwiseOnBoolean" severity="style" msg="Boolean expression &apos;(ur_ref==ref)&lt;&lt;3&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" verbose="Boolean expression &apos;(ur_ref==ref)&lt;&lt;3&apos; is used in bitwise operation. Did you mean &apos;||&apos;?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="732" column="27"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="731" column="30"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="732" column="27"/>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;best_bits&apos; to itself." verbose="Redundant assignment of &apos;best_bits&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="247" column="27"/>
+            <symbol>best_bits</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;best_next&apos; to itself." verbose="Redundant assignment of &apos;best_next&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="248" column="27"/>
+            <symbol>best_next</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;best_token&apos; to itself." verbose="Redundant assignment of &apos;best_token&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="249" column="28"/>
+            <symbol>best_token</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;best_eb&apos; to itself." verbose="Redundant assignment of &apos;best_eb&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="250" column="25"/>
+            <symbol>best_eb</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;best_qc&apos; to itself." verbose="Redundant assignment of &apos;best_qc&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="251" column="25"/>
+            <symbol>best_qc</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;token1&apos; to itself." verbose="Redundant assignment of &apos;token1&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="795" column="28"/>
+            <symbol>token1</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;eb1&apos; to itself." verbose="Redundant assignment of &apos;eb1&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="796" column="25"/>
+            <symbol>eb1</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;ti&apos; to itself." verbose="Redundant assignment of &apos;ti&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1035" column="17"/>
+            <symbol>ti</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;val&apos; can be reduced." verbose="The scope of the variable &apos;val&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="301" column="15"/>
+            <symbol>val</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;val_s&apos; can be reduced." verbose="The scope of the variable &apos;val_s&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="302" column="15"/>
+            <symbol>val_s</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: best_bits" verbose="Uninitialized variable: best_bits" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="247" column="28"/>
+            <symbol>best_bits</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: best_next" verbose="Uninitialized variable: best_next" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="248" column="28"/>
+            <symbol>best_next</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: best_token" verbose="Uninitialized variable: best_token" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="249" column="29"/>
+            <symbol>best_token</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: best_eb" verbose="Uninitialized variable: best_eb" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="250" column="26"/>
+            <symbol>best_eb</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: best_qc" verbose="Uninitialized variable: best_qc" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="251" column="26"/>
+            <symbol>best_qc</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: token1" verbose="Uninitialized variable: token1" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="795" column="29"/>
+            <symbol>token1</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: eb1" verbose="Uninitialized variable: eb1" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="796" column="26"/>
+            <symbol>eb1</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: ti" verbose="Uninitialized variable: ti" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1035" column="18"/>
+            <symbol>ti</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:190:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:215:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:215:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:215:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:676:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:215:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="185" col="31" call-argexpr="eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" call-funcname="oc_token_bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="383" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="847" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" call-funcname="oc_make_dct_token_full" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="853" col="35" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="866" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="878" col="39" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="983" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="999" col="37" call-argexpr="&eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="&new_eb" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:33:12" call-funcname="oc_make_eob_token_full" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="1067" col="35" call-argexpr="new_eb" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" call-funcname="oc_enc_token_log" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="186" col="3" my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:181:13" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:54:12" my-argnr="4" my-argname="_eb" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="129" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="156" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:152:13" my-argnr="2" my-argname="_cp" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="154" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:173:13" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="176" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:416:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="191" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="237" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="5" my-argname="_dequant" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="667" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:422:6" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="686" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c:147:12" my-argnr="1" my-argname="_enc" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="148" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/encint.h:417:5" my-argnr="8" my-argname="_stack" file="/home/hbina/git/godot/thirdparty/libtheora/tokenize.c" line="633" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functiondecl functionName="oc_make_eob_token" lineNumber="23"/>
+    <functiondecl functionName="oc_make_eob_token_full" lineNumber="33"/>
+    <functiondecl functionName="oc_decode_eob_token" lineNumber="48"/>
+    <functiondecl functionName="oc_make_dct_token_full" lineNumber="54"/>
+    <functiondecl functionName="oc_token_bits" lineNumber="147"/>
+    <functiondecl functionName="oc_enc_tokenlog_checkpoint" lineNumber="152"/>
+    <functiondecl functionName="oc_enc_tokenlog_rollback" lineNumber="160"/>
+    <functiondecl functionName="oc_enc_token_log" lineNumber="173"/>
+    <functiondecl functionName="oc_enc_eob_log" lineNumber="181"/>
+    <functiondecl functionName="oc_enc_tokenize_start" lineNumber="190"/>
+    <functiondecl functionName="oc_enc_tokenize_ac" lineNumber="215"/>
+    <functiondecl functionName="oc_enc_pred_dc_frag_rows" lineNumber="676"/>
+    <functiondecl functionName="oc_enc_tokenize_dc_frag_list" lineNumber="778"/>
+    <functiondecl functionName="oc_enc_tokenize_finish" lineNumber="1015"/>
+    <functioncall functionName="OC_BYTE_TABLE32"/>
+    <functioncall functionName="OC_CS_ITU_REC_470BG"/>
+    <functioncall functionName="OC_CS_ITU_REC_470M"/>
+    <functioncall functionName="OC_CS_NSPACES"/>
+    <functioncall functionName="OC_CS_UNSPECIFIED"/>
+    <functioncall functionName="OC_DCT_EOB1_TOKEN"/>
+    <functioncall functionName="OC_DCT_RUN_CAT1A"/>
+    <functioncall functionName="OC_DCT_RUN_CAT1B"/>
+    <functioncall functionName="OC_DCT_RUN_CAT1C"/>
+    <functioncall functionName="OC_DCT_RUN_CAT2A"/>
+    <functioncall functionName="OC_DCT_RUN_CAT2B"/>
+    <functioncall functionName="OC_DCT_SHORT_ZRL_TOKEN"/>
+    <functioncall functionName="OC_DCT_VAL_CAT2"/>
+    <functioncall functionName="OC_DCT_VAL_CAT3"/>
+    <functioncall functionName="OC_DCT_VAL_CAT4"/>
+    <functioncall functionName="OC_DCT_VAL_CAT5"/>
+    <functioncall functionName="OC_DCT_VAL_CAT6"/>
+    <functioncall functionName="OC_DCT_VAL_CAT7"/>
+    <functioncall functionName="OC_DCT_VAL_CAT8"/>
+    <functioncall functionName="OC_DCT_ZRL_TOKEN"/>
+    <functioncall functionName="OC_FRAME_FOR_MODE"/>
+    <functioncall functionName="OC_ILOGNZ_32"/>
+    <functioncall functionName="OC_MINI"/>
+    <functioncall functionName="OC_NDCT_EOB_TOKEN_MAX"/>
+    <functioncall functionName="OC_NMODES"/>
+    <functioncall functionName="OC_ONE_TOKEN"/>
+    <functioncall functionName="OC_PF_420"/>
+    <functioncall functionName="OC_PF_422"/>
+    <functioncall functionName="OC_PF_444"/>
+    <functioncall functionName="OC_PF_RSVD"/>
+    <functioncall functionName="OC_UNIBBLE_TABLE32"/>
+    <functioncall functionName="TH_CS_ITU_REC_470BG"/>
+    <functioncall functionName="TH_CS_ITU_REC_470M"/>
+    <functioncall functionName="TH_CS_NSPACES"/>
+    <functioncall functionName="TH_CS_UNSPECIFIED"/>
+    <functioncall functionName="TH_NDCT_TOKENS"/>
+    <functioncall functionName="TH_NHUFFMAN_TABLES"/>
+    <functioncall functionName="TH_PF_420"/>
+    <functioncall functionName="TH_PF_422"/>
+    <functioncall functionName="TH_PF_444"/>
+    <functioncall functionName="TH_PF_NFORMATS"/>
+    <functioncall functionName="TH_PF_RSVD"/>
+    <functioncall functionName="_eb"/>
+    <functioncall functionName="_enc"/>
+    <functioncall functionName="_fragy0"/>
+    <functioncall functionName="_n"/>
+    <functioncall functionName="_pli"/>
+    <functioncall functionName="_prev_eob_run1"/>
+    <functioncall functionName="_prev_ndct_tokens1"/>
+    <functioncall functionName="_run_count"/>
+    <functioncall functionName="_token"/>
+    <functioncall functionName="_val"/>
+    <functioncall functionName="_zzi"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="adj"/>
+    <functioncall functionName="best_bits"/>
+    <functioncall functionName="best_cost"/>
+    <functioncall functionName="best_eb"/>
+    <functioncall functionName="best_next"/>
+    <functioncall functionName="best_qc"/>
+    <functioncall functionName="best_token"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="case"/>
+    <functioncall functionName="cat"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="coded"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cost"/>
+    <functioncall functionName="dc"/>
+    <functioncall functionName="dc_pred_last"/>
+    <functioncall functionName="dc_reserve"/>
+    <functioncall functionName="dct_fzig_zag"/>
+    <functioncall functionName="dct_token_offs"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="eb"/>
+    <functioncall functionName="eb1"/>
+    <functioncall functionName="eob"/>
+    <functioncall functionName="eob_run"/>
+    <functioncall functionName="eob_run0"/>
+    <functioncall functionName="eob_run1"/>
+    <functioncall functionName="flush_bits"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frag_dc"/>
+    <functioncall functionName="fragi"/>
+    <functioncall functionName="fragii"/>
+    <functioncall functionName="frags"/>
+    <functioncall functionName="frame_type"/>
+    <functioncall functionName="huffi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="lambda"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mb_mode"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="ndct_tokens"/>
+    <functioncall functionName="neg"/>
+    <functioncall functionName="neobs1"/>
+    <functioncall functionName="new_eb"/>
+    <functioncall functionName="new_tok"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nhfrags"/>
+    <functioncall functionName="oc_decode_eob_token"/>
+    <functioncall functionName="oc_enc_eob_log"/>
+    <functioncall functionName="oc_enc_token_log"/>
+    <functioncall functionName="oc_enc_tokenlog_checkpoint"/>
+    <functioncall functionName="oc_ilog32"/>
+    <functioncall functionName="oc_make_dct_token_full"/>
+    <functioncall functionName="oc_make_eob_token"/>
+    <functioncall functionName="oc_make_eob_token_full"/>
+    <functioncall functionName="oc_token_bits"/>
+    <functioncall functionName="ogg_int16_t"/>
+    <functioncall functionName="ogg_int32_t"/>
+    <functioncall functionName="ogg_int64_t"/>
+    <functioncall functionName="ogg_uint16_t"/>
+    <functioncall functionName="old_eb1"/>
+    <functioncall functionName="old_eb2"/>
+    <functioncall functionName="old_tok1"/>
+    <functioncall functionName="old_tok2"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="pli"/>
+    <functioncall functionName="plj"/>
+    <functioncall functionName="pred"/>
+    <functioncall functionName="qc"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="run_count"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stack"/>
+    <functioncall functionName="sum_d2"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="ti"/>
+    <functioncall functionName="ti0"/>
+    <functioncall functionName="ti1r"/>
+    <functioncall functionName="ti1w"/>
+    <functioncall functionName="tj"/>
+    <functioncall functionName="tk"/>
+    <functioncall functionName="token"/>
+    <functioncall functionName="token1"/>
+    <functioncall functionName="u_ref"/>
+    <functioncall functionName="ur_ref"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="val_s"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zero_run"/>
+    <functioncall functionName="zzi"/>
+    <functioncall functionName="zzj"/>
+    <functioncall functionName="zzk"/>
+  </FileInfo>
+</analyzerinfo>

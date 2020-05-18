@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="952748775">
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;err&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;err&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="138" column="14" info="err is overwritten"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="122" column="14" info="err is assigned"/>
+            <symbol>err</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;err&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;err&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="140" column="14" info="err is overwritten"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="138" column="14" info="err is assigned"/>
+            <symbol>err</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;err&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;err&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="146" column="14" info="err is overwritten"/>
+            <location file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="140" column="14" info="err is assigned"/>
+            <symbol>err</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:52:20" call-funcname="char_to_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="123" col="30" call-argexpr="ch" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:52:20" call-funcname="char_to_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="139" col="30" call-argexpr="ch" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:44:13" call-funcname="int_to_char" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="163" col="24" call-argexpr="int_field" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:44:13" call-funcname="int_to_char" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="168" col="24" call-argexpr="int_field" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:44:13" call-funcname="int_to_char" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="188" col="27" call-argexpr="int_field" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:44:13" call-funcname="int_to_char" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="194" col="30" call-argexpr="int_field" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:44:13" call-funcname="int_to_char" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="196" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:44:13" call-funcname="int_to_char" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="196" col="30" call-argexpr="int_field" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c:39:6" my-argnr="1" my-argname="argv0" file="/home/hbina/git/godot/thirdparty/opus/repacketizer_demo.c" line="41" col="68" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="usage" lineNumber="39"/>
+    <functiondecl functionName="int_to_char" lineNumber="44"/>
+    <functiondecl functionName="char_to_int" lineNumber="52"/>
+    <functiondecl functionName="main" lineNumber="58"/>
+    <functioncall functionName="argv0"/>
+    <functioncall functionName="atoi"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="ch"/>
+    <functioncall functionName="char_to_int"/>
+    <functioncall functionName="eof"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="feof"/>
+    <functioncall functionName="fin"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fout"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="fread"/>
+    <functioncall functionName="fwrite"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int_field"/>
+    <functioncall functionName="int_to_char"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="opus_repacketizer_cat"/>
+    <functioncall functionName="opus_repacketizer_create"/>
+    <functioncall functionName="opus_repacketizer_get_nb_frames"/>
+    <functioncall functionName="opus_repacketizer_init"/>
+    <functioncall functionName="opus_repacketizer_out"/>
+    <functioncall functionName="opus_repacketizer_out_range"/>
+    <functioncall functionName="opus_strerror"/>
+    <functioncall functionName="opus_uint32"/>
+    <functioncall functionName="output_packet"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rp"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="usage"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

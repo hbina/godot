@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2699230549">
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:43:13" call-funcname="TransformOne" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="71" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:70:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:43:13" call-funcname="TransformOne" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="71" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:70:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:77:13" my-argnr="2" my-argname="out" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="101" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:119:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="120" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:125:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="126" col="17" value="0"/>
+    </array-index>
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:472:13" my-argnr="1" my-argname="src_y" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="474" col="22" value="4"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:668:13" my-argnr="1" my-argname="src_y" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="669" col="19" value="4"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:952:13" my-argnr="1" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="963" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:966:13" my-argnr="1" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="968" col="3" value="0"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:77:13" my-argnr="2" my-argname="out" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="101" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:119:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="120" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:125:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="126" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:794:13" my-argnr="1" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="798" col="40" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:119:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="120" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c:125:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/dec_msa.c" line="126" col="17" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="TransformOne" lineNumber="43"/>
+    <functiondecl functionName="TransformTwo" lineNumber="70"/>
+    <functiondecl functionName="TransformWHT" lineNumber="77"/>
+    <functiondecl functionName="TransformDC" lineNumber="119"/>
+    <functiondecl functionName="TransformAC3" lineNumber="125"/>
+    <functiondecl functionName="VFilter16" lineNumber="340"/>
+    <functiondecl functionName="HFilter16" lineNumber="359"/>
+    <functiondecl functionName="VFilterHorEdge16i" lineNumber="420"/>
+    <functiondecl functionName="VFilter16i" lineNumber="435"/>
+    <functiondecl functionName="HFilterVertEdge16i" lineNumber="442"/>
+    <functiondecl functionName="HFilter16i" lineNumber="472"/>
+    <functiondecl functionName="VFilter8" lineNumber="480"/>
+    <functiondecl functionName="HFilter8" lineNumber="525"/>
+    <functiondecl functionName="VFilter8i" lineNumber="561"/>
+    <functiondecl functionName="HFilter8i" lineNumber="592"/>
+    <functiondecl functionName="SimpleVFilter16" lineNumber="625"/>
+    <functiondecl functionName="SimpleHFilter16" lineNumber="635"/>
+    <functiondecl functionName="SimpleVFilter16i" lineNumber="662"/>
+    <functiondecl functionName="SimpleHFilter16i" lineNumber="668"/>
+    <functiondecl functionName="DC4" lineNumber="680"/>
+    <functiondecl functionName="TM4" lineNumber="689"/>
+    <functiondecl functionName="VE4" lineNumber="707"/>
+    <functiondecl functionName="RD4" lineNumber="724"/>
+    <functiondecl functionName="LD4" lineNumber="752"/>
+    <functiondecl functionName="DC16" lineNumber="778"/>
+    <functiondecl functionName="TM16" lineNumber="794"/>
+    <functiondecl functionName="VE16" lineNumber="820"/>
+    <functiondecl functionName="HE16" lineNumber="826"/>
+    <functiondecl functionName="DC16NoTop" lineNumber="838"/>
+    <functiondecl functionName="DC16NoLeft" lineNumber="851"/>
+    <functiondecl functionName="DC16NoTopLeft" lineNumber="863"/>
+    <functiondecl functionName="DC8uv" lineNumber="876"/>
+    <functiondecl functionName="TM8uv" lineNumber="895"/>
+    <functiondecl functionName="VE8uv" lineNumber="918"/>
+    <functiondecl functionName="HE8uv" lineNumber="924"/>
+    <functiondecl functionName="DC8uvNoLeft" lineNumber="940"/>
+    <functiondecl functionName="DC8uvNoTop" lineNumber="952"/>
+    <functiondecl functionName="DC8uvNoTopLeft" lineNumber="966"/>
+    <functiondecl functionName="VP8DspInitMSA" lineNumber="976"/>
+    <functioncall functionName="A"/>
+    <functioncall functionName="A1"/>
+    <functioncall functionName="AC"/>
+    <functioncall functionName="ADD4"/>
+    <functioncall functionName="ADDBLK_ST4x4_UB"/>
+    <functioncall functionName="ADDVI_H2_SH"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="B2"/>
+    <functioncall functionName="BPS"/>
+    <functioncall functionName="BUTTERFLY_4"/>
+    <functioncall functionName="C"/>
+    <functioncall functionName="CLIP_SH4_0_255"/>
+    <functioncall functionName="CLIP_SW4_0_255"/>
+    <functioncall functionName="DC"/>
+    <functioncall functionName="DC16"/>
+    <functioncall functionName="DC16NoLeft"/>
+    <functioncall functionName="DC16NoTop"/>
+    <functioncall functionName="DC16NoTopLeft"/>
+    <functioncall functionName="DC4"/>
+    <functioncall functionName="DC8uv"/>
+    <functioncall functionName="DC8uvNoLeft"/>
+    <functioncall functionName="DC8uvNoTop"/>
+    <functioncall functionName="DC8uvNoTopLeft"/>
+    <functioncall functionName="HADD_UH_U32"/>
+    <functioncall functionName="HE16"/>
+    <functioncall functionName="HE8uv"/>
+    <functioncall functionName="HFilter16"/>
+    <functioncall functionName="HFilter16i"/>
+    <functioncall functionName="HFilter8"/>
+    <functioncall functionName="HFilter8i"/>
+    <functioncall functionName="HFilterVertEdge16i"/>
+    <functioncall functionName="ILVL_B2_SH"/>
+    <functioncall functionName="ILVL_B2_SW"/>
+    <functioncall functionName="ILVRL_B2_SH"/>
+    <functioncall functionName="ILVRL_H2_SH"/>
+    <functioncall functionName="ILVRL_H2_SW"/>
+    <functioncall functionName="ILVR_B2_SH"/>
+    <functioncall functionName="ILVR_B2_SW"/>
+    <functioncall functionName="ILVR_B4_SW"/>
+    <functioncall functionName="ILVR_D4_UB"/>
+    <functioncall functionName="ILVR_H4_SW"/>
+    <functioncall functionName="INSERT_W2_UB"/>
+    <functioncall functionName="INSERT_W4_SW"/>
+    <functioncall functionName="L0"/>
+    <functioncall functionName="L1"/>
+    <functioncall functionName="L2"/>
+    <functioncall functionName="L3"/>
+    <functioncall functionName="LD4"/>
+    <functioncall functionName="LD_SB"/>
+    <functioncall functionName="LD_SB4"/>
+    <functioncall functionName="LD_SH2"/>
+    <functioncall functionName="LD_UB"/>
+    <functioncall functionName="LD_UB4"/>
+    <functioncall functionName="LD_UB8"/>
+    <functioncall functionName="LW"/>
+    <functioncall functionName="PCKEV_B2_SB"/>
+    <functioncall functionName="PCKEV_B2_SW"/>
+    <functioncall functionName="PCKEV_B4_SB"/>
+    <functioncall functionName="PCKEV_ST4x4_UB"/>
+    <functioncall functionName="R"/>
+    <functioncall functionName="RD4"/>
+    <functioncall functionName="SD"/>
+    <functioncall functionName="SD4"/>
+    <functioncall functionName="SH"/>
+    <functioncall functionName="SLDI_SH"/>
+    <functioncall functionName="SLDI_UB"/>
+    <functioncall functionName="SRAI_B"/>
+    <functioncall functionName="SRAI_H"/>
+    <functioncall functionName="SRAI_H2_SH"/>
+    <functioncall functionName="SRAI_W4_SW"/>
+    <functioncall functionName="SRARI_W4_SW"/>
+    <functioncall functionName="ST2x4_UB"/>
+    <functioncall functionName="ST4x4_UB"/>
+    <functioncall functionName="ST4x8_UB"/>
+    <functioncall functionName="ST_SB4"/>
+    <functioncall functionName="ST_UB2"/>
+    <functioncall functionName="ST_UB4"/>
+    <functioncall functionName="ST_UB8"/>
+    <functioncall functionName="SUB2"/>
+    <functioncall functionName="SW"/>
+    <functioncall functionName="SW4"/>
+    <functioncall functionName="SimpleHFilter16"/>
+    <functioncall functionName="SimpleHFilter16i"/>
+    <functioncall functionName="SimpleVFilter16"/>
+    <functioncall functionName="SimpleVFilter16i"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="T1"/>
+    <functioncall functionName="TL"/>
+    <functioncall functionName="TM16"/>
+    <functioncall functionName="TM4"/>
+    <functioncall functionName="TM8uv"/>
+    <functioncall functionName="TRANSPOSE16x4_UB_UB"/>
+    <functioncall functionName="TRANSPOSE16x8_UB_UB"/>
+    <functioncall functionName="TRANSPOSE4x4_SW_SW"/>
+    <functioncall functionName="TransformAC3"/>
+    <functioncall functionName="TransformDC"/>
+    <functioncall functionName="TransformOne"/>
+    <functioncall functionName="TransformTwo"/>
+    <functioncall functionName="TransformWHT"/>
+    <functioncall functionName="UNPCK_SH_SW"/>
+    <functioncall functionName="VE16"/>
+    <functioncall functionName="VE4"/>
+    <functioncall functionName="VE8uv"/>
+    <functioncall functionName="VFilter16"/>
+    <functioncall functionName="VFilter16i"/>
+    <functioncall functionName="VFilter8"/>
+    <functioncall functionName="VFilter8i"/>
+    <functioncall functionName="VFilterHorEdge16i"/>
+    <functioncall functionName="VP8DspInitMSA"/>
+    <functioncall functionName="VSHF_H2_SH"/>
+    <functioncall functionName="__msa_adds_s_b"/>
+    <functioncall functionName="__msa_adds_u_b"/>
+    <functioncall functionName="__msa_asub_u_b"/>
+    <functioncall functionName="__msa_ave_u_b"/>
+    <functioncall functionName="__msa_aver_u_b"/>
+    <functioncall functionName="__msa_clti_s_b"/>
+    <functioncall functionName="__msa_copy_s_d"/>
+    <functioncall functionName="__msa_copy_s_h"/>
+    <functioncall functionName="__msa_copy_s_w"/>
+    <functioncall functionName="__msa_fill_b"/>
+    <functioncall functionName="__msa_fill_h"/>
+    <functioncall functionName="__msa_fill_w"/>
+    <functioncall functionName="__msa_hadd_u_d"/>
+    <functioncall functionName="__msa_hadd_u_h"/>
+    <functioncall functionName="__msa_hadd_u_w"/>
+    <functioncall functionName="__msa_ilvr_b"/>
+    <functioncall functionName="__msa_insert_b"/>
+    <functioncall functionName="__msa_ldi_b"/>
+    <functioncall functionName="__msa_ldi_h"/>
+    <functioncall functionName="__msa_max_u_b"/>
+    <functioncall functionName="__msa_pckev_b"/>
+    <functioncall functionName="__msa_sat_s_h"/>
+    <functioncall functionName="__msa_srari_b"/>
+    <functioncall functionName="__msa_srli_b"/>
+    <functioncall functionName="__msa_subs_s_b"/>
+    <functioncall functionName="__msa_xori_b"/>
+    <functioncall functionName="a1_m"/>
+    <functioncall functionName="b1_m"/>
+    <functioncall functionName="b_limit"/>
+    <functioncall functionName="b_limit_in"/>
+    <functioncall functionName="c1_m"/>
+    <functioncall functionName="c4"/>
+    <functioncall functionName="c_tmp2_m"/>
+    <functioncall functionName="cnst3b"/>
+    <functioncall functionName="cnst4b"/>
+    <functioncall functionName="cnst63h"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d1"/>
+    <functioncall functionName="d1_m"/>
+    <functioncall functionName="d2"/>
+    <functioncall functionName="d4"/>
+    <functioncall functionName="d_tmp2_m"/>
+    <functioncall functionName="dc"/>
+    <functioncall functionName="dctemp"/>
+    <functioncall functionName="dctop"/>
+    <functioncall functionName="dcval"/>
+    <functioncall functionName="dest0"/>
+    <functioncall functionName="dest1"/>
+    <functioncall functionName="dest2"/>
+    <functioncall functionName="dest3"/>
+    <functioncall functionName="do_two"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="filt"/>
+    <functioncall functionName="filt1"/>
+    <functioncall functionName="filt2"/>
+    <functioncall functionName="filt_l"/>
+    <functioncall functionName="filt_r"/>
+    <functioncall functionName="filt_sign"/>
+    <functioncall functionName="flat_out"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="hev"/>
+    <functioncall functionName="hz0"/>
+    <functioncall functionName="hz1"/>
+    <functioncall functionName="hz2"/>
+    <functioncall functionName="hz3"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="in0"/>
+    <functioncall functionName="in1"/>
+    <functioncall functionName="in2"/>
+    <functioncall functionName="in3"/>
+    <functioncall functionName="input0"/>
+    <functioncall functionName="input1"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="limit"/>
+    <functioncall functionName="limit_in"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="mask0"/>
+    <functioncall functionName="mask1"/>
+    <functioncall functionName="mask2"/>
+    <functioncall functionName="mask3"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="out0"/>
+    <functioncall functionName="out1"/>
+    <functioncall functionName="out2"/>
+    <functioncall functionName="out3"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p0_a_sub_q0"/>
+    <functioncall functionName="p0_asub_q0_m"/>
+    <functioncall functionName="p0_d"/>
+    <functioncall functionName="p0_m"/>
+    <functioncall functionName="p0_u"/>
+    <functioncall functionName="p0_v"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p1_a_sub_q1"/>
+    <functioncall functionName="p1_asub_p0_m"/>
+    <functioncall functionName="p1_asub_q1_m"/>
+    <functioncall functionName="p1_d"/>
+    <functioncall functionName="p1_m"/>
+    <functioncall functionName="p1_u"/>
+    <functioncall functionName="p1_v"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p2_asub_p1_m"/>
+    <functioncall functionName="p2_d"/>
+    <functioncall functionName="p2_m"/>
+    <functioncall functionName="p2_u"/>
+    <functioncall functionName="p2_v"/>
+    <functioncall functionName="p3"/>
+    <functioncall functionName="p3_asub_p2_m"/>
+    <functioncall functionName="p3_u"/>
+    <functioncall functionName="p3_v"/>
+    <functioncall functionName="ptemp"/>
+    <functioncall functionName="ptemp_src"/>
+    <functioncall functionName="ptmp"/>
+    <functioncall functionName="ptmp1"/>
+    <functioncall functionName="ptmp_src_u"/>
+    <functioncall functionName="ptmp_src_v"/>
+    <functioncall functionName="q0"/>
+    <functioncall functionName="q0_d"/>
+    <functioncall functionName="q0_m"/>
+    <functioncall functionName="q0_sub_p0"/>
+    <functioncall functionName="q0_u"/>
+    <functioncall functionName="q0_v"/>
+    <functioncall functionName="q1"/>
+    <functioncall functionName="q1_asub_q0_m"/>
+    <functioncall functionName="q1_d"/>
+    <functioncall functionName="q1_m"/>
+    <functioncall functionName="q1_u"/>
+    <functioncall functionName="q1_v"/>
+    <functioncall functionName="q2"/>
+    <functioncall functionName="q2_asub_q1_m"/>
+    <functioncall functionName="q2_d"/>
+    <functioncall functionName="q2_m"/>
+    <functioncall functionName="q2_u"/>
+    <functioncall functionName="q2_v"/>
+    <functioncall functionName="q3"/>
+    <functioncall functionName="q3_asub_q2_m"/>
+    <functioncall functionName="q3_u"/>
+    <functioncall functionName="q3_v"/>
+    <functioncall functionName="r0"/>
+    <functioncall functionName="r1"/>
+    <functioncall functionName="r2"/>
+    <functioncall functionName="r3"/>
+    <functioncall functionName="r4"/>
+    <functioncall functionName="r5"/>
+    <functioncall functionName="r6"/>
+    <functioncall functionName="r7"/>
+    <functioncall functionName="res0"/>
+    <functioncall functionName="res1"/>
+    <functioncall functionName="res2"/>
+    <functioncall functionName="res3"/>
+    <functioncall functionName="row0"/>
+    <functioncall functionName="row1"/>
+    <functioncall functionName="row10"/>
+    <functioncall functionName="row11"/>
+    <functioncall functionName="row12"/>
+    <functioncall functionName="row13"/>
+    <functioncall functionName="row14"/>
+    <functioncall functionName="row15"/>
+    <functioncall functionName="row2"/>
+    <functioncall functionName="row3"/>
+    <functioncall functionName="row4"/>
+    <functioncall functionName="row5"/>
+    <functioncall functionName="row6"/>
+    <functioncall functionName="row7"/>
+    <functioncall functionName="row8"/>
+    <functioncall functionName="row9"/>
+    <functioncall functionName="rtop"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src_u"/>
+    <functioncall functionName="src_v"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="sum_m"/>
+    <functioncall functionName="t0"/>
+    <functioncall functionName="t1"/>
+    <functioncall functionName="t2"/>
+    <functioncall functionName="t3"/>
+    <functioncall functionName="temp0"/>
+    <functioncall functionName="temp1"/>
+    <functioncall functionName="temp2"/>
+    <functioncall functionName="temp3"/>
+    <functioncall functionName="thresh"/>
+    <functioncall functionName="thresh_in"/>
+    <functioncall functionName="tmp0"/>
+    <functioncall functionName="tmp0_h"/>
+    <functioncall functionName="tmp0_w"/>
+    <functioncall functionName="tmp1"/>
+    <functioncall functionName="tmp2"/>
+    <functioncall functionName="tmp3"/>
+    <functioncall functionName="tmp4"/>
+    <functioncall functionName="tmp5"/>
+    <functioncall functionName="tmp6"/>
+    <functioncall functionName="tmp7"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="u_l"/>
+    <functioncall functionName="u_r"/>
+    <functioncall functionName="v16i8"/>
+    <functioncall functionName="v16u8"/>
+    <functioncall functionName="v2i64"/>
+    <functioncall functionName="v4i32"/>
+    <functioncall functionName="v8i16"/>
+    <functioncall functionName="val0"/>
+    <functioncall functionName="val1"/>
+    <functioncall functionName="val2"/>
+    <functioncall functionName="val3"/>
+    <functioncall functionName="vt0"/>
+    <functioncall functionName="vt1"/>
+    <functioncall functionName="vt2"/>
+    <functioncall functionName="vt3"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zero"/>
+  </FileInfo>
+</analyzerinfo>

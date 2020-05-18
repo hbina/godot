@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="79109364">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;peer&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;peer&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="893" column="2"/>
+            <symbol>peer</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;NetworkProfiler::bandwidth_usage&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;NetworkProfiler::bandwidth_usage&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="79" column="6"/>
+            <symbol>NetworkProfiler::bandwidth_usage</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VisualProfiler::toggle&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VisualProfiler::toggle&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="356" column="7"/>
+            <symbol>VisualProfiler::toggle</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VisualProfiler::add&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VisualProfiler::add&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="360" column="7"/>
+            <symbol>VisualProfiler::add</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;VisualProfiler::tick&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;VisualProfiler::tick&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="362" column="7"/>
+            <symbol>VisualProfiler::tick</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;PerformanceProfiler::toggle&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;PerformanceProfiler::toggle&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="379" column="7"/>
+            <symbol>PerformanceProfiler::toggle</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;PerformanceProfiler::add&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;PerformanceProfiler::add&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="380" column="7"/>
+            <symbol>PerformanceProfiler::add</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;RemoteDebugger&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;RemoteDebugger&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" file="/home/hbina/git/godot/core/debugger/remote_debugger.h" line="117" column="2"/>
+            <symbol>RemoteDebugger</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PerformanceProfiler&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PerformanceProfiler&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="398" column="2"/>
+            <symbol>PerformanceProfiler</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="443" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="461" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="921" column="13"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="926" column="13"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;loop_begin_usec&apos; can be reduced." verbose="The scope of the variable &apos;loop_begin_usec&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="692" column="11"/>
+            <symbol>loop_begin_usec</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;loop_time_sec&apos; can be reduced." verbose="The scope of the variable &apos;loop_time_sec&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="693" column="11"/>
+            <symbol>loop_time_sec</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_try_capture&apos; argument 1 names different: declaration &apos;p_name&apos; definition &apos;p_msg&apos;." verbose="Function &apos;_try_capture&apos; argument 1 names different: declaration &apos;p_name&apos; definition &apos;p_msg&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="653" column="50"/>
+            <location file0="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" file="/home/hbina/git/godot/core/debugger/remote_debugger.h" line="108" column="35"/>
+            <symbol>_try_capture</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;loop_begin_usec&apos; is assigned a value that is never used." verbose="Variable &apos;loop_begin_usec&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="692" column="27"/>
+            <symbol>loop_begin_usec</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;loop_time_sec&apos; is assigned a value that is never used." verbose="Variable &apos;loop_time_sec&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="693" column="25"/>
+            <symbol>loop_time_sec</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/debugger/remote_debugger.cpp:319:7" call-funcname="_send_frame_data" call-argnr="1" file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="316" col="19" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/debugger/remote_debugger.h:101:7" call-funcname="_send_stack_vars" call-argnr="3" file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="769" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/debugger/remote_debugger.h:108:8" call-funcname="_try_capture" call-argnr="3" file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="789" col="30" call-argexpr="captured" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="788" col="21" info="Assignment 'captured=false', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/debugger/remote_debugger.cpp:195:8" my-argnr="1" my-argname="A" file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="196" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/debugger/remote_debugger.cpp:195:8" my-argnr="2" my-argname="B" file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="196" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/debugger/remote_debugger.cpp:195:8" my-argnr="1" my-argname="A" file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="196" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/debugger/remote_debugger.cpp:195:8" my-argnr="2" my-argname="B" file="/home/hbina/git/godot/core/debugger/remote_debugger.cpp" line="196" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="bandwidth_usage" lineNumber="79"/>
+    <functiondecl functionName="init_node" lineNumber="99"/>
+    <functiondecl functionName="toggle" lineNumber="111"/>
+    <functiondecl functionName="add" lineNumber="131"/>
+    <functiondecl functionName="tick" lineNumber="166"/>
+    <functiondecl functionName="toggle" lineNumber="204"/>
+    <functiondecl functionName="write_frame_data" lineNumber="220"/>
+    <functiondecl functionName="toggle" lineNumber="286"/>
+    <functiondecl functionName="add" lineNumber="296"/>
+    <functiondecl functionName="tick" lineNumber="311"/>
+    <functiondecl functionName="_send_frame_data" lineNumber="319"/>
+    <functiondecl functionName="toggle" lineNumber="356"/>
+    <functiondecl functionName="add" lineNumber="360"/>
+    <functiondecl functionName="tick" lineNumber="362"/>
+    <functiondecl functionName="toggle" lineNumber="379"/>
+    <functiondecl functionName="add" lineNumber="380"/>
+    <functiondecl functionName="tick" lineNumber="381"/>
+    <functiondecl functionName="_send_resource_usage" lineNumber="403"/>
+    <functiondecl functionName="_put_msg" lineNumber="428"/>
+    <functiondecl functionName="_err_handler" lineNumber="438"/>
+    <functiondecl functionName="_print_handler" lineNumber="459"/>
+    <functiondecl functionName="_create_overflow_error" lineNumber="497"/>
+    <functiondecl functionName="flush_output" lineNumber="510"/>
+    <functiondecl functionName="send_message" lineNumber="576"/>
+    <functiondecl functionName="send_error" lineNumber="584"/>
+    <functiondecl functionName="_send_stack_vars" lineNumber="639"/>
+    <functiondecl functionName="_try_capture" lineNumber="653"/>
+    <functiondecl functionName="debug" lineNumber="666"/>
+    <functiondecl functionName="poll_events" lineNumber="812"/>
+    <functiondecl functionName="_core_capture" lineNumber="851"/>
+    <functiondecl functionName="_profiler_capture" lineNumber="877"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_INVALID_DATA"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MESSAGE_TYPE_ERROR"/>
+    <functioncall functionName="MESSAGE_TYPE_LOG"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MOUSE_MODE_VISIBLE"/>
+    <functioncall functionName="MultiplayerNodeInfo"/>
+    <functioncall functionName="NetworkProfiler"/>
+    <functioncall functionName="PerformanceProfiler"/>
+    <functioncall functionName="ProfileInfoSort"/>
+    <functioncall functionName="RemoteDebugger"/>
+    <functioncall functionName="ScriptsProfiler"/>
+    <functioncall functionName="ServerInfo"/>
+    <functioncall functionName="ServersProfiler"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="USEC_TO_SEC"/>
+    <functioncall functionName="VisualProfiler"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="_bind_profiler"/>
+    <functioncall functionName="_core_capture"/>
+    <functioncall functionName="_create_overflow_error"/>
+    <functioncall functionName="_err_handler"/>
+    <functioncall functionName="_print_handler"/>
+    <functioncall functionName="_profiler_capture"/>
+    <functioncall functionName="_put_msg"/>
+    <functioncall functionName="_send_frame_data"/>
+    <functioncall functionName="_send_resource_usage"/>
+    <functioncall functionName="_send_stack_vars"/>
+    <functioncall functionName="_try_capture"/>
+    <functioncall functionName="add"/>
+    <functioncall functionName="add_error_handler"/>
+    <functioncall functionName="add_print_handler"/>
+    <functioncall functionName="allowed_chars"/>
+    <functioncall functionName="append_array"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="bandwidth_in"/>
+    <functioncall functionName="bandwidth_in_ptr"/>
+    <functioncall functionName="bandwidth_out"/>
+    <functioncall functionName="bandwidth_out_ptr"/>
+    <functioncall functionName="bandwidth_usage"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_count"/>
+    <functioncall functionName="can_block"/>
+    <functioncall functionName="cap"/>
+    <functioncall functionName="capture_parse"/>
+    <functioncall functionName="captured"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="char_count"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="cmd"/>
+    <functioncall functionName="command"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="core_cap"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="debug"/>
+    <functioncall functionName="debug_get_current_stack_info"/>
+    <functioncall functionName="debug_get_error"/>
+    <functioncall functionName="debug_get_globals"/>
+    <functioncall functionName="debug_get_stack_level_count"/>
+    <functioncall functionName="debug_get_stack_level_function"/>
+    <functioncall functionName="debug_get_stack_level_instance"/>
+    <functioncall functionName="debug_get_stack_level_line"/>
+    <functioncall functionName="debug_get_stack_level_locals"/>
+    <functioncall functionName="debug_get_stack_level_members"/>
+    <functioncall functionName="debug_get_stack_level_source"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="draw"/>
+    <functioncall functionName="eh"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="err_count"/>
+    <functioncall functionName="error_str"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fi"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="flush_output"/>
+    <functioncall functionName="flush_thread"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="frame_time"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_break_language"/>
+    <functioncall functionName="get_caller_id"/>
+    <functioncall functionName="get_error_stack_info"/>
+    <functioncall functionName="get_format_name"/>
+    <functioncall functionName="get_frame_profile"/>
+    <functioncall functionName="get_frame_profile_frame"/>
+    <functioncall functionName="get_idle_frames"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_language"/>
+    <functioncall functionName="get_language_count"/>
+    <functioncall functionName="get_message"/>
+    <functioncall functionName="get_mouse_mode"/>
+    <functioncall functionName="get_owner"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_singleton_object"/>
+    <functioncall functionName="get_ticks_msec"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_time_scale"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="globals"/>
+    <functioncall functionName="globals_vals"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_capture"/>
+    <functioncall functionName="has_changed"/>
+    <functioncall functionName="has_message"/>
+    <functioncall functionName="has_profiler"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idle_time"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="incoming_bandwidth"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="init_node"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="insert_breakpoint"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_peer_connected"/>
+    <functioncall functionName="is_skipping_breakpoints"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="join"/>
+    <functioncall functionName="joined_log_strings"/>
+    <functioncall functionName="last_bandwidth_time"/>
+    <functioncall functionName="last_profile_time"/>
+    <functioncall functionName="last_reset"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="local_vals"/>
+    <functioncall functionName="locals"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="loop_begin_usec"/>
+    <functioncall functionName="lv"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="max_chars_per_second"/>
+    <functioncall functionName="max_frame_functions"/>
+    <functioncall functionName="member_vals"/>
+    <functioncall functionName="members"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="message"/>
+    <functioncall functionName="mouse_mode"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="mutex"/>
+    <functioncall functionName="n_messages_dropped"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="network_profiler"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_int64"/>
+    <functioncall functionName="oe"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="opts"/>
+    <functioncall functionName="outgoing_bandwidth"/>
+    <functioncall functionName="output_string"/>
+    <functioncall functionName="overflow"/>
+    <functioncall functionName="overflowed"/>
+    <functioncall functionName="p_accumulated"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_can_continue"/>
+    <functioncall functionName="p_cmd"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_descr"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_err"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_final"/>
+    <functioncall functionName="p_frame_time"/>
+    <functioncall functionName="p_func"/>
+    <functioncall functionName="p_idle_time"/>
+    <functioncall functionName="p_is_error_breakpoint"/>
+    <functioncall functionName="p_line"/>
+    <functioncall functionName="p_message"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_opts"/>
+    <functioncall functionName="p_peer"/>
+    <functioncall functionName="p_performance"/>
+    <functioncall functionName="p_physics_frame_time"/>
+    <functioncall functionName="p_physics_time"/>
+    <functioncall functionName="p_prof"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_this"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_user"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="packet_size"/>
+    <functioncall functionName="parsed"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="perf"/>
+    <functioncall functionName="performance"/>
+    <functioncall functionName="performance_profiler"/>
+    <functioncall functionName="phl"/>
+    <functioncall functionName="physics_frame_time"/>
+    <functioncall functionName="physics_time"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="process_and_drop_events"/>
+    <functioncall functionName="prof"/>
+    <functioncall functionName="profile_areas"/>
+    <functioncall functionName="profiler_cap"/>
+    <functioncall functionName="profiler_enable"/>
+    <functioncall functionName="profiling_get_accumulated_data"/>
+    <functioncall functionName="profiling_get_frame_data"/>
+    <functioncall functionName="profiling_start"/>
+    <functioncall functionName="profiling_stop"/>
+    <functioncall functionName="pt"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="put_message"/>
+    <functioncall functionName="r_captured"/>
+    <functioncall functionName="register_message_capture"/>
+    <functioncall functionName="register_profiler"/>
+    <functioncall functionName="reload_all_scripts"/>
+    <functioncall functionName="remove_breakpoint"/>
+    <functioncall functionName="remove_error_handler"/>
+    <functioncall functionName="remove_print_handler"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="script_functions"/>
+    <functioncall functionName="script_lang"/>
+    <functioncall functionName="self_time"/>
+    <functioncall functionName="send_error"/>
+    <functioncall functionName="send_message"/>
+    <functioncall functionName="serialize"/>
+    <functioncall functionName="servers_profiler"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_depth"/>
+    <functioncall functionName="set_frame_profiling_enabled"/>
+    <functioncall functionName="set_lines_left"/>
+    <functioncall functionName="set_mouse_mode"/>
+    <functioncall functionName="set_skip_breakpoints"/>
+    <functioncall functionName="si"/>
+    <functioncall functionName="signature"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skip_profile_frame"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="strings"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="sync"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="texture_debug_usage"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tick"/>
+    <functioncall functionName="ticks"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="tinfo"/>
+    <functioncall functionName="to_send"/>
+    <functioncall functionName="toggle"/>
+    <functioncall functionName="total_bandwidth"/>
+    <functioncall functionName="total_time"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="types"/>
+    <functioncall functionName="unregister_profiler"/>
+    <functioncall functionName="visual_profiler"/>
+    <functioncall functionName="warn_count"/>
+    <functioncall functionName="warning"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="window_move_to_foreground"/>
+    <functioncall functionName="write_frame_data"/>
+  </FileInfo>
+</analyzerinfo>

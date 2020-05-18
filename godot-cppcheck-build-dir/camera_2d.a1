@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2030856136">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Camera2D::viewport&apos; is not initialized in the constructor." verbose="Member variable &apos;Camera2D::viewport&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/camera_2d.cpp" line="779" column="11"/>
+            <symbol>Camera2D::viewport</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;camera_pos&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;camera_pos&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/camera_2d.cpp" line="793" column="2"/>
+            <symbol>camera_pos</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_update_scroll" lineNumber="38"/>
+    <functiondecl functionName="_update_process_mode" lineNumber="66"/>
+    <functiondecl functionName="set_zoom" lineNumber="80"/>
+    <functiondecl functionName="get_zoom" lineNumber="88"/>
+    <functiondecl functionName="get_camera_transform" lineNumber="93"/>
+    <functiondecl functionName="_notification" lineNumber="220"/>
+    <functiondecl functionName="set_offset" lineNumber="351"/>
+    <functiondecl functionName="get_offset" lineNumber="357"/>
+    <functiondecl functionName="set_anchor_mode" lineNumber="362"/>
+    <functiondecl functionName="get_anchor_mode" lineNumber="368"/>
+    <functiondecl functionName="set_rotating" lineNumber="373"/>
+    <functiondecl functionName="is_rotating" lineNumber="379"/>
+    <functiondecl functionName="set_process_mode" lineNumber="384"/>
+    <functiondecl functionName="get_process_mode" lineNumber="393"/>
+    <functiondecl functionName="_make_current" lineNumber="398"/>
+    <functiondecl functionName="_set_current" lineNumber="408"/>
+    <functiondecl functionName="is_current" lineNumber="417"/>
+    <functiondecl functionName="make_current" lineNumber="422"/>
+    <functiondecl functionName="clear_current" lineNumber="432"/>
+    <functiondecl functionName="set_limit" lineNumber="440"/>
+    <functiondecl functionName="get_limit" lineNumber="447"/>
+    <functiondecl functionName="set_limit_smoothing_enabled" lineNumber="453"/>
+    <functiondecl functionName="is_limit_smoothing_enabled" lineNumber="459"/>
+    <functiondecl functionName="set_drag_margin" lineNumber="464"/>
+    <functiondecl functionName="get_drag_margin" lineNumber="471"/>
+    <functiondecl functionName="get_camera_position" lineNumber="477"/>
+    <functiondecl functionName="force_update_scroll" lineNumber="482"/>
+    <functiondecl functionName="reset_smoothing" lineNumber="487"/>
+    <functiondecl functionName="align" lineNumber="493"/>
+    <functiondecl functionName="set_follow_smoothing" lineNumber="519"/>
+    <functiondecl functionName="get_follow_smoothing" lineNumber="528"/>
+    <functiondecl functionName="get_camera_screen_center" lineNumber="533"/>
+    <functiondecl functionName="set_h_drag_enabled" lineNumber="538"/>
+    <functiondecl functionName="is_h_drag_enabled" lineNumber="543"/>
+    <functiondecl functionName="set_v_drag_enabled" lineNumber="548"/>
+    <functiondecl functionName="is_v_drag_enabled" lineNumber="553"/>
+    <functiondecl functionName="set_v_offset" lineNumber="558"/>
+    <functiondecl functionName="get_v_offset" lineNumber="565"/>
+    <functiondecl functionName="set_h_offset" lineNumber="570"/>
+    <functiondecl functionName="get_h_offset" lineNumber="576"/>
+    <functiondecl functionName="_set_old_smoothing" lineNumber="581"/>
+    <functiondecl functionName="set_enable_follow_smoothing" lineNumber="589"/>
+    <functiondecl functionName="is_follow_smoothing_enabled" lineNumber="594"/>
+    <functiondecl functionName="set_custom_viewport" lineNumber="599"/>
+    <functiondecl functionName="get_custom_viewport" lineNumber="629"/>
+    <functiondecl functionName="set_screen_drawing_enabled" lineNumber="634"/>
+    <functiondecl functionName="is_screen_drawing_enabled" lineNumber="639"/>
+    <functiondecl functionName="set_limit_drawing_enabled" lineNumber="643"/>
+    <functiondecl functionName="is_limit_drawing_enabled" lineNumber="648"/>
+    <functiondecl functionName="set_margin_drawing_enabled" lineNumber="652"/>
+    <functiondecl functionName="is_margin_drawing_enabled" lineNumber="657"/>
+    <functiondecl functionName="_bind_methods" lineNumber="661"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_PROPERTYI"/>
+    <functioncall functionName="ANCHOR_MODE_DRAG_CENTER"/>
+    <functioncall functionName="ANCHOR_MODE_FIXED_TOP_LEFT"/>
+    <functioncall functionName="AnchorMode"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CAMERA2D_PROCESS_IDLE"/>
+    <functioncall functionName="CAMERA2D_PROCESS_PHYSICS"/>
+    <functioncall functionName="Camera2D"/>
+    <functioncall functionName="Camera2DProcessMode"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GROUP_CALL_REALTIME"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="Node2D"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Transform2D"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_make_current"/>
+    <functioncall functionName="_set_current"/>
+    <functioncall functionName="_set_old_smoothing"/>
+    <functioncall functionName="_update_process_mode"/>
+    <functioncall functionName="_update_scroll"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="add_to_group"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="align"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="area_axis_color"/>
+    <functioncall functionName="area_axis_width"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call_group_flags"/>
+    <functioncall functionName="camera_origin"/>
+    <functioncall functionName="camera_pos"/>
+    <functioncall functionName="camera_scale"/>
+    <functioncall functionName="canvas_group_name"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="clear_current"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="current_camera_pos"/>
+    <functioncall functionName="custom_viewport"/>
+    <functioncall functionName="custom_viewport_id"/>
+    <functioncall functionName="draw_line"/>
+    <functioncall functionName="enable"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_update_scroll"/>
+    <functioncall functionName="get_anchor_mode"/>
+    <functioncall functionName="get_camera_position"/>
+    <functioncall functionName="get_camera_screen_center"/>
+    <functioncall functionName="get_camera_transform"/>
+    <functioncall functionName="get_canvas"/>
+    <functioncall functionName="get_custom_viewport"/>
+    <functioncall functionName="get_drag_margin"/>
+    <functioncall functionName="get_follow_smoothing"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_h_offset"/>
+    <functioncall functionName="get_id"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_limit"/>
+    <functioncall functionName="get_offset"/>
+    <functioncall functionName="get_origin"/>
+    <functioncall functionName="get_physics_process_delta_time"/>
+    <functioncall functionName="get_process_delta_time"/>
+    <functioncall functionName="get_process_mode"/>
+    <functioncall functionName="get_rotation"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_v_offset"/>
+    <functioncall functionName="get_viewport"/>
+    <functioncall functionName="get_viewport_rect"/>
+    <functioncall functionName="get_viewport_rid"/>
+    <functioncall functionName="get_visible_rect"/>
+    <functioncall functionName="get_zoom"/>
+    <functioncall functionName="group_name"/>
+    <functioncall functionName="h_offset_changed"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_current"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_follow_smoothing_enabled"/>
+    <functioncall functionName="is_h_drag_enabled"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_limit_drawing_enabled"/>
+    <functioncall functionName="is_limit_smoothing_enabled"/>
+    <functioncall functionName="is_margin_drawing_enabled"/>
+    <functioncall functionName="is_physics_processing_internal"/>
+    <functioncall functionName="is_processing_internal"/>
+    <functioncall functionName="is_rotating"/>
+    <functioncall functionName="is_screen_drawing_enabled"/>
+    <functioncall functionName="is_v_drag_enabled"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="limit_drawing_color"/>
+    <functioncall functionName="limit_drawing_enabled"/>
+    <functioncall functionName="limit_drawing_width"/>
+    <functioncall functionName="limit_smoothing_enabled"/>
+    <functioncall functionName="make_current"/>
+    <functioncall functionName="margin_drawing_color"/>
+    <functioncall functionName="margin_drawing_enabled"/>
+    <functioncall functionName="margin_drawing_width"/>
+    <functioncall functionName="new_camera_pos"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="old_smoothed_camera_pos"/>
+    <functioncall functionName="p_anchor_mode"/>
+    <functioncall functionName="p_current"/>
+    <functioncall functionName="p_drag_margin"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_limit"/>
+    <functioncall functionName="p_margin"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_rotating"/>
+    <functioncall functionName="p_speed"/>
+    <functioncall functionName="p_viewport"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_zoom"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="remove_from_group"/>
+    <functioncall functionName="reset_smoothing"/>
+    <functioncall functionName="ret_camera_pos"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rotated"/>
+    <functioncall functionName="rotating"/>
+    <functioncall functionName="scale_basis"/>
+    <functioncall functionName="screen_drawing_enabled"/>
+    <functioncall functionName="screen_offset"/>
+    <functioncall functionName="screen_rect"/>
+    <functioncall functionName="set_anchor_mode"/>
+    <functioncall functionName="set_canvas_transform"/>
+    <functioncall functionName="set_custom_viewport"/>
+    <functioncall functionName="set_drag_margin"/>
+    <functioncall functionName="set_enable_follow_smoothing"/>
+    <functioncall functionName="set_follow_smoothing"/>
+    <functioncall functionName="set_h_drag_enabled"/>
+    <functioncall functionName="set_h_offset"/>
+    <functioncall functionName="set_limit"/>
+    <functioncall functionName="set_limit_drawing_enabled"/>
+    <functioncall functionName="set_limit_smoothing_enabled"/>
+    <functioncall functionName="set_margin_drawing_enabled"/>
+    <functioncall functionName="set_notify_transform"/>
+    <functioncall functionName="set_offset"/>
+    <functioncall functionName="set_origin"/>
+    <functioncall functionName="set_physics_process_internal"/>
+    <functioncall functionName="set_process_internal"/>
+    <functioncall functionName="set_process_mode"/>
+    <functioncall functionName="set_rotating"/>
+    <functioncall functionName="set_rotation"/>
+    <functioncall functionName="set_screen_drawing_enabled"/>
+    <functioncall functionName="set_v_drag_enabled"/>
+    <functioncall functionName="set_v_offset"/>
+    <functioncall functionName="set_zoom"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="smoothed_camera_pos"/>
+    <functioncall functionName="smoothing"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="v_offset_changed"/>
+    <functioncall functionName="viewport"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="zoom"/>
+  </FileInfo>
+</analyzerinfo>

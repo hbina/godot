@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="57324346">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;sock&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;sock&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="74" column="3"/>
+            <symbol>sock</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;for_hostname&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;for_hostname&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="162" column="3"/>
+            <symbol>for_hostname</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cert&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cert&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="163" column="3"/>
+            <symbol>cert</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~ENetDTLSClient()&apos; at line 174. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~ENetDTLSClient()&apos; at line 174. Dynamic binding is not used.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="223" column="7" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="174" column="3" info="Calling close"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~ENetDTLSServer()&apos; at line 250. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~ENetDTLSServer()&apos; at line 250. Dynamic binding is not used.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="332" column="7" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="250" column="3" info="Calling close"/>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;bind&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;bind&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="84" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="49" column="16" info="Virtual function in base class"/>
+            <symbol>bind</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;sendto&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;sendto&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="91" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="50" column="16" info="Virtual function in base class"/>
+            <symbol>sendto</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;recvfrom&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;recvfrom&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="95" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="51" column="16" info="Virtual function in base class"/>
+            <symbol>recvfrom</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_option&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_option&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="102" column="6" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="52" column="14" info="Virtual function in base class"/>
+            <symbol>set_option</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="144" column="7" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="53" column="15" info="Virtual function in base class"/>
+            <symbol>close</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;bind&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;bind&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="177" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="49" column="16" info="Virtual function in base class"/>
+            <symbol>bind</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;sendto&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;sendto&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="181" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="50" column="16" info="Virtual function in base class"/>
+            <symbol>sendto</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;recvfrom&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;recvfrom&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="196" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="51" column="16" info="Virtual function in base class"/>
+            <symbol>recvfrom</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_option&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_option&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="219" column="6" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="52" column="14" info="Virtual function in base class"/>
+            <symbol>set_option</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="223" column="7" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="53" column="15" info="Virtual function in base class"/>
+            <symbol>close</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;bind&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;bind&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="253" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="49" column="16" info="Virtual function in base class"/>
+            <symbol>bind</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;sendto&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;sendto&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="257" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="50" column="16" info="Virtual function in base class"/>
+            <symbol>sendto</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;recvfrom&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;recvfrom&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="271" column="8" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="51" column="16" info="Virtual function in base class"/>
+            <symbol>recvfrom</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_option&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_option&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="328" column="6" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="52" column="14" info="Virtual function in base class"/>
+            <symbol>set_option</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;close&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="332" column="7" info="Function in derived class"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="53" column="15" info="Virtual function in base class"/>
+            <symbol>close</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="401" column="18"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="407" column="18"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="421" column="26"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="429" column="26"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="438" column="26"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="480" column="26"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="520" column="26"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enet_address_set_host&apos; argument 2 names different: declaration &apos;hostName&apos; definition &apos;name&apos;." verbose="Function &apos;enet_address_set_host&apos; argument 2 names different: declaration &apos;hostName&apos; definition &apos;name&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="367" column="61"/>
+            <location file0="/home/hbina/git/godot/thirdparty/enet/godot.cpp" file="/home/hbina/git/godot/thirdparty/enet/enet/enet.h" line="536" column="73"/>
+            <symbol>enet_address_set_host</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enet_address_get_host_ip&apos; argument 2 names different: declaration &apos;hostName&apos; definition &apos;name&apos;." verbose="Function &apos;enet_address_get_host_ip&apos; argument 2 names different: declaration &apos;hostName&apos; definition &apos;name&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="383" column="64"/>
+            <location file0="/home/hbina/git/godot/thirdparty/enet/godot.cpp" file="/home/hbina/git/godot/thirdparty/enet/enet/enet.h" line="556" column="76"/>
+            <symbol>enet_address_get_host_ip</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;enet_address_get_host&apos; argument 2 names different: declaration &apos;hostName&apos; definition &apos;name&apos;." verbose="Function &apos;enet_address_get_host&apos; argument 2 names different: declaration &apos;hostName&apos; definition &apos;name&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="388" column="61"/>
+            <location file0="/home/hbina/git/godot/thirdparty/enet/godot.cpp" file="/home/hbina/git/godot/thirdparty/enet/enet/enet.h" line="566" column="73"/>
+            <symbol>enet_address_get_host</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:546:15" call-funcname="enet_address_set_ip" call-argnr="1" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="372" col="2" my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:536:14" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:546:15" my-argnr="1" my-argname="address" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="379" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:546:15" my-argnr="2" my-argname="ip" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="380" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:498:21" my-argnr="2" my-argname="address" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="415" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:504:21" my-argnr="2" my-argname="address" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="485" col="90" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:504:21" my-argnr="3" my-argname="buffers" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="485" col="40" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/godot.cpp:160:2" my-argnr="1" my-argname="p_base" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="166" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/godot.cpp:238:2" my-argnr="1" my-argname="p_base" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="241" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:546:15" my-argnr="2" my-argname="ip" file="/home/hbina/git/godot/thirdparty/enet/godot.cpp" line="380" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="bind" lineNumber="84"/>
+    <functiondecl functionName="sendto" lineNumber="91"/>
+    <functiondecl functionName="recvfrom" lineNumber="95"/>
+    <functiondecl functionName="set_option" lineNumber="102"/>
+    <functiondecl functionName="close" lineNumber="144"/>
+    <functiondecl functionName="bind" lineNumber="177"/>
+    <functiondecl functionName="sendto" lineNumber="181"/>
+    <functiondecl functionName="recvfrom" lineNumber="196"/>
+    <functiondecl functionName="set_option" lineNumber="219"/>
+    <functiondecl functionName="close" lineNumber="223"/>
+    <functiondecl functionName="bind" lineNumber="253"/>
+    <functiondecl functionName="sendto" lineNumber="257"/>
+    <functiondecl functionName="recvfrom" lineNumber="271"/>
+    <functiondecl functionName="set_option" lineNumber="328"/>
+    <functiondecl functionName="close" lineNumber="332"/>
+    <functiondecl functionName="enet_initialize" lineNumber="344"/>
+    <functiondecl functionName="enet_deinitialize" lineNumber="349"/>
+    <functiondecl functionName="enet_host_random_seed" lineNumber="352"/>
+    <functiondecl functionName="enet_time_get" lineNumber="357"/>
+    <functiondecl functionName="enet_time_set" lineNumber="362"/>
+    <functiondecl functionName="enet_address_set_host" lineNumber="367"/>
+    <functiondecl functionName="enet_address_set_ip" lineNumber="376"/>
+    <functiondecl functionName="enet_address_get_host_ip" lineNumber="383"/>
+    <functiondecl functionName="enet_address_get_host" lineNumber="388"/>
+    <functiondecl functionName="enet_socket_create" lineNumber="393"/>
+    <functiondecl functionName="enet_host_dtls_server_setup" lineNumber="400"/>
+    <functiondecl functionName="enet_host_dtls_client_setup" lineNumber="406"/>
+    <functiondecl functionName="enet_socket_bind" lineNumber="412"/>
+    <functiondecl functionName="enet_socket_destroy" lineNumber="428"/>
+    <functiondecl functionName="enet_socket_send" lineNumber="434"/>
+    <functiondecl functionName="enet_socket_receive" lineNumber="476"/>
+    <functiondecl functionName="enet_socket_wait" lineNumber="498"/>
+    <functiondecl functionName="enet_socket_get_address" lineNumber="503"/>
+    <functiondecl functionName="enet_socketset_select" lineNumber="508"/>
+    <functiondecl functionName="enet_socket_listen" lineNumber="513"/>
+    <functiondecl functionName="enet_socket_set_option" lineNumber="518"/>
+    <functiondecl functionName="enet_socket_get_option" lineNumber="524"/>
+    <functiondecl functionName="enet_socket_connect" lineNumber="529"/>
+    <functiondecl functionName="enet_socket_accept" lineNumber="534"/>
+    <functiondecl functionName="enet_socket_shutdown" lineNumber="539"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ENET_PEER_RELIABLE_WINDOWS"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_MTU"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_PACKET_COMMANDS"/>
+    <functioncall functionName="ENetDTLSClient"/>
+    <functioncall functionName="ENetDTLSServer"/>
+    <functioncall functionName="ENetSocket"/>
+    <functioncall functionName="ENetUDP"/>
+    <functioncall functionName="ERR_BUSY"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_OUT_OF_MEMORY"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="IP_Address"/>
+    <functioncall functionName="POLL_TYPE_IN"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TYPE_ANY"/>
+    <functioncall functionName="TYPE_UDP"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="address"/>
+    <functioncall functionName="bind"/>
+    <functioncall functionName="bound"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="cert"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="connect_to_host"/>
+    <functioncall functionName="connect_to_peer"/>
+    <functioncall functionName="connected"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dataLength"/>
+    <functioncall functionName="dest"/>
+    <functioncall functionName="disconnect_from_peer"/>
+    <functioncall functionName="enet_address_set_ip"/>
+    <functioncall functionName="enet_uint16"/>
+    <functioncall functionName="enet_uint32"/>
+    <functioncall functionName="enet_uint8"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="for_hostname"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_available_packet_count"/>
+    <functioncall functionName="get_ipv6"/>
+    <functioncall functionName="get_packet"/>
+    <functioncall functionName="get_packet_address"/>
+    <functioncall functionName="get_packet_port"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_status"/>
+    <functioncall functionName="get_ticks_msec"/>
+    <functioncall functionName="get_unix_time"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="host"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="ip"/>
+    <functioncall functionName="ip_type"/>
+    <functioncall functionName="is_connection_available"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="newTimeBase"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="option"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_cert"/>
+    <functioncall functionName="p_for_hostname"/>
+    <functioncall functionName="p_ip"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_len"/>
+    <functioncall functionName="p_option"/>
+    <functioncall functionName="p_port"/>
+    <functioncall functionName="p_verify"/>
+    <functioncall functionName="peer"/>
+    <functioncall functionName="peer_ip"/>
+    <functioncall functionName="peer_port"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="port"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="put_packet"/>
+    <functioncall functionName="r_ip"/>
+    <functioncall functionName="r_port"/>
+    <functioncall functionName="r_read"/>
+    <functioncall functionName="r_sent"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="recvfrom"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resolve_hostname"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rsplit"/>
+    <functioncall functionName="sendto"/>
+    <functioncall functionName="sent"/>
+    <functioncall functionName="set_blocking_enabled"/>
+    <functioncall functionName="set_broadcasting_enabled"/>
+    <functioncall functionName="set_ipv6"/>
+    <functioncall functionName="set_option"/>
+    <functioncall functionName="set_reuse_address_enabled"/>
+    <functioncall functionName="set_tcp_no_delay_enabled"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sock"/>
+    <functioncall functionName="socket"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="take_connection"/>
+    <functioncall functionName="timeBase"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="udp"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="verify"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="wildcard"/>
+  </FileInfo>
+</analyzerinfo>

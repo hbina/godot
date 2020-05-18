@@ -1,0 +1,962 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1209005103">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="462" column="15"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="462" column="24"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;Xp&apos; can be reduced." verbose="The scope of the variable &apos;Xp&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="838" column="20"/>
+            <symbol>Xp</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="226" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="270" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="309" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="327" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="373" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="523" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="564" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="649" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="862" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="959" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1247" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1312" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1349" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1384" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1530" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1761" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1809" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2152" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2214" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2254" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;t&apos; is assigned a value that is never used." verbose="Variable &apos;t&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1489" column="6"/>
+            <symbol>t</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;p[0]&apos; is assigned a value that is never used." verbose="Variable &apos;p[0]&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1550" column="10"/>
+            <symbol>p[0]</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2412" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2525" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2228:5" call-funcname="mbedtls_mpi_fill_random" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2450" col="30" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2419:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2419:12" call-funcname="mpi_miller_rabin" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2540" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2512:5" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2228:5" call-funcname="mbedtls_mpi_fill_random" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2620" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2570:5" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2392:12" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2398" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+        <error id="unusedLabel" severity="style" msg="Label &apos;cleanup&apos; is not used." verbose="Label &apos;cleanup&apos; is not used." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="733" column="1"/>
+            <symbol>cleanup</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:572:5" call-funcname="mbedtls_mpi_write_string" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="715" col="46" call-argexpr="&n" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:572:5" call-funcname="mbedtls_mpi_write_string" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="715" col="46" call-argexpr="n" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2525" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2228:5" call-funcname="mbedtls_mpi_fill_random" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2450" col="30" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2419:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2419:12" call-funcname="mpi_miller_rabin" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2540" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2512:5" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2512:5" call-funcname="mbedtls_mpi_is_prime_ext" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2559" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2547:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2228:5" call-funcname="mbedtls_mpi_fill_random" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2620" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2570:5" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2392:12" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2398" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2525" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2228:5" call-funcname="mbedtls_mpi_fill_random" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2450" col="30" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2419:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2419:12" call-funcname="mpi_miller_rabin" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2540" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2512:5" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2512:5" call-funcname="mbedtls_mpi_is_prime_ext" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2559" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2547:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2228:5" call-funcname="mbedtls_mpi_fill_random" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2620" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2570:5" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:2392:12" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2398" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+        <error id="duplicateCondition" severity="style" msg="The if condition is the same as the previous if condition" verbose="The if condition is the same as the previous if condition" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2827" column="17" info="Second condition"/>
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2824" column="17" info="First condition"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="483" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="499" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" call-funcname="mbedtls_mpi_div_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="45" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="559" col="33" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" call-funcname="mpi_write_hlp" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="643" col="39" call-argexpr="&p" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="850" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="977" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1523" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1671" col="58" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1681" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1559:25" call-funcname="mbedtls_int_div_int" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1711" col="49" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1720" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1725" col="46" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1736" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1757" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="32" call-argexpr="R" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="549" col="50" info="Calling function 'mbedtls_mpi_div_int', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1798" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1801" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1803" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1968" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1971" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2194" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2247" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2290" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:316:5" call-funcname="mbedtls_mpi_lset" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2291" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2337" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1179:5" call-funcname="mbedtls_mpi_cmp_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2339" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1951:5" call-funcname="mbedtls_mpi_exp_mod" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="2783" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" call-funcname="mbedtls_mpi_bitlen" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="436" col="15" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:434:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1817:5" call-funcname="mbedtls_mpi_mod_int" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="548" col="26" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1654:5" call-funcname="mbedtls_mpi_div_mpi" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1785" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1772:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" call-funcname="mpi_montmul" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1945" col="13" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1936:12" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:415:8" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="419" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:442:12" my-argnr="1" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="444" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="1" my-argname="mm" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1887" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1876:13" my-argnr="2" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1878" col="30" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="3" my-argname="N" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1893:12" my-argnr="5" my-argname="T" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1899" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:533:12" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="539" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c:1436:6" my-argnr="3" my-argname="d" file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="1492" col="10" value="0"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/bignum.c" line="41" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mpi_check_small_factors" lineNumber="2392"/>
+    <functiondecl functionName="mpi_miller_rabin" lineNumber="2419"/>
+    <functiondecl functionName="mbedtls_mpi_is_prime_ext" lineNumber="2512"/>
+    <functiondecl functionName="mbedtls_mpi_gen_prime" lineNumber="2570"/>
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mbedtls_mpi_read_file" lineNumber="660"/>
+    <functiondecl functionName="mbedtls_mpi_write_file" lineNumber="699"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mpi_check_small_factors" lineNumber="2392"/>
+    <functiondecl functionName="mpi_miller_rabin" lineNumber="2419"/>
+    <functiondecl functionName="mbedtls_mpi_is_prime_ext" lineNumber="2512"/>
+    <functiondecl functionName="mbedtls_mpi_is_prime" lineNumber="2547"/>
+    <functiondecl functionName="mbedtls_mpi_gen_prime" lineNumber="2570"/>
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mpi_check_small_factors" lineNumber="2392"/>
+    <functiondecl functionName="mpi_miller_rabin" lineNumber="2419"/>
+    <functiondecl functionName="mbedtls_mpi_is_prime_ext" lineNumber="2512"/>
+    <functiondecl functionName="mbedtls_mpi_is_prime" lineNumber="2547"/>
+    <functiondecl functionName="mbedtls_mpi_gen_prime" lineNumber="2570"/>
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mbedtls_mpi_zeroize" lineNumber="81"/>
+    <functiondecl functionName="mbedtls_mpi_init" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_mpi_free" lineNumber="101"/>
+    <functiondecl functionName="mbedtls_mpi_grow" lineNumber="120"/>
+    <functiondecl functionName="mbedtls_mpi_shrink" lineNumber="151"/>
+    <functiondecl functionName="mbedtls_mpi_copy" lineNumber="192"/>
+    <functiondecl functionName="mbedtls_mpi_swap" lineNumber="234"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_assign" lineNumber="250"/>
+    <functiondecl functionName="mbedtls_mpi_safe_cond_swap" lineNumber="280"/>
+    <functiondecl functionName="mbedtls_mpi_lset" lineNumber="316"/>
+    <functiondecl functionName="mbedtls_mpi_get_bit" lineNumber="335"/>
+    <functiondecl functionName="mbedtls_mpi_set_bit" lineNumber="352"/>
+    <functiondecl functionName="mbedtls_mpi_lsb" lineNumber="381"/>
+    <functiondecl functionName="mbedtls_clz" lineNumber="397"/>
+    <functiondecl functionName="mbedtls_mpi_bitlen" lineNumber="415"/>
+    <functiondecl functionName="mbedtls_mpi_size" lineNumber="434"/>
+    <functiondecl functionName="mpi_get_digit" lineNumber="442"/>
+    <functiondecl functionName="mbedtls_mpi_read_string" lineNumber="459"/>
+    <functiondecl functionName="mpi_write_hlp" lineNumber="533"/>
+    <functiondecl functionName="mbedtls_mpi_write_string" lineNumber="572"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host_c" lineNumber="743"/>
+    <functiondecl functionName="mpi_uint_bigendian_to_host" lineNumber="758"/>
+    <functiondecl functionName="mpi_bigendian_to_host" lineNumber="801"/>
+    <functiondecl functionName="mbedtls_mpi_read_binary" lineNumber="833"/>
+    <functiondecl functionName="mbedtls_mpi_write_binary" lineNumber="870"/>
+    <functiondecl functionName="mbedtls_mpi_shift_l" lineNumber="916"/>
+    <functiondecl functionName="mbedtls_mpi_shift_r" lineNumber="967"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_abs" lineNumber="1011"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_mpi" lineNumber="1043"/>
+    <functiondecl functionName="ct_lt_mpi_uint" lineNumber="1082"/>
+    <functiondecl functionName="mbedtls_mpi_lt_mpi_ct" lineNumber="1113"/>
+    <functiondecl functionName="mbedtls_mpi_cmp_int" lineNumber="1179"/>
+    <functiondecl functionName="mbedtls_mpi_add_abs" lineNumber="1196"/>
+    <functiondecl functionName="mpi_sub_hlp" lineNumber="1255"/>
+    <functiondecl functionName="mbedtls_mpi_sub_abs" lineNumber="1276"/>
+    <functiondecl functionName="mbedtls_mpi_add_mpi" lineNumber="1322"/>
+    <functiondecl functionName="mbedtls_mpi_sub_mpi" lineNumber="1357"/>
+    <functiondecl functionName="mbedtls_mpi_add_int" lineNumber="1392"/>
+    <functiondecl functionName="mbedtls_mpi_sub_int" lineNumber="1410"/>
+    <functiondecl functionName="mpi_mul_hlp" lineNumber="1436"/>
+    <functiondecl functionName="mbedtls_mpi_mul_mpi" lineNumber="1500"/>
+    <functiondecl functionName="mbedtls_mpi_mul_int" lineNumber="1540"/>
+    <functiondecl functionName="mbedtls_int_div_int" lineNumber="1559"/>
+    <functiondecl functionName="mbedtls_mpi_div_mpi" lineNumber="1654"/>
+    <functiondecl functionName="mbedtls_mpi_div_int" lineNumber="1772"/>
+    <functiondecl functionName="mbedtls_mpi_mod_mpi" lineNumber="1791"/>
+    <functiondecl functionName="mbedtls_mpi_mod_int" lineNumber="1817"/>
+    <functiondecl functionName="mpi_montg_init" lineNumber="1876"/>
+    <functiondecl functionName="mpi_montmul" lineNumber="1893"/>
+    <functiondecl functionName="mpi_montred" lineNumber="1936"/>
+    <functiondecl functionName="mbedtls_mpi_exp_mod" lineNumber="1951"/>
+    <functiondecl functionName="mbedtls_mpi_gcd" lineNumber="2168"/>
+    <functiondecl functionName="mbedtls_mpi_fill_random" lineNumber="2228"/>
+    <functiondecl functionName="mbedtls_mpi_inv_mod" lineNumber="2261"/>
+    <functiondecl functionName="mbedtls_mpi_self_test" lineNumber="2706"/>
+    <functioncall functionName="A"/>
+    <functioncall functionName="Apos"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="G"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_ALLOC_FAILED"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_BUFFER_TOO_SMALL"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_DIVISION_BY_ZERO"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_FILE_IO_ERROR"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_INVALID_CHARACTER"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_NEGATIVE_VALUE"/>
+    <functioncall functionName="MBEDTLS_ERR_MPI_NOT_ACCEPTABLE"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE_RET"/>
+    <functioncall functionName="MBEDTLS_MPI_CHK"/>
+    <functioncall functionName="MBEDTLS_MPI_RW_BUFFER_SIZE"/>
+    <functioncall functionName="MBEDTLS_MPI_WINDOW_SIZE"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Q"/>
+    <functioncall functionName="R"/>
+    <functioncall functionName="RR"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="T1"/>
+    <functioncall functionName="T2"/>
+    <functioncall functionName="TA"/>
+    <functioncall functionName="TB"/>
+    <functioncall functionName="TG"/>
+    <functioncall functionName="TU"/>
+    <functioncall functionName="TV"/>
+    <functioncall functionName="U"/>
+    <functioncall functionName="U1"/>
+    <functioncall functionName="U2"/>
+    <functioncall functionName="V"/>
+    <functioncall functionName="V1"/>
+    <functioncall functionName="V2"/>
+    <functioncall functionName="W"/>
+    <functioncall functionName="X"/>
+    <functioncall functionName="XX"/>
+    <functioncall functionName="X_is_negative"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="Z"/>
+    <functioncall functionName="_B"/>
+    <functioncall functionName="_RR"/>
+    <functioncall functionName="assign"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buflen"/>
+    <functioncall functionName="bytes_to_copy"/>
+    <functioncall functionName="calloc"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="cond"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="ct_lt_mpi_uint"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d1"/>
+    <functioncall functionName="done"/>
+    <functioncall functionName="f_rng"/>
+    <functioncall functionName="fgets"/>
+    <functioncall functionName="fin"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fout"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="fwrite"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="limbs"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="lz"/>
+    <functioncall functionName="lzt"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="m0"/>
+    <functioncall functionName="mbedtls_calloc"/>
+    <functioncall functionName="mbedtls_clz"/>
+    <functioncall functionName="mbedtls_free"/>
+    <functioncall functionName="mbedtls_int_div_int"/>
+    <functioncall functionName="mbedtls_mpi"/>
+    <functioncall functionName="mbedtls_mpi_add_abs"/>
+    <functioncall functionName="mbedtls_mpi_add_int"/>
+    <functioncall functionName="mbedtls_mpi_add_mpi"/>
+    <functioncall functionName="mbedtls_mpi_bitlen"/>
+    <functioncall functionName="mbedtls_mpi_cmp_abs"/>
+    <functioncall functionName="mbedtls_mpi_cmp_int"/>
+    <functioncall functionName="mbedtls_mpi_cmp_mpi"/>
+    <functioncall functionName="mbedtls_mpi_copy"/>
+    <functioncall functionName="mbedtls_mpi_div_int"/>
+    <functioncall functionName="mbedtls_mpi_div_mpi"/>
+    <functioncall functionName="mbedtls_mpi_exp_mod"/>
+    <functioncall functionName="mbedtls_mpi_fill_random"/>
+    <functioncall functionName="mbedtls_mpi_free"/>
+    <functioncall functionName="mbedtls_mpi_gcd"/>
+    <functioncall functionName="mbedtls_mpi_grow"/>
+    <functioncall functionName="mbedtls_mpi_init"/>
+    <functioncall functionName="mbedtls_mpi_inv_mod"/>
+    <functioncall functionName="mbedtls_mpi_is_prime_ext"/>
+    <functioncall functionName="mbedtls_mpi_lsb"/>
+    <functioncall functionName="mbedtls_mpi_lset"/>
+    <functioncall functionName="mbedtls_mpi_mod_int"/>
+    <functioncall functionName="mbedtls_mpi_mod_mpi"/>
+    <functioncall functionName="mbedtls_mpi_mul_int"/>
+    <functioncall functionName="mbedtls_mpi_mul_mpi"/>
+    <functioncall functionName="mbedtls_mpi_read_string"/>
+    <functioncall functionName="mbedtls_mpi_shift_l"/>
+    <functioncall functionName="mbedtls_mpi_shift_r"/>
+    <functioncall functionName="mbedtls_mpi_sint"/>
+    <functioncall functionName="mbedtls_mpi_sub_abs"/>
+    <functioncall functionName="mbedtls_mpi_sub_int"/>
+    <functioncall functionName="mbedtls_mpi_sub_mpi"/>
+    <functioncall functionName="mbedtls_mpi_uint"/>
+    <functioncall functionName="mbedtls_mpi_write_string"/>
+    <functioncall functionName="mbedtls_mpi_zeroize"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="mbedtls_t_udbl"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mm"/>
+    <functioncall functionName="mpi_bigendian_to_host"/>
+    <functioncall functionName="mpi_check_small_factors"/>
+    <functioncall functionName="mpi_get_digit"/>
+    <functioncall functionName="mpi_miller_rabin"/>
+    <functioncall functionName="mpi_montg_init"/>
+    <functioncall functionName="mpi_montmul"/>
+    <functioncall functionName="mpi_montred"/>
+    <functioncall functionName="mpi_mul_hlp"/>
+    <functioncall functionName="mpi_sub_hlp"/>
+    <functioncall functionName="mpi_uint_bigendian_to_host"/>
+    <functioncall functionName="mpi_uint_bigendian_to_host_c"/>
+    <functioncall functionName="mpi_write_hlp"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nbits"/>
+    <functioncall functionName="nblimbs"/>
+    <functioncall functionName="neg"/>
+    <functioncall functionName="off"/>
+    <functioncall functionName="overhead"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_end"/>
+    <functioncall functionName="p_rng"/>
+    <functioncall functionName="plen"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="q0"/>
+    <functioncall functionName="quotient"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r1"/>
+    <functioncall functionName="radix"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rounds"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="slen"/>
+    <functioncall functionName="stored_bytes"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="t1"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="u0"/>
+    <functioncall functionName="u0_lsw"/>
+    <functioncall functionName="u0_msw"/>
+    <functioncall functionName="u1"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="wbits"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="wsize"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

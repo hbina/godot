@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1201839975">
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;change_dir&apos; is called from constructor &apos;DirAccessUnix()&apos; at line 424. Dynamic binding is not used." verbose="Virtual function &apos;change_dir&apos; is called from constructor &apos;DirAccessUnix()&apos; at line 424. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" file="/home/hbina/git/godot/drivers/unix/dir_access_unix.h" line="68" column="16" info="change_dir is a virtual function"/>
+            <location file="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" line="424" column="2" info="Calling change_dir"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;list_dir_end&apos; is called from destructor &apos;~DirAccessUnix()&apos; at line 429. Dynamic binding is not used." verbose="Virtual function &apos;list_dir_end&apos; is called from destructor &apos;~DirAccessUnix()&apos; at line 429. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" file="/home/hbina/git/godot/drivers/unix/dir_access_unix.h" line="62" column="15" info="list_dir_end is a virtual function"/>
+            <location file="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" line="429" column="2" info="Calling list_dir_end"/>
+        </error>
+        <error id="shadowArgument" severity="style" msg="Local variable &apos;p_dir&apos; shadows outer argument" verbose="Local variable &apos;p_dir&apos; shadows outer argument" cwe="398">
+            <location file="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" line="304" column="2" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" line="300" column="40" info="Shadowed declaration"/>
+            <symbol>p_dir</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp:181:13" call-funcname="_filter_drive" call-argnr="1" file="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" line="210" col="47" call-argexpr="&mnt" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp:181:13" my-argnr="1" my-argname="mnt" file="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" line="183" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp:181:13" my-argnr="1" my-argname="mnt" file="/home/hbina/git/godot/drivers/unix/dir_access_unix.cpp" line="183" col="14" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="create_fs" lineNumber="52"/>
+    <functiondecl functionName="list_dir_begin" lineNumber="57"/>
+    <functiondecl functionName="file_exists" lineNumber="72"/>
+    <functiondecl functionName="dir_exists" lineNumber="91"/>
+    <functiondecl functionName="get_modified_time" lineNumber="106"/>
+    <functiondecl functionName="get_next" lineNumber="125"/>
+    <functiondecl functionName="current_is_dir" lineNumber="162"/>
+    <functiondecl functionName="current_is_hidden" lineNumber="167"/>
+    <functiondecl functionName="list_dir_end" lineNumber="172"/>
+    <functiondecl functionName="_get_drives" lineNumber="200"/>
+    <functiondecl functionName="get_drive_count" lineNumber="254"/>
+    <functiondecl functionName="get_drive" lineNumber="262"/>
+    <functiondecl functionName="drives_are_shortcuts" lineNumber="272"/>
+    <functiondecl functionName="make_dir" lineNumber="277"/>
+    <functiondecl functionName="change_dir" lineNumber="300"/>
+    <functiondecl functionName="get_current_dir" lineNumber="345"/>
+    <functiondecl functionName="rename" lineNumber="359"/>
+    <functiondecl functionName="remove" lineNumber="374"/>
+    <functiondecl functionName="get_space_left" lineNumber="391"/>
+    <functiondecl functionName="get_filesystem_type" lineNumber="407"/>
+    <functiondecl functionName="create_fs" lineNumber="52"/>
+    <functiondecl functionName="list_dir_begin" lineNumber="57"/>
+    <functiondecl functionName="file_exists" lineNumber="72"/>
+    <functiondecl functionName="dir_exists" lineNumber="91"/>
+    <functiondecl functionName="get_modified_time" lineNumber="106"/>
+    <functiondecl functionName="get_next" lineNumber="125"/>
+    <functiondecl functionName="current_is_dir" lineNumber="162"/>
+    <functiondecl functionName="current_is_hidden" lineNumber="167"/>
+    <functiondecl functionName="list_dir_end" lineNumber="172"/>
+    <functiondecl functionName="_filter_drive" lineNumber="181"/>
+    <functiondecl functionName="_get_drives" lineNumber="200"/>
+    <functiondecl functionName="get_drive_count" lineNumber="254"/>
+    <functiondecl functionName="get_drive" lineNumber="262"/>
+    <functiondecl functionName="drives_are_shortcuts" lineNumber="272"/>
+    <functiondecl functionName="make_dir" lineNumber="277"/>
+    <functiondecl functionName="change_dir" lineNumber="300"/>
+    <functiondecl functionName="get_current_dir" lineNumber="345"/>
+    <functiondecl functionName="rename" lineNumber="359"/>
+    <functiondecl functionName="remove" lineNumber="374"/>
+    <functiondecl functionName="get_space_left" lineNumber="391"/>
+    <functiondecl functionName="get_filesystem_type" lineNumber="407"/>
+    <functiondecl functionName="create_fs" lineNumber="52"/>
+    <functiondecl functionName="list_dir_begin" lineNumber="57"/>
+    <functiondecl functionName="file_exists" lineNumber="72"/>
+    <functiondecl functionName="dir_exists" lineNumber="91"/>
+    <functiondecl functionName="get_modified_time" lineNumber="106"/>
+    <functiondecl functionName="get_next" lineNumber="125"/>
+    <functiondecl functionName="current_is_dir" lineNumber="162"/>
+    <functiondecl functionName="current_is_hidden" lineNumber="167"/>
+    <functiondecl functionName="list_dir_end" lineNumber="172"/>
+    <functiondecl functionName="_get_drives" lineNumber="200"/>
+    <functiondecl functionName="get_drive_count" lineNumber="254"/>
+    <functiondecl functionName="get_drive" lineNumber="262"/>
+    <functiondecl functionName="drives_are_shortcuts" lineNumber="272"/>
+    <functiondecl functionName="make_dir" lineNumber="277"/>
+    <functiondecl functionName="change_dir" lineNumber="300"/>
+    <functiondecl functionName="get_current_dir" lineNumber="345"/>
+    <functiondecl functionName="rename" lineNumber="359"/>
+    <functiondecl functionName="remove" lineNumber="374"/>
+    <functiondecl functionName="get_space_left" lineNumber="391"/>
+    <functiondecl functionName="get_filesystem_type" lineNumber="407"/>
+    <functioncall functionName="DirAccessUnix"/>
+    <functioncall functionName="ERR_BUG"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="S_ISDIR"/>
+    <functioncall functionName="S_IXOTH"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="_filter_drive"/>
+    <functioncall functionName="_get_drives"/>
+    <functioncall functionName="_get_root_path"/>
+    <functioncall functionName="_get_root_string"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="bd"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="change_dir"/>
+    <functioncall functionName="chdir"/>
+    <functioncall functionName="closedir"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="current_dir"/>
+    <functioncall functionName="d_name"/>
+    <functioncall functionName="dir_stream"/>
+    <functioncall functionName="endmntent"/>
+    <functioncall functionName="errno"/>
+    <functioncall functionName="f_bsize"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fd"/>
+    <functioncall functionName="fgets"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="fix_path"/>
+    <functioncall functionName="fix_unicode_name"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="fname"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="fpath"/>
+    <functioncall functionName="get_current_dir"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="getcwd"/>
+    <functioncall functionName="getenv"/>
+    <functioncall functionName="getmntent_r"/>
+    <functioncall functionName="home"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_rel_path"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="list"/>
+    <functioncall functionName="list_dir_end"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mkdir"/>
+    <functioncall functionName="mnt"/>
+    <functioncall functionName="mnt_dir"/>
+    <functioncall functionName="mnt_fsname"/>
+    <functioncall functionName="mtab"/>
+    <functioncall functionName="next_dir"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="opendir"/>
+    <functioncall functionName="p_dir"/>
+    <functioncall functionName="p_drive"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_new_path"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="percent_decode"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="readdir"/>
+    <functioncall functionName="real_current_dir_name"/>
+    <functioncall functionName="rename"/>
+    <functioncall functionName="replace_first"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rmdir"/>
+    <functioncall functionName="setmntent"/>
+    <functioncall functionName="simplify_path"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="snprintf"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="split_spaces"/>
+    <functioncall functionName="st_mode"/>
+    <functioncall functionName="st_mtime"/>
+    <functioncall functionName="stat"/>
+    <functioncall functionName="statvfs"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="strings"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="strncmp"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="try_dir"/>
+    <functioncall functionName="unlink"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="vfs"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="worked"/>
+  </FileInfo>
+</analyzerinfo>

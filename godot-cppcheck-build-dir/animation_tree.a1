@@ -1,0 +1,579 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="320895549">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AnimationTree::state&apos; is not initialized in the constructor." verbose="Member variable &apos;AnimationTree::state&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="1574" column="16"/>
+            <symbol>AnimationTree::state</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;TrackCacheTransform::rot_blend_accum&apos; is not initialized in the constructor." verbose="Member variable &apos;TrackCacheTransform::rot_blend_accum&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/animation/animation_tree.cpp" file="/home/hbina/git/godot/scene/animation/animation_tree.h" line="203" column="3"/>
+            <symbol>TrackCacheTransform::rot_blend_accum</symbol>
+        </error>
+        <error id="duplInheritedMember" severity="warning" msg="The class &apos;AnimationNodeTransition&apos; defines member variable with name &apos;inputs&apos; also defined in its parent class &apos;AnimationNode&apos;." verbose="The class &apos;AnimationNodeTransition&apos; defines member variable with name &apos;inputs&apos; also defined in its parent class &apos;AnimationNode&apos;." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/animation/animation_tree.cpp" file="/home/hbina/git/godot/scene/animation/animation_blend_tree.h" line="277" column="12" info="Derived variable &apos;AnimationNodeTransition::inputs&apos;"/>
+            <location file0="/home/hbina/git/godot/scene/animation/animation_tree.cpp" file="/home/hbina/git/godot/scene/animation/animation_tree.h" line="59" column="16" info="Parent variable &apos;AnimationNode::inputs&apos;"/>
+            <symbol>AnimationNodeTransition</symbol>
+            <symbol>inputs</symbol>
+            <symbol>AnimationNode</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!blend_tree&apos; is redundant or there is possible null pointer dereference: blend_tree." verbose="Either the condition &apos;!blend_tree&apos; is redundant or there is possible null pointer dereference: blend_tree." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="157" column="7" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="152" column="78" info="Assignment &apos;blend_tree=Object::cast_to&lt;AnimationNodeBlendTree&gt;(parent)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="153" column="18" info="Assuming that condition &apos;!blend_tree&apos; is not redundant"/>
+            <symbol>blend_tree</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:104:8" call-funcname="_blend_node" call-argnr="3" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="167" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:104:8" call-funcname="_blend_node" call-argnr="10" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="167" col="25" call-argexpr="&activity" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="523" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="547" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="756" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="763" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="794" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/animation/animation_tree.h:272:7" my-argnr="1" my-argname="player" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="545" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:104:8" call-funcname="_blend_node" call-argnr="3" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="167" col="25" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:104:8" call-funcname="_blend_node" call-argnr="10" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="167" col="25" call-argexpr="&activity" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="523" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="547" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="756" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="763" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/animation/animation_tree.h:315:7" call-funcname="set_active" call-argnr="1" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="794" col="13" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/animation/animation_tree.h:272:7" my-argnr="1" my-argname="player" file="/home/hbina/git/godot/scene/animation/animation_tree.cpp" line="545" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_parameter_list" lineNumber="39"/>
+    <functiondecl functionName="get_parameter_default_value" lineNumber="50"/>
+    <functiondecl functionName="set_parameter" lineNumber="57"/>
+    <functiondecl functionName="get_parameter" lineNumber="66"/>
+    <functiondecl functionName="get_child_nodes" lineNumber="75"/>
+    <functiondecl functionName="blend_animation" lineNumber="90"/>
+    <functiondecl functionName="_pre_process" lineNumber="122"/>
+    <functiondecl functionName="make_invalid" lineNumber="139"/>
+    <functiondecl functionName="blend_input" lineNumber="148"/>
+    <functiondecl functionName="blend_node" lineNumber="178"/>
+    <functiondecl functionName="_blend_node" lineNumber="183"/>
+    <functiondecl functionName="get_input_count" lineNumber="299"/>
+    <functiondecl functionName="get_input_name" lineNumber="303"/>
+    <functiondecl functionName="get_caption" lineNumber="308"/>
+    <functiondecl functionName="add_input" lineNumber="317"/>
+    <functiondecl functionName="set_input_name" lineNumber="327"/>
+    <functiondecl functionName="remove_input" lineNumber="334"/>
+    <functiondecl functionName="process" lineNumber="340"/>
+    <functiondecl functionName="set_filter_path" lineNumber="349"/>
+    <functiondecl functionName="set_filter_enabled" lineNumber="357"/>
+    <functiondecl functionName="is_filter_enabled" lineNumber="361"/>
+    <functiondecl functionName="is_path_filtered" lineNumber="365"/>
+    <functiondecl functionName="has_filter" lineNumber="369"/>
+    <functiondecl functionName="_get_filters" lineNumber="373"/>
+    <functiondecl functionName="_set_filters" lineNumber="385"/>
+    <functiondecl functionName="_validate_property" lineNumber="392"/>
+    <functiondecl functionName="get_child_by_name" lineNumber="398"/>
+    <functiondecl functionName="_bind_methods" lineNumber="405"/>
+    <functiondecl functionName="set_tree_root" lineNumber="463"/>
+    <functiondecl functionName="get_tree_root" lineNumber="480"/>
+    <functiondecl functionName="set_active" lineNumber="484"/>
+    <functiondecl functionName="is_active" lineNumber="511"/>
+    <functiondecl functionName="set_process_mode" lineNumber="516"/>
+    <functiondecl functionName="get_process_mode" lineNumber="533"/>
+    <functiondecl functionName="_node_removed" lineNumber="537"/>
+    <functiondecl functionName="_update_caches" lineNumber="541"/>
+    <functiondecl functionName="_clear_caches" lineNumber="734"/>
+    <functiondecl functionName="_process_graph" lineNumber="746"/>
+    <functiondecl functionName="advance" lineNumber="1282"/>
+    <functiondecl functionName="_notification" lineNumber="1287"/>
+    <functiondecl functionName="set_animation_player" lineNumber="1317"/>
+    <functiondecl functionName="get_animation_player" lineNumber="1322"/>
+    <functiondecl functionName="is_state_invalid" lineNumber="1326"/>
+    <functiondecl functionName="get_invalid_state_reason" lineNumber="1330"/>
+    <functiondecl functionName="get_last_process_pass" lineNumber="1335"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="1339"/>
+    <functiondecl functionName="set_root_motion_track" lineNumber="1383"/>
+    <functiondecl functionName="get_root_motion_track" lineNumber="1387"/>
+    <functiondecl functionName="get_root_motion_transform" lineNumber="1391"/>
+    <functiondecl functionName="_tree_changed" lineNumber="1395"/>
+    <functiondecl functionName="_update_properties_for_node" lineNumber="1404"/>
+    <functiondecl functionName="_update_properties" lineNumber="1448"/>
+    <functiondecl functionName="_set" lineNumber="1467"/>
+    <functiondecl functionName="_get" lineNumber="1483"/>
+    <functiondecl functionName="_get_property_list" lineNumber="1495"/>
+    <functiondecl functionName="rename_parameter" lineNumber="1505"/>
+    <functiondecl functionName="get_connection_activity" lineNumber="1520"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1538"/>
+    <functiondecl functionName="get_parameter_list" lineNumber="39"/>
+    <functiondecl functionName="get_parameter_default_value" lineNumber="50"/>
+    <functiondecl functionName="set_parameter" lineNumber="57"/>
+    <functiondecl functionName="get_parameter" lineNumber="66"/>
+    <functiondecl functionName="get_child_nodes" lineNumber="75"/>
+    <functiondecl functionName="blend_animation" lineNumber="90"/>
+    <functiondecl functionName="_pre_process" lineNumber="122"/>
+    <functiondecl functionName="make_invalid" lineNumber="139"/>
+    <functiondecl functionName="blend_input" lineNumber="148"/>
+    <functiondecl functionName="blend_node" lineNumber="178"/>
+    <functiondecl functionName="_blend_node" lineNumber="183"/>
+    <functiondecl functionName="get_input_count" lineNumber="299"/>
+    <functiondecl functionName="get_input_name" lineNumber="303"/>
+    <functiondecl functionName="get_caption" lineNumber="308"/>
+    <functiondecl functionName="add_input" lineNumber="317"/>
+    <functiondecl functionName="set_input_name" lineNumber="327"/>
+    <functiondecl functionName="remove_input" lineNumber="334"/>
+    <functiondecl functionName="process" lineNumber="340"/>
+    <functiondecl functionName="set_filter_path" lineNumber="349"/>
+    <functiondecl functionName="set_filter_enabled" lineNumber="357"/>
+    <functiondecl functionName="is_filter_enabled" lineNumber="361"/>
+    <functiondecl functionName="is_path_filtered" lineNumber="365"/>
+    <functiondecl functionName="has_filter" lineNumber="369"/>
+    <functiondecl functionName="_get_filters" lineNumber="373"/>
+    <functiondecl functionName="_set_filters" lineNumber="385"/>
+    <functiondecl functionName="_validate_property" lineNumber="392"/>
+    <functiondecl functionName="get_child_by_name" lineNumber="398"/>
+    <functiondecl functionName="_bind_methods" lineNumber="405"/>
+    <functiondecl functionName="set_tree_root" lineNumber="463"/>
+    <functiondecl functionName="get_tree_root" lineNumber="480"/>
+    <functiondecl functionName="set_active" lineNumber="484"/>
+    <functiondecl functionName="is_active" lineNumber="511"/>
+    <functiondecl functionName="set_process_mode" lineNumber="516"/>
+    <functiondecl functionName="get_process_mode" lineNumber="533"/>
+    <functiondecl functionName="_node_removed" lineNumber="537"/>
+    <functiondecl functionName="_update_caches" lineNumber="541"/>
+    <functiondecl functionName="_clear_caches" lineNumber="734"/>
+    <functiondecl functionName="_process_graph" lineNumber="746"/>
+    <functiondecl functionName="advance" lineNumber="1282"/>
+    <functiondecl functionName="_notification" lineNumber="1287"/>
+    <functiondecl functionName="set_animation_player" lineNumber="1317"/>
+    <functiondecl functionName="get_animation_player" lineNumber="1322"/>
+    <functiondecl functionName="is_state_invalid" lineNumber="1326"/>
+    <functiondecl functionName="get_invalid_state_reason" lineNumber="1330"/>
+    <functiondecl functionName="get_last_process_pass" lineNumber="1335"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="1339"/>
+    <functiondecl functionName="set_root_motion_track" lineNumber="1383"/>
+    <functiondecl functionName="get_root_motion_track" lineNumber="1387"/>
+    <functiondecl functionName="get_root_motion_transform" lineNumber="1391"/>
+    <functiondecl functionName="_tree_changed" lineNumber="1395"/>
+    <functiondecl functionName="_update_properties_for_node" lineNumber="1404"/>
+    <functiondecl functionName="_update_properties" lineNumber="1448"/>
+    <functiondecl functionName="_set" lineNumber="1467"/>
+    <functiondecl functionName="_get" lineNumber="1483"/>
+    <functiondecl functionName="_get_property_list" lineNumber="1495"/>
+    <functiondecl functionName="rename_parameter" lineNumber="1505"/>
+    <functiondecl functionName="get_connection_activity" lineNumber="1520"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1538"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ANIMATION_METHOD_CALL_DEFERRED"/>
+    <functioncall functionName="ANIMATION_METHOD_CALL_IMMEDIATE"/>
+    <functioncall functionName="ANIMATION_PROCESS_IDLE"/>
+    <functioncall functionName="ANIMATION_PROCESS_MANUAL"/>
+    <functioncall functionName="ANIMATION_PROCESS_PHYSICS"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="AnimationData"/>
+    <functioncall functionName="AnimationMethodCallMode"/>
+    <functioncall functionName="AnimationNode"/>
+    <functioncall functionName="AnimationNodeAdd2"/>
+    <functioncall functionName="AnimationNodeAdd3"/>
+    <functioncall functionName="AnimationNodeAnimation"/>
+    <functioncall functionName="AnimationNodeBlend2"/>
+    <functioncall functionName="AnimationNodeBlend3"/>
+    <functioncall functionName="AnimationNodeBlendTree"/>
+    <functioncall functionName="AnimationNodeOneShot"/>
+    <functioncall functionName="AnimationNodeOutput"/>
+    <functioncall functionName="AnimationNodeTimeScale"/>
+    <functioncall functionName="AnimationNodeTimeSeek"/>
+    <functioncall functionName="AnimationNodeTransition"/>
+    <functioncall functionName="AnimationPlayer"/>
+    <functioncall functionName="AnimationProcessMode"/>
+    <functioncall functionName="AnimationRootNode"/>
+    <functioncall functionName="AnimationTree"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BIND_VMETHOD"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="BezierAnim"/>
+    <functioncall functionName="Blend"/>
+    <functioncall functionName="CONNECTION_ERROR_CONNECTION_EXISTS"/>
+    <functioncall functionName="CONNECTION_ERROR_NO_INPUT"/>
+    <functioncall functionName="CONNECTION_ERROR_NO_INPUT_INDEX"/>
+    <functioncall functionName="CONNECTION_ERROR_NO_OUTPUT"/>
+    <functioncall functionName="CONNECTION_ERROR_SAME_NODE"/>
+    <functioncall functionName="CONNECTION_OK"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="DICTIONARY"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FILTER_BLEND"/>
+    <functioncall functionName="FILTER_IGNORE"/>
+    <functioncall functionName="FILTER_PASS"/>
+    <functioncall functionName="FILTER_STOP"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="HashMap"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="InputData"/>
+    <functioncall functionName="K"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MAX_INPUTS"/>
+    <functioncall functionName="MIX_MODE_ADD"/>
+    <functioncall functionName="MIX_MODE_BLEND"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="NODE_CACHE_UPDATE_MAX"/>
+    <functioncall functionName="NODE_PATH"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="OBJ_CATEGORY"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_NODE_PATH_VALID_TYPES"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PROPERTY_USAGE_NIL_IS_VARIANT"/>
+    <functioncall functionName="PROPERTY_USAGE_NOEDITOR"/>
+    <functioncall functionName="PlaybackData"/>
+    <functioncall functionName="PropertyAnim"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Quat"/>
+    <functioncall functionName="RTR"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SP_NODE2D_POS"/>
+    <functioncall functionName="SP_NODE2D_ROT"/>
+    <functioncall functionName="SP_NODE2D_SCALE"/>
+    <functioncall functionName="SP_NONE"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TYPE_ANIMATION"/>
+    <functioncall functionName="TYPE_AUDIO"/>
+    <functioncall functionName="TYPE_BEZIER"/>
+    <functioncall functionName="TYPE_METHOD"/>
+    <functioncall functionName="TYPE_TRANSFORM"/>
+    <functioncall functionName="TYPE_VALUE"/>
+    <functioncall functionName="TrackCache"/>
+    <functioncall functionName="TrackCacheAnimation"/>
+    <functioncall functionName="TrackCacheAudio"/>
+    <functioncall functionName="TrackCacheBezier"/>
+    <functioncall functionName="TrackCacheMethod"/>
+    <functioncall functionName="TrackCacheTransform"/>
+    <functioncall functionName="TrackCacheValue"/>
+    <functioncall functionName="TrackNodeCache"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_blend_node"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_clear_caches"/>
+    <functioncall functionName="_get_filters"/>
+    <functioncall functionName="_node_removed"/>
+    <functioncall functionName="_pre_process"/>
+    <functioncall functionName="_process_graph"/>
+    <functioncall functionName="_set_filters"/>
+    <functioncall functionName="_tree_changed"/>
+    <functioncall functionName="_update_caches"/>
+    <functioncall functionName="_update_properties"/>
+    <functioncall functionName="_update_properties_for_node"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="accum_pass"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="activity"/>
+    <functioncall functionName="add_input"/>
+    <functioncall functionName="advance"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="anim_name"/>
+    <functioncall functionName="anim_state"/>
+    <functioncall functionName="animation"/>
+    <functioncall functionName="animation_player"/>
+    <functioncall functionName="animation_playing"/>
+    <functioncall functionName="animation_track_get_key_animation"/>
+    <functioncall functionName="animations"/>
+    <functioncall functionName="any_valid"/>
+    <functioncall functionName="at_anim_pos"/>
+    <functioncall functionName="audio_len"/>
+    <functioncall functionName="audio_playing"/>
+    <functioncall functionName="audio_start"/>
+    <functioncall functionName="audio_track_get_key_end_offset"/>
+    <functioncall functionName="audio_track_get_key_start_offset"/>
+    <functioncall functionName="audio_track_get_key_stream"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="base_path"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bezier"/>
+    <functioncall functionName="bezier_accum"/>
+    <functioncall functionName="bezier_track_interpolate"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="blend"/>
+    <functioncall functionName="blend_animation"/>
+    <functioncall functionName="blend_count"/>
+    <functioncall functionName="blend_idx"/>
+    <functioncall functionName="blend_input"/>
+    <functioncall functionName="blend_node"/>
+    <functioncall functionName="blend_tree"/>
+    <functioncall functionName="blends"/>
+    <functioncall functionName="bone_idx"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="btree"/>
+    <functioncall functionName="cache_valid"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="can_call"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="children"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="current_animation_player"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="db"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delta"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end_ofs"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_bone"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fposmod"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="from_dict"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_animation"/>
+    <functioncall functionName="get_animation_list"/>
+    <functioncall functionName="get_animation_player"/>
+    <functioncall functionName="get_bone_rest"/>
+    <functioncall functionName="get_child_nodes"/>
+    <functioncall functionName="get_configuration_warning"/>
+    <functioncall functionName="get_input_count"/>
+    <functioncall functionName="get_input_name"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_key_list"/>
+    <functioncall functionName="get_length"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_node_and_resource"/>
+    <functioncall functionName="get_node_connection_array"/>
+    <functioncall functionName="get_node_name"/>
+    <functioncall functionName="get_parameter"/>
+    <functioncall functionName="get_parameter_default_value"/>
+    <functioncall functionName="get_parameter_list"/>
+    <functioncall functionName="get_physics_process_delta_time"/>
+    <functioncall functionName="get_process_delta_time"/>
+    <functioncall functionName="get_process_mode"/>
+    <functioncall functionName="get_root"/>
+    <functioncall functionName="get_root_motion_track"/>
+    <functioncall functionName="get_root_motion_transform"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_subname"/>
+    <functioncall functionName="get_subname_count"/>
+    <functioncall functionName="get_track_count"/>
+    <functioncall functionName="get_tree_root"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_animation"/>
+    <functioncall functionName="has_filter"/>
+    <functioncall functionName="has_loop"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="has_node"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="interpolate"/>
+    <functioncall functionName="invalid_reasons"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="is_active"/>
+    <functioncall functionName="is_connected"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_filter_enabled"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_path_filtered"/>
+    <functioncall functionName="is_playing"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="last_animation_player"/>
+    <functioncall functionName="last_pass"/>
+    <functioncall functionName="leftover_path"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="linear2db"/>
+    <functioncall functionName="loc"/>
+    <functioncall functionName="make_invalid"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="method_track_get_key_indices"/>
+    <functioncall functionName="method_track_get_name"/>
+    <functioncall functionName="method_track_get_params"/>
+    <functioncall functionName="mi"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_name"/>
+    <functioncall functionName="new_parent"/>
+    <functioncall functionName="new_path"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="node_2d"/>
+    <functioncall functionName="node_name"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="np"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="object"/>
+    <functioncall functionName="object_id"/>
+    <functioncall functionName="old_player"/>
+    <functioncall functionName="operatorString().utf8().get_data"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="p_active"/>
+    <functioncall functionName="p_animation"/>
+    <functioncall functionName="p_base"/>
+    <functioncall functionName="p_base_path"/>
+    <functioncall functionName="p_blend"/>
+    <functioncall functionName="p_connection"/>
+    <functioncall functionName="p_connections"/>
+    <functioncall functionName="p_delta"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_filter"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_input"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_new_base"/>
+    <functioncall functionName="p_new_parent"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_optimize"/>
+    <functioncall functionName="p_parameter"/>
+    <functioncall functionName="p_parent"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_player"/>
+    <functioncall functionName="p_reason"/>
+    <functioncall functionName="p_root"/>
+    <functioncall functionName="p_seek"/>
+    <functioncall functionName="p_seeked"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_sub_path"/>
+    <functioncall functionName="p_subpath"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_track"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="parameters_base_path"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pinfo"/>
+    <functioncall functionName="play"/>
+    <functioncall functionName="player"/>
+    <functioncall functionName="player2"/>
+    <functioncall functionName="playing"/>
+    <functioncall functionName="plist"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="prev_time"/>
+    <functioncall functionName="process"/>
+    <functioncall functionName="process_pass"/>
+    <functioncall functionName="properties_dirty"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_max"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_input"/>
+    <functioncall functionName="rename_parameter"/>
+    <functioncall functionName="replace_first"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resource"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="root_motion"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="rot_total"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="seeked"/>
+    <functioncall functionName="set_active"/>
+    <functioncall functionName="set_animation_player"/>
+    <functioncall functionName="set_assigned_animation"/>
+    <functioncall functionName="set_bone_pose"/>
+    <functioncall functionName="set_filter_enabled"/>
+    <functioncall functionName="set_filter_path"/>
+    <functioncall functionName="set_indexed"/>
+    <functioncall functionName="set_parameter"/>
+    <functioncall functionName="set_physics_process_internal"/>
+    <functioncall functionName="set_process_internal"/>
+    <functioncall functionName="set_process_mode"/>
+    <functioncall functionName="set_quat_scale"/>
+    <functioncall functionName="set_root_motion_track"/>
+    <functioncall functionName="set_transform"/>
+    <functioncall functionName="set_tree_root"/>
+    <functioncall functionName="setup_pass"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sk"/>
+    <functioncall functionName="skeleton"/>
+    <functioncall functionName="slerp"/>
+    <functioncall functionName="sname"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="spatial"/>
+    <functioncall functionName="special"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_ofs"/>
+    <functioncall functionName="started"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="subpath"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_play"/>
+    <functioncall functionName="track"/>
+    <functioncall functionName="track_animation"/>
+    <functioncall functionName="track_audio"/>
+    <functioncall functionName="track_bezier"/>
+    <functioncall functionName="track_blends"/>
+    <functioncall functionName="track_count"/>
+    <functioncall functionName="track_find_key"/>
+    <functioncall functionName="track_get_key_indices_in_range"/>
+    <functioncall functionName="track_get_key_time"/>
+    <functioncall functionName="track_get_key_value"/>
+    <functioncall functionName="track_get_path"/>
+    <functioncall functionName="track_get_type"/>
+    <functioncall functionName="track_method"/>
+    <functioncall functionName="track_type"/>
+    <functioncall functionName="track_value"/>
+    <functioncall functionName="track_xform"/>
+    <functioncall functionName="transform_track_interpolate"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="update_configuration_warning"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="value_track_get_key_indices"/>
+    <functioncall functionName="value_track_get_update_mode"/>
+    <functioncall functionName="value_track_interpolate"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="was_active"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="xform"/>
+  </FileInfo>
+</analyzerinfo>

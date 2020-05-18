@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2502192756">
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc:48:5" call-funcname="set_ifname" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc" line="125" col="7" my-id="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc:123:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc:74:5" call-funcname="set_addresses" call-argnr="3" file="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc" line="131" col="7" my-id="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc:123:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc:74:5" my-argnr="2" my-argname="msg" file="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc" line="76" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc:123:5" my-argnr="2" my-argname="msg" file="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc" line="125" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc:123:5" my-argnr="2" my-argname="msg" file="/home/hbina/git/godot/thirdparty/misc/ifaddrs-android.cc" line="125" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_ifname" lineNumber="48"/>
+    <functiondecl functionName="set_flags" lineNumber="58"/>
+    <functiondecl functionName="set_addresses" lineNumber="74"/>
+    <functiondecl functionName="make_prefixes" lineNumber="92"/>
+    <functiondecl functionName="populate_ifaddrs" lineNumber="123"/>
+    <functiondecl functionName="getifaddrs" lineNumber="139"/>
+    <functiondecl functionName="freeifaddrs" lineNumber="210"/>
+    <functioncall functionName="AF_INET"/>
+    <functioncall functionName="AF_INET6"/>
+    <functioncall functionName="IFA_PAYLOAD"/>
+    <functioncall functionName="IFA_RTA"/>
+    <functioncall functionName="IFNAMSIZ"/>
+    <functioncall functionName="NETLINK_ROUTE"/>
+    <functioncall functionName="NLMSG_DATA"/>
+    <functioncall functionName="NLMSG_LENGTH"/>
+    <functioncall functionName="NLMSG_NEXT"/>
+    <functioncall functionName="NLMSG_OK"/>
+    <functioncall functionName="NLM_F_REQUEST"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="PF_NETLINK"/>
+    <functioncall functionName="RTA_DATA"/>
+    <functioncall functionName="RTA_NEXT"/>
+    <functioncall functionName="RTA_OK"/>
+    <functioncall functionName="RTA_PAYLOAD"/>
+    <functioncall functionName="RTM_GETADDR"/>
+    <functioncall functionName="SIOCGIFFLAGS"/>
+    <functioncall functionName="SOCK_DGRAM"/>
+    <functioncall functionName="SOCK_RAW"/>
+    <functioncall functionName="address_msg"/>
+    <functioncall functionName="addrs"/>
+    <functioncall functionName="amount_read"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="bytes"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="cursor"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="fd"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="freeifaddrs"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="header_size"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="if_indextoname"/>
+    <functioncall functionName="ifa_addr"/>
+    <functioncall functionName="ifa_family"/>
+    <functioncall functionName="ifa_index"/>
+    <functioncall functionName="ifa_name"/>
+    <functioncall functionName="ifa_netmask"/>
+    <functioncall functionName="ifa_next"/>
+    <functioncall functionName="ifa_prefixlen"/>
+    <functioncall functionName="ifaddr"/>
+    <functioncall functionName="ifaddr_request"/>
+    <functioncall functionName="ifaddrmsg"/>
+    <functioncall functionName="ifaddrs"/>
+    <functioncall functionName="ifr"/>
+    <functioncall functionName="ifr_flags"/>
+    <functioncall functionName="ifr_name"/>
+    <functioncall functionName="in6_addr"/>
+    <functioncall functionName="in_addr"/>
+    <functioncall functionName="interface"/>
+    <functioncall functionName="ioctl"/>
+    <functioncall functionName="kMaxReadSize"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="make_prefixes"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="newest"/>
+    <functioncall functionName="nlmsg_len"/>
+    <functioncall functionName="nlmsg_type"/>
+    <functioncall functionName="payload_len"/>
+    <functioncall functionName="populate_ifaddrs"/>
+    <functioncall functionName="prefixlen"/>
+    <functioncall functionName="recv"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="remainder"/>
+    <functioncall functionName="rta"/>
+    <functioncall functionName="sa"/>
+    <functioncall functionName="send"/>
+    <functioncall functionName="set_addresses"/>
+    <functioncall functionName="set_flags"/>
+    <functioncall functionName="set_ifname"/>
+    <functioncall functionName="sin6_addr"/>
+    <functioncall functionName="sin_addr"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="socket"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="strncpy"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

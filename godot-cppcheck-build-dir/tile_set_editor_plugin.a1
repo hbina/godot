@@ -1,0 +1,763 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="895168172">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;TileSetEditor&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;TileSetEditor&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h" line="191" column="2"/>
+            <symbol>TileSetEditor</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;TilesetEditorContext&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;TilesetEditorContext&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h" line="277" column="2"/>
+            <symbol>TilesetEditorContext</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;TileSetEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;TileSetEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h" line="297" column="2"/>
+            <symbol>TileSetEditorPlugin</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;erasing&apos; can be reduced." verbose="The scope of the variable &apos;erasing&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="1210" column="14"/>
+            <symbol>erasing</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;alternative&apos; can be reduced." verbose="The scope of the variable &apos;alternative&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="1211" column="14"/>
+            <symbol>alternative</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;get_grabbed_point&apos; argument 2 names different: declaration &apos;grab_threshold&apos; definition &apos;p_grab_threshold&apos;." verbose="Function &apos;get_grabbed_point&apos; argument 2 names different: declaration &apos;grab_threshold&apos; definition &apos;p_grab_threshold&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="1179" column="73"/>
+            <location file0="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h" line="247" column="59"/>
+            <symbol>get_grabbed_point</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:199:7" call-funcname="_on_edit_mode_changed" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="892" col="24" call-argexpr="EDITMODE_REGION" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:200:7" call-funcname="_on_workspace_mode_changed" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="1352" col="33" call-argexpr="WORKSPACE_EDIT" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:199:7" call-funcname="_on_edit_mode_changed" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="3190" col="24" call-argexpr="EDITMODE_REGION" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:173:14" call-funcname="_import_node" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="167" col="2" my-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:174:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:174:14" call-funcname="_import_scene" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="172" col="2" my-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:175:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:174:14" call-funcname="_import_scene" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="177" col="2" my-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:189:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:179:7" call-funcname="can_drop_data_fw" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="230" col="7" my-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:180:7" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:173:14" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="52" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.h:292:15" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/editor/plugins/tile_set_editor_plugin.cpp" line="3529" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="edit" lineNumber="40"/>
+    <functiondecl functionName="_import_node" lineNumber="50"/>
+    <functiondecl functionName="_import_scene" lineNumber="162"/>
+    <functiondecl functionName="_undo_redo_import_scene" lineNumber="170"/>
+    <functiondecl functionName="update_library_file" lineNumber="175"/>
+    <functiondecl functionName="get_drag_data_fw" lineNumber="181"/>
+    <functiondecl functionName="can_drop_data_fw" lineNumber="186"/>
+    <functiondecl functionName="drop_data_fw" lineNumber="228"/>
+    <functiondecl functionName="_bind_methods" lineNumber="261"/>
+    <functiondecl functionName="_notification" lineNumber="283"/>
+    <functiondecl functionName="_on_tileset_toolbar_button_pressed" lineNumber="650"/>
+    <functiondecl functionName="_on_tileset_toolbar_confirm" lineNumber="678"/>
+    <functiondecl functionName="_on_texture_list_selected" lineNumber="721"/>
+    <functiondecl functionName="_on_textures_added" lineNumber="738"/>
+    <functiondecl functionName="_on_edit_mode_changed" lineNumber="764"/>
+    <functiondecl functionName="_on_workspace_mode_changed" lineNumber="882"/>
+    <functiondecl functionName="_on_workspace_draw" lineNumber="897"/>
+    <functiondecl functionName="_on_workspace_process" lineNumber="1115"/>
+    <functiondecl functionName="_on_workspace_overlay_draw" lineNumber="1128"/>
+    <functiondecl functionName="get_grabbed_point" lineNumber="1179"/>
+    <functiondecl functionName="is_within_grabbing_distance_of_first_point" lineNumber="1196"/>
+    <functiondecl functionName="_on_workspace_input" lineNumber="1204"/>
+    <functiondecl functionName="_on_tool_clicked" lineNumber="1745"/>
+    <functiondecl functionName="_on_priority_changed" lineNumber="1911"/>
+    <functiondecl functionName="_on_z_index_changed" lineNumber="1923"/>
+    <functiondecl functionName="_on_grid_snap_toggled" lineNumber="1935"/>
+    <functiondecl functionName="_get_collision_shape_points" lineNumber="1940"/>
+    <functiondecl functionName="_get_edited_shape_points" lineNumber="1956"/>
+    <functiondecl functionName="_set_edited_shape_points" lineNumber="1960"/>
+    <functiondecl functionName="_update_tile_data" lineNumber="1979"/>
+    <functiondecl functionName="_update_toggle_shape_button" lineNumber="2014"/>
+    <functiondecl functionName="_select_next_tile" lineNumber="2035"/>
+    <functiondecl functionName="_select_previous_tile" lineNumber="2071"/>
+    <functiondecl functionName="_get_tiles_in_current_texture" lineNumber="2109"/>
+    <functiondecl functionName="_sort_tiles" lineNumber="2127"/>
+    <functiondecl functionName="_select_next_subtile" lineNumber="2143"/>
+    <functiondecl functionName="_select_previous_subtile" lineNumber="2169"/>
+    <functiondecl functionName="_select_next_shape" lineNumber="2195"/>
+    <functiondecl functionName="_select_previous_shape" lineNumber="2240"/>
+    <functiondecl functionName="_set_edited_collision_shape" lineNumber="2302"/>
+    <functiondecl functionName="_set_snap_step" lineNumber="2307"/>
+    <functiondecl functionName="_set_snap_off" lineNumber="2313"/>
+    <functiondecl functionName="_set_snap_sep" lineNumber="2319"/>
+    <functiondecl functionName="_validate_current_tile_id" lineNumber="2325"/>
+    <functiondecl functionName="_select_edited_shape_coord" lineNumber="2330"/>
+    <functiondecl functionName="_undo_tile_removal" lineNumber="2334"/>
+    <functiondecl functionName="_zoom_in" lineNumber="2382"/>
+    <functiondecl functionName="_zoom_out" lineNumber="2391"/>
+    <functiondecl functionName="_zoom_reset" lineNumber="2400"/>
+    <functiondecl functionName="draw_highlight_current_tile" lineNumber="2406"/>
+    <functiondecl functionName="draw_highlight_subtile" lineNumber="2431"/>
+    <functiondecl functionName="draw_tile_subdivision" lineNumber="2464"/>
+    <functiondecl functionName="draw_edited_region_subdivision" lineNumber="2492"/>
+    <functiondecl functionName="draw_grid_snap" lineNumber="2532"/>
+    <functiondecl functionName="draw_polygon_shapes" lineNumber="2581"/>
+    <functiondecl functionName="close_shape" lineNumber="2850"/>
+    <functiondecl functionName="select_coord" lineNumber="2955"/>
+    <functiondecl functionName="snap_point" lineNumber="3050"/>
+    <functiondecl functionName="add_texture" lineNumber="3083"/>
+    <functiondecl functionName="remove_texture" lineNumber="3089"/>
+    <functiondecl functionName="update_texture_list" lineNumber="3101"/>
+    <functiondecl functionName="update_texture_list_icon" lineNumber="3139"/>
+    <functiondecl functionName="update_workspace_tile_mode" lineNumber="3150"/>
+    <functiondecl functionName="update_workspace_minsize" lineNumber="3246"/>
+    <functiondecl functionName="update_edited_region" lineNumber="3271"/>
+    <functiondecl functionName="get_current_tile" lineNumber="3293"/>
+    <functiondecl functionName="set_current_tile" lineNumber="3297"/>
+    <functiondecl functionName="get_current_texture" lineNumber="3311"/>
+    <functiondecl functionName="set_tileset" lineNumber="3318"/>
+    <functiondecl functionName="set_snap_options_visible" lineNumber="3323"/>
+    <functiondecl functionName="_set" lineNumber="3328"/>
+    <functiondecl functionName="_get" lineNumber="3394"/>
+    <functiondecl functionName="_get_property_list" lineNumber="3460"/>
+    <functiondecl functionName="_bind_methods" lineNumber="3509"/>
+    <functiondecl functionName="edit" lineNumber="3520"/>
+    <functiondecl functionName="handles" lineNumber="3527"/>
+    <functiondecl functionName="make_visible" lineNumber="3532"/>
+    <functiondecl functionName="get_state" lineNumber="3544"/>
+    <functiondecl functionName="set_state" lineNumber="3556"/>
+    <functioncall functionName="ACCESS_RESOURCES"/>
+    <functioncall functionName="ALIGN_CENTER"/>
+    <functioncall functionName="ATLAS_TILE"/>
+    <functioncall functionName="AUTO_TILE"/>
+    <functioncall functionName="AcceptDialog"/>
+    <functioncall functionName="BIND_BOTTOM"/>
+    <functioncall functionName="BIND_BOTTOMLEFT"/>
+    <functioncall functionName="BIND_BOTTOMRIGHT"/>
+    <functioncall functionName="BIND_CENTER"/>
+    <functioncall functionName="BIND_LEFT"/>
+    <functioncall functionName="BIND_RIGHT"/>
+    <functioncall functionName="BIND_TOP"/>
+    <functioncall functionName="BIND_TOPLEFT"/>
+    <functioncall functionName="BIND_TOPRIGHT"/>
+    <functioncall functionName="BITMASK_CLEAR"/>
+    <functioncall functionName="BITMASK_COPY"/>
+    <functioncall functionName="BITMASK_PASTE"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="BUTTON_MASK_MIDDLE"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="ButtonGroup"/>
+    <functioncall functionName="CANVAS_ITEM_Z_MAX"/>
+    <functioncall functionName="CANVAS_ITEM_Z_MIN"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="COLOR_ATLAS"/>
+    <functioncall functionName="COLOR_AUTOTILE"/>
+    <functioncall functionName="COLOR_SINGLE"/>
+    <functioncall functionName="COLOR_SUBDIVISION"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ConcavePolygonShape2D"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="ConvexPolygonShape2D"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITMODE_BITMASK"/>
+    <functioncall functionName="EDITMODE_COLLISION"/>
+    <functioncall functionName="EDITMODE_ICON"/>
+    <functioncall functionName="EDITMODE_MAX"/>
+    <functioncall functionName="EDITMODE_NAVIGATION"/>
+    <functioncall functionName="EDITMODE_OCCLUSION"/>
+    <functioncall functionName="EDITMODE_PRIORITY"/>
+    <functioncall functionName="EDITMODE_REGION"/>
+    <functioncall functionName="EDITMODE_Z_INDEX"/>
+    <functioncall functionName="EDITOR_GET"/>
+    <functioncall functionName="ED_SHORTCUT"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_CONTINUE_MSG"/>
+    <functioncall functionName="EditMode"/>
+    <functioncall functionName="EditorFileDialog"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="FILE_MODE_OPEN_FILES"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FOCUS_ALL"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HSeparator"/>
+    <functioncall functionName="HSplitContainer"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="ItemList"/>
+    <functioncall functionName="KEY_1"/>
+    <functioncall functionName="KEY_2"/>
+    <functioncall functionName="KEY_3"/>
+    <functioncall functionName="KEY_4"/>
+    <functioncall functionName="KEY_5"/>
+    <functioncall functionName="KEY_6"/>
+    <functioncall functionName="KEY_7"/>
+    <functioncall functionName="KEY_8"/>
+    <functioncall functionName="KEY_ALT"/>
+    <functioncall functionName="KEY_PAGEDOWN"/>
+    <functioncall functionName="KEY_PAGEUP"/>
+    <functioncall functionName="KEY_SHIFT"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="List"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MenuButton"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="NavigationPolygon"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="OccluderPolygon2D"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_EDITOR"/>
+    <functioncall functionName="PROPERTY_USAGE_GROUP"/>
+    <functioncall functionName="PackedVector2Array"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SELECT_NEXT"/>
+    <functioncall functionName="SELECT_PREVIOUS"/>
+    <functioncall functionName="SHAPE_DELETE"/>
+    <functioncall functionName="SHAPE_KEEP_INSIDE_TILE"/>
+    <functioncall functionName="SHAPE_NEW_POLYGON"/>
+    <functioncall functionName="SHAPE_NEW_RECTANGLE"/>
+    <functioncall functionName="SHAPE_TOGGLE_TYPE"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="ScrollContainer"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="Size2i"/>
+    <functioncall functionName="SpinBox"/>
+    <functioncall functionName="Sprite2D"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="SubtileData"/>
+    <functioncall functionName="TOOL_GRID_SNAP"/>
+    <functioncall functionName="TOOL_MAX"/>
+    <functioncall functionName="TOOL_SELECT"/>
+    <functioncall functionName="TOOL_TILESET_ADD_TEXTURE"/>
+    <functioncall functionName="TOOL_TILESET_CREATE_SCENE"/>
+    <functioncall functionName="TOOL_TILESET_MAX"/>
+    <functioncall functionName="TOOL_TILESET_MERGE_SCENE"/>
+    <functioncall functionName="TOOL_TILESET_REMOVE_TEXTURE"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TileSetEditor"/>
+    <functioncall functionName="TileSetEditorPlugin"/>
+    <functioncall functionName="TilesetEditorContext"/>
+    <functioncall functionName="ToolButton"/>
+    <functioncall functionName="Transform2D"/>
+    <functioncall functionName="VALIGN_CENTER"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="VISIBLE_INFO"/>
+    <functioncall functionName="VSeparator"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector2i"/>
+    <functioncall functionName="WORKSPACE_CREATE_ATLAS"/>
+    <functioncall functionName="WORKSPACE_CREATE_AUTOTILE"/>
+    <functioncall functionName="WORKSPACE_CREATE_SINGLE"/>
+    <functioncall functionName="WORKSPACE_EDIT"/>
+    <functioncall functionName="WORKSPACE_MODE_MAX"/>
+    <functioncall functionName="WorkspaceMode"/>
+    <functioncall functionName="ZOOM_1"/>
+    <functioncall functionName="ZOOM_IN"/>
+    <functioncall functionName="ZOOM_OUT"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_concave"/>
+    <functioncall functionName="_convex"/>
+    <functioncall functionName="_get_collision_shape_points"/>
+    <functioncall functionName="_get_edited_shape_points"/>
+    <functioncall functionName="_get_tiles_in_current_texture"/>
+    <functioncall functionName="_hide_script_from_inspector"/>
+    <functioncall functionName="_import_node"/>
+    <functioncall functionName="_import_scene"/>
+    <functioncall functionName="_on_edit_mode_changed"/>
+    <functioncall functionName="_on_grid_snap_toggled"/>
+    <functioncall functionName="_on_priority_changed"/>
+    <functioncall functionName="_on_texture_list_selected"/>
+    <functioncall functionName="_on_textures_added"/>
+    <functioncall functionName="_on_tileset_toolbar_button_pressed"/>
+    <functioncall functionName="_on_tileset_toolbar_confirm"/>
+    <functioncall functionName="_on_tool_clicked"/>
+    <functioncall functionName="_on_workspace_draw"/>
+    <functioncall functionName="_on_workspace_input"/>
+    <functioncall functionName="_on_workspace_mode_changed"/>
+    <functioncall functionName="_on_workspace_overlay_draw"/>
+    <functioncall functionName="_on_workspace_process"/>
+    <functioncall functionName="_on_z_index_changed"/>
+    <functioncall functionName="_select_edited_shape_coord"/>
+    <functioncall functionName="_select_next_shape"/>
+    <functioncall functionName="_select_next_subtile"/>
+    <functioncall functionName="_select_next_tile"/>
+    <functioncall functionName="_select_previous_shape"/>
+    <functioncall functionName="_select_previous_subtile"/>
+    <functioncall functionName="_select_previous_tile"/>
+    <functioncall functionName="_set_edited_collision_shape"/>
+    <functioncall functionName="_set_edited_shape_points"/>
+    <functioncall functionName="_set_snap_off"/>
+    <functioncall functionName="_set_snap_sep"/>
+    <functioncall functionName="_set_snap_step"/>
+    <functioncall functionName="_sort_tiles"/>
+    <functioncall functionName="_undo_redo_import_scene"/>
+    <functioncall functionName="_undo_tile_removal"/>
+    <functioncall functionName="_update_tile_data"/>
+    <functioncall functionName="_update_toggle_shape_button"/>
+    <functioncall functionName="_validate_current_tile_id"/>
+    <functioncall functionName="_zoom_in"/>
+    <functioncall functionName="_zoom_out"/>
+    <functioncall functionName="_zoom_reset"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="add_bottom_panel_item"/>
+    <functioncall functionName="add_change_receptor"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_filter"/>
+    <functioncall functionName="add_item"/>
+    <functioncall functionName="add_polygon"/>
+    <functioncall functionName="add_texture"/>
+    <functioncall functionName="add_theme_constant_override"/>
+    <functioncall functionName="add_theme_style_override"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="all_tiles"/>
+    <functioncall functionName="alternative"/>
+    <functioncall functionName="anchor"/>
+    <functioncall functionName="autotile_coord"/>
+    <functioncall functionName="autotile_get_bitmask"/>
+    <functioncall functionName="autotile_get_bitmask_map"/>
+    <functioncall functionName="autotile_get_bitmask_mode"/>
+    <functioncall functionName="autotile_get_icon_coordinate"/>
+    <functioncall functionName="autotile_get_light_occluder"/>
+    <functioncall functionName="autotile_get_light_oclusion_map"/>
+    <functioncall functionName="autotile_get_navigation_map"/>
+    <functioncall functionName="autotile_get_navigation_polygon"/>
+    <functioncall functionName="autotile_get_priority_map"/>
+    <functioncall functionName="autotile_get_size"/>
+    <functioncall functionName="autotile_get_spacing"/>
+    <functioncall functionName="autotile_get_subtile_priority"/>
+    <functioncall functionName="autotile_get_z_index"/>
+    <functioncall functionName="autotile_get_z_index_map"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c_bg"/>
+    <functioncall functionName="c_border"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="can_drop_data_fw"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="cd"/>
+    <functioncall functionName="cell_count"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="child2"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_filters"/>
+    <functioncall functionName="close_shape"/>
+    <functioncall functionName="collisions"/>
+    <functioncall functionName="colors"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="concave"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="connect_compat"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convex"/>
+    <functioncall functionName="coord"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="create_tile"/>
+    <functioncall functionName="creating_shape"/>
+    <functioncall functionName="current_idx"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="disconnect_compat"/>
+    <functioncall functionName="distance"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dragged"/>
+    <functioncall functionName="dragging"/>
+    <functioncall functionName="dragging_point"/>
+    <functioncall functionName="draw"/>
+    <functioncall functionName="draw_edited_region"/>
+    <functioncall functionName="draw_edited_region_subdivision"/>
+    <functioncall functionName="draw_grid_snap"/>
+    <functioncall functionName="draw_handles"/>
+    <functioncall functionName="draw_highlight_current_tile"/>
+    <functioncall functionName="draw_highlight_subtile"/>
+    <functioncall functionName="draw_line"/>
+    <functioncall functionName="draw_polygon"/>
+    <functioncall functionName="draw_polygon_shapes"/>
+    <functioncall functionName="draw_rect"/>
+    <functioncall functionName="draw_string"/>
+    <functioncall functionName="draw_texture"/>
+    <functioncall functionName="draw_tile_subdivision"/>
+    <functioncall functionName="drop_data_fw"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="edit"/>
+    <functioncall functionName="edit_mode"/>
+    <functioncall functionName="edited_collision_shape"/>
+    <functioncall functionName="edited_coord"/>
+    <functioncall functionName="edited_navigation_shape"/>
+    <functioncall functionName="edited_occlusion_shape"/>
+    <functioncall functionName="edited_region"/>
+    <functioncall functionName="edited_shape_coord"/>
+    <functioncall functionName="editor"/>
+    <functioncall functionName="empty_message"/>
+    <functioncall functionName="end_point"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="erasing"/>
+    <functioncall functionName="err_dialog"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="extensions"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="files"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_metadata"/>
+    <functioncall functionName="find_tile_by_name"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="font"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found_collision_shape"/>
+    <functioncall functionName="found_collisions"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="ftype"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_button_index"/>
+    <functioncall functionName="get_button_mask"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_control"/>
+    <functioncall functionName="get_current_texture"/>
+    <functioncall functionName="get_current_tile"/>
+    <functioncall functionName="get_custom_minimum_size"/>
+    <functioncall functionName="get_drag_data_fw"/>
+    <functioncall functionName="get_edited_scene"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_file_type"/>
+    <functioncall functionName="get_frame"/>
+    <functioncall functionName="get_grabbed_point"/>
+    <functioncall functionName="get_h_scroll"/>
+    <functioncall functionName="get_hframes"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_item_count"/>
+    <functioncall functionName="get_item_metadata"/>
+    <functioncall functionName="get_last_unused_tile_id"/>
+    <functioncall functionName="get_local_mouse_position"/>
+    <functioncall functionName="get_material"/>
+    <functioncall functionName="get_modulate"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_navigation_polygon"/>
+    <functioncall functionName="get_normal_map"/>
+    <functioncall functionName="get_occluder_polygon"/>
+    <functioncall functionName="get_offset"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_points"/>
+    <functioncall functionName="get_polygon"/>
+    <functioncall functionName="get_polygon_count"/>
+    <functioncall functionName="get_popup"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_recognized_extensions_for_type"/>
+    <functioncall functionName="get_rect"/>
+    <functioncall functionName="get_region_rect"/>
+    <functioncall functionName="get_relative"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_script"/>
+    <functioncall functionName="get_segments"/>
+    <functioncall functionName="get_selected_items"/>
+    <functioncall functionName="get_shape_owners"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_string_size"/>
+    <functioncall functionName="get_texture"/>
+    <functioncall functionName="get_theme_font"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_theme_stylebox"/>
+    <functioncall functionName="get_tile_list"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_v_scroll"/>
+    <functioncall functionName="get_vertices"/>
+    <functioncall functionName="get_vframes"/>
+    <functioncall functionName="get_z_index"/>
+    <functioncall functionName="grab_threshold"/>
+    <functioncall functionName="grabbed_point"/>
+    <functioncall functionName="grid_color"/>
+    <functioncall functionName="grid_coord"/>
+    <functioncall functionName="handle"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_no_area"/>
+    <functioncall functionName="has_point"/>
+    <functioncall functionName="has_tile"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="helper"/>
+    <functioncall functionName="hframes"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="hide_bottom_panel"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="ids"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="invalid_count"/>
+    <functioncall functionName="invert"/>
+    <functioncall functionName="is_centered"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_convex"/>
+    <functioncall functionName="is_key_pressed"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_region"/>
+    <functioncall functionName="is_shape_owner_disabled"/>
+    <functioncall functionName="is_shape_owner_one_way_collision_enabled"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_within_grabbing_distance_of_first_point"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="last_p"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="left_container"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="main_vb"/>
+    <functioncall functionName="make_bottom_panel_item_visible"/>
+    <functioncall functionName="material"/>
+    <functioncall functionName="max_workspace_size"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="ml"/>
+    <functioncall functionName="move_child"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="name2"/>
+    <functioncall functionName="nav_poly"/>
+    <functioncall functionName="new_mask"/>
+    <functioncall functionName="new_workspace_minsize"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normal_map"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="occluder"/>
+    <functioncall functionName="old_mask"/>
+    <functioncall functionName="one_way"/>
+    <functioncall functionName="one_way_collision"/>
+    <functioncall functionName="one_way_collision_margin"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="operatorString().left"/>
+    <functioncall functionName="operatorString().right"/>
+    <functioncall functionName="option"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_base_scene"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_edit_mode"/>
+    <functioncall functionName="p_editor"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_ie"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_library"/>
+    <functioncall functionName="p_merge"/>
+    <functioncall functionName="p_mouse_pos"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_scene"/>
+    <functioncall functionName="p_shape"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_tileset"/>
+    <functioncall functionName="p_tileset_editor"/>
+    <functioncall functionName="p_val"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_visible"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_workspace_mode"/>
+    <functioncall functionName="phys_offset"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="polygon"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="popup_centered_ratio"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="preview"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="queue_others"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="region"/>
+    <functioncall functionName="region_from"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_item"/>
+    <functioncall functionName="remove_texture"/>
+    <functioncall functionName="remove_tile"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rid"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="right_container"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="scene"/>
+    <functioncall functionName="scroll"/>
+    <functioncall functionName="sd"/>
+    <functioncall functionName="segments"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="select_coord"/>
+    <functioncall functionName="separator"/>
+    <functioncall functionName="separator_bitmask"/>
+    <functioncall functionName="separator_delete"/>
+    <functioncall functionName="separator_editmode"/>
+    <functioncall functionName="separator_grid"/>
+    <functioncall functionName="separator_shape_selection"/>
+    <functioncall functionName="separator_shape_toggle"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_access"/>
+    <functioncall functionName="set_align"/>
+    <functioncall functionName="set_autowrap"/>
+    <functioncall functionName="set_button_group"/>
+    <functioncall functionName="set_centered"/>
+    <functioncall functionName="set_clip_contents"/>
+    <functioncall functionName="set_current_tile"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_drag_forwarding"/>
+    <functioncall functionName="set_draw_behind_parent"/>
+    <functioncall functionName="set_file_mode"/>
+    <functioncall functionName="set_focus_mode"/>
+    <functioncall functionName="set_h_scroll"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_item_icon"/>
+    <functioncall functionName="set_item_icon_region"/>
+    <functioncall functionName="set_item_metadata"/>
+    <functioncall functionName="set_max"/>
+    <functioncall functionName="set_min"/>
+    <functioncall functionName="set_points"/>
+    <functioncall functionName="set_polygon"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_scale"/>
+    <functioncall functionName="set_script"/>
+    <functioncall functionName="set_shortcut"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="set_snap_options_visible"/>
+    <functioncall functionName="set_step"/>
+    <functioncall functionName="set_suffix"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_texture"/>
+    <functioncall functionName="set_tileset"/>
+    <functioncall functionName="set_toggle_mode"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_v_scroll"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_valign"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="set_vertices"/>
+    <functioncall functionName="shadow_color"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="shape_anchor"/>
+    <functioncall functionName="shape_data"/>
+    <functioncall functionName="shape_owner_get_shape"/>
+    <functioncall functionName="shape_owner_get_shape_count"/>
+    <functioncall functionName="shape_owner_get_transform"/>
+    <functioncall functionName="shape_transform"/>
+    <functioncall functionName="shapes"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="snap"/>
+    <functioncall functionName="snap_offset"/>
+    <functioncall functionName="snap_options_visible"/>
+    <functioncall functionName="snap_point"/>
+    <functioncall functionName="snap_scalar_separation"/>
+    <functioncall functionName="snap_separation"/>
+    <functioncall functionName="snap_step"/>
+    <functioncall functionName="sort_custom"/>
+    <functioncall functionName="sorted"/>
+    <functioncall functionName="spacer"/>
+    <functioncall functionName="spacing"/>
+    <functioncall functionName="spin_priority"/>
+    <functioncall functionName="spin_z_index"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="t_id"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="texture_dialog"/>
+    <functioncall functionName="texture_list"/>
+    <functioncall functionName="tg"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tile_get_light_occluder"/>
+    <functioncall functionName="tile_get_material"/>
+    <functioncall functionName="tile_get_modulate"/>
+    <functioncall functionName="tile_get_name"/>
+    <functioncall functionName="tile_get_navigation_polygon"/>
+    <functioncall functionName="tile_get_navigation_polygon_offset"/>
+    <functioncall functionName="tile_get_normal_map"/>
+    <functioncall functionName="tile_get_occluder_offset"/>
+    <functioncall functionName="tile_get_region"/>
+    <functioncall functionName="tile_get_shape"/>
+    <functioncall functionName="tile_get_shape_offset"/>
+    <functioncall functionName="tile_get_shape_transform"/>
+    <functioncall functionName="tile_get_shapes"/>
+    <functioncall functionName="tile_get_texture"/>
+    <functioncall functionName="tile_get_texture_offset"/>
+    <functioncall functionName="tile_get_tile_mode"/>
+    <functioncall functionName="tile_get_z_index"/>
+    <functioncall functionName="tile_id_name"/>
+    <functioncall functionName="tile_names_visible"/>
+    <functioncall functionName="tile_set_light_occluder"/>
+    <functioncall functionName="tile_set_material"/>
+    <functioncall functionName="tile_set_modulate"/>
+    <functioncall functionName="tile_set_name"/>
+    <functioncall functionName="tile_set_navigation_polygon"/>
+    <functioncall functionName="tile_set_navigation_polygon_offset"/>
+    <functioncall functionName="tile_set_normal_map"/>
+    <functioncall functionName="tile_set_occluder_offset"/>
+    <functioncall functionName="tile_set_region"/>
+    <functioncall functionName="tile_set_shape_one_way"/>
+    <functioncall functionName="tile_set_shape_one_way_margin"/>
+    <functioncall functionName="tile_set_shapes"/>
+    <functioncall functionName="tile_set_texture"/>
+    <functioncall functionName="tile_set_texture_offset"/>
+    <functioncall functionName="tile_set_z_index"/>
+    <functioncall functionName="tile_size"/>
+    <functioncall functionName="tiles"/>
+    <functioncall functionName="tileset"/>
+    <functioncall functionName="tileset_editor"/>
+    <functioncall functionName="tileset_toolbar_container"/>
+    <functioncall functionName="tileset_toolbar_tools"/>
+    <functioncall functionName="to_upper"/>
+    <functioncall functionName="tool_hb"/>
+    <functioncall functionName="toolbar"/>
+    <functioncall functionName="toolbar_separator"/>
+    <functioncall functionName="total"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="update_edited_region"/>
+    <functioncall functionName="update_texture_list"/>
+    <functioncall functionName="update_texture_list_icon"/>
+    <functioncall functionName="update_workspace_minsize"/>
+    <functioncall functionName="update_workspace_tile_mode"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="workspace"/>
+    <functioncall functionName="workspace_container"/>
+    <functioncall functionName="workspace_minsize"/>
+    <functioncall functionName="workspace_overlay"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

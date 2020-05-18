@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="600048505">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btCapsuleShape.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btConvexInternalShape.h" line="156" column="41"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btCapsuleShape.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btCapsuleShape.h" line="158" column="34"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;maxDot&apos; is assigned a value that is never used." verbose="Variable &apos;maxDot&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btCapsuleShape.cpp" line="69" column="11"/>
+            <symbol>maxDot</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BT_DECLARE_ALIGNED_ALLOCATOR"/>
+    <functioncall functionName="BT_LARGE_FLOAT"/>
+    <functioncall functionName="CAPSULE_SHAPE_PROXYTYPE"/>
+    <functioncall functionName="INVALID_SHAPE_PROXYTYPE"/>
+    <functioncall functionName="aabbMax"/>
+    <functioncall functionName="aabbMin"/>
+    <functioncall functionName="absolute"/>
+    <functioncall functionName="aniDir"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btCapsuleShape"/>
+    <functioncall functionName="btCapsuleShapeData"/>
+    <functioncall functionName="btCapsuleShapeX"/>
+    <functioncall functionName="btCapsuleShapeZ"/>
+    <functioncall functionName="btCollisionShape"/>
+    <functioncall functionName="btCollisionShapeData"/>
+    <functioncall functionName="btConvexInternalShape"/>
+    <functioncall functionName="btConvexInternalShapeData"/>
+    <functioncall functionName="btConvexShape"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btSqrt"/>
+    <functioncall functionName="btTransformAabb"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="calculateLocalInertia"/>
+    <functioncall functionName="calculateSerializeBufferSize"/>
+    <functioncall functionName="calculateTemporalAabb"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="collisionMargin"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="dataBuffer"/>
+    <functioncall functionName="deSerializeFloat"/>
+    <functioncall functionName="defaultMarginMultiplier"/>
+    <functioncall functionName="dimensions"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dot3"/>
+    <functioncall functionName="extent"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getAabb"/>
+    <functioncall functionName="getAabbSlow"/>
+    <functioncall functionName="getAngularMotionDisc"/>
+    <functioncall functionName="getAnisotropicRollingFrictionDirection"/>
+    <functioncall functionName="getBasis"/>
+    <functioncall functionName="getBoundingSphere"/>
+    <functioncall functionName="getContactBreakingThreshold"/>
+    <functioncall functionName="getHalfHeight"/>
+    <functioncall functionName="getLocalScaling"/>
+    <functioncall functionName="getMargin"/>
+    <functioncall functionName="getName"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getRadius"/>
+    <functioncall functionName="getShapeType"/>
+    <functioncall functionName="getUpAxis"/>
+    <functioncall functionName="getUserIndex"/>
+    <functioncall functionName="getUserPointer"/>
+    <functioncall functionName="halfExtents"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="isCompound"/>
+    <functioncall functionName="isConcave"/>
+    <functioncall functionName="isConvex"/>
+    <functioncall functionName="isConvex2d"/>
+    <functioncall functionName="isInfinite"/>
+    <functioncall functionName="isNonMoving"/>
+    <functioncall functionName="isPolyhedral"/>
+    <functioncall functionName="isSoftBody"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="lenSqr"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="m_collisionMargin"/>
+    <functioncall functionName="m_collisionShapeData"/>
+    <functioncall functionName="m_convexInternalShapeData"/>
+    <functioncall functionName="m_implicitShapeDimensions"/>
+    <functioncall functionName="m_isLocalAabbValid"/>
+    <functioncall functionName="m_localAabbMax"/>
+    <functioncall functionName="m_localAabbMin"/>
+    <functioncall functionName="m_localScaling"/>
+    <functioncall functionName="m_shapeType"/>
+    <functioncall functionName="m_upAxis"/>
+    <functioncall functionName="m_userIndex"/>
+    <functioncall functionName="m_userPointer"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="maxDot"/>
+    <functioncall functionName="minAxis"/>
+    <functioncall functionName="minDimension"/>
+    <functioncall functionName="newDot"/>
+    <functioncall functionName="penetrationVector"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="radius"/>
+    <functioncall functionName="radiusAxis"/>
+    <functioncall functionName="safeMargin"/>
+    <functioncall functionName="scaling"/>
+    <functioncall functionName="serialize"/>
+    <functioncall functionName="serializeFloat"/>
+    <functioncall functionName="serializeSingleShape"/>
+    <functioncall functionName="serializer"/>
+    <functioncall functionName="setIdentity"/>
+    <functioncall functionName="setLocalScaling"/>
+    <functioncall functionName="setMargin"/>
+    <functioncall functionName="setSafeMargin"/>
+    <functioncall functionName="setUserIndex"/>
+    <functioncall functionName="setUserPointer"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="supVec"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="trans"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="userPtr"/>
+    <functioncall functionName="vec0"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vtx"/>
+    <functioncall functionName="y2"/>
+    <functioncall functionName="z2"/>
+  </FileInfo>
+</analyzerinfo>

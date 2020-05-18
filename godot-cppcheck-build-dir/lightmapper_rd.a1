@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1854211432">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;a&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;a&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h" line="67" column="4"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;b&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;b&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h" line="68" column="4"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;na&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;na&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h" line="69" column="4"/>
+            <symbol>na</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;nb&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;nb&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h" line="70" column="4"/>
+            <symbol>nb</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;a&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;a&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h" line="100" column="4"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;b&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;b&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h" line="101" column="4"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;indices&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;indices&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h" line="102" column="4"/>
+            <symbol>indices</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;last_cell&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;last_cell&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="436" column="14" info="last_cell is overwritten"/>
+            <location file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="431" column="15" info="last_cell is assigned"/>
+            <symbol>last_cell</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:157:7" call-funcname="_plot_triangle_into_triangle_index_list" call-argnr="4" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="407" col="42" call-argexpr="face" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:204:12" call-funcname="_blit_meshes_into_atlas" call-argnr="7" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="632" col="48" call-argexpr="p_step_function" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="778" col="5" info="Assuming that condition 'if(p_step_function)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:205:7" call-funcname="_create_acceleration_structures" call-argnr="19" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="776" col="33" call-argexpr="p_step_function" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="778" col="5" info="Assuming that condition 'if(p_step_function)' is not redundant"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:205:7" my-argnr="1" my-argname="rd" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="491" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:157:7" call-funcname="_plot_triangle_into_triangle_index_list" call-argnr="4" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="407" col="42" call-argexpr="face" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:204:12" call-funcname="_blit_meshes_into_atlas" call-argnr="7" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="632" col="48" call-argexpr="p_step_function" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="778" col="5" info="Assuming that condition 'if(p_step_function)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:205:7" call-funcname="_create_acceleration_structures" call-argnr="19" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="776" col="33" call-argexpr="p_step_function" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="778" col="5" info="Assuming that condition 'if(p_step_function)' is not redundant"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.h:205:7" my-argnr="1" my-argname="rd" file="/home/hbina/git/godot/modules/lightmapper_rd/lightmapper_rd.cpp" line="491" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="add_mesh" lineNumber="12"/>
+    <functiondecl functionName="add_directional_light" lineNumber="23"/>
+    <functiondecl functionName="add_omni_light" lineNumber="37"/>
+    <functiondecl functionName="add_spot_light" lineNumber="53"/>
+    <functiondecl functionName="add_probe" lineNumber="76"/>
+    <functiondecl functionName="_blit_meshes_into_atlas" lineNumber="129"/>
+    <functiondecl functionName="_create_acceleration_structures" lineNumber="251"/>
+    <functiondecl functionName="_raster_geometry" lineNumber="543"/>
+    <functiondecl functionName="bake" lineNumber="616"/>
+    <functiondecl functionName="get_bake_texture_count" lineNumber="1708"/>
+    <functiondecl functionName="get_bake_texture" lineNumber="1711"/>
+    <functiondecl functionName="get_bake_mesh_count" lineNumber="1715"/>
+    <functiondecl functionName="get_bake_mesh_userdata" lineNumber="1718"/>
+    <functiondecl functionName="get_bake_mesh_uv_scale" lineNumber="1722"/>
+    <functiondecl functionName="get_bake_mesh_texture_slice" lineNumber="1731"/>
+    <functiondecl functionName="get_bake_probe_count" lineNumber="1736"/>
+    <functiondecl functionName="get_bake_probe_point" lineNumber="1740"/>
+    <functiondecl functionName="get_bake_probe_sh" lineNumber="1745"/>
+    <functiondecl functionName="add_mesh" lineNumber="12"/>
+    <functiondecl functionName="add_directional_light" lineNumber="23"/>
+    <functiondecl functionName="add_omni_light" lineNumber="37"/>
+    <functiondecl functionName="add_spot_light" lineNumber="53"/>
+    <functiondecl functionName="add_probe" lineNumber="76"/>
+    <functiondecl functionName="_blit_meshes_into_atlas" lineNumber="129"/>
+    <functiondecl functionName="_create_acceleration_structures" lineNumber="251"/>
+    <functiondecl functionName="_raster_geometry" lineNumber="543"/>
+    <functiondecl functionName="bake" lineNumber="616"/>
+    <functiondecl functionName="get_bake_texture_count" lineNumber="1708"/>
+    <functiondecl functionName="get_bake_texture" lineNumber="1711"/>
+    <functiondecl functionName="get_bake_mesh_count" lineNumber="1715"/>
+    <functiondecl functionName="get_bake_mesh_userdata" lineNumber="1718"/>
+    <functiondecl functionName="get_bake_mesh_uv_scale" lineNumber="1722"/>
+    <functiondecl functionName="get_bake_mesh_texture_slice" lineNumber="1731"/>
+    <functiondecl functionName="get_bake_probe_count" lineNumber="1736"/>
+    <functiondecl functionName="get_bake_probe_point" lineNumber="1740"/>
+    <functiondecl functionName="get_bake_probe_sh" lineNumber="1745"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="BAKE_ERROR_LIGHTMAP_CANT_PRE_BAKE_MESHES"/>
+    <functioncall functionName="BLEND_FACTOR_ONE"/>
+    <functioncall functionName="BLEND_FACTOR_ZERO"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="COMPARE_OP_LESS"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="DATA_FORMAT_D32_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_R16G16B16A16_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_R32G32B32A32_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_R32G32_UINT"/>
+    <functioncall functionName="DATA_FORMAT_R8G8B8A8_UNORM"/>
+    <functioncall functionName="DATA_FORMAT_R8_SNORM"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="Edge"/>
+    <functioncall functionName="EdgeHash"/>
+    <functioncall functionName="EdgeUV2"/>
+    <functioncall functionName="FINAL_ACTION_DISCARD"/>
+    <functioncall functionName="FINAL_ACTION_READ"/>
+    <functioncall functionName="FORMAT_RGB8"/>
+    <functioncall functionName="FORMAT_RGBA8"/>
+    <functioncall functionName="FORMAT_RGBAF"/>
+    <functioncall functionName="FORMAT_RGBAH"/>
+    <functioncall functionName="FORMAT_RGBH"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="INITIAL_ACTION_CLEAR"/>
+    <functioncall functionName="INITIAL_ACTION_KEEP"/>
+    <functioncall functionName="INVALID_FORMAT_ID"/>
+    <functioncall functionName="LIGHT_TYPE_DIRECTIONAL"/>
+    <functioncall functionName="LIGHT_TYPE_OMNI"/>
+    <functioncall functionName="LIGHT_TYPE_SPOT"/>
+    <functioncall functionName="Light"/>
+    <functioncall functionName="LightmapperRD"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="PipelineMultisampleState"/>
+    <functioncall functionName="PipelineRasterizationState"/>
+    <functioncall functionName="Probe"/>
+    <functioncall functionName="PushConstant"/>
+    <functioncall functionName="RENDER_PRIMITIVE_LINES"/>
+    <functioncall functionName="RENDER_PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="RasterPushConstant"/>
+    <functioncall functionName="RasterSeamsPushConstant"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SAMPLER_FILTER_LINEAR"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Size2i"/>
+    <functioncall functionName="TEXTURE_TYPE_2D"/>
+    <functioncall functionName="TEXTURE_TYPE_2D_ARRAY"/>
+    <functioncall functionName="TEXTURE_TYPE_3D"/>
+    <functioncall functionName="TEXTURE_USAGE_CAN_UPDATE_BIT"/>
+    <functioncall functionName="TEXTURE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT"/>
+    <functioncall functionName="TEXTURE_USAGE_STORAGE_BIT"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TextureView"/>
+    <functioncall functionName="UNIFORM_TYPE_IMAGE"/>
+    <functioncall functionName="UNIFORM_TYPE_SAMPLER"/>
+    <functioncall functionName="UNIFORM_TYPE_STORAGE_BUFFER"/>
+    <functioncall functionName="UNIFORM_TYPE_TEXTURE"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector2i"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="Vector3i"/>
+    <functioncall functionName="VertexHash"/>
+    <functioncall functionName="_blit_meshes_into_atlas"/>
+    <functioncall functionName="_create_acceleration_structures"/>
+    <functioncall functionName="_plot_triangle_into_triangle_index_list"/>
+    <functioncall functionName="_raster_geometry"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="albedo"/>
+    <functioncall functionName="albedo_array_tex"/>
+    <functioncall functionName="albedo_data"/>
+    <functioncall functionName="albedo_images"/>
+    <functioncall functionName="albedo_on_uv2"/>
+    <functioncall functionName="array_layers"/>
+    <functioncall functionName="atlas_offsets"/>
+    <functioncall functionName="atlas_size"/>
+    <functioncall functionName="atlas_slices"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="base_uniforms"/>
+    <functioncall functionName="bb"/>
+    <functioncall functionName="best_atlas_size"/>
+    <functioncall functionName="best_atlas_slices"/>
+    <functioncall functionName="blendseams_line_raster_pipeline"/>
+    <functioncall functionName="blendseams_line_raster_shader"/>
+    <functioncall functionName="blendseams_raster_uniform"/>
+    <functioncall functionName="blendseams_triangle_raster_pipeline"/>
+    <functioncall functionName="blendseams_triangle_raster_shader"/>
+    <functioncall functionName="blit_rect"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="bounds"/>
+    <functioncall functionName="box"/>
+    <functioncall functionName="box_buffer"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bs"/>
+    <functioncall functionName="buffer_get_data"/>
+    <functioncall functionName="cell"/>
+    <functioncall functionName="cell_index"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_colors"/>
+    <functioncall functionName="compute_base_uniform_set"/>
+    <functioncall functionName="compute_list"/>
+    <functioncall functionName="compute_list_begin"/>
+    <functioncall functionName="compute_list_bind_compute_pipeline"/>
+    <functioncall functionName="compute_list_bind_uniform_set"/>
+    <functioncall functionName="compute_list_dispatch"/>
+    <functioncall functionName="compute_list_end"/>
+    <functioncall functionName="compute_list_set_push_constant"/>
+    <functioncall functionName="compute_pipeline_create"/>
+    <functioncall functionName="compute_shader_dilate"/>
+    <functioncall functionName="compute_shader_dilate_pipeline"/>
+    <functioncall functionName="compute_shader_light_probes"/>
+    <functioncall functionName="compute_shader_light_probes_pipeline"/>
+    <functioncall functionName="compute_shader_primary"/>
+    <functioncall functionName="compute_shader_primary_pipeline"/>
+    <functioncall functionName="compute_shader_secondary"/>
+    <functioncall functionName="compute_shader_secondary_pipeline"/>
+    <functioncall functionName="compute_shader_unocclude"/>
+    <functioncall functionName="compute_shader_unocclude_pipeline"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convert"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_blend"/>
+    <functioncall functionName="create_disabled"/>
+    <functioncall functionName="create_local_device"/>
+    <functioncall functionName="debug"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="denoise_image"/>
+    <functioncall functionName="dilate_uniform_set"/>
+    <functioncall functionName="draw_list"/>
+    <functioncall functionName="draw_list_begin"/>
+    <functioncall functionName="draw_list_bind_render_pipeline"/>
+    <functioncall functionName="draw_list_bind_uniform_set"/>
+    <functioncall functionName="draw_list_draw"/>
+    <functioncall functionName="draw_list_end"/>
+    <functioncall functionName="draw_list_set_push_constant"/>
+    <functioncall functionName="ds"/>
+    <functioncall functionName="edge"/>
+    <functioncall functionName="edge_indices"/>
+    <functioncall functionName="emission"/>
+    <functioncall functionName="emission_array_tex"/>
+    <functioncall functionName="emission_data"/>
+    <functioncall functionName="emission_images"/>
+    <functioncall functionName="emission_on_uv2"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="euclidean_neg"/>
+    <functioncall functionName="euclidean_pos"/>
+    <functioncall functionName="euv2"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="face"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fb"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="framebuffer_create"/>
+    <functioncall functionName="framebuffer_get_format"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="generate_edf"/>
+    <functioncall functionName="generate_sdf8"/>
+    <functioncall functionName="get_bytecode"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_width"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="grid_size"/>
+    <functioncall functionName="grid_texture"/>
+    <functioncall functionName="grid_texture_sdf"/>
+    <functioncall functionName="group_size"/>
+    <functioncall functionName="grow_by"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="half_size"/>
+    <functioncall functionName="hash_djb2_one_float"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="indexptr"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="lb"/>
+    <functioncall functionName="light_accum_tex"/>
+    <functioncall functionName="light_accum_tex2"/>
+    <functioncall functionName="light_dest_tex"/>
+    <functioncall functionName="light_environment_tex"/>
+    <functioncall functionName="light_primary_dynamic_tex"/>
+    <functioncall functionName="light_probe_buffer"/>
+    <functioncall functionName="light_probe_uniform_set"/>
+    <functioncall functionName="light_source_tex"/>
+    <functioncall functionName="light_uniform_set"/>
+    <functioncall functionName="lights_buffer"/>
+    <functioncall functionName="lm_blendseams_shader_glsl"/>
+    <functioncall functionName="lm_compute_shader_glsl"/>
+    <functioncall functionName="lm_raster_shader_glsl"/>
+    <functioncall functionName="m_i"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="mem_used"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="mi"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="na"/>
+    <functioncall functionName="nb"/>
+    <functioncall functionName="nearest_power_of_2_templated"/>
+    <functioncall functionName="new_index"/>
+    <functioncall functionName="new_indices"/>
+    <functioncall functionName="new_sources"/>
+    <functioncall functionName="normal_tex"/>
+    <functioncall functionName="normal_z"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_angular_distance"/>
+    <functioncall functionName="p_attenuation"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_bake_sh"/>
+    <functioncall functionName="p_bake_userdata"/>
+    <functioncall functionName="p_bias"/>
+    <functioncall functionName="p_bounces"/>
+    <functioncall functionName="p_bounds"/>
+    <functioncall functionName="p_energy"/>
+    <functioncall functionName="p_environment_panorama"/>
+    <functioncall functionName="p_generate_probes"/>
+    <functioncall functionName="p_grid_size"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_indices"/>
+    <functioncall functionName="p_max_texture_size"/>
+    <functioncall functionName="p_mesh"/>
+    <functioncall functionName="p_na"/>
+    <functioncall functionName="p_nb"/>
+    <functioncall functionName="p_ofs"/>
+    <functioncall functionName="p_points"/>
+    <functioncall functionName="p_probe"/>
+    <functioncall functionName="p_quality"/>
+    <functioncall functionName="p_range"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_spot_angle"/>
+    <functioncall functionName="p_spot_attenuation"/>
+    <functioncall functionName="p_static"/>
+    <functioncall functionName="p_step_function"/>
+    <functioncall functionName="p_triangle_index"/>
+    <functioncall functionName="p_use_denoiser"/>
+    <functioncall functionName="parse_versions_from_text"/>
+    <functioncall functionName="partial_pack_rects"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="percent"/>
+    <functioncall functionName="position_tex"/>
+    <functioncall functionName="pp"/>
+    <functioncall functionName="print_errors"/>
+    <functioncall functionName="probe"/>
+    <functioncall functionName="probe_data"/>
+    <functioncall functionName="probe_positions"/>
+    <functioncall functionName="probe_positions_buffer"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_constant"/>
+    <functioncall functionName="qsize"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="raster_base_uniform"/>
+    <functioncall functionName="raster_depth_buffer"/>
+    <functioncall functionName="raster_pipeline"/>
+    <functioncall functionName="raster_pipeline_wire"/>
+    <functioncall functionName="raster_push_constant"/>
+    <functioncall functionName="rasterize_shader"/>
+    <functioncall functionName="ray_count"/>
+    <functioncall functionName="ray_iterations"/>
+    <functioncall functionName="rd"/>
+    <functioncall functionName="render_pipeline_create"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rw"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sampler"/>
+    <functioncall functionName="sampler_create"/>
+    <functioncall functionName="save_png"/>
+    <functioncall functionName="sb"/>
+    <functioncall functionName="seam"/>
+    <functioncall functionName="seam_found"/>
+    <functioncall functionName="seam_offset"/>
+    <functioncall functionName="seams_buffer"/>
+    <functioncall functionName="seams_push_constant"/>
+    <functioncall functionName="set_as_black"/>
+    <functioncall functionName="set_pixel"/>
+    <functioncall functionName="shader_create_from_bytecode"/>
+    <functioncall functionName="sidx"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sizes"/>
+    <functioncall functionName="slice"/>
+    <functioncall functionName="slice_norm_tex"/>
+    <functioncall functionName="slice_pos_tex"/>
+    <functioncall functionName="slice_seam_count"/>
+    <functioncall functionName="slice_tex"/>
+    <functioncall functionName="slice_triangle_count"/>
+    <functioncall functionName="slice_unoc_tex"/>
+    <functioncall functionName="slices"/>
+    <functioncall functionName="solid"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="source_sizes"/>
+    <functioncall functionName="storage_buffer_create"/>
+    <functioncall functionName="submit"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="sync"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tb"/>
+    <functioncall functionName="tdata"/>
+    <functioncall functionName="texdata"/>
+    <functioncall functionName="texture_clear"/>
+    <functioncall functionName="texture_copy"/>
+    <functioncall functionName="texture_create"/>
+    <functioncall functionName="texture_create_shared_from_slice"/>
+    <functioncall functionName="texture_get_data"/>
+    <functioncall functionName="texture_update"/>
+    <functioncall functionName="tf"/>
+    <functioncall functionName="tfp"/>
+    <functioncall functionName="tib"/>
+    <functioncall functionName="to_byte_array"/>
+    <functioncall functionName="total"/>
+    <functioncall functionName="triangle_box_overlap"/>
+    <functioncall functionName="triangle_buffer"/>
+    <functioncall functionName="triangle_cell_indices_buffer"/>
+    <functioncall functionName="triangle_index"/>
+    <functioncall functionName="triangle_offset"/>
+    <functioncall functionName="triangle_sort"/>
+    <functioncall functionName="triangles"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ts"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uniform_set_create"/>
+    <functioncall functionName="uniforms"/>
+    <functioncall functionName="unocclude_tex"/>
+    <functioncall functionName="unocclude_uniform_set"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="userdata"/>
+    <functioncall functionName="uv2"/>
+    <functioncall functionName="uv_offset"/>
+    <functioncall functionName="uv_offset_count"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="vb"/>
+    <functioncall functionName="vertex_buffer"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zeromem"/>
+  </FileInfo>
+</analyzerinfo>

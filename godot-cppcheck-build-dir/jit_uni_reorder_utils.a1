@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3027719304">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/cpu_primitive.hpp" line="37" column="5"/>
+            <symbol>cpu_primitive_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;kernel_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;kernel_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder.hpp" line="92" column="5"/>
+            <symbol>kernel_t</symbol>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%zu in format string (no. 1) requires &apos;size_t&apos; but the argument type is &apos;ptrdiff_t {aka signed long}&apos;." verbose="%zu in format string (no. 1) requires &apos;size_t&apos; but the argument type is &apos;ptrdiff_t {aka signed long}&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" line="306" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="portability" msg="%zu in format string (no. 2) requires &apos;size_t&apos; but the argument type is &apos;ptrdiff_t {aka signed long}&apos;." verbose="%zu in format string (no. 2) requires &apos;size_t&apos; but the argument type is &apos;ptrdiff_t {aka signed long}&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" line="306" column="5"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;prb_init&apos; argument 1 names different: declaration &apos;prb&apos; definition &apos;p&apos;." verbose="Function &apos;prb_init&apos; argument 1 names different: declaration &apos;prb&apos; definition &apos;p&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" line="97" column="26"/>
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder.hpp" line="56" column="26"/>
+            <symbol>prb_init</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;ok&apos; shadows outer variable" verbose="Local variable &apos;ok&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" line="117" column="14" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/jit_uni_reorder_utils.cpp" line="102" column="10" info="Shadowed declaration"/>
+            <symbol>ok</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="cvt_mem_desc_to_layout_desc" lineNumber="46"/>
+    <functiondecl functionName="prb_init" lineNumber="97"/>
+    <functiondecl functionName="prb_normalize" lineNumber="208"/>
+    <functiondecl functionName="prb_simplify" lineNumber="224"/>
+    <functiondecl functionName="prb_node_split" lineNumber="253"/>
+    <functiondecl functionName="prb_node_swap" lineNumber="271"/>
+    <functiondecl functionName="prb_node_move" lineNumber="281"/>
+    <functiondecl functionName="prb_dump" lineNumber="300"/>
+    <functioncall functionName="COMMON"/>
+    <functioncall functionName="IMPLICATION"/>
+    <functioncall functionName="MANY"/>
+    <functioncall functionName="MKLDNN_ARG_SCRATCHPAD"/>
+    <functioncall functionName="MKLDNN_MAX_NDIMS"/>
+    <functioncall functionName="NONE"/>
+    <functioncall functionName="P"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="blocking_desc"/>
+    <functioncall functionName="blocks"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="compute_blocks"/>
+    <functioncall functionName="cpu_primitive_t"/>
+    <functioncall functionName="create_scratchpad"/>
+    <functioncall functionName="cvt_mem_desc_to_layout_desc"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d0"/>
+    <functioncall functionName="d1"/>
+    <functioncall functionName="data_type"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="desc_"/>
+    <functioncall functionName="dim"/>
+    <functioncall functionName="dims"/>
+    <functioncall functionName="dt"/>
+    <functioncall functionName="extra"/>
+    <functioncall functionName="factor"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="fold"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="global_scratchpad_"/>
+    <functioncall functionName="grantor"/>
+    <functioncall functionName="has_default_values"/>
+    <functioncall functionName="has_zero_dim"/>
+    <functioncall functionName="i_pos"/>
+    <functioncall functionName="iblk"/>
+    <functioncall functionName="iblocks"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx0"/>
+    <functioncall functionName="idx1"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ild"/>
+    <functioncall functionName="imd"/>
+    <functioncall functionName="ioff"/>
+    <functioncall functionName="is"/>
+    <functioncall functionName="is_blocking_desc"/>
+    <functioncall functionName="itype"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="ker_"/>
+    <functioncall functionName="kernel_t"/>
+    <functioncall functionName="last_ss"/>
+    <functioncall functionName="ld"/>
+    <functioncall functionName="ld_d"/>
+    <functioncall functionName="ld_ndims_start"/>
+    <functioncall functionName="library"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="max_ndims"/>
+    <functioncall functionName="md_"/>
+    <functioncall functionName="memory_desc_wrapper"/>
+    <functioncall functionName="min_pos"/>
+    <functioncall functionName="mkldnn_dt2str"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n1"/>
+    <functioncall functionName="ndims"/>
+    <functioncall functionName="new_min"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="o_pos"/>
+    <functioncall functionName="oblocks"/>
+    <functioncall functionName="off_v"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="old"/>
+    <functioncall functionName="omd"/>
+    <functioncall functionName="ooff"/>
+    <functioncall functionName="os"/>
+    <functioncall functionName="otype"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="padded_dims"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="post_ops_"/>
+    <functioncall functionName="prb"/>
+    <functioncall functionName="primitive_t"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="scratchpad_buffer_"/>
+    <functioncall functionName="scratchpad_registry"/>
+    <functioncall functionName="scratchpad_size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src_engine_"/>
+    <functioncall functionName="ss"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="sum_idx"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="unimplemented"/>
+    <functioncall functionName="use_global_scratchpad"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zero_pos"/>
+  </FileInfo>
+</analyzerinfo>

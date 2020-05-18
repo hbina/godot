@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3542638902">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="689" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="763" column="7"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;shift_y&apos; shadows outer variable" verbose="Local variable &apos;shift_y&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="990" column="25" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="964" column="19" info="Shadowed declaration"/>
+            <symbol>shift_y</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;shift_uv&apos; shadows outer variable" verbose="Local variable &apos;shift_uv&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="991" column="25" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="965" column="19" info="Shadowed declaration"/>
+            <symbol>shift_uv</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;shift_y&apos; shadows outer variable" verbose="Local variable &apos;shift_y&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1019" column="29" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="990" column="25" info="Shadowed declaration"/>
+            <symbol>shift_y</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;shift_y&apos; shadows outer variable" verbose="Local variable &apos;shift_y&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1025" column="31" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1019" column="29" info="Shadowed declaration"/>
+            <symbol>shift_y</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="946" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="946" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="949" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="949" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="956" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="956" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1273" col="31" call-argexpr="mask_16x16_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1253" col="22" info="Assignment 'mask_16x16_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1273" col="31" call-argexpr="mask_8x8_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1254" col="20" info="Assignment 'mask_8x8_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1273" col="31" call-argexpr="mask_4x4_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1255" col="20" info="Assignment 'mask_4x4_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1273" col="31" call-argexpr="mask_4x4_int_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1246" col="59" info="Assignment 'mask_4x4_int_r=skip_border_4x4_r?0:mask_4x4_int[r]', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1364" col="31" call-argexpr="mask_16x16_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1346" col="22" info="Assignment 'mask_16x16_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1364" col="31" call-argexpr="mask_8x8_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1347" col="20" info="Assignment 'mask_8x8_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1364" col="31" call-argexpr="mask_4x4_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1348" col="20" info="Assignment 'mask_4x4_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1467" col="31" call-argexpr="mask_16x16_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1449" col="22" info="Assignment 'mask_16x16_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1467" col="31" call-argexpr="mask_8x8_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1450" col="20" info="Assignment 'mask_8x8_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1467" col="31" call-argexpr="mask_4x4_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1451" col="20" info="Assignment 'mask_4x4_r=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:467:13" call-funcname="filter_selectively_horiz" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1467" col="31" call-argexpr="mask_4x4_int_r" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1443" col="27" info="Assignment 'mask_4x4_int_r=skip_border_4x4_r?0:(mask_4x4_int&15)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1482:13" call-funcname="loop_filter_rows" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1543" col="19" call-argexpr="start_mi_row" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1535" col="18" info="Assignment 'start_mi_row=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" call-funcname="get_filter_level" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="682" col="28" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" call-funcname="get_filter_level" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="759" col="28" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:754:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1482:13" call-funcname="loop_filter_rows" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1543" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1529:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="1" my-argname="lfi_n" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="679" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:754:13" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="757" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:793:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="817" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:793:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="799" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:909:6" my-argnr="6" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="941" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1121:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1129" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1121:6" my-argnr="2" my-argname="plane" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1125" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1286:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1293" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1379:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1388" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1591:6" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1593" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1673:6" my-argnr="1" my-argname="lf_data" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1676" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1684:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1685" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1692:5" my-argnr="1" my-argname="lf_data" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1694" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="1" my-argname="lfi_n" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:793:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="799" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:909:6" my-argnr="6" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="941" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="946" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="946" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="949" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="949" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="956" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" call-funcname="build_masks" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="956" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1482:13" call-funcname="loop_filter_rows" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1543" col="19" call-argexpr="start_mi_row" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1535" col="18" info="Assignment 'start_mi_row=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" call-funcname="get_filter_level" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="682" col="28" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" call-funcname="get_filter_level" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="759" col="28" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:754:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1482:13" call-funcname="loop_filter_rows" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1543" col="3" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1529:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="1" my-argname="lfi_n" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:675:13" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="679" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:754:13" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="757" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:793:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="817" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:793:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="799" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:909:6" my-argnr="6" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="941" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1121:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1129" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1121:6" my-argnr="2" my-argname="plane" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1125" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1286:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1293" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1379:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1388" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1591:6" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1593" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1673:6" my-argnr="1" my-argname="lf_data" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1676" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1684:6" my-argnr="1" my-argname="cm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1685" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:1692:5" my-argnr="1" my-argname="lf_data" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="1694" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="1" my-argname="lfi_n" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:234:16" my-argnr="2" my-argname="mi" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="236" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:793:6" my-argnr="4" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="799" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c:909:6" my-argnr="6" my-argname="lfm" file="/home/hbina/git/godot/thirdparty/libvpx/vp9/common/vp9_loopfilter.c" line="941" col="13" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="update_sharpness" lineNumber="212"/>
+    <functiondecl functionName="get_filter_level" lineNumber="234"/>
+    <functiondecl functionName="vp9_loop_filter_init" lineNumber="240"/>
+    <functiondecl functionName="vp9_loop_filter_frame_init" lineNumber="254"/>
+    <functiondecl functionName="filter_selectively_vert_row2" lineNumber="299"/>
+    <functiondecl functionName="filter_selectively_horiz" lineNumber="467"/>
+    <functiondecl functionName="build_masks" lineNumber="675"/>
+    <functiondecl functionName="build_y_mask" lineNumber="754"/>
+    <functiondecl functionName="vp9_adjust_mask" lineNumber="793"/>
+    <functiondecl functionName="vp9_setup_mask" lineNumber="909"/>
+    <functiondecl functionName="filter_selectively_vert" lineNumber="1049"/>
+    <functiondecl functionName="vp9_filter_block_plane_non420" lineNumber="1121"/>
+    <functiondecl functionName="vp9_filter_block_plane_ss00" lineNumber="1286"/>
+    <functiondecl functionName="vp9_filter_block_plane_ss11" lineNumber="1379"/>
+    <functiondecl functionName="loop_filter_rows" lineNumber="1482"/>
+    <functiondecl functionName="vp9_loop_filter_frame" lineNumber="1529"/>
+    <functiondecl functionName="vp9_build_mask_frame" lineNumber="1549"/>
+    <functiondecl functionName="vp9_build_mask" lineNumber="1591"/>
+    <functiondecl functionName="vp9_loop_filter_data_reset" lineNumber="1673"/>
+    <functiondecl functionName="vp9_reset_lfm" lineNumber="1684"/>
+    <functiondecl functionName="vp9_loop_filter_worker" lineNumber="1692"/>
+    <functiondecl functionName="update_sharpness" lineNumber="212"/>
+    <functiondecl functionName="get_filter_level" lineNumber="234"/>
+    <functiondecl functionName="vp9_loop_filter_init" lineNumber="240"/>
+    <functiondecl functionName="vp9_loop_filter_frame_init" lineNumber="254"/>
+    <functiondecl functionName="filter_selectively_vert_row2" lineNumber="299"/>
+    <functiondecl functionName="highbd_filter_selectively_vert_row2" lineNumber="382"/>
+    <functiondecl functionName="filter_selectively_horiz" lineNumber="467"/>
+    <functiondecl functionName="highbd_filter_selectively_horiz" lineNumber="564"/>
+    <functiondecl functionName="build_masks" lineNumber="675"/>
+    <functiondecl functionName="build_y_mask" lineNumber="754"/>
+    <functiondecl functionName="vp9_adjust_mask" lineNumber="793"/>
+    <functiondecl functionName="vp9_setup_mask" lineNumber="909"/>
+    <functiondecl functionName="filter_selectively_vert" lineNumber="1049"/>
+    <functiondecl functionName="highbd_filter_selectively_vert" lineNumber="1083"/>
+    <functiondecl functionName="vp9_filter_block_plane_non420" lineNumber="1121"/>
+    <functiondecl functionName="vp9_filter_block_plane_ss00" lineNumber="1286"/>
+    <functiondecl functionName="vp9_filter_block_plane_ss11" lineNumber="1379"/>
+    <functiondecl functionName="loop_filter_rows" lineNumber="1482"/>
+    <functiondecl functionName="vp9_loop_filter_frame" lineNumber="1529"/>
+    <functiondecl functionName="vp9_build_mask_frame" lineNumber="1549"/>
+    <functiondecl functionName="vp9_build_mask" lineNumber="1591"/>
+    <functiondecl functionName="vp9_loop_filter_data_reset" lineNumber="1673"/>
+    <functiondecl functionName="vp9_reset_lfm" lineNumber="1684"/>
+    <functiondecl functionName="vp9_loop_filter_worker" lineNumber="1692"/>
+    <functioncall functionName="BLOCK_SIZES"/>
+    <functioncall functionName="CONVERT_TO_SHORTPTR"/>
+    <functioncall functionName="INTRA_FRAME"/>
+    <functioncall functionName="LAST_FRAME"/>
+    <functioncall functionName="LF_PATH_420"/>
+    <functioncall functionName="LF_PATH_444"/>
+    <functioncall functionName="LF_PATH_SLOW"/>
+    <functioncall functionName="MAX_LOOP_FILTER"/>
+    <functioncall functionName="MAX_MB_PLANE"/>
+    <functioncall functionName="MB_MODE_COUNT"/>
+    <functioncall functionName="MI_BLOCK_SIZE"/>
+    <functioncall functionName="SEG_LVL_ALT_LF"/>
+    <functioncall functionName="SIMD_WIDTH"/>
+    <functioncall functionName="TX_16X16"/>
+    <functioncall functionName="TX_32X32"/>
+    <functioncall functionName="TX_4X4"/>
+    <functioncall functionName="TX_8X8"/>
+    <functioncall functionName="TX_SIZES"/>
+    <functioncall functionName="VPXMAX"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="bd"/>
+    <functioncall functionName="bit_depth"/>
+    <functioncall functionName="block_edge_above"/>
+    <functioncall functionName="block_edge_left"/>
+    <functioncall functionName="block_inside_limit"/>
+    <functioncall functionName="block_size"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="build_masks"/>
+    <functioncall functionName="build_uv"/>
+    <functioncall functionName="build_y_mask"/>
+    <functioncall functionName="bw"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="clamp"/>
+    <functioncall functionName="cm"/>
+    <functioncall functionName="col_in_sb"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="default_filt_lvl"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst0"/>
+    <functioncall functionName="dual_mask_cutoff"/>
+    <functioncall functionName="end_mi_row"/>
+    <functioncall functionName="filter_level"/>
+    <functioncall functionName="filter_selectively_horiz"/>
+    <functioncall functionName="filter_selectively_vert"/>
+    <functioncall functionName="filter_selectively_vert_row2"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="frame_buffer"/>
+    <functioncall functionName="frame_filter_level"/>
+    <functioncall functionName="get_filter_level"/>
+    <functioncall functionName="get_lfm"/>
+    <functioncall functionName="get_segdata"/>
+    <functioncall functionName="get_uv_tx_size"/>
+    <functioncall functionName="get_uv_tx_size_impl"/>
+    <functioncall functionName="hev_thr"/>
+    <functioncall functionName="highbd_filter_selectively_horiz"/>
+    <functioncall functionName="highbd_filter_selectively_vert"/>
+    <functioncall functionName="highbd_filter_selectively_vert_row2"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx_16"/>
+    <functioncall functionName="idx_32"/>
+    <functioncall functionName="idx_8"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int_4x4_uv"/>
+    <functioncall functionName="int_4x4_y"/>
+    <functioncall functionName="inter_lvl"/>
+    <functioncall functionName="intra_lvl"/>
+    <functioncall functionName="is_inter_block"/>
+    <functioncall functionName="lf"/>
+    <functioncall functionName="lf_info"/>
+    <functioncall functionName="lfi"/>
+    <functioncall functionName="lfi_n"/>
+    <functioncall functionName="lfl_forward"/>
+    <functioncall functionName="lfm"/>
+    <functioncall functionName="lfthr"/>
+    <functioncall functionName="lim"/>
+    <functioncall functionName="loop_filter_rows"/>
+    <functioncall functionName="lvl"/>
+    <functioncall functionName="lvl_seg"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="mask_16x16"/>
+    <functioncall functionName="mask_16x16_r"/>
+    <functioncall functionName="mask_4x4"/>
+    <functioncall functionName="mask_4x4_int"/>
+    <functioncall functionName="mask_4x4_int_r"/>
+    <functioncall functionName="mask_4x4_r"/>
+    <functioncall functionName="mask_8x8"/>
+    <functioncall functionName="mask_8x8_r"/>
+    <functioncall functionName="mblim"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mi"/>
+    <functioncall functionName="mi_col"/>
+    <functioncall functionName="mi_cols"/>
+    <functioncall functionName="mi_row"/>
+    <functioncall functionName="mi_rows"/>
+    <functioncall functionName="mi_rows_to_filter"/>
+    <functioncall functionName="mi_stride"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="mode_info_stride"/>
+    <functioncall functionName="mode_ref_delta_enabled"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pitch"/>
+    <functioncall functionName="plane"/>
+    <functioncall functionName="planes"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="row_in_sb"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sb_type"/>
+    <functioncall functionName="seg"/>
+    <functioncall functionName="seg_id"/>
+    <functioncall functionName="segfeature_active"/>
+    <functioncall functionName="segment_id"/>
+    <functioncall functionName="sharpness_level"/>
+    <functioncall functionName="sharpness_lvl"/>
+    <functioncall functionName="shift_uv"/>
+    <functioncall functionName="shift_y"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip_border_4x4_c"/>
+    <functioncall functionName="skip_border_4x4_r"/>
+    <functioncall functionName="skip_this_c"/>
+    <functioncall functionName="skip_this_r"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_mi_row"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="subsampling_x"/>
+    <functioncall functionName="subsampling_y"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tx_size"/>
+    <functioncall functionName="tx_size_uv"/>
+    <functioncall functionName="tx_size_y"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="unused"/>
+    <functioncall functionName="update_sharpness"/>
+    <functioncall functionName="use_highbitdepth"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vp9_adjust_mask"/>
+    <functioncall functionName="vp9_filter_block_plane_non420"/>
+    <functioncall functionName="vp9_filter_block_plane_ss00"/>
+    <functioncall functionName="vp9_filter_block_plane_ss11"/>
+    <functioncall functionName="vp9_loop_filter_frame_init"/>
+    <functioncall functionName="vp9_setup_dst_planes"/>
+    <functioncall functionName="vp9_setup_mask"/>
+    <functioncall functionName="vp9_zero"/>
+    <functioncall functionName="vpx_highbd_lpf_horizontal_4"/>
+    <functioncall functionName="vpx_highbd_lpf_horizontal_4_dual"/>
+    <functioncall functionName="vpx_highbd_lpf_horizontal_8"/>
+    <functioncall functionName="vpx_highbd_lpf_horizontal_8_dual"/>
+    <functioncall functionName="vpx_highbd_lpf_horizontal_edge_16"/>
+    <functioncall functionName="vpx_highbd_lpf_horizontal_edge_8"/>
+    <functioncall functionName="vpx_highbd_lpf_vertical_16"/>
+    <functioncall functionName="vpx_highbd_lpf_vertical_16_dual"/>
+    <functioncall functionName="vpx_highbd_lpf_vertical_4"/>
+    <functioncall functionName="vpx_highbd_lpf_vertical_4_dual"/>
+    <functioncall functionName="vpx_highbd_lpf_vertical_8"/>
+    <functioncall functionName="vpx_highbd_lpf_vertical_8_dual"/>
+    <functioncall functionName="vpx_lpf_horizontal_4"/>
+    <functioncall functionName="vpx_lpf_horizontal_4_dual"/>
+    <functioncall functionName="vpx_lpf_horizontal_8"/>
+    <functioncall functionName="vpx_lpf_horizontal_8_dual"/>
+    <functioncall functionName="vpx_lpf_horizontal_edge_16"/>
+    <functioncall functionName="vpx_lpf_horizontal_edge_8"/>
+    <functioncall functionName="vpx_lpf_vertical_16"/>
+    <functioncall functionName="vpx_lpf_vertical_16_dual"/>
+    <functioncall functionName="vpx_lpf_vertical_4"/>
+    <functioncall functionName="vpx_lpf_vertical_4_dual"/>
+    <functioncall functionName="vpx_lpf_vertical_8"/>
+    <functioncall functionName="vpx_lpf_vertical_8_dual"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="y_only"/>
+  </FileInfo>
+</analyzerinfo>

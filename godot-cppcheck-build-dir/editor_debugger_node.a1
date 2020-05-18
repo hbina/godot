@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="547049650">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;source&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;source&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/debugger/editor_debugger_node.cpp" file="/home/hbina/git/godot/editor/debugger/editor_debugger_node.h" line="83" column="4"/>
+            <symbol>source</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;get_debugger&apos; argument 1 names different: declaration &apos;p_debugger&apos; definition &apos;p_id&apos;." verbose="Function &apos;get_debugger&apos; argument 1 names different: declaration &apos;p_debugger&apos; definition &apos;p_id&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/debugger/editor_debugger_node.cpp" line="164" column="60"/>
+            <location file0="/home/hbina/git/godot/editor/debugger/editor_debugger_node.cpp" file="/home/hbina/git/godot/editor/debugger/editor_debugger_node.h" line="144" column="41"/>
+            <symbol>get_debugger</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/debugger/editor_debugger_node.h:144:24" call-funcname="get_debugger" call-argnr="1" file="/home/hbina/git/godot/editor/debugger/editor_debugger_node.cpp" line="104" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/debugger/editor_debugger_node.cpp:42:6" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/editor/debugger/editor_debugger_node.cpp" line="43" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/debugger/editor_debugger_node.h:127:7" my-argnr="1" my-argname="p_debugger" file="/home/hbina/git/godot/editor/debugger/editor_debugger_node.cpp" line="133" col="22" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_add_debugger" lineNumber="88"/>
+    <functiondecl functionName="_stack_frame_selected" lineNumber="119"/>
+    <functiondecl functionName="_error_selected" lineNumber="127"/>
+    <functiondecl functionName="_text_editor_stack_goto" lineNumber="132"/>
+    <functiondecl functionName="_bind_methods" lineNumber="143"/>
+    <functiondecl functionName="get_inspected_remote_object" lineNumber="160"/>
+    <functiondecl functionName="get_debugger" lineNumber="164"/>
+    <functiondecl functionName="get_current_debugger" lineNumber="168"/>
+    <functiondecl functionName="get_default_debugger" lineNumber="172"/>
+    <functiondecl functionName="start" lineNumber="176"/>
+    <functiondecl functionName="stop" lineNumber="194"/>
+    <functiondecl functionName="_notification" lineNumber="214"/>
+    <functiondecl functionName="_debugger_stopped" lineNumber="324"/>
+    <functiondecl functionName="_debugger_wants_stop" lineNumber="342"/>
+    <functiondecl functionName="_debugger_changed" lineNumber="349"/>
+    <functiondecl functionName="set_script_debug_button" lineNumber="363"/>
+    <functiondecl functionName="_break_state_changed" lineNumber="382"/>
+    <functiondecl functionName="_menu_option" lineNumber="398"/>
+    <functiondecl functionName="_paused" lineNumber="426"/>
+    <functiondecl functionName="_breaked" lineNumber="437"/>
+    <functiondecl functionName="is_skip_breakpoints" lineNumber="448"/>
+    <functiondecl functionName="set_breakpoint" lineNumber="452"/>
+    <functiondecl functionName="reload_scripts" lineNumber="459"/>
+    <functiondecl functionName="debug_next" lineNumber="465"/>
+    <functiondecl functionName="debug_step" lineNumber="469"/>
+    <functiondecl functionName="debug_break" lineNumber="473"/>
+    <functiondecl functionName="debug_continue" lineNumber="477"/>
+    <functiondecl functionName="get_var_value" lineNumber="481"/>
+    <functiondecl functionName="request_remote_tree" lineNumber="486"/>
+    <functiondecl functionName="_remote_tree_updated" lineNumber="490"/>
+    <functiondecl functionName="_remote_object_updated" lineNumber="497"/>
+    <functiondecl functionName="_remote_object_property_updated" lineNumber="508"/>
+    <functiondecl functionName="_remote_object_requested" lineNumber="518"/>
+    <functiondecl functionName="_save_node_requested" lineNumber="525"/>
+    <functiondecl functionName="_method_changeds" lineNumber="532"/>
+    <functiondecl functionName="_property_changeds" lineNumber="540"/>
+    <functiondecl functionName="set_live_debugging" lineNumber="549"/>
+    <functiondecl functionName="update_live_edit_root" lineNumber="555"/>
+    <functiondecl functionName="live_debug_create_node" lineNumber="560"/>
+    <functiondecl functionName="live_debug_instance_node" lineNumber="565"/>
+    <functiondecl functionName="live_debug_remove_node" lineNumber="570"/>
+    <functiondecl functionName="live_debug_remove_and_keep_node" lineNumber="575"/>
+    <functiondecl functionName="live_debug_restore_node" lineNumber="580"/>
+    <functiondecl functionName="live_debug_duplicate_node" lineNumber="585"/>
+    <functiondecl functionName="live_debug_reparent_node" lineNumber="590"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ALIGN_LEFT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="Breakpoint"/>
+    <functioncall functionName="DEBUG_BREAK"/>
+    <functioncall functionName="DEBUG_CONTINUE"/>
+    <functioncall functionName="DEBUG_NEXT"/>
+    <functioncall functionName="DEBUG_SHOW_KEEP_OPEN"/>
+    <functioncall functionName="DEBUG_STEP"/>
+    <functioncall functionName="DEBUG_WITH_EXTERNAL_EDITOR"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITOR_DEF"/>
+    <functioncall functionName="EDITOR_GET"/>
+    <functioncall functionName="ED_GET_SHORTCUT"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="EditorDebuggerNode"/>
+    <functioncall functionName="EditorDebuggerTree"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MSG_TYPE_EDITOR"/>
+    <functioncall functionName="MarginContainer"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="OVERRIDE_2D"/>
+    <functioncall functionName="OVERRIDE_3D_1"/>
+    <functioncall functionName="OVERRIDE_3D_2"/>
+    <functioncall functionName="OVERRIDE_3D_3"/>
+    <functioncall functionName="OVERRIDE_3D_4"/>
+    <functioncall functionName="OVERRIDE_NONE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="ScriptEditorDebugger"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TabContainer"/>
+    <functioncall functionName="VARIANT_ARG_DECLARE"/>
+    <functioncall functionName="VARIANT_ARG_PASS"/>
+    <functioncall functionName="_add_debugger"/>
+    <functioncall functionName="_break_state_changed"/>
+    <functioncall functionName="_breaked"/>
+    <functioncall functionName="_clear_execution"/>
+    <functioncall functionName="_debugger_changed"/>
+    <functioncall functionName="_debugger_stopped"/>
+    <functioncall functionName="_debugger_wants_stop"/>
+    <functioncall functionName="_error_selected"/>
+    <functioncall functionName="_for_all"/>
+    <functioncall functionName="_menu_option"/>
+    <functioncall functionName="_method_changed"/>
+    <functioncall functionName="_method_changeds"/>
+    <functioncall functionName="_paused"/>
+    <functioncall functionName="_property_changed"/>
+    <functioncall functionName="_property_changeds"/>
+    <functioncall functionName="_remote_object_property_updated"/>
+    <functioncall functionName="_remote_object_requested"/>
+    <functioncall functionName="_remote_object_updated"/>
+    <functioncall functionName="_remote_tree_updated"/>
+    <functioncall functionName="_save_node_requested"/>
+    <functioncall functionName="_stack_frame_selected"/>
+    <functioncall functionName="_text_editor_stack_goto"/>
+    <functioncall functionName="add_check_shortcut"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_message"/>
+    <functioncall functionName="add_remote_tree_editor"/>
+    <functioncall functionName="add_separator"/>
+    <functioncall functionName="add_shortcut"/>
+    <functioncall functionName="add_theme_constant_override"/>
+    <functioncall functionName="add_theme_style_override"/>
+    <functioncall functionName="auto_switch_remote_scene_tree"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="breaked"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="checked"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_style"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="dbg"/>
+    <functioncall functionName="debug_break"/>
+    <functioncall functionName="debug_continue"/>
+    <functioncall functionName="debug_next"/>
+    <functioncall functionName="debug_step"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="error_count"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_current"/>
+    <functioncall functionName="get_current_debugger"/>
+    <functioncall functionName="get_current_tab"/>
+    <functioncall functionName="get_debugger"/>
+    <functioncall functionName="get_default_debugger"/>
+    <functioncall functionName="get_editor_history"/>
+    <functioncall functionName="get_error_count"/>
+    <functioncall functionName="get_gui_base"/>
+    <functioncall functionName="get_inspected_remote_object"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_item_index"/>
+    <functioncall functionName="get_log"/>
+    <functioncall functionName="get_margin"/>
+    <functioncall functionName="get_pause_button"/>
+    <functioncall functionName="get_popup"/>
+    <functioncall functionName="get_process_delta_time"/>
+    <functioncall functionName="get_remote_object"/>
+    <functioncall functionName="get_remote_pid"/>
+    <functioncall functionName="get_remote_tree"/>
+    <functioncall functionName="get_scene_tree_dock"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_stack_script_file"/>
+    <functioncall functionName="get_stack_script_line"/>
+    <functioncall functionName="get_tab_control"/>
+    <functioncall functionName="get_tab_count"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_theme_stylebox"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_var_value"/>
+    <functioncall functionName="get_warning_count"/>
+    <functioncall functionName="hide_bottom_panel"/>
+    <functioncall functionName="hide_on_stop"/>
+    <functioncall functionName="hide_remote_tree"/>
+    <functioncall functionName="hide_tab_buttons"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="is_active"/>
+    <functioncall functionName="is_breaked"/>
+    <functioncall functionName="is_connection_available"/>
+    <functioncall functionName="is_debuggable"/>
+    <functioncall functionName="is_item_checked"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_session_active"/>
+    <functioncall functionName="is_skip_breakpoints"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="live_debug_create_node"/>
+    <functioncall functionName="live_debug_duplicate_node"/>
+    <functioncall functionName="live_debug_instance_node"/>
+    <functioncall functionName="live_debug_remove_and_keep_node"/>
+    <functioncall functionName="live_debug_remove_node"/>
+    <functioncall functionName="live_debug_reparent_node"/>
+    <functioncall functionName="live_debug_restore_node"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="make_bottom_panel_item_visible"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="notify_all_debug_sessions_exited"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_at"/>
+    <functioncall functionName="p_at_pos"/>
+    <functioncall functionName="p_base"/>
+    <functioncall functionName="p_breaked"/>
+    <functioncall functionName="p_button"/>
+    <functioncall functionName="p_can_debug"/>
+    <functioncall functionName="p_debugger"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_func"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_keep_id"/>
+    <functioncall functionName="p_line"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_new_name"/>
+    <functioncall functionName="p_new_place"/>
+    <functioncall functionName="p_override"/>
+    <functioncall functionName="p_parent"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_protocol"/>
+    <functioncall functionName="p_script"/>
+    <functioncall functionName="p_source"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_var"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="pid"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="push_item"/>
+    <functioncall functionName="reload_scripts"/>
+    <functioncall functionName="remote_object_id"/>
+    <functioncall functionName="remote_scene_tree"/>
+    <functioncall functionName="request_remote_object"/>
+    <functioncall functionName="request_remote_tree"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="save_node"/>
+    <functioncall functionName="script_menu"/>
+    <functioncall functionName="set_breakpoint"/>
+    <functioncall functionName="set_current_tab"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_editor_remote_tree"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_item_checked"/>
+    <functioncall functionName="set_item_disabled"/>
+    <functioncall functionName="set_live_debugging"/>
+    <functioncall functionName="set_method_notify_callback"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_process"/>
+    <functioncall functionName="set_property_notify_callback"/>
+    <functioncall functionName="set_switch_on_hover"/>
+    <functioncall functionName="set_tab_align"/>
+    <functioncall functionName="set_tabs_visible"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="show_remote_tree"/>
+    <functioncall functionName="show_tab_buttons"/>
+    <functioncall functionName="singleton"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="stack_script"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tabs"/>
+    <functioncall functionName="take_connection"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="update_live_edit_root"/>
+    <functioncall functionName="update_property"/>
+    <functioncall functionName="update_scene_tree"/>
+    <functioncall functionName="update_tabs"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="visible"/>
+    <functioncall functionName="warning_count"/>
+  </FileInfo>
+</analyzerinfo>

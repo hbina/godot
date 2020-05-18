@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="224522297">
+        <error id="invalidPointerCast" severity="portability" msg="Casting from const float * to unsigned char * is not portable due to different binary data representations on different platforms." verbose="Casting from const float * to unsigned char * is not portable due to different binary data representations on different platforms." cwe="704" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="302" column="23"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="305" column="19"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;merge&apos; can be reduced." verbose="The scope of the variable &apos;merge&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="310" column="7"/>
+            <symbol>merge</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;registerConcaveMesh&apos; argument 3 names different: declaration &apos;scaling&apos; definition &apos;scaling1&apos;." verbose="Function &apos;registerConcaveMesh&apos; argument 3 names different: declaration &apos;scaling&apos; definition &apos;scaling1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="521" column="135"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h" line="35" column="118"/>
+            <symbol>registerConcaveMesh</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;registerConcaveMeshShape&apos; argument 4 names different: declaration &apos;scaling&apos; definition &apos;scaling1&apos;." verbose="Function &apos;registerConcaveMeshShape&apos; argument 4 names different: declaration &apos;scaling&apos; definition &apos;scaling1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="607" column="159"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h" line="22" column="142"/>
+            <symbol>registerConcaveMeshShape</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;registerRigidBody&apos; argument 5 names different: declaration &apos;aabbMin&apos; definition &apos;aabbMinPtr&apos;." verbose="Function &apos;registerRigidBody&apos; argument 5 names different: declaration &apos;aabbMin&apos; definition &apos;aabbMinPtr&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="816" column="136"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h" line="42" column="119"/>
+            <symbol>registerRigidBody</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;registerRigidBody&apos; argument 6 names different: declaration &apos;aabbMax&apos; definition &apos;aabbMaxPtr&apos;." verbose="Function &apos;registerRigidBody&apos; argument 6 names different: declaration &apos;aabbMax&apos; definition &apos;aabbMaxPtr&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="816" column="161"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h" line="42" column="141"/>
+            <symbol>registerRigidBody</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="288" column="11" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="253" column="6" info="Shadowed declaration"/>
+            <symbol>i</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:85:16" call-funcname="getCollidableCpu" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="165" col="38" call-argexpr="collidableIndex" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="162" col="22" info="Assuming that condition 'collidableIndex<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:85:16" call-funcname="getCollidableCpu" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="208" col="38" call-argexpr="collidableIndex" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="205" col="22" info="Assuming that condition 'collidableIndex<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:85:16" call-funcname="getCollidableCpu" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="327" col="38" call-argexpr="collidableIndex" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="324" col="22" info="Assuming that condition 'collidableIndex<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:85:16" call-funcname="getCollidableCpu" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="376" col="38" call-argexpr="collidableIndex" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="373" col="22" info="Assuming that condition 'collidableIndex<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:85:16" call-funcname="getCollidableCpu" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="529" col="38" call-argexpr="collidableIndex" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="526" col="22" info="Assuming that condition 'collidableIndex<0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:22:6" call-funcname="registerConcaveMeshShape" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="532" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:35:6" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:22:6" call-funcname="registerConcaveMeshShape" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="532" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:35:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:35:6" my-argnr="3" my-argname="scaling1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="523" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:22:6" my-argnr="4" my-argname="scaling1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="609" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:42:6" my-argnr="5" my-argname="aabbMinPtr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="818" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:42:6" my-argnr="6" my-argname="aabbMaxPtr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="819" col="36" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:21:6" my-argnr="1" my-argname="convexPtr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="240" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:35:6" my-argnr="3" my-argname="scaling1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="523" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:22:6" my-argnr="4" my-argname="scaling1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="609" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:42:6" my-argnr="5" my-argname="aabbMinPtr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="818" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:42:6" my-argnr="6" my-argname="aabbMaxPtr" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="819" col="36" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.h:22:6" my-argnr="2" my-argname="indices" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3GpuNarrowPhase.cpp" line="628" col="22" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="allocateCollidable" lineNumber="144"/>
+    <functiondecl functionName="registerSphereShape" lineNumber="159"/>
+    <functiondecl functionName="registerFace" lineNumber="194"/>
+    <functiondecl functionName="registerPlaneShape" lineNumber="202"/>
+    <functiondecl functionName="registerConvexHullShapeInternal" lineNumber="234"/>
+    <functiondecl functionName="registerConvexHullShape" lineNumber="298"/>
+    <functiondecl functionName="registerConvexHullShape" lineNumber="321"/>
+    <functiondecl functionName="registerCompoundShape" lineNumber="370"/>
+    <functiondecl functionName="registerConcaveMesh" lineNumber="521"/>
+    <functiondecl functionName="registerConcaveMeshShape" lineNumber="607"/>
+    <functiondecl functionName="getBodiesGpu" lineNumber="671"/>
+    <functiondecl functionName="getBodiesCpu" lineNumber="676"/>
+    <functiondecl functionName="getNumBodiesGpu" lineNumber="681"/>
+    <functiondecl functionName="getBodyInertiasGpu" lineNumber="686"/>
+    <functiondecl functionName="getNumBodyInertiasGpu" lineNumber="691"/>
+    <functiondecl functionName="getCollidableCpu" lineNumber="696"/>
+    <functiondecl functionName="getCollidableCpu" lineNumber="701"/>
+    <functiondecl functionName="getCollidablesGpu" lineNumber="706"/>
+    <functiondecl functionName="getCollidablesCpu" lineNumber="711"/>
+    <functiondecl functionName="getLocalSpaceAabbsCpu" lineNumber="718"/>
+    <functiondecl functionName="getAabbLocalSpaceBufferGpu" lineNumber="727"/>
+    <functiondecl functionName="getNumCollidablesGpu" lineNumber="731"/>
+    <functiondecl functionName="getNumContactsGpu" lineNumber="736"/>
+    <functiondecl functionName="getContactsGpu" lineNumber="740"/>
+    <functiondecl functionName="getContactsCPU" lineNumber="745"/>
+    <functiondecl functionName="computeContacts" lineNumber="751"/>
+    <functiondecl functionName="getLocalSpaceAabb" lineNumber="811"/>
+    <functiondecl functionName="registerRigidBody" lineNumber="816"/>
+    <functiondecl functionName="getNumRigidBodies" lineNumber="910"/>
+    <functiondecl functionName="writeAllBodiesToGpu" lineNumber="915"/>
+    <functiondecl functionName="reset" lineNumber="946"/>
+    <functiondecl functionName="readbackAllBodiesToCpu" lineNumber="965"/>
+    <functiondecl functionName="setObjectTransformCpu" lineNumber="970"/>
+    <functiondecl functionName="setObjectVelocityCpu" lineNumber="982"/>
+    <functiondecl functionName="getObjectTransformFromCpu" lineNumber="995"/>
+    <functioncall functionName="GpuSatCollision"/>
+    <functioncall functionName="MAX_NUM_PARTS_IN_BITS"/>
+    <functioncall functionName="SHAPE_COMPOUND_OF_CONVEX_HULLS"/>
+    <functioncall functionName="SHAPE_CONCAVE_TRIMESH"/>
+    <functioncall functionName="SHAPE_CONVEX_HULL"/>
+    <functioncall functionName="SHAPE_PLANE"/>
+    <functioncall functionName="SHAPE_SPHERE"/>
+    <functioncall functionName="aMax"/>
+    <functioncall functionName="aMin"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="aabbLocalSpace"/>
+    <functioncall functionName="aabbMax"/>
+    <functioncall functionName="aabbMin"/>
+    <functioncall functionName="aabbsLocalSpace"/>
+    <functioncall functionName="aabbsWorldSpace"/>
+    <functioncall functionName="addIndexedMesh"/>
+    <functioncall functionName="allocateCollidable"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="b3AlignedObjectArray"/>
+    <functioncall functionName="b3Assert"/>
+    <functioncall functionName="b3ConvexUtility"/>
+    <functioncall functionName="b3Error"/>
+    <functioncall functionName="b3GpuNarrowPhase"/>
+    <functioncall functionName="b3GpuNarrowPhaseInternalData"/>
+    <functioncall functionName="b3MakeVector3"/>
+    <functioncall functionName="b3MakeVector4"/>
+    <functioncall functionName="b3OpenCLArray"/>
+    <functioncall functionName="b3OptimizedBvh"/>
+    <functioncall functionName="b3Quaternion"/>
+    <functioncall functionName="b3TransformAabb"/>
+    <functioncall functionName="b3TriangleIndexVertexArray"/>
+    <functioncall functionName="b3Vector3"/>
+    <functioncall functionName="b3Warning"/>
+    <functioncall functionName="body"/>
+    <functioncall functionName="bodyIndex"/>
+    <functioncall functionName="broadphasePairs"/>
+    <functioncall functionName="broadphasePairsGPU"/>
+    <functioncall functionName="build"/>
+    <functioncall functionName="buildInternal"/>
+    <functioncall functionName="bvh"/>
+    <functioncall functionName="bvhInfo"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="childColIndex"/>
+    <functioncall functionName="childLocalAabbMax"/>
+    <functioncall functionName="childLocalAabbMin"/>
+    <functioncall functionName="childTr"/>
+    <functioncall functionName="clAabbArrayLocalSpace"/>
+    <functioncall functionName="clAabbArrayWorldSpace"/>
+    <functioncall functionName="clFinish"/>
+    <functioncall functionName="cl_mem"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="collidableIndex"/>
+    <functioncall functionName="computeConvexConvexContactsGPUSAT"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="convexPtr"/>
+    <functioncall functionName="copyFromHost"/>
+    <functioncall functionName="copyFromHostPointer"/>
+    <functioncall functionName="copyToHost"/>
+    <functioncall functionName="copyToHostPointer"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="edgeOffset"/>
+    <functioncall functionName="expand"/>
+    <functioncall functionName="faceConstant"/>
+    <functioncall functionName="faceOffset"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="friction"/>
+    <functioncall functionName="getBufferCL"/>
+    <functioncall functionName="getCollidableCpu"/>
+    <functioncall functionName="getLeafNodeArray"/>
+    <functioncall functionName="getQuantizedNodeArray"/>
+    <functioncall functionName="getSubtreeInfoArray"/>
+    <functioncall functionName="getTriangleIndex"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="indexOffset"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="initializePolyhedralFeatures"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="invLocalInertia"/>
+    <functioncall functionName="isLeafNode"/>
+    <functioncall functionName="localCenter"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="mC"/>
+    <functioncall functionName="mE"/>
+    <functioncall functionName="m_bodyBufferCPU"/>
+    <functioncall functionName="m_bodyBufferGPU"/>
+    <functioncall functionName="m_bvhAabbMax"/>
+    <functioncall functionName="m_bvhAabbMin"/>
+    <functioncall functionName="m_bvhData"/>
+    <functioncall functionName="m_bvhInfoCPU"/>
+    <functioncall functionName="m_bvhInfoGPU"/>
+    <functioncall functionName="m_bvhQuantization"/>
+    <functioncall functionName="m_childOrientation"/>
+    <functioncall functionName="m_childPosition"/>
+    <functioncall functionName="m_clippingFacesOutGPU"/>
+    <functioncall functionName="m_collidablesCPU"/>
+    <functioncall functionName="m_collidablesGPU"/>
+    <functioncall functionName="m_compoundPairCapacity"/>
+    <functioncall functionName="m_context"/>
+    <functioncall functionName="m_convexData"/>
+    <functioncall functionName="m_convexFaces"/>
+    <functioncall functionName="m_convexFacesGPU"/>
+    <functioncall functionName="m_convexIndices"/>
+    <functioncall functionName="m_convexIndicesGPU"/>
+    <functioncall functionName="m_convexPolyhedra"/>
+    <functioncall functionName="m_convexPolyhedraGPU"/>
+    <functioncall functionName="m_convexVertices"/>
+    <functioncall functionName="m_convexVerticesGPU"/>
+    <functioncall functionName="m_cpuChildShapes"/>
+    <functioncall functionName="m_currentContactBuffer"/>
+    <functioncall functionName="m_data"/>
+    <functioncall functionName="m_device"/>
+    <functioncall functionName="m_extents"/>
+    <functioncall functionName="m_gpuChildShapes"/>
+    <functioncall functionName="m_gpuSatCollision"/>
+    <functioncall functionName="m_inertiaBufferCPU"/>
+    <functioncall functionName="m_inertiaBufferGPU"/>
+    <functioncall functionName="m_localCenter"/>
+    <functioncall functionName="m_localShapeAABBCPU"/>
+    <functioncall functionName="m_localShapeAABBGPU"/>
+    <functioncall functionName="m_max"/>
+    <functioncall functionName="m_maxBroadphasePairs"/>
+    <functioncall functionName="m_maxCompoundChildShapes"/>
+    <functioncall functionName="m_maxContactCapacity"/>
+    <functioncall functionName="m_maxConvexBodies"/>
+    <functioncall functionName="m_maxConvexIndices"/>
+    <functioncall functionName="m_maxConvexShapes"/>
+    <functioncall functionName="m_maxConvexUniqueEdges"/>
+    <functioncall functionName="m_maxConvexVertices"/>
+    <functioncall functionName="m_maxFacesPerShape"/>
+    <functioncall functionName="m_maxTriConvexPairCapacity"/>
+    <functioncall functionName="m_maxVerticesPerFace"/>
+    <functioncall functionName="m_min"/>
+    <functioncall functionName="m_numAcceleratedRigidBodies"/>
+    <functioncall functionName="m_numAcceleratedShapes"/>
+    <functioncall functionName="m_numFaces"/>
+    <functioncall functionName="m_numUniqueEdges"/>
+    <functioncall functionName="m_numVertices"/>
+    <functioncall functionName="m_pBufContactOutCPU"/>
+    <functioncall functionName="m_planeBodyIndex"/>
+    <functioncall functionName="m_quantizedAabbMax"/>
+    <functioncall functionName="m_quantizedAabbMin"/>
+    <functioncall functionName="m_quat"/>
+    <functioncall functionName="m_queue"/>
+    <functioncall functionName="m_radius"/>
+    <functioncall functionName="m_shapeIndex"/>
+    <functioncall functionName="m_static0Index"/>
+    <functioncall functionName="m_subTreesCPU"/>
+    <functioncall functionName="m_subTreesGPU"/>
+    <functioncall functionName="m_treeNodesCPU"/>
+    <functioncall functionName="m_treeNodesGPU"/>
+    <functioncall functionName="m_triangleConvexPairs"/>
+    <functioncall functionName="m_uniqueEdges"/>
+    <functioncall functionName="m_uniqueEdgesGPU"/>
+    <functioncall functionName="m_worldNormalsAGPU"/>
+    <functioncall functionName="m_worldVertsA1GPU"/>
+    <functioncall functionName="m_worldVertsB1GPU"/>
+    <functioncall functionName="m_worldVertsB2GPU"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="mass"/>
+    <functioncall functionName="maxTriConvexPairCapacity"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="meshInterface"/>
+    <functioncall functionName="myAabbMax"/>
+    <functioncall functionName="myAabbMin"/>
+    <functioncall functionName="nContactOut"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="numBroadphasePairs"/>
+    <functioncall functionName="numIndices"/>
+    <functioncall functionName="numNewSubtrees"/>
+    <functioncall functionName="numNodes"/>
+    <functioncall functionName="numObjects"/>
+    <functioncall functionName="numSubTrees"/>
+    <functioncall functionName="numTriConvexPairsOut"/>
+    <functioncall functionName="numVertices"/>
+    <functioncall functionName="orgIndex"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="planeConstant"/>
+    <functioncall functionName="planeNormal"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quantize"/>
+    <functioncall functionName="queue"/>
+    <functioncall functionName="radius"/>
+    <functioncall functionName="registerConcaveMeshShape"/>
+    <functioncall functionName="registerConvexHullShape"/>
+    <functioncall functionName="registerConvexHullShapeInternal"/>
+    <functioncall functionName="registerFace"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="restitution"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="scaled"/>
+    <functioncall functionName="scaling"/>
+    <functioncall functionName="setFromOpenCLBuffer"/>
+    <functioncall functionName="setIdentity"/>
+    <functioncall functionName="setMax"/>
+    <functioncall functionName="setMin"/>
+    <functioncall functionName="setOrigin"/>
+    <functioncall functionName="setQuantizationValues"/>
+    <functioncall functionName="setRotation"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="shapeInfo"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="transpose"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unQuantize"/>
+    <functioncall functionName="useQuantizedAabbCompression"/>
+    <functioncall functionName="utilPtr"/>
+    <functioncall functionName="vert0"/>
+    <functioncall functionName="vert1"/>
+    <functioncall functionName="vert2"/>
+    <functioncall functionName="vertexOffset"/>
+    <functioncall functionName="vertices"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="vtx"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="writeToGpu"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

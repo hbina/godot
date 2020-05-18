@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2313789432">
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_cwrs32.c" line="146" column="11"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 2) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." verbose="%lu in format string (no. 2) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_cwrs32.c" line="146" column="11"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." verbose="%lu in format string (no. 1) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_cwrs32.c" line="151" column="11"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%lu in format string (no. 2) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." verbose="%lu in format string (no. 2) requires &apos;unsigned long&apos; but the argument type is &apos;signed long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_cwrs32.c" line="151" column="11"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/tests/test_unit_cwrs32.c" line="90" column="7"/>
+            <symbol>n</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="main" lineNumber="88"/>
+    <functiondecl functionName="main" lineNumber="88"/>
+    <functiondecl functionName="main" lineNumber="88"/>
+    <functioncall functionName="ALLOC_STACK"/>
+    <functioncall functionName="CELT_PVQ_V"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cwrsi"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="get_pulses"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icwrs"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ii"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nc"/>
+    <functioncall functionName="ncwrs_urow"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="pseudo"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="sy"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="uu"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

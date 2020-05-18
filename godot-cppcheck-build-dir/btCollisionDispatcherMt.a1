@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2311229387">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;mCallback&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;mCallback&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp" line="113" column="3"/>
+            <symbol>mCallback</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;btCollisionDispatcherMt&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;btCollisionDispatcherMt&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.h" line="25" column="2"/>
+            <symbol>btCollisionDispatcherMt</symbol>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.h:27:32" my-argnr="1" my-argname="body0" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp" line="43" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.h:27:32" my-argnr="2" my-argname="body1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp" line="43" col="86" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.h:30:15" my-argnr="1" my-argname="pairCache" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp" line="129" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="getNewManifold" lineNumber="36"/>
+    <functiondecl functionName="releaseManifold" lineNumber="77"/>
+    <functiondecl functionName="forLoop" lineNumber="117"/>
+    <functiondecl functionName="dispatchAllCollisionPairs" lineNumber="127"/>
+    <functioncall functionName="BT_OVERRIDE"/>
+    <functioncall functionName="CollisionDispatcherUpdater"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="allocate"/>
+    <functioncall functionName="body0"/>
+    <functioncall functionName="body1"/>
+    <functioncall functionName="btAlignedAlloc"/>
+    <functioncall functionName="btAlignedFree"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btCollisionDispatcher"/>
+    <functioncall functionName="btCollisionDispatcherMt"/>
+    <functioncall functionName="btGetCurrentThreadIndex"/>
+    <functioncall functionName="btGetTaskScheduler"/>
+    <functioncall functionName="btMin"/>
+    <functioncall functionName="btParallelFor"/>
+    <functioncall functionName="btPersistentManifold"/>
+    <functioncall functionName="clearManifold"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="contactBreakingThreshold"/>
+    <functioncall functionName="contactProcessingThreshold"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="findIndex"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="freeMemory"/>
+    <functioncall functionName="gContactBreakingThreshold"/>
+    <functioncall functionName="getCollisionShape"/>
+    <functioncall functionName="getContactBreakingThreshold"/>
+    <functioncall functionName="getContactProcessingThreshold"/>
+    <functioncall functionName="getNearCallback"/>
+    <functioncall functionName="getNumOverlappingPairs"/>
+    <functioncall functionName="getNumThreads"/>
+    <functioncall functionName="getOverlappingPairArrayPtr"/>
+    <functioncall functionName="grainSize"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iBegin"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="mCallback"/>
+    <functioncall functionName="m_batchUpdating"/>
+    <functioncall functionName="m_grainSize"/>
+    <functioncall functionName="m_index1a"/>
+    <functioncall functionName="manifold"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="pairCount"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resizeNoInitialize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="updater"/>
+    <functioncall functionName="validPtr"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="758607659">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/editor_export.cpp" file="/home/hbina/git/godot/editor/editor_node.h" line="550" column="20"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_export.cpp" line="320" column="17"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_export.cpp" line="355" column="16"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/editor_export.cpp" line="918" column="24"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="690" col="51" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="712" col="48" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="714" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_export.h:241:8" call-funcname="export_project_files" call-argnr="3" file="/home/hbina/git/godot/editor/editor_export.cpp" line="939" col="34" call-argexpr="&pd" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_export.h:241:8" call-funcname="export_project_files" call-argnr="3" file="/home/hbina/git/godot/editor/editor_export.cpp" line="1088" col="34" call-argexpr="&zd" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_export.h:243:8" call-funcname="save_pack" call-argnr="5" file="/home/hbina/git/godot/editor/editor_export.cpp" line="1584" col="18" call-argexpr="&embedded_pos" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/editor_export.h:243:8" call-funcname="save_pack" call-argnr="5" file="/home/hbina/git/godot/editor/editor_export.cpp" line="1584" col="18" call-argexpr="embedded_pos" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_export.h:243:8" call-funcname="save_pack" call-argnr="6" file="/home/hbina/git/godot/editor/editor_export.cpp" line="1584" col="18" call-argexpr="&embedded_size" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/editor_export.h:243:8" call-funcname="save_pack" call-argnr="6" file="/home/hbina/git/godot/editor/editor_export.cpp" line="1584" col="18" call-argexpr="embedded_size" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_export.h:215:9" call-funcname="find_export_template" call-argnr="2" file="/home/hbina/git/godot/editor/editor_export.cpp" line="403" col="9" my-id="/home/hbina/git/godot/editor/editor_export.h:214:7" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_export.h:194:7" my-argnr="1" my-argname="p_dir" file="/home/hbina/git/godot/editor/editor_export.cpp" line="426" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_export.h:201:7" my-argnr="1" my-argname="da" file="/home/hbina/git/godot/editor/editor_export.cpp" line="458" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_export.h:423:15" my-argnr="1" my-argname="r_options" file="/home/hbina/git/godot/editor/editor_export.cpp" line="1458" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/editor_export.h:446:15" my-argnr="1" my-argname="r_features" file="/home/hbina/git/godot/editor/editor_export.cpp" line="1658" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_get_pad" lineNumber="50"/>
+    <functiondecl functionName="_set" lineNumber="63"/>
+    <functiondecl functionName="_get" lineNumber="74"/>
+    <functiondecl functionName="_get_property_list" lineNumber="84"/>
+    <functiondecl functionName="get_platform" lineNumber="94"/>
+    <functiondecl functionName="get_files_to_export" lineNumber="99"/>
+    <functiondecl functionName="set_name" lineNumber="108"/>
+    <functiondecl functionName="get_name" lineNumber="113"/>
+    <functiondecl functionName="set_runnable" lineNumber="117"/>
+    <functiondecl functionName="is_runnable" lineNumber="123"/>
+    <functiondecl functionName="set_export_filter" lineNumber="128"/>
+    <functiondecl functionName="get_export_filter" lineNumber="134"/>
+    <functiondecl functionName="set_include_filter" lineNumber="138"/>
+    <functiondecl functionName="get_include_filter" lineNumber="144"/>
+    <functiondecl functionName="set_export_path" lineNumber="149"/>
+    <functiondecl functionName="get_export_path" lineNumber="161"/>
+    <functiondecl functionName="set_exclude_filter" lineNumber="166"/>
+    <functiondecl functionName="get_exclude_filter" lineNumber="172"/>
+    <functiondecl functionName="add_export_file" lineNumber="177"/>
+    <functiondecl functionName="remove_export_file" lineNumber="183"/>
+    <functiondecl functionName="has_export_file" lineNumber="188"/>
+    <functiondecl functionName="add_patch" lineNumber="193"/>
+    <functiondecl functionName="remove_patch" lineNumber="202"/>
+    <functiondecl functionName="set_patch" lineNumber="207"/>
+    <functiondecl functionName="get_patch" lineNumber="212"/>
+    <functiondecl functionName="get_patches" lineNumber="218"/>
+    <functiondecl functionName="set_custom_features" lineNumber="222"/>
+    <functiondecl functionName="get_custom_features" lineNumber="228"/>
+    <functiondecl functionName="set_script_export_mode" lineNumber="233"/>
+    <functiondecl functionName="get_script_export_mode" lineNumber="239"/>
+    <functiondecl functionName="set_script_encryption_key" lineNumber="244"/>
+    <functiondecl functionName="get_script_encryption_key" lineNumber="250"/>
+    <functiondecl functionName="gen_debug_flags" lineNumber="264"/>
+    <functiondecl functionName="_save_pack_file" lineNumber="318"/>
+    <functiondecl functionName="_save_zip_file" lineNumber="351"/>
+    <functiondecl functionName="get_option_icon" lineNumber="380"/>
+    <functiondecl functionName="find_export_template" lineNumber="386"/>
+    <functiondecl functionName="exists_export_template" lineNumber="402"/>
+    <functiondecl functionName="create_preset" lineNumber="406"/>
+    <functiondecl functionName="_export_find_resources" lineNumber="424"/>
+    <functiondecl functionName="_export_find_dependencies" lineNumber="435"/>
+    <functiondecl functionName="_edit_files_with_filter" lineNumber="456"/>
+    <functiondecl functionName="_edit_filter_list" lineNumber="497"/>
+    <functiondecl functionName="set_export_preset" lineNumber="516"/>
+    <functiondecl functionName="get_export_preset" lineNumber="523"/>
+    <functiondecl functionName="add_file" lineNumber="528"/>
+    <functiondecl functionName="add_shared_object" lineNumber="537"/>
+    <functiondecl functionName="add_ios_framework" lineNumber="542"/>
+    <functiondecl functionName="get_ios_frameworks" lineNumber="546"/>
+    <functiondecl functionName="add_ios_plist_content" lineNumber="550"/>
+    <functiondecl functionName="get_ios_plist_content" lineNumber="554"/>
+    <functiondecl functionName="add_ios_linker_flags" lineNumber="558"/>
+    <functiondecl functionName="get_ios_linker_flags" lineNumber="565"/>
+    <functiondecl functionName="add_ios_bundle_file" lineNumber="569"/>
+    <functiondecl functionName="get_ios_bundle_files" lineNumber="573"/>
+    <functiondecl functionName="add_ios_cpp_code" lineNumber="577"/>
+    <functiondecl functionName="get_ios_cpp_code" lineNumber="581"/>
+    <functiondecl functionName="add_ios_project_static_lib" lineNumber="585"/>
+    <functiondecl functionName="get_ios_project_static_libs" lineNumber="589"/>
+    <functiondecl functionName="_export_file_script" lineNumber="593"/>
+    <functiondecl functionName="_export_begin_script" lineNumber="600"/>
+    <functiondecl functionName="_export_end_script" lineNumber="607"/>
+    <functiondecl functionName="_export_file" lineNumber="614"/>
+    <functiondecl functionName="_export_begin" lineNumber="617"/>
+    <functiondecl functionName="skip" lineNumber="620"/>
+    <functiondecl functionName="_bind_methods" lineNumber="625"/>
+    <functiondecl functionName="get_feature_containers" lineNumber="646"/>
+    <functiondecl functionName="_add_shared_object" lineNumber="917"/>
+    <functiondecl functionName="save_pack" lineNumber="926"/>
+    <functiondecl functionName="save_zip" lineNumber="1076"/>
+    <functiondecl functionName="export_pack" lineNumber="1097"/>
+    <functiondecl functionName="export_zip" lineNumber="1102"/>
+    <functiondecl functionName="gen_export_flags" lineNumber="1107"/>
+    <functiondecl functionName="_save" lineNumber="1167"/>
+    <functiondecl functionName="save_presets" lineNumber="1217"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1224"/>
+    <functiondecl functionName="add_export_platform" lineNumber="1227"/>
+    <functiondecl functionName="get_export_platform_count" lineNumber="1232"/>
+    <functiondecl functionName="get_export_platform" lineNumber="1237"/>
+    <functiondecl functionName="add_export_preset" lineNumber="1244"/>
+    <functiondecl functionName="test_etc2" lineNumber="1252"/>
+    <functiondecl functionName="get_export_preset_count" lineNumber="1267"/>
+    <functiondecl functionName="get_export_preset" lineNumber="1272"/>
+    <functiondecl functionName="remove_export_preset" lineNumber="1278"/>
+    <functiondecl functionName="add_export_plugin" lineNumber="1284"/>
+    <functiondecl functionName="remove_export_plugin" lineNumber="1291"/>
+    <functiondecl functionName="get_export_plugins" lineNumber="1296"/>
+    <functiondecl functionName="_notification" lineNumber="1301"/>
+    <functiondecl functionName="load_config" lineNumber="1308"/>
+    <functiondecl functionName="poll_export_platforms" lineNumber="1408"/>
+    <functiondecl functionName="get_preset_features" lineNumber="1437"/>
+    <functiondecl functionName="get_export_options" lineNumber="1456"/>
+    <functiondecl functionName="get_name" lineNumber="1469"/>
+    <functiondecl functionName="get_os_name" lineNumber="1474"/>
+    <functiondecl functionName="get_logo" lineNumber="1478"/>
+    <functiondecl functionName="can_export" lineNumber="1483"/>
+    <functiondecl functionName="get_binary_extensions" lineNumber="1515"/>
+    <functiondecl functionName="export_project" lineNumber="1532"/>
+    <functiondecl functionName="sign_shared_object" lineNumber="1614"/>
+    <functiondecl functionName="set_extension" lineNumber="1618"/>
+    <functiondecl functionName="set_name" lineNumber="1622"/>
+    <functiondecl functionName="set_os_name" lineNumber="1626"/>
+    <functiondecl functionName="set_logo" lineNumber="1630"/>
+    <functiondecl functionName="set_release_64" lineNumber="1634"/>
+    <functiondecl functionName="set_release_32" lineNumber="1639"/>
+    <functiondecl functionName="set_debug_64" lineNumber="1643"/>
+    <functiondecl functionName="set_debug_32" lineNumber="1647"/>
+    <functiondecl functionName="add_platform_feature" lineNumber="1652"/>
+    <functiondecl functionName="get_platform_features" lineNumber="1657"/>
+    <functiondecl functionName="resolve_platform_feature_priorities" lineNumber="1666"/>
+    <functiondecl functionName="get_chmod_flags" lineNumber="1675"/>
+    <functiondecl functionName="set_chmod_flags" lineNumber="1680"/>
+    <functiondecl functionName="get_fixup_embedded_pck_func" lineNumber="1685"/>
+    <functiondecl functionName="_export_file" lineNumber="1703"/>
+    <functioncall functionName="ACCESS_FILESYSTEM"/>
+    <functioncall functionName="APPEND_STATUS_CREATE"/>
+    <functioncall functionName="BIND_VMETHOD"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BR"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UR"/>
+    <functioncall functionName="DOCK_SLOT_MAX"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BR"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UR"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITOR_3D"/>
+    <functioncall functionName="EDITOR_ASSETLIB"/>
+    <functioncall functionName="EDITOR_OPEN_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCRIPT"/>
+    <functioncall functionName="EDIT_REDO"/>
+    <functioncall functionName="EDIT_RELOAD_SAVED_SCENE"/>
+    <functioncall functionName="EDIT_UNDO"/>
+    <functioncall functionName="ERR_CANT_CREATE"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="ERR_FILE_CANT_OPEN"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="EXPORT_ALL_RESOURCES"/>
+    <functioncall functionName="EXPORT_SELECTED_RESOURCES"/>
+    <functioncall functionName="EXPORT_SELECTED_SCENES"/>
+    <functioncall functionName="EditorExport"/>
+    <functioncall functionName="EditorExportPlatform"/>
+    <functioncall functionName="EditorExportPlatformPC"/>
+    <functioncall functionName="EditorExportPlugin"/>
+    <functioncall functionName="EditorExportPreset"/>
+    <functioncall functionName="EditorExportTextSceneToBinaryPlugin"/>
+    <functioncall functionName="EditorNode"/>
+    <functioncall functionName="EditorPluginList"/>
+    <functioncall functionName="EditorProgress"/>
+    <functioncall functionName="EditorProgressBG"/>
+    <functioncall functionName="EditorSettings"/>
+    <functioncall functionName="ExportNotifier"/>
+    <functioncall functionName="ExportOption"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FILE_CLOSE"/>
+    <functioncall functionName="FILE_CLOSE_ALL"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_QUIT"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="FILE_CLOSE_OTHERS"/>
+    <functioncall functionName="FILE_CLOSE_RIGHT"/>
+    <functioncall functionName="FILE_EXPLORE_ANDROID_BUILD_TEMPLATES"/>
+    <functioncall functionName="FILE_EXPORT_MESH_LIBRARY"/>
+    <functioncall functionName="FILE_EXPORT_PROJECT"/>
+    <functioncall functionName="FILE_EXPORT_TILESET"/>
+    <functioncall functionName="FILE_EXTERNAL_OPEN_SCENE"/>
+    <functioncall functionName="FILE_IMPORT_SUBSCENE"/>
+    <functioncall functionName="FILE_INSTALL_ANDROID_SOURCE"/>
+    <functioncall functionName="FILE_NEW_INHERITED_SCENE"/>
+    <functioncall functionName="FILE_NEW_SCENE"/>
+    <functioncall functionName="FILE_OPEN_OLD_SCENE"/>
+    <functioncall functionName="FILE_OPEN_PREV"/>
+    <functioncall functionName="FILE_OPEN_RECENT"/>
+    <functioncall functionName="FILE_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCRIPT"/>
+    <functioncall functionName="FILE_QUIT"/>
+    <functioncall functionName="FILE_SAVE_ALL_SCENES"/>
+    <functioncall functionName="FILE_SAVE_AND_RUN"/>
+    <functioncall functionName="FILE_SAVE_AS_SCENE"/>
+    <functioncall functionName="FILE_SAVE_BEFORE_RUN"/>
+    <functioncall functionName="FILE_SAVE_OPTIMIZED"/>
+    <functioncall functionName="FILE_SAVE_SCENE"/>
+    <functioncall functionName="FILE_SHOW_IN_FILESYSTEM"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_DEF"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="GLOBAL_NEW_WINDOW"/>
+    <functioncall functionName="GLOBAL_SCENE"/>
+    <functioncall functionName="HELP_ABOUT"/>
+    <functioncall functionName="HELP_COMMUNITY"/>
+    <functioncall functionName="HELP_DOCS"/>
+    <functioncall functionName="HELP_QA"/>
+    <functioncall functionName="HELP_REPORT_A_BUG"/>
+    <functioncall functionName="HELP_SEARCH"/>
+    <functioncall functionName="HELP_SEND_DOCS_FEEDBACK"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MAX_BUILD_CALLBACKS"/>
+    <functioncall functionName="MAX_INIT_CALLBACKS"/>
+    <functioncall functionName="MODE_SCRIPT_COMPILED"/>
+    <functioncall functionName="MODE_SCRIPT_ENCRYPTED"/>
+    <functioncall functionName="MODE_SCRIPT_TEXT"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="PACKED_STRING_ARRAY"/>
+    <functioncall functionName="PACK_FORMAT_VERSION"/>
+    <functioncall functionName="PACK_HEADER_MAGIC"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_FILE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="READ_WRITE"/>
+    <functioncall functionName="RESOURCE_SAVE"/>
+    <functioncall functionName="RESOURCE_SAVE_AS"/>
+    <functioncall functionName="RUN_PLAY"/>
+    <functioncall functionName="RUN_PLAY_CUSTOM_SCENE"/>
+    <functioncall functionName="RUN_PLAY_SCENE"/>
+    <functioncall functionName="RUN_PROJECT_DATA_FOLDER"/>
+    <functioncall functionName="RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="RUN_SCENE_SETTINGS"/>
+    <functioncall functionName="RUN_SETTINGS"/>
+    <functioncall functionName="RUN_STOP"/>
+    <functioncall functionName="RUN_VCS_SETTINGS"/>
+    <functioncall functionName="RUN_VCS_SHUT_DOWN"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SCENE_TAB_CLOSE"/>
+    <functioncall functionName="SETTINGS_EDITOR_CONFIG_FOLDER"/>
+    <functioncall functionName="SETTINGS_EDITOR_DATA_FOLDER"/>
+    <functioncall functionName="SETTINGS_HELP"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DEFAULT"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DELETE"/>
+    <functioncall functionName="SETTINGS_LAYOUT_SAVE"/>
+    <functioncall functionName="SETTINGS_MANAGE_EXPORT_TEMPLATES"/>
+    <functioncall functionName="SETTINGS_MANAGE_FEATURE_PROFILES"/>
+    <functioncall functionName="SETTINGS_PICK_MAIN_SCENE"/>
+    <functioncall functionName="SETTINGS_PREFERENCES"/>
+    <functioncall functionName="SETTINGS_TOGGLE_CONSOLE"/>
+    <functioncall functionName="SETTINGS_TOGGLE_FULLSCREEN"/>
+    <functioncall functionName="SETTINGS_UPDATE_ALWAYS"/>
+    <functioncall functionName="SETTINGS_UPDATE_CHANGES"/>
+    <functioncall functionName="SETTINGS_UPDATE_CONTINUOUSLY"/>
+    <functioncall functionName="SETTINGS_UPDATE_SPINNER_HIDE"/>
+    <functioncall functionName="SETTINGS_UPDATE_WHEN_CHANGED"/>
+    <functioncall functionName="SET_VIDEO_DRIVER_SAVE_AND_RESTART"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="SharedObject"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TOOLS_CUSTOM"/>
+    <functioncall functionName="TOOLS_ORPHAN_RESOURCES"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Timer"/>
+    <functioncall functionName="VERSION_FULL_CONFIG"/>
+    <functioncall functionName="VERSION_MAJOR"/>
+    <functioncall functionName="VERSION_MINOR"/>
+    <functioncall functionName="VERSION_PATCH"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="VariantContainer"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="Z_DEFAULT_COMPRESSION"/>
+    <functioncall functionName="Z_DEFLATED"/>
+    <functioncall functionName="_add_shared_object"/>
+    <functioncall functionName="_cleanup_scene"/>
+    <functioncall functionName="_clear"/>
+    <functioncall functionName="_edit_current"/>
+    <functioncall functionName="_edit_files_with_filter"/>
+    <functioncall functionName="_edit_filter_list"/>
+    <functioncall functionName="_editor_select"/>
+    <functioncall functionName="_export_begin"/>
+    <functioncall functionName="_export_begin_script"/>
+    <functioncall functionName="_export_end"/>
+    <functioncall functionName="_export_end_script"/>
+    <functioncall functionName="_export_file"/>
+    <functioncall functionName="_export_file_script"/>
+    <functioncall functionName="_export_find_dependencies"/>
+    <functioncall functionName="_export_find_resources"/>
+    <functioncall functionName="_get_pad"/>
+    <functioncall functionName="_menu_option_confirm"/>
+    <functioncall functionName="_save"/>
+    <functioncall functionName="_save_pack_file"/>
+    <functioncall functionName="_save_scene"/>
+    <functioncall functionName="_save_scene_with_preview"/>
+    <functioncall functionName="_save_zip_file"/>
+    <functioncall functionName="_set"/>
+    <functioncall functionName="_set_only"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_export_file"/>
+    <functioncall functionName="add_export_preset"/>
+    <functioncall functionName="add_file"/>
+    <functioncall functionName="add_ios_bundle_file"/>
+    <functioncall functionName="add_ios_cpp_code"/>
+    <functioncall functionName="add_ios_framework"/>
+    <functioncall functionName="add_ios_linker_flags"/>
+    <functioncall functionName="add_ios_plist_content"/>
+    <functioncall functionName="add_ios_project_static_lib"/>
+    <functioncall functionName="add_patch"/>
+    <functioncall functionName="add_shared_object"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="block_save"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="bpoints"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="breakpoints"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="bufsize"/>
+    <functioncall functionName="c_escape"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="change_dir"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="config_file"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convert"/>
+    <functioncall functionName="convert_file_to_binary"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_preset"/>
+    <functioncall functionName="current_is_dir"/>
+    <functioncall functionName="current_version"/>
+    <functioncall functionName="custom_debug"/>
+    <functioncall functionName="custom_list"/>
+    <functioncall functionName="custom_map"/>
+    <functioncall functionName="custom_release"/>
+    <functioncall functionName="da"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="debug_file_32"/>
+    <functioncall functionName="debug_file_64"/>
+    <functioncall functionName="default_value"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="do_export"/>
+    <functioncall functionName="dvalid"/>
+    <functioncall functionName="edit_resource"/>
+    <functioncall functionName="editor_data"/>
+    <functioncall functionName="editor_folding"/>
+    <functioncall functionName="ef"/>
+    <functioncall functionName="embed_pos"/>
+    <functioncall functionName="embedded_pos"/>
+    <functioncall functionName="embedded_size"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="ends_with"/>
+    <functioncall functionName="engine_cfb"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="etc2_supported"/>
+    <functioncall functionName="etc_supported"/>
+    <functioncall functionName="exclude"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="exists_export_template"/>
+    <functioncall functionName="export_files"/>
+    <functioncall functionName="export_filter"/>
+    <functioncall functionName="export_path"/>
+    <functioncall functionName="export_project_files"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="feature"/>
+    <functioncall functionName="feature_list"/>
+    <functioncall functionName="features"/>
+    <functioncall functionName="features_pv"/>
+    <functioncall functionName="file_idx"/>
+    <functioncall functionName="filters"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_export_template"/>
+    <functioncall functionName="find_file"/>
+    <functioncall functionName="fixup_func"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="ftmp"/>
+    <functioncall functionName="fullpath"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_addon_area"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_basename"/>
+    <functioncall functionName="get_breakpoints"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_cache_dir"/>
+    <functioncall functionName="get_chmod_flags"/>
+    <functioncall functionName="get_current_dir"/>
+    <functioncall functionName="get_custom_features"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_debug_protocol"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_editor_theme"/>
+    <functioncall functionName="get_exclude_filter"/>
+    <functioncall functionName="get_export_filter"/>
+    <functioncall functionName="get_export_options"/>
+    <functioncall functionName="get_export_path"/>
+    <functioncall functionName="get_export_plugins"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_feature_containers"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_file_as_array"/>
+    <functioncall functionName="get_file_count"/>
+    <functioncall functionName="get_file_deps"/>
+    <functioncall functionName="get_file_path"/>
+    <functioncall functionName="get_files"/>
+    <functioncall functionName="get_files_to_export"/>
+    <functioncall functionName="get_filesystem"/>
+    <functioncall functionName="get_fixup_embedded_pck_func"/>
+    <functioncall functionName="get_icon"/>
+    <functioncall functionName="get_include_filter"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_logo"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_next"/>
+    <functioncall functionName="get_option_visibility"/>
+    <functioncall functionName="get_os_name"/>
+    <functioncall functionName="get_parent_control"/>
+    <functioncall functionName="get_patches"/>
+    <functioncall functionName="get_platform"/>
+    <functioncall functionName="get_platform_features"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_preset_features"/>
+    <functioncall functionName="get_properties"/>
+    <functioncall functionName="get_resource_dir"/>
+    <functioncall functionName="get_resource_type"/>
+    <functioncall functionName="get_script_create_dialog"/>
+    <functioncall functionName="get_script_encryption_key"/>
+    <functioncall functionName="get_script_export_mode"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_section_keys"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slice"/>
+    <functioncall functionName="get_subdir"/>
+    <functioncall functionName="get_subdir_count"/>
+    <functioncall functionName="get_templates_dir"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_value"/>
+    <functioncall functionName="got"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_child_process"/>
+    <functioncall functionName="has_default_value"/>
+    <functioncall functionName="has_section"/>
+    <functioncall functionName="has_section_key"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="header_size"/>
+    <functioncall functionName="hide_from_editor"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icon"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="is_abs_path"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_runnable"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="list_dir_begin"/>
+    <functioncall functionName="list_dir_end"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="load_config"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="matchn"/>
+    <functioncall functionName="md5"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="menu_hb"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_file"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="notifier"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_resource"/>
+    <functioncall functionName="option"/>
+    <functioncall functionName="option_section"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_at_pos"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_can_cancel"/>
+    <functioncall functionName="p_custom_features"/>
+    <functioncall functionName="p_debug"/>
+    <functioncall functionName="p_default"/>
+    <functioncall functionName="p_embed"/>
+    <functioncall functionName="p_emit_signal"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_exclude"/>
+    <functioncall functionName="p_extension"/>
+    <functioncall functionName="p_feature"/>
+    <functioncall functionName="p_feature_key"/>
+    <functioncall functionName="p_features"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_filter"/>
+    <functioncall functionName="p_filters"/>
+    <functioncall functionName="p_fixup_embedded_pck_func"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_force_refresh"/>
+    <functioncall functionName="p_func"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_include"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_info"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_label"/>
+    <functioncall functionName="p_logo"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_old"/>
+    <functioncall functionName="p_order"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_paths"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_platform"/>
+    <functioncall functionName="p_plugin"/>
+    <functioncall functionName="p_plugins_list"/>
+    <functioncall functionName="p_preset"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_remap"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_setting"/>
+    <functioncall functionName="p_so"/>
+    <functioncall functionName="p_so_files"/>
+    <functioncall functionName="p_so_func"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_table"/>
+    <functioncall functionName="p_tags"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="p_total"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_udata"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="p_with_preview"/>
+    <functioncall functionName="pad"/>
+    <functioncall functionName="passwd"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="path_remaps"/>
+    <functioncall functionName="path_to_file"/>
+    <functioncall functionName="path_utf8"/>
+    <functioncall functionName="paths"/>
+    <functioncall functionName="pck_path"/>
+    <functioncall functionName="pck_size"/>
+    <functioncall functionName="pck_start_pos"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="poll_export"/>
+    <functioncall functionName="port"/>
+    <functioncall functionName="preset"/>
+    <functioncall functionName="progress_add_task"/>
+    <functioncall functionName="progress_add_task_bg"/>
+    <functioncall functionName="progress_end_task"/>
+    <functioncall functionName="progress_end_task_bg"/>
+    <functioncall functionName="progress_task_step"/>
+    <functioncall functionName="progress_task_step_bg"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_embedded_size"/>
+    <functioncall functionName="r_embedded_start"/>
+    <functioncall functionName="r_list"/>
+    <functioncall functionName="release_file_32"/>
+    <functioncall functionName="release_file_64"/>
+    <functioncall functionName="remap"/>
+    <functioncall functionName="remap_features"/>
+    <functioncall functionName="remapped_path"/>
+    <functioncall functionName="remaps"/>
+    <functioncall functionName="remote_port"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_file_or_error"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="replace_first"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resolve_platform_feature_priorities"/>
+    <functioncall functionName="rest"/>
+    <functioncall functionName="restart_if_changed"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="runnable"/>
+    <functioncall functionName="rvalid"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="save_custom"/>
+    <functioncall functionName="save_files"/>
+    <functioncall functionName="save_pack"/>
+    <functioncall functionName="save_presets"/>
+    <functioncall functionName="save_timer"/>
+    <functioncall functionName="save_zip"/>
+    <functioncall functionName="script_mode"/>
+    <functioncall functionName="sd"/>
+    <functioncall functionName="section"/>
+    <functioncall functionName="seek_end"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_custom_features"/>
+    <functioncall functionName="set_exclude_filter"/>
+    <functioncall functionName="set_export_filter"/>
+    <functioncall functionName="set_export_path"/>
+    <functioncall functionName="set_export_preset"/>
+    <functioncall functionName="set_include_filter"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_one_shot"/>
+    <functioncall functionName="set_runnable"/>
+    <functioncall functionName="set_script_encryption_key"/>
+    <functioncall functionName="set_script_export_mode"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="set_wait_time"/>
+    <functioncall functionName="show_warning"/>
+    <functioncall functionName="sign_shared_object"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="skipped"/>
+    <functioncall functionName="so_files"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="splash"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="src_f"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="store_32"/>
+    <functioncall functionName="store_64"/>
+    <functioncall functionName="store_8"/>
+    <functioncall functionName="store_buffer"/>
+    <functioncall functionName="string_len"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tags"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="template_file_name"/>
+    <functioncall functionName="template_path"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tmp_path"/>
+    <functioncall functionName="tmppath"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="top_split"/>
+    <functioncall functionName="total"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="unsaved_cache"/>
+    <functioncall functionName="update_keying"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="variant"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="zd"/>
+    <functioncall functionName="zip"/>
+    <functioncall functionName="zipClose"/>
+    <functioncall functionName="zipCloseFileInZip"/>
+    <functioncall functionName="zipFile"/>
+    <functioncall functionName="zipOpen2"/>
+    <functioncall functionName="zipOpenNewFileInZip"/>
+    <functioncall functionName="zipWriteInFileInZip"/>
+    <functioncall functionName="zipio_create_io_from_file"/>
+  </FileInfo>
+</analyzerinfo>

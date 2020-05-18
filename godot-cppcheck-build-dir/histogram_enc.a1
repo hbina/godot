@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1522966341">
+        <error id="nullPointerArithmeticRedundantCheck" severity="warning" msg="Either the condition &apos;map_tmp==NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." verbose="Either the condition &apos;map_tmp==NULL&apos; is redundant or there is pointer arithmetic with NULL pointer." cwe="682">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1190" column="46" info="Null pointer addition"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1192" column="37" info="Assuming that condition &apos;map_tmp==NULL&apos; is not redundant"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:199:6" call-funcname="VP8LHistogramAddSinglePixOrCopy" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="81" col="36" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:199:6" call-funcname="VP8LHistogramAddSinglePixOrCopy" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="81" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:96:6" call-funcname="VP8LHistogramInit" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="119" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:96:6" call-funcname="VP8LHistogramInit" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="160" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="360" col="21" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="362" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="363" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="364" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="365" col="23" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:316:27" call-funcname="GetCombinedEntropy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="380" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:316:27" call-funcname="GetCombinedEntropy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="402" col="25" call-argexpr="trivial_at_end" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="378" col="24" info="Assignment 'trivial_at_end=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:316:27" call-funcname="GetCombinedEntropy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="417" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:373:12" call-funcname="GetCombinedHistogramEntropy" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="449" col="34" call-argexpr="&cost" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:373:12" call-funcname="GetCombinedHistogramEntropy" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="467" col="30" call-argexpr="&cost" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="508" col="21" call-argexpr="&alpha_sym" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="508" col="21" call-argexpr="alpha_sym" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="511" col="21" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="515" col="21" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="518" col="21" call-argexpr="&red_sym" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="518" col="21" call-argexpr="red_sym" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="520" col="21" call-argexpr="&blue_sym" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" call-funcname="PopulationCost" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="520" col="21" call-argexpr="blue_sym" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:184:13" call-funcname="HistogramSetRemoveHistogram" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="603" col="34" call-argexpr="&num_used_orig" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:486:13" call-funcname="DominantCostRangeInit" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="623" col="24" call-argexpr="&cost_range" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:486:13" call-funcname="DominantCostRangeInit" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="623" col="24" call-argexpr="cost_range" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:44:13" call-funcname="HistogramSwap" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="700" col="24" call-argexpr="&cur_combo" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:788:13" call-funcname="HistoQueueUpdatePair" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="821" col="23" call-argexpr="&pair" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:743:12" call-funcname="HistoQueueInit" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="852" col="22" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:743:12" call-funcname="HistoQueueInit" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="852" col="22" call-argexpr="histo_queue" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:801:15" call-funcname="HistoQueuePush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="861" col="21" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:762:13" call-funcname="HistoQueuePopPair" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="879" col="26" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:772:13" call-funcname="HistoQueueUpdateHead" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="881" col="29" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:801:15" call-funcname="HistoQueuePush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="889" col="21" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:753:13" call-funcname="HistoQueueClear" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="896" col="18" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:743:12" call-funcname="HistoQueueInit" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="933" col="22" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:743:12" call-funcname="HistoQueueInit" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="933" col="22" call-argexpr="histo_queue" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:720:17" call-funcname="MyRand" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="959" col="34" call-argexpr="&seed" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:801:15" call-funcname="HistoQueuePush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="968" col="25" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:762:13" call-funcname="HistoQueuePopPair" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1002" col="26" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:762:13" call-funcname="HistoQueuePopPair" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1024" col="28" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:772:13" call-funcname="HistoQueueUpdateHead" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1028" col="27" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:753:13" call-funcname="HistoQueueClear" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1037" col="18" call-argexpr="&histo_queue" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:581:13" call-funcname="HistogramCopyAndAnalyze" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1198" col="26" call-argexpr="&num_used" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:643:13" call-funcname="HistogramCombineEntropyBin" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1212" col="31" call-argexpr="&num_used" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:907:12" call-funcname="HistogramCombineStochastic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1227" col="36" call-argexpr="&num_used" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:907:12" call-funcname="HistogramCombineStochastic" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1227" col="36" call-argexpr="&do_greedy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:907:12" call-funcname="HistogramCombineStochastic" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1227" col="36" call-argexpr="do_greedy" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:836:12" call-funcname="HistogramCombineGreedy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1233" col="34" call-argexpr="&num_used" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:199:6" call-funcname="VP8LHistogramAddSinglePixOrCopy" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="81" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:77:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:77:6" call-funcname="VP8LHistogramStoreRefs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="93" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:86:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:426:25" call-funcname="HistogramAdd" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="450" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:441:15" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:184:13" call-funcname="HistogramSetRemoveHistogram" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="872" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:836:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:557:13" call-funcname="HistogramBuild" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1195" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1170:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:581:13" call-funcname="HistogramCopyAndAnalyze" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1198" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1170:5" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:643:13" call-funcname="HistogramCombineEntropyBin" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1212" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1170:5" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:581:13" call-funcname="HistogramCopyAndAnalyze" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1198" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1170:5" my-argnr="10"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:34:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="35" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:44:13" my-argnr="1" my-argname="A" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="45" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:44:13" my-argnr="2" my-argname="B" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="46" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:50:13" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="56" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:50:13" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="52" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:96:6" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="98" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:165:6" my-argnr="1" my-argname="set" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="167" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:184:13" my-argnr="1" my-argname="set" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="186" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:184:13" my-argnr="3" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="188" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:230:27" my-argnr="1" my-argname="entropy" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="232" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:278:15" my-argnr="1" my-argname="stats" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="284" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:298:15" my-argnr="4" my-argname="is_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="309" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:358:8" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="360" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:373:12" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="377" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:373:12" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="379" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:373:12" my-argnr="4" my-argname="cost" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="380" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:441:15" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="446" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:441:15" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="446" col="42" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:486:13" my-argnr="1" my-argname="c" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="487" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:495:13" my-argnr="1" my-argname="h" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="497" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:495:13" my-argnr="2" my-argname="c" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="497" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:505:13" my-argnr="1" my-argname="h" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="508" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:541:12" my-argnr="1" my-argname="h" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="544" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:541:12" my-argnr="2" my-argname="c" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="543" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:557:13" my-argnr="4" my-argname="image_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="562" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:581:13" my-argnr="1" my-argname="orig_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="587" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:581:13" my-argnr="2" my-argname="image_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="588" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:581:13" my-argnr="3" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="586" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:616:13" my-argnr="1" my-argname="image_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="620" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:643:13" my-argnr="1" my-argname="image_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="652" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:643:13" my-argnr="2" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="667" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:720:17" my-argnr="1" my-argname="seed" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="721" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:743:12" my-argnr="1" my-argname="histo_queue" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="744" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:762:13" my-argnr="1" my-argname="histo_queue" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="764" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:772:13" my-argnr="1" my-argname="histo_queue" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="775" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:772:13" my-argnr="2" my-argname="pair" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="774" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:788:13" my-argnr="1" my-argname="h1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="792" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:788:13" my-argnr="2" my-argname="h2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="792" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:788:13" my-argnr="4" my-argname="pair" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="793" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:801:15" my-argnr="1" my-argname="histo_queue" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="809" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:836:12" my-argnr="1" my-argname="image_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="839" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:903:12" my-argnr="1" my-argname="idx1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="905" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:903:12" my-argnr="2" my-argname="idx2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="905" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:907:12" my-argnr="1" my-argname="image_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="915" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:907:12" my-argnr="2" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="913" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1048:13" my-argnr="1" my-argname="in" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1052" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1048:13" my-argnr="2" my-argname="out" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1053" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1109:13" my-argnr="1" my-argname="set" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1135" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1109:13" my-argnr="4" my-argname="cluster_mappings_tmp" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1134" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:1160:13" my-argnr="1" my-argname="image_histo" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="1163" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:44:13" my-argnr="1" my-argname="A" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="45" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:44:13" my-argnr="2" my-argname="B" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="46" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:184:13" my-argnr="3" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="188" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:278:15" my-argnr="1" my-argname="stats" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="284" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:373:12" my-argnr="4" my-argname="cost" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="380" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:541:12" my-argnr="1" my-argname="h" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="544" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:541:12" my-argnr="2" my-argname="c" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="543" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:581:13" my-argnr="3" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="586" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:643:13" my-argnr="2" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="667" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c:907:12" my-argnr="2" my-argname="num_used" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/histogram_enc.c" line="913" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="HistogramClear" lineNumber="34"/>
+    <functiondecl functionName="HistogramSwap" lineNumber="44"/>
+    <functiondecl functionName="HistogramCopy" lineNumber="50"/>
+    <functiondecl functionName="VP8LGetHistogramSize" lineNumber="62"/>
+    <functiondecl functionName="VP8LFreeHistogram" lineNumber="69"/>
+    <functiondecl functionName="VP8LFreeHistogramSet" lineNumber="73"/>
+    <functiondecl functionName="VP8LHistogramStoreRefs" lineNumber="77"/>
+    <functiondecl functionName="VP8LHistogramCreate" lineNumber="86"/>
+    <functiondecl functionName="VP8LHistogramInit" lineNumber="96"/>
+    <functiondecl functionName="VP8LAllocateHistogram" lineNumber="111"/>
+    <functiondecl functionName="HistogramSetResetPointers" lineNumber="124"/>
+    <functiondecl functionName="HistogramSetTotalSize" lineNumber="140"/>
+    <functiondecl functionName="VP8LAllocateHistogramSet" lineNumber="146"/>
+    <functiondecl functionName="VP8LHistogramSetClear" lineNumber="165"/>
+    <functiondecl functionName="HistogramSetRemoveHistogram" lineNumber="184"/>
+    <functiondecl functionName="VP8LHistogramAddSinglePixOrCopy" lineNumber="199"/>
+    <functiondecl functionName="BitsEntropyRefine" lineNumber="230"/>
+    <functiondecl functionName="VP8LBitsEntropy" lineNumber="262"/>
+    <functiondecl functionName="InitialHuffmanCost" lineNumber="269"/>
+    <functiondecl functionName="FinalHuffmanCost" lineNumber="278"/>
+    <functiondecl functionName="PopulationCost" lineNumber="298"/>
+    <functiondecl functionName="GetCombinedEntropy" lineNumber="316"/>
+    <functiondecl functionName="VP8LHistogramEstimateBits" lineNumber="358"/>
+    <functiondecl functionName="GetCombinedHistogramEntropy" lineNumber="373"/>
+    <functiondecl functionName="HistogramAdd" lineNumber="426"/>
+    <functiondecl functionName="HistogramAddEval" lineNumber="441"/>
+    <functiondecl functionName="HistogramAddThresh" lineNumber="461"/>
+    <functiondecl functionName="DominantCostRangeInit" lineNumber="486"/>
+    <functiondecl functionName="UpdateDominantCostRange" lineNumber="495"/>
+    <functiondecl functionName="UpdateHistogramCost" lineNumber="505"/>
+    <functiondecl functionName="GetBinIdForEntropy" lineNumber="531"/>
+    <functiondecl functionName="GetHistoBinIndex" lineNumber="541"/>
+    <functiondecl functionName="HistogramBuild" lineNumber="557"/>
+    <functiondecl functionName="HistogramCopyAndAnalyze" lineNumber="581"/>
+    <functiondecl functionName="HistogramAnalyzeEntropyBin" lineNumber="616"/>
+    <functiondecl functionName="HistogramCombineEntropyBin" lineNumber="643"/>
+    <functiondecl functionName="MyRand" lineNumber="720"/>
+    <functiondecl functionName="HistoQueueInit" lineNumber="743"/>
+    <functiondecl functionName="HistoQueueClear" lineNumber="753"/>
+    <functiondecl functionName="HistoQueuePopPair" lineNumber="762"/>
+    <functiondecl functionName="HistoQueueUpdateHead" lineNumber="772"/>
+    <functiondecl functionName="HistoQueueUpdatePair" lineNumber="788"/>
+    <functiondecl functionName="HistoQueuePush" lineNumber="801"/>
+    <functiondecl functionName="HistogramCombineGreedy" lineNumber="836"/>
+    <functiondecl functionName="PairComparison" lineNumber="903"/>
+    <functiondecl functionName="HistogramCombineStochastic" lineNumber="907"/>
+    <functiondecl functionName="HistogramRemap" lineNumber="1048"/>
+    <functiondecl functionName="GetCombineCostFactor" lineNumber="1095"/>
+    <functiondecl functionName="OptimizeHistogramSymbols" lineNumber="1109"/>
+    <functiondecl functionName="RemoveEmptyHistograms" lineNumber="1160"/>
+    <functiondecl functionName="VP8LGetHistoImageSymbols" lineNumber="1170"/>
+    <functioncall functionName="BitsEntropyRefine"/>
+    <functioncall functionName="DominantCostRangeInit"/>
+    <functioncall functionName="End"/>
+    <functioncall functionName="Error"/>
+    <functioncall functionName="FinalHuffmanCost"/>
+    <functioncall functionName="GetBinIdForEntropy"/>
+    <functioncall functionName="GetCombineCostFactor"/>
+    <functioncall functionName="GetCombinedEntropy"/>
+    <functioncall functionName="GetCombinedHistogramEntropy"/>
+    <functioncall functionName="GetHistoBinIndex"/>
+    <functioncall functionName="HistoQueueClear"/>
+    <functioncall functionName="HistoQueueInit"/>
+    <functioncall functionName="HistoQueuePopPair"/>
+    <functioncall functionName="HistoQueuePush"/>
+    <functioncall functionName="HistoQueueUpdateHead"/>
+    <functioncall functionName="HistoQueueUpdatePair"/>
+    <functioncall functionName="HistogramAdd"/>
+    <functioncall functionName="HistogramAddEval"/>
+    <functioncall functionName="HistogramAddThresh"/>
+    <functioncall functionName="HistogramAnalyzeEntropyBin"/>
+    <functioncall functionName="HistogramBuild"/>
+    <functioncall functionName="HistogramClear"/>
+    <functioncall functionName="HistogramCombineEntropyBin"/>
+    <functioncall functionName="HistogramCombineGreedy"/>
+    <functioncall functionName="HistogramCombineStochastic"/>
+    <functioncall functionName="HistogramCopy"/>
+    <functioncall functionName="HistogramCopyAndAnalyze"/>
+    <functioncall functionName="HistogramRemap"/>
+    <functioncall functionName="HistogramSetRemoveHistogram"/>
+    <functioncall functionName="HistogramSetResetPointers"/>
+    <functioncall functionName="HistogramSetTotalSize"/>
+    <functioncall functionName="HistogramSwap"/>
+    <functioncall functionName="InitialHuffmanCost"/>
+    <functioncall functionName="MyRand"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="NUM_DISTANCE_CODES"/>
+    <functioncall functionName="NUM_LENGTH_CODES"/>
+    <functioncall functionName="NUM_LITERAL_CODES"/>
+    <functioncall functionName="OptimizeHistogramSymbols"/>
+    <functioncall functionName="PairComparison"/>
+    <functioncall functionName="PixOrCopyCacheIdx"/>
+    <functioncall functionName="PixOrCopyDistance"/>
+    <functioncall functionName="PixOrCopyIsCacheIdx"/>
+    <functioncall functionName="PixOrCopyIsLiteral"/>
+    <functioncall functionName="PixOrCopyLength"/>
+    <functioncall functionName="PixOrCopyLiteral"/>
+    <functioncall functionName="PopulationCost"/>
+    <functioncall functionName="RemoveEmptyHistograms"/>
+    <functioncall functionName="UpdateDominantCostRange"/>
+    <functioncall functionName="UpdateHistogramCost"/>
+    <functioncall functionName="VP8LAllocateHistogramSet"/>
+    <functioncall functionName="VP8LBitEntropyInit"/>
+    <functioncall functionName="VP8LBitsEntropyUnrefined"/>
+    <functioncall functionName="VP8LExtraCost"/>
+    <functioncall functionName="VP8LExtraCostCombined"/>
+    <functioncall functionName="VP8LFreeHistogramSet"/>
+    <functioncall functionName="VP8LGetCombinedEntropyUnrefined"/>
+    <functioncall functionName="VP8LGetEntropyUnrefined"/>
+    <functioncall functionName="VP8LGetHistogramSize"/>
+    <functioncall functionName="VP8LHistogram"/>
+    <functioncall functionName="VP8LHistogramAdd"/>
+    <functioncall functionName="VP8LHistogramAddSinglePixOrCopy"/>
+    <functioncall functionName="VP8LHistogramInit"/>
+    <functioncall functionName="VP8LHistogramNumCodes"/>
+    <functioncall functionName="VP8LHistogramSet"/>
+    <functioncall functionName="VP8LHistogramSetClear"/>
+    <functioncall functionName="VP8LHistogramStoreRefs"/>
+    <functioncall functionName="VP8LPrefixEncodeBits"/>
+    <functioncall functionName="VP8LRefsCursorInit"/>
+    <functioncall functionName="VP8LRefsCursorNext"/>
+    <functioncall functionName="VP8LRefsCursorOk"/>
+    <functioncall functionName="VP8LSubSampleSize"/>
+    <functioncall functionName="VP8L_NON_TRIVIAL_SYM"/>
+    <functioncall functionName="WEBP_ALIGN"/>
+    <functioncall functionName="WEBP_ALIGN_CST"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="X"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="alpha_"/>
+    <functioncall functionName="alpha_sym"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="backward_refs"/>
+    <functioncall functionName="best_bits"/>
+    <functioncall functionName="best_cost"/>
+    <functioncall functionName="best_idx1"/>
+    <functioncall functionName="best_idx2"/>
+    <functioncall functionName="best_out"/>
+    <functioncall functionName="bin_id"/>
+    <functioncall functionName="bin_map"/>
+    <functioncall functionName="bit_cost_"/>
+    <functioncall functionName="bit_cost_thresh"/>
+    <functioncall functionName="bit_entropy"/>
+    <functioncall functionName="blue_"/>
+    <functioncall functionName="blue_cost_"/>
+    <functioncall functionName="blue_max_"/>
+    <functioncall functionName="blue_min_"/>
+    <functioncall functionName="blue_sym"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bsearch"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cache_bits"/>
+    <functioncall functionName="cluster"/>
+    <functioncall functionName="cluster_mappings"/>
+    <functioncall functionName="cluster_mappings_tmp"/>
+    <functioncall functionName="cluster_max"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="combine_cost_factor"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cost"/>
+    <functioncall functionName="cost_combo"/>
+    <functioncall functionName="cost_diff"/>
+    <functioncall functionName="cost_range"/>
+    <functioncall functionName="cost_threshold"/>
+    <functioncall functionName="cur_bits"/>
+    <functioncall functionName="cur_combo"/>
+    <functioncall functionName="cur_pos"/>
+    <functioncall functionName="curr_cost"/>
+    <functioncall functionName="distance_"/>
+    <functioncall functionName="distance_cost"/>
+    <functioncall functionName="distance_modifier"/>
+    <functioncall functionName="distance_modifier_arg0"/>
+    <functioncall functionName="do_continue"/>
+    <functioncall functionName="do_eval"/>
+    <functioncall functionName="do_greedy"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_cache_bits"/>
+    <functioncall functionName="dst_literal"/>
+    <functioncall functionName="entropy"/>
+    <functioncall functionName="entropy_combine"/>
+    <functioncall functionName="entropy_combine_num_bins"/>
+    <functioncall functionName="extra_bits"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="h1"/>
+    <functioncall functionName="h2"/>
+    <functioncall functionName="histo"/>
+    <functioncall functionName="histo_bits"/>
+    <functioncall functionName="histo_queue"/>
+    <functioncall functionName="histo_size"/>
+    <functioncall functionName="histogram_symbols"/>
+    <functioncall functionName="histograms"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="idx1"/>
+    <functioncall functionName="idx2"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image_histo"/>
+    <functioncall functionName="image_histo_raw_size"/>
+    <functioncall functionName="init_arrays"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_X_used"/>
+    <functioncall functionName="is_Y_used"/>
+    <functioncall functionName="is_idx1_best"/>
+    <functioncall functionName="is_idx2_best"/>
+    <functioncall functionName="is_used_"/>
+    <functioncall functionName="iter"/>
+    <functioncall functionName="ix"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="kHistoQueueSize"/>
+    <functioncall functionName="kInvalidHistogramSymbol"/>
+    <functioncall functionName="kSmallBias"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="literal"/>
+    <functioncall functionName="literal_"/>
+    <functioncall functionName="literal_cost_"/>
+    <functioncall functionName="literal_ix"/>
+    <functioncall functionName="literal_max_"/>
+    <functioncall functionName="literal_min_"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="low_effort"/>
+    <functioncall functionName="map_tmp"/>
+    <functioncall functionName="mapping_index"/>
+    <functioncall functionName="mappings"/>
+    <functioncall functionName="max_size"/>
+    <functioncall functionName="max_val"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="min_limit"/>
+    <functioncall functionName="mix"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nonzero_code"/>
+    <functioncall functionName="num_clusters"/>
+    <functioncall functionName="num_codes"/>
+    <functioncall functionName="num_combine_failures"/>
+    <functioncall functionName="num_used"/>
+    <functioncall functionName="num_used_orig"/>
+    <functioncall functionName="orig_histo"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="out_size"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pair"/>
+    <functioncall functionName="palette_code_bits"/>
+    <functioncall functionName="palette_code_bits_"/>
+    <functioncall functionName="population"/>
+    <functioncall functionName="quality"/>
+    <functioncall functionName="queue"/>
+    <functioncall functionName="range"/>
+    <functioncall functionName="red_"/>
+    <functioncall functionName="red_cost_"/>
+    <functioncall functionName="red_max_"/>
+    <functioncall functionName="red_min_"/>
+    <functioncall functionName="red_sym"/>
+    <functioncall functionName="refs"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="seed"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="stats"/>
+    <functioncall functionName="sum_cost"/>
+    <functioncall functionName="threshold"/>
+    <functioncall functionName="threshold_size"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp_histo"/>
+    <functioncall functionName="total_size"/>
+    <functioncall functionName="trivial_at_end"/>
+    <functioncall functionName="trivial_symbol_"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="xsize"/>
+    <functioncall functionName="ysize"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="990987347">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_x::get&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_x::get&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="588" column="9"/>
+            <symbol>CanvasItemEditor::proj_vector2_x::get</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_x::set&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_x::set&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="589" column="8"/>
+            <symbol>CanvasItemEditor::proj_vector2_x::set</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_y::get&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_y::get&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="593" column="9"/>
+            <symbol>CanvasItemEditor::proj_vector2_y::get</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_y::set&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_y::set&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="594" column="8"/>
+            <symbol>CanvasItemEditor::proj_vector2_y::set</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;make_visible&apos; is called from constructor &apos;Skeleton2DEditorPlugin(EditorNode*p_node)&apos; at line 143. Dynamic binding is not used." verbose="Virtual function &apos;make_visible&apos; is called from constructor &apos;Skeleton2DEditorPlugin(EditorNode*p_node)&apos; at line 143. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.h" line="79" column="15" info="make_visible is a virtual function"/>
+            <location file="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" line="143" column="2" info="Calling make_visible"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Skeleton2DEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Skeleton2DEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.h" line="81" column="2"/>
+            <symbol>Skeleton2DEditorPlugin</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;CanvasItemEditor&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;CanvasItemEditor&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="650" column="2"/>
+            <symbol>CanvasItemEditor</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;CanvasItemEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;CanvasItemEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="671" column="2"/>
+            <symbol>CanvasItemEditorPlugin</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.h:79:15" call-funcname="make_visible" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" line="143" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:576:8" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="577" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:576:8" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="577" col="53" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:582:8" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="583" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:582:8" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="583" col="53" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.h:78:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/editor/plugins/skeleton_2d_editor_plugin.cpp" line="124" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_node_removed" lineNumber="38"/>
+    <functiondecl functionName="edit" lineNumber="46"/>
+    <functiondecl functionName="_menu_option" lineNumber="51"/>
+    <functiondecl functionName="_bind_methods" lineNumber="94"/>
+    <functiondecl functionName="edit" lineNumber="117"/>
+    <functiondecl functionName="handles" lineNumber="122"/>
+    <functiondecl functionName="make_visible" lineNumber="127"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_BOTTOM_LEFT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_BOTTOM_RIGHT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_BOTTOM_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_BOTTOM"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_LEFT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_RIGHT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_TOP"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_HCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_KEEP_RATIO"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_LEFT_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_RIGHT_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_TOP_LEFT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_TOP_RIGHT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_TOP_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_VCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_BOTTOM_LEFT"/>
+    <functioncall functionName="ANCHORS_PRESET_BOTTOM_RIGHT"/>
+    <functioncall functionName="ANCHORS_PRESET_BOTTOM_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_BOTTOM"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_LEFT"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_RIGHT"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_TOP"/>
+    <functioncall functionName="ANCHORS_PRESET_HCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_LEFT_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_RIGHT_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_TOP_LEFT"/>
+    <functioncall functionName="ANCHORS_PRESET_TOP_RIGHT"/>
+    <functioncall functionName="ANCHORS_PRESET_TOP_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_VCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_WIDE"/>
+    <functioncall functionName="ANIM_CLEAR_POSE"/>
+    <functioncall functionName="ANIM_COPY_POSE"/>
+    <functioncall functionName="ANIM_INSERT_KEY"/>
+    <functioncall functionName="ANIM_INSERT_KEY_EXISTING"/>
+    <functioncall functionName="ANIM_INSERT_POS"/>
+    <functioncall functionName="ANIM_INSERT_ROT"/>
+    <functioncall functionName="ANIM_INSERT_SCALE"/>
+    <functioncall functionName="ANIM_PASTE_POSE"/>
+    <functioncall functionName="AcceptDialog"/>
+    <functioncall functionName="BoneList"/>
+    <functioncall functionName="CLEAR_GUIDES"/>
+    <functioncall functionName="CanvasItemEditor"/>
+    <functioncall functionName="CanvasItemEditorPlugin"/>
+    <functioncall functionName="CanvasItemEditorSelectedItem"/>
+    <functioncall functionName="CanvasItemEditorViewport"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="DRAG_ANCHOR_ALL"/>
+    <functioncall functionName="DRAG_ANCHOR_BOTTOM_LEFT"/>
+    <functioncall functionName="DRAG_ANCHOR_BOTTOM_RIGHT"/>
+    <functioncall functionName="DRAG_ANCHOR_TOP_LEFT"/>
+    <functioncall functionName="DRAG_ANCHOR_TOP_RIGHT"/>
+    <functioncall functionName="DRAG_BOTTOM"/>
+    <functioncall functionName="DRAG_BOTTOM_LEFT"/>
+    <functioncall functionName="DRAG_BOTTOM_RIGHT"/>
+    <functioncall functionName="DRAG_BOX_SELECTION"/>
+    <functioncall functionName="DRAG_DOUBLE_GUIDE"/>
+    <functioncall functionName="DRAG_H_GUIDE"/>
+    <functioncall functionName="DRAG_KEY_MOVE"/>
+    <functioncall functionName="DRAG_LEFT"/>
+    <functioncall functionName="DRAG_MOVE"/>
+    <functioncall functionName="DRAG_MOVE_X"/>
+    <functioncall functionName="DRAG_MOVE_Y"/>
+    <functioncall functionName="DRAG_NONE"/>
+    <functioncall functionName="DRAG_PIVOT"/>
+    <functioncall functionName="DRAG_RIGHT"/>
+    <functioncall functionName="DRAG_ROTATE"/>
+    <functioncall functionName="DRAG_SCALE_BOTH"/>
+    <functioncall functionName="DRAG_SCALE_X"/>
+    <functioncall functionName="DRAG_SCALE_Y"/>
+    <functioncall functionName="DRAG_TOP"/>
+    <functioncall functionName="DRAG_TOP_LEFT"/>
+    <functioncall functionName="DRAG_TOP_RIGHT"/>
+    <functioncall functionName="DRAG_V_GUIDE"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GROUP_SELECTED"/>
+    <functioncall functionName="LOCK_SELECTED"/>
+    <functioncall functionName="MARGINS_PRESET_BOTTOM_LEFT"/>
+    <functioncall functionName="MARGINS_PRESET_BOTTOM_RIGHT"/>
+    <functioncall functionName="MARGINS_PRESET_BOTTOM_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_BOTTOM"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_LEFT"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_RIGHT"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_TOP"/>
+    <functioncall functionName="MARGINS_PRESET_HCENTER_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_LEFT_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_RIGHT_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_TOP_LEFT"/>
+    <functioncall functionName="MARGINS_PRESET_TOP_RIGHT"/>
+    <functioncall functionName="MARGINS_PRESET_TOP_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_VCENTER_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_WIDE"/>
+    <functioncall functionName="MENU_OPTION_MAKE_REST"/>
+    <functioncall functionName="MENU_OPTION_SET_REST"/>
+    <functioncall functionName="MenuButton"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="PREVIEW_CANVAS_SCALE"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="SHOW_EDIT_LOCKS"/>
+    <functioncall functionName="SHOW_GRID"/>
+    <functioncall functionName="SHOW_GUIDES"/>
+    <functioncall functionName="SHOW_HELPERS"/>
+    <functioncall functionName="SHOW_ORIGIN"/>
+    <functioncall functionName="SHOW_RULERS"/>
+    <functioncall functionName="SHOW_TRANSFORMATION_GIZMOS"/>
+    <functioncall functionName="SHOW_VIEWPORT"/>
+    <functioncall functionName="SKELETON_CLEAR_BONES"/>
+    <functioncall functionName="SKELETON_CLEAR_IK_CHAIN"/>
+    <functioncall functionName="SKELETON_MAKE_BONES"/>
+    <functioncall functionName="SKELETON_SET_IK_CHAIN"/>
+    <functioncall functionName="SKELETON_SHOW_BONES"/>
+    <functioncall functionName="SNAP_CONFIGURE"/>
+    <functioncall functionName="SNAP_DEFAULT"/>
+    <functioncall functionName="SNAP_PIXEL"/>
+    <functioncall functionName="SNAP_RELATIVE"/>
+    <functioncall functionName="SNAP_TARGET_GRID"/>
+    <functioncall functionName="SNAP_TARGET_GUIDE"/>
+    <functioncall functionName="SNAP_TARGET_OTHER_NODE"/>
+    <functioncall functionName="SNAP_TARGET_PARENT"/>
+    <functioncall functionName="SNAP_TARGET_PIXEL"/>
+    <functioncall functionName="SNAP_TARGET_SELF"/>
+    <functioncall functionName="SNAP_TARGET_SELF_ANCHORS"/>
+    <functioncall functionName="SNAP_USE"/>
+    <functioncall functionName="SNAP_USE_GRID"/>
+    <functioncall functionName="SNAP_USE_GUIDES"/>
+    <functioncall functionName="SNAP_USE_NODE_ANCHORS"/>
+    <functioncall functionName="SNAP_USE_NODE_CENTER"/>
+    <functioncall functionName="SNAP_USE_NODE_PARENT"/>
+    <functioncall functionName="SNAP_USE_NODE_SIDES"/>
+    <functioncall functionName="SNAP_USE_OTHER_NODES"/>
+    <functioncall functionName="SNAP_USE_PIXEL"/>
+    <functioncall functionName="SNAP_USE_ROTATION"/>
+    <functioncall functionName="SNAP_USE_SCALE"/>
+    <functioncall functionName="Skeleton2DEditor"/>
+    <functioncall functionName="Skeleton2DEditorPlugin"/>
+    <functioncall functionName="SnapTarget"/>
+    <functioncall functionName="TOOL_EDIT_PIVOT"/>
+    <functioncall functionName="TOOL_LIST_SELECT"/>
+    <functioncall functionName="TOOL_MAX"/>
+    <functioncall functionName="TOOL_MOVE"/>
+    <functioncall functionName="TOOL_PAN"/>
+    <functioncall functionName="TOOL_ROTATE"/>
+    <functioncall functionName="TOOL_RULER"/>
+    <functioncall functionName="TOOL_SCALE"/>
+    <functioncall functionName="TOOL_SELECT"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Transform2D"/>
+    <functioncall functionName="UNGROUP_SELECTED"/>
+    <functioncall functionName="UNLOCK_SELECTED"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="VIEW_CENTER_TO_SELECTION"/>
+    <functioncall functionName="VIEW_FRAME_TO_SELECTION"/>
+    <functioncall functionName="_menu_option"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_control_to_menu_panel"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_item"/>
+    <functioncall functionName="add_separator"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="bone"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="edit"/>
+    <functioncall functionName="err_dialog"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="get_bone"/>
+    <functioncall functionName="get_bone_count"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_gui_base"/>
+    <functioncall functionName="get_popup"/>
+    <functioncall functionName="get_rest"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_viewport"/>
+    <functioncall functionName="has_z"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="last_pass"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="make_visible"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_option"/>
+    <functioncall functionName="p_sprite"/>
+    <functioncall functionName="p_undo_redo"/>
+    <functioncall functionName="p_visible"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="prev_anchors"/>
+    <functioncall functionName="r_current_snap_target"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_switch_on_hover"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="sprite_editor"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,511 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="973301527">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="266" column="37"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="615" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="640" column="23"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;err&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;err&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1567" column="7" info="err is overwritten"/>
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1552" column="8" info="err is assigned"/>
+            <symbol>err</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;err&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;err&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1641" column="7" info="err is overwritten"/>
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1612" column="10" info="err is assigned"/>
+            <symbol>err</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;ret&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;ret&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="2037" column="8" info="ret is overwritten"/>
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1960" column="8" info="ret is assigned"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;ret&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;ret&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="2319" column="8" info="ret is overwritten"/>
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="2276" column="8" info="ret is assigned"/>
+            <symbol>ret</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;devices&apos; shadows outer variable" verbose="Local variable &apos;devices&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="273" column="12" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="258" column="17" info="Shadowed declaration"/>
+            <symbol>devices</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;version_name&apos; is assigned a value that is never used." verbose="Variable &apos;version_name&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1537" column="23"/>
+            <symbol>version_name</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;da&apos; is assigned a value that is never used." verbose="Variable &apos;da&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1721" column="21"/>
+            <symbol>da</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/export/export.cpp:590:15" my-argnr="1" my-argname="ed" file="/home/hbina/git/godot/platform/android/export/export.cpp" line="592" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/export/export.cpp:1382:15" my-argnr="1" my-argname="r_options" file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1384" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/export/export.cpp:2328:15" my-argnr="1" my-argname="r_features" file="/home/hbina/git/godot/platform/android/export/export.cpp" line="2330" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/export/export.cpp:590:15" my-argnr="1" my-argname="ed" file="/home/hbina/git/godot/platform/android/export/export.cpp" line="592" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/export/export.cpp:1382:15" my-argnr="1" my-argname="r_options" file="/home/hbina/git/godot/platform/android/export/export.cpp" line="1384" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/android/export/export.cpp:2328:15" my-argnr="1" my-argname="r_features" file="/home/hbina/git/godot/platform/android/export/export.cpp" line="2330" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_device_poll_thread" lineNumber="264"/>
+    <functiondecl functionName="get_project_name" lineNumber="409"/>
+    <functiondecl functionName="get_package_name" lineNumber="425"/>
+    <functiondecl functionName="is_package_name_valid" lineNumber="451"/>
+    <functiondecl functionName="_should_compress_asset" lineNumber="515"/>
+    <functiondecl functionName="get_zip_fileinfo" lineNumber="562"/>
+    <functiondecl functionName="get_abis" lineNumber="581"/>
+    <functiondecl functionName="store_in_apk" lineNumber="590"/>
+    <functiondecl functionName="save_apk_so" lineNumber="609"/>
+    <functiondecl functionName="save_apk_file" lineNumber="639"/>
+    <functiondecl functionName="ignore_apk_file" lineNumber="647"/>
+    <functiondecl functionName="_fix_manifest" lineNumber="651"/>
+    <functiondecl functionName="_parse_string" lineNumber="1180"/>
+    <functiondecl functionName="_fix_resources" lineNumber="1233"/>
+    <functiondecl functionName="_process_launcher_icons" lineNumber="1328"/>
+    <functiondecl functionName="get_enabled_abis" lineNumber="1349"/>
+    <functiondecl functionName="get_preset_features" lineNumber="1365"/>
+    <functiondecl functionName="get_export_options" lineNumber="1382"/>
+    <functiondecl functionName="get_name" lineNumber="1436"/>
+    <functiondecl functionName="get_os_name" lineNumber="1440"/>
+    <functiondecl functionName="get_logo" lineNumber="1444"/>
+    <functiondecl functionName="poll_export" lineNumber="1448"/>
+    <functiondecl functionName="get_options_count" lineNumber="1458"/>
+    <functiondecl functionName="get_options_tooltip" lineNumber="1464"/>
+    <functiondecl functionName="get_option_label" lineNumber="1469"/>
+    <functiondecl functionName="get_option_tooltip" lineNumber="1476"/>
+    <functiondecl functionName="run" lineNumber="1490"/>
+    <functiondecl functionName="get_run_icon" lineNumber="1651"/>
+    <functiondecl functionName="can_export" lineNumber="1655"/>
+    <functiondecl functionName="get_binary_extensions" lineNumber="1767"/>
+    <functiondecl functionName="export_project" lineNumber="1773"/>
+    <functiondecl functionName="get_platform_features" lineNumber="2328"/>
+    <functiondecl functionName="resolve_platform_feature_priorities" lineNumber="2334"/>
+    <functiondecl functionName="register_android_exporter" lineNumber="2359"/>
+    <functiondecl functionName="_device_poll_thread" lineNumber="264"/>
+    <functiondecl functionName="get_project_name" lineNumber="409"/>
+    <functiondecl functionName="get_package_name" lineNumber="425"/>
+    <functiondecl functionName="is_package_name_valid" lineNumber="451"/>
+    <functiondecl functionName="_should_compress_asset" lineNumber="515"/>
+    <functiondecl functionName="get_zip_fileinfo" lineNumber="562"/>
+    <functiondecl functionName="get_abis" lineNumber="581"/>
+    <functiondecl functionName="store_in_apk" lineNumber="590"/>
+    <functiondecl functionName="save_apk_so" lineNumber="609"/>
+    <functiondecl functionName="save_apk_file" lineNumber="639"/>
+    <functiondecl functionName="ignore_apk_file" lineNumber="647"/>
+    <functiondecl functionName="_fix_manifest" lineNumber="651"/>
+    <functiondecl functionName="_parse_string" lineNumber="1180"/>
+    <functiondecl functionName="_fix_resources" lineNumber="1233"/>
+    <functiondecl functionName="_process_launcher_icons" lineNumber="1328"/>
+    <functiondecl functionName="get_enabled_abis" lineNumber="1349"/>
+    <functiondecl functionName="get_preset_features" lineNumber="1365"/>
+    <functiondecl functionName="get_export_options" lineNumber="1382"/>
+    <functiondecl functionName="get_name" lineNumber="1436"/>
+    <functiondecl functionName="get_os_name" lineNumber="1440"/>
+    <functiondecl functionName="get_logo" lineNumber="1444"/>
+    <functiondecl functionName="poll_export" lineNumber="1448"/>
+    <functiondecl functionName="get_options_count" lineNumber="1458"/>
+    <functiondecl functionName="get_options_tooltip" lineNumber="1464"/>
+    <functiondecl functionName="get_option_label" lineNumber="1469"/>
+    <functiondecl functionName="get_option_tooltip" lineNumber="1476"/>
+    <functiondecl functionName="run" lineNumber="1490"/>
+    <functiondecl functionName="get_run_icon" lineNumber="1651"/>
+    <functiondecl functionName="can_export" lineNumber="1655"/>
+    <functiondecl functionName="get_binary_extensions" lineNumber="1767"/>
+    <functiondecl functionName="export_project" lineNumber="1773"/>
+    <functiondecl functionName="get_platform_features" lineNumber="2328"/>
+    <functiondecl functionName="resolve_platform_feature_priorities" lineNumber="2334"/>
+    <functiondecl functionName="register_android_exporter" lineNumber="2359"/>
+    <functioncall functionName="APPEND_STATUS_CREATE"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="DEBUG_FLAG_REMOTE_DEBUG"/>
+    <functioncall functionName="EDITOR_DEF"/>
+    <functioncall functionName="EDITOR_GET"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="EditorExportPlatform"/>
+    <functioncall functionName="EditorExportPlatformAndroid"/>
+    <functioncall functionName="ExportOption"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="INTERPOLATE_LANCZOS"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MSG_TYPE_EDITOR"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="PACKED_STRING_ARRAY"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_DIR"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_MULTILINE_TEXT"/>
+    <functioncall functionName="PROPERTY_HINT_PLACEHOLDER_TEXT"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PackedStringArray"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="VERSION_FULL_CONFIG"/>
+    <functioncall functionName="VERSION_NAME"/>
+    <functioncall functionName="WARN_PRINT"/>
+    <functioncall functionName="ZIP_ALIGNMENT"/>
+    <functioncall functionName="Z_DEFAULT_COMPRESSION"/>
+    <functioncall functionName="Z_DEFLATED"/>
+    <functioncall functionName="_android_logo"/>
+    <functioncall functionName="_android_run_icon"/>
+    <functioncall functionName="_device_poll_thread"/>
+    <functioncall functionName="_fix_manifest"/>
+    <functioncall functionName="_fix_resources"/>
+    <functioncall functionName="_parse_string"/>
+    <functioncall functionName="_process_launcher_icons"/>
+    <functioncall functionName="_should_compress_asset"/>
+    <functioncall functionName="_signed"/>
+    <functioncall functionName="abi"/>
+    <functioncall functionName="abi_index"/>
+    <functioncall functionName="abis"/>
+    <functioncall functionName="abis_string"/>
+    <functioncall functionName="adb"/>
+    <functioncall functionName="add_export_platform"/>
+    <functioncall functionName="add_io_error"/>
+    <functioncall functionName="add_message"/>
+    <functioncall functionName="add_property_hint"/>
+    <functioncall functionName="android_perms"/>
+    <functioncall functionName="api_level"/>
+    <functioncall functionName="apk"/>
+    <functioncall functionName="apk_expansion"/>
+    <functioncall functionName="apkfname"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="array"/>
+    <functioncall functionName="attr_count"/>
+    <functioncall functionName="attr_name"/>
+    <functioncall functionName="attr_name_string"/>
+    <functioncall functionName="attr_nspace"/>
+    <functioncall functionName="attr_required_string"/>
+    <functioncall functionName="attr_resid"/>
+    <functioncall functionName="attr_uses_feature_string"/>
+    <functioncall functionName="attr_uses_permission_string"/>
+    <functioncall functionName="attr_value"/>
+    <functioncall functionName="attr_version_string"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bias"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="build_command"/>
+    <functioncall functionName="build_path"/>
+    <functioncall functionName="byte"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="can_export"/>
+    <functioncall functionName="can_export_error"/>
+    <functioncall functionName="can_export_missing_templates"/>
+    <functioncall functionName="capitalize"/>
+    <functioncall functionName="chars"/>
+    <functioncall functionName="chr"/>
+    <functioncall functionName="chunk"/>
+    <functioncall functionName="cl"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="cmdline"/>
+    <functioncall functionName="compressed_size"/>
+    <functioncall functionName="compression_method"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="crc"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_from_image"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="day"/>
+    <functioncall functionName="dbg_port"/>
+    <functioncall functionName="dc"/>
+    <functioncall functionName="debug_opengl"/>
+    <functioncall functionName="decode_uint16"/>
+    <functioncall functionName="decode_uint32"/>
+    <functioncall functionName="delay_usec"/>
+    <functioncall functionName="description"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="device_lock"/>
+    <functioncall functionName="device_thread"/>
+    <functioncall functionName="devices"/>
+    <functioncall functionName="devices_changed"/>
+    <functioncall functionName="different"/>
+    <functioncall functionName="dimensions"/>
+    <functioncall functionName="dk"/>
+    <functioncall functionName="dof_index"/>
+    <functioncall functionName="dp"/>
+    <functioncall functionName="dpos"/>
+    <functioncall functionName="dst_f"/>
+    <functioncall functionName="dst_path"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="dvalid"/>
+    <functioncall functionName="ec"/>
+    <functioncall functionName="ec2"/>
+    <functioncall functionName="ed"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="enabled"/>
+    <functioncall functionName="enabled_abis"/>
+    <functioncall functionName="encode_uint16"/>
+    <functioncall functionName="encode_uint32"/>
+    <functioncall functionName="ends_with"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="errn"/>
+    <functioncall functionName="exe_ext"/>
+    <functioncall functionName="execute"/>
+    <functioncall functionName="execute_and_show_output"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="exists_export_template"/>
+    <functioncall functionName="export_path"/>
+    <functioncall functionName="export_project"/>
+    <functioncall functionName="export_project_files"/>
+    <functioncall functionName="exported"/>
+    <functioncall functionName="exporter"/>
+    <functioncall functionName="extra"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="feature_name"/>
+    <functioncall functionName="feature_string"/>
+    <functioncall functionName="feature_version"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="final_apk"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_export_template"/>
+    <functioncall functionName="find_last"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="fname"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fs_port"/>
+    <functioncall functionName="fullpath"/>
+    <functioncall functionName="gen_export_flags"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_abis"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_cache_dir"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_date"/>
+    <functioncall functionName="get_enabled_abis"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_file_as_array"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_line"/>
+    <functioncall functionName="get_log"/>
+    <functioncall functionName="get_md5"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_package_name"/>
+    <functioncall functionName="get_project_name"/>
+    <functioncall functionName="get_resource_path"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slice"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_time"/>
+    <functioncall functionName="get_width"/>
+    <functioncall functionName="get_zip_fileinfo"/>
+    <functioncall functionName="hand_tracking_index"/>
+    <functioncall functionName="has_setting"/>
+    <functioncall functionName="has_version_attribute"/>
+    <functioncall functionName="hour"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icon_densities_count"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ignore_apk_file"/>
+    <functioncall functionName="image_to_png"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="immersive"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="invalid_abis"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="io2"/>
+    <functioncall functionName="iofs"/>
+    <functioncall functionName="is_default"/>
+    <functioncall functionName="is_enabled"/>
+    <functioncall functionName="is_package_name_valid"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="jarsigner"/>
+    <functioncall functionName="join"/>
+    <functioncall functionName="js"/>
+    <functioncall functionName="keystore"/>
+    <functioncall functionName="lang"/>
+    <functioncall functionName="launcher_adaptive_icon_background_image"/>
+    <functioncall functionName="launcher_adaptive_icon_background_option"/>
+    <functioncall functionName="launcher_adaptive_icon_foreground_image"/>
+    <functioncall functionName="launcher_adaptive_icon_foreground_option"/>
+    <functioncall functionName="launcher_icon_image"/>
+    <functioncall functionName="launcher_icon_option"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="level"/>
+    <functioncall functionName="load_image"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="manifest_cur_size"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="month"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="ndevices"/>
+    <functioncall functionName="notifier"/>
+    <functioncall functionName="ns_android_string"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="opengl"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_debug"/>
+    <functioncall functionName="p_debug_flags"/>
+    <functioncall functionName="p_device"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_give_internet"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_package"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_preset"/>
+    <functioncall functionName="p_source_image"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="p_utf8"/>
+    <functioncall functionName="package_name"/>
+    <functioncall functionName="padding"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="password"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="perm_string"/>
+    <functioncall functionName="pkg"/>
+    <functioncall functionName="plugins"/>
+    <functioncall functionName="plugins_dir"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="pn"/>
+    <functioncall functionName="pn_err"/>
+    <functioncall functionName="png_buffer"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="project_icon_path"/>
+    <functioncall functionName="prop"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quit_request"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="release_keystore"/>
+    <functioncall functionName="release_password"/>
+    <functioncall functionName="release_username"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_file_or_error"/>
+    <functioncall functionName="remove_prev"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="replace_first"/>
+    <functioncall functionName="required_value"/>
+    <functioncall functionName="required_value_string"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="rest_from"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="retval"/>
+    <functioncall functionName="rv"/>
+    <functioncall functionName="rvalid"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="save_apk_file"/>
+    <functioncall functionName="save_apk_so"/>
+    <functioncall functionName="save_pack"/>
+    <functioncall functionName="sdk_path"/>
+    <functioncall functionName="sec"/>
+    <functioncall functionName="set_environment"/>
+    <functioncall functionName="show_warning"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="size_file_extra"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="src_apk"/>
+    <functioncall functionName="src_f"/>
+    <functioncall functionName="st_offset"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="store_err"/>
+    <functioncall functionName="store_in_apk"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="string_at"/>
+    <functioncall functionName="string_block_len"/>
+    <functioncall functionName="string_count"/>
+    <functioncall functionName="string_data_offset"/>
+    <functioncall functionName="string_end"/>
+    <functioncall functionName="string_table_ends"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tag_size"/>
+    <functioncall functionName="test_etc2"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tmp_export_path"/>
+    <functioncall functionName="tmp_unaligned"/>
+    <functioncall functionName="tmp_unaligned_path"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="to_upper"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tsa_url"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="unaligned_apk"/>
+    <functioncall functionName="uncompressed_size"/>
+    <functioncall functionName="unconditional_compress_ext"/>
+    <functioncall functionName="unzClose"/>
+    <functioncall functionName="unzCloseCurrentFile"/>
+    <functioncall functionName="unzGetCurrentFileInfo"/>
+    <functioncall functionName="unzGetCurrentFileZStreamPos64"/>
+    <functioncall functionName="unzGoToFirstFile"/>
+    <functioncall functionName="unzGoToNextFile"/>
+    <functioncall functionName="unzOpen2"/>
+    <functioncall functionName="unzOpenCurrentFile"/>
+    <functioncall functionName="unzOpenCurrentFile2"/>
+    <functioncall functionName="unzReadCurrentFile"/>
+    <functioncall functionName="use_32_fb"/>
+    <functioncall functionName="use_remote"/>
+    <functioncall functionName="use_reverse"/>
+    <functioncall functionName="user"/>
+    <functioncall functionName="user_perm"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="version_code"/>
+    <functioncall functionName="version_name"/>
+    <functioncall functionName="version_value"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="wait_to_finish"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="working_image"/>
+    <functioncall functionName="year"/>
+    <functioncall functionName="zipClose"/>
+    <functioncall functionName="zipCloseFileInZip"/>
+    <functioncall functionName="zipCloseFileInZipRaw"/>
+    <functioncall functionName="zipOpen2"/>
+    <functioncall functionName="zipOpenNewFileInZip"/>
+    <functioncall functionName="zipOpenNewFileInZip2"/>
+    <functioncall functionName="zipWriteInFileInZip"/>
+    <functioncall functionName="zipfi"/>
+    <functioncall functionName="zipio_create_io_from_file"/>
+  </FileInfo>
+</analyzerinfo>

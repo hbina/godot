@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="679802513">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/TextureTransform.cpp" line="245" column="30"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/TextureTransform.h:209:10" my-argnr="1" my-argname="pScene" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/TextureTransform.cpp" line="231" col="42" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/TextureTransform.h:212:10" my-argnr="1" my-argname="pImp" file="/home/hbina/git/godot/thirdparty/assimp/code/PostProcessing/TextureTransform.cpp" line="83" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="IsActive" lineNumber="74"/>
+    <functiondecl functionName="SetupProperties" lineNumber="81"/>
+    <functiondecl functionName="PreProcessUVTransform" lineNumber="87"/>
+    <functiondecl functionName="UpdateUVIndex" lineNumber="192"/>
+    <functiondecl functionName="MappingModeToChar" lineNumber="208"/>
+    <functiondecl functionName="Execute" lineNumber="220"/>
+    <functioncall functionName="AI_CONFIG_PP_TUV_EVALUATE"/>
+    <functioncall functionName="AI_DEG_TO_RAD"/>
+    <functioncall functionName="AI_MATH_PI"/>
+    <functioncall functionName="AI_MATH_TWO_PI"/>
+    <functioncall functionName="AI_MATKEY_UVWSRC"/>
+    <functioncall functionName="AI_MAX_NUMBER_OF_TEXTURECOORDS"/>
+    <functioncall functionName="AI_NO_EXCEPT"/>
+    <functioncall functionName="AI_RAD_TO_DEG"/>
+    <functioncall functionName="AI_UVTRAFO_ALL"/>
+    <functioncall functionName="ASSIMP_LOG_DEBUG"/>
+    <functioncall functionName="ASSIMP_LOG_ERROR"/>
+    <functioncall functionName="ASSIMP_LOG_ERROR_F"/>
+    <functioncall functionName="ASSIMP_LOG_INFO"/>
+    <functioncall functionName="ASSIMP_LOG_INFO_F"/>
+    <functioncall functionName="ASSIMP_LOG_WARN"/>
+    <functioncall functionName="AddProperty"/>
+    <functioncall functionName="GetNumUVChannels"/>
+    <functioncall functionName="GetPropertyInteger"/>
+    <functioncall functionName="IsUntransformed"/>
+    <functioncall functionName="MappingModeToChar"/>
+    <functioncall functionName="PreProcessUVTransform"/>
+    <functioncall functionName="RotationZ"/>
+    <functioncall functionName="STransformVecInfo"/>
+    <functioncall functionName="TTUpdateInfo"/>
+    <functioncall functionName="TextureTransformStep"/>
+    <functioncall functionName="UpdateUVIndex"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a2"/>
+    <functioncall functionName="a3"/>
+    <functioncall functionName="aiMatrix3x3"/>
+    <functioncall functionName="aiTextureMapMode_Wrap"/>
+    <functioncall functionName="aiVector2D"/>
+    <functioncall functionName="aiVector3D"/>
+    <functioncall functionName="ai_assert"/>
+    <functioncall functionName="ai_snprintf"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="cnt"/>
+    <functioncall functionName="configFlags"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dest"/>
+    <functioncall functionName="directShortcut"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inChannels"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="isNullLogger"/>
+    <functioncall functionName="it"/>
+    <functioncall functionName="it2"/>
+    <functioncall functionName="lockedPos"/>
+    <functioncall functionName="mData"/>
+    <functioncall functionName="mIndex"/>
+    <functioncall functionName="mNumMaterials"/>
+    <functioncall functionName="mNumMeshes"/>
+    <functioncall functionName="mNumProperties"/>
+    <functioncall functionName="mNumVertices"/>
+    <functioncall functionName="mRotation"/>
+    <functioncall functionName="mScale"/>
+    <functioncall functionName="mScaling"/>
+    <functioncall functionName="mSemantic"/>
+    <functioncall functionName="mTranslation"/>
+    <functioncall functionName="mapU"/>
+    <functioncall functionName="mapV"/>
+    <functioncall functionName="mat"/>
+    <functioncall functionName="matrix"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="meshLists"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="need"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="outChannels"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rounded"/>
+    <functioncall functionName="semantic"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="szTemp"/>
+    <functioncall functionName="transformedChannels"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="untransformed"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="updateList"/>
+    <functioncall functionName="uv"/>
+    <functioncall functionName="uvIndex"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

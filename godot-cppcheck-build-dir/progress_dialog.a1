@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1593264185">
+        <error id="AssignmentIntegerToAddress" severity="portability" msg="Assigning an integer to a pointer is not portable." verbose="Assigning an integer (int/long/etc) to a pointer is not portable across different platforms and compilers. For example in 32-bit Windows and linux they are same width, but in 64-bit Windows and linux they are of different width. In worst case you end up assigning 64-bit integer to 32-bit pointer. The safe way is to store addresses only in pointer types (or typedefs like uintptr_t)." cwe="758">
+            <location file="/home/hbina/git/godot/editor/progress_dialog.cpp" line="127" column="19"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;no_updates&apos; is always true" verbose="Condition &apos;no_updates&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/editor/progress_dialog.cpp" line="122" column="6" info="Condition &apos;no_updates&apos; is always true"/>
+            <location file="/home/hbina/git/godot/editor/progress_dialog.cpp" line="116" column="20" info="Assignment &apos;no_updates=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;no_updates&apos; shadows outer variable" verbose="Local variable &apos;no_updates&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/editor/progress_dialog.cpp" line="119" column="3" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/editor/progress_dialog.cpp" line="116" column="7" info="Shadowed declaration"/>
+            <symbol>no_updates</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;no_updates&apos; is assigned a value that is never used." verbose="Variable &apos;no_updates&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/editor/progress_dialog.cpp" line="119" column="14"/>
+            <symbol>no_updates</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;updates&apos; is assigned a value that is never used." verbose="Variable &apos;updates&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/editor/progress_dialog.cpp" line="127" column="19"/>
+            <symbol>updates</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_add_task" lineNumber="39"/>
+    <functiondecl functionName="_update" lineNumber="64"/>
+    <functiondecl functionName="_task_step" lineNumber="78"/>
+    <functiondecl functionName="_end_task" lineNumber="90"/>
+    <functiondecl functionName="_bind_methods" lineNumber="101"/>
+    <functiondecl functionName="add_task" lineNumber="109"/>
+    <functiondecl functionName="task_step" lineNumber="113"/>
+    <functiondecl functionName="end_task" lineNumber="131"/>
+    <functiondecl functionName="_notification" lineNumber="140"/>
+    <functiondecl functionName="_popup" lineNumber="143"/>
+    <functiondecl functionName="add_task" lineNumber="159"/>
+    <functiondecl functionName="task_step" lineNumber="194"/>
+    <functiondecl functionName="end_task" lineNumber="220"/>
+    <functiondecl functionName="_cancel_pressed" lineNumber="234"/>
+    <functiondecl functionName="_bind_methods" lineNumber="238"/>
+    <functioncall functionName="BackgroundProgress"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="PRESET_WIDE"/>
+    <functioncall functionName="PopupPanel"/>
+    <functioncall functionName="ProgressBar"/>
+    <functioncall functionName="ProgressDialog"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Task"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="_add_task"/>
+    <functioncall functionName="_cancel_pressed"/>
+    <functioncall functionName="_end_task"/>
+    <functioncall functionName="_popup"/>
+    <functioncall functionName="_task_step"/>
+    <functioncall functionName="_update"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_margin_child"/>
+    <functioncall functionName="add_spacer"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cancel"/>
+    <functioncall functionName="cancel_hb"/>
+    <functioncall functionName="cancelled"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="ec"/>
+    <functioncall functionName="editor_get_scale"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_combined_minimum_size"/>
+    <functioncall functionName="get_margin"/>
+    <functioncall functionName="get_minimum_size"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_theme_stylebox"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="get_value"/>
+    <functioncall functionName="grab_focus"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="hb"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_flushing"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="iteration"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="main"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="ms"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="no_updates"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_can_cancel"/>
+    <functioncall functionName="p_force_redraw"/>
+    <functioncall functionName="p_label"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_steps"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="process_events"/>
+    <functioncall functionName="progress"/>
+    <functioncall functionName="push_call"/>
+    <functioncall functionName="raise"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_anchors_and_margins_preset"/>
+    <functioncall functionName="set_clip_text"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_exclusive"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_margin"/>
+    <functioncall functionName="set_max"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="vb"/>
+    <functioncall functionName="vb2"/>
+    <functioncall functionName="width"/>
+  </FileInfo>
+</analyzerinfo>

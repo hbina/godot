@@ -1,0 +1,675 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="905630192">
+        <error id="oppositeExpression" severity="style" msg="Opposite expression on both sides of &apos;&amp;&apos;." verbose="Finding the opposite expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1054" column="20"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;split&apos; can be reduced." verbose="The scope of the variable &apos;split&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1011" column="23"/>
+            <symbol>split</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;area&apos; can be reduced." verbose="The scope of the variable &apos;area&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1303" column="15"/>
+            <symbol>area</symbol>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;dx&gt;0&apos; is redundant or there is division by zero at line 657." verbose="Either the condition &apos;dx&gt;0&apos; is redundant or there is division by zero at line 657." cwe="369">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="657" column="5" info="Division by zero"/>
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="651" column="15" info="Assignment &apos;dx=-dx&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="640" column="13" info="Assuming that condition &apos;dx&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;dy&gt;0&apos; is redundant or there is division by zero at line 796." verbose="Either the condition &apos;dy&gt;0&apos; is redundant or there is division by zero at line 796." cwe="369">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="796" column="5" info="Division by zero"/>
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="791" column="15" info="Assignment &apos;dy=-dy&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="780" column="13" info="Assuming that condition &apos;dy&gt;0&apos; is not redundant"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: worker" verbose="Uninitialized variable: worker" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1789" column="5"/>
+            <symbol>worker</symbol>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: error" verbose="Uninitialized variable: error" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1889" column="12"/>
+            <symbol>error</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;error&apos; is not assigned a value." verbose="Variable &apos;error&apos; is not assigned a value." cwe="665">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1878" column="19"/>
+            <symbol>error</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;memory&apos; is assigned a value that is never used." verbose="Variable &apos;memory&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1896" column="23"/>
+            <symbol>memory</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" call-funcname="gray_render_scanline" call-argnr="6" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="799" col="25" call-argexpr="first" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="789" col="15" info="Assignment 'first=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="622" col="7" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1170" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" call-funcname="gray_render_line" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="4" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:983:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="988" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="2" my-argname="control" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1016" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="3" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1014" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1069:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1074" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="2" my-argname="control1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1113" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="3" my-argname="control2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1111" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="4" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1109" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1167" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1875:3" my-argnr="2" my-argname="araster" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1882" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" call-funcname="gray_render_scanline" call-argnr="6" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="799" col="25" call-argexpr="first" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="789" col="15" info="Assignment 'first=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="622" col="7" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1170" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" call-funcname="gray_render_line" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="4" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:500:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="505" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:983:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="988" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="2" my-argname="control" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1016" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="3" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1014" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1069:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1074" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="2" my-argname="control1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1113" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="3" my-argname="control2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1111" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="4" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1109" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1167" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1875:3" my-argnr="2" my-argname="araster" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1882" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:500:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="505" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+  </FileInfo>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;error&apos; to itself." verbose="Redundant assignment of &apos;error&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="213" column="5"/>
+            <symbol>error</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;line&apos; to itself." verbose="Redundant assignment of &apos;line&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="214" column="5"/>
+            <symbol>line</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;file&apos; to itself." verbose="Redundant assignment of &apos;file&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="215" column="5"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;memory&apos; to itself." verbose="Redundant assignment of &apos;memory&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1855" column="5"/>
+            <symbol>memory</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;raster&apos; to itself." verbose="Redundant assignment of &apos;raster&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1869" column="5"/>
+            <symbol>raster</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;raster&apos; to itself." verbose="Redundant assignment of &apos;raster&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1910" column="5"/>
+            <symbol>raster</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;pool_base&apos; to itself." verbose="Redundant assignment of &apos;pool_base&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1911" column="5"/>
+            <symbol>pool_base</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;pool_size&apos; to itself." verbose="Redundant assignment of &apos;pool_size&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1912" column="5"/>
+            <symbol>pool_size</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;raster&apos; to itself." verbose="Redundant assignment of &apos;raster&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1921" column="5"/>
+            <symbol>raster</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;mode&apos; to itself." verbose="Redundant assignment of &apos;mode&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1922" column="5"/>
+            <symbol>mode</symbol>
+        </error>
+        <error id="selfAssignment" severity="warning" msg="Redundant assignment of &apos;args&apos; to itself." verbose="Redundant assignment of &apos;args&apos; to itself." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1923" column="5"/>
+            <symbol>args</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;gray_TRaster_::memory&apos; is never used." verbose="struct member &apos;gray_TRaster_::memory&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="490" column="19"/>
+            <symbol>gray_TRaster_::memory</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;error&apos; is assigned a value that is never used." verbose="Variable &apos;error&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="213" column="5"/>
+            <symbol>error</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;line&apos; is assigned a value that is never used." verbose="Variable &apos;line&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="214" column="5"/>
+            <symbol>line</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;file&apos; is assigned a value that is never used." verbose="Variable &apos;file&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="215" column="5"/>
+            <symbol>file</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;memory&apos; is assigned a value that is never used." verbose="Variable &apos;memory&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1855" column="5"/>
+            <symbol>memory</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;raster&apos; is assigned a value that is never used." verbose="Variable &apos;raster&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1869" column="5"/>
+            <symbol>raster</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;raster&apos; is assigned a value that is never used." verbose="Variable &apos;raster&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1910" column="5"/>
+            <symbol>raster</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pool_base&apos; is assigned a value that is never used." verbose="Variable &apos;pool_base&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1911" column="5"/>
+            <symbol>pool_base</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;pool_size&apos; is assigned a value that is never used." verbose="Variable &apos;pool_size&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1912" column="5"/>
+            <symbol>pool_size</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;raster&apos; is assigned a value that is never used." verbose="Variable &apos;raster&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1921" column="5"/>
+            <symbol>raster</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;mode&apos; is assigned a value that is never used." verbose="Variable &apos;mode&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1922" column="5"/>
+            <symbol>mode</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;args&apos; is assigned a value that is never used." verbose="Variable &apos;args&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1923" column="5"/>
+            <symbol>args</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" call-funcname="gray_render_scanline" call-argnr="6" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="799" col="25" call-argexpr="first" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="789" col="15" info="Assignment 'first=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="622" col="7" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1170" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" call-funcname="gray_render_line" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="4" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:500:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="505" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:983:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="988" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="2" my-argname="control" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1016" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="3" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1014" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1069:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1074" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="2" my-argname="control1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1113" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="3" my-argname="control2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1111" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="4" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1109" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1167" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1850:3" my-argnr="2" my-argname="araster" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1858" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:500:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="505" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="failed to expand &apos;FT_UDIV&apos;, Invalid ## usage when expanding &apos;FT_UDIV&apos;." verbose="failed to expand &apos;FT_UDIV&apos;, Invalid ## usage when expanding &apos;FT_UDIV&apos;.">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="391" column="0"/>
+        </error>
+        <error id="syntaxError" severity="error" msg="syntax error" verbose="syntax error">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1724" column="54"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" call-funcname="gray_render_scanline" call-argnr="6" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="799" col="25" call-argexpr="first" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="789" col="15" info="Assignment 'first=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="622" col="7" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1170" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" call-funcname="gray_render_line" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="4" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:983:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="988" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="2" my-argname="control" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1016" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="3" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1014" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1069:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1074" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="2" my-argname="control1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1113" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="3" my-argname="control2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1111" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="4" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1109" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1167" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1850:3" my-argnr="2" my-argname="araster" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1858" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" call-funcname="gray_render_scanline" call-argnr="6" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="799" col="25" call-argexpr="first" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="789" col="15" info="Assignment 'first=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="622" col="7" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:605:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" call-funcname="gray_set_cell" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1170" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" call-funcname="gray_render_line" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" call-funcname="gray_render_conic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1192" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1188:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="3" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="4" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" call-funcname="gray_render_cubic" call-argnr="1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1203" col="5" my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1198:3" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:983:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="988" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="2" my-argname="control" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1016" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="3" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1014" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1069:3" my-argnr="1" my-argname="base" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1074" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="2" my-argname="control1" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1113" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="3" my-argname="control2" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1111" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="4" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1109" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1160:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1167" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1179:3" my-argnr="1" my-argname="to" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1182" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1875:3" my-argnr="2" my-argname="araster" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1882" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:527:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="530" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:571:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="585" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:706:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="714" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1005:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1018" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1101:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1115" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1209:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1218" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1293:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1298" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1635:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1641" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c:1671:3" my-argnr="1" my-argname="worker" file="/home/hbina/git/godot/thirdparty/freetype/src/smooth/ftgrays.c" line="1673" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="gray_record_cell" lineNumber="527"/>
+    <functiondecl functionName="gray_set_cell" lineNumber="571"/>
+    <functiondecl functionName="gray_render_scanline" lineNumber="605"/>
+    <functiondecl functionName="gray_render_line" lineNumber="706"/>
+    <functiondecl functionName="gray_split_conic" lineNumber="983"/>
+    <functiondecl functionName="gray_render_conic" lineNumber="1005"/>
+    <functiondecl functionName="gray_split_cubic" lineNumber="1069"/>
+    <functiondecl functionName="gray_render_cubic" lineNumber="1101"/>
+    <functiondecl functionName="gray_move_to" lineNumber="1160"/>
+    <functiondecl functionName="gray_line_to" lineNumber="1179"/>
+    <functiondecl functionName="gray_conic_to" lineNumber="1188"/>
+    <functiondecl functionName="gray_cubic_to" lineNumber="1198"/>
+    <functiondecl functionName="gray_hline" lineNumber="1209"/>
+    <functiondecl functionName="gray_sweep" lineNumber="1293"/>
+    <functiondecl functionName="gray_convert_glyph_inner" lineNumber="1635"/>
+    <functiondecl functionName="gray_convert_glyph" lineNumber="1671"/>
+    <functiondecl functionName="gray_raster_render" lineNumber="1757"/>
+    <functiondecl functionName="gray_raster_new" lineNumber="1875"/>
+    <functiondecl functionName="gray_raster_done" lineNumber="1894"/>
+    <functiondecl functionName="gray_raster_reset" lineNumber="1906"/>
+    <functiondecl functionName="gray_raster_set_mode" lineNumber="1917"/>
+    <functiondecl functionName="gray_dump_cells" lineNumber="500"/>
+    <functiondecl functionName="gray_record_cell" lineNumber="527"/>
+    <functiondecl functionName="gray_set_cell" lineNumber="571"/>
+    <functiondecl functionName="gray_render_scanline" lineNumber="605"/>
+    <functiondecl functionName="gray_render_line" lineNumber="706"/>
+    <functiondecl functionName="gray_split_conic" lineNumber="983"/>
+    <functiondecl functionName="gray_render_conic" lineNumber="1005"/>
+    <functiondecl functionName="gray_split_cubic" lineNumber="1069"/>
+    <functiondecl functionName="gray_render_cubic" lineNumber="1101"/>
+    <functiondecl functionName="gray_move_to" lineNumber="1160"/>
+    <functiondecl functionName="gray_line_to" lineNumber="1179"/>
+    <functiondecl functionName="gray_conic_to" lineNumber="1188"/>
+    <functiondecl functionName="gray_cubic_to" lineNumber="1198"/>
+    <functiondecl functionName="gray_hline" lineNumber="1209"/>
+    <functiondecl functionName="gray_sweep" lineNumber="1293"/>
+    <functiondecl functionName="gray_convert_glyph_inner" lineNumber="1635"/>
+    <functiondecl functionName="gray_convert_glyph" lineNumber="1671"/>
+    <functiondecl functionName="gray_raster_render" lineNumber="1757"/>
+    <functiondecl functionName="gray_raster_new" lineNumber="1875"/>
+    <functiondecl functionName="gray_raster_done" lineNumber="1894"/>
+    <functiondecl functionName="gray_raster_reset" lineNumber="1906"/>
+    <functiondecl functionName="gray_raster_set_mode" lineNumber="1917"/>
+    <functiondecl functionName="FT_Message" lineNumber="195"/>
+    <functiondecl functionName="FT_Throw" lineNumber="209"/>
+    <functiondecl functionName="gray_dump_cells" lineNumber="500"/>
+    <functiondecl functionName="gray_record_cell" lineNumber="527"/>
+    <functiondecl functionName="gray_set_cell" lineNumber="571"/>
+    <functiondecl functionName="gray_render_scanline" lineNumber="605"/>
+    <functiondecl functionName="gray_render_line" lineNumber="706"/>
+    <functiondecl functionName="gray_split_conic" lineNumber="983"/>
+    <functiondecl functionName="gray_render_conic" lineNumber="1005"/>
+    <functiondecl functionName="gray_split_cubic" lineNumber="1069"/>
+    <functiondecl functionName="gray_render_cubic" lineNumber="1101"/>
+    <functiondecl functionName="gray_move_to" lineNumber="1160"/>
+    <functiondecl functionName="gray_line_to" lineNumber="1179"/>
+    <functiondecl functionName="gray_conic_to" lineNumber="1188"/>
+    <functiondecl functionName="gray_cubic_to" lineNumber="1198"/>
+    <functiondecl functionName="gray_hline" lineNumber="1209"/>
+    <functiondecl functionName="gray_sweep" lineNumber="1293"/>
+    <functiondecl functionName="FT_Outline_Decompose" lineNumber="1373"/>
+    <functiondecl functionName="gray_convert_glyph_inner" lineNumber="1635"/>
+    <functiondecl functionName="gray_convert_glyph" lineNumber="1671"/>
+    <functiondecl functionName="gray_raster_render" lineNumber="1757"/>
+    <functiondecl functionName="gray_raster_new" lineNumber="1850"/>
+    <functiondecl functionName="gray_raster_done" lineNumber="1866"/>
+    <functiondecl functionName="gray_raster_reset" lineNumber="1906"/>
+    <functiondecl functionName="gray_raster_set_mode" lineNumber="1917"/>
+    <functiondecl functionName="gray_record_cell" lineNumber="527"/>
+    <functiondecl functionName="gray_set_cell" lineNumber="571"/>
+    <functiondecl functionName="gray_render_scanline" lineNumber="605"/>
+    <functiondecl functionName="gray_render_line" lineNumber="706"/>
+    <functiondecl functionName="gray_split_conic" lineNumber="983"/>
+    <functiondecl functionName="gray_render_conic" lineNumber="1005"/>
+    <functiondecl functionName="gray_split_cubic" lineNumber="1069"/>
+    <functiondecl functionName="gray_render_cubic" lineNumber="1101"/>
+    <functiondecl functionName="gray_move_to" lineNumber="1160"/>
+    <functiondecl functionName="gray_line_to" lineNumber="1179"/>
+    <functiondecl functionName="gray_conic_to" lineNumber="1188"/>
+    <functiondecl functionName="gray_cubic_to" lineNumber="1198"/>
+    <functiondecl functionName="gray_hline" lineNumber="1209"/>
+    <functiondecl functionName="gray_sweep" lineNumber="1293"/>
+    <functiondecl functionName="FT_Outline_Decompose" lineNumber="1373"/>
+    <functiondecl functionName="gray_convert_glyph_inner" lineNumber="1635"/>
+    <functiondecl functionName="gray_convert_glyph" lineNumber="1671"/>
+    <functiondecl functionName="gray_raster_render" lineNumber="1757"/>
+    <functiondecl functionName="gray_raster_new" lineNumber="1850"/>
+    <functiondecl functionName="gray_raster_done" lineNumber="1866"/>
+    <functiondecl functionName="gray_raster_reset" lineNumber="1906"/>
+    <functiondecl functionName="gray_raster_set_mode" lineNumber="1917"/>
+    <functiondecl functionName="gray_record_cell" lineNumber="527"/>
+    <functiondecl functionName="gray_set_cell" lineNumber="571"/>
+    <functiondecl functionName="gray_render_scanline" lineNumber="605"/>
+    <functiondecl functionName="gray_render_line" lineNumber="706"/>
+    <functiondecl functionName="gray_split_conic" lineNumber="983"/>
+    <functiondecl functionName="gray_render_conic" lineNumber="1005"/>
+    <functiondecl functionName="gray_split_cubic" lineNumber="1069"/>
+    <functiondecl functionName="gray_render_cubic" lineNumber="1101"/>
+    <functiondecl functionName="gray_move_to" lineNumber="1160"/>
+    <functiondecl functionName="gray_line_to" lineNumber="1179"/>
+    <functiondecl functionName="gray_conic_to" lineNumber="1188"/>
+    <functiondecl functionName="gray_cubic_to" lineNumber="1198"/>
+    <functiondecl functionName="gray_hline" lineNumber="1209"/>
+    <functiondecl functionName="gray_sweep" lineNumber="1293"/>
+    <functiondecl functionName="gray_convert_glyph_inner" lineNumber="1635"/>
+    <functiondecl functionName="gray_convert_glyph" lineNumber="1671"/>
+    <functiondecl functionName="gray_raster_render" lineNumber="1757"/>
+    <functiondecl functionName="gray_raster_new" lineNumber="1875"/>
+    <functiondecl functionName="gray_raster_done" lineNumber="1894"/>
+    <functiondecl functionName="gray_raster_reset" lineNumber="1906"/>
+    <functiondecl functionName="gray_raster_set_mode" lineNumber="1917"/>
+    <functioncall functionName="Close"/>
+    <functioncall functionName="Do_Conic"/>
+    <functioncall functionName="End"/>
+    <functioncall functionName="Exit"/>
+    <functioncall functionName="FT_ABS"/>
+    <functioncall functionName="FT_ALLOC"/>
+    <functioncall functionName="FT_BEGIN_STMNT"/>
+    <functioncall functionName="FT_CURVE_TAG"/>
+    <functioncall functionName="FT_DEFINE_RASTER_FUNCS"/>
+    <functioncall functionName="FT_END_STMNT"/>
+    <functioncall functionName="FT_FREE"/>
+    <functioncall functionName="FT_GLYPH_FORMAT_OUTLINE"/>
+    <functioncall functionName="FT_MAX"/>
+    <functioncall functionName="FT_MIN"/>
+    <functioncall functionName="FT_Memory"/>
+    <functioncall functionName="FT_Message"/>
+    <functioncall functionName="FT_Outline_ConicTo_Func"/>
+    <functioncall functionName="FT_Outline_CubicTo_Func"/>
+    <functioncall functionName="FT_Outline_Decompose"/>
+    <functioncall functionName="FT_Outline_LineTo_Func"/>
+    <functioncall functionName="FT_Outline_MoveTo_Func"/>
+    <functioncall functionName="FT_Pos"/>
+    <functioncall functionName="FT_PtrDist"/>
+    <functioncall functionName="FT_Raster"/>
+    <functioncall functionName="FT_Raster_Done_Func"/>
+    <functioncall functionName="FT_Raster_New_Func"/>
+    <functioncall functionName="FT_Raster_Render_Func"/>
+    <functioncall functionName="FT_Raster_Reset_Func"/>
+    <functioncall functionName="FT_Raster_Set_Mode_Func"/>
+    <functioncall functionName="FT_Raster_Span_Func"/>
+    <functioncall functionName="FT_THROW"/>
+    <functioncall functionName="FT_TRACE7"/>
+    <functioncall functionName="FT_Throw"/>
+    <functioncall functionName="FT_Trace_Disable"/>
+    <functioncall functionName="FT_Trace_Enable"/>
+    <functioncall functionName="FT_UNUSED"/>
+    <functioncall functionName="Found"/>
+    <functioncall functionName="Invalid_Argument"/>
+    <functioncall functionName="Invalid_Mode"/>
+    <functioncall functionName="Invalid_Outline"/>
+    <functioncall functionName="Memory_Overflow"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Split"/>
+    <functioncall functionName="acount"/>
+    <functioncall functionName="ap"/>
+    <functioncall functionName="arc"/>
+    <functioncall functionName="area"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bands"/>
+    <functioncall functionName="bez_stack"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cell"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="conic_to"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="continued"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="control1"/>
+    <functioncall functionName="control2"/>
+    <functioncall functionName="cover"/>
+    <functioncall functionName="coverage"/>
+    <functioncall functionName="cubic_to"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delta"/>
+    <functioncall functionName="draw"/>
+    <functioncall functionName="dx"/>
+    <functioncall functionName="dy"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="ex"/>
+    <functioncall functionName="ex1"/>
+    <functioncall functionName="ex2"/>
+    <functioncall functionName="ey"/>
+    <functioncall functionName="ey1"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="fmt"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="ft_grays_raster"/>
+    <functioncall functionName="ft_longjmp"/>
+    <functioncall functionName="ft_memset"/>
+    <functioncall functionName="ft_setjmp"/>
+    <functioncall functionName="func_interface"/>
+    <functioncall functionName="fx1"/>
+    <functioncall functionName="fx2"/>
+    <functioncall functionName="fy1"/>
+    <functioncall functionName="fy2"/>
+    <functioncall functionName="gray_conic_to"/>
+    <functioncall functionName="gray_convert_glyph"/>
+    <functioncall functionName="gray_convert_glyph_inner"/>
+    <functioncall functionName="gray_cubic_to"/>
+    <functioncall functionName="gray_hline"/>
+    <functioncall functionName="gray_line_to"/>
+    <functioncall functionName="gray_move_to"/>
+    <functioncall functionName="gray_raster_done"/>
+    <functioncall functionName="gray_raster_new"/>
+    <functioncall functionName="gray_raster_render"/>
+    <functioncall functionName="gray_raster_reset"/>
+    <functioncall functionName="gray_raster_set_mode"/>
+    <functioncall functionName="gray_record_cell"/>
+    <functioncall functionName="gray_render_conic"/>
+    <functioncall functionName="gray_render_cubic"/>
+    <functioncall functionName="gray_render_line"/>
+    <functioncall functionName="gray_render_scanline"/>
+    <functioncall functionName="gray_set_cell"/>
+    <functioncall functionName="gray_spans"/>
+    <functioncall functionName="gray_split_conic"/>
+    <functioncall functionName="gray_split_cubic"/>
+    <functioncall functionName="gray_sweep"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="invalid"/>
+    <functioncall functionName="jump_buffer"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="lift"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="line_to"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="longjmp"/>
+    <functioncall functionName="max_cells"/>
+    <functioncall functionName="max_ex"/>
+    <functioncall functionName="max_ey"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="min_ex"/>
+    <functioncall functionName="min_ey"/>
+    <functioncall functionName="mod"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="move_to"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n_contours"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="num_cells"/>
+    <functioncall functionName="num_spans"/>
+    <functioncall functionName="outline"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pitch"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="pool_base"/>
+    <functioncall functionName="pool_size"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="raster"/>
+    <functioncall functionName="rem"/>
+    <functioncall functionName="render_span"/>
+    <functioncall functionName="render_span_data"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rows"/>
+    <functioncall functionName="setjmp"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="spans"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="target_map"/>
+    <functioncall functionName="the_raster"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_x"/>
+    <functioncall functionName="to_y"/>
+    <functioncall functionName="user"/>
+    <functioncall functionName="v_control"/>
+    <functioncall functionName="v_last"/>
+    <functioncall functionName="v_middle"/>
+    <functioncall functionName="v_start"/>
+    <functioncall functionName="va_end"/>
+    <functioncall functionName="va_start"/>
+    <functioncall functionName="vec"/>
+    <functioncall functionName="vec1"/>
+    <functioncall functionName="vec2"/>
+    <functioncall functionName="vfprintf"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="worker"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x1"/>
+    <functioncall functionName="x2"/>
+    <functioncall functionName="xMax"/>
+    <functioncall functionName="xMin"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y1"/>
+    <functioncall functionName="yMax"/>
+    <functioncall functionName="yMin"/>
+    <functioncall functionName="ycells"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,1181 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3210447560">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;curlen&apos; can be reduced." verbose="The scope of the variable &apos;curlen&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="710" column="9"/>
+            <symbol>curlen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;curlen&apos; can be reduced." verbose="The scope of the variable &apos;curlen&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="755" column="9"/>
+            <symbol>curlen</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dist&apos; can be reduced." verbose="The scope of the variable &apos;dist&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1069" column="14"/>
+            <symbol>dist</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;lc&apos; can be reduced." verbose="The scope of the variable &apos;lc&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1070" column="9"/>
+            <symbol>lc</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;lx&apos; can be reduced." verbose="The scope of the variable &apos;lx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1071" column="14"/>
+            <symbol>lx</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;code&apos; can be reduced." verbose="The scope of the variable &apos;code&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1072" column="14"/>
+            <symbol>code</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;extra&apos; can be reduced." verbose="The scope of the variable &apos;extra&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1073" column="9"/>
+            <symbol>extra</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+        <error id="unsignedPositive" severity="style" msg="Unsigned expression &apos;static_lenb&apos; can&apos;t be negative so it is unnecessary to test it." verbose="Unsigned expression &apos;static_lenb&apos; can&apos;t be negative so it is unnecessary to test it." cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="974" column="28" info="Unsigned positive"/>
+            <symbol>static_lenb</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;int&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="362" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;int&apos;." verbose="%u in format string (no. 1) requires &apos;unsigned int&apos; but the argument type is &apos;int&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="368" column="9"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;bi_reverse&apos; argument 1 names different: declaration &apos;value&apos; definition &apos;code&apos;." verbose="Function &apos;bi_reverse&apos; argument 1 names different: declaration &apos;value&apos; definition &apos;code&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1159" column="14"/>
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="152" column="27"/>
+            <symbol>bi_reverse</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;bi_reverse&apos; argument 2 names different: declaration &apos;length&apos; definition &apos;len&apos;." verbose="Function &apos;bi_reverse&apos; argument 2 names different: declaration &apos;length&apos; definition &apos;len&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1160" column="9"/>
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="152" column="27"/>
+            <symbol>bi_reverse</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="2" my-argname="buf" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="873" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="2" my-argname="buf" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="873" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="2" my-argname="buf" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="873" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="2" my-argname="buf" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="873" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="823" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="823" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="851" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="854" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="857" column="5"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="929" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="929" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 1) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="933" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." verbose="%ld in format string (no. 2) requires &apos;long&apos; but the argument type is &apos;unsigned long&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="933" column="9"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1084" column="13"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="warning" msg="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." verbose="%d in format string (no. 1) requires &apos;int&apos; but the argument type is &apos;unsigned int&apos;." cwe="686">
+            <location file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1094" column="13"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:184:12" call-funcname="send_bits" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="782" col="61" call-argexpr="count-11" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="778" col="26" info="Assuming that condition 'count<=10' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:184:12" call-funcname="send_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="769" col="18" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:184:12" call-funcname="send_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:184:12" call-funcname="send_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:184:12" call-funcname="send_bits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" my-argnr="3" my-argname="bl_count" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="592" col="5" value="30"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:184:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="193" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" my-argnr="3" my-argname="bl_count" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="592" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:184:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="193" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="2" my-argname="buf" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="873" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="2" my-argname="buf" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="873" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="2" my-argname="buf" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="873" col="51" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:142:12" call-funcname="gen_codes" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="299" col="14" call-argexpr="bl_count" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:152:16" call-funcname="bi_reverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="304" col="42" call-argexpr="(unsigned int)n" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" call-funcname="scan_tree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="805" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:146:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" call-funcname="bi_flush" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="889" col="5" my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:303:20" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:299:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="384" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:140:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="456" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:141:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="490" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="630" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:143:12" my-argnr="2" my-argname="desc" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="619" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:144:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="711" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:145:12" my-argnr="2" my-argname="tree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="756" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:147:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="844" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:305:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="869" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:304:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="899" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:301:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="921" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/deflate.h:300:19" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1019" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1075" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:149:12" my-argnr="2" my-argname="ltree" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1108" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:154:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1176" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zlib/trees.c:153:12" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/zlib/trees.c" line="1193" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="gen_trees_header" lineNumber="326"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="gen_trees_header" lineNumber="326"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="gen_trees_header" lineNumber="326"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="send_bits" lineNumber="186"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="z__tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="z__tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="z__tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="z__tr_align" lineNumber="896"/>
+    <functiondecl functionName="z__tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="z__tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="z__tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="z__tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="z__tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="z__tr_align" lineNumber="896"/>
+    <functiondecl functionName="z__tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="z__tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functiondecl functionName="tr_static_init" lineNumber="232"/>
+    <functiondecl functionName="_tr_init" lineNumber="379"/>
+    <functiondecl functionName="init_block" lineNumber="407"/>
+    <functiondecl functionName="pqdownheap" lineNumber="451"/>
+    <functiondecl functionName="gen_bitlen" lineNumber="486"/>
+    <functiondecl functionName="gen_codes" lineNumber="572"/>
+    <functiondecl functionName="build_tree" lineNumber="615"/>
+    <functiondecl functionName="scan_tree" lineNumber="703"/>
+    <functiondecl functionName="send_tree" lineNumber="748"/>
+    <functiondecl functionName="build_bl_tree" lineNumber="799"/>
+    <functiondecl functionName="send_all_trees" lineNumber="834"/>
+    <functiondecl functionName="_tr_stored_block" lineNumber="863"/>
+    <functiondecl functionName="_tr_flush_bits" lineNumber="886"/>
+    <functiondecl functionName="_tr_align" lineNumber="896"/>
+    <functiondecl functionName="_tr_flush_block" lineNumber="911"/>
+    <functiondecl functionName="_tr_tally" lineNumber="1014"/>
+    <functiondecl functionName="compress_block" lineNumber="1064"/>
+    <functiondecl functionName="detect_data_type" lineNumber="1124"/>
+    <functiondecl functionName="bi_reverse" lineNumber="1158"/>
+    <functiondecl functionName="bi_flush" lineNumber="1173"/>
+    <functiondecl functionName="bi_windup" lineNumber="1190"/>
+    <functioncall functionName="Byte"/>
+    <functioncall functionName="_tr_stored_block"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="bi_buf"/>
+    <functioncall functionName="bi_flush"/>
+    <functioncall functionName="bi_reverse"/>
+    <functioncall functionName="bi_valid"/>
+    <functioncall functionName="bi_windup"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="bits_sent"/>
+    <functioncall functionName="bl_count"/>
+    <functioncall functionName="bl_desc"/>
+    <functioncall functionName="bl_tree"/>
+    <functioncall functionName="block_start"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="build_bl_tree"/>
+    <functioncall functionName="build_tree"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="compress_block"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="curlen"/>
+    <functioncall functionName="d_desc"/>
+    <functioncall functionName="dad"/>
+    <functioncall functionName="dcode"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="detect_data_type"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="dyn_dtree"/>
+    <functioncall functionName="dyn_ltree"/>
+    <functioncall functionName="dyn_tree"/>
+    <functioncall functionName="elems"/>
+    <functioncall functionName="extra"/>
+    <functioncall functionName="extra_base"/>
+    <functioncall functionName="extra_bits"/>
+    <functioncall functionName="extra_blbits"/>
+    <functioncall functionName="extra_dbits"/>
+    <functioncall functionName="extra_lbits"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="freq"/>
+    <functioncall functionName="gen_bitlen"/>
+    <functioncall functionName="gen_codes"/>
+    <functioncall functionName="gen_trees_header"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="heap_len"/>
+    <functioncall functionName="heap_max"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init_block"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="isgraph"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="l_desc"/>
+    <functioncall functionName="last"/>
+    <functioncall functionName="last_lit"/>
+    <functioncall functionName="lc"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="level"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="lx"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="max_blindex"/>
+    <functioncall functionName="max_code"/>
+    <functioncall functionName="max_length"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nextlen"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="off_t"/>
+    <functioncall functionName="opt_len"/>
+    <functioncall functionName="opt_lenb"/>
+    <functioncall functionName="overflow"/>
+    <functioncall functionName="pending"/>
+    <functioncall functionName="pqdownheap"/>
+    <functioncall functionName="rank"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="scan_tree"/>
+    <functioncall functionName="send_all_trees"/>
+    <functioncall functionName="send_bits"/>
+    <functioncall functionName="send_tree"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="static_bl_desc"/>
+    <functioncall functionName="static_d_desc"/>
+    <functioncall functionName="static_dtree"/>
+    <functioncall functionName="static_init_done"/>
+    <functioncall functionName="static_l_desc"/>
+    <functioncall functionName="static_len"/>
+    <functioncall functionName="static_lenb"/>
+    <functioncall functionName="static_ltree"/>
+    <functioncall functionName="static_tree"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="stored_len"/>
+    <functioncall functionName="stree"/>
+    <functioncall functionName="tr_static_init"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="xbits"/>
+    <functioncall functionName="z__tr_stored_block"/>
+    <functioncall functionName="z_error"/>
+    <functioncall functionName="z_verbose"/>
+    <functioncall functionName="zmemcpy"/>
+  </FileInfo>
+</analyzerinfo>

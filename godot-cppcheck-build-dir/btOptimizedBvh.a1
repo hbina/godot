@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2551410369">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;NodeTriangleCallback&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;NodeTriangleCallback&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp" line="45" column="3"/>
+            <symbol>NodeTriangleCallback</symbol>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between const unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp" line="300" column="28"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const unsigned char * and double * which have an incompatible binary data representation." verbose="Casting between const unsigned char * and double * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp" line="308" column="29"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp" line="334" column="14" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp" line="273" column="6" info="Shadowed declaration"/>
+            <symbol>i</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp:50:16" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp" line="56" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp:92:16" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btOptimizedBvh.cpp" line="104" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="internalProcessTriangleIndex" lineNumber="50"/>
+    <functiondecl functionName="internalProcessTriangleIndex" lineNumber="92"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BT_DECLARE_ALIGNED_ALLOCATOR"/>
+    <functioncall functionName="BT_LARGE_FLOAT"/>
+    <functioncall functionName="INVALID_SHAPE_PROXYTYPE"/>
+    <functioncall functionName="InternalProcessAllTriangles"/>
+    <functioncall functionName="MAX_NUM_PARTS_IN_BITS"/>
+    <functioncall functionName="MIN_AABB_HALF_DIMENSION"/>
+    <functioncall functionName="NodeTriangleCallback"/>
+    <functioncall functionName="PHY_DOUBLE"/>
+    <functioncall functionName="PHY_FIXEDPOINT88"/>
+    <functioncall functionName="PHY_FLOAT"/>
+    <functioncall functionName="PHY_INTEGER"/>
+    <functioncall functionName="PHY_SHORT"/>
+    <functioncall functionName="PHY_UCHAR"/>
+    <functioncall functionName="QuantizedNodeTriangleCallback"/>
+    <functioncall functionName="aabbMax"/>
+    <functioncall functionName="aabbMin"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btCollisionShape"/>
+    <functioncall functionName="btCollisionShapeData"/>
+    <functioncall functionName="btConcaveShape"/>
+    <functioncall functionName="btOptimizedBvh"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btStridingMeshInterface"/>
+    <functioncall functionName="btStridingMeshInterfaceData"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="buildTree"/>
+    <functioncall functionName="bvh"/>
+    <functioncall functionName="bvhAabbMax"/>
+    <functioncall functionName="bvhAabbMin"/>
+    <functioncall functionName="calculateAabbBruteForce"/>
+    <functioncall functionName="calculateLocalInertia"/>
+    <functioncall functionName="calculateSerializeBufferSize"/>
+    <functioncall functionName="calculateTemporalAabb"/>
+    <functioncall functionName="callback"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="collisionMargin"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="copyFromArray"/>
+    <functioncall functionName="curNodeSubPart"/>
+    <functioncall functionName="deSerializeInPlace"/>
+    <functioncall functionName="expand"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getAabb"/>
+    <functioncall functionName="getAngularMotionDisc"/>
+    <functioncall functionName="getAnisotropicRollingFrictionDirection"/>
+    <functioncall functionName="getBoundingSphere"/>
+    <functioncall functionName="getContactBreakingThreshold"/>
+    <functioncall functionName="getEscapeIndex"/>
+    <functioncall functionName="getLocalScaling"/>
+    <functioncall functionName="getLockedReadOnlyVertexIndexBase"/>
+    <functioncall functionName="getLockedVertexIndexBase"/>
+    <functioncall functionName="getMargin"/>
+    <functioncall functionName="getName"/>
+    <functioncall functionName="getNumSubParts"/>
+    <functioncall functionName="getPartId"/>
+    <functioncall functionName="getPremadeAabb"/>
+    <functioncall functionName="getScaling"/>
+    <functioncall functionName="getShapeType"/>
+    <functioncall functionName="getTriangleIndex"/>
+    <functioncall functionName="getUserIndex"/>
+    <functioncall functionName="getUserPointer"/>
+    <functioncall functionName="getX"/>
+    <functioncall functionName="getY"/>
+    <functioncall functionName="getZ"/>
+    <functioncall functionName="gfxbase"/>
+    <functioncall functionName="hasPremadeAabb"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_alignedDataBuffer"/>
+    <functioncall functionName="i_dataBufferSize"/>
+    <functioncall functionName="i_swapEndian"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="indexbase"/>
+    <functioncall functionName="indexstride"/>
+    <functioncall functionName="indicestype"/>
+    <functioncall functionName="isCompound"/>
+    <functioncall functionName="isConcave"/>
+    <functioncall functionName="isConvex"/>
+    <functioncall functionName="isConvex2d"/>
+    <functioncall functionName="isInfinite"/>
+    <functioncall functionName="isLeafNode"/>
+    <functioncall functionName="isNonMoving"/>
+    <functioncall functionName="isPolyhedral"/>
+    <functioncall functionName="isSoftBody"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="m_bvhAabbMax"/>
+    <functioncall functionName="m_bvhAabbMin"/>
+    <functioncall functionName="m_curNodeIndex"/>
+    <functioncall functionName="m_leafNodes"/>
+    <functioncall functionName="m_optimizedTree"/>
+    <functioncall functionName="m_quantizedAabbMax"/>
+    <functioncall functionName="m_quantizedAabbMin"/>
+    <functioncall functionName="m_quantizedLeafNodes"/>
+    <functioncall functionName="m_rootNodeIndex"/>
+    <functioncall functionName="m_scaling"/>
+    <functioncall functionName="m_shapeType"/>
+    <functioncall functionName="m_subtreeSize"/>
+    <functioncall functionName="m_triangleNodes"/>
+    <functioncall functionName="m_useQuantization"/>
+    <functioncall functionName="m_userIndex"/>
+    <functioncall functionName="m_userPointer"/>
+    <functioncall functionName="meshInterface"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="nodeSubPart"/>
+    <functioncall functionName="numLeafNodes"/>
+    <functioncall functionName="numfaces"/>
+    <functioncall functionName="numverts"/>
+    <functioncall functionName="o_alignedDataBuffer"/>
+    <functioncall functionName="partId"/>
+    <functioncall functionName="preallocateIndices"/>
+    <functioncall functionName="preallocateVertices"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="quantize"/>
+    <functioncall functionName="quantizedQueryAabbMax"/>
+    <functioncall functionName="quantizedQueryAabbMin"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="scaling"/>
+    <functioncall functionName="serialize"/>
+    <functioncall functionName="serializeSingleShape"/>
+    <functioncall functionName="setAabbFromQuantizeNode"/>
+    <functioncall functionName="setLocalScaling"/>
+    <functioncall functionName="setMargin"/>
+    <functioncall functionName="setMax"/>
+    <functioncall functionName="setMin"/>
+    <functioncall functionName="setPremadeAabb"/>
+    <functioncall functionName="setQuantizationValues"/>
+    <functioncall functionName="setScaling"/>
+    <functioncall functionName="setUserIndex"/>
+    <functioncall functionName="setUserPointer"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="setX"/>
+    <functioncall functionName="setY"/>
+    <functioncall functionName="setZ"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="testQuantizedAabbAgainstQuantizedAabb"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="triangleIndex"/>
+    <functioncall functionName="triangleNodes"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="unLockReadOnlyVertexBase"/>
+    <functioncall functionName="unLockVertexBase"/>
+    <functioncall functionName="updateBvhNodes"/>
+    <functioncall functionName="useQuantizedAabbCompression"/>
+    <functioncall functionName="userPtr"/>
+    <functioncall functionName="vertexbase"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

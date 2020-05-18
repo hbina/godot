@@ -1,0 +1,368 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3670296678">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;SpriteFramesEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;SpriteFramesEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.h" line="151" column="2"/>
+            <symbol>SpriteFramesEditorPlugin</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!selected&apos; is redundant or there is possible null pointer dereference: selected." verbose="Either the condition &apos;!selected&apos; is redundant or there is possible null pointer dereference: selected." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.cpp" line="482" column="16" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.cpp" line="480" column="47" info="Assignment &apos;selected=animations-&gt;get_selected()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.cpp" line="481" column="16" info="Assuming that condition &apos;!selected&apos; is not redundant"/>
+            <symbol>selected</symbol>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;thumbnail_size*3/2&apos; to function set_fixed_column_width is always 144" verbose="Argument &apos;thumbnail_size*3/2&apos; to function set_fixed_column_width is always 144" cwe="570">
+            <location file="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.cpp" line="981" column="50" info="Argument &apos;thumbnail_size*3/2&apos; to function set_fixed_column_width is always 144"/>
+            <location file="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.cpp" line="978" column="23" info="Assignment &apos;thumbnail_size=96&apos;, assigned value is 96"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.h:113:7" call-funcname="can_drop_data_fw" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.cpp" line="816" col="7" my-id="/home/hbina/git/godot/editor/plugins/sprite_frames_editor_plugin.h:114:7" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_gui_input" lineNumber="40"/>
+    <functiondecl functionName="_open_sprite_sheet" lineNumber="43"/>
+    <functiondecl functionName="_sheet_preview_draw" lineNumber="55"/>
+    <functiondecl functionName="_sheet_preview_input" lineNumber="105"/>
+    <functiondecl functionName="_sheet_add_frames" lineNumber="147"/>
+    <functiondecl functionName="_sheet_select_clear_all_frames" lineNumber="187"/>
+    <functiondecl functionName="_sheet_spin_changed" lineNumber="203"/>
+    <functiondecl functionName="_prepare_sprite_sheet" lineNumber="210"/>
+    <functiondecl functionName="_notification" lineNumber="229"/>
+    <functiondecl functionName="_file_load_request" lineNumber="255"/>
+    <functiondecl functionName="_load_pressed" lineNumber="300"/>
+    <functiondecl functionName="_paste_pressed" lineNumber="316"/>
+    <functiondecl functionName="_copy_pressed" lineNumber="338"/>
+    <functiondecl functionName="_empty_pressed" lineNumber="351"/>
+    <functiondecl functionName="_empty2_pressed" lineNumber="376"/>
+    <functiondecl functionName="_up_pressed" lineNumber="401"/>
+    <functiondecl functionName="_down_pressed" lineNumber="425"/>
+    <functiondecl functionName="_delete_pressed" lineNumber="449"/>
+    <functiondecl functionName="_animation_select" lineNumber="469"/>
+    <functiondecl functionName="_find_anim_sprites" lineNumber="486"/>
+    <functiondecl functionName="_animation_name_edited" lineNumber="513"/>
+    <functiondecl functionName="_animation_add" lineNumber="561"/>
+    <functiondecl functionName="_animation_remove" lineNumber="592"/>
+    <functiondecl functionName="_animation_remove_confirmed" lineNumber="604"/>
+    <functiondecl functionName="_animation_loop_changed" lineNumber="624"/>
+    <functiondecl functionName="_animation_fps_changed" lineNumber="637"/>
+    <functiondecl functionName="_update_library" lineNumber="651"/>
+    <functiondecl functionName="edit" lineNumber="723"/>
+    <functiondecl functionName="get_drag_data_fw" lineNumber="751"/>
+    <functiondecl functionName="can_drop_data_fw" lineNumber="771"/>
+    <functiondecl functionName="drop_data_fw" lineNumber="814"/>
+    <functiondecl functionName="_bind_methods" lineNumber="868"/>
+    <functiondecl functionName="edit" lineNumber="1073"/>
+    <functiondecl functionName="handles" lineNumber="1094"/>
+    <functiondecl functionName="make_visible" lineNumber="1107"/>
+    <functioncall functionName="AcceptDialog"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="CenterContainer"/>
+    <functioncall functionName="CheckButton"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="EditorFileDialog"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="FILE_MODE_OPEN_FILE"/>
+    <functioncall functionName="FILE_MODE_OPEN_FILES"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HSplitContainer"/>
+    <functioncall functionName="ICON_MODE_TOP"/>
+    <functioncall functionName="ItemList"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="MERGE_ENDS"/>
+    <functioncall functionName="MOUSE_FILTER_PASS"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="ScrollContainer"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="SpinBox"/>
+    <functioncall functionName="SpriteFramesEditor"/>
+    <functioncall functionName="SpriteFramesEditorPlugin"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TextureRect"/>
+    <functioncall functionName="ToolButton"/>
+    <functioncall functionName="Tree"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="VSeparator"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="_animation_add"/>
+    <functioncall functionName="_animation_fps_changed"/>
+    <functioncall functionName="_animation_loop_changed"/>
+    <functioncall functionName="_animation_name_edited"/>
+    <functioncall functionName="_animation_remove"/>
+    <functioncall functionName="_animation_remove_confirmed"/>
+    <functioncall functionName="_animation_select"/>
+    <functioncall functionName="_copy_pressed"/>
+    <functioncall functionName="_delete"/>
+    <functioncall functionName="_delete_pressed"/>
+    <functioncall functionName="_down_pressed"/>
+    <functioncall functionName="_empty2_pressed"/>
+    <functioncall functionName="_empty_pressed"/>
+    <functioncall functionName="_file_load_request"/>
+    <functioncall functionName="_find_anim_sprites"/>
+    <functioncall functionName="_load_pressed"/>
+    <functioncall functionName="_open_sprite_sheet"/>
+    <functioncall functionName="_paste_pressed"/>
+    <functioncall functionName="_prepare_sprite_sheet"/>
+    <functioncall functionName="_sheet_add_frames"/>
+    <functioncall functionName="_sheet_preview_draw"/>
+    <functioncall functionName="_sheet_preview_input"/>
+    <functioncall functionName="_sheet_select_clear_all_frames"/>
+    <functioncall functionName="_sheet_spin_changed"/>
+    <functioncall functionName="_up_pressed"/>
+    <functioncall functionName="_update_library"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="accent"/>
+    <functioncall functionName="add_bottom_panel_item"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_filter"/>
+    <functioncall functionName="add_item"/>
+    <functioncall functionName="add_margin_child"/>
+    <functioncall functionName="add_spacer"/>
+    <functioncall functionName="add_theme_constant_override"/>
+    <functioncall functionName="add_theme_style_override"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="anim_loop"/>
+    <functioncall functionName="anim_names"/>
+    <functioncall functionName="anim_root"/>
+    <functioncall functionName="anim_speed"/>
+    <functioncall functionName="animated_sprite"/>
+    <functioncall functionName="animated_sprite_3d"/>
+    <functioncall functionName="animations"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="at_pos"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="can_drop_data_fw"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="cc"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_filters"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="counter"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="create_item"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="delete_dialog"/>
+    <functioncall functionName="dialog"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="drag_resource"/>
+    <functioncall functionName="draw_line"/>
+    <functioncall functionName="draw_rect"/>
+    <functioncall functionName="drop_data_fw"/>
+    <functioncall functionName="edit"/>
+    <functioncall functionName="edited"/>
+    <functioncall functionName="edited_anim"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="empty2"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="extensions"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fc"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="file_split_sheet"/>
+    <functioncall functionName="files"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="frames"/>
+    <functioncall functionName="frames_editor"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="from_frame"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="ftype"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_animation_list"/>
+    <functioncall functionName="get_animation_loop"/>
+    <functioncall functionName="get_animation_speed"/>
+    <functioncall functionName="get_atlas"/>
+    <functioncall functionName="get_button_index"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_control"/>
+    <functioncall functionName="get_current"/>
+    <functioncall functionName="get_drag_data_fw"/>
+    <functioncall functionName="get_edited"/>
+    <functioncall functionName="get_edited_scene"/>
+    <functioncall functionName="get_file_type"/>
+    <functioncall functionName="get_frame"/>
+    <functioncall functionName="get_frame_count"/>
+    <functioncall functionName="get_item_at_position"/>
+    <functioncall functionName="get_item_count"/>
+    <functioncall functionName="get_line_edit"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_ok"/>
+    <functioncall functionName="get_owner"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_recognized_extensions_for_type"/>
+    <functioncall functionName="get_region"/>
+    <functioncall functionName="get_resource_clipboard"/>
+    <functioncall functionName="get_selected"/>
+    <functioncall functionName="get_shift"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_sprite_frames"/>
+    <functioncall functionName="get_text"/>
+    <functioncall functionName="get_texture"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_theme_stylebox"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_value"/>
+    <functioncall functionName="grab_focus"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_animation"/>
+    <functioncall functionName="hbc"/>
+    <functioncall functionName="hbc_animlist"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="hide_bottom_panel"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icon"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="last_frame_selected"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="load_sheet"/>
+    <functioncall functionName="make_binds"/>
+    <functioncall functionName="make_bottom_panel_item_visible"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="move_down"/>
+    <functioncall functionName="move_up"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="new_anim"/>
+    <functioncall functionName="new_name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nodes"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_at_pos"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_frames"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_sfames"/>
+    <functioncall functionName="p_skip_selector"/>
+    <functioncall functionName="p_undo_redo"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_visible"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="paste"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="popup_centered_ratio"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_nodes"/>
+    <functioncall functionName="remove_anim"/>
+    <functioncall functionName="reorder"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="resource"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="select_clear_all"/>
+    <functioncall functionName="selected"/>
+    <functioncall functionName="set_allow_reselect"/>
+    <functioncall functionName="set_atlas"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_drag_forwarding"/>
+    <functioncall functionName="set_editable"/>
+    <functioncall functionName="set_enable_h_scroll"/>
+    <functioncall functionName="set_enable_v_scroll"/>
+    <functioncall functionName="set_expand"/>
+    <functioncall functionName="set_file_mode"/>
+    <functioncall functionName="set_fixed_column_width"/>
+    <functioncall functionName="set_fixed_icon_size"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_hide_root"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_icon_mode"/>
+    <functioncall functionName="set_item_tooltip"/>
+    <functioncall functionName="set_max"/>
+    <functioncall functionName="set_max_columns"/>
+    <functioncall functionName="set_max_text_lines"/>
+    <functioncall functionName="set_metadata"/>
+    <functioncall functionName="set_min"/>
+    <functioncall functionName="set_mouse_filter"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_region"/>
+    <functioncall functionName="set_resource_clipboard"/>
+    <functioncall functionName="set_step"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_texture"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_undo_redo"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="should_clear"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="show_warning"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sort_custom"/>
+    <functioncall functionName="split_sheet_dialog"/>
+    <functioncall functionName="split_sheet_h"/>
+    <functioncall functionName="split_sheet_hb"/>
+    <functioncall functionName="split_sheet_preview"/>
+    <functioncall functionName="split_sheet_v"/>
+    <functioncall functionName="split_sheet_vb"/>
+    <functioncall functionName="splite_sheet_scroll"/>
+    <functioncall functionName="ss_label"/>
+    <functioncall functionName="sub_vb"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thumbnail_size"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_delete"/>
+    <functioncall functionName="to_double"/>
+    <functioncall functionName="to_move"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="updating"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vbc"/>
+    <functioncall functionName="vbc_animlist"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xp"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

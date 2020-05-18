@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1313021123">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;y&apos; can be reduced." verbose="The scope of the variable &apos;y&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="65" column="23"/>
+            <symbol>y</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="257" col="32" call-argexpr="&x_prev" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="257" col="32" call-argexpr="&i_prev" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="260" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="260" col="28" call-argexpr="&x_prev" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="260" col="28" call-argexpr="&i_prev" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="280" col="32" call-argexpr="&xy_prev" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="280" col="32" call-argexpr="&i_prev" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="283" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="283" col="28" call-argexpr="&xy_prev" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" call-funcname="GetEntropyUnrefinedHelper" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="283" col="28" call-argexpr="&i_prev" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:107:15" my-argnr="1" my-argname="population" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="109" col="26" value="16"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:152:15" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="155" col="25" value="16"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:152:15" my-argnr="2" my-argname="Y" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="156" col="25" value="16"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" my-argnr="3" my-argname="val_prev" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="226" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" my-argnr="4" my-argname="i_prev" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="223" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:244:13" my-argnr="4" my-argname="stats" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="251" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:265:13" my-argnr="5" my-argname="stats" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="274" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" my-argnr="3" my-argname="val_prev" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="226" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c:217:25" my-argnr="4" my-argname="i_prev" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/lossless_enc_mips32.c" line="223" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="FastSLog2Slow_MIPS32" lineNumber="26"/>
+    <functiondecl functionName="FastLog2Slow_MIPS32" lineNumber="62"/>
+    <functiondecl functionName="ExtraCost_MIPS32" lineNumber="107"/>
+    <functiondecl functionName="ExtraCostCombined_MIPS32" lineNumber="152"/>
+    <functiondecl functionName="GetEntropyUnrefinedHelper" lineNumber="217"/>
+    <functiondecl functionName="GetEntropyUnrefined_MIPS32" lineNumber="244"/>
+    <functiondecl functionName="GetCombinedEntropyUnrefined_MIPS32" lineNumber="265"/>
+    <functiondecl functionName="AddVector_MIPS32" lineNumber="347"/>
+    <functiondecl functionName="AddVectorEq_MIPS32" lineNumber="359"/>
+    <functiondecl functionName="VP8LEncDspInitMIPS32" lineNumber="382"/>
+    <functioncall functionName="AddVectorEq_MIPS32"/>
+    <functioncall functionName="AddVector_MIPS32"/>
+    <functioncall functionName="ExtraCostCombined_MIPS32"/>
+    <functioncall functionName="ExtraCost_MIPS32"/>
+    <functioncall functionName="FastLog2Slow_MIPS32"/>
+    <functioncall functionName="FastSLog2Slow_MIPS32"/>
+    <functioncall functionName="GetCombinedEntropyUnrefined_MIPS32"/>
+    <functioncall functionName="GetEntropyUnrefinedHelper"/>
+    <functioncall functionName="GetEntropyUnrefined_MIPS32"/>
+    <functioncall functionName="VP8LBitEntropyInit"/>
+    <functioncall functionName="VP8LEncDspInitMIPS32"/>
+    <functioncall functionName="VP8LFastSLog2"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="bit_entropy"/>
+    <functioncall functionName="correction"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="entropy"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_prev"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="log_2"/>
+    <functioncall functionName="log_cnt"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stats"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="temp1"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x_prev"/>
+    <functioncall functionName="xy"/>
+    <functioncall functionName="xy_prev"/>
+  </FileInfo>
+</analyzerinfo>

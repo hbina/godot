@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2760611727">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;rep_itr==nullptr&apos; is redundant or there is possible null pointer dereference: rep_itr." verbose="Either the condition &apos;rep_itr==nullptr&apos; is redundant or there is possible null pointer dereference: rep_itr." cwe="476" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/math/disjoint_set.cpp" file="/home/hbina/git/godot/core/math/disjoint_set.h" line="144" column="25" info="Null pointer dereference"/>
+            <location file0="/home/hbina/git/godot/core/math/disjoint_set.cpp" file="/home/hbina/git/godot/core/math/disjoint_set.h" line="141" column="49" info="Assignment &apos;rep_itr=elements.find(representative)&apos;, assigned value is 0"/>
+            <location file0="/home/hbina/git/godot/core/math/disjoint_set.cpp" file="/home/hbina/git/godot/core/math/disjoint_set.h" line="142" column="24" info="Assuming that condition &apos;rep_itr==nullptr&apos; is not redundant"/>
+            <symbol>rep_itr</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;get_representatives&apos; argument 1 names different: declaration &apos;out_roots&apos; definition &apos;out_representatives&apos;." verbose="Function &apos;get_representatives&apos; argument 1 names different: declaration &apos;out_roots&apos; definition &apos;out_representatives&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/math/disjoint_set.cpp" file="/home/hbina/git/godot/core/math/disjoint_set.h" line="130" column="60"/>
+            <location file0="/home/hbina/git/godot/core/math/disjoint_set.cpp" file="/home/hbina/git/godot/core/math/disjoint_set.h" line="66" column="38"/>
+            <symbol>get_representatives</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/disjoint_set.h:55:11" my-argnr="1" my-argname="element" file="/home/hbina/git/godot/core/math/disjoint_set.h" line="82" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="AL"/>
+    <functioncall functionName="C"/>
+    <functioncall functionName="DefaultAllocator"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="Element"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="insert_or_get"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="memdelete_allocator"/>
+    <functioncall functionName="memnew_allocator"/>
+    <functioncall functionName="new_element"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="object"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rank"/>
+    <functioncall functionName="representative"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x_root"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_root"/>
+  </FileInfo>
+</analyzerinfo>

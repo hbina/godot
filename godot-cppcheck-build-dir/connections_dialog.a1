@@ -1,0 +1,640 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1567448618">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ConnectionData&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ConnectionData&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/connections_dialog.cpp" file="/home/hbina/git/godot/editor/connections_dialog.h" line="67" column="3"/>
+            <symbol>ConnectionData</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ScriptEditor&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ScriptEditor&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/connections_dialog.cpp" file="/home/hbina/git/godot/editor/plugins/script_editor_plugin.h" line="452" column="2"/>
+            <symbol>ScriptEditor</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;ScriptEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;ScriptEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/connections_dialog.cpp" file="/home/hbina/git/godot/editor/plugins/script_editor_plugin.h" line="484" column="2"/>
+            <symbol>ScriptEditorPlugin</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!target&apos; is redundant or there is possible null pointer dereference: target." verbose="Either the condition &apos;!target&apos; is redundant or there is possible null pointer dereference: target." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/connections_dialog.cpp" line="571" column="23" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/connections_dialog.cpp" line="555" column="39" info="Assignment &apos;target=selectedNode-&gt;get_node(dst_path)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/connections_dialog.cpp" line="556" column="16" info="Assuming that condition &apos;!target&apos; is not redundant"/>
+            <symbol>target</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/connections_dialog.cpp" file="/home/hbina/git/godot/editor/editor_node.h" line="550" column="20"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_text_entered&apos; argument 1 names different: declaration &apos;_text&apos; definition &apos;p_text&apos;." verbose="Function &apos;_text_entered&apos; argument 1 names different: declaration &apos;_text&apos; definition &apos;p_text&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/connections_dialog.cpp" line="144" column="49"/>
+            <location file0="/home/hbina/git/godot/editor/connections_dialog.cpp" file="/home/hbina/git/godot/editor/connections_dialog.h" line="109" column="35"/>
+            <symbol>_text_entered</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="690" col="51" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="712" col="48" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="714" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/script_editor_plugin.h:420:7" call-funcname="edit" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/script_editor_plugin.h" line="419" col="89" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_find_first_script" lineNumber="41"/>
+    <functiondecl functionName="_set" lineNumber="67"/>
+    <functiondecl functionName="_get" lineNumber="81"/>
+    <functiondecl functionName="_get_property_list" lineNumber="95"/>
+    <functiondecl functionName="notify_changed" lineNumber="102"/>
+    <functiondecl functionName="ok_pressed" lineNumber="114"/>
+    <functiondecl functionName="_cancel_pressed" lineNumber="136"/>
+    <functiondecl functionName="_item_activated" lineNumber="140"/>
+    <functiondecl functionName="_text_entered" lineNumber="144"/>
+    <functiondecl functionName="_tree_node_selected" lineNumber="151"/>
+    <functiondecl functionName="_add_bind" lineNumber="165"/>
+    <functiondecl functionName="_remove_bind" lineNumber="230"/>
+    <functiondecl functionName="_update_ok_enabled" lineNumber="246"/>
+    <functiondecl functionName="_notification" lineNumber="263"/>
+    <functiondecl functionName="_bind_methods" lineNumber="270"/>
+    <functiondecl functionName="get_source" lineNumber="278"/>
+    <functiondecl functionName="get_signal_name" lineNumber="283"/>
+    <functiondecl functionName="get_dst_path" lineNumber="288"/>
+    <functiondecl functionName="set_dst_node" lineNumber="293"/>
+    <functiondecl functionName="get_dst_method_name" lineNumber="298"/>
+    <functiondecl functionName="set_dst_method" lineNumber="306"/>
+    <functiondecl functionName="get_binds" lineNumber="311"/>
+    <functiondecl functionName="get_deferred" lineNumber="316"/>
+    <functiondecl functionName="get_oneshot" lineNumber="321"/>
+    <functiondecl functionName="is_editing" lineNumber="329"/>
+    <functiondecl functionName="init" lineNumber="339"/>
+    <functiondecl functionName="popup_dialog" lineNumber="369"/>
+    <functiondecl functionName="_advanced_pressed" lineNumber="379"/>
+    <functiondecl functionName="make_custom_tooltip" lineNumber="525"/>
+    <functiondecl functionName="_make_or_edit_connection" lineNumber="549"/>
+    <functiondecl functionName="_connect" lineNumber="618"/>
+    <functiondecl functionName="_disconnect" lineNumber="643"/>
+    <functiondecl functionName="_disconnect_all" lineNumber="666"/>
+    <functiondecl functionName="_tree_item_selected" lineNumber="693"/>
+    <functiondecl functionName="_tree_item_activated" lineNumber="708"/>
+    <functiondecl functionName="_is_item_signal" lineNumber="722"/>
+    <functiondecl functionName="_open_connection_dialog" lineNumber="730"/>
+    <functiondecl functionName="_open_connection_dialog" lineNumber="771"/>
+    <functiondecl functionName="_go_to_script" lineNumber="786"/>
+    <functiondecl functionName="_handle_signal_menu_option" lineNumber="808"/>
+    <functiondecl functionName="_handle_slot_menu_option" lineNumber="827"/>
+    <functiondecl functionName="_rmb_pressed" lineNumber="849"/>
+    <functiondecl functionName="_close" lineNumber="867"/>
+    <functiondecl functionName="_connect_pressed" lineNumber="872"/>
+    <functiondecl functionName="_notification" lineNumber="888"/>
+    <functiondecl functionName="_bind_methods" lineNumber="895"/>
+    <functiondecl functionName="set_node" lineNumber="900"/>
+    <functiondecl functionName="update_tree" lineNumber="906"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="AcceptDialog"/>
+    <functioncall functionName="BASIS"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="Basis"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="CLOSE_ALL"/>
+    <functioncall functionName="CLOSE_DOCS"/>
+    <functioncall functionName="CLOSE_OTHER_TABS"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="CONNECT"/>
+    <functioncall functionName="CONNECT_DEFERRED"/>
+    <functioncall functionName="CONNECT_ONESHOT"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="CheckBox"/>
+    <functioncall functionName="CheckButton"/>
+    <functioncall functionName="ClassDoc"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="ConnectDialog"/>
+    <functioncall functionName="ConnectDialogBinds"/>
+    <functioncall functionName="ConnectionData"/>
+    <functioncall functionName="ConnectionsDock"/>
+    <functioncall functionName="ConnectionsDockTree"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="DISCONNECT"/>
+    <functioncall functionName="DISCONNECT_ALL"/>
+    <functioncall functionName="DISPLAY_DIR_AND_NAME"/>
+    <functioncall functionName="DISPLAY_FULL_PATH"/>
+    <functioncall functionName="DISPLAY_NAME"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BR"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UR"/>
+    <functioncall functionName="DOCK_SLOT_MAX"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BR"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UR"/>
+    <functioncall functionName="DTR"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDIT"/>
+    <functioncall functionName="EDITOR_3D"/>
+    <functioncall functionName="EDITOR_ASSETLIB"/>
+    <functioncall functionName="EDITOR_OPEN_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCRIPT"/>
+    <functioncall functionName="EDIT_REDO"/>
+    <functioncall functionName="EDIT_RELOAD_SAVED_SCENE"/>
+    <functioncall functionName="EDIT_UNDO"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="EditorHelpBit"/>
+    <functioncall functionName="EditorInspector"/>
+    <functioncall functionName="EditorNode"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="EditorPluginList"/>
+    <functioncall functionName="EditorProgress"/>
+    <functioncall functionName="EditorProgressBG"/>
+    <functioncall functionName="EditorSettings"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FILE_CLOSE"/>
+    <functioncall functionName="FILE_CLOSE_ALL"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_QUIT"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="FILE_CLOSE_OTHERS"/>
+    <functioncall functionName="FILE_CLOSE_RIGHT"/>
+    <functioncall functionName="FILE_COPY_PATH"/>
+    <functioncall functionName="FILE_EXPLORE_ANDROID_BUILD_TEMPLATES"/>
+    <functioncall functionName="FILE_EXPORT_MESH_LIBRARY"/>
+    <functioncall functionName="FILE_EXPORT_PROJECT"/>
+    <functioncall functionName="FILE_EXPORT_TILESET"/>
+    <functioncall functionName="FILE_EXTERNAL_OPEN_SCENE"/>
+    <functioncall functionName="FILE_IMPORT_SUBSCENE"/>
+    <functioncall functionName="FILE_INSTALL_ANDROID_SOURCE"/>
+    <functioncall functionName="FILE_NEW"/>
+    <functioncall functionName="FILE_NEW_INHERITED_SCENE"/>
+    <functioncall functionName="FILE_NEW_SCENE"/>
+    <functioncall functionName="FILE_NEW_TEXTFILE"/>
+    <functioncall functionName="FILE_OPEN"/>
+    <functioncall functionName="FILE_OPEN_OLD_SCENE"/>
+    <functioncall functionName="FILE_OPEN_PREV"/>
+    <functioncall functionName="FILE_OPEN_RECENT"/>
+    <functioncall functionName="FILE_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCRIPT"/>
+    <functioncall functionName="FILE_QUIT"/>
+    <functioncall functionName="FILE_REOPEN_CLOSED"/>
+    <functioncall functionName="FILE_RUN"/>
+    <functioncall functionName="FILE_SAVE"/>
+    <functioncall functionName="FILE_SAVE_ALL"/>
+    <functioncall functionName="FILE_SAVE_ALL_SCENES"/>
+    <functioncall functionName="FILE_SAVE_AND_RUN"/>
+    <functioncall functionName="FILE_SAVE_AS"/>
+    <functioncall functionName="FILE_SAVE_AS_SCENE"/>
+    <functioncall functionName="FILE_SAVE_BEFORE_RUN"/>
+    <functioncall functionName="FILE_SAVE_OPTIMIZED"/>
+    <functioncall functionName="FILE_SAVE_SCENE"/>
+    <functioncall functionName="FILE_SHOW_IN_FILESYSTEM"/>
+    <functioncall functionName="FILE_THEME"/>
+    <functioncall functionName="FILE_TOOL_RELOAD"/>
+    <functioncall functionName="FILE_TOOL_RELOAD_SOFT"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="G"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_NEW_WINDOW"/>
+    <functioncall functionName="GLOBAL_SCENE"/>
+    <functioncall functionName="GO_TO_SCRIPT"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HELP_ABOUT"/>
+    <functioncall functionName="HELP_COMMUNITY"/>
+    <functioncall functionName="HELP_DOCS"/>
+    <functioncall functionName="HELP_QA"/>
+    <functioncall functionName="HELP_REPORT_A_BUG"/>
+    <functioncall functionName="HELP_SEARCH"/>
+    <functioncall functionName="HELP_SEARCH_FIND"/>
+    <functioncall functionName="HELP_SEARCH_FIND_NEXT"/>
+    <functioncall functionName="HELP_SEARCH_FIND_PREVIOUS"/>
+    <functioncall functionName="HELP_SEND_DOCS_FEEDBACK"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="LineEdit"/>
+    <functioncall functionName="MAX_BUILD_CALLBACKS"/>
+    <functioncall functionName="MAX_INIT_CALLBACKS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="OptionButton"/>
+    <functioncall functionName="PLANE"/>
+    <functioncall functionName="PanelContainer"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="PopupMenu"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="QUAT"/>
+    <functioncall functionName="Quat"/>
+    <functioncall functionName="RECT2"/>
+    <functioncall functionName="REPLACE_IN_FILES"/>
+    <functioncall functionName="RESOURCE_SAVE"/>
+    <functioncall functionName="RESOURCE_SAVE_AS"/>
+    <functioncall functionName="RUN_PLAY"/>
+    <functioncall functionName="RUN_PLAY_CUSTOM_SCENE"/>
+    <functioncall functionName="RUN_PLAY_SCENE"/>
+    <functioncall functionName="RUN_PROJECT_DATA_FOLDER"/>
+    <functioncall functionName="RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="RUN_SCENE_SETTINGS"/>
+    <functioncall functionName="RUN_SETTINGS"/>
+    <functioncall functionName="RUN_STOP"/>
+    <functioncall functionName="RUN_VCS_SETTINGS"/>
+    <functioncall functionName="RUN_VCS_SHUT_DOWN"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SCENE_TAB_CLOSE"/>
+    <functioncall functionName="SCRIPT_EDITOR_FUNC_MAX"/>
+    <functioncall functionName="SEARCH_HELP"/>
+    <functioncall functionName="SEARCH_IN_FILES"/>
+    <functioncall functionName="SEARCH_WEBSITE"/>
+    <functioncall functionName="SELECT_ROW"/>
+    <functioncall functionName="SETTINGS_EDITOR_CONFIG_FOLDER"/>
+    <functioncall functionName="SETTINGS_EDITOR_DATA_FOLDER"/>
+    <functioncall functionName="SETTINGS_HELP"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DEFAULT"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DELETE"/>
+    <functioncall functionName="SETTINGS_LAYOUT_SAVE"/>
+    <functioncall functionName="SETTINGS_MANAGE_EXPORT_TEMPLATES"/>
+    <functioncall functionName="SETTINGS_MANAGE_FEATURE_PROFILES"/>
+    <functioncall functionName="SETTINGS_PICK_MAIN_SCENE"/>
+    <functioncall functionName="SETTINGS_PREFERENCES"/>
+    <functioncall functionName="SETTINGS_TOGGLE_CONSOLE"/>
+    <functioncall functionName="SETTINGS_TOGGLE_FULLSCREEN"/>
+    <functioncall functionName="SETTINGS_UPDATE_ALWAYS"/>
+    <functioncall functionName="SETTINGS_UPDATE_CHANGES"/>
+    <functioncall functionName="SETTINGS_UPDATE_CONTINUOUSLY"/>
+    <functioncall functionName="SETTINGS_UPDATE_SPINNER_HIDE"/>
+    <functioncall functionName="SETTINGS_UPDATE_WHEN_CHANGED"/>
+    <functioncall functionName="SET_VIDEO_DRIVER_SAVE_AND_RESTART"/>
+    <functioncall functionName="SHOW_IN_FILE_SYSTEM"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="SORT_BY_NAME"/>
+    <functioncall functionName="SORT_BY_NONE"/>
+    <functioncall functionName="SORT_BY_PATH"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="SYNTAX_HIGHLIGHTER_FUNC_MAX"/>
+    <functioncall functionName="SceneTreeEditor"/>
+    <functioncall functionName="ScriptEditor"/>
+    <functioncall functionName="ScriptEditorBase"/>
+    <functioncall functionName="ScriptEditorPlugin"/>
+    <functioncall functionName="ScriptEditorQuickOpen"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="Signal"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="THEME_IMPORT"/>
+    <functioncall functionName="THEME_RELOAD"/>
+    <functioncall functionName="THEME_SAVE"/>
+    <functioncall functionName="THEME_SAVE_AS"/>
+    <functioncall functionName="TOGGLE_SCRIPTS_PANEL"/>
+    <functioncall functionName="TOOLS_CUSTOM"/>
+    <functioncall functionName="TOOLS_ORPHAN_RESOURCES"/>
+    <functioncall functionName="TRANSFORM"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="Type"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="VECTOR3"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="VariantContainer"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="WINDOW_MOVE_DOWN"/>
+    <functioncall functionName="WINDOW_MOVE_UP"/>
+    <functioncall functionName="WINDOW_NEXT"/>
+    <functioncall functionName="WINDOW_PREV"/>
+    <functioncall functionName="WINDOW_SORT"/>
+    <functioncall functionName="_add_bind"/>
+    <functioncall functionName="_advanced_pressed"/>
+    <functioncall functionName="_cancel_pressed"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_cleanup_scene"/>
+    <functioncall functionName="_connect"/>
+    <functioncall functionName="_connect_pressed"/>
+    <functioncall functionName="_disconnect"/>
+    <functioncall functionName="_disconnect_all"/>
+    <functioncall functionName="_edit_current"/>
+    <functioncall functionName="_editor_select"/>
+    <functioncall functionName="_find_first_script"/>
+    <functioncall functionName="_go_to_script"/>
+    <functioncall functionName="_handle_signal_menu_option"/>
+    <functioncall functionName="_handle_slot_menu_option"/>
+    <functioncall functionName="_help_class_goto"/>
+    <functioncall functionName="_is_item_signal"/>
+    <functioncall functionName="_item_activated"/>
+    <functioncall functionName="_make_or_edit_connection"/>
+    <functioncall functionName="_menu_option_confirm"/>
+    <functioncall functionName="_ok_pressed"/>
+    <functioncall functionName="_open_connection_dialog"/>
+    <functioncall functionName="_remove_bind"/>
+    <functioncall functionName="_rmb_pressed"/>
+    <functioncall functionName="_save_scene"/>
+    <functioncall functionName="_save_scene_with_preview"/>
+    <functioncall functionName="_set"/>
+    <functioncall functionName="_set_only"/>
+    <functioncall functionName="_text_entered"/>
+    <functioncall functionName="_tree_item_activated"/>
+    <functioncall functionName="_tree_item_selected"/>
+    <functioncall functionName="_tree_node_selected"/>
+    <functioncall functionName="_update_ok_enabled"/>
+    <functioncall functionName="add_bind"/>
+    <functioncall functionName="add_bind_hb"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_item"/>
+    <functioncall functionName="add_margin_child"/>
+    <functioncall functionName="add_script_function"/>
+    <functioncall functionName="add_spacer"/>
+    <functioncall functionName="add_theme_color_override"/>
+    <functioncall functionName="add_theme_constant_override"/>
+    <functioncall functionName="add_theme_style_override"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="advanced"/>
+    <functioncall functionName="argnames"/>
+    <functioncall functionName="bDeferred"/>
+    <functioncall functionName="bEdit"/>
+    <functioncall functionName="bOneshot"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_editor"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="binds"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cToEdit"/>
+    <functioncall functionName="cToMake"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="cd"/>
+    <functioncall functionName="cdbinds"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="cn"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="connect_button"/>
+    <functioncall functionName="connect_dialog"/>
+    <functioncall functionName="connections"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="create_item"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="deferred"/>
+    <functioncall functionName="del_bind"/>
+    <functioncall functionName="descr"/>
+    <functioncall functionName="did_script"/>
+    <functioncall functionName="disconnect_all_dialog"/>
+    <functioncall functionName="dst_method"/>
+    <functioncall functionName="dst_node"/>
+    <functioncall functionName="dst_path"/>
+    <functioncall functionName="dstm_hb"/>
+    <functioncall functionName="edit"/>
+    <functioncall functionName="edit_resource"/>
+    <functioncall functionName="editor_data"/>
+    <functioncall functionName="editor_folding"/>
+    <functioncall functionName="editor_get_scale"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="error_label"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_function"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="found_inherited_function"/>
+    <functioncall functionName="from_signal"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_addon_area"/>
+    <functioncall functionName="get_base_script"/>
+    <functioncall functionName="get_binds"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_children"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_deferred"/>
+    <functioncall functionName="get_doc_data"/>
+    <functioncall functionName="get_dst_method_name"/>
+    <functioncall functionName="get_dst_path"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_global_position"/>
+    <functioncall functionName="get_index"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_item_id"/>
+    <functioncall functionName="get_language"/>
+    <functioncall functionName="get_metadata"/>
+    <functioncall functionName="get_method"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_next"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_object"/>
+    <functioncall functionName="get_ok"/>
+    <functioncall functionName="get_oneshot"/>
+    <functioncall functionName="get_owner"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_parent_class"/>
+    <functioncall functionName="get_parent_control"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_path_to"/>
+    <functioncall functionName="get_rich_text"/>
+    <functioncall functionName="get_root"/>
+    <functioncall functionName="get_scene_tree"/>
+    <functioncall functionName="get_scene_tree_dock"/>
+    <functioncall functionName="get_script"/>
+    <functioncall functionName="get_script_create_dialog"/>
+    <functioncall functionName="get_script_signal_list"/>
+    <functioncall functionName="get_selected"/>
+    <functioncall functionName="get_selected_path"/>
+    <functioncall functionName="get_signal_connection_list"/>
+    <functioncall functionName="get_signal_list"/>
+    <functioncall functionName="get_signal_name"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slice"/>
+    <functioncall functionName="get_source"/>
+    <functioncall functionName="get_source_code"/>
+    <functioncall functionName="get_text"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_theme_stylebox"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_tree_editor"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="get_type_name"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="global_position"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_child_process"/>
+    <functioncall functionName="has_default_value"/>
+    <functioncall functionName="has_method"/>
+    <functioncall functionName="has_theme_icon"/>
+    <functioncall functionName="hb"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="hide_from_editor"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icon"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inherits"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_editing"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_resource_file"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="it"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="main_hb"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="menu_hb"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node_signals"/>
+    <functioncall functionName="node_signals2"/>
+    <functioncall functionName="notify_changed"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oneshot"/>
+    <functioncall functionName="open_resource"/>
+    <functioncall functionName="operatorConnection"/>
+    <functioncall functionName="operatorDictionary"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="option"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_can_cancel"/>
+    <functioncall functionName="p_desc"/>
+    <functioncall functionName="p_editor"/>
+    <functioncall functionName="p_emit_signal"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_for_signal"/>
+    <functioncall functionName="p_force_refresh"/>
+    <functioncall functionName="p_grab_focus"/>
+    <functioncall functionName="p_label"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_old"/>
+    <functioncall functionName="p_order"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_plugins_list"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_root"/>
+    <functioncall functionName="p_setting"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_table"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_undo_redo"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_variant"/>
+    <functioncall functionName="p_with_preview"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pitem"/>
+    <functioncall functionName="popup"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="popup_dialog"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="progress_add_task"/>
+    <functioncall functionName="progress_add_task_bg"/>
+    <functioncall functionName="progress_end_task"/>
+    <functioncall functionName="progress_end_task_bg"/>
+    <functioncall functionName="progress_task_step"/>
+    <functioncall functionName="progress_task_step_bg"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="restart_if_changed"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="script"/>
+    <functioncall functionName="script_function_args"/>
+    <functioncall functionName="script_goto_method"/>
+    <functioncall functionName="select"/>
+    <functioncall functionName="selectedNode"/>
+    <functioncall functionName="set_allow_rmb_select"/>
+    <functioncall functionName="set_columns"/>
+    <functioncall functionName="set_connect_to_script_mode"/>
+    <functioncall functionName="set_connecting_signal"/>
+    <functioncall functionName="set_custom_bg_color"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_dst_method"/>
+    <functioncall functionName="set_dst_node"/>
+    <functioncall functionName="set_editable"/>
+    <functioncall functionName="set_fixed_size_to_width"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_hide_on_ok"/>
+    <functioncall functionName="set_hide_root"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_marked"/>
+    <functioncall functionName="set_metadata"/>
+    <functioncall functionName="set_min_size"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_select_mode"/>
+    <functioncall functionName="set_selectable"/>
+    <functioncall functionName="set_selected"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_visible"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="signal"/>
+    <functioncall functionName="signalName"/>
+    <functioncall functionName="signal_menu"/>
+    <functioncall functionName="signal_name"/>
+    <functioncall functionName="signaldesc"/>
+    <functioncall functionName="signalname"/>
+    <functioncall functionName="sinfo"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="slot_menu"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="spacing"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="text"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tname"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="top_split"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="type_list"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="unsaved_cache"/>
+    <functioncall functionName="update_keying"/>
+    <functioncall functionName="update_tree"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="variant"/>
+    <functioncall functionName="vbc"/>
+    <functioncall functionName="vbc_left"/>
+    <functioncall functionName="vbc_right"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="vt"/>
+    <functioncall functionName="which"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

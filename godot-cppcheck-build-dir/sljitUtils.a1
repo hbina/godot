@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1254713971">
+        <error id="unreadVariable" severity="style" msg="Variable &apos;aligned_new_start&apos; is assigned a value that is never used." verbose="Variable &apos;aligned_new_start&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c" line="321" column="21"/>
+            <symbol>aligned_new_start</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;aligned_old_start&apos; is assigned a value that is never used." verbose="Variable &apos;aligned_old_start&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c" line="322" column="21"/>
+            <symbol>aligned_old_start</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c:298:47" my-argnr="1" my-argname="stack" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c" line="303" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c:298:47" my-argnr="1" my-argname="stack" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c" line="303" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c:298:47" my-argnr="1" my-argname="stack" file="/home/hbina/git/godot/thirdparty/pcre2/src/sljit/sljitUtils.c" line="303" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="allocator_grab_lock" lineNumber="115"/>
+    <functiondecl functionName="allocator_release_lock" lineNumber="120"/>
+    <functiondecl functionName="sljit_grab_lock" lineNumber="133"/>
+    <functiondecl functionName="sljit_release_lock" lineNumber="138"/>
+    <functiondecl functionName="open_dev_zero" lineNumber="188"/>
+    <functiondecl functionName="allocator_grab_lock" lineNumber="37"/>
+    <functiondecl functionName="allocator_release_lock" lineNumber="42"/>
+    <functiondecl functionName="sljit_grab_lock" lineNumber="51"/>
+    <functiondecl functionName="sljit_release_lock" lineNumber="56"/>
+    <functiondecl functionName="open_dev_zero" lineNumber="176"/>
+    <functiondecl functionName="allocator_grab_lock" lineNumber="71"/>
+    <functiondecl functionName="allocator_release_lock" lineNumber="80"/>
+    <functiondecl functionName="sljit_grab_lock" lineNumber="91"/>
+    <functiondecl functionName="sljit_release_lock" lineNumber="100"/>
+    <functiondecl functionName="allocator_grab_lock" lineNumber="115"/>
+    <functiondecl functionName="allocator_release_lock" lineNumber="120"/>
+    <functiondecl functionName="sljit_grab_lock" lineNumber="133"/>
+    <functiondecl functionName="sljit_release_lock" lineNumber="138"/>
+    <functiondecl functionName="open_dev_zero" lineNumber="188"/>
+    <functiondecl functionName="sljit_allocate_stack" lineNumber="212"/>
+    <functiondecl functionName="sljit_free_stack" lineNumber="287"/>
+    <functiondecl functionName="sljit_stack_resize" lineNumber="298"/>
+    <functiondecl functionName="allocator_grab_lock" lineNumber="37"/>
+    <functiondecl functionName="allocator_release_lock" lineNumber="42"/>
+    <functiondecl functionName="sljit_grab_lock" lineNumber="51"/>
+    <functiondecl functionName="sljit_release_lock" lineNumber="56"/>
+    <functiondecl functionName="open_dev_zero" lineNumber="176"/>
+    <functiondecl functionName="sljit_allocate_stack" lineNumber="212"/>
+    <functiondecl functionName="sljit_free_stack" lineNumber="287"/>
+    <functiondecl functionName="sljit_stack_resize" lineNumber="298"/>
+    <functiondecl functionName="allocator_grab_lock" lineNumber="71"/>
+    <functiondecl functionName="allocator_release_lock" lineNumber="80"/>
+    <functiondecl functionName="sljit_grab_lock" lineNumber="91"/>
+    <functiondecl functionName="sljit_release_lock" lineNumber="100"/>
+    <functiondecl functionName="sljit_allocate_stack" lineNumber="212"/>
+    <functiondecl functionName="sljit_free_stack" lineNumber="287"/>
+    <functiondecl functionName="sljit_stack_resize" lineNumber="298"/>
+    <functioncall functionName="CreateMutex"/>
+    <functioncall functionName="GetSystemInfo"/>
+    <functioncall functionName="INFINITE"/>
+    <functioncall functionName="MAP_PRIVATE"/>
+    <functioncall functionName="MEM_COMMIT"/>
+    <functioncall functionName="MEM_DECOMMIT"/>
+    <functioncall functionName="MEM_RELEASE"/>
+    <functioncall functionName="MEM_RESERVE"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="O_RDWR"/>
+    <functioncall functionName="PAGE_READWRITE"/>
+    <functioncall functionName="PROT_WRITE"/>
+    <functioncall functionName="PTHREAD_MUTEX_INITIALIZER"/>
+    <functioncall functionName="ReleaseMutex"/>
+    <functioncall functionName="SLJIT_FREE"/>
+    <functioncall functionName="SLJIT_MALLOC"/>
+    <functioncall functionName="SLJIT_UNUSED_ARG"/>
+    <functioncall functionName="TRUE"/>
+    <functioncall functionName="VirtualAlloc"/>
+    <functioncall functionName="VirtualFree"/>
+    <functioncall functionName="WaitForSingleObject"/>
+    <functioncall functionName="_SC_PAGESIZE"/>
+    <functioncall functionName="aligned_new_start"/>
+    <functioncall functionName="aligned_old_start"/>
+    <functioncall functionName="allocator_data"/>
+    <functioncall functionName="allocator_mutex"/>
+    <functioncall functionName="dev_zero"/>
+    <functioncall functionName="dev_zero_mutex"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="global_mutex"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="max_size"/>
+    <functioncall functionName="min_start"/>
+    <functioncall functionName="mmap"/>
+    <functioncall functionName="munmap"/>
+    <functioncall functionName="new_start"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_dev_zero"/>
+    <functioncall functionName="pthread_mutex_lock"/>
+    <functioncall functionName="pthread_mutex_unlock"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="si"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sljit_free_stack"/>
+    <functioncall functionName="sljit_page_align"/>
+    <functioncall functionName="sljit_stack_resize"/>
+    <functioncall functionName="sljit_uw"/>
+    <functioncall functionName="stack"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_size"/>
+    <functioncall functionName="sysconf"/>
+  </FileInfo>
+</analyzerinfo>

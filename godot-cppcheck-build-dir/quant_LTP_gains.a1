@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1797239559">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cl_ptr_Q5&apos; can be reduced." verbose="The scope of the variable &apos;cl_ptr_Q5&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="49" column="27"/>
+            <symbol>cl_ptr_Q5</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cbk_gain_ptr_Q7&apos; can be reduced." verbose="The scope of the variable &apos;cbk_gain_ptr_Q7&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="51" column="27"/>
+            <symbol>cbk_gain_ptr_Q7</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b_Q14_ptr&apos; can be reduced." verbose="The scope of the variable &apos;b_Q14_ptr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="52" column="27"/>
+            <symbol>b_Q14_ptr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;W_Q18_ptr&apos; can be reduced." verbose="The scope of the variable &apos;W_Q18_ptr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="53" column="27"/>
+            <symbol>W_Q18_ptr</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;silk_quant_LTP_gains&apos; argument 4 names different: declaration &apos;sum_gain_dB_Q7&apos; definition &apos;sum_log_gain_Q7&apos;." verbose="Function &apos;silk_quant_LTP_gains&apos; argument 4 names different: declaration &apos;sum_gain_dB_Q7&apos; definition &apos;sum_log_gain_Q7&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="39" column="34"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" file="/home/hbina/git/godot/thirdparty/opus/silk/main.h" line="211" column="34"/>
+            <symbol>silk_quant_LTP_gains</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h:67:25" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h" line="69" col="80" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h:67:25" my-argnr="2" my-argname="file" file="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h" line="69" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/MacroCount.h:490:8" call-funcname="silk_max" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="99" col="43" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/main.h:207:6" my-argnr="4" my-argname="sum_log_gain_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/quant_LTP_gains.c" line="128" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functiondecl functionName="silk_quant_LTP_gains" lineNumber="35"/>
+    <functioncall functionName="B_Q14"/>
+    <functioncall functionName="EC_ILOG"/>
+    <functioncall functionName="OPUS_ARCHMASK"/>
+    <functioncall functionName="Qres"/>
+    <functioncall functionName="SigProcFIX_CLZ16"/>
+    <functioncall functionName="W_Q18"/>
+    <functioncall functionName="W_Q18_ptr"/>
+    <functioncall functionName="_ASSERTE"/>
+    <functioncall functionName="__builtin_clz"/>
+    <functioncall functionName="__builtin_mips_extr_w"/>
+    <functioncall functionName="__builtin_mips_mult"/>
+    <functioncall functionName="__builtin_mips_shll_s_w"/>
+    <functioncall functionName="__builtin_mips_shra_r_w"/>
+    <functioncall functionName="_silk_fatal"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a16"/>
+    <functioncall functionName="a32"/>
+    <functioncall functionName="a32_nrm"/>
+    <functioncall functionName="a64"/>
+    <functioncall functionName="a_headrm"/>
+    <functioncall functionName="abort"/>
+    <functioncall functionName="ac"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b16"/>
+    <functioncall functionName="b32"/>
+    <functioncall functionName="b32_inv"/>
+    <functioncall functionName="b32_nrm"/>
+    <functioncall functionName="b64"/>
+    <functioncall functionName="b_Q14_ptr"/>
+    <functioncall functionName="b_headrm"/>
+    <functioncall functionName="best_sum_log_gain_Q7"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c16"/>
+    <functioncall functionName="c32"/>
+    <functioncall functionName="cbk_gain_ptr_Q7"/>
+    <functioncall functionName="cbk_index"/>
+    <functioncall functionName="cbk_ptr_Q7"/>
+    <functioncall functionName="cbk_size"/>
+    <functioncall functionName="cl_ptr_Q5"/>
+    <functioncall functionName="err_Q32"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="frac_Q7"/>
+    <functioncall functionName="gain_Q7"/>
+    <functioncall functionName="gain_safety"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="in16"/>
+    <functioncall functionName="in32"/>
+    <functioncall functionName="in_upper"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="limit1"/>
+    <functioncall functionName="limit2"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="lshift"/>
+    <functioncall functionName="lz"/>
+    <functioncall functionName="lzeros"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="max_gain_Q7"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="mu_Q9"/>
+    <functioncall functionName="ops_count"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_int64"/>
+    <functioncall functionName="opus_int8"/>
+    <functioncall functionName="opus_uint32"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rate_dist_Q14"/>
+    <functioncall functionName="rate_dist_Q14_subfr"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="silk_ADD32"/>
+    <functioncall functionName="silk_ADD_POS_SAT32"/>
+    <functioncall functionName="silk_CLZ32"/>
+    <functioncall functionName="silk_CLZ32_armv5"/>
+    <functioncall functionName="silk_CLZ_FRAC"/>
+    <functioncall functionName="silk_LSHIFT32"/>
+    <functioncall functionName="silk_MLA"/>
+    <functioncall functionName="silk_ROR32"/>
+    <functioncall functionName="silk_RSHIFT_ROUND"/>
+    <functioncall functionName="silk_SAT16"/>
+    <functioncall functionName="silk_SMLAWB"/>
+    <functioncall functionName="silk_SMLAWB_armv5e"/>
+    <functioncall functionName="silk_SMLAWW"/>
+    <functioncall functionName="silk_SMLAWW_armv4"/>
+    <functioncall functionName="silk_SMULBB_armv5e"/>
+    <functioncall functionName="silk_SMULWB"/>
+    <functioncall functionName="silk_SMULWB_armv4"/>
+    <functioncall functionName="silk_SMULWB_armv5e"/>
+    <functioncall functionName="silk_SUB32"/>
+    <functioncall functionName="silk_VQ_WMat_EC"/>
+    <functioncall functionName="silk_VQ_WMat_EC_c"/>
+    <functioncall functionName="silk_VQ_WMat_EC_sse4_1"/>
+    <functioncall functionName="silk_lin2log"/>
+    <functioncall functionName="silk_log2lin"/>
+    <functioncall functionName="silk_max"/>
+    <functioncall functionName="silk_min"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="sum_log_gain_tmp_Q7"/>
+    <functioncall functionName="temp_idx"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

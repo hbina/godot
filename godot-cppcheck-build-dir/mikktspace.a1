@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1309319023">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bitang&apos; can be reduced." verbose="The scope of the variable &apos;bitang&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="406" column="10"/>
+            <symbol>bitang</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;t&apos; can be reduced." verbose="The scope of the variable &apos;t&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1560" column="15"/>
+            <symbol>t</symbol>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;n&gt;=0&apos; is redundant or there is division by zero at line 1459." verbose="Either the condition &apos;n&gt;=0&apos; is redundant or there is division by zero at line 1459." cwe="369">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1459" column="22" info="Division by zero"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1457" column="13" info="Assignment &apos;n=(iR-iL)+1&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1458" column="10" info="Assuming that condition &apos;n&gt;=0&apos; is not redundant"/>
+        </error>
+        <error id="zerodivcond" severity="warning" msg="Either the condition &apos;n&gt;=0&apos; is redundant or there is division by zero at line 1666." verbose="Either the condition &apos;n&gt;=0&apos; is redundant or there is division by zero at line 1666." cwe="369">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1666" column="22" info="Division by zero"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1664" column="13" info="Assignment &apos;n=(iR-iL)+1&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1665" column="10" info="Assuming that condition &apos;n&gt;=0&apos; is not redundant"/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="559" column="9" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="457" column="6" info="Shadowed declaration"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;distSQ_02&apos; shadows outer variable" verbose="Local variable &apos;distSQ_02&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="817" column="18" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="804" column="17" info="Shadowed declaration"/>
+            <symbol>distSQ_02</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;distSQ_13&apos; shadows outer variable" verbose="Local variable &apos;distSQ_13&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="818" column="18" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="805" column="17" info="Shadowed declaration"/>
+            <symbol>distSQ_13</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;s&apos; shadows outer variable" verbose="Local variable &apos;s&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1306" column="10" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1221" column="29" info="Shadowed declaration"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;f&apos; shadows outer variable" verbose="Local variable &apos;f&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1549" column="13" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1497" column="37" info="Shadowed declaration"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;t&apos; shadows outer variable" verbose="Local variable &apos;t&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1579" column="9" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1560" column="15" info="Shadowed declaration"/>
+            <symbol>t</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;bIsGood&apos; shadows outer variable" verbose="Local variable &apos;bIsGood&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1774" column="17" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1761" column="15" info="Shadowed declaration"/>
+            <symbol>bIsGood</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;i&apos; shadows outer variable" verbose="Local variable &apos;i&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1861" column="18" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1813" column="11" info="Shadowed declaration"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i&apos; is assigned a value that is never used." verbose="Variable &apos;i&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="723" column="33"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i&apos; is assigned a value that is never used." verbose="Variable &apos;i&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="938" column="12"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i&apos; is assigned a value that is never used." verbose="Variable &apos;i&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1065" column="25"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i&apos; is assigned a value that is never used." verbose="Variable &apos;i&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1197" column="45"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;iUniqueTspaces&apos; is assigned a value that is never used." verbose="Variable &apos;iUniqueTspaces&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1217" column="17"/>
+            <symbol>iUniqueTspaces</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;iUniqueTspaces&apos; is assigned a value that is never used." verbose="Variable &apos;iUniqueTspaces&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1348" column="18"/>
+            <symbol>iUniqueTspaces</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i&apos; is assigned a value that is never used." verbose="Variable &apos;i&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1590" column="12"/>
+            <symbol>i</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;i&apos; is assigned a value that is never used." verbose="Variable &apos;i&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1813" column="12"/>
+            <symbol>i</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" call-funcname="GetPosition" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="459" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:447:13" call-funcname="MergeVertsFast" call-argnr="4" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="564" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:172:12" call-funcname="MakeIndex" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="780" col="47" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:172:12" call-funcname="MakeIndex" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="796" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="879" col="13" call-argexpr="&iF" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="879" col="13" call-argexpr="iF" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="879" col="13" call-argexpr="&iI" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="879" col="13" call-argexpr="iI" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="3" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="879" col="13" call-argexpr="index" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="459" col="37" info="Calling function 'GetPosition', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="889" col="13" call-argexpr="&iF" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="889" col="13" call-argexpr="iF" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="889" col="13" call-argexpr="&iI" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="889" col="13" call-argexpr="iI" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="899" col="13" call-argexpr="&iF" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="899" col="13" call-argexpr="iF" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="899" col="13" call-argexpr="&iI" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" call-funcname="IndexToData" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="899" col="13" call-argexpr="iI" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1058:14" call-funcname="AssignRecur" call-argnr="3" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1092" col="18" call-argexpr="neigh_indexL" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1089" col="21" info="Assuming that condition 'neigh_indexL>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1087" col="46" info="Assignment 'neigh_indexL=pTriInfos[f].FaceNeighbors[i]', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1058:14" call-funcname="AssignRecur" call-argnr="3" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1103" col="18" call-argexpr="neigh_indexR" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1100" col="21" info="Assuming that condition 'neigh_indexR>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1088" col="46" info="Assignment 'neigh_indexR=pTriInfos[f].FaceNeighbors[i>0?i-1:2]', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1059:13" call-funcname="AddTriToGroup" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1166" col="15" call-argexpr="iMyTriIndex" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1089" col="21" info="Assuming that condition 'neigh_indexL>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1087" col="46" info="Assignment 'neigh_indexL=pTriInfos[f].FaceNeighbors[i]', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1092" col="43" info="Calling function 'AssignRecur', 3rd argument 'neigh_indexL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1058:14" call-funcname="AssignRecur" call-argnr="3" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1173" col="15" call-argexpr="neigh_indexL" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1172" col="19" info="Assuming that condition 'neigh_indexL>=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1058:14" call-funcname="AssignRecur" call-argnr="3" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1175" col="15" call-argexpr="neigh_indexR" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1174" col="19" info="Assuming that condition 'neigh_indexR>=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1187:13" call-funcname="QuickSort" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1282" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1186:14" call-funcname="CompareSubGroups" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1290" col="30" call-argexpr="&tmp_group" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1490:13" call-funcname="QuickSortEdges" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1509" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1490:13" call-funcname="QuickSortEdges" call-argnr="4" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1509" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:172:12" call-funcname="MakeIndex" call-argnr="2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1871" col="43" call-argexpr="iMissingIndex" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1865" col="24" info="Assignment 'iMissingIndex=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.h:114:7" call-funcname="genTangSpace" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="226" col="9" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.h:113:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" call-funcname="GetPosition" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="459" col="15" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:165:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" call-funcname="GetPosition" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="608" col="21" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:447:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" call-funcname="GetPosition" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="694" col="20" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:448:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" call-funcname="GetPosition" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="731" col="21" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:449:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:216:14" call-funcname="GetTexCoord" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="922" col="19" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:920:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" call-funcname="GetPosition" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="961" col="20" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:166:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:215:14" call-funcname="GetNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1239" col="8" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:168:14" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:215:14" call-funcname="GetNormal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1386" col="8" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1188:16" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" call-funcname="GetPosition" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1871" col="12" my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:221:13" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" my-argnr="1" my-argname="piFace" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="181" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" my-argnr="2" my-argname="piVert" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="180" col="2" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" my-argnr="1" my-argname="piFace" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="181" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:178:13" my-argnr="2" my-argname="piVert" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="180" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:184:16" my-argnr="1" my-argname="pTS0" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="191" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:184:16" my-argnr="2" my-argname="pTS1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="191" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.h:114:7" my-argnr="1" my-argname="pContext" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="239" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:164:12" my-argnr="3" my-argname="pContext" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="768" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:214:14" my-argnr="1" my-argname="pContext" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="880" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:215:14" my-argnr="1" my-argname="pContext" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="890" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:216:14" my-argnr="1" my-argname="pContext" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="900" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1059:13" my-argnr="1" my-argname="pGroup" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1127" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1058:14" my-argnr="4" my-argname="pGroup" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1137" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1186:14" my-argnr="1" my-argname="pg1" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1437" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1186:14" my-argnr="2" my-argname="pg2" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1437" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1187:13" my-argnr="1" my-argname="pSortBuffer" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1461" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/mikktspace.c:1491:13" my-argnr="3" my-argname="edgenum_out" file="/home/hbina/git/godot/thirdparty/misc/mikktspace.c" line="1696" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="veq" lineNumber="47"/>
+    <functiondecl functionName="vadd" lineNumber="52"/>
+    <functiondecl functionName="vsub" lineNumber="64"/>
+    <functiondecl functionName="vscale" lineNumber="75"/>
+    <functiondecl functionName="LengthSquared" lineNumber="86"/>
+    <functiondecl functionName="Length" lineNumber="91"/>
+    <functiondecl functionName="Normalize" lineNumber="96"/>
+    <functiondecl functionName="vdot" lineNumber="101"/>
+    <functiondecl functionName="NotZero" lineNumber="107"/>
+    <functiondecl functionName="VNotZero" lineNumber="113"/>
+    <functiondecl functionName="MakeIndex" lineNumber="172"/>
+    <functiondecl functionName="IndexToData" lineNumber="178"/>
+    <functiondecl functionName="AvgTSpace" lineNumber="184"/>
+    <functiondecl functionName="genTangSpaceDefault" lineNumber="224"/>
+    <functiondecl functionName="genTangSpace" lineNumber="229"/>
+    <functiondecl functionName="FindGridCell" lineNumber="440"/>
+    <functiondecl functionName="GenerateSharedVerticesIndexList" lineNumber="451"/>
+    <functiondecl functionName="MergeVertsFast" lineNumber="576"/>
+    <functiondecl functionName="MergeVertsSlow" lineNumber="686"/>
+    <functiondecl functionName="GenerateSharedVerticesIndexListSlow" lineNumber="721"/>
+    <functiondecl functionName="GenerateInitialVerticesIndexList" lineNumber="764"/>
+    <functiondecl functionName="GetPosition" lineNumber="875"/>
+    <functiondecl functionName="GetNormal" lineNumber="885"/>
+    <functiondecl functionName="GetTexCoord" lineNumber="895"/>
+    <functiondecl functionName="CalcTexArea" lineNumber="920"/>
+    <functiondecl functionName="InitTriInfo" lineNumber="936"/>
+    <functiondecl functionName="Build4RuleGroups" lineNumber="1061"/>
+    <functiondecl functionName="AddTriToGroup" lineNumber="1125"/>
+    <functiondecl functionName="AssignRecur" lineNumber="1131"/>
+    <functiondecl functionName="GenerateTSpaces" lineNumber="1190"/>
+    <functiondecl functionName="EvalTspace" lineNumber="1359"/>
+    <functiondecl functionName="CompareSubGroups" lineNumber="1433"/>
+    <functiondecl functionName="QuickSort" lineNumber="1446"/>
+    <functiondecl functionName="BuildNeighborsFast" lineNumber="1493"/>
+    <functiondecl functionName="BuildNeighborsSlow" lineNumber="1588"/>
+    <functiondecl functionName="QuickSortEdges" lineNumber="1637"/>
+    <functiondecl functionName="GetEdge" lineNumber="1694"/>
+    <functiondecl functionName="DegenPrologue" lineNumber="1728"/>
+    <functiondecl functionName="DegenEpilogue" lineNumber="1811"/>
+    <functioncall functionName="AddTriToGroup"/>
+    <functioncall functionName="AssignRecur"/>
+    <functioncall functionName="AvgTSpace"/>
+    <functioncall functionName="Build4RuleGroups"/>
+    <functioncall functionName="BuildNeighborsFast"/>
+    <functioncall functionName="BuildNeighborsSlow"/>
+    <functioncall functionName="CalcTexArea"/>
+    <functioncall functionName="CompareSubGroups"/>
+    <functioncall functionName="DegenEpilogue"/>
+    <functioncall functionName="DegenPrologue"/>
+    <functioncall functionName="EvalTspace"/>
+    <functioncall functionName="FindGridCell"/>
+    <functioncall functionName="GenerateInitialVerticesIndexList"/>
+    <functioncall functionName="GenerateSharedVerticesIndexList"/>
+    <functioncall functionName="GenerateSharedVerticesIndexListSlow"/>
+    <functioncall functionName="GenerateTSpaces"/>
+    <functioncall functionName="GetEdge"/>
+    <functioncall functionName="GetNormal"/>
+    <functioncall functionName="GetPosition"/>
+    <functioncall functionName="GetTexCoord"/>
+    <functioncall functionName="IndexToData"/>
+    <functioncall functionName="InitTriInfo"/>
+    <functioncall functionName="Length"/>
+    <functioncall functionName="LengthSquared"/>
+    <functioncall functionName="MakeIndex"/>
+    <functioncall functionName="MergeVertsFast"/>
+    <functioncall functionName="MergeVertsSlow"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Normalize"/>
+    <functioncall functionName="NotZero"/>
+    <functioncall functionName="P0"/>
+    <functioncall functionName="P1"/>
+    <functioncall functionName="P2"/>
+    <functioncall functionName="P3"/>
+    <functioncall functionName="QuickSort"/>
+    <functioncall functionName="QuickSortEdges"/>
+    <functioncall functionName="T0"/>
+    <functioncall functionName="T1"/>
+    <functioncall functionName="T2"/>
+    <functioncall functionName="T3"/>
+    <functioncall functionName="VNotZero"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="bAnswer"/>
+    <functioncall functionName="bDiff"/>
+    <functioncall functionName="bFound"/>
+    <functioncall functionName="bIsGood"/>
+    <functioncall functionName="bJustADegenerate"/>
+    <functioncall functionName="bNotFound"/>
+    <functioncall functionName="bOrient"/>
+    <functioncall functionName="bOrientPreservering"/>
+    <functioncall functionName="bQuadDiagIs_02"/>
+    <functioncall functionName="bReadyLeftSwap"/>
+    <functioncall functionName="bReadyRightSwap"/>
+    <functioncall functionName="bRes"/>
+    <functioncall functionName="bSkip"/>
+    <functioncall functionName="bStillFindingGoodOnes"/>
+    <functioncall functionName="bStillSame"/>
+    <functioncall functionName="bUnassigned_A"/>
+    <functioncall functionName="bitang"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="channel"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="d1"/>
+    <functioncall functionName="d2"/>
+    <functioncall functionName="dy"/>
+    <functioncall functionName="dz"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="e2"/>
+    <functioncall functionName="edgenum_A"/>
+    <functioncall functionName="edgenum_B"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fAbsArea"/>
+    <functioncall functionName="fAngle"/>
+    <functioncall functionName="fAngleSum"/>
+    <functioncall functionName="fCos"/>
+    <functioncall functionName="fCosS"/>
+    <functioncall functionName="fIndex"/>
+    <functioncall functionName="fLenOs"/>
+    <functioncall functionName="fLenOt"/>
+    <functioncall functionName="fMagS"/>
+    <functioncall functionName="fMagT"/>
+    <functioncall functionName="fMax"/>
+    <functioncall functionName="fMin"/>
+    <functioncall functionName="fSignedAreaSTx2"/>
+    <functioncall functionName="fThresCos"/>
+    <functioncall functionName="fVal"/>
+    <functioncall functionName="fX"/>
+    <functioncall functionName="fabsf"/>
+    <functioncall functionName="face"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="genTangSpace"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i0"/>
+    <functioncall functionName="i0_A"/>
+    <functioncall functionName="i0_B"/>
+    <functioncall functionName="i1"/>
+    <functioncall functionName="i1_A"/>
+    <functioncall functionName="i1_B"/>
+    <functioncall functionName="i2"/>
+    <functioncall functionName="i2rec"/>
+    <functioncall functionName="i3"/>
+    <functioncall functionName="iCell"/>
+    <functioncall functionName="iCurStartIndex"/>
+    <functioncall functionName="iDegenTriangles"/>
+    <functioncall functionName="iDstTriIndex"/>
+    <functioncall functionName="iDstVert"/>
+    <functioncall functionName="iEntries"/>
+    <functioncall functionName="iF"/>
+    <functioncall functionName="iFlag"/>
+    <functioncall functionName="iI"/>
+    <functioncall functionName="iIndex"/>
+    <functioncall functionName="iL"/>
+    <functioncall functionName="iL_in"/>
+    <functioncall functionName="iLeft"/>
+    <functioncall functionName="iMembers"/>
+    <functioncall functionName="iMissingIndex"/>
+    <functioncall functionName="iMyTriIndex"/>
+    <functioncall functionName="iNextGoodTriangleSearchIndex"/>
+    <functioncall functionName="iNrActiveGroups"/>
+    <functioncall functionName="iNrFaces"/>
+    <functioncall functionName="iNrMaxGroups"/>
+    <functioncall functionName="iNrTrianglesIn"/>
+    <functioncall functionName="iOffset"/>
+    <functioncall functionName="iOrgF"/>
+    <functioncall functionName="iOrgFaceNumber"/>
+    <functioncall functionName="iR"/>
+    <functioncall functionName="iR_in"/>
+    <functioncall functionName="iRight"/>
+    <functioncall functionName="iSrcVert"/>
+    <functioncall functionName="iTSpacesOffs"/>
+    <functioncall functionName="iTmp"/>
+    <functioncall functionName="iTotTris"/>
+    <functioncall functionName="iTri"/>
+    <functioncall functionName="iTriIndex"/>
+    <functioncall functionName="iUniqueSubGroups"/>
+    <functioncall functionName="iVert"/>
+    <functioncall functionName="iVertIndex"/>
+    <functioncall functionName="iVertexRepresentitive"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="index2"/>
+    <functioncall functionName="index2rec"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="l2"/>
+    <functioncall functionName="m_getNormal"/>
+    <functioncall functionName="m_getNumFaces"/>
+    <functioncall functionName="m_getNumVerticesOfFace"/>
+    <functioncall functionName="m_getPosition"/>
+    <functioncall functionName="m_getTexCoord"/>
+    <functioncall functionName="m_setTSpace"/>
+    <functioncall functionName="m_setTSpaceBasic"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="neigh_indexL"/>
+    <functioncall functionName="neigh_indexR"/>
+    <functioncall functionName="norm"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="pContext"/>
+    <functioncall functionName="pEdges"/>
+    <functioncall functionName="pGroup"/>
+    <functioncall functionName="pGroups"/>
+    <functioncall functionName="pIndices"/>
+    <functioncall functionName="pSortBuffer"/>
+    <functioncall functionName="pSubGroupTspace"/>
+    <functioncall functionName="pTS_out"/>
+    <functioncall functionName="pTable"/>
+    <functioncall functionName="pTmpMembers"/>
+    <functioncall functionName="pTmpVert"/>
+    <functioncall functionName="pTriInfos"/>
+    <functioncall functionName="pTriMembers"/>
+    <functioncall functionName="pUniSubGroups"/>
+    <functioncall functionName="piGroupTrianglesBuffer"/>
+    <functioncall functionName="piHashCount"/>
+    <functioncall functionName="piHashCount2"/>
+    <functioncall functionName="piHashOffsets"/>
+    <functioncall functionName="piHashTable"/>
+    <functioncall functionName="piTriListIn"/>
+    <functioncall functionName="piTriList_in_and_out"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="psTriInfos"/>
+    <functioncall functionName="psTspace"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sTmp"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sqrtf"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="t0"/>
+    <functioncall functionName="t1"/>
+    <functioncall functionName="t21x"/>
+    <functioncall functionName="t21y"/>
+    <functioncall functionName="t31x"/>
+    <functioncall functionName="t31y"/>
+    <functioncall functionName="tang"/>
+    <functioncall functionName="texc"/>
+    <functioncall functionName="tmp_group"/>
+    <functioncall functionName="tri_info"/>
+    <functioncall functionName="uSeed"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="v3"/>
+    <functioncall functionName="vDstP"/>
+    <functioncall functionName="vMax"/>
+    <functioncall functionName="vMin"/>
+    <functioncall functionName="vN"/>
+    <functioncall functionName="vN2"/>
+    <functioncall functionName="vOs"/>
+    <functioncall functionName="vOs2"/>
+    <functioncall functionName="vOt"/>
+    <functioncall functionName="vOt2"/>
+    <functioncall functionName="vP"/>
+    <functioncall functionName="vP2"/>
+    <functioncall functionName="vSrcP"/>
+    <functioncall functionName="vT"/>
+    <functioncall functionName="vT2"/>
+    <functioncall functionName="vadd"/>
+    <functioncall functionName="vdot"/>
+    <functioncall functionName="veq"/>
+    <functioncall functionName="vert_index"/>
+    <functioncall functionName="vert_num"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vscale"/>
+    <functioncall functionName="vsub"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

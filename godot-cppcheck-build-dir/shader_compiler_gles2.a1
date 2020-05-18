@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2014325103">
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: fnode" verbose="Possible null pointer dereference: fnode" cwe="476">
+            <location file="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.cpp" line="255" column="7" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.cpp" line="241" column="29" info="Assignment &apos;fnode=nullptr&apos;, assigned value is 0"/>
+            <symbol>fnode</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.h:81:9" call-funcname="_dump_node_code" call-argnr="6" file="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.cpp" line="982" col="17" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.h:80:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.cpp" line="224" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.h:81:9" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/drivers/gles2/shader_compiler_gles2.cpp" line="283" col="10" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_mktab" lineNumber="40"/>
+    <functiondecl functionName="_typestr" lineNumber="50"/>
+    <functiondecl functionName="_prestr" lineNumber="55"/>
+    <functiondecl functionName="_qualstr" lineNumber="70"/>
+    <functiondecl functionName="_opstr" lineNumber="83"/>
+    <functiondecl functionName="_mkid" lineNumber="88"/>
+    <functiondecl functionName="f2sp0" lineNumber="94"/>
+    <functiondecl functionName="get_constant_text" lineNumber="103"/>
+    <functiondecl functionName="_dump_function_deps" lineNumber="221"/>
+    <functiondecl functionName="_dump_node_code" lineNumber="279"/>
+    <functiondecl functionName="compile" lineNumber="950"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_HANDLER_SHADER"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="PRECISION_HIGHP"/>
+    <functioncall functionName="SHADER_CANVAS_ITEM"/>
+    <functioncall functionName="SHADER_MAX"/>
+    <functioncall functionName="SHADER_SPATIAL"/>
+    <functioncall functionName="ShaderCompilerGLES2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="Uniform"/>
+    <functioncall functionName="Varying"/>
+    <functioncall functionName="_dump_function_deps"/>
+    <functioncall functionName="_dump_node_code"/>
+    <functioncall functionName="_err_print_error"/>
+    <functioncall functionName="_mkid"/>
+    <functioncall functionName="_mktab"/>
+    <functioncall functionName="_opstr"/>
+    <functioncall functionName="_prestr"/>
+    <functioncall functionName="_qualstr"/>
+    <functioncall functionName="_typestr"/>
+    <functioncall functionName="added_fragment"/>
+    <functioncall functionName="added_vertex"/>
+    <functioncall functionName="array_size"/>
+    <functioncall functionName="as_string"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="body"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call_expression"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="compile"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="datatype"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="f2sp0"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fidx"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="fnode"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_blinn"/>
+    <functioncall functionName="force_lambert"/>
+    <functioncall functionName="fragment_global"/>
+    <functioncall functionName="fragment_name"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="func_list"/>
+    <functioncall functionName="function"/>
+    <functioncall functionName="function_code"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_builtin_funcs"/>
+    <functioncall functionName="get_constant_text"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_datatype"/>
+    <functioncall functionName="get_datatype_name"/>
+    <functioncall functionName="get_error_line"/>
+    <functioncall functionName="get_error_text"/>
+    <functioncall functionName="get_functions"/>
+    <functioncall functionName="get_modes"/>
+    <functioncall functionName="get_operator_text"/>
+    <functioncall functionName="get_shader"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_types"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="hint"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index_expression"/>
+    <functioncall functionName="initializer"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_const"/>
+    <functioncall functionName="is_sampler_type"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="light_name"/>
+    <functioncall functionName="max_texture_uniforms"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="p_actions"/>
+    <functioncall functionName="p_assigning"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_default_actions"/>
+    <functioncall functionName="p_float"/>
+    <functioncall functionName="p_func_code"/>
+    <functioncall functionName="p_level"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_op"/>
+    <functioncall functionName="p_pres"/>
+    <functioncall functionName="p_qual"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="precision"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="qualifier"/>
+    <functioncall functionName="r_added"/>
+    <functioncall functionName="r_gen_code"/>
+    <functioncall functionName="r_to_add"/>
+    <functioncall functionName="real"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return_struct_name"/>
+    <functioncall functionName="return_type"/>
+    <functioncall functionName="rtoss"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="shader_struct"/>
+    <functioncall functionName="single_statement"/>
+    <functioncall functionName="sint"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="snode"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="struct_name"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="texture_order"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="type_str"/>
+    <functioncall functionName="uint"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="vertex_global"/>
+    <functioncall functionName="vertex_name"/>
+  </FileInfo>
+</analyzerinfo>

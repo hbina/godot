@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2403279201">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/cpu_primitive.hpp" line="37" column="5"/>
+            <symbol>cpu_primitive_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;gemm_inner_product_bwd_weights_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;gemm_inner_product_bwd_weights_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.hpp" line="138" column="5"/>
+            <symbol>gemm_inner_product_bwd_weights_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;gemm_inner_product_bwd_data_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;gemm_inner_product_bwd_data_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.hpp" line="100" column="5"/>
+            <symbol>gemm_inner_product_bwd_data_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;gemm_inner_product_fwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;gemm_inner_product_fwd_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.hpp" line="64" column="5"/>
+            <symbol>gemm_inner_product_fwd_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.hpp" line="148" column="38"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.hpp" line="110" column="38"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/gemm_inner_product.hpp" line="74" column="38"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="execute_backward_weights" lineNumber="85"/>
+    <functiondecl functionName="execute_backward_data" lineNumber="66"/>
+    <functiondecl functionName="execute_forward" lineNumber="34"/>
+    <functiondecl functionName="execute_backward_weights" lineNumber="85"/>
+    <functiondecl functionName="execute_backward_data" lineNumber="66"/>
+    <functiondecl functionName="execute_forward" lineNumber="34"/>
+    <functioncall functionName="DECLARE_COMMON_PD_T"/>
+    <functioncall functionName="IC"/>
+    <functioncall functionName="IC_total_padded"/>
+    <functioncall functionName="IMPLICATION"/>
+    <functioncall functionName="MB"/>
+    <functioncall functionName="MKLDNN_ARG_BIAS"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_BIAS"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_DST"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_WEIGHTS"/>
+    <functioncall functionName="MKLDNN_ARG_DST"/>
+    <functioncall functionName="MKLDNN_ARG_SCRATCHPAD"/>
+    <functioncall functionName="MKLDNN_ARG_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_WEIGHTS"/>
+    <functioncall functionName="OC"/>
+    <functioncall functionName="OC_blocks"/>
+    <functioncall functionName="PRAGMA_OMP_SIMD"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="apd"/>
+    <functioncall functionName="array_cmp"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="balance211"/>
+    <functioncall functionName="beta"/>
+    <functioncall functionName="bias"/>
+    <functioncall functionName="blksize"/>
+    <functioncall functionName="blocking_desc"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cpu_primitive_t"/>
+    <functioncall functionName="create_scratchpad"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="dense_gemm_consitency_check"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="dhwio"/>
+    <functioncall functionName="diff_bias"/>
+    <functioncall functionName="diff_bias_d"/>
+    <functioncall functionName="diff_dst"/>
+    <functioncall functionName="diff_dst_d"/>
+    <functioncall functionName="diff_dst_md"/>
+    <functioncall functionName="diff_src"/>
+    <functioncall functionName="diff_src_md"/>
+    <functioncall functionName="diff_weights"/>
+    <functioncall functionName="diff_weights_md"/>
+    <functioncall functionName="do_relu"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_md"/>
+    <functioncall functionName="dst_off"/>
+    <functioncall functionName="everyone_is"/>
+    <functioncall functionName="execute_backward_data"/>
+    <functioncall functionName="execute_backward_weights"/>
+    <functioncall functionName="execute_forward"/>
+    <functioncall functionName="extended_sgemm"/>
+    <functioncall functionName="f32"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="gemm_inner_product_bwd_data_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="gemm_inner_product_bwd_weights_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="gemm_inner_product_fwd_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="global_scratchpad_"/>
+    <functioncall functionName="grantor"/>
+    <functioncall functionName="has_default_values"/>
+    <functioncall functionName="has_zero_dim_memory"/>
+    <functioncall functionName="hwio"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inner_blks"/>
+    <functioncall functionName="inner_idxs"/>
+    <functioncall functionName="inner_nblks"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="io"/>
+    <functioncall functionName="is_blocking_desc"/>
+    <functioncall functionName="is_dense"/>
+    <functioncall functionName="is_fwd"/>
+    <functioncall functionName="is_relu"/>
+    <functioncall functionName="ithr"/>
+    <functioncall functionName="library"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="matches_tag"/>
+    <functioncall functionName="memory_desc_matches_one_of_tag"/>
+    <functioncall functionName="nc"/>
+    <functioncall functionName="ndims"/>
+    <functioncall functionName="nthr"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="oc_e"/>
+    <functioncall functionName="oc_st"/>
+    <functioncall functionName="offset0"/>
+    <functioncall functionName="one_of"/>
+    <functioncall functionName="only_padded_dim"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="padded_dims"/>
+    <functioncall functionName="parallel"/>
+    <functioncall functionName="parallel_nd"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="post_ops_"/>
+    <functioncall functionName="primitive_t"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="scratchpad_buffer_"/>
+    <functioncall functionName="scratchpad_registry"/>
+    <functioncall functionName="scratchpad_size"/>
+    <functioncall functionName="set_default_params"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="src_md"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strides"/>
+    <functioncall functionName="strides_compatible"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unimplemented"/>
+    <functioncall functionName="use_global_scratchpad"/>
+    <functioncall functionName="wei_tr"/>
+    <functioncall functionName="weights"/>
+    <functioncall functionName="weights_md"/>
+    <functioncall functionName="with_bias"/>
+  </FileInfo>
+</analyzerinfo>

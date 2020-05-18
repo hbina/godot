@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3222496475">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;newTriangle&apos; can be reduced." verbose="The scope of the variable &apos;newTriangle&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="164" column="43"/>
+            <symbol>newTriangle</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;newTriangle&apos; can be reduced." verbose="The scope of the variable &apos;newTriangle&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="290" column="43"/>
+            <symbol>newTriangle</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;vol&apos; can be reduced." verbose="The scope of the variable &apos;vol&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="476" column="12"/>
+            <symbol>vol</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;nvisible&apos; can be reduced." verbose="The scope of the variable &apos;nvisible&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="528" column="13"/>
+            <symbol>nvisible</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;u&apos; can be reduced." verbose="The scope of the variable &apos;u&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="685" column="16"/>
+            <symbol>u</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;v&apos; can be reduced." verbose="The scope of the variable &apos;v&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="685" column="19"/>
+            <symbol>v</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;vol&apos; can be reduced." verbose="The scope of the variable &apos;vol&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="711" column="16"/>
+            <symbol>vol</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;vertices&apos; shadows outer variable" verbose="Local variable &apos;vertices&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="110" column="42" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="96" column="30" info="Shadowed declaration"/>
+            <symbol>vertices</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;vertices&apos; shadows outer variable" verbose="Local variable &apos;vertices&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="152" column="34" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="96" column="30" info="Shadowed declaration"/>
+            <symbol>vertices</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;vertices&apos; shadows outer variable" verbose="Local variable &apos;vertices&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="231" column="42" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="219" column="30" info="Shadowed declaration"/>
+            <symbol>vertices</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;vertices&apos; shadows outer variable" verbose="Local variable &apos;vertices&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="278" column="34" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="219" column="30" info="Shadowed declaration"/>
+            <symbol>vertices</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;vol&apos; is assigned a value that is never used." verbose="Variable &apos;vol&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="476" column="16"/>
+            <symbol>vol</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tmp&apos; is assigned a value that is never used." verbose="Variable &apos;tmp&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="527" column="39"/>
+            <symbol>tmp</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;nvisible&apos; is assigned a value that is never used." verbose="Variable &apos;nvisible&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/vhacd/src/vhacdICHull.cpp" line="528" column="22"/>
+            <symbol>nvisible</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="AddEdge"/>
+    <functioncall functionName="AddPoint"/>
+    <functioncall functionName="AddPoints"/>
+    <functioncall functionName="AddTriangle"/>
+    <functioncall functionName="AddVertex"/>
+    <functioncall functionName="CheckConsistancy"/>
+    <functioncall functionName="CleanEdges"/>
+    <functioncall functionName="CleanTriangles"/>
+    <functioncall functionName="CleanUp"/>
+    <functioncall functionName="CleanVertices"/>
+    <functioncall functionName="Clear"/>
+    <functioncall functionName="Colinear"/>
+    <functioncall functionName="ComputePointVolume"/>
+    <functioncall functionName="ComputeVolume4"/>
+    <functioncall functionName="Copy"/>
+    <functioncall functionName="Delete"/>
+    <functioncall functionName="DoubleTriangle"/>
+    <functioncall functionName="FindMaxVolumePoint"/>
+    <functioncall functionName="GetData"/>
+    <functioncall functionName="GetEdges"/>
+    <functioncall functionName="GetHead"/>
+    <functioncall functionName="GetMesh"/>
+    <functioncall functionName="GetNEdges"/>
+    <functioncall functionName="GetNTriangles"/>
+    <functioncall functionName="GetNVertices"/>
+    <functioncall functionName="GetNext"/>
+    <functioncall functionName="GetPrev"/>
+    <functioncall functionName="GetSize"/>
+    <functioncall functionName="GetTriangles"/>
+    <functioncall functionName="GetVertices"/>
+    <functioncall functionName="ICHull"/>
+    <functioncall functionName="MakeCCW"/>
+    <functioncall functionName="MakeConeFace"/>
+    <functioncall functionName="MakeFace"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Next"/>
+    <functioncall functionName="Normalize"/>
+    <functioncall functionName="Prev"/>
+    <functioncall functionName="ProcessPoint"/>
+    <functioncall functionName="PushBack"/>
+    <functioncall functionName="Resize"/>
+    <functioncall functionName="Size"/>
+    <functioncall functionName="Vec3"/>
+    <functioncall functionName="X"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="Z"/>
+    <functioncall functionName="addedPoints"/>
+    <functioncall functionName="bary"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="e0"/>
+    <functioncall functionName="e1"/>
+    <functioncall functionName="e2"/>
+    <functioncall functionName="eHead"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="f0"/>
+    <functioncall functionName="fHead"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fold"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="m_duplicate"/>
+    <functioncall functionName="m_edgesToDelete"/>
+    <functioncall functionName="m_edgesToUpdate"/>
+    <functioncall functionName="m_isFlat"/>
+    <functioncall functionName="m_mesh"/>
+    <functioncall functionName="m_name"/>
+    <functioncall functionName="m_newFace"/>
+    <functioncall functionName="m_normal"/>
+    <functioncall functionName="m_onHull"/>
+    <functioncall functionName="m_pos"/>
+    <functioncall functionName="m_tag"/>
+    <functioncall functionName="m_trianglesToDelete"/>
+    <functioncall functionName="m_visible"/>
+    <functioncall functionName="markVisibleFaces"/>
+    <functioncall functionName="minVolume"/>
+    <functioncall functionName="newFace"/>
+    <functioncall functionName="newPt"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="pos0"/>
+    <functioncall functionName="pt"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sc_dummyIndex"/>
+    <functioncall functionName="sc_eps"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="totalVolume"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="v3"/>
+    <functioncall functionName="vHead"/>
+    <functioncall functionName="vMaxVolume"/>
+    <functioncall functionName="ver0"/>
+    <functioncall functionName="ver1"/>
+    <functioncall functionName="ver2"/>
+    <functioncall functionName="vol"/>
+    <functioncall functionName="volume"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4032638518">
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/pcg.h:12:10" my-argnr="1" my-argname="rng" file="/home/hbina/git/godot/thirdparty/misc/pcg.cpp" line="8" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/pcg.h:13:6" my-argnr="1" my-argname="rng" file="/home/hbina/git/godot/thirdparty/misc/pcg.cpp" line="20" col="5" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="pcg32_random_r" lineNumber="6"/>
+    <functiondecl functionName="pcg32_srandom_r" lineNumber="18"/>
+    <functioncall functionName="pcg32_random_r"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rng"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="state"/>
+  </FileInfo>
+</analyzerinfo>

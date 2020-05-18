@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3341482655">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="565" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="591" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1395" column="4"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="271" column="8"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;q&apos; can be reduced." verbose="The scope of the variable &apos;q&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="896" column="8"/>
+            <symbol>q</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;curr_bits&apos; can be reduced." verbose="The scope of the variable &apos;curr_bits&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="897" column="8"/>
+            <symbol>curr_bits</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;imid&apos; can be reduced." verbose="The scope of the variable &apos;imid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="898" column="8"/>
+            <symbol>imid</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;iside&apos; can be reduced." verbose="The scope of the variable &apos;iside&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="898" column="16"/>
+            <symbol>iside</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;mid&apos; can be reduced." verbose="The scope of the variable &apos;mid&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="900" column="15"/>
+            <symbol>mid</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;side&apos; can be reduced." verbose="The scope of the variable &apos;side&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="900" column="22"/>
+            <symbol>side</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1025" column="14"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1489" column="14"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;denormalise_bands&apos; argument 4 names different: declaration &apos;bandE&apos; definition &apos;bandLogE&apos;." verbose="Function &apos;denormalise_bands&apos; argument 4 names different: declaration &apos;bandE&apos; definition &apos;bandLogE&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="196" column="56"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.h" line="62" column="56"/>
+            <symbol>denormalise_bands</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;quant_all_bands&apos; argument 5 names different: declaration &apos;X&apos; definition &apos;X_&apos;." verbose="Function &apos;quant_all_bands&apos; argument 5 names different: declaration &apos;X&apos; definition &apos;X_&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1364" column="18"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.h" line="104" column="19"/>
+            <symbol>quant_all_bands</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;quant_all_bands&apos; argument 6 names different: declaration &apos;Y&apos; definition &apos;Y_&apos;." verbose="Function &apos;quant_all_bands&apos; argument 6 names different: declaration &apos;Y&apos; definition &apos;Y_&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1364" column="33"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.h" line="104" column="34"/>
+            <symbol>quant_all_bands</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;quant_all_bands&apos; argument 18 names different: declaration &apos;M&apos; definition &apos;LM&apos;." verbose="Function &apos;quant_all_bands&apos; argument 18 names different: declaration &apos;M&apos; definition &apos;LM&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1367" column="43"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.h" line="107" column="43"/>
+            <symbol>quant_all_bands</symbol>
+        </error>
+        <error id="constStatement" severity="warning" msg="Found suspicious operator &apos;+&apos;" verbose="Found suspicious operator &apos;+&apos;" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="475" column="59"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="351" column="47"/>
+        </error>
+        <error id="clarifyCalculation" severity="style" msg="Clarify calculation precedence for &apos;&amp;&apos; and &apos;?&apos;." verbose="Suspicious calculation. Please use parentheses to clarify the code. The code &apos;&apos;a&amp;b?c:d&apos;&apos; should be written as either &apos;&apos;(a&amp;b)?c:d&apos;&apos; or &apos;&apos;a&amp;(b?c:d)&apos;&apos;." cwe="783">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1054" column="47"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;b&apos; is assigned a value that is never used." verbose="Variable &apos;b&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="875" column="11"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;imid&apos; is assigned a value that is never used." verbose="Variable &apos;imid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="898" column="12"/>
+            <symbol>imid</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;iside&apos; is assigned a value that is never used." verbose="Variable &apos;iside&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="898" column="21"/>
+            <symbol>iside</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;mid&apos; is assigned a value that is never used." verbose="Variable &apos;mid&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="900" column="18"/>
+            <symbol>mid</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;side&apos; is assigned a value that is never used." verbose="Variable &apos;side&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="900" column="26"/>
+            <symbol>side</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" call-argexpr="&xp" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" call-argexpr="&side" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:622:12" call-funcname="compute_qn" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="19" call-argexpr="stereo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="703" col="7" info="Assuming that condition 'if(stereo&&i>=intensity)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="29" call-argexpr="stereo" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="939" col="17" info="Calling function 'compute_theta', 10th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&sctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="sctx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&b" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&fill" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" call-funcname="pulses2bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1004" col="33" call-argexpr="q" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1000" col="43" info="Assuming that condition 'q>0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1003" col="10" info="q is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&sctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="sctx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&b" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&fill" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="effective_lowband!=-1?norm2+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="last?NULL:norm2+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:401:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:401:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="16" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="16" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="10"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:44:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="161" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:54:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="179" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:61:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="203" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:363:13" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="374" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:363:13" my-argnr="4" my-argname="bandE" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="373" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:70:5" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="460" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:558:13" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="580" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:584:13" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="603" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="692" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="2" my-argname="sctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="838" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="6" my-argname="b" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="851" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:890:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="905" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1086" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1214" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="2" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1372" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="20" my-argname="seed" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1408" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:70:5" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="460" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="6" my-argname="b" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="2" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1372" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="20" my-argname="seed" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1408" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" call-argexpr="&xp" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" call-argexpr="&side" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:622:12" call-funcname="compute_qn" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="19" call-argexpr="stereo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="703" col="7" info="Assuming that condition 'if(stereo&&i>=intensity)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="29" call-argexpr="stereo" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="939" col="17" info="Calling function 'compute_theta', 10th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&sctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="sctx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&b" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&fill" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" call-funcname="pulses2bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1004" col="33" call-argexpr="q" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1000" col="43" info="Assuming that condition 'q>0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1003" col="10" info="q is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&sctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="sctx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&b" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&fill" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="effective_lowband!=-1?norm2+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="last?NULL:norm2+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:401:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:401:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="16" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="16" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="10"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:44:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="161" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:54:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="179" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:61:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="203" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:363:13" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="374" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:363:13" my-argnr="4" my-argname="bandE" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="373" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:70:5" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="460" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:558:13" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="580" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:584:13" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="603" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="692" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="2" my-argname="sctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="838" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="6" my-argname="b" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="851" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:890:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="905" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1086" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1214" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="2" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1372" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="20" my-argname="seed" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1408" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:70:5" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="460" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="6" my-argname="b" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="2" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1372" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="20" my-argname="seed" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1408" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" call-argexpr="&xp" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" call-argexpr="&side" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:622:12" call-funcname="compute_qn" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="19" call-argexpr="stereo" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="703" col="7" info="Assuming that condition 'if(stereo&&i>=intensity)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="29" call-argexpr="stereo" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="939" col="17" info="Calling function 'compute_theta', 10th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&sctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="sctx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&b" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="938" col="20" call-argexpr="&fill" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" call-funcname="pulses2bits" call-argnr="4" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1004" col="33" call-argexpr="q" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1000" col="43" info="Assuming that condition 'q>0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1003" col="10" info="q is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="27" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&sctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="sctx" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&b" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" call-funcname="compute_theta" call-argnr="11" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1235" col="17" call-argexpr="&fill" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1326" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1332" col="25" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1499" col="27" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="effective_lowband!=-1?norm2+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1502" col="27" call-argexpr="last?NULL:norm2+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="7" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" call-funcname="quant_band_stereo" call-argnr="9" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1508" col="37" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="&ctx" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="effective_lowband!=-1?norm+effective_lowband:NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="8" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1512" col="30" call-argexpr="last?NULL:norm+M*eBands[i]-norm_offset" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:401:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" call-funcname="dual_inner_prod_c" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="413" col="4" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:401:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="16" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/vq.h:73:5" call-funcname="stereo_itheta" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="711" col="16" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1102" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="8"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" call-funcname="quant_band_n1" call-argnr="5" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1230" col="14" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" call-funcname="quant_band" call-argnr="10" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="10"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:53:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="60" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/rate.h:80:24" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/rate.h" line="85" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="5" my-argname="xy1" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="149" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:138:25" my-argnr="6" my-argname="xy2" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="150" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:44:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="161" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:54:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="179" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:61:6" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="203" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:363:13" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="374" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:363:13" my-argnr="4" my-argname="bandE" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="373" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:70:5" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="460" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:558:13" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="580" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:584:13" my-argnr="1" my-argname="X" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="603" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="692" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="2" my-argname="sctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="838" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="6" my-argname="b" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:845:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="851" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:890:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="905" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1070:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1086" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:1202:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1214" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="2" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1372" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="20" my-argname="seed" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1408" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h:66:25" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/opus/celt/pitch.h" line="72" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:70:5" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="460" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.c:671:13" my-argnr="6" my-argname="b" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="702" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="2" my-argname="m" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1372" col="46" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/bands.h:103:6" my-argnr="20" my-argname="seed" file="/home/hbina/git/godot/thirdparty/opus/celt/bands.c" line="1408" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="hysteresis_decision" lineNumber="46"/>
+    <functiondecl functionName="celt_lcg_rand" lineNumber="61"/>
+    <functiondecl functionName="bitexact_cos" lineNumber="68"/>
+    <functiondecl functionName="bitexact_log2tan" lineNumber="80"/>
+    <functiondecl functionName="compute_band_energies" lineNumber="158"/>
+    <functiondecl functionName="normalise_bands" lineNumber="176"/>
+    <functiondecl functionName="denormalise_bands" lineNumber="195"/>
+    <functiondecl functionName="anti_collapse" lineNumber="267"/>
+    <functiondecl functionName="intensity_stereo" lineNumber="363"/>
+    <functiondecl functionName="stereo_split" lineNumber="388"/>
+    <functiondecl functionName="stereo_merge" lineNumber="401"/>
+    <functiondecl functionName="spreading_decision" lineNumber="454"/>
+    <functiondecl functionName="deinterleave_hadamard" lineNumber="558"/>
+    <functiondecl functionName="interleave_hadamard" lineNumber="584"/>
+    <functiondecl functionName="haar1" lineNumber="607"/>
+    <functiondecl functionName="compute_qn" lineNumber="622"/>
+    <functiondecl functionName="compute_theta" lineNumber="671"/>
+    <functiondecl functionName="quant_band_n1" lineNumber="845"/>
+    <functiondecl functionName="quant_partition" lineNumber="890"/>
+    <functiondecl functionName="quant_band" lineNumber="1070"/>
+    <functiondecl functionName="quant_band_stereo" lineNumber="1202"/>
+    <functiondecl functionName="quant_all_bands" lineNumber="1363"/>
+    <functiondecl functionName="hysteresis_decision" lineNumber="46"/>
+    <functiondecl functionName="celt_lcg_rand" lineNumber="61"/>
+    <functiondecl functionName="bitexact_cos" lineNumber="68"/>
+    <functiondecl functionName="bitexact_log2tan" lineNumber="80"/>
+    <functiondecl functionName="compute_band_energies" lineNumber="158"/>
+    <functiondecl functionName="normalise_bands" lineNumber="176"/>
+    <functiondecl functionName="denormalise_bands" lineNumber="195"/>
+    <functiondecl functionName="anti_collapse" lineNumber="267"/>
+    <functiondecl functionName="intensity_stereo" lineNumber="363"/>
+    <functiondecl functionName="stereo_split" lineNumber="388"/>
+    <functiondecl functionName="stereo_merge" lineNumber="401"/>
+    <functiondecl functionName="spreading_decision" lineNumber="454"/>
+    <functiondecl functionName="deinterleave_hadamard" lineNumber="558"/>
+    <functiondecl functionName="interleave_hadamard" lineNumber="584"/>
+    <functiondecl functionName="haar1" lineNumber="607"/>
+    <functiondecl functionName="compute_qn" lineNumber="622"/>
+    <functiondecl functionName="compute_theta" lineNumber="671"/>
+    <functiondecl functionName="quant_band_n1" lineNumber="845"/>
+    <functiondecl functionName="quant_partition" lineNumber="890"/>
+    <functiondecl functionName="quant_band" lineNumber="1070"/>
+    <functiondecl functionName="quant_band_stereo" lineNumber="1202"/>
+    <functiondecl functionName="quant_all_bands" lineNumber="1363"/>
+    <functiondecl functionName="hysteresis_decision" lineNumber="46"/>
+    <functiondecl functionName="celt_lcg_rand" lineNumber="61"/>
+    <functiondecl functionName="bitexact_cos" lineNumber="68"/>
+    <functiondecl functionName="bitexact_log2tan" lineNumber="80"/>
+    <functiondecl functionName="compute_band_energies" lineNumber="158"/>
+    <functiondecl functionName="normalise_bands" lineNumber="176"/>
+    <functiondecl functionName="denormalise_bands" lineNumber="195"/>
+    <functiondecl functionName="anti_collapse" lineNumber="267"/>
+    <functiondecl functionName="intensity_stereo" lineNumber="363"/>
+    <functiondecl functionName="stereo_split" lineNumber="388"/>
+    <functiondecl functionName="stereo_merge" lineNumber="401"/>
+    <functiondecl functionName="spreading_decision" lineNumber="454"/>
+    <functiondecl functionName="deinterleave_hadamard" lineNumber="558"/>
+    <functiondecl functionName="interleave_hadamard" lineNumber="584"/>
+    <functiondecl functionName="haar1" lineNumber="607"/>
+    <functiondecl functionName="compute_qn" lineNumber="622"/>
+    <functiondecl functionName="compute_theta" lineNumber="671"/>
+    <functiondecl functionName="quant_band_n1" lineNumber="845"/>
+    <functiondecl functionName="quant_partition" lineNumber="890"/>
+    <functiondecl functionName="quant_band" lineNumber="1070"/>
+    <functiondecl functionName="quant_band_stereo" lineNumber="1202"/>
+    <functiondecl functionName="quant_all_bands" lineNumber="1363"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="B0"/>
+    <functioncall functionName="Ediff"/>
+    <functioncall functionName="El"/>
+    <functioncall functionName="Er"/>
+    <functioncall functionName="K"/>
+    <functioncall functionName="LM"/>
+    <functioncall functionName="M"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="N0"/>
+    <functioncall functionName="N2"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="N_B"/>
+    <functioncall functionName="N_B0"/>
+    <functioncall functionName="X"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="_norm"/>
+    <functioncall functionName="a1"/>
+    <functioncall functionName="a2"/>
+    <functioncall functionName="alg_quant"/>
+    <functioncall functionName="alg_unquant"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="balance"/>
+    <functioncall functionName="band"/>
+    <functioncall functionName="bandE"/>
+    <functioncall functionName="bandID"/>
+    <functioncall functionName="bitexact_cos"/>
+    <functioncall functionName="bitexact_log2tan"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="bits2pulses"/>
+    <functioncall functionName="bound"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="celt_inner_prod_c"/>
+    <functioncall functionName="celt_lcg_rand"/>
+    <functioncall functionName="celt_sudiv"/>
+    <functioncall functionName="celt_udiv"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="cm"/>
+    <functioncall functionName="cm_mask"/>
+    <functioncall functionName="compute_qn"/>
+    <functioncall functionName="compute_theta"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="curr_balance"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="deinterleave_hadamard"/>
+    <functioncall functionName="delta"/>
+    <functioncall functionName="downsample"/>
+    <functioncall functionName="dual_inner_prod_c"/>
+    <functioncall functionName="dual_stereo"/>
+    <functioncall functionName="eBands"/>
+    <functioncall functionName="ec"/>
+    <functioncall functionName="ec_dec_bit_logp"/>
+    <functioncall functionName="ec_dec_bits"/>
+    <functioncall functionName="ec_dec_uint"/>
+    <functioncall functionName="ec_dec_update"/>
+    <functioncall functionName="ec_decode"/>
+    <functioncall functionName="ec_enc_bit_logp"/>
+    <functioncall functionName="ec_enc_bits"/>
+    <functioncall functionName="ec_enc_uint"/>
+    <functioncall functionName="ec_encode"/>
+    <functioncall functionName="ec_ilog"/>
+    <functioncall functionName="ec_tell_frac"/>
+    <functioncall functionName="effEBands"/>
+    <functioncall functionName="effective_lowband"/>
+    <functioncall functionName="encode"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="exp"/>
+    <functioncall functionName="fill"/>
+    <functioncall functionName="fl"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="fold_start"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="freq"/>
+    <functioncall functionName="fs"/>
+    <functioncall functionName="ft"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="gain"/>
+    <functioncall functionName="get_pulses"/>
+    <functioncall functionName="haar1"/>
+    <functioncall functionName="hadamard"/>
+    <functioncall functionName="hf_sum"/>
+    <functioncall functionName="hi"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icos"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="imid"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="intensity"/>
+    <functioncall functionName="intensity_stereo"/>
+    <functioncall functionName="interleave_hadamard"/>
+    <functioncall functionName="inv"/>
+    <functioncall functionName="iside"/>
+    <functioncall functionName="isin"/>
+    <functioncall functionName="isqrt32"/>
+    <functioncall functionName="itheta"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="last_decision"/>
+    <functioncall functionName="lc"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="lg"/>
+    <functioncall functionName="lgain"/>
+    <functioncall functionName="lo"/>
+    <functioncall functionName="longBlocks"/>
+    <functioncall functionName="lowband"/>
+    <functioncall functionName="lowband_offset"/>
+    <functioncall functionName="lowband_out"/>
+    <functioncall functionName="lowband_scratch"/>
+    <functioncall functionName="ls"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="maxval"/>
+    <functioncall functionName="mbits"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="mid2"/>
+    <functioncall functionName="minval"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nbBands"/>
+    <functioncall functionName="nbEBands"/>
+    <functioncall functionName="next_lowband2"/>
+    <functioncall functionName="norm"/>
+    <functioncall functionName="norm_offset"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="opus_alloc"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_uint32"/>
+    <functioncall functionName="orig_fill"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prev1"/>
+    <functioncall functionName="prev2"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="pulse_cap"/>
+    <functioncall functionName="pulses"/>
+    <functioncall functionName="pulses2bits"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="qalloc"/>
+    <functioncall functionName="qb"/>
+    <functioncall functionName="qn"/>
+    <functioncall functionName="quant_band"/>
+    <functioncall functionName="quant_band_n1"/>
+    <functioncall functionName="quant_band_stereo"/>
+    <functioncall functionName="quant_partition"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rebalance"/>
+    <functioncall functionName="remaining_bits"/>
+    <functioncall functionName="renormalise_vector"/>
+    <functioncall functionName="renormalize"/>
+    <functioncall functionName="resynth"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rgain"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="rng"/>
+    <functioncall functionName="sbits"/>
+    <functioncall functionName="sctx"/>
+    <functioncall functionName="seed"/>
+    <functioncall functionName="shortMdctSize"/>
+    <functioncall functionName="side"/>
+    <functioncall functionName="sign"/>
+    <functioncall functionName="silence"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="spread"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="stereo"/>
+    <functioncall functionName="stereo_itheta"/>
+    <functioncall functionName="stereo_merge"/>
+    <functioncall functionName="stereo_split"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tell"/>
+    <functioncall functionName="tf_change"/>
+    <functioncall functionName="thresh"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp1"/>
+    <functioncall functionName="tmp2"/>
+    <functioncall functionName="update_hf"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x0"/>
+    <functioncall functionName="x2"/>
+    <functioncall functionName="x_cm"/>
+    <functioncall functionName="xp"/>
+    <functioncall functionName="xy"/>
+    <functioncall functionName="xy01"/>
+    <functioncall functionName="xy02"/>
+    <functioncall functionName="y_0"/>
+    <functioncall functionName="y_1"/>
+    <functioncall functionName="y_2"/>
+    <functioncall functionName="y_3"/>
+    <functioncall functionName="y_cm"/>
+  </FileInfo>
+</analyzerinfo>

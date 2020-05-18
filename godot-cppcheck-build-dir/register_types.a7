@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2502312762">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Build2DFaces::vertex_snap2&apos; is not initialized in the constructor." verbose="Member variable &apos;Build2DFaces::vertex_snap2&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/csg/register_types.cpp" file="/home/hbina/git/godot/modules/csg/csg.h" line="186" column="3"/>
+            <symbol>Build2DFaces::vertex_snap2</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CSGShape3D::Vector3Hasher::hash&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CSGShape3D::Vector3Hasher::hash&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/csg/register_types.cpp" file="/home/hbina/git/godot/modules/csg/csg_shape.h" line="74" column="28"/>
+            <symbol>CSGShape3D::Vector3Hasher::hash</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;EditorPluginCSG&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;EditorPluginCSG&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/csg/register_types.cpp" file="/home/hbina/git/godot/modules/csg/csg_gizmos.h" line="61" column="2"/>
+            <symbol>EditorPluginCSG</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:99:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="100" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:105:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="106" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="1" my-argname="p_left" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/csg/csg.h:110:24" my-argnr="2" my-argname="p_right" file="/home/hbina/git/godot/modules/csg/csg.h" line="111" col="31" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="register_csg_types" lineNumber="36"/>
+    <functiondecl functionName="unregister_csg_types" lineNumber="56"/>
+    <functiondecl functionName="register_csg_types" lineNumber="36"/>
+    <functiondecl functionName="unregister_csg_types" lineNumber="56"/>
+    <functioncall functionName="Build2DFaces"/>
+    <functioncall functionName="CSGBox3D"/>
+    <functioncall functionName="CSGCombiner3D"/>
+    <functioncall functionName="CSGCylinder3D"/>
+    <functioncall functionName="CSGMesh3D"/>
+    <functioncall functionName="CSGPolygon3D"/>
+    <functioncall functionName="CSGPrimitive3D"/>
+    <functioncall functionName="CSGShape3D"/>
+    <functioncall functionName="CSGShape3DGizmoPlugin"/>
+    <functioncall functionName="CSGSphere3D"/>
+    <functioncall functionName="CSGTorus3D"/>
+    <functioncall functionName="EditorNode3DGizmoPlugin"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="EditorPluginCSG"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GeometryInstance3D"/>
+    <functioncall functionName="MODE_DEPTH"/>
+    <functioncall functionName="MODE_PATH"/>
+    <functioncall functionName="MODE_SPIN"/>
+    <functioncall functionName="OPERATION_INTERSECTION"/>
+    <functioncall functionName="OPERATION_SUBSTRACTION"/>
+    <functioncall functionName="OPERATION_SUBTRACTION"/>
+    <functioncall functionName="OPERATION_UNION"/>
+    <functioncall functionName="PATH_ROTATION_PATH"/>
+    <functioncall functionName="PATH_ROTATION_PATH_FOLLOW"/>
+    <functioncall functionName="PATH_ROTATION_POLYGON"/>
+    <functioncall functionName="VertexKeyHash"/>
+    <functioncall functionName="add_by_type"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="hash_djb2_one_32"/>
+    <functioncall functionName="hash_djb2_one_float"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="register_class"/>
+    <functioncall functionName="register_virtual_class"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

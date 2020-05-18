@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2517433543">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cell_size&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cell_size&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/gridmap/grid_map.cpp" line="1096" column="2"/>
+            <symbol>cell_size</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_set" lineNumber="42"/>
+    <functiondecl functionName="_get" lineNumber="98"/>
+    <functiondecl functionName="_get_property_list" lineNumber="136"/>
+    <functiondecl functionName="set_collision_layer" lineNumber="145"/>
+    <functiondecl functionName="get_collision_layer" lineNumber="151"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="156"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="162"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="167"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="177"/>
+    <functiondecl functionName="set_collision_layer_bit" lineNumber="182"/>
+    <functiondecl functionName="get_collision_layer_bit" lineNumber="192"/>
+    <functiondecl functionName="set_mesh_library" lineNumber="197"/>
+    <functiondecl functionName="get_mesh_library" lineNumber="209"/>
+    <functiondecl functionName="set_cell_size" lineNumber="214"/>
+    <functiondecl functionName="get_cell_size" lineNumber="220"/>
+    <functiondecl functionName="set_octant_size" lineNumber="225"/>
+    <functiondecl functionName="get_octant_size" lineNumber="231"/>
+    <functiondecl functionName="set_center_x" lineNumber="236"/>
+    <functiondecl functionName="get_center_x" lineNumber="242"/>
+    <functiondecl functionName="set_center_y" lineNumber="246"/>
+    <functiondecl functionName="get_center_y" lineNumber="252"/>
+    <functiondecl functionName="set_center_z" lineNumber="256"/>
+    <functiondecl functionName="get_center_z" lineNumber="262"/>
+    <functiondecl functionName="set_cell_item" lineNumber="266"/>
+    <functiondecl functionName="get_cell_item" lineNumber="342"/>
+    <functiondecl functionName="get_cell_item_orientation" lineNumber="358"/>
+    <functiondecl functionName="world_to_map" lineNumber="374"/>
+    <functiondecl functionName="map_to_world" lineNumber="382"/>
+    <functiondecl functionName="_octant_transform" lineNumber="391"/>
+    <functiondecl functionName="_octant_update" lineNumber="406"/>
+    <functiondecl functionName="_reset_physic_bodies_collision_filters" lineNumber="568"/>
+    <functiondecl functionName="_octant_enter_world" lineNumber="575"/>
+    <functiondecl functionName="_octant_exit_world" lineNumber="609"/>
+    <functiondecl functionName="_octant_clean_up" lineNumber="636"/>
+    <functiondecl functionName="_notification" lineNumber="664"/>
+    <functiondecl functionName="_update_visibility" lineNumber="731"/>
+    <functiondecl functionName="_queue_octants_dirty" lineNumber="746"/>
+    <functiondecl functionName="_recreate_octant_data" lineNumber="755"/>
+    <functiondecl functionName="_clear_internal" lineNumber="767"/>
+    <functiondecl functionName="clear" lineNumber="781"/>
+    <functiondecl functionName="resource_changed" lineNumber="787"/>
+    <functiondecl functionName="_update_octants_callback" lineNumber="792"/>
+    <functiondecl functionName="_bind_methods" lineNumber="814"/>
+    <functiondecl functionName="set_clip" lineNumber="887"/>
+    <functiondecl functionName="set_cell_scale" lineNumber="909"/>
+    <functiondecl functionName="get_cell_scale" lineNumber="915"/>
+    <functiondecl functionName="get_used_cells" lineNumber="920"/>
+    <functiondecl functionName="get_meshes" lineNumber="933"/>
+    <functiondecl functionName="_get_offset" lineNumber="968"/>
+    <functiondecl functionName="clear_baked_meshes" lineNumber="975"/>
+    <functiondecl functionName="make_baked_meshes" lineNumber="985"/>
+    <functiondecl functionName="get_bake_meshes" lineNumber="1070"/>
+    <functiondecl functionName="get_bake_mesh_instance" lineNumber="1085"/>
+    <functiondecl functionName="_set" lineNumber="42"/>
+    <functiondecl functionName="_get" lineNumber="98"/>
+    <functiondecl functionName="_get_property_list" lineNumber="136"/>
+    <functiondecl functionName="set_collision_layer" lineNumber="145"/>
+    <functiondecl functionName="get_collision_layer" lineNumber="151"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="156"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="162"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="167"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="177"/>
+    <functiondecl functionName="set_collision_layer_bit" lineNumber="182"/>
+    <functiondecl functionName="get_collision_layer_bit" lineNumber="192"/>
+    <functiondecl functionName="set_mesh_library" lineNumber="197"/>
+    <functiondecl functionName="get_mesh_library" lineNumber="209"/>
+    <functiondecl functionName="set_cell_size" lineNumber="214"/>
+    <functiondecl functionName="get_cell_size" lineNumber="220"/>
+    <functiondecl functionName="set_octant_size" lineNumber="225"/>
+    <functiondecl functionName="get_octant_size" lineNumber="231"/>
+    <functiondecl functionName="set_center_x" lineNumber="236"/>
+    <functiondecl functionName="get_center_x" lineNumber="242"/>
+    <functiondecl functionName="set_center_y" lineNumber="246"/>
+    <functiondecl functionName="get_center_y" lineNumber="252"/>
+    <functiondecl functionName="set_center_z" lineNumber="256"/>
+    <functiondecl functionName="get_center_z" lineNumber="262"/>
+    <functiondecl functionName="set_cell_item" lineNumber="266"/>
+    <functiondecl functionName="get_cell_item" lineNumber="342"/>
+    <functiondecl functionName="get_cell_item_orientation" lineNumber="358"/>
+    <functiondecl functionName="world_to_map" lineNumber="374"/>
+    <functiondecl functionName="map_to_world" lineNumber="382"/>
+    <functiondecl functionName="_octant_transform" lineNumber="391"/>
+    <functiondecl functionName="_octant_update" lineNumber="406"/>
+    <functiondecl functionName="_reset_physic_bodies_collision_filters" lineNumber="568"/>
+    <functiondecl functionName="_octant_enter_world" lineNumber="575"/>
+    <functiondecl functionName="_octant_exit_world" lineNumber="609"/>
+    <functiondecl functionName="_octant_clean_up" lineNumber="636"/>
+    <functiondecl functionName="_notification" lineNumber="664"/>
+    <functiondecl functionName="_update_visibility" lineNumber="731"/>
+    <functiondecl functionName="_queue_octants_dirty" lineNumber="746"/>
+    <functiondecl functionName="_recreate_octant_data" lineNumber="755"/>
+    <functiondecl functionName="_clear_internal" lineNumber="767"/>
+    <functiondecl functionName="clear" lineNumber="781"/>
+    <functiondecl functionName="resource_changed" lineNumber="787"/>
+    <functiondecl functionName="_update_octants_callback" lineNumber="792"/>
+    <functiondecl functionName="_bind_methods" lineNumber="814"/>
+    <functiondecl functionName="set_clip" lineNumber="887"/>
+    <functiondecl functionName="set_cell_scale" lineNumber="909"/>
+    <functiondecl functionName="get_cell_scale" lineNumber="915"/>
+    <functiondecl functionName="get_used_cells" lineNumber="920"/>
+    <functiondecl functionName="get_meshes" lineNumber="933"/>
+    <functiondecl functionName="_get_offset" lineNumber="968"/>
+    <functiondecl functionName="clear_baked_meshes" lineNumber="975"/>
+    <functiondecl functionName="make_baked_meshes" lineNumber="985"/>
+    <functiondecl functionName="get_bake_meshes" lineNumber="1070"/>
+    <functiondecl functionName="get_bake_mesh_instance" lineNumber="1085"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="ARRAY_MAX"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="AXIS_X"/>
+    <functioncall functionName="AXIS_Z"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="BIND_CONSTANT"/>
+    <functioncall functionName="BODY_MODE_STATIC"/>
+    <functioncall functionName="BODY_STATE_TRANSFORM"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="Cell"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="DICTIONARY"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GridMap"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="INVALID_CELL_ITEM"/>
+    <functioncall functionName="IndexKey"/>
+    <functioncall functionName="LIGHT_PARAM_MAX"/>
+    <functioncall functionName="List"/>
+    <functioncall functionName="MULTIMESH_TRANSFORM_3D"/>
+    <functioncall functionName="Map"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NavMesh"/>
+    <functioncall functionName="Node3D"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="Octant"/>
+    <functioncall functionName="OctantKey"/>
+    <functioncall functionName="PRIMITIVE_LINES"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_STORAGE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VECTOR3"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_clear_internal"/>
+    <functioncall functionName="_get_offset"/>
+    <functioncall functionName="_octant_clean_up"/>
+    <functioncall functionName="_octant_enter_world"/>
+    <functioncall functionName="_octant_exit_world"/>
+    <functioncall functionName="_octant_transform"/>
+    <functioncall functionName="_octant_update"/>
+    <functioncall functionName="_queue_octants_dirty"/>
+    <functioncall functionName="_recreate_octant_data"/>
+    <functioncall functionName="_reset_physic_bodies_collision_filters"/>
+    <functioncall functionName="_update_octants_callback"/>
+    <functioncall functionName="_update_visibility"/>
+    <functioncall functionName="add_vertices_to_array"/>
+    <functioncall functionName="append_from"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="awaiting_update"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bm"/>
+    <functioncall functionName="body_add_shape"/>
+    <functioncall functionName="body_attach_object_instance_id"/>
+    <functioncall functionName="body_clear_shapes"/>
+    <functioncall functionName="body_create"/>
+    <functioncall functionName="body_set_collision_layer"/>
+    <functioncall functionName="body_set_collision_mask"/>
+    <functioncall functionName="body_set_space"/>
+    <functioncall functionName="body_set_state"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="cell"/>
+    <functioncall functionName="cell_map"/>
+    <functioncall functionName="cell_scale"/>
+    <functioncall functionName="cell_size"/>
+    <functioncall functionName="cells"/>
+    <functioncall functionName="center_x"/>
+    <functioncall functionName="center_y"/>
+    <functioncall functionName="center_z"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_baked_meshes"/>
+    <functioncall functionName="clip"/>
+    <functioncall functionName="col_debug"/>
+    <functioncall functionName="collision_debug"/>
+    <functioncall functionName="collision_debug_instance"/>
+    <functioncall functionName="collision_layer"/>
+    <functioncall functionName="collision_mask"/>
+    <functioncall functionName="commit"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="decode_uint32"/>
+    <functioncall functionName="decode_uint64"/>
+    <functioncall functionName="dirty"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="encode_uint32"/>
+    <functioncall functionName="encode_uint64"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_bake_mesh_instance"/>
+    <functioncall functionName="get_bake_meshes"/>
+    <functioncall functionName="get_cell_item"/>
+    <functioncall functionName="get_cell_item_orientation"/>
+    <functioncall functionName="get_cell_scale"/>
+    <functioncall functionName="get_cell_size"/>
+    <functioncall functionName="get_center_x"/>
+    <functioncall functionName="get_center_y"/>
+    <functioncall functionName="get_center_z"/>
+    <functioncall functionName="get_collision_layer"/>
+    <functioncall functionName="get_collision_layer_bit"/>
+    <functioncall functionName="get_collision_mask"/>
+    <functioncall functionName="get_collision_mask_bit"/>
+    <functioncall functionName="get_debug_collision_material"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_item_mesh"/>
+    <functioncall functionName="get_item_navmesh"/>
+    <functioncall functionName="get_item_navmesh_transform"/>
+    <functioncall functionName="get_item_shapes"/>
+    <functioncall functionName="get_mesh_library"/>
+    <functioncall functionName="get_meshes"/>
+    <functioncall functionName="get_octant_size"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_scenario"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_space"/>
+    <functioncall functionName="get_surface_count"/>
+    <functioncall functionName="get_used_cells"/>
+    <functioncall functionName="get_world_3d"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_item"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ik"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instance_attach_object_instance_id"/>
+    <functioncall functionName="instance_create"/>
+    <functioncall functionName="instance_set_base"/>
+    <functioncall functionName="instance_set_scenario"/>
+    <functioncall functionName="instance_set_transform"/>
+    <functioncall functionName="instance_set_visible"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_debugging_collisions_hint"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_inside_world"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="it"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="lightmap_unwrap"/>
+    <functioncall functionName="local_transform"/>
+    <functioncall functionName="make_baked_meshes"/>
+    <functioncall functionName="map_to_world"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="mesh_add_surface_from_arrays"/>
+    <functioncall functionName="mesh_clear"/>
+    <functioncall functionName="mesh_create"/>
+    <functioncall functionName="mesh_surface_set_material"/>
+    <functioncall functionName="mm"/>
+    <functioncall functionName="mmi"/>
+    <functioncall functionName="multimesh"/>
+    <functioncall functionName="multimesh_allocate"/>
+    <functioncall functionName="multimesh_create"/>
+    <functioncall functionName="multimesh_instance_set_transform"/>
+    <functioncall functionName="multimesh_set_mesh"/>
+    <functioncall functionName="navigation"/>
+    <functioncall functionName="navmesh"/>
+    <functioncall functionName="new_xform"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nm"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="octant_size"/>
+    <functioncall functionName="octantkey"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_clip_above"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_floor"/>
+    <functioncall functionName="p_gen_lightmap_uv"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_item"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_layer"/>
+    <functioncall functionName="p_lightmap_uv_texel_size"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_mesh_library"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_rot"/>
+    <functioncall functionName="p_scale"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_x"/>
+    <functioncall functionName="p_y"/>
+    <functioncall functionName="p_z"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_call"/>
+    <functioncall functionName="recreating_octants"/>
+    <functioncall functionName="region"/>
+    <functioncall functionName="region_create"/>
+    <functioncall functionName="region_set_map"/>
+    <functioncall functionName="region_set_navmesh"/>
+    <functioncall functionName="region_set_transform"/>
+    <functioncall functionName="register_owner"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resource_changed"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="set_cell_item"/>
+    <functioncall functionName="set_cell_scale"/>
+    <functioncall functionName="set_cell_size"/>
+    <functioncall functionName="set_center_x"/>
+    <functioncall functionName="set_center_y"/>
+    <functioncall functionName="set_center_z"/>
+    <functioncall functionName="set_clip"/>
+    <functioncall functionName="set_collision_layer"/>
+    <functioncall functionName="set_collision_layer_bit"/>
+    <functioncall functionName="set_collision_mask"/>
+    <functioncall functionName="set_collision_mask_bit"/>
+    <functioncall functionName="set_material"/>
+    <functioncall functionName="set_mesh_library"/>
+    <functioncall functionName="set_notify_transform"/>
+    <functioncall functionName="set_octant_size"/>
+    <functioncall functionName="set_origin"/>
+    <functioncall functionName="set_orthogonal_index"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="st"/>
+    <functioncall functionName="static_body"/>
+    <functioncall functionName="surf_mat"/>
+    <functioncall functionName="surface_get_material"/>
+    <functioncall functionName="surface_get_primitive_type"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unregister_owner"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="world_pos"/>
+    <functioncall functionName="world_to_map"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

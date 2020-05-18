@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="503682683">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;y&apos; can be reduced." verbose="The scope of the variable &apos;y&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="851" column="7"/>
+            <symbol>y</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="751" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="779" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="780" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="781" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="818" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="819" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="820" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:45:12" call-funcname="CheckNonOpaque" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="854" col="39" call-argexpr="a_ptr" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1110" col="41" info="Assignment 'a_ptr=import_alpha?rgb+3:NULL', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="52" info="Calling function 'ImportYUVAFromRGBA', 4th argument 'a_ptr' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:811:25" call-funcname="AccumulateRGB" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="970" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:767:25" call-funcname="AccumulateRGBA" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="973" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1010" col="30" call-argexpr="use_iterative_conversion" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="60" info="Calling function 'PictureARGBToYUVA', 4th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1021" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="30" call-argexpr="a_ptr" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1110" col="41" info="Assignment 'a_ptr=import_alpha?rgb+3:NULL', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1168" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1183" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1192" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1192" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1199" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1206" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1206" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:144:12" call-funcname="RGBToY" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="763" col="16" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:754:25" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:149:12" call-funcname="RGBToU" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="837" col="16" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:829:25" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" call-funcname="PreprocessARGB" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="878" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:45:12" call-funcname="CheckNonOpaque" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="854" col="25" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1015:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1021" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1020:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1025" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1024:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1024:5" call-funcname="WebPPictureSharpARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1029" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1028:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:400:12" my-argnr="3" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="403" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="6" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="451" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="9" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="852" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" my-argnr="1" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1106" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="751" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="779" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="780" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="781" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="818" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="819" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="820" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:45:12" call-funcname="CheckNonOpaque" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="854" col="39" call-argexpr="a_ptr" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1110" col="41" info="Assignment 'a_ptr=import_alpha?rgb+3:NULL', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="52" info="Calling function 'ImportYUVAFromRGBA', 4th argument 'a_ptr' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:811:25" call-funcname="AccumulateRGB" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="970" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:767:25" call-funcname="AccumulateRGBA" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="973" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1010" col="30" call-argexpr="use_iterative_conversion" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="60" info="Calling function 'PictureARGBToYUVA', 4th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1021" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="30" call-argexpr="a_ptr" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1110" col="41" info="Assignment 'a_ptr=import_alpha?rgb+3:NULL', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1192" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1192" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1199" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1206" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1206" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:144:12" call-funcname="RGBToY" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="763" col="16" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:754:25" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:149:12" call-funcname="RGBToU" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="837" col="16" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:829:25" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" call-funcname="PreprocessARGB" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="878" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:45:12" call-funcname="CheckNonOpaque" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="854" col="25" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1015:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1021" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1020:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1025" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1024:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1024:5" call-funcname="WebPPictureSharpARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1029" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1028:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:400:12" my-argnr="3" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="403" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="6" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="451" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="9" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="852" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" my-argnr="1" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1106" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+  </FileInfo>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;do_copy&apos; is always false" verbose="Condition &apos;do_copy&apos; is always false" cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1124" column="9" info="Condition &apos;do_copy&apos; is always false"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="751" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="779" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="780" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="781" col="11" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="818" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="819" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:126:24" call-funcname="LinearToGamma" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="820" col="14" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:45:12" call-funcname="CheckNonOpaque" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="854" col="39" call-argexpr="a_ptr" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1110" col="41" info="Assignment 'a_ptr=import_alpha?rgb+3:NULL', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="52" info="Calling function 'ImportYUVAFromRGBA', 4th argument 'a_ptr' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:811:25" call-funcname="AccumulateRGB" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="970" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:767:25" call-funcname="AccumulateRGBA" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="973" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1010" col="30" call-argexpr="use_iterative_conversion" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="60" info="Calling function 'PictureARGBToYUVA', 4th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1021" col="27" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="30" call-argexpr="a_ptr" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1110" col="41" info="Assignment 'a_ptr=import_alpha?rgb+3:NULL', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" call-funcname="ImportYUVAFromRGBA" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1111" col="30" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1168" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1183" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1192" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1192" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1199" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1206" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" call-funcname="Import" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1206" col="22" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:331:13" call-funcname="ImportOneRow" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="493" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:144:12" call-funcname="RGBToY" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="763" col="16" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:754:25" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:149:12" call-funcname="RGBToU" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="837" col="16" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:829:25" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" call-funcname="PreprocessARGB" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="878" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:45:12" call-funcname="CheckNonOpaque" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="854" col="25" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1017" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1015:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1021" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1020:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:995:12" call-funcname="PictureARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1025" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1024:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1024:5" call-funcname="WebPPictureSharpARGBToYUVA" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1029" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1028:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:400:12" my-argnr="3" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="403" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:445:12" my-argnr="6" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="451" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:842:12" my-argnr="9" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="852" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:1098:12" my-argnr="1" my-argname="picture" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="1106" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c:738:24" my-argnr="2" my-argname="a_ptr" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/picture_csp_enc.c" line="743" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="CheckNonOpaque" lineNumber="45"/>
+    <functiondecl functionName="WebPPictureHasTransparency" lineNumber="62"/>
+    <functiondecl functionName="InitGammaTables" lineNumber="94"/>
+    <functiondecl functionName="GammaToLinear" lineNumber="110"/>
+    <functiondecl functionName="Interpolate" lineNumber="114"/>
+    <functiondecl functionName="LinearToGamma" lineNumber="126"/>
+    <functiondecl functionName="RGBToY" lineNumber="144"/>
+    <functiondecl functionName="RGBToU" lineNumber="149"/>
+    <functiondecl functionName="RGBToV" lineNumber="154"/>
+    <functiondecl functionName="InitGammaTablesS" lineNumber="185"/>
+    <functiondecl functionName="GammaToLinearS" lineNumber="224"/>
+    <functiondecl functionName="LinearToGammaS" lineNumber="228"/>
+    <functiondecl functionName="clip_8b" lineNumber="257"/>
+    <functiondecl functionName="clip_y" lineNumber="261"/>
+    <functiondecl functionName="RGBToGray" lineNumber="267"/>
+    <functiondecl functionName="ScaleDown" lineNumber="272"/>
+    <functiondecl functionName="UpdateW" lineNumber="280"/>
+    <functiondecl functionName="UpdateChroma" lineNumber="291"/>
+    <functiondecl functionName="StoreGray" lineNumber="311"/>
+    <functiondecl functionName="Filter2" lineNumber="320"/>
+    <functiondecl functionName="UpLift" lineNumber="327"/>
+    <functiondecl functionName="ImportOneRow" lineNumber="331"/>
+    <functiondecl functionName="InterpolateTwoRows" lineNumber="352"/>
+    <functiondecl functionName="ConvertRGBToY" lineNumber="385"/>
+    <functiondecl functionName="ConvertRGBToU" lineNumber="390"/>
+    <functiondecl functionName="ConvertRGBToV" lineNumber="395"/>
+    <functiondecl functionName="ConvertWRGBToYUV" lineNumber="400"/>
+    <functiondecl functionName="PreprocessARGB" lineNumber="445"/>
+    <functiondecl functionName="LinearToGammaWeighted" lineNumber="738"/>
+    <functiondecl functionName="ConvertRowToY" lineNumber="754"/>
+    <functiondecl functionName="AccumulateRGBA" lineNumber="767"/>
+    <functiondecl functionName="AccumulateRGB" lineNumber="811"/>
+    <functiondecl functionName="ConvertRowsToUV" lineNumber="829"/>
+    <functiondecl functionName="ImportYUVAFromRGBA" lineNumber="842"/>
+    <functiondecl functionName="PictureARGBToYUVA" lineNumber="995"/>
+    <functiondecl functionName="WebPPictureARGBToYUVADithered" lineNumber="1015"/>
+    <functiondecl functionName="WebPPictureARGBToYUVA" lineNumber="1020"/>
+    <functiondecl functionName="WebPPictureSharpARGBToYUVA" lineNumber="1024"/>
+    <functiondecl functionName="WebPPictureSmartARGBToYUVA" lineNumber="1028"/>
+    <functiondecl functionName="WebPPictureYUVAToARGB" lineNumber="1035"/>
+    <functiondecl functionName="Import" lineNumber="1098"/>
+    <functiondecl functionName="WebPPictureImportBGR" lineNumber="1165"/>
+    <functiondecl functionName="WebPPictureImportBGRA" lineNumber="1172"/>
+    <functiondecl functionName="WebPPictureImportBGRX" lineNumber="1180"/>
+    <functiondecl functionName="WebPPictureImportRGB" lineNumber="1189"/>
+    <functiondecl functionName="WebPPictureImportRGBA" lineNumber="1196"/>
+    <functiondecl functionName="WebPPictureImportRGBX" lineNumber="1203"/>
+    <functiondecl functionName="CheckNonOpaque" lineNumber="45"/>
+    <functiondecl functionName="WebPPictureHasTransparency" lineNumber="62"/>
+    <functiondecl functionName="InitGammaTables" lineNumber="94"/>
+    <functiondecl functionName="GammaToLinear" lineNumber="110"/>
+    <functiondecl functionName="Interpolate" lineNumber="114"/>
+    <functiondecl functionName="LinearToGamma" lineNumber="126"/>
+    <functiondecl functionName="RGBToY" lineNumber="144"/>
+    <functiondecl functionName="RGBToU" lineNumber="149"/>
+    <functiondecl functionName="RGBToV" lineNumber="154"/>
+    <functiondecl functionName="InitGammaTablesS" lineNumber="185"/>
+    <functiondecl functionName="GammaToLinearS" lineNumber="224"/>
+    <functiondecl functionName="LinearToGammaS" lineNumber="228"/>
+    <functiondecl functionName="clip_8b" lineNumber="257"/>
+    <functiondecl functionName="clip_y" lineNumber="261"/>
+    <functiondecl functionName="RGBToGray" lineNumber="267"/>
+    <functiondecl functionName="ScaleDown" lineNumber="272"/>
+    <functiondecl functionName="UpdateW" lineNumber="280"/>
+    <functiondecl functionName="UpdateChroma" lineNumber="291"/>
+    <functiondecl functionName="StoreGray" lineNumber="311"/>
+    <functiondecl functionName="Filter2" lineNumber="320"/>
+    <functiondecl functionName="UpLift" lineNumber="327"/>
+    <functiondecl functionName="ImportOneRow" lineNumber="331"/>
+    <functiondecl functionName="InterpolateTwoRows" lineNumber="352"/>
+    <functiondecl functionName="ConvertRGBToY" lineNumber="385"/>
+    <functiondecl functionName="ConvertRGBToU" lineNumber="390"/>
+    <functiondecl functionName="ConvertRGBToV" lineNumber="395"/>
+    <functiondecl functionName="ConvertWRGBToYUV" lineNumber="400"/>
+    <functiondecl functionName="PreprocessARGB" lineNumber="445"/>
+    <functiondecl functionName="LinearToGammaWeighted" lineNumber="738"/>
+    <functiondecl functionName="ConvertRowToY" lineNumber="754"/>
+    <functiondecl functionName="AccumulateRGBA" lineNumber="767"/>
+    <functiondecl functionName="AccumulateRGB" lineNumber="811"/>
+    <functiondecl functionName="ConvertRowsToUV" lineNumber="829"/>
+    <functiondecl functionName="ImportYUVAFromRGBA" lineNumber="842"/>
+    <functiondecl functionName="PictureARGBToYUVA" lineNumber="995"/>
+    <functiondecl functionName="WebPPictureARGBToYUVADithered" lineNumber="1015"/>
+    <functiondecl functionName="WebPPictureARGBToYUVA" lineNumber="1020"/>
+    <functiondecl functionName="WebPPictureSharpARGBToYUVA" lineNumber="1024"/>
+    <functiondecl functionName="WebPPictureSmartARGBToYUVA" lineNumber="1028"/>
+    <functiondecl functionName="WebPPictureYUVAToARGB" lineNumber="1035"/>
+    <functiondecl functionName="Import" lineNumber="1098"/>
+    <functiondecl functionName="WebPPictureImportRGB" lineNumber="1189"/>
+    <functiondecl functionName="WebPPictureImportRGBA" lineNumber="1196"/>
+    <functiondecl functionName="WebPPictureImportRGBX" lineNumber="1203"/>
+    <functiondecl functionName="CheckNonOpaque" lineNumber="45"/>
+    <functiondecl functionName="WebPPictureHasTransparency" lineNumber="62"/>
+    <functiondecl functionName="InitGammaTables" lineNumber="94"/>
+    <functiondecl functionName="GammaToLinear" lineNumber="110"/>
+    <functiondecl functionName="Interpolate" lineNumber="114"/>
+    <functiondecl functionName="LinearToGamma" lineNumber="126"/>
+    <functiondecl functionName="RGBToY" lineNumber="144"/>
+    <functiondecl functionName="RGBToU" lineNumber="149"/>
+    <functiondecl functionName="RGBToV" lineNumber="154"/>
+    <functiondecl functionName="InitGammaTablesS" lineNumber="185"/>
+    <functiondecl functionName="GammaToLinearS" lineNumber="224"/>
+    <functiondecl functionName="LinearToGammaS" lineNumber="228"/>
+    <functiondecl functionName="clip_8b" lineNumber="257"/>
+    <functiondecl functionName="clip_y" lineNumber="261"/>
+    <functiondecl functionName="RGBToGray" lineNumber="267"/>
+    <functiondecl functionName="ScaleDown" lineNumber="272"/>
+    <functiondecl functionName="UpdateW" lineNumber="280"/>
+    <functiondecl functionName="UpdateChroma" lineNumber="291"/>
+    <functiondecl functionName="StoreGray" lineNumber="311"/>
+    <functiondecl functionName="Filter2" lineNumber="320"/>
+    <functiondecl functionName="UpLift" lineNumber="327"/>
+    <functiondecl functionName="ImportOneRow" lineNumber="331"/>
+    <functiondecl functionName="InterpolateTwoRows" lineNumber="352"/>
+    <functiondecl functionName="ConvertRGBToY" lineNumber="385"/>
+    <functiondecl functionName="ConvertRGBToU" lineNumber="390"/>
+    <functiondecl functionName="ConvertRGBToV" lineNumber="395"/>
+    <functiondecl functionName="ConvertWRGBToYUV" lineNumber="400"/>
+    <functiondecl functionName="PreprocessARGB" lineNumber="445"/>
+    <functiondecl functionName="LinearToGammaWeighted" lineNumber="738"/>
+    <functiondecl functionName="ConvertRowToY" lineNumber="754"/>
+    <functiondecl functionName="AccumulateRGBA" lineNumber="767"/>
+    <functiondecl functionName="AccumulateRGB" lineNumber="811"/>
+    <functiondecl functionName="ConvertRowsToUV" lineNumber="829"/>
+    <functiondecl functionName="ImportYUVAFromRGBA" lineNumber="842"/>
+    <functiondecl functionName="PictureARGBToYUVA" lineNumber="995"/>
+    <functiondecl functionName="WebPPictureARGBToYUVADithered" lineNumber="1015"/>
+    <functiondecl functionName="WebPPictureARGBToYUVA" lineNumber="1020"/>
+    <functiondecl functionName="WebPPictureSharpARGBToYUVA" lineNumber="1024"/>
+    <functiondecl functionName="WebPPictureSmartARGBToYUVA" lineNumber="1028"/>
+    <functiondecl functionName="WebPPictureYUVAToARGB" lineNumber="1035"/>
+    <functiondecl functionName="Import" lineNumber="1098"/>
+    <functiondecl functionName="WebPPictureImportBGR" lineNumber="1165"/>
+    <functiondecl functionName="WebPPictureImportBGRA" lineNumber="1172"/>
+    <functiondecl functionName="WebPPictureImportBGRX" lineNumber="1180"/>
+    <functiondecl functionName="WebPPictureImportRGB" lineNumber="1189"/>
+    <functiondecl functionName="WebPPictureImportRGBA" lineNumber="1196"/>
+    <functiondecl functionName="WebPPictureImportRGBX" lineNumber="1203"/>
+    <functioncall functionName="AccumulateRGB"/>
+    <functioncall functionName="AccumulateRGBA"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="CheckNonOpaque"/>
+    <functioncall functionName="ConvertRGBToU"/>
+    <functioncall functionName="ConvertRGBToV"/>
+    <functioncall functionName="ConvertRGBToY"/>
+    <functioncall functionName="ConvertRowToY"/>
+    <functioncall functionName="ConvertRowsToUV"/>
+    <functioncall functionName="ConvertWRGBToYUV"/>
+    <functioncall functionName="End"/>
+    <functioncall functionName="Filter2"/>
+    <functioncall functionName="G"/>
+    <functioncall functionName="GammaToLinear"/>
+    <functioncall functionName="GammaToLinearS"/>
+    <functioncall functionName="Import"/>
+    <functioncall functionName="ImportOneRow"/>
+    <functioncall functionName="ImportYUVAFromRGBA"/>
+    <functioncall functionName="InitGammaTables"/>
+    <functioncall functionName="InitGammaTablesS"/>
+    <functioncall functionName="Interpolate"/>
+    <functioncall functionName="InterpolateTwoRows"/>
+    <functioncall functionName="LinearToGamma"/>
+    <functioncall functionName="LinearToGammaS"/>
+    <functioncall functionName="LinearToGammaWeighted"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="PictureARGBToYUVA"/>
+    <functioncall functionName="PreprocessARGB"/>
+    <functioncall functionName="R"/>
+    <functioncall functionName="RGBToGray"/>
+    <functioncall functionName="RGBToU"/>
+    <functioncall functionName="RGBToV"/>
+    <functioncall functionName="RGBToY"/>
+    <functioncall functionName="ScaleDown"/>
+    <functioncall functionName="StoreGray"/>
+    <functioncall functionName="UpLift"/>
+    <functioncall functionName="UpdateChroma"/>
+    <functioncall functionName="UpdateW"/>
+    <functioncall functionName="VP8InitRandom"/>
+    <functioncall functionName="VP8LConvertBGRAToRGBA"/>
+    <functioncall functionName="VP8LDspInit"/>
+    <functioncall functionName="VP8RGBToU"/>
+    <functioncall functionName="VP8RGBToV"/>
+    <functioncall functionName="VP8RGBToY"/>
+    <functioncall functionName="VP8RandomBits"/>
+    <functioncall functionName="VP8_ENC_ERROR_INVALID_CONFIGURATION"/>
+    <functioncall functionName="VP8_ENC_ERROR_NULL_PARAMETER"/>
+    <functioncall functionName="VP8_ENC_ERROR_OUT_OF_MEMORY"/>
+    <functioncall functionName="W"/>
+    <functioncall functionName="W0"/>
+    <functioncall functionName="WEBP_YUV420"/>
+    <functioncall functionName="WEBP_YUV420A"/>
+    <functioncall functionName="WebPConvertBGR24ToY"/>
+    <functioncall functionName="WebPConvertRGB24ToY"/>
+    <functioncall functionName="WebPConvertRGBA32ToUV"/>
+    <functioncall functionName="WebPEncodingSetError"/>
+    <functioncall functionName="WebPExtractAlpha"/>
+    <functioncall functionName="WebPGetLinePairConverter"/>
+    <functioncall functionName="WebPHasAlpha32b"/>
+    <functioncall functionName="WebPHasAlpha8b"/>
+    <functioncall functionName="WebPInitAlphaProcessing"/>
+    <functioncall functionName="WebPInitConvertARGBToYUV"/>
+    <functioncall functionName="WebPPackARGB"/>
+    <functioncall functionName="WebPPackRGB"/>
+    <functioncall functionName="WebPPictureAlloc"/>
+    <functioncall functionName="WebPPictureAllocARGB"/>
+    <functioncall functionName="WebPPictureAllocYUVA"/>
+    <functioncall functionName="WebPPictureSharpARGBToYUVA"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="WebPSharpYUVFilterRow"/>
+    <functioncall functionName="WebPSharpYUVUpdateRGB"/>
+    <functioncall functionName="WebPSharpYUVUpdateY"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="YUV_FIX"/>
+    <functioncall functionName="YUV_HALF"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a_ptr"/>
+    <functioncall functionName="a_stride"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="alpha_offset"/>
+    <functioncall functionName="argb"/>
+    <functioncall functionName="argb_stride"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b_ptr"/>
+    <functioncall functionName="base_rg"/>
+    <functioncall functionName="best_rgb_uv"/>
+    <functioncall functionName="best_rgb_y"/>
+    <functioncall functionName="best_uv"/>
+    <functioncall functionName="best_uv_base"/>
+    <functioncall functionName="best_y"/>
+    <functioncall functionName="best_y_base"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="clip_8b"/>
+    <functioncall functionName="clip_y"/>
+    <functioncall functionName="colorspace"/>
+    <functioncall functionName="cur_u"/>
+    <functioncall functionName="cur_uv"/>
+    <functioncall functionName="cur_v"/>
+    <functioncall functionName="cur_y"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="diff_y_sum"/>
+    <functioncall functionName="dithering"/>
+    <functioncall functionName="do_copy"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_a"/>
+    <functioncall functionName="dst_u"/>
+    <functioncall functionName="dst_v"/>
+    <functioncall functionName="dst_y"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="g_ptr"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has_alpha"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="import_alpha"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int16_t"/>
+    <functioncall functionName="is_last_row"/>
+    <functioncall functionName="is_rgb"/>
+    <functioncall functionName="iter"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="kGammaTablesOk"/>
+    <functioncall functionName="kGammaTablesSOk"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="next_uv"/>
+    <functioncall functionName="off"/>
+    <functioncall functionName="picture"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="prev_uv"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_ptr"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rg"/>
+    <functioncall functionName="rgb"/>
+    <functioncall functionName="rgb_stride"/>
+    <functioncall functionName="rgba"/>
+    <functioncall functionName="rgba_stride"/>
+    <functioncall functionName="row_has_alpha"/>
+    <functioncall functionName="rows_have_alpha"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src1"/>
+    <functioncall functionName="src2"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="tab_pos"/>
+    <functioncall functionName="target_uv"/>
+    <functioncall functionName="target_uv_base"/>
+    <functioncall functionName="target_y"/>
+    <functioncall functionName="target_y_base"/>
+    <functioncall functionName="tmp_buffer"/>
+    <functioncall functionName="tmp_rgb"/>
+    <functioncall functionName="top_u"/>
+    <functioncall functionName="top_v"/>
+    <functioncall functionName="total_a"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="upsample"/>
+    <functioncall functionName="use_argb"/>
+    <functioncall functionName="use_dsp"/>
+    <functioncall functionName="use_iterative_conversion"/>
+    <functioncall functionName="uv_h"/>
+    <functioncall functionName="uv_stride"/>
+    <functioncall functionName="uv_w"/>
+    <functioncall functionName="uv_width"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_stride"/>
+  </FileInfo>
+</analyzerinfo>
