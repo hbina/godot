@@ -89,7 +89,7 @@ float Engine::get_time_scale() const {
 	return _time_scale;
 }
 
-Dictionary Engine::get_version_info() const {
+Dictionary Engine::get_version_info() {
 
 	Dictionary dict;
 	dict["major"] = VERSION_MAJOR;
@@ -128,7 +128,7 @@ static Array array_from_info_count(const char *const *info_list, int info_count)
 	return arr;
 }
 
-Dictionary Engine::get_author_info() const {
+Dictionary Engine::get_author_info() {
 	Dictionary dict;
 
 	dict["lead_developers"] = array_from_info(AUTHORS_LEAD_DEVELOPERS);
@@ -139,7 +139,7 @@ Dictionary Engine::get_author_info() const {
 	return dict;
 }
 
-Array Engine::get_copyright_info() const {
+Array Engine::get_copyright_info() {
 	Array components;
 	for (int component_index = 0; component_index < COPYRIGHT_INFO_COUNT; component_index++) {
 		const ComponentCopyright &cp_info = COPYRIGHT_INFO[component_index];
@@ -161,7 +161,7 @@ Array Engine::get_copyright_info() const {
 	return components;
 }
 
-Dictionary Engine::get_donor_info() const {
+Dictionary Engine::get_donor_info() {
 	Dictionary donors;
 	donors["platinum_sponsors"] = array_from_info(DONORS_SPONSOR_PLAT);
 	donors["gold_sponsors"] = array_from_info(DONORS_SPONSOR_GOLD);
@@ -172,7 +172,7 @@ Dictionary Engine::get_donor_info() const {
 	return donors;
 }
 
-Dictionary Engine::get_license_info() const {
+Dictionary Engine::get_license_info() {
 	Dictionary licenses;
 	for (int i = 0; i < LICENSE_COUNT; i++) {
 		licenses[LICENSE_NAMES[i]] = LICENSE_BODIES[i];
@@ -180,7 +180,7 @@ Dictionary Engine::get_license_info() const {
 	return licenses;
 }
 
-String Engine::get_license_text() const {
+String Engine::get_license_text() {
 	return String(GODOT_LICENSE_TEXT);
 }
 

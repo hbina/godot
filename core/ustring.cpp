@@ -337,7 +337,7 @@ String &String::operator=(const char *p_str) {
 	return *this;
 }
 
-String & String::operator=(const CharType *p_str) {
+String &String::operator=(const CharType *p_str) {
 	copy_from(p_str);
 	return *this;
 }

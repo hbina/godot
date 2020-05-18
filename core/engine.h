@@ -120,12 +120,12 @@ public:
 	_FORCE_INLINE_ bool is_editor_hint() const { return false; }
 #endif
 
-	Dictionary get_version_info() const;
-	Dictionary get_author_info() const;
-	Array get_copyright_info() const;
-	Dictionary get_donor_info() const;
-	Dictionary get_license_info() const;
-	String get_license_text() const;
+	static Dictionary get_version_info();
+	static Dictionary get_author_info();
+	static Array get_copyright_info();
+	static Dictionary get_donor_info();
+	static Dictionary get_license_info();
+	static String get_license_text();
 
 	bool is_abort_on_gpu_errors_enabled() const;
 
