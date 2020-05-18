@@ -1055,7 +1055,7 @@ public:
 
 protected:
 	//binders to script API
-	RID _texture_create(const Ref<RDTextureFormat> &p_format, const Ref<RDTextureView> &p_view, const TypedArray<PackedByteArray> &p_data = Array());
+	RID _texture_create(const Ref<RDTextureFormat> &p_format, const Ref<RDTextureView> &p_view, const TypedArray<PackedByteArray> &p_data = TypedArray<PackedByteArray>(Array()));
 	RID _texture_create_shared(const Ref<RDTextureView> &p_view, RID p_with_texture);
 	RID _texture_create_shared_from_slice(const Ref<RDTextureView> &p_view, RID p_with_texture, uint32_t p_layer, uint32_t p_mipmap, TextureSliceType p_slice_type = TEXTURE_SLICE_2D);
 

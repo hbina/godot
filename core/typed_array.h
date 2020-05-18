@@ -76,7 +76,7 @@ public:
 		_FORCE_INLINE_ TypedArray(const Variant &p_variant) :                      \
 				Array(Array(p_variant), m_variant_type, StringName(), Variant()) { \
 		}                                                                          \
-		_FORCE_INLINE_ TypedArray(const Array &p_array) :                          \
+		explicit _FORCE_INLINE_ TypedArray(const Array &p_array) :                 \
 				Array(p_array, m_variant_type, StringName(), Variant()) {          \
 		}                                                                          \
 		_FORCE_INLINE_ TypedArray() {                                              \

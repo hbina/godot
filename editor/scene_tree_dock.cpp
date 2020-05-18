@@ -2280,11 +2280,10 @@ void SceneTreeDock::_normalize_drop(Node *&to_node, int &to_pos, int p_type) {
 		if (to_node == EditorNode::get_singleton()->get_edited_scene()) {
 			to_node = nullptr;
 			ERR_FAIL_MSG("Cannot perform drop above the root node!");
-		}
-
+		} else {
 		to_pos = to_node->get_index();
 		to_node = to_node->get_parent();
-
+		}
 	} else if (p_type == 1) {
 		//drop at below selected node
 		if (to_node == EditorNode::get_singleton()->get_edited_scene()) {
