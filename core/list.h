@@ -440,8 +440,7 @@ public:
 	/**
 	 * copy the list
 	 */
-	void operator=(const List &p_list) {
-
+	List &operator=(const List &p_list) {
 		clear();
 		const Element *it = p_list.front();
 		while (it) {
@@ -449,6 +448,7 @@ public:
 			push_back(it->get());
 			it = it->next();
 		}
+		return *this;
 	}
 
 	T &operator[](int p_index) {

@@ -136,43 +136,46 @@ public:
 		return Variant(reference);
 	}
 
-	void operator=(const Ref &p_from) {
-
+	Ref &operator=(const Ref &p_from) {
 		ref(p_from);
+		return *this;
 	}
 
 	template <class T_Other>
-	void operator=(const Ref<T_Other> &p_from) {
+	Ref<T> &operator=(const Ref<T_Other> &p_from) {
 
 		Reference *refb = const_cast<Reference *>(static_cast<const Reference *>(p_from.ptr()));
 		if (!refb) {
 			unref();
-			return;
+			return *this;
 		}
 		Ref r;
 		r.reference = Object::cast_to<T>(refb);
 		ref(r);
 		r.reference = nullptr;
+		return *this;
 	}
 
-	void operator=(const Variant &p_variant) {
+	Ref<T> &operator=(const Variant &p_variant) {
 
 		Object *object = p_variant.get_validated_object();
 
 		if (object == reference) {
-			return;
+			return *this;
 		}
 
 		unref();
 
 		if (!object) {
-			return;
+			return *this;
 		}
 
 		T *r = Object::cast_to<T>(object);
 		if (r && r->reference()) {
 			reference = r;
 		}
+
+		return *this;
 	}
 
 	template <class T_Other>

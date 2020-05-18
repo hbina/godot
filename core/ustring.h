@@ -61,12 +61,14 @@ public:
 		return _cowdata.ptr() + _index;
 	}
 
-	_FORCE_INLINE_ void operator=(const T &other) const {
+	_FORCE_INLINE_ CharProxy<T> &operator=(const T &other) {
 		_cowdata.set(_index, other);
+		return *this;
 	}
 
-	_FORCE_INLINE_ void operator=(const CharProxy<T> &other) const {
+	_FORCE_INLINE_ CharProxy<T> &operator=(const CharProxy<T> &other) {
 		_cowdata.set(_index, other.operator T());
+		return *this;
 	}
 };
 
@@ -173,8 +175,8 @@ public:
 
 	/* Compatibility Operators */
 
-	void operator=(const char *p_str);
-	void operator=(const CharType *p_str);
+	String &operator=(const char *p_str);
+	String &operator=(const CharType *p_str);
 	bool operator==(const char *p_str) const;
 	bool operator==(const CharType *p_str) const;
 	bool operator==(const StrRange &p_str_range) const;

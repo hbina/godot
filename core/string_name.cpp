@@ -145,10 +145,10 @@ bool StringName::operator!=(const StringName &p_name) const {
 	return _data != p_name._data;
 }
 
-void StringName::operator=(const StringName &p_name) {
+StringName &StringName::operator=(const StringName &p_name) {
 
 	if (this == &p_name)
-		return;
+		return *this;
 
 	unref();
 
@@ -156,6 +156,8 @@ void StringName::operator=(const StringName &p_name) {
 
 		_data = p_name._data;
 	}
+
+	return *this;
 }
 
 StringName::StringName(const StringName &p_name) {

@@ -112,7 +112,7 @@ private:
 	void _copy_on_write();
 
 public:
-	void operator=(const CowData<T> &p_from) { _ref(p_from); }
+	CowData<T> &operator=(const CowData<T> &p_from) { _ref(p_from); }
 
 	_FORCE_INLINE_ T *ptrw() {
 		_copy_on_write();

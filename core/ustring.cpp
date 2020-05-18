@@ -332,14 +332,14 @@ String &String::operator+=(const char *p_str) {
 	return *this;
 }
 
-void String::operator=(const char *p_str) {
-
+String &String::operator=(const char *p_str) {
 	copy_from(p_str);
+	return *this;
 }
 
-void String::operator=(const CharType *p_str) {
-
+String & String::operator=(const CharType *p_str) {
 	copy_from(p_str);
+	return *this;
 }
 
 bool String::operator==(const StrRange &p_str_range) const {

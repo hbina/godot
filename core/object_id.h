@@ -52,8 +52,15 @@ public:
 	_ALWAYS_INLINE_ bool operator!=(const ObjectID &p_id) const { return id != p_id.id; }
 	_ALWAYS_INLINE_ bool operator<(const ObjectID &p_id) const { return id < p_id.id; }
 
-	_ALWAYS_INLINE_ void operator=(int64_t p_int64) { id = p_int64; }
-	_ALWAYS_INLINE_ void operator=(uint64_t p_uint64) { id = p_uint64; }
+	_ALWAYS_INLINE_ ObjectID &operator=(int64_t p_int64) {
+		id = p_int64;
+		return *this;
+	}
+
+	_ALWAYS_INLINE_ ObjectID &operator=(uint64_t p_uint64) {
+		id = p_uint64;
+		return *this;
+	}
 
 	_ALWAYS_INLINE_ ObjectID() {}
 	_ALWAYS_INLINE_ explicit ObjectID(const uint64_t p_id) { id = p_id; }

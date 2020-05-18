@@ -615,13 +615,13 @@ public:
 		_data._free_root();
 	}
 
-	void operator=(const Set &p_set) {
-
+	Set &operator=(const Set &p_set) {
 		_copy_from(p_set);
+
+		return *this;
 	}
 
 	Set(const Set &p_set) {
-
 		_copy_from(p_set);
 	}
 

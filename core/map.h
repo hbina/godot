@@ -663,13 +663,12 @@ public:
 		_data._free_root();
 	}
 
-	void operator=(const Map &p_map) {
-
+	Map &operator=(const Map &p_map) {
 		_copy_from(p_map);
+		return *this;
 	}
 
 	Map(const Map &p_map) {
-
 		_copy_from(p_map);
 	}
 
@@ -677,7 +676,6 @@ public:
 	}
 
 	~Map() {
-
 		clear();
 	}
 };

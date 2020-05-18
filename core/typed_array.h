@@ -39,20 +39,25 @@ template <class T>
 class TypedArray : public Array {
 public:
 	template <class U>
-	_FORCE_INLINE_ void operator=(const TypedArray<U> &p_array) {
+	_FORCE_INLINE_ TypedArray &operator=(const TypedArray<U> &p_array) {
 		static_assert(__is_base_of(T, U));
 		_assign(p_array);
+		return *this;
 	}
 
-	_FORCE_INLINE_ void operator=(const Array &p_array) {
+	_FORCE_INLINE_ TypedArray &operator=(const Array &p_array) {
 		_assign(p_array);
+		return *this;
 	}
+
 	_FORCE_INLINE_ TypedArray(const Variant &p_variant) :
 			Array(Array(p_variant), Variant::OBJECT, T::get_class_static(), Variant()) {
 	}
+
 	_FORCE_INLINE_ TypedArray(const Array &p_array) :
 			Array(p_array, Variant::OBJECT, T::get_class_static(), Variant()) {
 	}
+
 	_FORCE_INLINE_ TypedArray() {
 		set_typed(Variant::OBJECT, T::get_class_static(), Variant());
 	}
@@ -64,8 +69,9 @@ public:
 	template <>                                                                    \
 	class TypedArray<m_type> : public Array {                                      \
 	public:                                                                        \
-		_FORCE_INLINE_ void operator=(const Array &p_array) {                      \
+		_FORCE_INLINE_ Array &operator=(const Array &p_array) {                    \
 			_assign(p_array);                                                      \
+			return *this;                                                          \
 		}                                                                          \
 		_FORCE_INLINE_ TypedArray(const Variant &p_variant) :                      \
 				Array(Array(p_variant), m_variant_type, StringName(), Variant()) { \

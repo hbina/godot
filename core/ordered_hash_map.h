@@ -291,8 +291,9 @@ private:
 	}
 
 public:
-	void operator=(const OrderedHashMap &p_map) {
+	OrderedHashMap &operator=(const OrderedHashMap &p_map) {
 		_copy_from(p_map);
+		return *this;
 	}
 
 	OrderedHashMap(const OrderedHashMap &p_map) {

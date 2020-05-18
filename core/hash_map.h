@@ -546,9 +546,9 @@ public:
 		elements = 0;
 	}
 
-	void operator=(const HashMap &p_table) {
-
+	HashMap &operator=(const HashMap &p_table) {
 		copy_from(p_table);
+		return *this;
 	}
 
 	HashMap() {
