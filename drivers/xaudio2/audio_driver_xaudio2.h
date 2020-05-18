@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -50,7 +50,7 @@ class AudioDriverXAudio2 : public AudioDriver {
 
 		HANDLE buffer_end_event;
 		XAudio2DriverVoiceCallback() :
-				buffer_end_event(CreateEvent(NULL, FALSE, FALSE, NULL)) {}
+				buffer_end_event(CreateEvent(nullptr, FALSE, FALSE, nullptr)) {}
 		void STDMETHODCALLTYPE OnBufferEnd(void *pBufferContext) {
 			SetEvent(buffer_end_event);
 		}
@@ -65,7 +65,7 @@ class AudioDriverXAudio2 : public AudioDriver {
 	};
 
 	Thread *thread;
-	Mutex *mutex;
+	Mutex mutex;
 
 	int32_t *samples_in;
 	int16_t *samples_out[AUDIO_BUFFERS];
@@ -94,14 +94,14 @@ class AudioDriverXAudio2 : public AudioDriver {
 public:
 	const char *get_name() const;
 
-	virtual Error init();
-	virtual void start();
-	virtual int get_mix_rate() const;
-	virtual SpeakerMode get_speaker_mode() const;
-	virtual float get_latency();
-	virtual void lock();
-	virtual void unlock();
-	virtual void finish();
+	virtual Error init() override;
+	virtual void start() override;
+	virtual int get_mix_rate() const override;
+	virtual SpeakerMode get_speaker_mode() const override;
+	virtual float get_latency() override;
+	virtual void lock() override;
+	virtual void unlock() override;
+	virtual void finish() override;
 
 	AudioDriverXAudio2();
 	~AudioDriverXAudio2();

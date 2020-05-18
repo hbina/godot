@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1813577248">
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;AnimationTreeEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;AnimationTreeEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.h" line="112" column="2"/>
+            <symbol>AnimationTreeEditorPlugin</symbol>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.h:81:7" my-argnr="1" my-argname="p_editor" file="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.cpp" line="175" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.h:82:7" my-argnr="1" my-argname="p_editor" file="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.cpp" line="184" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.h:109:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/editor/plugins/animation_tree_editor_plugin.cpp" line="262" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="edit" lineNumber="50"/>
+    <functiondecl functionName="_path_button_pressed" lineNumber="66"/>
+    <functiondecl functionName="_update_path" lineNumber="74"/>
+    <functiondecl functionName="edit_path" lineNumber="102"/>
+    <functiondecl functionName="get_edited_path" lineNumber="138"/>
+    <functiondecl functionName="enter_editor" lineNumber="142"/>
+    <functiondecl functionName="_about_to_show_root" lineNumber="149"/>
+    <functiondecl functionName="_notification" lineNumber="152"/>
+    <functiondecl functionName="_bind_methods" lineNumber="169"/>
+    <functiondecl functionName="add_plugin" lineNumber="174"/>
+    <functiondecl functionName="remove_plugin" lineNumber="183"/>
+    <functiondecl functionName="get_base_path" lineNumber="189"/>
+    <functiondecl functionName="can_edit" lineNumber="197"/>
+    <functiondecl functionName="get_animation_list" lineNumber="206"/>
+    <functiondecl functionName="edit" lineNumber="255"/>
+    <functiondecl functionName="handles" lineNumber="260"/>
+    <functiondecl functionName="make_visible" lineNumber="265"/>
+    <functioncall functionName="AddOption"/>
+    <functioncall functionName="AnimationNodeBlendSpace1DEditor"/>
+    <functioncall functionName="AnimationNodeBlendSpace2DEditor"/>
+    <functioncall functionName="AnimationNodeBlendTreeEditor"/>
+    <functioncall functionName="AnimationNodeStateMachineEditor"/>
+    <functioncall functionName="AnimationTreeEditor"/>
+    <functioncall functionName="AnimationTreeEditorPlugin"/>
+    <functioncall functionName="AnimationTreeNodeEditorPlugin"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_BREAK"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="FOCUS_NONE"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HSeparator"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PanelContainer"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="ScrollContainer"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="_path_button_pressed"/>
+    <functioncall functionName="_update_path"/>
+    <functioncall functionName="add_bottom_panel_item"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_plugin"/>
+    <functioncall functionName="anim_tree_editor"/>
+    <functioncall functionName="anims"/>
+    <functioncall functionName="ap"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="button_path"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="can_edit"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="edit"/>
+    <functioncall functionName="edit_path"/>
+    <functioncall functionName="edited_path"/>
+    <functioncall functionName="editor_base"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_animation_list"/>
+    <functioncall functionName="get_animation_player"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_by_name"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_meta"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_tree_root"/>
+    <functioncall functionName="group"/>
+    <functioncall functionName="has_meta"/>
+    <functioncall functionName="has_node"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="hide_bottom_panel"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="make_bottom_panel_item_visible"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_editor"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_tree"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_visible"/>
+    <functioncall functionName="parameters_base_path"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="path_edit"/>
+    <functioncall functionName="path_hb"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="remove_child"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_button_group"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_enable_h_scroll"/>
+    <functioncall functionName="set_enable_v_scroll"/>
+    <functioncall functionName="set_focus_mode"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_process"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_toggle_mode"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

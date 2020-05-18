@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2692382516">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_tau&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_tau&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.h" line="33" column="3"/>
+            <symbol>m_tau</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;m_damping&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;m_damping&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.h" line="34" column="3"/>
+            <symbol>m_damping</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;btSolve2LinearConstraint::resolveUnilateralPairConstraint&apos; can be const." verbose="The member function &apos;btSolve2LinearConstraint::resolveUnilateralPairConstraint&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.h" line="39" column="7"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" line="22" column="32"/>
+            <symbol>btSolve2LinearConstraint::resolveUnilateralPairConstraint</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;btSolve2LinearConstraint::resolveBilateralPairConstraint&apos; can be const." verbose="The member function &apos;btSolve2LinearConstraint::resolveBilateralPairConstraint&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.h" line="63" column="7"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" line="102" column="32"/>
+            <symbol>btSolve2LinearConstraint::resolveBilateralPairConstraint</symbol>
+        </error>
+        <error id="funcArgOrderDifferent" severity="warning" msg="Function &apos;resolveUnilateralPairConstraint&apos; argument order different: declaration &apos;body0, body1, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos; definition &apos;body1, body2, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos;" verbose="Function &apos;resolveUnilateralPairConstraint&apos; argument order different: declaration &apos;body0, body1, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos; definition &apos;body1, body2, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos;" cwe="683">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" line="23" column="15"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.h" line="40" column="16"/>
+            <symbol>resolveUnilateralPairConstraint</symbol>
+        </error>
+        <error id="funcArgOrderDifferent" severity="warning" msg="Function &apos;resolveBilateralPairConstraint&apos; argument order different: declaration &apos;body0, body1, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos; definition &apos;body1, body2, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos;" verbose="Function &apos;resolveBilateralPairConstraint&apos; argument order different: declaration &apos;body0, body1, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos; definition &apos;body1, body2, world2A, world2B, invInertiaADiag, invMassA, linvelA, angvelA, rel_posA1, invInertiaBDiag, invMassB, linvelB, angvelB, rel_posA2, depthA, normalA, rel_posB1, rel_posB2, depthB, normalB, imp0, imp1&apos;" cwe="683">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" line="103" column="15"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletDynamics/ConstraintSolver/btSolve2LinearConstraint.h" line="64" column="16"/>
+            <symbol>resolveBilateralPairConstraint</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="resolveUnilateralPairConstraint" lineNumber="22"/>
+    <functiondecl functionName="resolveBilateralPairConstraint" lineNumber="102"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="SIMD_EPSILON"/>
+    <functioncall functionName="ang"/>
+    <functioncall functionName="angvelA"/>
+    <functioncall functionName="angvelB"/>
+    <functioncall functionName="axisInA"/>
+    <functioncall functionName="axisInB"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btFabs"/>
+    <functioncall functionName="btJacobianEntry"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="damping"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="getDiagonal"/>
+    <functioncall functionName="getNonDiagonal"/>
+    <functioncall functionName="getRelativeVelocity"/>
+    <functioncall functionName="getVelocityInLocalPoint"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="imp0"/>
+    <functioncall functionName="imp1"/>
+    <functioncall functionName="invInertiaADiag"/>
+    <functioncall functionName="invInertiaBDiag"/>
+    <functioncall functionName="invMassA"/>
+    <functioncall functionName="invMassB"/>
+    <functioncall functionName="jacA"/>
+    <functioncall functionName="jacB"/>
+    <functioncall functionName="jointAxis"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lin1"/>
+    <functioncall functionName="linvelA"/>
+    <functioncall functionName="linvelB"/>
+    <functioncall functionName="m_Adiag"/>
+    <functioncall functionName="m_aJ"/>
+    <functioncall functionName="m_bJ"/>
+    <functioncall functionName="m_linearJointAxis"/>
+    <functioncall functionName="normalA"/>
+    <functioncall functionName="normalB"/>
+    <functioncall functionName="rel_posA1"/>
+    <functioncall functionName="rel_posA2"/>
+    <functioncall functionName="rel_posB1"/>
+    <functioncall functionName="rel_posB2"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="tau"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="world2A"/>
+    <functioncall functionName="world2B"/>
+  </FileInfo>
+</analyzerinfo>

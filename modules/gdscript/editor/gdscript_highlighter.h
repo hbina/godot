@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -62,11 +62,11 @@ private:
 public:
 	static SyntaxHighlighter *create();
 
-	virtual void _update_cache();
-	virtual Map<int, TextEdit::HighlighterInfo> _get_line_syntax_highlighting(int p_line);
+	virtual void _update_cache() override;
+	virtual Map<int, TextEdit::HighlighterInfo> _get_line_syntax_highlighting(int p_line) override;
 
-	virtual String get_name() const;
-	virtual List<String> get_supported_languages();
+	virtual String get_name() const override;
+	virtual List<String> get_supported_languages() override;
 };
 
 #endif // GDSCRIPT_HIGHLIGHTER_H

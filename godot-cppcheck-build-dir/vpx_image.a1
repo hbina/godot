@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3227181041">
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:202:5" call-funcname="vpx_img_set_rect" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="175" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:202:5" call-funcname="vpx_img_set_rect" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="175" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:18:21" call-funcname="img_alloc_helper" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="188" col="26" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:18:21" call-funcname="img_alloc_helper" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="188" col="10" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:183:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:18:21" call-funcname="img_alloc_helper" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="199" col="10" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:191:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:18:21" call-funcname="img_alloc_helper" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="199" col="10" my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:191:14" my-argnr="6"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:202:5" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="209" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:255:6" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="262" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c:255:6" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vpx/src/vpx_image.c" line="262" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="img_alloc_helper" lineNumber="18"/>
+    <functiondecl functionName="vpx_img_alloc" lineNumber="183"/>
+    <functiondecl functionName="vpx_img_wrap" lineNumber="191"/>
+    <functiondecl functionName="vpx_img_set_rect" lineNumber="202"/>
+    <functiondecl functionName="vpx_img_flip" lineNumber="255"/>
+    <functiondecl functionName="vpx_img_free" lineNumber="277"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="VPX_PLANE_ALPHA"/>
+    <functioncall functionName="VPX_PLANE_PACKED"/>
+    <functioncall functionName="VPX_PLANE_U"/>
+    <functioncall functionName="VPX_PLANE_V"/>
+    <functioncall functionName="VPX_PLANE_Y"/>
+    <functioncall functionName="align"/>
+    <functioncall functionName="alloc_size"/>
+    <functioncall functionName="bps"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf_align"/>
+    <functioncall functionName="calloc"/>
+    <functioncall functionName="d_h"/>
+    <functioncall functionName="d_w"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="fail"/>
+    <functioncall functionName="fmt"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="img_alloc_helper"/>
+    <functioncall functionName="img_data"/>
+    <functioncall functionName="img_data_owner"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="self_allocd"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stride_align"/>
+    <functioncall functionName="stride_in_bytes"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="vpx_free"/>
+    <functioncall functionName="vpx_image_t"/>
+    <functioncall functionName="vpx_img_free"/>
+    <functioncall functionName="vpx_img_set_rect"/>
+    <functioncall functionName="vpx_memalign"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="x_chroma_shift"/>
+    <functioncall functionName="xcs"/>
+    <functioncall functionName="y_chroma_shift"/>
+    <functioncall functionName="ycs"/>
+  </FileInfo>
+</analyzerinfo>

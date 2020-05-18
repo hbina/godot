@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3130297411">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;left_tangent&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;left_tangent&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/curve.cpp" file="/home/hbina/git/godot/scene/resources/curve.h" line="60" column="4"/>
+            <symbol>left_tangent</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;right_tangent&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;right_tangent&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/curve.cpp" file="/home/hbina/git/godot/scene/resources/curve.h" line="61" column="4"/>
+            <symbol>right_tangent</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;pos&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;pos&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/curve.cpp" file="/home/hbina/git/godot/scene/resources/curve.h" line="72" column="4"/>
+            <symbol>pos</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;left_tangent&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;left_tangent&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/curve.cpp" file="/home/hbina/git/godot/scene/resources/curve.h" line="73" column="4"/>
+            <symbol>left_tangent</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;right_tangent&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;right_tangent&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/curve.cpp" file="/home/hbina/git/godot/scene/resources/curve.h" line="74" column="4"/>
+            <symbol>right_tangent</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;Point&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;Point&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/resources/curve.cpp" file="/home/hbina/git/godot/scene/resources/curve.h" line="66" column="3"/>
+            <symbol>Point</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:122:7" call-funcname="update_auto_tangents" call-argnr="1" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="101" col="22" call-argexpr="ret" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/curve.cpp" line="70" col="9" info="Assignment 'ret=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:197:10" call-funcname="interpolate" call-argnr="1" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="642" col="20" call-argexpr="(int)p_findex" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/curve.cpp" line="638" col="14" info="Assignment 'p_findex=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/curve.cpp:36:25" call-funcname="_bezier_interp" call-argnr="1" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="648" col="30" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/curve.cpp" line="951" col="39" info="Calling function '_bake_segment2d', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:178:7" call-funcname="_bake_segment2d" call-argnr="2" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="662" col="18" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/curve.cpp" line="951" col="39" info="Calling function '_bake_segment2d', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:178:7" call-funcname="_bake_segment2d" call-argnr="2" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="951" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:178:7" call-funcname="_bake_segment2d" call-argnr="8" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="951" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:268:10" call-funcname="interpolate" call-argnr="1" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1141" col="20" call-argexpr="(int)p_findex" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1137" col="14" info="Assignment 'p_findex=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/curve.cpp:36:25" call-funcname="_bezier_interp" call-argnr="1" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1147" col="30" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1625" col="39" info="Calling function '_bake_segment3d', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:247:7" call-funcname="_bake_segment3d" call-argnr="2" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1160" col="18" call-argexpr="p_begin" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1625" col="39" info="Calling function '_bake_segment3d', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:247:7" call-funcname="_bake_segment3d" call-argnr="2" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1625" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/curve.h:247:7" call-funcname="_bake_segment3d" call-argnr="8" file="/home/hbina/git/godot/scene/resources/curve.cpp" line="1625" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="add_point" lineNumber="57"/>
+    <functiondecl functionName="get_index" lineNumber="108"/>
+    <functiondecl functionName="clean_dupes" lineNumber="138"/>
+    <functiondecl functionName="set_point_left_tangent" lineNumber="155"/>
+    <functiondecl functionName="set_point_right_tangent" lineNumber="162"/>
+    <functiondecl functionName="set_point_left_mode" lineNumber="169"/>
+    <functiondecl functionName="set_point_right_mode" lineNumber="181"/>
+    <functiondecl functionName="get_point_left_tangent" lineNumber="193"/>
+    <functiondecl functionName="get_point_right_tangent" lineNumber="198"/>
+    <functiondecl functionName="get_point_left_mode" lineNumber="203"/>
+    <functiondecl functionName="get_point_right_mode" lineNumber="208"/>
+    <functiondecl functionName="remove_point" lineNumber="213"/>
+    <functiondecl functionName="clear_points" lineNumber="219"/>
+    <functiondecl functionName="set_point_value" lineNumber="224"/>
+    <functiondecl functionName="set_point_offset" lineNumber="231"/>
+    <functiondecl functionName="get_point_position" lineNumber="246"/>
+    <functiondecl functionName="get_point" lineNumber="251"/>
+    <functiondecl functionName="update_auto_tangents" lineNumber="256"/>
+    <functiondecl functionName="set_min_value" lineNumber="285"/>
+    <functiondecl functionName="set_max_value" lineNumber="297"/>
+    <functiondecl functionName="interpolate" lineNumber="307"/>
+    <functiondecl functionName="interpolate_local_nocheck" lineNumber="326"/>
+    <functiondecl functionName="mark_dirty" lineNumber="359"/>
+    <functiondecl functionName="get_data" lineNumber="364"/>
+    <functiondecl functionName="set_data" lineNumber="385"/>
+    <functiondecl functionName="bake" lineNumber="426"/>
+    <functiondecl functionName="set_bake_resolution" lineNumber="445"/>
+    <functiondecl functionName="interpolate_baked" lineNumber="452"/>
+    <functiondecl functionName="ensure_default_setup" lineNumber="487"/>
+    <functiondecl functionName="_bind_methods" lineNumber="497"/>
+    <functiondecl functionName="get_point_count" lineNumber="539"/>
+    <functiondecl functionName="add_point" lineNumber="543"/>
+    <functiondecl functionName="set_point_position" lineNumber="558"/>
+    <functiondecl functionName="get_point_position" lineNumber="566"/>
+    <functiondecl functionName="set_point_in" lineNumber="572"/>
+    <functiondecl functionName="get_point_in" lineNumber="580"/>
+    <functiondecl functionName="set_point_out" lineNumber="586"/>
+    <functiondecl functionName="get_point_out" lineNumber="595"/>
+    <functiondecl functionName="remove_point" lineNumber="601"/>
+    <functiondecl functionName="clear_points" lineNumber="609"/>
+    <functiondecl functionName="interpolate" lineNumber="617"/>
+    <functiondecl functionName="interpolatef" lineNumber="635"/>
+    <functiondecl functionName="_bake_segment2d" lineNumber="645"/>
+    <functiondecl functionName="_bake" lineNumber="667"/>
+    <functiondecl functionName="get_baked_length" lineNumber="754"/>
+    <functiondecl functionName="interpolate_baked" lineNumber="761"/>
+    <functiondecl functionName="get_baked_points" lineNumber="803"/>
+    <functiondecl functionName="set_bake_interval" lineNumber="811"/>
+    <functiondecl functionName="get_bake_interval" lineNumber="818"/>
+    <functiondecl functionName="get_closest_point" lineNumber="823"/>
+    <functiondecl functionName="get_closest_offset" lineNumber="859"/>
+    <functiondecl functionName="_get_data" lineNumber="898"/>
+    <functiondecl functionName="_set_data" lineNumber="917"/>
+    <functiondecl functionName="tessellate" lineNumber="937"/>
+    <functiondecl functionName="_bind_methods" lineNumber="976"/>
+    <functiondecl functionName="get_point_count" lineNumber="1024"/>
+    <functiondecl functionName="add_point" lineNumber="1028"/>
+    <functiondecl functionName="set_point_position" lineNumber="1042"/>
+    <functiondecl functionName="get_point_position" lineNumber="1050"/>
+    <functiondecl functionName="set_point_tilt" lineNumber="1056"/>
+    <functiondecl functionName="get_point_tilt" lineNumber="1064"/>
+    <functiondecl functionName="set_point_in" lineNumber="1070"/>
+    <functiondecl functionName="get_point_in" lineNumber="1078"/>
+    <functiondecl functionName="set_point_out" lineNumber="1084"/>
+    <functiondecl functionName="get_point_out" lineNumber="1093"/>
+    <functiondecl functionName="remove_point" lineNumber="1099"/>
+    <functiondecl functionName="clear_points" lineNumber="1107"/>
+    <functiondecl functionName="interpolate" lineNumber="1116"/>
+    <functiondecl functionName="interpolatef" lineNumber="1134"/>
+    <functiondecl functionName="_bake_segment3d" lineNumber="1144"/>
+    <functiondecl functionName="_bake" lineNumber="1165"/>
+    <functiondecl functionName="get_baked_length" lineNumber="1312"/>
+    <functiondecl functionName="interpolate_baked" lineNumber="1319"/>
+    <functiondecl functionName="interpolate_baked_tilt" lineNumber="1361"/>
+    <functiondecl functionName="interpolate_baked_up_vector" lineNumber="1396"/>
+    <functiondecl functionName="get_baked_points" lineNumber="1440"/>
+    <functiondecl functionName="get_baked_tilts" lineNumber="1448"/>
+    <functiondecl functionName="get_baked_up_vectors" lineNumber="1456"/>
+    <functiondecl functionName="get_closest_point" lineNumber="1464"/>
+    <functiondecl functionName="get_closest_offset" lineNumber="1500"/>
+    <functiondecl functionName="set_bake_interval" lineNumber="1539"/>
+    <functiondecl functionName="get_bake_interval" lineNumber="1546"/>
+    <functiondecl functionName="set_up_vector_enabled" lineNumber="1551"/>
+    <functiondecl functionName="is_up_vector_enabled" lineNumber="1558"/>
+    <functiondecl functionName="_get_data" lineNumber="1563"/>
+    <functiondecl functionName="_set_data" lineNumber="1587"/>
+    <functiondecl functionName="tessellate" lineNumber="1611"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1650"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="CMP_EPSILON"/>
+    <functioncall functionName="Curve"/>
+    <functioncall functionName="Curve2D"/>
+    <functioncall functionName="Curve3D"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ELEMS"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MAX_X"/>
+    <functioncall functionName="MIN_X"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="Point"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SIGNAL_RANGE_CHANGED"/>
+    <functioncall functionName="TANGENT_FREE"/>
+    <functioncall functionName="TANGENT_LINEAR"/>
+    <functioncall functionName="TANGENT_MODE_COUNT"/>
+    <functioncall functionName="TangentMode"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_bake"/>
+    <functioncall functionName="_bake_resolution"/>
+    <functioncall functionName="_bake_segment2d"/>
+    <functioncall functionName="_bake_segment3d"/>
+    <functioncall functionName="_baked_cache_dirty"/>
+    <functioncall functionName="_bezier_interp"/>
+    <functioncall functionName="_get_data"/>
+    <functioncall functionName="_set_data"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="add_point"/>
+    <functioncall functionName="angle_to"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="bake"/>
+    <functioncall functionName="bake_interval"/>
+    <functioncall functionName="baked_cache_dirty"/>
+    <functioncall functionName="baked_max_ofs"/>
+    <functioncall functionName="beg"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="clean_dupes"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_points"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="cubic_interpolate"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="diff"/>
+    <functioncall functionName="direction"/>
+    <functioncall functionName="dirty"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="distance_squared_to"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fi"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="fmod"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="forward"/>
+    <functioncall functionName="frac"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_bake_interval"/>
+    <functioncall functionName="get_bake_resolution"/>
+    <functioncall functionName="get_baked_length"/>
+    <functioncall functionName="get_baked_points"/>
+    <functioncall functionName="get_baked_tilts"/>
+    <functioncall functionName="get_baked_up_vectors"/>
+    <functioncall functionName="get_closest_offset"/>
+    <functioncall functionName="get_closest_point"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_index"/>
+    <functioncall functionName="get_max_value"/>
+    <functioncall functionName="get_min_value"/>
+    <functioncall functionName="get_point_count"/>
+    <functioncall functionName="get_point_in"/>
+    <functioncall functionName="get_point_left_mode"/>
+    <functioncall functionName="get_point_left_tangent"/>
+    <functioncall functionName="get_point_out"/>
+    <functioncall functionName="get_point_position"/>
+    <functioncall functionName="get_point_right_mode"/>
+    <functioncall functionName="get_point_right_tangent"/>
+    <functioncall functionName="get_point_tilt"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="imax"/>
+    <functioncall functionName="imin"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="interpolate"/>
+    <functioncall functionName="interpolate_baked"/>
+    <functioncall functionName="interpolate_baked_up_vector"/>
+    <functioncall functionName="interpolate_local_nocheck"/>
+    <functioncall functionName="interpolatef"/>
+    <functioncall functionName="is_num"/>
+    <functioncall functionName="is_up_vector_enabled"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="lastilt"/>
+    <functioncall functionName="lastpos"/>
+    <functioncall functionName="left_mode"/>
+    <functioncall functionName="left_tangent"/>
+    <functioncall functionName="length_squared"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="local"/>
+    <functioncall functionName="local_offset"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="mark_dirty"/>
+    <functioncall functionName="mid"/>
+    <functioncall functionName="mp"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nb"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="np"/>
+    <functioncall functionName="npp"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p3"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_apply_tilt"/>
+    <functioncall functionName="p_atpos"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_begin"/>
+    <functioncall functionName="p_cubic"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_end"/>
+    <functioncall functionName="p_findex"/>
+    <functioncall functionName="p_in"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_left"/>
+    <functioncall functionName="p_left_mode"/>
+    <functioncall functionName="p_max"/>
+    <functioncall functionName="p_max_depth"/>
+    <functioncall functionName="p_max_stages"/>
+    <functioncall functionName="p_min"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_out"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_resolution"/>
+    <functioncall functionName="p_right"/>
+    <functioncall functionName="p_right_mode"/>
+    <functioncall functionName="p_tilt"/>
+    <functioncall functionName="p_to_point"/>
+    <functioncall functionName="p_tol"/>
+    <functioncall functionName="p_tolerance"/>
+    <functioncall functionName="pc"/>
+    <functioncall functionName="pidx"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="post"/>
+    <functioncall functionName="pre"/>
+    <functioncall functionName="prev_forward"/>
+    <functioncall functionName="prev_sideways"/>
+    <functioncall functionName="proj"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_bake"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="rem"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_point"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right_mode"/>
+    <functioncall functionName="right_tangent"/>
+    <functioncall functionName="rotate"/>
+    <functioncall functionName="rotated"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_bake_interval"/>
+    <functioncall functionName="set_bake_resolution"/>
+    <functioncall functionName="set_data"/>
+    <functioncall functionName="set_max_value"/>
+    <functioncall functionName="set_min_value"/>
+    <functioncall functionName="set_point_in"/>
+    <functioncall functionName="set_point_left_mode"/>
+    <functioncall functionName="set_point_left_tangent"/>
+    <functioncall functionName="set_point_offset"/>
+    <functioncall functionName="set_point_out"/>
+    <functioncall functionName="set_point_position"/>
+    <functioncall functionName="set_point_right_mode"/>
+    <functioncall functionName="set_point_right_tangent"/>
+    <functioncall functionName="set_point_tilt"/>
+    <functioncall functionName="set_point_value"/>
+    <functioncall functionName="set_up_vector_enabled"/>
+    <functioncall functionName="sideways"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="step"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tangent"/>
+    <functioncall functionName="tessellate"/>
+    <functioncall functionName="tilt"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="up"/>
+    <functioncall functionName="up1"/>
+    <functioncall functionName="up_vector_enabled"/>
+    <functioncall functionName="update_auto_tangents"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_dot"/>
+    <functioncall functionName="yac"/>
+    <functioncall functionName="ybc"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,489 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3807784897">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;spv::spirvbin_t::remap&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;spv::spirvbin_t::remap&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.h" line="87" column="10"/>
+            <symbol>spv::spirvbin_t::remap</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;spirvbin_t&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;spirvbin_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.h" line="85" column="5"/>
+            <symbol>spirvbin_t</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp:1436:13" my-argnr="2" my-argname="hasResult" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp" line="1437" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp:1436:13" my-argnr="3" my-argname="hasResultType" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spirv.hpp" line="1437" col="19" value="0"/>
+  </FileInfo>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;asId&apos;." verbose="Non-pure function: &apos;asId&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="476" column="28"/>
+            <symbol>asId</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;asId&apos;." verbose="Non-pure function: &apos;asId&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="479" column="28"/>
+            <symbol>asId</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;spirvbin_t::options&apos; is not initialized in the constructor." verbose="Member variable &apos;spirvbin_t::options&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.h" line="115" column="4"/>
+            <symbol>spirvbin_t::options</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;spv::spirvbin_t::nextUnusedId&apos; can be const." verbose="The member function &apos;spv::spirvbin_t::nextUnusedId&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.h" line="213" column="21"/>
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="249" column="25"/>
+            <symbol>spv::spirvbin_t::nextUnusedId</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;spv::spirvbin_t::literalStringWords&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;spv::spirvbin_t::literalStringWords&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.h" line="217" column="8"/>
+            <symbol>spv::spirvbin_t::literalStringWords</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;TVector&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;TVector&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/glslang/Include/Common.h" line="184" column="5"/>
+            <symbol>TVector</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;TVector&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;TVector&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/glslang/Include/Common.h" line="185" column="5"/>
+            <symbol>TVector</symbol>
+        </error>
+        <error id="duplicateCondition" severity="style" msg="The if condition is the same as the previous if condition" verbose="The if condition is the same as the previous if condition" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="347" column="32" info="Second condition"/>
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="341" column="32" info="First condition"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;Function&apos; argument 4 names different: declaration &apos;firstParam&apos; definition &apos;firstParamId&apos;." verbose="Function &apos;Function&apos; argument 4 names different: declaration &apos;firstParam&apos; definition &apos;firstParamId&apos;." cwe="628" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spvIR.h" line="442" column="71"/>
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spvIR.h" line="327" column="56"/>
+            <symbol>Function</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;remap&apos; argument 1 names different: declaration &apos;spv&apos; definition &apos;in_spv&apos;." verbose="Function &apos;remap&apos; argument 1 names different: declaration &apos;spv&apos; definition &apos;in_spv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="1477" column="56"/>
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.h" line="121" column="43"/>
+            <symbol>remap</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;unreachable&apos; shadows outer variable" verbose="Local variable &apos;unreachable&apos; shadows outer variable" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spvIR.h" line="238" column="22" info="Shadow variable"/>
+            <location file0="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spvIR.h" line="299" column="10" info="Shadowed declaration"/>
+            <symbol>unreachable</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;id&apos; can be declared with const" verbose="Parameter &apos;id&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="486" column="29"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;id&apos; can be declared with const" verbose="Parameter &apos;id&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="827" column="26"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;id&apos; can be declared with const" verbose="Parameter &apos;id&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="1127" column="26"/>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;id&apos; can be declared with const" verbose="Parameter &apos;id&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="1171" column="34"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/SPVRemapper.cpp" line="705" column="25"/>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spvIR.h:399:10" my-argnr="1" my-argname="instruction" file="/home/hbina/git/godot/thirdparty/glslang/SPIRV/spvIR.h" line="401" col="28" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="msg" lineNumber="55"/>
+    <functiondecl functionName="asOpCodeHash" lineNumber="62"/>
+    <functiondecl functionName="literalRange" lineNumber="78"/>
+    <functiondecl functionName="typeRange" lineNumber="97"/>
+    <functiondecl functionName="constRange" lineNumber="118"/>
+    <functiondecl functionName="typeSizeInWords" lineNumber="133"/>
+    <functiondecl functionName="idTypeSizeInWords" lineNumber="151"/>
+    <functiondecl functionName="isStripOp" lineNumber="163"/>
+    <functiondecl functionName="isFlowCtrl" lineNumber="176"/>
+    <functiondecl functionName="isTypeOp" lineNumber="192"/>
+    <functiondecl functionName="isConstOp" lineNumber="220"/>
+    <functiondecl functionName="nextUnusedId" lineNumber="249"/>
+    <functiondecl functionName="localId" lineNumber="257"/>
+    <functiondecl functionName="literalString" lineNumber="297"/>
+    <functiondecl functionName="applyMap" lineNumber="311"/>
+    <functiondecl functionName="mapRemainder" lineNumber="329"/>
+    <functiondecl functionName="stripDebug" lineNumber="363"/>
+    <functiondecl functionName="stripDeadRefs" lineNumber="377"/>
+    <functiondecl functionName="buildLocalMaps" lineNumber="402"/>
+    <functiondecl functionName="validate" lineNumber="491"/>
+    <functiondecl functionName="mapNames" lineNumber="697"/>
+    <functiondecl functionName="mapFnBodies" lineNumber="716"/>
+    <functiondecl functionName="forwardLoadStores" lineNumber="840"/>
+    <functiondecl functionName="optLoadStore" lineNumber="907"/>
+    <functiondecl functionName="dceFuncs" lineNumber="1056"/>
+    <functiondecl functionName="dceVars" lineNumber="1105"/>
+    <functiondecl functionName="dceTypes" lineNumber="1151"/>
+    <functiondecl functionName="idPos" lineNumber="1264"/>
+    <functiondecl functionName="hashType" lineNumber="1277"/>
+    <functiondecl functionName="mapTypeConst" lineNumber="1364"/>
+    <functiondecl functionName="strip" lineNumber="1389"/>
+    <functiondecl functionName="remap" lineNumber="1417"/>
+    <functiondecl functionName="remap" lineNumber="1477"/>
+    <functioncall functionName="ALL_BUT_STRIP"/>
+    <functioncall functionName="Block"/>
+    <functioncall functionName="D"/>
+    <functioncall functionName="DCE_TYPES"/>
+    <functioncall functionName="DO_EVERYTHING"/>
+    <functioncall functionName="Decoration"/>
+    <functioncall functionName="DecorationMax"/>
+    <functioncall functionName="FPFastMathModeMask"/>
+    <functioncall functionName="Function"/>
+    <functioncall functionName="FunctionControlMask"/>
+    <functioncall functionName="FunctionControlMaskNone"/>
+    <functioncall functionName="GetThreadPoolAllocator"/>
+    <functioncall functionName="HASH"/>
+    <functioncall functionName="IdImmediate"/>
+    <functioncall functionName="ImageOperandsMask"/>
+    <functioncall functionName="Instruction"/>
+    <functioncall functionName="IsPow2"/>
+    <functioncall functionName="KernelProfilingInfoMask"/>
+    <functioncall functionName="LoopControlMask"/>
+    <functioncall functionName="MAP_FUNCS"/>
+    <functioncall functionName="MemoryAccessMask"/>
+    <functioncall functionName="MemorySemanticsImageMemoryMask"/>
+    <functioncall functionName="MemorySemanticsMask"/>
+    <functioncall functionName="NoResult"/>
+    <functioncall functionName="NoType"/>
+    <functioncall functionName="OPT_ALL"/>
+    <functioncall functionName="OPT_LOADSTORE"/>
+    <functioncall functionName="Op"/>
+    <functioncall functionName="OpBranch"/>
+    <functioncall functionName="OpClassAnnotate"/>
+    <functioncall functionName="OpClassArithmetic"/>
+    <functioncall functionName="OpClassAtomic"/>
+    <functioncall functionName="OpClassBarrier"/>
+    <functioncall functionName="OpClassBit"/>
+    <functioncall functionName="OpClassComposite"/>
+    <functioncall functionName="OpClassConstant"/>
+    <functioncall functionName="OpClassConvert"/>
+    <functioncall functionName="OpClassCount"/>
+    <functioncall functionName="OpClassDebug"/>
+    <functioncall functionName="OpClassDerivative"/>
+    <functioncall functionName="OpClassDeviceSideEnqueue"/>
+    <functioncall functionName="OpClassExtension"/>
+    <functioncall functionName="OpClassFlowControl"/>
+    <functioncall functionName="OpClassFunction"/>
+    <functioncall functionName="OpClassGroup"/>
+    <functioncall functionName="OpClassImage"/>
+    <functioncall functionName="OpClassMemory"/>
+    <functioncall functionName="OpClassMisc"/>
+    <functioncall functionName="OpClassMissing"/>
+    <functioncall functionName="OpClassMode"/>
+    <functioncall functionName="OpClassPipe"/>
+    <functioncall functionName="OpClassPrimitive"/>
+    <functioncall functionName="OpClassRelationalLogical"/>
+    <functioncall functionName="OpClassType"/>
+    <functioncall functionName="OpFunction"/>
+    <functioncall functionName="OpFunctionEnd"/>
+    <functioncall functionName="OpFunctionParameter"/>
+    <functioncall functionName="OpLabel"/>
+    <functioncall functionName="OpNop"/>
+    <functioncall functionName="OpUnreachable"/>
+    <functioncall functionName="OperandAccessQualifier"/>
+    <functioncall functionName="OperandAddressing"/>
+    <functioncall functionName="OperandBuiltIn"/>
+    <functioncall functionName="OperandCapability"/>
+    <functioncall functionName="OperandCount"/>
+    <functioncall functionName="OperandDecoration"/>
+    <functioncall functionName="OperandDimensionality"/>
+    <functioncall functionName="OperandExecutionMode"/>
+    <functioncall functionName="OperandExecutionModel"/>
+    <functioncall functionName="OperandFPFastMath"/>
+    <functioncall functionName="OperandFPRoundingMode"/>
+    <functioncall functionName="OperandFuncParamAttr"/>
+    <functioncall functionName="OperandFunction"/>
+    <functioncall functionName="OperandGroupOperation"/>
+    <functioncall functionName="OperandId"/>
+    <functioncall functionName="OperandImageChannelDataType"/>
+    <functioncall functionName="OperandImageChannelOrder"/>
+    <functioncall functionName="OperandImageOperands"/>
+    <functioncall functionName="OperandKernelEnqueueFlags"/>
+    <functioncall functionName="OperandKernelProfilingInfo"/>
+    <functioncall functionName="OperandLinkageType"/>
+    <functioncall functionName="OperandLiteralNumber"/>
+    <functioncall functionName="OperandLiteralString"/>
+    <functioncall functionName="OperandLoop"/>
+    <functioncall functionName="OperandMemory"/>
+    <functioncall functionName="OperandMemoryAccess"/>
+    <functioncall functionName="OperandMemorySemantics"/>
+    <functioncall functionName="OperandNone"/>
+    <functioncall functionName="OperandOpcode"/>
+    <functioncall functionName="OperandOptionalLiteral"/>
+    <functioncall functionName="OperandOptionalLiteralString"/>
+    <functioncall functionName="OperandSamplerAddressingMode"/>
+    <functioncall functionName="OperandSamplerFilterMode"/>
+    <functioncall functionName="OperandSamplerImageFormat"/>
+    <functioncall functionName="OperandScope"/>
+    <functioncall functionName="OperandSelect"/>
+    <functioncall functionName="OperandSource"/>
+    <functioncall functionName="OperandStorage"/>
+    <functioncall functionName="OperandVariableIdLiteral"/>
+    <functioncall functionName="OperandVariableIds"/>
+    <functioncall functionName="OperandVariableLiteralId"/>
+    <functioncall functionName="OperandVariableLiterals"/>
+    <functioncall functionName="PRED"/>
+    <functioncall functionName="Parameterize"/>
+    <functioncall functionName="ReachDeadContinue"/>
+    <functioncall functionName="ReachDeadMerge"/>
+    <functioncall functionName="ReachReason"/>
+    <functioncall functionName="SelectionControlMask"/>
+    <functioncall functionName="StorageClass"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="TPoolAllocator"/>
+    <functioncall functionName="TString"/>
+    <functioncall functionName="TVector"/>
+    <functioncall functionName="_FNV_offset_basis"/>
+    <functioncall functionName="_Next"/>
+    <functioncall functionName="_Where"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="addFunction"/>
+    <functioncall functionName="addIdOperand"/>
+    <functioncall functionName="addImmediateOperand"/>
+    <functioncall functionName="addInstruction"/>
+    <functioncall functionName="addLocalVariable"/>
+    <functioncall functionName="allocate"/>
+    <functioncall functionName="applyMap"/>
+    <functioncall functionName="asId"/>
+    <functioncall functionName="asOpCode"/>
+    <functioncall functionName="asOpCodeHash"/>
+    <functioncall functionName="asTypeConstId"/>
+    <functioncall functionName="asWordCount"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bitmask"/>
+    <functioncall functionName="block"/>
+    <functioncall functionName="blockNum"/>
+    <functioncall functionName="bound"/>
+    <functioncall functionName="branch"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buildLocalMaps"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="call_it"/>
+    <functioncall functionName="ceil"/>
+    <functioncall functionName="ceiling"/>
+    <functioncall functionName="cend"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="charCount"/>
+    <functioncall functionName="checkGuardBlock"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dceFuncs"/>
+    <functioncall functionName="dceTypes"/>
+    <functioncall functionName="dceVars"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="dump"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="entry"/>
+    <functioncall functionName="entryPoint"/>
+    <functioncall functionName="enumParams"/>
+    <functioncall functionName="ep"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="errorHandler"/>
+    <functioncall functionName="errorLatch"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="firstMappedID"/>
+    <functioncall functionName="fn"/>
+    <functioncall functionName="fnRes"/>
+    <functioncall functionName="fnStart"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="forwardLoadStores"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="fun"/>
+    <functioncall functionName="functionInstruction"/>
+    <functioncall functionName="functionType"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="getClass"/>
+    <functioncall functionName="getId"/>
+    <functioncall functionName="getIdOperand"/>
+    <functioncall functionName="getImmediateOperand"/>
+    <functioncall functionName="getInstruction"/>
+    <functioncall functionName="getName"/>
+    <functioncall functionName="getNumOperands"/>
+    <functioncall functionName="getOpCode"/>
+    <functioncall functionName="getParent"/>
+    <functioncall functionName="getResultId"/>
+    <functioncall functionName="getTypeId"/>
+    <functioncall functionName="guardBlockBeginVal"/>
+    <functioncall functionName="guardBlockEndVal"/>
+    <functioncall functionName="guardBlockSize"/>
+    <functioncall functionName="handler"/>
+    <functioncall functionName="hasResult"/>
+    <functioncall functionName="hasType"/>
+    <functioncall functionName="hashType"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="headerSize"/>
+    <functioncall functionName="header_size"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idBufferPos"/>
+    <functioncall functionName="idBufferSize"/>
+    <functioncall functionName="idFn"/>
+    <functioncall functionName="idMap"/>
+    <functioncall functionName="idPos"/>
+    <functioncall functionName="idTypeSize"/>
+    <functioncall functionName="idTypeSizeInWords"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="immediate"/>
+    <functioncall functionName="implicitThis"/>
+    <functioncall functionName="inReadableOrder"/>
+    <functioncall functionName="in_spv"/>
+    <functioncall functionName="indent"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="inst"/>
+    <functioncall functionName="instFn"/>
+    <functioncall functionName="inst_fn_nop"/>
+    <functioncall functionName="instances"/>
+    <functioncall functionName="instruction"/>
+    <functioncall functionName="instructionStart"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="isConstOp"/>
+    <functioncall functionName="isFlowCtrl"/>
+    <functioncall functionName="isId"/>
+    <functioncall functionName="isMapped"/>
+    <functioncall functionName="isNewIdMapped"/>
+    <functioncall functionName="isOldIdUnmapped"/>
+    <functioncall functionName="isOldIdUnused"/>
+    <functioncall functionName="isStripOp"/>
+    <functioncall functionName="isType"/>
+    <functioncall functionName="isTypeOp"/>
+    <functioncall functionName="largestNewId"/>
+    <functioncall functionName="literalSize"/>
+    <functioncall functionName="literalSizePos"/>
+    <functioncall functionName="literalString"/>
+    <functioncall functionName="literalStringWords"/>
+    <functioncall functionName="localId"/>
+    <functioncall functionName="logHandler"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="mBits"/>
+    <functioncall functionName="magic"/>
+    <functioncall functionName="mapFnBodies"/>
+    <functioncall functionName="mapInstruction"/>
+    <functioncall functionName="mapNames"/>
+    <functioncall functionName="mapRemainder"/>
+    <functioncall functionName="mapTypeConst"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="maxBound"/>
+    <functioncall functionName="maxCount"/>
+    <functioncall functionName="maxMappedId"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="move"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nameMap"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="newId"/>
+    <functioncall functionName="nextInst"/>
+    <functioncall functionName="nextPage"/>
+    <functioncall functionName="nextUnusedId"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="numOperands"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="offsetAllocation"/>
+    <functioncall functionName="oldId"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="opClass"/>
+    <functioncall functionName="opCode"/>
+    <functioncall functionName="opDesc"/>
+    <functioncall functionName="opOpCode"/>
+    <functioncall functionName="opWordCount"/>
+    <functioncall functionName="op_fn_nop"/>
+    <functioncall functionName="opcode"/>
+    <functioncall functionName="operandParams"/>
+    <functioncall functionName="opt"/>
+    <functioncall functionName="optLoadStore"/>
+    <functioncall functionName="opts"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pageCount"/>
+    <functioncall functionName="pair"/>
+    <functioncall functionName="param"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="postGuard"/>
+    <functioncall functionName="powerOf2"/>
+    <functioncall functionName="preGuard"/>
+    <functioncall functionName="pred"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prevAlloc"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="process"/>
+    <functioncall functionName="processInstruction"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="range_t"/>
+    <functioncall functionName="raw_instruction"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="remap"/>
+    <functioncall functionName="resId"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="resizeMapped"/>
+    <functioncall functionName="resultId"/>
+    <functioncall functionName="resultPresent"/>
+    <functioncall functionName="resultType"/>
+    <functioncall functionName="ret_str"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="schemaNum"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="setBlock"/>
+    <functioncall functionName="setMapped"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="snprintf"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="stringNum"/>
+    <functioncall functionName="strip"/>
+    <functioncall functionName="stripDeadRefs"/>
+    <functioncall functionName="stripDebug"/>
+    <functioncall functionName="stripInst"/>
+    <functioncall functionName="strippedPos"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tHeader"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="text"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="thisOpCode"/>
+    <functioncall functionName="to_string"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="txt"/>
+    <functioncall functionName="typeConstPos"/>
+    <functioncall functionName="typeId"/>
+    <functioncall functionName="typePresent"/>
+    <functioncall functionName="typeSizeInWords"/>
+    <functioncall functionName="typeStart"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="unique_ptr"/>
+    <functioncall functionName="unmapped"/>
+    <functioncall functionName="unreachable"/>
+    <functioncall functionName="unused"/>
+    <functioncall functionName="unusedId"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="validate"/>
+    <functioncall functionName="varId"/>
+    <functioncall functionName="verbose"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="windowSize"/>
+    <functioncall functionName="word"/>
+    <functioncall functionName="wordCount"/>
+    <functioncall functionName="wordString"/>
+  </FileInfo>
+</analyzerinfo>

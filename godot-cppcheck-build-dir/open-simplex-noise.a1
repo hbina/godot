@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2593844064">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r&apos; can be reduced." verbose="The scope of the variable &apos;r&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="186" column="6"/>
+            <symbol>r</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: rc" verbose="Unused variable: rc" cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="181" column="6"/>
+            <symbol>rc</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;aScore&apos; is assigned a value that is never used." verbose="Variable &apos;aScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="703" column="12"/>
+            <symbol>aScore</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;bScore&apos; is assigned a value that is never used." verbose="Variable &apos;bScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="707" column="12"/>
+            <symbol>bScore</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;aScore&apos; is assigned a value that is never used." verbose="Variable &apos;aScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="714" column="12"/>
+            <symbol>aScore</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;bScore&apos; is assigned a value that is never used." verbose="Variable &apos;bScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="718" column="12"/>
+            <symbol>bScore</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;bScore&apos; is assigned a value that is never used." verbose="Variable &apos;bScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="1470" column="11"/>
+            <symbol>bScore</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;aScore&apos; is assigned a value that is never used." verbose="Variable &apos;aScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="1474" column="11"/>
+            <symbol>aScore</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;bScore&apos; is assigned a value that is never used." verbose="Variable &apos;bScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="1894" column="11"/>
+            <symbol>bScore</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;aScore&apos; is assigned a value that is never used." verbose="Variable &apos;aScore&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="1898" column="11"/>
+            <symbol>aScore</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c:103:15" call-funcname="extrapolate2" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="279" col="28" my-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.h:50:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c:111:15" call-funcname="extrapolate3" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="510" col="29" my-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.h:51:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c:121:15" call-funcname="extrapolate4" call-argnr="1" file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="1145" col="29" my-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.h:52:8" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c:103:15" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="105" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c:111:15" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="113" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c:121:15" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="123" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.h:46:5" my-argnr="2" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/misc/open-simplex-noise.c" line="188" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="extrapolate2" lineNumber="103"/>
+    <functiondecl functionName="extrapolate3" lineNumber="111"/>
+    <functiondecl functionName="extrapolate4" lineNumber="121"/>
+    <functiondecl functionName="fastFloor" lineNumber="131"/>
+    <functiondecl functionName="open_simplex_noise" lineNumber="179"/>
+    <functiondecl functionName="open_simplex_noise2" lineNumber="229"/>
+    <functiondecl functionName="open_simplex_noise3" lineNumber="357"/>
+    <functiondecl functionName="open_simplex_noise4" lineNumber="930"/>
+    <functioncall functionName="aIsBiggerSide"/>
+    <functioncall functionName="aIsFurtherSide"/>
+    <functioncall functionName="aPoint"/>
+    <functioncall functionName="aScore"/>
+    <functioncall functionName="attn0"/>
+    <functioncall functionName="attn1"/>
+    <functioncall functionName="attn10"/>
+    <functioncall functionName="attn2"/>
+    <functioncall functionName="attn3"/>
+    <functioncall functionName="attn4"/>
+    <functioncall functionName="attn5"/>
+    <functioncall functionName="attn6"/>
+    <functioncall functionName="attn7"/>
+    <functioncall functionName="attn8"/>
+    <functioncall functionName="attn9"/>
+    <functioncall functionName="attn_ext"/>
+    <functioncall functionName="attn_ext0"/>
+    <functioncall functionName="attn_ext1"/>
+    <functioncall functionName="attn_ext2"/>
+    <functioncall functionName="bPoint"/>
+    <functioncall functionName="bScore"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="dw0"/>
+    <functioncall functionName="dw1"/>
+    <functioncall functionName="dw10"/>
+    <functioncall functionName="dw2"/>
+    <functioncall functionName="dw3"/>
+    <functioncall functionName="dw4"/>
+    <functioncall functionName="dw5"/>
+    <functioncall functionName="dw6"/>
+    <functioncall functionName="dw7"/>
+    <functioncall functionName="dw8"/>
+    <functioncall functionName="dw9"/>
+    <functioncall functionName="dw_ext0"/>
+    <functioncall functionName="dw_ext1"/>
+    <functioncall functionName="dw_ext2"/>
+    <functioncall functionName="dx0"/>
+    <functioncall functionName="dx1"/>
+    <functioncall functionName="dx10"/>
+    <functioncall functionName="dx2"/>
+    <functioncall functionName="dx3"/>
+    <functioncall functionName="dx4"/>
+    <functioncall functionName="dx5"/>
+    <functioncall functionName="dx6"/>
+    <functioncall functionName="dx7"/>
+    <functioncall functionName="dx8"/>
+    <functioncall functionName="dx9"/>
+    <functioncall functionName="dx_ext"/>
+    <functioncall functionName="dx_ext0"/>
+    <functioncall functionName="dx_ext1"/>
+    <functioncall functionName="dx_ext2"/>
+    <functioncall functionName="dy0"/>
+    <functioncall functionName="dy1"/>
+    <functioncall functionName="dy10"/>
+    <functioncall functionName="dy2"/>
+    <functioncall functionName="dy3"/>
+    <functioncall functionName="dy4"/>
+    <functioncall functionName="dy5"/>
+    <functioncall functionName="dy6"/>
+    <functioncall functionName="dy7"/>
+    <functioncall functionName="dy8"/>
+    <functioncall functionName="dy9"/>
+    <functioncall functionName="dy_ext"/>
+    <functioncall functionName="dy_ext0"/>
+    <functioncall functionName="dy_ext1"/>
+    <functioncall functionName="dy_ext2"/>
+    <functioncall functionName="dz0"/>
+    <functioncall functionName="dz1"/>
+    <functioncall functionName="dz10"/>
+    <functioncall functionName="dz2"/>
+    <functioncall functionName="dz3"/>
+    <functioncall functionName="dz4"/>
+    <functioncall functionName="dz5"/>
+    <functioncall functionName="dz6"/>
+    <functioncall functionName="dz7"/>
+    <functioncall functionName="dz8"/>
+    <functioncall functionName="dz9"/>
+    <functioncall functionName="dz_ext0"/>
+    <functioncall functionName="dz_ext1"/>
+    <functioncall functionName="dz_ext2"/>
+    <functioncall functionName="extrapolate2"/>
+    <functioncall functionName="extrapolate3"/>
+    <functioncall functionName="extrapolate4"/>
+    <functioncall functionName="fastFloor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="gradients3D"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inSum"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int16_t"/>
+    <functioncall functionName="int8_t"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p3"/>
+    <functioncall functionName="p4"/>
+    <functioncall functionName="perm"/>
+    <functioncall functionName="permGradIndex3D"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="score"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="squishOffset"/>
+    <functioncall functionName="stretchOffset"/>
+    <functioncall functionName="uins"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="wb"/>
+    <functioncall functionName="wins"/>
+    <functioncall functionName="ws"/>
+    <functioncall functionName="wsb"/>
+    <functioncall functionName="wsv_ext0"/>
+    <functioncall functionName="wsv_ext1"/>
+    <functioncall functionName="wsv_ext2"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xb"/>
+    <functioncall functionName="xi"/>
+    <functioncall functionName="xins"/>
+    <functioncall functionName="xs"/>
+    <functioncall functionName="xsb"/>
+    <functioncall functionName="xsv_ext"/>
+    <functioncall functionName="xsv_ext0"/>
+    <functioncall functionName="xsv_ext1"/>
+    <functioncall functionName="xsv_ext2"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="yb"/>
+    <functioncall functionName="yins"/>
+    <functioncall functionName="ys"/>
+    <functioncall functionName="ysb"/>
+    <functioncall functionName="ysv_ext"/>
+    <functioncall functionName="ysv_ext0"/>
+    <functioncall functionName="ysv_ext1"/>
+    <functioncall functionName="ysv_ext2"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zb"/>
+    <functioncall functionName="zins"/>
+    <functioncall functionName="zs"/>
+    <functioncall functionName="zsb"/>
+    <functioncall functionName="zsv_ext0"/>
+    <functioncall functionName="zsv_ext1"/>
+    <functioncall functionName="zsv_ext2"/>
+  </FileInfo>
+</analyzerinfo>

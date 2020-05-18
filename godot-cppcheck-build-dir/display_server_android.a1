@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="345340636">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;rendering_driver&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;rendering_driver&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="371" column="2"/>
+            <symbol>rendering_driver</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;rendering_driver&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;rendering_driver&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="374" column="2"/>
+            <symbol>rendering_driver</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!godot_java&apos; is redundant or there is possible null pointer dereference: godot_java." verbose="Either the condition &apos;!godot_java&apos; is redundant or there is possible null pointer dereference: godot_java." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="108" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="105" column="76" info="Assignment &apos;godot_java=OS_Android::get_singleton()-&gt;get_godot_java()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="106" column="16" info="Assuming that condition &apos;!godot_java&apos; is not redundant"/>
+            <symbol>godot_java</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." verbose="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="120" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="117" column="84" info="Assignment &apos;godot_io_java=OS_Android::get_singleton()-&gt;get_godot_io_java()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="118" column="16" info="Assuming that condition &apos;!godot_io_java&apos; is not redundant"/>
+            <symbol>godot_io_java</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." verbose="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="127" column="28" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="124" column="84" info="Assignment &apos;godot_io_java=OS_Android::get_singleton()-&gt;get_godot_io_java()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="125" column="18" info="Assuming that condition &apos;!godot_io_java&apos; is not redundant"/>
+            <symbol>godot_io_java</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." verbose="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="151" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="148" column="84" info="Assignment &apos;godot_io_java=OS_Android::get_singleton()-&gt;get_godot_io_java()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="149" column="18" info="Assuming that condition &apos;!godot_io_java&apos; is not redundant"/>
+            <symbol>godot_io_java</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." verbose="Either the condition &apos;!godot_io_java&apos; is redundant or there is possible null pointer dereference: godot_io_java." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="184" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="181" column="84" info="Assignment &apos;godot_io_java=OS_Android::get_singleton()-&gt;get_godot_io_java()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="182" column="18" info="Assuming that condition &apos;!godot_io_java&apos; is not redundant"/>
+            <symbol>godot_io_java</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!godot_java&apos; is redundant or there is possible null pointer dereference: godot_java." verbose="Either the condition &apos;!godot_java&apos; is redundant or there is possible null pointer dereference: godot_java." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="342" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="339" column="76" info="Assignment &apos;godot_java=OS_Android::get_singleton()-&gt;get_godot_java()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="340" column="16" info="Assuming that condition &apos;!godot_java&apos; is not redundant"/>
+            <symbol>godot_java</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="49" column="9"/>
+        </error>
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;rendering_driver&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;rendering_driver&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="374" column="19" info="rendering_driver is overwritten"/>
+            <location file="/home/hbina/git/godot/platform/android/display_server_android.cpp" line="371" column="19" info="rendering_driver is assigned"/>
+            <symbol>rendering_driver</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_singleton" lineNumber="48"/>
+    <functiondecl functionName="has_feature" lineNumber="52"/>
+    <functiondecl functionName="get_name" lineNumber="78"/>
+    <functiondecl functionName="clipboard_set" lineNumber="82"/>
+    <functiondecl functionName="clipboard_get" lineNumber="93"/>
+    <functiondecl functionName="screen_set_keep_on" lineNumber="104"/>
+    <functiondecl functionName="screen_is_kept_on" lineNumber="112"/>
+    <functiondecl functionName="screen_set_orientation" lineNumber="116"/>
+    <functiondecl functionName="screen_get_orientation" lineNumber="123"/>
+    <functiondecl functionName="get_screen_count" lineNumber="130"/>
+    <functiondecl functionName="screen_get_position" lineNumber="134"/>
+    <functiondecl functionName="screen_get_size" lineNumber="138"/>
+    <functiondecl functionName="screen_get_usable_rect" lineNumber="142"/>
+    <functiondecl functionName="screen_get_dpi" lineNumber="147"/>
+    <functiondecl functionName="screen_is_touchscreen" lineNumber="154"/>
+    <functiondecl functionName="virtual_keyboard_show" lineNumber="158"/>
+    <functiondecl functionName="virtual_keyboard_hide" lineNumber="169"/>
+    <functiondecl functionName="virtual_keyboard_get_height" lineNumber="180"/>
+    <functiondecl functionName="window_set_window_event_callback" lineNumber="187"/>
+    <functiondecl functionName="window_set_input_event_callback" lineNumber="191"/>
+    <functiondecl functionName="window_set_input_text_callback" lineNumber="195"/>
+    <functiondecl functionName="window_set_rect_changed_callback" lineNumber="199"/>
+    <functiondecl functionName="window_set_drop_files_callback" lineNumber="203"/>
+    <functiondecl functionName="_window_callback" lineNumber="207"/>
+    <functiondecl functionName="send_window_event" lineNumber="216"/>
+    <functiondecl functionName="send_input_event" lineNumber="220"/>
+    <functiondecl functionName="send_input_text" lineNumber="224"/>
+    <functiondecl functionName="_dispatch_input_events" lineNumber="228"/>
+    <functiondecl functionName="get_window_list" lineNumber="232"/>
+    <functiondecl functionName="get_window_at_screen_position" lineNumber="238"/>
+    <functiondecl functionName="window_attach_instance_id" lineNumber="242"/>
+    <functiondecl functionName="window_get_attached_instance_id" lineNumber="246"/>
+    <functiondecl functionName="window_set_title" lineNumber="250"/>
+    <functiondecl functionName="window_get_current_screen" lineNumber="254"/>
+    <functiondecl functionName="window_set_current_screen" lineNumber="258"/>
+    <functiondecl functionName="window_get_position" lineNumber="262"/>
+    <functiondecl functionName="window_set_position" lineNumber="266"/>
+    <functiondecl functionName="window_set_transient" lineNumber="270"/>
+    <functiondecl functionName="window_set_max_size" lineNumber="274"/>
+    <functiondecl functionName="window_get_max_size" lineNumber="278"/>
+    <functiondecl functionName="window_set_min_size" lineNumber="282"/>
+    <functiondecl functionName="window_get_min_size" lineNumber="286"/>
+    <functiondecl functionName="window_set_size" lineNumber="290"/>
+    <functiondecl functionName="window_get_size" lineNumber="294"/>
+    <functiondecl functionName="window_get_real_size" lineNumber="298"/>
+    <functiondecl functionName="window_set_mode" lineNumber="302"/>
+    <functiondecl functionName="window_get_mode" lineNumber="306"/>
+    <functiondecl functionName="window_is_maximize_allowed" lineNumber="310"/>
+    <functiondecl functionName="window_set_flag" lineNumber="314"/>
+    <functiondecl functionName="window_get_flag" lineNumber="318"/>
+    <functiondecl functionName="window_request_attention" lineNumber="322"/>
+    <functiondecl functionName="window_move_to_foreground" lineNumber="326"/>
+    <functiondecl functionName="window_can_draw" lineNumber="330"/>
+    <functiondecl functionName="can_any_window_draw" lineNumber="334"/>
+    <functiondecl functionName="alert" lineNumber="338"/>
+    <functiondecl functionName="process_events" lineNumber="345"/>
+    <functiondecl functionName="get_rendering_drivers_func" lineNumber="349"/>
+    <functiondecl functionName="create_func" lineNumber="362"/>
+    <functiondecl functionName="register_android_driver" lineNumber="366"/>
+    <functiondecl functionName="process_joy_event" lineNumber="445"/>
+    <functiondecl functionName="process_key_event" lineNumber="464"/>
+    <functiondecl functionName="process_touch" lineNumber="490"/>
+    <functiondecl functionName="process_hover" lineNumber="605"/>
+    <functiondecl functionName="process_double_tap" lineNumber="622"/>
+    <functiondecl functionName="process_scroll" lineNumber="632"/>
+    <functiondecl functionName="process_accelerometer" lineNumber="641"/>
+    <functiondecl functionName="process_gravity" lineNumber="645"/>
+    <functiondecl functionName="process_magnetometer" lineNumber="649"/>
+    <functiondecl functionName="process_gyroscope" lineNumber="653"/>
+    <functiondecl functionName="get_singleton" lineNumber="48"/>
+    <functiondecl functionName="has_feature" lineNumber="52"/>
+    <functiondecl functionName="get_name" lineNumber="78"/>
+    <functiondecl functionName="clipboard_set" lineNumber="82"/>
+    <functiondecl functionName="clipboard_get" lineNumber="93"/>
+    <functiondecl functionName="screen_set_keep_on" lineNumber="104"/>
+    <functiondecl functionName="screen_is_kept_on" lineNumber="112"/>
+    <functiondecl functionName="screen_set_orientation" lineNumber="116"/>
+    <functiondecl functionName="screen_get_orientation" lineNumber="123"/>
+    <functiondecl functionName="get_screen_count" lineNumber="130"/>
+    <functiondecl functionName="screen_get_position" lineNumber="134"/>
+    <functiondecl functionName="screen_get_size" lineNumber="138"/>
+    <functiondecl functionName="screen_get_usable_rect" lineNumber="142"/>
+    <functiondecl functionName="screen_get_dpi" lineNumber="147"/>
+    <functiondecl functionName="screen_is_touchscreen" lineNumber="154"/>
+    <functiondecl functionName="virtual_keyboard_show" lineNumber="158"/>
+    <functiondecl functionName="virtual_keyboard_hide" lineNumber="169"/>
+    <functiondecl functionName="virtual_keyboard_get_height" lineNumber="180"/>
+    <functiondecl functionName="window_set_window_event_callback" lineNumber="187"/>
+    <functiondecl functionName="window_set_input_event_callback" lineNumber="191"/>
+    <functiondecl functionName="window_set_input_text_callback" lineNumber="195"/>
+    <functiondecl functionName="window_set_rect_changed_callback" lineNumber="199"/>
+    <functiondecl functionName="window_set_drop_files_callback" lineNumber="203"/>
+    <functiondecl functionName="_window_callback" lineNumber="207"/>
+    <functiondecl functionName="send_window_event" lineNumber="216"/>
+    <functiondecl functionName="send_input_event" lineNumber="220"/>
+    <functiondecl functionName="send_input_text" lineNumber="224"/>
+    <functiondecl functionName="_dispatch_input_events" lineNumber="228"/>
+    <functiondecl functionName="get_window_list" lineNumber="232"/>
+    <functiondecl functionName="get_window_at_screen_position" lineNumber="238"/>
+    <functiondecl functionName="window_attach_instance_id" lineNumber="242"/>
+    <functiondecl functionName="window_get_attached_instance_id" lineNumber="246"/>
+    <functiondecl functionName="window_set_title" lineNumber="250"/>
+    <functiondecl functionName="window_get_current_screen" lineNumber="254"/>
+    <functiondecl functionName="window_set_current_screen" lineNumber="258"/>
+    <functiondecl functionName="window_get_position" lineNumber="262"/>
+    <functiondecl functionName="window_set_position" lineNumber="266"/>
+    <functiondecl functionName="window_set_transient" lineNumber="270"/>
+    <functiondecl functionName="window_set_max_size" lineNumber="274"/>
+    <functiondecl functionName="window_get_max_size" lineNumber="278"/>
+    <functiondecl functionName="window_set_min_size" lineNumber="282"/>
+    <functiondecl functionName="window_get_min_size" lineNumber="286"/>
+    <functiondecl functionName="window_set_size" lineNumber="290"/>
+    <functiondecl functionName="window_get_size" lineNumber="294"/>
+    <functiondecl functionName="window_get_real_size" lineNumber="298"/>
+    <functiondecl functionName="window_set_mode" lineNumber="302"/>
+    <functiondecl functionName="window_get_mode" lineNumber="306"/>
+    <functiondecl functionName="window_is_maximize_allowed" lineNumber="310"/>
+    <functiondecl functionName="window_set_flag" lineNumber="314"/>
+    <functiondecl functionName="window_get_flag" lineNumber="318"/>
+    <functiondecl functionName="window_request_attention" lineNumber="322"/>
+    <functiondecl functionName="window_move_to_foreground" lineNumber="326"/>
+    <functiondecl functionName="window_can_draw" lineNumber="330"/>
+    <functiondecl functionName="can_any_window_draw" lineNumber="334"/>
+    <functiondecl functionName="alert" lineNumber="338"/>
+    <functiondecl functionName="process_events" lineNumber="345"/>
+    <functiondecl functionName="get_rendering_drivers_func" lineNumber="349"/>
+    <functiondecl functionName="create_func" lineNumber="362"/>
+    <functiondecl functionName="register_android_driver" lineNumber="366"/>
+    <functiondecl functionName="process_joy_event" lineNumber="445"/>
+    <functiondecl functionName="process_key_event" lineNumber="464"/>
+    <functiondecl functionName="process_touch" lineNumber="490"/>
+    <functiondecl functionName="process_hover" lineNumber="605"/>
+    <functiondecl functionName="process_double_tap" lineNumber="622"/>
+    <functiondecl functionName="process_scroll" lineNumber="632"/>
+    <functiondecl functionName="process_accelerometer" lineNumber="641"/>
+    <functiondecl functionName="process_gravity" lineNumber="645"/>
+    <functiondecl functionName="process_magnetometer" lineNumber="649"/>
+    <functiondecl functionName="process_gyroscope" lineNumber="653"/>
+    <functiondecl functionName="get_singleton" lineNumber="48"/>
+    <functiondecl functionName="has_feature" lineNumber="52"/>
+    <functiondecl functionName="get_name" lineNumber="78"/>
+    <functiondecl functionName="clipboard_set" lineNumber="82"/>
+    <functiondecl functionName="clipboard_get" lineNumber="93"/>
+    <functiondecl functionName="screen_set_keep_on" lineNumber="104"/>
+    <functiondecl functionName="screen_is_kept_on" lineNumber="112"/>
+    <functiondecl functionName="screen_set_orientation" lineNumber="116"/>
+    <functiondecl functionName="screen_get_orientation" lineNumber="123"/>
+    <functiondecl functionName="get_screen_count" lineNumber="130"/>
+    <functiondecl functionName="screen_get_position" lineNumber="134"/>
+    <functiondecl functionName="screen_get_size" lineNumber="138"/>
+    <functiondecl functionName="screen_get_usable_rect" lineNumber="142"/>
+    <functiondecl functionName="screen_get_dpi" lineNumber="147"/>
+    <functiondecl functionName="screen_is_touchscreen" lineNumber="154"/>
+    <functiondecl functionName="virtual_keyboard_show" lineNumber="158"/>
+    <functiondecl functionName="virtual_keyboard_hide" lineNumber="169"/>
+    <functiondecl functionName="virtual_keyboard_get_height" lineNumber="180"/>
+    <functiondecl functionName="window_set_window_event_callback" lineNumber="187"/>
+    <functiondecl functionName="window_set_input_event_callback" lineNumber="191"/>
+    <functiondecl functionName="window_set_input_text_callback" lineNumber="195"/>
+    <functiondecl functionName="window_set_rect_changed_callback" lineNumber="199"/>
+    <functiondecl functionName="window_set_drop_files_callback" lineNumber="203"/>
+    <functiondecl functionName="_window_callback" lineNumber="207"/>
+    <functiondecl functionName="send_window_event" lineNumber="216"/>
+    <functiondecl functionName="send_input_event" lineNumber="220"/>
+    <functiondecl functionName="send_input_text" lineNumber="224"/>
+    <functiondecl functionName="_dispatch_input_events" lineNumber="228"/>
+    <functiondecl functionName="get_window_list" lineNumber="232"/>
+    <functiondecl functionName="get_window_at_screen_position" lineNumber="238"/>
+    <functiondecl functionName="window_attach_instance_id" lineNumber="242"/>
+    <functiondecl functionName="window_get_attached_instance_id" lineNumber="246"/>
+    <functiondecl functionName="window_set_title" lineNumber="250"/>
+    <functiondecl functionName="window_get_current_screen" lineNumber="254"/>
+    <functiondecl functionName="window_set_current_screen" lineNumber="258"/>
+    <functiondecl functionName="window_get_position" lineNumber="262"/>
+    <functiondecl functionName="window_set_position" lineNumber="266"/>
+    <functiondecl functionName="window_set_transient" lineNumber="270"/>
+    <functiondecl functionName="window_set_max_size" lineNumber="274"/>
+    <functiondecl functionName="window_get_max_size" lineNumber="278"/>
+    <functiondecl functionName="window_set_min_size" lineNumber="282"/>
+    <functiondecl functionName="window_get_min_size" lineNumber="286"/>
+    <functiondecl functionName="window_set_size" lineNumber="290"/>
+    <functiondecl functionName="window_get_size" lineNumber="294"/>
+    <functiondecl functionName="window_get_real_size" lineNumber="298"/>
+    <functiondecl functionName="window_set_mode" lineNumber="302"/>
+    <functiondecl functionName="window_get_mode" lineNumber="306"/>
+    <functiondecl functionName="window_is_maximize_allowed" lineNumber="310"/>
+    <functiondecl functionName="window_set_flag" lineNumber="314"/>
+    <functiondecl functionName="window_get_flag" lineNumber="318"/>
+    <functiondecl functionName="window_request_attention" lineNumber="322"/>
+    <functiondecl functionName="window_move_to_foreground" lineNumber="326"/>
+    <functiondecl functionName="window_can_draw" lineNumber="330"/>
+    <functiondecl functionName="can_any_window_draw" lineNumber="334"/>
+    <functiondecl functionName="alert" lineNumber="338"/>
+    <functiondecl functionName="process_events" lineNumber="345"/>
+    <functiondecl functionName="get_rendering_drivers_func" lineNumber="349"/>
+    <functiondecl functionName="create_func" lineNumber="362"/>
+    <functiondecl functionName="register_android_driver" lineNumber="366"/>
+    <functiondecl functionName="process_joy_event" lineNumber="445"/>
+    <functiondecl functionName="process_key_event" lineNumber="464"/>
+    <functiondecl functionName="process_touch" lineNumber="490"/>
+    <functiondecl functionName="process_hover" lineNumber="605"/>
+    <functiondecl functionName="process_double_tap" lineNumber="622"/>
+    <functiondecl functionName="process_scroll" lineNumber="632"/>
+    <functiondecl functionName="process_accelerometer" lineNumber="641"/>
+    <functiondecl functionName="process_gravity" lineNumber="645"/>
+    <functiondecl functionName="process_magnetometer" lineNumber="649"/>
+    <functiondecl functionName="process_gyroscope" lineNumber="653"/>
+    <functioncall functionName="AKEYCODE_0"/>
+    <functioncall functionName="AKEYCODE_1"/>
+    <functioncall functionName="AKEYCODE_2"/>
+    <functioncall functionName="AKEYCODE_3"/>
+    <functioncall functionName="AKEYCODE_4"/>
+    <functioncall functionName="AKEYCODE_5"/>
+    <functioncall functionName="AKEYCODE_6"/>
+    <functioncall functionName="AKEYCODE_7"/>
+    <functioncall functionName="AKEYCODE_8"/>
+    <functioncall functionName="AKEYCODE_9"/>
+    <functioncall functionName="AKEYCODE_A"/>
+    <functioncall functionName="AKEYCODE_ALT_LEFT"/>
+    <functioncall functionName="AKEYCODE_ALT_RIGHT"/>
+    <functioncall functionName="AKEYCODE_B"/>
+    <functioncall functionName="AKEYCODE_BACK"/>
+    <functioncall functionName="AKEYCODE_BACKSLASH"/>
+    <functioncall functionName="AKEYCODE_BUTTON_A"/>
+    <functioncall functionName="AKEYCODE_BUTTON_B"/>
+    <functioncall functionName="AKEYCODE_BUTTON_C"/>
+    <functioncall functionName="AKEYCODE_BUTTON_L1"/>
+    <functioncall functionName="AKEYCODE_BUTTON_L2"/>
+    <functioncall functionName="AKEYCODE_BUTTON_MODE"/>
+    <functioncall functionName="AKEYCODE_BUTTON_R1"/>
+    <functioncall functionName="AKEYCODE_BUTTON_R2"/>
+    <functioncall functionName="AKEYCODE_BUTTON_SELECT"/>
+    <functioncall functionName="AKEYCODE_BUTTON_START"/>
+    <functioncall functionName="AKEYCODE_BUTTON_THUMBL"/>
+    <functioncall functionName="AKEYCODE_BUTTON_THUMBR"/>
+    <functioncall functionName="AKEYCODE_BUTTON_X"/>
+    <functioncall functionName="AKEYCODE_BUTTON_Y"/>
+    <functioncall functionName="AKEYCODE_BUTTON_Z"/>
+    <functioncall functionName="AKEYCODE_C"/>
+    <functioncall functionName="AKEYCODE_COMMA"/>
+    <functioncall functionName="AKEYCODE_D"/>
+    <functioncall functionName="AKEYCODE_DEL"/>
+    <functioncall functionName="AKEYCODE_DPAD_CENTER"/>
+    <functioncall functionName="AKEYCODE_DPAD_DOWN"/>
+    <functioncall functionName="AKEYCODE_DPAD_LEFT"/>
+    <functioncall functionName="AKEYCODE_DPAD_RIGHT"/>
+    <functioncall functionName="AKEYCODE_DPAD_UP"/>
+    <functioncall functionName="AKEYCODE_E"/>
+    <functioncall functionName="AKEYCODE_ENTER"/>
+    <functioncall functionName="AKEYCODE_EQUALS"/>
+    <functioncall functionName="AKEYCODE_EXPLORER"/>
+    <functioncall functionName="AKEYCODE_F"/>
+    <functioncall functionName="AKEYCODE_G"/>
+    <functioncall functionName="AKEYCODE_H"/>
+    <functioncall functionName="AKEYCODE_HOME"/>
+    <functioncall functionName="AKEYCODE_I"/>
+    <functioncall functionName="AKEYCODE_J"/>
+    <functioncall functionName="AKEYCODE_K"/>
+    <functioncall functionName="AKEYCODE_L"/>
+    <functioncall functionName="AKEYCODE_LEFT_BRACKET"/>
+    <functioncall functionName="AKEYCODE_M"/>
+    <functioncall functionName="AKEYCODE_MEDIA_FAST_FORWARD"/>
+    <functioncall functionName="AKEYCODE_MEDIA_NEXT"/>
+    <functioncall functionName="AKEYCODE_MEDIA_PLAY_PAUSE"/>
+    <functioncall functionName="AKEYCODE_MEDIA_PREVIOUS"/>
+    <functioncall functionName="AKEYCODE_MEDIA_REWIND"/>
+    <functioncall functionName="AKEYCODE_MEDIA_STOP"/>
+    <functioncall functionName="AKEYCODE_MENU"/>
+    <functioncall functionName="AKEYCODE_MINUS"/>
+    <functioncall functionName="AKEYCODE_MUTE"/>
+    <functioncall functionName="AKEYCODE_N"/>
+    <functioncall functionName="AKEYCODE_O"/>
+    <functioncall functionName="AKEYCODE_P"/>
+    <functioncall functionName="AKEYCODE_PAGE_DOWN"/>
+    <functioncall functionName="AKEYCODE_PAGE_UP"/>
+    <functioncall functionName="AKEYCODE_PLUS"/>
+    <functioncall functionName="AKEYCODE_Q"/>
+    <functioncall functionName="AKEYCODE_R"/>
+    <functioncall functionName="AKEYCODE_RIGHT_BRACKET"/>
+    <functioncall functionName="AKEYCODE_S"/>
+    <functioncall functionName="AKEYCODE_SHIFT_LEFT"/>
+    <functioncall functionName="AKEYCODE_SHIFT_RIGHT"/>
+    <functioncall functionName="AKEYCODE_SLASH"/>
+    <functioncall functionName="AKEYCODE_SPACE"/>
+    <functioncall functionName="AKEYCODE_T"/>
+    <functioncall functionName="AKEYCODE_TAB"/>
+    <functioncall functionName="AKEYCODE_U"/>
+    <functioncall functionName="AKEYCODE_V"/>
+    <functioncall functionName="AKEYCODE_VOLUME_DOWN"/>
+    <functioncall functionName="AKEYCODE_VOLUME_UP"/>
+    <functioncall functionName="AKEYCODE_W"/>
+    <functioncall functionName="AKEYCODE_X"/>
+    <functioncall functionName="AKEYCODE_Y"/>
+    <functioncall functionName="AKEYCODE_Z"/>
+    <functioncall functionName="AudioDriverAndroid"/>
+    <functioncall functionName="AudioDriverOpenSL"/>
+    <functioncall functionName="BUFFER_COUNT"/>
+    <functioncall functionName="DisplayServerAndroid"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="GetStringUTFChars"/>
+    <functioncall functionName="KEY_0"/>
+    <functioncall functionName="KEY_1"/>
+    <functioncall functionName="KEY_2"/>
+    <functioncall functionName="KEY_3"/>
+    <functioncall functionName="KEY_4"/>
+    <functioncall functionName="KEY_5"/>
+    <functioncall functionName="KEY_6"/>
+    <functioncall functionName="KEY_7"/>
+    <functioncall functionName="KEY_8"/>
+    <functioncall functionName="KEY_9"/>
+    <functioncall functionName="KEY_A"/>
+    <functioncall functionName="KEY_ALT"/>
+    <functioncall functionName="KEY_B"/>
+    <functioncall functionName="KEY_BACK"/>
+    <functioncall functionName="KEY_BACKSLASH"/>
+    <functioncall functionName="KEY_BACKSPACE"/>
+    <functioncall functionName="KEY_BRACKETLEFT"/>
+    <functioncall functionName="KEY_BRACKETRIGHT"/>
+    <functioncall functionName="KEY_C"/>
+    <functioncall functionName="KEY_COMMA"/>
+    <functioncall functionName="KEY_D"/>
+    <functioncall functionName="KEY_DOWN"/>
+    <functioncall functionName="KEY_E"/>
+    <functioncall functionName="KEY_ENTER"/>
+    <functioncall functionName="KEY_EQUAL"/>
+    <functioncall functionName="KEY_ESCAPE"/>
+    <functioncall functionName="KEY_F"/>
+    <functioncall functionName="KEY_FORWARD"/>
+    <functioncall functionName="KEY_G"/>
+    <functioncall functionName="KEY_H"/>
+    <functioncall functionName="KEY_HOME"/>
+    <functioncall functionName="KEY_HOMEPAGE"/>
+    <functioncall functionName="KEY_I"/>
+    <functioncall functionName="KEY_J"/>
+    <functioncall functionName="KEY_K"/>
+    <functioncall functionName="KEY_L"/>
+    <functioncall functionName="KEY_LAUNCH0"/>
+    <functioncall functionName="KEY_LAUNCH1"/>
+    <functioncall functionName="KEY_LAUNCH2"/>
+    <functioncall functionName="KEY_LAUNCH3"/>
+    <functioncall functionName="KEY_LAUNCH4"/>
+    <functioncall functionName="KEY_LAUNCH5"/>
+    <functioncall functionName="KEY_LAUNCH6"/>
+    <functioncall functionName="KEY_LAUNCH7"/>
+    <functioncall functionName="KEY_LAUNCH8"/>
+    <functioncall functionName="KEY_LAUNCH9"/>
+    <functioncall functionName="KEY_LAUNCHA"/>
+    <functioncall functionName="KEY_LAUNCHB"/>
+    <functioncall functionName="KEY_LAUNCHC"/>
+    <functioncall functionName="KEY_LAUNCHD"/>
+    <functioncall functionName="KEY_LAUNCHE"/>
+    <functioncall functionName="KEY_LEFT"/>
+    <functioncall functionName="KEY_M"/>
+    <functioncall functionName="KEY_MEDIANEXT"/>
+    <functioncall functionName="KEY_MEDIAPREVIOUS"/>
+    <functioncall functionName="KEY_MEDIASTOP"/>
+    <functioncall functionName="KEY_MENU"/>
+    <functioncall functionName="KEY_MINUS"/>
+    <functioncall functionName="KEY_N"/>
+    <functioncall functionName="KEY_O"/>
+    <functioncall functionName="KEY_P"/>
+    <functioncall functionName="KEY_PAGEDOWN"/>
+    <functioncall functionName="KEY_PAGEUP"/>
+    <functioncall functionName="KEY_PAUSE"/>
+    <functioncall functionName="KEY_PERIODCENTERED"/>
+    <functioncall functionName="KEY_PLUS"/>
+    <functioncall functionName="KEY_Q"/>
+    <functioncall functionName="KEY_R"/>
+    <functioncall functionName="KEY_RIGHT"/>
+    <functioncall functionName="KEY_S"/>
+    <functioncall functionName="KEY_SHIFT"/>
+    <functioncall functionName="KEY_SLASH"/>
+    <functioncall functionName="KEY_SPACE"/>
+    <functioncall functionName="KEY_T"/>
+    <functioncall functionName="KEY_TAB"/>
+    <functioncall functionName="KEY_U"/>
+    <functioncall functionName="KEY_UNKNOWN"/>
+    <functioncall functionName="KEY_UP"/>
+    <functioncall functionName="KEY_V"/>
+    <functioncall functionName="KEY_VOLUMEDOWN"/>
+    <functioncall functionName="KEY_VOLUMEMUTE"/>
+    <functioncall functionName="KEY_VOLUMEUP"/>
+    <functioncall functionName="KEY_W"/>
+    <functioncall functionName="KEY_X"/>
+    <functioncall functionName="KEY_Y"/>
+    <functioncall functionName="KEY_Z"/>
+    <functioncall functionName="MAIN_WINDOW_ID"/>
+    <functioncall functionName="OS_Android"/>
+    <functioncall functionName="Point2i"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Rect2i"/>
+    <functioncall functionName="ReleaseStringUTFChars"/>
+    <functioncall functionName="RenderingDeviceVulkan"/>
+    <functioncall functionName="SCREEN_LANDSCAPE"/>
+    <functioncall functionName="SCREEN_OF_MAIN_WINDOW"/>
+    <functioncall functionName="ScreenOrientation"/>
+    <functioncall functionName="Size2i"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="ThreadAndroid"/>
+    <functioncall functionName="VulkanContextAndroid"/>
+    <functioncall functionName="_dispatch_input_events"/>
+    <functioncall functionName="_window_callback"/>
+    <functioncall functionName="alert"/>
+    <functioncall functionName="android_get_keysym"/>
+    <functioncall functionName="argp"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="ce"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clipboard_get"/>
+    <functioncall functionName="clipboard_set"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="context_vulkan"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_func"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="env"/>
+    <functioncall functionName="ev"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finalize"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_clipboard"/>
+    <functioncall functionName="get_display_size"/>
+    <functioncall functionName="get_env"/>
+    <functioncall functionName="get_godot_io_java"/>
+    <functioncall functionName="get_godot_java"/>
+    <functioncall functionName="get_native_window"/>
+    <functioncall functionName="get_rendering_drivers_func"/>
+    <functioncall functionName="get_screen_dpi"/>
+    <functioncall functionName="get_screen_orientation"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_vk_height"/>
+    <functioncall functionName="gl_initialization_error"/>
+    <functioncall functionName="godot_io_java"/>
+    <functioncall functionName="godot_java"/>
+    <functioncall functionName="has_get_clipboard"/>
+    <functioncall functionName="has_set_clipboard"/>
+    <functioncall functionName="has_vk"/>
+    <functioncall functionName="hat"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hide_vk"/>
+    <functioncall functionName="hover_prev_pos"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="input_event_callback"/>
+    <functioncall functionName="input_text_callback"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_viable"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="joy_axis"/>
+    <functioncall functionName="joy_button"/>
+    <functioncall functionName="joy_hat"/>
+    <functioncall functionName="keycode"/>
+    <functioncall functionName="main_loop_request_go_back"/>
+    <functioncall functionName="make_current"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="native_window"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_accelerometer"/>
+    <functioncall functionName="p_alert"/>
+    <functioncall functionName="p_arg"/>
+    <functioncall functionName="p_callable"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_existing_text"/>
+    <functioncall functionName="p_feature"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_gravity"/>
+    <functioncall functionName="p_gyroscope"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_keycode"/>
+    <functioncall functionName="p_magnetometer"/>
+    <functioncall functionName="p_max_length"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_orientation"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_pressed"/>
+    <functioncall functionName="p_rendering_driver"/>
+    <functioncall functionName="p_resolution"/>
+    <functioncall functionName="p_scancode"/>
+    <functioncall functionName="p_text"/>
+    <functioncall functionName="p_title"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_unicode_char"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="parse_input_event"/>
+    <functioncall functionName="parse_utf8"/>
+    <functioncall functionName="phy_keycode"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="pressed"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="register_config"/>
+    <functioncall functionName="register_create_function"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="rendering_device_vulkan"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="scroll_prev_pos"/>
+    <functioncall functionName="send_input_event"/>
+    <functioncall functionName="set_accelerometer"/>
+    <functioncall functionName="set_clipboard"/>
+    <functioncall functionName="set_delta"/>
+    <functioncall functionName="set_doubleclick"/>
+    <functioncall functionName="set_event_dispatch_function"/>
+    <functioncall functionName="set_global_position"/>
+    <functioncall functionName="set_gravity"/>
+    <functioncall functionName="set_gyroscope"/>
+    <functioncall functionName="set_index"/>
+    <functioncall functionName="set_keep_screen_on"/>
+    <functioncall functionName="set_keycode"/>
+    <functioncall functionName="set_magnetometer"/>
+    <functioncall functionName="set_physical_keycode"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_relative"/>
+    <functioncall functionName="set_screen_orientation"/>
+    <functioncall functionName="set_unicode"/>
+    <functioncall functionName="show_vk"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="source_utf8"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tp"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="window_create"/>
+    <functioncall functionName="window_event_callback"/>
+  </FileInfo>
+</analyzerinfo>

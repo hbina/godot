@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -103,7 +103,7 @@ Error WSLServer::PendingPeer::do_handshake(const Vector<String> p_protocols) {
 	if (OS::get_singleton()->get_ticks_msec() - time > WSL_SERVER_TIMEOUT)
 		return ERR_TIMEOUT;
 	if (use_ssl) {
-		Ref<StreamPeerSSL> ssl = static_cast<Ref<StreamPeerSSL> >(connection);
+		Ref<StreamPeerSSL> ssl = static_cast<Ref<StreamPeerSSL>>(connection);
 		if (ssl.is_null())
 			return FAILED;
 		ssl->poll();
@@ -165,15 +165,13 @@ Error WSLServer::listen(int p_port, const Vector<String> p_protocols, bool gd_mp
 	for (int i = 0; i < p_protocols.size(); i++) {
 		pw[i] = p_protocols[i].strip_edges();
 	}
-	_server->listen(p_port);
-
-	return OK;
+	return _server->listen(p_port, bind_ip);
 }
 
 void WSLServer::poll() {
 
 	List<int> remove_ids;
-	for (Map<int, Ref<WebSocketPeer> >::Element *E = _peer_map.front(); E; E = E->next()) {
+	for (Map<int, Ref<WebSocketPeer>>::Element *E = _peer_map.front(); E; E = E->next()) {
 		Ref<WSLPeer> peer = (WSLPeer *)E->get().ptr();
 		peer->poll();
 		if (!peer->is_connected_to_host()) {
@@ -186,8 +184,8 @@ void WSLServer::poll() {
 	}
 	remove_ids.clear();
 
-	List<Ref<PendingPeer> > remove_peers;
-	for (List<Ref<PendingPeer> >::Element *E = _pending.front(); E; E = E->next()) {
+	List<Ref<PendingPeer>> remove_peers;
+	for (List<Ref<PendingPeer>>::Element *E = _pending.front(); E; E = E->next()) {
 		Ref<PendingPeer> ppeer = E->get();
 		Error err = ppeer->do_handshake(_protocols);
 		if (err == ERR_BUSY) {
@@ -208,12 +206,13 @@ void WSLServer::poll() {
 
 		Ref<WSLPeer> ws_peer = memnew(WSLPeer);
 		ws_peer->make_context(data, _in_buf_size, _in_pkt_size, _out_buf_size, _out_pkt_size);
+		ws_peer->set_no_delay(true);
 
 		_peer_map[id] = ws_peer;
 		remove_peers.push_back(ppeer);
 		_on_connect(id, ppeer->protocol);
 	}
-	for (List<Ref<PendingPeer> >::Element *E = remove_peers.front(); E; E = E->next()) {
+	for (List<Ref<PendingPeer>>::Element *E = remove_peers.front(); E; E = E->next()) {
 		_pending.erase(E->get());
 	}
 	remove_peers.clear();
@@ -252,7 +251,7 @@ int WSLServer::get_max_packet_size() const {
 
 void WSLServer::stop() {
 	_server->stop();
-	for (Map<int, Ref<WebSocketPeer> >::Element *E = _peer_map.front(); E; E = E->next()) {
+	for (Map<int, Ref<WebSocketPeer>>::Element *E = _peer_map.front(); E; E = E->next()) {
 		Ref<WSLPeer> peer = (WSLPeer *)E->get().ptr();
 		peer->close_now();
 	}
@@ -266,7 +265,7 @@ bool WSLServer::has_peer(int p_id) const {
 }
 
 Ref<WebSocketPeer> WSLServer::get_peer(int p_id) const {
-	ERR_FAIL_COND_V(!has_peer(p_id), NULL);
+	ERR_FAIL_COND_V(!has_peer(p_id), nullptr);
 	return _peer_map[p_id];
 }
 
@@ -299,10 +298,10 @@ Error WSLServer::set_buffers(int p_in_buffer, int p_in_packets, int p_out_buffer
 }
 
 WSLServer::WSLServer() {
-	_in_buf_size = nearest_shift((int)GLOBAL_GET(WSS_IN_BUF) - 1) + 10;
-	_in_pkt_size = nearest_shift((int)GLOBAL_GET(WSS_IN_PKT) - 1);
-	_out_buf_size = nearest_shift((int)GLOBAL_GET(WSS_OUT_BUF) - 1) + 10;
-	_out_pkt_size = nearest_shift((int)GLOBAL_GET(WSS_OUT_PKT) - 1);
+	_in_buf_size = DEF_BUF_SHIFT;
+	_in_pkt_size = DEF_PKT_SHIFT;
+	_out_buf_size = DEF_BUF_SHIFT;
+	_out_pkt_size = DEF_PKT_SHIFT;
 	_server.instance();
 }
 

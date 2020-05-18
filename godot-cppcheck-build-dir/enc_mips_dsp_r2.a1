@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2653346508">
+        <error id="knownConditionTrueFalse" severity="style" msg="The expression &apos;ret != 0&apos; is always false." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1313" column="15"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1281" column="13" info="&apos;ret&apos; is assigned value &apos;0&apos; here."/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:174:25" call-funcname="ITransformOne" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="244" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:242:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:174:25" call-funcname="ITransformOne" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="244" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:242:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:174:25" call-funcname="ITransformOne" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="244" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:242:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:250:12" call-funcname="Disto4x4_MIPSdspR2" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="324" col="12" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:317:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:546:25" call-funcname="DCMode8" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1019" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1016:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:546:25" call-funcname="DCMode8" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1019" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1016:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:483:25" call-funcname="DCMode16" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1038" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1036:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:483:25" call-funcname="DCMode16" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1038" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1036:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:591:13" call-funcname="DC4" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1047" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1046:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:144:13" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="152" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:144:13" my-argnr="2" my-argname="ref" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="152" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:144:13" my-argnr="3" my-argname="out" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="152" col="55" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:174:25" call-funcname="ITransformOne" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="244" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:242:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:174:25" call-funcname="ITransformOne" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="244" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:242:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:174:25" call-funcname="ITransformOne" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="244" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:242:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:250:12" call-funcname="Disto4x4_MIPSdspR2" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="324" col="12" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:317:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:546:25" call-funcname="DCMode8" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1019" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1016:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:546:25" call-funcname="DCMode8" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1019" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1016:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:483:25" call-funcname="DCMode16" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1038" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1036:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:483:25" call-funcname="DCMode16" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1038" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1036:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:591:13" call-funcname="DC4" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="1047" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:1046:13" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:144:13" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="152" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:144:13" my-argnr="2" my-argname="ref" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="152" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c:144:13" my-argnr="3" my-argname="out" file="/home/hbina/git/godot/thirdparty/libwebp/src/dsp/enc_mips_dsp_r2.c" line="152" col="55" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="FTransform_MIPSdspR2" lineNumber="144"/>
+    <functiondecl functionName="ITransformOne" lineNumber="174"/>
+    <functiondecl functionName="ITransform_MIPSdspR2" lineNumber="242"/>
+    <functiondecl functionName="Disto4x4_MIPSdspR2" lineNumber="250"/>
+    <functiondecl functionName="Disto16x16_MIPSdspR2" lineNumber="317"/>
+    <functiondecl functionName="VerticalPred8" lineNumber="380"/>
+    <functiondecl functionName="VerticalPred16" lineNumber="381"/>
+    <functiondecl functionName="HorizontalPred8" lineNumber="398"/>
+    <functiondecl functionName="HorizontalPred16" lineNumber="399"/>
+    <functiondecl functionName="TrueMotion8" lineNumber="475"/>
+    <functiondecl functionName="TrueMotion16" lineNumber="476"/>
+    <functiondecl functionName="DCMode16" lineNumber="483"/>
+    <functiondecl functionName="DCMode8" lineNumber="546"/>
+    <functiondecl functionName="DC4" lineNumber="591"/>
+    <functiondecl functionName="TM4" lineNumber="612"/>
+    <functiondecl functionName="VE4" lineNumber="667"/>
+    <functiondecl functionName="HE4" lineNumber="698"/>
+    <functiondecl functionName="RD4" lineNumber="734"/>
+    <functiondecl functionName="VR4" lineNumber="783"/>
+    <functiondecl functionName="LD4" lineNumber="833"/>
+    <functiondecl functionName="VL4" lineNumber="880"/>
+    <functiondecl functionName="HD4" lineNumber="929"/>
+    <functiondecl functionName="HU4" lineNumber="977"/>
+    <functiondecl functionName="IntraChromaPreds_MIPSdspR2" lineNumber="1016"/>
+    <functiondecl functionName="Intra16Preds_MIPSdspR2" lineNumber="1036"/>
+    <functiondecl functionName="Intra4Preds_MIPSdspR2" lineNumber="1046"/>
+    <functiondecl functionName="SSE16x16_MIPSdspR2" lineNumber="1082"/>
+    <functiondecl functionName="SSE16x8_MIPSdspR2" lineNumber="1112"/>
+    <functiondecl functionName="SSE8x8_MIPSdspR2" lineNumber="1134"/>
+    <functiondecl functionName="SSE4x4_MIPSdspR2" lineNumber="1152"/>
+    <functiondecl functionName="QuantizeBlock_MIPSdspR2" lineNumber="1275"/>
+    <functiondecl functionName="Quantize2Blocks_MIPSdspR2" lineNumber="1316"/>
+    <functiondecl functionName="FTransformWHT_MIPSdspR2" lineNumber="1363"/>
+    <functiondecl functionName="CollectHistogram_MIPSdspR2" lineNumber="1455"/>
+    <functiondecl functionName="VP8EncDspInitMIPSdspR2" lineNumber="1488"/>
+    <functiondecl functionName="FTransform_MIPSdspR2" lineNumber="144"/>
+    <functiondecl functionName="ITransformOne" lineNumber="174"/>
+    <functiondecl functionName="ITransform_MIPSdspR2" lineNumber="242"/>
+    <functiondecl functionName="Disto4x4_MIPSdspR2" lineNumber="250"/>
+    <functiondecl functionName="Disto16x16_MIPSdspR2" lineNumber="317"/>
+    <functiondecl functionName="VerticalPred8" lineNumber="380"/>
+    <functiondecl functionName="VerticalPred16" lineNumber="381"/>
+    <functiondecl functionName="HorizontalPred8" lineNumber="398"/>
+    <functiondecl functionName="HorizontalPred16" lineNumber="399"/>
+    <functiondecl functionName="TrueMotion8" lineNumber="475"/>
+    <functiondecl functionName="TrueMotion16" lineNumber="476"/>
+    <functiondecl functionName="DCMode16" lineNumber="483"/>
+    <functiondecl functionName="DCMode8" lineNumber="546"/>
+    <functiondecl functionName="DC4" lineNumber="591"/>
+    <functiondecl functionName="TM4" lineNumber="612"/>
+    <functiondecl functionName="VE4" lineNumber="667"/>
+    <functiondecl functionName="HE4" lineNumber="698"/>
+    <functiondecl functionName="RD4" lineNumber="734"/>
+    <functiondecl functionName="VR4" lineNumber="783"/>
+    <functiondecl functionName="LD4" lineNumber="833"/>
+    <functiondecl functionName="VL4" lineNumber="880"/>
+    <functiondecl functionName="HD4" lineNumber="929"/>
+    <functiondecl functionName="HU4" lineNumber="977"/>
+    <functiondecl functionName="IntraChromaPreds_MIPSdspR2" lineNumber="1016"/>
+    <functiondecl functionName="Intra16Preds_MIPSdspR2" lineNumber="1036"/>
+    <functiondecl functionName="Intra4Preds_MIPSdspR2" lineNumber="1046"/>
+    <functiondecl functionName="QuantizeBlock_MIPSdspR2" lineNumber="1275"/>
+    <functiondecl functionName="Quantize2Blocks_MIPSdspR2" lineNumber="1316"/>
+    <functiondecl functionName="FTransformWHT_MIPSdspR2" lineNumber="1363"/>
+    <functiondecl functionName="CollectHistogram_MIPSdspR2" lineNumber="1455"/>
+    <functiondecl functionName="VP8EncDspInitMIPSdspR2" lineNumber="1488"/>
+    <functioncall functionName="CollectHistogram_MIPSdspR2"/>
+    <functioncall functionName="DC"/>
+    <functioncall functionName="DC4"/>
+    <functioncall functionName="DCMode16"/>
+    <functioncall functionName="DCMode8"/>
+    <functioncall functionName="Disto16x16_MIPSdspR2"/>
+    <functioncall functionName="Disto4x4_MIPSdspR2"/>
+    <functioncall functionName="FTransformWHT_MIPSdspR2"/>
+    <functioncall functionName="FTransform_MIPSdspR2"/>
+    <functioncall functionName="HD4"/>
+    <functioncall functionName="HE4"/>
+    <functioncall functionName="HU4"/>
+    <functioncall functionName="HorizontalPred16"/>
+    <functioncall functionName="HorizontalPred8"/>
+    <functioncall functionName="ITransformOne"/>
+    <functioncall functionName="ITransform_MIPSdspR2"/>
+    <functioncall functionName="Intra16Preds_MIPSdspR2"/>
+    <functioncall functionName="Intra4Preds_MIPSdspR2"/>
+    <functioncall functionName="IntraChromaPreds_MIPSdspR2"/>
+    <functioncall functionName="LD4"/>
+    <functioncall functionName="MAX_COEFF_THRESH"/>
+    <functioncall functionName="MAX_LEVEL"/>
+    <functioncall functionName="Quantize2Blocks_MIPSdspR2"/>
+    <functioncall functionName="QuantizeBlock_MIPSdspR2"/>
+    <functioncall functionName="RD4"/>
+    <functioncall functionName="SSE16x16_MIPSdspR2"/>
+    <functioncall functionName="SSE16x8_MIPSdspR2"/>
+    <functioncall functionName="SSE4x4_MIPSdspR2"/>
+    <functioncall functionName="SSE8x8_MIPSdspR2"/>
+    <functioncall functionName="TM4"/>
+    <functioncall functionName="TrueMotion16"/>
+    <functioncall functionName="TrueMotion8"/>
+    <functioncall functionName="VE4"/>
+    <functioncall functionName="VL4"/>
+    <functioncall functionName="VP8EncDspInitMIPSdspR2"/>
+    <functioncall functionName="VP8FTransform"/>
+    <functioncall functionName="VP8SetHistogramData"/>
+    <functioncall functionName="VR4"/>
+    <functioncall functionName="VerticalPred16"/>
+    <functioncall functionName="VerticalPred8"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="distribution"/>
+    <functioncall functionName="do_two"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="histo"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="max_level"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mtx"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="start_block"/>
+    <functioncall functionName="temp17"/>
+    <functioncall functionName="top"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

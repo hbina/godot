@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2933872055">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/cpu_primitive.hpp" line="37" column="5"/>
+            <symbol>cpu_primitive_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;simple_concat_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;simple_concat_t &lt; data_type :: f32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.hpp" line="141" column="5"/>
+            <symbol>simple_concat_t &lt; data_type :: f32 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;simple_concat_t &lt; data_type :: u8 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;simple_concat_t &lt; data_type :: u8 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.hpp" line="141" column="5"/>
+            <symbol>simple_concat_t &lt; data_type :: u8 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;simple_concat_t &lt; data_type :: s8 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;simple_concat_t &lt; data_type :: s8 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.hpp" line="141" column="5"/>
+            <symbol>simple_concat_t &lt; data_type :: s8 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;simple_concat_t &lt; data_type :: s32 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;simple_concat_t &lt; data_type :: s32 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.hpp" line="141" column="5"/>
+            <symbol>simple_concat_t &lt; data_type :: s32 &gt;</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/simple_concat.hpp" line="148" column="38"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="execute" lineNumber="28"/>
+    <functiondecl functionName="execute" lineNumber="28"/>
+    <functiondecl functionName="execute" lineNumber="28"/>
+    <functiondecl functionName="execute" lineNumber="28"/>
+    <functioncall functionName="DECLARE_CONCAT_PD_T"/>
+    <functioncall functionName="MKLDNN_ARG_DST"/>
+    <functioncall functionName="MKLDNN_ARG_SCRATCHPAD"/>
+    <functioncall functionName="MKLDNN_MAX_NDIMS"/>
+    <functioncall functionName="PRAGMA_OMP_SIMD"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="apd"/>
+    <functioncall functionName="array_copy"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="blk_off"/>
+    <functioncall functionName="blocked"/>
+    <functioncall functionName="blocking_desc"/>
+    <functioncall functionName="blocking_desc_is_equal"/>
+    <functioncall functionName="blocks_"/>
+    <functioncall functionName="book"/>
+    <functioncall functionName="compute_blocks"/>
+    <functioncall functionName="concat_dim"/>
+    <functioncall functionName="cpu_concat_pd_t"/>
+    <functioncall functionName="cpu_primitive_t"/>
+    <functioncall functionName="create_scratchpad"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="dim_t"/>
+    <functioncall functionName="dims"/>
+    <functioncall functionName="dst_d"/>
+    <functioncall functionName="dst_md"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="everyone_is"/>
+    <functioncall functionName="f32"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format_kind"/>
+    <functioncall functionName="format_perm"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="global_scratchpad_"/>
+    <functioncall functionName="grantor"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_d"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ignore_strides"/>
+    <functioncall functionName="in_off"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="init_scratchpad"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="iperm_"/>
+    <functioncall functionName="is_additional_buffer"/>
+    <functioncall functionName="key_concat_iptrs"/>
+    <functioncall functionName="key_concat_istrides"/>
+    <functioncall functionName="key_concat_nelems"/>
+    <functioncall functionName="key_concat_optrs"/>
+    <functioncall functionName="library"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="n_inputs"/>
+    <functioncall functionName="ndims"/>
+    <functioncall functionName="nelems_to_concat"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_arrs"/>
+    <functioncall functionName="o_d"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="out_off"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="padded_dims"/>
+    <functioncall functionName="parallel_nd"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="pd_t"/>
+    <functioncall functionName="perm_"/>
+    <functioncall functionName="phys_dims"/>
+    <functioncall functionName="primitive_t"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="registrar"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rhs"/>
+    <functioncall functionName="s32"/>
+    <functioncall functionName="s8"/>
+    <functioncall functionName="scratchpad"/>
+    <functioncall functionName="scratchpad_buffer_"/>
+    <functioncall functionName="scratchpad_registry"/>
+    <functioncall functionName="scratchpad_size"/>
+    <functioncall functionName="simple_concat_t &lt; data_type :: f32 &gt;"/>
+    <functioncall functionName="simple_concat_t &lt; data_type :: s32 &gt;"/>
+    <functioncall functionName="simple_concat_t &lt; data_type :: s8 &gt;"/>
+    <functioncall functionName="simple_concat_t &lt; data_type :: u8 &gt;"/>
+    <functioncall functionName="simultaneous_sort"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src_image_md"/>
+    <functioncall functionName="src_md"/>
+    <functioncall functionName="start_dim"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strides"/>
+    <functioncall functionName="strides_t"/>
+    <functioncall functionName="u8"/>
+    <functioncall functionName="use_global_scratchpad"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3135822868">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;GIM_TRIANGLE_CONTACT::m_point_count&apos; is not initialized in the constructor." verbose="Member variable &apos;GIM_TRIANGLE_CONTACT::m_point_count&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.h" line="55" column="2"/>
+            <symbol>GIM_TRIANGLE_CONTACT::m_point_count</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;btPrimitiveTriangle::clip_triangle&apos; can be const." verbose="The member function &apos;btPrimitiveTriangle::clip_triangle&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.h" line="113" column="6"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="87" column="26"/>
+            <symbol>btPrimitiveTriangle::clip_triangle</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;m&apos; can be reduced." verbose="The scope of the variable &apos;m&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="11"/>
+            <symbol>m</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="14"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;o&apos; can be reduced." verbose="The scope of the variable &apos;o&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="17"/>
+            <symbol>o</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="532" column="20"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;other&apos; can be declared with const" verbose="Parameter &apos;other&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="87" column="61"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h:144:28" call-funcname="bt_mat3_dot_col" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="525" col="23" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h:144:28" call-funcname="bt_mat3_dot_col" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btBoxCollision.h" line="526" col="24" call-argexpr="i" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:43:24" call-funcname="bt_plane_clip_polygon_collect" call-argnr="6" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="142" col="31" call-argexpr="clipped_count" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="127" col="22" info="Assignment 'clipped_count=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.h:94:25" call-funcname="get_edge_plane" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="95" col="16" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:119:23" call-funcname="bt_plane_clip_triangle" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="97" col="44" call-argexpr="temp_points" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:70:23" call-funcname="bt_plane_clip_polygon" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="107" col="39" call-argexpr="temp_points" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:70:23" call-funcname="bt_plane_clip_polygon" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="107" col="39" call-argexpr="temp_points1" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:70:23" call-funcname="bt_plane_clip_polygon" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="114" col="39" call-argexpr="temp_points1" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.h:113:6" call-funcname="clip_triangle" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="133" col="31" call-argexpr="clipped_points" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:70:23" call-funcname="bt_plane_clip_polygon" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.cpp" line="114" col="18" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btTriangleShapeEx.h:113:6" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h:70:23" my-argnr="2" my-argname="polygon_points" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/Gimpact/btClipPolygon.h" line="79" col="54" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="merge_points" lineNumber="26"/>
+    <functiondecl functionName="overlap_test_conservative" lineNumber="63"/>
+    <functiondecl functionName="clip_triangle" lineNumber="87"/>
+    <functiondecl functionName="find_triangle_collision_clip_method" lineNumber="120"/>
+    <functiondecl functionName="overlap_test_conservative" lineNumber="175"/>
+    <functioncall functionName="AD"/>
+    <functioncall functionName="ATTRIBUTE_ALIGNED16"/>
+    <functioncall functionName="BD"/>
+    <functioncall functionName="BT_BOX_BOX_TRANSFORM_CACHE"/>
+    <functioncall functionName="BT_CONST_COLLIDE_PLANE"/>
+    <functioncall functionName="BT_CONST_FRONT_PLANE"/>
+    <functioncall functionName="Dx"/>
+    <functioncall functionName="Dy"/>
+    <functioncall functionName="Dz"/>
+    <functioncall functionName="GIM_TRIANGLE_CONTACT"/>
+    <functioncall functionName="N"/>
+    <functioncall functionName="SIMD_EPSILON"/>
+    <functioncall functionName="SIMD_INFINITY"/>
+    <functioncall functionName="T"/>
+    <functioncall functionName="_M"/>
+    <functioncall functionName="_classif"/>
+    <functioncall functionName="_dist"/>
+    <functioncall functionName="_dotdir"/>
+    <functioncall functionName="_fMaximumExtent"/>
+    <functioncall functionName="_fmax"/>
+    <functioncall functionName="_fmin"/>
+    <functioncall functionName="_k"/>
+    <functioncall functionName="_scalar"/>
+    <functioncall functionName="absolute"/>
+    <functioncall functionName="appy_transform"/>
+    <functioncall functionName="appy_transform_trans_cache"/>
+    <functioncall functionName="blend_factor"/>
+    <functioncall functionName="blendfactor"/>
+    <functioncall functionName="box"/>
+    <functioncall functionName="btAABB"/>
+    <functioncall functionName="btFabs"/>
+    <functioncall functionName="btPrimitiveTriangle"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btTriangleShape"/>
+    <functioncall functionName="btTriangleShapeEx"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="bt_closest_point_on_segment"/>
+    <functioncall functionName="bt_distance_point_plane"/>
+    <functioncall functionName="bt_edge_plane"/>
+    <functioncall functionName="bt_line_plane_collision"/>
+    <functioncall functionName="bt_mat3_dot_col"/>
+    <functioncall functionName="bt_plane_clip_polygon"/>
+    <functioncall functionName="bt_plane_clip_polygon_collect"/>
+    <functioncall functionName="bt_plane_clip_triangle"/>
+    <functioncall functionName="bt_vec_blend"/>
+    <functioncall functionName="buildTriPlane"/>
+    <functioncall functionName="ca"/>
+    <functioncall functionName="calc_absolute_matrix"/>
+    <functioncall functionName="calc_from_full_invert"/>
+    <functioncall functionName="calc_from_homogenic"/>
+    <functioncall functionName="calc_from_triangle"/>
+    <functioncall functionName="calc_from_triangle_margin"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="clip_triangle"/>
+    <functioncall functionName="clipped"/>
+    <functioncall functionName="clipped_count"/>
+    <functioncall functionName="clipped_points"/>
+    <functioncall functionName="colindex"/>
+    <functioncall functionName="collide_plane"/>
+    <functioncall functionName="collide_ray"/>
+    <functioncall functionName="collide_triangle_exact"/>
+    <functioncall functionName="contacts1"/>
+    <functioncall functionName="contacts2"/>
+    <functioncall functionName="copy_from"/>
+    <functioncall functionName="copy_with_margin"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="diff"/>
+    <functioncall functionName="dis0"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="dist0"/>
+    <functioncall functionName="dist1"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="dot3"/>
+    <functioncall functionName="e0"/>
+    <functioncall functionName="e1"/>
+    <functioncall functionName="e2"/>
+    <functioncall functionName="ea"/>
+    <functioncall functionName="eb"/>
+    <functioncall functionName="edge_index"/>
+    <functioncall functionName="edgeplane"/>
+    <functioncall functionName="extends"/>
+    <functioncall functionName="extents"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_intersection"/>
+    <functioncall functionName="firstdist"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fulltest"/>
+    <functioncall functionName="getBasis"/>
+    <functioncall functionName="getMargin"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getRow"/>
+    <functioncall functionName="get_center_extend"/>
+    <functioncall functionName="get_edge_plane"/>
+    <functioncall functionName="has_collision"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="increment_margin"/>
+    <functioncall functionName="invalidate"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="m_AR"/>
+    <functioncall functionName="m_R1to0"/>
+    <functioncall functionName="m_T1to0"/>
+    <functioncall functionName="m_collisionMargin"/>
+    <functioncall functionName="m_margin"/>
+    <functioncall functionName="m_max"/>
+    <functioncall functionName="m_min"/>
+    <functioncall functionName="m_penetration_depth"/>
+    <functioncall functionName="m_plane"/>
+    <functioncall functionName="m_point_count"/>
+    <functioncall functionName="m_separating_normal"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="merge_point"/>
+    <functioncall functionName="merge_points"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="olddist"/>
+    <functioncall functionName="other"/>
+    <functioncall functionName="overlapping_trans_cache"/>
+    <functioncall functionName="overlapping_trans_conservative"/>
+    <functioncall functionName="overlapping_trans_conservative2"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="plane"/>
+    <functioncall functionName="plane0"/>
+    <functioncall functionName="plane1"/>
+    <functioncall functionName="plane_classify"/>
+    <functioncall functionName="planenormal"/>
+    <functioncall functionName="pmax"/>
+    <functioncall functionName="pmin"/>
+    <functioncall functionName="point0"/>
+    <functioncall functionName="point1"/>
+    <functioncall functionName="point2"/>
+    <functioncall functionName="projection_interval"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rad"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="setValue"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="t2"/>
+    <functioncall functionName="tbox"/>
+    <functioncall functionName="temp_points"/>
+    <functioncall functionName="temp_points1"/>
+    <functioncall functionName="textends"/>
+    <functioncall functionName="tmax"/>
+    <functioncall functionName="tmin"/>
+    <functioncall functionName="total_margin"/>
+    <functioncall functionName="tp"/>
+    <functioncall functionName="tparam"/>
+    <functioncall functionName="trans"/>
+    <functioncall functionName="trans1_to_0"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="triangle_plane"/>
+    <functioncall functionName="trianglebox"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tv0"/>
+    <functioncall functionName="tv1"/>
+    <functioncall functionName="tv2"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="v3"/>
+    <functioncall functionName="vA1"/>
+    <functioncall functionName="vA2"/>
+    <functioncall functionName="vB1"/>
+    <functioncall functionName="vB2"/>
+    <functioncall functionName="vPoint"/>
+    <functioncall functionName="vPointA"/>
+    <functioncall functionName="vPointB"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

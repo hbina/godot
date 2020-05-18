@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1475667352">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EngineDebugger::profiler_enable&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EngineDebugger::profiler_enable&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/debugger/engine_debugger.cpp" file="/home/hbina/git/godot/core/debugger/engine_debugger.h" line="124" column="7"/>
+            <location file="/home/hbina/git/godot/core/debugger/engine_debugger.cpp" line="76" column="22"/>
+            <symbol>EngineDebugger::profiler_enable</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;EngineDebugger::capture_parse&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;EngineDebugger::capture_parse&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/debugger/engine_debugger.cpp" file="/home/hbina/git/godot/core/debugger/engine_debugger.h" line="125" column="8"/>
+            <location file="/home/hbina/git/godot/core/debugger/engine_debugger.cpp" line="105" column="23"/>
+            <symbol>EngineDebugger::capture_parse</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;register_profiler&apos; argument 2 names different: declaration &apos;p_profiler&apos; definition &apos;p_func&apos;." verbose="Function &apos;register_profiler&apos; argument 2 names different: declaration &apos;p_profiler&apos; definition &apos;p_func&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/debugger/engine_debugger.cpp" line="46" column="82"/>
+            <location file0="/home/hbina/git/godot/core/debugger/engine_debugger.cpp" file="/home/hbina/git/godot/core/debugger/engine_debugger.h" line="111" column="74"/>
+            <symbol>register_profiler</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/debugger/engine_debugger.h:129:15" call-funcname="poll_events" call-argnr="1" file="/home/hbina/git/godot/core/debugger/engine_debugger.cpp" line="115" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="register_profiler" lineNumber="46"/>
+    <functiondecl functionName="unregister_profiler" lineNumber="51"/>
+    <functiondecl functionName="register_message_capture" lineNumber="61"/>
+    <functiondecl functionName="unregister_message_capture" lineNumber="66"/>
+    <functiondecl functionName="profiler_enable" lineNumber="76"/>
+    <functiondecl functionName="profiler_add_frame_data" lineNumber="85"/>
+    <functiondecl functionName="is_profiling" lineNumber="93"/>
+    <functiondecl functionName="has_profiler" lineNumber="97"/>
+    <functiondecl functionName="has_capture" lineNumber="101"/>
+    <functiondecl functionName="capture_parse" lineNumber="105"/>
+    <functiondecl functionName="line_poll" lineNumber="112"/>
+    <functiondecl functionName="iteration" lineNumber="119"/>
+    <functiondecl functionName="initialize" lineNumber="134"/>
+    <functiondecl functionName="deinitialize" lineNumber="174"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="Capture"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="LocalDebugger"/>
+    <functioncall functionName="Profiler"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="RemoteDebugger"/>
+    <functioncall functionName="ScriptDebugger"/>
+    <functioncall functionName="USEC_TO_SEC"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="add"/>
+    <functioncall functionName="capture"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_last"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame_time"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_process_id"/>
+    <functioncall functionName="get_script_debugger"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idle_time"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initialize_debugging"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="insert_breakpoint"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_add"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_capture"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_frame_ticks"/>
+    <functioncall functionName="p_func"/>
+    <functioncall functionName="p_idle_ticks"/>
+    <functioncall functionName="p_msg"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_opts"/>
+    <functioncall functionName="p_physics_frame_time"/>
+    <functioncall functionName="p_physics_ticks"/>
+    <functioncall functionName="p_protocol"/>
+    <functioncall functionName="p_skip_breakpoints"/>
+    <functioncall functionName="p_tick"/>
+    <functioncall functionName="p_toggle"/>
+    <functioncall functionName="p_uri"/>
+    <functioncall functionName="peer"/>
+    <functioncall functionName="physics_frame_time"/>
+    <functioncall functionName="physics_time"/>
+    <functioncall functionName="poll_events"/>
+    <functioncall functionName="profiler_enable"/>
+    <functioncall functionName="proto"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_captured"/>
+    <functioncall functionName="register_uri_handler"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="script_debugger"/>
+    <functioncall functionName="send_message"/>
+    <functioncall functionName="set_skip_breakpoints"/>
+    <functioncall functionName="singleton"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sp"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="tick"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="toggle"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

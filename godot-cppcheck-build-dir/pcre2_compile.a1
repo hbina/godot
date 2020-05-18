@@ -1,0 +1,1042 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="695317530">
+        <error id="autoVariables" severity="error" msg="Address of local auto-variable assigned to a function parameter." verbose="Dangerous assignment - the function parameter is assigned the address of a local auto-variable. Local auto-variables are reserved from the stack which is freed when the function ends. So the pointer to a local variable is invalid after the function ends." cwe="562">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8058" column="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ref_count&apos; can be reduced." verbose="The scope of the variable &apos;ref_count&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1191" column="13"/>
+            <symbol>ref_count</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ref_count&apos; can be reduced." verbose="The scope of the variable &apos;ref_count&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1260" column="13"/>
+            <symbol>ref_count</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;groupnumber&apos; can be reduced." verbose="The scope of the variable &apos;groupnumber&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5198" column="13"/>
+            <symbol>groupnumber</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;branchlength&apos; can be reduced." verbose="The scope of the variable &apos;branchlength&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9450" column="5"/>
+            <symbol>branchlength</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;p&apos; can be reduced." verbose="The scope of the variable &apos;p&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10268" column="9"/>
+            <symbol>p</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;previous_matched_char&apos; is assigned a value that is never used." verbose="Variable &apos;previous_matched_char&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5306" column="28"/>
+            <symbol>previous_matched_char</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1409" col="17" call-argexpr="&p" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1409" col="17" call-argexpr="&min" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1425" col="21" call-argexpr="&p" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1425" col="21" call-argexpr="&max" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1566" col="32" call-argexpr="&p" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1566" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1566" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1723" col="23" call-argexpr="&p" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1723" col="23" call-argexpr="&s" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1741" col="23" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1741" col="23" call-argexpr="&s" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1779" col="23" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1779" col="23" call-argexpr="&s" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2398:1" call-funcname="manage_callouts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2556" col="39" call-argexpr="&previous_callout" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2398:1" call-funcname="manage_callouts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2637" col="43" call-argexpr="&previous_callout" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2711" col="36" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2711" col="36" call-argexpr="&c" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2711" col="36" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2711" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2809" col="29" call-argexpr="&tempptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2809" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2809" col="29" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2809" col="29" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2398:1" call-funcname="manage_callouts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2812" col="39" call-argexpr="&previous_callout" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2904" col="32" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2904" col="32" call-argexpr="&c" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2904" col="32" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2904" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3087" col="24" call-argexpr="&p" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3087" col="24" call-argexpr="&i" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3087" col="24" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3103" col="21" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3103" col="21" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3103" col="21" call-argexpr="&name" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3103" col="21" call-argexpr="&namelen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3103" col="21" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3155" col="28" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3155" col="28" call-argexpr="&min_repeat" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3155" col="28" call-argexpr="&max_repeat" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" call-funcname="read_repeat_counts" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3155" col="28" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2187:1" call-funcname="check_posix_syntax" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3255" col="27" call-argexpr="&tempptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2187:1" call-funcname="check_posix_syntax" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3345" col="29" call-argexpr="&tempptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3481" col="36" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3481" col="36" call-argexpr="&c" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" call-funcname="_pcre2_check_escape_32" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3481" col="36" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3698" col="23" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3698" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3698" col="23" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3698" col="23" call-argexpr="&name" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3698" col="23" call-argexpr="&namelen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3698" col="23" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3802" col="23" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3802" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3802" col="23" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3802" col="23" call-argexpr="&name" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3802" col="23" call-argexpr="&namelen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="3802" col="23" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4064" col="21" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4064" col="21" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4064" col="21" call-argexpr="&name" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4064" col="21" call-argexpr="&namelen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4064" col="21" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4099" col="23" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4099" col="23" call-argexpr="&i" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4099" col="23" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4124" col="21" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4124" col="21" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4124" col="21" call-argexpr="&name" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4124" col="21" call-argexpr="&namelen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4124" col="21" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4290" col="22" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4290" col="22" call-argexpr="&i" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4290" col="22" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4328" col="25" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4328" col="25" call-argexpr="&major" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4328" col="25" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4372" col="23" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4372" col="23" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4372" col="23" call-argexpr="&name" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4372" col="23" call-argexpr="&namelen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4372" col="23" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4506" col="21" call-argexpr="&ptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4506" col="21" call-argexpr="&offset" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4506" col="21" call-argexpr="&name" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4506" col="21" call-argexpr="&namelen" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" call-funcname="read_name" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4506" col="21" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2398:1" call-funcname="manage_callouts" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4663" col="33" call-argexpr="&previous_callout" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4887:1" call-funcname="add_to_class_internal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5087" col="29" call-argexpr="start" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5162" col="57" info="Calling function 'add_to_class', 5th argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5162" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" call-funcname="add_list_to_class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5842" col="34" call-argexpr="classbits" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" call-funcname="add_list_to_class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5842" col="34" call-argexpr="&class_uchardata" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" call-funcname="add_not_list_to_class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5847" col="38" call-argexpr="classbits" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" call-funcname="add_not_list_to_class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5847" col="38" call-argexpr="&class_uchardata" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" call-funcname="add_list_to_class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5852" col="34" call-argexpr="classbits" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" call-funcname="add_list_to_class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5852" col="34" call-argexpr="&class_uchardata" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" call-funcname="add_not_list_to_class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5857" col="38" call-argexpr="classbits" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" call-funcname="add_not_list_to_class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5857" col="38" call-argexpr="&class_uchardata" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5957" col="25" call-argexpr="classbits" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5957" col="25" call-argexpr="&class_uchardata" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5965" col="23" call-argexpr="classbits" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5965" col="23" call-argexpr="&class_uchardata" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5195:1" call-funcname="find_dupname_details" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6301" col="53" call-argexpr="&index" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5195:1" call-funcname="find_dupname_details" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6301" col="53" call-argexpr="&count" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="23" call-argexpr="&tempcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="23" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="23" call-argexpr="&subfirstcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="23" call-argexpr="&subfirstcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="23" call-argexpr="&subreqcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="23" call-argexpr="&subreqcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="12" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="23" call-argexpr="(lengthptr==NULL)?NULL:&length_prevgroup" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5195:1" call-funcname="find_dupname_details" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6718" col="53" call-argexpr="&index" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5195:1" call-funcname="find_dupname_details" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6718" col="53" call-argexpr="&count" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&options" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&code" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&branchfirstcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&branchfirstcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&branchreqcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&branchreqcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="&bc" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" call-funcname="compile_branch" call-argnr="11" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8085" col="23" call-argexpr="(lengthptr==NULL)?NULL:&length" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4734:1" call-funcname="first_significant_code" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8306" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8302:1" call-funcname="is_anchored" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8315" col="22" call-argexpr="bracket_map" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10341" col="29" info="Calling function 'is_anchored', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4734:1" call-funcname="first_significant_code" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8411" col="45" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8407:1" call-funcname="is_startline" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8439" col="25" call-argexpr="bracket_map" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10400" col="36" info="Calling function 'is_startline', 2nd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4734:1" call-funcname="first_significant_code" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8444" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8685:1" call-funcname="find_firstassertedcu" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8714" col="30" call-argexpr="&dflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8859:1" call-funcname="parsed_skip" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9088" col="23" call-argexpr="PSKIP_ALT" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" call-funcname="check_lookbehinds" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9164" col="36" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" call-funcname="set_lookbehind_lengths" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9200" col="32" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8978:1" call-funcname="get_grouplength" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9309" col="34" call-argexpr="&gptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8978:1" call-funcname="get_grouplength" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9309" col="34" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8978:1" call-funcname="get_grouplength" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9309" col="34" call-argexpr="&this_recurse" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8978:1" call-funcname="get_grouplength" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9347" col="34" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" call-funcname="set_lookbehind_lengths" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9628" col="32" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" call-funcname="set_lookbehind_lengths" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9628" col="32" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" call-funcname="set_lookbehind_lengths" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9628" col="32" call-argexpr="&loopcount" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2492:12" call-funcname="parse_regex" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10052" col="24" call-argexpr="&has_lookbehind" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2492:12" call-funcname="parse_regex" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10052" col="24" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" call-funcname="check_lookbehinds" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10082" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" call-funcname="check_lookbehinds" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10082" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" call-funcname="check_lookbehinds" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10082" col="32" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&code" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&firstcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="firstcu" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&firstcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="firstcuflags" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&reqcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="reqcu" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&reqcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="reqcuflags" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="10" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="11" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="12" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10123" col="20" call-argexpr="&length" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8791:1" call-funcname="add_name_to_table" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10211" col="22" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&code" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&pptr" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&errorcode" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="6" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&firstcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&firstcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="8" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&reqcu" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="9" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&reqcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="10" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="11" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="12" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10221" col="24" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8529:1" call-funcname="find_recurse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10264" col="43" call-argexpr="utf" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9927" col="41" info="Assignment 'utf=(cb.external_options&524288U)!=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1957:21" call-funcname="_pcre2_auto_possessify_32" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10327" col="28" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8302:1" call-funcname="is_anchored" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10341" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8302:1" call-funcname="is_anchored" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10341" col="17" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8302:1" call-funcname="is_anchored" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10341" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8302:1" call-funcname="is_anchored" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10341" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8685:1" call-funcname="find_firstassertedcu" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10360" col="35" call-argexpr="&firstcuflags" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8685:1" call-funcname="find_firstassertedcu" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10360" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8407:1" call-funcname="is_startline" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10400" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8407:1" call-funcname="is_startline" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10400" col="24" call-argexpr="&cb" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8407:1" call-funcname="is_startline" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10400" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8407:1" call-funcname="is_startline" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="10400" col="24" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1409" col="6" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" call-funcname="read_number" call-argnr="7" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1409" col="6" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1978:21" call-funcname="_pcre2_strncmp_c8_32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2235" col="5" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2228:1" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4887:1" call-funcname="add_to_class_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5087" col="8" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4887:1" call-funcname="add_to_class_internal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5087" col="8" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4887:1" call-funcname="add_to_class_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5128" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4887:1" call-funcname="add_to_class_internal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5128" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5162" col="9" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5162" col="9" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" call-funcname="add_to_class" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5162" col="9" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1977:21" call-funcname="_pcre2_strncmp_32" call-argnr="1" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5206" col="7" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5195:1" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" call-funcname="compile_regex" call-argnr="10" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="6446" col="10" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="9"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8302:1" call-funcname="is_anchored" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8315" col="11" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8302:1" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8407:1" call-funcname="is_startline" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8439" col="13" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8407:1" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" call-funcname="get_branchlength" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9004" col="18" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8978:1" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" call-funcname="get_branchlength" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9004" col="18" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8978:1" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" call-funcname="get_branchlength" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9004" col="18" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8978:1" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" call-funcname="check_lookbehinds" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9164" col="19" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" call-funcname="check_lookbehinds" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9164" col="19" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" call-funcname="get_branchlength" call-argnr="2" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9459" col="18" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" call-funcname="get_branchlength" call-argnr="3" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9459" col="18" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" call-funcname="get_branchlength" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9459" col="18" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" call-funcname="get_branchlength" call-argnr="5" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9459" col="18" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" call-funcname="set_lookbehind_lengths" call-argnr="4" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9628" col="10" my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" my-argnr="5" my-argname="p" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5120" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" my-argnr="5" my-argname="p" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5161" col="5" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1317" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" my-argnr="7" my-argname="errorcodeptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1320" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1401" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1488" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2277" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" my-argnr="5" my-argname="offsetptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2288" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" my-argnr="6" my-argname="nameptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2287" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" my-argnr="7" my-argname="namelenptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2347" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" my-argnr="9" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2288" col="33" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2398:1" my-argnr="2" my-argname="pcalloutptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2401" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2492:12" my-argnr="4" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2502" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:4887:1" my-argnr="4" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="4953" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5082:1" my-argnr="4" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5085" col="1" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" my-argnr="5" my-argname="p" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5120" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" my-argnr="5" my-argname="p" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5161" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5195:1" my-argnr="6" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5200" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="1" my-argname="optionsptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5286" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="2" my-argname="codeptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5297" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="3" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5290" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="10" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5308" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" my-argnr="2" my-argname="codeptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="7990" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" my-argnr="3" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="7997" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" my-argnr="11" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8008" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8685:1" my-argnr="1" my-argname="code" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8694" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8685:1" my-argnr="2" my-argname="flags" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8690" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8791:1" my-argnr="1" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8795" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8791:1" my-argnr="2" my-argname="name" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8821" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" my-argnr="1" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9048" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" my-argnr="3" my-argname="lcptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9056" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" my-argnr="1" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9451" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" my-argnr="1" my-argname="pptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9511" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" my-argnr="4" my-argname="cb" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9509" col="1" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1312:1" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1317" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:1398:1" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1401" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_internal.h:1959:21" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="1488" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2187:1" my-argnr="1" my-argname="ptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2190" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2273:1" my-argnr="1" my-argname="ptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2277" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:2398:1" my-argnr="2" my-argname="pcalloutptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="2401" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5116:1" my-argnr="5" my-argname="p" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5120" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5156:1" my-argnr="5" my-argname="p" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5161" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="1" my-argname="optionsptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5286" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="2" my-argname="codeptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5297" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:5275:1" my-argnr="3" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="5290" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" my-argnr="2" my-argname="codeptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="7990" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:126:3" my-argnr="3" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="7997" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8685:1" my-argnr="1" my-argname="code" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8694" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:8791:1" my-argnr="2" my-argname="name" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="8821" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" my-argnr="1" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9048" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:131:3" my-argnr="3" my-argname="lcptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9056" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:135:3" my-argnr="1" my-argname="pptrptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9451" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c:139:3" my-argnr="1" my-argname="pptr" file="/home/hbina/git/godot/thirdparty/pcre2/src/pcre2_compile.c" line="9511" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="pcre2_code_copy_32" lineNumber="1189"/>
+    <functiondecl functionName="pcre2_code_copy_with_tables_32" lineNumber="1223"/>
+    <functiondecl functionName="pcre2_code_free_32" lineNumber="1258"/>
+    <functiondecl functionName="read_number" lineNumber="1312"/>
+    <functiondecl functionName="read_repeat_counts" lineNumber="1398"/>
+    <functiondecl functionName="_pcre2_check_escape_32" lineNumber="1483"/>
+    <functiondecl functionName="check_posix_syntax" lineNumber="2187"/>
+    <functiondecl functionName="check_posix_name" lineNumber="2228"/>
+    <functiondecl functionName="read_name" lineNumber="2273"/>
+    <functiondecl functionName="manage_callouts" lineNumber="2398"/>
+    <functiondecl functionName="parse_regex" lineNumber="2492"/>
+    <functiondecl functionName="first_significant_code" lineNumber="4734"/>
+    <functiondecl functionName="add_to_class_internal" lineNumber="4887"/>
+    <functiondecl functionName="add_to_class" lineNumber="5082"/>
+    <functiondecl functionName="add_list_to_class" lineNumber="5116"/>
+    <functiondecl functionName="add_not_list_to_class" lineNumber="5156"/>
+    <functiondecl functionName="find_dupname_details" lineNumber="5195"/>
+    <functiondecl functionName="compile_branch" lineNumber="5275"/>
+    <functiondecl functionName="compile_regex" lineNumber="7985"/>
+    <functiondecl functionName="is_anchored" lineNumber="8302"/>
+    <functiondecl functionName="is_startline" lineNumber="8407"/>
+    <functiondecl functionName="find_recurse" lineNumber="8529"/>
+    <functiondecl functionName="find_firstassertedcu" lineNumber="8685"/>
+    <functiondecl functionName="add_name_to_table" lineNumber="8791"/>
+    <functiondecl functionName="parsed_skip" lineNumber="8859"/>
+    <functiondecl functionName="get_grouplength" lineNumber="8978"/>
+    <functiondecl functionName="get_branchlength" lineNumber="9042"/>
+    <functiondecl functionName="set_lookbehind_lengths" lineNumber="9446"/>
+    <functiondecl functionName="check_lookbehinds" lineNumber="9502"/>
+    <functiondecl functionName="pcre2_compile_32" lineNumber="9659"/>
+    <functioncall functionName="ATOMIC_GROUP"/>
+    <functioncall functionName="BAD_VERSION_CONDITION"/>
+    <functioncall functionName="CHECK_GROUP"/>
+    <functioncall functionName="CHECK_QUANTIFIER"/>
+    <functioncall functionName="CLASS_CASELESS_CHAR"/>
+    <functioncall functionName="CLASS_CONTINUE"/>
+    <functioncall functionName="CLASS_LITERAL"/>
+    <functioncall functionName="COME_FROM_NU"/>
+    <functioncall functionName="CONTINUE_CLASS"/>
+    <functioncall functionName="DEFINE_NAME"/>
+    <functioncall functionName="END_REPEAT"/>
+    <functioncall functionName="ERR0"/>
+    <functioncall functionName="ERR1"/>
+    <functioncall functionName="ERR10"/>
+    <functioncall functionName="ERR11"/>
+    <functioncall functionName="ERR12"/>
+    <functioncall functionName="ERR13"/>
+    <functioncall functionName="ERR14"/>
+    <functioncall functionName="ERR15"/>
+    <functioncall functionName="ERR16"/>
+    <functioncall functionName="ERR17"/>
+    <functioncall functionName="ERR18"/>
+    <functioncall functionName="ERR19"/>
+    <functioncall functionName="ERR2"/>
+    <functioncall functionName="ERR20"/>
+    <functioncall functionName="ERR21"/>
+    <functioncall functionName="ERR22"/>
+    <functioncall functionName="ERR23"/>
+    <functioncall functionName="ERR24"/>
+    <functioncall functionName="ERR25"/>
+    <functioncall functionName="ERR26"/>
+    <functioncall functionName="ERR27"/>
+    <functioncall functionName="ERR28"/>
+    <functioncall functionName="ERR29"/>
+    <functioncall functionName="ERR3"/>
+    <functioncall functionName="ERR30"/>
+    <functioncall functionName="ERR31"/>
+    <functioncall functionName="ERR32"/>
+    <functioncall functionName="ERR33"/>
+    <functioncall functionName="ERR34"/>
+    <functioncall functionName="ERR35"/>
+    <functioncall functionName="ERR36"/>
+    <functioncall functionName="ERR37"/>
+    <functioncall functionName="ERR38"/>
+    <functioncall functionName="ERR39"/>
+    <functioncall functionName="ERR4"/>
+    <functioncall functionName="ERR40"/>
+    <functioncall functionName="ERR41"/>
+    <functioncall functionName="ERR42"/>
+    <functioncall functionName="ERR43"/>
+    <functioncall functionName="ERR44"/>
+    <functioncall functionName="ERR45"/>
+    <functioncall functionName="ERR46"/>
+    <functioncall functionName="ERR47"/>
+    <functioncall functionName="ERR48"/>
+    <functioncall functionName="ERR49"/>
+    <functioncall functionName="ERR5"/>
+    <functioncall functionName="ERR50"/>
+    <functioncall functionName="ERR51"/>
+    <functioncall functionName="ERR52"/>
+    <functioncall functionName="ERR53"/>
+    <functioncall functionName="ERR54"/>
+    <functioncall functionName="ERR55"/>
+    <functioncall functionName="ERR56"/>
+    <functioncall functionName="ERR57"/>
+    <functioncall functionName="ERR58"/>
+    <functioncall functionName="ERR59"/>
+    <functioncall functionName="ERR6"/>
+    <functioncall functionName="ERR60"/>
+    <functioncall functionName="ERR61"/>
+    <functioncall functionName="ERR62"/>
+    <functioncall functionName="ERR63"/>
+    <functioncall functionName="ERR64"/>
+    <functioncall functionName="ERR65"/>
+    <functioncall functionName="ERR66"/>
+    <functioncall functionName="ERR67"/>
+    <functioncall functionName="ERR68"/>
+    <functioncall functionName="ERR69"/>
+    <functioncall functionName="ERR7"/>
+    <functioncall functionName="ERR70"/>
+    <functioncall functionName="ERR71"/>
+    <functioncall functionName="ERR72"/>
+    <functioncall functionName="ERR73"/>
+    <functioncall functionName="ERR74"/>
+    <functioncall functionName="ERR75"/>
+    <functioncall functionName="ERR76"/>
+    <functioncall functionName="ERR77"/>
+    <functioncall functionName="ERR78"/>
+    <functioncall functionName="ERR79"/>
+    <functioncall functionName="ERR8"/>
+    <functioncall functionName="ERR80"/>
+    <functioncall functionName="ERR81"/>
+    <functioncall functionName="ERR82"/>
+    <functioncall functionName="ERR83"/>
+    <functioncall functionName="ERR84"/>
+    <functioncall functionName="ERR85"/>
+    <functioncall functionName="ERR86"/>
+    <functioncall functionName="ERR87"/>
+    <functioncall functionName="ERR88"/>
+    <functioncall functionName="ERR89"/>
+    <functioncall functionName="ERR9"/>
+    <functioncall functionName="ERR90"/>
+    <functioncall functionName="ERR91"/>
+    <functioncall functionName="ERR92"/>
+    <functioncall functionName="ERR93"/>
+    <functioncall functionName="ERR94"/>
+    <functioncall functionName="ERR95"/>
+    <functioncall functionName="ERR96"/>
+    <functioncall functionName="ERR97"/>
+    <functioncall functionName="ERR98"/>
+    <functioncall functionName="ESCAPE_FAILED"/>
+    <functioncall functionName="ESC_A"/>
+    <functioncall functionName="ESC_B"/>
+    <functioncall functionName="ESC_C"/>
+    <functioncall functionName="ESC_D"/>
+    <functioncall functionName="ESC_E"/>
+    <functioncall functionName="ESC_G"/>
+    <functioncall functionName="ESC_H"/>
+    <functioncall functionName="ESC_K"/>
+    <functioncall functionName="ESC_N"/>
+    <functioncall functionName="ESC_P"/>
+    <functioncall functionName="ESC_Q"/>
+    <functioncall functionName="ESC_R"/>
+    <functioncall functionName="ESC_S"/>
+    <functioncall functionName="ESC_V"/>
+    <functioncall functionName="ESC_W"/>
+    <functioncall functionName="ESC_X"/>
+    <functioncall functionName="ESC_Z"/>
+    <functioncall functionName="ESC_b"/>
+    <functioncall functionName="ESC_d"/>
+    <functioncall functionName="ESC_dum"/>
+    <functioncall functionName="ESC_g"/>
+    <functioncall functionName="ESC_h"/>
+    <functioncall functionName="ESC_k"/>
+    <functioncall functionName="ESC_p"/>
+    <functioncall functionName="ESC_s"/>
+    <functioncall functionName="ESC_v"/>
+    <functioncall functionName="ESC_w"/>
+    <functioncall functionName="ESC_z"/>
+    <functioncall functionName="EXIT"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="FAILED_BACK"/>
+    <functioncall functionName="GROUP_PROCESS"/>
+    <functioncall functionName="GROUP_PROCESS_NOTE_EMPTY"/>
+    <functioncall functionName="HAD_CB_ERROR"/>
+    <functioncall functionName="HAD_EARLY_ERROR"/>
+    <functioncall functionName="HAD_ERROR"/>
+    <functioncall functionName="HANDLE_NUMERICAL_RECURSION"/>
+    <functioncall functionName="HANDLE_SINGLE_REFERENCE"/>
+    <functioncall functionName="ISNOTFIXED"/>
+    <functioncall functionName="MAX_NAME_SIZE"/>
+    <functioncall functionName="NEGATIVE_LOOK_AHEAD"/>
+    <functioncall functionName="NORMAL_CHAR"/>
+    <functioncall functionName="NORMAL_CHAR_SET"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="OP_ACCEPT"/>
+    <functioncall functionName="OP_ALLANY"/>
+    <functioncall functionName="OP_ALT"/>
+    <functioncall functionName="OP_ANY"/>
+    <functioncall functionName="OP_ANYBYTE"/>
+    <functioncall functionName="OP_ANYNL"/>
+    <functioncall functionName="OP_ASSERT"/>
+    <functioncall functionName="OP_ASSERTBACK"/>
+    <functioncall functionName="OP_ASSERTBACK_NA"/>
+    <functioncall functionName="OP_ASSERTBACK_NOT"/>
+    <functioncall functionName="OP_ASSERT_ACCEPT"/>
+    <functioncall functionName="OP_ASSERT_NA"/>
+    <functioncall functionName="OP_ASSERT_NOT"/>
+    <functioncall functionName="OP_BRA"/>
+    <functioncall functionName="OP_BRAMINZERO"/>
+    <functioncall functionName="OP_BRAPOS"/>
+    <functioncall functionName="OP_BRAPOSZERO"/>
+    <functioncall functionName="OP_BRAZERO"/>
+    <functioncall functionName="OP_CALLOUT"/>
+    <functioncall functionName="OP_CALLOUT_STR"/>
+    <functioncall functionName="OP_CBRA"/>
+    <functioncall functionName="OP_CBRAPOS"/>
+    <functioncall functionName="OP_CHAR"/>
+    <functioncall functionName="OP_CHARI"/>
+    <functioncall functionName="OP_CIRC"/>
+    <functioncall functionName="OP_CIRCM"/>
+    <functioncall functionName="OP_CLASS"/>
+    <functioncall functionName="OP_CLOSE"/>
+    <functioncall functionName="OP_COMMIT"/>
+    <functioncall functionName="OP_COMMIT_ARG"/>
+    <functioncall functionName="OP_COND"/>
+    <functioncall functionName="OP_CREF"/>
+    <functioncall functionName="OP_CRMINPLUS"/>
+    <functioncall functionName="OP_CRMINQUERY"/>
+    <functioncall functionName="OP_CRMINRANGE"/>
+    <functioncall functionName="OP_CRMINSTAR"/>
+    <functioncall functionName="OP_CRPLUS"/>
+    <functioncall functionName="OP_CRPOSPLUS"/>
+    <functioncall functionName="OP_CRPOSQUERY"/>
+    <functioncall functionName="OP_CRPOSRANGE"/>
+    <functioncall functionName="OP_CRPOSSTAR"/>
+    <functioncall functionName="OP_CRQUERY"/>
+    <functioncall functionName="OP_CRRANGE"/>
+    <functioncall functionName="OP_CRSTAR"/>
+    <functioncall functionName="OP_DEFINE"/>
+    <functioncall functionName="OP_DIGIT"/>
+    <functioncall functionName="OP_DNCREF"/>
+    <functioncall functionName="OP_DNREF"/>
+    <functioncall functionName="OP_DNREFI"/>
+    <functioncall functionName="OP_DNRREF"/>
+    <functioncall functionName="OP_DOLL"/>
+    <functioncall functionName="OP_DOLLM"/>
+    <functioncall functionName="OP_END"/>
+    <functioncall functionName="OP_EOD"/>
+    <functioncall functionName="OP_EODN"/>
+    <functioncall functionName="OP_EXACT"/>
+    <functioncall functionName="OP_EXACTI"/>
+    <functioncall functionName="OP_EXTUNI"/>
+    <functioncall functionName="OP_FAIL"/>
+    <functioncall functionName="OP_FALSE"/>
+    <functioncall functionName="OP_HSPACE"/>
+    <functioncall functionName="OP_KET"/>
+    <functioncall functionName="OP_KETRMAX"/>
+    <functioncall functionName="OP_KETRMIN"/>
+    <functioncall functionName="OP_KETRPOS"/>
+    <functioncall functionName="OP_MARK"/>
+    <functioncall functionName="OP_MINPLUS"/>
+    <functioncall functionName="OP_MINPLUSI"/>
+    <functioncall functionName="OP_MINQUERY"/>
+    <functioncall functionName="OP_MINQUERYI"/>
+    <functioncall functionName="OP_MINSTAR"/>
+    <functioncall functionName="OP_MINSTARI"/>
+    <functioncall functionName="OP_MINUPTO"/>
+    <functioncall functionName="OP_MINUPTOI"/>
+    <functioncall functionName="OP_NCLASS"/>
+    <functioncall functionName="OP_NOT"/>
+    <functioncall functionName="OP_NOTEXACT"/>
+    <functioncall functionName="OP_NOTEXACTI"/>
+    <functioncall functionName="OP_NOTI"/>
+    <functioncall functionName="OP_NOTMINPLUS"/>
+    <functioncall functionName="OP_NOTMINPLUSI"/>
+    <functioncall functionName="OP_NOTMINQUERY"/>
+    <functioncall functionName="OP_NOTMINQUERYI"/>
+    <functioncall functionName="OP_NOTMINSTAR"/>
+    <functioncall functionName="OP_NOTMINSTARI"/>
+    <functioncall functionName="OP_NOTMINUPTO"/>
+    <functioncall functionName="OP_NOTMINUPTOI"/>
+    <functioncall functionName="OP_NOTPLUS"/>
+    <functioncall functionName="OP_NOTPLUSI"/>
+    <functioncall functionName="OP_NOTPOSPLUS"/>
+    <functioncall functionName="OP_NOTPOSPLUSI"/>
+    <functioncall functionName="OP_NOTPOSQUERY"/>
+    <functioncall functionName="OP_NOTPOSQUERYI"/>
+    <functioncall functionName="OP_NOTPOSSTAR"/>
+    <functioncall functionName="OP_NOTPOSSTARI"/>
+    <functioncall functionName="OP_NOTPOSUPTO"/>
+    <functioncall functionName="OP_NOTPOSUPTOI"/>
+    <functioncall functionName="OP_NOTPROP"/>
+    <functioncall functionName="OP_NOTQUERY"/>
+    <functioncall functionName="OP_NOTQUERYI"/>
+    <functioncall functionName="OP_NOTSTAR"/>
+    <functioncall functionName="OP_NOTSTARI"/>
+    <functioncall functionName="OP_NOTUPTO"/>
+    <functioncall functionName="OP_NOTUPTOI"/>
+    <functioncall functionName="OP_NOT_DIGIT"/>
+    <functioncall functionName="OP_NOT_HSPACE"/>
+    <functioncall functionName="OP_NOT_VSPACE"/>
+    <functioncall functionName="OP_NOT_WHITESPACE"/>
+    <functioncall functionName="OP_NOT_WORDCHAR"/>
+    <functioncall functionName="OP_NOT_WORD_BOUNDARY"/>
+    <functioncall functionName="OP_ONCE"/>
+    <functioncall functionName="OP_PLUS"/>
+    <functioncall functionName="OP_PLUSI"/>
+    <functioncall functionName="OP_POSPLUS"/>
+    <functioncall functionName="OP_POSPLUSI"/>
+    <functioncall functionName="OP_POSQUERY"/>
+    <functioncall functionName="OP_POSQUERYI"/>
+    <functioncall functionName="OP_POSSTAR"/>
+    <functioncall functionName="OP_POSSTARI"/>
+    <functioncall functionName="OP_POSUPTO"/>
+    <functioncall functionName="OP_POSUPTOI"/>
+    <functioncall functionName="OP_PROP"/>
+    <functioncall functionName="OP_PRUNE"/>
+    <functioncall functionName="OP_PRUNE_ARG"/>
+    <functioncall functionName="OP_QUERY"/>
+    <functioncall functionName="OP_QUERYI"/>
+    <functioncall functionName="OP_RECURSE"/>
+    <functioncall functionName="OP_REF"/>
+    <functioncall functionName="OP_REFI"/>
+    <functioncall functionName="OP_REVERSE"/>
+    <functioncall functionName="OP_RREF"/>
+    <functioncall functionName="OP_SBRA"/>
+    <functioncall functionName="OP_SBRAPOS"/>
+    <functioncall functionName="OP_SCBRA"/>
+    <functioncall functionName="OP_SCBRAPOS"/>
+    <functioncall functionName="OP_SCOND"/>
+    <functioncall functionName="OP_SCRIPT_RUN"/>
+    <functioncall functionName="OP_SET_SOM"/>
+    <functioncall functionName="OP_SKIP"/>
+    <functioncall functionName="OP_SKIPZERO"/>
+    <functioncall functionName="OP_SKIP_ARG"/>
+    <functioncall functionName="OP_SOD"/>
+    <functioncall functionName="OP_SOM"/>
+    <functioncall functionName="OP_STAR"/>
+    <functioncall functionName="OP_STARI"/>
+    <functioncall functionName="OP_TABLE_LENGTH"/>
+    <functioncall functionName="OP_THEN"/>
+    <functioncall functionName="OP_THEN_ARG"/>
+    <functioncall functionName="OP_TRUE"/>
+    <functioncall functionName="OP_TYPEEXACT"/>
+    <functioncall functionName="OP_TYPEMINPLUS"/>
+    <functioncall functionName="OP_TYPEMINQUERY"/>
+    <functioncall functionName="OP_TYPEMINSTAR"/>
+    <functioncall functionName="OP_TYPEMINUPTO"/>
+    <functioncall functionName="OP_TYPEPLUS"/>
+    <functioncall functionName="OP_TYPEPOSPLUS"/>
+    <functioncall functionName="OP_TYPEPOSQUERY"/>
+    <functioncall functionName="OP_TYPEPOSSTAR"/>
+    <functioncall functionName="OP_TYPEPOSUPTO"/>
+    <functioncall functionName="OP_TYPEQUERY"/>
+    <functioncall functionName="OP_TYPESTAR"/>
+    <functioncall functionName="OP_TYPEUPTO"/>
+    <functioncall functionName="OP_UPTO"/>
+    <functioncall functionName="OP_UPTOI"/>
+    <functioncall functionName="OP_VSPACE"/>
+    <functioncall functionName="OP_WHITESPACE"/>
+    <functioncall functionName="OP_WORDCHAR"/>
+    <functioncall functionName="OP_WORD_BOUNDARY"/>
+    <functioncall functionName="OP_XCLASS"/>
+    <functioncall functionName="OUTPUT_SINGLE_REPEAT"/>
+    <functioncall functionName="PARSED_END"/>
+    <functioncall functionName="PARSED_SKIP_FAILED"/>
+    <functioncall functionName="PCRE2_MATCHEDBY_DFA_INTERPRETER"/>
+    <functioncall functionName="PCRE2_MATCHEDBY_INTERPRETER"/>
+    <functioncall functionName="PCRE2_MATCHEDBY_JIT"/>
+    <functioncall functionName="POSITIVE_LOOK_AHEAD"/>
+    <functioncall functionName="POST_ASSERTION"/>
+    <functioncall functionName="POST_LOOKBEHIND"/>
+    <functioncall functionName="PSKIP_ALT"/>
+    <functioncall functionName="PSKIP_CLASS"/>
+    <functioncall functionName="PSKIP_KET"/>
+    <functioncall functionName="PSO_BSR"/>
+    <functioncall functionName="PSO_FLG"/>
+    <functioncall functionName="PSO_LIMD"/>
+    <functioncall functionName="PSO_LIMH"/>
+    <functioncall functionName="PSO_LIMM"/>
+    <functioncall functionName="PSO_NL"/>
+    <functioncall functionName="PSO_OPT"/>
+    <functioncall functionName="RANGE_NO"/>
+    <functioncall functionName="RANGE_OK_ESCAPED"/>
+    <functioncall functionName="RANGE_OK_LITERAL"/>
+    <functioncall functionName="RANGE_STARTED"/>
+    <functioncall functionName="RECURSE_BY_NAME"/>
+    <functioncall functionName="RECURSE_OR_BACKREF_LENGTH"/>
+    <functioncall functionName="RECURSION_BYNUMBER"/>
+    <functioncall functionName="REPEAT"/>
+    <functioncall functionName="SET_RECURSION"/>
+    <functioncall functionName="UNCLOSED_PARENTHESIS"/>
+    <functioncall functionName="VERB_ARG"/>
+    <functioncall functionName="_pcre2_auto_possessify_32"/>
+    <functioncall functionName="_pcre2_check_escape_32"/>
+    <functioncall functionName="_pcre2_default_compile_context_32"/>
+    <functioncall functionName="_pcre2_default_tables_32"/>
+    <functioncall functionName="_pcre2_find_bracket_32"/>
+    <functioncall functionName="_pcre2_hspace_list_32"/>
+    <functioncall functionName="_pcre2_is_newline_32"/>
+    <functioncall functionName="_pcre2_jit_free_32"/>
+    <functioncall functionName="_pcre2_memmove32"/>
+    <functioncall functionName="_pcre2_ord2utf_32"/>
+    <functioncall functionName="_pcre2_strlen_32"/>
+    <functioncall functionName="_pcre2_strncmp_32"/>
+    <functioncall functionName="_pcre2_strncmp_c8_32"/>
+    <functioncall functionName="_pcre2_study_32"/>
+    <functioncall functionName="_pcre2_valid_utf_32"/>
+    <functioncall functionName="_pcre2_vspace_list_32"/>
+    <functioncall functionName="add_after_mark"/>
+    <functioncall functionName="add_list_to_class"/>
+    <functioncall functionName="add_name_to_table"/>
+    <functioncall functionName="add_not_list_to_class"/>
+    <functioncall functionName="add_to_class"/>
+    <functioncall functionName="add_to_class_internal"/>
+    <functioncall functionName="alasmeta"/>
+    <functioncall functionName="alasnames"/>
+    <functioncall functionName="alt_bsux"/>
+    <functioncall functionName="assert_depth"/>
+    <functioncall functionName="atomcount"/>
+    <functioncall functionName="auto_callout"/>
+    <functioncall functionName="backref_map"/>
+    <functioncall functionName="bc"/>
+    <functioncall functionName="bcptr"/>
+    <functioncall functionName="big32count"/>
+    <functioncall functionName="blocksize"/>
+    <functioncall functionName="bracket_map"/>
+    <functioncall functionName="bracode"/>
+    <functioncall functionName="bracount"/>
+    <functioncall functionName="bralink"/>
+    <functioncall functionName="branch_length"/>
+    <functioncall functionName="branchfirstcu"/>
+    <functioncall functionName="branchfirstcuflags"/>
+    <functioncall functionName="branchlength"/>
+    <functioncall functionName="branchreqcu"/>
+    <functioncall functionName="branchreqcuflags"/>
+    <functioncall functionName="bravalue"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bsr"/>
+    <functioncall functionName="bsr_convention"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c16workspace"/>
+    <functioncall functionName="callout_string"/>
+    <functioncall functionName="calloutlength"/>
+    <functioncall functionName="capitem"/>
+    <functioncall functionName="capnumber"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="cbits"/>
+    <functioncall functionName="cc"/>
+    <functioncall functionName="ccontext"/>
+    <functioncall functionName="cflags"/>
+    <functioncall functionName="check_lookbehinds"/>
+    <functioncall functionName="check_posix_name"/>
+    <functioncall functionName="check_posix_syntax"/>
+    <functioncall functionName="class_has_8bitchar"/>
+    <functioncall functionName="class_range_end"/>
+    <functioncall functionName="class_uchardata"/>
+    <functioncall functionName="class_uchardata_base"/>
+    <functioncall functionName="classbits"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="codestart"/>
+    <functioncall functionName="compile_branch"/>
+    <functioncall functionName="compile_regex"/>
+    <functioncall functionName="condcount"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="cworkspace"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delimiter"/>
+    <functioncall functionName="dflags"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="end_pattern"/>
+    <functioncall functionName="errcodeptr"/>
+    <functioncall functionName="errorcode"/>
+    <functioncall functionName="errorcodeptr"/>
+    <functioncall functionName="erroroffset"/>
+    <functioncall functionName="escape"/>
+    <functioncall functionName="executable_jit"/>
+    <functioncall functionName="expect_cond_assert"/>
+    <functioncall functionName="external_options"/>
+    <functioncall functionName="extra_options"/>
+    <functioncall functionName="find_dupname_details"/>
+    <functioncall functionName="find_firstassertedcu"/>
+    <functioncall functionName="find_recurse"/>
+    <functioncall functionName="first_significant_code"/>
+    <functioncall functionName="firstcu"/>
+    <functioncall functionName="firstcuflags"/>
+    <functioncall functionName="flag"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="ge"/>
+    <functioncall functionName="get_branchlength"/>
+    <functioncall functionName="get_grouplength"/>
+    <functioncall functionName="gptr"/>
+    <functioncall functionName="greedy_default"/>
+    <functioncall functionName="greedy_non_default"/>
+    <functioncall functionName="group"/>
+    <functioncall functionName="group_return"/>
+    <functioncall functionName="groupinfo"/>
+    <functioncall functionName="grouplength"/>
+    <functioncall functionName="groupno"/>
+    <functioncall functionName="groupnumber"/>
+    <functioncall functionName="had_accept"/>
+    <functioncall functionName="had_recurse"/>
+    <functioncall functionName="has_arg"/>
+    <functioncall functionName="has_lookbehind"/>
+    <functioncall functionName="heap_parsed_pattern"/>
+    <functioncall functionName="hptr"/>
+    <functioncall functionName="hyphenok"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inassert"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="inescq"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="int64_t"/>
+    <functioncall functionName="inverbname"/>
+    <functioncall functionName="is_anchored"/>
+    <functioncall functionName="is_dupname"/>
+    <functioncall functionName="is_group"/>
+    <functioncall functionName="is_startline"/>
+    <functioncall functionName="isclass"/>
+    <functioncall functionName="isdup"/>
+    <functioncall functionName="isdupname"/>
+    <functioncall functionName="isinline"/>
+    <functioncall functionName="itemlength"/>
+    <functioncall functionName="last_branch"/>
+    <functioncall functionName="last_code"/>
+    <functioncall functionName="lcptr"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="length_prevgroup"/>
+    <functioncall functionName="limit_depth"/>
+    <functioncall functionName="limit_heap"/>
+    <functioncall functionName="limit_match"/>
+    <functioncall functionName="linkoffset"/>
+    <functioncall functionName="local_negate"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="lookbehind"/>
+    <functioncall functionName="lookbehindlength"/>
+    <functioncall functionName="loopcount"/>
+    <functioncall functionName="major"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="manage_callouts"/>
+    <functioncall functionName="matched_char"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="max_error"/>
+    <functioncall functionName="max_group"/>
+    <functioncall functionName="max_lookbehind"/>
+    <functioncall functionName="max_pattern_length"/>
+    <functioncall functionName="max_repeat"/>
+    <functioncall functionName="mcbuffer"/>
+    <functioncall functionName="mclength"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memctl"/>
+    <functioncall functionName="memory_data"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="meta"/>
+    <functioncall functionName="meta_arg"/>
+    <functioncall functionName="meta_extra_lengths"/>
+    <functioncall functionName="meta_quantifier"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="min_repeat"/>
+    <functioncall functionName="minminlength"/>
+    <functioncall functionName="minor"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="name_count"/>
+    <functioncall functionName="name_entry_size"/>
+    <functioncall functionName="name_table"/>
+    <functioncall functionName="named_group_list_size"/>
+    <functioncall functionName="named_groups"/>
+    <functioncall functionName="namelen"/>
+    <functioncall functionName="names_found"/>
+    <functioncall functionName="negate_class"/>
+    <functioncall functionName="nest_depth"/>
+    <functioncall functionName="new_map"/>
+    <functioncall functionName="newcode"/>
+    <functioncall functionName="newline"/>
+    <functioncall functionName="newline_convention"/>
+    <functioncall functionName="newsize"/>
+    <functioncall functionName="newspace"/>
+    <functioncall functionName="newtables"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nlen"/>
+    <functioncall functionName="nllen"/>
+    <functioncall functionName="nltype"/>
+    <functioncall functionName="number"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="okquantifier"/>
+    <functioncall functionName="oldcode"/>
+    <functioncall functionName="oldlinkoffset"/>
+    <functioncall functionName="oldptr"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="op_previous"/>
+    <functioncall functionName="op_type"/>
+    <functioncall functionName="open_caps"/>
+    <functioncall functionName="options"/>
+    <functioncall functionName="orig_code"/>
+    <functioncall functionName="overall_options"/>
+    <functioncall functionName="overflow"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="parens_depth"/>
+    <functioncall functionName="parens_nest_limit"/>
+    <functioncall functionName="parse_regex"/>
+    <functioncall functionName="parsed_pattern"/>
+    <functioncall functionName="parsed_pattern_end"/>
+    <functioncall functionName="parsed_skip"/>
+    <functioncall functionName="patlen"/>
+    <functioncall functionName="pattern"/>
+    <functioncall functionName="pbits"/>
+    <functioncall functionName="pcre2_code_free_32"/>
+    <functioncall functionName="pn"/>
+    <functioncall functionName="posix_class"/>
+    <functioncall functionName="posix_names"/>
+    <functioncall functionName="possessive_quantifier"/>
+    <functioncall functionName="pp"/>
+    <functioncall functionName="pptr"/>
+    <functioncall functionName="pptrptr"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prev_expect_cond_assert"/>
+    <functioncall functionName="prev_length"/>
+    <functioncall functionName="prev_okquantifier"/>
+    <functioncall functionName="previous"/>
+    <functioncall functionName="previous_callout"/>
+    <functioncall functionName="prop_type"/>
+    <functioncall functionName="prop_value"/>
+    <functioncall functionName="pso_list"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrend"/>
+    <functioncall functionName="re"/>
+    <functioncall functionName="re_blocksize"/>
+    <functioncall functionName="read_name"/>
+    <functioncall functionName="read_number"/>
+    <functioncall functionName="read_repeat_counts"/>
+    <functioncall functionName="recurses"/>
+    <functioncall functionName="repcode"/>
+    <functioncall functionName="repeat_max"/>
+    <functioncall functionName="repeat_min"/>
+    <functioncall functionName="repeat_type"/>
+    <functioncall functionName="req_caseopt"/>
+    <functioncall functionName="req_varyopt"/>
+    <functioncall functionName="reqcu"/>
+    <functioncall functionName="reqcuflags"/>
+    <functioncall functionName="reset_caseful"/>
+    <functioncall functionName="reset_group"/>
+    <functioncall functionName="rgroup"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="scode"/>
+    <functioncall functionName="search_from"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="set_lookbehind_lengths"/>
+    <functioncall functionName="setflags"/>
+    <functioncall functionName="should_flip_negation"/>
+    <functioncall functionName="sign"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skipassert"/>
+    <functioncall functionName="skipatstart"/>
+    <functioncall functionName="skipunits"/>
+    <functioncall functionName="slot"/>
+    <functioncall functionName="stack_groupinfo"/>
+    <functioncall functionName="stack_guard"/>
+    <functioncall functionName="stack_guard_data"/>
+    <functioncall functionName="stack_parsed_pattern"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_bitmap"/>
+    <functioncall functionName="start_bracket"/>
+    <functioncall functionName="start_pattern"/>
+    <functioncall functionName="start_workspace"/>
+    <functioncall functionName="startptr"/>
+    <functioncall functionName="subfirstcu"/>
+    <functioncall functionName="subfirstcuflags"/>
+    <functioncall functionName="subreqcu"/>
+    <functioncall functionName="subreqcuflags"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tables"/>
+    <functioncall functionName="taboffset"/>
+    <functioncall functionName="tabopt"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="tempcode"/>
+    <functioncall functionName="tempptr"/>
+    <functioncall functionName="tempreqvary"/>
+    <functioncall functionName="terminator"/>
+    <functioncall functionName="this_recurse"/>
+    <functioncall functionName="thisptr"/>
+    <functioncall functionName="top_backref"/>
+    <functioncall functionName="top_nest"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uchardata"/>
+    <functioncall functionName="uchardptr"/>
+    <functioncall functionName="ucp_Adlam"/>
+    <functioncall functionName="ucp_Ahom"/>
+    <functioncall functionName="ucp_Anatolian_Hieroglyphs"/>
+    <functioncall functionName="ucp_Arabic"/>
+    <functioncall functionName="ucp_Armenian"/>
+    <functioncall functionName="ucp_Avestan"/>
+    <functioncall functionName="ucp_Balinese"/>
+    <functioncall functionName="ucp_Bamum"/>
+    <functioncall functionName="ucp_Bassa_Vah"/>
+    <functioncall functionName="ucp_Batak"/>
+    <functioncall functionName="ucp_Bengali"/>
+    <functioncall functionName="ucp_Bhaiksuki"/>
+    <functioncall functionName="ucp_Bopomofo"/>
+    <functioncall functionName="ucp_Brahmi"/>
+    <functioncall functionName="ucp_Braille"/>
+    <functioncall functionName="ucp_Buginese"/>
+    <functioncall functionName="ucp_Buhid"/>
+    <functioncall functionName="ucp_C"/>
+    <functioncall functionName="ucp_Canadian_Aboriginal"/>
+    <functioncall functionName="ucp_Carian"/>
+    <functioncall functionName="ucp_Caucasian_Albanian"/>
+    <functioncall functionName="ucp_Cc"/>
+    <functioncall functionName="ucp_Cf"/>
+    <functioncall functionName="ucp_Chakma"/>
+    <functioncall functionName="ucp_Cham"/>
+    <functioncall functionName="ucp_Cherokee"/>
+    <functioncall functionName="ucp_Cn"/>
+    <functioncall functionName="ucp_Co"/>
+    <functioncall functionName="ucp_Common"/>
+    <functioncall functionName="ucp_Coptic"/>
+    <functioncall functionName="ucp_Cs"/>
+    <functioncall functionName="ucp_Cuneiform"/>
+    <functioncall functionName="ucp_Cypriot"/>
+    <functioncall functionName="ucp_Cyrillic"/>
+    <functioncall functionName="ucp_Deseret"/>
+    <functioncall functionName="ucp_Devanagari"/>
+    <functioncall functionName="ucp_Dogra"/>
+    <functioncall functionName="ucp_Duployan"/>
+    <functioncall functionName="ucp_Egyptian_Hieroglyphs"/>
+    <functioncall functionName="ucp_Elbasan"/>
+    <functioncall functionName="ucp_Elymaic"/>
+    <functioncall functionName="ucp_Ethiopic"/>
+    <functioncall functionName="ucp_Georgian"/>
+    <functioncall functionName="ucp_Glagolitic"/>
+    <functioncall functionName="ucp_Gothic"/>
+    <functioncall functionName="ucp_Grantha"/>
+    <functioncall functionName="ucp_Greek"/>
+    <functioncall functionName="ucp_Gujarati"/>
+    <functioncall functionName="ucp_Gunjala_Gondi"/>
+    <functioncall functionName="ucp_Gurmukhi"/>
+    <functioncall functionName="ucp_Han"/>
+    <functioncall functionName="ucp_Hangul"/>
+    <functioncall functionName="ucp_Hanifi_Rohingya"/>
+    <functioncall functionName="ucp_Hanunoo"/>
+    <functioncall functionName="ucp_Hatran"/>
+    <functioncall functionName="ucp_Hebrew"/>
+    <functioncall functionName="ucp_Hiragana"/>
+    <functioncall functionName="ucp_Imperial_Aramaic"/>
+    <functioncall functionName="ucp_Inherited"/>
+    <functioncall functionName="ucp_Inscriptional_Pahlavi"/>
+    <functioncall functionName="ucp_Inscriptional_Parthian"/>
+    <functioncall functionName="ucp_Javanese"/>
+    <functioncall functionName="ucp_Kaithi"/>
+    <functioncall functionName="ucp_Kannada"/>
+    <functioncall functionName="ucp_Katakana"/>
+    <functioncall functionName="ucp_Kayah_Li"/>
+    <functioncall functionName="ucp_Kharoshthi"/>
+    <functioncall functionName="ucp_Khmer"/>
+    <functioncall functionName="ucp_Khojki"/>
+    <functioncall functionName="ucp_Khudawadi"/>
+    <functioncall functionName="ucp_L"/>
+    <functioncall functionName="ucp_Lao"/>
+    <functioncall functionName="ucp_Latin"/>
+    <functioncall functionName="ucp_Lepcha"/>
+    <functioncall functionName="ucp_Limbu"/>
+    <functioncall functionName="ucp_Linear_A"/>
+    <functioncall functionName="ucp_Linear_B"/>
+    <functioncall functionName="ucp_Lisu"/>
+    <functioncall functionName="ucp_Ll"/>
+    <functioncall functionName="ucp_Lm"/>
+    <functioncall functionName="ucp_Lo"/>
+    <functioncall functionName="ucp_Lt"/>
+    <functioncall functionName="ucp_Lu"/>
+    <functioncall functionName="ucp_Lycian"/>
+    <functioncall functionName="ucp_Lydian"/>
+    <functioncall functionName="ucp_M"/>
+    <functioncall functionName="ucp_Mahajani"/>
+    <functioncall functionName="ucp_Makasar"/>
+    <functioncall functionName="ucp_Malayalam"/>
+    <functioncall functionName="ucp_Mandaic"/>
+    <functioncall functionName="ucp_Manichaean"/>
+    <functioncall functionName="ucp_Marchen"/>
+    <functioncall functionName="ucp_Masaram_Gondi"/>
+    <functioncall functionName="ucp_Mc"/>
+    <functioncall functionName="ucp_Me"/>
+    <functioncall functionName="ucp_Medefaidrin"/>
+    <functioncall functionName="ucp_Meetei_Mayek"/>
+    <functioncall functionName="ucp_Mende_Kikakui"/>
+    <functioncall functionName="ucp_Meroitic_Cursive"/>
+    <functioncall functionName="ucp_Meroitic_Hieroglyphs"/>
+    <functioncall functionName="ucp_Miao"/>
+    <functioncall functionName="ucp_Mn"/>
+    <functioncall functionName="ucp_Modi"/>
+    <functioncall functionName="ucp_Mongolian"/>
+    <functioncall functionName="ucp_Mro"/>
+    <functioncall functionName="ucp_Multani"/>
+    <functioncall functionName="ucp_Myanmar"/>
+    <functioncall functionName="ucp_N"/>
+    <functioncall functionName="ucp_Nabataean"/>
+    <functioncall functionName="ucp_Nandinagari"/>
+    <functioncall functionName="ucp_Nd"/>
+    <functioncall functionName="ucp_New_Tai_Lue"/>
+    <functioncall functionName="ucp_Newa"/>
+    <functioncall functionName="ucp_Nko"/>
+    <functioncall functionName="ucp_Nl"/>
+    <functioncall functionName="ucp_No"/>
+    <functioncall functionName="ucp_Nushu"/>
+    <functioncall functionName="ucp_Nyiakeng_Puachue_Hmong"/>
+    <functioncall functionName="ucp_Ogham"/>
+    <functioncall functionName="ucp_Ol_Chiki"/>
+    <functioncall functionName="ucp_Old_Hungarian"/>
+    <functioncall functionName="ucp_Old_Italic"/>
+    <functioncall functionName="ucp_Old_North_Arabian"/>
+    <functioncall functionName="ucp_Old_Permic"/>
+    <functioncall functionName="ucp_Old_Persian"/>
+    <functioncall functionName="ucp_Old_Sogdian"/>
+    <functioncall functionName="ucp_Old_South_Arabian"/>
+    <functioncall functionName="ucp_Old_Turkic"/>
+    <functioncall functionName="ucp_Oriya"/>
+    <functioncall functionName="ucp_Osage"/>
+    <functioncall functionName="ucp_Osmanya"/>
+    <functioncall functionName="ucp_P"/>
+    <functioncall functionName="ucp_Pahawh_Hmong"/>
+    <functioncall functionName="ucp_Palmyrene"/>
+    <functioncall functionName="ucp_Pau_Cin_Hau"/>
+    <functioncall functionName="ucp_Pc"/>
+    <functioncall functionName="ucp_Pd"/>
+    <functioncall functionName="ucp_Pe"/>
+    <functioncall functionName="ucp_Pf"/>
+    <functioncall functionName="ucp_Phags_Pa"/>
+    <functioncall functionName="ucp_Phoenician"/>
+    <functioncall functionName="ucp_Pi"/>
+    <functioncall functionName="ucp_Po"/>
+    <functioncall functionName="ucp_Ps"/>
+    <functioncall functionName="ucp_Psalter_Pahlavi"/>
+    <functioncall functionName="ucp_Rejang"/>
+    <functioncall functionName="ucp_Runic"/>
+    <functioncall functionName="ucp_S"/>
+    <functioncall functionName="ucp_Samaritan"/>
+    <functioncall functionName="ucp_Saurashtra"/>
+    <functioncall functionName="ucp_Sc"/>
+    <functioncall functionName="ucp_Sharada"/>
+    <functioncall functionName="ucp_Shavian"/>
+    <functioncall functionName="ucp_Siddham"/>
+    <functioncall functionName="ucp_SignWriting"/>
+    <functioncall functionName="ucp_Sinhala"/>
+    <functioncall functionName="ucp_Sk"/>
+    <functioncall functionName="ucp_Sm"/>
+    <functioncall functionName="ucp_So"/>
+    <functioncall functionName="ucp_Sogdian"/>
+    <functioncall functionName="ucp_Sora_Sompeng"/>
+    <functioncall functionName="ucp_Soyombo"/>
+    <functioncall functionName="ucp_Sundanese"/>
+    <functioncall functionName="ucp_Syloti_Nagri"/>
+    <functioncall functionName="ucp_Syriac"/>
+    <functioncall functionName="ucp_Tagalog"/>
+    <functioncall functionName="ucp_Tagbanwa"/>
+    <functioncall functionName="ucp_Tai_Le"/>
+    <functioncall functionName="ucp_Tai_Tham"/>
+    <functioncall functionName="ucp_Tai_Viet"/>
+    <functioncall functionName="ucp_Takri"/>
+    <functioncall functionName="ucp_Tamil"/>
+    <functioncall functionName="ucp_Tangut"/>
+    <functioncall functionName="ucp_Telugu"/>
+    <functioncall functionName="ucp_Thaana"/>
+    <functioncall functionName="ucp_Thai"/>
+    <functioncall functionName="ucp_Tibetan"/>
+    <functioncall functionName="ucp_Tifinagh"/>
+    <functioncall functionName="ucp_Tirhuta"/>
+    <functioncall functionName="ucp_Ugaritic"/>
+    <functioncall functionName="ucp_Unknown"/>
+    <functioncall functionName="ucp_Vai"/>
+    <functioncall functionName="ucp_Wancho"/>
+    <functioncall functionName="ucp_Warang_Citi"/>
+    <functioncall functionName="ucp_Yi"/>
+    <functioncall functionName="ucp_Z"/>
+    <functioncall functionName="ucp_Zanabazar_Square"/>
+    <functioncall functionName="ucp_Zl"/>
+    <functioncall functionName="ucp_Zp"/>
+    <functioncall functionName="ucp_Zs"/>
+    <functioncall functionName="ucp_gbCR"/>
+    <functioncall functionName="ucp_gbControl"/>
+    <functioncall functionName="ucp_gbExtend"/>
+    <functioncall functionName="ucp_gbExtended_Pictographic"/>
+    <functioncall functionName="ucp_gbL"/>
+    <functioncall functionName="ucp_gbLF"/>
+    <functioncall functionName="ucp_gbLV"/>
+    <functioncall functionName="ucp_gbLVT"/>
+    <functioncall functionName="ucp_gbOther"/>
+    <functioncall functionName="ucp_gbPrepend"/>
+    <functioncall functionName="ucp_gbRegionalIndicator"/>
+    <functioncall functionName="ucp_gbSpacingMark"/>
+    <functioncall functionName="ucp_gbT"/>
+    <functioncall functionName="ucp_gbV"/>
+    <functioncall functionName="ucp_gbZWJ"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="unset"/>
+    <functioncall functionName="usedlength"/>
+    <functioncall functionName="utf"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="verbarglen"/>
+    <functioncall functionName="verbculen"/>
+    <functioncall functionName="verbnamelength"/>
+    <functioncall functionName="verbnames"/>
+    <functioncall functionName="verbs"/>
+    <functioncall functionName="vn"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="was_r_ampersand"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="workspace_size"/>
+    <functioncall functionName="xc"/>
+    <functioncall functionName="xclass_has_prop"/>
+    <functioncall functionName="xl"/>
+    <functioncall functionName="yield"/>
+    <functioncall functionName="zerofirstcu"/>
+    <functioncall functionName="zerofirstcuflags"/>
+    <functioncall functionName="zeroreqcu"/>
+    <functioncall functionName="zeroreqcuflags"/>
+  </FileInfo>
+</analyzerinfo>

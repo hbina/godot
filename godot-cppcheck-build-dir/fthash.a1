@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1066418947">
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: error" verbose="Uninitialized variable: error" cwe="908">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="191" column="12"/>
+            <symbol>error</symbol>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &apos;error&apos; is not assigned a value." verbose="Variable &apos;error&apos; is not assigned a value." cwe="665">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="171" column="15"/>
+            <symbol>error</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c:166:3" call-funcname="hash_init" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="199" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c:51:3" my-argnr="1" my-argname="key" file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="53" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c:83:3" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="86" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c:83:3" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="86" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c:95:3" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c:95:3" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/thirdparty/freetype/src/base/fthash.c" line="98" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="hash_str_lookup" lineNumber="51"/>
+    <functiondecl functionName="hash_num_lookup" lineNumber="66"/>
+    <functiondecl functionName="hash_str_compare" lineNumber="83"/>
+    <functiondecl functionName="hash_num_compare" lineNumber="95"/>
+    <functiondecl functionName="hash_bucket" lineNumber="106"/>
+    <functiondecl functionName="hash_rehash" lineNumber="132"/>
+    <functiondecl functionName="hash_init" lineNumber="166"/>
+    <functiondecl functionName="ft_hash_str_init" lineNumber="196"/>
+    <functiondecl functionName="ft_hash_num_init" lineNumber="204"/>
+    <functiondecl functionName="ft_hash_str_free" lineNumber="212"/>
+    <functiondecl functionName="hash_insert" lineNumber="234"/>
+    <functiondecl functionName="ft_hash_str_insert" lineNumber="272"/>
+    <functiondecl functionName="ft_hash_num_insert" lineNumber="287"/>
+    <functiondecl functionName="hash_lookup" lineNumber="302"/>
+    <functiondecl functionName="ft_hash_str_lookup" lineNumber="314"/>
+    <functiondecl functionName="ft_hash_num_lookup" lineNumber="327"/>
+    <functioncall functionName="Exit"/>
+    <functioncall functionName="FT_Err_Ok"/>
+    <functioncall functionName="FT_FREE"/>
+    <functioncall functionName="FT_MEM_NEW_ARRAY"/>
+    <functioncall functionName="FT_NEW"/>
+    <functioncall functionName="FT_NEW_ARRAY"/>
+    <functioncall functionName="FT_ULong"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="compare"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="ft_strcmp"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash_bucket"/>
+    <functioncall functionName="hash_init"/>
+    <functioncall functionName="hash_insert"/>
+    <functioncall functionName="hash_lookup"/>
+    <functioncall functionName="hash_num_compare"/>
+    <functioncall functionName="hash_num_lookup"/>
+    <functioncall functionName="hash_rehash"/>
+    <functioncall functionName="hash_str_compare"/>
+    <functioncall functionName="hash_str_lookup"/>
+    <functioncall functionName="hk"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="is_num"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="limit"/>
+    <functioncall functionName="lookup"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="nn"/>
+    <functioncall functionName="num"/>
+    <functioncall functionName="obp"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="sz"/>
+    <functioncall functionName="table"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

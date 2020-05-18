@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="692596059">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::ios&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::ios&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::ios</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::input&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::input&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::input</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::video_driver_index&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::video_driver_index&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::video_driver_index</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;set_video_mode&apos; is called from constructor &apos;OSIPhone(int width,int height,String p_data_dir)&apos; at line 646. Dynamic binding is not used." verbose="Virtual function &apos;set_video_mode&apos; is called from constructor &apos;OSIPhone(int width,int height,String p_data_dir)&apos; at line 646. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" file="/home/hbina/git/godot/platform/iphone/os_iphone.h" line="166" column="15" info="set_video_mode is a virtual function"/>
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="646" column="2" info="Calling set_video_mode"/>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: new_ptr" verbose="Memory leak: new_ptr" cwe="401">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="627" column="1"/>
+            <symbol>new_ptr</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="76" column="9"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tempFile&apos; is assigned a value that is never used." verbose="Variable &apos;tempFile&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="553" column="18"/>
+            <symbol>tempFile</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="4" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="5" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:168:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="445" col="2" value="0"/>
+  </FileInfo>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::game_center&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::game_center&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::game_center</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="4" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="5" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:168:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="445" col="2" value="0"/>
+  </FileInfo>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::icloud&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::icloud&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::icloud</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="4" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="5" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:168:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="445" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="4" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="5" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:168:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="445" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="4" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="5" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:168:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="445" col="2" value="0"/>
+  </FileInfo>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::store_kit&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::store_kit&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::store_kit</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="4" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="5" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:168:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="445" col="2" value="0"/>
+  </FileInfo>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::context_vulkan&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::context_vulkan&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::context_vulkan</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;OSIPhone::rendering_device_vulkan&apos; is not initialized in the constructor." verbose="Member variable &apos;OSIPhone::rendering_device_vulkan&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="629" column="11"/>
+            <symbol>OSIPhone::rendering_device_vulkan</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="4" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:133:7" call-funcname="touch_press" call-argnr="5" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="261" col="15" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/platform/iphone/os_iphone.h:168:15" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/platform/iphone/os_iphone.cpp" line="445" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_video_driver_count" lineNumber="60"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="65"/>
+    <functiondecl functionName="get_singleton" lineNumber="74"/>
+    <functiondecl functionName="set_data_dir" lineNumber="81"/>
+    <functiondecl functionName="set_unique_id" lineNumber="90"/>
+    <functiondecl functionName="get_unique_id" lineNumber="95"/>
+    <functiondecl functionName="initialize_core" lineNumber="100"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="107"/>
+    <functiondecl functionName="initialize" lineNumber="111"/>
+    <functiondecl functionName="get_main_loop" lineNumber="176"/>
+    <functiondecl functionName="set_main_loop" lineNumber="181"/>
+    <functiondecl functionName="iterate" lineNumber="191"/>
+    <functiondecl functionName="key" lineNumber="207"/>
+    <functiondecl functionName="touch_press" lineNumber="219"/>
+    <functiondecl functionName="touch_drag" lineNumber="234"/>
+    <functiondecl functionName="queue_event" lineNumber="247"/>
+    <functiondecl functionName="touches_cancelled" lineNumber="254"/>
+    <functiondecl functionName="update_gravity" lineNumber="268"/>
+    <functiondecl functionName="update_accelerometer" lineNumber="272"/>
+    <functiondecl functionName="update_magnetometer" lineNumber="311"/>
+    <functiondecl functionName="update_gyroscope" lineNumber="315"/>
+    <functiondecl functionName="get_unused_joy_id" lineNumber="319"/>
+    <functiondecl functionName="joy_connection_changed" lineNumber="323"/>
+    <functiondecl functionName="joy_button" lineNumber="327"/>
+    <functiondecl functionName="joy_axis" lineNumber="331"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="335"/>
+    <functiondecl functionName="finalize" lineNumber="345"/>
+    <functiondecl functionName="set_mouse_show" lineNumber="375"/>
+    <functiondecl functionName="set_mouse_grab" lineNumber="376"/>
+    <functiondecl functionName="is_mouse_grab_enabled" lineNumber="378"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="383"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="388"/>
+    <functiondecl functionName="set_window_title" lineNumber="393"/>
+    <functiondecl functionName="alert" lineNumber="395"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="402"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="410"/>
+    <functiondecl functionName="register_dynamic_symbol" lineNumber="418"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="422"/>
+    <functiondecl functionName="set_video_mode" lineNumber="433"/>
+    <functiondecl functionName="get_video_mode" lineNumber="438"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="443"/>
+    <functiondecl functionName="can_draw" lineNumber="448"/>
+    <functiondecl functionName="set_base_framebuffer" lineNumber="455"/>
+    <functiondecl functionName="has_virtual_keyboard" lineNumber="464"/>
+    <functiondecl functionName="show_virtual_keyboard" lineNumber="474"/>
+    <functiondecl functionName="hide_virtual_keyboard" lineNumber="478"/>
+    <functiondecl functionName="set_virtual_keyboard_height" lineNumber="482"/>
+    <functiondecl functionName="get_virtual_keyboard_height" lineNumber="486"/>
+    <functiondecl functionName="shell_open" lineNumber="490"/>
+    <functiondecl functionName="set_keep_screen_on" lineNumber="494"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="499"/>
+    <functiondecl functionName="get_name" lineNumber="504"/>
+    <functiondecl functionName="get_model_name" lineNumber="509"/>
+    <functiondecl functionName="get_window_size" lineNumber="518"/>
+    <functiondecl functionName="get_window_safe_area" lineNumber="525"/>
+    <functiondecl functionName="has_touchscreen_ui_hint" lineNumber="529"/>
+    <functiondecl functionName="set_locale" lineNumber="534"/>
+    <functiondecl functionName="get_locale" lineNumber="538"/>
+    <functiondecl functionName="native_video_play" lineNumber="549"/>
+    <functiondecl functionName="native_video_is_playing" lineNumber="575"/>
+    <functiondecl functionName="native_video_pause" lineNumber="579"/>
+    <functiondecl functionName="native_video_unpause" lineNumber="584"/>
+    <functiondecl functionName="native_video_focus_out" lineNumber="588"/>
+    <functiondecl functionName="native_video_stop" lineNumber="592"/>
+    <functiondecl functionName="vibrate_handheld" lineNumber="597"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="602"/>
+    <functiondecl functionName="add_ios_init_callback" lineNumber="615"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="60"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="65"/>
+    <functiondecl functionName="get_singleton" lineNumber="74"/>
+    <functiondecl functionName="set_data_dir" lineNumber="81"/>
+    <functiondecl functionName="set_unique_id" lineNumber="90"/>
+    <functiondecl functionName="get_unique_id" lineNumber="95"/>
+    <functiondecl functionName="initialize_core" lineNumber="100"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="107"/>
+    <functiondecl functionName="initialize" lineNumber="111"/>
+    <functiondecl functionName="get_main_loop" lineNumber="176"/>
+    <functiondecl functionName="set_main_loop" lineNumber="181"/>
+    <functiondecl functionName="iterate" lineNumber="191"/>
+    <functiondecl functionName="key" lineNumber="207"/>
+    <functiondecl functionName="touch_press" lineNumber="219"/>
+    <functiondecl functionName="touch_drag" lineNumber="234"/>
+    <functiondecl functionName="queue_event" lineNumber="247"/>
+    <functiondecl functionName="touches_cancelled" lineNumber="254"/>
+    <functiondecl functionName="update_gravity" lineNumber="268"/>
+    <functiondecl functionName="update_accelerometer" lineNumber="272"/>
+    <functiondecl functionName="update_magnetometer" lineNumber="311"/>
+    <functiondecl functionName="update_gyroscope" lineNumber="315"/>
+    <functiondecl functionName="get_unused_joy_id" lineNumber="319"/>
+    <functiondecl functionName="joy_connection_changed" lineNumber="323"/>
+    <functiondecl functionName="joy_button" lineNumber="327"/>
+    <functiondecl functionName="joy_axis" lineNumber="331"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="335"/>
+    <functiondecl functionName="finalize" lineNumber="345"/>
+    <functiondecl functionName="set_mouse_show" lineNumber="375"/>
+    <functiondecl functionName="set_mouse_grab" lineNumber="376"/>
+    <functiondecl functionName="is_mouse_grab_enabled" lineNumber="378"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="383"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="388"/>
+    <functiondecl functionName="set_window_title" lineNumber="393"/>
+    <functiondecl functionName="alert" lineNumber="395"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="402"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="410"/>
+    <functiondecl functionName="register_dynamic_symbol" lineNumber="418"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="422"/>
+    <functiondecl functionName="set_video_mode" lineNumber="433"/>
+    <functiondecl functionName="get_video_mode" lineNumber="438"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="443"/>
+    <functiondecl functionName="can_draw" lineNumber="448"/>
+    <functiondecl functionName="set_base_framebuffer" lineNumber="455"/>
+    <functiondecl functionName="has_virtual_keyboard" lineNumber="464"/>
+    <functiondecl functionName="show_virtual_keyboard" lineNumber="474"/>
+    <functiondecl functionName="hide_virtual_keyboard" lineNumber="478"/>
+    <functiondecl functionName="set_virtual_keyboard_height" lineNumber="482"/>
+    <functiondecl functionName="get_virtual_keyboard_height" lineNumber="486"/>
+    <functiondecl functionName="shell_open" lineNumber="490"/>
+    <functiondecl functionName="set_keep_screen_on" lineNumber="494"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="499"/>
+    <functiondecl functionName="get_name" lineNumber="504"/>
+    <functiondecl functionName="get_model_name" lineNumber="509"/>
+    <functiondecl functionName="get_window_size" lineNumber="518"/>
+    <functiondecl functionName="get_window_safe_area" lineNumber="525"/>
+    <functiondecl functionName="has_touchscreen_ui_hint" lineNumber="529"/>
+    <functiondecl functionName="set_locale" lineNumber="534"/>
+    <functiondecl functionName="get_locale" lineNumber="538"/>
+    <functiondecl functionName="native_video_play" lineNumber="549"/>
+    <functiondecl functionName="native_video_is_playing" lineNumber="575"/>
+    <functiondecl functionName="native_video_pause" lineNumber="579"/>
+    <functiondecl functionName="native_video_unpause" lineNumber="584"/>
+    <functiondecl functionName="native_video_focus_out" lineNumber="588"/>
+    <functiondecl functionName="native_video_stop" lineNumber="592"/>
+    <functiondecl functionName="vibrate_handheld" lineNumber="597"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="602"/>
+    <functiondecl functionName="add_ios_init_callback" lineNumber="615"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="60"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="65"/>
+    <functiondecl functionName="get_singleton" lineNumber="74"/>
+    <functiondecl functionName="set_data_dir" lineNumber="81"/>
+    <functiondecl functionName="set_unique_id" lineNumber="90"/>
+    <functiondecl functionName="get_unique_id" lineNumber="95"/>
+    <functiondecl functionName="initialize_core" lineNumber="100"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="107"/>
+    <functiondecl functionName="initialize" lineNumber="111"/>
+    <functiondecl functionName="get_main_loop" lineNumber="176"/>
+    <functiondecl functionName="set_main_loop" lineNumber="181"/>
+    <functiondecl functionName="iterate" lineNumber="191"/>
+    <functiondecl functionName="key" lineNumber="207"/>
+    <functiondecl functionName="touch_press" lineNumber="219"/>
+    <functiondecl functionName="touch_drag" lineNumber="234"/>
+    <functiondecl functionName="queue_event" lineNumber="247"/>
+    <functiondecl functionName="touches_cancelled" lineNumber="254"/>
+    <functiondecl functionName="update_gravity" lineNumber="268"/>
+    <functiondecl functionName="update_accelerometer" lineNumber="272"/>
+    <functiondecl functionName="update_magnetometer" lineNumber="311"/>
+    <functiondecl functionName="update_gyroscope" lineNumber="315"/>
+    <functiondecl functionName="get_unused_joy_id" lineNumber="319"/>
+    <functiondecl functionName="joy_connection_changed" lineNumber="323"/>
+    <functiondecl functionName="joy_button" lineNumber="327"/>
+    <functiondecl functionName="joy_axis" lineNumber="331"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="335"/>
+    <functiondecl functionName="finalize" lineNumber="345"/>
+    <functiondecl functionName="set_mouse_show" lineNumber="375"/>
+    <functiondecl functionName="set_mouse_grab" lineNumber="376"/>
+    <functiondecl functionName="is_mouse_grab_enabled" lineNumber="378"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="383"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="388"/>
+    <functiondecl functionName="set_window_title" lineNumber="393"/>
+    <functiondecl functionName="alert" lineNumber="395"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="402"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="410"/>
+    <functiondecl functionName="register_dynamic_symbol" lineNumber="418"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="422"/>
+    <functiondecl functionName="set_video_mode" lineNumber="433"/>
+    <functiondecl functionName="get_video_mode" lineNumber="438"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="443"/>
+    <functiondecl functionName="can_draw" lineNumber="448"/>
+    <functiondecl functionName="set_base_framebuffer" lineNumber="455"/>
+    <functiondecl functionName="has_virtual_keyboard" lineNumber="464"/>
+    <functiondecl functionName="show_virtual_keyboard" lineNumber="474"/>
+    <functiondecl functionName="hide_virtual_keyboard" lineNumber="478"/>
+    <functiondecl functionName="set_virtual_keyboard_height" lineNumber="482"/>
+    <functiondecl functionName="get_virtual_keyboard_height" lineNumber="486"/>
+    <functiondecl functionName="shell_open" lineNumber="490"/>
+    <functiondecl functionName="set_keep_screen_on" lineNumber="494"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="499"/>
+    <functiondecl functionName="get_name" lineNumber="504"/>
+    <functiondecl functionName="get_model_name" lineNumber="509"/>
+    <functiondecl functionName="get_window_size" lineNumber="518"/>
+    <functiondecl functionName="get_window_safe_area" lineNumber="525"/>
+    <functiondecl functionName="has_touchscreen_ui_hint" lineNumber="529"/>
+    <functiondecl functionName="set_locale" lineNumber="534"/>
+    <functiondecl functionName="get_locale" lineNumber="538"/>
+    <functiondecl functionName="native_video_play" lineNumber="549"/>
+    <functiondecl functionName="native_video_is_playing" lineNumber="575"/>
+    <functiondecl functionName="native_video_pause" lineNumber="579"/>
+    <functiondecl functionName="native_video_unpause" lineNumber="584"/>
+    <functiondecl functionName="native_video_focus_out" lineNumber="588"/>
+    <functiondecl functionName="native_video_stop" lineNumber="592"/>
+    <functiondecl functionName="vibrate_handheld" lineNumber="597"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="602"/>
+    <functiondecl functionName="add_ios_init_callback" lineNumber="615"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="60"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="65"/>
+    <functiondecl functionName="get_singleton" lineNumber="74"/>
+    <functiondecl functionName="set_data_dir" lineNumber="81"/>
+    <functiondecl functionName="set_unique_id" lineNumber="90"/>
+    <functiondecl functionName="get_unique_id" lineNumber="95"/>
+    <functiondecl functionName="initialize_core" lineNumber="100"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="107"/>
+    <functiondecl functionName="initialize" lineNumber="111"/>
+    <functiondecl functionName="get_main_loop" lineNumber="176"/>
+    <functiondecl functionName="set_main_loop" lineNumber="181"/>
+    <functiondecl functionName="iterate" lineNumber="191"/>
+    <functiondecl functionName="key" lineNumber="207"/>
+    <functiondecl functionName="touch_press" lineNumber="219"/>
+    <functiondecl functionName="touch_drag" lineNumber="234"/>
+    <functiondecl functionName="queue_event" lineNumber="247"/>
+    <functiondecl functionName="touches_cancelled" lineNumber="254"/>
+    <functiondecl functionName="update_gravity" lineNumber="268"/>
+    <functiondecl functionName="update_accelerometer" lineNumber="272"/>
+    <functiondecl functionName="update_magnetometer" lineNumber="311"/>
+    <functiondecl functionName="update_gyroscope" lineNumber="315"/>
+    <functiondecl functionName="get_unused_joy_id" lineNumber="319"/>
+    <functiondecl functionName="joy_connection_changed" lineNumber="323"/>
+    <functiondecl functionName="joy_button" lineNumber="327"/>
+    <functiondecl functionName="joy_axis" lineNumber="331"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="335"/>
+    <functiondecl functionName="finalize" lineNumber="345"/>
+    <functiondecl functionName="set_mouse_show" lineNumber="375"/>
+    <functiondecl functionName="set_mouse_grab" lineNumber="376"/>
+    <functiondecl functionName="is_mouse_grab_enabled" lineNumber="378"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="383"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="388"/>
+    <functiondecl functionName="set_window_title" lineNumber="393"/>
+    <functiondecl functionName="alert" lineNumber="395"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="402"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="410"/>
+    <functiondecl functionName="register_dynamic_symbol" lineNumber="418"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="422"/>
+    <functiondecl functionName="set_video_mode" lineNumber="433"/>
+    <functiondecl functionName="get_video_mode" lineNumber="438"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="443"/>
+    <functiondecl functionName="can_draw" lineNumber="448"/>
+    <functiondecl functionName="set_base_framebuffer" lineNumber="455"/>
+    <functiondecl functionName="has_virtual_keyboard" lineNumber="464"/>
+    <functiondecl functionName="show_virtual_keyboard" lineNumber="474"/>
+    <functiondecl functionName="hide_virtual_keyboard" lineNumber="478"/>
+    <functiondecl functionName="set_virtual_keyboard_height" lineNumber="482"/>
+    <functiondecl functionName="get_virtual_keyboard_height" lineNumber="486"/>
+    <functiondecl functionName="shell_open" lineNumber="490"/>
+    <functiondecl functionName="set_keep_screen_on" lineNumber="494"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="499"/>
+    <functiondecl functionName="get_name" lineNumber="504"/>
+    <functiondecl functionName="get_model_name" lineNumber="509"/>
+    <functiondecl functionName="get_window_size" lineNumber="518"/>
+    <functiondecl functionName="get_window_safe_area" lineNumber="525"/>
+    <functiondecl functionName="has_touchscreen_ui_hint" lineNumber="529"/>
+    <functiondecl functionName="set_locale" lineNumber="534"/>
+    <functiondecl functionName="get_locale" lineNumber="538"/>
+    <functiondecl functionName="native_video_play" lineNumber="549"/>
+    <functiondecl functionName="native_video_is_playing" lineNumber="575"/>
+    <functiondecl functionName="native_video_pause" lineNumber="579"/>
+    <functiondecl functionName="native_video_unpause" lineNumber="584"/>
+    <functiondecl functionName="native_video_focus_out" lineNumber="588"/>
+    <functiondecl functionName="native_video_stop" lineNumber="592"/>
+    <functiondecl functionName="vibrate_handheld" lineNumber="597"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="602"/>
+    <functiondecl functionName="add_ios_init_callback" lineNumber="615"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="60"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="65"/>
+    <functiondecl functionName="get_singleton" lineNumber="74"/>
+    <functiondecl functionName="set_data_dir" lineNumber="81"/>
+    <functiondecl functionName="set_unique_id" lineNumber="90"/>
+    <functiondecl functionName="get_unique_id" lineNumber="95"/>
+    <functiondecl functionName="initialize_core" lineNumber="100"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="107"/>
+    <functiondecl functionName="initialize" lineNumber="111"/>
+    <functiondecl functionName="get_main_loop" lineNumber="176"/>
+    <functiondecl functionName="set_main_loop" lineNumber="181"/>
+    <functiondecl functionName="iterate" lineNumber="191"/>
+    <functiondecl functionName="key" lineNumber="207"/>
+    <functiondecl functionName="touch_press" lineNumber="219"/>
+    <functiondecl functionName="touch_drag" lineNumber="234"/>
+    <functiondecl functionName="queue_event" lineNumber="247"/>
+    <functiondecl functionName="touches_cancelled" lineNumber="254"/>
+    <functiondecl functionName="update_gravity" lineNumber="268"/>
+    <functiondecl functionName="update_accelerometer" lineNumber="272"/>
+    <functiondecl functionName="update_magnetometer" lineNumber="311"/>
+    <functiondecl functionName="update_gyroscope" lineNumber="315"/>
+    <functiondecl functionName="get_unused_joy_id" lineNumber="319"/>
+    <functiondecl functionName="joy_connection_changed" lineNumber="323"/>
+    <functiondecl functionName="joy_button" lineNumber="327"/>
+    <functiondecl functionName="joy_axis" lineNumber="331"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="335"/>
+    <functiondecl functionName="finalize" lineNumber="345"/>
+    <functiondecl functionName="set_mouse_show" lineNumber="375"/>
+    <functiondecl functionName="set_mouse_grab" lineNumber="376"/>
+    <functiondecl functionName="is_mouse_grab_enabled" lineNumber="378"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="383"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="388"/>
+    <functiondecl functionName="set_window_title" lineNumber="393"/>
+    <functiondecl functionName="alert" lineNumber="395"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="402"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="410"/>
+    <functiondecl functionName="register_dynamic_symbol" lineNumber="418"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="422"/>
+    <functiondecl functionName="set_video_mode" lineNumber="433"/>
+    <functiondecl functionName="get_video_mode" lineNumber="438"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="443"/>
+    <functiondecl functionName="can_draw" lineNumber="448"/>
+    <functiondecl functionName="set_base_framebuffer" lineNumber="455"/>
+    <functiondecl functionName="has_virtual_keyboard" lineNumber="464"/>
+    <functiondecl functionName="show_virtual_keyboard" lineNumber="474"/>
+    <functiondecl functionName="hide_virtual_keyboard" lineNumber="478"/>
+    <functiondecl functionName="set_virtual_keyboard_height" lineNumber="482"/>
+    <functiondecl functionName="get_virtual_keyboard_height" lineNumber="486"/>
+    <functiondecl functionName="shell_open" lineNumber="490"/>
+    <functiondecl functionName="set_keep_screen_on" lineNumber="494"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="499"/>
+    <functiondecl functionName="get_name" lineNumber="504"/>
+    <functiondecl functionName="get_model_name" lineNumber="509"/>
+    <functiondecl functionName="get_window_size" lineNumber="518"/>
+    <functiondecl functionName="get_window_safe_area" lineNumber="525"/>
+    <functiondecl functionName="has_touchscreen_ui_hint" lineNumber="529"/>
+    <functiondecl functionName="set_locale" lineNumber="534"/>
+    <functiondecl functionName="get_locale" lineNumber="538"/>
+    <functiondecl functionName="native_video_play" lineNumber="549"/>
+    <functiondecl functionName="native_video_is_playing" lineNumber="575"/>
+    <functiondecl functionName="native_video_pause" lineNumber="579"/>
+    <functiondecl functionName="native_video_unpause" lineNumber="584"/>
+    <functiondecl functionName="native_video_focus_out" lineNumber="588"/>
+    <functiondecl functionName="native_video_stop" lineNumber="592"/>
+    <functiondecl functionName="vibrate_handheld" lineNumber="597"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="602"/>
+    <functiondecl functionName="add_ios_init_callback" lineNumber="615"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="60"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="65"/>
+    <functiondecl functionName="get_singleton" lineNumber="74"/>
+    <functiondecl functionName="set_data_dir" lineNumber="81"/>
+    <functiondecl functionName="set_unique_id" lineNumber="90"/>
+    <functiondecl functionName="get_unique_id" lineNumber="95"/>
+    <functiondecl functionName="initialize_core" lineNumber="100"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="107"/>
+    <functiondecl functionName="initialize" lineNumber="111"/>
+    <functiondecl functionName="get_main_loop" lineNumber="176"/>
+    <functiondecl functionName="set_main_loop" lineNumber="181"/>
+    <functiondecl functionName="iterate" lineNumber="191"/>
+    <functiondecl functionName="key" lineNumber="207"/>
+    <functiondecl functionName="touch_press" lineNumber="219"/>
+    <functiondecl functionName="touch_drag" lineNumber="234"/>
+    <functiondecl functionName="queue_event" lineNumber="247"/>
+    <functiondecl functionName="touches_cancelled" lineNumber="254"/>
+    <functiondecl functionName="update_gravity" lineNumber="268"/>
+    <functiondecl functionName="update_accelerometer" lineNumber="272"/>
+    <functiondecl functionName="update_magnetometer" lineNumber="311"/>
+    <functiondecl functionName="update_gyroscope" lineNumber="315"/>
+    <functiondecl functionName="get_unused_joy_id" lineNumber="319"/>
+    <functiondecl functionName="joy_connection_changed" lineNumber="323"/>
+    <functiondecl functionName="joy_button" lineNumber="327"/>
+    <functiondecl functionName="joy_axis" lineNumber="331"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="335"/>
+    <functiondecl functionName="finalize" lineNumber="345"/>
+    <functiondecl functionName="set_mouse_show" lineNumber="375"/>
+    <functiondecl functionName="set_mouse_grab" lineNumber="376"/>
+    <functiondecl functionName="is_mouse_grab_enabled" lineNumber="378"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="383"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="388"/>
+    <functiondecl functionName="set_window_title" lineNumber="393"/>
+    <functiondecl functionName="alert" lineNumber="395"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="402"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="410"/>
+    <functiondecl functionName="register_dynamic_symbol" lineNumber="418"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="422"/>
+    <functiondecl functionName="set_video_mode" lineNumber="433"/>
+    <functiondecl functionName="get_video_mode" lineNumber="438"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="443"/>
+    <functiondecl functionName="can_draw" lineNumber="448"/>
+    <functiondecl functionName="set_base_framebuffer" lineNumber="455"/>
+    <functiondecl functionName="has_virtual_keyboard" lineNumber="464"/>
+    <functiondecl functionName="show_virtual_keyboard" lineNumber="474"/>
+    <functiondecl functionName="hide_virtual_keyboard" lineNumber="478"/>
+    <functiondecl functionName="set_virtual_keyboard_height" lineNumber="482"/>
+    <functiondecl functionName="get_virtual_keyboard_height" lineNumber="486"/>
+    <functiondecl functionName="shell_open" lineNumber="490"/>
+    <functiondecl functionName="set_keep_screen_on" lineNumber="494"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="499"/>
+    <functiondecl functionName="get_name" lineNumber="504"/>
+    <functiondecl functionName="get_model_name" lineNumber="509"/>
+    <functiondecl functionName="get_window_size" lineNumber="518"/>
+    <functiondecl functionName="get_window_safe_area" lineNumber="525"/>
+    <functiondecl functionName="has_touchscreen_ui_hint" lineNumber="529"/>
+    <functiondecl functionName="set_locale" lineNumber="534"/>
+    <functiondecl functionName="get_locale" lineNumber="538"/>
+    <functiondecl functionName="native_video_play" lineNumber="549"/>
+    <functiondecl functionName="native_video_is_playing" lineNumber="575"/>
+    <functiondecl functionName="native_video_pause" lineNumber="579"/>
+    <functiondecl functionName="native_video_unpause" lineNumber="584"/>
+    <functiondecl functionName="native_video_focus_out" lineNumber="588"/>
+    <functiondecl functionName="native_video_stop" lineNumber="592"/>
+    <functiondecl functionName="vibrate_handheld" lineNumber="597"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="602"/>
+    <functiondecl functionName="add_ios_init_callback" lineNumber="615"/>
+    <functiondecl functionName="get_video_driver_count" lineNumber="60"/>
+    <functiondecl functionName="get_video_driver_name" lineNumber="65"/>
+    <functiondecl functionName="get_singleton" lineNumber="74"/>
+    <functiondecl functionName="set_data_dir" lineNumber="81"/>
+    <functiondecl functionName="set_unique_id" lineNumber="90"/>
+    <functiondecl functionName="get_unique_id" lineNumber="95"/>
+    <functiondecl functionName="initialize_core" lineNumber="100"/>
+    <functiondecl functionName="get_current_video_driver" lineNumber="107"/>
+    <functiondecl functionName="initialize" lineNumber="111"/>
+    <functiondecl functionName="get_main_loop" lineNumber="176"/>
+    <functiondecl functionName="set_main_loop" lineNumber="181"/>
+    <functiondecl functionName="iterate" lineNumber="191"/>
+    <functiondecl functionName="key" lineNumber="207"/>
+    <functiondecl functionName="touch_press" lineNumber="219"/>
+    <functiondecl functionName="touch_drag" lineNumber="234"/>
+    <functiondecl functionName="queue_event" lineNumber="247"/>
+    <functiondecl functionName="touches_cancelled" lineNumber="254"/>
+    <functiondecl functionName="update_gravity" lineNumber="268"/>
+    <functiondecl functionName="update_accelerometer" lineNumber="272"/>
+    <functiondecl functionName="update_magnetometer" lineNumber="311"/>
+    <functiondecl functionName="update_gyroscope" lineNumber="315"/>
+    <functiondecl functionName="get_unused_joy_id" lineNumber="319"/>
+    <functiondecl functionName="joy_connection_changed" lineNumber="323"/>
+    <functiondecl functionName="joy_button" lineNumber="327"/>
+    <functiondecl functionName="joy_axis" lineNumber="331"/>
+    <functiondecl functionName="delete_main_loop" lineNumber="335"/>
+    <functiondecl functionName="finalize" lineNumber="345"/>
+    <functiondecl functionName="set_mouse_show" lineNumber="375"/>
+    <functiondecl functionName="set_mouse_grab" lineNumber="376"/>
+    <functiondecl functionName="is_mouse_grab_enabled" lineNumber="378"/>
+    <functiondecl functionName="get_mouse_position" lineNumber="383"/>
+    <functiondecl functionName="get_mouse_button_state" lineNumber="388"/>
+    <functiondecl functionName="set_window_title" lineNumber="393"/>
+    <functiondecl functionName="alert" lineNumber="395"/>
+    <functiondecl functionName="open_dynamic_library" lineNumber="402"/>
+    <functiondecl functionName="close_dynamic_library" lineNumber="410"/>
+    <functiondecl functionName="register_dynamic_symbol" lineNumber="418"/>
+    <functiondecl functionName="get_dynamic_library_symbol_handle" lineNumber="422"/>
+    <functiondecl functionName="set_video_mode" lineNumber="433"/>
+    <functiondecl functionName="get_video_mode" lineNumber="438"/>
+    <functiondecl functionName="get_fullscreen_mode_list" lineNumber="443"/>
+    <functiondecl functionName="can_draw" lineNumber="448"/>
+    <functiondecl functionName="set_base_framebuffer" lineNumber="455"/>
+    <functiondecl functionName="has_virtual_keyboard" lineNumber="464"/>
+    <functiondecl functionName="show_virtual_keyboard" lineNumber="474"/>
+    <functiondecl functionName="hide_virtual_keyboard" lineNumber="478"/>
+    <functiondecl functionName="set_virtual_keyboard_height" lineNumber="482"/>
+    <functiondecl functionName="get_virtual_keyboard_height" lineNumber="486"/>
+    <functiondecl functionName="shell_open" lineNumber="490"/>
+    <functiondecl functionName="set_keep_screen_on" lineNumber="494"/>
+    <functiondecl functionName="get_user_data_dir" lineNumber="499"/>
+    <functiondecl functionName="get_name" lineNumber="504"/>
+    <functiondecl functionName="get_model_name" lineNumber="509"/>
+    <functiondecl functionName="get_window_size" lineNumber="518"/>
+    <functiondecl functionName="get_window_safe_area" lineNumber="525"/>
+    <functiondecl functionName="has_touchscreen_ui_hint" lineNumber="529"/>
+    <functiondecl functionName="set_locale" lineNumber="534"/>
+    <functiondecl functionName="get_locale" lineNumber="538"/>
+    <functiondecl functionName="native_video_play" lineNumber="549"/>
+    <functiondecl functionName="native_video_is_playing" lineNumber="575"/>
+    <functiondecl functionName="native_video_pause" lineNumber="579"/>
+    <functiondecl functionName="native_video_unpause" lineNumber="584"/>
+    <functiondecl functionName="native_video_focus_out" lineNumber="588"/>
+    <functiondecl functionName="native_video_stop" lineNumber="592"/>
+    <functiondecl functionName="vibrate_handheld" lineNumber="597"/>
+    <functiondecl functionName="_check_internal_feature_support" lineNumber="602"/>
+    <functiondecl functionName="add_ios_init_callback" lineNumber="615"/>
+    <functioncall functionName="ACCEL_RANGE"/>
+    <functioncall functionName="CompositeLogger"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_DEF"/>
+    <functioncall functionName="GameCenter"/>
+    <functioncall functionName="ICloud"/>
+    <functioncall functionName="InAppStore"/>
+    <functioncall functionName="InputDefault"/>
+    <functioncall functionName="MAX_EVENTS"/>
+    <functioncall functionName="MAX_MOUSE_COUNT"/>
+    <functioncall functionName="MouseList"/>
+    <functioncall functionName="OSIPhone"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RTLD_SELF"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="RenderingServerRaster"/>
+    <functioncall functionName="RenderingServerWrapMT"/>
+    <functioncall functionName="Singleton"/>
+    <functioncall functionName="StdLogger"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="SyslogLogger"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_focus_out_video"/>
+    <functioncall functionName="_get_ios_window_safe_area"/>
+    <functioncall functionName="_hide_keyboard"/>
+    <functioncall functionName="_is_video_playing"/>
+    <functioncall functionName="_pause_video"/>
+    <functioncall functionName="_play_video"/>
+    <functioncall functionName="_set_keep_screen_on"/>
+    <functioncall functionName="_set_logger"/>
+    <functioncall functionName="_shell_open"/>
+    <functioncall functionName="_show_keyboard"/>
+    <functioncall functionName="_stop_video"/>
+    <functioncall functionName="_unpause_video"/>
+    <functioncall functionName="_vibrate"/>
+    <functioncall functionName="add_driver"/>
+    <functioncall functionName="add_singleton"/>
+    <functioncall functionName="address"/>
+    <functioncall functionName="alert"/>
+    <functioncall functionName="audio_driver"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="close_dynamic_library"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="da"/>
+    <functioncall functionName="data_dir"/>
+    <functioncall functionName="delete_main_loop"/>
+    <functioncall functionName="ev"/>
+    <functioncall functionName="event_count"/>
+    <functioncall functionName="exists"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="finish"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="game_center"/>
+    <functioncall functionName="get_current_dir"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_dynamic_library_symbol_handle"/>
+    <functioncall functionName="get_model"/>
+    <functioncall functionName="get_model_name"/>
+    <functioncall functionName="get_render_thread_mode"/>
+    <functioncall functionName="get_resource_path"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_unused_joy_id"/>
+    <functioncall functionName="get_user_data_dir"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="gl_initialization_error"/>
+    <functioncall functionName="gl_view_base_fb"/>
+    <functioncall functionName="has_path"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="iOS"/>
+    <functioncall functionName="icloud"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="initialize_core"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="ios"/>
+    <functioncall functionName="ios_init_callbacks"/>
+    <functioncall functionName="ios_init_callbacks_capacity"/>
+    <functioncall functionName="ios_init_callbacks_count"/>
+    <functioncall functionName="is_open"/>
+    <functioncall functionName="is_viable"/>
+    <functioncall functionName="iteration"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="joy_axis"/>
+    <functioncall functionName="joy_button"/>
+    <functioncall functionName="joy_connection_changed"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="loggers"/>
+    <functioncall functionName="main_loop"/>
+    <functioncall functionName="make_current"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="native_video_is_playing"/>
+    <functioncall functionName="new_ptr"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_dynamic_library"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_also_set_library_path"/>
+    <functioncall functionName="p_audio_driver"/>
+    <functioncall functionName="p_audio_track"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_button"/>
+    <functioncall functionName="p_connected"/>
+    <functioncall functionName="p_data_dir"/>
+    <functioncall functionName="p_device"/>
+    <functioncall functionName="p_dir"/>
+    <functioncall functionName="p_driver"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_existing_text"/>
+    <functioncall functionName="p_fb"/>
+    <functioncall functionName="p_height"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="p_library_handle"/>
+    <functioncall functionName="p_locale"/>
+    <functioncall functionName="p_main_loop"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_optional"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pressed"/>
+    <functioncall functionName="p_prev_x"/>
+    <functioncall functionName="p_prev_y"/>
+    <functioncall functionName="p_subtitle_track"/>
+    <functioncall functionName="p_symbol_handle"/>
+    <functioncall functionName="p_uri"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_video_driver"/>
+    <functioncall functionName="p_video_mode"/>
+    <functioncall functionName="p_volume"/>
+    <functioncall functionName="p_x"/>
+    <functioncall functionName="p_y"/>
+    <functioncall functionName="p_z"/>
+    <functioncall functionName="parse_input_event"/>
+    <functioncall functionName="print"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="queue_event"/>
+    <functioncall functionName="realloc"/>
+    <functioncall functionName="register_config"/>
+    <functioncall functionName="rendering_server"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_accelerometer"/>
+    <functioncall functionName="set_data_dir"/>
+    <functioncall functionName="set_echo"/>
+    <functioncall functionName="set_gravity"/>
+    <functioncall functionName="set_gyroscope"/>
+    <functioncall functionName="set_index"/>
+    <functioncall functionName="set_keep_screen_on"/>
+    <functioncall functionName="set_keycode"/>
+    <functioncall functionName="set_magnetometer"/>
+    <functioncall functionName="set_main_loop"/>
+    <functioncall functionName="set_physical_keycode"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_relative"/>
+    <functioncall functionName="set_unicode"/>
+    <functioncall functionName="set_video_mode"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="store_kit"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="touch_press"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="video_mode"/>
+    <functioncall functionName="vm"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="width"/>
+  </FileInfo>
+</analyzerinfo>

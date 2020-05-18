@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3902605620">
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;is_initialized&apos; is called from destructor &apos;~XRInterfaceGDNative()&apos; at line 53. Dynamic binding is not used." verbose="Virtual function &apos;is_initialized&apos; is called from destructor &apos;~XRInterfaceGDNative()&apos; at line 53. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp" file="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.h" line="64" column="15" info="is_initialized is a virtual function"/>
+            <location file="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp" line="53" column="30" info="Calling is_initialized"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;uninitialize&apos; is called from destructor &apos;~XRInterfaceGDNative()&apos; at line 54. Dynamic binding is not used." verbose="Virtual function &apos;uninitialize&apos; is called from destructor &apos;~XRInterfaceGDNative()&apos; at line 54. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp" file="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.h" line="66" column="15" info="uninitialize is a virtual function"/>
+            <location file="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp" line="54" column="3" info="Calling uninitialize"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp:235:12" my-argnr="1" my-argname="p_interface" file="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp" line="237" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp:266:12" my-argnr="3" my-argname="p_rect" file="/home/hbina/git/godot/modules/gdnative/xr/xr_interface_gdnative.cpp" line="272" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_bind_methods" lineNumber="36"/>
+    <functiondecl functionName="cleanup" lineNumber="61"/>
+    <functiondecl functionName="set_interface" lineNumber="69"/>
+    <functiondecl functionName="get_name" lineNumber="82"/>
+    <functiondecl functionName="get_capabilities" lineNumber="95"/>
+    <functiondecl functionName="get_anchor_detection_is_enabled" lineNumber="105"/>
+    <functiondecl functionName="set_anchor_detection_is_enabled" lineNumber="112"/>
+    <functiondecl functionName="get_camera_feed_id" lineNumber="119"/>
+    <functiondecl functionName="is_stereo" lineNumber="126"/>
+    <functiondecl functionName="is_initialized" lineNumber="136"/>
+    <functiondecl functionName="initialize" lineNumber="143"/>
+    <functiondecl functionName="uninitialize" lineNumber="160"/>
+    <functiondecl functionName="get_render_targetsize" lineNumber="172"/>
+    <functiondecl functionName="get_transform_for_eye" lineNumber="182"/>
+    <functiondecl functionName="get_projection_for_eye" lineNumber="194"/>
+    <functiondecl functionName="get_external_texture_for_eye" lineNumber="204"/>
+    <functiondecl functionName="commit_for_eye" lineNumber="211"/>
+    <functiondecl functionName="process" lineNumber="218"/>
+    <functiondecl functionName="notification" lineNumber="224"/>
+    <functiondecl functionName="godot_xr_register_interface" lineNumber="235"/>
+    <functiondecl functionName="godot_xr_get_worldscale" lineNumber="245"/>
+    <functiondecl functionName="godot_xr_get_reference_frame" lineNumber="252"/>
+    <functiondecl functionName="godot_xr_blit" lineNumber="266"/>
+    <functiondecl functionName="godot_xr_get_texid" lineNumber="288"/>
+    <functiondecl functionName="godot_xr_add_controller" lineNumber="305"/>
+    <functiondecl functionName="godot_xr_remove_controller" lineNumber="344"/>
+    <functiondecl functionName="godot_xr_set_controller_transform" lineNumber="366"/>
+    <functiondecl functionName="godot_xr_set_controller_button" lineNumber="382"/>
+    <functiondecl functionName="godot_xr_set_controller_axis" lineNumber="398"/>
+    <functiondecl functionName="godot_xr_get_controller_rumble" lineNumber="417"/>
+    <functioncall functionName="ADD_PROPERTY_DEFAULT"/>
+    <functioncall functionName="CameraMatrix"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="ERR_FAIL_NULL_V"/>
+    <functioncall functionName="Eyes"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TRACKER_CONTROLLER"/>
+    <functioncall functionName="TRACKER_LEFT_HAND"/>
+    <functioncall functionName="TRACKER_RIGHT_HAND"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="XRInterface"/>
+    <functioncall functionName="XRInterfaceGDNative"/>
+    <functioncall functionName="XRPositionalTracker"/>
+    <functioncall functionName="add_interface"/>
+    <functioncall functionName="add_tracker"/>
+    <functioncall functionName="basis"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="clear_primary_interface_if"/>
+    <functioncall functionName="commit_for_eye"/>
+    <functioncall functionName="constructor"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="destructor"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fill_projection_for_eye"/>
+    <functioncall functionName="find_by_type_and_id"/>
+    <functioncall functionName="get_anchor_detection_is_enabled"/>
+    <functioncall functionName="get_camera_feed_id"/>
+    <functioncall functionName="get_capabilities"/>
+    <functioncall functionName="get_external_texture_for_eye"/>
+    <functioncall functionName="get_joy_id"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_primary_interface"/>
+    <functioncall functionName="get_reference_frame"/>
+    <functioncall functionName="get_render_targetsize"/>
+    <functioncall functionName="get_rumble"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_tracker_id"/>
+    <functioncall functionName="get_transform_for_eye"/>
+    <functioncall functionName="get_unused_joy_id"/>
+    <functioncall functionName="get_world_scale"/>
+    <functioncall functionName="godot_int"/>
+    <functioncall functionName="godot_string_destroy"/>
+    <functioncall functionName="godot_transform_new_identity"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="initialized"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="interface"/>
+    <functioncall functionName="is_initialized"/>
+    <functioncall functionName="is_stereo"/>
+    <functioncall functionName="joy_axis"/>
+    <functioncall functionName="joy_button"/>
+    <functioncall functionName="joy_connection_changed"/>
+    <functioncall functionName="joyid"/>
+    <functioncall functionName="jx"/>
+    <functioncall functionName="matrix"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="new_interface"/>
+    <functioncall functionName="new_tracker"/>
+    <functioncall functionName="notification"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="orientation"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_aspect"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_button"/>
+    <functioncall functionName="p_cam_transform"/>
+    <functioncall functionName="p_controller_id"/>
+    <functioncall functionName="p_device_name"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_eye"/>
+    <functioncall functionName="p_interface"/>
+    <functioncall functionName="p_is_pressed"/>
+    <functioncall functionName="p_rect"/>
+    <functioncall functionName="p_render_target"/>
+    <functioncall functionName="p_screen_rect"/>
+    <functioncall functionName="p_tracks_orientation"/>
+    <functioncall functionName="p_tracks_position"/>
+    <functioncall functionName="p_transform"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_z_far"/>
+    <functioncall functionName="p_z_near"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="process"/>
+    <functioncall functionName="reference_frame"/>
+    <functioncall functionName="remove_tracker"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_anchor_detection_is_enabled"/>
+    <functioncall functionName="set_hand"/>
+    <functioncall functionName="set_interface"/>
+    <functioncall functionName="set_joy_id"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_orientation"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_primary_interface"/>
+    <functioncall functionName="set_rw_position"/>
+    <functioncall functionName="set_type"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uninitialize"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xr_server"/>
+  </FileInfo>
+</analyzerinfo>

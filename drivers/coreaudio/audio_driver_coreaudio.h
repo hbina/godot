@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -46,7 +46,7 @@ class AudioDriverCoreAudio : public AudioDriver {
 	AudioComponentInstance input_unit;
 
 	bool active;
-	Mutex *mutex;
+	Mutex mutex;
 
 	String device_name;
 	String capture_device_name;
@@ -88,33 +88,33 @@ class AudioDriverCoreAudio : public AudioDriver {
 	void capture_finish();
 
 public:
-	const char *get_name() const {
+	const char *get_name() const override {
 		return "CoreAudio";
 	};
 
-	virtual Error init();
-	virtual void start();
-	virtual int get_mix_rate() const;
-	virtual SpeakerMode get_speaker_mode() const;
+	virtual Error init() override;
+	virtual void start() override;
+	virtual int get_mix_rate() const override;
+	virtual SpeakerMode get_speaker_mode() const override;
 
-	virtual void lock();
-	virtual void unlock();
-	virtual void finish();
+	virtual void lock() override;
+	virtual void unlock() override;
+	virtual void finish() override;
 
-	virtual Error capture_start();
-	virtual Error capture_stop();
+	virtual Error capture_start() override;
+	virtual Error capture_stop() override;
 
 	bool try_lock();
-	void stop();
+	virtual void stop() override;
 
 #ifdef OSX_ENABLED
-	virtual Array get_device_list();
-	virtual String get_device();
-	virtual void set_device(String device);
+	virtual Array get_device_list() override;
+	virtual String get_device() override;
+	virtual void set_device(String device) override;
 
-	virtual Array capture_get_device_list();
-	virtual void capture_set_device(const String &p_name);
-	virtual String capture_get_device();
+	virtual Array capture_get_device_list() override;
+	virtual void capture_set_device(const String &p_name) override;
+	virtual String capture_get_device() override;
 #endif
 
 	AudioDriverCoreAudio();

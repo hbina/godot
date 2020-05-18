@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1312445863">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioStreamPlaybackOGGVorbis::ogg_stream&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioStreamPlaybackOGGVorbis::ogg_stream&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" file="/home/hbina/git/godot/modules/stb_vorbis/audio_stream_ogg_vorbis.h" line="69" column="2"/>
+            <symbol>AudioStreamPlaybackOGGVorbis::ogg_stream</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioStreamPlaybackOGGVorbis::frames_mixed&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioStreamPlaybackOGGVorbis::frames_mixed&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" file="/home/hbina/git/godot/modules/stb_vorbis/audio_stream_ogg_vorbis.h" line="69" column="2"/>
+            <symbol>AudioStreamPlaybackOGGVorbis::frames_mixed</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioStreamPlaybackOGGVorbis::active&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioStreamPlaybackOGGVorbis::active&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" file="/home/hbina/git/godot/modules/stb_vorbis/audio_stream_ogg_vorbis.h" line="69" column="2"/>
+            <symbol>AudioStreamPlaybackOGGVorbis::active</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;AudioStreamPlaybackOGGVorbis::loops&apos; is not initialized in the constructor." verbose="Member variable &apos;AudioStreamPlaybackOGGVorbis::loops&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" file="/home/hbina/git/godot/modules/stb_vorbis/audio_stream_ogg_vorbis.h" line="69" column="2"/>
+            <symbol>AudioStreamPlaybackOGGVorbis::loops</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="88" column="15" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="84" column="34" info="Assignment &apos;f=FileAccess::open(p_source_file,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="86" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="94" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="84" column="34" info="Assignment &apos;f=FileAccess::open(p_source_file,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="86" column="22" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.h:43:15" my-argnr="1" my-argname="p_extensions" file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="48" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.h:50:15" my-argnr="1" my-argname="r_options" file="/home/hbina/git/godot/modules/stb_vorbis/resource_importer_ogg_vorbis.cpp" line="75" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="get_importer_name" lineNumber="37"/>
+    <functiondecl functionName="get_visible_name" lineNumber="42"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="46"/>
+    <functiondecl functionName="get_save_extension" lineNumber="51"/>
+    <functiondecl functionName="get_resource_type" lineNumber="55"/>
+    <functiondecl functionName="get_option_visibility" lineNumber="60"/>
+    <functiondecl functionName="get_preset_count" lineNumber="65"/>
+    <functiondecl functionName="get_preset_name" lineNumber="68"/>
+    <functiondecl functionName="get_import_options" lineNumber="73"/>
+    <functiondecl functionName="import" lineNumber="79"/>
+    <functioncall functionName="AudioStream"/>
+    <functioncall functionName="AudioStreamOGGVorbis"/>
+    <functioncall functionName="AudioStreamPlaybackOGGVorbis"/>
+    <functioncall functionName="AudioStreamPlaybackResampled"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FILE_CORRUPT"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="ImportOption"/>
+    <functioncall functionName="OBJ_SAVE_TYPE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RES_BASE_EXTENSION"/>
+    <functioncall functionName="ResourceImporter"/>
+    <functioncall functionName="ResourceImporterOGGVorbis"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="loop"/>
+    <functioncall functionName="loop_offset"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ogg_stream"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_source_file"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="save"/>
+    <functioncall functionName="set_data"/>
+    <functioncall functionName="set_loop"/>
+    <functioncall functionName="set_loop_offset"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="w"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3218648068">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;BroadPhase2DHashGrid::pair_userdata&apos; is not initialized in the constructor." verbose="Member variable &apos;BroadPhase2DHashGrid::pair_userdata&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="635" column="23"/>
+            <symbol>BroadPhase2DHashGrid::pair_userdata</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;BroadPhase2DHashGrid::unpair_userdata&apos; is not initialized in the constructor." verbose="Member variable &apos;BroadPhase2DHashGrid::unpair_userdata&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="635" column="23"/>
+            <symbol>BroadPhase2DHashGrid::unpair_userdata</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;BroadPhase2DHashGrid::_pair_attempt&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;BroadPhase2DHashGrid::_pair_attempt&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h" line="166" column="7"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="36" column="28"/>
+            <symbol>BroadPhase2DHashGrid::_pair_attempt</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cull_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cull_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h" line="180" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_sw.h" line="61" column="14" info="Virtual function in base class"/>
+            <symbol>cull_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;cull_aabb&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;cull_aabb&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h" line="181" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_sw.h" line="62" column="14" info="Virtual function in base class"/>
+            <symbol>cull_aabb</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;update&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;update&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h" line="186" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_sw.h" line="67" column="15" info="Virtual function in base class"/>
+            <symbol>update</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="58" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="54" column="62" info="Assignment &apos;E=p_elem-&gt;paired.find(p_with)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="56" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="340" column="15" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="337" column="49" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="338" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="366" column="15" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="363" column="49" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="364" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="386" column="15" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="383" column="49" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="384" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="398" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="396" column="55" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="397" column="18" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="404" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="402" column="55" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="403" column="18" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="410" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="408" column="55" info="Assignment &apos;E=element_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="409" column="18" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:123:7" call-funcname="_enter_grid" call-argnr="1" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="347" col="14" call-argexpr="&e" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:124:7" call-funcname="_exit_grid" call-argnr="1" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="352" col="13" call-argexpr="&e" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:168:7" call-funcname="_check_motion" call-argnr="1" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="357" col="15" call-argexpr="&e" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:124:7" call-funcname="_exit_grid" call-argnr="1" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="372" col="13" call-argexpr="&e" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:123:7" call-funcname="_enter_grid" call-argnr="1" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="377" col="14" call-argexpr="&e" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:168:7" call-funcname="_check_motion" call-argnr="1" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="378" col="16" call-argexpr="&e" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:124:7" call-funcname="_exit_grid" call-argnr="1" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="389" col="13" call-argexpr="&e" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:125:0" call-funcname="_cull < false , true >" call-argnr="8" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="512" col="20" call-argexpr="cullcount" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="511" col="18" info="Assignment 'cullcount=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:125:0" call-funcname="_cull < false , true >" call-argnr="5" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="512" col="2" my-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:180:14" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:125:0" call-funcname="_cull < false , true >" call-argnr="7" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="512" col="2" my-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:180:14" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:125:0" call-funcname="_cull < true , false >" call-argnr="5" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="588" col="4" my-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:181:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:125:0" call-funcname="_cull < true , false >" call-argnr="7" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="588" col="4" my-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:181:14" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:166:7" my-argnr="1" my-argname="p_elem" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="38" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:167:7" my-argnr="1" my-argname="p_elem" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="54" col="43" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.h:168:7" my-argnr="1" my-argname="p_elem" file="/home/hbina/git/godot/servers/physics_2d/broad_phase_2d_hash_grid.cpp" line="77" col="48" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_pair_attempt" lineNumber="36"/>
+    <functiondecl functionName="_unpair_attempt" lineNumber="52"/>
+    <functiondecl functionName="_check_motion" lineNumber="75"/>
+    <functiondecl functionName="_enter_grid" lineNumber="100"/>
+    <functiondecl functionName="_exit_grid" lineNumber="201"/>
+    <functiondecl functionName="create" lineNumber="320"/>
+    <functiondecl functionName="move" lineNumber="335"/>
+    <functiondecl functionName="set_static" lineNumber="361"/>
+    <functiondecl functionName="remove" lineNumber="381"/>
+    <functiondecl functionName="get_object" lineNumber="394"/>
+    <functiondecl functionName="is_static" lineNumber="400"/>
+    <functiondecl functionName="get_subindex" lineNumber="406"/>
+    <functiondecl functionName="cull_segment" lineNumber="476"/>
+    <functiondecl functionName="cull_aabb" lineNumber="576"/>
+    <functiondecl functionName="set_pair_callback" lineNumber="616"/>
+    <functiondecl functionName="set_unpair_callback" lineNumber="621"/>
+    <functiondecl functionName="update" lineNumber="627"/>
+    <functiondecl functionName="_create" lineNumber="630"/>
+    <functiondecl functionName="_cull &lt; false , true &gt;" lineNumber="414"/>
+    <functiondecl functionName="_cull &lt; true , false &gt;" lineNumber="414"/>
+    <functioncall functionName="BroadPhase2DHashGrid"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="Element"/>
+    <functioncall functionName="GLOBAL_DEF"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PairData"/>
+    <functioncall functionName="PairKey"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="Point2i"/>
+    <functioncall functionName="PosBin"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RC"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="SGN"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_check_motion"/>
+    <functioncall functionName="_cull &lt; false , true &gt;"/>
+    <functioncall functionName="_cull &lt; true , false &gt;"/>
+    <functioncall functionName="_enter_grid"/>
+    <functioncall functionName="_exit_grid"/>
+    <functioncall functionName="_pair_attempt"/>
+    <functioncall functionName="_static"/>
+    <functioncall functionName="_unpair_attempt"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cell_size"/>
+    <functioncall functionName="colliding"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cullcount"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="entered"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exited"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash_table"/>
+    <functioncall functionName="hash_table_size"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inc"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="intersects"/>
+    <functioncall functionName="intersects_segment"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="larger_prime"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memdelete_arr"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_elem"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_max_results"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_pair_callback"/>
+    <functioncall functionName="p_result_indices"/>
+    <functioncall functionName="p_results"/>
+    <functioncall functionName="p_static"/>
+    <functioncall functionName="p_subindex"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_unpair_callback"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="p_with"/>
+    <functioncall functionName="pair_callback"/>
+    <functioncall functionName="pair_userdata"/>
+    <functioncall functionName="pairing"/>
+    <functioncall functionName="pass"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="pk"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="px"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="self"/>
+    <functioncall functionName="set_custom_property_info"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="subindex"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="unpair_callback"/>
+    <functioncall functionName="unpair_userdata"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

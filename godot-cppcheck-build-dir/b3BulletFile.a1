@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="267916449">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::code&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::code&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::code</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::len&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::len&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::len</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::oldPtr&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::oldPtr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::oldPtr</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::dna_nr&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::dna_nr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::dna_nr</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;bChunkInd::nr&apos; is not initialized in the constructor." verbose="Member variable &apos;bChunkInd::nr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3Chunk.h" line="61" column="2"/>
+            <symbol>bChunkInd::nr</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bDNA::getArraySizeNew&apos; can be const." verbose="The member function &apos;bParse::bDNA::getArraySizeNew&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3DNA.h" line="40" column="6"/>
+            <symbol>bParse::bDNA::getArraySizeNew</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;bParse::bDNA::getElementSize&apos; can be const." verbose="The member function &apos;bParse::bDNA::getElementSize&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3DNA.h" line="45" column="6"/>
+            <symbol>bParse::bDNA::getElementSize</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;b3BulletFile&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;b3BulletFile&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h" line="53" column="2"/>
+            <symbol>b3BulletFile</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;addDataBlock&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;addDataBlock&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h" line="59" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="119" column="15" info="Virtual function in base class"/>
+            <symbol>addDataBlock</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;write&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;write&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h" line="62" column="14" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="137" column="14" info="Virtual function in base class"/>
+            <symbol>write</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;parse&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;parse&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h" line="64" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="135" column="15" info="Virtual function in base class"/>
+            <symbol>parse</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;parseData&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;parseData&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h" line="66" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="83" column="15" info="Virtual function in base class"/>
+            <symbol>parseData</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;writeDNA&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;writeDNA&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h" line="68" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h" line="141" column="15" info="Virtual function in base class"/>
+            <symbol>writeDNA</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;dataPtrHead&apos; is assigned a value that is never used." verbose="Variable &apos;dataPtrHead&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="128" column="20"/>
+            <symbol>dataPtrHead</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="122" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="216" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="122" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="216" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="122" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="216" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="122" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="216" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="122" col="25" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3File.h:78:6" call-funcname="getNextBlock" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="216" col="22" call-argexpr="&dataChunk" call-argvaluetype="7" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.h:62:14" my-argnr="1" my-argname="fileName" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp" line="337" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="parseData" lineNumber="104"/>
+    <functiondecl functionName="addDataBlock" lineNumber="225"/>
+    <functiondecl functionName="writeDNA" lineNumber="230"/>
+    <functiondecl functionName="parse" lineNumber="277"/>
+    <functiondecl functionName="write" lineNumber="335"/>
+    <functiondecl functionName="addStruct" lineNumber="382"/>
+    <functiondecl functionName="parseData" lineNumber="104"/>
+    <functiondecl functionName="addDataBlock" lineNumber="225"/>
+    <functiondecl functionName="writeDNA" lineNumber="230"/>
+    <functiondecl functionName="parse" lineNumber="277"/>
+    <functiondecl functionName="write" lineNumber="335"/>
+    <functiondecl functionName="addStruct" lineNumber="382"/>
+    <functiondecl functionName="parseData" lineNumber="104"/>
+    <functiondecl functionName="addDataBlock" lineNumber="225"/>
+    <functiondecl functionName="writeDNA" lineNumber="230"/>
+    <functiondecl functionName="parse" lineNumber="277"/>
+    <functiondecl functionName="write" lineNumber="335"/>
+    <functiondecl functionName="addStruct" lineNumber="382"/>
+    <functiondecl functionName="parseData" lineNumber="104"/>
+    <functiondecl functionName="addDataBlock" lineNumber="225"/>
+    <functiondecl functionName="writeDNA" lineNumber="230"/>
+    <functiondecl functionName="parse" lineNumber="277"/>
+    <functiondecl functionName="write" lineNumber="335"/>
+    <functiondecl functionName="addStruct" lineNumber="382"/>
+    <functiondecl functionName="parseData" lineNumber="104"/>
+    <functiondecl functionName="addDataBlock" lineNumber="225"/>
+    <functiondecl functionName="writeDNA" lineNumber="230"/>
+    <functiondecl functionName="parse" lineNumber="277"/>
+    <functiondecl functionName="write" lineNumber="335"/>
+    <functiondecl functionName="addStruct" lineNumber="382"/>
+    <functioncall functionName="FDF_STRUCT_EQU"/>
+    <functioncall functionName="FDF_STRUCT_NEQU"/>
+    <functioncall functionName="VOID_IS_8"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b3AlignedAlloc"/>
+    <functioncall functionName="b3AlignedFree"/>
+    <functioncall functionName="b3Assert"/>
+    <functioncall functionName="b3BulletFile"/>
+    <functioncall functionName="b3s_bulletDNAlen"/>
+    <functioncall functionName="b3s_bulletDNAlen64"/>
+    <functioncall functionName="b3s_bulletDNAstr"/>
+    <functioncall functionName="b3s_bulletDNAstr64"/>
+    <functioncall functionName="bChunkInd"/>
+    <functioncall functionName="bDNA"/>
+    <functioncall functionName="bFile"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dataBlock"/>
+    <functioncall functionName="dataChunk"/>
+    <functioncall functionName="dataPtr"/>
+    <functioncall functionName="dataPtrHead"/>
+    <functioncall functionName="dna_nr"/>
+    <functioncall functionName="endian"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="fileName"/>
+    <functioncall functionName="fixupPointers"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="fp"/>
+    <functioncall functionName="fwrite"/>
+    <functioncall functionName="getLength"/>
+    <functioncall functionName="getNextBlock"/>
+    <functioncall functionName="getOffset"/>
+    <functioncall functionName="getReverseType"/>
+    <functioncall functionName="getStruct"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="littleEndian"/>
+    <functioncall functionName="mDataStart"/>
+    <functioncall functionName="mFlags"/>
+    <functioncall functionName="m_DnaCopy"/>
+    <functioncall functionName="m_dim1"/>
+    <functioncall functionName="m_headerString"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memoryBuffer"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="oldPtr"/>
+    <functioncall functionName="parseInternal"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="readStruct"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="structType"/>
+    <functioncall functionName="swapLen"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="verboseMode"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="writeChunks"/>
+    <functioncall functionName="writeDNA"/>
+  </FileInfo>
+</analyzerinfo>

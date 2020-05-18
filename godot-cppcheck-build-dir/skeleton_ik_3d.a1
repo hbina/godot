@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1357666707">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Task::chain&apos; is not initialized in the constructor." verbose="Member variable &apos;Task::chain&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.h" line="117" column="3"/>
+            <symbol>Task::chain</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;sub_chain_size&apos; can be reduced." verbose="The scope of the variable &apos;sub_chain_size&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="73" column="6"/>
+            <symbol>sub_chain_size</symbol>
+        </error>
+        <error id="constParameter" severity="style" msg="Parameter &apos;r_chain&apos; can be declared with const" verbose="Parameter &apos;r_chain&apos; can be declared with const" cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="169" column="60"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.h:132:14" call-funcname="solve_simple_backwards" call-argnr="2" file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="162" col="25" call-argexpr="p_solve_magnet" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="308" col="23" info="Calling function 'solve_simple', 2nd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.h:133:14" call-funcname="solve_simple_forwards" call-argnr="2" file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="163" col="24" call-argexpr="p_solve_magnet" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="308" col="23" info="Calling function 'solve_simple', 2nd argument 'false' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.h:130:14" call-funcname="solve_simple" call-argnr="2" file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="308" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.h:126:14" my-argnr="1" my-argname="p_task" file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="59" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.h:130:14" my-argnr="1" my-argname="p_task" file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="157" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.h:139:14" my-argnr="1" my-argname="p_task" file="/home/hbina/git/godot/scene/3d/skeleton_ik_3d.cpp" line="266" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="find_child" lineNumber="39"/>
+    <functiondecl functionName="add_child" lineNumber="48"/>
+    <functiondecl functionName="build_chain" lineNumber="57"/>
+    <functiondecl functionName="update_chain" lineNumber="139"/>
+    <functiondecl functionName="solve_simple" lineNumber="153"/>
+    <functiondecl functionName="solve_simple_backwards" lineNumber="169"/>
+    <functiondecl functionName="solve_simple_forwards" lineNumber="202"/>
+    <functiondecl functionName="create_simple_task" lineNumber="241"/>
+    <functiondecl functionName="free_task" lineNumber="260"/>
+    <functiondecl functionName="set_goal" lineNumber="265"/>
+    <functiondecl functionName="make_goal" lineNumber="269"/>
+    <functiondecl functionName="solve" lineNumber="284"/>
+    <functiondecl functionName="_validate_property" lineNumber="343"/>
+    <functiondecl functionName="_bind_methods" lineNumber="366"/>
+    <functiondecl functionName="_notification" lineNumber="416"/>
+    <functiondecl functionName="set_root_bone" lineNumber="453"/>
+    <functiondecl functionName="get_root_bone" lineNumber="458"/>
+    <functiondecl functionName="set_tip_bone" lineNumber="462"/>
+    <functiondecl functionName="get_tip_bone" lineNumber="467"/>
+    <functiondecl functionName="set_interpolation" lineNumber="471"/>
+    <functiondecl functionName="get_interpolation" lineNumber="475"/>
+    <functiondecl functionName="set_target_transform" lineNumber="479"/>
+    <functiondecl functionName="get_target_transform" lineNumber="484"/>
+    <functiondecl functionName="set_target_node" lineNumber="488"/>
+    <functiondecl functionName="get_target_node" lineNumber="494"/>
+    <functiondecl functionName="set_override_tip_basis" lineNumber="498"/>
+    <functiondecl functionName="is_override_tip_basis" lineNumber="502"/>
+    <functiondecl functionName="set_use_magnet" lineNumber="506"/>
+    <functiondecl functionName="is_using_magnet" lineNumber="510"/>
+    <functiondecl functionName="set_magnet_position" lineNumber="514"/>
+    <functiondecl functionName="get_magnet_position" lineNumber="518"/>
+    <functiondecl functionName="set_min_distance" lineNumber="522"/>
+    <functiondecl functionName="set_max_iterations" lineNumber="526"/>
+    <functiondecl functionName="is_running" lineNumber="530"/>
+    <functiondecl functionName="start" lineNumber="534"/>
+    <functiondecl functionName="stop" lineNumber="543"/>
+    <functiondecl functionName="_get_target_transform" lineNumber="547"/>
+    <functiondecl functionName="reload_chain" lineNumber="558"/>
+    <functiondecl functionName="reload_goal" lineNumber="573"/>
+    <functiondecl functionName="_solve_chain" lineNumber="580"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="ChainItem"/>
+    <functioncall functionName="ChainTip"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="NODE_PATH"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="SkeletonIK3D"/>
+    <functioncall functionName="TRANSFORM"/>
+    <functioncall functionName="Task"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VECTOR3"/>
+    <functioncall functionName="_get_target_transform"/>
+    <functioncall functionName="_solve_chain"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="basis"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="blending_delta"/>
+    <functioncall functionName="bone"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="build_chain"/>
+    <functioncall functionName="can_solve"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="chain"/>
+    <functioncall functionName="chain_item"/>
+    <functioncall functionName="chain_root"/>
+    <functioncall functionName="chain_sub_tip"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="child_ci"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="create_simple_task"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="current_ori"/>
+    <functioncall functionName="current_pos"/>
+    <functioncall functionName="distance_to_goal"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="ee"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end_effector"/>
+    <functioncall functionName="end_effector_pose"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find_bone"/>
+    <functioncall functionName="find_child"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free_task"/>
+    <functioncall functionName="get_basis"/>
+    <functioncall functionName="get_bone_count"/>
+    <functioncall functionName="get_bone_global_pose"/>
+    <functioncall functionName="get_bone_name"/>
+    <functioncall functionName="get_bone_parent"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_interpolation"/>
+    <functioncall functionName="get_magnet_position"/>
+    <functioncall functionName="get_max_iterations"/>
+    <functioncall functionName="get_min_distance"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_parent_skeleton"/>
+    <functioncall functionName="get_physical_bone"/>
+    <functioncall functionName="get_root_bone"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_target_node"/>
+    <functioncall functionName="get_target_transform"/>
+    <functioncall functionName="get_tip_bone"/>
+    <functioncall functionName="goal"/>
+    <functioncall functionName="goal_global_transform"/>
+    <functioncall functionName="goal_transform"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="infant_child_id"/>
+    <functioncall functionName="initial_ori"/>
+    <functioncall functionName="initial_transform"/>
+    <functioncall functionName="interpolate_with"/>
+    <functioncall functionName="interpolation"/>
+    <functioncall functionName="is_empty"/>
+    <functioncall functionName="is_override_tip_basis"/>
+    <functioncall functionName="is_processing_internal"/>
+    <functioncall functionName="is_running"/>
+    <functioncall functionName="is_using_magnet"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="look_parent"/>
+    <functioncall functionName="magnet_position"/>
+    <functioncall functionName="make_goal"/>
+    <functioncall functionName="max_iterations"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="middle_chain_item"/>
+    <functioncall functionName="middle_chain_item_id"/>
+    <functioncall functionName="min_distance"/>
+    <functioncall functionName="names"/>
+    <functioncall functionName="new_bone_pose"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="override_tip_basis"/>
+    <functioncall functionName="p_bone_id"/>
+    <functioncall functionName="p_chain_item"/>
+    <functioncall functionName="p_end_effector"/>
+    <functioncall functionName="p_force_simple_chain"/>
+    <functioncall functionName="p_goal"/>
+    <functioncall functionName="p_interpolation"/>
+    <functioncall functionName="p_iterations"/>
+    <functioncall functionName="p_local_position"/>
+    <functioncall functionName="p_magnet_position"/>
+    <functioncall functionName="p_min_distance"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_one_time"/>
+    <functioncall functionName="p_override"/>
+    <functioncall functionName="p_root_bone"/>
+    <functioncall functionName="p_sk"/>
+    <functioncall functionName="p_solve_magnet"/>
+    <functioncall functionName="p_target"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="p_tip_bone"/>
+    <functioncall functionName="p_use"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="parent_item"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="previous_distance_to_goal"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="reload_chain"/>
+    <functioncall functionName="reload_goal"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root_bone"/>
+    <functioncall functionName="rot_angle"/>
+    <functioncall functionName="rot_axis"/>
+    <functioncall functionName="rotate"/>
+    <functioncall functionName="scaled"/>
+    <functioncall functionName="set_bone_global_pose_override"/>
+    <functioncall functionName="set_goal"/>
+    <functioncall functionName="set_interpolation"/>
+    <functioncall functionName="set_magnet_position"/>
+    <functioncall functionName="set_max_iterations"/>
+    <functioncall functionName="set_min_distance"/>
+    <functioncall functionName="set_override_tip_basis"/>
+    <functioncall functionName="set_process_internal"/>
+    <functioncall functionName="set_process_priority"/>
+    <functioncall functionName="set_root_bone"/>
+    <functioncall functionName="set_target_node"/>
+    <functioncall functionName="set_target_transform"/>
+    <functioncall functionName="set_tip_bone"/>
+    <functioncall functionName="set_use_magnet"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skeleton"/>
+    <functioncall functionName="solve"/>
+    <functioncall functionName="solve_simple"/>
+    <functioncall functionName="solve_simple_backwards"/>
+    <functioncall functionName="solve_simple_forwards"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="sub_chain"/>
+    <functioncall functionName="sub_chain_root"/>
+    <functioncall functionName="sub_chain_size"/>
+    <functioncall functionName="sub_chain_tip"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="target_node_override"/>
+    <functioncall functionName="target_node_path_override"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tip_bone"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update_chain"/>
+    <functioncall functionName="use_magnet"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

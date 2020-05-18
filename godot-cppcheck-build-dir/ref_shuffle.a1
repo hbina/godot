@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3769332299">
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/cpu_primitive.hpp" line="37" column="5"/>
+            <symbol>cpu_primitive_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ref_shuffle_t &lt; 4 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ref_shuffle_t &lt; 4 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.hpp" line="65" column="5"/>
+            <symbol>ref_shuffle_t &lt; 4 &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ref_shuffle_t &lt; 1 &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ref_shuffle_t &lt; 1 &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.hpp" line="65" column="5"/>
+            <symbol>ref_shuffle_t &lt; 1 &gt;</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.hpp" line="101" column="38"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;H&apos; can be reduced." verbose="The scope of the variable &apos;H&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="9"/>
+            <symbol>H</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;W&apos; can be reduced." verbose="The scope of the variable &apos;W&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="16"/>
+            <symbol>W</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;D&apos; can be reduced." verbose="The scope of the variable &apos;D&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="23"/>
+            <symbol>D</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;HW&apos; can be reduced." verbose="The scope of the variable &apos;HW&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="30"/>
+            <symbol>HW</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;H&apos; is assigned a value that is never used." verbose="Variable &apos;H&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="11"/>
+            <symbol>H</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;W&apos; is assigned a value that is never used." verbose="Variable &apos;W&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="18"/>
+            <symbol>W</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;D&apos; is assigned a value that is never used." verbose="Variable &apos;D&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="25"/>
+            <symbol>D</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;HW&apos; is assigned a value that is never used." verbose="Variable &apos;HW&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_shuffle.cpp" line="50" column="33"/>
+            <symbol>HW</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="C"/>
+    <functioncall functionName="D"/>
+    <functioncall functionName="DECLARE_COMMON_PD_T"/>
+    <functioncall functionName="H"/>
+    <functioncall functionName="MB"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_DST"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_DST"/>
+    <functioncall functionName="MKLDNN_ARG_SCRATCHPAD"/>
+    <functioncall functionName="MKLDNN_ARG_SRC"/>
+    <functioncall functionName="PRAGMA_OMP_SIMD"/>
+    <functioncall functionName="SP"/>
+    <functioncall functionName="W"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="any"/>
+    <functioncall functionName="apd"/>
+    <functioncall functionName="array_product"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="axis_size"/>
+    <functioncall functionName="blksize"/>
+    <functioncall functionName="blocking_desc"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="cc"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="cpu_primitive_t"/>
+    <functioncall functionName="create_scratchpad"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="dat_tag_"/>
+    <functioncall functionName="data_d"/>
+    <functioncall functionName="data_md"/>
+    <functioncall functionName="data_type"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="dims"/>
+    <functioncall functionName="execute_&lt;any&gt;"/>
+    <functioncall functionName="execute_&lt;nCdhw16c&gt;"/>
+    <functioncall functionName="execute_&lt;nCdhw8c&gt;"/>
+    <functioncall functionName="execute_&lt;nChw16c&gt;"/>
+    <functioncall functionName="execute_&lt;nChw8c&gt;"/>
+    <functioncall functionName="execute_&lt;ncdhw&gt;"/>
+    <functioncall functionName="execute_&lt;nchw&gt;"/>
+    <functioncall functionName="execute_&lt;ndhwc&gt;"/>
+    <functioncall functionName="execute_&lt;nhwc&gt;"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="global_scratchpad_"/>
+    <functioncall functionName="grantor"/>
+    <functioncall functionName="group_size"/>
+    <functioncall functionName="has_spatial"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_arg"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="inner_size"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="input_off"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_fwd"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="library"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="memory_desc_matches_one_of_tag"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="nCdhw16c"/>
+    <functioncall functionName="nCdhw8c"/>
+    <functioncall functionName="nChw16c"/>
+    <functioncall functionName="nChw8c"/>
+    <functioncall functionName="ncdhw"/>
+    <functioncall functionName="nchw"/>
+    <functioncall functionName="ndhwc"/>
+    <functioncall functionName="ndims"/>
+    <functioncall functionName="nhwc"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="o_arg"/>
+    <functioncall functionName="off_l"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="one_of"/>
+    <functioncall functionName="outer_size"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="parallel_nd"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="primitive_t"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ref_shuffle_t &lt; 1 &gt;"/>
+    <functioncall functionName="ref_shuffle_t &lt; 4 &gt;"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rev_transposed_"/>
+    <functioncall functionName="scratchpad_buffer_"/>
+    <functioncall functionName="scratchpad_registry"/>
+    <functioncall functionName="scratchpad_size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sp"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="transpose_col"/>
+    <functioncall functionName="transpose_row"/>
+    <functioncall functionName="use_global_scratchpad"/>
+  </FileInfo>
+</analyzerinfo>

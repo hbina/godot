@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="764670947">
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;packet!=NULL&apos; is always true" verbose="Condition &apos;packet!=NULL&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="968" column="16" info="Condition &apos;packet!=NULL&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="940" column="16" info="Assuming that condition &apos;packet==NULL&apos; is not redundant"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;outgoingCommand&apos; can be reduced." verbose="The scope of the variable &apos;outgoingCommand&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="252" column="27"/>
+            <symbol>outgoingCommand</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="3" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="58" col="38" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="4" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="58" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="5" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="58" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="4" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="210" col="41" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="3" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="448" col="38" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="4" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="448" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="5" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="448" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="3" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="515" col="42" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="4" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="515" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="5" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="515" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="3" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="551" col="38" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="4" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="551" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" call-funcname="enet_peer_queue_outgoing_command" call-argnr="5" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="551" col="38" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/enet/peer.c:271:1" call-funcname="enet_peer_remove_incoming_commands" call-argnr="1" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="301" col="5" my-id="/home/hbina/git/godot/thirdparty/enet/peer.c:299:1" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:610:30" call-funcname="enet_peer_on_disconnect" call-argnr="1" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="374" col="5" my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:596:30" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:603:30" call-funcname="enet_peer_setup_outgoing_command" call-argnr="1" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="699" col="5" my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:604:30" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:570:23" call-funcname="enet_packet_create" call-argnr="1" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="939" col="14" my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:605:30" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:600:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="47" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:601:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="64" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:609:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="345" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:610:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="357" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:593:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="442" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:594:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="463" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:595:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="486" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:598:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="503" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:597:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="534" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:599:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="575" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:606:30" my-argnr="1" my-argname="peer" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="592" col="39" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:606:30" my-argnr="2" my-argname="command" file="/home/hbina/git/godot/thirdparty/enet/peer.c" line="592" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="enet_peer_throttle_configure" lineNumber="43"/>
+    <functiondecl functionName="enet_peer_throttle" lineNumber="62"/>
+    <functiondecl functionName="enet_peer_send" lineNumber="100"/>
+    <functiondecl functionName="enet_peer_receive" lineNumber="222"/>
+    <functiondecl functionName="enet_peer_reset_outgoing_commands" lineNumber="250"/>
+    <functiondecl functionName="enet_peer_remove_incoming_commands" lineNumber="271"/>
+    <functiondecl functionName="enet_peer_reset_incoming_commands" lineNumber="299"/>
+    <functiondecl functionName="enet_peer_reset_queues" lineNumber="305"/>
+    <functiondecl functionName="enet_peer_on_connect" lineNumber="343"/>
+    <functiondecl functionName="enet_peer_on_disconnect" lineNumber="355"/>
+    <functiondecl functionName="enet_peer_reset" lineNumber="372"/>
+    <functiondecl functionName="enet_peer_ping" lineNumber="438"/>
+    <functiondecl functionName="enet_peer_ping_interval" lineNumber="461"/>
+    <functiondecl functionName="enet_peer_timeout" lineNumber="484"/>
+    <functiondecl functionName="enet_peer_disconnect_now" lineNumber="499"/>
+    <functiondecl functionName="enet_peer_disconnect" lineNumber="530"/>
+    <functiondecl functionName="enet_peer_disconnect_later" lineNumber="573"/>
+    <functiondecl functionName="enet_peer_queue_acknowledgement" lineNumber="588"/>
+    <functiondecl functionName="enet_peer_setup_outgoing_command" lineNumber="620"/>
+    <functiondecl functionName="enet_peer_queue_outgoing_command" lineNumber="686"/>
+    <functiondecl functionName="enet_peer_dispatch_incoming_unreliable_commands" lineNumber="705"/>
+    <functiondecl functionName="enet_peer_dispatch_incoming_reliable_commands" lineNumber="788"/>
+    <functiondecl functionName="enet_peer_queue_incoming_command" lineNumber="827"/>
+    <functioncall functionName="ENET_HOST_TO_NET_16"/>
+    <functioncall functionName="ENET_HOST_TO_NET_32"/>
+    <functioncall functionName="ENET_NET_TO_HOST_16"/>
+    <functioncall functionName="ENET_NET_TO_HOST_32"/>
+    <functioncall functionName="ENET_PACKET_FLAG_UNRELIABLE_FRAGMENT"/>
+    <functioncall functionName="ENET_PACKET_FLAG_UNSEQUENCED"/>
+    <functioncall functionName="ENET_PEER_DEFAULT_PACKET_THROTTLE"/>
+    <functioncall functionName="ENET_PEER_DEFAULT_ROUND_TRIP_TIME"/>
+    <functioncall functionName="ENET_PEER_FREE_RELIABLE_WINDOWS"/>
+    <functioncall functionName="ENET_PEER_PACKET_THROTTLE_ACCELERATION"/>
+    <functioncall functionName="ENET_PEER_PACKET_THROTTLE_DECELERATION"/>
+    <functioncall functionName="ENET_PEER_PACKET_THROTTLE_INTERVAL"/>
+    <functioncall functionName="ENET_PEER_PACKET_THROTTLE_SCALE"/>
+    <functioncall functionName="ENET_PEER_PING_INTERVAL"/>
+    <functioncall functionName="ENET_PEER_RELIABLE_WINDOWS"/>
+    <functioncall functionName="ENET_PEER_RELIABLE_WINDOW_SIZE"/>
+    <functioncall functionName="ENET_PEER_STATE_DISCONNECTED"/>
+    <functioncall functionName="ENET_PEER_STATE_DISCONNECTING"/>
+    <functioncall functionName="ENET_PEER_STATE_DISCONNECT_LATER"/>
+    <functioncall functionName="ENET_PEER_TIMEOUT_LIMIT"/>
+    <functioncall functionName="ENET_PEER_TIMEOUT_MAXIMUM"/>
+    <functioncall functionName="ENET_PEER_TIMEOUT_MINIMUM"/>
+    <functioncall functionName="ENET_PROTOCOL_COMMAND_DISCONNECT"/>
+    <functioncall functionName="ENET_PROTOCOL_COMMAND_FLAG_ACKNOWLEDGE"/>
+    <functioncall functionName="ENET_PROTOCOL_COMMAND_FLAG_UNSEQUENCED"/>
+    <functioncall functionName="ENET_PROTOCOL_COMMAND_SEND_UNRELIABLE"/>
+    <functioncall functionName="ENET_PROTOCOL_COMMAND_SEND_UNRELIABLE_FRAGMENT"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_MTU"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_PACKET_COMMANDS"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_PEER_ID"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_WINDOW_SIZE"/>
+    <functioncall functionName="ENetProtocolAcknowledge"/>
+    <functioncall functionName="ENetProtocolHeader"/>
+    <functioncall functionName="ENetProtocolSendFragment"/>
+    <functioncall functionName="ENetSocket"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="acceleration"/>
+    <functioncall functionName="acknowledgement"/>
+    <functioncall functionName="acknowledgements"/>
+    <functioncall functionName="bandwidthLimitedPeers"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="channel"/>
+    <functioncall functionName="channelCount"/>
+    <functioncall functionName="channelID"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="command"/>
+    <functioncall functionName="commandNumber"/>
+    <functioncall functionName="connectedPeers"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="currentCommand"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dataLength"/>
+    <functioncall functionName="deceleration"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="discardCommand"/>
+    <functioncall functionName="dispatchList"/>
+    <functioncall functionName="dispatchQueue"/>
+    <functioncall functionName="dispatchedCommands"/>
+    <functioncall functionName="droppedCommand"/>
+    <functioncall functionName="enet_free"/>
+    <functioncall functionName="enet_host_flush"/>
+    <functioncall functionName="enet_list_begin"/>
+    <functioncall functionName="enet_list_clear"/>
+    <functioncall functionName="enet_list_empty"/>
+    <functioncall functionName="enet_list_end"/>
+    <functioncall functionName="enet_list_insert"/>
+    <functioncall functionName="enet_list_move"/>
+    <functioncall functionName="enet_list_next"/>
+    <functioncall functionName="enet_list_previous"/>
+    <functioncall functionName="enet_list_remove"/>
+    <functioncall functionName="enet_malloc"/>
+    <functioncall functionName="enet_packet_create"/>
+    <functioncall functionName="enet_packet_destroy"/>
+    <functioncall functionName="enet_peer_disconnect"/>
+    <functioncall functionName="enet_peer_dispatch_incoming_reliable_commands"/>
+    <functioncall functionName="enet_peer_dispatch_incoming_unreliable_commands"/>
+    <functioncall functionName="enet_peer_on_disconnect"/>
+    <functioncall functionName="enet_peer_queue_outgoing_command"/>
+    <functioncall functionName="enet_peer_remove_incoming_commands"/>
+    <functioncall functionName="enet_peer_reset"/>
+    <functioncall functionName="enet_peer_reset_incoming_commands"/>
+    <functioncall functionName="enet_peer_reset_outgoing_commands"/>
+    <functioncall functionName="enet_peer_reset_queues"/>
+    <functioncall functionName="enet_peer_setup_outgoing_command"/>
+    <functioncall functionName="enet_protocol_command_size"/>
+    <functioncall functionName="enet_uint16"/>
+    <functioncall functionName="enet_uint32"/>
+    <functioncall functionName="enet_uint8"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fragment"/>
+    <functioncall functionName="fragmentCount"/>
+    <functioncall functionName="fragmentLength"/>
+    <functioncall functionName="fragmentNumber"/>
+    <functioncall functionName="fragmentOffset"/>
+    <functioncall functionName="fragments"/>
+    <functioncall functionName="fragmentsRemaining"/>
+    <functioncall functionName="host"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="incomingCommand"/>
+    <functioncall functionName="incomingCommandList"/>
+    <functioncall functionName="incomingReliableCommands"/>
+    <functioncall functionName="incomingReliableSequenceNumber"/>
+    <functioncall functionName="incomingUnreliableCommands"/>
+    <functioncall functionName="incomingUnreliableSequenceNumber"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="interval"/>
+    <functioncall functionName="lastRoundTripTime"/>
+    <functioncall functionName="lastRoundTripTimeVariance"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="maximumPacketSize"/>
+    <functioncall functionName="maximumWaitingData"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mtu"/>
+    <functioncall functionName="notifyError"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="outgoingCommand"/>
+    <functioncall functionName="outgoingReliableCommands"/>
+    <functioncall functionName="outgoingReliableSequenceNumber"/>
+    <functioncall functionName="outgoingUnreliableCommands"/>
+    <functioncall functionName="outgoingUnreliableSequenceNumber"/>
+    <functioncall functionName="outgoingUnsequencedGroup"/>
+    <functioncall functionName="packet"/>
+    <functioncall functionName="packetThrottle"/>
+    <functioncall functionName="packetThrottleAcceleration"/>
+    <functioncall functionName="packetThrottleDeceleration"/>
+    <functioncall functionName="packetThrottleLimit"/>
+    <functioncall functionName="peer"/>
+    <functioncall functionName="pingInterval"/>
+    <functioncall functionName="queue"/>
+    <functioncall functionName="referenceCount"/>
+    <functioncall functionName="reliableSequenceNumber"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sentReliableCommands"/>
+    <functioncall functionName="sentTime"/>
+    <functioncall functionName="sentUnreliableCommands"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="startCommand"/>
+    <functioncall functionName="startSequenceNumber"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="timeoutLimit"/>
+    <functioncall functionName="timeoutMaximum"/>
+    <functioncall functionName="timeoutMinimum"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="unreliableSequenceNumber"/>
+    <functioncall functionName="unsequencedWindow"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

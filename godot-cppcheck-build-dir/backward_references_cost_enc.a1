@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3302096820">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;k&apos; can be reduced." verbose="The scope of the variable &apos;k&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="725" column="11"/>
+            <symbol>k</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:102:27" call-funcname="GetCacheCost" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="131" col="29" call-argexpr="ix" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="128" col="10" info="Assuming that condition 'ix>=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:107:27" call-funcname="GetLengthCost" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="266" col="42" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:121:25" call-funcname="AddSingleLiteralWithCostModel" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="606" col="32" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:121:25" call-funcname="AddSingleLiteralWithCostModel" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="606" col="32" call-argexpr="use_color_cache" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="589" col="7" info="Assuming that condition 'use_color_cache' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:374:25" call-funcname="UpdateCostAtIndex" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="662" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:374:25" call-funcname="UpdateCostAtIndex" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="663" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:689:13" call-funcname="TraceBackwards" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="780" col="17" call-argexpr="&chosen_path" call-argvaluetype="7" call-argvalue="2"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:689:13" call-funcname="TraceBackwards" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="780" col="17" call-argexpr="&chosen_path_size" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:102:27" call-funcname="GetCacheCost" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="131" col="17" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:121:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:208:12" call-funcname="CostIntervalIsInFreeList" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="226" col="10" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:222:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:107:27" call-funcname="GetLengthCost" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="266" col="29" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:250:12" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:321:25" call-funcname="UpdateCost" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="338" col="33" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:334:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:342:25" call-funcname="ConnectIntervals" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="359" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:355:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:395:25" call-funcname="PositionOrphanInterval" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="450" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:419:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:121:25" call-funcname="AddSingleLiteralWithCostModel" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="606" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:563:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:61:12" call-funcname="CostModelBuild" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="594" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:563:12" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:250:12" call-funcname="CostManagerInit" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="598" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:563:12" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:27:13" call-funcname="VP8LClearBackwardRefs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="721" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:705:12" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:563:12" call-funcname="BackwardReferencesHashChainDistanceOnly" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="776" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:757:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:563:12" call-funcname="BackwardReferencesHashChainDistanceOnly" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="776" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:757:12" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:563:12" call-funcname="BackwardReferencesHashChainDistanceOnly" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="776" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:757:12" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:705:12" call-funcname="BackwardReferencesHashChainFollowChosenPath" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="781" col="8" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:757:12" my-argnr="7"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:61:12" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="79" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:95:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="96" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:102:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="104" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:107:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="111" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:114:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="118" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:121:25" my-argnr="1" my-argname="argb" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="126" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:121:25" my-argnr="7" my-argname="cost" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="137" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:202:13" my-argnr="1" my-argname="manager" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="204" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:202:13" my-argnr="2" my-argname="interval" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="204" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:214:13" my-argnr="1" my-argname="manager" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="216" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:250:12" my-argnr="1" my-argname="manager" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="256" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:321:25" my-argnr="1" my-argname="manager" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="326" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:374:25" my-argnr="1" my-argname="manager" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="376" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:459:25" my-argnr="1" my-argname="manager" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="463" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:689:13" my-argnr="3" my-argname="chosen_path" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="701" col="4" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:689:13" my-argnr="4" my-argname="chosen_path_size" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="702" col="4" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:95:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="96" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:102:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="104" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:107:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="111" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:114:27" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="118" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c:121:25" my-argnr="7" my-argname="cost" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/backward_references_cost_enc.c" line="137" col="7" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ConvertPopulationCountTableToBitEstimates" lineNumber="40"/>
+    <functiondecl functionName="CostModelBuild" lineNumber="61"/>
+    <functiondecl functionName="GetLiteralCost" lineNumber="95"/>
+    <functiondecl functionName="GetCacheCost" lineNumber="102"/>
+    <functiondecl functionName="GetLengthCost" lineNumber="107"/>
+    <functiondecl functionName="GetDistanceCost" lineNumber="114"/>
+    <functiondecl functionName="AddSingleLiteralWithCostModel" lineNumber="121"/>
+    <functiondecl functionName="CostIntervalAddToFreeList" lineNumber="202"/>
+    <functiondecl functionName="CostIntervalIsInFreeList" lineNumber="208"/>
+    <functiondecl functionName="CostManagerInitFreeList" lineNumber="214"/>
+    <functiondecl functionName="DeleteIntervalList" lineNumber="222"/>
+    <functiondecl functionName="CostManagerClear" lineNumber="233"/>
+    <functiondecl functionName="CostManagerInit" lineNumber="250"/>
+    <functiondecl functionName="UpdateCost" lineNumber="321"/>
+    <functiondecl functionName="UpdateCostPerInterval" lineNumber="334"/>
+    <functiondecl functionName="ConnectIntervals" lineNumber="342"/>
+    <functiondecl functionName="PopInterval" lineNumber="355"/>
+    <functiondecl functionName="UpdateCostAtIndex" lineNumber="374"/>
+    <functiondecl functionName="PositionOrphanInterval" lineNumber="395"/>
+    <functiondecl functionName="InsertInterval" lineNumber="419"/>
+    <functiondecl functionName="PushInterval" lineNumber="459"/>
+    <functiondecl functionName="BackwardReferencesHashChainDistanceOnly" lineNumber="563"/>
+    <functiondecl functionName="TraceBackwards" lineNumber="689"/>
+    <functiondecl functionName="BackwardReferencesHashChainFollowChosenPath" lineNumber="705"/>
+    <functiondecl functionName="VP8LBackwardReferencesTraceBackwards" lineNumber="761"/>
+    <functioncall functionName="AddSingleLiteralWithCostModel"/>
+    <functioncall functionName="BackwardReferencesHashChainDistanceOnly"/>
+    <functioncall functionName="BackwardReferencesHashChainFollowChosenPath"/>
+    <functioncall functionName="ConnectIntervals"/>
+    <functioncall functionName="ConvertPopulationCountTableToBitEstimates"/>
+    <functioncall functionName="CostIntervalAddToFreeList"/>
+    <functioncall functionName="CostIntervalIsInFreeList"/>
+    <functioncall functionName="CostManagerClear"/>
+    <functioncall functionName="CostManagerInit"/>
+    <functioncall functionName="CostManagerInitFreeList"/>
+    <functioncall functionName="CostModelBuild"/>
+    <functioncall functionName="DeleteIntervalList"/>
+    <functioncall functionName="Error"/>
+    <functioncall functionName="GetCacheCost"/>
+    <functioncall functionName="GetDistanceCost"/>
+    <functioncall functionName="GetLengthCost"/>
+    <functioncall functionName="GetLiteralCost"/>
+    <functioncall functionName="InsertInterval"/>
+    <functioncall functionName="MAX_LENGTH"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="NUM_DISTANCE_CODES"/>
+    <functioncall functionName="PixOrCopyCreateCacheIdx"/>
+    <functioncall functionName="PixOrCopyCreateCopy"/>
+    <functioncall functionName="PixOrCopyCreateLiteral"/>
+    <functioncall functionName="PopInterval"/>
+    <functioncall functionName="PositionOrphanInterval"/>
+    <functioncall functionName="PushInterval"/>
+    <functioncall functionName="TraceBackwards"/>
+    <functioncall functionName="UpdateCost"/>
+    <functioncall functionName="UpdateCostAtIndex"/>
+    <functioncall functionName="UpdateCostPerInterval"/>
+    <functioncall functionName="VP8LAllocateHistogram"/>
+    <functioncall functionName="VP8LBackwardRefsCursorAdd"/>
+    <functioncall functionName="VP8LClearBackwardRefs"/>
+    <functioncall functionName="VP8LColorCacheClear"/>
+    <functioncall functionName="VP8LColorCacheContains"/>
+    <functioncall functionName="VP8LColorCacheInit"/>
+    <functioncall functionName="VP8LColorCacheInsert"/>
+    <functioncall functionName="VP8LDistanceToPlaneCode"/>
+    <functioncall functionName="VP8LFastLog2"/>
+    <functioncall functionName="VP8LFreeHistogram"/>
+    <functioncall functionName="VP8LHashChainFindCopy"/>
+    <functioncall functionName="VP8LHashChainFindOffset"/>
+    <functioncall functionName="VP8LHistogramAddSinglePixOrCopy"/>
+    <functioncall functionName="VP8LHistogramInit"/>
+    <functioncall functionName="VP8LHistogramNumCodes"/>
+    <functioncall functionName="VP8LPrefixEncodeBits"/>
+    <functioncall functionName="VP8LRefsCursorInit"/>
+    <functioncall functionName="VP8LRefsCursorNext"/>
+    <functioncall functionName="VP8LRefsCursorOk"/>
+    <functioncall functionName="WebPSafeCalloc"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="alpha_"/>
+    <functioncall functionName="argb"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="blue_"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cache_bits"/>
+    <functioncall functionName="cache_intervals_"/>
+    <functioncall functionName="cache_intervals_size_"/>
+    <functioncall functionName="cc_init"/>
+    <functioncall functionName="chosen_path"/>
+    <functioncall functionName="chosen_path_size"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cost"/>
+    <functioncall functionName="cost_"/>
+    <functioncall functionName="cost_manager"/>
+    <functioncall functionName="cost_model"/>
+    <functioncall functionName="cost_model_size"/>
+    <functioncall functionName="cost_tmp"/>
+    <functioncall functionName="cost_val"/>
+    <functioncall functionName="costs_"/>
+    <functioncall functionName="count_"/>
+    <functioncall functionName="cur_pos"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="dist_array"/>
+    <functioncall functionName="dist_array_size"/>
+    <functioncall functionName="distance"/>
+    <functioncall functionName="distance_"/>
+    <functioncall functionName="do_clean_intervals"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="end_"/>
+    <functioncall functionName="end_original"/>
+    <functioncall functionName="error_"/>
+    <functioncall functionName="extra_bits"/>
+    <functioncall functionName="first_offset_is_constant"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free_intervals_"/>
+    <functioncall functionName="hash_chain"/>
+    <functioncall functionName="hashers"/>
+    <functioncall functionName="head_"/>
+    <functioncall functionName="histo"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index_"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="interval"/>
+    <functioncall functionName="interval_in"/>
+    <functioncall functionName="interval_new"/>
+    <functioncall functionName="interval_next"/>
+    <functioncall functionName="ix"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="len_j"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="literal_"/>
+    <functioncall functionName="literal_array_size"/>
+    <functioncall functionName="literal_idx"/>
+    <functioncall functionName="manager"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="offset_cost"/>
+    <functioncall functionName="offset_j"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="palette_code_bits_"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pix_count"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prev_cost"/>
+    <functioncall functionName="previous"/>
+    <functioncall functionName="previous_"/>
+    <functioncall functionName="recycled_intervals_"/>
+    <functioncall functionName="red_"/>
+    <functioncall functionName="refs"/>
+    <functioncall functionName="refs_dst"/>
+    <functioncall functionName="refs_src"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_"/>
+    <functioncall functionName="start_new"/>
+    <functioncall functionName="sum"/>
+    <functioncall functionName="use_color_cache"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="xsize"/>
+    <functioncall functionName="ysize"/>
+  </FileInfo>
+</analyzerinfo>

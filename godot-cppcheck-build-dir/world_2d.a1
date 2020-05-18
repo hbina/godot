@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2171873861">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;canvas&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;canvas&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/world_2d.cpp" line="389" column="2"/>
+            <symbol>canvas</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/resources/world_2d.cpp" line="158" column="38" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/resources/world_2d.cpp" line="156" column="66" info="Assignment &apos;E=notifiers.find(p_notifier)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/resources/world_2d.cpp" line="157" column="17" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/world_2d.cpp:98:7" call-funcname="_notifier_update_cells" call-argnr="3" file="/home/hbina/git/godot/scene/resources/world_2d.cpp" line="149" col="25" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/resources/world_2d.cpp:98:7" call-funcname="_notifier_update_cells" call-argnr="3" file="/home/hbina/git/godot/scene/resources/world_2d.cpp" line="158" col="25" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="inc" lineNumber="46"/>
+    <functiondecl functionName="dec" lineNumber="50"/>
+    <functiondecl functionName="_notifier_update_cells" lineNumber="98"/>
+    <functiondecl functionName="_notifier_add" lineNumber="133"/>
+    <functiondecl functionName="_notifier_update" lineNumber="141"/>
+    <functiondecl functionName="_notifier_remove" lineNumber="154"/>
+    <functiondecl functionName="_add_viewport" lineNumber="181"/>
+    <functiondecl functionName="_update_viewport" lineNumber="190"/>
+    <functiondecl functionName="_remove_viewport" lineNumber="200"/>
+    <functiondecl functionName="_update" lineNumber="216"/>
+    <functiondecl functionName="_register_viewport" lineNumber="321"/>
+    <functiondecl functionName="_update_viewport" lineNumber="326"/>
+    <functiondecl functionName="_remove_viewport" lineNumber="330"/>
+    <functiondecl functionName="_register_notifier" lineNumber="335"/>
+    <functiondecl functionName="_update_notifier" lineNumber="339"/>
+    <functiondecl functionName="_remove_notifier" lineNumber="343"/>
+    <functiondecl functionName="_update" lineNumber="348"/>
+    <functiondecl functionName="get_canvas" lineNumber="353"/>
+    <functiondecl functionName="get_space" lineNumber="358"/>
+    <functiondecl functionName="get_viewport_list" lineNumber="363"/>
+    <functiondecl functionName="_bind_methods" lineNumber="370"/>
+    <functiondecl functionName="get_direct_space_state" lineNumber="382"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="AREA_PARAM_ANGULAR_DAMP"/>
+    <functioncall functionName="AREA_PARAM_GRAVITY"/>
+    <functioncall functionName="AREA_PARAM_GRAVITY_VECTOR"/>
+    <functioncall functionName="AREA_PARAM_LINEAR_DAMP"/>
+    <functioncall functionName="CellData"/>
+    <functioncall functionName="CellRef"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="G"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_DEF"/>
+    <functioncall functionName="H"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SpatialIndexer2D"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="ViewportData"/>
+    <functioncall functionName="World2D"/>
+    <functioncall functionName="_RID"/>
+    <functioncall functionName="_add_viewport"/>
+    <functioncall functionName="_enter_viewport"/>
+    <functioncall functionName="_exit_viewport"/>
+    <functioncall functionName="_notifier_add"/>
+    <functioncall functionName="_notifier_remove"/>
+    <functioncall functionName="_notifier_update"/>
+    <functioncall functionName="_notifier_update_cells"/>
+    <functioncall functionName="_remove_viewport"/>
+    <functioncall functionName="_update"/>
+    <functioncall functionName="_update_viewport"/>
+    <functioncall functionName="area_set_param"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="canvas"/>
+    <functioncall functionName="canvas_create"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="ck"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_canvas"/>
+    <functioncall functionName="get_direct_space_state"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_space"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inc"/>
+    <functioncall functionName="indexer"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="p_add"/>
+    <functioncall functionName="p_notifier"/>
+    <functioncall functionName="p_rect"/>
+    <functioncall functionName="p_viewport"/>
+    <functioncall functionName="pass"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_custom_property_info"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="space"/>
+    <functioncall functionName="space_create"/>
+    <functioncall functionName="space_get_direct_state"/>
+    <functioncall functionName="space_set_active"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="vd"/>
+    <functioncall functionName="visible_cells"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

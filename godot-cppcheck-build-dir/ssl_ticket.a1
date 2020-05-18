@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3847642512">
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="25" column="0"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;left&apos; is assigned a value that is never used." verbose="Variable &apos;left&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="180" column="10"/>
+            <symbol>left</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" call-funcname="ssl_ticket_gen_key" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="150" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="&clear_len" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="clear_len" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:209:12" call-funcname="ssl_load_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="444" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:379:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:46:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="48" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="65" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:90:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="95" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:118:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="126" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="5" my-argname="tlen" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="298" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:363:32" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="369" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" call-funcname="ssl_ticket_gen_key" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="150" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="&clear_len" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="clear_len" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:209:12" call-funcname="ssl_load_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="444" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:379:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:46:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="48" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="65" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:118:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="126" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="5" my-argname="tlen" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="298" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:363:32" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="369" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" call-funcname="ssl_ticket_gen_key" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="150" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="&clear_len" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="clear_len" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:209:12" call-funcname="ssl_load_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="444" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:379:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:46:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="48" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="65" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:118:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="126" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="5" my-argname="tlen" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="298" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:363:32" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="369" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" call-funcname="ssl_ticket_gen_key" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="150" col="35" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="&clear_len" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="33" call-argexpr="clear_len" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:165:12" call-funcname="ssl_save_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="326" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:209:12" call-funcname="ssl_load_session" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="444" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:379:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:46:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="48" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:60:12" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="65" col="35" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:118:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="126" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:281:5" my-argnr="5" my-argname="tlen" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="298" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c:363:32" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/ssl_ticket.c" line="369" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="mbedtls_ssl_ticket_init" lineNumber="46"/>
+    <functiondecl functionName="ssl_ticket_gen_key" lineNumber="60"/>
+    <functiondecl functionName="ssl_ticket_update_keys" lineNumber="90"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_setup" lineNumber="118"/>
+    <functiondecl functionName="ssl_save_session" lineNumber="165"/>
+    <functiondecl functionName="ssl_load_session" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_write" lineNumber="281"/>
+    <functiondecl functionName="ssl_ticket_select_key" lineNumber="363"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_parse" lineNumber="379"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_free" lineNumber="473"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_init" lineNumber="46"/>
+    <functiondecl functionName="ssl_ticket_gen_key" lineNumber="60"/>
+    <functiondecl functionName="ssl_ticket_update_keys" lineNumber="90"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_setup" lineNumber="118"/>
+    <functiondecl functionName="ssl_save_session" lineNumber="165"/>
+    <functiondecl functionName="ssl_load_session" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_write" lineNumber="281"/>
+    <functiondecl functionName="ssl_ticket_select_key" lineNumber="363"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_parse" lineNumber="379"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_free" lineNumber="473"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_init" lineNumber="46"/>
+    <functiondecl functionName="ssl_ticket_gen_key" lineNumber="60"/>
+    <functiondecl functionName="ssl_ticket_update_keys" lineNumber="90"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_setup" lineNumber="118"/>
+    <functiondecl functionName="ssl_save_session" lineNumber="165"/>
+    <functiondecl functionName="ssl_load_session" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_write" lineNumber="281"/>
+    <functiondecl functionName="ssl_ticket_select_key" lineNumber="363"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_parse" lineNumber="379"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_free" lineNumber="473"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_init" lineNumber="46"/>
+    <functiondecl functionName="ssl_ticket_gen_key" lineNumber="60"/>
+    <functiondecl functionName="ssl_ticket_update_keys" lineNumber="90"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_setup" lineNumber="118"/>
+    <functiondecl functionName="ssl_save_session" lineNumber="165"/>
+    <functiondecl functionName="ssl_load_session" lineNumber="209"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_write" lineNumber="281"/>
+    <functiondecl functionName="ssl_ticket_select_key" lineNumber="363"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_parse" lineNumber="379"/>
+    <functiondecl functionName="mbedtls_ssl_ticket_free" lineNumber="473"/>
+    <functioncall functionName="MBEDTLS_ENCRYPT"/>
+    <functioncall functionName="MBEDTLS_ERR_SSL_ALLOC_FAILED"/>
+    <functioncall functionName="MBEDTLS_ERR_SSL_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_SSL_BUFFER_TOO_SMALL"/>
+    <functioncall functionName="MBEDTLS_ERR_SSL_INTERNAL_ERROR"/>
+    <functioncall functionName="MBEDTLS_ERR_SSL_INVALID_MAC"/>
+    <functioncall functionName="MBEDTLS_ERR_SSL_SESSION_TICKET_EXPIRED"/>
+    <functioncall functionName="MBEDTLS_ERR_THREADING_MUTEX_ERROR"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buf_len"/>
+    <functioncall functionName="calloc"/>
+    <functioncall functionName="cert_len"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="ciph_len"/>
+    <functioncall functionName="cipher"/>
+    <functioncall functionName="cipher_info"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="clear_len"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="enc_len"/>
+    <functioncall functionName="f_rng"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="generation_time"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="iv"/>
+    <functioncall functionName="key_bitlen"/>
+    <functioncall functionName="key_name"/>
+    <functioncall functionName="keys"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="lifetime"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mbedtls_cipher_auth_decrypt"/>
+    <functioncall functionName="mbedtls_cipher_auth_encrypt"/>
+    <functioncall functionName="mbedtls_cipher_free"/>
+    <functioncall functionName="mbedtls_cipher_get_key_bitlen"/>
+    <functioncall functionName="mbedtls_cipher_info_from_type"/>
+    <functioncall functionName="mbedtls_cipher_setkey"/>
+    <functioncall functionName="mbedtls_cipher_setup"/>
+    <functioncall functionName="mbedtls_mutex_free"/>
+    <functioncall functionName="mbedtls_mutex_init"/>
+    <functioncall functionName="mbedtls_mutex_lock"/>
+    <functioncall functionName="mbedtls_mutex_unlock"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="mbedtls_ssl_session"/>
+    <functioncall functionName="mbedtls_ssl_ticket_context"/>
+    <functioncall functionName="mbedtls_time"/>
+    <functioncall functionName="mbedtls_x509_crt"/>
+    <functioncall functionName="mbedtls_x509_crt_free"/>
+    <functioncall functionName="mbedtls_x509_crt_init"/>
+    <functioncall functionName="mbedtls_x509_crt_parse_der"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mutex"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_rng"/>
+    <functioncall functionName="p_ticket"/>
+    <functioncall functionName="peer_cert"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="session"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="ssl_load_session"/>
+    <functioncall functionName="ssl_save_session"/>
+    <functioncall functionName="ssl_ticket_gen_key"/>
+    <functioncall functionName="ssl_ticket_select_key"/>
+    <functioncall functionName="ssl_ticket_update_keys"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="tag"/>
+    <functioncall functionName="ticket"/>
+    <functioncall functionName="ticket_lifetime"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="void"/>
+  </FileInfo>
+</analyzerinfo>

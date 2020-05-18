@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1258576229">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tt&apos; can be reduced." verbose="The scope of the variable &apos;tt&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/basis_universal/basisu_resample_filters.cpp" line="66" column="9"/>
+            <symbol>tt</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="box_filter" lineNumber="24"/>
+    <functiondecl functionName="tent_filter" lineNumber="34"/>
+    <functiondecl functionName="bell_filter" lineNumber="46"/>
+    <functiondecl functionName="B_spline_filter" lineNumber="64"/>
+    <functiondecl functionName="quadratic" lineNumber="87"/>
+    <functiondecl functionName="quadratic_interp_filter" lineNumber="103"/>
+    <functiondecl functionName="quadratic_approx_filter" lineNumber="108"/>
+    <functiondecl functionName="quadratic_mix_filter" lineNumber="113"/>
+    <functiondecl functionName="mitchell" lineNumber="126"/>
+    <functiondecl functionName="mitchell_filter" lineNumber="152"/>
+    <functiondecl functionName="catmull_rom_filter" lineNumber="158"/>
+    <functiondecl functionName="sinc" lineNumber="163"/>
+    <functiondecl functionName="clean" lineNumber="173"/>
+    <functiondecl functionName="blackman_exact_window" lineNumber="186"/>
+    <functiondecl functionName="blackman_filter" lineNumber="192"/>
+    <functiondecl functionName="gaussian_filter" lineNumber="205"/>
+    <functiondecl functionName="lanczos3_filter" lineNumber="217"/>
+    <functiondecl functionName="lanczos4_filter" lineNumber="229"/>
+    <functiondecl functionName="lanczos6_filter" lineNumber="241"/>
+    <functiondecl functionName="lanczos12_filter" lineNumber="253"/>
+    <functiondecl functionName="bessel0" lineNumber="264"/>
+    <functiondecl functionName="kaiser" lineNumber="287"/>
+    <functiondecl functionName="kaiser_filter" lineNumber="294"/>
+    <functiondecl functionName="find_resample_filter" lineNumber="321"/>
+    <functiondecl functionName="box_filter" lineNumber="24"/>
+    <functiondecl functionName="tent_filter" lineNumber="34"/>
+    <functiondecl functionName="bell_filter" lineNumber="46"/>
+    <functiondecl functionName="B_spline_filter" lineNumber="64"/>
+    <functiondecl functionName="quadratic" lineNumber="87"/>
+    <functiondecl functionName="quadratic_interp_filter" lineNumber="103"/>
+    <functiondecl functionName="quadratic_approx_filter" lineNumber="108"/>
+    <functiondecl functionName="quadratic_mix_filter" lineNumber="113"/>
+    <functiondecl functionName="mitchell" lineNumber="126"/>
+    <functiondecl functionName="mitchell_filter" lineNumber="152"/>
+    <functiondecl functionName="catmull_rom_filter" lineNumber="158"/>
+    <functiondecl functionName="sinc" lineNumber="163"/>
+    <functiondecl functionName="clean" lineNumber="173"/>
+    <functiondecl functionName="blackman_exact_window" lineNumber="186"/>
+    <functiondecl functionName="blackman_filter" lineNumber="192"/>
+    <functiondecl functionName="gaussian_filter" lineNumber="205"/>
+    <functiondecl functionName="lanczos3_filter" lineNumber="217"/>
+    <functiondecl functionName="lanczos4_filter" lineNumber="229"/>
+    <functiondecl functionName="lanczos6_filter" lineNumber="241"/>
+    <functiondecl functionName="lanczos12_filter" lineNumber="253"/>
+    <functiondecl functionName="bessel0" lineNumber="264"/>
+    <functiondecl functionName="kaiser" lineNumber="287"/>
+    <functiondecl functionName="kaiser_filter" lineNumber="294"/>
+    <functiondecl functionName="find_resample_filter" lineNumber="321"/>
+    <functioncall functionName="B_spline_filter"/>
+    <functioncall functionName="R"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="alpha"/>
+    <functioncall functionName="append_vector"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bell_filter"/>
+    <functioncall functionName="bessel0"/>
+    <functioncall functionName="blackman_exact_window"/>
+    <functioncall functionName="blackman_filter"/>
+    <functioncall functionName="box_filter"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cABGR4444"/>
+    <functioncall functionName="cASTC4x4"/>
+    <functioncall functionName="cATC_RGB"/>
+    <functioncall functionName="cATC_RGBA_INTERPOLATED_ALPHA"/>
+    <functioncall functionName="cBC1"/>
+    <functioncall functionName="cBC3"/>
+    <functioncall functionName="cBC4"/>
+    <functioncall functionName="cBC5"/>
+    <functioncall functionName="cBC7"/>
+    <functioncall functionName="cBGR565"/>
+    <functioncall functionName="cETC1"/>
+    <functioncall functionName="cETC1S"/>
+    <functioncall functionName="cETC2_ALPHA"/>
+    <functioncall functionName="cETC2_R11_EAC"/>
+    <functioncall functionName="cETC2_RG11_EAC"/>
+    <functioncall functionName="cETC2_RGB"/>
+    <functioncall functionName="cETC2_RGBA"/>
+    <functioncall functionName="cFXT1_RGB"/>
+    <functioncall functionName="cHuffmanBigRepeatCode"/>
+    <functioncall functionName="cHuffmanBigZeroRunCode"/>
+    <functioncall functionName="cHuffmanSmallRepeatCode"/>
+    <functioncall functionName="cHuffmanSmallZeroRunCode"/>
+    <functioncall functionName="cNoClamp"/>
+    <functioncall functionName="cPVRTC1_4_RGB"/>
+    <functioncall functionName="cPVRTC1_4_RGBA"/>
+    <functioncall functionName="cPVRTC2_4_RGBA"/>
+    <functioncall functionName="cRGB565"/>
+    <functioncall functionName="cRGBA32"/>
+    <functioncall functionName="cRGBA4444"/>
+    <functioncall functionName="cZero"/>
+    <functioncall functionName="catmull_rom_filter"/>
+    <functioncall functionName="clamp"/>
+    <functioncall functionName="clean"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="cur_s"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="ds"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exp"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor_log2i"/>
+    <functioncall functionName="fmt"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="g_huffman_sorted_codelength_codes"/>
+    <functioncall functionName="g_resample_filters"/>
+    <functioncall functionName="gaussian_filter"/>
+    <functioncall functionName="get_bytes_per_block"/>
+    <functioncall functionName="half_width"/>
+    <functioncall functionName="high"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="kaiser"/>
+    <functioncall functionName="kaiser_filter"/>
+    <functioncall functionName="lanczos12_filter"/>
+    <functioncall functionName="lanczos3_filter"/>
+    <functioncall functionName="lanczos4_filter"/>
+    <functioncall functionName="lanczos6_filter"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="low"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="maximum"/>
+    <functioncall functionName="maxv"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minimum"/>
+    <functioncall functionName="mitchell"/>
+    <functioncall functionName="mitchell_filter"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pName"/>
+    <functioncall functionName="pObjs"/>
+    <functioncall functionName="quadratic"/>
+    <functioncall functionName="quadratic_approx_filter"/>
+    <functioncall functionName="quadratic_interp_filter"/>
+    <functioncall functionName="quadratic_mix_filter"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="sinc"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tent_filter"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="vec"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

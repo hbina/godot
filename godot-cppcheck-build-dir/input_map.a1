@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1216088125">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/input/input_map.cpp" line="208" column="54" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/input/input_map.cpp" line="194" column="54" info="Assignment &apos;E=input_map.find(p_action)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/input/input_map.cpp" line="195" column="22" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/input/input_map.h:58:34" call-funcname="_find_event" call-argnr="3" file="/home/hbina/git/godot/core/input/input_map.cpp" line="208" col="53" call-argexpr="&pressed" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/core/input/input_map.h:58:34" call-funcname="_find_event" call-argnr="3" file="/home/hbina/git/godot/core/input/input_map.cpp" line="208" col="53" call-argexpr="pressed" call-argvaluetype="4" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/input/input_map.h:58:34" call-funcname="_find_event" call-argnr="4" file="/home/hbina/git/godot/core/input/input_map.cpp" line="208" col="53" call-argexpr="&strength" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/core/input/input_map.h:58:34" call-funcname="_find_event" call-argnr="4" file="/home/hbina/git/godot/core/input/input_map.cpp" line="208" col="53" call-argexpr="strength" call-argvaluetype="4" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_bind_methods" lineNumber="40"/>
+    <functiondecl functionName="add_action" lineNumber="57"/>
+    <functiondecl functionName="erase_action" lineNumber="67"/>
+    <functiondecl functionName="_get_actions" lineNumber="73"/>
+    <functiondecl functionName="get_actions" lineNumber="88"/>
+    <functiondecl functionName="_find_event" lineNumber="102"/>
+    <functiondecl functionName="has_action" lineNumber="122"/>
+    <functiondecl functionName="action_set_deadzone" lineNumber="127"/>
+    <functiondecl functionName="action_add_event" lineNumber="134"/>
+    <functiondecl functionName="action_has_event" lineNumber="144"/>
+    <functiondecl functionName="action_erase_event" lineNumber="150"/>
+    <functiondecl functionName="action_erase_events" lineNumber="159"/>
+    <functiondecl functionName="_get_action_list" lineNumber="166"/>
+    <functiondecl functionName="get_action_list" lineNumber="180"/>
+    <functiondecl functionName="event_is_action" lineNumber="189"/>
+    <functiondecl functionName="event_get_action_status" lineNumber="193"/>
+    <functiondecl functionName="get_action_map" lineNumber="220"/>
+    <functiondecl functionName="load_from_globals" lineNumber="224"/>
+    <functiondecl functionName="load_default" lineNumber="253"/>
+    <functioncall functionName="Action"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="InputMap"/>
+    <functioncall functionName="KEY_DOWN"/>
+    <functioncall functionName="KEY_END"/>
+    <functioncall functionName="KEY_ENTER"/>
+    <functioncall functionName="KEY_ESCAPE"/>
+    <functioncall functionName="KEY_HOME"/>
+    <functioncall functionName="KEY_KP_ENTER"/>
+    <functioncall functionName="KEY_LEFT"/>
+    <functioncall functionName="KEY_PAGEDOWN"/>
+    <functioncall functionName="KEY_PAGEUP"/>
+    <functioncall functionName="KEY_RIGHT"/>
+    <functioncall functionName="KEY_SPACE"/>
+    <functioncall functionName="KEY_TAB"/>
+    <functioncall functionName="KEY_UP"/>
+    <functioncall functionName="List"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="_find_event"/>
+    <functioncall functionName="_get_action_list"/>
+    <functioncall functionName="_get_actions"/>
+    <functioncall functionName="action_add_event"/>
+    <functioncall functionName="action_erase_event"/>
+    <functioncall functionName="action_erase_events"/>
+    <functioncall functionName="action_has_event"/>
+    <functioncall functionName="action_match"/>
+    <functioncall functionName="action_set_deadzone"/>
+    <functioncall functionName="add_action"/>
+    <functioncall functionName="al"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="deadzone"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="erase_action"/>
+    <functioncall functionName="event"/>
+    <functioncall functionName="event_get_action_status"/>
+    <functioncall functionName="event_is_action"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_action"/>
+    <functioncall functionName="get_action_list"/>
+    <functioncall functionName="get_actions"/>
+    <functioncall functionName="get_device"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_strength"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_action"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inputs"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="last_id"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="load_from_globals"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="p_action"/>
+    <functioncall functionName="p_deadzone"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_pressed"/>
+    <functioncall functionName="p_strength"/>
+    <functioncall functionName="pinfo"/>
+    <functioncall functionName="pressed"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_keycode"/>
+    <functioncall functionName="set_shift"/>
+    <functioncall functionName="singleton"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="strength"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

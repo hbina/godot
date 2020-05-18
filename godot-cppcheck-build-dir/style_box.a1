@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3281259879">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;bg_color&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;bg_color&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="954" column="2"/>
+            <symbol>bg_color</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;color&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;color&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="1073" column="2"/>
+            <symbol>color</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;set_grow_end&apos; argument 1 names different: declaration &apos;p_grow&apos; definition &apos;p_grow_end&apos;." verbose="Function &apos;set_grow_end&apos; argument 1 names different: declaration &apos;p_grow&apos; definition &apos;p_grow_end&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="1009" column="39"/>
+            <location file0="/home/hbina/git/godot/scene/resources/style_box.cpp" file="/home/hbina/git/godot/scene/resources/style_box.h" line="266" column="26"/>
+            <symbol>set_grow_end</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;set_grow_begin&apos; argument 1 names different: declaration &apos;p_grow&apos; definition &apos;p_grow_begin&apos;." verbose="Function &apos;set_grow_begin&apos; argument 1 names different: declaration &apos;p_grow&apos; definition &apos;p_grow_begin&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="1017" column="41"/>
+            <location file0="/home/hbina/git/godot/scene/resources/style_box.cpp" file="/home/hbina/git/godot/scene/resources/style_box.h" line="263" column="28"/>
+            <symbol>set_grow_begin</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:570:13" call-funcname="set_inner_corner_radius" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="605" col="25" call-argexpr="corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:570:13" call-funcname="set_inner_corner_radius" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="605" col="25" call-argexpr="ring_corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:570:13" call-funcname="set_inner_corner_radius" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="615" col="25" call-argexpr="corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:570:13" call-funcname="set_inner_corner_radius" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="615" col="25" call-argexpr="inner_corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="735" col="14" call-argexpr="adapted_border" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="735" col="14" call-argexpr="border_width" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="736" col="14" call-argexpr="adapted_border" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="736" col="14" call-argexpr="border_width" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="740" col="14" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="740" col="14" call-argexpr="corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="741" col="14" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="741" col="14" call-argexpr="corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="742" col="14" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="742" col="14" call-argexpr="corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="3" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="743" col="14" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" call-funcname="adapt_values" call-argnr="4" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="743" col="14" call-argexpr="corner_radius" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="771" col="12" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="775" col="13" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="782" col="12" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="788" col="12" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="818" col="14" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="829" col="14" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="837" col="14" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/scene/resources/style_box.cpp:594:13" call-funcname="draw_ring" call-argnr="5" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="842" col="13" call-argexpr="adapted_corner" call-argvaluetype="7" call-argvalue="16"/>  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/style_box.cpp:570:13" my-argnr="4" my-argname="inner_corner_radius" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="579" col="2" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/style_box.cpp:570:13" my-argnr="4" my-argname="inner_corner_radius" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="579" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" my-argnr="4" my-argname="p_values" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="673" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/resources/style_box.cpp:672:13" my-argnr="4" my-argname="p_values" file="/home/hbina/git/godot/scene/resources/style_box.cpp" line="673" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="test_mask" lineNumber="37"/>
+    <functiondecl functionName="set_default_margin" lineNumber="42"/>
+    <functiondecl functionName="get_default_margin" lineNumber="49"/>
+    <functiondecl functionName="get_margin" lineNumber="56"/>
+    <functiondecl functionName="get_current_item_drawn" lineNumber="66"/>
+    <functiondecl functionName="get_minimum_size" lineNumber="70"/>
+    <functiondecl functionName="get_offset" lineNumber="75"/>
+    <functiondecl functionName="get_center_size" lineNumber="80"/>
+    <functiondecl functionName="get_draw_rect" lineNumber="85"/>
+    <functiondecl functionName="_bind_methods" lineNumber="89"/>
+    <functiondecl functionName="set_texture" lineNumber="122"/>
+    <functiondecl functionName="get_texture" lineNumber="137"/>
+    <functiondecl functionName="set_normal_map" lineNumber="142"/>
+    <functiondecl functionName="get_normal_map" lineNumber="150"/>
+    <functiondecl functionName="set_margin_size" lineNumber="155"/>
+    <functiondecl functionName="get_margin_size" lineNumber="169"/>
+    <functiondecl functionName="get_style_margin" lineNumber="176"/>
+    <functiondecl functionName="get_draw_rect" lineNumber="183"/>
+    <functiondecl functionName="draw" lineNumber="187"/>
+    <functiondecl functionName="set_draw_center" lineNumber="208"/>
+    <functiondecl functionName="is_draw_center_enabled" lineNumber="214"/>
+    <functiondecl functionName="get_center_size" lineNumber="219"/>
+    <functiondecl functionName="set_expand_margin_size" lineNumber="227"/>
+    <functiondecl functionName="set_expand_margin_size_individual" lineNumber="234"/>
+    <functiondecl functionName="set_expand_margin_size_all" lineNumber="242"/>
+    <functiondecl functionName="get_expand_margin_size" lineNumber="250"/>
+    <functiondecl functionName="set_region_rect" lineNumber="256"/>
+    <functiondecl functionName="get_region_rect" lineNumber="265"/>
+    <functiondecl functionName="set_h_axis_stretch_mode" lineNumber="270"/>
+    <functiondecl functionName="get_h_axis_stretch_mode" lineNumber="277"/>
+    <functiondecl functionName="set_v_axis_stretch_mode" lineNumber="282"/>
+    <functiondecl functionName="get_v_axis_stretch_mode" lineNumber="289"/>
+    <functiondecl functionName="set_modulate" lineNumber="294"/>
+    <functiondecl functionName="get_modulate" lineNumber="301"/>
+    <functiondecl functionName="_bind_methods" lineNumber="306"/>
+    <functiondecl functionName="set_bg_color" lineNumber="381"/>
+    <functiondecl functionName="get_bg_color" lineNumber="387"/>
+    <functiondecl functionName="set_border_color" lineNumber="392"/>
+    <functiondecl functionName="get_border_color" lineNumber="397"/>
+    <functiondecl functionName="set_border_width_all" lineNumber="402"/>
+    <functiondecl functionName="get_border_width_min" lineNumber="409"/>
+    <functiondecl functionName="set_border_width" lineNumber="414"/>
+    <functiondecl functionName="get_border_width" lineNumber="420"/>
+    <functiondecl functionName="set_border_blend" lineNumber="425"/>
+    <functiondecl functionName="get_border_blend" lineNumber="430"/>
+    <functiondecl functionName="set_corner_radius_all" lineNumber="435"/>
+    <functiondecl functionName="set_corner_radius_individual" lineNumber="443"/>
+    <functiondecl functionName="get_corner_radius_min" lineNumber="451"/>
+    <functiondecl functionName="set_corner_radius" lineNumber="461"/>
+    <functiondecl functionName="get_corner_radius" lineNumber="467"/>
+    <functiondecl functionName="set_expand_margin_size" lineNumber="473"/>
+    <functiondecl functionName="set_expand_margin_size_individual" lineNumber="480"/>
+    <functiondecl functionName="set_expand_margin_size_all" lineNumber="488"/>
+    <functiondecl functionName="get_expand_margin_size" lineNumber="496"/>
+    <functiondecl functionName="set_draw_center" lineNumber="501"/>
+    <functiondecl functionName="is_draw_center_enabled" lineNumber="506"/>
+    <functiondecl functionName="set_shadow_color" lineNumber="511"/>
+    <functiondecl functionName="get_shadow_color" lineNumber="516"/>
+    <functiondecl functionName="set_shadow_size" lineNumber="521"/>
+    <functiondecl functionName="get_shadow_size" lineNumber="526"/>
+    <functiondecl functionName="set_shadow_offset" lineNumber="531"/>
+    <functiondecl functionName="get_shadow_offset" lineNumber="536"/>
+    <functiondecl functionName="set_anti_aliased" lineNumber="541"/>
+    <functiondecl functionName="is_anti_aliased" lineNumber="545"/>
+    <functiondecl functionName="set_aa_size" lineNumber="549"/>
+    <functiondecl functionName="get_aa_size" lineNumber="553"/>
+    <functiondecl functionName="set_corner_detail" lineNumber="557"/>
+    <functiondecl functionName="get_corner_detail" lineNumber="561"/>
+    <functiondecl functionName="get_center_size" lineNumber="565"/>
+    <functiondecl functionName="set_inner_corner_radius" lineNumber="570"/>
+    <functiondecl functionName="draw_ring" lineNumber="594"/>
+    <functiondecl functionName="adapt_values" lineNumber="672"/>
+    <functiondecl functionName="get_draw_rect" lineNumber="695"/>
+    <functiondecl functionName="draw" lineNumber="707"/>
+    <functiondecl functionName="get_style_margin" lineNumber="860"/>
+    <functiondecl functionName="_bind_methods" lineNumber="864"/>
+    <functiondecl functionName="set_color" lineNumber="985"/>
+    <functiondecl functionName="get_color" lineNumber="989"/>
+    <functiondecl functionName="set_thickness" lineNumber="993"/>
+    <functiondecl functionName="get_thickness" lineNumber="997"/>
+    <functiondecl functionName="set_vertical" lineNumber="1001"/>
+    <functiondecl functionName="is_vertical" lineNumber="1005"/>
+    <functiondecl functionName="set_grow_end" lineNumber="1009"/>
+    <functiondecl functionName="get_grow_end" lineNumber="1013"/>
+    <functiondecl functionName="set_grow_begin" lineNumber="1017"/>
+    <functiondecl functionName="get_grow_begin" lineNumber="1021"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1025"/>
+    <functiondecl functionName="get_style_margin" lineNumber="1044"/>
+    <functiondecl functionName="get_center_size" lineNumber="1048"/>
+    <functiondecl functionName="draw" lineNumber="1052"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_PROPERTYI"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="AXIS_STRETCH_MODE_STRETCH"/>
+    <functioncall functionName="AXIS_STRETCH_MODE_TILE"/>
+    <functioncall functionName="AXIS_STRETCH_MODE_TILE_FIT"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="CORNER_BOTTOM_LEFT"/>
+    <functioncall functionName="CORNER_BOTTOM_RIGHT"/>
+    <functioncall functionName="CORNER_TOP_LEFT"/>
+    <functioncall functionName="CORNER_TOP_RIGHT"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="INT_MAX"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="Margin"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NinePatchAxisMode"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="OBJ_SAVE_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RECT2"/>
+    <functioncall functionName="RES_BASE_EXTENSION"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="StyleBox"/>
+    <functioncall functionName="StyleBoxEmpty"/>
+    <functioncall functionName="StyleBoxFlat"/>
+    <functioncall functionName="StyleBoxLine"/>
+    <functioncall functionName="StyleBoxTexture"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="aa_on"/>
+    <functioncall functionName="aa_size_grow"/>
+    <functioncall functionName="adapt_values"/>
+    <functioncall functionName="adapted_border"/>
+    <functioncall functionName="adapted_corner"/>
+    <functioncall functionName="alpha_bg"/>
+    <functioncall functionName="axis_h"/>
+    <functioncall functionName="axis_v"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bg_color"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="blend_on"/>
+    <functioncall functionName="border_bottom"/>
+    <functioncall functionName="border_color"/>
+    <functioncall functionName="border_color_alpha"/>
+    <functioncall functionName="border_color_blend"/>
+    <functioncall functionName="border_color_inner"/>
+    <functioncall functionName="border_left"/>
+    <functioncall functionName="border_right"/>
+    <functioncall functionName="border_style_rect"/>
+    <functioncall functionName="border_top"/>
+    <functioncall functionName="border_width"/>
+    <functioncall functionName="canvas_item_add_nine_patch"/>
+    <functioncall functionName="canvas_item_add_rect"/>
+    <functioncall functionName="canvas_item_add_triangle_array"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="colors"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="corner_detail"/>
+    <functioncall functionName="corner_index"/>
+    <functioncall functionName="corner_radius"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="draw"/>
+    <functioncall functionName="draw_border"/>
+    <functioncall functionName="draw_center"/>
+    <functioncall functionName="draw_ring"/>
+    <functioncall functionName="draw_shadow"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fill_center"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get_aa_size"/>
+    <functioncall functionName="get_bg_color"/>
+    <functioncall functionName="get_border_blend"/>
+    <functioncall functionName="get_border_color"/>
+    <functioncall functionName="get_border_width"/>
+    <functioncall functionName="get_border_width_min"/>
+    <functioncall functionName="get_center_size"/>
+    <functioncall functionName="get_color"/>
+    <functioncall functionName="get_corner_detail"/>
+    <functioncall functionName="get_corner_radius"/>
+    <functioncall functionName="get_current_item_drawn"/>
+    <functioncall functionName="get_default_margin"/>
+    <functioncall functionName="get_expand_margin_size"/>
+    <functioncall functionName="get_grow_begin"/>
+    <functioncall functionName="get_grow_end"/>
+    <functioncall functionName="get_h_axis_stretch_mode"/>
+    <functioncall functionName="get_margin"/>
+    <functioncall functionName="get_margin_size"/>
+    <functioncall functionName="get_minimum_size"/>
+    <functioncall functionName="get_modulate"/>
+    <functioncall functionName="get_normal_map"/>
+    <functioncall functionName="get_offset"/>
+    <functioncall functionName="get_rect_region"/>
+    <functioncall functionName="get_region_rect"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_shadow_color"/>
+    <functioncall functionName="get_shadow_offset"/>
+    <functioncall functionName="get_shadow_size"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_style_margin"/>
+    <functioncall functionName="get_texture"/>
+    <functioncall functionName="get_thickness"/>
+    <functioncall functionName="get_v_axis_stretch_mode"/>
+    <functioncall functionName="grow"/>
+    <functioncall functionName="grow_end"/>
+    <functioncall functionName="grow_individual"/>
+    <functioncall functionName="grow_margin"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="infill_aa_rect"/>
+    <functioncall functionName="infill_inner_rect"/>
+    <functioncall functionName="infill_rect"/>
+    <functioncall functionName="inner_color"/>
+    <functioncall functionName="inner_corner_radius"/>
+    <functioncall functionName="inner_rect"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_anti_aliased"/>
+    <functioncall functionName="is_draw_center_enabled"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_vertical"/>
+    <functioncall functionName="is_zero_approx"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="modulate"/>
+    <functioncall functionName="newValue"/>
+    <functioncall functionName="normal_rid"/>
+    <functioncall functionName="outer_color"/>
+    <functioncall functionName="p_aa_size"/>
+    <functioncall functionName="p_anti_aliased"/>
+    <functioncall functionName="p_blend"/>
+    <functioncall functionName="p_bottom"/>
+    <functioncall functionName="p_canvas_item"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_corner"/>
+    <functioncall functionName="p_corner_detail"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_expand_margin"/>
+    <functioncall functionName="p_expand_margin_size"/>
+    <functioncall functionName="p_grow_begin"/>
+    <functioncall functionName="p_grow_end"/>
+    <functioncall functionName="p_index_a"/>
+    <functioncall functionName="p_index_b"/>
+    <functioncall functionName="p_left"/>
+    <functioncall functionName="p_margin"/>
+    <functioncall functionName="p_max_a"/>
+    <functioncall functionName="p_max_b"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_modulate"/>
+    <functioncall functionName="p_normal_map"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_rect"/>
+    <functioncall functionName="p_region_rect"/>
+    <functioncall functionName="p_right"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_thickness"/>
+    <functioncall functionName="p_top"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_vertical"/>
+    <functioncall functionName="p_width"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rad"/>
+    <functioncall functionName="radius"/>
+    <functioncall functionName="radius_bottom_left"/>
+    <functioncall functionName="radius_botton_right"/>
+    <functioncall functionName="radius_top_left"/>
+    <functioncall functionName="radius_top_right"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="region_rect"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="ring_corner_radius"/>
+    <functioncall functionName="ring_rect"/>
+    <functioncall functionName="set_aa_size"/>
+    <functioncall functionName="set_anti_aliased"/>
+    <functioncall functionName="set_bg_color"/>
+    <functioncall functionName="set_border_blend"/>
+    <functioncall functionName="set_border_color"/>
+    <functioncall functionName="set_border_width"/>
+    <functioncall functionName="set_border_width_all"/>
+    <functioncall functionName="set_color"/>
+    <functioncall functionName="set_corner_detail"/>
+    <functioncall functionName="set_corner_radius"/>
+    <functioncall functionName="set_corner_radius_all"/>
+    <functioncall functionName="set_corner_radius_individual"/>
+    <functioncall functionName="set_default_margin"/>
+    <functioncall functionName="set_draw_center"/>
+    <functioncall functionName="set_expand_margin_size"/>
+    <functioncall functionName="set_expand_margin_size_all"/>
+    <functioncall functionName="set_expand_margin_size_individual"/>
+    <functioncall functionName="set_grow_begin"/>
+    <functioncall functionName="set_grow_end"/>
+    <functioncall functionName="set_h_axis_stretch_mode"/>
+    <functioncall functionName="set_inner_corner_radius"/>
+    <functioncall functionName="set_margin_size"/>
+    <functioncall functionName="set_modulate"/>
+    <functioncall functionName="set_normal_map"/>
+    <functioncall functionName="set_region_rect"/>
+    <functioncall functionName="set_shadow_color"/>
+    <functioncall functionName="set_shadow_offset"/>
+    <functioncall functionName="set_shadow_size"/>
+    <functioncall functionName="set_texture"/>
+    <functioncall functionName="set_thickness"/>
+    <functioncall functionName="set_v_axis_stretch_mode"/>
+    <functioncall functionName="set_vertical"/>
+    <functioncall functionName="shadow_color"/>
+    <functioncall functionName="shadow_color_transparent"/>
+    <functioncall functionName="shadow_inner_rect"/>
+    <functioncall functionName="shadow_rect"/>
+    <functioncall functionName="shadow_size"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="smallest"/>
+    <functioncall functionName="src_rect"/>
+    <functioncall functionName="style_rect"/>
+    <functioncall functionName="test_mask"/>
+    <functioncall functionName="thickness"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="uvs"/>
+    <functioncall functionName="vert_offset"/>
+    <functioncall functionName="vertical"/>
+    <functioncall functionName="verts"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="60470496">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Slot::cE&apos; is not initialized in the constructor." verbose="Member variable &apos;Slot::cE&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="448" column="4"/>
+            <symbol>Slot::cE</symbol>
+        </error>
+        <error id="operatorEqVarError" severity="warning" msg="Member variable &apos;Reference::_class_name&apos; is not assigned a value in &apos;Reference::operator=&apos;." verbose="Member variable &apos;Reference::_class_name&apos; is not assigned a value in &apos;Reference::operator=&apos;." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="40" column="2"/>
+            <symbol>Reference::_class_name</symbol>
+        </error>
+        <error id="operatorEqVarError" severity="warning" msg="Member variable &apos;Reference::refcount&apos; is not assigned a value in &apos;Reference::operator=&apos;." verbose="Member variable &apos;Reference::refcount&apos; is not assigned a value in &apos;Reference::operator=&apos;." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="40" column="2"/>
+            <symbol>Reference::refcount</symbol>
+        </error>
+        <error id="operatorEqVarError" severity="warning" msg="Member variable &apos;Reference::refcount_init&apos; is not assigned a value in &apos;Reference::operator=&apos;." verbose="Member variable &apos;Reference::refcount_init&apos; is not assigned a value in &apos;Reference::operator=&apos;." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="40" column="2"/>
+            <symbol>Reference::refcount_init</symbol>
+        </error>
+        <error id="operatorEqVarError" severity="warning" msg="Member variable &apos;WeakRef::_class_name&apos; is not assigned a value in &apos;WeakRef::operator=&apos;." verbose="Member variable &apos;WeakRef::_class_name&apos; is not assigned a value in &apos;WeakRef::operator=&apos;." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="270" column="2"/>
+            <symbol>WeakRef::_class_name</symbol>
+        </error>
+        <error id="operatorEqVarError" severity="warning" msg="Member variable &apos;WeakRef::ref&apos; is not assigned a value in &apos;WeakRef::operator=&apos;." verbose="Member variable &apos;WeakRef::ref&apos; is not assigned a value in &apos;WeakRef::operator=&apos;." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="270" column="2"/>
+            <symbol>WeakRef::ref</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;Callable::operator=&apos; should return &apos;Callable &amp;&apos;." verbose="The Callable::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;Callable &amp;Callable::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/callable.h" line="95" column="2"/>
+            <symbol>Callable</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;Ref &lt; Reference &gt;::operator=&apos; should return &apos;Ref &lt; Reference &gt; &amp;&apos;." verbose="The Ref &lt; Reference &gt;::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;Ref &lt; Reference &gt; &amp;Ref &lt; Reference &gt;::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="139" column="2"/>
+            <symbol>Ref &lt; Reference &gt;</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;Ref &lt; Script &gt;::operator=&apos; should return &apos;Ref &lt; Script &gt; &amp;&apos;." verbose="The Ref &lt; Script &gt;::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;Ref &lt; Script &gt; &amp;Ref &lt; Script &gt;::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="139" column="2"/>
+            <symbol>Ref &lt; Script &gt;</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;object&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;object&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="361" column="2"/>
+            <symbol>object</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="362" column="2"/>
+            <symbol>name</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_set&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_set&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="510" column="7"/>
+            <symbol>Object::_set</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_get&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_get&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="511" column="7"/>
+            <symbol>Object::_get</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_get_property_list&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_get_property_list&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="512" column="7"/>
+            <symbol>Object::_get_property_list</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_notification&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_notification&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="513" column="7"/>
+            <symbol>Object::_notification</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_change_notify&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_change_notify&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="572" column="22"/>
+            <symbol>Object::_change_notify</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;Object::_is_gpl_reversed&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;Object::_is_gpl_reversed&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="579" column="7"/>
+            <symbol>Object::_is_gpl_reversed</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Callable&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Callable&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/callable.h" line="101" column="2"/>
+            <symbol>Callable</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;PropertyInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;PropertyInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="179" column="2"/>
+            <symbol>PropertyInfo</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="218" column="2"/>
+            <symbol>MethodInfo</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;MethodInfo&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="224" column="2"/>
+            <symbol>MethodInfo</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;Connection&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;Connection&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="427" column="3"/>
+            <symbol>Connection</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Ref &lt; Reference &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Ref &lt; Reference &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="198" column="2"/>
+            <symbol>Ref &lt; Reference &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Ref &lt; Reference &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Ref &lt; Reference &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="212" column="2"/>
+            <symbol>Ref &lt; Reference &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Ref &lt; Reference &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Ref &lt; Reference &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="219" column="2"/>
+            <symbol>Ref &lt; Reference &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Ref &lt; Script &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Ref &lt; Script &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="198" column="2"/>
+            <symbol>Ref &lt; Script &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Ref &lt; Script &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Ref &lt; Script &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="212" column="2"/>
+            <symbol>Ref &lt; Script &gt;</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Ref &lt; Script &gt;&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Ref &lt; Script &gt;&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="219" column="2"/>
+            <symbol>Ref &lt; Script &gt;</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!object&apos; is redundant or there is possible null pointer dereference: object." verbose="Either the condition &apos;!object&apos; is redundant or there is possible null pointer dereference: object." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="323" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="320" column="29" info="Assignment &apos;object=get_object()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="321" column="18" info="Assuming that condition &apos;!object&apos; is not redundant"/>
+            <symbol>object</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!object&apos; is redundant or there is possible null pointer dereference: object." verbose="Either the condition &apos;!object&apos; is redundant or there is possible null pointer dereference: object." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="328" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="326" column="29" info="Assignment &apos;object=get_object()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="327" column="16" info="Assuming that condition &apos;!object&apos; is not redundant"/>
+            <symbol>object</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!object&apos; is redundant or there is possible null pointer dereference: object." verbose="Either the condition &apos;!object&apos; is redundant or there is possible null pointer dereference: object." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="334" column="9" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="331" column="29" info="Assignment &apos;object=get_object()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/core/callable.cpp" line="332" column="18" info="Assuming that condition &apos;!object&apos; is not redundant"/>
+            <symbol>object</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable.h:101:2" my-argnr="1" my-argname="p_custom" file="/home/hbina/git/godot/core/callable.cpp" line="228" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:40:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="40" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:270:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="270" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable.h:101:2" my-argnr="1" my-argname="p_custom" file="/home/hbina/git/godot/core/callable.cpp" line="228" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:40:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="40" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:270:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="270" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable.h:101:2" my-argnr="1" my-argname="p_custom" file="/home/hbina/git/godot/core/callable.cpp" line="228" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:40:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="40" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:270:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="270" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable.h:101:2" my-argnr="1" my-argname="p_custom" file="/home/hbina/git/godot/core/callable.cpp" line="228" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:40:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="40" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:270:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="270" col="2" value="0"/>
+  </FileInfo>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/reference.h" line="297" column="4"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:295:29" my-argnr="2" my-argname="p_ptr" file="/home/hbina/git/godot/core/reference.h" line="297" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable.h:101:2" my-argnr="1" my-argname="p_custom" file="/home/hbina/git/godot/core/callable.cpp" line="228" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:40:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="40" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:270:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="270" col="2" value="0"/>
+  </FileInfo>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable.cpp" file="/home/hbina/git/godot/core/object.h" line="569" column="5"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable.h:101:2" my-argnr="1" my-argname="p_custom" file="/home/hbina/git/godot/core/callable.cpp" line="228" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/object.h:622:14" my-argnr="1" my-argname="p_inheritance_list" file="/home/hbina/git/godot/core/object.h" line="622" col="78" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:40:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="40" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/reference.h:270:2" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/core/reference.h" line="270" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="call_deferred" lineNumber="37"/>
+    <functiondecl functionName="call" lineNumber="41"/>
+    <functiondecl functionName="get_object" lineNumber="56"/>
+    <functiondecl functionName="get_object_id" lineNumber="66"/>
+    <functiondecl functionName="get_method" lineNumber="75"/>
+    <functiondecl functionName="get_custom" lineNumber="81"/>
+    <functiondecl functionName="hash" lineNumber="87"/>
+    <functiondecl functionName="get_object" lineNumber="269"/>
+    <functiondecl functionName="get_object_id" lineNumber="272"/>
+    <functiondecl functionName="get_name" lineNumber="275"/>
+    <functiondecl functionName="emit" lineNumber="310"/>
+    <functiondecl functionName="connect" lineNumber="318"/>
+    <functiondecl functionName="disconnect" lineNumber="325"/>
+    <functiondecl functionName="is_connected" lineNumber="330"/>
+    <functiondecl functionName="get_connections" lineNumber="337"/>
+    <functiondecl functionName="call_deferred" lineNumber="37"/>
+    <functiondecl functionName="call" lineNumber="41"/>
+    <functiondecl functionName="get_object" lineNumber="56"/>
+    <functiondecl functionName="get_object_id" lineNumber="66"/>
+    <functiondecl functionName="get_method" lineNumber="75"/>
+    <functiondecl functionName="get_custom" lineNumber="81"/>
+    <functiondecl functionName="hash" lineNumber="87"/>
+    <functiondecl functionName="get_object" lineNumber="269"/>
+    <functiondecl functionName="get_object_id" lineNumber="272"/>
+    <functiondecl functionName="get_name" lineNumber="275"/>
+    <functiondecl functionName="emit" lineNumber="310"/>
+    <functiondecl functionName="connect" lineNumber="318"/>
+    <functiondecl functionName="disconnect" lineNumber="325"/>
+    <functiondecl functionName="is_connected" lineNumber="330"/>
+    <functiondecl functionName="get_connections" lineNumber="337"/>
+    <functiondecl functionName="call_deferred" lineNumber="37"/>
+    <functiondecl functionName="call" lineNumber="41"/>
+    <functiondecl functionName="get_object" lineNumber="56"/>
+    <functiondecl functionName="get_object_id" lineNumber="66"/>
+    <functiondecl functionName="get_method" lineNumber="75"/>
+    <functiondecl functionName="get_custom" lineNumber="81"/>
+    <functiondecl functionName="hash" lineNumber="87"/>
+    <functiondecl functionName="get_object" lineNumber="269"/>
+    <functiondecl functionName="get_object_id" lineNumber="272"/>
+    <functiondecl functionName="get_name" lineNumber="275"/>
+    <functiondecl functionName="emit" lineNumber="310"/>
+    <functiondecl functionName="connect" lineNumber="318"/>
+    <functiondecl functionName="disconnect" lineNumber="325"/>
+    <functiondecl functionName="is_connected" lineNumber="330"/>
+    <functiondecl functionName="get_connections" lineNumber="337"/>
+    <functiondecl functionName="call_deferred" lineNumber="37"/>
+    <functiondecl functionName="call" lineNumber="41"/>
+    <functiondecl functionName="get_object" lineNumber="56"/>
+    <functiondecl functionName="get_object_id" lineNumber="66"/>
+    <functiondecl functionName="get_method" lineNumber="75"/>
+    <functiondecl functionName="get_custom" lineNumber="81"/>
+    <functiondecl functionName="hash" lineNumber="87"/>
+    <functiondecl functionName="get_object" lineNumber="269"/>
+    <functiondecl functionName="get_object_id" lineNumber="272"/>
+    <functiondecl functionName="get_name" lineNumber="275"/>
+    <functiondecl functionName="emit" lineNumber="310"/>
+    <functiondecl functionName="connect" lineNumber="318"/>
+    <functiondecl functionName="disconnect" lineNumber="325"/>
+    <functiondecl functionName="is_connected" lineNumber="330"/>
+    <functiondecl functionName="get_connections" lineNumber="337"/>
+    <functiondecl functionName="call_deferred" lineNumber="37"/>
+    <functiondecl functionName="call" lineNumber="41"/>
+    <functiondecl functionName="get_object" lineNumber="56"/>
+    <functiondecl functionName="get_object_id" lineNumber="66"/>
+    <functiondecl functionName="get_method" lineNumber="75"/>
+    <functiondecl functionName="get_custom" lineNumber="81"/>
+    <functiondecl functionName="hash" lineNumber="87"/>
+    <functiondecl functionName="get_object" lineNumber="269"/>
+    <functiondecl functionName="get_object_id" lineNumber="272"/>
+    <functiondecl functionName="get_name" lineNumber="275"/>
+    <functiondecl functionName="emit" lineNumber="310"/>
+    <functiondecl functionName="connect" lineNumber="318"/>
+    <functiondecl functionName="disconnect" lineNumber="325"/>
+    <functiondecl functionName="is_connected" lineNumber="330"/>
+    <functiondecl functionName="get_connections" lineNumber="337"/>
+    <functiondecl functionName="call_deferred" lineNumber="37"/>
+    <functiondecl functionName="call" lineNumber="41"/>
+    <functiondecl functionName="get_object" lineNumber="56"/>
+    <functiondecl functionName="get_object_id" lineNumber="66"/>
+    <functiondecl functionName="get_method" lineNumber="75"/>
+    <functiondecl functionName="get_custom" lineNumber="81"/>
+    <functiondecl functionName="hash" lineNumber="87"/>
+    <functiondecl functionName="get_object" lineNumber="269"/>
+    <functiondecl functionName="get_object_id" lineNumber="272"/>
+    <functiondecl functionName="get_name" lineNumber="275"/>
+    <functiondecl functionName="emit" lineNumber="310"/>
+    <functiondecl functionName="connect" lineNumber="318"/>
+    <functiondecl functionName="disconnect" lineNumber="325"/>
+    <functiondecl functionName="is_connected" lineNumber="330"/>
+    <functiondecl functionName="get_connections" lineNumber="337"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="CALL_ERROR_INSTANCE_IS_NULL"/>
+    <functioncall functionName="CALL_ERROR_INVALID_ARGUMENT"/>
+    <functioncall functionName="CALL_ERROR_INVALID_METHOD"/>
+    <functioncall functionName="CALL_ERROR_TOO_FEW_ARGUMENTS"/>
+    <functioncall functionName="CALL_ERROR_TOO_MANY_ARGUMENTS"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="CallableCustom"/>
+    <functioncall functionName="Connection"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="MAX_SCRIPT_INSTANCE_BINDINGS"/>
+    <functioncall functionName="METADATA_NONE"/>
+    <functioncall functionName="MessageQueue"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PROPERTY_HINT_ARRAY_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_COLOR_NO_ALPHA"/>
+    <functioncall functionName="PROPERTY_HINT_DIR"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_EASING"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_FLAGS"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_DIR"/>
+    <functioncall functionName="PROPERTY_HINT_GLOBAL_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_IMAGE_COMPRESS_LOSSLESS"/>
+    <functioncall functionName="PROPERTY_HINT_IMAGE_COMPRESS_LOSSY"/>
+    <functioncall functionName="PROPERTY_HINT_INT_IS_OBJECTID"/>
+    <functioncall functionName="PROPERTY_HINT_KEY_ACCEL"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_2D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_2D_RENDER"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_RENDER"/>
+    <functioncall functionName="PROPERTY_HINT_LENGTH"/>
+    <functioncall functionName="PROPERTY_HINT_MAX"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_BASE_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_INSTANCE"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_SCRIPT"/>
+    <functioncall functionName="PROPERTY_HINT_METHOD_OF_VARIANT_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_MULTILINE_TEXT"/>
+    <functioncall functionName="PROPERTY_HINT_NODE_PATH_TO_EDITED_NODE"/>
+    <functioncall functionName="PROPERTY_HINT_NODE_PATH_VALID_TYPES"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_OBJECT_ID"/>
+    <functioncall functionName="PROPERTY_HINT_OBJECT_TOO_BIG"/>
+    <functioncall functionName="PROPERTY_HINT_PLACEHOLDER_TEXT"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_BASE_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_INSTANCE"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_SCRIPT"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_VARIANT_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_SAVE_FILE"/>
+    <functioncall functionName="PROPERTY_HINT_TYPE_STRING"/>
+    <functioncall functionName="PROPERTY_USAGE_CATEGORY"/>
+    <functioncall functionName="PROPERTY_USAGE_DEFAULT"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNATIONALIZED"/>
+    <functioncall functionName="PROPERTY_USAGE_NETWORK"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Ref &lt; Reference &gt;"/>
+    <functioncall functionName="Ref &lt; Script &gt;"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="Script"/>
+    <functioncall functionName="Signal"/>
+    <functioncall functionName="SignalData"/>
+    <functioncall functionName="Slot"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TYPE_CALL"/>
+    <functioncall functionName="TYPE_NOTIFICATION"/>
+    <functioncall functionName="TYPE_SET"/>
+    <functioncall functionName="VARIANT_ARG_LIST"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="WeakRef"/>
+    <functioncall functionName="_add_class"/>
+    <functioncall functionName="_bind_methods"/>
+    <functioncall functionName="_changed_callback"/>
+    <functioncall functionName="_class_name"/>
+    <functioncall functionName="_class_ptr"/>
+    <functioncall functionName="_get"/>
+    <functioncall functionName="_get_bind_methods"/>
+    <functioncall functionName="_get_category"/>
+    <functioncall functionName="_get_class_namev"/>
+    <functioncall functionName="_get_get"/>
+    <functioncall functionName="_get_get_property_list"/>
+    <functioncall functionName="_get_notification"/>
+    <functioncall functionName="_get_property_list"/>
+    <functioncall functionName="_get_property_listv"/>
+    <functioncall functionName="_get_set"/>
+    <functioncall functionName="_get_valid_parents_static"/>
+    <functioncall functionName="_getv"/>
+    <functioncall functionName="_is_gpl_reversed"/>
+    <functioncall functionName="_notification"/>
+    <functioncall functionName="_notificationv"/>
+    <functioncall functionName="_set"/>
+    <functioncall functionName="_setv"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="cast_to &lt; Reference &gt;"/>
+    <functioncall functionName="cast_to &lt; Script &gt;"/>
+    <functioncall functionName="class_name"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="connections"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="custom"/>
+    <functioncall functionName="custom_a"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="dynamic_cast"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="eq_a"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_as_text"/>
+    <functioncall functionName="get_category_static"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_class_ptr_static"/>
+    <functioncall functionName="get_class_static"/>
+    <functioncall functionName="get_compare_equal_func"/>
+    <functioncall functionName="get_compare_less_func"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_inheritance_list_static"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_object"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_script"/>
+    <functioncall functionName="get_signal_connection_list"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_valid_parents_static"/>
+    <functioncall functionName="get_validated_object"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash_djb2_one_64"/>
+    <functioncall functionName="hint"/>
+    <functioncall functionName="hint_string"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="init_ref"/>
+    <functioncall functionName="initialize_class"/>
+    <functioncall functionName="initialized"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_class_ptr"/>
+    <functioncall functionName="is_connected"/>
+    <functioncall functionName="is_custom"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_resource_file"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="less_a"/>
+    <functioncall functionName="lock"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="object"/>
+    <functioncall functionName="operatorDictionary"/>
+    <functioncall functionName="operatorString"/>
+    <functioncall functionName="operatorVariant"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_arguments"/>
+    <functioncall functionName="p_binds"/>
+    <functioncall functionName="p_callable"/>
+    <functioncall functionName="p_class"/>
+    <functioncall functionName="p_class_name"/>
+    <functioncall functionName="p_custom"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_flags"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_hint"/>
+    <functioncall functionName="p_hint_string"/>
+    <functioncall functionName="p_inheritance_list"/>
+    <functioncall functionName="p_instance_id"/>
+    <functioncall functionName="p_list"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_notification"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_parents"/>
+    <functioncall functionName="p_property"/>
+    <functioncall functionName="p_ptr"/>
+    <functioncall functionName="p_ref"/>
+    <functioncall functionName="p_reference"/>
+    <functioncall functionName="p_reversed"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_usage"/>
+    <functioncall functionName="p_val"/>
+    <functioncall functionName="private:"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_callable"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_call_error"/>
+    <functioncall functionName="r_ret"/>
+    <functioncall functionName="r_return_value"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="ref_pointer"/>
+    <functioncall functionName="refb"/>
+    <functioncall functionName="reference"/>
+    <functioncall functionName="referenced"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="slot"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="unlikely"/>
+    <functioncall functionName="unlock"/>
+    <functioncall functionName="unref"/>
+    <functioncall functionName="unreference"/>
+    <functioncall functionName="usage"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="void"/>
+  </FileInfo>
+</analyzerinfo>

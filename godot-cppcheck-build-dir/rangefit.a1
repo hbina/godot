@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1955571467">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Vec3::m_x&apos; is not initialized in the constructor." verbose="Member variable &apos;Vec3::m_x&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/maths.h" line="40" column="5"/>
+            <symbol>Vec3::m_x</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Vec3::m_y&apos; is not initialized in the constructor." verbose="Member variable &apos;Vec3::m_y&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/maths.h" line="40" column="5"/>
+            <symbol>Vec3::m_y</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Vec3::m_z&apos; is not initialized in the constructor." verbose="Member variable &apos;Vec3::m_z&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/maths.h" line="40" column="5"/>
+            <symbol>Vec3::m_z</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;Sym3x3::m_x&apos; is not initialized in the constructor." verbose="Member variable &apos;Sym3x3::m_x&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/maths.h" line="204" column="5"/>
+            <symbol>Sym3x3::m_x</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;Sym3x3&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;Sym3x3&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/maths.h" line="208" column="5"/>
+            <symbol>Sym3x3</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;Compress3&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;Compress3&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/rangefit.h" line="43" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/colourfit.h" line="47" column="18" info="Virtual function in base class"/>
+            <symbol>Compress3</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;Compress4&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;Compress4&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/rangefit.h" line="44" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" file="/home/hbina/git/godot/thirdparty/squish/colourfit.h" line="48" column="18" info="Virtual function in base class"/>
+            <symbol>Compress4</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/squish/squish.h:116:6" call-funcname="CompressMasked" call-argnr="5" file="/home/hbina/git/godot/thirdparty/squish/squish.h" line="159" col="19" call-argexpr="metric" call-argvaluetype="0" call-argvalue="0" warning="true"/><function-call call-id="/home/hbina/git/godot/thirdparty/squish/colourblock.h:34:6" call-funcname="WriteColourBlock3" call-argnr="3" file="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" line="141" col="26" call-argexpr="indices" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/squish/colourblock.h:35:6" call-funcname="WriteColourBlock4" call-argnr="3" file="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" line="194" col="26" call-argexpr="indices" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/squish/squish.h:116:6" call-funcname="CompressMasked" call-argnr="1" file="/home/hbina/git/godot/thirdparty/squish/squish.h" line="159" col="5" my-id="/home/hbina/git/godot/thirdparty/squish/squish.h:157:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/squish/squish.h:116:6" call-funcname="CompressMasked" call-argnr="3" file="/home/hbina/git/godot/thirdparty/squish/squish.h" line="159" col="5" my-id="/home/hbina/git/godot/thirdparty/squish/squish.h:157:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/squish/squish.h:116:6" call-funcname="CompressMasked" call-argnr="5" file="/home/hbina/git/godot/thirdparty/squish/squish.h" line="159" col="5" my-id="/home/hbina/git/godot/thirdparty/squish/squish.h:157:13" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/squish/colourblock.h:34:6" call-funcname="WriteColourBlock3" call-argnr="4" file="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" line="141" col="9" my-id="/home/hbina/git/godot/thirdparty/squish/rangefit.h:43:18" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/squish/colourblock.h:35:6" call-funcname="WriteColourBlock4" call-argnr="4" file="/home/hbina/git/godot/thirdparty/squish/rangefit.cpp" line="194" col="9" my-id="/home/hbina/git/godot/thirdparty/squish/rangefit.h:44:18" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="Compress3" lineNumber="96"/>
+    <functiondecl functionName="Compress4" lineNumber="148"/>
+    <functioncall functionName="ColourFit"/>
+    <functioncall functionName="CompressMasked"/>
+    <functioncall functionName="ComputePrincipleComponent"/>
+    <functioncall functionName="ComputeWeightedCovariance"/>
+    <functioncall functionName="Dot"/>
+    <functioncall functionName="FLT_MAX"/>
+    <functioncall functionName="GetCount"/>
+    <functioncall functionName="GetPoints"/>
+    <functioncall functionName="GetWeights"/>
+    <functioncall functionName="LengthSquared"/>
+    <functioncall functionName="Max"/>
+    <functioncall functionName="Min"/>
+    <functioncall functionName="RangeFit"/>
+    <functioncall functionName="RemapIndices"/>
+    <functioncall functionName="Sym3x3"/>
+    <functioncall functionName="Truncate"/>
+    <functioncall functionName="Vec3"/>
+    <functioncall functionName="WriteColourBlock3"/>
+    <functioncall functionName="WriteColourBlock4"/>
+    <functioncall functionName="block"/>
+    <functioncall functionName="ceil"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="closest"/>
+    <functioncall functionName="colours"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="copy"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="covariance"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="grid"/>
+    <functioncall functionName="gridrcp"/>
+    <functioncall functionName="half"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="m_end"/>
+    <functioncall functionName="m_start"/>
+    <functioncall functionName="m_x"/>
+    <functioncall functionName="m_y"/>
+    <functioncall functionName="m_z"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="metric"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="one"/>
+    <functioncall functionName="principle"/>
+    <functioncall functionName="rgba"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="weights"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zero"/>
+  </FileInfo>
+</analyzerinfo>

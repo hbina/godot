@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4251654282">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;pred_lag_ptr&apos; can be reduced." verbose="The scope of the variable &apos;pred_lag_ptr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="204" column="46"/>
+            <symbol>pred_lag_ptr</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h:67:25" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h" line="69" col="80" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h:67:25" my-argnr="2" my-argname="file" file="/home/hbina/git/godot/thirdparty/opus/silk/typedef.h" line="69" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" call-funcname="silk_PLC_energy" call-argnr="6" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="235" col="20" call-argexpr="prevGain_Q10" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="239" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:540:29" call-funcname="silk_max_int" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="242" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:110:6" call-funcname="silk_LPC_analysis_filter" call-argnr="3" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="295" col="29" call-argexpr="A_Q12" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:548:31" call-funcname="silk_max_32" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="426" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:46:25" call-funcname="silk_PLC_conceal" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="83" col="9" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="189" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/silk/SigProc_FIX.h:178:6" call-funcname="silk_sum_sqr_shift" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="190" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c:170:25" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="2" my-argname="lz" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="64" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h:56:25" my-argnr="3" my-argname="frac_Q7" file="/home/hbina/git/godot/thirdparty/opus/silk/Inlines.h" line="65" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:43:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="58" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/silk/PLC.h:47:6" my-argnr="1" my-argname="psDec" file="/home/hbina/git/godot/thirdparty/opus/silk/PLC.c" line="74" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functiondecl functionName="silk_PLC_Reset" lineNumber="54"/>
+    <functiondecl functionName="silk_PLC" lineNumber="65"/>
+    <functiondecl functionName="silk_PLC_update" lineNumber="97"/>
+    <functiondecl functionName="silk_PLC_energy" lineNumber="170"/>
+    <functiondecl functionName="silk_PLC_conceal" lineNumber="194"/>
+    <functiondecl functionName="silk_PLC_glue_frames" lineNumber="390"/>
+    <functioncall functionName="ALLOC"/>
+    <functioncall functionName="A_Q12"/>
+    <functioncall functionName="EC_ILOG"/>
+    <functioncall functionName="LPC_order"/>
+    <functioncall functionName="LPC_pred_Q10"/>
+    <functioncall functionName="LTPCoef_Q14"/>
+    <functioncall functionName="LTP_Gain_Q14"/>
+    <functioncall functionName="LTP_pred_Q12"/>
+    <functioncall functionName="LTP_scale_Q14"/>
+    <functioncall functionName="LZ"/>
+    <functioncall functionName="Qres"/>
+    <functioncall functionName="RESTORE_STACK"/>
+    <functioncall functionName="SAVE_STACK"/>
+    <functioncall functionName="SigProcFIX_CLZ16"/>
+    <functioncall functionName="VARDECL"/>
+    <functioncall functionName="_ASSERTE"/>
+    <functioncall functionName="__builtin_clz"/>
+    <functioncall functionName="__builtin_mips_extr_w"/>
+    <functioncall functionName="__builtin_mips_mult"/>
+    <functioncall functionName="__builtin_mips_shll_s_w"/>
+    <functioncall functionName="__builtin_mips_shra_r_w"/>
+    <functioncall functionName="_silk_fatal"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a16"/>
+    <functioncall functionName="a32"/>
+    <functioncall functionName="a32_nrm"/>
+    <functioncall functionName="a64"/>
+    <functioncall functionName="a_headrm"/>
+    <functioncall functionName="abort"/>
+    <functioncall functionName="ac"/>
+    <functioncall functionName="arch"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b16"/>
+    <functioncall functionName="b32"/>
+    <functioncall functionName="b32_inv"/>
+    <functioncall functionName="b32_nrm"/>
+    <functioncall functionName="b64"/>
+    <functioncall functionName="b_headrm"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c16"/>
+    <functioncall functionName="c32"/>
+    <functioncall functionName="conc_energy"/>
+    <functioncall functionName="conc_energy_shift"/>
+    <functioncall functionName="down_scale_Q30"/>
+    <functioncall functionName="energy"/>
+    <functioncall functionName="energy1"/>
+    <functioncall functionName="energy2"/>
+    <functioncall functionName="energy_shift"/>
+    <functioncall functionName="err_Q32"/>
+    <functioncall functionName="exc_Q14"/>
+    <functioncall functionName="exc_buf"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="first_frame_after_reset"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="frac_Q24"/>
+    <functioncall functionName="frac_Q7"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="frame_length"/>
+    <functioncall functionName="fs_kHz"/>
+    <functioncall functionName="gain_Q16"/>
+    <functioncall functionName="harm_Gain_Q15"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="in16"/>
+    <functioncall functionName="in32"/>
+    <functioncall functionName="in_upper"/>
+    <functioncall functionName="invGain_Q30"/>
+    <functioncall functionName="inv_gain_Q30"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="lag"/>
+    <functioncall functionName="last_frame_lost"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="limit1"/>
+    <functioncall functionName="limit2"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="lossCnt"/>
+    <functioncall functionName="lost"/>
+    <functioncall functionName="lshift"/>
+    <functioncall functionName="ltp_mem_length"/>
+    <functioncall functionName="lz"/>
+    <functioncall functionName="lzeros"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="nb_subfr"/>
+    <functioncall functionName="ops_count"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_int64"/>
+    <functioncall functionName="opus_int8"/>
+    <functioncall functionName="opus_uint32"/>
+    <functioncall functionName="pitchL_Q8"/>
+    <functioncall functionName="prevGain_Q10"/>
+    <functioncall functionName="prevGain_Q16"/>
+    <functioncall functionName="prevLPC_Q12"/>
+    <functioncall functionName="prevLTP_scale_Q14"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="psDec"/>
+    <functioncall functionName="psDecCtrl"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="randScale_Q14"/>
+    <functioncall functionName="rand_Gain_Q15"/>
+    <functioncall functionName="rand_scale_Q14"/>
+    <functioncall functionName="rand_seed"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="sLPC_Q14_buf"/>
+    <functioncall functionName="sLPC_Q14_ptr"/>
+    <functioncall functionName="sLTP"/>
+    <functioncall functionName="sLTP_Q14"/>
+    <functioncall functionName="sLTP_buf_idx"/>
+    <functioncall functionName="sPLC"/>
+    <functioncall functionName="scale_Q10"/>
+    <functioncall functionName="scale_Q14"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="shift1"/>
+    <functioncall functionName="shift2"/>
+    <functioncall functionName="signalType"/>
+    <functioncall functionName="silk_ADD32"/>
+    <functioncall functionName="silk_ADD_SAT32"/>
+    <functioncall functionName="silk_ADD_SAT32_armv5e"/>
+    <functioncall functionName="silk_CLZ32"/>
+    <functioncall functionName="silk_CLZ32_armv5"/>
+    <functioncall functionName="silk_CLZ_FRAC"/>
+    <functioncall functionName="silk_DIV32"/>
+    <functioncall functionName="silk_DIV32_16"/>
+    <functioncall functionName="silk_INVERSE32_varQ"/>
+    <functioncall functionName="silk_LPC_analysis_filter"/>
+    <functioncall functionName="silk_LPC_inverse_pred_gain"/>
+    <functioncall functionName="silk_LSHIFT32"/>
+    <functioncall functionName="silk_LSHIFT_SAT32"/>
+    <functioncall functionName="silk_MLA"/>
+    <functioncall functionName="silk_PLC_Reset"/>
+    <functioncall functionName="silk_PLC_conceal"/>
+    <functioncall functionName="silk_PLC_energy"/>
+    <functioncall functionName="silk_PLC_update"/>
+    <functioncall functionName="silk_ROR32"/>
+    <functioncall functionName="silk_RSHIFT32"/>
+    <functioncall functionName="silk_RSHIFT_ROUND"/>
+    <functioncall functionName="silk_SAT16"/>
+    <functioncall functionName="silk_SMLAWB"/>
+    <functioncall functionName="silk_SMLAWB_armv5e"/>
+    <functioncall functionName="silk_SMLAWW"/>
+    <functioncall functionName="silk_SMLAWW_armv4"/>
+    <functioncall functionName="silk_SMULBB"/>
+    <functioncall functionName="silk_SMULBB_armv5e"/>
+    <functioncall functionName="silk_SMULWB"/>
+    <functioncall functionName="silk_SMULWB_armv4"/>
+    <functioncall functionName="silk_SMULWB_armv5e"/>
+    <functioncall functionName="silk_SMULWW"/>
+    <functioncall functionName="silk_SMULWW_armv4"/>
+    <functioncall functionName="silk_SQRT_APPROX"/>
+    <functioncall functionName="silk_SUB32"/>
+    <functioncall functionName="silk_bwexpander"/>
+    <functioncall functionName="silk_max"/>
+    <functioncall functionName="silk_max_16"/>
+    <functioncall functionName="silk_max_32"/>
+    <functioncall functionName="silk_max_int"/>
+    <functioncall functionName="silk_min"/>
+    <functioncall functionName="silk_min_32"/>
+    <functioncall functionName="silk_min_int"/>
+    <functioncall functionName="silk_sum_sqr_shift"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="slope_Q16"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="subfr_length"/>
+    <functioncall functionName="temp_LTP_Gain_Q14"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="vqadds_s32"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,543 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="299503124">
+        <error id="redundantAssignment" severity="style" msg="Variable &apos;priv-&gt;yv12_frame_buffers.use_frame_threads&apos; is reassigned a value before the old one has been used." verbose="Variable &apos;priv-&gt;yv12_frame_buffers.use_frame_threads&apos; is reassigned a value before the old one has been used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="128" column="48" info="priv-&gt;yv12_frame_buffers.use_frame_threads is overwritten"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="124" column="48" info="priv-&gt;yv12_frame_buffers.use_frame_threads is assigned"/>
+            <symbol>priv-&gt;yv12_frame_buffers.use_frame_threads</symbol>
+        </error>
+        <error id="duplicateBranch" severity="style" msg="Found duplicate branches for &apos;if&apos; and &apos;else&apos;." verbose="Finding the same code in an &apos;if&apos; and related &apos;else&apos; branch is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="218" column="5"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="220" column="5"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;vpx_codec_alg_priv::img_setup&apos; is never used." verbose="struct member &apos;vpx_codec_alg_priv::img_setup&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="65" column="29"/>
+            <symbol>vpx_codec_alg_priv::img_setup</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/onyxd_int.h:137:5" call-funcname="vp8_create_decoder_instances" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="387" col="42" call-argexpr="&oxcf" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_end_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="105" col="15" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:98:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="24" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="66" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:111:19" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="125" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:94:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="109" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="2" my-argname="si" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="218" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:231:1" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="236" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="252" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="253" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="283" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="281" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:321:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="331" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="565" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="570" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:744:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="749" col="35" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="223" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/onyxd_int.h:137:5" call-funcname="vp8_create_decoder_instances" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="387" col="42" call-argexpr="&oxcf" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_end_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="105" col="15" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:98:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="24" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="66" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:111:19" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="125" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:94:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="109" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="2" my-argname="si" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="218" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:231:1" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="236" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="252" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="253" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="283" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="281" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:321:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="331" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="565" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="570" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:744:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="749" col="35" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="223" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="407" column="17"/>
+            <symbol>i</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/onyxd_int.h:137:5" call-funcname="vp8_create_decoder_instances" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="387" col="42" call-argexpr="&oxcf" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_end_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="105" col="15" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:98:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="24" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="66" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:111:19" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="125" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:94:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="109" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="2" my-argname="si" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="218" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:231:1" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="236" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="252" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="253" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="283" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="281" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:321:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="331" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="565" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="570" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:744:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="749" col="35" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="223" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/onyxd_int.h:137:5" call-funcname="vp8_create_decoder_instances" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="387" col="42" call-argexpr="&oxcf" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_end_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="105" col="15" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:98:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="24" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="66" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:111:19" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="125" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:94:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="109" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="2" my-argname="si" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="218" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:231:1" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="236" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="252" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="253" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="283" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="281" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:321:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="331" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="565" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="570" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:744:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="749" col="35" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="223" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+  </FileInfo>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;vpx_codec_alg_priv::dbg_postproc_flag&apos; is never used." verbose="struct member &apos;vpx_codec_alg_priv::dbg_postproc_flag&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="56" column="29"/>
+            <symbol>vpx_codec_alg_priv::dbg_postproc_flag</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/onyxd_int.h:137:5" call-funcname="vp8_create_decoder_instances" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="387" col="42" call-argexpr="&oxcf" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_end_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="105" col="15" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:98:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="24" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="66" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:111:19" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="125" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:94:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="109" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="2" my-argname="si" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="218" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:231:1" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="236" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="252" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="253" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="283" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="281" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:321:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="331" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="565" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="570" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:744:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="749" col="35" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="223" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="32" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/onyxd_int.h:137:5" call-funcname="vp8_create_decoder_instances" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="387" col="42" call-argexpr="&oxcf" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&time_end_stamp" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/onyxd.h:53:9" call-funcname="vp8dx_get_raw_frame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="549" col="37" call-argexpr="&flags" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="105" col="15" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:98:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" call-funcname="vp8dx_decode_bool" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="24" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:150:24" call-funcname="vp8_peek_si_internal" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="209" col="12" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:206:24" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:58:12" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="66" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h:111:19" my-argnr="1" my-argname="br" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/dboolhuff.h" line="125" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h:32:19" my-argnr="3" my-argname="p" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/decoder/treereader.h" line="40" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:94:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="109" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="2" my-argname="si" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="218" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:231:1" my-argnr="2" my-argname="error" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="236" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="252" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:244:13" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="253" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="283" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:276:1" my-argnr="4" my-argname="res" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="281" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:321:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="331" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="1" my-argname="img" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="565" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:562:24" my-argnr="2" my-argname="yv12" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="570" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:744:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="749" col="35" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:212:24" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="223" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c:513:21" my-argnr="2" my-argname="iter" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/vp8_dx_iface.c" line="521" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="vp8_init_ctx" lineNumber="71"/>
+    <functiondecl functionName="vp8_init" lineNumber="94"/>
+    <functiondecl functionName="vp8_destroy" lineNumber="141"/>
+    <functiondecl functionName="vp8_peek_si_internal" lineNumber="150"/>
+    <functiondecl functionName="vp8_peek_si" lineNumber="206"/>
+    <functiondecl functionName="vp8_get_si" lineNumber="212"/>
+    <functiondecl functionName="update_error_state" lineNumber="231"/>
+    <functiondecl functionName="yuvconfig2image" lineNumber="244"/>
+    <functiondecl functionName="update_fragments" lineNumber="276"/>
+    <functiondecl functionName="vp8_decode" lineNumber="321"/>
+    <functiondecl functionName="vp8_get_frame" lineNumber="513"/>
+    <functiondecl functionName="image2yuvconfig" lineNumber="562"/>
+    <functiondecl functionName="vp8_set_reference" lineNumber="591"/>
+    <functiondecl functionName="vp8_get_reference" lineNumber="612"/>
+    <functiondecl functionName="vp8_set_postproc" lineNumber="633"/>
+    <functiondecl functionName="vp8_set_dbg_color_ref_frame" lineNumber="656"/>
+    <functiondecl functionName="vp8_set_dbg_color_mb_modes" lineNumber="668"/>
+    <functiondecl functionName="vp8_set_dbg_color_b_modes" lineNumber="680"/>
+    <functiondecl functionName="vp8_set_dbg_display_mv" lineNumber="692"/>
+    <functiondecl functionName="vp8_get_last_ref_updates" lineNumber="704"/>
+    <functiondecl functionName="vp8_get_last_ref_frame" lineNumber="724"/>
+    <functiondecl functionName="vp8_get_frame_corrupted" lineNumber="744"/>
+    <functiondecl functionName="vp8_set_decryptor" lineNumber="763"/>
+    <functiondecl functionName="vp8_init_ctx" lineNumber="71"/>
+    <functiondecl functionName="vp8_init" lineNumber="94"/>
+    <functiondecl functionName="vp8_destroy" lineNumber="141"/>
+    <functiondecl functionName="vp8_peek_si_internal" lineNumber="150"/>
+    <functiondecl functionName="vp8_peek_si" lineNumber="206"/>
+    <functiondecl functionName="vp8_get_si" lineNumber="212"/>
+    <functiondecl functionName="update_error_state" lineNumber="231"/>
+    <functiondecl functionName="yuvconfig2image" lineNumber="244"/>
+    <functiondecl functionName="update_fragments" lineNumber="276"/>
+    <functiondecl functionName="vp8_decode" lineNumber="321"/>
+    <functiondecl functionName="vp8_get_frame" lineNumber="513"/>
+    <functiondecl functionName="image2yuvconfig" lineNumber="562"/>
+    <functiondecl functionName="vp8_set_reference" lineNumber="591"/>
+    <functiondecl functionName="vp8_get_reference" lineNumber="612"/>
+    <functiondecl functionName="vp8_set_postproc" lineNumber="633"/>
+    <functiondecl functionName="vp8_set_dbg_color_ref_frame" lineNumber="656"/>
+    <functiondecl functionName="vp8_set_dbg_color_mb_modes" lineNumber="668"/>
+    <functiondecl functionName="vp8_set_dbg_color_b_modes" lineNumber="680"/>
+    <functiondecl functionName="vp8_set_dbg_display_mv" lineNumber="692"/>
+    <functiondecl functionName="vp8_get_last_ref_updates" lineNumber="704"/>
+    <functiondecl functionName="vp8_get_last_ref_frame" lineNumber="724"/>
+    <functiondecl functionName="vp8_get_frame_corrupted" lineNumber="744"/>
+    <functiondecl functionName="vp8_set_decryptor" lineNumber="763"/>
+    <functiondecl functionName="vp8_init_ctx" lineNumber="71"/>
+    <functiondecl functionName="vp8_init" lineNumber="94"/>
+    <functiondecl functionName="vp8_destroy" lineNumber="141"/>
+    <functiondecl functionName="vp8_peek_si_internal" lineNumber="150"/>
+    <functiondecl functionName="vp8_peek_si" lineNumber="206"/>
+    <functiondecl functionName="vp8_get_si" lineNumber="212"/>
+    <functiondecl functionName="update_error_state" lineNumber="231"/>
+    <functiondecl functionName="yuvconfig2image" lineNumber="244"/>
+    <functiondecl functionName="update_fragments" lineNumber="276"/>
+    <functiondecl functionName="vp8_decode" lineNumber="321"/>
+    <functiondecl functionName="vp8_get_frame" lineNumber="513"/>
+    <functiondecl functionName="image2yuvconfig" lineNumber="562"/>
+    <functiondecl functionName="vp8_set_reference" lineNumber="591"/>
+    <functiondecl functionName="vp8_get_reference" lineNumber="612"/>
+    <functiondecl functionName="vp8_set_postproc" lineNumber="633"/>
+    <functiondecl functionName="vp8_set_dbg_color_ref_frame" lineNumber="656"/>
+    <functiondecl functionName="vp8_set_dbg_color_mb_modes" lineNumber="668"/>
+    <functiondecl functionName="vp8_set_dbg_color_b_modes" lineNumber="680"/>
+    <functiondecl functionName="vp8_set_dbg_display_mv" lineNumber="692"/>
+    <functiondecl functionName="vp8_get_last_ref_updates" lineNumber="704"/>
+    <functiondecl functionName="vp8_get_last_ref_frame" lineNumber="724"/>
+    <functiondecl functionName="vp8_get_frame_corrupted" lineNumber="744"/>
+    <functiondecl functionName="vp8_set_decryptor" lineNumber="763"/>
+    <functiondecl functionName="vp8_init_ctx" lineNumber="71"/>
+    <functiondecl functionName="vp8_init" lineNumber="94"/>
+    <functiondecl functionName="vp8_destroy" lineNumber="141"/>
+    <functiondecl functionName="vp8_peek_si_internal" lineNumber="150"/>
+    <functiondecl functionName="vp8_peek_si" lineNumber="206"/>
+    <functiondecl functionName="vp8_get_si" lineNumber="212"/>
+    <functiondecl functionName="update_error_state" lineNumber="231"/>
+    <functiondecl functionName="yuvconfig2image" lineNumber="244"/>
+    <functiondecl functionName="update_fragments" lineNumber="276"/>
+    <functiondecl functionName="vp8_decode" lineNumber="321"/>
+    <functiondecl functionName="vp8_get_frame" lineNumber="513"/>
+    <functiondecl functionName="image2yuvconfig" lineNumber="562"/>
+    <functiondecl functionName="vp8_set_reference" lineNumber="591"/>
+    <functiondecl functionName="vp8_get_reference" lineNumber="612"/>
+    <functiondecl functionName="vp8_set_postproc" lineNumber="633"/>
+    <functiondecl functionName="vp8_set_dbg_color_ref_frame" lineNumber="656"/>
+    <functiondecl functionName="vp8_set_dbg_color_mb_modes" lineNumber="668"/>
+    <functiondecl functionName="vp8_set_dbg_color_b_modes" lineNumber="680"/>
+    <functiondecl functionName="vp8_set_dbg_display_mv" lineNumber="692"/>
+    <functiondecl functionName="vp8_get_last_ref_updates" lineNumber="704"/>
+    <functiondecl functionName="vp8_get_last_ref_frame" lineNumber="724"/>
+    <functiondecl functionName="vp8_get_frame_corrupted" lineNumber="744"/>
+    <functiondecl functionName="vp8_set_decryptor" lineNumber="763"/>
+    <functiondecl functionName="vp8_init_ctx" lineNumber="71"/>
+    <functiondecl functionName="vp8_init" lineNumber="94"/>
+    <functiondecl functionName="vp8_destroy" lineNumber="141"/>
+    <functiondecl functionName="vp8_peek_si_internal" lineNumber="150"/>
+    <functiondecl functionName="vp8_peek_si" lineNumber="206"/>
+    <functiondecl functionName="vp8_get_si" lineNumber="212"/>
+    <functiondecl functionName="update_error_state" lineNumber="231"/>
+    <functiondecl functionName="yuvconfig2image" lineNumber="244"/>
+    <functiondecl functionName="update_fragments" lineNumber="276"/>
+    <functiondecl functionName="vp8_decode" lineNumber="321"/>
+    <functiondecl functionName="vp8_get_frame" lineNumber="513"/>
+    <functiondecl functionName="image2yuvconfig" lineNumber="562"/>
+    <functiondecl functionName="vp8_set_reference" lineNumber="591"/>
+    <functiondecl functionName="vp8_get_reference" lineNumber="612"/>
+    <functiondecl functionName="vp8_set_postproc" lineNumber="633"/>
+    <functiondecl functionName="vp8_set_dbg_color_ref_frame" lineNumber="656"/>
+    <functiondecl functionName="vp8_set_dbg_color_mb_modes" lineNumber="668"/>
+    <functiondecl functionName="vp8_set_dbg_color_b_modes" lineNumber="680"/>
+    <functiondecl functionName="vp8_set_dbg_display_mv" lineNumber="692"/>
+    <functiondecl functionName="vp8_get_last_ref_updates" lineNumber="704"/>
+    <functiondecl functionName="vp8_get_last_ref_frame" lineNumber="724"/>
+    <functiondecl functionName="vp8_get_frame_corrupted" lineNumber="744"/>
+    <functiondecl functionName="vp8_set_decryptor" lineNumber="763"/>
+    <functiondecl functionName="vp8_init_ctx" lineNumber="71"/>
+    <functiondecl functionName="vp8_init" lineNumber="94"/>
+    <functiondecl functionName="vp8_destroy" lineNumber="141"/>
+    <functiondecl functionName="vp8_peek_si_internal" lineNumber="150"/>
+    <functiondecl functionName="vp8_peek_si" lineNumber="206"/>
+    <functiondecl functionName="vp8_get_si" lineNumber="212"/>
+    <functiondecl functionName="update_error_state" lineNumber="231"/>
+    <functiondecl functionName="yuvconfig2image" lineNumber="244"/>
+    <functiondecl functionName="update_fragments" lineNumber="276"/>
+    <functiondecl functionName="vp8_decode" lineNumber="321"/>
+    <functiondecl functionName="vp8_get_frame" lineNumber="513"/>
+    <functiondecl functionName="image2yuvconfig" lineNumber="562"/>
+    <functiondecl functionName="vp8_set_reference" lineNumber="591"/>
+    <functiondecl functionName="vp8_get_reference" lineNumber="612"/>
+    <functiondecl functionName="vp8_set_postproc" lineNumber="633"/>
+    <functiondecl functionName="vp8_set_dbg_color_ref_frame" lineNumber="656"/>
+    <functiondecl functionName="vp8_set_dbg_color_mb_modes" lineNumber="668"/>
+    <functiondecl functionName="vp8_set_dbg_color_b_modes" lineNumber="680"/>
+    <functiondecl functionName="vp8_set_dbg_display_mv" lineNumber="692"/>
+    <functiondecl functionName="vp8_get_last_ref_updates" lineNumber="704"/>
+    <functiondecl functionName="vp8_get_last_ref_frame" lineNumber="724"/>
+    <functiondecl functionName="vp8_get_frame_corrupted" lineNumber="744"/>
+    <functiondecl functionName="vp8_set_decryptor" lineNumber="763"/>
+    <functioncall functionName="ABOVE4X4"/>
+    <functioncall functionName="ALTREF_FRAME"/>
+    <functioncall functionName="B_DC_PRED"/>
+    <functioncall functionName="B_HD_PRED"/>
+    <functioncall functionName="B_HE_PRED"/>
+    <functioncall functionName="B_HU_PRED"/>
+    <functioncall functionName="B_LD_PRED"/>
+    <functioncall functionName="B_MODE_COUNT"/>
+    <functioncall functionName="B_PRED"/>
+    <functioncall functionName="B_RD_PRED"/>
+    <functioncall functionName="B_TM_PRED"/>
+    <functioncall functionName="B_VE_PRED"/>
+    <functioncall functionName="B_VL_PRED"/>
+    <functioncall functionName="B_VR_PRED"/>
+    <functioncall functionName="CODEC_INTERFACE"/>
+    <functioncall functionName="DC_PRED"/>
+    <functioncall functionName="DECLARE_ALIGNED"/>
+    <functioncall functionName="GOLDEN_FRAME"/>
+    <functioncall functionName="H_PRED"/>
+    <functioncall functionName="Height"/>
+    <functioncall functionName="LAST_FRAME"/>
+    <functioncall functionName="LEFT4X4"/>
+    <functioncall functionName="MAX_REF_FRAMES"/>
+    <functioncall functionName="MB_LVL_MAX"/>
+    <functioncall functionName="MB_MODE_COUNT"/>
+    <functioncall functionName="MVPcount"/>
+    <functioncall functionName="MVPshort"/>
+    <functioncall functionName="MVPsign"/>
+    <functioncall functionName="NEARESTMV"/>
+    <functioncall functionName="NEARMV"/>
+    <functioncall functionName="NEW4X4"/>
+    <functioncall functionName="NEWMV"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="SPLITMV"/>
+    <functioncall functionName="TM_PRED"/>
+    <functioncall functionName="VP8D_DEBUG_CLR_BLK_MODES"/>
+    <functioncall functionName="VP8D_DEBUG_CLR_FRM_REF_BLKS"/>
+    <functioncall functionName="VP8D_DEBUG_DRAW_MV"/>
+    <functioncall functionName="VP8D_GET_FRAME_CORRUPTED"/>
+    <functioncall functionName="VP8D_GET_LAST_REF_UPDATES"/>
+    <functioncall functionName="VP8D_GET_LAST_REF_USED"/>
+    <functioncall functionName="VP8_ALTR_FRAME"/>
+    <functioncall functionName="VP8_COPY_REFERENCE"/>
+    <functioncall functionName="VP8_GOLD_FRAME"/>
+    <functioncall functionName="VP8_LAST_FRAME"/>
+    <functioncall functionName="VP8_MFQE"/>
+    <functioncall functionName="VP8_SEG_MAX"/>
+    <functioncall functionName="VP8_SET_DBG_COLOR_B_MODES"/>
+    <functioncall functionName="VP8_SET_DBG_COLOR_MB_MODES"/>
+    <functioncall functionName="VP8_SET_DBG_COLOR_REF_FRAME"/>
+    <functioncall functionName="VP8_SET_DBG_DISPLAY_MV"/>
+    <functioncall functionName="VP8_SET_POSTPROC"/>
+    <functioncall functionName="VP8_SET_REFERENCE"/>
+    <functioncall functionName="VPXD_SET_DECRYPTOR"/>
+    <functioncall functionName="VPXMIN"/>
+    <functioncall functionName="VPX_CODEC_CAP_ERROR_CONCEALMENT"/>
+    <functioncall functionName="VPX_CODEC_CAP_INPUT_FRAGMENTS"/>
+    <functioncall functionName="VPX_CODEC_CAP_POSTPROC"/>
+    <functioncall functionName="VPX_CODEC_CORRUPT_FRAME"/>
+    <functioncall functionName="VPX_CODEC_INTERNAL_ABI_VERSION"/>
+    <functioncall functionName="VPX_CODEC_INVALID_PARAM"/>
+    <functioncall functionName="VPX_CODEC_MEM_ERROR"/>
+    <functioncall functionName="VPX_CODEC_OK"/>
+    <functioncall functionName="VPX_CODEC_UNSUP_BITSTREAM"/>
+    <functioncall functionName="VPX_IMG_FMT_I420"/>
+    <functioncall functionName="VPX_PLANE_ALPHA"/>
+    <functioncall functionName="VPX_PLANE_U"/>
+    <functioncall functionName="VPX_PLANE_V"/>
+    <functioncall functionName="VPX_PLANE_Y"/>
+    <functioncall functionName="V_PRED"/>
+    <functioncall functionName="Width"/>
+    <functioncall functionName="ZERO4X4"/>
+    <functioncall functionName="ZEROMV"/>
+    <functioncall functionName="allocated_decoding_thread_count"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b_multithreaded_rd"/>
+    <functioncall functionName="bigsplit"/>
+    <functioncall functionName="br"/>
+    <functioncall functionName="buffer_alloc"/>
+    <functioncall functionName="cfg"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="clear_buffer"/>
+    <functioncall functionName="common"/>
+    <functioncall functionName="corrupted"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="d_h"/>
+    <functioncall functionName="d_w"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_sz"/>
+    <functioncall functionName="dbg_color_b_modes_flag"/>
+    <functioncall functionName="dbg_color_mb_modes_flag"/>
+    <functioncall functionName="dbg_color_ref_frame_flag"/>
+    <functioncall functionName="dbg_display_mv_flag"/>
+    <functioncall functionName="deadline"/>
+    <functioncall functionName="deblocking_level"/>
+    <functioncall functionName="dec"/>
+    <functioncall functionName="decoder_init"/>
+    <functioncall functionName="decrypt_cb"/>
+    <functioncall functionName="decrypt_state"/>
+    <functioncall functionName="detail"/>
+    <functioncall functionName="enabled"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="error_code"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fragments"/>
+    <functioncall functionName="frame_to_show"/>
+    <functioncall functionName="frame_type"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image2yuvconfig"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="init"/>
+    <functioncall functionName="init_flags"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_kf"/>
+    <functioncall functionName="jmp"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="lst_fb_idx"/>
+    <functioncall functionName="mb"/>
+    <functioncall functionName="mb_rows"/>
+    <functioncall functionName="mbd"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mvlong_width"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="new_fb_idx"/>
+    <functioncall functionName="noise_level"/>
+    <functioncall functionName="oci"/>
+    <functioncall functionName="oxcf"/>
+    <functioncall functionName="pbi"/>
+    <functioncall functionName="pc"/>
+    <functioncall functionName="post_proc_flag"/>
+    <functioncall functionName="prev_mb_rows"/>
+    <functioncall functionName="priv"/>
+    <functioncall functionName="ptrs"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="range"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resolution_change"/>
+    <functioncall functionName="sd"/>
+    <functioncall functionName="setjmp"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="si"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sizes"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="sz"/>
+    <functioncall functionName="threads"/>
+    <functioncall functionName="time_end_stamp"/>
+    <functioncall functionName="time_stamp"/>
+    <functioncall functionName="u_buffer"/>
+    <functioncall functionName="update_error_state"/>
+    <functioncall functionName="update_fragments"/>
+    <functioncall functionName="use_frame_threads"/>
+    <functioncall functionName="user_priv"/>
+    <functioncall functionName="uv_h"/>
+    <functioncall functionName="uv_stride"/>
+    <functioncall functionName="uv_w"/>
+    <functioncall functionName="v_buffer"/>
+    <functioncall functionName="va_arg"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vp8_alloc_frame_buffers"/>
+    <functioncall functionName="vp8_build_block_doffsets"/>
+    <functioncall functionName="vp8_clear_system_state"/>
+    <functioncall functionName="vp8_create_decoder_instances"/>
+    <functioncall functionName="vp8_ctf_maps"/>
+    <functioncall functionName="vp8_decode"/>
+    <functioncall functionName="vp8_destroy"/>
+    <functioncall functionName="vp8_get_frame"/>
+    <functioncall functionName="vp8_get_frame_corrupted"/>
+    <functioncall functionName="vp8_get_last_ref_frame"/>
+    <functioncall functionName="vp8_get_last_ref_updates"/>
+    <functioncall functionName="vp8_get_reference"/>
+    <functioncall functionName="vp8_get_si"/>
+    <functioncall functionName="vp8_init"/>
+    <functioncall functionName="vp8_init_ctx"/>
+    <functioncall functionName="vp8_peek_si"/>
+    <functioncall functionName="vp8_peek_si_internal"/>
+    <functioncall functionName="vp8_remove_decoder_instances"/>
+    <functioncall functionName="vp8_rtcd"/>
+    <functioncall functionName="vp8_set_dbg_color_b_modes"/>
+    <functioncall functionName="vp8_set_dbg_color_mb_modes"/>
+    <functioncall functionName="vp8_set_dbg_color_ref_frame"/>
+    <functioncall functionName="vp8_set_dbg_display_mv"/>
+    <functioncall functionName="vp8_set_decryptor"/>
+    <functioncall functionName="vp8_set_postproc"/>
+    <functioncall functionName="vp8_set_reference"/>
+    <functioncall functionName="vp8dx_bool_decoder_fill"/>
+    <functioncall functionName="vp8dx_decode_bool"/>
+    <functioncall functionName="vp8dx_get_raw_frame"/>
+    <functioncall functionName="vp8dx_get_reference"/>
+    <functioncall functionName="vp8dx_receive_compressed_data"/>
+    <functioncall functionName="vp8dx_references_buffer"/>
+    <functioncall functionName="vp8dx_set_reference"/>
+    <functioncall functionName="vp8mt_alloc_temp_buffers"/>
+    <functioncall functionName="vpx_calloc"/>
+    <functioncall functionName="vpx_codec_stream_info_t"/>
+    <functioncall functionName="vpx_codec_vp8_dx"/>
+    <functioncall functionName="vpx_dsp_rtcd"/>
+    <functioncall functionName="vpx_free"/>
+    <functioncall functionName="vpx_internal_error"/>
+    <functioncall functionName="vpx_scale_rtcd"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="y_buffer"/>
+    <functioncall functionName="y_h"/>
+    <functioncall functionName="y_height"/>
+    <functioncall functionName="y_stride"/>
+    <functioncall functionName="y_w"/>
+    <functioncall functionName="y_width"/>
+    <functioncall functionName="yuvconfig2image"/>
+    <functioncall functionName="yv12_frame_buffers"/>
+  </FileInfo>
+</analyzerinfo>

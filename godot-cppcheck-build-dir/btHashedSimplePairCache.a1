@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3114318067">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;btHashedSimplePairCache::equalsPair&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;btHashedSimplePairCache::equalsPair&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btHashedSimplePairCache.h" line="110" column="25"/>
+            <symbol>btHashedSimplePairCache::equalsPair</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;btHashedSimplePairCache::getHash&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;btHashedSimplePairCache::getHash&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btHashedSimplePairCache.h" line="115" column="33"/>
+            <symbol>btHashedSimplePairCache::getHash</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="removeAllPairs" lineNumber="38"/>
+    <functiondecl functionName="findPair" lineNumber="49"/>
+    <functiondecl functionName="growTables" lineNumber="83"/>
+    <functiondecl functionName="internalAddPair" lineNumber="119"/>
+    <functiondecl functionName="removeOverlappingPair" lineNumber="152"/>
+    <functiondecl functionName="removeAllPairs" lineNumber="38"/>
+    <functiondecl functionName="findPair" lineNumber="49"/>
+    <functiondecl functionName="growTables" lineNumber="83"/>
+    <functiondecl functionName="internalAddPair" lineNumber="119"/>
+    <functiondecl functionName="removeOverlappingPair" lineNumber="152"/>
+    <functioncall functionName="BT_SIMPLE_NULL_PAIR"/>
+    <functioncall functionName="btAssert"/>
+    <functioncall functionName="btHashedSimplePairCache"/>
+    <functioncall functionName="btSimplePair"/>
+    <functioncall functionName="capacity"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="equalsPair"/>
+    <functioncall functionName="expandNonInitializing"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="getHash"/>
+    <functioncall functionName="growTables"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hashValue"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="indexA"/>
+    <functioncall functionName="indexB"/>
+    <functioncall functionName="initialAllocatedSize"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="internalAddPair"/>
+    <functioncall functionName="internalFindPair"/>
+    <functioncall functionName="lastHash"/>
+    <functioncall functionName="lastPairIndex"/>
+    <functioncall functionName="m_indexA"/>
+    <functioncall functionName="m_indexB"/>
+    <functioncall functionName="m_userPointer"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="newCapacity"/>
+    <functioncall functionName="pairIndex"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="previous"/>
+    <functioncall functionName="proxyIdA"/>
+    <functioncall functionName="proxyIdB"/>
+    <functioncall functionName="reserve"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

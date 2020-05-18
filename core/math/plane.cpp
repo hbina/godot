@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -31,9 +31,6 @@
 #include "plane.h"
 
 #include "core/math/math_funcs.h"
-
-#define _PLANE_EQ_DOT_EPSILON 0.999
-#define _PLANE_EQ_D_EPSILON 0.0001
 
 void Plane::set_normal(const Vector3 &p_normal) {
 
@@ -156,9 +153,13 @@ bool Plane::intersects_segment(const Vector3 &p_begin, const Vector3 &p_end, Vec
 
 /* misc */
 
-bool Plane::is_almost_like(const Plane &p_plane) const {
+bool Plane::is_equal_approx_any_side(const Plane &p_plane) const {
+	return (normal.is_equal_approx(p_plane.normal) && Math::is_equal_approx(d, p_plane.d)) || (normal.is_equal_approx(-p_plane.normal) && Math::is_equal_approx(d, -p_plane.d));
+}
 
-	return (normal.dot(p_plane.normal) > _PLANE_EQ_DOT_EPSILON && Math::absd(d - p_plane.d) < _PLANE_EQ_D_EPSILON);
+bool Plane::is_equal_approx(const Plane &p_plane) const {
+
+	return normal.is_equal_approx(p_plane.normal) && Math::is_equal_approx(d, p_plane.d);
 }
 
 Plane::operator String() const {

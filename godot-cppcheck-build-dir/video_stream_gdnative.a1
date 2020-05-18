@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1565762347">
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;VideoDecoderServer::get_extensions&apos; can be const." verbose="The member function &apos;VideoDecoderServer::get_extensions&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/modules/gdnative/videodecoder/video_stream_gdnative.cpp" file="/home/hbina/git/godot/modules/gdnative/videodecoder/video_stream_gdnative.h" line="77" column="26"/>
+            <symbol>VideoDecoderServer::get_extensions</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;VideoDecoderGDNative&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;VideoDecoderGDNative&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/modules/gdnative/videodecoder/video_stream_gdnative.cpp" file="/home/hbina/git/godot/modules/gdnative/videodecoder/video_stream_gdnative.h" line="48" column="2"/>
+            <symbol>VideoDecoderGDNative</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/gdnative/videodecoder/video_stream_gdnative.h:165:15" call-funcname="seek" call-argnr="1" file="/home/hbina/git/godot/modules/gdnative/videodecoder/video_stream_gdnative.cpp" line="269" col="7" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="godot_videodecoder_file_read" lineNumber="44"/>
+    <functiondecl functionName="godot_videodecoder_file_seek" lineNumber="60"/>
+    <functiondecl functionName="godot_videodecoder_register_decoder" lineNumber="107"/>
+    <functiondecl functionName="open_file" lineNumber="115"/>
+    <functiondecl functionName="update" lineNumber="145"/>
+    <functiondecl functionName="update_texture" lineNumber="189"/>
+    <functiondecl functionName="cleanup" lineNumber="226"/>
+    <functiondecl functionName="set_interface" lineNumber="238"/>
+    <functiondecl functionName="is_playing" lineNumber="249"/>
+    <functiondecl functionName="is_paused" lineNumber="253"/>
+    <functiondecl functionName="play" lineNumber="257"/>
+    <functiondecl functionName="stop" lineNumber="267"/>
+    <functiondecl functionName="seek" lineNumber="274"/>
+    <functiondecl functionName="set_paused" lineNumber="286"/>
+    <functiondecl functionName="get_texture" lineNumber="290"/>
+    <functiondecl functionName="get_length" lineNumber="294"/>
+    <functiondecl functionName="get_playback_position" lineNumber="299"/>
+    <functiondecl functionName="has_loop" lineNumber="305"/>
+    <functiondecl functionName="set_loop" lineNumber="310"/>
+    <functiondecl functionName="set_audio_track" lineNumber="314"/>
+    <functiondecl functionName="set_mix_callback" lineNumber="319"/>
+    <functiondecl functionName="get_channels" lineNumber="325"/>
+    <functiondecl functionName="get_mix_rate" lineNumber="331"/>
+    <functiondecl functionName="instance_playback" lineNumber="339"/>
+    <functiondecl functionName="set_file" lineNumber="351"/>
+    <functiondecl functionName="get_file" lineNumber="356"/>
+    <functiondecl functionName="_bind_methods" lineNumber="361"/>
+    <functiondecl functionName="set_audio_track" lineNumber="369"/>
+    <functiondecl functionName="load" lineNumber="376"/>
+    <functiondecl functionName="get_recognized_extensions" lineNumber="394"/>
+    <functiondecl functionName="handles_type" lineNumber="402"/>
+    <functiondecl functionName="get_resource_type" lineNumber="406"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="AUX_BUFFER_SIZE"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_CANT_OPEN"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="FORMAT_RGBA8"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GDNative"/>
+    <functioncall functionName="GDNativeCallRegistry"/>
+    <functioncall functionName="GDNativeLibrary"/>
+    <functioncall functionName="Image"/>
+    <functioncall functionName="ImageTexture"/>
+    <functioncall functionName="OK"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="RES"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="VideoDecoderGDNative"/>
+    <functioncall functionName="VideoDecoderServer"/>
+    <functioncall functionName="VideoStream"/>
+    <functioncall functionName="VideoStreamGDNative"/>
+    <functioncall functionName="VideoStreamPlayback"/>
+    <functioncall functionName="VideoStreamPlaybackGDNative"/>
+    <functioncall functionName="_get_supported_extensions"/>
+    <functioncall functionName="audio_track"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="buf_size"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constructor"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="create_from_image"/>
+    <functioncall functionName="data_struct"/>
+    <functioncall functionName="decoder"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="delay_compensation"/>
+    <functioncall functionName="destructor"/>
+    <functioncall functionName="el"/>
+    <functioncall functionName="extension"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="file_opened"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_audioframe"/>
+    <functioncall functionName="get_buffer"/>
+    <functioncall functionName="get_channels"/>
+    <functioncall functionName="get_decoder"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_extensions"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_len"/>
+    <functioncall functionName="get_length"/>
+    <functioncall functionName="get_mix_rate"/>
+    <functioncall functionName="get_playback_position"/>
+    <functioncall functionName="get_plugin_name"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_supported_extensions"/>
+    <functioncall functionName="get_texture_size"/>
+    <functioncall functionName="get_videoframe"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="interface"/>
+    <functioncall functionName="is_parent_class"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mix_callback"/>
+    <functioncall functionName="mix_rate"/>
+    <functioncall functionName="mix_udata"/>
+    <functioncall functionName="native_call_cb"/>
+    <functioncall functionName="native_calls"/>
+    <functioncall functionName="new_pos"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_channels"/>
+    <functioncall functionName="num_ext"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_file"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_delta"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_interface"/>
+    <functioncall functionName="p_load_once"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_paused"/>
+    <functioncall functionName="p_reloadable"/>
+    <functioncall functionName="p_singleton"/>
+    <functioncall functionName="p_symbol_prefix"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_track"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="paused"/>
+    <functioncall functionName="pcm"/>
+    <functioncall functionName="pcm_write_idx"/>
+    <functioncall functionName="playing"/>
+    <functioncall functionName="plugin_name"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="register_decoder_interface"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="samples_decoded"/>
+    <functioncall functionName="seek"/>
+    <functioncall functionName="seek_backward"/>
+    <functioncall functionName="seek_end"/>
+    <functioncall functionName="set_audio_track"/>
+    <functioncall functionName="set_file"/>
+    <functioncall functionName="set_interface"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="to_lower"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="update_texture"/>
+    <functioncall functionName="vec"/>
+    <functioncall functionName="whence"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+  </FileInfo>
+</analyzerinfo>

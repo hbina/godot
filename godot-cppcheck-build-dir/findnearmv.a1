@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="231884319">
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;vp8_find_near_mvs&apos; argument 5 names different: declaration &apos;best&apos; definition &apos;best_mv&apos;." verbose="Function &apos;vp8_find_near_mvs&apos; argument 5 names different: declaration &apos;best&apos; definition &apos;best_mv&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="30" column="13"/>
+            <location file0="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="81" column="46"/>
+            <symbol>vp8_find_near_mvs</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;vp8_find_near_mvs&apos; argument 6 names different: declaration &apos;near_mv_ref_cts&apos; definition &apos;cnt&apos;." verbose="Function &apos;vp8_find_near_mvs&apos; argument 6 names different: declaration &apos;near_mv_ref_cts&apos; definition &apos;cnt&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="31" column="9"/>
+            <location file0="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="82" column="9"/>
+            <symbol>vp8_find_near_mvs</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:26:20" call-funcname="mv_bias" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="69" col="20" call-argexpr="&this_mv" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:26:20" call-funcname="mv_bias" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="91" col="20" call-argexpr="&this_mv" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" call-funcname="vp8_find_near_mvs" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="162" col="22" call-argexpr="cnt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:38:20" call-funcname="vp8_clamp_mv2" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="144" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c:140:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" call-funcname="vp8_find_near_mvs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="162" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:88:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" call-funcname="vp8_find_near_mvs" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="162" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:88:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:26:20" my-argnr="4" my-argname="ref_frame_sign_bias" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="29" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:38:20" my-argnr="1" my-argname="mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="40" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:38:20" my-argnr="2" my-argname="xd" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="40" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:51:20" my-argnr="1" my-argname="mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="55" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:64:28" my-argnr="1" my-argname="mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="70" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="1" my-argname="xd" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="36" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="3" my-argname="nearest" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="135" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="4" my-argname="nearby" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="136" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="5" my-argname="best_mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="134" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c:140:13" my-argnr="1" my-argname="inv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="142" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c:140:13" my-argnr="2" my-argname="src" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="142" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:88:5" my-argnr="7" my-argname="ref_frame_sign_bias" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="160" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:26:20" call-funcname="mv_bias" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="69" col="20" call-argexpr="&this_mv" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:26:20" call-funcname="mv_bias" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="91" col="20" call-argexpr="&this_mv" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" call-funcname="vp8_find_near_mvs" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="162" col="22" call-argexpr="cnt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:38:20" call-funcname="vp8_clamp_mv2" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="144" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c:140:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" call-funcname="vp8_find_near_mvs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="162" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:88:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" call-funcname="vp8_find_near_mvs" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="162" col="5" my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:88:5" my-argnr="2"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:26:20" my-argnr="4" my-argname="ref_frame_sign_bias" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="29" col="38" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:38:20" my-argnr="1" my-argname="mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="40" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:38:20" my-argnr="2" my-argname="xd" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="40" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:51:20" my-argnr="1" my-argname="mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="55" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:64:28" my-argnr="1" my-argname="mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h" line="70" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="1" my-argname="xd" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="36" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="3" my-argname="nearest" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="135" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="4" my-argname="nearby" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="136" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:77:6" my-argnr="5" my-argname="best_mv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="134" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c:140:13" my-argnr="1" my-argname="inv" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="142" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c:140:13" my-argnr="2" my-argname="src" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="142" col="22" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.h:88:5" my-argnr="7" my-argname="ref_frame_sign_bias" file="/home/hbina/git/godot/thirdparty/libvpx/vp8/common/findnearmv.c" line="160" col="21" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="vp8_find_near_mvs" lineNumber="24"/>
+    <functiondecl functionName="invert_and_clamp_mvs" lineNumber="140"/>
+    <functiondecl functionName="vp8_find_near_mvs_bias" lineNumber="149"/>
+    <functiondecl functionName="vp8_mv_ref_probs" lineNumber="182"/>
+    <functiondecl functionName="vp8_find_near_mvs" lineNumber="24"/>
+    <functiondecl functionName="invert_and_clamp_mvs" lineNumber="140"/>
+    <functiondecl functionName="vp8_find_near_mvs_bias" lineNumber="149"/>
+    <functiondecl functionName="vp8_mv_ref_probs" lineNumber="182"/>
+    <functioncall functionName="ABOVE4X4"/>
+    <functioncall functionName="B_DC_PRED"/>
+    <functioncall functionName="B_HD_PRED"/>
+    <functioncall functionName="B_HE_PRED"/>
+    <functioncall functionName="B_HU_PRED"/>
+    <functioncall functionName="B_LD_PRED"/>
+    <functioncall functionName="B_MODE_COUNT"/>
+    <functioncall functionName="B_PRED"/>
+    <functioncall functionName="B_RD_PRED"/>
+    <functioncall functionName="B_TM_PRED"/>
+    <functioncall functionName="B_VE_PRED"/>
+    <functioncall functionName="B_VL_PRED"/>
+    <functioncall functionName="B_VR_PRED"/>
+    <functioncall functionName="CNT_INTRA"/>
+    <functioncall functionName="CNT_NEAR"/>
+    <functioncall functionName="CNT_NEAREST"/>
+    <functioncall functionName="CNT_SPLITMV"/>
+    <functioncall functionName="DC_PRED"/>
+    <functioncall functionName="DECLARE_ALIGNED"/>
+    <functioncall functionName="H_PRED"/>
+    <functioncall functionName="LEFT4X4"/>
+    <functioncall functionName="MAX_REF_FRAMES"/>
+    <functioncall functionName="MB_LVL_MAX"/>
+    <functioncall functionName="MB_MODE_COUNT"/>
+    <functioncall functionName="NEARESTMV"/>
+    <functioncall functionName="NEARMV"/>
+    <functioncall functionName="NEW4X4"/>
+    <functioncall functionName="NEWMV"/>
+    <functioncall functionName="SPLITMV"/>
+    <functioncall functionName="TM_PRED"/>
+    <functioncall functionName="V_PRED"/>
+    <functioncall functionName="ZERO4X4"/>
+    <functioncall functionName="ZEROMV"/>
+    <functioncall functionName="as_int"/>
+    <functioncall functionName="as_mode"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="cnt"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="here"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inv"/>
+    <functioncall functionName="invert_and_clamp_mvs"/>
+    <functioncall functionName="mb_to_bottom_edge"/>
+    <functioncall functionName="mb_to_left_edge"/>
+    <functioncall functionName="mb_to_right_edge"/>
+    <functioncall functionName="mb_to_top_edge"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="mode_info_stride"/>
+    <functioncall functionName="mv"/>
+    <functioncall functionName="mv_bias"/>
+    <functioncall functionName="near_mvs"/>
+    <functioncall functionName="ref_frame"/>
+    <functioncall functionName="ref_frame_sign_bias"/>
+    <functioncall functionName="refframe"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="row"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="sign_bias"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this_mv"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="vp8_clamp_mv2"/>
+    <functioncall functionName="vp8_find_near_mvs"/>
+    <functioncall functionName="xd"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,689 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2996865522">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShaderData::ubo_size&apos; is not initialized in the constructor." verbose="Member variable &apos;ShaderData::ubo_size&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="2081" column="33"/>
+            <symbol>ShaderData::ubo_size</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;RasterizerCanvasRD&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;RasterizerCanvasRD&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h" line="499" column="2"/>
+            <symbol>RasterizerCanvasRD</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!binding_ptr&apos; is redundant or there is possible null pointer dereference: binding_ptr." verbose="Either the condition &apos;!binding_ptr&apos; is redundant or there is possible null pointer dereference: binding_ptr." cwe="476">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="227" column="29" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="225" column="65" info="Assignment &apos;binding_ptr=bindings.texture_bindings.getptr(p_binding)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="226" column="16" info="Assuming that condition &apos;!binding_ptr&apos; is not redundant"/>
+            <symbol>binding_ptr</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!pb_ptr&apos; is redundant or there is possible null pointer dereference: pb_ptr." verbose="Either the condition &apos;!pb_ptr&apos; is redundant or there is possible null pointer dereference: pb_ptr." cwe="476">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="457" column="24" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="454" column="58" info="Assignment &apos;pb_ptr=polygon_buffers.polygons.getptr(p_polygon)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="455" column="16" info="Assuming that condition &apos;!pb_ptr&apos; is not redundant"/>
+            <symbol>pb_ptr</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!texture_binding_ptr&apos; is redundant or there is possible null pointer dereference: texture_binding_ptr." verbose="Either the condition &apos;!texture_binding_ptr&apos; is redundant or there is possible null pointer dereference: texture_binding_ptr." cwe="476">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="476" column="37" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="474" column="73" info="Assignment &apos;texture_binding_ptr=bindings.texture_bindings.getptr(p_binding)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="475" column="18" info="Assuming that condition &apos;!texture_binding_ptr&apos; is not redundant"/>
+            <symbol>texture_binding_ptr</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!pb&apos; is redundant or there is possible null pointer dereference: pb." verbose="Either the condition &apos;!pb&apos; is redundant or there is possible null pointer dereference: pb." cwe="476">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="901" column="110" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="895" column="57" info="Assignment &apos;pb=polygon_buffers.polygons.getptr(polygon-&gt;polygon.polygon_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="896" column="18" info="Assuming that condition &apos;!pb&apos; is not redundant"/>
+            <symbol>pb</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!pb&apos; is redundant or there is possible null pointer dereference: pb." verbose="Either the condition &apos;!pb&apos; is redundant or there is possible null pointer dereference: pb." cwe="476">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="940" column="67" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="895" column="57" info="Assignment &apos;pb=polygon_buffers.polygons.getptr(polygon-&gt;polygon.polygon_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="896" column="18" info="Assuming that condition &apos;!pb&apos; is not redundant"/>
+            <symbol>pb</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!cl&apos; is redundant or there is possible null pointer dereference: cl." verbose="Either the condition &apos;!cl&apos; is redundant or there is possible null pointer dereference: cl." cwe="476">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1586" column="6" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1584" column="48" info="Assignment &apos;cl=canvas_light_owner.getornull(p_rid)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1585" column="16" info="Assuming that condition &apos;!cl&apos; is not redundant"/>
+            <symbol>cl</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!oc&apos; is redundant or there is possible null pointer dereference: oc." verbose="Either the condition &apos;!oc&apos; is redundant or there is possible null pointer dereference: oc." cwe="476">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1819" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1817" column="56" info="Assignment &apos;oc=occluder_polygon_owner.getornull(p_occluder)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1818" column="16" info="Assuming that condition &apos;!oc&apos; is not redundant"/>
+            <symbol>oc</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1382" column="21"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1528" column="23"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1858" column="41"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="2088" column="41"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="2102" column="41"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between const unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between const unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="283" column="17"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between unsigned char * and float * which have an incompatible binary data representation." verbose="Casting between unsigned char * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1756" column="19"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;set_code&apos; argument 1 names different: declaration &apos;p_Code&apos; definition &apos;p_code&apos;." verbose="Function &apos;set_code&apos; argument 1 names different: declaration &apos;p_Code&apos; definition &apos;p_code&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1822" column="61"/>
+            <location file0="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h" line="185" column="39"/>
+            <symbol>set_code</symbol>
+        </error>
+        <error id="constArgument" severity="style" msg="Argument &apos;!clight&apos; to function ERR_CONTINUE is always 1" verbose="Argument &apos;!clight&apos; to function ERR_CONTINUE is always 1" cwe="570">
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1466" column="18" info="Argument &apos;!clight&apos; to function ERR_CONTINUE is always 1"/>
+            <location file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1463" column="8" info="Assuming that condition &apos;!clight&apos; is not redundant"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:463:7" call-funcname="_render_item" call-argnr="5" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1400" col="15" call-argexpr="current_clip" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1368" col="7" info="Assuming that condition 'if(current_clip)' is not redundant"/>
+  <path file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1365" col="21" info="Assignment 'current_clip=ci->final_clip_owner', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:483:7" call-funcname="light_set_use_shadow" call-argnr="2" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="2521" col="23" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:463:7" call-funcname="_render_item" call-argnr="6" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="1400" col="3" my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:464:7" my-argnr="4"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:469:22" my-argnr="2" my-argname="p_mat4" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="38" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:466:22" my-argnr="2" my-argname="p_mat2x4" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="58" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:467:22" my-argnr="2" my-argname="p_mat2x3" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="71" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:470:22" my-argnr="2" my-argname="p_mat4" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="81" col="2" value="0"/>
+    </array-index>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:469:22" my-argnr="2" my-argname="p_mat4" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="38" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:466:22" my-argnr="2" my-argname="p_mat2x4" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="58" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:467:22" my-argnr="2" my-argname="p_mat2x3" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="71" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:470:22" my-argnr="2" my-argname="p_mat4" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="81" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.h:472:22" my-argnr="2" my-argname="r_ss" file="/home/hbina/git/godot/servers/rendering/rasterizer_rd/rasterizer_canvas_rd.cpp" line="101" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_update_transform_2d_to_mat4" lineNumber="36"/>
+    <functiondecl functionName="_update_transform_2d_to_mat2x4" lineNumber="56"/>
+    <functiondecl functionName="_update_transform_2d_to_mat2x3" lineNumber="69"/>
+    <functiondecl functionName="_update_transform_to_mat4" lineNumber="79"/>
+    <functiondecl functionName="_update_specular_shininess" lineNumber="99"/>
+    <functiondecl functionName="_create_texture_binding" lineNumber="107"/>
+    <functiondecl functionName="free_texture_binding" lineNumber="223"/>
+    <functiondecl functionName="_dispose_bindings" lineNumber="235"/>
+    <functiondecl functionName="request_polygon" lineNumber="250"/>
+    <functiondecl functionName="free_polygon" lineNumber="452"/>
+    <functiondecl functionName="_render_items" lineNumber="1329"/>
+    <functiondecl functionName="canvas_render_items" lineNumber="1408"/>
+    <functiondecl functionName="light_create" lineNumber="1576"/>
+    <functiondecl functionName="light_set_texture" lineNumber="1583"/>
+    <functiondecl functionName="light_set_use_shadow" lineNumber="1592"/>
+    <functiondecl functionName="light_update_shadow" lineNumber="1643"/>
+    <functiondecl functionName="occluder_polygon_create" lineNumber="1719"/>
+    <functiondecl functionName="occluder_polygon_set_shape_as_lines" lineNumber="1727"/>
+    <functiondecl functionName="occluder_polygon_set_cull_mode" lineNumber="1816"/>
+    <functiondecl functionName="set_code" lineNumber="1822"/>
+    <functiondecl functionName="set_default_texture_param" lineNumber="2010"/>
+    <functiondecl functionName="get_param_list" lineNumber="2017"/>
+    <functiondecl functionName="get_instance_param_list" lineNumber="2041"/>
+    <functiondecl functionName="is_param_texture" lineNumber="2058"/>
+    <functiondecl functionName="is_animated" lineNumber="2066"/>
+    <functiondecl functionName="casts_shadows" lineNumber="2069"/>
+    <functiondecl functionName="get_default_parameter" lineNumber="2072"/>
+    <functiondecl functionName="_create_shader_func" lineNumber="2096"/>
+    <functiondecl functionName="update_parameters" lineNumber="2100"/>
+    <functiondecl functionName="_create_material_func" lineNumber="2214"/>
+    <functiondecl functionName="set_time" lineNumber="2222"/>
+    <functiondecl functionName="update" lineNumber="2226"/>
+    <functiondecl functionName="free" lineNumber="2516"/>
+    <functioncall functionName="ARRAY_BONES"/>
+    <functioncall functionName="ARRAY_COLOR"/>
+    <functioncall functionName="ARRAY_TEX_UV"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="BLEND_FACTOR_DST_ALPHA"/>
+    <functioncall functionName="BLEND_FACTOR_DST_COLOR"/>
+    <functioncall functionName="BLEND_FACTOR_ONE"/>
+    <functioncall functionName="BLEND_FACTOR_ONE_MINUS_SRC_ALPHA"/>
+    <functioncall functionName="BLEND_FACTOR_SRC_ALPHA"/>
+    <functioncall functionName="BLEND_FACTOR_ZERO"/>
+    <functioncall functionName="BLEND_MODE_ADD"/>
+    <functioncall functionName="BLEND_MODE_DISABLED"/>
+    <functioncall functionName="BLEND_MODE_MIX"/>
+    <functioncall functionName="BLEND_MODE_MUL"/>
+    <functioncall functionName="BLEND_MODE_PMALPHA"/>
+    <functioncall functionName="BLEND_MODE_SUB"/>
+    <functioncall functionName="BLEND_OP_ADD"/>
+    <functioncall functionName="BLEND_OP_SUBTRACT"/>
+    <functioncall functionName="Basis"/>
+    <functioncall functionName="Buffer"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_DEFAULT"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_LINEAR"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_LINEAR_WITH_MIPMAPS"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_NEAREST"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_NEAREST_WITH_MIPMAPS"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_REPEAT_DEFAULT"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_REPEAT_DISABLED"/>
+    <functioncall functionName="CANVAS_ITEM_TEXTURE_REPEAT_ENABLED"/>
+    <functioncall functionName="CANVAS_OCCLUDER_POLYGON_CULL_DISABLED"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="COMPARE_OP_GREATER"/>
+    <functioncall functionName="COMPARE_OP_LESS"/>
+    <functioncall functionName="CameraMatrix"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="DATA_FORMAT_D32_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_R32G32B32A32_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_R32G32B32A32_UINT"/>
+    <functioncall functionName="DATA_FORMAT_R32G32B32_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_R32G32_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_R32_SFLOAT"/>
+    <functioncall functionName="DATA_FORMAT_X8_D24_UNORM_PACK32"/>
+    <functioncall functionName="DEFAULT_MAX_LIGHTS_PER_ITEM"/>
+    <functioncall functionName="DEFAULT_MAX_LIGHTS_PER_RENDER"/>
+    <functioncall functionName="DEFAULT_RD_BUFFER_BONES"/>
+    <functioncall functionName="DEFAULT_RD_BUFFER_COLOR"/>
+    <functioncall functionName="DEFAULT_RD_BUFFER_TEX_UV"/>
+    <functioncall functionName="DEFAULT_RD_TEXTURE_BLACK"/>
+    <functioncall functionName="DEFAULT_RD_TEXTURE_MULTIMESH_BUFFER"/>
+    <functioncall functionName="DEFAULT_RD_TEXTURE_NORMAL"/>
+    <functioncall functionName="DEFAULT_RD_TEXTURE_WHITE"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="FILTER_LINEAR"/>
+    <functioncall functionName="FINAL_ACTION_DISCARD"/>
+    <functioncall functionName="FINAL_ACTION_READ"/>
+    <functioncall functionName="INDEX_BUFFER_FORMAT_UINT16"/>
+    <functioncall functionName="INDEX_BUFFER_FORMAT_UINT32"/>
+    <functioncall functionName="INITIAL_ACTION_CLEAR"/>
+    <functioncall functionName="INITIAL_ACTION_KEEP"/>
+    <functioncall functionName="INVALID_ID"/>
+    <functioncall functionName="ItemStateData"/>
+    <functioncall functionName="LIGHT_MODE_LIGHT_ONLY"/>
+    <functioncall functionName="LIGHT_MODE_NORMAL"/>
+    <functioncall functionName="LIGHT_MODE_UNSHADED"/>
+    <functioncall functionName="LIMIT_MAX_TEXTURES_PER_SHADER_STAGE"/>
+    <functioncall functionName="LIMIT_MAX_UNIFORM_BUFFER_SIZE"/>
+    <functioncall functionName="LightUniform"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX_RENDER_ITEMS"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MaterialData"/>
+    <functioncall functionName="PIPELINE_LIGHT_MODE_DISABLED"/>
+    <functioncall functionName="PIPELINE_LIGHT_MODE_ENABLED"/>
+    <functioncall functionName="PIPELINE_LIGHT_MODE_MAX"/>
+    <functioncall functionName="PIPELINE_VARIANT_ATTRIBUTE_LINES"/>
+    <functioncall functionName="PIPELINE_VARIANT_ATTRIBUTE_LINES_STRIP"/>
+    <functioncall functionName="PIPELINE_VARIANT_ATTRIBUTE_POINTS"/>
+    <functioncall functionName="PIPELINE_VARIANT_ATTRIBUTE_TRIANGLES"/>
+    <functioncall functionName="PIPELINE_VARIANT_ATTRIBUTE_TRIANGLE_STRIP"/>
+    <functioncall functionName="PIPELINE_VARIANT_MAX"/>
+    <functioncall functionName="PIPELINE_VARIANT_NINEPATCH"/>
+    <functioncall functionName="PIPELINE_VARIANT_PRIMITIVE_LINES"/>
+    <functioncall functionName="PIPELINE_VARIANT_PRIMITIVE_POINTS"/>
+    <functioncall functionName="PIPELINE_VARIANT_PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="PIPELINE_VARIANT_QUAD"/>
+    <functioncall functionName="POLYGON_CULL_BACK"/>
+    <functioncall functionName="POLYGON_CULL_DISABLED"/>
+    <functioncall functionName="POLYGON_CULL_FRONT"/>
+    <functioncall functionName="POLY_HEIGHT"/>
+    <functioncall functionName="PRIMITIVE_MAX"/>
+    <functioncall functionName="Pair"/>
+    <functioncall functionName="PipelineDepthStencilState"/>
+    <functioncall functionName="PipelineMultisampleState"/>
+    <functioncall functionName="PipelineRasterizationState"/>
+    <functioncall functionName="PolygonBuffers"/>
+    <functioncall functionName="PushConstant"/>
+    <functioncall functionName="RENDER_PRIMITIVE_LINES"/>
+    <functioncall functionName="RENDER_PRIMITIVE_LINESTRIPS"/>
+    <functioncall functionName="RENDER_PRIMITIVE_POINTS"/>
+    <functioncall functionName="RENDER_PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="RENDER_PRIMITIVE_TRIANGLE_STRIPS"/>
+    <functioncall functionName="REPEAT_DISABLE"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="RasterizerCanvasRD"/>
+    <functioncall functionName="RasterizerRD"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Rect2i"/>
+    <functioncall functionName="SAMPLER_FILTER_LINEAR"/>
+    <functioncall functionName="SAMPLER_REPEAT_MODE_REPEAT"/>
+    <functioncall functionName="SHADER_CANVAS_ITEM"/>
+    <functioncall functionName="SHADER_TYPE_2D"/>
+    <functioncall functionName="SHADER_VARIANT_ATTRIBUTES"/>
+    <functioncall functionName="SHADER_VARIANT_ATTRIBUTES_LIGHT"/>
+    <functioncall functionName="SHADER_VARIANT_ATTRIBUTES_POINTS"/>
+    <functioncall functionName="SHADER_VARIANT_ATTRIBUTES_POINTS_LIGHT"/>
+    <functioncall functionName="SHADER_VARIANT_MAX"/>
+    <functioncall functionName="SHADER_VARIANT_NINEPATCH"/>
+    <functioncall functionName="SHADER_VARIANT_NINEPATCH_LIGHT"/>
+    <functioncall functionName="SHADER_VARIANT_PRIMITIVE"/>
+    <functioncall functionName="SHADER_VARIANT_PRIMITIVE_LIGHT"/>
+    <functioncall functionName="SHADER_VARIANT_PRIMITIVE_POINTS"/>
+    <functioncall functionName="SHADER_VARIANT_PRIMITIVE_POINTS_LIGHT"/>
+    <functioncall functionName="SHADER_VARIANT_QUAD"/>
+    <functioncall functionName="SHADER_VARIANT_QUAD_LIGHT"/>
+    <functioncall functionName="ShaderData"/>
+    <functioncall functionName="ShadowRenderPushConstant"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="Size2i"/>
+    <functioncall functionName="SkeletonUniform"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="TEXTURE_TYPE_2D"/>
+    <functioncall functionName="TEXTURE_USAGE_COLOR_ATTACHMENT_BIT"/>
+    <functioncall functionName="TEXTURE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT"/>
+    <functioncall functionName="TEXTURE_USAGE_SAMPLING_BIT"/>
+    <functioncall functionName="TextureBinding"/>
+    <functioncall functionName="TextureBindingID"/>
+    <functioncall functionName="TextureBindingKeyHasher"/>
+    <functioncall functionName="TextureView"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="Transform2D"/>
+    <functioncall functionName="UNIFORM_TYPE_SAMPLER"/>
+    <functioncall functionName="UNIFORM_TYPE_STORAGE_BUFFER"/>
+    <functioncall functionName="UNIFORM_TYPE_TEXTURE"/>
+    <functioncall functionName="UNIFORM_TYPE_TEXTURE_BUFFER"/>
+    <functioncall functionName="UNIFORM_TYPE_UNIFORM_BUFFER"/>
+    <functioncall functionName="Uniform"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_bind_texture_binding"/>
+    <functioncall functionName="_create_current"/>
+    <functioncall functionName="_create_material_func"/>
+    <functioncall functionName="_create_material_funcs"/>
+    <functioncall functionName="_create_shader_func"/>
+    <functioncall functionName="_create_shader_funcs"/>
+    <functioncall functionName="_create_texture_binding"/>
+    <functioncall functionName="_dispose_bindings"/>
+    <functioncall functionName="_render_item"/>
+    <functioncall functionName="_render_items"/>
+    <functioncall functionName="_update_specular_shininess"/>
+    <functioncall functionName="_update_transform_2d_to_mat2x3"/>
+    <functioncall functionName="_update_transform_2d_to_mat2x4"/>
+    <functioncall functionName="_update_transform_2d_to_mat4"/>
+    <functioncall functionName="_update_transform_to_mat4"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="actions"/>
+    <functioncall functionName="add"/>
+    <functioncall functionName="af_color"/>
+    <functioncall functionName="af_depth"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="attachment"/>
+    <functioncall functionName="attachments"/>
+    <functioncall functionName="axis_x"/>
+    <functioncall functionName="axis_y"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back_buffer_rect"/>
+    <functioncall functionName="backbuffer_copy"/>
+    <functioncall functionName="backbuffer_shader"/>
+    <functioncall functionName="base_flags"/>
+    <functioncall functionName="base_transform"/>
+    <functioncall functionName="binding"/>
+    <functioncall functionName="binding_id"/>
+    <functioncall functionName="binding_ptr"/>
+    <functioncall functionName="blend_mode"/>
+    <functioncall functionName="blend_state"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="buffer_update"/>
+    <functioncall functionName="buffers"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cam_target"/>
+    <functioncall functionName="canvas_item_state"/>
+    <functioncall functionName="canvas_light"/>
+    <functioncall functionName="canvas_normal_transform"/>
+    <functioncall functionName="canvas_singleton"/>
+    <functioncall functionName="canvas_state_buffer"/>
+    <functioncall functionName="canvas_transform"/>
+    <functioncall functionName="canvas_transform_inverse"/>
+    <functioncall functionName="cc"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="cl"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_colors"/>
+    <functioncall functionName="clight"/>
+    <functioncall functionName="code"/>
+    <functioncall functionName="commands"/>
+    <functioncall functionName="compile"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constant_value_to_variant"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copy_back_buffer"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="create_blend"/>
+    <functioncall functionName="create_disabled"/>
+    <functioncall functionName="cull_mode"/>
+    <functioncall functionName="current_clip"/>
+    <functioncall functionName="custom_data"/>
+    <functioncall functionName="default_empty"/>
+    <functioncall functionName="default_filter"/>
+    <functioncall functionName="default_repeat"/>
+    <functioncall functionName="default_skeleton_texture_buffer"/>
+    <functioncall functionName="default_skeleton_uniform_buffer"/>
+    <functioncall functionName="default_texture_params"/>
+    <functioncall functionName="default_value"/>
+    <functioncall functionName="default_version"/>
+    <functioncall functionName="default_version_rd_shader"/>
+    <functioncall functionName="default_version_rd_shader_light"/>
+    <functioncall functionName="defines"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="descriptions"/>
+    <functioncall functionName="draw_center"/>
+    <functioncall functionName="draw_list"/>
+    <functioncall functionName="draw_list_begin"/>
+    <functioncall functionName="draw_list_bind_index_array"/>
+    <functioncall functionName="draw_list_bind_render_pipeline"/>
+    <functioncall functionName="draw_list_bind_uniform_set"/>
+    <functioncall functionName="draw_list_bind_vertex_array"/>
+    <functioncall functionName="draw_list_disable_scissor"/>
+    <functioncall functionName="draw_list_draw"/>
+    <functioncall functionName="draw_list_enable_scissor"/>
+    <functioncall functionName="draw_list_end"/>
+    <functioncall functionName="draw_list_set_push_constant"/>
+    <functioncall functionName="ds"/>
+    <functioncall functionName="dst_rect"/>
+    <functioncall functionName="energy"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="farp"/>
+    <functioncall functionName="fb"/>
+    <functioncall functionName="fb_format"/>
+    <functioncall functionName="fb_textures"/>
+    <functioncall functionName="final_clip_owner"/>
+    <functioncall functionName="final_clip_rect"/>
+    <functioncall functionName="final_modulate"/>
+    <functioncall functionName="final_transform"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fragment"/>
+    <functioncall functionName="fragment_global"/>
+    <functioncall functionName="framebuffer"/>
+    <functioncall functionName="framebuffer_create"/>
+    <functioncall functionName="framebuffer_format"/>
+    <functioncall functionName="framebuffer_format_create"/>
+    <functioncall functionName="framebuffer_get_format"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="free_texture_binding"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="full"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="gen_code"/>
+    <functioncall functionName="geometry"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_frame_number"/>
+    <functioncall functionName="get_id"/>
+    <functioncall functionName="get_origin"/>
+    <functioncall functionName="get_render_pipeline"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="getornull"/>
+    <functioncall functionName="getptr"/>
+    <functioncall functionName="global_defines"/>
+    <functioncall functionName="global_variables_get_storage_buffer"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="hash"/>
+    <functioncall functionName="hash_djb2_one_32"/>
+    <functioncall functionName="hash_djb2_one_64"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hint"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idptr"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ignore"/>
+    <functioncall functionName="in_list"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="index_array"/>
+    <functioncall functionName="index_array_create"/>
+    <functioncall functionName="index_buffer"/>
+    <functioncall functionName="index_buffer_create"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instance_index"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="intersects_transformed"/>
+    <functioncall functionName="invalid_uniform"/>
+    <functioncall functionName="ir"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="item_count"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="iw"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="light"/>
+    <functioncall functionName="light_cache_count"/>
+    <functioncall functionName="light_count"/>
+    <functioncall functionName="light_internal"/>
+    <functioncall functionName="light_mask"/>
+    <functioncall functionName="light_mode"/>
+    <functioncall functionName="light_set_use_shadow"/>
+    <functioncall functionName="light_shader_xform"/>
+    <functioncall functionName="light_uniforms"/>
+    <functioncall functionName="lights_uniform_buffer"/>
+    <functioncall functionName="limit_get"/>
+    <functioncall functionName="looking_at"/>
+    <functioncall functionName="make_half_float"/>
+    <functioncall functionName="make_rid"/>
+    <functioncall functionName="material"/>
+    <functioncall functionName="material_data"/>
+    <functioncall functionName="material_force_update_textures"/>
+    <functioncall functionName="material_get_data"/>
+    <functioncall functionName="material_screen_texture_found"/>
+    <functioncall functionName="material_set_data_request_function"/>
+    <functioncall functionName="matrix"/>
+    <functioncall functionName="max_lights_per_item"/>
+    <functioncall functionName="max_lights_per_render"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memdelete_arr"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mesh_get_default_rd_buffer"/>
+    <functioncall functionName="modelview"/>
+    <functioncall functionName="multimesh"/>
+    <functioncall functionName="nearp"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_ptr"/>
+    <functioncall functionName="normal_transform"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalmap"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="occluder"/>
+    <functioncall functionName="occluder_polygon_set_shape_as_lines"/>
+    <functioncall functionName="order"/>
+    <functioncall functionName="owns"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_binding"/>
+    <functioncall functionName="p_canvas_transform"/>
+    <functioncall functionName="p_canvas_transform_inverse"/>
+    <functioncall functionName="p_code"/>
+    <functioncall functionName="p_draw_list"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_far"/>
+    <functioncall functionName="p_filter"/>
+    <functioncall functionName="p_framebuffer_format"/>
+    <functioncall functionName="p_item_list"/>
+    <functioncall functionName="p_light_list"/>
+    <functioncall functionName="p_lights"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_multimesh"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_near"/>
+    <functioncall functionName="p_normalmap"/>
+    <functioncall functionName="p_occluder"/>
+    <functioncall functionName="p_occluders"/>
+    <functioncall functionName="p_param"/>
+    <functioncall functionName="p_parameter"/>
+    <functioncall functionName="p_parameters"/>
+    <functioncall functionName="p_pipeline_variants"/>
+    <functioncall functionName="p_polygon"/>
+    <functioncall functionName="p_repeat"/>
+    <functioncall functionName="p_resolution"/>
+    <functioncall functionName="p_rid"/>
+    <functioncall functionName="p_screen_uniform_set"/>
+    <functioncall functionName="p_shader"/>
+    <functioncall functionName="p_specular"/>
+    <functioncall functionName="p_storage"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_to_render_target"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pb"/>
+    <functioncall functionName="pb_ptr"/>
+    <functioncall functionName="pi"/>
+    <functioncall functionName="pipeline"/>
+    <functioncall functionName="pipeline_variants"/>
+    <functioncall functionName="point_count"/>
+    <functioncall functionName="polygon_buffer"/>
+    <functioncall functionName="polygon_id"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="primitive"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_constant"/>
+    <functioncall functionName="pv"/>
+    <functioncall functionName="quad_index_array"/>
+    <functioncall functionName="quad_index_buffer"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="rd_texture"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="rect_cache"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="render_index_cache"/>
+    <functioncall functionName="render_pipeline_create"/>
+    <functioncall functionName="render_target_copy_to_back_buffer"/>
+    <functioncall functionName="render_target_disable_clear_request"/>
+    <functioncall functionName="render_target_get_back_buffer_uniform_set"/>
+    <functioncall functionName="render_target_get_clear_request_color"/>
+    <functioncall functionName="render_target_get_rd_framebuffer"/>
+    <functioncall functionName="render_target_get_size"/>
+    <functioncall functionName="render_target_is_clear_requested"/>
+    <functioncall functionName="request_texture_binding"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rs"/>
+    <functioncall functionName="sampler"/>
+    <functioncall functionName="sampler_create"/>
+    <functioncall functionName="sampler_rd_get_default"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="screen_transform"/>
+    <functioncall functionName="screen_uniform_set"/>
+    <functioncall functionName="self"/>
+    <functioncall functionName="set_frustum"/>
+    <functioncall functionName="setup"/>
+    <functioncall functionName="shader_set_data_request_function"/>
+    <functioncall functionName="shader_variant"/>
+    <functioncall functionName="shader_version"/>
+    <functioncall functionName="shadow_matrix"/>
+    <functioncall functionName="shadow_sampler"/>
+    <functioncall functionName="shadow_sampler_state"/>
+    <functioncall functionName="shadow_smooth"/>
+    <functioncall functionName="singleton"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skeleton_inverse"/>
+    <functioncall functionName="skeleton_transform"/>
+    <functioncall functionName="specular"/>
+    <functioncall functionName="specular_shininess"/>
+    <functioncall functionName="state_buffer"/>
+    <functioncall functionName="state_uniform_set"/>
+    <functioncall functionName="state_uniform_set_with_light"/>
+    <functioncall functionName="static_assert"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="su"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="tan"/>
+    <functioncall functionName="tex_uniform_count"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="texture_2d_get_size"/>
+    <functioncall functionName="texture_binding_ptr"/>
+    <functioncall functionName="texture_buffer_create"/>
+    <functioncall functionName="texture_create"/>
+    <functioncall functionName="texture_filter"/>
+    <functioncall functionName="texture_get_rd_texture"/>
+    <functioncall functionName="texture_is_format_supported_for_usage"/>
+    <functioncall functionName="texture_rd_get_default"/>
+    <functioncall functionName="texture_repeat"/>
+    <functioncall functionName="texture_uniforms"/>
+    <functioncall functionName="tf"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="time"/>
+    <functioncall functionName="to_dispose"/>
+    <functioncall functionName="to_light_xform"/>
+    <functioncall functionName="translate"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="u_lights"/>
+    <functioncall functionName="u_shadows"/>
+    <functioncall functionName="ubo_size"/>
+    <functioncall functionName="uint16_t"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uniform_buffer"/>
+    <functioncall functionName="uniform_buffer_create"/>
+    <functioncall functionName="uniform_offsets"/>
+    <functioncall functionName="uniform_set"/>
+    <functioncall functionName="uniform_set_create"/>
+    <functioncall functionName="uniform_set_is_valid"/>
+    <functioncall functionName="uniform_to_property_info"/>
+    <functioncall functionName="uniform_total_size"/>
+    <functioncall functionName="uniforms"/>
+    <functioncall functionName="update_textures"/>
+    <functioncall functionName="update_uniform_buffer"/>
+    <functioncall functionName="uses_material_samplers"/>
+    <functioncall functionName="uses_screen_texture"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="variants"/>
+    <functioncall functionName="vd"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="version_create"/>
+    <functioncall functionName="version_free"/>
+    <functioncall functionName="version_get_shader"/>
+    <functioncall functionName="version_is_valid"/>
+    <functioncall functionName="version_set_code"/>
+    <functioncall functionName="versions"/>
+    <functioncall functionName="vertex"/>
+    <functioncall functionName="vertex_array"/>
+    <functioncall functionName="vertex_array_create"/>
+    <functioncall functionName="vertex_buffer"/>
+    <functioncall functionName="vertex_buffer_create"/>
+    <functioncall functionName="vertex_format"/>
+    <functioncall functionName="vertex_format_create"/>
+    <functioncall functionName="vertex_format_id"/>
+    <functioncall functionName="vertex_global"/>
+    <functioncall functionName="vertex_id"/>
+    <functioncall functionName="vf"/>
+    <functioncall functionName="vr"/>
+    <functioncall functionName="vw"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="world"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="xform_cache"/>
+    <functioncall functionName="xmax"/>
+    <functioncall functionName="xmin"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="ymax"/>
+    <functioncall functionName="ymin"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

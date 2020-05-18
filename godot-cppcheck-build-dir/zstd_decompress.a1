@@ -1,0 +1,727 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="487028469">
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &apos;!&apos; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="132" column="32"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;src==NULL&apos; is redundant or there is possible null pointer dereference: ip." verbose="Either the condition &apos;src==NULL&apos; is redundant or there is possible null pointer dereference: ip." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="268" column="30" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="241" column="22" info="Assignment &apos;ip=(const BYTE*)src&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="246" column="24" info="Assuming that condition &apos;src==NULL&apos; is not redundant"/>
+            <symbol>ip</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;dctx==NULL&apos; is redundant or there is possible null pointer dereference: dctx." verbose="Either the condition &apos;dctx==NULL&apos; is redundant or there is possible null pointer dereference: dctx." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="715" column="48" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" column="38" info="Calling function &apos;ZSTD_decompressMultiFrame&apos;, 1st argument &apos;dctx&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" column="39" info="Calling function &apos;ZSTD_decompress_usingDDict&apos;, 1st argument &apos;dctx&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" column="37" info="Calling function &apos;ZSTD_decompressDCtx&apos;, 1st argument &apos;dctx&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" column="44" info="Assignment &apos;dctx=ZSTD_createDCtx()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" column="25" info="Assuming that condition &apos;dctx==NULL&apos; is not redundant"/>
+            <symbol>dctx</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;dctx==NULL&apos; is redundant or there is possible null pointer dereference: dctx." verbose="Either the condition &apos;dctx==NULL&apos; is redundant or there is possible null pointer dereference: dctx." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="801" column="13" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" column="91" info="Calling function &apos;ZSTD_getDDict&apos;, 1st argument &apos;dctx&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" column="37" info="Calling function &apos;ZSTD_decompressDCtx&apos;, 1st argument &apos;dctx&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" column="44" info="Assignment &apos;dctx=ZSTD_createDCtx()&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" column="25" info="Assuming that condition &apos;dctx==NULL&apos; is not redundant"/>
+            <symbol>dctx</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" call-funcname="ZSTD_decompressFrame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="762" col="52" call-argexpr="&src" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" call-funcname="ZSTD_decompressFrame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="762" col="52" call-argexpr="&srcSize" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="8" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="38" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="37" info="Calling function 'ZSTD_decompressDCtx', 1st argument 'dctx' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:799:26" call-funcname="ZSTD_getDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="90" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="37" info="Calling function 'ZSTD_decompressDCtx', 1st argument 'dctx' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" call-funcname="ZSTD_decompressDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="36" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:156:8" call-funcname="ZSTD_freeDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="829" col="18" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="37" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="37" info="Calling function 'ZSTD_decompressDCtx', 1st argument 'dctx' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="39" info="Calling function 'ZSTD_decompress_usingDDict', 1st argument 'dctx' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="7" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" call-funcname="ZSTD_initDStream_usingDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1315" col="39" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1338:8" call-funcname="ZSTD_DCtx_refDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1324" col="41" call-argexpr="ddict" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1315" col="45" info="Calling function 'ZSTD_initDStream_usingDDict', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:873:8" call-funcname="ZSTD_decompressContinue" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1650" col="71" call-argexpr="isSkipFrame?0:zds->outBuffSize-zds->outStart" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:208:15" call-funcname="ZSTD_frameHeaderSize_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="229" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:227:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" call-funcname="ZSTD_getFrameHeader_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="323" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" call-funcname="ZSTD_getFrameHeader_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="323" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" call-funcname="ZSTD_getFrameHeader" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="341" col="13" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:332:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:332:20" call-funcname="ZSTD_getFrameContentSize" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="423" col="36" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:421:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" call-funcname="ZSTD_getFrameHeader_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="434" col="27" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:432:15" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:456:27" call-funcname="ZSTD_findFrameSizeInfo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="529" col="46" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:527:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:456:27" call-funcname="ZSTD_findFrameSizeInfo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="544" col="50" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:539:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" call-funcname="ZSTD_checkContinuity" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="578" col="5" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:575:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" call-funcname="ZSTD_checkContinuity" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="578" col="5" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:575:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" call-funcname="ZSTD_decompressDCtx" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="17" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:822:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" call-funcname="ZSTD_decompressDCtx" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="17" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:822:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" call-funcname="ZSTD_checkContinuity" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="878" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:873:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1013:15" call-funcname="ZSTD_refDictContent" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1109" col="30" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1107:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1013:15" call-funcname="ZSTD_refDictContent" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1109" col="30" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1107:15" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1128:8" call-funcname="ZSTD_decompressBegin" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1152" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1150:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" call-funcname="ZSTD_getFrameHeader" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1209" col="27" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1206:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="8" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:117:12" call-funcname="ZSTD_initStaticDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1242" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1240:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:156:8" call-funcname="ZSTD_freeDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1252" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1250:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1279" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1277:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1279" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1277:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1282:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1282:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1289" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1289" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" call-funcname="ZSTD_DCtx_refPrefix_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1296" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1294:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" call-funcname="ZSTD_DCtx_refPrefix_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1296" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1294:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1422:8" call-funcname="ZSTD_DCtx_reset" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1306" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1303:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1282:8" call-funcname="ZSTD_DCtx_loadDictionary" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1307" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1303:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" call-funcname="ZSTD_initDStream_usingDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1315" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1312:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1422:8" call-funcname="ZSTD_DCtx_reset" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1323" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1338:8" call-funcname="ZSTD_DCtx_refDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1324" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1422:8" call-funcname="ZSTD_DCtx_reset" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1333" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1331:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1404:8" call-funcname="ZSTD_DCtx_setParameter" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1366" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1364:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:78:8" call-funcname="ZSTD_sizeof_DCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1442" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1440:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" call-funcname="ZSTD_getFrameHeader" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1468" col="24" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1464:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1487:8" call-funcname="ZSTD_decompressStream" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1765" col="25" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:97:13" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="99" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:148:13" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="150" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:174:6" my-argnr="2" my-argname="srcDCtx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="177" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:208:15" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="213" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" my-argnr="1" my-argname="zfhPtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="244" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="565" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="629" col="53" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="4" my-argname="srcPtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="619" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="5" my-argname="srcSizePtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="623" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="715" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:799:26" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="801" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:843:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="843" col="63" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:845:22" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="846" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:867:12" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="867" col="55" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:873:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="877" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1013:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1015" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:164:8" my-argnr="1" my-argname="entropy" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1036" col="118" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1266" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1338:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1340" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1352:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1357" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1404:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1406" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1479:19" my-argnr="1" my-argname="dst" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1482" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1479:19" my-argnr="3" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1482" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="4" my-argname="dstPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1762" col="50" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="7" my-argname="srcPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1763" col="46" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:174:6" my-argnr="2" my-argname="srcDCtx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="177" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="4" my-argname="srcPtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="619" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="5" my-argname="srcSizePtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="623" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="715" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:843:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="843" col="63" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:867:12" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="867" col="55" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1479:19" my-argnr="3" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1482" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1762" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="4" my-argname="dstPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1762" col="50" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="5" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1763" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="7" my-argname="srcPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1763" col="46" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" call-funcname="ZSTD_decompressFrame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="762" col="52" call-argexpr="&src" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" call-funcname="ZSTD_decompressFrame" call-argnr="5" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="762" col="52" call-argexpr="&srcSize" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="8" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="38" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="37" info="Calling function 'ZSTD_decompressDCtx', 1st argument 'dctx' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:799:26" call-funcname="ZSTD_getDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="90" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="37" info="Calling function 'ZSTD_decompressDCtx', 1st argument 'dctx' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" call-funcname="ZSTD_decompressDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="36" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:156:8" call-funcname="ZSTD_freeDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="829" col="18" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="37" call-argexpr="dctx" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="827" col="25" info="Assuming that condition 'dctx==NULL' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="826" col="44" info="Assignment 'dctx=ZSTD_createDCtx()', assigned value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="37" info="Calling function 'ZSTD_decompressDCtx', 1st argument 'dctx' value is 0"/>
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="39" info="Calling function 'ZSTD_decompress_usingDDict', 1st argument 'dctx' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="37" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="7" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" call-funcname="ZSTD_initDStream_usingDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1315" col="39" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1338:8" call-funcname="ZSTD_DCtx_refDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1324" col="41" call-argexpr="ddict" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1315" col="45" info="Calling function 'ZSTD_initDStream_usingDDict', 2nd argument 'NULL' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:873:8" call-funcname="ZSTD_decompressContinue" call-argnr="3" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1650" col="71" call-argexpr="isSkipFrame?0:zds->outBuffSize-zds->outStart" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:208:15" call-funcname="ZSTD_frameHeaderSize_internal" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="229" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:227:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" call-funcname="ZSTD_getFrameHeader_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="323" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" call-funcname="ZSTD_getFrameHeader_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="323" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" call-funcname="ZSTD_getFrameHeader" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="341" col="13" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:332:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:332:20" call-funcname="ZSTD_getFrameContentSize" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="423" col="36" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:421:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" call-funcname="ZSTD_getFrameHeader_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="434" col="27" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:432:15" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:456:27" call-funcname="ZSTD_findFrameSizeInfo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="529" col="46" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:527:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:456:27" call-funcname="ZSTD_findFrameSizeInfo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="544" col="50" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:539:20" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" call-funcname="ZSTD_checkContinuity" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="578" col="5" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:575:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" call-funcname="ZSTD_checkContinuity" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="578" col="5" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:575:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="6" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="795" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:790:8" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" call-funcname="ZSTD_decompress_usingDDict" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="818" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" call-funcname="ZSTD_decompressDCtx" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="17" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:822:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:816:8" call-funcname="ZSTD_decompressDCtx" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="828" col="17" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:822:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" call-funcname="ZSTD_checkContinuity" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="878" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:873:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1013:15" call-funcname="ZSTD_refDictContent" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1109" col="30" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1107:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1013:15" call-funcname="ZSTD_refDictContent" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1109" col="30" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1107:15" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1128:8" call-funcname="ZSTD_decompressBegin" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1152" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1150:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" call-funcname="ZSTD_getFrameHeader" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1209" col="27" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1206:10" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="4" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" call-funcname="ZSTD_decompressMultiFrame" call-argnr="8" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1224" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1218:8" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:117:12" call-funcname="ZSTD_initStaticDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1242" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1240:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:156:8" call-funcname="ZSTD_freeDCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1252" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1250:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1279" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1277:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1279" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1277:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1282:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1284" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1282:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1289" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" call-funcname="ZSTD_DCtx_loadDictionary_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1289" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" call-funcname="ZSTD_DCtx_refPrefix_advanced" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1296" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1294:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1287:8" call-funcname="ZSTD_DCtx_refPrefix_advanced" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1296" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1294:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1422:8" call-funcname="ZSTD_DCtx_reset" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1306" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1303:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1282:8" call-funcname="ZSTD_DCtx_loadDictionary" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1307" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1303:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" call-funcname="ZSTD_initDStream_usingDDict" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1315" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1312:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1422:8" call-funcname="ZSTD_DCtx_reset" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1323" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1338:8" call-funcname="ZSTD_DCtx_refDDict" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1324" col="23" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1321:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1422:8" call-funcname="ZSTD_DCtx_reset" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1333" col="22" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1331:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1404:8" call-funcname="ZSTD_DCtx_setParameter" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1366" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1364:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:78:8" call-funcname="ZSTD_sizeof_DCtx" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1442" col="12" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1440:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:321:8" call-funcname="ZSTD_getFrameHeader" call-argnr="2" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1468" col="24" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1464:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1487:8" call-funcname="ZSTD_decompressStream" call-argnr="1" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1765" col="25" my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:97:13" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="99" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:148:13" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="150" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:174:6" my-argnr="2" my-argname="srcDCtx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="177" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:208:15" my-argnr="1" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="213" col="40" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:239:8" my-argnr="1" my-argname="zfhPtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="244" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:172:6" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="565" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="629" col="53" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="4" my-argname="srcPtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="619" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="5" my-argname="srcSizePtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="623" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="715" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:799:26" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="801" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:843:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="843" col="63" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:845:22" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="846" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:867:12" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="867" col="55" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:873:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="877" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1013:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1015" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress_internal.h:164:8" my-argnr="1" my-argname="entropy" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1036" col="118" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1261:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1266" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1338:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1340" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1352:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1357" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1404:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1406" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1479:19" my-argnr="1" my-argname="dst" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1482" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1479:19" my-argnr="3" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1482" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="4" my-argname="dstPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1762" col="50" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="7" my-argname="srcPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1763" col="46" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:174:6" my-argnr="2" my-argname="srcDCtx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="177" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="4" my-argname="srcPtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="619" col="37" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:615:15" my-argnr="5" my-argname="srcSizePtr" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="623" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:698:15" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="715" col="48" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:843:8" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="843" col="63" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:867:12" my-argnr="1" my-argname="dctx" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="867" col="55" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1479:19" my-argnr="3" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1482" col="17" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1762" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="4" my-argname="dstPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1762" col="50" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="5" my-argname="src" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1763" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c:1757:8" my-argnr="7" my-argname="srcPos" file="/home/hbina/git/godot/thirdparty/zstd/decompress/zstd_decompress.c" line="1763" col="46" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ZSTD_sizeof_DCtx" lineNumber="78"/>
+    <functiondecl functionName="ZSTD_estimateDCtxSize" lineNumber="86"/>
+    <functiondecl functionName="ZSTD_startingInputLength" lineNumber="89"/>
+    <functiondecl functionName="ZSTD_initDCtx_internal" lineNumber="97"/>
+    <functiondecl functionName="ZSTD_initStaticDCtx" lineNumber="117"/>
+    <functiondecl functionName="ZSTD_createDCtx_advanced" lineNumber="130"/>
+    <functiondecl functionName="ZSTD_createDCtx" lineNumber="142"/>
+    <functiondecl functionName="ZSTD_clearDict" lineNumber="148"/>
+    <functiondecl functionName="ZSTD_freeDCtx" lineNumber="156"/>
+    <functiondecl functionName="ZSTD_copyDCtx" lineNumber="174"/>
+    <functiondecl functionName="ZSTD_isFrame" lineNumber="190"/>
+    <functiondecl functionName="ZSTD_frameHeaderSize_internal" lineNumber="208"/>
+    <functiondecl functionName="ZSTD_frameHeaderSize" lineNumber="227"/>
+    <functiondecl functionName="ZSTD_getFrameHeader_advanced" lineNumber="239"/>
+    <functiondecl functionName="ZSTD_getFrameHeader" lineNumber="321"/>
+    <functiondecl functionName="ZSTD_getFrameContentSize" lineNumber="332"/>
+    <functiondecl functionName="readSkippableFrameSize" lineNumber="350"/>
+    <functiondecl functionName="ZSTD_findDecompressedSize" lineNumber="372"/>
+    <functiondecl functionName="ZSTD_getDecompressedSize" lineNumber="421"/>
+    <functiondecl functionName="ZSTD_decodeFrameHeader" lineNumber="432"/>
+    <functiondecl functionName="ZSTD_errorFrameSizeInfo" lineNumber="448"/>
+    <functiondecl functionName="ZSTD_findFrameSizeInfo" lineNumber="456"/>
+    <functiondecl functionName="ZSTD_findFrameCompressedSize" lineNumber="527"/>
+    <functiondecl functionName="ZSTD_decompressBound" lineNumber="539"/>
+    <functiondecl functionName="ZSTD_checkContinuity" lineNumber="563"/>
+    <functiondecl functionName="ZSTD_insertBlock" lineNumber="575"/>
+    <functiondecl functionName="ZSTD_copyRawBlock" lineNumber="584"/>
+    <functiondecl functionName="ZSTD_setRleBlock" lineNumber="597"/>
+    <functiondecl functionName="ZSTD_decompressFrame" lineNumber="615"/>
+    <functiondecl functionName="ZSTD_decompressMultiFrame" lineNumber="698"/>
+    <functiondecl functionName="ZSTD_decompress_usingDict" lineNumber="790"/>
+    <functiondecl functionName="ZSTD_getDDict" lineNumber="799"/>
+    <functiondecl functionName="ZSTD_decompressDCtx" lineNumber="816"/>
+    <functiondecl functionName="ZSTD_decompress" lineNumber="822"/>
+    <functiondecl functionName="ZSTD_nextSrcSizeToDecompress" lineNumber="843"/>
+    <functiondecl functionName="ZSTD_nextInputType" lineNumber="845"/>
+    <functiondecl functionName="ZSTD_isSkipFrame" lineNumber="867"/>
+    <functiondecl functionName="ZSTD_decompressContinue" lineNumber="873"/>
+    <functiondecl functionName="ZSTD_refDictContent" lineNumber="1013"/>
+    <functiondecl functionName="ZSTD_loadDEntropy" lineNumber="1026"/>
+    <functiondecl functionName="ZSTD_decompress_insertDictionary" lineNumber="1107"/>
+    <functiondecl functionName="ZSTD_decompressBegin" lineNumber="1128"/>
+    <functiondecl functionName="ZSTD_decompressBegin_usingDict" lineNumber="1150"/>
+    <functiondecl functionName="ZSTD_decompressBegin_usingDDict" lineNumber="1163"/>
+    <functiondecl functionName="ZSTD_getDictID_fromDict" lineNumber="1186"/>
+    <functiondecl functionName="ZSTD_getDictID_fromFrame" lineNumber="1206"/>
+    <functiondecl functionName="ZSTD_decompress_usingDDict" lineNumber="1218"/>
+    <functiondecl functionName="ZSTD_createDStream" lineNumber="1234"/>
+    <functiondecl functionName="ZSTD_initStaticDStream" lineNumber="1240"/>
+    <functiondecl functionName="ZSTD_createDStream_advanced" lineNumber="1245"/>
+    <functiondecl functionName="ZSTD_freeDStream" lineNumber="1250"/>
+    <functiondecl functionName="ZSTD_DStreamInSize" lineNumber="1258"/>
+    <functiondecl functionName="ZSTD_DStreamOutSize" lineNumber="1259"/>
+    <functiondecl functionName="ZSTD_DCtx_loadDictionary_advanced" lineNumber="1261"/>
+    <functiondecl functionName="ZSTD_DCtx_loadDictionary_byReference" lineNumber="1277"/>
+    <functiondecl functionName="ZSTD_DCtx_loadDictionary" lineNumber="1282"/>
+    <functiondecl functionName="ZSTD_DCtx_refPrefix_advanced" lineNumber="1287"/>
+    <functiondecl functionName="ZSTD_DCtx_refPrefix" lineNumber="1294"/>
+    <functiondecl functionName="ZSTD_initDStream_usingDict" lineNumber="1303"/>
+    <functiondecl functionName="ZSTD_initDStream" lineNumber="1312"/>
+    <functiondecl functionName="ZSTD_initDStream_usingDDict" lineNumber="1321"/>
+    <functiondecl functionName="ZSTD_resetDStream" lineNumber="1331"/>
+    <functiondecl functionName="ZSTD_DCtx_refDDict" lineNumber="1338"/>
+    <functiondecl functionName="ZSTD_DCtx_setMaxWindowSize" lineNumber="1352"/>
+    <functiondecl functionName="ZSTD_DCtx_setFormat" lineNumber="1364"/>
+    <functiondecl functionName="ZSTD_dParam_getBounds" lineNumber="1369"/>
+    <functiondecl functionName="ZSTD_dParam_withinBounds" lineNumber="1391"/>
+    <functiondecl functionName="ZSTD_DCtx_setParameter" lineNumber="1404"/>
+    <functiondecl functionName="ZSTD_DCtx_reset" lineNumber="1422"/>
+    <functiondecl functionName="ZSTD_sizeof_DStream" lineNumber="1440"/>
+    <functiondecl functionName="ZSTD_decodingBufferSize_min" lineNumber="1445"/>
+    <functiondecl functionName="ZSTD_estimateDStreamSize" lineNumber="1456"/>
+    <functiondecl functionName="ZSTD_estimateDStreamSize_fromFrame" lineNumber="1464"/>
+    <functiondecl functionName="ZSTD_limitCopy" lineNumber="1479"/>
+    <functiondecl functionName="ZSTD_decompressStream" lineNumber="1487"/>
+    <functiondecl functionName="ZSTD_decompressStream_simpleArgs" lineNumber="1757"/>
+    <functiondecl functionName="ZSTD_sizeof_DCtx" lineNumber="78"/>
+    <functiondecl functionName="ZSTD_estimateDCtxSize" lineNumber="86"/>
+    <functiondecl functionName="ZSTD_startingInputLength" lineNumber="89"/>
+    <functiondecl functionName="ZSTD_initDCtx_internal" lineNumber="97"/>
+    <functiondecl functionName="ZSTD_initStaticDCtx" lineNumber="117"/>
+    <functiondecl functionName="ZSTD_createDCtx_advanced" lineNumber="130"/>
+    <functiondecl functionName="ZSTD_createDCtx" lineNumber="142"/>
+    <functiondecl functionName="ZSTD_clearDict" lineNumber="148"/>
+    <functiondecl functionName="ZSTD_freeDCtx" lineNumber="156"/>
+    <functiondecl functionName="ZSTD_copyDCtx" lineNumber="174"/>
+    <functiondecl functionName="ZSTD_isFrame" lineNumber="190"/>
+    <functiondecl functionName="ZSTD_frameHeaderSize_internal" lineNumber="208"/>
+    <functiondecl functionName="ZSTD_frameHeaderSize" lineNumber="227"/>
+    <functiondecl functionName="ZSTD_getFrameHeader_advanced" lineNumber="239"/>
+    <functiondecl functionName="ZSTD_getFrameHeader" lineNumber="321"/>
+    <functiondecl functionName="ZSTD_getFrameContentSize" lineNumber="332"/>
+    <functiondecl functionName="readSkippableFrameSize" lineNumber="350"/>
+    <functiondecl functionName="ZSTD_findDecompressedSize" lineNumber="372"/>
+    <functiondecl functionName="ZSTD_getDecompressedSize" lineNumber="421"/>
+    <functiondecl functionName="ZSTD_decodeFrameHeader" lineNumber="432"/>
+    <functiondecl functionName="ZSTD_errorFrameSizeInfo" lineNumber="448"/>
+    <functiondecl functionName="ZSTD_findFrameSizeInfo" lineNumber="456"/>
+    <functiondecl functionName="ZSTD_findFrameCompressedSize" lineNumber="527"/>
+    <functiondecl functionName="ZSTD_decompressBound" lineNumber="539"/>
+    <functiondecl functionName="ZSTD_checkContinuity" lineNumber="563"/>
+    <functiondecl functionName="ZSTD_insertBlock" lineNumber="575"/>
+    <functiondecl functionName="ZSTD_copyRawBlock" lineNumber="584"/>
+    <functiondecl functionName="ZSTD_setRleBlock" lineNumber="597"/>
+    <functiondecl functionName="ZSTD_decompressFrame" lineNumber="615"/>
+    <functiondecl functionName="ZSTD_decompressMultiFrame" lineNumber="698"/>
+    <functiondecl functionName="ZSTD_decompress_usingDict" lineNumber="790"/>
+    <functiondecl functionName="ZSTD_getDDict" lineNumber="799"/>
+    <functiondecl functionName="ZSTD_decompressDCtx" lineNumber="816"/>
+    <functiondecl functionName="ZSTD_decompress" lineNumber="822"/>
+    <functiondecl functionName="ZSTD_nextSrcSizeToDecompress" lineNumber="843"/>
+    <functiondecl functionName="ZSTD_nextInputType" lineNumber="845"/>
+    <functiondecl functionName="ZSTD_isSkipFrame" lineNumber="867"/>
+    <functiondecl functionName="ZSTD_decompressContinue" lineNumber="873"/>
+    <functiondecl functionName="ZSTD_refDictContent" lineNumber="1013"/>
+    <functiondecl functionName="ZSTD_loadDEntropy" lineNumber="1026"/>
+    <functiondecl functionName="ZSTD_decompress_insertDictionary" lineNumber="1107"/>
+    <functiondecl functionName="ZSTD_decompressBegin" lineNumber="1128"/>
+    <functiondecl functionName="ZSTD_decompressBegin_usingDict" lineNumber="1150"/>
+    <functiondecl functionName="ZSTD_decompressBegin_usingDDict" lineNumber="1163"/>
+    <functiondecl functionName="ZSTD_getDictID_fromDict" lineNumber="1186"/>
+    <functiondecl functionName="ZSTD_getDictID_fromFrame" lineNumber="1206"/>
+    <functiondecl functionName="ZSTD_decompress_usingDDict" lineNumber="1218"/>
+    <functiondecl functionName="ZSTD_createDStream" lineNumber="1234"/>
+    <functiondecl functionName="ZSTD_initStaticDStream" lineNumber="1240"/>
+    <functiondecl functionName="ZSTD_createDStream_advanced" lineNumber="1245"/>
+    <functiondecl functionName="ZSTD_freeDStream" lineNumber="1250"/>
+    <functiondecl functionName="ZSTD_DStreamInSize" lineNumber="1258"/>
+    <functiondecl functionName="ZSTD_DStreamOutSize" lineNumber="1259"/>
+    <functiondecl functionName="ZSTD_DCtx_loadDictionary_advanced" lineNumber="1261"/>
+    <functiondecl functionName="ZSTD_DCtx_loadDictionary_byReference" lineNumber="1277"/>
+    <functiondecl functionName="ZSTD_DCtx_loadDictionary" lineNumber="1282"/>
+    <functiondecl functionName="ZSTD_DCtx_refPrefix_advanced" lineNumber="1287"/>
+    <functiondecl functionName="ZSTD_DCtx_refPrefix" lineNumber="1294"/>
+    <functiondecl functionName="ZSTD_initDStream_usingDict" lineNumber="1303"/>
+    <functiondecl functionName="ZSTD_initDStream" lineNumber="1312"/>
+    <functiondecl functionName="ZSTD_initDStream_usingDDict" lineNumber="1321"/>
+    <functiondecl functionName="ZSTD_resetDStream" lineNumber="1331"/>
+    <functiondecl functionName="ZSTD_DCtx_refDDict" lineNumber="1338"/>
+    <functiondecl functionName="ZSTD_DCtx_setMaxWindowSize" lineNumber="1352"/>
+    <functiondecl functionName="ZSTD_DCtx_setFormat" lineNumber="1364"/>
+    <functiondecl functionName="ZSTD_dParam_getBounds" lineNumber="1369"/>
+    <functiondecl functionName="ZSTD_dParam_withinBounds" lineNumber="1391"/>
+    <functiondecl functionName="ZSTD_DCtx_setParameter" lineNumber="1404"/>
+    <functiondecl functionName="ZSTD_DCtx_reset" lineNumber="1422"/>
+    <functiondecl functionName="ZSTD_sizeof_DStream" lineNumber="1440"/>
+    <functiondecl functionName="ZSTD_decodingBufferSize_min" lineNumber="1445"/>
+    <functiondecl functionName="ZSTD_estimateDStreamSize" lineNumber="1456"/>
+    <functiondecl functionName="ZSTD_estimateDStreamSize_fromFrame" lineNumber="1464"/>
+    <functiondecl functionName="ZSTD_limitCopy" lineNumber="1479"/>
+    <functiondecl functionName="ZSTD_decompressStream" lineNumber="1487"/>
+    <functiondecl functionName="ZSTD_decompressStream_simpleArgs" lineNumber="1757"/>
+    <functioncall functionName="DEBUGLOG"/>
+    <functioncall functionName="ERROR"/>
+    <functioncall functionName="FORWARD_IF_ERROR"/>
+    <functioncall functionName="FSE_isError"/>
+    <functioncall functionName="FSE_readNCount"/>
+    <functioncall functionName="GENERIC"/>
+    <functioncall functionName="HUF_DECOMPRESS_WORKSPACE_SIZE_U32"/>
+    <functioncall functionName="HUF_DTABLE_SIZE"/>
+    <functioncall functionName="HUF_DTable"/>
+    <functioncall functionName="HUF_isError"/>
+    <functioncall functionName="HUF_readDTableX1_wksp"/>
+    <functioncall functionName="HUF_readDTableX2_wksp"/>
+    <functioncall functionName="HufLog"/>
+    <functioncall functionName="LLFSELog"/>
+    <functioncall functionName="LLTable"/>
+    <functioncall functionName="LL_base"/>
+    <functioncall functionName="LL_bits"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MEM_readLE16"/>
+    <functioncall functionName="MEM_readLE32"/>
+    <functioncall functionName="MEM_readLE64"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MLFSELog"/>
+    <functioncall functionName="MLTable"/>
+    <functioncall functionName="ML_base"/>
+    <functioncall functionName="ML_bits"/>
+    <functioncall functionName="MaxLL"/>
+    <functioncall functionName="MaxML"/>
+    <functioncall functionName="MaxOff"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="OFTable"/>
+    <functioncall functionName="OF_base"/>
+    <functioncall functionName="OF_bits"/>
+    <functioncall functionName="OffFSELog"/>
+    <functioncall functionName="RETURN_ERROR"/>
+    <functioncall functionName="RETURN_ERROR_IF"/>
+    <functioncall functionName="U32"/>
+    <functioncall functionName="U64"/>
+    <functioncall functionName="WILDCOPY_OVERLENGTH"/>
+    <functioncall functionName="XXH64_digest"/>
+    <functioncall functionName="XXH64_reset"/>
+    <functioncall functionName="XXH64_update"/>
+    <functioncall functionName="ZSTD_BLOCKSIZE_MAX"/>
+    <functioncall functionName="ZSTD_CONTENTSIZE_ERROR"/>
+    <functioncall functionName="ZSTD_CONTENTSIZE_UNKNOWN"/>
+    <functioncall functionName="ZSTD_DCtx"/>
+    <functioncall functionName="ZSTD_DCtx_loadDictionary"/>
+    <functioncall functionName="ZSTD_DCtx_loadDictionary_advanced"/>
+    <functioncall functionName="ZSTD_DCtx_refDDict"/>
+    <functioncall functionName="ZSTD_DCtx_refPrefix_advanced"/>
+    <functioncall functionName="ZSTD_DCtx_reset"/>
+    <functioncall functionName="ZSTD_DCtx_setParameter"/>
+    <functioncall functionName="ZSTD_DDict_dictContent"/>
+    <functioncall functionName="ZSTD_DDict_dictSize"/>
+    <functioncall functionName="ZSTD_FRAMEHEADERSIZE_MAX"/>
+    <functioncall functionName="ZSTD_FRAMEHEADERSIZE_MIN"/>
+    <functioncall functionName="ZSTD_FRAMEHEADERSIZE_PREFIX"/>
+    <functioncall functionName="ZSTD_FRAMEIDSIZE"/>
+    <functioncall functionName="ZSTD_MAGICNUMBER"/>
+    <functioncall functionName="ZSTD_MAGIC_SKIPPABLE_MASK"/>
+    <functioncall functionName="ZSTD_REP_NUM"/>
+    <functioncall functionName="ZSTD_SKIPPABLEHEADERSIZE"/>
+    <functioncall functionName="ZSTD_STATIC_ASSERT"/>
+    <functioncall functionName="ZSTD_WINDOWLOG_ABSOLUTEMIN"/>
+    <functioncall functionName="ZSTD_WINDOWLOG_LIMIT_DEFAULT"/>
+    <functioncall functionName="ZSTD_WINDOWLOG_MAX"/>
+    <functioncall functionName="ZSTD_blockHeaderSize"/>
+    <functioncall functionName="ZSTD_buildFSETable"/>
+    <functioncall functionName="ZSTD_checkContinuity"/>
+    <functioncall functionName="ZSTD_clearDict"/>
+    <functioncall functionName="ZSTD_copyDDictParameters"/>
+    <functioncall functionName="ZSTD_copyRawBlock"/>
+    <functioncall functionName="ZSTD_cpuid"/>
+    <functioncall functionName="ZSTD_cpuid_bmi2"/>
+    <functioncall functionName="ZSTD_createDCtx"/>
+    <functioncall functionName="ZSTD_createDCtx_advanced"/>
+    <functioncall functionName="ZSTD_createDDict_advanced"/>
+    <functioncall functionName="ZSTD_createDStream_advanced"/>
+    <functioncall functionName="ZSTD_dParam_getBounds"/>
+    <functioncall functionName="ZSTD_dParam_withinBounds"/>
+    <functioncall functionName="ZSTD_d_format"/>
+    <functioncall functionName="ZSTD_d_windowLogMax"/>
+    <functioncall functionName="ZSTD_dct_auto"/>
+    <functioncall functionName="ZSTD_dct_rawContent"/>
+    <functioncall functionName="ZSTD_decodeFrameHeader"/>
+    <functioncall functionName="ZSTD_decodingBufferSize_min"/>
+    <functioncall functionName="ZSTD_decompressBegin"/>
+    <functioncall functionName="ZSTD_decompressBegin_usingDDict"/>
+    <functioncall functionName="ZSTD_decompressBegin_usingDict"/>
+    <functioncall functionName="ZSTD_decompressBlock_internal"/>
+    <functioncall functionName="ZSTD_decompressContinue"/>
+    <functioncall functionName="ZSTD_decompressDCtx"/>
+    <functioncall functionName="ZSTD_decompressFrame"/>
+    <functioncall functionName="ZSTD_decompressMultiFrame"/>
+    <functioncall functionName="ZSTD_decompressStream"/>
+    <functioncall functionName="ZSTD_decompress_insertDictionary"/>
+    <functioncall functionName="ZSTD_decompress_usingDDict"/>
+    <functioncall functionName="ZSTD_defaultCMem"/>
+    <functioncall functionName="ZSTD_dlm_byCopy"/>
+    <functioncall functionName="ZSTD_dlm_byRef"/>
+    <functioncall functionName="ZSTD_dont_use"/>
+    <functioncall functionName="ZSTD_errorFrameSizeInfo"/>
+    <functioncall functionName="ZSTD_estimateDCtxSize"/>
+    <functioncall functionName="ZSTD_estimateDStreamSize"/>
+    <functioncall functionName="ZSTD_f_zstd1"/>
+    <functioncall functionName="ZSTD_f_zstd1_magicless"/>
+    <functioncall functionName="ZSTD_findFrameCompressedSize"/>
+    <functioncall functionName="ZSTD_findFrameSizeInfo"/>
+    <functioncall functionName="ZSTD_format_e"/>
+    <functioncall functionName="ZSTD_frame"/>
+    <functioncall functionName="ZSTD_frameHeaderSize_internal"/>
+    <functioncall functionName="ZSTD_frameSizeInfo"/>
+    <functioncall functionName="ZSTD_free"/>
+    <functioncall functionName="ZSTD_freeDCtx"/>
+    <functioncall functionName="ZSTD_freeDDict"/>
+    <functioncall functionName="ZSTD_getDDict"/>
+    <functioncall functionName="ZSTD_getErrorCode"/>
+    <functioncall functionName="ZSTD_getFrameContentSize"/>
+    <functioncall functionName="ZSTD_getFrameHeader"/>
+    <functioncall functionName="ZSTD_getFrameHeader_advanced"/>
+    <functioncall functionName="ZSTD_getcBlockSize"/>
+    <functioncall functionName="ZSTD_initDCtx_internal"/>
+    <functioncall functionName="ZSTD_initDStream_usingDDict"/>
+    <functioncall functionName="ZSTD_initStaticDCtx"/>
+    <functioncall functionName="ZSTD_isError"/>
+    <functioncall functionName="ZSTD_isSkipFrame"/>
+    <functioncall functionName="ZSTD_limitCopy"/>
+    <functioncall functionName="ZSTD_loadDEntropy"/>
+    <functioncall functionName="ZSTD_malloc"/>
+    <functioncall functionName="ZSTD_nextInputType"/>
+    <functioncall functionName="ZSTD_nextSrcSizeToDecompress"/>
+    <functioncall functionName="ZSTD_refDictContent"/>
+    <functioncall functionName="ZSTD_reset_session_only"/>
+    <functioncall functionName="ZSTD_setRleBlock"/>
+    <functioncall functionName="ZSTD_sizeof_DCtx"/>
+    <functioncall functionName="ZSTD_sizeof_DDict"/>
+    <functioncall functionName="ZSTD_skippableFrame"/>
+    <functioncall functionName="ZSTD_startingInputLength"/>
+    <functioncall functionName="ZSTD_use_indefinitely"/>
+    <functioncall functionName="ZSTD_use_once"/>
+    <functioncall functionName="ZSTDds_checkChecksum"/>
+    <functioncall functionName="ZSTDds_decodeBlockHeader"/>
+    <functioncall functionName="ZSTDds_decodeFrameHeader"/>
+    <functioncall functionName="ZSTDds_decodeSkippableHeader"/>
+    <functioncall functionName="ZSTDds_decompressBlock"/>
+    <functioncall functionName="ZSTDds_decompressLastBlock"/>
+    <functioncall functionName="ZSTDds_getFrameHeaderSize"/>
+    <functioncall functionName="ZSTDds_skipFrame"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="bType"/>
+    <functioncall functionName="blockProperties"/>
+    <functioncall functionName="blockSize"/>
+    <functioncall functionName="blockSizeMax"/>
+    <functioncall functionName="blockStart"/>
+    <functioncall functionName="blockType"/>
+    <functioncall functionName="bp"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="bufferSize"/>
+    <functioncall functionName="cBlockSize"/>
+    <functioncall functionName="cMem"/>
+    <functioncall functionName="cSize"/>
+    <functioncall functionName="check32"/>
+    <functioncall functionName="checksumFlag"/>
+    <functioncall functionName="checksum_wrong"/>
+    <functioncall functionName="compressedSize"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="corruption_detected"/>
+    <functioncall functionName="customFree"/>
+    <functioncall functionName="customMem"/>
+    <functioncall functionName="dParam"/>
+    <functioncall functionName="dctx"/>
+    <functioncall functionName="ddict"/>
+    <functioncall functionName="ddictLocal"/>
+    <functioncall functionName="decodedSize"/>
+    <functioncall functionName="decompressedBound"/>
+    <functioncall functionName="decompressedSize"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="dict"/>
+    <functioncall functionName="dictContentType"/>
+    <functioncall functionName="dictID"/>
+    <functioncall functionName="dictIDSizeCode"/>
+    <functioncall functionName="dictLoadMethod"/>
+    <functioncall functionName="dictPtr"/>
+    <functioncall functionName="dictSize"/>
+    <functioncall functionName="dictUses"/>
+    <functioncall functionName="dictionary_corrupted"/>
+    <functioncall functionName="dictionary_wrong"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dstBuffer_null"/>
+    <functioncall functionName="dstCapacity"/>
+    <functioncall functionName="dstDCtx"/>
+    <functioncall functionName="dstSize_tooSmall"/>
+    <functioncall functionName="dststart"/>
+    <functioncall functionName="eSize"/>
+    <functioncall functionName="entropy"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="expected"/>
+    <functioncall functionName="fParams"/>
+    <functioncall functionName="fcsID"/>
+    <functioncall functionName="fcsId"/>
+    <functioncall functionName="fhsize"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format"/>
+    <functioncall functionName="frameContentSize"/>
+    <functioncall functionName="frameHeaderSize"/>
+    <functioncall functionName="frameParameter_unsupported"/>
+    <functioncall functionName="frameParameter_windowTooLarge"/>
+    <functioncall functionName="frameSizeInfo"/>
+    <functioncall functionName="frameSrcSize"/>
+    <functioncall functionName="h32"/>
+    <functioncall functionName="hError"/>
+    <functioncall functionName="hSize"/>
+    <functioncall functionName="headerBuffer"/>
+    <functioncall functionName="headerSize"/>
+    <functioncall functionName="hostageByte"/>
+    <functioncall functionName="hufTable"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inBuff"/>
+    <functioncall functionName="inBuffSize"/>
+    <functioncall functionName="inPos"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="ip"/>
+    <functioncall functionName="ipstart"/>
+    <functioncall functionName="isSkipFrame"/>
+    <functioncall functionName="istart"/>
+    <functioncall functionName="lastBlock"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lhSize"/>
+    <functioncall functionName="litlengthHeaderSize"/>
+    <functioncall functionName="litlengthLog"/>
+    <functioncall functionName="litlengthMaxValue"/>
+    <functioncall functionName="litlengthNCount"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="lowerBound"/>
+    <functioncall functionName="magicNumber"/>
+    <functioncall functionName="matchlengthHeaderSize"/>
+    <functioncall functionName="matchlengthLog"/>
+    <functioncall functionName="matchlengthMaxValue"/>
+    <functioncall functionName="matchlengthNCount"/>
+    <functioncall functionName="maxWindowSize"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memory_allocation"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minInputSize"/>
+    <functioncall functionName="neededInBuffSize"/>
+    <functioncall functionName="neededInSize"/>
+    <functioncall functionName="neededOutBuffSize"/>
+    <functioncall functionName="neededRBSize"/>
+    <functioncall functionName="neededSize"/>
+    <functioncall functionName="nextSrcSizeHint"/>
+    <functioncall functionName="offcodeHeaderSize"/>
+    <functioncall functionName="offcodeLog"/>
+    <functioncall functionName="offcodeMaxValue"/>
+    <functioncall functionName="offcodeNCount"/>
+    <functioncall functionName="offsetof"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="origSize"/>
+    <functioncall functionName="ostart"/>
+    <functioncall functionName="outBuffSize"/>
+    <functioncall functionName="outStart"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="parameter_outOfBound"/>
+    <functioncall functionName="parameter_unsupported"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="prefix"/>
+    <functioncall functionName="prefixSize"/>
+    <functioncall functionName="prefixStart"/>
+    <functioncall functionName="prefix_unknown"/>
+    <functioncall functionName="previousDstEnd"/>
+    <functioncall functionName="rSize"/>
+    <functioncall functionName="readSkippableFrameSize"/>
+    <functioncall functionName="regenSize"/>
+    <functioncall functionName="remainingInput"/>
+    <functioncall functionName="remainingSize"/>
+    <functioncall functionName="remainingSrcSize"/>
+    <functioncall functionName="rep"/>
+    <functioncall functionName="repStartValue"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rleSize"/>
+    <functioncall functionName="singleSegment"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeU32"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skippableSize"/>
+    <functioncall functionName="someMoreWork"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="srcDCtx"/>
+    <functioncall functionName="srcSize"/>
+    <functioncall functionName="srcSize_wrong"/>
+    <functioncall functionName="stage"/>
+    <functioncall functionName="stage_wrong"/>
+    <functioncall functionName="staticSize"/>
+    <functioncall functionName="streamStage"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="toCopy"/>
+    <functioncall functionName="toFlushSize"/>
+    <functioncall functionName="toLoad"/>
+    <functioncall functionName="upperBound"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="windowLog"/>
+    <functioncall functionName="windowSize"/>
+    <functioncall functionName="workspace"/>
+    <functioncall functionName="workspaceSize"/>
+    <functioncall functionName="xxhState"/>
+    <functioncall functionName="zds"/>
+    <functioncall functionName="zdss_flush"/>
+    <functioncall functionName="zdss_init"/>
+    <functioncall functionName="zdss_load"/>
+    <functioncall functionName="zdss_loadHeader"/>
+    <functioncall functionName="zdss_read"/>
+    <functioncall functionName="zfh"/>
+    <functioncall functionName="zfhPtr"/>
+    <functioncall functionName="zfp"/>
+  </FileInfo>
+</analyzerinfo>

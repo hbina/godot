@@ -1,0 +1,843 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3755079179">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="407" column="51"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="409" column="68"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::body_shape&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::body_shape&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="157" column="3"/>
+            <symbol>ShapePair::body_shape</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::local_shape&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::local_shape&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="157" column="3"/>
+            <symbol>ShapePair::local_shape</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="157" column="3"/>
+            <symbol>ShapePair::tagged</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." verbose="Member variable &apos;ShapePair::tagged&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="158" column="3"/>
+            <symbol>ShapePair::tagged</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;constant_angular_velocity&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;constant_angular_velocity&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="230" column="2"/>
+            <symbol>constant_angular_velocity</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;mass&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;mass&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="946" column="2"/>
+            <symbol>mass</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;gravity_scale&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;gravity_scale&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="948" column="2"/>
+            <symbol>gravity_scale</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;linear_damp&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;linear_damp&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="949" column="2"/>
+            <symbol>linear_damp</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;angular_damp&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;angular_damp&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="950" column="2"/>
+            <symbol>angular_damp</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;angular_velocity&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;angular_velocity&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="955" column="2"/>
+            <symbol>angular_velocity</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;PhysicsBody2D&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;PhysicsBody2D&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" file="/home/hbina/git/godot/scene/2d/physics_body_2d.h" line="53" column="2"/>
+            <symbol>PhysicsBody2D</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!physics_body&apos; is redundant or there is possible null pointer dereference: physics_body." verbose="Either the condition &apos;!physics_body&apos; is redundant or there is possible null pointer dereference: physics_body." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="161" column="76" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="159" column="62" info="Assignment &apos;physics_body=Object::cast_to&lt;PhysicsBody2D&gt;(p_node)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="160" column="20" info="Assuming that condition &apos;!physics_body&apos; is not redundant"/>
+            <symbol>physics_body</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!physics_body&apos; is redundant or there is possible null pointer dereference: physics_body." verbose="Either the condition &apos;!physics_body&apos; is redundant or there is possible null pointer dereference: physics_body." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="169" column="79" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="167" column="62" info="Assignment &apos;physics_body=Object::cast_to&lt;PhysicsBody2D&gt;(p_node)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="168" column="20" info="Assuming that condition &apos;!physics_body&apos; is not redundant"/>
+            <symbol>physics_body</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="255" column="16" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="253" column="71" info="Assignment &apos;E=contact_monitor-&gt;body_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="254" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="259" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="253" column="71" info="Assignment &apos;E=contact_monitor-&gt;body_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="254" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="278" column="17" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="276" column="71" info="Assignment &apos;E=contact_monitor-&gt;body_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="277" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="279" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="276" column="71" info="Assignment &apos;E=contact_monitor-&gt;body_map.find(p_id)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="277" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="407" column="30"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="409" column="40"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:185:7" call-funcname="_body_inout" call-argnr="1" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="464" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:328:10" call-funcname="move_and_slide" call-argnr="3" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1167" col="30" call-argexpr="p_stop_on_slope" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1183" col="8" info="Assuming that condition 'if(p_stop_on_slope)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:319:7" call-funcname="move_and_collide" call-argnr="4" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1175" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:185:7" call-funcname="_body_inout" call-argnr="1" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="464" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:328:10" call-funcname="move_and_slide" call-argnr="3" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1167" col="30" call-argexpr="p_stop_on_slope" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1183" col="8" info="Assuming that condition 'if(p_stop_on_slope)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:319:7" call-funcname="move_and_collide" call-argnr="4" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1175" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:185:7" call-funcname="_body_inout" call-argnr="1" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="464" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:328:10" call-funcname="move_and_slide" call-argnr="3" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1167" col="30" call-argexpr="p_stop_on_slope" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1183" col="8" info="Assuming that condition 'if(p_stop_on_slope)' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/scene/2d/physics_body_2d.h:319:7" call-funcname="move_and_collide" call-argnr="4" file="/home/hbina/git/godot/scene/2d/physics_body_2d.cpp" line="1175" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_notification" lineNumber="42"/>
+    <functiondecl functionName="_set_layers" lineNumber="45"/>
+    <functiondecl functionName="_get_layers" lineNumber="51"/>
+    <functiondecl functionName="_bind_methods" lineNumber="56"/>
+    <functiondecl functionName="set_collision_layer" lineNumber="82"/>
+    <functiondecl functionName="get_collision_layer" lineNumber="88"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="93"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="99"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="104"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="113"/>
+    <functiondecl functionName="set_collision_layer_bit" lineNumber="118"/>
+    <functiondecl functionName="get_collision_layer_bit" lineNumber="128"/>
+    <functiondecl functionName="get_collision_exceptions" lineNumber="142"/>
+    <functiondecl functionName="add_collision_exception_with" lineNumber="156"/>
+    <functiondecl functionName="remove_collision_exception_with" lineNumber="164"/>
+    <functiondecl functionName="set_constant_linear_velocity" lineNumber="172"/>
+    <functiondecl functionName="set_constant_angular_velocity" lineNumber="178"/>
+    <functiondecl functionName="get_constant_linear_velocity" lineNumber="184"/>
+    <functiondecl functionName="get_constant_angular_velocity" lineNumber="188"/>
+    <functiondecl functionName="set_physics_material_override" lineNumber="193"/>
+    <functiondecl functionName="get_physics_material_override" lineNumber="208"/>
+    <functiondecl functionName="_bind_methods" lineNumber="212"/>
+    <functiondecl functionName="_reload_physics_characteristics" lineNumber="236"/>
+    <functiondecl functionName="_body_enter_tree" lineNumber="246"/>
+    <functiondecl functionName="_body_exit_tree" lineNumber="270"/>
+    <functiondecl functionName="_body_inout" lineNumber="293"/>
+    <functiondecl functionName="_test_motion" lineNumber="363"/>
+    <functiondecl functionName="_direct_state_changed" lineNumber="371"/>
+    <functiondecl functionName="set_mode" lineNumber="480"/>
+    <functiondecl functionName="get_mode" lineNumber="506"/>
+    <functiondecl functionName="set_mass" lineNumber="511"/>
+    <functiondecl functionName="get_mass" lineNumber="519"/>
+    <functiondecl functionName="set_inertia" lineNumber="524"/>
+    <functiondecl functionName="get_inertia" lineNumber="530"/>
+    <functiondecl functionName="set_weight" lineNumber="535"/>
+    <functiondecl functionName="get_weight" lineNumber="540"/>
+    <functiondecl functionName="set_physics_material_override" lineNumber="545"/>
+    <functiondecl functionName="get_physics_material_override" lineNumber="560"/>
+    <functiondecl functionName="set_gravity_scale" lineNumber="564"/>
+    <functiondecl functionName="get_gravity_scale" lineNumber="569"/>
+    <functiondecl functionName="set_linear_damp" lineNumber="574"/>
+    <functiondecl functionName="get_linear_damp" lineNumber="580"/>
+    <functiondecl functionName="set_angular_damp" lineNumber="585"/>
+    <functiondecl functionName="get_angular_damp" lineNumber="591"/>
+    <functiondecl functionName="set_axis_velocity" lineNumber="596"/>
+    <functiondecl functionName="set_linear_velocity" lineNumber="610"/>
+    <functiondecl functionName="get_linear_velocity" lineNumber="621"/>
+    <functiondecl functionName="set_angular_velocity" lineNumber="626"/>
+    <functiondecl functionName="get_angular_velocity" lineNumber="634"/>
+    <functiondecl functionName="set_use_custom_integrator" lineNumber="639"/>
+    <functiondecl functionName="is_using_custom_integrator" lineNumber="647"/>
+    <functiondecl functionName="set_sleeping" lineNumber="652"/>
+    <functiondecl functionName="set_can_sleep" lineNumber="658"/>
+    <functiondecl functionName="is_able_to_sleep" lineNumber="664"/>
+    <functiondecl functionName="is_sleeping" lineNumber="669"/>
+    <functiondecl functionName="set_max_contacts_reported" lineNumber="674"/>
+    <functiondecl functionName="get_max_contacts_reported" lineNumber="680"/>
+    <functiondecl functionName="apply_central_impulse" lineNumber="685"/>
+    <functiondecl functionName="apply_impulse" lineNumber="689"/>
+    <functiondecl functionName="apply_torque_impulse" lineNumber="694"/>
+    <functiondecl functionName="set_applied_force" lineNumber="698"/>
+    <functiondecl functionName="get_applied_force" lineNumber="703"/>
+    <functiondecl functionName="set_applied_torque" lineNumber="708"/>
+    <functiondecl functionName="get_applied_torque" lineNumber="713"/>
+    <functiondecl functionName="add_central_force" lineNumber="718"/>
+    <functiondecl functionName="add_force" lineNumber="722"/>
+    <functiondecl functionName="add_torque" lineNumber="727"/>
+    <functiondecl functionName="set_continuous_collision_detection_mode" lineNumber="731"/>
+    <functiondecl functionName="get_continuous_collision_detection_mode" lineNumber="737"/>
+    <functiondecl functionName="get_colliding_bodies" lineNumber="742"/>
+    <functiondecl functionName="set_contact_monitor" lineNumber="761"/>
+    <functiondecl functionName="is_contact_monitor_enabled" lineNumber="791"/>
+    <functiondecl functionName="_notification" lineNumber="796"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="814"/>
+    <functiondecl functionName="_bind_methods" lineNumber="830"/>
+    <functiondecl functionName="_reload_physics_characteristics" lineNumber="972"/>
+    <functiondecl functionName="_move" lineNumber="984"/>
+    <functiondecl functionName="separate_raycast_shapes" lineNumber="1002"/>
+    <functiondecl functionName="move_and_collide" lineNumber="1039"/>
+    <functiondecl functionName="move_and_slide" lineNumber="1072"/>
+    <functiondecl functionName="move_and_slide_with_snap" lineNumber="1163"/>
+    <functiondecl functionName="is_on_floor" lineNumber="1203"/>
+    <functiondecl functionName="is_on_wall" lineNumber="1207"/>
+    <functiondecl functionName="is_on_ceiling" lineNumber="1211"/>
+    <functiondecl functionName="get_floor_normal" lineNumber="1216"/>
+    <functiondecl functionName="get_floor_velocity" lineNumber="1221"/>
+    <functiondecl functionName="test_move" lineNumber="1226"/>
+    <functiondecl functionName="set_safe_margin" lineNumber="1233"/>
+    <functiondecl functionName="get_safe_margin" lineNumber="1238"/>
+    <functiondecl functionName="get_slide_count" lineNumber="1243"/>
+    <functiondecl functionName="get_slide_collision" lineNumber="1248"/>
+    <functiondecl functionName="_get_slide_collision" lineNumber="1253"/>
+    <functiondecl functionName="set_sync_to_physics" lineNumber="1269"/>
+    <functiondecl functionName="is_sync_to_physics_enabled" lineNumber="1290"/>
+    <functiondecl functionName="_direct_state_changed" lineNumber="1294"/>
+    <functiondecl functionName="_notification" lineNumber="1307"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1330"/>
+    <functiondecl functionName="get_position" lineNumber="1383"/>
+    <functiondecl functionName="get_normal" lineNumber="1387"/>
+    <functiondecl functionName="get_travel" lineNumber="1390"/>
+    <functiondecl functionName="get_remainder" lineNumber="1393"/>
+    <functiondecl functionName="get_local_shape" lineNumber="1396"/>
+    <functiondecl functionName="get_collider" lineNumber="1403"/>
+    <functiondecl functionName="get_collider_id" lineNumber="1411"/>
+    <functiondecl functionName="get_collider_shape" lineNumber="1415"/>
+    <functiondecl functionName="get_collider_shape_index" lineNumber="1428"/>
+    <functiondecl functionName="get_collider_velocity" lineNumber="1432"/>
+    <functiondecl functionName="get_collider_metadata" lineNumber="1436"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1441"/>
+    <functiondecl functionName="_notification" lineNumber="42"/>
+    <functiondecl functionName="_set_layers" lineNumber="45"/>
+    <functiondecl functionName="_get_layers" lineNumber="51"/>
+    <functiondecl functionName="_bind_methods" lineNumber="56"/>
+    <functiondecl functionName="set_collision_layer" lineNumber="82"/>
+    <functiondecl functionName="get_collision_layer" lineNumber="88"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="93"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="99"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="104"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="113"/>
+    <functiondecl functionName="set_collision_layer_bit" lineNumber="118"/>
+    <functiondecl functionName="get_collision_layer_bit" lineNumber="128"/>
+    <functiondecl functionName="get_collision_exceptions" lineNumber="142"/>
+    <functiondecl functionName="add_collision_exception_with" lineNumber="156"/>
+    <functiondecl functionName="remove_collision_exception_with" lineNumber="164"/>
+    <functiondecl functionName="set_constant_linear_velocity" lineNumber="172"/>
+    <functiondecl functionName="set_constant_angular_velocity" lineNumber="178"/>
+    <functiondecl functionName="get_constant_linear_velocity" lineNumber="184"/>
+    <functiondecl functionName="get_constant_angular_velocity" lineNumber="188"/>
+    <functiondecl functionName="set_physics_material_override" lineNumber="193"/>
+    <functiondecl functionName="get_physics_material_override" lineNumber="208"/>
+    <functiondecl functionName="_bind_methods" lineNumber="212"/>
+    <functiondecl functionName="_reload_physics_characteristics" lineNumber="236"/>
+    <functiondecl functionName="_body_enter_tree" lineNumber="246"/>
+    <functiondecl functionName="_body_exit_tree" lineNumber="270"/>
+    <functiondecl functionName="_body_inout" lineNumber="293"/>
+    <functiondecl functionName="_test_motion" lineNumber="363"/>
+    <functiondecl functionName="_direct_state_changed" lineNumber="371"/>
+    <functiondecl functionName="set_mode" lineNumber="480"/>
+    <functiondecl functionName="get_mode" lineNumber="506"/>
+    <functiondecl functionName="set_mass" lineNumber="511"/>
+    <functiondecl functionName="get_mass" lineNumber="519"/>
+    <functiondecl functionName="set_inertia" lineNumber="524"/>
+    <functiondecl functionName="get_inertia" lineNumber="530"/>
+    <functiondecl functionName="set_weight" lineNumber="535"/>
+    <functiondecl functionName="get_weight" lineNumber="540"/>
+    <functiondecl functionName="set_physics_material_override" lineNumber="545"/>
+    <functiondecl functionName="get_physics_material_override" lineNumber="560"/>
+    <functiondecl functionName="set_gravity_scale" lineNumber="564"/>
+    <functiondecl functionName="get_gravity_scale" lineNumber="569"/>
+    <functiondecl functionName="set_linear_damp" lineNumber="574"/>
+    <functiondecl functionName="get_linear_damp" lineNumber="580"/>
+    <functiondecl functionName="set_angular_damp" lineNumber="585"/>
+    <functiondecl functionName="get_angular_damp" lineNumber="591"/>
+    <functiondecl functionName="set_axis_velocity" lineNumber="596"/>
+    <functiondecl functionName="set_linear_velocity" lineNumber="610"/>
+    <functiondecl functionName="get_linear_velocity" lineNumber="621"/>
+    <functiondecl functionName="set_angular_velocity" lineNumber="626"/>
+    <functiondecl functionName="get_angular_velocity" lineNumber="634"/>
+    <functiondecl functionName="set_use_custom_integrator" lineNumber="639"/>
+    <functiondecl functionName="is_using_custom_integrator" lineNumber="647"/>
+    <functiondecl functionName="set_sleeping" lineNumber="652"/>
+    <functiondecl functionName="set_can_sleep" lineNumber="658"/>
+    <functiondecl functionName="is_able_to_sleep" lineNumber="664"/>
+    <functiondecl functionName="is_sleeping" lineNumber="669"/>
+    <functiondecl functionName="set_max_contacts_reported" lineNumber="674"/>
+    <functiondecl functionName="get_max_contacts_reported" lineNumber="680"/>
+    <functiondecl functionName="apply_central_impulse" lineNumber="685"/>
+    <functiondecl functionName="apply_impulse" lineNumber="689"/>
+    <functiondecl functionName="apply_torque_impulse" lineNumber="694"/>
+    <functiondecl functionName="set_applied_force" lineNumber="698"/>
+    <functiondecl functionName="get_applied_force" lineNumber="703"/>
+    <functiondecl functionName="set_applied_torque" lineNumber="708"/>
+    <functiondecl functionName="get_applied_torque" lineNumber="713"/>
+    <functiondecl functionName="add_central_force" lineNumber="718"/>
+    <functiondecl functionName="add_force" lineNumber="722"/>
+    <functiondecl functionName="add_torque" lineNumber="727"/>
+    <functiondecl functionName="set_continuous_collision_detection_mode" lineNumber="731"/>
+    <functiondecl functionName="get_continuous_collision_detection_mode" lineNumber="737"/>
+    <functiondecl functionName="get_colliding_bodies" lineNumber="742"/>
+    <functiondecl functionName="set_contact_monitor" lineNumber="761"/>
+    <functiondecl functionName="is_contact_monitor_enabled" lineNumber="791"/>
+    <functiondecl functionName="_notification" lineNumber="796"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="814"/>
+    <functiondecl functionName="_bind_methods" lineNumber="830"/>
+    <functiondecl functionName="_reload_physics_characteristics" lineNumber="972"/>
+    <functiondecl functionName="_move" lineNumber="984"/>
+    <functiondecl functionName="separate_raycast_shapes" lineNumber="1002"/>
+    <functiondecl functionName="move_and_collide" lineNumber="1039"/>
+    <functiondecl functionName="move_and_slide" lineNumber="1072"/>
+    <functiondecl functionName="move_and_slide_with_snap" lineNumber="1163"/>
+    <functiondecl functionName="is_on_floor" lineNumber="1203"/>
+    <functiondecl functionName="is_on_wall" lineNumber="1207"/>
+    <functiondecl functionName="is_on_ceiling" lineNumber="1211"/>
+    <functiondecl functionName="get_floor_normal" lineNumber="1216"/>
+    <functiondecl functionName="get_floor_velocity" lineNumber="1221"/>
+    <functiondecl functionName="test_move" lineNumber="1226"/>
+    <functiondecl functionName="set_safe_margin" lineNumber="1233"/>
+    <functiondecl functionName="get_safe_margin" lineNumber="1238"/>
+    <functiondecl functionName="get_slide_count" lineNumber="1243"/>
+    <functiondecl functionName="get_slide_collision" lineNumber="1248"/>
+    <functiondecl functionName="_get_slide_collision" lineNumber="1253"/>
+    <functiondecl functionName="set_sync_to_physics" lineNumber="1269"/>
+    <functiondecl functionName="is_sync_to_physics_enabled" lineNumber="1290"/>
+    <functiondecl functionName="_direct_state_changed" lineNumber="1294"/>
+    <functiondecl functionName="_notification" lineNumber="1307"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1330"/>
+    <functiondecl functionName="get_position" lineNumber="1383"/>
+    <functiondecl functionName="get_normal" lineNumber="1387"/>
+    <functiondecl functionName="get_travel" lineNumber="1390"/>
+    <functiondecl functionName="get_remainder" lineNumber="1393"/>
+    <functiondecl functionName="get_local_shape" lineNumber="1396"/>
+    <functiondecl functionName="get_collider" lineNumber="1403"/>
+    <functiondecl functionName="get_collider_id" lineNumber="1411"/>
+    <functiondecl functionName="get_collider_shape" lineNumber="1415"/>
+    <functiondecl functionName="get_collider_shape_index" lineNumber="1428"/>
+    <functiondecl functionName="get_collider_velocity" lineNumber="1432"/>
+    <functiondecl functionName="get_collider_metadata" lineNumber="1436"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1441"/>
+    <functiondecl functionName="_notification" lineNumber="42"/>
+    <functiondecl functionName="_set_layers" lineNumber="45"/>
+    <functiondecl functionName="_get_layers" lineNumber="51"/>
+    <functiondecl functionName="_bind_methods" lineNumber="56"/>
+    <functiondecl functionName="set_collision_layer" lineNumber="82"/>
+    <functiondecl functionName="get_collision_layer" lineNumber="88"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="93"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="99"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="104"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="113"/>
+    <functiondecl functionName="set_collision_layer_bit" lineNumber="118"/>
+    <functiondecl functionName="get_collision_layer_bit" lineNumber="128"/>
+    <functiondecl functionName="get_collision_exceptions" lineNumber="142"/>
+    <functiondecl functionName="add_collision_exception_with" lineNumber="156"/>
+    <functiondecl functionName="remove_collision_exception_with" lineNumber="164"/>
+    <functiondecl functionName="set_constant_linear_velocity" lineNumber="172"/>
+    <functiondecl functionName="set_constant_angular_velocity" lineNumber="178"/>
+    <functiondecl functionName="get_constant_linear_velocity" lineNumber="184"/>
+    <functiondecl functionName="get_constant_angular_velocity" lineNumber="188"/>
+    <functiondecl functionName="set_physics_material_override" lineNumber="193"/>
+    <functiondecl functionName="get_physics_material_override" lineNumber="208"/>
+    <functiondecl functionName="_bind_methods" lineNumber="212"/>
+    <functiondecl functionName="_reload_physics_characteristics" lineNumber="236"/>
+    <functiondecl functionName="_body_enter_tree" lineNumber="246"/>
+    <functiondecl functionName="_body_exit_tree" lineNumber="270"/>
+    <functiondecl functionName="_body_inout" lineNumber="293"/>
+    <functiondecl functionName="_test_motion" lineNumber="363"/>
+    <functiondecl functionName="_direct_state_changed" lineNumber="371"/>
+    <functiondecl functionName="set_mode" lineNumber="480"/>
+    <functiondecl functionName="get_mode" lineNumber="506"/>
+    <functiondecl functionName="set_mass" lineNumber="511"/>
+    <functiondecl functionName="get_mass" lineNumber="519"/>
+    <functiondecl functionName="set_inertia" lineNumber="524"/>
+    <functiondecl functionName="get_inertia" lineNumber="530"/>
+    <functiondecl functionName="set_weight" lineNumber="535"/>
+    <functiondecl functionName="get_weight" lineNumber="540"/>
+    <functiondecl functionName="set_physics_material_override" lineNumber="545"/>
+    <functiondecl functionName="get_physics_material_override" lineNumber="560"/>
+    <functiondecl functionName="set_gravity_scale" lineNumber="564"/>
+    <functiondecl functionName="get_gravity_scale" lineNumber="569"/>
+    <functiondecl functionName="set_linear_damp" lineNumber="574"/>
+    <functiondecl functionName="get_linear_damp" lineNumber="580"/>
+    <functiondecl functionName="set_angular_damp" lineNumber="585"/>
+    <functiondecl functionName="get_angular_damp" lineNumber="591"/>
+    <functiondecl functionName="set_axis_velocity" lineNumber="596"/>
+    <functiondecl functionName="set_linear_velocity" lineNumber="610"/>
+    <functiondecl functionName="get_linear_velocity" lineNumber="621"/>
+    <functiondecl functionName="set_angular_velocity" lineNumber="626"/>
+    <functiondecl functionName="get_angular_velocity" lineNumber="634"/>
+    <functiondecl functionName="set_use_custom_integrator" lineNumber="639"/>
+    <functiondecl functionName="is_using_custom_integrator" lineNumber="647"/>
+    <functiondecl functionName="set_sleeping" lineNumber="652"/>
+    <functiondecl functionName="set_can_sleep" lineNumber="658"/>
+    <functiondecl functionName="is_able_to_sleep" lineNumber="664"/>
+    <functiondecl functionName="is_sleeping" lineNumber="669"/>
+    <functiondecl functionName="set_max_contacts_reported" lineNumber="674"/>
+    <functiondecl functionName="get_max_contacts_reported" lineNumber="680"/>
+    <functiondecl functionName="apply_central_impulse" lineNumber="685"/>
+    <functiondecl functionName="apply_impulse" lineNumber="689"/>
+    <functiondecl functionName="apply_torque_impulse" lineNumber="694"/>
+    <functiondecl functionName="set_applied_force" lineNumber="698"/>
+    <functiondecl functionName="get_applied_force" lineNumber="703"/>
+    <functiondecl functionName="set_applied_torque" lineNumber="708"/>
+    <functiondecl functionName="get_applied_torque" lineNumber="713"/>
+    <functiondecl functionName="add_central_force" lineNumber="718"/>
+    <functiondecl functionName="add_force" lineNumber="722"/>
+    <functiondecl functionName="add_torque" lineNumber="727"/>
+    <functiondecl functionName="set_continuous_collision_detection_mode" lineNumber="731"/>
+    <functiondecl functionName="get_continuous_collision_detection_mode" lineNumber="737"/>
+    <functiondecl functionName="get_colliding_bodies" lineNumber="742"/>
+    <functiondecl functionName="set_contact_monitor" lineNumber="761"/>
+    <functiondecl functionName="is_contact_monitor_enabled" lineNumber="791"/>
+    <functiondecl functionName="_notification" lineNumber="796"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="814"/>
+    <functiondecl functionName="_bind_methods" lineNumber="830"/>
+    <functiondecl functionName="_reload_physics_characteristics" lineNumber="972"/>
+    <functiondecl functionName="_move" lineNumber="984"/>
+    <functiondecl functionName="separate_raycast_shapes" lineNumber="1002"/>
+    <functiondecl functionName="move_and_collide" lineNumber="1039"/>
+    <functiondecl functionName="move_and_slide" lineNumber="1072"/>
+    <functiondecl functionName="move_and_slide_with_snap" lineNumber="1163"/>
+    <functiondecl functionName="is_on_floor" lineNumber="1203"/>
+    <functiondecl functionName="is_on_wall" lineNumber="1207"/>
+    <functiondecl functionName="is_on_ceiling" lineNumber="1211"/>
+    <functiondecl functionName="get_floor_normal" lineNumber="1216"/>
+    <functiondecl functionName="get_floor_velocity" lineNumber="1221"/>
+    <functiondecl functionName="test_move" lineNumber="1226"/>
+    <functiondecl functionName="set_safe_margin" lineNumber="1233"/>
+    <functiondecl functionName="get_safe_margin" lineNumber="1238"/>
+    <functiondecl functionName="get_slide_count" lineNumber="1243"/>
+    <functiondecl functionName="get_slide_collision" lineNumber="1248"/>
+    <functiondecl functionName="_get_slide_collision" lineNumber="1253"/>
+    <functiondecl functionName="set_sync_to_physics" lineNumber="1269"/>
+    <functiondecl functionName="is_sync_to_physics_enabled" lineNumber="1290"/>
+    <functiondecl functionName="_direct_state_changed" lineNumber="1294"/>
+    <functiondecl functionName="_notification" lineNumber="1307"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1330"/>
+    <functiondecl functionName="get_position" lineNumber="1383"/>
+    <functiondecl functionName="get_normal" lineNumber="1387"/>
+    <functiondecl functionName="get_travel" lineNumber="1390"/>
+    <functiondecl functionName="get_remainder" lineNumber="1393"/>
+    <functiondecl functionName="get_local_shape" lineNumber="1396"/>
+    <functiondecl functionName="get_collider" lineNumber="1403"/>
+    <functiondecl functionName="get_collider_id" lineNumber="1411"/>
+    <functiondecl functionName="get_collider_shape" lineNumber="1415"/>
+    <functiondecl functionName="get_collider_shape_index" lineNumber="1428"/>
+    <functiondecl functionName="get_collider_velocity" lineNumber="1432"/>
+    <functiondecl functionName="get_collider_metadata" lineNumber="1436"/>
+    <functiondecl functionName="_bind_methods" lineNumber="1441"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="Array"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BIND_VMETHOD"/>
+    <functioncall functionName="BODY_MODE_CHARACTER"/>
+    <functioncall functionName="BODY_MODE_KINEMATIC"/>
+    <functioncall functionName="BODY_MODE_RIGID"/>
+    <functioncall functionName="BODY_MODE_STATIC"/>
+    <functioncall functionName="BODY_PARAM_ANGULAR_DAMP"/>
+    <functioncall functionName="BODY_PARAM_BOUNCE"/>
+    <functioncall functionName="BODY_PARAM_FRICTION"/>
+    <functioncall functionName="BODY_PARAM_GRAVITY_SCALE"/>
+    <functioncall functionName="BODY_PARAM_INERTIA"/>
+    <functioncall functionName="BODY_PARAM_LINEAR_DAMP"/>
+    <functioncall functionName="BODY_PARAM_MASS"/>
+    <functioncall functionName="BODY_STATE_ANGULAR_VELOCITY"/>
+    <functioncall functionName="BODY_STATE_CAN_SLEEP"/>
+    <functioncall functionName="BODY_STATE_LINEAR_VELOCITY"/>
+    <functioncall functionName="BODY_STATE_SLEEPING"/>
+    <functioncall functionName="BODY_STATE_TRANSFORM"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="BodyMode"/>
+    <functioncall functionName="BodyState"/>
+    <functioncall functionName="CCDMode"/>
+    <functioncall functionName="CCD_MODE_CAST_RAY"/>
+    <functioncall functionName="CCD_MODE_CAST_SHAPE"/>
+    <functioncall functionName="CCD_MODE_DISABLED"/>
+    <functioncall functionName="Collision"/>
+    <functioncall functionName="CollisionObject2D"/>
+    <functioncall functionName="ContactMonitor"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_DEF"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="KinematicBody2D"/>
+    <functioncall functionName="KinematicCollision2D"/>
+    <functioncall functionName="MODE_CHARACTER"/>
+    <functioncall functionName="MODE_KINEMATIC"/>
+    <functioncall functionName="MODE_RIGID"/>
+    <functioncall functionName="MODE_STATIC"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="Mode"/>
+    <functioncall functionName="NIL"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_2D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_EDITOR"/>
+    <functioncall functionName="PROPERTY_USAGE_NIL_IS_VARIANT"/>
+    <functioncall functionName="PhysicsBody2D"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="RigidBody2D"/>
+    <functioncall functionName="RigidBody2D_RemoveAction"/>
+    <functioncall functionName="ShapePair"/>
+    <functioncall functionName="StaticBody2D"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_RigidBody2DInOut"/>
+    <functioncall functionName="_body_enter_tree"/>
+    <functioncall functionName="_body_exit_tree"/>
+    <functioncall functionName="_body_inout"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_direct_state_changed"/>
+    <functioncall functionName="_get_layers"/>
+    <functioncall functionName="_get_slide_collision"/>
+    <functioncall functionName="_move"/>
+    <functioncall functionName="_reload_physics_characteristics"/>
+    <functioncall functionName="_set_layers"/>
+    <functioncall functionName="_test_motion"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="add_central_force"/>
+    <functioncall functionName="add_collision_exception_with"/>
+    <functioncall functionName="add_force"/>
+    <functioncall functionName="add_torque"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="angular_damp"/>
+    <functioncall functionName="angular_velocity"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="apply"/>
+    <functioncall functionName="apply_central_impulse"/>
+    <functioncall functionName="apply_impulse"/>
+    <functioncall functionName="apply_torque_impulse"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="body"/>
+    <functioncall functionName="body_add_central_force"/>
+    <functioncall functionName="body_add_collision_exception"/>
+    <functioncall functionName="body_add_force"/>
+    <functioncall functionName="body_add_torque"/>
+    <functioncall functionName="body_apply_central_impulse"/>
+    <functioncall functionName="body_apply_impulse"/>
+    <functioncall functionName="body_apply_torque_impulse"/>
+    <functioncall functionName="body_create"/>
+    <functioncall functionName="body_entered"/>
+    <functioncall functionName="body_exited"/>
+    <functioncall functionName="body_get_applied_force"/>
+    <functioncall functionName="body_get_applied_torque"/>
+    <functioncall functionName="body_get_collision_exceptions"/>
+    <functioncall functionName="body_get_direct_state"/>
+    <functioncall functionName="body_get_object_instance_id"/>
+    <functioncall functionName="body_get_param"/>
+    <functioncall functionName="body_id"/>
+    <functioncall functionName="body_in"/>
+    <functioncall functionName="body_remove_collision_exception"/>
+    <functioncall functionName="body_set_applied_force"/>
+    <functioncall functionName="body_set_applied_torque"/>
+    <functioncall functionName="body_set_axis_velocity"/>
+    <functioncall functionName="body_set_collision_layer"/>
+    <functioncall functionName="body_set_collision_mask"/>
+    <functioncall functionName="body_set_continuous_collision_detection_mode"/>
+    <functioncall functionName="body_set_force_integration_callback"/>
+    <functioncall functionName="body_set_max_contacts_reported"/>
+    <functioncall functionName="body_set_mode"/>
+    <functioncall functionName="body_set_omit_force_integration"/>
+    <functioncall functionName="body_set_param"/>
+    <functioncall functionName="body_set_state"/>
+    <functioncall functionName="body_shape"/>
+    <functioncall functionName="body_shape_entered"/>
+    <functioncall functionName="body_shape_exited"/>
+    <functioncall functionName="body_test_motion"/>
+    <functioncall functionName="body_test_ray_separation"/>
+    <functioncall functionName="body_velocity"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bs"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="col"/>
+    <functioncall functionName="collided"/>
+    <functioncall functionName="collider"/>
+    <functioncall functionName="collider_id"/>
+    <functioncall functionName="collider_metadata"/>
+    <functioncall functionName="collider_rid"/>
+    <functioncall functionName="collider_shape"/>
+    <functioncall functionName="collider_vel"/>
+    <functioncall functionName="collider_velocity"/>
+    <functioncall functionName="colliding"/>
+    <functioncall functionName="collision"/>
+    <functioncall functionName="collision_depth"/>
+    <functioncall functionName="collision_layer"/>
+    <functioncall functionName="collision_local_shape"/>
+    <functioncall functionName="collision_normal"/>
+    <functioncall functionName="collision_point"/>
+    <functioncall functionName="computed_bounce"/>
+    <functioncall functionName="computed_friction"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="constant_angular_velocity"/>
+    <functioncall functionName="constant_linear_velocity"/>
+    <functioncall functionName="contact_monitor"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="deepest"/>
+    <functioncall functionName="deg2rad"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exceptions"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor_velocity"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_angular_damp"/>
+    <functioncall functionName="get_angular_velocity"/>
+    <functioncall functionName="get_applied_force"/>
+    <functioncall functionName="get_applied_torque"/>
+    <functioncall functionName="get_collider"/>
+    <functioncall functionName="get_collider_id"/>
+    <functioncall functionName="get_collider_metadata"/>
+    <functioncall functionName="get_collider_shape"/>
+    <functioncall functionName="get_collider_shape_index"/>
+    <functioncall functionName="get_collider_velocity"/>
+    <functioncall functionName="get_colliding_bodies"/>
+    <functioncall functionName="get_collision_exceptions"/>
+    <functioncall functionName="get_collision_layer"/>
+    <functioncall functionName="get_collision_layer_bit"/>
+    <functioncall functionName="get_collision_mask"/>
+    <functioncall functionName="get_collision_mask_bit"/>
+    <functioncall functionName="get_configuration_warning"/>
+    <functioncall functionName="get_constant_angular_velocity"/>
+    <functioncall functionName="get_constant_linear_velocity"/>
+    <functioncall functionName="get_contact_collider_id"/>
+    <functioncall functionName="get_contact_collider_shape"/>
+    <functioncall functionName="get_contact_count"/>
+    <functioncall functionName="get_contact_local_shape"/>
+    <functioncall functionName="get_continuous_collision_detection_mode"/>
+    <functioncall functionName="get_floor_normal"/>
+    <functioncall functionName="get_floor_velocity"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_gravity_scale"/>
+    <functioncall functionName="get_inertia"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_linear_damp"/>
+    <functioncall functionName="get_linear_velocity"/>
+    <functioncall functionName="get_local_shape"/>
+    <functioncall functionName="get_mass"/>
+    <functioncall functionName="get_max_contacts_reported"/>
+    <functioncall functionName="get_mode"/>
+    <functioncall functionName="get_normal"/>
+    <functioncall functionName="get_physics_material_override"/>
+    <functioncall functionName="get_physics_process_delta_time"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_process_delta_time"/>
+    <functioncall functionName="get_remainder"/>
+    <functioncall functionName="get_result_ptr"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_safe_margin"/>
+    <functioncall functionName="get_script_instance"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slide_count"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_travel"/>
+    <functioncall functionName="get_weight"/>
+    <functioncall functionName="gravity_scale"/>
+    <functioncall functionName="gt"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in_scene"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instance_id"/>
+    <functioncall functionName="is_able_to_sleep"/>
+    <functioncall functionName="is_connected"/>
+    <functioncall functionName="is_contact_monitor_enabled"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_in_physics_frame"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_on_ceiling"/>
+    <functioncall functionName="is_on_floor"/>
+    <functioncall functionName="is_on_wall"/>
+    <functioncall functionName="is_sleeping"/>
+    <functioncall functionName="is_sync_to_physics_enabled"/>
+    <functioncall functionName="is_using_custom_integrator"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="last_valid_transform"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="linear_damp"/>
+    <functioncall functionName="linear_velocity"/>
+    <functioncall functionName="local_shape"/>
+    <functioncall functionName="locked"/>
+    <functioncall functionName="make_binds"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="mass"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="motion"/>
+    <functioncall functionName="move_and_collide"/>
+    <functioncall functionName="move_and_slide"/>
+    <functioncall functionName="move_and_slide_with_snap"/>
+    <functioncall functionName="new_transform"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="obj2d"/>
+    <functioncall functionName="objid"/>
+    <functioncall functionName="on_floor"/>
+    <functioncall functionName="on_floor_body"/>
+    <functioncall functionName="owner"/>
+    <functioncall functionName="ownerid"/>
+    <functioncall functionName="p_active"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_angular_damp"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_body_shape"/>
+    <functioncall functionName="p_bounce"/>
+    <functioncall functionName="p_bs"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_enabled"/>
+    <functioncall functionName="p_exclude_raycast_shapes"/>
+    <functioncall functionName="p_floor_max_angle"/>
+    <functioncall functionName="p_force"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_gravity_scale"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="p_impulse"/>
+    <functioncall functionName="p_inertia"/>
+    <functioncall functionName="p_infinite_inertia"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_layer"/>
+    <functioncall functionName="p_linear_damp"/>
+    <functioncall functionName="p_linear_velocity"/>
+    <functioncall functionName="p_local_shape"/>
+    <functioncall functionName="p_ls"/>
+    <functioncall functionName="p_margin"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_mass"/>
+    <functioncall functionName="p_max_slides"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_motion"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_physics_material_override"/>
+    <functioncall functionName="p_sleeping"/>
+    <functioncall functionName="p_snap"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_stop_on_slope"/>
+    <functioncall functionName="p_test_only"/>
+    <functioncall functionName="p_torque"/>
+    <functioncall functionName="p_up_direction"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_vel"/>
+    <functioncall functionName="p_velocity"/>
+    <functioncall functionName="physics_body"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="recover"/>
+    <functioncall functionName="remainder"/>
+    <functioncall functionName="remove_collision_exception_with"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sep_res"/>
+    <functioncall functionName="separate_raycast_shapes"/>
+    <functioncall functionName="set_angular_damp"/>
+    <functioncall functionName="set_angular_velocity"/>
+    <functioncall functionName="set_applied_force"/>
+    <functioncall functionName="set_applied_torque"/>
+    <functioncall functionName="set_axis_velocity"/>
+    <functioncall functionName="set_block_transform_notify"/>
+    <functioncall functionName="set_can_sleep"/>
+    <functioncall functionName="set_collision_layer"/>
+    <functioncall functionName="set_collision_layer_bit"/>
+    <functioncall functionName="set_collision_mask"/>
+    <functioncall functionName="set_collision_mask_bit"/>
+    <functioncall functionName="set_constant_angular_velocity"/>
+    <functioncall functionName="set_constant_linear_velocity"/>
+    <functioncall functionName="set_contact_monitor"/>
+    <functioncall functionName="set_continuous_collision_detection_mode"/>
+    <functioncall functionName="set_global_transform"/>
+    <functioncall functionName="set_gravity_scale"/>
+    <functioncall functionName="set_inertia"/>
+    <functioncall functionName="set_linear_damp"/>
+    <functioncall functionName="set_linear_velocity"/>
+    <functioncall functionName="set_mass"/>
+    <functioncall functionName="set_max_contacts_reported"/>
+    <functioncall functionName="set_mode"/>
+    <functioncall functionName="set_notify_local_transform"/>
+    <functioncall functionName="set_only_update_transform_changes"/>
+    <functioncall functionName="set_physics_material_override"/>
+    <functioncall functionName="set_pickable"/>
+    <functioncall functionName="set_safe_margin"/>
+    <functioncall functionName="set_sleeping"/>
+    <functioncall functionName="set_sync_to_physics"/>
+    <functioncall functionName="set_use_custom_integrator"/>
+    <functioncall functionName="set_weight"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="shape_find_owner"/>
+    <functioncall functionName="shape_owner_get_owner"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sleeping"/>
+    <functioncall functionName="sleeping_state_changed"/>
+    <functioncall functionName="slide"/>
+    <functioncall functionName="sp"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="sync_to_physics"/>
+    <functioncall functionName="tagged"/>
+    <functioncall functionName="test_move"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="toadd_count"/>
+    <functioncall functionName="toremove_count"/>
+    <functioncall functionName="travel"/>
+    <functioncall functionName="tree_entered"/>
+    <functioncall functionName="tree_exiting"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update_configuration_warning"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

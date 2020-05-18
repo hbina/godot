@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1147919013">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;rad_center_off&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;rad_center_off&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/gui/texture_progress.cpp" line="537" column="2"/>
+            <symbol>rad_center_off</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/gui/texture_progress.h:112:7" call-funcname="draw_nine_patch_stretched" call-argnr="2" file="/home/hbina/git/godot/scene/gui/texture_progress.cpp" line="314" col="31" call-argexpr="FILL_LEFT_TO_RIGHT" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/gui/texture_progress.h:112:7" call-funcname="draw_nine_patch_stretched" call-argnr="2" file="/home/hbina/git/godot/scene/gui/texture_progress.cpp" line="320" col="31" call-argexpr="FILL_LEFT_TO_RIGHT" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_under_texture" lineNumber="35"/>
+    <functiondecl functionName="get_under_texture" lineNumber="42"/>
+    <functiondecl functionName="set_over_texture" lineNumber="47"/>
+    <functiondecl functionName="get_over_texture" lineNumber="56"/>
+    <functiondecl functionName="set_stretch_margin" lineNumber="61"/>
+    <functiondecl functionName="get_stretch_margin" lineNumber="68"/>
+    <functiondecl functionName="set_nine_patch_stretch" lineNumber="73"/>
+    <functiondecl functionName="get_nine_patch_stretch" lineNumber="79"/>
+    <functiondecl functionName="get_minimum_size" lineNumber="83"/>
+    <functiondecl functionName="set_progress_texture" lineNumber="97"/>
+    <functiondecl functionName="get_progress_texture" lineNumber="104"/>
+    <functiondecl functionName="set_tint_under" lineNumber="109"/>
+    <functiondecl functionName="get_tint_under" lineNumber="114"/>
+    <functiondecl functionName="set_tint_progress" lineNumber="118"/>
+    <functiondecl functionName="get_tint_progress" lineNumber="123"/>
+    <functiondecl functionName="set_tint_over" lineNumber="127"/>
+    <functiondecl functionName="get_tint_over" lineNumber="132"/>
+    <functiondecl functionName="unit_val_to_uv" lineNumber="136"/>
+    <functiondecl functionName="get_relative_center" lineNumber="192"/>
+    <functiondecl functionName="draw_nine_patch_stretched" lineNumber="204"/>
+    <functiondecl functionName="_notification" lineNumber="306"/>
+    <functiondecl functionName="set_fill_mode" lineNumber="424"/>
+    <functiondecl functionName="get_fill_mode" lineNumber="430"/>
+    <functiondecl functionName="set_radial_initial_angle" lineNumber="434"/>
+    <functiondecl functionName="get_radial_initial_angle" lineNumber="443"/>
+    <functiondecl functionName="set_fill_degrees" lineNumber="447"/>
+    <functiondecl functionName="get_fill_degrees" lineNumber="452"/>
+    <functiondecl functionName="set_radial_center_offset" lineNumber="456"/>
+    <functiondecl functionName="get_radial_center_offset" lineNumber="461"/>
+    <functiondecl functionName="_bind_methods" lineNumber="465"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_PROPERTYI"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="FILL_BILINEAR_LEFT_AND_RIGHT"/>
+    <functioncall functionName="FILL_BILINEAR_TOP_AND_BOTTOM"/>
+    <functioncall functionName="FILL_BOTTOM_TO_TOP"/>
+    <functioncall functionName="FILL_CLOCKWISE"/>
+    <functioncall functionName="FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE"/>
+    <functioncall functionName="FILL_COUNTER_CLOCKWISE"/>
+    <functioncall functionName="FILL_LEFT_TO_RIGHT"/>
+    <functioncall functionName="FILL_RIGHT_TO_LEFT"/>
+    <functioncall functionName="FILL_TOP_TO_BOTTOM"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="FillMode"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MOUSE_FILTER_PASS"/>
+    <functioncall functionName="NINE_PATCH_STRETCH"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Range"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="TextureProgress"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bottomright"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="canvas_item_add_nine_patch"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="colors"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cp"/>
+    <functioncall functionName="cr"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="draw_line"/>
+    <functioncall functionName="draw_nine_patch_stretched"/>
+    <functioncall functionName="draw_polygon"/>
+    <functioncall functionName="draw_texture"/>
+    <functioncall functionName="draw_texture_rect_region"/>
+    <functioncall functionName="dst_rect"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first_section_size"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_as_ratio"/>
+    <functioncall functionName="get_canvas_item"/>
+    <functioncall functionName="get_fill_degrees"/>
+    <functioncall functionName="get_fill_mode"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_nine_patch_stretch"/>
+    <functioncall functionName="get_over_texture"/>
+    <functioncall functionName="get_progress_texture"/>
+    <functioncall functionName="get_radial_center_offset"/>
+    <functioncall functionName="get_radial_initial_angle"/>
+    <functioncall functionName="get_rect_region"/>
+    <functioncall functionName="get_relative_center"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_stretch_margin"/>
+    <functioncall functionName="get_tint_over"/>
+    <functioncall functionName="get_tint_progress"/>
+    <functioncall functionName="get_tint_under"/>
+    <functioncall functionName="get_under_texture"/>
+    <functioncall functionName="get_width"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="last_section_size"/>
+    <functioncall functionName="minimum_size_changed"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="nine_patch_stretch"/>
+    <functioncall functionName="over"/>
+    <functioncall functionName="p_angle"/>
+    <functioncall functionName="p_fill"/>
+    <functioncall functionName="p_margin"/>
+    <functioncall functionName="p_modulate"/>
+    <functioncall functionName="p_off"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_stretch"/>
+    <functioncall functionName="p_texture"/>
+    <functioncall functionName="p_tint"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="progress"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="region"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="set_fill_degrees"/>
+    <functioncall functionName="set_fill_mode"/>
+    <functioncall functionName="set_mouse_filter"/>
+    <functioncall functionName="set_nine_patch_stretch"/>
+    <functioncall functionName="set_over_texture"/>
+    <functioncall functionName="set_progress_texture"/>
+    <functioncall functionName="set_radial_center_offset"/>
+    <functioncall functionName="set_radial_initial_angle"/>
+    <functioncall functionName="set_stretch_margin"/>
+    <functioncall functionName="set_tint_over"/>
+    <functioncall functionName="set_tint_progress"/>
+    <functioncall functionName="set_tint_under"/>
+    <functioncall functionName="set_under_texture"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="src_rect"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="texture_size"/>
+    <functioncall functionName="tint_over"/>
+    <functioncall functionName="tint_progress"/>
+    <functioncall functionName="tint_under"/>
+    <functioncall functionName="topleft"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="under"/>
+    <functioncall functionName="unit_val_to_uv"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="uv"/>
+    <functioncall functionName="uvs"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width_filled"/>
+    <functioncall functionName="width_texture"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

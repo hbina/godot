@@ -1,0 +1,1365 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3423053593">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;default_type&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;default_type&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="6274" column="2"/>
+            <symbol>default_type</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_x::get&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_x::get&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="588" column="9"/>
+            <symbol>CanvasItemEditor::proj_vector2_x::get</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_x::set&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_x::set&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="589" column="8"/>
+            <symbol>CanvasItemEditor::proj_vector2_x::set</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_y::get&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_y::get&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="593" column="9"/>
+            <symbol>CanvasItemEditor::proj_vector2_y::get</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CanvasItemEditor::proj_vector2_y::set&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CanvasItemEditor::proj_vector2_y::set&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="594" column="8"/>
+            <symbol>CanvasItemEditor::proj_vector2_y::set</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;get_state&apos; is called from constructor &apos;CanvasItemEditor(EditorNode*p_editor)&apos; at line 5823. Dynamic binding is not used." verbose="Virtual function &apos;get_state&apos; is called from constructor &apos;CanvasItemEditor(EditorNode*p_editor)&apos; at line 5823. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="622" column="21" info="get_state is a virtual function"/>
+            <location file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="5823" column="29" info="Calling get_state"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;CanvasItemEditor&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;CanvasItemEditor&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="650" column="2"/>
+            <symbol>CanvasItemEditor</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;CanvasItemEditorPlugin&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;CanvasItemEditorPlugin&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="671" column="2"/>
+            <symbol>CanvasItemEditorPlugin</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="962" column="3"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="4588" column="5"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;anchor_snapped&apos; can be reduced." verbose="The scope of the variable &apos;anchor_snapped&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3071" column="9"/>
+            <symbol>anchor_snapped</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="319" col="26" call-argexpr="r_current_snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="320" col="26" call-argexpr="r_current_snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="323" col="26" call-argexpr="r_current_snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:524:7" call-funcname="_snap_other_nodes" call-argnr="4" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="328" col="20" call-argexpr="r_current_snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="351" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="352" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="353" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="358" col="27" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="359" col="27" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="360" col="27" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="363" col="27" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="373" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="374" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="383" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="384" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="392" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="395" col="26" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:524:7" call-funcname="_snap_other_nodes" call-argnr="4" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="412" col="20" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:518:7" call-funcname="_snap_if_closer_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="451" col="24" call-argexpr="snap_target" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:453:7" call-funcname="_get_bone_shape" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="670" col="23" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1344" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1346" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="4" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1346" col="26" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1366" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1518" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1518" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1777" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1778" col="39" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1780" col="39" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1781" col="37" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1845" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1845" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1975" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="1975" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:433:7" call-funcname="_save_canvas_item_ik_chain" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2049" col="31" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2064" col="31" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:616:9" call-funcname="snap_point" call-argnr="4" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2064" col="31" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2110" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:462:7" call-funcname="_insert_animation_keys" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2110" col="27" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:433:7" call-funcname="_save_canvas_item_ik_chain" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2151" col="31" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:468:7" call-funcname="_draw_text_at_position" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2637" col="25" call-argexpr="p_side" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3063" col="22" info="Assignment 'dragged_anchor=3', assigned value is 3"/>
+  <path file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3093" col="121" info="Calling function '_draw_percentage_at_position', 3rd argument '(Margin)((dragged_anchor+1)%4)' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:470:7" call-funcname="_draw_percentage_at_position" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3093" col="32" call-argexpr="(Margin)((dragged_anchor+1)%4)" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3063" col="22" info="Assignment 'dragged_anchor=3', assigned value is 3"/>
+</function-call><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:470:7" call-funcname="_draw_percentage_at_position" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3097" col="32" call-argexpr="(Margin)(dragged_anchor)" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3054" col="22" info="Assignment 'dragged_anchor=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:470:7" call-funcname="_draw_percentage_at_position" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3101" col="32" call-argexpr="(Margin)(dragged_anchor)" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3054" col="22" info="Assignment 'dragged_anchor=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:470:7" call-funcname="_draw_percentage_at_position" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3105" col="32" call-argexpr="(Margin)((dragged_anchor+1)%4)" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3063" col="22" info="Assignment 'dragged_anchor=3', assigned value is 3"/>
+</function-call><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:455:21" call-funcname="_get_edited_canvas_items" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3211" col="57" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:455:21" call-funcname="_get_edited_canvas_items" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="4479" col="57" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:455:21" call-funcname="_get_edited_canvas_items" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="4479" col="57" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:550:7" call-funcname="_update_override_camera_button" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="5694" col="32" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:418:7" call-funcname="_is_node_locked" call-argnr="1" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="238" col="6" my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:419:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:457:7" call-funcname="_expand_encompassing_rect_using_children" call-argnr="2" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="575" col="2" my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:458:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:424:7" call-funcname="_find_canvas_items_in_rect" call-argnr="3" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="761" col="6" my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:424:7" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:576:8" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="577" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:576:8" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="577" col="53" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:582:8" my-argnr="1" my-argname="a" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="583" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:582:8" my-argnr="2" my-argname="b" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h" line="583" col="53" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:418:7" my-argnr="1" my-argname="p_node" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="234" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:453:7" my-argnr="3" my-argname="bone" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="700" col="69" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:435:7" my-argnr="2" my-argname="p_bones_state" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="924" col="44" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:479:7" my-argnr="1" my-argname="control" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="2999" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:480:7" my-argnr="1" my-argname="control" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="3030" col="34" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:650:2" my-argnr="1" my-argname="p_editor" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="5430" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:664:15" my-argnr="1" my-argname="p_object" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="5836" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:705:7" my-argnr="2" my-argname="p_desired_node" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="5951" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.h:707:7" my-argnr="2" my-argname="child" file="/home/hbina/git/godot/editor/plugins/canvas_item_editor_plugin.cpp" line="5966" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_fields" lineNumber="212"/>
+    <functiondecl functionName="get_fields" lineNumber="223"/>
+    <functiondecl functionName="_is_node_locked" lineNumber="233"/>
+    <functiondecl functionName="_is_node_movable" lineNumber="237"/>
+    <functiondecl functionName="_snap_if_closer_float" lineNumber="250"/>
+    <functiondecl functionName="_snap_if_closer_point" lineNumber="264"/>
+    <functiondecl functionName="_snap_other_nodes" lineNumber="295"/>
+    <functiondecl functionName="snap_point" lineNumber="332"/>
+    <functiondecl functionName="snap_angle" lineNumber="464"/>
+    <functiondecl functionName="_unhandled_key_input" lineNumber="476"/>
+    <functiondecl functionName="_get_editor_data" lineNumber="502"/>
+    <functiondecl functionName="_keying_changed" lineNumber="511"/>
+    <functiondecl functionName="_get_encompassing_rect_from_list" lineNumber="519"/>
+    <functiondecl functionName="_expand_encompassing_rect_using_children" lineNumber="541"/>
+    <functiondecl functionName="_get_encompassing_rect" lineNumber="572"/>
+    <functiondecl functionName="_find_canvas_items_at_pos" lineNumber="580"/>
+    <functiondecl functionName="_get_canvas_items_at_pos" lineNumber="617"/>
+    <functiondecl functionName="_get_bones_at_pos" lineNumber="663"/>
+    <functiondecl functionName="_get_bone_shape" lineNumber="696"/>
+    <functiondecl functionName="_find_canvas_items_in_rect" lineNumber="744"/>
+    <functiondecl functionName="_select_click_on_item" lineNumber="792"/>
+    <functiondecl functionName="_get_edited_canvas_items" lineNumber="819"/>
+    <functiondecl functionName="_anchor_to_position" lineNumber="844"/>
+    <functiondecl functionName="_position_to_anchor" lineNumber="853"/>
+    <functiondecl functionName="_save_canvas_item_ik_chain" lineNumber="863"/>
+    <functiondecl functionName="_save_canvas_item_state" lineNumber="903"/>
+    <functiondecl functionName="_restore_canvas_item_ik_chain" lineNumber="922"/>
+    <functiondecl functionName="_restore_canvas_item_state" lineNumber="930"/>
+    <functiondecl functionName="_commit_canvas_item_state" lineNumber="941"/>
+    <functiondecl functionName="_snap_changed" lineNumber="961"/>
+    <functiondecl functionName="_selection_result_pressed" lineNumber="967"/>
+    <functiondecl functionName="_selection_menu_hide" lineNumber="978"/>
+    <functiondecl functionName="_gui_input_rulers_and_guides" lineNumber="985"/>
+    <functiondecl functionName="_gui_input_zoom_or_pan" lineNumber="1195"/>
+    <functiondecl functionName="_gui_input_pivot" lineNumber="1318"/>
+    <functiondecl functionName="_solve_IK" lineNumber="1395"/>
+    <functiondecl functionName="_gui_input_rotate" lineNumber="1466"/>
+    <functiondecl functionName="_gui_input_open_scene_on_double_click" lineNumber="1536"/>
+    <functiondecl functionName="_gui_input_anchors" lineNumber="1553"/>
+    <functiondecl functionName="_gui_input_resize" lineNumber="1684"/>
+    <functiondecl functionName="_gui_input_scale" lineNumber="1868"/>
+    <functiondecl functionName="_gui_input_move" lineNumber="1994"/>
+    <functiondecl functionName="_gui_input_select" lineNumber="2239"/>
+    <functiondecl functionName="_gui_input_ruler_tool" lineNumber="2421"/>
+    <functiondecl functionName="_gui_input_hover" lineNumber="2453"/>
+    <functiondecl functionName="_gui_input_viewport" lineNumber="2506"/>
+    <functiondecl functionName="_draw_text_at_position" lineNumber="2605"/>
+    <functiondecl functionName="_draw_margin_at_position" lineNumber="2627"/>
+    <functiondecl functionName="_draw_percentage_at_position" lineNumber="2634"/>
+    <functiondecl functionName="_draw_focus" lineNumber="2641"/>
+    <functiondecl functionName="_draw_guides" lineNumber="2648"/>
+    <functiondecl functionName="_draw_smart_snapping" lineNumber="2693"/>
+    <functiondecl functionName="_draw_rulers" lineNumber="2707"/>
+    <functiondecl functionName="_draw_grid" lineNumber="2795"/>
+    <functiondecl functionName="_draw_ruler_tool" lineNumber="2868"/>
+    <functiondecl functionName="_draw_control_anchors" lineNumber="2998"/>
+    <functiondecl functionName="_draw_control_helpers" lineNumber="3029"/>
+    <functiondecl functionName="_draw_selection" lineNumber="3204"/>
+    <functiondecl functionName="_draw_straight_line" lineNumber="3414"/>
+    <functiondecl functionName="_draw_axis" lineNumber="3455"/>
+    <functiondecl functionName="_draw_bones" lineNumber="3484"/>
+    <functiondecl functionName="_draw_invisible_nodes_positions" lineNumber="3542"/>
+    <functiondecl functionName="_draw_hover" lineNumber="3580"/>
+    <functiondecl functionName="_draw_locks_and_groups" lineNumber="3610"/>
+    <functiondecl functionName="_build_bones_list" lineNumber="3653"/>
+    <functiondecl functionName="_draw_viewport" lineNumber="3719"/>
+    <functiondecl functionName="update_viewport" lineNumber="3789"/>
+    <functiondecl functionName="set_current_tool" lineNumber="3794"/>
+    <functiondecl functionName="_notification" lineNumber="3798"/>
+    <functiondecl functionName="_selection_changed" lineNumber="4030"/>
+    <functiondecl functionName="edit" lineNumber="4056"/>
+    <functiondecl functionName="_queue_update_bone_list" lineNumber="4068"/>
+    <functiondecl functionName="_update_bone_list" lineNumber="4077"/>
+    <functiondecl functionName="_tree_changed" lineNumber="4105"/>
+    <functiondecl functionName="_update_scrollbars" lineNumber="4109"/>
+    <functiondecl functionName="_popup_warning_depop" lineNumber="4199"/>
+    <functiondecl functionName="_popup_warning_temporarily" lineNumber="4209"/>
+    <functiondecl functionName="_update_scroll" lineNumber="4227"/>
+    <functiondecl functionName="_set_anchors_and_margins_preset" lineNumber="4237"/>
+    <functiondecl functionName="_set_anchors_and_margins_to_keep_ratio" lineNumber="4279"/>
+    <functiondecl functionName="_set_anchors_preset" lineNumber="4308"/>
+    <functiondecl functionName="_zoom_on_position" lineNumber="4324"/>
+    <functiondecl functionName="_update_zoom_label" lineNumber="4349"/>
+    <functiondecl functionName="_button_zoom_minus" lineNumber="4365"/>
+    <functiondecl functionName="_button_zoom_reset" lineNumber="4369"/>
+    <functiondecl functionName="_button_zoom_plus" lineNumber="4373"/>
+    <functiondecl functionName="_button_toggle_smart_snap" lineNumber="4377"/>
+    <functiondecl functionName="_button_toggle_grid_snap" lineNumber="4382"/>
+    <functiondecl functionName="_button_override_camera" lineNumber="4386"/>
+    <functiondecl functionName="_button_tool_select" lineNumber="4396"/>
+    <functiondecl functionName="_insert_animation_keys" lineNumber="4407"/>
+    <functiondecl functionName="_button_toggle_anchor_mode" lineNumber="4478"/>
+    <functiondecl functionName="_update_override_camera_button" lineNumber="4492"/>
+    <functiondecl functionName="_popup_callback" lineNumber="4503"/>
+    <functiondecl functionName="_focus_selection" lineNumber="5040"/>
+    <functiondecl functionName="_bind_methods" lineNumber="5102"/>
+    <functiondecl functionName="get_state" lineNumber="5116"/>
+    <functiondecl functionName="set_state" lineNumber="5153"/>
+    <functiondecl functionName="add_control_to_info_overlay" lineNumber="5330"/>
+    <functiondecl functionName="remove_control_from_info_overlay" lineNumber="5338"/>
+    <functiondecl functionName="add_control_to_menu_panel" lineNumber="5344"/>
+    <functiondecl functionName="remove_control_from_menu_panel" lineNumber="5350"/>
+    <functiondecl functionName="get_palette_split" lineNumber="5355"/>
+    <functiondecl functionName="get_bottom_split" lineNumber="5360"/>
+    <functiondecl functionName="focus_selection" lineNumber="5365"/>
+    <functiondecl functionName="edit" lineNumber="5828"/>
+    <functiondecl functionName="handles" lineNumber="5834"/>
+    <functiondecl functionName="make_visible" lineNumber="5839"/>
+    <functiondecl functionName="get_state" lineNumber="5854"/>
+    <functiondecl functionName="set_state" lineNumber="5858"/>
+    <functiondecl functionName="_on_mouse_exit" lineNumber="5876"/>
+    <functiondecl functionName="_on_select_type" lineNumber="5882"/>
+    <functiondecl functionName="_on_change_type_confirmed" lineNumber="5889"/>
+    <functiondecl functionName="_on_change_type_closed" lineNumber="5899"/>
+    <functiondecl functionName="_create_preview" lineNumber="5904"/>
+    <functiondecl functionName="_remove_preview" lineNumber="5936"/>
+    <functiondecl functionName="_cyclical_dependency_exists" lineNumber="5950"/>
+    <functiondecl functionName="_create_nodes" lineNumber="5965"/>
+    <functiondecl functionName="_create_instance" lineNumber="6028"/>
+    <functiondecl functionName="_perform_drop_data" lineNumber="6069"/>
+    <functiondecl functionName="can_drop_data" lineNumber="6140"/>
+    <functiondecl functionName="_show_resource_type_selector" lineNumber="6192"/>
+    <functiondecl functionName="_only_packed_scenes_selected" lineNumber="6205"/>
+    <functiondecl functionName="drop_data" lineNumber="6216"/>
+    <functiondecl functionName="_notification" lineNumber="6255"/>
+    <functiondecl functionName="_bind_methods" lineNumber="6270"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ALIGN_CENTER"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_BOTTOM_LEFT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_BOTTOM_RIGHT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_BOTTOM_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_BOTTOM"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_LEFT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_RIGHT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_CENTER_TOP"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_HCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_KEEP_RATIO"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_LEFT_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_RIGHT_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_TOP_LEFT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_TOP_RIGHT"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_TOP_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_VCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_AND_MARGINS_PRESET_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_BOTTOM_LEFT"/>
+    <functioncall functionName="ANCHORS_PRESET_BOTTOM_RIGHT"/>
+    <functioncall functionName="ANCHORS_PRESET_BOTTOM_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_BOTTOM"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_LEFT"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_RIGHT"/>
+    <functioncall functionName="ANCHORS_PRESET_CENTER_TOP"/>
+    <functioncall functionName="ANCHORS_PRESET_HCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_LEFT_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_RIGHT_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_TOP_LEFT"/>
+    <functioncall functionName="ANCHORS_PRESET_TOP_RIGHT"/>
+    <functioncall functionName="ANCHORS_PRESET_TOP_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_VCENTER_WIDE"/>
+    <functioncall functionName="ANCHORS_PRESET_WIDE"/>
+    <functioncall functionName="ANCHOR_BEGIN"/>
+    <functioncall functionName="ANCHOR_END"/>
+    <functioncall functionName="ANIM_CLEAR_POSE"/>
+    <functioncall functionName="ANIM_COPY_POSE"/>
+    <functioncall functionName="ANIM_INSERT_KEY"/>
+    <functioncall functionName="ANIM_INSERT_KEY_EXISTING"/>
+    <functioncall functionName="ANIM_INSERT_POS"/>
+    <functioncall functionName="ANIM_INSERT_ROT"/>
+    <functioncall functionName="ANIM_INSERT_SCALE"/>
+    <functioncall functionName="ANIM_PASTE_POSE"/>
+    <functioncall functionName="AcceptDialog"/>
+    <functioncall functionName="BoneList"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="CLEAR_GUIDES"/>
+    <functioncall functionName="CURSOR_ARROW"/>
+    <functioncall functionName="CURSOR_BDIAGSIZE"/>
+    <functioncall functionName="CURSOR_CROSS"/>
+    <functioncall functionName="CURSOR_DRAG"/>
+    <functioncall functionName="CURSOR_FDIAGSIZE"/>
+    <functioncall functionName="CURSOR_HSIZE"/>
+    <functioncall functionName="CURSOR_MOVE"/>
+    <functioncall functionName="CURSOR_VSIZE"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="CanvasItemEditor"/>
+    <functioncall functionName="CanvasItemEditorPlugin"/>
+    <functioncall functionName="CanvasItemEditorSelectedItem"/>
+    <functioncall functionName="CanvasItemEditorViewport"/>
+    <functioncall functionName="CheckBox"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ConfirmationDialog"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="DRAG_ANCHOR_ALL"/>
+    <functioncall functionName="DRAG_ANCHOR_BOTTOM_LEFT"/>
+    <functioncall functionName="DRAG_ANCHOR_BOTTOM_RIGHT"/>
+    <functioncall functionName="DRAG_ANCHOR_TOP_LEFT"/>
+    <functioncall functionName="DRAG_ANCHOR_TOP_RIGHT"/>
+    <functioncall functionName="DRAG_BOTTOM"/>
+    <functioncall functionName="DRAG_BOTTOM_LEFT"/>
+    <functioncall functionName="DRAG_BOTTOM_RIGHT"/>
+    <functioncall functionName="DRAG_BOX_SELECTION"/>
+    <functioncall functionName="DRAG_DOUBLE_GUIDE"/>
+    <functioncall functionName="DRAG_H_GUIDE"/>
+    <functioncall functionName="DRAG_KEY_MOVE"/>
+    <functioncall functionName="DRAG_LEFT"/>
+    <functioncall functionName="DRAG_MOVE"/>
+    <functioncall functionName="DRAG_MOVE_X"/>
+    <functioncall functionName="DRAG_MOVE_Y"/>
+    <functioncall functionName="DRAG_NONE"/>
+    <functioncall functionName="DRAG_PIVOT"/>
+    <functioncall functionName="DRAG_RIGHT"/>
+    <functioncall functionName="DRAG_ROTATE"/>
+    <functioncall functionName="DRAG_SCALE_BOTH"/>
+    <functioncall functionName="DRAG_SCALE_X"/>
+    <functioncall functionName="DRAG_SCALE_Y"/>
+    <functioncall functionName="DRAG_TOP"/>
+    <functioncall functionName="DRAG_TOP_LEFT"/>
+    <functioncall functionName="DRAG_TOP_RIGHT"/>
+    <functioncall functionName="DRAG_V_GUIDE"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITOR_GET"/>
+    <functioncall functionName="EDSCALE"/>
+    <functioncall functionName="ED_GET_SHORTCUT"/>
+    <functioncall functionName="ED_SHORTCUT"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="EditorPlugin"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FOCUS_ALL"/>
+    <functioncall functionName="FOCUS_NONE"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GEN_EDIT_STATE_INSTANCE"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="GPUParticles2D"/>
+    <functioncall functionName="GROUP_SELECTED"/>
+    <functioncall functionName="GROW_DIRECTION_BEGIN"/>
+    <functioncall functionName="GridContainer"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HScrollBar"/>
+    <functioncall functionName="HSeparator"/>
+    <functioncall functionName="HSplitContainer"/>
+    <functioncall functionName="KEY_0"/>
+    <functioncall functionName="KEY_ALT"/>
+    <functioncall functionName="KEY_B"/>
+    <functioncall functionName="KEY_CONTROL"/>
+    <functioncall functionName="KEY_DOWN"/>
+    <functioncall functionName="KEY_E"/>
+    <functioncall functionName="KEY_EQUAL"/>
+    <functioncall functionName="KEY_F"/>
+    <functioncall functionName="KEY_G"/>
+    <functioncall functionName="KEY_H"/>
+    <functioncall functionName="KEY_INSERT"/>
+    <functioncall functionName="KEY_K"/>
+    <functioncall functionName="KEY_KP_DIVIDE"/>
+    <functioncall functionName="KEY_KP_MULTIPLY"/>
+    <functioncall functionName="KEY_LEFT"/>
+    <functioncall functionName="KEY_MASK_CMD"/>
+    <functioncall functionName="KEY_MINUS"/>
+    <functioncall functionName="KEY_P"/>
+    <functioncall functionName="KEY_Q"/>
+    <functioncall functionName="KEY_R"/>
+    <functioncall functionName="KEY_RIGHT"/>
+    <functioncall functionName="KEY_S"/>
+    <functioncall functionName="KEY_SHIFT"/>
+    <functioncall functionName="KEY_SPACE"/>
+    <functioncall functionName="KEY_UP"/>
+    <functioncall functionName="KEY_W"/>
+    <functioncall functionName="KEY_Y"/>
+    <functioncall functionName="LOCK_SELECTED"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="Light2D"/>
+    <functioncall functionName="List"/>
+    <functioncall functionName="MARGINS_PRESET_BOTTOM_LEFT"/>
+    <functioncall functionName="MARGINS_PRESET_BOTTOM_RIGHT"/>
+    <functioncall functionName="MARGINS_PRESET_BOTTOM_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_BOTTOM"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_LEFT"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_RIGHT"/>
+    <functioncall functionName="MARGINS_PRESET_CENTER_TOP"/>
+    <functioncall functionName="MARGINS_PRESET_HCENTER_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_LEFT_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_RIGHT_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_TOP_LEFT"/>
+    <functioncall functionName="MARGINS_PRESET_TOP_RIGHT"/>
+    <functioncall functionName="MARGINS_PRESET_TOP_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_VCENTER_WIDE"/>
+    <functioncall functionName="MARGINS_PRESET_WIDE"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MOUSE_FILTER_PASS"/>
+    <functioncall functionName="Margin"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="Math_SQRT2"/>
+    <functioncall functionName="MenuButton"/>
+    <functioncall functionName="MenuOption"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="NinePatchRect"/>
+    <functioncall functionName="Node2D"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="OVERRIDE_2D"/>
+    <functioncall functionName="OVERRIDE_NONE"/>
+    <functioncall functionName="Object"/>
+    <functioncall functionName="ObjectID"/>
+    <functioncall functionName="PRESET_BOTTOM_LEFT"/>
+    <functioncall functionName="PRESET_BOTTOM_RIGHT"/>
+    <functioncall functionName="PRESET_BOTTOM_WIDE"/>
+    <functioncall functionName="PRESET_CENTER"/>
+    <functioncall functionName="PRESET_CENTER_BOTTOM"/>
+    <functioncall functionName="PRESET_CENTER_LEFT"/>
+    <functioncall functionName="PRESET_CENTER_RIGHT"/>
+    <functioncall functionName="PRESET_CENTER_TOP"/>
+    <functioncall functionName="PRESET_HCENTER_WIDE"/>
+    <functioncall functionName="PRESET_LEFT_WIDE"/>
+    <functioncall functionName="PRESET_MODE_KEEP_SIZE"/>
+    <functioncall functionName="PRESET_MODE_MINSIZE"/>
+    <functioncall functionName="PRESET_RIGHT_WIDE"/>
+    <functioncall functionName="PRESET_TOP_LEFT"/>
+    <functioncall functionName="PRESET_TOP_RIGHT"/>
+    <functioncall functionName="PRESET_TOP_WIDE"/>
+    <functioncall functionName="PRESET_VCENTER_WIDE"/>
+    <functioncall functionName="PRESET_WIDE"/>
+    <functioncall functionName="PREVIEW_CANVAS_SCALE"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="Polygon2D"/>
+    <functioncall functionName="PopupMenu"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SHOW_EDIT_LOCKS"/>
+    <functioncall functionName="SHOW_GRID"/>
+    <functioncall functionName="SHOW_GUIDES"/>
+    <functioncall functionName="SHOW_HELPERS"/>
+    <functioncall functionName="SHOW_ORIGIN"/>
+    <functioncall functionName="SHOW_RULERS"/>
+    <functioncall functionName="SHOW_TRANSFORMATION_GIZMOS"/>
+    <functioncall functionName="SHOW_VIEWPORT"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="SIZE_SHRINK_END"/>
+    <functioncall functionName="SKELETON_CLEAR_BONES"/>
+    <functioncall functionName="SKELETON_CLEAR_IK_CHAIN"/>
+    <functioncall functionName="SKELETON_MAKE_BONES"/>
+    <functioncall functionName="SKELETON_SET_IK_CHAIN"/>
+    <functioncall functionName="SKELETON_SHOW_BONES"/>
+    <functioncall functionName="SNAP_CONFIGURE"/>
+    <functioncall functionName="SNAP_DEFAULT"/>
+    <functioncall functionName="SNAP_NODE_CENTER"/>
+    <functioncall functionName="SNAP_OTHER_NODES"/>
+    <functioncall functionName="SNAP_PIXEL"/>
+    <functioncall functionName="SNAP_RELATIVE"/>
+    <functioncall functionName="SNAP_TARGET_GRID"/>
+    <functioncall functionName="SNAP_TARGET_GUIDE"/>
+    <functioncall functionName="SNAP_TARGET_NONE"/>
+    <functioncall functionName="SNAP_TARGET_OTHER_NODE"/>
+    <functioncall functionName="SNAP_TARGET_PARENT"/>
+    <functioncall functionName="SNAP_TARGET_PIXEL"/>
+    <functioncall functionName="SNAP_TARGET_SELF"/>
+    <functioncall functionName="SNAP_TARGET_SELF_ANCHORS"/>
+    <functioncall functionName="SNAP_USE"/>
+    <functioncall functionName="SNAP_USE_GRID"/>
+    <functioncall functionName="SNAP_USE_GUIDES"/>
+    <functioncall functionName="SNAP_USE_NODE_ANCHORS"/>
+    <functioncall functionName="SNAP_USE_NODE_CENTER"/>
+    <functioncall functionName="SNAP_USE_NODE_PARENT"/>
+    <functioncall functionName="SNAP_USE_NODE_SIDES"/>
+    <functioncall functionName="SNAP_USE_OTHER_NODES"/>
+    <functioncall functionName="SNAP_USE_PIXEL"/>
+    <functioncall functionName="SNAP_USE_ROTATION"/>
+    <functioncall functionName="SNAP_USE_SCALE"/>
+    <functioncall functionName="SPIN_BOX_GRID_RANGE"/>
+    <functioncall functionName="SPIN_BOX_ROTATION_RANGE"/>
+    <functioncall functionName="SPIN_BOX_SCALE_MAX"/>
+    <functioncall functionName="SPIN_BOX_SCALE_MIN"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="SnapDialog"/>
+    <functioncall functionName="SnapTarget"/>
+    <functioncall functionName="SpinBox"/>
+    <functioncall functionName="Sprite2D"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StyleBoxFlat"/>
+    <functioncall functionName="StyleBoxTexture"/>
+    <functioncall functionName="SubViewportContainer"/>
+    <functioncall functionName="TOOL_EDIT_PIVOT"/>
+    <functioncall functionName="TOOL_LIST_SELECT"/>
+    <functioncall functionName="TOOL_MAX"/>
+    <functioncall functionName="TOOL_MOVE"/>
+    <functioncall functionName="TOOL_PAN"/>
+    <functioncall functionName="TOOL_ROTATE"/>
+    <functioncall functionName="TOOL_RULER"/>
+    <functioncall functionName="TOOL_SCALE"/>
+    <functioncall functionName="TOOL_SELECT"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="TextureRect"/>
+    <functioncall functionName="Theme"/>
+    <functioncall functionName="Timer"/>
+    <functioncall functionName="Tool"/>
+    <functioncall functionName="ToolButton"/>
+    <functioncall functionName="TouchScreenButton"/>
+    <functioncall functionName="Transform2D"/>
+    <functioncall functionName="UNGROUP_SELECTED"/>
+    <functioncall functionName="UNLOCK_SELECTED"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="VIEW_CENTER_TO_SELECTION"/>
+    <functioncall functionName="VIEW_FRAME_TO_SELECTION"/>
+    <functioncall functionName="VScrollBar"/>
+    <functioncall functionName="VSeparator"/>
+    <functioncall functionName="VSplitContainer"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_anchor_to_position"/>
+    <functioncall functionName="_build_bones_list"/>
+    <functioncall functionName="_button_override_camera"/>
+    <functioncall functionName="_button_toggle_anchor_mode"/>
+    <functioncall functionName="_button_toggle_grid_snap"/>
+    <functioncall functionName="_button_toggle_smart_snap"/>
+    <functioncall functionName="_button_tool_select"/>
+    <functioncall functionName="_button_zoom_minus"/>
+    <functioncall functionName="_button_zoom_plus"/>
+    <functioncall functionName="_button_zoom_reset"/>
+    <functioncall functionName="_commit_canvas_item_state"/>
+    <functioncall functionName="_create_instance"/>
+    <functioncall functionName="_create_nodes"/>
+    <functioncall functionName="_create_preview"/>
+    <functioncall functionName="_cyclical_dependency_exists"/>
+    <functioncall functionName="_draw_axis"/>
+    <functioncall functionName="_draw_bones"/>
+    <functioncall functionName="_draw_control_anchors"/>
+    <functioncall functionName="_draw_control_helpers"/>
+    <functioncall functionName="_draw_focus"/>
+    <functioncall functionName="_draw_grid"/>
+    <functioncall functionName="_draw_guides"/>
+    <functioncall functionName="_draw_hover"/>
+    <functioncall functionName="_draw_invisible_nodes_positions"/>
+    <functioncall functionName="_draw_locks_and_groups"/>
+    <functioncall functionName="_draw_margin_at_position"/>
+    <functioncall functionName="_draw_percentage_at_position"/>
+    <functioncall functionName="_draw_ruler_tool"/>
+    <functioncall functionName="_draw_rulers"/>
+    <functioncall functionName="_draw_selection"/>
+    <functioncall functionName="_draw_smart_snapping"/>
+    <functioncall functionName="_draw_straight_line"/>
+    <functioncall functionName="_draw_text_at_position"/>
+    <functioncall functionName="_draw_viewport"/>
+    <functioncall functionName="_edit_get_minimum_size"/>
+    <functioncall functionName="_edit_get_pivot"/>
+    <functioncall functionName="_edit_get_position"/>
+    <functioncall functionName="_edit_get_rect"/>
+    <functioncall functionName="_edit_get_rotation"/>
+    <functioncall functionName="_edit_get_state"/>
+    <functioncall functionName="_edit_get_transform"/>
+    <functioncall functionName="_edit_is_selected_on_click"/>
+    <functioncall functionName="_edit_set_pivot"/>
+    <functioncall functionName="_edit_set_position"/>
+    <functioncall functionName="_edit_set_rect"/>
+    <functioncall functionName="_edit_set_rotation"/>
+    <functioncall functionName="_edit_set_state"/>
+    <functioncall functionName="_edit_use_pivot"/>
+    <functioncall functionName="_edit_use_rect"/>
+    <functioncall functionName="_expand_encompassing_rect_using_children"/>
+    <functioncall functionName="_find_canvas_items_at_pos"/>
+    <functioncall functionName="_find_canvas_items_in_rect"/>
+    <functioncall functionName="_focus_selection"/>
+    <functioncall functionName="_get_bone_shape"/>
+    <functioncall functionName="_get_bones_at_pos"/>
+    <functioncall functionName="_get_canvas_items_at_pos"/>
+    <functioncall functionName="_get_edited_canvas_items"/>
+    <functioncall functionName="_get_editor_data"/>
+    <functioncall functionName="_get_encompassing_rect"/>
+    <functioncall functionName="_get_encompassing_rect_from_list"/>
+    <functioncall functionName="_gui_input_anchors"/>
+    <functioncall functionName="_gui_input_hover"/>
+    <functioncall functionName="_gui_input_move"/>
+    <functioncall functionName="_gui_input_open_scene_on_double_click"/>
+    <functioncall functionName="_gui_input_pivot"/>
+    <functioncall functionName="_gui_input_resize"/>
+    <functioncall functionName="_gui_input_rotate"/>
+    <functioncall functionName="_gui_input_ruler_tool"/>
+    <functioncall functionName="_gui_input_rulers_and_guides"/>
+    <functioncall functionName="_gui_input_scale"/>
+    <functioncall functionName="_gui_input_select"/>
+    <functioncall functionName="_gui_input_viewport"/>
+    <functioncall functionName="_gui_input_zoom_or_pan"/>
+    <functioncall functionName="_insert_animation_keys"/>
+    <functioncall functionName="_is_node_locked"/>
+    <functioncall functionName="_is_node_movable"/>
+    <functioncall functionName="_keying_changed"/>
+    <functioncall functionName="_on_change_type_closed"/>
+    <functioncall functionName="_on_change_type_confirmed"/>
+    <functioncall functionName="_on_mouse_exit"/>
+    <functioncall functionName="_on_select_type"/>
+    <functioncall functionName="_only_packed_scenes_selected"/>
+    <functioncall functionName="_perform_drop_data"/>
+    <functioncall functionName="_popup_callback"/>
+    <functioncall functionName="_popup_warning_depop"/>
+    <functioncall functionName="_popup_warning_temporarily"/>
+    <functioncall functionName="_position_to_anchor"/>
+    <functioncall functionName="_queue_update_bone_list"/>
+    <functioncall functionName="_remove_preview"/>
+    <functioncall functionName="_restore_canvas_item_ik_chain"/>
+    <functioncall functionName="_restore_canvas_item_state"/>
+    <functioncall functionName="_save_canvas_item_ik_chain"/>
+    <functioncall functionName="_save_canvas_item_state"/>
+    <functioncall functionName="_select_click_on_item"/>
+    <functioncall functionName="_selection_changed"/>
+    <functioncall functionName="_selection_menu_hide"/>
+    <functioncall functionName="_selection_result_pressed"/>
+    <functioncall functionName="_set_anchors_and_margins_preset"/>
+    <functioncall functionName="_set_anchors_and_margins_to_keep_ratio"/>
+    <functioncall functionName="_set_anchors_preset"/>
+    <functioncall functionName="_show_resource_type_selector"/>
+    <functioncall functionName="_snap_changed"/>
+    <functioncall functionName="_snap_if_closer_float"/>
+    <functioncall functionName="_snap_if_closer_point"/>
+    <functioncall functionName="_snap_other_nodes"/>
+    <functioncall functionName="_solve_IK"/>
+    <functioncall functionName="_tree_changed"/>
+    <functioncall functionName="_unhandled_key_input"/>
+    <functioncall functionName="_update_bone_list"/>
+    <functioncall functionName="_update_override_camera_button"/>
+    <functioncall functionName="_update_scroll"/>
+    <functioncall functionName="_update_scrollbars"/>
+    <functioncall functionName="_update_zoom_label"/>
+    <functioncall functionName="_zoom_on_position"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="accept"/>
+    <functioncall functionName="accept_event"/>
+    <functioncall functionName="accepted"/>
+    <functioncall functionName="action_name"/>
+    <functioncall functionName="add_check_shortcut"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_control_to_info_overlay"/>
+    <functioncall functionName="add_do_method"/>
+    <functioncall functionName="add_do_property"/>
+    <functioncall functionName="add_do_reference"/>
+    <functioncall functionName="add_editor_plugin"/>
+    <functioncall functionName="add_icon_item"/>
+    <functioncall functionName="add_item"/>
+    <functioncall functionName="add_node"/>
+    <functioncall functionName="add_preview"/>
+    <functioncall functionName="add_separator"/>
+    <functioncall functionName="add_shortcut"/>
+    <functioncall functionName="add_submenu_item"/>
+    <functioncall functionName="add_theme_color_override"/>
+    <functioncall functionName="add_theme_constant_override"/>
+    <functioncall functionName="add_theme_font_override"/>
+    <functioncall functionName="add_undo_method"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="all_group"/>
+    <functioncall functionName="all_locked"/>
+    <functioncall functionName="anchor_mode_button"/>
+    <functioncall functionName="anchor_val"/>
+    <functioncall functionName="anchors_mode"/>
+    <functioncall functionName="anchors_popup"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="angle_text_width"/>
+    <functioncall functionName="angle_to"/>
+    <functioncall functionName="animation_hb"/>
+    <functioncall functionName="animation_menu"/>
+    <functioncall functionName="arc_1_end_angle"/>
+    <functioncall functionName="arc_1_radius"/>
+    <functioncall functionName="arc_1_start_angle"/>
+    <functioncall functionName="arc_2_end_angle"/>
+    <functioncall functionName="arc_2_radius"/>
+    <functioncall functionName="arc_2_start_angle"/>
+    <functioncall functionName="arc_max_radius"/>
+    <functioncall functionName="arc_point_count"/>
+    <functioncall functionName="area_axis_color"/>
+    <functioncall functionName="aspect"/>
+    <functioncall functionName="atan2"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="back"/>
+    <functioncall functionName="basic_rule"/>
+    <functioncall functionName="basis_determinant"/>
+    <functioncall functionName="basis_xform"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bg_color"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bk"/>
+    <functioncall functionName="bone"/>
+    <functioncall functionName="bone_E"/>
+    <functioncall functionName="bone_color1"/>
+    <functioncall functionName="bone_color2"/>
+    <functioncall functionName="bone_ik_color"/>
+    <functioncall functionName="bone_last_frame"/>
+    <functioncall functionName="bone_list_dirty"/>
+    <functioncall functionName="bone_outline_color"/>
+    <functioncall functionName="bone_selected_color"/>
+    <functioncall functionName="bone_shape"/>
+    <functioncall functionName="bone_shape_outline"/>
+    <functioncall functionName="bones_ik_states"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="bottom_split"/>
+    <functioncall functionName="box_selecting_to"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="bsfrom"/>
+    <functioncall functionName="btn_group"/>
+    <functioncall functionName="btn_list"/>
+    <functioncall functionName="button_group"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="call"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="can_instance"/>
+    <functioncall functionName="canvas_item"/>
+    <functioncall functionName="canvas_item_add_line"/>
+    <functioncall functionName="canvas_item_add_polygon"/>
+    <functioncall functionName="canvas_item_add_primitive"/>
+    <functioncall functionName="canvas_item_add_set_transform"/>
+    <functioncall functionName="canvas_item_editor"/>
+    <functioncall functionName="canvas_item_rect"/>
+    <functioncall functionName="canvas_item_tmp"/>
+    <functioncall functionName="canvas_set_disable_scale"/>
+    <functioncall functionName="canvas_xform"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="ceil"/>
+    <functioncall functionName="cell"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="check"/>
+    <functioncall functionName="child"/>
+    <functioncall functionName="child_container"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="click"/>
+    <functioncall functionName="closest_zoom_factor"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="color_base"/>
+    <functioncall functionName="color_snapped"/>
+    <functioncall functionName="colors"/>
+    <functioncall functionName="commit_action"/>
+    <functioncall functionName="commit_bones"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="container"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="control"/>
+    <functioncall functionName="controls_vb"/>
+    <functioncall functionName="controls_vb_begin"/>
+    <functioncall functionName="copy_default_theme"/>
+    <functioncall functionName="corner"/>
+    <functioncall functionName="create_action"/>
+    <functioncall functionName="ctrl"/>
+    <functioncall functionName="current_begin"/>
+    <functioncall functionName="current_end"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="default_type"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="drag_from"/>
+    <functioncall functionName="drag_from_local"/>
+    <functioncall functionName="drag_rotation_center"/>
+    <functioncall functionName="drag_selection"/>
+    <functioncall functionName="drag_to"/>
+    <functioncall functionName="drag_to_snapped_begin"/>
+    <functioncall functionName="drag_to_snapped_end"/>
+    <functioncall functionName="drag_type"/>
+    <functioncall functionName="dragged_anchor"/>
+    <functioncall functionName="dragged_guide_index"/>
+    <functioncall functionName="dragged_guide_pos"/>
+    <functioncall functionName="draw"/>
+    <functioncall functionName="draw_arc"/>
+    <functioncall functionName="draw_colored_polygon"/>
+    <functioncall functionName="draw_line"/>
+    <functioncall functionName="draw_rect"/>
+    <functioncall functionName="draw_secondary_lines"/>
+    <functioncall functionName="draw_set_transform_matrix"/>
+    <functioncall functionName="draw_string"/>
+    <functioncall functionName="draw_texture"/>
+    <functioncall functionName="drop_pos"/>
+    <functioncall functionName="duplicate"/>
+    <functioncall functionName="ed"/>
+    <functioncall functionName="edit"/>
+    <functioncall functionName="editable"/>
+    <functioncall functionName="editor"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="exception"/>
+    <functioncall functionName="exceptions"/>
+    <functioncall functionName="existing"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fast_ftoi"/>
+    <functioncall functionName="files"/>
+    <functioncall functionName="final_leaf_node_rotation"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="fmod"/>
+    <functioncall functionName="font"/>
+    <functioncall functionName="font_color"/>
+    <functioncall functionName="font_secondary_color"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="force_no_IK"/>
+    <functioncall functionName="forward_canvas_draw_over_viewport"/>
+    <functioncall functionName="forward_canvas_force_draw_over_viewport"/>
+    <functioncall functionName="forward_gui_input"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="from_node"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_alt"/>
+    <functioncall functionName="get_anchor"/>
+    <functioncall functionName="get_basename"/>
+    <functioncall functionName="get_button_index"/>
+    <functioncall functionName="get_buttons"/>
+    <functioncall functionName="get_canvas_item"/>
+    <functioncall functionName="get_canvas_transform"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_class"/>
+    <functioncall functionName="get_control"/>
+    <functioncall functionName="get_controls_container"/>
+    <functioncall functionName="get_default_length"/>
+    <functioncall functionName="get_delta"/>
+    <functioncall functionName="get_edited_scene"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_editor_data"/>
+    <functioncall functionName="get_editor_plugins_force_over"/>
+    <functioncall functionName="get_editor_plugins_over"/>
+    <functioncall functionName="get_editor_selection"/>
+    <functioncall functionName="get_factor"/>
+    <functioncall functionName="get_fields"/>
+    <functioncall functionName="get_file"/>
+    <functioncall functionName="get_filename"/>
+    <functioncall functionName="get_focus_owner"/>
+    <functioncall functionName="get_global_canvas_transform"/>
+    <functioncall functionName="get_global_position"/>
+    <functioncall functionName="get_global_rect"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_global_transform_with_canvas"/>
+    <functioncall functionName="get_gui_base"/>
+    <functioncall functionName="get_h_size_flags"/>
+    <functioncall functionName="get_height"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_item_index"/>
+    <functioncall functionName="get_keycode"/>
+    <functioncall functionName="get_local_mouse_position"/>
+    <functioncall functionName="get_margin"/>
+    <functioncall functionName="get_meta"/>
+    <functioncall functionName="get_metakey"/>
+    <functioncall functionName="get_minimum_size"/>
+    <functioncall functionName="get_name"/>
+    <functioncall functionName="get_name_count"/>
+    <functioncall functionName="get_node_editor_data"/>
+    <functioncall functionName="get_object_icon"/>
+    <functioncall functionName="get_ok"/>
+    <functioncall functionName="get_origin"/>
+    <functioncall functionName="get_owner"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_parent_anchorable_rect"/>
+    <functioncall functionName="get_parent_item"/>
+    <functioncall functionName="get_path"/>
+    <functioncall functionName="get_path_to"/>
+    <functioncall functionName="get_pivot_offset"/>
+    <functioncall functionName="get_popup"/>
+    <functioncall functionName="get_position"/>
+    <functioncall functionName="get_pressed_button"/>
+    <functioncall functionName="get_property_list"/>
+    <functioncall functionName="get_rect"/>
+    <functioncall functionName="get_relative"/>
+    <functioncall functionName="get_rotation"/>
+    <functioncall functionName="get_rotation_degrees"/>
+    <functioncall functionName="get_scale"/>
+    <functioncall functionName="get_scene_root"/>
+    <functioncall functionName="get_scene_tree_dock"/>
+    <functioncall functionName="get_screen_transform"/>
+    <functioncall functionName="get_selected_node_list"/>
+    <functioncall functionName="get_selected_nodes"/>
+    <functioncall functionName="get_selection"/>
+    <functioncall functionName="get_shift"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_state"/>
+    <functioncall functionName="get_string_size"/>
+    <functioncall functionName="get_text"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_font"/>
+    <functioncall functionName="get_theme_icon"/>
+    <functioncall functionName="get_theme_stylebox"/>
+    <functioncall functionName="get_track_editor"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_tree"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="get_value"/>
+    <functioncall functionName="get_viewport"/>
+    <functioncall functionName="get_viewport_rid"/>
+    <functioncall functionName="get_z_index"/>
+    <functioncall functionName="global_xform"/>
+    <functioncall functionName="grab_distance"/>
+    <functioncall functionName="graduation_color"/>
+    <functioncall functionName="grid_color"/>
+    <functioncall functionName="grid_offset"/>
+    <functioncall functionName="grid_offset_x"/>
+    <functioncall functionName="grid_offset_y"/>
+    <functioncall functionName="grid_output"/>
+    <functioncall functionName="grid_snap_active"/>
+    <functioncall functionName="grid_snap_button"/>
+    <functioncall functionName="grid_step"/>
+    <functioncall functionName="grid_step_multiplier"/>
+    <functioncall functionName="grid_step_x"/>
+    <functioncall functionName="grid_step_y"/>
+    <functioncall functionName="group_button"/>
+    <functioncall functionName="guide_color"/>
+    <functioncall functionName="h_angle_text_pos"/>
+    <functioncall functionName="h_scroll"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_child_bones"/>
+    <functioncall functionName="has_container_parents"/>
+    <functioncall functionName="has_focus"/>
+    <functioncall functionName="has_meta"/>
+    <functioncall functionName="has_point"/>
+    <functioncall functionName="has_z"/>
+    <functioncall functionName="hb"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="hguides"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="horizontal_angle"/>
+    <functioncall functionName="horizontal_angle_rad"/>
+    <functioncall functionName="hover_result"/>
+    <functioncall functionName="hovering_results_items"/>
+    <functioncall functionName="hovering_results_tmp"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icon"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ik_found"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="info_overlay"/>
+    <functioncall functionName="info_overlay_label_stylebox"/>
+    <functioncall functionName="info_overlay_theme"/>
+    <functioncall functionName="insert_node_value_key"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instanced_scene"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="intersects"/>
+    <functioncall functionName="inverse"/>
+    <functioncall functionName="is_a_parent_of"/>
+    <functioncall functionName="is_class"/>
+    <functioncall functionName="is_ctrl"/>
+    <functioncall functionName="is_doubleclick"/>
+    <functioncall functionName="is_echo"/>
+    <functioncall functionName="is_editable_instance"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_equal_approx"/>
+    <functioncall functionName="is_hovering_h_guide"/>
+    <functioncall functionName="is_hovering_v_guide"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_item_checked"/>
+    <functioncall functionName="is_key_pressed"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_pan_key"/>
+    <functioncall functionName="is_point_in_polygon"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_selected"/>
+    <functioncall functionName="is_set_as_toplevel"/>
+    <functioncall functionName="is_shortcut"/>
+    <functioncall functionName="is_text_field"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="is_zero_approx"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="item_locked"/>
+    <functioncall functionName="item_rect"/>
+    <functioncall functionName="item_size"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="joint"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="key_auto_insert_button"/>
+    <functioncall functionName="key_insert_button"/>
+    <functioncall functionName="key_loc_button"/>
+    <functioncall functionName="key_pos"/>
+    <functioncall functionName="key_rot"/>
+    <functioncall functionName="key_rot_button"/>
+    <functioncall functionName="key_scale"/>
+    <functioncall functionName="key_scale_button"/>
+    <functioncall functionName="keycode_get_string"/>
+    <functioncall functionName="label"/>
+    <functioncall functionName="label_desc"/>
+    <functioncall functionName="last_pass"/>
+    <functioncall functionName="leaf_node"/>
+    <functioncall functionName="leaf_pos"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="line_color"/>
+    <functioncall functionName="list"/>
+    <functioncall functionName="list_select_button"/>
+    <functioncall functionName="load"/>
+    <functioncall functionName="load_scene"/>
+    <functioncall functionName="local_grab_distance"/>
+    <functioncall functionName="localize_path"/>
+    <functioncall functionName="lock_button"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="major_subdivision"/>
+    <functioncall functionName="make_binds"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="merge"/>
+    <functioncall functionName="minimum"/>
+    <functioncall functionName="minor_subdivision"/>
+    <functioncall functionName="move_button"/>
+    <functioncall functionName="move_local_base"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n2d"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nb_bones"/>
+    <functioncall functionName="nb_control"/>
+    <functioncall functionName="new_anchor"/>
+    <functioncall functionName="new_name"/>
+    <functioncall functionName="new_pos"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="node2d"/>
+    <functioncall functionName="node_icon"/>
+    <functioncall functionName="node_id"/>
+    <functioncall functionName="node_name"/>
+    <functioncall functionName="node_path"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="open_request"/>
+    <functioncall functionName="orthonormalized"/>
+    <functioncall functionName="outline_colors"/>
+    <functioncall functionName="outline_shape"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="override_camera_button"/>
+    <functioncall functionName="p_allow_locked"/>
+    <functioncall functionName="p_already_accepted"/>
+    <functioncall functionName="p_append"/>
+    <functioncall functionName="p_bones_length"/>
+    <functioncall functionName="p_bones_state"/>
+    <functioncall functionName="p_canvas_item"/>
+    <functioncall functionName="p_canvas_item_editor"/>
+    <functioncall functionName="p_canvas_xform"/>
+    <functioncall functionName="p_color"/>
+    <functioncall functionName="p_control"/>
+    <functioncall functionName="p_current"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_duration"/>
+    <functioncall functionName="p_editor"/>
+    <functioncall functionName="p_ev"/>
+    <functioncall functionName="p_event"/>
+    <functioncall functionName="p_exceptions"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_game_running"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_object"/>
+    <functioncall functionName="p_on_existing"/>
+    <functioncall functionName="p_op"/>
+    <functioncall functionName="p_parent_xform"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_popup_warning"/>
+    <functioncall functionName="p_pos"/>
+    <functioncall functionName="p_position"/>
+    <functioncall functionName="p_preset"/>
+    <functioncall functionName="p_pressed"/>
+    <functioncall functionName="p_primary_grid_steps"/>
+    <functioncall functionName="p_radius"/>
+    <functioncall functionName="p_rect"/>
+    <functioncall functionName="p_result"/>
+    <functioncall functionName="p_scale_step"/>
+    <functioncall functionName="p_self_canvas_item"/>
+    <functioncall functionName="p_side"/>
+    <functioncall functionName="p_snap_target"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_status"/>
+    <functioncall functionName="p_string"/>
+    <functioncall functionName="p_target"/>
+    <functioncall functionName="p_target_scene_path"/>
+    <functioncall functionName="p_target_value"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_tool"/>
+    <functioncall functionName="p_transform_to_snap"/>
+    <functioncall functionName="p_undo_redo"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_visible"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="p_zoom"/>
+    <functioncall functionName="palette_split"/>
+    <functioncall functionName="pan_button"/>
+    <functioncall functionName="pan_on_scroll"/>
+    <functioncall functionName="pan_pressed"/>
+    <functioncall functionName="panning"/>
+    <functioncall functionName="parent"/>
+    <functioncall functionName="parent_bone"/>
+    <functioncall functionName="parent_ci"/>
+    <functioncall functionName="parent_xform"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pc"/>
+    <functioncall functionName="percent_val"/>
+    <functioncall functionName="pivot"/>
+    <functioncall functionName="pivot_button"/>
+    <functioncall functionName="pivot_icon"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="popup"/>
+    <functioncall functionName="popup_centered"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="position_icon"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="pre_drag_bones_length"/>
+    <functioncall functionName="pre_drag_bones_undo_state"/>
+    <functioncall functionName="pre_drag_color"/>
+    <functioncall functionName="pre_drag_xform"/>
+    <functioncall functionName="presets_menu"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="prev_anchors"/>
+    <functioncall functionName="prev_hguides"/>
+    <functioncall functionName="prev_vguides"/>
+    <functioncall functionName="prev_xform"/>
+    <functioncall functionName="preview"/>
+    <functioncall functionName="preview_node"/>
+    <functioncall functionName="previous_anchor"/>
+    <functioncall functionName="previous_pos"/>
+    <functioncall functionName="previous_position_icon"/>
+    <functioncall functionName="primary_grid_color"/>
+    <functioncall functionName="primary_grid_steps"/>
+    <functioncall functionName="property"/>
+    <functioncall functionName="props"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="queue_delete"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_current_snap"/>
+    <functioncall functionName="r_current_snap_target"/>
+    <functioncall functionName="r_first"/>
+    <functioncall functionName="r_items"/>
+    <functioncall functionName="r_rect"/>
+    <functioncall functionName="rad2deg"/>
+    <functioncall functionName="ratio"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="rel"/>
+    <functioncall functionName="rel_path_to"/>
+    <functioncall functionName="relt"/>
+    <functioncall functionName="reltn"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_canvas_item_if_parent_in_selection"/>
+    <functioncall functionName="remove_child"/>
+    <functioncall functionName="remove_node"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize_drag"/>
+    <functioncall functionName="restore_bones"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="root_node"/>
+    <functioncall functionName="root_pos"/>
+    <functioncall functionName="rot"/>
+    <functioncall functionName="rotate"/>
+    <functioncall functionName="rotate_button"/>
+    <functioncall functionName="rotation"/>
+    <functioncall functionName="rotation_offset"/>
+    <functioncall functionName="rotation_step"/>
+    <functioncall functionName="round"/>
+    <functioncall functionName="roundf"/>
+    <functioncall functionName="rtos"/>
+    <functioncall functionName="ruler_button"/>
+    <functioncall functionName="ruler_primary_color"/>
+    <functioncall functionName="ruler_secondary_color"/>
+    <functioncall functionName="ruler_tool_active"/>
+    <functioncall functionName="ruler_tool_origin"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="scale_basis"/>
+    <functioncall functionName="scale_button"/>
+    <functioncall functionName="scale_step"/>
+    <functioncall functionName="scale_x"/>
+    <functioncall functionName="scale_y"/>
+    <functioncall functionName="scene"/>
+    <functioncall functionName="scene_tree"/>
+    <functioncall functionName="screen_pos"/>
+    <functioncall functionName="screen_rect"/>
+    <functioncall functionName="se"/>
+    <functioncall functionName="secondary_grid_color"/>
+    <functioncall functionName="select_button"/>
+    <functioncall functionName="selected"/>
+    <functioncall functionName="selected_from_canvas"/>
+    <functioncall functionName="selection"/>
+    <functioncall functionName="selection2"/>
+    <functioncall functionName="selection_menu"/>
+    <functioncall functionName="selection_menu_additive_selection"/>
+    <functioncall functionName="selection_results"/>
+    <functioncall functionName="selector"/>
+    <functioncall functionName="selitems"/>
+    <functioncall functionName="set_allow_greater"/>
+    <functioncall functionName="set_allow_lesser"/>
+    <functioncall functionName="set_anchor"/>
+    <functioncall functionName="set_anchors_and_margins_preset"/>
+    <functioncall functionName="set_begin"/>
+    <functioncall functionName="set_bg_color"/>
+    <functioncall functionName="set_button_group"/>
+    <functioncall functionName="set_camera_override"/>
+    <functioncall functionName="set_clip_contents"/>
+    <functioncall functionName="set_columns"/>
+    <functioncall functionName="set_custom_minimum_size"/>
+    <functioncall functionName="set_default_cursor_shape"/>
+    <functioncall functionName="set_default_margin"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_end"/>
+    <functioncall functionName="set_expand_margin_size_all"/>
+    <functioncall functionName="set_fields"/>
+    <functioncall functionName="set_filename"/>
+    <functioncall functionName="set_flat"/>
+    <functioncall functionName="set_focus_mode"/>
+    <functioncall functionName="set_global_canvas_transform"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_hide_on_checkable_item_selection"/>
+    <functioncall functionName="set_icon"/>
+    <functioncall functionName="set_item_checked"/>
+    <functioncall functionName="set_item_icon"/>
+    <functioncall functionName="set_item_metadata"/>
+    <functioncall functionName="set_item_tooltip"/>
+    <functioncall functionName="set_margin"/>
+    <functioncall functionName="set_margin_size"/>
+    <functioncall functionName="set_max"/>
+    <functioncall functionName="set_meta"/>
+    <functioncall functionName="set_min"/>
+    <functioncall functionName="set_min_size"/>
+    <functioncall functionName="set_modulate"/>
+    <functioncall functionName="set_mouse_filter"/>
+    <functioncall functionName="set_name"/>
+    <functioncall functionName="set_one_shot"/>
+    <functioncall functionName="set_page"/>
+    <functioncall functionName="set_physics_process"/>
+    <functioncall functionName="set_position"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_process_unhandled_key_input"/>
+    <functioncall functionName="set_rotation"/>
+    <functioncall functionName="set_scale"/>
+    <functioncall functionName="set_shortcut"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="set_snap_controls_to_pixels"/>
+    <functioncall functionName="set_state"/>
+    <functioncall functionName="set_step"/>
+    <functioncall functionName="set_stretch"/>
+    <functioncall functionName="set_stylebox"/>
+    <functioncall functionName="set_suffix"/>
+    <functioncall functionName="set_switch_on_hover"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_text_align"/>
+    <functioncall functionName="set_texture"/>
+    <functioncall functionName="set_theme"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_toggle_mode"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_undo_redo"/>
+    <functioncall functionName="set_v_grow_direction"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_value"/>
+    <functioncall functionName="set_visible"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="show_edit_locks"/>
+    <functioncall functionName="show_grid"/>
+    <functioncall functionName="show_guides"/>
+    <functioncall functionName="show_helpers"/>
+    <functioncall functionName="show_origin"/>
+    <functioncall functionName="show_rulers"/>
+    <functioncall functionName="show_transformation_gizmos"/>
+    <functioncall functionName="show_viewport"/>
+    <functioncall functionName="sign"/>
+    <functioncall functionName="simple_xform"/>
+    <functioncall functionName="single_axis"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="skeleton_menu"/>
+    <functioncall functionName="skeleton_show_bones"/>
+    <functioncall functionName="smart_snap_active"/>
+    <functioncall functionName="smart_snap_button"/>
+    <functioncall functionName="smartsnap_config_popup"/>
+    <functioncall functionName="snap_angle"/>
+    <functioncall functionName="snap_config_menu"/>
+    <functioncall functionName="snap_dialog"/>
+    <functioncall functionName="snap_guides"/>
+    <functioncall functionName="snap_node_anchors"/>
+    <functioncall functionName="snap_node_center"/>
+    <functioncall functionName="snap_node_parent"/>
+    <functioncall functionName="snap_node_sides"/>
+    <functioncall functionName="snap_other_nodes"/>
+    <functioncall functionName="snap_pixel"/>
+    <functioncall functionName="snap_point"/>
+    <functioncall functionName="snap_relative"/>
+    <functioncall functionName="snap_rotation"/>
+    <functioncall functionName="snap_rotation_offset"/>
+    <functioncall functionName="snap_rotation_step"/>
+    <functioncall functionName="snap_scale"/>
+    <functioncall functionName="snap_scale_step"/>
+    <functioncall functionName="snap_target"/>
+    <functioncall functionName="snapped"/>
+    <functioncall functionName="solver_k"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="sprite"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="stepify"/>
+    <functioncall functionName="still_selected"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="success"/>
+    <functioncall functionName="suffix"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="symmetric"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tangent"/>
+    <functioncall functionName="target"/>
+    <functioncall functionName="target_node"/>
+    <functioncall functionName="target_pos"/>
+    <functioncall functionName="target_position"/>
+    <functioncall functionName="text_color"/>
+    <functioncall functionName="text_pos"/>
+    <functioncall functionName="text_pos2"/>
+    <functioncall functionName="text_width"/>
+    <functioncall functionName="texture"/>
+    <functioncall functionName="texture_size"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="timer"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="to_node"/>
+    <functioncall functionName="to_snap_transform"/>
+    <functioncall functionName="tool"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="translate"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="undo_state"/>
+    <functioncall functionName="ungroup_button"/>
+    <functioncall functionName="uniform"/>
+    <functioncall functionName="unlock_button"/>
+    <functioncall functionName="update"/>
+    <functioncall functionName="update_scrollbars"/>
+    <functioncall functionName="update_viewport"/>
+    <functioncall functionName="updating_scroll"/>
+    <functioncall functionName="use_anchors"/>
+    <functioncall functionName="use_y"/>
+    <functioncall functionName="v_angle_text_pos"/>
+    <functioncall functionName="v_scroll"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="validate_child_name"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="vbc"/>
+    <functioncall functionName="vertical_angle"/>
+    <functioncall functionName="vertical_angle_rad"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="vguides"/>
+    <functioncall functionName="view_menu"/>
+    <functioncall functionName="view_offset"/>
+    <functioncall functionName="view_offset_int"/>
+    <functioncall functionName="viewport"/>
+    <functioncall functionName="viewport_canvas_item"/>
+    <functioncall functionName="viewport_scrollable"/>
+    <functioncall functionName="viewport_set_hide_canvas"/>
+    <functioncall functionName="warning_child_of_container"/>
+    <functioncall functionName="warp_mouse_motion"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x_for_viewport_y"/>
+    <functioncall functionName="x_for_zero_y"/>
+    <functioncall functionName="x_handle_rect"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_for_viewport_x"/>
+    <functioncall functionName="y_for_zero_x"/>
+    <functioncall functionName="y_handle_rect"/>
+    <functioncall functionName="zoom"/>
+    <functioncall functionName="zoom_hb"/>
+    <functioncall functionName="zoom_minus"/>
+    <functioncall functionName="zoom_plus"/>
+    <functioncall functionName="zoom_reset"/>
+    <functioncall functionName="zoom_text"/>
+  </FileInfo>
+</analyzerinfo>

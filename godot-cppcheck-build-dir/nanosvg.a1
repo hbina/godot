@@ -1,0 +1,1038 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="371709885">
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="624" column="2"/>
+        </error>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="628" column="2"/>
+        </error>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="950" column="2"/>
+        </error>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1045" column="2"/>
+        </error>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2556" column="2"/>
+        </error>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2938" column="5"/>
+        </error>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="155" column="2"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1231" column="2"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;if(name&amp;&amp;value)&apos; is redundant or there is possible null pointer dereference: s." verbose="Either the condition &apos;if(name&amp;&amp;value)&apos; is redundant or there is possible null pointer dereference: s." cwe="476">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="301" column="11" info="Null pointer dereference"/>
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="299" column="10" info="Assignment from &apos;s&apos;"/>
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="314" column="6" info="Assuming that condition &apos;if(name&amp;&amp;value)&apos; is not redundant"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;name&amp;&amp;value&apos; is redundant or there is possible null pointer dereference: s." verbose="Either the condition &apos;name&amp;&amp;value&apos; is redundant or there is possible null pointer dereference: s." cwe="476">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="310" column="11" info="Null pointer dereference"/>
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="309" column="11" info="Assignment from &apos;s&apos;"/>
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="314" column="12" info="Assuming that condition &apos;name&amp;&amp;value&apos; is not redundant"/>
+            <symbol>s</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="153" column="22"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;quote&apos; can be reduced." verbose="The scope of the variable &apos;quote&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="265" column="7"/>
+            <symbol>quote</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;count&apos; can be reduced." verbose="The scope of the variable &apos;count&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="570" column="12"/>
+            <symbol>count</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;a&apos; can be reduced." verbose="The scope of the variable &apos;a&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="571" column="19"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b&apos; can be reduced." verbose="The scope of the variable &apos;b&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="571" column="22"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="571" column="25"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;px&apos; can be reduced." verbose="The scope of the variable &apos;px&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="725" column="8"/>
+            <symbol>px</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;py&apos; can be reduced." verbose="The scope of the variable &apos;py&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="725" column="11"/>
+            <symbol>py</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dx&apos; can be reduced." verbose="The scope of the variable &apos;dx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="725" column="15"/>
+            <symbol>dx</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;dy&apos; can be reduced." verbose="The scope of the variable &apos;dy&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="725" column="18"/>
+            <symbol>dy</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;intPart&apos; can be reduced." verbose="The scope of the variable &apos;intPart&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1091" column="12"/>
+            <symbol>intPart</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;fracPart&apos; can be reduced." verbose="The scope of the variable &apos;fracPart&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1091" column="25"/>
+            <symbol>fracPart</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;start&apos; can be reduced." verbose="The scope of the variable &apos;start&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1822" column="14"/>
+            <symbol>start</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;end&apos; can be reduced." verbose="The scope of the variable &apos;end&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1823" column="14"/>
+            <symbol>end</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;a&apos; can be reduced." verbose="The scope of the variable &apos;a&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2074" column="26"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cmd&apos; can be reduced." verbose="The scope of the variable &apos;cmd&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2186" column="7"/>
+            <symbol>cmd</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;nargs&apos; can be reduced." verbose="The scope of the variable &apos;nargs&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2188" column="6"/>
+            <symbol>nargs</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;rargs&apos; can be reduced." verbose="The scope of the variable &apos;rargs&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2189" column="6"/>
+            <symbol>rargs</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;closedFlag&apos; can be reduced." verbose="The scope of the variable &apos;closedFlag&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2192" column="7"/>
+            <symbol>closedFlag</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;gy&apos; can be reduced." verbose="The scope of the variable &apos;gy&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1024" column="21"/>
+            <symbol>gy</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cr&apos; can be reduced." verbose="The scope of the variable &apos;cr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1026" column="10"/>
+            <symbol>cr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cg&apos; can be reduced." verbose="The scope of the variable &apos;cg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1026" column="14"/>
+            <symbol>cg</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cb&apos; can be reduced." verbose="The scope of the variable &apos;cb&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1026" column="18"/>
+            <symbol>cb</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ca&apos; can be reduced." verbose="The scope of the variable &apos;ca&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1026" column="22"/>
+            <symbol>ca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1027" column="16"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;gx&apos; can be reduced." verbose="The scope of the variable &apos;gx&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1069" column="21"/>
+            <symbol>gx</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;gy&apos; can be reduced." verbose="The scope of the variable &apos;gy&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1069" column="25"/>
+            <symbol>gy</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;gd&apos; can be reduced." verbose="The scope of the variable &apos;gd&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1069" column="29"/>
+            <symbol>gd</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cr&apos; can be reduced." verbose="The scope of the variable &apos;cr&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1071" column="10"/>
+            <symbol>cr</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cg&apos; can be reduced." verbose="The scope of the variable &apos;cg&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1071" column="14"/>
+            <symbol>cg</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;cb&apos; can be reduced." verbose="The scope of the variable &apos;cb&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1071" column="18"/>
+            <symbol>cb</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ca&apos; can be reduced." verbose="The scope of the variable &apos;ca&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1071" column="22"/>
+            <symbol>ca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;c&apos; can be reduced." verbose="The scope of the variable &apos;c&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1072" column="16"/>
+            <symbol>c</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;r&apos; can be reduced." verbose="The scope of the variable &apos;r&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1225" column="8"/>
+            <symbol>r</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;g&apos; can be reduced." verbose="The scope of the variable &apos;g&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1225" column="15"/>
+            <symbol>g</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b&apos; can be reduced." verbose="The scope of the variable &apos;b&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1225" column="22"/>
+            <symbol>b</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;n&apos; can be reduced." verbose="The scope of the variable &apos;n&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1225" column="41"/>
+            <symbol>n</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1265" column="9"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;count&apos; can be reduced." verbose="The scope of the variable &apos;count&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1289" column="15"/>
+            <symbol>count</symbol>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;name&apos; shadows outer variable" verbose="Local variable &apos;name&apos; shadows outer variable" cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="289" column="9" info="Shadow variable"/>
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="262" column="8" info="Shadowed declaration"/>
+            <symbol>name</symbol>
+        </error>
+        <error id="passedByValue" severity="performance" msg="Function parameter &apos;pt&apos; should be passed by const reference." verbose="Parameter &apos;pt&apos; is passed by value. It could be passed as a const reference which is usually faster and recommended in C++." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="265" column="64"/>
+            <symbol>pt</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;intPart&apos; is assigned a value that is never used." verbose="Variable &apos;intPart&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1091" column="20"/>
+            <symbol>intPart</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;fracPart&apos; is assigned a value that is never used." verbose="Variable &apos;fracPart&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1091" column="34"/>
+            <symbol>fracPart</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;lx0&apos; is assigned a value that is never used." verbose="Variable &apos;lx0&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="518" column="7"/>
+            <symbol>lx0</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ly0&apos; is assigned a value that is never used." verbose="Variable &apos;ly0&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="519" column="7"/>
+            <symbol>ly0</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;rx0&apos; is assigned a value that is never used." verbose="Variable &apos;rx0&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="536" column="7"/>
+            <symbol>rx0</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;ry0&apos; is assigned a value that is never used." verbose="Variable &apos;ry0&apos; is assigned a value that is never used." cwe="563">
+            <location file0="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.cc" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="537" column="7"/>
+            <symbol>ry0</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="538" col="21" call-argexpr="s2" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:789:14" call-funcname="nsvg__convertToPixels" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="879" col="28" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:568:13" call-funcname="nsvg__curveBounds" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="918" col="21" call-argexpr="curveBounds" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:568:13" call-funcname="nsvg__curveBounds" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="918" col="21" call-argexpr="curve" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:518:13" call-funcname="nsvg__xformInverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="989" col="21" call-argexpr="inv" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:907:13" call-funcname="nsvg__getLocalBounds" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="990" col="23" call-argexpr="localBounds" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:907:13" call-funcname="nsvg__getLocalBounds" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="990" col="23" call-argexpr="inv" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:819:22" call-funcname="nsvg__createGradient" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="991" col="46" call-argexpr="localBounds" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:518:13" call-funcname="nsvg__xformInverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1006" col="21" call-argexpr="inv" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:907:13" call-funcname="nsvg__getLocalBounds" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1007" col="23" call-argexpr="localBounds" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:907:13" call-funcname="nsvg__getLocalBounds" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1007" col="23" call-argexpr="inv" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:819:22" call-funcname="nsvg__createGradient" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1008" col="48" call-argexpr="localBounds" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:568:13" call-funcname="nsvg__curveBounds" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1059" col="20" call-argexpr="bounds" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" call-funcname="nsvg__parseNumber" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1465" col="50" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1466" col="26" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" call-funcname="nsvg__parseNumber" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1501" col="27" call-argexpr="it" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1502" col="37" call-argexpr="it" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1515" col="36" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1515" col="36" call-argexpr="&na" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1526" col="36" call-argexpr="args" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1526" col="36" call-argexpr="&na" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:469:13" call-funcname="nsvg__xformSetTranslation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1529" col="27" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1539" col="36" call-argexpr="args" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1539" col="36" call-argexpr="&na" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:476:13" call-funcname="nsvg__xformSetScale" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1541" col="21" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1551" col="36" call-argexpr="&na" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:483:13" call-funcname="nsvg__xformSetSkewX" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1552" col="21" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1562" col="36" call-argexpr="&na" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:490:13" call-funcname="nsvg__xformSetSkewY" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1563" col="21" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1574" col="36" call-argexpr="args" call-argvaluetype="7" call-argvalue="12"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1574" col="36" call-argexpr="&na" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:462:13" call-funcname="nsvg__xformIdentity" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1577" col="21" call-argexpr="m" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:469:13" call-funcname="nsvg__xformSetTranslation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1580" col="28" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1581" col="22" call-argexpr="m" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1581" col="22" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:497:13" call-funcname="nsvg__xformSetRotation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1584" col="24" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1585" col="21" call-argexpr="m" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1585" col="21" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:469:13" call-funcname="nsvg__xformSetTranslation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1588" col="28" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1589" col="22" call-argexpr="m" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1589" col="22" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1511:12" call-funcname="nsvg__parseMatrix" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1604" col="28" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1521:12" call-funcname="nsvg__parseTranslate" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1606" col="31" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1534:12" call-funcname="nsvg__parseScale" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1608" col="27" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1568:12" call-funcname="nsvg__parseRotate" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1610" col="28" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1546:12" call-funcname="nsvg__parseSkewX" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1612" col="27" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1557:12" call-funcname="nsvg__parseSkewY" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1614" col="27" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:534:13" call-funcname="nsvg__xformPremultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1620" col="25" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1671:20" call-funcname="nsvg__getNextDashItem" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1699" col="30" call-argexpr="item" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1476:14" call-funcname="nsvg__parseCoordinate" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1702" col="58" call-argexpr="item" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1597:13" call-funcname="nsvg__parseTransform" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1771" col="23" call-argexpr="xform" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:534:13" call-funcname="nsvg__xformPremultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1772" col="25" call-argexpr="xform" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1817" col="24" call-argexpr="name" call-argvaluetype="7" call-argvalue="512"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1817" col="24" call-argexpr="value" call-argvaluetype="7" call-argvalue="512"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" call-funcname="nsvg__xformPoint" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2169" col="19" call-argexpr="&x" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" call-funcname="nsvg__xformPoint" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2169" col="19" call-argexpr="&y" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" call-funcname="nsvg__xformPoint" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2169" col="19" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" call-funcname="nsvg__xformVec" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2170" col="17" call-argexpr="&tanx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" call-funcname="nsvg__xformVec" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2170" col="17" call-argexpr="&tany" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" call-funcname="nsvg__xformVec" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2170" col="17" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1841:13" call-funcname="nsvg__parseAttribs" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2204" col="22" call-argexpr="tmp" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1188:20" call-funcname="nsvg__getNextPathItem" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2216" col="29" call-argexpr="item" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2220" col="39" call-argexpr="item" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1883:13" call-funcname="nsvg__pathMoveTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2225" col="24" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1883:13" call-funcname="nsvg__pathMoveTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2225" col="24" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1883:13" call-funcname="nsvg__pathMoveTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2225" col="24" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1883:13" call-funcname="nsvg__pathMoveTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2225" col="24" call-argexpr="cmd=='m'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1895:13" call-funcname="nsvg__pathLineTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2234" col="24" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1895:13" call-funcname="nsvg__pathLineTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2234" col="24" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1895:13" call-funcname="nsvg__pathLineTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2234" col="24" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1895:13" call-funcname="nsvg__pathLineTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2234" col="24" call-argexpr="cmd=='l'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1907:13" call-funcname="nsvg__pathHLineTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2239" col="25" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1907:13" call-funcname="nsvg__pathHLineTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2239" col="25" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1907:13" call-funcname="nsvg__pathHLineTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2239" col="25" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1907:13" call-funcname="nsvg__pathHLineTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2239" col="25" call-argexpr="cmd=='h'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1916:13" call-funcname="nsvg__pathVLineTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2244" col="25" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1916:13" call-funcname="nsvg__pathVLineTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2244" col="25" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1916:13" call-funcname="nsvg__pathVLineTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2244" col="25" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1916:13" call-funcname="nsvg__pathVLineTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2244" col="25" call-argexpr="cmd=='v'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" call-funcname="nsvg__pathCubicBezTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2249" col="28" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" call-funcname="nsvg__pathCubicBezTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2249" col="28" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" call-funcname="nsvg__pathCubicBezTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2249" col="28" call-argexpr="&cpx2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" call-funcname="nsvg__pathCubicBezTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2249" col="28" call-argexpr="&cpy2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" call-funcname="nsvg__pathCubicBezTo" call-argnr="6" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2249" col="28" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" call-funcname="nsvg__pathCubicBezTo" call-argnr="7" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2249" col="28" call-argexpr="cmd=='c'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" call-funcname="nsvg__pathCubicBezShortTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2253" col="33" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" call-funcname="nsvg__pathCubicBezShortTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2253" col="33" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" call-funcname="nsvg__pathCubicBezShortTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2253" col="33" call-argexpr="&cpx2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" call-funcname="nsvg__pathCubicBezShortTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2253" col="33" call-argexpr="&cpy2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" call-funcname="nsvg__pathCubicBezShortTo" call-argnr="6" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2253" col="33" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" call-funcname="nsvg__pathCubicBezShortTo" call-argnr="7" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2253" col="33" call-argexpr="cmd=='s'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" call-funcname="nsvg__pathQuadBezTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2257" col="27" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" call-funcname="nsvg__pathQuadBezTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2257" col="27" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" call-funcname="nsvg__pathQuadBezTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2257" col="27" call-argexpr="&cpx2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" call-funcname="nsvg__pathQuadBezTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2257" col="27" call-argexpr="&cpy2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" call-funcname="nsvg__pathQuadBezTo" call-argnr="6" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2257" col="27" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" call-funcname="nsvg__pathQuadBezTo" call-argnr="7" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2257" col="27" call-argexpr="cmd=='q'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" call-funcname="nsvg__pathQuadBezShortTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2261" col="32" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" call-funcname="nsvg__pathQuadBezShortTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2261" col="32" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" call-funcname="nsvg__pathQuadBezShortTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2261" col="32" call-argexpr="&cpx2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" call-funcname="nsvg__pathQuadBezShortTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2261" col="32" call-argexpr="&cpy2" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" call-funcname="nsvg__pathQuadBezShortTo" call-argnr="6" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2261" col="32" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" call-funcname="nsvg__pathQuadBezShortTo" call-argnr="7" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2261" col="32" call-argexpr="cmd=='t'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" call-funcname="nsvg__pathArcTo" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2265" col="23" call-argexpr="&cpx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" call-funcname="nsvg__pathArcTo" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2265" col="23" call-argexpr="&cpy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" call-funcname="nsvg__pathArcTo" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2265" col="23" call-argexpr="args" call-argvaluetype="7" call-argvalue="40"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" call-funcname="nsvg__pathArcTo" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2265" col="23" call-argexpr="cmd=='a'?1:0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1029:13" call-funcname="nsvg__addPath" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2455" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1188:20" call-funcname="nsvg__getNextPathItem" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2476" col="31" call-argexpr="item" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2477" col="39" call-argexpr="item" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1029:13" call-funcname="nsvg__addPath" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2491" col="15" call-argexpr="(char)closeFlag" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2706" col="28" info="Calling function 'nsvg__parsePoly', 3rd argument '0' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" call-funcname="nsvg__parseNumber" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2508" col="26" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2509" col="29" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" call-funcname="nsvg__parseNumber" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2512" col="26" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2513" col="29" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" call-funcname="nsvg__parseNumber" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2516" col="26" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2517" col="30" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" call-funcname="nsvg__parseNumber" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2520" col="26" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2521" col="31" call-argexpr="buf" call-argvaluetype="7" call-argvalue="64"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2460:13" call-funcname="nsvg__parsePoly" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2706" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:469:13" call-funcname="nsvg__xformSetTranslation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2778" col="27" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2779" col="22" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:476:13" call-funcname="nsvg__xformSetScale" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2781" col="21" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2782" col="22" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2745:13" call-funcname="nsvg__imageBounds" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2794" col="19" call-argexpr="bounds" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:518:13" call-funcname="nsvg__xformInverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2861" col="22" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:518:13" call-funcname="nsvg__xformInverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2866" col="22" call-argexpr="t" call-argvaluetype="7" call-argvalue="24"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:333:13" call-funcname="nsvg__flattenCubicBez" call-argnr="11" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="367" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:240:13" call-funcname="nsvg__addPathPoint" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="379" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:333:13" call-funcname="nsvg__flattenCubicBez" call-argnr="10" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="382" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:333:13" call-funcname="nsvg__flattenCubicBez" call-argnr="11" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="382" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:240:13" call-funcname="nsvg__addPathPoint" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="385" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" call-funcname="nsvg__normalize" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="404" col="29" call-argexpr="&dx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" call-funcname="nsvg__normalize" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="404" col="29" call-argexpr="&dy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:399:13" call-funcname="nsvg__initClosed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="630" col="19" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:399:13" call-funcname="nsvg__initClosed" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="630" col="19" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" call-funcname="nsvg__normalize" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="637" col="18" call-argexpr="&dx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" call-funcname="nsvg__normalize" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="637" col="18" call-argexpr="&dy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" call-funcname="nsvg__buttCap" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="639" col="17" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" call-funcname="nsvg__buttCap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="639" col="17" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" call-funcname="nsvg__buttCap" call-argnr="8" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="639" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" call-funcname="nsvg__squareCap" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="641" col="19" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" call-funcname="nsvg__squareCap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="641" col="19" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" call-funcname="nsvg__squareCap" call-argnr="8" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="641" col="19" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" call-funcname="nsvg__roundCap" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="643" col="18" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" call-funcname="nsvg__roundCap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="643" col="18" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" call-funcname="nsvg__roundCap" call-argnr="9" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="643" col="18" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:545:13" call-funcname="nsvg__roundJoin" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="649" col="20" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:545:13" call-funcname="nsvg__roundJoin" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="649" col="20" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" call-funcname="nsvg__bevelJoin" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="651" col="20" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" call-funcname="nsvg__bevelJoin" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="651" col="20" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:509:13" call-funcname="nsvg__miterJoin" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="653" col="20" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:509:13" call-funcname="nsvg__miterJoin" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="653" col="20" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" call-funcname="nsvg__straightJoin" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="655" col="22" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" call-funcname="nsvg__straightJoin" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="655" col="22" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" call-funcname="nsvg__normalize" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="668" col="18" call-argexpr="&dx" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" call-funcname="nsvg__normalize" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="668" col="18" call-argexpr="&dy" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" call-funcname="nsvg__buttCap" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="670" col="17" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" call-funcname="nsvg__buttCap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="670" col="17" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" call-funcname="nsvg__squareCap" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="672" col="19" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" call-funcname="nsvg__squareCap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="672" col="19" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" call-funcname="nsvg__roundCap" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="674" col="18" call-argexpr="&right" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" call-funcname="nsvg__roundCap" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="674" col="18" call-argexpr="&left" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:333:13" call-funcname="nsvg__flattenCubicBez" call-argnr="10" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="751" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:607:13" call-funcname="nsvg__expandStroke" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="814" col="25" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:607:13" call-funcname="nsvg__expandStroke" call-argnr="4" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="836" col="23" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:955:14" call-funcname="nsvg__clampf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1036" col="39" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:955:14" call-funcname="nsvg__clampf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1083" col="39" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:921:13" call-funcname="nsvg__fillActiveEdges" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1191" col="26" call-argexpr="&xmin" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:921:13" call-funcname="nsvg__fillActiveEdges" call-argnr="6" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1191" col="26" call-argexpr="&xmax" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:921:13" call-funcname="nsvg__fillActiveEdges" call-argnr="7" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1191" col="26" call-argexpr="fillRule" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1440" col="55" info="Calling function 'nsvg__rasterizeSortedEdges', 6th argument 'NSVG_FILLRULE_NONZERO' value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:955:14" call-funcname="nsvg__clampf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1292" col="20" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:955:14" call-funcname="nsvg__clampf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1303" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:955:14" call-funcname="nsvg__clampf" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1304" col="21" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1263:13" call-funcname="nsvg__initPaint" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1412" col="19" call-argexpr="&cache" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1115:13" call-funcname="nsvg__rasterizeSortedEdges" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1414" col="30" call-argexpr="&cache" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1263:13" call-funcname="nsvg__initPaint" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1438" col="19" call-argexpr="&cache" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1115:13" call-funcname="nsvg__rasterizeSortedEdges" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1440" col="30" call-argexpr="&cache" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1115:13" call-funcname="nsvg__rasterizeSortedEdges" call-argnr="6" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1440" col="30" call-argexpr="NSVG_FILLRULE_NONZERO" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:255:13" call-funcname="nsvg__parseElement" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="350" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:331:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:255:13" call-funcname="nsvg__parseElement" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="350" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:331:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:243:13" call-funcname="nsvg__parseContent" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="344" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:331:5" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:243:13" call-funcname="nsvg__parseContent" call-argnr="3" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="344" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:331:5" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" call-funcname="nsvg__xformMultiply" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="538" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:534:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:701:13" call-funcname="nsvg__addPoint" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="739" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:737:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:773:14" call-funcname="nsvg__actualWidth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="785" col="12" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:783:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:744:20" call-funcname="nsvg__getAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="791" col="21" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:789:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:744:20" call-funcname="nsvg__getAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="821" col="21" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:819:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:808:26" call-funcname="nsvg__findGradientData" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="829" col="9" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:819:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" call-funcname="nsvg__xformPoint" call-argnr="5" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="913" col="3" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:907:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:744:20" call-funcname="nsvg__getAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="939" col="21" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:937:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:744:20" call-funcname="nsvg__getAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1031" col="21" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1029:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1425" col="14" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1423:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1086:15" call-funcname="nsvg__atof" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1433" col="14" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1431:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" call-funcname="nsvg__parseNumber" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1465" col="33" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1461:23" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:789:14" call-funcname="nsvg__convertToPixels" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1479" col="9" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1476:14" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1461:23" call-funcname="nsvg__parseCoordinateRaw" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1478" col="25" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1476:14" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1515" col="12" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1511:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1526" col="12" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1521:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1539" col="12" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1534:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1551" col="12" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1546:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1562" col="12" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1557:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" call-funcname="nsvg__parseTransformArgs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1574" col="12" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1568:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:462:13" call-funcname="nsvg__xformIdentity" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1600" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1597:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1476:14" call-funcname="nsvg__parseCoordinate" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1702" col="37" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1687:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:744:20" call-funcname="nsvg__getAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1718" col="21" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1713:13" call-funcname="nsvg__parseStyle" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1722" col="3" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1817" col="9" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1788:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1788:12" call-funcname="nsvg__parseNameValue" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1836" col="3" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1713:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1713:13" call-funcname="nsvg__parseStyle" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1847" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1841:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:713:13" call-funcname="nsvg__moveTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1892" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1883:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:723:13" call-funcname="nsvg__lineTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1904" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1895:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:723:13" call-funcname="nsvg__lineTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1913" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1907:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:723:13" call-funcname="nsvg__lineTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1922" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1916:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:737:13" call-funcname="nsvg__cubicBezTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1946" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:737:13" call-funcname="nsvg__cubicBezTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1976" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:737:13" call-funcname="nsvg__cubicBezTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2010" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:737:13" call-funcname="nsvg__cubicBezTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2043" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:723:13" call-funcname="nsvg__lineTo" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2100" col="3" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1841:13" call-funcname="nsvg__parseAttribs" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2204" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2183:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2326" col="8" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2315:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2378" col="8" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2370:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2409" col="8" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2400:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2442" col="8" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2433:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:696:13" call-funcname="nsvg__resetPath" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2468" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2460:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2500" col="8" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2496:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1715:12" call-funcname="nsvg__parseAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2576" col="15" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2551:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:744:20" call-funcname="nsvg__getAttr" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2623" col="24" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2621:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2551:13" call-funcname="nsvg__parseGradient" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2670" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2663:13" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2745:13" call-funcname="nsvg__imageBounds" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2794" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2785:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1438:12" call-funcname="nsvg__parseUnits" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2822" col="57" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2785:13" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:331:5" call-funcname="nsvg__parseXML" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2887" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:170:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2785:13" call-funcname="nsvg__scaleToViewbox" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2890" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:170:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:170:12" call-funcname="nsvgParse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2917" col="10" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:166:12" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:288:13" call-funcname="nsvg__addEdge" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="421" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:288:13" call-funcname="nsvg__addEdge" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="439" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:288:13" call-funcname="nsvg__addEdge" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="468" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:288:13" call-funcname="nsvg__addEdge" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="499" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:288:13" call-funcname="nsvg__addEdge" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="520" col="3" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:509:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:288:13" call-funcname="nsvg__addEdge" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="575" col="3" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:545:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:288:13" call-funcname="nsvg__addEdge" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="592" col="2" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:891:13" call-funcname="nsvg__fillScanline" call-argnr="1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="936" col="6" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:921:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:891:13" call-funcname="nsvg__fillScanline" call-argnr="6" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="936" col="6" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:921:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:891:13" call-funcname="nsvg__fillScanline" call-argnr="7" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="936" col="6" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:921:13" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:987:13" call-funcname="nsvg__scanlineSolid" call-argnr="9" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1197" col="4" my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1115:13" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <array-index>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:462:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="464" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:469:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="471" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:476:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="478" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:483:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="485" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:490:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="492" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:497:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="500" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="507" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" my-argnr="2" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="507" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:518:13" my-argnr="2" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="520" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" my-argnr="5" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="544" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" my-argnr="5" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="550" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:556:12" my-argnr="1" my-argname="pt" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="558" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:556:12" my-argnr="2" my-argname="bounds" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="558" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:568:13" my-argnr="1" my-argname="bounds" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="578" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:568:13" my-argnr="2" my-argname="curve" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="572" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:900:14" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="902" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1188:20" my-argnr="2" my-argname="it" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1190" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1438:12" my-argnr="1" my-argname="units" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1440" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1671:20" my-argnr="2" my-argname="it" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1674" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1687:12" my-argnr="2" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1694" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" my-argnr="4" my-argname="args" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2080" col="13" value="0"/>
+    </array-index>
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1227:21" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1231" col="9" value="4"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:243:13" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="248" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:255:13" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="268" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:462:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="464" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:469:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="471" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:476:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="478" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:483:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="485" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:490:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="492" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:497:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="500" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="507" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" my-argnr="2" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="507" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:518:13" my-argnr="2" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="520" col="31" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:534:13" my-argnr="2" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="537" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" my-argnr="1" my-argname="dx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="544" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" my-argnr="2" my-argname="dy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="545" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" my-argnr="5" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="544" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" my-argnr="1" my-argname="dx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="550" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" my-argnr="2" my-argname="dy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="551" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" my-argnr="5" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="550" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:556:12" my-argnr="1" my-argname="pt" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="558" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:556:12" my-argnr="2" my-argname="bounds" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="558" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:568:13" my-argnr="1" my-argname="bounds" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="578" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:668:13" my-argnr="1" my-argname="paint" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="670" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:696:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="698" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:701:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="703" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:713:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="715" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:723:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="726" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:749:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="751" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:757:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="759" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:763:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="765" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:768:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="770" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:773:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="775" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:778:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="780" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:808:26" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="810" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:900:14" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="902" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:907:13" my-argnr="2" my-argname="shape" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="912" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1151" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1188:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1192" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1188:20" my-argnr="2" my-argname="it" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1190" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1411:21" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1414" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1438:12" my-argnr="1" my-argname="units" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1440" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1482:12" my-argnr="4" my-argname="na" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1488" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1521:12" my-argnr="1" my-argname="xform" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1530" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1534:12" my-argnr="1" my-argname="xform" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1542" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1546:12" my-argnr="1" my-argname="xform" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1553" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1557:12" my-argnr="1" my-argname="xform" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1564" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1568:12" my-argnr="1" my-argname="xform" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1592" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1597:13" my-argnr="2" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1601" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1637:13" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1639" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1649:13" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1651" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1661:13" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1663" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1671:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1676" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1671:20" my-argnr="2" my-argname="it" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1674" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1687:12" my-argnr="2" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1694" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1713:13" my-argnr="2" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1825" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1841:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1844" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1907:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1913" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1916:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1922" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1950" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1951" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" my-argnr="4" my-argname="cpx2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1948" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1925:13" my-argnr="5" my-argname="cpy2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1949" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1959" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1960" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="4" my-argname="cpx2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1973" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="5" my-argname="cpy2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1974" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1990" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1991" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" my-argnr="4" my-argname="cpx2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2012" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" my-argnr="5" my-argname="cpy2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2013" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2024" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2025" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="4" my-argname="cpx2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2034" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="5" my-argname="cpy2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2035" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2085" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2086" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" my-argnr="4" my-argname="args" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2080" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2183:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2196" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2315:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2325" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2370:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2377" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2400:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2408" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2433:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2441" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2460:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2470" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2496:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2499" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2621:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2632" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2725:13" my-argnr="2" my-argname="el" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2729" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2745:13" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2748" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2775:13" my-argnr="1" my-argname="grad" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2779" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:166:12" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2907" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:211:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="213" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:240:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="244" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:265:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="267" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:276:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="278" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="322" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="322" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:371:13" my-argnr="2" my-argname="shape" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="376" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:399:13" my-argnr="1" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="409" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:399:13" my-argnr="2" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="410" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:399:13" my-argnr="3" my-argname="p0" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="402" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:399:13" my-argnr="4" my-argname="p1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="402" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="427" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="428" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:413:13" my-argnr="4" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="416" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="445" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="446" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:431:13" my-argnr="4" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="434" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="485" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="486" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:453:13" my-argnr="4" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="457" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="499" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="502" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" my-argnr="4" my-argname="p0" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="492" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" my-argnr="5" my-argname="p1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="493" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:509:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="541" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:509:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="542" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:509:13" my-argnr="4" my-argname="p0" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="512" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:509:13" my-argnr="5" my-argname="p1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="513" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:545:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="563" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:545:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="565" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:545:13" my-argnr="4" my-argname="p0" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="549" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:545:13" my-argnr="5" my-argname="p1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="550" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="592" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="593" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" my-argnr="4" my-argname="p1" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="589" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:607:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="609" col="54" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:735:13" my-argnr="2" my-argname="shape" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="740" col="21" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:855:24" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="859" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:885:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="887" col="12" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:885:13" my-argnr="2" my-argname="z" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="887" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:891:13" my-argnr="6" my-argname="xmin" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="895" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:891:13" my-argnr="7" my-argname="xmax" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="896" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:987:13" my-argnr="9" my-argname="cache" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="991" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1115:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1123" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1263:13" my-argnr="1" my-argname="cache" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1268" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:1263:13" my-argnr="2" my-argname="paint" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1268" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:61:6" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="1374" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:243:13" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="248" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:255:13" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="268" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="507" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:505:13" my-argnr="2" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="507" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:534:13" my-argnr="2" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="537" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:542:13" my-argnr="5" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="544" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:548:13" my-argnr="5" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="550" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:556:12" my-argnr="1" my-argname="pt" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="558" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:763:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="765" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:768:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="770" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:773:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="775" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:778:14" my-argnr="1" my-argname="p" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="780" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:900:14" my-argnr="1" my-argname="t" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="902" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1145:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1151" col="7" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1188:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1192" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1411:21" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1414" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1438:12" my-argnr="1" my-argname="units" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1440" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1597:13" my-argnr="2" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1601" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1637:13" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1639" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1649:13" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1651" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1661:13" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1663" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1671:20" my-argnr="1" my-argname="s" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1676" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1687:12" my-argnr="2" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1694" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1713:13" my-argnr="2" my-argname="str" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1825" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1841:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1844" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1907:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1913" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1916:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1922" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1959" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1960" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="4" my-argname="cpx2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1973" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1954:13" my-argnr="5" my-argname="cpy2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1974" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1990" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:1984:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="1991" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2024" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2025" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="4" my-argname="cpx2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2034" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2018:13" my-argnr="5" my-argname="cpy2" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2035" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" my-argnr="2" my-argname="cpx" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2085" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2067:13" my-argnr="3" my-argname="cpy" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2086" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2183:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2196" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2315:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2325" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2370:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2377" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2400:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2408" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2433:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2441" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2460:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2470" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2496:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2499" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2621:13" my-argnr="2" my-argname="attr" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2632" col="14" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:2725:13" my-argnr="2" my-argname="el" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2729" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h:166:12" my-argnr="1" my-argname="filename" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvg.h" line="2907" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" my-argnr="1" my-argname="x" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="322" col="20" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:320:14" my-argnr="2" my-argname="y" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="322" col="32" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="499" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:489:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="502" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" my-argnr="2" my-argname="left" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="592" col="27" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:586:13" my-argnr="3" my-argname="right" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="593" col="19" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:607:13" my-argnr="1" my-argname="r" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="609" col="54" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:891:13" my-argnr="6" my-argname="xmin" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="895" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h:891:13" my-argnr="7" my-argname="xmax" file="/home/hbina/git/godot/thirdparty/nanosvg/nanosvgrast.h" line="896" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="NSVG_CAP_BUTT"/>
+    <functioncall functionName="NSVG_FILLRULE_NONZERO"/>
+    <functioncall functionName="NSVG_FLAGS_VISIBLE"/>
+    <functioncall functionName="NSVG_JOIN_MITER"/>
+    <functioncall functionName="NSVG_OBJECT_SPACE"/>
+    <functioncall functionName="NSVG_PAINT_COLOR"/>
+    <functioncall functionName="NSVG_PAINT_LINEAR_GRADIENT"/>
+    <functioncall functionName="NSVG_PAINT_NONE"/>
+    <functioncall functionName="NSVG_PAINT_RADIAL_GRADIENT"/>
+    <functioncall functionName="NSVG_PT_CORNER"/>
+    <functioncall functionName="NSVG_SPREAD_PAD"/>
+    <functioncall functionName="NSVG_SPREAD_REFLECT"/>
+    <functioncall functionName="NSVG_SPREAD_REPEAT"/>
+    <functioncall functionName="NSVG_UNITS_CM"/>
+    <functioncall functionName="NSVG_UNITS_EM"/>
+    <functioncall functionName="NSVG_UNITS_EX"/>
+    <functioncall functionName="NSVG_UNITS_IN"/>
+    <functioncall functionName="NSVG_UNITS_MM"/>
+    <functioncall functionName="NSVG_UNITS_PC"/>
+    <functioncall functionName="NSVG_UNITS_PERCENT"/>
+    <functioncall functionName="NSVG_UNITS_PT"/>
+    <functioncall functionName="NSVG_UNITS_PX"/>
+    <functioncall functionName="NSVG_UNITS_USER"/>
+    <functioncall functionName="NSVG_USER_SPACE"/>
+    <functioncall functionName="NSVGrasterizer"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="SEEK_END"/>
+    <functioncall functionName="SEEK_SET"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="a0"/>
+    <functioncall functionName="acosf"/>
+    <functioncall functionName="active"/>
+    <functioncall functionName="alignX"/>
+    <functioncall functionName="alignY"/>
+    <functioncall functionName="allDashLen"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="atan2f"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="attrHead"/>
+    <functioncall functionName="ax"/>
+    <functioncall functionName="ay"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="b2ac"/>
+    <functioncall functionName="bounds"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c0"/>
+    <functioncall functionName="c1"/>
+    <functioncall functionName="ca"/>
+    <functioncall functionName="cache"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="cedges"/>
+    <functioncall functionName="ceilf"/>
+    <functioncall functionName="changed"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="closeFlag"/>
+    <functioncall functionName="closed"/>
+    <functioncall functionName="closedFlag"/>
+    <functioncall functionName="cmd"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="content"/>
+    <functioncall functionName="contentCb"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="coord"/>
+    <functioncall functionName="cosf"/>
+    <functioncall functionName="cosrx"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="cpoints"/>
+    <functioncall functionName="cpoints2"/>
+    <functioncall functionName="cpts"/>
+    <functioncall functionName="cpx"/>
+    <functioncall functionName="cpx1"/>
+    <functioncall functionName="cpx2"/>
+    <functioncall functionName="cpy"/>
+    <functioncall functionName="cpy1"/>
+    <functioncall functionName="cpy2"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="cscanline"/>
+    <functioncall functionName="cur"/>
+    <functioncall functionName="curpage"/>
+    <functioncall functionName="curve"/>
+    <functioncall functionName="curveBounds"/>
+    <functioncall functionName="cx"/>
+    <functioncall functionName="cx1"/>
+    <functioncall functionName="cx2"/>
+    <functioncall functionName="cxp"/>
+    <functioncall functionName="cy"/>
+    <functioncall functionName="cy1"/>
+    <functioncall functionName="cy2"/>
+    <functioncall functionName="cyp"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d3"/>
+    <functioncall functionName="da"/>
+    <functioncall functionName="dashOffset"/>
+    <functioncall functionName="dashState"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="defsFlag"/>
+    <functioncall functionName="det"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="distTol"/>
+    <functioncall functionName="dlx0"/>
+    <functioncall functionName="dlx1"/>
+    <functioncall functionName="dly0"/>
+    <functioncall functionName="dly1"/>
+    <functioncall functionName="dmr2"/>
+    <functioncall functionName="dmy"/>
+    <functioncall functionName="double"/>
+    <functioncall functionName="dpi"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dx"/>
+    <functioncall functionName="dxdy"/>
+    <functioncall functionName="dy"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="edges"/>
+    <functioncall functionName="el"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="endelCb"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="expPart"/>
+    <functioncall functionName="fabs"/>
+    <functioncall functionName="fabsf"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="filename"/>
+    <functioncall functionName="fill"/>
+    <functioncall functionName="fillColor"/>
+    <functioncall functionName="fillGradient"/>
+    <functioncall functionName="fillRule"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="floorf"/>
+    <functioncall functionName="fmodf"/>
+    <functioncall functionName="fontSize"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fp"/>
+    <functioncall functionName="fread"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="freelist"/>
+    <functioncall functionName="fseek"/>
+    <functioncall functionName="ftell"/>
+    <functioncall functionName="fx"/>
+    <functioncall functionName="fy"/>
+    <functioncall functionName="g"/>
+    <functioncall functionName="grad"/>
+    <functioncall functionName="gradient"/>
+    <functioncall functionName="gradients"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="hasFracPart"/>
+    <functioncall functionName="hda"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="ia"/>
+    <functioncall functionName="ib"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idash"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="intPart"/>
+    <functioncall functionName="inv"/>
+    <functioncall functionName="it"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="iu"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="kappa"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="level"/>
+    <functioncall functionName="lineCap"/>
+    <functioncall functionName="lineJoin"/>
+    <functioncall functionName="lineWidth"/>
+    <functioncall functionName="localBounds"/>
+    <functioncall functionName="lx"/>
+    <functioncall functionName="lx0"/>
+    <functioncall functionName="lx1"/>
+    <functioncall functionName="ly"/>
+    <functioncall functionName="ly0"/>
+    <functioncall functionName="ly1"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="mark"/>
+    <functioncall functionName="maxWeight"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="miterLimit"/>
+    <functioncall functionName="mn"/>
+    <functioncall functionName="mx"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="na"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="ncap"/>
+    <functioncall functionName="ndivs"/>
+    <functioncall functionName="nedges"/>
+    <functioncall functionName="newp"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="npoints"/>
+    <functioncall functionName="npoints2"/>
+    <functioncall functionName="npts"/>
+    <functioncall functionName="nstops"/>
+    <functioncall functionName="nsvgDelete"/>
+    <functioncall functionName="nsvgDeleteRasterizer"/>
+    <functioncall functionName="nsvgParse"/>
+    <functioncall functionName="nsvg__RGBA"/>
+    <functioncall functionName="nsvg__absf"/>
+    <functioncall functionName="nsvg__actualHeight"/>
+    <functioncall functionName="nsvg__actualLength"/>
+    <functioncall functionName="nsvg__actualOrigX"/>
+    <functioncall functionName="nsvg__actualOrigY"/>
+    <functioncall functionName="nsvg__actualWidth"/>
+    <functioncall functionName="nsvg__addActive"/>
+    <functioncall functionName="nsvg__addEdge"/>
+    <functioncall functionName="nsvg__addPath"/>
+    <functioncall functionName="nsvg__addPathPoint"/>
+    <functioncall functionName="nsvg__addPoint"/>
+    <functioncall functionName="nsvg__addShape"/>
+    <functioncall functionName="nsvg__alloc"/>
+    <functioncall functionName="nsvg__appendPathPoint"/>
+    <functioncall functionName="nsvg__applyOpacity"/>
+    <functioncall functionName="nsvg__atof"/>
+    <functioncall functionName="nsvg__bevelJoin"/>
+    <functioncall functionName="nsvg__buttCap"/>
+    <functioncall functionName="nsvg__clampf"/>
+    <functioncall functionName="nsvg__cmpEdge"/>
+    <functioncall functionName="nsvg__colors"/>
+    <functioncall functionName="nsvg__content"/>
+    <functioncall functionName="nsvg__convertToPixels"/>
+    <functioncall functionName="nsvg__coord"/>
+    <functioncall functionName="nsvg__createGradient"/>
+    <functioncall functionName="nsvg__createParser"/>
+    <functioncall functionName="nsvg__cubicBezTo"/>
+    <functioncall functionName="nsvg__curveBounds"/>
+    <functioncall functionName="nsvg__curveDivs"/>
+    <functioncall functionName="nsvg__deleteGradientData"/>
+    <functioncall functionName="nsvg__deletePaint"/>
+    <functioncall functionName="nsvg__deleteParser"/>
+    <functioncall functionName="nsvg__deletePaths"/>
+    <functioncall functionName="nsvg__div255"/>
+    <functioncall functionName="nsvg__duplicatePoints"/>
+    <functioncall functionName="nsvg__endElement"/>
+    <functioncall functionName="nsvg__evalBezier"/>
+    <functioncall functionName="nsvg__expandStroke"/>
+    <functioncall functionName="nsvg__fillActiveEdges"/>
+    <functioncall functionName="nsvg__fillScanline"/>
+    <functioncall functionName="nsvg__findGradientData"/>
+    <functioncall functionName="nsvg__flattenCubicBez"/>
+    <functioncall functionName="nsvg__flattenShape"/>
+    <functioncall functionName="nsvg__flattenShapeStroke"/>
+    <functioncall functionName="nsvg__freeActive"/>
+    <functioncall functionName="nsvg__getArgsPerElement"/>
+    <functioncall functionName="nsvg__getAttr"/>
+    <functioncall functionName="nsvg__getAverageScale"/>
+    <functioncall functionName="nsvg__getLocalBounds"/>
+    <functioncall functionName="nsvg__getNextDashItem"/>
+    <functioncall functionName="nsvg__getNextPathItem"/>
+    <functioncall functionName="nsvg__imageBounds"/>
+    <functioncall functionName="nsvg__initClosed"/>
+    <functioncall functionName="nsvg__initPaint"/>
+    <functioncall functionName="nsvg__isdigit"/>
+    <functioncall functionName="nsvg__isnum"/>
+    <functioncall functionName="nsvg__isspace"/>
+    <functioncall functionName="nsvg__lerpRGBA"/>
+    <functioncall functionName="nsvg__lineTo"/>
+    <functioncall functionName="nsvg__maxf"/>
+    <functioncall functionName="nsvg__minf"/>
+    <functioncall functionName="nsvg__miterJoin"/>
+    <functioncall functionName="nsvg__moveTo"/>
+    <functioncall functionName="nsvg__nextPage"/>
+    <functioncall functionName="nsvg__normalize"/>
+    <functioncall functionName="nsvg__parseAttr"/>
+    <functioncall functionName="nsvg__parseAttribs"/>
+    <functioncall functionName="nsvg__parseCircle"/>
+    <functioncall functionName="nsvg__parseColor"/>
+    <functioncall functionName="nsvg__parseColorHex"/>
+    <functioncall functionName="nsvg__parseColorName"/>
+    <functioncall functionName="nsvg__parseColorRGB"/>
+    <functioncall functionName="nsvg__parseContent"/>
+    <functioncall functionName="nsvg__parseCoordinate"/>
+    <functioncall functionName="nsvg__parseCoordinateRaw"/>
+    <functioncall functionName="nsvg__parseElement"/>
+    <functioncall functionName="nsvg__parseEllipse"/>
+    <functioncall functionName="nsvg__parseFillRule"/>
+    <functioncall functionName="nsvg__parseGradient"/>
+    <functioncall functionName="nsvg__parseGradientStop"/>
+    <functioncall functionName="nsvg__parseLine"/>
+    <functioncall functionName="nsvg__parseLineCap"/>
+    <functioncall functionName="nsvg__parseLineJoin"/>
+    <functioncall functionName="nsvg__parseMatrix"/>
+    <functioncall functionName="nsvg__parseMiterLimit"/>
+    <functioncall functionName="nsvg__parseNameValue"/>
+    <functioncall functionName="nsvg__parseNumber"/>
+    <functioncall functionName="nsvg__parseOpacity"/>
+    <functioncall functionName="nsvg__parsePath"/>
+    <functioncall functionName="nsvg__parsePoly"/>
+    <functioncall functionName="nsvg__parseRect"/>
+    <functioncall functionName="nsvg__parseRotate"/>
+    <functioncall functionName="nsvg__parseSVG"/>
+    <functioncall functionName="nsvg__parseScale"/>
+    <functioncall functionName="nsvg__parseSkewX"/>
+    <functioncall functionName="nsvg__parseSkewY"/>
+    <functioncall functionName="nsvg__parseStrokeDashArray"/>
+    <functioncall functionName="nsvg__parseStyle"/>
+    <functioncall functionName="nsvg__parseTransform"/>
+    <functioncall functionName="nsvg__parseTransformArgs"/>
+    <functioncall functionName="nsvg__parseTranslate"/>
+    <functioncall functionName="nsvg__parseUnits"/>
+    <functioncall functionName="nsvg__parseUrl"/>
+    <functioncall functionName="nsvg__parseXML"/>
+    <functioncall functionName="nsvg__pathArcTo"/>
+    <functioncall functionName="nsvg__pathCubicBezShortTo"/>
+    <functioncall functionName="nsvg__pathCubicBezTo"/>
+    <functioncall functionName="nsvg__pathHLineTo"/>
+    <functioncall functionName="nsvg__pathLineTo"/>
+    <functioncall functionName="nsvg__pathMoveTo"/>
+    <functioncall functionName="nsvg__pathQuadBezShortTo"/>
+    <functioncall functionName="nsvg__pathQuadBezTo"/>
+    <functioncall functionName="nsvg__pathVLineTo"/>
+    <functioncall functionName="nsvg__popAttr"/>
+    <functioncall functionName="nsvg__prepareStroke"/>
+    <functioncall functionName="nsvg__ptEquals"/>
+    <functioncall functionName="nsvg__ptInBounds"/>
+    <functioncall functionName="nsvg__pushAttr"/>
+    <functioncall functionName="nsvg__rasterizeSortedEdges"/>
+    <functioncall functionName="nsvg__resetPath"/>
+    <functioncall functionName="nsvg__resetPool"/>
+    <functioncall functionName="nsvg__roundCap"/>
+    <functioncall functionName="nsvg__roundJoin"/>
+    <functioncall functionName="nsvg__scaleGradient"/>
+    <functioncall functionName="nsvg__scaleToViewbox"/>
+    <functioncall functionName="nsvg__scanlineSolid"/>
+    <functioncall functionName="nsvg__sqr"/>
+    <functioncall functionName="nsvg__squareCap"/>
+    <functioncall functionName="nsvg__startElement"/>
+    <functioncall functionName="nsvg__straightJoin"/>
+    <functioncall functionName="nsvg__unpremultiplyAlpha"/>
+    <functioncall functionName="nsvg__vecang"/>
+    <functioncall functionName="nsvg__vecrat"/>
+    <functioncall functionName="nsvg__viewAlign"/>
+    <functioncall functionName="nsvg__vmag"/>
+    <functioncall functionName="nsvg__xformIdentity"/>
+    <functioncall functionName="nsvg__xformInverse"/>
+    <functioncall functionName="nsvg__xformMultiply"/>
+    <functioncall functionName="nsvg__xformPoint"/>
+    <functioncall functionName="nsvg__xformPremultiply"/>
+    <functioncall functionName="nsvg__xformSetRotation"/>
+    <functioncall functionName="nsvg__xformSetScale"/>
+    <functioncall functionName="nsvg__xformSetSkewX"/>
+    <functioncall functionName="nsvg__xformSetSkewY"/>
+    <functioncall functionName="nsvg__xformSetTranslation"/>
+    <functioncall functionName="nsvg__xformVec"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="opacity"/>
+    <functioncall functionName="orig"/>
+    <functioncall functionName="ox"/>
+    <functioncall functionName="oy"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="pages"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pathFlag"/>
+    <functioncall functionName="paths"/>
+    <functioncall functionName="plist"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="points2"/>
+    <functioncall functionName="pow"/>
+    <functioncall functionName="prevx"/>
+    <functioncall functionName="prevy"/>
+    <functioncall functionName="pt"/>
+    <functioncall functionName="ptanx"/>
+    <functioncall functionName="ptany"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="pts"/>
+    <functioncall functionName="px"/>
+    <functioncall functionName="py"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="qsort"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="realloc"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="rel"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="rotx"/>
+    <functioncall functionName="rx"/>
+    <functioncall functionName="rx0"/>
+    <functioncall functionName="rx1"/>
+    <functioncall functionName="ry"/>
+    <functioncall functionName="ry0"/>
+    <functioncall functionName="ry1"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="s1"/>
+    <functioncall functionName="s2"/>
+    <functioncall functionName="sb"/>
+    <functioncall functionName="scale"/>
+    <functioncall functionName="scanline"/>
+    <functioncall functionName="scany"/>
+    <functioncall functionName="sh"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="shapes"/>
+    <functioncall functionName="sinf"/>
+    <functioncall functionName="sinrx"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sl"/>
+    <functioncall functionName="sn"/>
+    <functioncall functionName="snext"/>
+    <functioncall functionName="spread"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="sqrtf"/>
+    <functioncall functionName="sscanf"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="startelCb"/>
+    <functioncall functionName="stopColor"/>
+    <functioncall functionName="stopOffset"/>
+    <functioncall functionName="stops"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="strchr"/>
+    <functioncall functionName="strcmp"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="strncmp"/>
+    <functioncall functionName="strncpy"/>
+    <functioncall functionName="stroke"/>
+    <functioncall functionName="strokeColor"/>
+    <functioncall functionName="strokeDashArray"/>
+    <functioncall functionName="strokeDashCount"/>
+    <functioncall functionName="strokeDashOffset"/>
+    <functioncall functionName="strokeGradient"/>
+    <functioncall functionName="strokeLineCap"/>
+    <functioncall functionName="strokeLineJoin"/>
+    <functioncall functionName="strstr"/>
+    <functioncall functionName="strtol"/>
+    <functioncall functionName="strtoll"/>
+    <functioncall functionName="sw"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="sx"/>
+    <functioncall functionName="sy"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="t0"/>
+    <functioncall functionName="t2"/>
+    <functioncall functionName="t4"/>
+    <functioncall functionName="tanf"/>
+    <functioncall functionName="tanx"/>
+    <functioncall functionName="tany"/>
+    <functioncall functionName="tessTol"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tol"/>
+    <functioncall functionName="totalDist"/>
+    <functioncall functionName="tx"/>
+    <functioncall functionName="ty"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="ua"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="units"/>
+    <functioncall functionName="ux"/>
+    <functioncall functionName="uy"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="viewHeight"/>
+    <functioncall functionName="viewMinx"/>
+    <functioncall functionName="viewMiny"/>
+    <functioncall functionName="viewWidth"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vx"/>
+    <functioncall functionName="vy"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x0"/>
+    <functioncall functionName="x1"/>
+    <functioncall functionName="x12"/>
+    <functioncall functionName="x123"/>
+    <functioncall functionName="x1234"/>
+    <functioncall functionName="x1p"/>
+    <functioncall functionName="x2"/>
+    <functioncall functionName="x23"/>
+    <functioncall functionName="x234"/>
+    <functioncall functionName="x3"/>
+    <functioncall functionName="x34"/>
+    <functioncall functionName="x4"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="xmax"/>
+    <functioncall functionName="xmin"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y0"/>
+    <functioncall functionName="y1"/>
+    <functioncall functionName="y12"/>
+    <functioncall functionName="y123"/>
+    <functioncall functionName="y1234"/>
+    <functioncall functionName="y1p"/>
+    <functioncall functionName="y2"/>
+    <functioncall functionName="y23"/>
+    <functioncall functionName="y234"/>
+    <functioncall functionName="y3"/>
+    <functioncall functionName="y34"/>
+    <functioncall functionName="y4"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

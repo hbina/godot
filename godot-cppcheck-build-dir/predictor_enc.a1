@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3999931621">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;x&apos; can be reduced." verbose="The scope of the variable &apos;x&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="432" column="9"/>
+            <symbol>x</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;tile_y&apos; can be reduced." verbose="The scope of the variable &apos;tile_y&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="481" column="7"/>
+            <symbol>tile_y</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;histo&apos; can be reduced." verbose="The scope of the variable &apos;histo&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="482" column="7"/>
+            <symbol>histo</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:233:25" call-funcname="GetResidual" call-argnr="13" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="378" col="18" call-argexpr="residuals" call-argvaluetype="7" call-argvalue="8589934592"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:413:13" call-funcname="CopyImageWithPrediction" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="502" col="26" call-argexpr="low_effort" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="484" col="7" info="Assuming that condition 'low_effort' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:33:14" call-funcname="PredictionCostSpatial" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="537" col="31" call-argexpr="counts" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:531:14" call-funcname="PredictionCostCrossColor" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="550" col="38" call-argexpr="accumulated_red_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:531:14" call-funcname="PredictionCostCrossColor" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="550" col="38" call-argexpr="histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:540:14" call-funcname="GetPredictionCostCrossColorRed" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="570" col="51" call-argexpr="green_to_red_best" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="568" col="27" info="Assignment 'green_to_red_best=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:540:14" call-funcname="GetPredictionCostCrossColorRed" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="570" col="51" call-argexpr="accumulated_red_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:540:14" call-funcname="GetPredictionCostCrossColorRed" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="581" col="60" call-argexpr="accumulated_red_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:531:14" call-funcname="PredictionCostCrossColor" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="603" col="38" call-argexpr="accumulated_blue_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:531:14" call-funcname="PredictionCostCrossColor" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="603" col="38" call-argexpr="histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:593:14" call-funcname="GetPredictionCostCrossColorBlue" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="641" col="52" call-argexpr="green_to_blue_best" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="637" col="28" info="Assignment 'green_to_blue_best=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:593:14" call-funcname="GetPredictionCostCrossColorBlue" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="641" col="52" call-argexpr="red_to_blue_best" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="638" col="26" info="Assignment 'red_to_blue_best=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:593:14" call-funcname="GetPredictionCostCrossColorBlue" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="641" col="52" call-argexpr="accumulated_blue_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:593:14" call-funcname="GetPredictionCostCrossColorBlue" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="651" col="61" call-argexpr="accumulated_blue_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:563:13" call-funcname="GetBestGreenToRed" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="695" col="20" call-argexpr="accumulated_red_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:627:13" call-funcname="GetBestGreenRedToBlue" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="697" col="24" call-argexpr="accumulated_blue_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:675:24" call-funcname="GetBestColorTransformForTile" call-argnr="9" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="739" col="44" call-argexpr="accumulated_red_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:675:24" call-funcname="GetBestColorTransformForTile" call-argnr="10" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="739" col="44" call-argexpr="accumulated_blue_histo" call-argvaluetype="7" call-argvalue="1024"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:68:25" call-funcname="PredictBatch" call-argnr="6" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="239" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:233:25" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:68:25" call-funcname="PredictBatch" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="239" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:233:25" my-argnr="4"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:68:25" call-funcname="PredictBatch" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="239" col="5" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:233:25" my-argnr="13"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:298:12" call-funcname="GetBestPredictorForTile" call-argnr="8" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="494" col="26" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:475:6" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:298:12" call-funcname="GetBestPredictorForTile" call-argnr="7" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="494" col="26" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:475:6" my-argnr="6"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:540:14" call-funcname="GetPredictionCostCrossColorRed" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="570" col="21" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:563:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:593:14" call-funcname="GetPredictionCostCrossColorBlue" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="641" col="21" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:627:13" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:675:24" call-funcname="GetBestColorTransformForTile" call-argnr="11" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="739" col="16" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:717:6" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:510:25" my-argnr="1" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="511" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:516:25" my-argnr="2" my-argname="m" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="518" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:563:13" my-argnr="9" my-argname="best_tx" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="590" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c:627:13" my-argnr="9" my-argname="best_tx" file="/home/hbina/git/godot/thirdparty/libwebp/src/enc/predictor_enc.c" line="669" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="GetMin" lineNumber="28"/>
+    <functiondecl functionName="PredictionCostSpatial" lineNumber="33"/>
+    <functiondecl functionName="PredictionCostSpatialHistogram" lineNumber="46"/>
+    <functiondecl functionName="UpdateHisto" lineNumber="58"/>
+    <functiondecl functionName="PredictBatch" lineNumber="68"/>
+    <functiondecl functionName="GetResidual" lineNumber="233"/>
+    <functiondecl functionName="GetBestPredictorForTile" lineNumber="298"/>
+    <functiondecl functionName="CopyImageWithPrediction" lineNumber="413"/>
+    <functiondecl functionName="VP8LResidualImage" lineNumber="475"/>
+    <functiondecl functionName="MultipliersClear" lineNumber="510"/>
+    <functiondecl functionName="ColorCodeToMultipliers" lineNumber="516"/>
+    <functiondecl functionName="MultipliersToColorCode" lineNumber="523"/>
+    <functiondecl functionName="PredictionCostCrossColor" lineNumber="531"/>
+    <functiondecl functionName="GetPredictionCostCrossColorRed" lineNumber="540"/>
+    <functiondecl functionName="GetBestGreenToRed" lineNumber="563"/>
+    <functiondecl functionName="GetPredictionCostCrossColorBlue" lineNumber="593"/>
+    <functiondecl functionName="GetBestGreenRedToBlue" lineNumber="627"/>
+    <functiondecl functionName="GetBestColorTransformForTile" lineNumber="675"/>
+    <functiondecl functionName="CopyTileWithColorTransform" lineNumber="703"/>
+    <functiondecl functionName="VP8LColorSpaceTransform" lineNumber="717"/>
+    <functioncall functionName="ARGB_BLACK"/>
+    <functioncall functionName="ColorCodeToMultipliers"/>
+    <functioncall functionName="CopyImageWithPrediction"/>
+    <functioncall functionName="CopyTileWithColorTransform"/>
+    <functioncall functionName="GetBestColorTransformForTile"/>
+    <functioncall functionName="GetBestGreenRedToBlue"/>
+    <functioncall functionName="GetBestGreenToRed"/>
+    <functioncall functionName="GetBestPredictorForTile"/>
+    <functioncall functionName="GetMin"/>
+    <functioncall functionName="GetPredictionCostCrossColorBlue"/>
+    <functioncall functionName="GetPredictionCostCrossColorRed"/>
+    <functioncall functionName="GetResidual"/>
+    <functioncall functionName="MultipliersClear"/>
+    <functioncall functionName="MultipliersToColorCode"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="PredictBatch"/>
+    <functioncall functionName="PredictionCostCrossColor"/>
+    <functioncall functionName="PredictionCostSpatial"/>
+    <functioncall functionName="PredictionCostSpatialHistogram"/>
+    <functioncall functionName="UpdateHisto"/>
+    <functioncall functionName="VP8LCollectColorBlueTransforms"/>
+    <functioncall functionName="VP8LCollectColorRedTransforms"/>
+    <functioncall functionName="VP8LCombinedShannonEntropy"/>
+    <functioncall functionName="VP8LNearLosslessBits"/>
+    <functioncall functionName="VP8LSubPixels"/>
+    <functioncall functionName="VP8LSubSampleSize"/>
+    <functioncall functionName="VP8LTransformColor"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="accumulated"/>
+    <functioncall functionName="accumulated_blue_histo"/>
+    <functioncall functionName="accumulated_red_histo"/>
+    <functioncall functionName="argb"/>
+    <functioncall functionName="argb_scratch"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="best_histo"/>
+    <functioncall functionName="best_tx"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="color_transform"/>
+    <functioncall functionName="context_start_x"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="counts"/>
+    <functioncall functionName="cur_diff"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="current_max_diffs"/>
+    <functioncall functionName="current_row"/>
+    <functioncall functionName="delta"/>
+    <functioncall functionName="exact"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="green_to_blue"/>
+    <functioncall functionName="green_to_blue_"/>
+    <functioncall functionName="green_to_blue_best"/>
+    <functioncall functionName="green_to_blue_cur"/>
+    <functioncall functionName="green_to_red"/>
+    <functioncall functionName="green_to_red_"/>
+    <functioncall functionName="green_to_red_best"/>
+    <functioncall functionName="green_to_red_cur"/>
+    <functioncall functionName="have_left"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="histo"/>
+    <functioncall functionName="histo_argb"/>
+    <functioncall functionName="histo_stack_1"/>
+    <functioncall functionName="histo_stack_2"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="iter"/>
+    <functioncall functionName="ix"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="kExpValue"/>
+    <functioncall functionName="kPredLowEffort"/>
+    <functioncall functionName="low_effort"/>
+    <functioncall functionName="max_diffs"/>
+    <functioncall functionName="max_quantization"/>
+    <functioncall functionName="max_tile_size"/>
+    <functioncall functionName="max_x"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="near_lossless_quality"/>
+    <functioncall functionName="num_pixels"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="pred_func"/>
+    <functioncall functionName="predict"/>
+    <functioncall functionName="prev_x"/>
+    <functioncall functionName="prev_y"/>
+    <functioncall functionName="quality"/>
+    <functioncall functionName="red_to_blue"/>
+    <functioncall functionName="red_to_blue_"/>
+    <functioncall functionName="red_to_blue_best"/>
+    <functioncall functionName="red_to_blue_cur"/>
+    <functioncall functionName="relative_x"/>
+    <functioncall functionName="relative_y"/>
+    <functioncall functionName="residual"/>
+    <functioncall functionName="residuals"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="retval"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="start_x"/>
+    <functioncall functionName="start_y"/>
+    <functioncall functionName="stride"/>
+    <functioncall functionName="tile_argb"/>
+    <functioncall functionName="tile_height"/>
+    <functioncall functionName="tile_size"/>
+    <functioncall functionName="tile_width"/>
+    <functioncall functionName="tile_x"/>
+    <functioncall functionName="tile_x_offset"/>
+    <functioncall functionName="tile_xsize"/>
+    <functioncall functionName="tile_y"/>
+    <functioncall functionName="tile_y_offset"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="tmp32"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="upper"/>
+    <functioncall functionName="upper_row"/>
+    <functioncall functionName="used_subtract_green"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="x_end"/>
+    <functioncall functionName="x_start"/>
+    <functioncall functionName="xscan"/>
+    <functioncall functionName="xsize"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="ysize"/>
+  </FileInfo>
+</analyzerinfo>

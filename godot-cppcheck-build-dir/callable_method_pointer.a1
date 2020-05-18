@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3417688658">
+        <error id="noConstructor" severity="style" msg="The class &apos;CallableCustomMethodPointerBase&apos; does not have a constructor although it has private member variables." verbose="The class &apos;CallableCustomMethodPointerBase&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398">
+            <location file0="/home/hbina/git/godot/core/callable_method_pointer.cpp" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="40" column="1"/>
+            <symbol>CallableCustomMethodPointerBase</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/callable_method_pointer.h:147:6" call-funcname="call_with_variant_args" call-argnr="3" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="177" col="3" my-id="/home/hbina/git/godot/core/callable_method_pointer.h:175:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/callable_method_pointer.h:230:6" call-funcname="call_with_variant_args_ret" call-argnr="3" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="261" col="3" my-id="/home/hbina/git/godot/core/callable_method_pointer.h:259:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="1" my-argname="p_instance" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="138" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="138" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="3" my-argname="p_args" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="138" col="49" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="1" my-argname="p_instance" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="221" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="221" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="3" my-argname="p_args" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="221" col="49" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="1" my-argname="p_instance" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="138" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="138" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="1" my-argname="p_instance" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="221" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="221" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/callable_method_pointer.h:147:6" call-funcname="call_with_variant_args" call-argnr="3" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="177" col="3" my-id="/home/hbina/git/godot/core/callable_method_pointer.h:175:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/core/callable_method_pointer.h:230:6" call-funcname="call_with_variant_args_ret" call-argnr="3" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="261" col="3" my-id="/home/hbina/git/godot/core/callable_method_pointer.h:259:15" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Bounds checking">
+    <pointer-arith>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:189:10" my-argnr="2" my-argname="p_func_text" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="198" col="17" value="1"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:273:10" my-argnr="2" my-argname="p_func_text" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="282" col="17" value="1"/>
+    </pointer-arith>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:93:26" my-argnr="1" my-argname="p_args" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="95" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:108:26" my-argnr="1" my-argname="p_args" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="110" col="36" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="1" my-argname="p_instance" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="136" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="136" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="1" my-argname="p_instance" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="219" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="219" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="1" my-argname="p_instance" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="136" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:132:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="136" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/callable_method_pointer.h:215:6" my-argnr="2" my-argname="p_method" file="/home/hbina/git/godot/core/callable_method_pointer.h" line="219" col="24" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="compare_equal" lineNumber="33"/>
+    <functiondecl functionName="compare_less" lineNumber="50"/>
+    <functiondecl functionName="get_compare_equal_func" lineNumber="70"/>
+    <functiondecl functionName="get_compare_less_func" lineNumber="74"/>
+    <functiondecl functionName="hash" lineNumber="78"/>
+    <functiondecl functionName="_setup" lineNumber="82"/>
+    <functiondecl functionName="compare_equal" lineNumber="33"/>
+    <functiondecl functionName="compare_less" lineNumber="50"/>
+    <functiondecl functionName="get_compare_equal_func" lineNumber="70"/>
+    <functiondecl functionName="get_compare_less_func" lineNumber="74"/>
+    <functiondecl functionName="hash" lineNumber="78"/>
+    <functiondecl functionName="_setup" lineNumber="82"/>
+    <functioncall functionName="CALL_ERROR_INVALID_ARGUMENT"/>
+    <functioncall functionName="CALL_ERROR_TOO_FEW_ARGUMENTS"/>
+    <functioncall functionName="CALL_ERROR_TOO_MANY_ARGUMENTS"/>
+    <functioncall functionName="CALL_OK"/>
+    <functioncall functionName="Callable"/>
+    <functioncall functionName="CallableCustomMethodPointer"/>
+    <functioncall functionName="CallableCustomMethodPointerRet"/>
+    <functioncall functionName="Data"/>
+    <functioncall functionName="Is"/>
+    <functioncall functionName="P"/>
+    <functioncall functionName="R"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="_setup"/>
+    <functioncall functionName="argtype"/>
+    <functioncall functionName="call_with_variant_args"/>
+    <functioncall functionName="call_with_variant_args_helper"/>
+    <functioncall functionName="call_with_variant_args_ret"/>
+    <functioncall functionName="call_with_variant_args_ret_helper"/>
+    <functioncall functionName="can_convert_strict"/>
+    <functioncall functionName="cast"/>
+    <functioncall functionName="ccmp"/>
+    <functioncall functionName="comp_size"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="hash_djb2_one_32"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="method"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_arg_idx"/>
+    <functioncall functionName="p_argcount"/>
+    <functioncall functionName="p_args"/>
+    <functioncall functionName="p_arguments"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_base_ptr"/>
+    <functioncall functionName="p_instance"/>
+    <functioncall functionName="p_method"/>
+    <functioncall functionName="p_text"/>
+    <functioncall functionName="r_call_error"/>
+    <functioncall functionName="r_error"/>
+    <functioncall functionName="r_ret"/>
+    <functioncall functionName="r_return_value"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sizeof..."/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="zeromem"/>
+  </FileInfo>
+</analyzerinfo>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="390922784">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;use_len&apos; can be reduced." verbose="The scope of the variable &apos;use_len&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="237" column="12"/>
+            <symbol>use_len</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:53:12" call-funcname="pkcs12_parse_pbe_params" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="105" col="40" call-argexpr="&iterations" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" call-funcname="mbedtls_pkcs12_derivation" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="112" col="42" call-argexpr="unipwd" call-argvaluetype="7" call-argvalue="258"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" call-funcname="mbedtls_pkcs12_derivation" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="122" col="42" call-argexpr="unipwd" call-argvaluetype="7" call-argvalue="258"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="155" col="41" call-argexpr="key" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="7" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="155" col="41" call-argexpr="NULL" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="8" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="155" col="41" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="41" call-argexpr="key" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="7" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="41" call-argexpr="iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="288" col="23" call-argexpr="salt_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="289" col="23" call-argexpr="pwd_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="326" col="27" call-argexpr="hash_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:53:12" call-funcname="pkcs12_parse_pbe_params" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="105" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" call-funcname="mbedtls_pkcs12_derivation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="112" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="155" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:133:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="155" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:133:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:174:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:174:5" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="289" col="5" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="288" col="5" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="288" col="23" call-argexpr="salt_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="289" col="23" call-argexpr="pwd_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="326" col="27" call-argexpr="hash_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="289" col="5" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="288" col="5" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" my-argnr="5"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:53:12" call-funcname="pkcs12_parse_pbe_params" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="105" col="40" call-argexpr="&iterations" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" call-funcname="mbedtls_pkcs12_derivation" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="112" col="42" call-argexpr="unipwd" call-argvaluetype="7" call-argvalue="258"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" call-funcname="mbedtls_pkcs12_derivation" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="122" col="42" call-argexpr="unipwd" call-argvaluetype="7" call-argvalue="258"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="5" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="41" call-argexpr="key" call-argvaluetype="7" call-argvalue="32"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="7" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="41" call-argexpr="iv" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="288" col="23" call-argexpr="salt_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="289" col="23" call-argexpr="pwd_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="326" col="27" call-argexpr="hash_block" call-argvaluetype="7" call-argvalue="128"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:53:12" call-funcname="pkcs12_parse_pbe_params" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="105" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" call-funcname="mbedtls_pkcs12_derivation" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="112" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="1" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:174:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:89:12" call-funcname="pkcs12_pbe_derive_key_iv" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="193" col="17" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:174:5" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="289" col="5" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:233:13" call-funcname="pkcs12_fill_buffer" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="288" col="5" my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c:248:5" my-argnr="5"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/pkcs12.c" line="31" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="pkcs12_parse_pbe_params" lineNumber="53"/>
+    <functiondecl functionName="pkcs12_pbe_derive_key_iv" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_pkcs12_pbe_sha1_rc4_128" lineNumber="133"/>
+    <functiondecl functionName="mbedtls_pkcs12_pbe" lineNumber="174"/>
+    <functiondecl functionName="pkcs12_fill_buffer" lineNumber="233"/>
+    <functiondecl functionName="mbedtls_pkcs12_derivation" lineNumber="248"/>
+    <functiondecl functionName="pkcs12_fill_buffer" lineNumber="233"/>
+    <functiondecl functionName="mbedtls_pkcs12_derivation" lineNumber="248"/>
+    <functiondecl functionName="pkcs12_parse_pbe_params" lineNumber="53"/>
+    <functiondecl functionName="pkcs12_pbe_derive_key_iv" lineNumber="89"/>
+    <functiondecl functionName="mbedtls_pkcs12_pbe_sha1_rc4_128" lineNumber="133"/>
+    <functiondecl functionName="mbedtls_pkcs12_pbe" lineNumber="174"/>
+    <functiondecl functionName="pkcs12_fill_buffer" lineNumber="233"/>
+    <functiondecl functionName="mbedtls_pkcs12_derivation" lineNumber="248"/>
+    <functioncall functionName="MBEDTLS_ASN1_OCTET_STRING"/>
+    <functioncall functionName="MBEDTLS_ASN1_SEQUENCE"/>
+    <functioncall functionName="MBEDTLS_ERR_ASN1_LENGTH_MISMATCH"/>
+    <functioncall functionName="MBEDTLS_ERR_ASN1_UNEXPECTED_TAG"/>
+    <functioncall functionName="MBEDTLS_ERR_PKCS12_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_ERR_PKCS12_FEATURE_UNAVAILABLE"/>
+    <functioncall functionName="MBEDTLS_ERR_PKCS12_PASSWORD_MISMATCH"/>
+    <functioncall functionName="MBEDTLS_MD_MAX_SIZE"/>
+    <functioncall functionName="MBEDTLS_MD_SHA1"/>
+    <functioncall functionName="MBEDTLS_PKCS12_DERIVE_IV"/>
+    <functioncall functionName="MBEDTLS_PKCS12_DERIVE_KEY"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="cipher_ctx"/>
+    <functioncall functionName="cipher_info"/>
+    <functioncall functionName="cipher_type"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="data_len"/>
+    <functioncall functionName="datalen"/>
+    <functioncall functionName="diversifier"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="fill_len"/>
+    <functioncall functionName="filler"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="hash_block"/>
+    <functioncall functionName="hash_output"/>
+    <functioncall functionName="hlen"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="iterations"/>
+    <functioncall functionName="iv"/>
+    <functioncall functionName="iv_size"/>
+    <functioncall functionName="ivlen"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="keylen"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="mbedtls_arc4_crypt"/>
+    <functioncall functionName="mbedtls_arc4_free"/>
+    <functioncall functionName="mbedtls_arc4_init"/>
+    <functioncall functionName="mbedtls_arc4_setup"/>
+    <functioncall functionName="mbedtls_asn1_buf"/>
+    <functioncall functionName="mbedtls_asn1_get_int"/>
+    <functioncall functionName="mbedtls_asn1_get_tag"/>
+    <functioncall functionName="mbedtls_cipher_finish"/>
+    <functioncall functionName="mbedtls_cipher_free"/>
+    <functioncall functionName="mbedtls_cipher_info_from_type"/>
+    <functioncall functionName="mbedtls_cipher_init"/>
+    <functioncall functionName="mbedtls_cipher_reset"/>
+    <functioncall functionName="mbedtls_cipher_set_iv"/>
+    <functioncall functionName="mbedtls_cipher_setkey"/>
+    <functioncall functionName="mbedtls_cipher_setup"/>
+    <functioncall functionName="mbedtls_cipher_update"/>
+    <functioncall functionName="mbedtls_md"/>
+    <functioncall functionName="mbedtls_md_finish"/>
+    <functioncall functionName="mbedtls_md_free"/>
+    <functioncall functionName="mbedtls_md_get_size"/>
+    <functioncall functionName="mbedtls_md_info_from_type"/>
+    <functioncall functionName="mbedtls_md_init"/>
+    <functioncall functionName="mbedtls_md_setup"/>
+    <functioncall functionName="mbedtls_md_starts"/>
+    <functioncall functionName="mbedtls_md_update"/>
+    <functioncall functionName="mbedtls_operation_t"/>
+    <functioncall functionName="mbedtls_pkcs12_derivation"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="md_ctx"/>
+    <functioncall functionName="md_info"/>
+    <functioncall functionName="md_type"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mode"/>
+    <functioncall functionName="olen"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="pbe_params"/>
+    <functioncall functionName="pkcs12_fill_buffer"/>
+    <functioncall functionName="pkcs12_parse_pbe_params"/>
+    <functioncall functionName="pkcs12_pbe_derive_key_iv"/>
+    <functioncall functionName="pwd"/>
+    <functioncall functionName="pwd_block"/>
+    <functioncall functionName="pwdlen"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="salt"/>
+    <functioncall functionName="salt_block"/>
+    <functioncall functionName="saltlen"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="unipwd"/>
+    <functioncall functionName="use_len"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

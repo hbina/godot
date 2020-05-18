@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="47206517">
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;close&apos; is called from destructor &apos;~MIDIDriverWinMidi()&apos; at line 104. Dynamic binding is not used." verbose="Virtual function &apos;close&apos; is called from destructor &apos;~MIDIDriverWinMidi()&apos; at line 104. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/drivers/winmidi/midi_driver_winmidi.cpp" file="/home/hbina/git/godot/drivers/winmidi/midi_driver_winmidi.h" line="52" column="15" info="close is a virtual function"/>
+            <location file="/home/hbina/git/godot/drivers/winmidi/midi_driver_winmidi.cpp" line="104" column="2" info="Calling close"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="read" lineNumber="37"/>
+    <functiondecl functionName="open" lineNumber="44"/>
+    <functiondecl functionName="get_connected_inputs" lineNumber="69"/>
+    <functiondecl functionName="close" lineNumber="89"/>
+    <functioncall functionName="CALLBACK_FUNCTION"/>
+    <functioncall functionName="DWORD_PTR"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="MIDIDriverWinMidi"/>
+    <functioncall functionName="MIDIINCAPS"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="caps"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="dwParam1"/>
+    <functioncall functionName="dwParam2"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="midiInClose"/>
+    <functioncall functionName="midiInGetDevCaps"/>
+    <functioncall functionName="midiInGetErrorText"/>
+    <functioncall functionName="midiInGetID"/>
+    <functioncall functionName="midiInGetNumDevs"/>
+    <functioncall functionName="midiInOpen"/>
+    <functioncall functionName="midiInStart"/>
+    <functioncall functionName="midiInStop"/>
+    <functioncall functionName="midi_in"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="receive_input_packet"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="szPname"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="uint64_t"/>
+  </FileInfo>
+</analyzerinfo>

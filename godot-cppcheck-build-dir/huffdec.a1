@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1787218801">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;inext&apos; can be reduced." verbose="The scope of the variable &apos;inext&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="324" column="9"/>
+            <symbol>inext</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;bits&apos; can be reduced." verbose="The scope of the variable &apos;bits&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="482" column="8"/>
+            <symbol>bits</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:429:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:481:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:481:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="308" col="34" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" call-funcname="oc_huff_tree_occupancy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="309" col="28" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="31" info="Assuming that condition '_depth<=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="343" col="38" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="344" col="32" call-argexpr="_depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="31" info="Assuming that condition '_depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="356" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="357" col="37" call-argexpr="depth-1" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="355" col="11" info="Assuming that condition 'depth>0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="388" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" call-funcname="oc_huff_node_fill" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="390" col="22" call-argexpr="_level" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="380" col="12" info="Assuming that condition '_level<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="387" col="5" info="_level is decremented', new value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="28" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" call-funcname="oc_huff_tree_collapse_size" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="441" col="36" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="nodes" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="445" col="36" call-argexpr="&storage" call-argvaluetype="7" call-argvalue="1"/><function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/bitpack.h:49:5" call-funcname="oc_pack_read1" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="231" col="8" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" call-funcname="oc_huff_node_init" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="7" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" call-funcname="oc_huff_tree_collapse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="383" col="15" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:378:13" my-argnr="5"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" call-funcname="oc_huff_tree_mindepth" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="408" col="18" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" call-funcname="oc_huff_tree_copy" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="416" col="22" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:362:22" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:223:12" call-funcname="oc_huff_tree_unpack" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="438" col="9" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:84:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" call-funcname="oc_pack_look" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="484" col="10" my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:107:21" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:133:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="137" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:289:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="292" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:305:12" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="306" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:336:15" my-argnr="1" my-argname="_binode" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="342" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.h:89:5" my-argnr="2" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="483" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:146:13" my-argnr="1" my-argname="_b" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="152" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:189:22" my-argnr="1" my-argname="_storage" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="191" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:203:15" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="205" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c:316:22" my-argnr="1" my-argname="_node" file="/home/hbina/git/godot/thirdparty/libtheora/huffdec.c" line="319" col="52" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functiondecl functionName="oc_pack_refill" lineNumber="107"/>
+    <functiondecl functionName="oc_pack_look" lineNumber="133"/>
+    <functiondecl functionName="oc_pack_adv" lineNumber="146"/>
+    <functiondecl functionName="oc_huff_node_size" lineNumber="182"/>
+    <functiondecl functionName="oc_huff_node_init" lineNumber="189"/>
+    <functiondecl functionName="oc_huff_tree_size" lineNumber="203"/>
+    <functiondecl functionName="oc_huff_tree_unpack" lineNumber="223"/>
+    <functiondecl functionName="oc_huff_tree_mindepth" lineNumber="289"/>
+    <functiondecl functionName="oc_huff_tree_occupancy" lineNumber="305"/>
+    <functiondecl functionName="oc_huff_tree_copy" lineNumber="316"/>
+    <functiondecl functionName="oc_huff_tree_collapse_size" lineNumber="336"/>
+    <functiondecl functionName="oc_huff_node_fill" lineNumber="378"/>
+    <functiondecl functionName="oc_huff_tree_collapse" lineNumber="400"/>
+    <functiondecl functionName="oc_huff_trees_unpack" lineNumber="429"/>
+    <functiondecl functionName="oc_huff_trees_copy" lineNumber="453"/>
+    <functiondecl functionName="oc_huff_trees_clear" lineNumber="472"/>
+    <functiondecl functionName="oc_huff_token_decode" lineNumber="481"/>
+    <functioncall functionName="OC_CS_ITU_REC_470BG"/>
+    <functioncall functionName="OC_CS_ITU_REC_470M"/>
+    <functioncall functionName="OC_CS_NSPACES"/>
+    <functioncall functionName="OC_CS_UNSPECIFIED"/>
+    <functioncall functionName="OC_LOTS_OF_BITS"/>
+    <functioncall functionName="OC_MAXI"/>
+    <functioncall functionName="OC_MINI"/>
+    <functioncall functionName="OC_NDCT_TOKEN_BITS"/>
+    <functioncall functionName="OC_PF_420"/>
+    <functioncall functionName="OC_PF_422"/>
+    <functioncall functionName="OC_PF_444"/>
+    <functioncall functionName="OC_PF_RSVD"/>
+    <functioncall functionName="TH_CS_ITU_REC_470BG"/>
+    <functioncall functionName="TH_CS_ITU_REC_470M"/>
+    <functioncall functionName="TH_CS_NSPACES"/>
+    <functioncall functionName="TH_CS_UNSPECIFIED"/>
+    <functioncall functionName="TH_NDCT_TOKENS"/>
+    <functioncall functionName="TH_NHUFFMAN_TABLES"/>
+    <functioncall functionName="TH_PF_420"/>
+    <functioncall functionName="TH_PF_422"/>
+    <functioncall functionName="TH_PF_444"/>
+    <functioncall functionName="TH_PF_NFORMATS"/>
+    <functioncall functionName="TH_PF_RSVD"/>
+    <functioncall functionName="_b"/>
+    <functioncall functionName="_binode"/>
+    <functioncall functionName="_binodes"/>
+    <functioncall functionName="_bits"/>
+    <functioncall functionName="_depth"/>
+    <functioncall functionName="_level"/>
+    <functioncall functionName="_nbits"/>
+    <functioncall functionName="_nodes"/>
+    <functioncall functionName="_ogg_calloc"/>
+    <functioncall functionName="_ogg_free"/>
+    <functioncall functionName="_opb"/>
+    <functioncall functionName="_storage"/>
+    <functioncall functionName="available"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="depth0"/>
+    <functioncall functionName="depth1"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="nbits"/>
+    <functioncall functionName="nodes"/>
+    <functioncall functionName="nused"/>
+    <functioncall functionName="oc_huff_node_fill"/>
+    <functioncall functionName="oc_huff_node_init"/>
+    <functioncall functionName="oc_huff_node_size"/>
+    <functioncall functionName="oc_huff_tree_collapse"/>
+    <functioncall functionName="oc_huff_tree_collapse_size"/>
+    <functioncall functionName="oc_huff_tree_copy"/>
+    <functioncall functionName="oc_huff_tree_mindepth"/>
+    <functioncall functionName="oc_huff_tree_occupancy"/>
+    <functioncall functionName="oc_huff_tree_size"/>
+    <functioncall functionName="oc_huff_tree_unpack"/>
+    <functioncall functionName="oc_pack_adv"/>
+    <functioncall functionName="oc_pack_bytes_left"/>
+    <functioncall functionName="oc_pack_look"/>
+    <functioncall functionName="oc_pack_read"/>
+    <functioncall functionName="oc_pack_read1"/>
+    <functioncall functionName="oc_pack_refill"/>
+    <functioncall functionName="oc_pb_window"/>
+    <functioncall functionName="occupancy"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="storage"/>
+    <functioncall functionName="token"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="window"/>
+  </FileInfo>
+</analyzerinfo>

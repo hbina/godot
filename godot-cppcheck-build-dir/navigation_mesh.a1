@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3989206090">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;source_group_name&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;source_group_name&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/resources/navigation_mesh.cpp" line="544" column="2"/>
+            <symbol>source_group_name</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="create_from_mesh" lineNumber="33"/>
+    <functiondecl functionName="set_sample_partition_type" lineNumber="65"/>
+    <functiondecl functionName="get_sample_partition_type" lineNumber="70"/>
+    <functiondecl functionName="set_parsed_geometry_type" lineNumber="74"/>
+    <functiondecl functionName="get_parsed_geometry_type" lineNumber="80"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="84"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="89"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="94"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="104"/>
+    <functiondecl functionName="set_source_geometry_mode" lineNumber="109"/>
+    <functiondecl functionName="get_source_geometry_mode" lineNumber="115"/>
+    <functiondecl functionName="set_source_group_name" lineNumber="119"/>
+    <functiondecl functionName="get_source_group_name" lineNumber="123"/>
+    <functiondecl functionName="set_cell_size" lineNumber="127"/>
+    <functiondecl functionName="get_cell_size" lineNumber="131"/>
+    <functiondecl functionName="set_cell_height" lineNumber="135"/>
+    <functiondecl functionName="get_cell_height" lineNumber="139"/>
+    <functiondecl functionName="set_agent_height" lineNumber="143"/>
+    <functiondecl functionName="get_agent_height" lineNumber="147"/>
+    <functiondecl functionName="set_agent_radius" lineNumber="151"/>
+    <functiondecl functionName="get_agent_radius" lineNumber="155"/>
+    <functiondecl functionName="set_agent_max_climb" lineNumber="159"/>
+    <functiondecl functionName="get_agent_max_climb" lineNumber="163"/>
+    <functiondecl functionName="set_agent_max_slope" lineNumber="167"/>
+    <functiondecl functionName="get_agent_max_slope" lineNumber="171"/>
+    <functiondecl functionName="set_region_min_size" lineNumber="175"/>
+    <functiondecl functionName="get_region_min_size" lineNumber="179"/>
+    <functiondecl functionName="set_region_merge_size" lineNumber="183"/>
+    <functiondecl functionName="get_region_merge_size" lineNumber="187"/>
+    <functiondecl functionName="set_edge_max_length" lineNumber="191"/>
+    <functiondecl functionName="get_edge_max_length" lineNumber="195"/>
+    <functiondecl functionName="set_edge_max_error" lineNumber="199"/>
+    <functiondecl functionName="get_edge_max_error" lineNumber="203"/>
+    <functiondecl functionName="set_verts_per_poly" lineNumber="207"/>
+    <functiondecl functionName="get_verts_per_poly" lineNumber="211"/>
+    <functiondecl functionName="set_detail_sample_distance" lineNumber="215"/>
+    <functiondecl functionName="get_detail_sample_distance" lineNumber="219"/>
+    <functiondecl functionName="set_detail_sample_max_error" lineNumber="223"/>
+    <functiondecl functionName="get_detail_sample_max_error" lineNumber="227"/>
+    <functiondecl functionName="set_filter_low_hanging_obstacles" lineNumber="231"/>
+    <functiondecl functionName="get_filter_low_hanging_obstacles" lineNumber="235"/>
+    <functiondecl functionName="set_filter_ledge_spans" lineNumber="239"/>
+    <functiondecl functionName="get_filter_ledge_spans" lineNumber="243"/>
+    <functiondecl functionName="set_filter_walkable_low_height_spans" lineNumber="247"/>
+    <functiondecl functionName="get_filter_walkable_low_height_spans" lineNumber="251"/>
+    <functiondecl functionName="set_vertices" lineNumber="255"/>
+    <functiondecl functionName="get_vertices" lineNumber="261"/>
+    <functiondecl functionName="_set_polygons" lineNumber="266"/>
+    <functiondecl functionName="_get_polygons" lineNumber="275"/>
+    <functiondecl functionName="add_polygon" lineNumber="286"/>
+    <functiondecl functionName="get_polygon_count" lineNumber="293"/>
+    <functiondecl functionName="get_polygon" lineNumber="297"/>
+    <functiondecl functionName="clear_polygons" lineNumber="302"/>
+    <functiondecl functionName="get_debug_mesh" lineNumber="307"/>
+    <functiondecl functionName="_bind_methods" lineNumber="393"/>
+    <functiondecl functionName="_validate_property" lineNumber="509"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="ARRAY_INDEX"/>
+    <functioncall functionName="ARRAY_MAX"/>
+    <functioncall functionName="ARRAY_VERTEX"/>
+    <functioncall functionName="ArrayMesh"/>
+    <functioncall functionName="BIND_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CMP_EPSILON"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="NavigationMesh"/>
+    <functioncall functionName="PACKED_VECTOR3_ARRAY"/>
+    <functioncall functionName="PARSED_GEOMETRY_BOTH"/>
+    <functioncall functionName="PARSED_GEOMETRY_MAX"/>
+    <functioncall functionName="PARSED_GEOMETRY_MESH_INSTANCES"/>
+    <functioncall functionName="PARSED_GEOMETRY_STATIC_COLLIDERS"/>
+    <functioncall functionName="PRIMITIVE_LINES"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="SAMPLE_PARTITION_LAYERS"/>
+    <functioncall functionName="SAMPLE_PARTITION_MAX"/>
+    <functioncall functionName="SAMPLE_PARTITION_MONOTONE"/>
+    <functioncall functionName="SAMPLE_PARTITION_WATERSHED"/>
+    <functioncall functionName="SOURCE_GEOMETRY_GROUPS_EXPLICIT"/>
+    <functioncall functionName="SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN"/>
+    <functioncall functionName="SOURCE_GEOMETRY_MAX"/>
+    <functioncall functionName="SOURCE_GEOMETRY_NAVMESH_CHILDREN"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="_get_polygons"/>
+    <functioncall functionName="_set_polygons"/>
+    <functioncall functionName="add_polygon"/>
+    <functioncall functionName="add_surface_from_arrays"/>
+    <functioncall functionName="append_array"/>
+    <functioncall functionName="arr"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_polygons"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_from_mesh"/>
+    <functioncall functionName="ek"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_agent_height"/>
+    <functioncall functionName="get_agent_max_climb"/>
+    <functioncall functionName="get_agent_max_slope"/>
+    <functioncall functionName="get_agent_radius"/>
+    <functioncall functionName="get_cell_height"/>
+    <functioncall functionName="get_cell_size"/>
+    <functioncall functionName="get_collision_mask"/>
+    <functioncall functionName="get_collision_mask_bit"/>
+    <functioncall functionName="get_detail_sample_distance"/>
+    <functioncall functionName="get_detail_sample_max_error"/>
+    <functioncall functionName="get_edge_max_error"/>
+    <functioncall functionName="get_edge_max_length"/>
+    <functioncall functionName="get_filter_ledge_spans"/>
+    <functioncall functionName="get_filter_low_hanging_obstacles"/>
+    <functioncall functionName="get_filter_walkable_low_height_spans"/>
+    <functioncall functionName="get_parsed_geometry_type"/>
+    <functioncall functionName="get_polygon"/>
+    <functioncall functionName="get_polygon_count"/>
+    <functioncall functionName="get_region_merge_size"/>
+    <functioncall functionName="get_region_min_size"/>
+    <functioncall functionName="get_sample_partition_type"/>
+    <functioncall functionName="get_source_geometry_mode"/>
+    <functioncall functionName="get_source_group_name"/>
+    <functioncall functionName="get_surface_count"/>
+    <functioncall functionName="get_vertices"/>
+    <functioncall functionName="get_verts_per_poly"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="indices"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="p_geometry_mode"/>
+    <functioncall functionName="p_group_name"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_polygon"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_vertices"/>
+    <functioncall functionName="partition_type"/>
+    <functioncall functionName="polygon"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_agent_height"/>
+    <functioncall functionName="set_agent_max_climb"/>
+    <functioncall functionName="set_agent_max_slope"/>
+    <functioncall functionName="set_agent_radius"/>
+    <functioncall functionName="set_cell_height"/>
+    <functioncall functionName="set_cell_size"/>
+    <functioncall functionName="set_collision_mask"/>
+    <functioncall functionName="set_collision_mask_bit"/>
+    <functioncall functionName="set_detail_sample_distance"/>
+    <functioncall functionName="set_detail_sample_max_error"/>
+    <functioncall functionName="set_edge_max_error"/>
+    <functioncall functionName="set_edge_max_length"/>
+    <functioncall functionName="set_filter_ledge_spans"/>
+    <functioncall functionName="set_filter_low_hanging_obstacles"/>
+    <functioncall functionName="set_filter_walkable_low_height_spans"/>
+    <functioncall functionName="set_parsed_geometry_type"/>
+    <functioncall functionName="set_region_merge_size"/>
+    <functioncall functionName="set_region_min_size"/>
+    <functioncall functionName="set_sample_partition_type"/>
+    <functioncall functionName="set_source_geometry_mode"/>
+    <functioncall functionName="set_source_group_name"/>
+    <functioncall functionName="set_vertices"/>
+    <functioncall functionName="set_verts_per_poly"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="snapped"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="surface_get_arrays"/>
+    <functioncall functionName="surface_get_primitive_type"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="varr"/>
+    <functioncall functionName="vi"/>
+  </FileInfo>
+</analyzerinfo>

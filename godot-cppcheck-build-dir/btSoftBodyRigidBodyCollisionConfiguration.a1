@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4068675923">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btSoftSoftCollisionAlgorithm::m_ownManifold&apos; is not initialized in the constructor." verbose="Member variable &apos;btSoftSoftCollisionAlgorithm::m_ownManifold&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h" line="37" column="2"/>
+            <symbol>btSoftSoftCollisionAlgorithm::m_ownManifold</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;btSoftSoftCollisionAlgorithm::m_manifoldPtr&apos; is not initialized in the constructor." verbose="Member variable &apos;btSoftSoftCollisionAlgorithm::m_manifoldPtr&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h" line="37" column="2"/>
+            <symbol>btSoftSoftCollisionAlgorithm::m_manifoldPtr</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;btSoftSoftCollisionAlgorithm&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;btSoftSoftCollisionAlgorithm&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h" line="37" column="2"/>
+            <symbol>btSoftSoftCollisionAlgorithm</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Same expression on both sides of &apos;&amp;&apos;." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h" line="49" column="25"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h" line="48" column="20" info="&apos;x&apos; is assigned value &apos;0&apos; here."/>
+        </error>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;mem&apos; shadows outer variable" verbose="Local variable &apos;mem&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.cpp" line="67" column="10" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyRigidBodyCollisionConfiguration.cpp" line="28" column="8" info="Shadowed declaration"/>
+            <symbol>mem</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h:41:2" call-funcname="btSoftRigidCollisionAlgorithm" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h" line="61" col="51" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h:41:2" call-funcname="btSoftRigidCollisionAlgorithm" call-argnr="5" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h" line="61" col="51" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h:41:2" call-funcname="btSoftRigidCollisionAlgorithm" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h" line="65" col="51" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:113:2" call-funcname="btSoftBodyConcaveCollisionAlgorithm" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h" line="133" col="56" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h:50:2" call-funcname="btSoftSoftCollisionAlgorithm" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h" line="60" col="49" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h:41:2" call-funcname="btSoftRigidCollisionAlgorithm" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h" line="61" col="22" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h:56:33" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h:41:2" call-funcname="btSoftRigidCollisionAlgorithm" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h" line="61" col="22" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftRigidCollisionAlgorithm.h:56:33" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:113:2" call-funcname="btSoftBodyConcaveCollisionAlgorithm" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h" line="133" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:130:33" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:113:2" call-funcname="btSoftBodyConcaveCollisionAlgorithm" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h" line="133" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:130:33" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:113:2" call-funcname="btSoftBodyConcaveCollisionAlgorithm" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h" line="142" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:139:33" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:113:2" call-funcname="btSoftBodyConcaveCollisionAlgorithm" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h" line="142" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftBodyConcaveCollisionAlgorithm.h:139:33" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h:50:2" call-funcname="btSoftSoftCollisionAlgorithm" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h" line="60" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h:56:33" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h:50:2" call-funcname="btSoftSoftCollisionAlgorithm" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h" line="60" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletSoftBody/btSoftSoftCollisionAlgorithm.h:56:33" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="getCollisionAlgorithmCreateFunc" lineNumber="94"/>
+    <functioncall functionName="CreateFunc"/>
+    <functioncall functionName="MAX_NUM_PARTS_IN_BITS"/>
+    <functioncall functionName="SwappedCreateFunc"/>
+    <functioncall functionName="allocateCollisionAlgorithm"/>
+    <functioncall functionName="bbsize"/>
+    <functioncall functionName="body0Wrap"/>
+    <functioncall functionName="body1Wrap"/>
+    <functioncall functionName="btAlignedAlloc"/>
+    <functioncall functionName="btAlignedFree"/>
+    <functioncall functionName="btCollisionAlgorithm"/>
+    <functioncall functionName="btCollisionAlgorithmCreateFunc"/>
+    <functioncall functionName="btDefaultCollisionConfiguration"/>
+    <functioncall functionName="btDefaultCollisionConstructionInfo"/>
+    <functioncall functionName="btMax"/>
+    <functioncall functionName="btPoolAllocator"/>
+    <functioncall functionName="btSoftBodyConcaveCollisionAlgorithm"/>
+    <functioncall functionName="btSoftBodyRigidBodyCollisionConfiguration"/>
+    <functioncall functionName="btSoftBodyTriangleCallback"/>
+    <functioncall functionName="btSoftRigidCollisionAlgorithm"/>
+    <functioncall functionName="btSoftSoftCollisionAlgorithm"/>
+    <functioncall functionName="btTriIndex"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="collisionAlgorithmMaxElementSize"/>
+    <functioncall functionName="constructionInfo"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="getCollisionAlgorithmCreateFunc"/>
+    <functioncall functionName="getElementSize"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="isConcave"/>
+    <functioncall functionName="isConvex"/>
+    <functioncall functionName="m_collisionAlgorithmPool"/>
+    <functioncall functionName="m_defaultMaxCollisionAlgorithmPoolSize"/>
+    <functioncall functionName="m_manifoldPtr"/>
+    <functioncall functionName="m_softRigidConcaveCreateFunc"/>
+    <functioncall functionName="m_softRigidConvexCreateFunc"/>
+    <functioncall functionName="m_softSoftCreateFunc"/>
+    <functioncall functionName="m_swapped"/>
+    <functioncall functionName="m_swappedSoftRigidConcaveCreateFunc"/>
+    <functioncall functionName="m_swappedSoftRigidConvexCreateFunc"/>
+    <functioncall functionName="maxSize0"/>
+    <functioncall functionName="maxSize1"/>
+    <functioncall functionName="maxSize2"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="proxyType0"/>
+    <functioncall functionName="proxyType1"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="shape"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="triangleIndex"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

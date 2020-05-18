@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2202681432">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;playback&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;playback&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/animation/animation_node_state_machine.cpp" line="1009" column="2"/>
+            <symbol>playback</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/animation/animation_node_state_machine.h:115:7" my-argnr="1" my-argname="p_state_machine" file="/home/hbina/git/godot/scene/animation/animation_node_state_machine.cpp" line="184" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/animation/animation_node_state_machine.h:177:15" my-argnr="1" my-argname="r_list" file="/home/hbina/git/godot/scene/animation/animation_node_state_machine.cpp" line="529" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_switch_mode" lineNumber="35"/>
+    <functiondecl functionName="get_switch_mode" lineNumber="40"/>
+    <functiondecl functionName="set_auto_advance" lineNumber="45"/>
+    <functiondecl functionName="has_auto_advance" lineNumber="49"/>
+    <functiondecl functionName="set_advance_condition" lineNumber="53"/>
+    <functiondecl functionName="get_advance_condition" lineNumber="65"/>
+    <functiondecl functionName="get_advance_condition_name" lineNumber="69"/>
+    <functiondecl functionName="set_xfade_time" lineNumber="73"/>
+    <functiondecl functionName="get_xfade_time" lineNumber="80"/>
+    <functiondecl functionName="set_disabled" lineNumber="84"/>
+    <functiondecl functionName="is_disabled" lineNumber="89"/>
+    <functiondecl functionName="set_priority" lineNumber="93"/>
+    <functiondecl functionName="get_priority" lineNumber="98"/>
+    <functiondecl functionName="_bind_methods" lineNumber="102"/>
+    <functiondecl functionName="travel" lineNumber="146"/>
+    <functiondecl functionName="start" lineNumber="153"/>
+    <functiondecl functionName="stop" lineNumber="158"/>
+    <functiondecl functionName="is_playing" lineNumber="162"/>
+    <functiondecl functionName="get_current_node" lineNumber="165"/>
+    <functiondecl functionName="get_blend_from_node" lineNumber="168"/>
+    <functiondecl functionName="get_travel_path" lineNumber="171"/>
+    <functiondecl functionName="get_current_play_pos" lineNumber="174"/>
+    <functiondecl functionName="get_current_length" lineNumber="177"/>
+    <functiondecl functionName="_travel" lineNumber="181"/>
+    <functiondecl functionName="process" lineNumber="295"/>
+    <functiondecl functionName="_bind_methods" lineNumber="502"/>
+    <functiondecl functionName="get_parameter_list" lineNumber="528"/>
+    <functiondecl functionName="get_parameter_default_value" lineNumber="544"/>
+    <functiondecl functionName="add_node" lineNumber="555"/>
+    <functiondecl functionName="replace_node" lineNumber="573"/>
+    <functiondecl functionName="get_node" lineNumber="594"/>
+    <functiondecl functionName="get_node_name" lineNumber="601"/>
+    <functiondecl functionName="get_child_nodes" lineNumber="611"/>
+    <functiondecl functionName="has_node" lineNumber="628"/>
+    <functiondecl functionName="remove_node" lineNumber="631"/>
+    <functiondecl functionName="rename_node" lineNumber="670"/>
+    <functiondecl functionName="get_node_list" lineNumber="704"/>
+    <functiondecl functionName="has_transition" lineNumber="717"/>
+    <functiondecl functionName="find_transition" lineNumber="726"/>
+    <functiondecl functionName="add_transition" lineNumber="735"/>
+    <functiondecl functionName="get_transition" lineNumber="756"/>
+    <functiondecl functionName="get_transition_from" lineNumber="760"/>
+    <functiondecl functionName="get_transition_to" lineNumber="765"/>
+    <functiondecl functionName="get_transition_count" lineNumber="771"/>
+    <functiondecl functionName="remove_transition" lineNumber="775"/>
+    <functiondecl functionName="remove_transition_by_index" lineNumber="790"/>
+    <functiondecl functionName="set_start_node" lineNumber="800"/>
+    <functiondecl functionName="get_start_node" lineNumber="806"/>
+    <functiondecl functionName="set_end_node" lineNumber="811"/>
+    <functiondecl functionName="get_end_node" lineNumber="817"/>
+    <functiondecl functionName="set_graph_offset" lineNumber="822"/>
+    <functiondecl functionName="get_graph_offset" lineNumber="826"/>
+    <functiondecl functionName="process" lineNumber="830"/>
+    <functiondecl functionName="get_caption" lineNumber="838"/>
+    <functiondecl functionName="_notification" lineNumber="842"/>
+    <functiondecl functionName="get_child_by_name" lineNumber="845"/>
+    <functiondecl functionName="_set" lineNumber="849"/>
+    <functiondecl functionName="_get" lineNumber="894"/>
+    <functiondecl functionName="_get_property_list" lineNumber="940"/>
+    <functiondecl functionName="set_node_position" lineNumber="960"/>
+    <functiondecl functionName="get_node_position" lineNumber="965"/>
+    <functiondecl functionName="_tree_changed" lineNumber="971"/>
+    <functiondecl functionName="_bind_methods" lineNumber="975"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ARRAY"/>
+    <functioncall functionName="AStarCost"/>
+    <functioncall functionName="AnimationNodeStateMachine"/>
+    <functioncall functionName="AnimationNodeStateMachinePlayback"/>
+    <functioncall functionName="AnimationNodeStateMachineTransition"/>
+    <functioncall functionName="AnimationRootNode"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="CONNECT_REFERENCE_COUNTED"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_FAIL_V_MSG"/>
+    <functioncall functionName="FILTER_IGNORE"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="OBJECT"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_NONE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_RESOURCE_TYPE"/>
+    <functioncall functionName="PROPERTY_USAGE_DO_NOT_SHARE_ON_DUPLICATE"/>
+    <functioncall functionName="PROPERTY_USAGE_NOEDITOR"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Resource"/>
+    <functioncall functionName="STRING_NAME"/>
+    <functioncall functionName="SWITCH_MODE_AT_END"/>
+    <functioncall functionName="SWITCH_MODE_IMMEDIATE"/>
+    <functioncall functionName="SWITCH_MODE_SYNC"/>
+    <functioncall functionName="State"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="StringName"/>
+    <functioncall functionName="VECTOR2"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_travel"/>
+    <functioncall functionName="_tree_changed"/>
+    <functioncall functionName="ac"/>
+    <functioncall functionName="add_node"/>
+    <functioncall functionName="add_transition"/>
+    <functioncall functionName="advance_condition_name"/>
+    <functioncall functionName="ap"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="auto_advance_to"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="blend_node"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="cn"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="connect_compat"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="cost"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="current"/>
+    <functioncall functionName="current_pos"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="disconnect_compat"/>
+    <functioncall functionName="distance"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="do_start"/>
+    <functioncall functionName="emit_changed"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="end_node"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="fade_blend"/>
+    <functioncall functionName="fading_from"/>
+    <functioncall functionName="fading_time"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found_route"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_advance_condition"/>
+    <functioncall functionName="get_advance_condition_name"/>
+    <functioncall functionName="get_current_node"/>
+    <functioncall functionName="get_end_node"/>
+    <functioncall functionName="get_graph_offset"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_node_name"/>
+    <functioncall functionName="get_node_position"/>
+    <functioncall functionName="get_parameter"/>
+    <functioncall functionName="get_priority"/>
+    <functioncall functionName="get_slicec"/>
+    <functioncall functionName="get_start_node"/>
+    <functioncall functionName="get_switch_mode"/>
+    <functioncall functionName="get_transition"/>
+    <functioncall functionName="get_transition_count"/>
+    <functioncall functionName="get_transition_from"/>
+    <functioncall functionName="get_transition_to"/>
+    <functioncall functionName="get_travel_path"/>
+    <functioncall functionName="get_xfade_time"/>
+    <functioncall functionName="goto_next"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_auto_advance"/>
+    <functioncall functionName="has_node"/>
+    <functioncall functionName="has_transition"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="invert"/>
+    <functioncall functionName="is_disabled"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_playing"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="least_cost_transition"/>
+    <functioncall functionName="len_current"/>
+    <functioncall functionName="loops_current"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_pos"/>
+    <functioncall functionName="next_xfade"/>
+    <functioncall functionName="node"/>
+    <functioncall functionName="node_name"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_condition"/>
+    <functioncall functionName="p_disabled"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_new_name"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_offset"/>
+    <functioncall functionName="p_position"/>
+    <functioncall functionName="p_priority"/>
+    <functioncall functionName="p_seek"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_state_machine"/>
+    <functioncall functionName="p_time"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_transition"/>
+    <functioncall functionName="p_travel"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_xfade"/>
+    <functioncall functionName="playback"/>
+    <functioncall functionName="playing"/>
+    <functioncall functionName="pos_current"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="prev"/>
+    <functioncall functionName="process"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="rem"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_node"/>
+    <functioncall functionName="remove_transition"/>
+    <functioncall functionName="remove_transition_by_index"/>
+    <functioncall functionName="rename_node"/>
+    <functioncall functionName="replace_node"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_advance_condition"/>
+    <functioncall functionName="set_auto_advance"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_end_node"/>
+    <functioncall functionName="set_graph_offset"/>
+    <functioncall functionName="set_local_to_scene"/>
+    <functioncall functionName="set_node_position"/>
+    <functioncall functionName="set_priority"/>
+    <functioncall functionName="set_start_node"/>
+    <functioncall functionName="set_switch_mode"/>
+    <functioncall functionName="set_xfade_time"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sort_custom"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_node"/>
+    <functioncall functionName="start_request"/>
+    <functioncall functionName="start_request_travel"/>
+    <functioncall functionName="state"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="target_pos"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="tr"/>
+    <functioncall functionName="trans"/>
+    <functioncall functionName="transition"/>
+    <functioncall functionName="travel"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

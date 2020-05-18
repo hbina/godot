@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1350408452">
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;disconnect_from_stream&apos; is called from destructor &apos;~StreamPeerMbedTLS()&apos; at line 289. Dynamic binding is not used." verbose="Virtual function &apos;disconnect_from_stream&apos; is called from destructor &apos;~StreamPeerMbedTLS()&apos; at line 289. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.h" line="63" column="15" info="disconnect_from_stream is a virtual function"/>
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="289" column="2" info="Calling disconnect_from_stream"/>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;sp==nullptr&apos; is redundant or there is possible null pointer dereference: sp." verbose="Either the condition &apos;sp==nullptr&apos; is redundant or there is possible null pointer dereference: sp." cwe="476">
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="46" column="14" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="41" column="26" info="Assignment &apos;sp=(StreamPeerMbedTLS*)ctx&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="43" column="21" info="Assuming that condition &apos;sp==nullptr&apos; is not redundant"/>
+            <symbol>sp</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;sp==nullptr&apos; is redundant or there is possible null pointer dereference: sp." verbose="Either the condition &apos;sp==nullptr&apos; is redundant or there is possible null pointer dereference: sp." cwe="476">
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="66" column="14" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="61" column="26" info="Assignment &apos;sp=(StreamPeerMbedTLS*)ctx&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="63" column="21" info="Assuming that condition &apos;sp==nullptr&apos; is not redundant"/>
+            <symbol>sp</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="41" column="26"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="61" column="26"/>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;len&apos; is less than zero." verbose="The unsigned expression &apos;len&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="38" column="28" info="Unsigned less than zero"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;len&apos; is less than zero." verbose="The unsigned expression &apos;len&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="58" column="28" info="Unsigned less than zero"/>
+            <symbol>len</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;connect_to_stream&apos; argument 4 names different: declaration &apos;p_valid_cert&apos; definition &apos;p_ca_certs&apos;." verbose="Function &apos;connect_to_stream&apos; argument 4 names different: declaration &apos;p_valid_cert&apos; definition &apos;p_ca_certs&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="106" column="142"/>
+            <location file0="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.h" line="60" column="151"/>
+            <symbol>connect_to_stream</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.h:66:16" call-funcname="put_partial_data" call-argnr="1" file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="157" col="9" my-id="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.h:65:16" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.h:69:16" call-funcname="get_partial_data" call-argnr="1" file="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.cpp" line="206" col="9" my-id="/home/hbina/git/godot/modules/mbedtls/stream_peer_mbedtls.h:68:16" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="bio_send" lineNumber="36"/>
+    <functiondecl functionName="bio_recv" lineNumber="56"/>
+    <functiondecl functionName="_cleanup" lineNumber="76"/>
+    <functiondecl functionName="_do_handshake" lineNumber="83"/>
+    <functiondecl functionName="connect_to_stream" lineNumber="106"/>
+    <functiondecl functionName="accept_stream" lineNumber="129"/>
+    <functiondecl functionName="put_data" lineNumber="149"/>
+    <functiondecl functionName="put_partial_data" lineNumber="170"/>
+    <functiondecl functionName="get_data" lineNumber="197"/>
+    <functiondecl functionName="get_partial_data" lineNumber="219"/>
+    <functiondecl functionName="poll" lineNumber="242"/>
+    <functiondecl functionName="get_available_bytes" lineNumber="276"/>
+    <functiondecl functionName="disconnect_from_stream" lineNumber="292"/>
+    <functiondecl functionName="get_status" lineNumber="306"/>
+    <functiondecl functionName="_create_func" lineNumber="311"/>
+    <functiondecl functionName="initialize_ssl" lineNumber="316"/>
+    <functiondecl functionName="finalize_ssl" lineNumber="322"/>
+    <functioncall functionName="CookieContextMbedTLS"/>
+    <functioncall functionName="CryptoKeyMbedTLS"/>
+    <functioncall functionName="CryptoMbedTLS"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="MBEDTLS_SSL_TRANSPORT_STREAM"/>
+    <functioncall functionName="MBEDTLS_SSL_VERIFY_NONE"/>
+    <functioncall functionName="MBEDTLS_SSL_VERIFY_REQUIRED"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="SSLContextMbedTLS"/>
+    <functioncall functionName="STATUS_CONNECTED"/>
+    <functioncall functionName="STATUS_DISCONNECTED"/>
+    <functioncall functionName="STATUS_ERROR"/>
+    <functioncall functionName="STATUS_ERROR_HOSTNAME_MISMATCH"/>
+    <functioncall functionName="STATUS_HANDSHAKING"/>
+    <functioncall functionName="StreamPeerMbedTLS"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="X509CertificateMbedTLS"/>
+    <functioncall functionName="_cleanup"/>
+    <functioncall functionName="_create_func"/>
+    <functioncall functionName="_do_handshake"/>
+    <functioncall functionName="authmode"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="bio_recv"/>
+    <functioncall functionName="bio_send"/>
+    <functioncall functionName="blocking_handshake"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="byte"/>
+    <functioncall functionName="cert"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="disconnect_from_stream"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="get_context"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="get_partial_data"/>
+    <functioncall functionName="get_status"/>
+    <functioncall functionName="got"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init_client"/>
+    <functioncall functionName="init_server"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="mbedtls_pk_free"/>
+    <functioncall functionName="mbedtls_pk_init"/>
+    <functioncall functionName="mbedtls_ssl_close_notify"/>
+    <functioncall functionName="mbedtls_ssl_get_bytes_avail"/>
+    <functioncall functionName="mbedtls_ssl_handshake"/>
+    <functioncall functionName="mbedtls_ssl_read"/>
+    <functioncall functionName="mbedtls_ssl_set_bio"/>
+    <functioncall functionName="mbedtls_ssl_set_hostname"/>
+    <functioncall functionName="mbedtls_ssl_write"/>
+    <functioncall functionName="mbedtls_x509_crt_free"/>
+    <functioncall functionName="mbedtls_x509_crt_init"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_base"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_bytes"/>
+    <functioncall functionName="p_ca_certs"/>
+    <functioncall functionName="p_cert"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_key"/>
+    <functioncall functionName="pkey"/>
+    <functioncall functionName="print_mbedtls_error"/>
+    <functioncall functionName="put_partial_data"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sent"/>
+    <functioncall functionName="ssl"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

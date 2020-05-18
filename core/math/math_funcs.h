@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -55,55 +55,55 @@ public:
 	 * CONSTEXPR STATIC MATH FUNCTIONS
 	 */
 
-	constexpr static double sin(const double &p_x) { return gcem::sin(p_x); }
+	static constexpr double sin(const double &p_x) { return gcem::sin(p_x); }
 
-	constexpr static double cos(const double &p_x) { return gcem::cos(p_x); }
+	static constexpr double cos(const double &p_x) { return gcem::cos(p_x); }
 
-	constexpr static double tan(const double &p_x) { return gcem::tan(p_x); }
+	static constexpr double tan(const double &p_x) { return gcem::tan(p_x); }
 
-	constexpr static double sinh(const double &p_x) { return gcem::sin(p_x); }
+	static constexpr double sinh(const double &p_x) { return gcem::sin(p_x); }
 
-	constexpr static double sinc(const double &p_x) { return p_x == 0 ? 1 : gcem::sin(p_x) / p_x; }
+	static constexpr double sinc(const double &p_x) { return p_x == 0 ? 1 : gcem::sin(p_x) / p_x; }
 
-	constexpr static double sincn(const double &p_x) { return sinc(Math_PI * p_x); }
+	static constexpr double sincn(const double &p_x) { return sinc(Math_PI * p_x); }
 
-	constexpr static double cosh(const double &p_x) { return gcem::cosh(p_x); }
+	static constexpr double cosh(const double &p_x) { return gcem::cosh(p_x); }
 
-	constexpr static double tanh(const double &p_x) { return gcem::tanh(p_x); }
+	static constexpr double tanh(const double &p_x) { return gcem::tanh(p_x); }
 
-	constexpr static double asin(const double &p_x) { return gcem::asin(p_x); }
+	static constexpr double asin(const double &p_x) { return gcem::asin(p_x); }
 
-	constexpr static double acos(const double &p_x) { return gcem::acos(p_x); }
+	static constexpr double acos(const double &p_x) { return gcem::acos(p_x); }
 
-	constexpr static double atan(const double &p_x) { return gcem::atan(p_x); }
+	static constexpr double atan(const double &p_x) { return gcem::atan(p_x); }
 
-	constexpr static double atan2(const double &p_y, const double &p_x) { return gcem::atan2(p_y, p_x); }
+	static constexpr double atan2(const double &p_y, const double &p_x) { return gcem::atan2(p_y, p_x); }
 
-	constexpr static double sqrt(const double &p_x) { return gcem::sqrt(p_x); }
+	static constexpr double sqrt(const double &p_x) { return gcem::sqrt(p_x); }
 
-	constexpr static double floor(const double &p_x) { return gcem::floor(p_x); }
+	static constexpr double floor(const double &p_x) { return gcem::floor(p_x); }
 
-	constexpr static double ceil(const double &p_x) { return gcem::ceil(p_x); }
+	static constexpr double ceil(const double &p_x) { return gcem::ceil(p_x); }
 
-	constexpr static double pow(const double &p_x, const double &p_y) { return gcem::pow(p_x, p_y); }
+	static constexpr double pow(const double &p_x, const double &p_y) { return gcem::pow(p_x, p_y); }
 
-	constexpr static double log(const double &p_x) { return gcem::log(p_x); }
+	static constexpr double log(const double &p_x) { return gcem::log(p_x); }
 
-	constexpr static double exp(const double &p_x) { return gcem::exp(p_x); }
+	static constexpr double exp(const double &p_x) { return gcem::exp(p_x); }
 
-	constexpr static bool is_nan(const double &p_val) { return gcem::internal::is_nan(p_val); }
+	static constexpr bool is_nan(const double &p_val) { return gcem::internal::is_nan(p_val); }
 
-	constexpr static bool is_inf(const double &p_val) { return gcem::internal::is_inf(p_val); }
+	static constexpr bool is_inf(const double &p_val) { return gcem::internal::is_inf(p_val); }
 
-	constexpr static double abs(const double &g) { return gcem::abs(g); }
+	static constexpr double abs(const double &g) { return gcem::abs(g); }
 
-	constexpr static double deg2rad(const double &p_y) { return p_y * Math_PI / 180.0; }
+	static constexpr double deg2rad(const double &p_y) { return p_y * Math_PI / 180.0; }
 
-	constexpr static double rad2deg(const double &p_y) { return p_y * 180.0 / Math_PI; }
+	static constexpr double rad2deg(const double &p_y) { return p_y * 180.0 / Math_PI; }
 
-	constexpr static double lerp(const double &p_from, const double &p_to, const double &p_weight) { return p_from + (p_to - p_from) * p_weight; }
+	static constexpr double lerp(const double &p_from, const double &p_to, const double &p_weight) { return p_from + (p_to - p_from) * p_weight; }
 
-	constexpr static int posmod(const int &p_x, const int &p_y) {
+	static constexpr int posmod(const int &p_x, const int &p_y) {
 		int value = p_x % p_y;
 		if ((value < 0 && p_y > 0) || (value > 0 && p_y < 0)) {
 			value += p_y;
@@ -111,33 +111,46 @@ public:
 		return value;
 	}
 
-	constexpr static double smoothstep(const double &p_from, const double &p_to, const double &p_weight) {
-		if (is_equal_approx(p_from, p_to)) return p_from;
+	static constexpr float inverse_lerp(float p_from, float p_to, float p_value) { return (p_value - p_from) / (p_to - p_from); }
+
+	static constexpr double range_lerp(double p_value, double p_istart, double p_istop, double p_ostart, double p_ostop) { return Math::lerp(p_ostart, p_ostop, Math::inverse_lerp(p_istart, p_istop, p_value)); }
+	static constexpr float range_lerp(float p_value, float p_istart, float p_istop, float p_ostart, float p_ostop) { return Math::lerp(p_ostart, p_ostop, Math::inverse_lerp(p_istart, p_istop, p_value)); }
+
+	static constexpr double smoothstep(double p_from, double p_to, double p_weight) {
+		if (is_equal_approx(p_from, p_to))
+			return p_from;
 		double x = CLAMP((p_weight - p_from) / (p_to - p_from), 0.0, 1.0);
 		return x * x * (3.0 - 2.0 * x);
 	}
+	static constexpr float smoothstep(float p_from, float p_to, float p_weight) {
+		if (is_equal_approx(p_from, p_to))
+			return p_from;
+		float x = CLAMP((p_weight - p_from) / (p_to - p_from), 0.0f, 1.0f);
+		return x * x * (3.0f - 2.0f * x);
+	}
 
-	constexpr static double move_toward(const double &p_from, const double &p_to, const double &p_delta) { return gcem::abs(p_to - p_from) <= p_delta ? p_to : p_from + SGN(p_to - p_from) * p_delta; }
+	static constexpr double move_toward(double p_from, double p_to, double p_delta) { return abs(p_to - p_from) <= p_delta ? p_to : p_from + SGN(p_to - p_from) * p_delta; }
+	static constexpr float move_toward(float p_from, float p_to, float p_delta) { return abs(p_to - p_from) <= p_delta ? p_to : p_from + SGN(p_to - p_from) * p_delta; }
 
-	constexpr static double linear2db(const double &p_linear) { return Math::log(p_linear) * 8.6858896380650365530225783783321; }
+	static constexpr double linear2db(const double &p_linear) { return Math::log(p_linear) * 8.6858896380650365530225783783321; }
 
-	constexpr static double db2linear(const double &p_db) { return Math::exp(p_db * 0.11512925464970228420089957273422); }
+	static constexpr double db2linear(const double &p_db) { return Math::exp(p_db * 0.11512925464970228420089957273422); }
 
-	constexpr static double round(const double &p_val) { return (p_val >= 0) ? Math::floor(p_val + 0.5) : -Math::floor(-p_val + 0.5); }
+	static constexpr double round(const double &p_val) { return (p_val >= 0) ? Math::floor(p_val + 0.5) : -Math::floor(-p_val + 0.5); }
 
-	constexpr static int wrapi(const int &value, const int &min, const int &max) {
+	static constexpr int wrapi(const int &value, const int &min, const int &max) {
 		int range = max - min;
 		return range == 0 ? min : min + ((((value - min) % range) + range) % range);
 	}
 
-	constexpr static double wrapf(const double &value, const double &min, const double &max) {
+	static constexpr double wrapf(const double &value, const double &min, const double &max) {
 		double range = max - min;
 		return is_zero_approx(range) ? min : value - (range * Math::floor((value - min) / range));
 	}
 
 	// NOTE :: 	This function is not a template because the calculation inside is done in `double`
 	// TODO ::	Consider using const T&
-	constexpr static double ease(double p_x, double p_c) {
+	static constexpr double ease(double p_x, double p_c) {
 		if (p_x < 0)
 			p_x = 0;
 		else if (p_x > 1.0)
@@ -160,7 +173,7 @@ public:
 			return 0.0; // no ease (raw)
 	};
 
-	constexpr static double dectime(const double &p_value, const double &p_amount, const double &p_step) {
+	static constexpr double dectime(const double &p_value, const double &p_amount, const double &p_step) {
 		double sgn = p_value < 0 ? -1.0 : 1.0;
 		double val = Math::abs(p_value);
 		val -= p_amount * p_step;
@@ -169,14 +182,14 @@ public:
 		return val * sgn;
 	}
 
-	constexpr static double stepify(const double &p_value, const double &p_step) {
+	static constexpr double stepify(const double &p_value, const double &p_step) {
 		if (p_step != 0) {
 			return Math::floor(p_value / p_step + 0.5) * p_step;
 		}
 		return p_value;
 	};
 
-	constexpr static bool is_equal_approx_ratio(const real_t &a, const real_t &b, const real_t &epsilon = CMP_EPSILON, const real_t &min_epsilon = CMP_EPSILON) {
+	static constexpr bool is_equal_approx_ratio(const real_t &a, const real_t &b, const real_t &epsilon = CMP_EPSILON, const real_t &min_epsilon = CMP_EPSILON) {
 		// this is an approximate way to check that numbers are close, as a ratio of their average size
 		// helps compare approximate numbers that may be very big or very small
 		real_t diff = abs(a - b);
@@ -188,7 +201,7 @@ public:
 		return diff < epsilon;
 	}
 
-	constexpr static bool is_equal_approx(const real_t &a, const real_t &b) {
+	static constexpr bool is_equal_approx(const real_t &a, const real_t &b) {
 		// Check for exact equality first, required to handle "infinity" values.
 		if (a == b) {
 			return true;
@@ -201,7 +214,7 @@ public:
 		return abs(a - b) < tolerance;
 	}
 
-	constexpr static bool is_equal_approx(const real_t &a, const real_t &b, const real_t &tolerance) {
+	static constexpr bool is_equal_approx(const real_t &a, const real_t &b, const real_t &tolerance) {
 		// Check for exact equality first, required to handle "infinity" values.
 		if (a == b) {
 			return true;
@@ -210,29 +223,29 @@ public:
 		return abs(a - b) < tolerance;
 	}
 
-	constexpr static bool is_zero_approx(const real_t &s) {
+	static constexpr bool is_zero_approx(const real_t &s) {
 		return abs(s) < CMP_EPSILON;
 	}
 
 	// TODO :: do we still need this?
-	constexpr static float absf(const float &g) {
+	static constexpr float absf(const float &g) {
 		return gcem::abs(g);
 	}
 
-	constexpr static double absd(const double &g) {
+	static constexpr double absd(const double &g) {
 		return gcem::abs(g);
 	}
 
 	//this function should be as fast as possible and rounding mode should not matter
-	constexpr static int fast_ftoi(const double &a) {
+	static constexpr int fast_ftoi(const double &a) {
 		return static_cast<int>(a);
 	}
 
-	constexpr static double snap_scalar(const double &p_offset, const double &p_step, const double &p_target) {
+	static constexpr double snap_scalar(const double &p_offset, const double &p_step, const double &p_target) {
 		return p_step != 0 ? Math::stepify(p_target - p_offset, p_step) + p_offset : p_target;
 	}
 
-	constexpr static double snap_scalar_separation(const double &p_offset, const double &p_step, const double &p_target, const double &p_separation) {
+	static constexpr double snap_scalar_separation(const double &p_offset, const double &p_step, const double &p_target, const double &p_separation) {
 		if (p_step != 0) {
 			double a = Math::stepify(p_target - p_offset, p_step + p_separation) + p_offset;
 			double b = a;
@@ -245,7 +258,7 @@ public:
 		return p_target;
 	}
 
-	constexpr static double fmod(const double &p_x, const double &p_y) {
+	static constexpr double fmod(const double &p_x, const double &p_y) {
 		double mod = p_x;
 		double local_y = p_y;
 		// Handling negative values
@@ -267,7 +280,7 @@ public:
 		return mod;
 	}
 
-	constexpr static double fposmod(const double &p_x, const double &p_y) {
+	static constexpr double fposmod(const double &p_x, const double &p_y) {
 		double value = Math::fmod(p_x, p_y);
 		if ((value < 0 && p_y > 0) || (value > 0 && p_y < 0)) {
 			value += p_y;
@@ -277,15 +290,11 @@ public:
 	}
 
 	// FIXME :: Once `constexpr fmod` is implemented, make this constexpr as well...
-	constexpr static double lerp_angle(const double &p_from, const double &p_to, const double &p_weight) {
+	static constexpr double lerp_angle(const double &p_from, const double &p_to, const double &p_weight) {
 		double difference = fmod(p_to - p_from, Math_TAU);
 		double distance = fmod(2.0 * difference, Math_TAU) - difference;
 		return p_from + distance * p_weight;
 	}
-
-	constexpr static double inverse_lerp(const double &p_from, const double &p_to, const double &p_value) { return (p_value - p_from) / (p_to - p_from); }
-
-	constexpr static double range_lerp(const double &p_value, const double &p_istart, const double &p_istop, const double &p_ostart, const double &p_ostop) { return Math::lerp(p_ostart, p_ostop, Math::inverse_lerp(p_istart, p_istop, p_value)); }
 
 	static int step_decimals(const double &p_step) {
 		static const std::array<double, 10> sd = {
@@ -314,7 +323,7 @@ public:
 		return 0;
 	};
 
-	constexpr static int range_step_decimals(const double &p_step) {
+	static constexpr int range_step_decimals(const double &p_step) {
 		if (p_step < 0.0000000000001) {
 			return 16; // Max value hardcoded in String::num
 		}

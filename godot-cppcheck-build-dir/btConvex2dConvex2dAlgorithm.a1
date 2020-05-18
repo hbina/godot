@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3207733343">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CreateFunc::m_numPerturbationIterations&apos; is not initialized in the constructor." verbose="Member variable &apos;CreateFunc::m_numPerturbationIterations&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="45" column="42"/>
+            <symbol>CreateFunc::m_numPerturbationIterations</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;CreateFunc::m_minimumPointsPerturbationThreshold&apos; is not initialized in the constructor." verbose="Member variable &apos;CreateFunc::m_minimumPointsPerturbationThreshold&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="45" column="42"/>
+            <symbol>CreateFunc::m_minimumPointsPerturbationThreshold</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;calculateTimeOfImpact&apos; argument 1 names different: declaration &apos;body0&apos; definition &apos;col0&apos;." verbose="Function &apos;calculateTimeOfImpact&apos; argument 1 names different: declaration &apos;body0&apos; definition &apos;col0&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="133" column="80"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h" line="48" column="60"/>
+            <symbol>calculateTimeOfImpact</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;calculateTimeOfImpact&apos; argument 2 names different: declaration &apos;body1&apos; definition &apos;col1&apos;." verbose="Function &apos;calculateTimeOfImpact&apos; argument 2 names different: declaration &apos;body1&apos; definition &apos;col1&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="133" column="105"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h" line="48" column="86"/>
+            <symbol>calculateTimeOfImpact</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:42:2" call-funcname="btConvex2dConvex2dAlgorithm" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h" line="78" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:75:33" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:42:2" call-funcname="btConvex2dConvex2dAlgorithm" call-argnr="4" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h" line="78" col="21" my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:75:33" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:46:15" my-argnr="1" my-argname="body0Wrap" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="99" col="64" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:46:15" my-argnr="2" my-argname="body1Wrap" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="100" col="64" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:46:15" my-argnr="4" my-argname="resultOut" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="94" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:48:19" my-argnr="1" my-argname="col0" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="143" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.h:48:19" my-argnr="2" my-argname="col1" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp" line="144" col="25" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="setLowLevelOfDetail" lineNumber="76"/>
+    <functiondecl functionName="processCollision" lineNumber="86"/>
+    <functiondecl functionName="calculateTimeOfImpact" lineNumber="133"/>
+    <functioncall functionName="CreateFunc"/>
+    <functioncall functionName="allocateCollisionAlgorithm"/>
+    <functioncall functionName="body0Wrap"/>
+    <functioncall functionName="body1Wrap"/>
+    <functioncall functionName="btActivatingCollisionAlgorithm"/>
+    <functioncall functionName="btConvex2dConvex2dAlgorithm"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="calcTimeOfImpact"/>
+    <functioncall functionName="ccd1"/>
+    <functioncall functionName="ci"/>
+    <functioncall functionName="convex0"/>
+    <functioncall functionName="convex1"/>
+    <functioncall functionName="dispatchInfo"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="getCcdSquareMotionThreshold"/>
+    <functioncall functionName="getCcdSweptSphereRadius"/>
+    <functioncall functionName="getClosestPoints"/>
+    <functioncall functionName="getCollisionObject"/>
+    <functioncall functionName="getCollisionShape"/>
+    <functioncall functionName="getContactBreakingThreshold"/>
+    <functioncall functionName="getHitFraction"/>
+    <functioncall functionName="getInterpolationWorldTransform"/>
+    <functioncall functionName="getMargin"/>
+    <functioncall functionName="getNewManifold"/>
+    <functioncall functionName="getOrigin"/>
+    <functioncall functionName="getWorldTransform"/>
+    <functioncall functionName="gjkPairDetector"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="length2"/>
+    <functioncall functionName="m_debugDraw"/>
+    <functioncall functionName="m_fraction"/>
+    <functioncall functionName="m_lowLevelOfDetail"/>
+    <functioncall functionName="m_manifold"/>
+    <functioncall functionName="m_manifoldPtr"/>
+    <functioncall functionName="m_maximumDistanceSquared"/>
+    <functioncall functionName="m_minimumPointsPerturbationThreshold"/>
+    <functioncall functionName="m_numPerturbationIterations"/>
+    <functioncall functionName="m_ownManifold"/>
+    <functioncall functionName="m_pdSolver"/>
+    <functioncall functionName="m_simplexSolver"/>
+    <functioncall functionName="mem"/>
+    <functioncall functionName="mf"/>
+    <functioncall functionName="min0"/>
+    <functioncall functionName="min1"/>
+    <functioncall functionName="new"/>
+    <functioncall functionName="pdSolver"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="refreshContactPoints"/>
+    <functioncall functionName="releaseManifold"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="resultFraction"/>
+    <functioncall functionName="resultOut"/>
+    <functioncall functionName="setHitFraction"/>
+    <functioncall functionName="setMinkowskiA"/>
+    <functioncall functionName="setMinkowskiB"/>
+    <functioncall functionName="setPersistentManifold"/>
+    <functioncall functionName="simplexSolver"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sphere0"/>
+    <functioncall functionName="sphere1"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="useLowLevel"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="voronoiSimplex"/>
+  </FileInfo>
+</analyzerinfo>

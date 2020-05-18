@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4254961242">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;data&apos; can be reduced." verbose="The scope of the variable &apos;data&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="182" column="14"/>
+            <symbol>data</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" call-funcname="blowfish_enc" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="219" col="21" call-argexpr="&datal" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" call-funcname="blowfish_enc" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="219" col="21" call-argexpr="&datar" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" call-funcname="blowfish_enc" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="228" col="25" call-argexpr="&datal" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" call-funcname="blowfish_enc" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="228" col="25" call-argexpr="&datar" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:131:13" call-funcname="blowfish_dec" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="256" col="21" call-argexpr="&X0" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:131:13" call-funcname="blowfish_dec" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="256" col="21" call-argexpr="&X1" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" call-funcname="blowfish_enc" call-argnr="2" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="260" col="21" call-argexpr="&X0" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" call-funcname="blowfish_enc" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="260" col="21" call-argexpr="&X1" call-argvaluetype="7" call-argvalue="4"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:83:17" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="95" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="124" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" my-argnr="2" my-argname="xl" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="107" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" my-argnr="3" my-argname="xr" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="108" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:131:13" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="153" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:131:13" my-argnr="2" my-argname="xl" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="136" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:131:13" my-argnr="3" my-argname="xr" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="137" col="11" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" my-argnr="2" my-argname="xl" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="107" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:102:13" my-argnr="3" my-argname="xr" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="108" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:131:13" my-argnr="2" my-argname="xl" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="136" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c:131:13" my-argnr="3" my-argname="xr" file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="137" col="11" value="0"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/blowfish.c" line="31" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="F" lineNumber="83"/>
+    <functiondecl functionName="blowfish_enc" lineNumber="102"/>
+    <functiondecl functionName="blowfish_dec" lineNumber="131"/>
+    <functiondecl functionName="mbedtls_blowfish_init" lineNumber="160"/>
+    <functiondecl functionName="mbedtls_blowfish_free" lineNumber="166"/>
+    <functiondecl functionName="mbedtls_blowfish_setkey" lineNumber="177"/>
+    <functiondecl functionName="mbedtls_blowfish_crypt_ecb" lineNumber="239"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="MBEDTLS_BLOWFISH_BLOCKSIZE"/>
+    <functioncall functionName="MBEDTLS_BLOWFISH_ROUNDS"/>
+    <functioncall functionName="MBEDTLS_ERR_BLOWFISH_BAD_INPUT_DATA"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE"/>
+    <functioncall functionName="MBEDTLS_INTERNAL_VALIDATE_RET"/>
+    <functioncall functionName="X0"/>
+    <functioncall functionName="X1"/>
+    <functioncall functionName="Xl"/>
+    <functioncall functionName="Xr"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="blowfish_dec"/>
+    <functioncall functionName="blowfish_enc"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="datal"/>
+    <functioncall functionName="datar"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="mbedtls_blowfish_context"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="short"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

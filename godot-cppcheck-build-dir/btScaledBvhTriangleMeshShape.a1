@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1342901063">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.h" line="79" column="50"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp:41:15" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp" line="44" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp:41:15" my-argnr="1" my-argname="triangle" file="/home/hbina/git/godot/thirdparty/bullet/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp" line="44" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="processTriangle" lineNumber="41"/>
+    <functioncall functionName="SCALED_TRIANGLE_MESH_SHAPE_PROXYTYPE"/>
+    <functioncall functionName="absolute"/>
+    <functioncall functionName="btScalar"/>
+    <functioncall functionName="btScaledBvhTriangleMeshShape"/>
+    <functioncall functionName="btScaledTriangleMeshShapeData"/>
+    <functioncall functionName="btVector3"/>
+    <functioncall functionName="callback"/>
+    <functioncall functionName="childShape"/>
+    <functioncall functionName="class"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="dataBuffer"/>
+    <functioncall functionName="dot3"/>
+    <functioncall functionName="extent"/>
+    <functioncall functionName="getBasis"/>
+    <functioncall functionName="getLocalAabbMax"/>
+    <functioncall functionName="getLocalAabbMin"/>
+    <functioncall functionName="getMargin"/>
+    <functioncall functionName="getX"/>
+    <functioncall functionName="getY"/>
+    <functioncall functionName="getZ"/>
+    <functioncall functionName="invLocalScaling"/>
+    <functioncall functionName="localAabbMin"/>
+    <functioncall functionName="localCenter"/>
+    <functioncall functionName="localScaling"/>
+    <functioncall functionName="m_bvhTriMeshShape"/>
+    <functioncall functionName="m_localScaling"/>
+    <functioncall functionName="m_originalCallback"/>
+    <functioncall functionName="m_trimeshShapeData"/>
+    <functioncall functionName="margin"/>
+    <functioncall functionName="originalCallback"/>
+    <functioncall functionName="partId"/>
+    <functioncall functionName="processAllTriangles"/>
+    <functioncall functionName="processTriangle"/>
+    <functioncall functionName="scaledAabbMax"/>
+    <functioncall functionName="scaledAabbMin"/>
+    <functioncall functionName="scaledCallback"/>
+    <functioncall functionName="scaling"/>
+    <functioncall functionName="serialize"/>
+    <functioncall functionName="serializeFloat"/>
+    <functioncall functionName="serializer"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="trans"/>
+    <functioncall functionName="triangleIndex"/>
+  </FileInfo>
+</analyzerinfo>

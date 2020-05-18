@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="764974972">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;a&apos; can be reduced." verbose="The scope of the variable &apos;a&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="70" column="15"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;a&apos; can be reduced." verbose="The scope of the variable &apos;a&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="100" column="15"/>
+            <symbol>a</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;b&apos; can be reduced." verbose="The scope of the variable &apos;b&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="100" column="18"/>
+            <symbol>b</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:51:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="53" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:67:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="74" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:97:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="104" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:97:5" call-funcname="mbedtls_arc4_crypt" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="175" col="27" call-argexpr="ibuf" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:97:5" call-funcname="mbedtls_arc4_crypt" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="175" col="27" call-argexpr="obuf" call-argvaluetype="7" call-argvalue="8"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:51:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="53" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:67:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="74" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:97:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="104" col="9" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:97:5" call-funcname="mbedtls_arc4_crypt" call-argnr="3" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="175" col="27" call-argexpr="ibuf" call-argvaluetype="7" call-argvalue="8"/><function-call call-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:97:5" call-funcname="mbedtls_arc4_crypt" call-argnr="4" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="175" col="27" call-argexpr="obuf" call-argvaluetype="7" call-argvalue="8"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:51:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="53" col="13" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:67:6" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="74" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c:97:5" my-argnr="1" my-argname="ctx" file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="104" col="9" value="0"/>
+  </FileInfo>
+        <error id="preprocessorErrorDirective" severity="error" msg="No header in #include" verbose="No header in #include">
+            <location file="/home/hbina/git/godot/thirdparty/mbedtls/library/arc4.c" line="30" column="0"/>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="mbedtls_arc4_init" lineNumber="51"/>
+    <functiondecl functionName="mbedtls_arc4_free" lineNumber="56"/>
+    <functiondecl functionName="mbedtls_arc4_setup" lineNumber="67"/>
+    <functiondecl functionName="mbedtls_arc4_crypt" lineNumber="97"/>
+    <functiondecl functionName="mbedtls_arc4_init" lineNumber="51"/>
+    <functiondecl functionName="mbedtls_arc4_free" lineNumber="56"/>
+    <functiondecl functionName="mbedtls_arc4_setup" lineNumber="67"/>
+    <functiondecl functionName="mbedtls_arc4_crypt" lineNumber="97"/>
+    <functiondecl functionName="mbedtls_arc4_self_test" lineNumber="158"/>
+    <functiondecl functionName="mbedtls_arc4_init" lineNumber="51"/>
+    <functiondecl functionName="mbedtls_arc4_free" lineNumber="56"/>
+    <functiondecl functionName="mbedtls_arc4_setup" lineNumber="67"/>
+    <functiondecl functionName="mbedtls_arc4_crypt" lineNumber="97"/>
+    <functiondecl functionName="mbedtls_arc4_self_test" lineNumber="158"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="exit"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="ibuf"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="mbedtls_arc4_context"/>
+    <functioncall functionName="mbedtls_arc4_crypt"/>
+    <functioncall functionName="mbedtls_arc4_free"/>
+    <functioncall functionName="mbedtls_arc4_init"/>
+    <functioncall functionName="mbedtls_arc4_setup"/>
+    <functioncall functionName="mbedtls_platform_zeroize"/>
+    <functioncall functionName="mbedtls_printf"/>
+    <functioncall functionName="memcmp"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="obuf"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

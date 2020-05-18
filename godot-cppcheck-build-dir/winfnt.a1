@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="3989534569">
+        <error id="unreadVariable" severity="style" msg="Variable &apos;memory&apos; is assigned a value that is never used." verbose="Variable &apos;memory&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="191" column="23"/>
+            <symbol>memory</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;stream&apos; is assigned a value that is never used." verbose="Variable &apos;stream&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="192" column="23"/>
+            <symbol>stream</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;memory&apos; is assigned a value that is never used." verbose="Variable &apos;memory&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="703" column="12"/>
+            <symbol>memory</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c:930:3" call-funcname="FNT_Size_Select" call-argnr="2" file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="984" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c:634:3" my-argnr="1" my-argname="cmap" file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="640" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c:650:3" my-argnr="1" my-argname="cmap" file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="658" col="23" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c:650:3" my-argnr="2" my-argname="pchar_code" file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="655" col="29" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c:1121:3" my-argnr="2" my-argname="aheader" file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="1127" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c:634:3" my-argnr="1" my-argname="cmap" file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="640" col="18" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c:650:3" my-argnr="2" my-argname="pchar_code" file="/home/hbina/git/godot/thirdparty/freetype/src/winfonts/winfnt.c" line="655" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="fnt_font_done" lineNumber="189"/>
+    <functiondecl functionName="fnt_font_load" lineNumber="209"/>
+    <functiondecl functionName="fnt_face_get_dll_font" lineNumber="271"/>
+    <functiondecl functionName="fnt_cmap_init" lineNumber="617"/>
+    <functiondecl functionName="fnt_cmap_char_index" lineNumber="634"/>
+    <functiondecl functionName="fnt_cmap_char_next" lineNumber="650"/>
+    <functiondecl functionName="FNT_Face_Done" lineNumber="694"/>
+    <functiondecl functionName="FNT_Face_Init" lineNumber="713"/>
+    <functiondecl functionName="FNT_Size_Select" lineNumber="930"/>
+    <functiondecl functionName="FNT_Size_Request" lineNumber="951"/>
+    <functiondecl functionName="FNT_Load_Glyph" lineNumber="989"/>
+    <functiondecl functionName="winfnt_get_header" lineNumber="1121"/>
+    <functiondecl functionName="winfnt_get_service" lineNumber="1152"/>
+    <functioncall functionName="A_space"/>
+    <functioncall functionName="B_space"/>
+    <functioncall functionName="C_space"/>
+    <functioncall functionName="Exit"/>
+    <functioncall functionName="Exit1"/>
+    <functioncall functionName="FNT_Face_Done"/>
+    <functioncall functionName="FNT_Face_Init"/>
+    <functioncall functionName="FNT_Load_Glyph"/>
+    <functioncall functionName="FNT_Size_Request"/>
+    <functioncall functionName="FNT_Size_Select"/>
+    <functioncall functionName="FT_ABS"/>
+    <functioncall functionName="FT_ALLOC"/>
+    <functioncall functionName="FT_ALLOC_MULT"/>
+    <functioncall functionName="FT_BOOL"/>
+    <functioncall functionName="FT_CMAP_FACE"/>
+    <functioncall functionName="FT_CMap_CharIndexFunc"/>
+    <functioncall functionName="FT_CMap_CharNextFunc"/>
+    <functioncall functionName="FT_CMap_DoneFunc"/>
+    <functioncall functionName="FT_CMap_InitFunc"/>
+    <functioncall functionName="FT_CMap_New"/>
+    <functioncall functionName="FT_DriverRec"/>
+    <functioncall functionName="FT_ENCODING_APPLE_ROMAN"/>
+    <functioncall functionName="FT_ENCODING_NONE"/>
+    <functioncall functionName="FT_ERR"/>
+    <functioncall functionName="FT_ERR_EQ"/>
+    <functioncall functionName="FT_EXPORT_VAR"/>
+    <functioncall functionName="FT_Err_Ok"/>
+    <functioncall functionName="FT_FACE"/>
+    <functioncall functionName="FT_FACE_FLAG_HORIZONTAL"/>
+    <functioncall functionName="FT_FACE_MEMORY"/>
+    <functioncall functionName="FT_FONT_FORMAT_WINFNT"/>
+    <functioncall functionName="FT_FRAME_BYTE"/>
+    <functioncall functionName="FT_FRAME_BYTES"/>
+    <functioncall functionName="FT_FRAME_END"/>
+    <functioncall functionName="FT_FRAME_ENTER"/>
+    <functioncall functionName="FT_FRAME_EXIT"/>
+    <functioncall functionName="FT_FRAME_EXTRACT"/>
+    <functioncall functionName="FT_FRAME_RELEASE"/>
+    <functioncall functionName="FT_FRAME_SKIP_BYTES"/>
+    <functioncall functionName="FT_FRAME_START"/>
+    <functioncall functionName="FT_FRAME_ULONG_LE"/>
+    <functioncall functionName="FT_FRAME_USHORT_LE"/>
+    <functioncall functionName="FT_FREE"/>
+    <functioncall functionName="FT_GET_USHORT_LE"/>
+    <functioncall functionName="FT_GLYPH_FORMAT_BITMAP"/>
+    <functioncall functionName="FT_GLYPH_OWN_BITMAP"/>
+    <functioncall functionName="FT_GlyphSlotRec"/>
+    <functioncall functionName="FT_MEM_COPY"/>
+    <functioncall functionName="FT_MODULE_DRIVER_NO_OUTLINES"/>
+    <functioncall functionName="FT_MulDiv"/>
+    <functioncall functionName="FT_NEW"/>
+    <functioncall functionName="FT_NEW_ARRAY"/>
+    <functioncall functionName="FT_NEXT_ULONG_LE"/>
+    <functioncall functionName="FT_NEXT_USHORT_LE"/>
+    <functioncall functionName="FT_PIXEL_MODE_MONO"/>
+    <functioncall functionName="FT_PIX_ROUND"/>
+    <functioncall functionName="FT_Pos"/>
+    <functioncall functionName="FT_REALLOC"/>
+    <functioncall functionName="FT_REQUEST_HEIGHT"/>
+    <functioncall functionName="FT_SERVICE_ID_FONT_FORMAT"/>
+    <functioncall functionName="FT_SERVICE_ID_WINFNT"/>
+    <functioncall functionName="FT_SIZE_FACE"/>
+    <functioncall functionName="FT_STREAM_POS"/>
+    <functioncall functionName="FT_STREAM_READ_FIELDS"/>
+    <functioncall functionName="FT_STREAM_SEEK"/>
+    <functioncall functionName="FT_Select_Metrics"/>
+    <functioncall functionName="FT_Short"/>
+    <functioncall functionName="FT_SizeRec"/>
+    <functioncall functionName="FT_THROW"/>
+    <functioncall functionName="FT_TRACE1"/>
+    <functioncall functionName="FT_TRACE2"/>
+    <functioncall functionName="FT_UInt"/>
+    <functioncall functionName="FT_UInt32"/>
+    <functioncall functionName="FT_ULong"/>
+    <functioncall functionName="FT_UNUSED"/>
+    <functioncall functionName="Fail"/>
+    <functioncall functionName="Found_rsrc_section"/>
+    <functioncall functionName="Invalid_Argument"/>
+    <functioncall functionName="Invalid_Face_Handle"/>
+    <functioncall functionName="Invalid_File_Format"/>
+    <functioncall functionName="Invalid_Pixel_Size"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="TT_APPLE_ID_DEFAULT"/>
+    <functioncall functionName="TT_PLATFORM_APPLE_UNICODE"/>
+    <functioncall functionName="TT_PLATFORM_MACINTOSH"/>
+    <functioncall functionName="Unimplemented_Feature"/>
+    <functioncall functionName="Unknown_File_Format"/>
+    <functioncall functionName="ascent"/>
+    <functioncall functionName="available_sizes"/>
+    <functioncall functionName="avg_width"/>
+    <functioncall functionName="bitmap"/>
+    <functioncall functionName="bits_offset"/>
+    <functioncall functionName="bits_pointer"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="break_char"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="bytes_per_row"/>
+    <functioncall functionName="char_code"/>
+    <functioncall functionName="characteristics"/>
+    <functioncall functionName="charmap"/>
+    <functioncall functionName="charset"/>
+    <functioncall functionName="cmap"/>
+    <functioncall functionName="code_page"/>
+    <functioncall functionName="color_table_offset"/>
+    <functioncall functionName="column"/>
+    <functioncall functionName="copyright"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="data_entry"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="default_char"/>
+    <functioncall functionName="device_offset"/>
+    <functioncall functionName="dir_entry1"/>
+    <functioncall functionName="dir_entry2"/>
+    <functioncall functionName="dir_entry3"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="external_leading"/>
+    <functioncall functionName="face"/>
+    <functioncall functionName="face_index"/>
+    <functioncall functionName="face_instance_index"/>
+    <functioncall functionName="face_name_offset"/>
+    <functioncall functionName="family_name"/>
+    <functioncall functionName="family_size"/>
+    <functioncall functionName="file_size"/>
+    <functioncall functionName="file_type"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="first_char"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="fnt_cmap_char_index"/>
+    <functioncall functionName="fnt_cmap_char_next"/>
+    <functioncall functionName="fnt_cmap_class"/>
+    <functioncall functionName="fnt_cmap_class_rec"/>
+    <functioncall functionName="fnt_cmap_init"/>
+    <functioncall functionName="fnt_face_get_dll_font"/>
+    <functioncall functionName="fnt_font_done"/>
+    <functioncall functionName="fnt_font_load"/>
+    <functioncall functionName="fnt_frame"/>
+    <functioncall functionName="fntface"/>
+    <functioncall functionName="font"/>
+    <functioncall functionName="font_count"/>
+    <functioncall functionName="font_offset"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="ft_service_list_lookup"/>
+    <functioncall functionName="ft_strlen"/>
+    <functioncall functionName="ft_synthesize_vertical_metrics"/>
+    <functioncall functionName="glyph_index"/>
+    <functioncall functionName="header"/>
+    <functioncall functionName="horizontal_resolution"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="internal_leading"/>
+    <functioncall functionName="italic"/>
+    <functioncall functionName="lang_dir"/>
+    <functioncall functionName="last_char"/>
+    <functioncall functionName="lfanew"/>
+    <functioncall functionName="limit"/>
+    <functioncall functionName="machine"/>
+    <functioncall functionName="magic"/>
+    <functioncall functionName="magic32"/>
+    <functioncall functionName="major_version"/>
+    <functioncall functionName="max_width"/>
+    <functioncall functionName="memory"/>
+    <functioncall functionName="metrics"/>
+    <functioncall functionName="minor_version"/>
+    <functioncall functionName="module"/>
+    <functioncall functionName="mz_header"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="name_dir"/>
+    <functioncall functionName="ne_header"/>
+    <functioncall functionName="new_format"/>
+    <functioncall functionName="nominal_point_size"/>
+    <functioncall functionName="num_faces"/>
+    <functioncall functionName="num_glyphs"/>
+    <functioncall functionName="num_params"/>
+    <functioncall functionName="number_of_id_entries"/>
+    <functioncall functionName="number_of_named_entries"/>
+    <functioncall functionName="number_of_sections"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="offset_to_data"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="pe32_header"/>
+    <functioncall functionName="pe32_section"/>
+    <functioncall functionName="pitch"/>
+    <functioncall functionName="pitch_and_family"/>
+    <functioncall functionName="pixel_height"/>
+    <functioncall functionName="pixel_width"/>
+    <functioncall functionName="pointer"/>
+    <functioncall functionName="pointer_to_raw_data"/>
+    <functioncall functionName="req"/>
+    <functioncall functionName="res_offset"/>
+    <functioncall functionName="reserved"/>
+    <functioncall functionName="reserved1"/>
+    <functioncall functionName="resource_tab_offset"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rname_tab_offset"/>
+    <functioncall functionName="root"/>
+    <functioncall functionName="root_dir"/>
+    <functioncall functionName="rows"/>
+    <functioncall functionName="rsrc_size"/>
+    <functioncall functionName="rsrc_virtual_address"/>
+    <functioncall functionName="service_id"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="size_of_optional_header"/>
+    <functioncall functionName="size_of_raw_data"/>
+    <functioncall functionName="size_shift"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="strike_index"/>
+    <functioncall functionName="strike_out"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="time_date_stamp"/>
+    <functioncall functionName="type"/>
+    <functioncall functionName="type_id"/>
+    <functioncall functionName="underline"/>
+    <functioncall functionName="version"/>
+    <functioncall functionName="vertical_resolution"/>
+    <functioncall functionName="virtual_address"/>
+    <functioncall functionName="weight"/>
+    <functioncall functionName="winfnt_driver_class"/>
+    <functioncall functionName="winfnt_get_header"/>
+    <functioncall functionName="winfnt_get_service"/>
+    <functioncall functionName="winfnt_header_fields"/>
+    <functioncall functionName="winfnt_service_rec"/>
+    <functioncall functionName="winfnt_services"/>
+    <functioncall functionName="winmz_header_fields"/>
+    <functioncall functionName="winne_header_fields"/>
+    <functioncall functionName="winpe32_header_fields"/>
+    <functioncall functionName="winpe32_section_fields"/>
+    <functioncall functionName="winpe_rsrc_data_entry_fields"/>
+    <functioncall functionName="winpe_rsrc_dir_entry_fields"/>
+    <functioncall functionName="winpe_rsrc_dir_fields"/>
+    <functioncall functionName="x_ppem"/>
+    <functioncall functionName="x_res"/>
+    <functioncall functionName="y_ppem"/>
+    <functioncall functionName="y_res"/>
+  </FileInfo>
+</analyzerinfo>

@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -129,8 +129,8 @@ Transform Transform::interpolate_with(const Transform &p_transform, real_t p_c) 
 	Vector3 dst_loc = p_transform.origin;
 
 	Transform interp;
-	interp.basis.set_quat_scale(src_rot.slerp(dst_rot, p_c).normalized(), src_scale.linear_interpolate(dst_scale, p_c));
-	interp.origin = src_loc.linear_interpolate(dst_loc, p_c);
+	interp.basis.set_quat_scale(src_rot.slerp(dst_rot, p_c).normalized(), src_scale.lerp(dst_scale, p_c));
+	interp.origin = src_loc.lerp(dst_loc, p_c);
 
 	return interp;
 }
@@ -180,6 +180,11 @@ Transform Transform::orthonormalized() const {
 	Transform _copy = *this;
 	_copy.orthonormalize();
 	return _copy;
+}
+
+bool Transform::is_equal_approx(const Transform &p_transform) const {
+
+	return basis.is_equal_approx(p_transform.basis) && origin.is_equal_approx(p_transform.origin);
 }
 
 bool Transform::operator==(const Transform &p_transform) const {

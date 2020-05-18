@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4127342519">
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/local_debugger.cpp" line="403" column="6"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/core/debugger/local_debugger.cpp" line="407" column="6"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/debugger/local_debugger.cpp:70:7" call-funcname="_print_frame_data" call-argnr="1" file="/home/hbina/git/godot/core/debugger/local_debugger.cpp" line="67" col="20" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="toggle" lineNumber="49"/>
+    <functiondecl functionName="tick" lineNumber="65"/>
+    <functiondecl functionName="_print_frame_data" lineNumber="70"/>
+    <functiondecl functionName="debug" lineNumber="118"/>
+    <functiondecl functionName="print_variables" lineNumber="342"/>
+    <functiondecl functionName="to_breakpoint" lineNumber="366"/>
+    <functiondecl functionName="send_message" lineNumber="383"/>
+    <functiondecl functionName="send_error" lineNumber="389"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="LocalDebugger"/>
+    <functioncall functionName="ProfileInfoSort"/>
+    <functioncall functionName="ScriptsProfiler"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="USEC_TO_SEC"/>
+    <functioncall functionName="_print_frame_data"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="breakpoint_find_source"/>
+    <functioncall functionName="call_count"/>
+    <functioncall functionName="clear_breakpoints"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="current_frame"/>
+    <functioncall functionName="debug_get_error"/>
+    <functioncall functionName="debug_get_globals"/>
+    <functioncall functionName="debug_get_stack_level_count"/>
+    <functioncall functionName="debug_get_stack_level_function"/>
+    <functioncall functionName="debug_get_stack_level_line"/>
+    <functioncall functionName="debug_get_stack_level_locals"/>
+    <functioncall functionName="debug_get_stack_level_members"/>
+    <functioncall functionName="debug_get_stack_level_source"/>
+    <functioncall functionName="debug_parse_stack_level_expression"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="expr"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="first"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="frame_time"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_break_language"/>
+    <functioncall functionName="get_breakpoints"/>
+    <functioncall functionName="get_language"/>
+    <functioncall functionName="get_language_count"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slice_count"/>
+    <functioncall functionName="get_slicec"/>
+    <functioncall functionName="get_stdin_string"/>
+    <functioncall functionName="get_ticks_usec"/>
+    <functioncall functionName="globals"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="idle_accum"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="insert_breakpoint"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="last_colon"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="linenr"/>
+    <functioncall functionName="locals"/>
+    <functioncall functionName="members"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="p_accumulated"/>
+    <functioncall functionName="p_descr"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_err"/>
+    <functioncall functionName="p_frame_time"/>
+    <functioncall functionName="p_idle_time"/>
+    <functioncall functionName="p_opts"/>
+    <functioncall functionName="p_physics_frame_time"/>
+    <functioncall functionName="p_physics_time"/>
+    <functioncall functionName="p_user"/>
+    <functioncall functionName="print"/>
+    <functioncall functionName="print_line"/>
+    <functioncall functionName="print_variables"/>
+    <functioncall functionName="profiling_get_accumulated_data"/>
+    <functioncall functionName="profiling_get_frame_data"/>
+    <functioncall functionName="profiling_start"/>
+    <functioncall functionName="profiling_stop"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="quit"/>
+    <functioncall functionName="register_profiler"/>
+    <functioncall functionName="remove_breakpoint"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rfind"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="rtos"/>
+    <functioncall functionName="scr_prof"/>
+    <functioncall functionName="script_time"/>
+    <functioncall functionName="script_time_us"/>
+    <functioncall functionName="scripts_profiler"/>
+    <functioncall functionName="second"/>
+    <functioncall functionName="self_time"/>
+    <functioncall functionName="set_depth"/>
+    <functioncall functionName="set_lines_left"/>
+    <functioncall functionName="signature"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="source"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="st"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="tick"/>
+    <functioncall functionName="to_breakpoint"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="toggle"/>
+    <functioncall functionName="total_time"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="tt"/>
+    <functioncall functionName="unregister_profiler"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="value_pos"/>
+    <functioncall functionName="values"/>
+    <functioncall functionName="variable_prefix"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

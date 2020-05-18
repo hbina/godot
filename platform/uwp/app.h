@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -34,7 +34,6 @@
 
 #include <wrl.h>
 
-// ANGLE doesn't provide a specific lib for GLES3, so we keep using GLES2
 #include "GLES2/gl2.h"
 #include "os_uwp.h"
 
@@ -53,7 +52,7 @@ namespace GodotUWP
 		virtual void SetWindow(Windows::UI::Core::CoreWindow^ window);
 		virtual void Load(Platform::String^ entryPoint);
 		virtual void Run();
-		virtual void Uninitialize();
+		virtual void uninitialize() override;
 
 		property Windows::Foundation::EventRegistrationToken MouseMovedToken {
 				Windows::Foundation::EventRegistrationToken get() { return this->mouseMovedToken; }

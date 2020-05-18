@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1475073623">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;pd_t::conv_supports_bias_&apos; is not initialized in the constructor." verbose="Member variable &apos;pd_t::conv_supports_bias_&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="116" column="9"/>
+            <symbol>pd_t::conv_supports_bias_</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;cpu_primitive_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/cpu_primitive.hpp" line="37" column="5"/>
+            <symbol>cpu_primitive_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ref_deconvolution_fwd_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ref_deconvolution_fwd_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="209" column="5"/>
+            <symbol>ref_deconvolution_fwd_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ref_deconvolution_bwd_data_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ref_deconvolution_bwd_data_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="335" column="5"/>
+            <symbol>ref_deconvolution_bwd_data_t</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Struct &apos;ref_deconvolution_bwd_weights_t&apos; has a constructor with 1 argument that is not explicit." verbose="Struct &apos;ref_deconvolution_bwd_weights_t&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="444" column="5"/>
+            <symbol>ref_deconvolution_bwd_weights_t</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="256" column="38"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="354" column="38"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="486" column="38"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &apos;io_blk&apos;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &apos;io_blk&apos;. The initialized value is overwritten before it is read." cwe="563">
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="50" column="12" info="io_blk is overwritten"/>
+            <location file0="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.cpp" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="47" column="28" info="io_blk is initialized"/>
+            <symbol>io_blk</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp:66:17" my-argnr="1" my-argname="dd" file="/home/hbina/git/godot/thirdparty/oidn/mkl-dnn/src/cpu/ref_deconvolution.hpp" line="70" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functioncall functionName="CHECK"/>
+    <functioncall functionName="DECLARE_COMMON_PD_T"/>
+    <functioncall functionName="G"/>
+    <functioncall functionName="ID_IC"/>
+    <functioncall functionName="ID_OC"/>
+    <functioncall functionName="IMPLICATION"/>
+    <functioncall functionName="MB"/>
+    <functioncall functionName="MKLDNN_ARG_BIAS"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_BIAS"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_DST"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_DIFF_WEIGHTS"/>
+    <functioncall functionName="MKLDNN_ARG_DST"/>
+    <functioncall functionName="MKLDNN_ARG_SCRATCHPAD"/>
+    <functioncall functionName="MKLDNN_ARG_SRC"/>
+    <functioncall functionName="MKLDNN_ARG_WEIGHTS"/>
+    <functioncall functionName="OC"/>
+    <functioncall functionName="OD"/>
+    <functioncall functionName="OH"/>
+    <functioncall functionName="OW"/>
+    <functioncall functionName="PRAGMA_OMP_SIMD"/>
+    <functioncall functionName="SP"/>
+    <functioncall functionName="accum_data_type"/>
+    <functioncall functionName="adesc"/>
+    <functioncall functionName="alg"/>
+    <functioncall functionName="alg_kind"/>
+    <functioncall functionName="apd"/>
+    <functioncall functionName="args"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="attr"/>
+    <functioncall functionName="attr_"/>
+    <functioncall functionName="backward_data"/>
+    <functioncall functionName="bias"/>
+    <functioncall functionName="bias_desc"/>
+    <functioncall functionName="bias_md_"/>
+    <functioncall functionName="blocked"/>
+    <functioncall functionName="blocking"/>
+    <functioncall functionName="blocking_desc"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c_weights_d"/>
+    <functioncall functionName="cd"/>
+    <functioncall functionName="clone"/>
+    <functioncall functionName="compute_blocked_format"/>
+    <functioncall functionName="compute_bwd_bias"/>
+    <functioncall functionName="compute_bwd_bias_nCdhwXc &lt; 16 &gt;"/>
+    <functioncall functionName="compute_bwd_bias_nCdhwXc &lt; 8 &gt;"/>
+    <functioncall functionName="compute_bwd_bias_ncdhw"/>
+    <functioncall functionName="compute_fwd_bias"/>
+    <functioncall functionName="compute_fwd_bias_nCdhwXc &lt; 16 &gt;"/>
+    <functioncall functionName="compute_fwd_bias_nCdhwXc &lt; 8 &gt;"/>
+    <functioncall functionName="compute_fwd_bias_ncdhw"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="conv_args"/>
+    <functioncall functionName="conv_ctx"/>
+    <functioncall functionName="conv_desc_init"/>
+    <functioncall functionName="conv_descr_create"/>
+    <functioncall functionName="conv_p_"/>
+    <functioncall functionName="conv_pd_"/>
+    <functioncall functionName="conv_supports_bias_"/>
+    <functioncall functionName="convolution_direct"/>
+    <functioncall functionName="convolution_winograd"/>
+    <functioncall functionName="cpu_deconvolution_bwd_data_pd_t"/>
+    <functioncall functionName="cpu_deconvolution_bwd_weights_pd_t"/>
+    <functioncall functionName="cpu_deconvolution_fwd_pd_t"/>
+    <functioncall functionName="cpu_primitive_t"/>
+    <functioncall functionName="create_primitive"/>
+    <functioncall functionName="create_scratchpad"/>
+    <functioncall functionName="d_weights_d"/>
+    <functioncall functionName="data_type"/>
+    <functioncall functionName="db"/>
+    <functioncall functionName="deconvolution_direct"/>
+    <functioncall functionName="deconvolution_winograd"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="desc"/>
+    <functioncall functionName="diff_bias"/>
+    <functioncall functionName="diff_bias_md_"/>
+    <functioncall functionName="diff_dst"/>
+    <functioncall functionName="diff_dst_d"/>
+    <functioncall functionName="diff_dst_desc"/>
+    <functioncall functionName="diff_dst_md"/>
+    <functioncall functionName="diff_dst_md_"/>
+    <functioncall functionName="diff_src_desc"/>
+    <functioncall functionName="diff_src_md"/>
+    <functioncall functionName="diff_weights_desc"/>
+    <functioncall functionName="diff_weights_md"/>
+    <functioncall functionName="dilates"/>
+    <functioncall functionName="div_up"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="dst_d"/>
+    <functioncall functionName="dst_desc"/>
+    <functioncall functionName="dst_md"/>
+    <functioncall functionName="dst_md_"/>
+    <functioncall functionName="dst_tag_"/>
+    <functioncall functionName="eltwise"/>
+    <functioncall functionName="eltwise_fwd_preserves_zero"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="engine"/>
+    <functioncall functionName="engine_"/>
+    <functioncall functionName="everyone_is"/>
+    <functioncall functionName="execute"/>
+    <functioncall functionName="f32"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="forward_inference"/>
+    <functioncall functionName="forward_training"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="global_scratchpad_"/>
+    <functioncall functionName="grantor"/>
+    <functioncall functionName="has_default_values"/>
+    <functioncall functionName="has_padded_dst"/>
+    <functioncall functionName="hint_fwd_pd"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_blk"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init_convolution"/>
+    <functioncall functionName="inner_nblks"/>
+    <functioncall functionName="input"/>
+    <functioncall functionName="io_blk"/>
+    <functioncall functionName="is_fwd"/>
+    <functioncall functionName="is_zero_md"/>
+    <functioncall functionName="it"/>
+    <functioncall functionName="jit_impl"/>
+    <functioncall functionName="library"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="mb"/>
+    <functioncall functionName="memory_desc_init_by_blocking_desc"/>
+    <functioncall functionName="memory_desc_init_by_tag"/>
+    <functioncall functionName="memory_desc_matches_one_of_tag"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="move"/>
+    <functioncall functionName="nCdhw16c"/>
+    <functioncall functionName="nCdhw8c"/>
+    <functioncall functionName="nChw16c"/>
+    <functioncall functionName="nChw8c"/>
+    <functioncall functionName="nCw16c"/>
+    <functioncall functionName="nCw8c"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="ncdhw"/>
+    <functioncall functionName="nchw"/>
+    <functioncall functionName="ncw"/>
+    <functioncall functionName="ndims"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="oc"/>
+    <functioncall functionName="od"/>
+    <functioncall functionName="off"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="oh"/>
+    <functioncall functionName="oi_blk"/>
+    <functioncall functionName="ok"/>
+    <functioncall functionName="one_of"/>
+    <functioncall functionName="other"/>
+    <functioncall functionName="output"/>
+    <functioncall functionName="ow"/>
+    <functioncall functionName="padded_dims"/>
+    <functioncall functionName="padding_kind"/>
+    <functioncall functionName="parallel_nd"/>
+    <functioncall functionName="pd"/>
+    <functioncall functionName="pd_t"/>
+    <functioncall functionName="pick"/>
+    <functioncall functionName="post_ops_"/>
+    <functioncall functionName="primitive_t"/>
+    <functioncall functionName="prop_kind"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ref_deconvolution_bwd_data_t"/>
+    <functioncall functionName="ref_deconvolution_bwd_weights_t"/>
+    <functioncall functionName="ref_deconvolution_fwd_t"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sanity_check_ok"/>
+    <functioncall functionName="scratchpad_buffer_"/>
+    <functioncall functionName="scratchpad_md"/>
+    <functioncall functionName="scratchpad_registry"/>
+    <functioncall functionName="scratchpad_size"/>
+    <functioncall functionName="sp"/>
+    <functioncall functionName="src_desc"/>
+    <functioncall functionName="src_md"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stream"/>
+    <functioncall functionName="strides"/>
+    <functioncall functionName="support_bias"/>
+    <functioncall functionName="swap"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="use_global_scratchpad"/>
+    <functioncall functionName="weights_desc"/>
+    <functioncall functionName="weights_md"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="with_bias"/>
+    <functioncall functionName="with_groups"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

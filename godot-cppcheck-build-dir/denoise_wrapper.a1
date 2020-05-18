@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4243229067">
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;oidn_denoise&apos; argument 1 names different: declaration &apos;device&apos; definition &apos;deviceptr&apos;." verbose="Function &apos;oidn_denoise&apos; argument 1 names different: declaration &apos;device&apos; definition &apos;deviceptr&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/denoise/denoise_wrapper.cpp" line="11" column="25"/>
+            <location file0="/home/hbina/git/godot/modules/denoise/denoise_wrapper.cpp" file="/home/hbina/git/godot/modules/denoise/denoise_wrapper.h" line="5" column="25"/>
+            <symbol>oidn_denoise</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="oidn_denoiser_init" lineNumber="5"/>
+    <functiondecl functionName="oidn_denoise" lineNumber="11"/>
+    <functiondecl functionName="oidn_denoiser_finish" lineNumber="32"/>
+    <functioncall functionName="OIDN_DEVICE_TYPE_CPU"/>
+    <functioncall functionName="OIDN_FORMAT_FLOAT3"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="deviceptr"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="filter"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="msg"/>
+    <functioncall functionName="oidnCommitDevice"/>
+    <functioncall functionName="oidnCommitFilter"/>
+    <functioncall functionName="oidnExecuteFilter"/>
+    <functioncall functionName="oidnGetDeviceError"/>
+    <functioncall functionName="oidnNewDevice"/>
+    <functioncall functionName="oidnNewFilter"/>
+    <functioncall functionName="oidnReleaseDevice"/>
+    <functioncall functionName="oidnReleaseFilter"/>
+    <functioncall functionName="oidnSetFilter1b"/>
+    <functioncall functionName="oidnSetSharedFilterImage"/>
+    <functioncall functionName="p_floats"/>
+    <functioncall functionName="p_height"/>
+    <functioncall functionName="p_width"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="true"/>
+  </FileInfo>
+</analyzerinfo>

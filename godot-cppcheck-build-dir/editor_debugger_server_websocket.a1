@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2633491785">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;server&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;server&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" line="78" column="2"/>
+            <symbol>server</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="warning" msg="Virtual function &apos;stop&apos; is called from destructor &apos;~EditorDebuggerServerWebSocket()&apos; at line 86. Dynamic binding is not used." verbose="Virtual function &apos;stop&apos; is called from destructor &apos;~EditorDebuggerServerWebSocket()&apos; at line 86. Dynamic binding is not used.">
+            <location file0="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.h" line="54" column="15" info="stop is a virtual function"/>
+            <location file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" line="86" column="2" info="Calling stop"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_peer_connected&apos; argument 1 names different: declaration &apos;p_peer&apos; definition &apos;p_id&apos;." verbose="Function &apos;_peer_connected&apos; argument 1 names different: declaration &apos;p_peer&apos; definition &apos;p_id&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" line="37" column="57"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.h" line="49" column="27"/>
+            <symbol>_peer_connected</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_peer_connected&apos; argument 2 names different: declaration &apos;p_protocol&apos; definition &apos;_protocol&apos;." verbose="Function &apos;_peer_connected&apos; argument 2 names different: declaration &apos;p_protocol&apos; definition &apos;_protocol&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" line="37" column="70"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.h" line="49" column="42"/>
+            <symbol>_peer_connected</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;_peer_disconnected&apos; argument 1 names different: declaration &apos;p_peer&apos; definition &apos;p_id&apos;." verbose="Function &apos;_peer_disconnected&apos; argument 1 names different: declaration &apos;p_peer&apos; definition &apos;p_id&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" line="41" column="60"/>
+            <location file0="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.cpp" file="/home/hbina/git/godot/modules/websocket/editor_debugger_server_websocket.h" line="50" column="30"/>
+            <symbol>_peer_disconnected</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_peer_connected" lineNumber="37"/>
+    <functiondecl functionName="_peer_disconnected" lineNumber="41"/>
+    <functiondecl functionName="poll" lineNumber="46"/>
+    <functiondecl functionName="start" lineNumber="50"/>
+    <functiondecl functionName="stop" lineNumber="57"/>
+    <functiondecl functionName="is_active" lineNumber="62"/>
+    <functiondecl functionName="is_connection_available" lineNumber="66"/>
+    <functiondecl functionName="take_connection" lineNumber="70"/>
+    <functiondecl functionName="create" lineNumber="89"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="EditorDebuggerServer"/>
+    <functioncall functionName="EditorDebuggerServerWebSocket"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_GET"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="RemoteDebuggerPeerWebSocket"/>
+    <functioncall functionName="_peer_connected"/>
+    <functioncall functionName="_peer_disconnected"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="create"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_peer"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_connection_available"/>
+    <functioncall functionName="is_listening"/>
+    <functioncall functionName="listen"/>
+    <functioncall functionName="max_pkts"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_id"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="pop_front"/>
+    <functioncall functionName="protocols"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="remote_port"/>
+    <functioncall functionName="set_buffers"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="this"/>
+  </FileInfo>
+</analyzerinfo>

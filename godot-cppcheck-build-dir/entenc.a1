@@ -1,0 +1,579 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2465686944">
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;ft&apos; can be reduced." verbose="The scope of the variable &apos;ft&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="176" column="13"/>
+            <symbol>ft</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;fl&apos; can be reduced." verbose="The scope of the variable &apos;fl&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="177" column="13"/>
+            <symbol>fl</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;ec_enc_bits&apos; argument 3 names different: declaration &apos;_ftb&apos; definition &apos;_bits&apos;." verbose="Function &apos;ec_enc_bits&apos; argument 3 names different: declaration &apos;_ftb&apos; definition &apos;_bits&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="193" column="57"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h" line="77" column="57"/>
+            <symbol>ec_enc_bits</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/arch.h:58:25" my-argnr="1" my-argname="str" file="/home/hbina/git/godot/thirdparty/opus/celt/arch.h" line="60" col="80" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/arch.h:58:25" my-argnr="2" my-argname="file" file="/home/hbina/git/godot/thirdparty/opus/celt/arch.h" line="60" col="68" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="238" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+  </FileInfo>
+        <error id="shiftNegativeLHS" severity="portability" msg="Shifting a negative value is technically undefined behaviour" verbose="Shifting a negative value is technically undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="148" column="11"/>
+        </error>
+        <error id="shiftNegativeLHS" severity="portability" msg="Shifting a negative value is technically undefined behaviour" verbose="Shifting a negative value is technically undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="170" column="11"/>
+        </error>
+        <error id="shiftNegative" severity="error" msg="Shifting by a negative value is undefined behaviour" verbose="Shifting by a negative value is undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="192" column="11"/>
+        </error>
+        <error id="shiftNegative" severity="error" msg="Shifting by a negative value is undefined behaviour" verbose="Shifting by a negative value is undefined behaviour" cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="214" column="11"/>
+        </error>
+        <error id="shiftTooManyBits" severity="warning" msg="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 141." verbose="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 141." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="148" column="11" info="Shift"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="141" column="29" info="Assuming that condition &apos;(shift)&lt;=32767&apos; is not redundant"/>
+        </error>
+        <error id="shiftTooManyBits" severity="warning" msg="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 163." verbose="Shifting 32-bit value by 32767 bits is undefined behaviour. See condition at line 163." cwe="758">
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="170" column="11" info="Shift"/>
+            <location file0="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" file="/home/hbina/git/godot/thirdparty/opus/celt/fixed_debug.h" line="163" column="29" info="Assuming that condition &apos;(shift)&lt;=32767&apos; is not redundant"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:128:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:175:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:112:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:128:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:139:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:151:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:164:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:193:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:214:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:237:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:244:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:128:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:244:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:82:13" call-funcname="ec_enc_carry_out" call-argnr="2" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="266" col="50" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" call-funcname="ec_encode" call-argnr="1" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="187" col="5" my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:71:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:60:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="61" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:66:12" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="67" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c:101:25" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="103" col="9" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:36:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="113" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:53:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="141" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:56:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="155" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:65:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="166" col="5" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:77:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="196" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:93:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="220" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:103:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="239" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:93:32" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="94" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:97:35" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="98" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:101:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="102" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h:111:24" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entcode.h" line="112" col="10" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:50:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="130" col="15" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/opus/celt/entenc.h:108:6" my-argnr="1" my-argname="_this" file="/home/hbina/git/godot/thirdparty/opus/celt/entenc.c" line="252" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functiondecl functionName="ec_write_byte" lineNumber="60"/>
+    <functiondecl functionName="ec_write_byte_at_end" lineNumber="66"/>
+    <functiondecl functionName="ec_enc_carry_out" lineNumber="82"/>
+    <functiondecl functionName="ec_enc_normalize" lineNumber="101"/>
+    <functiondecl functionName="ec_enc_init" lineNumber="112"/>
+    <functiondecl functionName="ec_encode" lineNumber="128"/>
+    <functiondecl functionName="ec_encode_bin" lineNumber="139"/>
+    <functiondecl functionName="ec_enc_bit_logp" lineNumber="151"/>
+    <functiondecl functionName="ec_enc_icdf" lineNumber="164"/>
+    <functiondecl functionName="ec_enc_uint" lineNumber="175"/>
+    <functiondecl functionName="ec_enc_bits" lineNumber="193"/>
+    <functiondecl functionName="ec_enc_patch_initial_bits" lineNumber="214"/>
+    <functiondecl functionName="ec_enc_shrink" lineNumber="237"/>
+    <functiondecl functionName="ec_enc_done" lineNumber="244"/>
+    <functioncall functionName="ADD32_"/>
+    <functioncall functionName="EC_CODE_TOP"/>
+    <functioncall functionName="EC_ILOG"/>
+    <functioncall functionName="EC_SYM_MAX"/>
+    <functioncall functionName="EXTRACT16_"/>
+    <functioncall functionName="Q"/>
+    <functioncall functionName="SHR32"/>
+    <functioncall functionName="_bits"/>
+    <functioncall functionName="_buf"/>
+    <functioncall functionName="_celt_fatal"/>
+    <functioncall functionName="_fh"/>
+    <functioncall functionName="_fl"/>
+    <functioncall functionName="_ft"/>
+    <functioncall functionName="_nbits"/>
+    <functioncall functionName="_s"/>
+    <functioncall functionName="_size"/>
+    <functioncall functionName="_this"/>
+    <functioncall functionName="_val"/>
+    <functioncall functionName="_value"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="abort"/>
+    <functioncall functionName="asm"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="buf"/>
+    <functioncall functionName="carry"/>
+    <functioncall functionName="celt_udiv"/>
+    <functioncall functionName="char"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="ec_enc_bits"/>
+    <functioncall functionName="ec_enc_carry_out"/>
+    <functioncall functionName="ec_enc_normalize"/>
+    <functioncall functionName="ec_encode"/>
+    <functioncall functionName="ec_ilog"/>
+    <functioncall functionName="ec_window"/>
+    <functioncall functionName="ec_write_byte"/>
+    <functioncall functionName="ec_write_byte_at_end"/>
+    <functioncall functionName="end_offs"/>
+    <functioncall functionName="end_window"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="ext"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="fl"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="ft"/>
+    <functioncall functionName="ftb"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="memmove"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="msk"/>
+    <functioncall functionName="nend_bits"/>
+    <functioncall functionName="offs"/>
+    <functioncall functionName="opus_alloc"/>
+    <functioncall functionName="opus_int16"/>
+    <functioncall functionName="opus_int32"/>
+    <functioncall functionName="opus_int64"/>
+    <functioncall functionName="opus_uint32"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rng"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="shift"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="storage"/>
+    <functioncall functionName="str"/>
+    <functioncall functionName="sym"/>
+    <functioncall functionName="used"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="window"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

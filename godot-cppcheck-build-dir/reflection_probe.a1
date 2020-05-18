@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4274741889">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;interior_ambient&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;interior_ambient&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/reflection_probe.cpp" line="263" column="2"/>
+            <symbol>interior_ambient</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="set_intensity" lineNumber="33"/>
+    <functiondecl functionName="get_intensity" lineNumber="39"/>
+    <functiondecl functionName="set_interior_ambient" lineNumber="44"/>
+    <functiondecl functionName="set_interior_ambient_energy" lineNumber="50"/>
+    <functiondecl functionName="get_interior_ambient_energy" lineNumber="55"/>
+    <functiondecl functionName="get_interior_ambient" lineNumber="59"/>
+    <functiondecl functionName="set_interior_ambient_probe_contribution" lineNumber="64"/>
+    <functiondecl functionName="get_interior_ambient_probe_contribution" lineNumber="70"/>
+    <functiondecl functionName="set_max_distance" lineNumber="75"/>
+    <functiondecl functionName="get_max_distance" lineNumber="80"/>
+    <functiondecl functionName="set_extents" lineNumber="85"/>
+    <functiondecl functionName="get_extents" lineNumber="105"/>
+    <functiondecl functionName="set_origin_offset" lineNumber="110"/>
+    <functiondecl functionName="get_origin_offset" lineNumber="126"/>
+    <functiondecl functionName="set_enable_box_projection" lineNumber="131"/>
+    <functiondecl functionName="is_box_projection_enabled" lineNumber="136"/>
+    <functiondecl functionName="set_as_interior" lineNumber="141"/>
+    <functiondecl functionName="is_set_as_interior" lineNumber="148"/>
+    <functiondecl functionName="set_enable_shadows" lineNumber="153"/>
+    <functiondecl functionName="are_shadows_enabled" lineNumber="158"/>
+    <functiondecl functionName="set_cull_mask" lineNumber="163"/>
+    <functiondecl functionName="get_cull_mask" lineNumber="168"/>
+    <functiondecl functionName="set_update_mode" lineNumber="173"/>
+    <functiondecl functionName="get_update_mode" lineNumber="178"/>
+    <functiondecl functionName="get_aabb" lineNumber="182"/>
+    <functiondecl functionName="get_faces" lineNumber="189"/>
+    <functiondecl functionName="_validate_property" lineNumber="194"/>
+    <functiondecl functionName="_bind_methods" lineNumber="203"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="BIND_ENUM_CONSTANT"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="COLOR"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="PROPERTY_HINT_COLOR_NO_ALPHA"/>
+    <functioncall functionName="PROPERTY_HINT_ENUM"/>
+    <functioncall functionName="PROPERTY_HINT_EXP_RANGE"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_RENDER"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PROPERTY_USAGE_INTERNAL"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="ReflectionProbe"/>
+    <functioncall functionName="ReflectionProbeUpdateMode"/>
+    <functioncall functionName="SGN"/>
+    <functioncall functionName="UPDATE_ALWAYS"/>
+    <functioncall functionName="UPDATE_ONCE"/>
+    <functioncall functionName="UpdateMode"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="VECTOR3"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="VisualInstance3D"/>
+    <functioncall functionName="_change_notify"/>
+    <functioncall functionName="are_shadows_enabled"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="extents"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="get_cull_mask"/>
+    <functioncall functionName="get_extents"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_intensity"/>
+    <functioncall functionName="get_interior_ambient"/>
+    <functioncall functionName="get_interior_ambient_energy"/>
+    <functioncall functionName="get_interior_ambient_probe_contribution"/>
+    <functioncall functionName="get_max_distance"/>
+    <functioncall functionName="get_origin_offset"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_update_mode"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance_set_base"/>
+    <functioncall functionName="interior"/>
+    <functioncall functionName="is_box_projection_enabled"/>
+    <functioncall functionName="is_set_as_interior"/>
+    <functioncall functionName="origin_offset"/>
+    <functioncall functionName="p_ambient"/>
+    <functioncall functionName="p_contribution"/>
+    <functioncall functionName="p_distance"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_energy"/>
+    <functioncall functionName="p_extents"/>
+    <functioncall functionName="p_intensity"/>
+    <functioncall functionName="p_layers"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="probe"/>
+    <functioncall functionName="reflection_probe_create"/>
+    <functioncall functionName="reflection_probe_set_as_interior"/>
+    <functioncall functionName="reflection_probe_set_cull_mask"/>
+    <functioncall functionName="reflection_probe_set_enable_box_projection"/>
+    <functioncall functionName="reflection_probe_set_enable_shadows"/>
+    <functioncall functionName="reflection_probe_set_extents"/>
+    <functioncall functionName="reflection_probe_set_intensity"/>
+    <functioncall functionName="reflection_probe_set_interior_ambient"/>
+    <functioncall functionName="reflection_probe_set_interior_ambient_energy"/>
+    <functioncall functionName="reflection_probe_set_interior_ambient_probe_contribution"/>
+    <functioncall functionName="reflection_probe_set_max_distance"/>
+    <functioncall functionName="reflection_probe_set_origin_offset"/>
+    <functioncall functionName="reflection_probe_set_update_mode"/>
+    <functioncall functionName="set_as_interior"/>
+    <functioncall functionName="set_cull_mask"/>
+    <functioncall functionName="set_disable_scale"/>
+    <functioncall functionName="set_enable_box_projection"/>
+    <functioncall functionName="set_enable_shadows"/>
+    <functioncall functionName="set_extents"/>
+    <functioncall functionName="set_intensity"/>
+    <functioncall functionName="set_interior_ambient"/>
+    <functioncall functionName="set_interior_ambient_energy"/>
+    <functioncall functionName="set_interior_ambient_probe_contribution"/>
+    <functioncall functionName="set_max_distance"/>
+    <functioncall functionName="set_origin_offset"/>
+    <functioncall functionName="set_update_mode"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update_gizmo"/>
+  </FileInfo>
+</analyzerinfo>

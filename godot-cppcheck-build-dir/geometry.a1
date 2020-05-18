@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2016878712">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file0="/home/hbina/git/godot/core/math/geometry.cpp" file="/home/hbina/git/godot/core/math/geometry.h" line="717" column="32"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called." verbose="The obsolete function &apos;alloca&apos; is called. In C++11 and later it is recommended to use std::array&lt;&gt; or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/core/math/geometry.cpp" line="1324" column="22"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting from float * to signed int * is not portable due to different binary data representations on different platforms." verbose="Casting from float * to signed int * is not portable due to different binary data representations on different platforms." cwe="704">
+            <location file="/home/hbina/git/godot/core/math/geometry.cpp" line="1325" column="11"/>
+        </error>
+        <error id="invalidPointerCast" severity="portability" msg="Casting between signed int * and float * which have an incompatible binary data representation." verbose="Casting between signed int * and float * which have an incompatible binary data representation." cwe="704">
+            <location file="/home/hbina/git/godot/core/math/geometry.cpp" line="1326" column="13"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/core/math/geometry.h:1270:32" call-funcname="_polypaths_do_operation" call-argnr="1" file="/home/hbina/git/godot/core/math/geometry.h" line="802" col="33" call-argexpr="OPERATION_UNION" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.h:1271:32" call-funcname="_polypath_offset" call-argnr="4" file="/home/hbina/git/godot/core/math/geometry.h" line="832" col="26" call-argexpr="END_POLYGON" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.h:537:14" call-funcname="segment_intersects_segment_2d" call-argnr="5" file="/home/hbina/git/godot/core/math/geometry.h" line="901" col="37" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.cpp:307:20" call-funcname="_plot_face" call-argnr="2" file="/home/hbina/git/godot/core/math/geometry.cpp" line="605" col="13" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.cpp:307:20" call-funcname="_plot_face" call-argnr="3" file="/home/hbina/git/godot/core/math/geometry.cpp" line="605" col="13" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.cpp:307:20" call-funcname="_plot_face" call-argnr="4" file="/home/hbina/git/godot/core/math/geometry.cpp" line="605" col="13" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.cpp:363:20" call-funcname="_mark_outside" call-argnr="4" file="/home/hbina/git/godot/core/math/geometry.cpp" line="614" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.cpp:363:20" call-funcname="_mark_outside" call-argnr="2" file="/home/hbina/git/godot/core/math/geometry.cpp" line="623" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/core/math/geometry.cpp:363:20" call-funcname="_mark_outside" call-argnr="3" file="/home/hbina/git/godot/core/math/geometry.cpp" line="632" col="17" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.h:447:17" my-argnr="2" my-argname="p_segment" file="/home/hbina/git/godot/core/math/geometry.h" line="449" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.h:465:17" my-argnr="2" my-argname="p_segment" file="/home/hbina/git/godot/core/math/geometry.h" line="467" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.h:478:17" my-argnr="2" my-argname="p_segment" file="/home/hbina/git/godot/core/math/geometry.h" line="480" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.h:509:17" my-argnr="2" my-argname="p_segment" file="/home/hbina/git/godot/core/math/geometry.h" line="511" col="25" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.h:588:21" my-argnr="1" my-argname="p_triangle" file="/home/hbina/git/godot/core/math/geometry.h" line="590" col="56" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.h:1145:29" my-argnr="3" my-argname="triverts" file="/home/hbina/git/godot/core/math/geometry.h" line="1161" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.cpp:204:13" my-argnr="1" my-argname="p_faces" file="/home/hbina/git/godot/core/math/geometry.cpp" line="206" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.cpp:363:20" my-argnr="1" my-argname="p_cell_status" file="/home/hbina/git/godot/core/math/geometry.cpp" line="365" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.cpp:472:20" my-argnr="1" my-argname="p_cell_status" file="/home/hbina/git/godot/core/math/geometry.cpp" line="478" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.h:1145:29" my-argnr="3" my-argname="triverts" file="/home/hbina/git/godot/core/math/geometry.h" line="1161" col="8" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.cpp:204:13" my-argnr="1" my-argname="p_faces" file="/home/hbina/git/godot/core/math/geometry.cpp" line="206" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.cpp:363:20" my-argnr="1" my-argname="p_cell_status" file="/home/hbina/git/godot/core/math/geometry.cpp" line="365" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/core/math/geometry.cpp:472:20" my-argnr="1" my-argname="p_cell_status" file="/home/hbina/git/godot/core/math/geometry.cpp" line="478" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="optimize_vertices" lineNumber="56"/>
+    <functiondecl functionName="clear" lineNumber="109"/>
+    <functiondecl functionName="_connect_faces" lineNumber="128"/>
+    <functiondecl functionName="_group_face" lineNumber="204"/>
+    <functiondecl functionName="separate_objects" lineNumber="220"/>
+    <functiondecl functionName="_plot_face" lineNumber="307"/>
+    <functiondecl functionName="_mark_outside" lineNumber="363"/>
+    <functiondecl functionName="_build_faces" lineNumber="472"/>
+    <functiondecl functionName="wrap_geometry" lineNumber="532"/>
+    <functiondecl functionName="decompose_polygon_in_convex" lineNumber="686"/>
+    <functiondecl functionName="build_convex_mesh" lineNumber="720"/>
+    <functiondecl functionName="build_box_planes" lineNumber="859"/>
+    <functiondecl functionName="build_cylinder_planes" lineNumber="873"/>
+    <functiondecl functionName="build_sphere_planes" lineNumber="895"/>
+    <functiondecl functionName="build_capsule_planes" lineNumber="928"/>
+    <functiondecl functionName="make_atlas" lineNumber="975"/>
+    <functiondecl functionName="_polypaths_do_operation" lineNumber="1083"/>
+    <functiondecl functionName="_polypath_offset" lineNumber="1143"/>
+    <functiondecl functionName="compute_convex_mesh_points" lineNumber="1210"/>
+    <functiondecl functionName="pack_rects" lineNumber="1249"/>
+    <functiondecl functionName="partial_pack_rects" lineNumber="1285"/>
+    <functiondecl functionName="edt" lineNumber="1322"/>
+    <functiondecl functionName="generate_edf" lineNumber="1359"/>
+    <functiondecl functionName="generate_sdf8" lineNumber="1425"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ABlen"/>
+    <functioncall functionName="AXIS_Z"/>
+    <functioncall functionName="AddPath"/>
+    <functioncall functionName="B"/>
+    <functioncall functionName="CLAMP"/>
+    <functioncall functionName="CMP_POINT_IN_PLANE_EPSILON"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="ConvexPartition_HM"/>
+    <functioncall functionName="D"/>
+    <functioncall functionName="END_BUTT"/>
+    <functioncall functionName="END_JOINED"/>
+    <functioncall functionName="END_POLYGON"/>
+    <functioncall functionName="END_ROUND"/>
+    <functioncall functionName="END_SQUARE"/>
+    <functioncall functionName="ERR_FAIL"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_INDEX"/>
+    <functioncall functionName="ERR_FAIL_INDEX_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="Execute"/>
+    <functioncall functionName="Face3"/>
+    <functioncall functionName="Geometry"/>
+    <functioncall functionName="GetNumPoints"/>
+    <functioncall functionName="GetPoint"/>
+    <functioncall functionName="I"/>
+    <functioncall functionName="Init"/>
+    <functioncall functionName="IntPoint"/>
+    <functioncall functionName="JOIN_MITER"/>
+    <functioncall functionName="JOIN_ROUND"/>
+    <functioncall functionName="JOIN_SQUARE"/>
+    <functioncall functionName="LOC_BOUNDARY"/>
+    <functioncall functionName="LOC_INSIDE"/>
+    <functioncall functionName="LOC_OUTSIDE"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="OPERATION_DIFFERENCE"/>
+    <functioncall functionName="OPERATION_INTERSECTION"/>
+    <functioncall functionName="OPERATION_UNION"/>
+    <functioncall functionName="OPERATION_XOR"/>
+    <functioncall functionName="OpenPathsFromPolyTree"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="Point2"/>
+    <functioncall functionName="SetOrientation"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="TRIANGULATOR_CCW"/>
+    <functioncall functionName="Vector"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="Vector3i"/>
+    <functioncall functionName="X"/>
+    <functioncall functionName="Y"/>
+    <functioncall functionName="_CELL_PREV_FIRST"/>
+    <functioncall functionName="_CELL_PREV_X_NEG"/>
+    <functioncall functionName="_CELL_PREV_X_POS"/>
+    <functioncall functionName="_CELL_PREV_Y_NEG"/>
+    <functioncall functionName="_CELL_PREV_Y_POS"/>
+    <functioncall functionName="_CELL_PREV_Z_NEG"/>
+    <functioncall functionName="_CELL_PREV_Z_POS"/>
+    <functioncall functionName="_CELL_SOLID"/>
+    <functioncall functionName="_FaceClassify"/>
+    <functioncall functionName="_Link"/>
+    <functioncall functionName="_build_faces"/>
+    <functioncall functionName="_connect_faces"/>
+    <functioncall functionName="_fcptr"/>
+    <functioncall functionName="_group_face"/>
+    <functioncall functionName="_mark_outside"/>
+    <functioncall functionName="_plot_face"/>
+    <functioncall functionName="_polypath_offset"/>
+    <functioncall functionName="_polypaths_do_operation"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="acos"/>
+    <functioncall functionName="ad"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="an"/>
+    <functioncall functionName="angle"/>
+    <functioncall functionName="aspect"/>
+    <functioncall functionName="atan2"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="best"/>
+    <functioncall functionName="bn"/>
+    <functioncall functionName="boxcenter"/>
+    <functioncall functionName="boxhalfsize"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="c2"/>
+    <functioncall functionName="cell_status"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="cmax"/>
+    <functioncall functionName="cmin"/>
+    <functioncall functionName="cn"/>
+    <functioncall functionName="co"/>
+    <functioncall functionName="contact"/>
+    <functioncall functionName="context"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="convex_shape_point"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="crs_l"/>
+    <functioncall functionName="ctDifference"/>
+    <functioncall functionName="ctIntersection"/>
+    <functioncall functionName="ctUnion"/>
+    <functioncall functionName="ctXor"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="d1"/>
+    <functioncall functionName="d2"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="den"/>
+    <functioncall functionName="denom"/>
+    <functioncall functionName="diff"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="disp_x"/>
+    <functioncall functionName="disp_y"/>
+    <functioncall functionName="disp_z"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="distance_squared_to"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="div_x"/>
+    <functioncall functionName="div_y"/>
+    <functioncall functionName="div_z"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="e1"/>
+    <functioncall functionName="e2"/>
+    <functioncall functionName="edge"/>
+    <functioncall functionName="edge0_A"/>
+    <functioncall functionName="edge1_A"/>
+    <functioncall functionName="edt"/>
+    <functioncall functionName="end_h"/>
+    <functioncall functionName="end_w"/>
+    <functioncall functionName="error"/>
+    <functioncall functionName="et"/>
+    <functioncall functionName="etClosedLine"/>
+    <functioncall functionName="etClosedPolygon"/>
+    <functioncall functionName="etOpenButt"/>
+    <functioncall functionName="etOpenRound"/>
+    <functioncall functionName="etOpenSquare"/>
+    <functioncall functionName="excluded"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="face"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fast_ftoi"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="float_count"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="found"/>
+    <functioncall functionName="from2D"/>
+    <functioncall functionName="from_y"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="further_away"/>
+    <functioncall functionName="further_away_opposite"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_aabb"/>
+    <functioncall functionName="get_any_point"/>
+    <functioncall functionName="group"/>
+    <functioncall functionName="grow_by"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in_poly"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="inp"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="int32_t"/>
+    <functioncall functionName="inters"/>
+    <functioncall functionName="inters_d2"/>
+    <functioncall functionName="intersect_3"/>
+    <functioncall functionName="intersects_aabb"/>
+    <functioncall functionName="is_a_open"/>
+    <functioncall functionName="is_zero_approx"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="jt"/>
+    <functioncall functionName="jtMiter"/>
+    <functioncall functionName="jtRound"/>
+    <functioncall functionName="jtSquare"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="k_n"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="l2"/>
+    <functioncall functionName="len"/>
+    <functioncall functionName="len_x"/>
+    <functioncall functionName="len_y"/>
+    <functioncall functionName="len_z"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="length_squared"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="line_vec"/>
+    <functioncall functionName="max_h"/>
+    <functioncall functionName="max_w"/>
+    <functioncall functionName="memdelete_arr"/>
+    <functioncall functionName="memnew_arr"/>
+    <functioncall functionName="merge_with"/>
+    <functioncall functionName="min"/>
+    <functioncall functionName="min_index"/>
+    <functioncall functionName="mua"/>
+    <functioncall functionName="mub"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="n1"/>
+    <functioncall functionName="n2"/>
+    <functioncall functionName="n3"/>
+    <functioncall functionName="new_len_x"/>
+    <functioncall functionName="new_len_y"/>
+    <functioncall functionName="new_len_z"/>
+    <functioncall functionName="new_vertices"/>
+    <functioncall functionName="new_x"/>
+    <functioncall functionName="new_y"/>
+    <functioncall functionName="new_z"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_power_of_2"/>
+    <functioncall functionName="next_x"/>
+    <functioncall functionName="next_y"/>
+    <functioncall functionName="next_z"/>
+    <functioncall functionName="ni"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="ofs"/>
+    <functioncall functionName="op"/>
+    <functioncall functionName="out_poly"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p0"/>
+    <functioncall functionName="p1"/>
+    <functioncall functionName="p2"/>
+    <functioncall functionName="p_a"/>
+    <functioncall functionName="p_axis"/>
+    <functioncall functionName="p_b"/>
+    <functioncall functionName="p_cell_status"/>
+    <functioncall functionName="p_circle_pos"/>
+    <functioncall functionName="p_delta"/>
+    <functioncall functionName="p_end_type"/>
+    <functioncall functionName="p_error"/>
+    <functioncall functionName="p_face"/>
+    <functioncall functionName="p_faces"/>
+    <functioncall functionName="p_from"/>
+    <functioncall functionName="p_from_a"/>
+    <functioncall functionName="p_from_b"/>
+    <functioncall functionName="p_group"/>
+    <functioncall functionName="p_index"/>
+    <functioncall functionName="p_join_type"/>
+    <functioncall functionName="p_lats"/>
+    <functioncall functionName="p_lons"/>
+    <functioncall functionName="p_negative"/>
+    <functioncall functionName="p_norm"/>
+    <functioncall functionName="p_op"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_points"/>
+    <functioncall functionName="p_polygon"/>
+    <functioncall functionName="p_polygon_a"/>
+    <functioncall functionName="p_polygon_b"/>
+    <functioncall functionName="p_polyline"/>
+    <functioncall functionName="p_radius"/>
+    <functioncall functionName="p_res"/>
+    <functioncall functionName="p_sides"/>
+    <functioncall functionName="p_sphere_pos"/>
+    <functioncall functionName="p_sphere_radius"/>
+    <functioncall functionName="p_to"/>
+    <functioncall functionName="p_to_a"/>
+    <functioncall functionName="p_v0"/>
+    <functioncall functionName="p_v2"/>
+    <functioncall functionName="p_v3"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="path_a"/>
+    <functioncall functionName="path_b"/>
+    <functioncall functionName="paths"/>
+    <functioncall functionName="planeBoxOverlap"/>
+    <functioncall functionName="plot"/>
+    <functioncall functionName="point_in_projected_triangle"/>
+    <functioncall functionName="polypath"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="position"/>
+    <functioncall functionName="previous"/>
+    <functioncall functionName="ptClip"/>
+    <functioncall functionName="ptSubject"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="q"/>
+    <functioncall functionName="q2"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="r_norm"/>
+    <functioncall functionName="r_res"/>
+    <functioncall functionName="r_result"/>
+    <functioncall functionName="rad"/>
+    <functioncall functionName="real_t"/>
+    <functioncall functionName="ref"/>
+    <functioncall functionName="rel"/>
+    <functioncall functionName="rel_l"/>
+    <functioncall functionName="res_normal"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="sD"/>
+    <functioncall functionName="sN"/>
+    <functioncall functionName="seg_from"/>
+    <functioncall functionName="seg_to"/>
+    <functioncall functionName="segment"/>
+    <functioncall functionName="segment_intersects_segment_2d"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="sphere_d"/>
+    <functioncall functionName="sphere_pos"/>
+    <functioncall functionName="sqrt"/>
+    <functioncall functionName="sqrtterm"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stbrp_init_target"/>
+    <functioncall functionName="stbrp_node"/>
+    <functioncall functionName="stbrp_pack_rects"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tD"/>
+    <functioncall functionName="tN"/>
+    <functioncall functionName="to2D"/>
+    <functioncall functionName="tree"/>
+    <functioncall functionName="triangles"/>
+    <functioncall functionName="triangulate"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="u"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="v0"/>
+    <functioncall functionName="v1"/>
+    <functioncall functionName="v2"/>
+    <functioncall functionName="vab"/>
+    <functioncall functionName="vac"/>
+    <functioncall functionName="vad"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="vap"/>
+    <functioncall functionName="vbc"/>
+    <functioncall functionName="vbp"/>
+    <functioncall functionName="vec2_cross"/>
+    <functioncall functionName="vec_to_line"/>
+    <functioncall functionName="vj1"/>
+    <functioncall functionName="vj2"/>
+    <functioncall functionName="vmax"/>
+    <functioncall functionName="vmin"/>
+    <functioncall functionName="voxelsize"/>
+    <functioncall functionName="w"/>
+    <functioncall functionName="w2"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="wrapped_faces"/>
+    <functioncall functionName="wrects"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="y_mult"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="z_mult"/>
+    <functioncall functionName="zeromem"/>
+  </FileInfo>
+</analyzerinfo>

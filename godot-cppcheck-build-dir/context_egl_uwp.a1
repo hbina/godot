@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4084229467">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ContextEGL_UWP::vsync&apos; is not initialized in the constructor." verbose="Member variable &apos;ContextEGL_UWP::vsync&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/platform/uwp/context_egl_uwp.cpp" line="211" column="17"/>
+            <symbol>ContextEGL_UWP::vsync</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ContextEGL_UWP::get_window_width&apos; can be const." verbose="The member function &apos;ContextEGL_UWP::get_window_width&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/platform/uwp/context_egl_uwp.cpp" file="/home/hbina/git/godot/platform/uwp/context_egl_uwp.h" line="70" column="6"/>
+            <location file="/home/hbina/git/godot/platform/uwp/context_egl_uwp.cpp" line="47" column="21"/>
+            <symbol>ContextEGL_UWP::get_window_width</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;ContextEGL_UWP::get_window_height&apos; can be const." verbose="The member function &apos;ContextEGL_UWP::get_window_height&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/platform/uwp/context_egl_uwp.cpp" file="/home/hbina/git/godot/platform/uwp/context_egl_uwp.h" line="71" column="6"/>
+            <location file="/home/hbina/git/godot/platform/uwp/context_egl_uwp.cpp" line="52" column="21"/>
+            <symbol>ContextEGL_UWP::get_window_height</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="release_current" lineNumber="37"/>
+    <functiondecl functionName="make_current" lineNumber="42"/>
+    <functiondecl functionName="get_window_width" lineNumber="47"/>
+    <functiondecl functionName="get_window_height" lineNumber="52"/>
+    <functiondecl functionName="reset" lineNumber="57"/>
+    <functiondecl functionName="swap_buffers" lineNumber="65"/>
+    <functiondecl functionName="initialize" lineNumber="77"/>
+    <functiondecl functionName="cleanup" lineNumber="193"/>
+    <functioncall functionName="ContextEGL_UWP"/>
+    <functioncall functionName="CreateException"/>
+    <functioncall functionName="EGL_ALPHA_SIZE"/>
+    <functioncall functionName="EGL_ANGLE_DISPLAY_ALLOW_RENDER_TO_BACK_BUFFER"/>
+    <functioncall functionName="EGL_BLUE_SIZE"/>
+    <functioncall functionName="EGL_CONTEXT_CLIENT_VERSION"/>
+    <functioncall functionName="EGL_DEFAULT_DISPLAY"/>
+    <functioncall functionName="EGL_DEPTH_SIZE"/>
+    <functioncall functionName="EGL_GREEN_SIZE"/>
+    <functioncall functionName="EGL_HEIGHT"/>
+    <functioncall functionName="EGL_NONE"/>
+    <functioncall functionName="EGL_NO_CONTEXT"/>
+    <functioncall functionName="EGL_NO_DISPLAY"/>
+    <functioncall functionName="EGL_NO_SURFACE"/>
+    <functioncall functionName="EGL_PLATFORM_ANGLE_ANGLE"/>
+    <functioncall functionName="EGL_PLATFORM_ANGLE_ENABLE_AUTOMATIC_TRIM_ANGLE"/>
+    <functioncall functionName="EGL_PLATFORM_ANGLE_TYPE_ANGLE"/>
+    <functioncall functionName="EGL_PLATFORM_ANGLE_TYPE_D3D11_ANGLE"/>
+    <functioncall functionName="EGL_RED_SIZE"/>
+    <functioncall functionName="EGL_SAMPLE_BUFFERS"/>
+    <functioncall functionName="EGL_STENCIL_SIZE"/>
+    <functioncall functionName="EGL_TRUE"/>
+    <functioncall functionName="EGL_WIDTH"/>
+    <functioncall functionName="E_FAIL"/>
+    <functioncall functionName="GLES_2_0"/>
+    <functioncall functionName="GetForCurrentThread"/>
+    <functioncall functionName="VULKAN"/>
+    <functioncall functionName="catch"/>
+    <functioncall functionName="cleanup"/>
+    <functioncall functionName="config"/>
+    <functioncall functionName="configAttribList"/>
+    <functioncall functionName="context"/>
+    <functioncall functionName="contextAttribs"/>
+    <functioncall functionName="display"/>
+    <functioncall functionName="displayAttributes"/>
+    <functioncall functionName="driver"/>
+    <functioncall functionName="eglChooseConfig"/>
+    <functioncall functionName="eglCreateContext"/>
+    <functioncall functionName="eglCreateWindowSurface"/>
+    <functioncall functionName="eglDestroyContext"/>
+    <functioncall functionName="eglDestroySurface"/>
+    <functioncall functionName="eglGetConfigs"/>
+    <functioncall functionName="eglGetPlatformDisplayEXT"/>
+    <functioncall functionName="eglGetProcAddress"/>
+    <functioncall functionName="eglInitialize"/>
+    <functioncall functionName="eglMakeCurrent"/>
+    <functioncall functionName="eglQuerySurface"/>
+    <functioncall functionName="eglSwapBuffers"/>
+    <functioncall functionName="eglTerminate"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="mEglContext"/>
+    <functioncall functionName="mEglDisplay"/>
+    <functioncall functionName="mEglSurface"/>
+    <functioncall functionName="majorVersion"/>
+    <functioncall functionName="minorVersion"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="numConfigs"/>
+    <functioncall functionName="p_driver"/>
+    <functioncall functionName="p_window"/>
+    <functioncall functionName="reinterpret_cast"/>
+    <functioncall functionName="surface"/>
+    <functioncall functionName="surfaceAttribList"/>
+    <functioncall functionName="use"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="window"/>
+  </FileInfo>
+</analyzerinfo>

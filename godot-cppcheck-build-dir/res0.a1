@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="4046275883">
+        <error id="allocaCalled" severity="warning" msg="Obsolete function &apos;alloca&apos; called. In C99 and later it is recommended to use a variable length array instead." verbose="The obsolete function &apos;alloca&apos; is called. In C99 and later it is recommended to use a variable length array or a dynamically allocated array instead. The function &apos;alloca&apos; is dangerous for many reasons (http://stackoverflow.com/questions/1018853/why-is-alloca-not-considered-good-practice and http://linux.die.net/man/3/alloca).">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="665" column="21"/>
+            <symbol>alloca</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="77" column="7"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;j&apos; can be reduced." verbose="The scope of the variable &apos;j&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="321" column="9"/>
+            <symbol>j</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+        <error id="shadowVariable" severity="style" msg="Local variable &apos;j&apos; shadows outer variable" verbose="Local variable &apos;j&apos; shadows outer variable" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="84" column="11" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="77" column="7" info="Shadowed declaration"/>
+            <symbol>j</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: of" verbose="Unused variable: of" cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="491" column="9"/>
+            <symbol>of</symbol>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: buffer" verbose="Unused variable: buffer" cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="492" column="8"/>
+            <symbol>buffer</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="29" call-argexpr="entry" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="398" col="13" info="Assuming that condition 'entry>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="395" col="35" info="Assignment 'entry=local_book_besterror(book,vec+i*dim)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:384:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="728" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="728" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="728" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:384:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;of&apos; can be reduced." verbose="The scope of the variable &apos;of&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="455" column="11"/>
+            <symbol>of</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="29" call-argexpr="entry" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="398" col="13" info="Assuming that condition 'entry>=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="395" col="35" info="Assignment 'entry=local_book_besterror(book,vec+i*dim)', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:384:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="728" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="728" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="728" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="794" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:384:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="22" call-argexpr="&work" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="402" col="11" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="421" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/misc.h:21:14" call-funcname="_vorbis_block_alloc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="488" col="19" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:102:12" call-funcname="vorbis_book_encode" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="594" col="31" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="713" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:706:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="731" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:718:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:409:15" call-funcname="_01class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="745" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:738:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" call-funcname="_01inverse" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="757" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:750:5" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:476:15" call-funcname="_2class" call-argnr="3" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="768" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:762:8" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="3"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:531:12" call-funcname="_01forward" call-argnr="5" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="797" col="12" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="7"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/libvorbis/codebook.h:111:13" call-funcname="vorbis_book_decodevv_add" call-argnr="2" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="843" col="18" my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:194:22" my-argnr="1" my-argname="vi" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="197" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:258:22" my-argnr="1" my-argname="vd" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="262" col="28" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:319:12" my-argnr="1" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="320" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:387:12" my-argnr="4" my-argname="book" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="391" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:646:12" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="658" col="11" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:776:5" my-argnr="2" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="779" col="16" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libvorbis/res0.c:805:5" my-argnr="1" my-argname="vb" file="/home/hbina/git/godot/thirdparty/libvorbis/res0.c" line="814" col="12" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="387"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="387"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="387"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="387"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="384"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="384"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="387"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="387"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functiondecl functionName="res0_free_info" lineNumber="68"/>
+    <functiondecl functionName="res0_free_look" lineNumber="76"/>
+    <functiondecl functionName="icount" lineNumber="154"/>
+    <functiondecl functionName="res0_pack" lineNumber="164"/>
+    <functiondecl functionName="res0_unpack" lineNumber="194"/>
+    <functiondecl functionName="res0_look" lineNumber="258"/>
+    <functiondecl functionName="local_book_besterror" lineNumber="319"/>
+    <functiondecl functionName="_encodepart" lineNumber="387"/>
+    <functiondecl functionName="_01class" lineNumber="409"/>
+    <functiondecl functionName="_2class" lineNumber="476"/>
+    <functiondecl functionName="_01forward" lineNumber="531"/>
+    <functiondecl functionName="_01inverse" lineNumber="646"/>
+    <functiondecl functionName="res0_inverse" lineNumber="706"/>
+    <functiondecl functionName="res1_forward" lineNumber="718"/>
+    <functiondecl functionName="res1_class" lineNumber="738"/>
+    <functiondecl functionName="res1_inverse" lineNumber="750"/>
+    <functiondecl functionName="res2_class" lineNumber="762"/>
+    <functiondecl functionName="res2_forward" lineNumber="776"/>
+    <functiondecl functionName="res2_inverse" lineNumber="805"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="_01class"/>
+    <functioncall functionName="_01forward"/>
+    <functioncall functionName="_01inverse"/>
+    <functioncall functionName="_2class"/>
+    <functioncall functionName="_VDBG_free"/>
+    <functioncall functionName="_VDBG_malloc"/>
+    <functioncall functionName="_alloca"/>
+    <functioncall functionName="_encodepart"/>
+    <functioncall functionName="_mm_cvtsd_si32"/>
+    <functioncall functionName="_mm_load_sd"/>
+    <functioncall functionName="_ogg_calloc"/>
+    <functioncall functionName="_ogg_free"/>
+    <functioncall functionName="_ogg_malloc"/>
+    <functioncall functionName="_vorbis_block_alloc"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="accumulator"/>
+    <functioncall functionName="alloca"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="bits"/>
+    <functioncall functionName="book"/>
+    <functioncall functionName="books"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="cascade"/>
+    <functioncall functionName="cflag"/>
+    <functioncall functionName="ch"/>
+    <functioncall functionName="codec_setup"/>
+    <functioncall functionName="deco"/>
+    <functioncall functionName="decodemap"/>
+    <functioncall functionName="decodepart"/>
+    <functioncall functionName="del"/>
+    <functioncall functionName="delta"/>
+    <functioncall functionName="dim"/>
+    <functioncall functionName="e"/>
+    <functioncall functionName="encode"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="entries"/>
+    <functioncall functionName="entry"/>
+    <functioncall functionName="eopbreak"/>
+    <functioncall functionName="errout"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="fclose"/>
+    <functioncall functionName="floor"/>
+    <functioncall functionName="fopen"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="fpu"/>
+    <functioncall functionName="fullbooks"/>
+    <functioncall functionName="groupbook"/>
+    <functioncall functionName="grouping"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="icount"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="in"/>
+    <functioncall functionName="index"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="local_book_besterror"/>
+    <functioncall functionName="look"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="max"/>
+    <functioncall functionName="maxstage"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minval"/>
+    <functioncall functionName="mult"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="o"/>
+    <functioncall functionName="of"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="oggpack_read"/>
+    <functioncall functionName="oggpack_write"/>
+    <functioncall functionName="opb"/>
+    <functioncall functionName="ov_ilog"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="partbooks"/>
+    <functioncall functionName="partitions"/>
+    <functioncall functionName="partitions_per_word"/>
+    <functioncall functionName="parts"/>
+    <functioncall functionName="partvals"/>
+    <functioncall functionName="partword"/>
+    <functioncall functionName="phrasebook"/>
+    <functioncall functionName="quantvals"/>
+    <functioncall functionName="res0_free_info"/>
+    <functioncall functionName="res0_free_look"/>
+    <functioncall functionName="res0_inverse"/>
+    <functioncall functionName="res0_look"/>
+    <functioncall functionName="res0_pack"/>
+    <functioncall functionName="res0_unpack"/>
+    <functioncall functionName="res1_class"/>
+    <functioncall functionName="res1_forward"/>
+    <functioncall functionName="res1_inverse"/>
+    <functioncall functionName="res2_class"/>
+    <functioncall functionName="res2_forward"/>
+    <functioncall functionName="res2_inverse"/>
+    <functioncall functionName="resbits"/>
+    <functioncall functionName="resvals"/>
+    <functioncall functionName="ret"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="samples_per_partition"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="sprintf"/>
+    <functioncall functionName="stagebook"/>
+    <functioncall functionName="stages"/>
+    <functioncall functionName="statebook"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="submap"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="tmax"/>
+    <functioncall functionName="tmin"/>
+    <functioncall functionName="train_seq"/>
+    <functioncall functionName="training_data"/>
+    <functioncall functionName="used"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="val"/>
+    <functioncall functionName="vb"/>
+    <functioncall functionName="vl"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="vorbis_book_decode"/>
+    <functioncall functionName="vorbis_book_decodev_add"/>
+    <functioncall functionName="vorbis_book_decodevs_add"/>
+    <functioncall functionName="vorbis_book_decodevv_add"/>
+    <functioncall functionName="vorbis_book_encode"/>
+    <functioncall functionName="vr"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="work"/>
+    <functioncall functionName="ze"/>
+  </FileInfo>
+</analyzerinfo>

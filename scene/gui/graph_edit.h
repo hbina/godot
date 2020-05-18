@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -47,7 +47,7 @@ class GraphEditFilter : public Control {
 
 	friend class GraphEdit;
 	GraphEdit *ge;
-	virtual bool has_point(const Point2 &p_point) const;
+	virtual bool has_point(const Point2 &p_point) const override;
 
 public:
 	GraphEditFilter(GraphEdit *p_edit);
@@ -104,7 +104,7 @@ private:
 	float zoom;
 
 	bool box_selecting;
-	bool box_selection_mode_aditive;
+	bool box_selection_mode_additive;
 	Point2 box_selecting_from;
 	Point2 box_selecting_to;
 	Rect2 box_selecting_rect;
@@ -176,10 +176,10 @@ private:
 
 protected:
 	static void _bind_methods();
-	virtual void add_child_notify(Node *p_child);
-	virtual void remove_child_notify(Node *p_child);
+	virtual void add_child_notify(Node *p_child) override;
+	virtual void remove_child_notify(Node *p_child) override;
 	void _notification(int p_what);
-	virtual bool clips_input() const;
+	virtual bool clips_input() const override;
 
 public:
 	Error connect_node(const StringName &p_from, int p_from_port, const StringName &p_to, int p_to_port);

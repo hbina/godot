@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -105,12 +105,11 @@ class AnimationPlayerEditor : public VBoxContainer {
 	LineEdit *name;
 	Label *name_title;
 	UndoRedo *undo_redo;
-	Ref<Texture> autoplay_icon;
+	Ref<Texture2D> autoplay_icon;
 	bool last_active;
 	float timeline_position;
 
 	EditorFileDialog *file;
-	AcceptDialog *accept;
 	ConfirmationDialog *delete_dialog;
 	int current_option;
 
@@ -210,6 +209,7 @@ class AnimationPlayerEditor : public VBoxContainer {
 	void _allocate_onion_layers();
 	void _free_onion_layers();
 	void _prepare_onion_layers_1();
+	void _prepare_onion_layers_1_deferred();
 	void _prepare_onion_layers_2();
 	void _start_onion_skinning();
 	void _stop_onion_skinning();
@@ -231,8 +231,8 @@ public:
 	bool is_pinned() const { return pin->is_pressed(); }
 	void unpin() { pin->set_pressed(false); }
 	AnimationTrackEditor *get_track_editor() { return track_editor; }
-	Dictionary get_state() const;
-	void set_state(const Dictionary &p_state);
+	virtual Dictionary get_state() const;
+	virtual void set_state(const Dictionary &p_state);
 
 	void ensure_visibility();
 
@@ -254,16 +254,16 @@ protected:
 	void _notification(int p_what);
 
 public:
-	virtual Dictionary get_state() const { return anim_editor->get_state(); }
-	virtual void set_state(const Dictionary &p_state) { anim_editor->set_state(p_state); }
+	virtual Dictionary get_state() const override { return anim_editor->get_state(); }
+	virtual void set_state(const Dictionary &p_state) override { anim_editor->set_state(p_state); }
 
-	virtual String get_name() const { return "Anim"; }
-	bool has_main_screen() const { return false; }
-	virtual void edit(Object *p_object);
-	virtual bool handles(Object *p_object) const;
-	virtual void make_visible(bool p_visible);
+	virtual String get_name() const override { return "Anim"; }
+	virtual bool has_main_screen() const override { return false; }
+	virtual void edit(Object *p_object) override;
+	virtual bool handles(Object *p_object) const override;
+	virtual void make_visible(bool p_visible) override;
 
-	virtual void forward_canvas_force_draw_over_viewport(Control *p_overlay) { anim_editor->forward_canvas_force_draw_over_viewport(p_overlay); }
+	virtual void forward_canvas_force_draw_over_viewport(Control *p_overlay) override { anim_editor->forward_canvas_force_draw_over_viewport(p_overlay); }
 
 	AnimationPlayerEditorPlugin(EditorNode *p_node);
 	~AnimationPlayerEditorPlugin();

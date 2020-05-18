@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2424738545">
+        <error id="unsignedLessThanZero" severity="style" msg="Checking if unsigned expression &apos;dataLength&apos; is less than zero." verbose="The unsigned expression &apos;dataLength&apos; will never be negative so it is either pointless or an error to check if it is." cwe="570">
+            <location file="/home/hbina/git/godot/thirdparty/enet/packet.c" line="29" column="20" info="Unsigned less than zero"/>
+            <symbol>dataLength</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/enet/packet.c:105:1" call-funcname="reflect_crc" call-argnr="1" file="/home/hbina/git/godot/thirdparty/enet/packet.c" line="125" col="39" call-argexpr="byte" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/enet/enet/enet.h:572:23" my-argnr="1" my-argname="packet" file="/home/hbina/git/godot/thirdparty/enet/packet.c" line="81" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="enet_packet_create" lineNumber="20"/>
+    <functiondecl functionName="enet_packet_destroy" lineNumber="57"/>
+    <functiondecl functionName="enet_packet_resize" lineNumber="77"/>
+    <functiondecl functionName="reflect_crc" lineNumber="105"/>
+    <functiondecl functionName="initialize_crc32" lineNumber="119"/>
+    <functiondecl functionName="enet_crc32" lineNumber="143"/>
+    <functioncall functionName="ENET_HOST_TO_NET_32"/>
+    <functioncall functionName="ENET_PEER_RELIABLE_WINDOWS"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_MTU"/>
+    <functioncall functionName="ENET_PROTOCOL_MAXIMUM_PACKET_COMMANDS"/>
+    <functioncall functionName="ENetSocket"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="bit"/>
+    <functioncall functionName="byte"/>
+    <functioncall functionName="crc"/>
+    <functioncall functionName="data"/>
+    <functioncall functionName="dataLength"/>
+    <functioncall functionName="enet_free"/>
+    <functioncall functionName="enet_malloc"/>
+    <functioncall functionName="enet_uint16"/>
+    <functioncall functionName="enet_uint32"/>
+    <functioncall functionName="enet_uint8"/>
+    <functioncall functionName="flags"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="freeCallback"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initialize_crc32"/>
+    <functioncall functionName="initializedCRC32"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="newData"/>
+    <functioncall functionName="packet"/>
+    <functioncall functionName="reflect_crc"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="uint8_t"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

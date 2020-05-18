@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="705311252">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ConstraintCfg::m_enableParallelSolve&apos; is not initialized in the constructor." verbose="Member variable &apos;ConstraintCfg::m_enableParallelSolve&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h" line="48" column="3"/>
+            <symbol>ConstraintCfg::m_enableParallelSolve</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;ConstraintCfg::m_batchCellSize&apos; is not initialized in the constructor." verbose="Member variable &apos;ConstraintCfg::m_batchCellSize&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h" line="48" column="3"/>
+            <symbol>ConstraintCfg::m_batchCellSize</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;SolveTask::getType&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;SolveTask::getType&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="351" column="21"/>
+            <symbol>SolveTask::getType</symbol>
+        </error>
+        <error id="noCopyConstructor" severity="warning" msg="Class &apos;b3Solver&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;b3Solver&apos; does not have a copy constructor which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="97" column="2"/>
+            <symbol>b3Solver</symbol>
+        </error>
+        <error id="noOperatorEq" severity="warning" msg="Class &apos;b3Solver&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." verbose="Class &apos;b3Solver&apos; does not have a operator= which is recommended since it has dynamic memory/resource allocation(s)." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="97" column="2"/>
+            <symbol>b3Solver</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;useBatches&apos; is always true" verbose="Condition &apos;useBatches&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="531" column="6" info="Condition &apos;useBatches&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="530" column="20" info="Assignment &apos;useBatches=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;applyFriction&apos; is always true" verbose="Condition &apos;applyFriction&apos; is always true" cwe="571">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="824" column="7" info="Condition &apos;applyFriction&apos; is always true"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="823" column="24" info="Assignment &apos;applyFriction=true&apos;, assigned value is 1"/>
+        </error>
+        <error id="duplicateExpression" severity="style" msg="Same expression on both sides of &apos;&amp;&amp;&apos;." verbose="Finding the same expression on both sides of an operator is suspicious and might indicate a cut and paste or logic error. Please examine this code carefully to determine if it is correct." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="267" column="32"/>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;solveContactConstraint&apos; argument 2 names different: declaration &apos;inertiaBuf&apos; definition &apos;shapeBuf&apos;." verbose="Function &apos;solveContactConstraint&apos; argument 2 names different: declaration &apos;inertiaBuf&apos; definition &apos;shapeBuf&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="712" column="122"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h" line="96" column="113"/>
+            <symbol>solveContactConstraint</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;batchContacts&apos; argument 3 names different: declaration &apos;n&apos; definition &apos;nNative&apos;." verbose="Function &apos;batchContacts&apos; argument 3 names different: declaration &apos;n&apos; definition &apos;nNative&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1033" column="111"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h" line="107" column="102"/>
+            <symbol>batchContacts</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;batchContacts&apos; argument 4 names different: declaration &apos;offsets&apos; definition &apos;offsetsNative&apos;." verbose="Function &apos;batchContacts&apos; argument 4 names different: declaration &apos;offsets&apos; definition &apos;offsetsNative&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1033" column="149"/>
+            <location file0="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h" line="107" column="134"/>
+            <symbol>batchContacts</symbol>
+        </error>
+        <error id="shadowArgument" severity="style" msg="Local variable &apos;constraint&apos; shadows outer argument" verbose="Local variable &apos;constraint&apos; shadows outer argument" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="689" column="22" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="641" column="42" info="Shadowed declaration"/>
+            <symbol>constraint</symbol>
+        </error>
+        <error id="shadowArgument" severity="style" msg="Local variable &apos;constraint&apos; shadows outer argument" verbose="Local variable &apos;constraint&apos; shadows outer argument" cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="703" column="22" info="Shadow variable"/>
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="641" column="42" info="Shadowed declaration"/>
+            <symbol>constraint</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt0&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt0&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="45" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt0</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt1&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt1&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="46" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt1</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt2&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt2&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="47" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt2</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt3&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt3&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="48" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt3</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt4&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt4&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="50" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt4</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt5&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt5&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="51" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt5</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt6&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt6&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="52" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt6</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt7&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt7&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="53" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt7</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt8&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt8&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="55" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt8</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt9&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt9&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="56" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt9</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt10&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt10&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="57" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt10</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt11&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt11&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="58" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt11</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt12&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt12&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="60" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt12</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt13&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt13&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="61" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt13</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt14&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt14&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="62" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt14</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_valInt15&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_valInt15&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="63" column="6"/>
+            <symbol>SolverDebugInfo::m_valInt15</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_val0&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_val0&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="65" column="8"/>
+            <symbol>SolverDebugInfo::m_val0</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_val1&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_val1&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="66" column="8"/>
+            <symbol>SolverDebugInfo::m_val1</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_val2&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_val2&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="67" column="8"/>
+            <symbol>SolverDebugInfo::m_val2</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;SolverDebugInfo::m_val3&apos; is never used." verbose="struct member &apos;SolverDebugInfo::m_val3&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="68" column="8"/>
+            <symbol>SolverDebugInfo::m_val3</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ParallelSolveData::m_numConstraints&apos; is never used." verbose="struct member &apos;ParallelSolveData::m_numConstraints&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="76" column="32"/>
+            <symbol>ParallelSolveData::m_numConstraints</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;ParallelSolveData::m_offsets&apos; is never used." verbose="struct member &apos;ParallelSolveData::m_offsets&apos; is never used." cwe="563">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="77" column="32"/>
+            <symbol>ParallelSolveData::m_offsets</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="1" my-argname="bodyBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="517" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="2" my-argname="shapeBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="519" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="521" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="663" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="4" my-argname="m_numConstraints" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="654" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="5" my-argname="m_offsets" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="656" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:102:7" my-argnr="4" my-argname="contactCOut" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="873" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="3" my-argname="nNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1064" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="4" my-argname="offsetsNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1076" col="23" value="0"/>
+  </FileInfo>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1047" column="3"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="1" my-argname="bodyBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="517" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="2" my-argname="shapeBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="519" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="521" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="663" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="4" my-argname="m_numConstraints" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="654" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="5" my-argname="m_offsets" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="656" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:102:7" my-argnr="4" my-argname="contactCOut" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="873" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="3" my-argname="nNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1064" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="4" my-argname="offsetsNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1076" col="23" value="0"/>
+  </FileInfo>
+        <error id="memsetClassFloat" severity="portability" msg="Using memset() on struct which contains a floating point number." verbose="Using memset() on struct which contains a floating point number. This is not portable because memset() sets each byte of a block of memory to a specific value and the actual representation of a floating-point value is implementation defined. Note: In case of an IEEE754-1985 compatible implementation setting all bits to zero results in the value 0.0." cwe="758">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="740" column="6"/>
+        </error>
+        <error id="wrongPrintfScanfArgNum" severity="warning" msg="printf format string requires 1 parameter but 2 are given." verbose="printf format string requires 1 parameter but 2 are given." cwe="685">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="807" column="8"/>
+        </error>
+        <error id="wrongPrintfScanfArgNum" severity="warning" msg="printf format string requires 1 parameter but 2 are given." verbose="printf format string requires 1 parameter but 2 are given." cwe="685">
+            <location file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="812" column="8"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="1" my-argname="bodyBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="517" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="2" my-argname="shapeBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="519" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="521" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="663" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="4" my-argname="m_numConstraints" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="654" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="5" my-argname="m_offsets" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="656" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:102:7" my-argnr="4" my-argname="contactCOut" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="873" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="3" my-argname="nNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1064" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="4" my-argname="offsetsNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1076" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:187:0" call-funcname="solveContact < false >" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="379" col="25" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="12" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="maxRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:262:22" call-funcname="solveFriction" call-argnr="13" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="398" col="19" call-argexpr="minRambdaDt" call-argvaluetype="7" call-argvalue="16"/><function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="1" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="1"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="2" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="2"/>
+<function-call call-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" call-funcname="checkConstraintBatch" call-argnr="3" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="736" col="7" my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:96:7" my-argnr="3"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="1" my-argname="bodyBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="517" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="2" my-argname="shapeBuf" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="519" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:99:7" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="521" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="3" my-argname="constraint" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="663" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="4" my-argname="m_numConstraints" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="654" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp:639:6" my-argnr="5" my-argname="m_offsets" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="656" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:102:7" my-argnr="4" my-argname="contactCOut" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="873" col="2" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="3" my-argname="nNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1064" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.h:107:7" my-argnr="4" my-argname="offsetsNative" file="/home/hbina/git/godot/thirdparty/bullet/Bullet3OpenCL/RigidBody/b3Solver.cpp" line="1076" col="23" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="solveFriction" lineNumber="262"/>
+    <functiondecl functionName="getType" lineNumber="351"/>
+    <functiondecl functionName="run" lineNumber="353"/>
+    <functiondecl functionName="solveContactConstraintHost" lineNumber="468"/>
+    <functiondecl functionName="checkConstraintBatch" lineNumber="639"/>
+    <functiondecl functionName="solveContactConstraint" lineNumber="712"/>
+    <functiondecl functionName="convertToConstraints" lineNumber="867"/>
+    <functiondecl functionName="batchContacts" lineNumber="1033"/>
+    <functiondecl functionName="solveContact &lt; false &gt;" lineNumber="188"/>
+    <functiondecl functionName="solveFriction" lineNumber="262"/>
+    <functiondecl functionName="getType" lineNumber="351"/>
+    <functiondecl functionName="run" lineNumber="353"/>
+    <functiondecl functionName="solveContactConstraintHost" lineNumber="468"/>
+    <functiondecl functionName="checkConstraintBatch" lineNumber="639"/>
+    <functiondecl functionName="solveContactConstraint" lineNumber="712"/>
+    <functiondecl functionName="convertToConstraints" lineNumber="867"/>
+    <functiondecl functionName="batchContacts" lineNumber="1033"/>
+    <functiondecl functionName="solveContact &lt; false &gt;" lineNumber="188"/>
+    <functiondecl functionName="solveFriction" lineNumber="262"/>
+    <functiondecl functionName="getType" lineNumber="351"/>
+    <functiondecl functionName="run" lineNumber="353"/>
+    <functiondecl functionName="solveContactConstraintHost" lineNumber="468"/>
+    <functiondecl functionName="checkConstraintBatch" lineNumber="639"/>
+    <functiondecl functionName="solveContactConstraint" lineNumber="712"/>
+    <functiondecl functionName="convertToConstraints" lineNumber="867"/>
+    <functiondecl functionName="batchContacts" lineNumber="1033"/>
+    <functiondecl functionName="solveContact &lt; false &gt;" lineNumber="188"/>
+    <functiondecl functionName="solveFriction" lineNumber="262"/>
+    <functiondecl functionName="getType" lineNumber="351"/>
+    <functiondecl functionName="run" lineNumber="353"/>
+    <functiondecl functionName="solveContactConstraintHost" lineNumber="468"/>
+    <functiondecl functionName="checkConstraintBatch" lineNumber="639"/>
+    <functiondecl functionName="solveContactConstraint" lineNumber="712"/>
+    <functiondecl functionName="convertToConstraints" lineNumber="867"/>
+    <functiondecl functionName="batchContacts" lineNumber="1033"/>
+    <functiondecl functionName="solveContact &lt; false &gt;" lineNumber="188"/>
+    <functioncall functionName="B3_DECLARE_ALIGNED_ALLOCATOR"/>
+    <functioncall functionName="B3_PROFILE"/>
+    <functioncall functionName="B3_SOLVER_N_BATCHES"/>
+    <functioncall functionName="B3_SOLVER_N_CELLS"/>
+    <functioncall functionName="B3_SOLVER_N_SPLIT_X"/>
+    <functioncall functionName="B3_SOLVER_N_SPLIT_Y"/>
+    <functioncall functionName="B3_SOLVER_N_SPLIT_Z"/>
+    <functioncall functionName="ConstraintCfg"/>
+    <functioncall functionName="FLT_MAX"/>
+    <functioncall functionName="SolveTask"/>
+    <functioncall functionName="SolverDebugInfo"/>
+    <functioncall functionName="_finite"/>
+    <functioncall functionName="aIdx"/>
+    <functioncall functionName="ab"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="ac"/>
+    <functioncall functionName="additionalMacros"/>
+    <functioncall functionName="angVelA"/>
+    <functioncall functionName="angVelB"/>
+    <functioncall functionName="angular0"/>
+    <functioncall functionName="angular1"/>
+    <functioncall functionName="applyFriction"/>
+    <functioncall functionName="at"/>
+    <functioncall functionName="b3Assert"/>
+    <functioncall functionName="b3BoundSearchCL"/>
+    <functioncall functionName="b3BufferInfoCL"/>
+    <functioncall functionName="b3Dot"/>
+    <functioncall functionName="b3GpuConstraint4"/>
+    <functioncall functionName="b3MakeInt4"/>
+    <functioncall functionName="b3Max"/>
+    <functioncall functionName="b3Min"/>
+    <functioncall functionName="b3OpenCLArray"/>
+    <functioncall functionName="b3PlaneSpace1"/>
+    <functioncall functionName="b3PrefixScanCL"/>
+    <functioncall functionName="b3RadixSort32CL"/>
+    <functioncall functionName="b3Solver"/>
+    <functioncall functionName="bIdx"/>
+    <functioncall functionName="bInfo"/>
+    <functioncall functionName="batchId"/>
+    <functioncall functionName="batchKernelNewSource"/>
+    <functioncall functionName="batchKernelSource"/>
+    <functioncall functionName="batchSizes"/>
+    <functioncall functionName="batchingKernelsCL"/>
+    <functioncall functionName="batchingKernelsNewCL"/>
+    <functioncall functionName="batchingNewProg"/>
+    <functioncall functionName="batchingProg"/>
+    <functioncall functionName="bodies"/>
+    <functioncall functionName="bodyBuf"/>
+    <functioncall functionName="bodyNative"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="calcRelVel"/>
+    <functioncall functionName="cellIdx"/>
+    <functioncall functionName="cellIndex"/>
+    <functioncall functionName="checkConstraintBatch"/>
+    <functioncall functionName="clFinish"/>
+    <functioncall functionName="clReleaseKernel"/>
+    <functioncall functionName="compileCLKernelFromString"/>
+    <functioncall functionName="compileCLProgramFromString"/>
+    <functioncall functionName="constraint"/>
+    <functioncall functionName="constraintNative"/>
+    <functioncall functionName="constraints"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copyFromHost"/>
+    <functioncall functionName="copyToHost"/>
+    <functioncall functionName="cpuConstraints"/>
+    <functioncall functionName="cs"/>
+    <functioncall functionName="ctx"/>
+    <functioncall functionName="curWgidx"/>
+    <functioncall functionName="debugInfo"/>
+    <functioncall functionName="device"/>
+    <functioncall functionName="dt"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="findLinearSearch"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="gBodies"/>
+    <functioncall functionName="gConstraintOut"/>
+    <functioncall functionName="gContact"/>
+    <functioncall functionName="gConvertConstraintOnCpu"/>
+    <functioncall functionName="gIdx"/>
+    <functioncall functionName="gN"/>
+    <functioncall functionName="gOffsets"/>
+    <functioncall functionName="gShapes"/>
+    <functioncall functionName="getBufferCL"/>
+    <functioncall functionName="getFrictionCoeff"/>
+    <functioncall functionName="getX"/>
+    <functioncall functionName="gpuDebugInfo"/>
+    <functioncall functionName="hostContacts"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="ib"/>
+    <functioncall functionName="ic"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="ii"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="invInertiaA"/>
+    <functioncall functionName="invInertiaB"/>
+    <functioncall functionName="invMassA"/>
+    <functioncall functionName="invMassB"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="jj"/>
+    <functioncall functionName="k"/>
+    <functioncall functionName="launch1D"/>
+    <functioncall functionName="launcher"/>
+    <functioncall functionName="linVelA"/>
+    <functioncall functionName="linVelB"/>
+    <functioncall functionName="linear"/>
+    <functioncall functionName="m_angVel"/>
+    <functioncall functionName="m_batchIdx"/>
+    <functioncall functionName="m_batchSizes"/>
+    <functioncall functionName="m_batchingKernel"/>
+    <functioncall functionName="m_batchingKernelNew"/>
+    <functioncall functionName="m_bodies"/>
+    <functioncall functionName="m_bodyA"/>
+    <functioncall functionName="m_bodyAPtrAndSignBit"/>
+    <functioncall functionName="m_bodyB"/>
+    <functioncall functionName="m_bodyBPtrAndSignBit"/>
+    <functioncall functionName="m_cellIndex"/>
+    <functioncall functionName="m_center"/>
+    <functioncall functionName="m_constraints"/>
+    <functioncall functionName="m_contactToConstraintKernel"/>
+    <functioncall functionName="m_context"/>
+    <functioncall functionName="m_copyConstraintKernel"/>
+    <functioncall functionName="m_curWgidx"/>
+    <functioncall functionName="m_device"/>
+    <functioncall functionName="m_dt"/>
+    <functioncall functionName="m_initInvInertia"/>
+    <functioncall functionName="m_invInertiaWorld"/>
+    <functioncall functionName="m_invMass"/>
+    <functioncall functionName="m_linVel"/>
+    <functioncall functionName="m_linear"/>
+    <functioncall functionName="m_maxNumBatches"/>
+    <functioncall functionName="m_nConstraints"/>
+    <functioncall functionName="m_nContacts"/>
+    <functioncall functionName="m_nIterations"/>
+    <functioncall functionName="m_numConstraints"/>
+    <functioncall functionName="m_offsets"/>
+    <functioncall functionName="m_pos"/>
+    <functioncall functionName="m_positionConstraintCoeff"/>
+    <functioncall functionName="m_positionDrift"/>
+    <functioncall functionName="m_queue"/>
+    <functioncall functionName="m_reorderContactKernel"/>
+    <functioncall functionName="m_setSortDataKernel"/>
+    <functioncall functionName="m_shapes"/>
+    <functioncall functionName="m_solveContactKernel"/>
+    <functioncall functionName="m_solveFriction"/>
+    <functioncall functionName="m_solveFrictionKernel"/>
+    <functioncall functionName="m_start"/>
+    <functioncall functionName="m_staticIdx"/>
+    <functioncall functionName="m_valInt1"/>
+    <functioncall functionName="m_valInt2"/>
+    <functioncall functionName="m_valInt3"/>
+    <functioncall functionName="m_valInt4"/>
+    <functioncall functionName="maxNumBatches"/>
+    <functioncall functionName="maxRambdaDt"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="minRambdaDt"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="nConstraints"/>
+    <functioncall functionName="nContacts"/>
+    <functioncall functionName="nSplit"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="numConstraintsHost"/>
+    <functioncall functionName="numConstraintsInCell"/>
+    <functioncall functionName="numInBatch"/>
+    <functioncall functionName="numWorkItems"/>
+    <functioncall functionName="offsetsHost"/>
+    <functioncall functionName="pErrNum"/>
+    <functioncall functionName="pairCapacity"/>
+    <functioncall functionName="posA"/>
+    <functioncall functionName="posB"/>
+    <functioncall functionName="prevSum"/>
+    <functioncall functionName="printf"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="queue"/>
+    <functioncall functionName="r0"/>
+    <functioncall functionName="r1"/>
+    <functioncall functionName="read"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="run"/>
+    <functioncall functionName="setBuffer"/>
+    <functioncall functionName="setBuffers"/>
+    <functioncall functionName="setConst"/>
+    <functioncall functionName="setConstraint4"/>
+    <functioncall functionName="setLinearAndAngular"/>
+    <functioncall functionName="setZero"/>
+    <functioncall functionName="shapeBuf"/>
+    <functioncall functionName="shapeNative"/>
+    <functioncall functionName="shapes"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="solveContact &lt; false &gt;"/>
+    <functioncall functionName="solveContactCL"/>
+    <functioncall functionName="solveContactProg"/>
+    <functioncall functionName="solveContactSource"/>
+    <functioncall functionName="solveFriction"/>
+    <functioncall functionName="solveFrictionCL"/>
+    <functioncall functionName="solveFrictionProg"/>
+    <functioncall functionName="solveFrictionSource"/>
+    <functioncall functionName="solverSetup2CL"/>
+    <functioncall functionName="solverSetup2Prog"/>
+    <functioncall functionName="solverSetup2Source"/>
+    <functioncall functionName="solverSetupCL"/>
+    <functioncall functionName="solverSetupProg"/>
+    <functioncall functionName="solverSetupSource"/>
+    <functioncall functionName="sortSize"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="staticIdx"/>
+    <functioncall functionName="struct"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="updated"/>
+    <functioncall functionName="useBatches"/>
+    <functioncall functionName="useNewBatchingKernel"/>
+    <functioncall functionName="usedBodies"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="verify"/>
+    <functioncall functionName="wgIdx"/>
+    <functioncall functionName="write"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+    <functioncall functionName="zIdx"/>
+  </FileInfo>
+</analyzerinfo>

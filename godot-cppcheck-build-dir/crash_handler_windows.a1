@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1116512143">
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;CrashHandler::initialize&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;CrashHandler::initialize&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/platform/windows/crash_handler_windows.cpp" file="/home/hbina/git/godot/platform/windows/crash_handler_windows.h" line="48" column="7"/>
+            <location file="/home/hbina/git/godot/platform/windows/crash_handler_windows.cpp" line="225" column="20"/>
+            <symbol>CrashHandler::initialize</symbol>
+        </error>
+        <error id="functionConst" severity="style" msg="Technically the member function &apos;symbol::name&apos; can be const." verbose="The member function &apos;symbol::name&apos; can be made a const function. Making this function &apos;const&apos; should not cause compiler errors. Even though the function can be made const function technically it may not make sense conceptually. Think about your design and the task of the function first - is it a function that must not change object internal state?" cwe="398" inconclusive="true">
+            <location file="/home/hbina/git/godot/platform/windows/crash_handler_windows.cpp" line="80" column="14"/>
+            <symbol>symbol::name</symbol>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;get_mod_info&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;get_mod_info&apos; has a constructor with 1 argument that is not explicit. Such constructors should in general be explicit for type safety reasons. Using the explicit keyword in the constructor means some mistakes when using the class can be avoided." cwe="398">
+            <location file="/home/hbina/git/godot/platform/windows/crash_handler_windows.cpp" line="94" column="2"/>
+            <symbol>get_mod_info</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="disable" lineNumber="218"/>
+    <functiondecl functionName="initialize" lineNumber="225"/>
+    <functiondecl functionName="name" lineNumber="80"/>
+    <functiondecl functionName="undecorated_name" lineNumber="81"/>
+    <functiondecl functionName="CrashHandlerException" lineNumber="117"/>
+    <functiondecl functionName="disable" lineNumber="218"/>
+    <functiondecl functionName="initialize" lineNumber="225"/>
+    <functiondecl functionName="name" lineNumber="80"/>
+    <functiondecl functionName="undecorated_name" lineNumber="81"/>
+    <functiondecl functionName="CrashHandlerException" lineNumber="117"/>
+    <functiondecl functionName="disable" lineNumber="218"/>
+    <functiondecl functionName="initialize" lineNumber="225"/>
+    <functiondecl functionName="name" lineNumber="80"/>
+    <functiondecl functionName="undecorated_name" lineNumber="81"/>
+    <functiondecl functionName="CrashHandlerException" lineNumber="117"/>
+    <functiondecl functionName="disable" lineNumber="218"/>
+    <functiondecl functionName="initialize" lineNumber="225"/>
+    <functioncall functionName="AddrModeFlat"/>
+    <functioncall functionName="ContextRecord"/>
+    <functioncall functionName="CrashHandler"/>
+    <functioncall functionName="DWORD64"/>
+    <functioncall functionName="Ebp"/>
+    <functioncall functionName="Eip"/>
+    <functioncall functionName="EnumProcessModules"/>
+    <functioncall functionName="Esp"/>
+    <functioncall functionName="FileName"/>
+    <functioncall functionName="GetCurrentProcess"/>
+    <functioncall functionName="GetCurrentThread"/>
+    <functioncall functionName="GetModuleBaseName"/>
+    <functioncall functionName="GetModuleFileNameEx"/>
+    <functioncall functionName="GetModuleInformation"/>
+    <functioncall functionName="HMODULE"/>
+    <functioncall functionName="ImageNtHeader"/>
+    <functioncall functionName="IsDebuggerPresent"/>
+    <functioncall functionName="LineNumber"/>
+    <functioncall functionName="Machine"/>
+    <functioncall functionName="NOTIFICATION_CRASH"/>
+    <functioncall functionName="Name"/>
+    <functioncall functionName="Offset"/>
+    <functioncall functionName="Rbp"/>
+    <functioncall functionName="Rip"/>
+    <functioncall functionName="Rsp"/>
+    <functioncall functionName="SYMOPT_UNDNAME"/>
+    <functioncall functionName="SizeOfImage"/>
+    <functioncall functionName="StackWalk64"/>
+    <functioncall functionName="SymCleanup"/>
+    <functioncall functionName="SymFunctionTableAccess64"/>
+    <functioncall functionName="SymGetLineFromAddr64"/>
+    <functioncall functionName="SymGetModuleBase64"/>
+    <functioncall functionName="SymGetOptions"/>
+    <functioncall functionName="SymGetSymFromAddr64"/>
+    <functioncall functionName="SymInitialize"/>
+    <functioncall functionName="SymLoadModule64"/>
+    <functioncall functionName="SymSetOptions"/>
+    <functioncall functionName="UNDNAME_COMPLETE"/>
+    <functioncall functionName="UnDecorateSymbolName"/>
+    <functioncall functionName="__FUNCTION__"/>
+    <functioncall functionName="address"/>
+    <functioncall functionName="back_inserter"/>
+    <functioncall functionName="base"/>
+    <functioncall functionName="base_address"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="c_str"/>
+    <functioncall functionName="cbNeeded"/>
+    <functioncall functionName="context"/>
+    <functioncall functionName="disabled"/>
+    <functioncall functionName="displacement"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="frame"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_main_loop"/>
+    <functioncall functionName="get_mod_info"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="hThread"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="image_type"/>
+    <functioncall functionName="img"/>
+    <functioncall functionName="is_disable_crash_handler"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="load_size"/>
+    <functioncall functionName="lpBaseOfDll"/>
+    <functioncall functionName="max_name_len"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="mi"/>
+    <functioncall functionName="mod"/>
+    <functioncall functionName="module"/>
+    <functioncall functionName="module_handles"/>
+    <functioncall functionName="modules"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="notification"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="offset_from_symbol"/>
+    <functioncall functionName="operatornew"/>
+    <functioncall functionName="process"/>
+    <functioncall functionName="proj_settings"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="skip_first"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="string"/>
+    <functioncall functionName="strlen"/>
+    <functioncall functionName="sym"/>
+    <functioncall functionName="symbol"/>
+    <functioncall functionName="temp"/>
+    <functioncall functionName="transform"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="und_name"/>
+    <functioncall functionName="undecorated_name"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

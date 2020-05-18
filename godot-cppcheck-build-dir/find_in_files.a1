@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2121092999">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;FindInFiles::_initial_files_count&apos; is not initialized in the constructor." verbose="Member variable &apos;FindInFiles::_initial_files_count&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="89" column="14"/>
+            <symbol>FindInFiles::_initial_files_count</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;F==nullptr&apos; is redundant or there is possible null pointer dereference: F." verbose="Either the condition &apos;F==nullptr&apos; is redundant or there is possible null pointer dereference: F." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="849" column="24" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="847" column="60" info="Assignment &apos;F=_result_items.find(item)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="848" column="20" info="Assuming that condition &apos;F==nullptr&apos; is not redundant"/>
+            <symbol>F</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." verbose="Either the condition &apos;!f&apos; is redundant or there is possible null pointer dereference: f." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="872" column="16" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="914" column="38" info="Calling function &apos;get_line&apos;, 1st argument &apos;f&apos; value is 0"/>
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="906" column="36" info="Assignment &apos;f=FileAccess::open(fpath,FileAccess::READ)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="907" column="20" info="Assuming that condition &apos;!f&apos; is not redundant"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file0="/home/hbina/git/godot/editor/find_in_files.cpp" file="/home/hbina/git/godot/editor/editor_node.h" line="550" column="20"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="457" column="18"/>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/editor/find_in_files.cpp" line="496" column="18"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="690" col="51" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="712" col="48" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/editor_node.h:447:7" call-funcname="_menu_option_confirm" call-argnr="2" file="/home/hbina/git/godot/editor/editor_node.h" line="714" col="42" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/find_in_files.h:204:7" call-funcname="set_progress_visible" call-argnr="1" file="/home/hbina/git/godot/editor/find_in_files.cpp" line="587" col="23" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/find_in_files.h:204:7" call-funcname="set_progress_visible" call-argnr="1" file="/home/hbina/git/godot/editor/find_in_files.cpp" line="695" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/editor/find_in_files.h:204:7" call-funcname="set_progress_visible" call-argnr="1" file="/home/hbina/git/godot/editor/find_in_files.cpp" line="798" col="22" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/editor/find_in_files.cpp:868:9" my-argnr="1" my-argname="f" file="/home/hbina/git/godot/editor/find_in_files.cpp" line="872" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="is_text_char" lineNumber="57"/>
+    <functiondecl functionName="find_next" lineNumber="61"/>
+    <functiondecl functionName="set_search_text" lineNumber="95"/>
+    <functiondecl functionName="set_whole_words" lineNumber="99"/>
+    <functiondecl functionName="set_match_case" lineNumber="103"/>
+    <functiondecl functionName="set_folder" lineNumber="107"/>
+    <functiondecl functionName="set_filter" lineNumber="111"/>
+    <functiondecl functionName="_notification" lineNumber="115"/>
+    <functiondecl functionName="start" lineNumber="121"/>
+    <functiondecl functionName="stop" lineNumber="146"/>
+    <functiondecl functionName="_process" lineNumber="152"/>
+    <functiondecl functionName="_iterate" lineNumber="165"/>
+    <functiondecl functionName="get_progress" lineNumber="215"/>
+    <functiondecl functionName="_scan_dir" lineNumber="222"/>
+    <functiondecl functionName="_scan_file" lineNumber="256"/>
+    <functiondecl functionName="_bind_methods" lineNumber="284"/>
+    <functiondecl functionName="set_search_text" lineNumber="401"/>
+    <functiondecl functionName="set_replace_text" lineNumber="406"/>
+    <functiondecl functionName="set_find_in_files_mode" lineNumber="410"/>
+    <functiondecl functionName="get_search_text" lineNumber="431"/>
+    <functiondecl functionName="get_replace_text" lineNumber="436"/>
+    <functiondecl functionName="is_match_case" lineNumber="440"/>
+    <functiondecl functionName="is_whole_words" lineNumber="444"/>
+    <functiondecl functionName="get_folder" lineNumber="448"/>
+    <functiondecl functionName="get_filter" lineNumber="453"/>
+    <functiondecl functionName="_notification" lineNumber="465"/>
+    <functiondecl functionName="_on_folder_button_pressed" lineNumber="490"/>
+    <functiondecl functionName="custom_action" lineNumber="494"/>
+    <functiondecl functionName="_on_search_text_modified" lineNumber="508"/>
+    <functiondecl functionName="_on_search_text_entered" lineNumber="517"/>
+    <functiondecl functionName="_on_replace_text_entered" lineNumber="532"/>
+    <functiondecl functionName="_on_folder_selected" lineNumber="541"/>
+    <functiondecl functionName="_bind_methods" lineNumber="548"/>
+    <functiondecl functionName="set_with_replace" lineNumber="643"/>
+    <functiondecl functionName="set_replace_text" lineNumber="661"/>
+    <functiondecl functionName="clear" lineNumber="665"/>
+    <functiondecl functionName="start_search" lineNumber="672"/>
+    <functiondecl functionName="stop_search" lineNumber="689"/>
+    <functiondecl functionName="_notification" lineNumber="700"/>
+    <functiondecl functionName="_on_result_found" lineNumber="706"/>
+    <functiondecl functionName="draw_result_text" lineNumber="758"/>
+    <functiondecl functionName="_on_item_edited" lineNumber="779"/>
+    <functiondecl functionName="_on_finished" lineNumber="794"/>
+    <functiondecl functionName="_on_refresh_button_clicked" lineNumber="803"/>
+    <functiondecl functionName="_on_cancel_button_clicked" lineNumber="807"/>
+    <functiondecl functionName="_on_result_selected" lineNumber="811"/>
+    <functiondecl functionName="_on_replace_text_changed" lineNumber="826"/>
+    <functiondecl functionName="_on_replace_all_clicked" lineNumber="830"/>
+    <functiondecl functionName="get_line" lineNumber="868"/>
+    <functiondecl functionName="apply_replaces_in_file" lineNumber="900"/>
+    <functiondecl functionName="get_replace_text" lineNumber="961"/>
+    <functiondecl functionName="update_replace_buttons" lineNumber="965"/>
+    <functiondecl functionName="set_progress_visible" lineNumber="972"/>
+    <functiondecl functionName="_bind_methods" lineNumber="976"/>
+    <functioncall functionName="ADD_SIGNAL"/>
+    <functioncall functionName="ANCHOR_BEGIN"/>
+    <functioncall functionName="ANCHOR_END"/>
+    <functioncall functionName="AcceptDialog"/>
+    <functioncall functionName="Button"/>
+    <functioncall functionName="CELL_MODE_CHECK"/>
+    <functioncall functionName="CELL_MODE_CUSTOM"/>
+    <functioncall functionName="CheckBox"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="Control"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_BR"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UL"/>
+    <functioncall functionName="DOCK_SLOT_LEFT_UR"/>
+    <functioncall functionName="DOCK_SLOT_MAX"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_BR"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UL"/>
+    <functioncall functionName="DOCK_SLOT_RIGHT_UR"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="EDITOR_3D"/>
+    <functioncall functionName="EDITOR_ASSETLIB"/>
+    <functioncall functionName="EDITOR_OPEN_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCREENSHOT"/>
+    <functioncall functionName="EDITOR_SCRIPT"/>
+    <functioncall functionName="EDIT_REDO"/>
+    <functioncall functionName="EDIT_RELOAD_SAVED_SCENE"/>
+    <functioncall functionName="EDIT_UNDO"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="EditorNode"/>
+    <functioncall functionName="EditorPluginList"/>
+    <functioncall functionName="EditorProgress"/>
+    <functioncall functionName="EditorProgressBG"/>
+    <functioncall functionName="FILE_CLOSE"/>
+    <functioncall functionName="FILE_CLOSE_ALL"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_QUIT"/>
+    <functioncall functionName="FILE_CLOSE_ALL_AND_RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="FILE_CLOSE_OTHERS"/>
+    <functioncall functionName="FILE_CLOSE_RIGHT"/>
+    <functioncall functionName="FILE_EXPLORE_ANDROID_BUILD_TEMPLATES"/>
+    <functioncall functionName="FILE_EXPORT_MESH_LIBRARY"/>
+    <functioncall functionName="FILE_EXPORT_PROJECT"/>
+    <functioncall functionName="FILE_EXPORT_TILESET"/>
+    <functioncall functionName="FILE_EXTERNAL_OPEN_SCENE"/>
+    <functioncall functionName="FILE_IMPORT_SUBSCENE"/>
+    <functioncall functionName="FILE_INSTALL_ANDROID_SOURCE"/>
+    <functioncall functionName="FILE_MODE_OPEN_DIR"/>
+    <functioncall functionName="FILE_NEW_INHERITED_SCENE"/>
+    <functioncall functionName="FILE_NEW_SCENE"/>
+    <functioncall functionName="FILE_OPEN_OLD_SCENE"/>
+    <functioncall functionName="FILE_OPEN_PREV"/>
+    <functioncall functionName="FILE_OPEN_RECENT"/>
+    <functioncall functionName="FILE_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCENE"/>
+    <functioncall functionName="FILE_QUICK_OPEN_SCRIPT"/>
+    <functioncall functionName="FILE_QUIT"/>
+    <functioncall functionName="FILE_SAVE_ALL_SCENES"/>
+    <functioncall functionName="FILE_SAVE_AND_RUN"/>
+    <functioncall functionName="FILE_SAVE_AS_SCENE"/>
+    <functioncall functionName="FILE_SAVE_BEFORE_RUN"/>
+    <functioncall functionName="FILE_SAVE_OPTIMIZED"/>
+    <functioncall functionName="FILE_SAVE_SCENE"/>
+    <functioncall functionName="FILE_SHOW_IN_FILESYSTEM"/>
+    <functioncall functionName="FileDialog"/>
+    <functioncall functionName="FindInFiles"/>
+    <functioncall functionName="FindInFilesDialog"/>
+    <functioncall functionName="FindInFilesPanel"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GLOBAL_NEW_WINDOW"/>
+    <functioncall functionName="GLOBAL_SCENE"/>
+    <functioncall functionName="GridContainer"/>
+    <functioncall functionName="HBoxContainer"/>
+    <functioncall functionName="HELP_ABOUT"/>
+    <functioncall functionName="HELP_COMMUNITY"/>
+    <functioncall functionName="HELP_DOCS"/>
+    <functioncall functionName="HELP_QA"/>
+    <functioncall functionName="HELP_REPORT_A_BUG"/>
+    <functioncall functionName="HELP_SEARCH"/>
+    <functioncall functionName="HELP_SEND_DOCS_FEEDBACK"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="Label"/>
+    <functioncall functionName="LineEdit"/>
+    <functioncall functionName="MARGIN_BOTTOM"/>
+    <functioncall functionName="MARGIN_LEFT"/>
+    <functioncall functionName="MARGIN_RIGHT"/>
+    <functioncall functionName="MARGIN_TOP"/>
+    <functioncall functionName="MAX_BUILD_CALLBACKS"/>
+    <functioncall functionName="MAX_INIT_CALLBACKS"/>
+    <functioncall functionName="MethodInfo"/>
+    <functioncall functionName="Node"/>
+    <functioncall functionName="ProgressBar"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="READ"/>
+    <functioncall functionName="REPLACE_MODE"/>
+    <functioncall functionName="RESOURCE_SAVE"/>
+    <functioncall functionName="RESOURCE_SAVE_AS"/>
+    <functioncall functionName="RUN_PLAY"/>
+    <functioncall functionName="RUN_PLAY_CUSTOM_SCENE"/>
+    <functioncall functionName="RUN_PLAY_SCENE"/>
+    <functioncall functionName="RUN_PROJECT_DATA_FOLDER"/>
+    <functioncall functionName="RUN_PROJECT_MANAGER"/>
+    <functioncall functionName="RUN_SCENE_SETTINGS"/>
+    <functioncall functionName="RUN_SETTINGS"/>
+    <functioncall functionName="RUN_STOP"/>
+    <functioncall functionName="RUN_VCS_SETTINGS"/>
+    <functioncall functionName="RUN_VCS_SHUT_DOWN"/>
+    <functioncall functionName="Result"/>
+    <functioncall functionName="SCENE_TAB_CLOSE"/>
+    <functioncall functionName="SEARCH_MODE"/>
+    <functioncall functionName="SELECT_ROW"/>
+    <functioncall functionName="SETTINGS_EDITOR_CONFIG_FOLDER"/>
+    <functioncall functionName="SETTINGS_EDITOR_DATA_FOLDER"/>
+    <functioncall functionName="SETTINGS_HELP"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DEFAULT"/>
+    <functioncall functionName="SETTINGS_LAYOUT_DELETE"/>
+    <functioncall functionName="SETTINGS_LAYOUT_SAVE"/>
+    <functioncall functionName="SETTINGS_MANAGE_EXPORT_TEMPLATES"/>
+    <functioncall functionName="SETTINGS_MANAGE_FEATURE_PROFILES"/>
+    <functioncall functionName="SETTINGS_PICK_MAIN_SCENE"/>
+    <functioncall functionName="SETTINGS_PREFERENCES"/>
+    <functioncall functionName="SETTINGS_TOGGLE_CONSOLE"/>
+    <functioncall functionName="SETTINGS_TOGGLE_FULLSCREEN"/>
+    <functioncall functionName="SETTINGS_UPDATE_ALWAYS"/>
+    <functioncall functionName="SETTINGS_UPDATE_CHANGES"/>
+    <functioncall functionName="SETTINGS_UPDATE_CONTINUOUSLY"/>
+    <functioncall functionName="SETTINGS_UPDATE_SPINNER_HIDE"/>
+    <functioncall functionName="SETTINGS_UPDATE_WHEN_CHANGED"/>
+    <functioncall functionName="SET_VIDEO_DRIVER_SAVE_AND_RESTART"/>
+    <functioncall functionName="SIGNAL_FILES_MODIFIED"/>
+    <functioncall functionName="SIGNAL_FIND_REQUESTED"/>
+    <functioncall functionName="SIGNAL_FINISHED"/>
+    <functioncall functionName="SIGNAL_REPLACE_REQUESTED"/>
+    <functioncall functionName="SIGNAL_RESULT_FOUND"/>
+    <functioncall functionName="SIGNAL_RESULT_SELECTED"/>
+    <functioncall functionName="SIZE_EXPAND_FILL"/>
+    <functioncall functionName="SIZE_SHRINK_CENTER"/>
+    <functioncall functionName="STRING"/>
+    <functioncall functionName="Set"/>
+    <functioncall functionName="Size2"/>
+    <functioncall functionName="String"/>
+    <functioncall functionName="TOOLS_CUSTOM"/>
+    <functioncall functionName="TOOLS_ORPHAN_RESOURCES"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Tree"/>
+    <functioncall functionName="VBoxContainer"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="WRITE"/>
+    <functioncall functionName="_"/>
+    <functioncall functionName="_cancel_button"/>
+    <functioncall functionName="_cleanup_scene"/>
+    <functioncall functionName="_current_dir"/>
+    <functioncall functionName="_edit_current"/>
+    <functioncall functionName="_editor_select"/>
+    <functioncall functionName="_files_to_scan"/>
+    <functioncall functionName="_filters_container"/>
+    <functioncall functionName="_find_button"/>
+    <functioncall functionName="_finder"/>
+    <functioncall functionName="_folder_dialog"/>
+    <functioncall functionName="_folder_line_edit"/>
+    <functioncall functionName="_folders_stack"/>
+    <functioncall functionName="_initial_files_count"/>
+    <functioncall functionName="_iterate"/>
+    <functioncall functionName="_match_case"/>
+    <functioncall functionName="_match_case_checkbox"/>
+    <functioncall functionName="_menu_option_confirm"/>
+    <functioncall functionName="_on_cancel_button_clicked"/>
+    <functioncall functionName="_on_finished"/>
+    <functioncall functionName="_on_folder_button_pressed"/>
+    <functioncall functionName="_on_folder_selected"/>
+    <functioncall functionName="_on_item_edited"/>
+    <functioncall functionName="_on_refresh_button_clicked"/>
+    <functioncall functionName="_on_replace_all_clicked"/>
+    <functioncall functionName="_on_replace_text_changed"/>
+    <functioncall functionName="_on_replace_text_entered"/>
+    <functioncall functionName="_on_result_found"/>
+    <functioncall functionName="_on_result_selected"/>
+    <functioncall functionName="_on_search_text_entered"/>
+    <functioncall functionName="_on_search_text_modified"/>
+    <functioncall functionName="_pattern"/>
+    <functioncall functionName="_process"/>
+    <functioncall functionName="_progress_bar"/>
+    <functioncall functionName="_refresh_button"/>
+    <functioncall functionName="_replace_all_button"/>
+    <functioncall functionName="_replace_button"/>
+    <functioncall functionName="_replace_container"/>
+    <functioncall functionName="_replace_label"/>
+    <functioncall functionName="_replace_line_edit"/>
+    <functioncall functionName="_replace_text_line_edit"/>
+    <functioncall functionName="_results_display"/>
+    <functioncall functionName="_root_dir"/>
+    <functioncall functionName="_save_scene"/>
+    <functioncall functionName="_save_scene_with_preview"/>
+    <functioncall functionName="_scan_dir"/>
+    <functioncall functionName="_scan_file"/>
+    <functioncall functionName="_search_text_label"/>
+    <functioncall functionName="_search_text_line_edit"/>
+    <functioncall functionName="_status_label"/>
+    <functioncall functionName="_whole_words"/>
+    <functioncall functionName="_whole_words_checkbox"/>
+    <functioncall functionName="_with_replace"/>
+    <functioncall functionName="add_button"/>
+    <functioncall functionName="add_child"/>
+    <functioncall functionName="add_theme_font_override"/>
+    <functioncall functionName="apply_replaces_in_file"/>
+    <functioncall functionName="begin"/>
+    <functioncall functionName="begins_with"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="bool"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="cb"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_item"/>
+    <functioncall functionName="current_is_dir"/>
+    <functioncall functionName="current_is_hidden"/>
+    <functioncall functionName="custom_action"/>
+    <functioncall functionName="dir"/>
+    <functioncall functionName="disabled"/>
+    <functioncall functionName="draw_begin"/>
+    <functioncall functionName="draw_rect"/>
+    <functioncall functionName="draw_result_text"/>
+    <functioncall functionName="draw_width"/>
+    <functioncall functionName="edit_resource"/>
+    <functioncall functionName="editor_data"/>
+    <functioncall functionName="editor_folding"/>
+    <functioncall functionName="editor_get_scale"/>
+    <functioncall functionName="elapsed"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="end"/>
+    <functioncall functionName="eof_reached"/>
+    <functioncall functionName="exts"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="file"/>
+    <functioncall functionName="file_ext"/>
+    <functioncall functionName="file_item"/>
+    <functioncall functionName="filter_label"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="find_label"/>
+    <functioncall functionName="find_next"/>
+    <functioncall functionName="findn"/>
+    <functioncall functionName="folder"/>
+    <functioncall functionName="folder_button"/>
+    <functioncall functionName="folder_label"/>
+    <functioncall functionName="folder_name"/>
+    <functioncall functionName="folders_to_scan"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="format"/>
+    <functioncall functionName="fpath"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="gc"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_8"/>
+    <functioncall functionName="get_addon_area"/>
+    <functioncall functionName="get_base_dir"/>
+    <functioncall functionName="get_child"/>
+    <functioncall functionName="get_child_count"/>
+    <functioncall functionName="get_children"/>
+    <functioncall functionName="get_edited_scene_root"/>
+    <functioncall functionName="get_extension"/>
+    <functioncall functionName="get_gui_base"/>
+    <functioncall functionName="get_inspector"/>
+    <functioncall functionName="get_line"/>
+    <functioncall functionName="get_metadata"/>
+    <functioncall functionName="get_next"/>
+    <functioncall functionName="get_ok"/>
+    <functioncall functionName="get_parent"/>
+    <functioncall functionName="get_parent_control"/>
+    <functioncall functionName="get_progress"/>
+    <functioncall functionName="get_replace_text"/>
+    <functioncall functionName="get_script_create_dialog"/>
+    <functioncall functionName="get_search_text"/>
+    <functioncall functionName="get_selected"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="get_string_size"/>
+    <functioncall functionName="get_text"/>
+    <functioncall functionName="get_theme_color"/>
+    <functioncall functionName="get_theme_font"/>
+    <functioncall functionName="get_ticks_msec"/>
+    <functioncall functionName="get_undo_redo"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_child_process"/>
+    <functioncall functionName="hbc"/>
+    <functioncall functionName="hide"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="init_folder"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_checked"/>
+    <functioncall functionName="is_disabled"/>
+    <functioncall functionName="is_match_case"/>
+    <functioncall functionName="is_pressed"/>
+    <functioncall functionName="is_processing"/>
+    <functioncall functionName="is_searching"/>
+    <functioncall functionName="is_text_char"/>
+    <functioncall functionName="is_visible"/>
+    <functioncall functionName="is_whole_words"/>
+    <functioncall functionName="item"/>
+    <functioncall functionName="item_obj"/>
+    <functioncall functionName="item_text"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="line"/>
+    <functioncall functionName="line_number"/>
+    <functioncall functionName="list_dir_begin"/>
+    <functioncall functionName="locations"/>
+    <functioncall functionName="log"/>
+    <functioncall functionName="match_rect"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="menu_hb"/>
+    <functioncall functionName="modified_files"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="open_resource"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_amount"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_can_cancel"/>
+    <functioncall functionName="p_file"/>
+    <functioncall functionName="p_force_refresh"/>
+    <functioncall functionName="p_label"/>
+    <functioncall functionName="p_match_case"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_old"/>
+    <functioncall functionName="p_path"/>
+    <functioncall functionName="p_pattern"/>
+    <functioncall functionName="p_pid"/>
+    <functioncall functionName="p_plugins_list"/>
+    <functioncall functionName="p_resource"/>
+    <functioncall functionName="p_state"/>
+    <functioncall functionName="p_step"/>
+    <functioncall functionName="p_table"/>
+    <functioncall functionName="p_task"/>
+    <functioncall functionName="p_type"/>
+    <functioncall functionName="p_whole_word"/>
+    <functioncall functionName="p_with_preview"/>
+    <functioncall functionName="path"/>
+    <functioncall functionName="pattern"/>
+    <functioncall functionName="plus_file"/>
+    <functioncall functionName="pop_back"/>
+    <functioncall functionName="popup_centered_ratio"/>
+    <functioncall functionName="prefix_label"/>
+    <functioncall functionName="print_verbose"/>
+    <functioncall functionName="progress_add_task"/>
+    <functioncall functionName="progress_add_task_bg"/>
+    <functioncall functionName="progress_end_task"/>
+    <functioncall functionName="progress_end_task_bg"/>
+    <functioncall functionName="progress_task_step"/>
+    <functioncall functionName="progress_task_step_bg"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="queue_delete"/>
+    <functioncall functionName="r"/>
+    <functioncall functionName="raw_text_width"/>
+    <functioncall functionName="rect"/>
+    <functioncall functionName="reopen"/>
+    <functioncall functionName="repl_begin"/>
+    <functioncall functionName="repl_end"/>
+    <functioncall functionName="repl_line_number"/>
+    <functioncall functionName="replace"/>
+    <functioncall functionName="replace_label"/>
+    <functioncall functionName="replace_text"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="search_text"/>
+    <functioncall functionName="select_all"/>
+    <functioncall functionName="set_allow_rmb_select"/>
+    <functioncall functionName="set_anchor_and_margin"/>
+    <functioncall functionName="set_as_ratio"/>
+    <functioncall functionName="set_cell_mode"/>
+    <functioncall functionName="set_checked"/>
+    <functioncall functionName="set_column_expand"/>
+    <functioncall functionName="set_column_min_width"/>
+    <functioncall functionName="set_columns"/>
+    <functioncall functionName="set_custom_color"/>
+    <functioncall functionName="set_custom_draw"/>
+    <functioncall functionName="set_disabled"/>
+    <functioncall functionName="set_editable"/>
+    <functioncall functionName="set_expand_right"/>
+    <functioncall functionName="set_file_mode"/>
+    <functioncall functionName="set_h_size_flags"/>
+    <functioncall functionName="set_hide_root"/>
+    <functioncall functionName="set_metadata"/>
+    <functioncall functionName="set_min_size"/>
+    <functioncall functionName="set_pressed"/>
+    <functioncall functionName="set_process"/>
+    <functioncall functionName="set_progress_visible"/>
+    <functioncall functionName="set_select_mode"/>
+    <functioncall functionName="set_self_modulate"/>
+    <functioncall functionName="set_size"/>
+    <functioncall functionName="set_text"/>
+    <functioncall functionName="set_title"/>
+    <functioncall functionName="set_tooltip"/>
+    <functioncall functionName="set_v_size_flags"/>
+    <functioncall functionName="set_visible"/>
+    <functioncall functionName="show"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="start"/>
+    <functioncall functionName="start_search"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="stop"/>
+    <functioncall functionName="stop_search"/>
+    <functioncall functionName="store_string"/>
+    <functioncall functionName="strip_edges"/>
+    <functioncall functionName="sub_dirs"/>
+    <functioncall functionName="substr"/>
+    <functioncall functionName="task"/>
+    <functioncall functionName="text"/>
+    <functioncall functionName="text_index"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="time_before"/>
+    <functioncall functionName="top_split"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="ud"/>
+    <functioncall functionName="unsaved_cache"/>
+    <functioncall functionName="update_keying"/>
+    <functioncall functionName="update_replace_buttons"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="varray"/>
+    <functioncall functionName="vbc"/>
+    <functioncall functionName="vformat"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="whole_words"/>
+    <functioncall functionName="with_replace"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

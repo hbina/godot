@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1338279532">
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." verbose="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" column="26" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="265" column="14" info="Assuming that condition &apos;pic!=NULL&apos; is not redundant"/>
+            <symbol>pic</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." verbose="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="262" column="21" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="265" column="14" info="Assuming that condition &apos;pic!=NULL&apos; is not redundant"/>
+            <symbol>pic</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." verbose="Either the condition &apos;pic!=NULL&apos; is redundant or there is possible null pointer dereference: pic." cwe="476">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="263" column="22" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="265" column="14" info="Assuming that condition &apos;pic!=NULL&apos; is not redundant"/>
+            <symbol>pic</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;i&apos; can be reduced." verbose="The scope of the variable &apos;i&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="256" column="7"/>
+            <symbol>i</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="193" col="12" call-argexpr="&num_malloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="203" col="12" call-argexpr="&num_calloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="213" col="14" call-argexpr="&num_free_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="193" col="12" call-argexpr="&num_malloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="203" col="12" call-argexpr="&num_calloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="213" col="14" call-argexpr="&num_free_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="193" col="12" call-argexpr="&num_malloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="203" col="12" call-argexpr="&num_calloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="213" col="14" call-argexpr="&num_free_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="193" col="12" call-argexpr="&num_malloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="203" col="12" call-argexpr="&num_calloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="213" col="14" call-argexpr="&num_free_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="193" col="12" call-argexpr="&num_malloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="203" col="12" call-argexpr="&num_calloc_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" call-funcname="Increment" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="213" col="14" call-argexpr="&num_free_calls" call-argvaluetype="7" call-argvalue="4"/><function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:91:13" my-argnr="1" my-argname="v" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="114" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:211:6" call-funcname="WebPSafeFree" call-argnr="1" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="226" col="3" my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:225:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:242:6" my-argnr="2" my-argname="dst" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="244" col="24" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c:255:5" my-argnr="1" my-argname="pic" file="/home/hbina/git/godot/thirdparty/libwebp/src/utils/utils.c" line="261" col="26" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functiondecl functionName="PrintMemInfo" lineNumber="76"/>
+    <functiondecl functionName="Increment" lineNumber="91"/>
+    <functiondecl functionName="AddMem" lineNumber="117"/>
+    <functiondecl functionName="SubMem" lineNumber="139"/>
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functiondecl functionName="PrintMemInfo" lineNumber="76"/>
+    <functiondecl functionName="Increment" lineNumber="91"/>
+    <functiondecl functionName="AddMem" lineNumber="117"/>
+    <functiondecl functionName="SubMem" lineNumber="139"/>
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functiondecl functionName="PrintMemInfo" lineNumber="76"/>
+    <functiondecl functionName="Increment" lineNumber="91"/>
+    <functiondecl functionName="AddMem" lineNumber="117"/>
+    <functiondecl functionName="SubMem" lineNumber="139"/>
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functiondecl functionName="PrintMemInfo" lineNumber="76"/>
+    <functiondecl functionName="Increment" lineNumber="91"/>
+    <functiondecl functionName="AddMem" lineNumber="117"/>
+    <functiondecl functionName="SubMem" lineNumber="139"/>
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functiondecl functionName="PrintMemInfo" lineNumber="76"/>
+    <functiondecl functionName="Increment" lineNumber="91"/>
+    <functiondecl functionName="AddMem" lineNumber="117"/>
+    <functiondecl functionName="SubMem" lineNumber="139"/>
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functiondecl functionName="CheckSizeArgumentsOverflow" lineNumber="168"/>
+    <functiondecl functionName="WebPSafeMalloc" lineNumber="191"/>
+    <functiondecl functionName="WebPSafeCalloc" lineNumber="201"/>
+    <functiondecl functionName="WebPSafeFree" lineNumber="211"/>
+    <functiondecl functionName="WebPMalloc" lineNumber="221"/>
+    <functiondecl functionName="WebPFree" lineNumber="225"/>
+    <functiondecl functionName="WebPCopyPlane" lineNumber="231"/>
+    <functiondecl functionName="WebPCopyPixels" lineNumber="242"/>
+    <functiondecl functionName="WebPGetColorPalette" lineNumber="255"/>
+    <functioncall functionName="AddMem"/>
+    <functioncall functionName="CheckSizeArgumentsOverflow"/>
+    <functioncall functionName="Increment"/>
+    <functioncall functionName="NULL"/>
+    <functioncall functionName="PrintMemInfo"/>
+    <functioncall functionName="SubMem"/>
+    <functioncall functionName="VP8LHashPix"/>
+    <functioncall functionName="WebPCopyPlane"/>
+    <functioncall functionName="WebPSafeFree"/>
+    <functioncall functionName="WebPSafeMalloc"/>
+    <functioncall functionName="abort"/>
+    <functioncall functionName="all_blocks"/>
+    <functioncall functionName="argb"/>
+    <functioncall functionName="argb_stride"/>
+    <functioncall functionName="assert"/>
+    <functioncall functionName="atexit"/>
+    <functioncall functionName="atoi"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="block"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="calloc"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="countdown_to_fail"/>
+    <functioncall functionName="dst"/>
+    <functioncall functionName="exit_registered"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fprintf"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="getenv"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="high_water_mark"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="last_pix"/>
+    <functioncall functionName="long"/>
+    <functioncall functionName="malloc"/>
+    <functioncall functionName="malloc_fail_at_str"/>
+    <functioncall functionName="malloc_limit_str"/>
+    <functioncall functionName="mem_limit"/>
+    <functioncall functionName="memcpy"/>
+    <functioncall functionName="next_"/>
+    <functioncall functionName="nmemb"/>
+    <functioncall functionName="num_calloc_calls"/>
+    <functioncall functionName="num_colors"/>
+    <functioncall functionName="num_free_calls"/>
+    <functioncall functionName="num_malloc_calls"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="size_"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="src"/>
+    <functioncall functionName="stderr"/>
+    <functioncall functionName="total_mem"/>
+    <functioncall functionName="total_mem_allocated"/>
+    <functioncall functionName="total_size"/>
+    <functioncall functionName="uint32_t"/>
+    <functioncall functionName="uint64_t"/>
+    <functioncall functionName="use_argb"/>
+    <functioncall functionName="void"/>
+    <functioncall functionName="while"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+  </FileInfo>
+</analyzerinfo>

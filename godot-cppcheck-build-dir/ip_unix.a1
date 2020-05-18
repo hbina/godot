@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="846691640">
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/unix/ip_unix.cpp:78:19" my-argnr="1" my-argname="p_addr" file="/home/hbina/git/godot/drivers/unix/ip_unix.cpp" line="82" col="6" value="0"/>
+  </FileInfo>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/drivers/unix/ip_unix.cpp" line="160" column="26" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/drivers/unix/ip_unix.cpp" line="156" column="28" info="Assignment &apos;E=r_interfaces-&gt;insert(name,info)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/drivers/unix/ip_unix.cpp" line="157" column="17" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/drivers/unix/ip_unix.cpp:78:19" my-argnr="1" my-argname="p_addr" file="/home/hbina/git/godot/drivers/unix/ip_unix.cpp" line="82" col="6" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_sockaddr2ip" lineNumber="78"/>
+    <functiondecl functionName="get_local_interfaces" lineNumber="169"/>
+    <functiondecl functionName="make_default" lineNumber="256"/>
+    <functiondecl functionName="_create_unix" lineNumber="261"/>
+    <functiondecl functionName="_sockaddr2ip" lineNumber="78"/>
+    <functiondecl functionName="get_local_interfaces" lineNumber="134"/>
+    <functiondecl functionName="make_default" lineNumber="256"/>
+    <functiondecl functionName="_create_unix" lineNumber="261"/>
+    <functioncall functionName="AF_INET"/>
+    <functioncall functionName="AF_INET6"/>
+    <functioncall functionName="AF_UNSPEC"/>
+    <functioncall functionName="AI_ADDRCONFIG"/>
+    <functioncall functionName="AdapterName"/>
+    <functioncall functionName="Data"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_MSG"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="FirstUnicastAddress"/>
+    <functioncall functionName="FriendlyName"/>
+    <functioncall functionName="GAA_FLAG_SKIP_FRIENDLY_NAME"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="GetAdaptersAddresses"/>
+    <functioncall functionName="GetAt"/>
+    <functioncall functionName="GetHostNames"/>
+    <functioncall functionName="IP"/>
+    <functioncall functionName="IP_Address"/>
+    <functioncall functionName="IP_Unix"/>
+    <functioncall functionName="IfIndex"/>
+    <functioncall functionName="Interface_Info"/>
+    <functioncall functionName="Next"/>
+    <functioncall functionName="Size"/>
+    <functioncall functionName="_create_unix"/>
+    <functioncall functionName="_sockaddr2ip"/>
+    <functioncall functionName="addrs"/>
+    <functioncall functionName="ai_addr"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buf_size"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="err"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="freeaddrinfo"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_data"/>
+    <functioncall functionName="getaddrinfo"/>
+    <functioncall functionName="hints"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="info"/>
+    <functioncall functionName="insert"/>
+    <functioncall functionName="ip"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="lpSockaddr"/>
+    <functioncall functionName="memalloc"/>
+    <functioncall functionName="memfree"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="memset"/>
+    <functioncall functionName="name"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="num_uint64"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_addr"/>
+    <functioncall functionName="push_front"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="s6_addr"/>
+    <functioncall functionName="sa_family"/>
+    <functioncall functionName="set_ipv4"/>
+    <functioncall functionName="set_ipv6"/>
+    <functioncall functionName="sin_addr"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="utf8"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>

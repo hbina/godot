@@ -5,8 +5,8 @@
 /*                           GODOT ENGINE                                */
 /*                      https://godotengine.org                          */
 /*************************************************************************/
-/* Copyright (c) 2007-2019 Juan Linietsky, Ariel Manzur.                 */
-/* Copyright (c) 2014-2019 Godot Engine contributors (cf. AUTHORS.md)    */
+/* Copyright (c) 2007-2020 Juan Linietsky, Ariel Manzur.                 */
+/* Copyright (c) 2014-2020 Godot Engine contributors (cf. AUTHORS.md).   */
 /*                                                                       */
 /* Permission is hereby granted, free of charge, to any person obtaining */
 /* a copy of this software and associated documentation files (the       */
@@ -65,8 +65,8 @@ class EditorSettingsDialog : public AcceptDialog {
 	String shortcut_configured;
 	String shortcut_filter;
 
-	virtual void cancel_pressed();
-	virtual void ok_pressed();
+	virtual void cancel_pressed() override;
+	virtual void ok_pressed() override;
 
 	void _settings_changed();
 	void _settings_property_edited(const String &p_name);

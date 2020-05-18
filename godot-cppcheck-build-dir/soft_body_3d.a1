@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="1879828107">
+        <error id="uninitMemberVarPrivate" severity="warning" msg="Member variable &apos;SoftBodyRenderingServerHandler::surface&apos; is not initialized in the constructor." verbose="Member variable &apos;SoftBodyRenderingServerHandler::surface&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="42" column="33"/>
+            <symbol>SoftBodyRenderingServerHandler::surface</symbol>
+        </error>
+        <error id="uninitMemberVarPrivate" severity="warning" msg="Member variable &apos;SoftBodyRenderingServerHandler::stride&apos; is not initialized in the constructor." verbose="Member variable &apos;SoftBodyRenderingServerHandler::stride&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="42" column="33"/>
+            <symbol>SoftBodyRenderingServerHandler::stride</symbol>
+        </error>
+        <error id="uninitMemberVarPrivate" severity="warning" msg="Member variable &apos;SoftBodyRenderingServerHandler::offset_vertices&apos; is not initialized in the constructor." verbose="Member variable &apos;SoftBodyRenderingServerHandler::offset_vertices&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="42" column="33"/>
+            <symbol>SoftBodyRenderingServerHandler::offset_vertices</symbol>
+        </error>
+        <error id="uninitMemberVarPrivate" severity="warning" msg="Member variable &apos;SoftBodyRenderingServerHandler::offset_normal&apos; is not initialized in the constructor." verbose="Member variable &apos;SoftBodyRenderingServerHandler::offset_normal&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="42" column="33"/>
+            <symbol>SoftBodyRenderingServerHandler::offset_normal</symbol>
+        </error>
+        <error id="uninitMemberVarPrivate" severity="warning" msg="Member variable &apos;SoftBodyRenderingServerHandler::write_buffer&apos; is not initialized in the constructor." verbose="Member variable &apos;SoftBodyRenderingServerHandler::write_buffer&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="42" column="33"/>
+            <symbol>SoftBodyRenderingServerHandler::write_buffer</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SoftBody3D::debug_mesh&apos; is not initialized in the constructor." verbose="Member variable &apos;SoftBody3D::debug_mesh&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="704" column="13"/>
+            <symbol>SoftBody3D::debug_mesh</symbol>
+        </error>
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;SoftBody3D::capture_input_on_drag&apos; is not initialized in the constructor." verbose="Member variable &apos;SoftBody3D::capture_input_on_drag&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="704" column="13"/>
+            <symbol>SoftBody3D::capture_input_on_drag</symbol>
+        </error>
+        <error id="operatorEq" severity="style" msg="&apos;PinnedPoint::operator=&apos; should return &apos;PinnedPoint &amp;&apos;." verbose="The PinnedPoint::operator= does not conform to standard C/C++ behaviour. To conform to standard C/C++ behaviour, return a reference to self (such as: &apos;PinnedPoint &amp;PinnedPoint::operator=(..) { .. return *this; }&apos;. For safety reasons it might be better to not fix this message. If you think that safety is always more important than conformance then please ignore/suppress this message. For more details about this topic, see the book &quot;Effective C++&quot; by Scott Meyers." cwe="398">
+            <location file0="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" file="/home/hbina/git/godot/scene/3d/soft_body_3d.h" line="78" column="3"/>
+            <symbol>PinnedPoint</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;spatial_attachment_path&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;spatial_attachment_path&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="107" column="2"/>
+            <symbol>spatial_attachment_path</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;offset&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;offset&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="109" column="2"/>
+            <symbol>offset</symbol>
+        </error>
+        <error id="functionStatic" severity="performance" msg="Technically the member function &apos;SoftBodyRenderingServerHandler::close&apos; can be static (but you may consider moving to unnamed namespace)." verbose="The member function &apos;SoftBodyRenderingServerHandler::close&apos; can be made a static function. Making a function static can bring a performance benefit since no &apos;this&apos; instance is passed to the function. This change should not cause compiler errors but it does not necessarily make sense conceptually. Think about your design and the task of the function first - is it a function that must not access members of class instances? And maybe it is more appropriate to move this function to a unnamed namespace." cwe="398" inconclusive="true">
+            <location file0="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" file="/home/hbina/git/godot/scene/3d/soft_body_3d.h" line="57" column="7"/>
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="80" column="38"/>
+            <symbol>SoftBodyRenderingServerHandler::close</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!collision_object&apos; is redundant or there is possible null pointer dereference: collision_object." verbose="Either the condition &apos;!collision_object&apos; is redundant or there is possible null pointer dereference: collision_object." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="590" column="83" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="588" column="74" info="Assignment &apos;collision_object=Object::cast_to&lt;CollisionObject3D&gt;(p_node)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="589" column="20" info="Assuming that condition &apos;!collision_object&apos; is not redundant"/>
+            <symbol>collision_object</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!collision_object&apos; is redundant or there is possible null pointer dereference: collision_object." verbose="Either the condition &apos;!collision_object&apos; is redundant or there is possible null pointer dereference: collision_object." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="597" column="86" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="595" column="74" info="Assignment &apos;collision_object=Object::cast_to&lt;CollisionObject3D&gt;(p_node)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="596" column="20" info="Assuming that condition &apos;!collision_object&apos; is not redundant"/>
+            <symbol>collision_object</symbol>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;point_index&apos; can be reduced." verbose="The scope of the variable &apos;point_index&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="203" column="6"/>
+            <symbol>point_index</symbol>
+        </error>
+        <error id="funcArgNamesDifferent" severity="style" msg="Function &apos;prepare&apos; argument 1 names different: declaration &apos;p_mesh_rid&apos; definition &apos;p_mesh&apos;." verbose="Function &apos;prepare&apos; argument 1 names different: declaration &apos;p_mesh_rid&apos; definition &apos;p_mesh&apos;." cwe="628" inconclusive="true">
+            <location file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="44" column="50"/>
+            <location file0="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" file="/home/hbina/git/godot/scene/3d/soft_body_3d.h" line="54" column="19"/>
+            <symbol>prepare</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:178:7" call-funcname="pin_point" call-argnr="2" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="195" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:178:7" call-funcname="pin_point" call-argnr="2" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="208" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:193:7" call-funcname="_pin_point_on_physics_server" call-argnr="2" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="681" col="30" call-argexpr="pin" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="682" col="5" info="Assuming that condition 'if(pin)' is not redundant"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:105:7" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="178" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:178:7" call-funcname="pin_point" call-argnr="2" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="195" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:178:7" call-funcname="pin_point" call-argnr="2" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="208" col="14" call-argexpr="false" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:193:7" call-funcname="_pin_point_on_physics_server" call-argnr="2" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="681" col="30" call-argexpr="pin" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="682" col="5" info="Assuming that condition 'if(pin)' is not redundant"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="/home/hbina/git/godot/scene/3d/soft_body_3d.h:105:7" my-argnr="1" my-argname="p_list" file="/home/hbina/git/godot/scene/3d/soft_body_3d.cpp" line="178" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="prepare" lineNumber="44"/>
+    <functiondecl functionName="clear" lineNumber="67"/>
+    <functiondecl functionName="open" lineNumber="76"/>
+    <functiondecl functionName="close" lineNumber="80"/>
+    <functiondecl functionName="commit_changes" lineNumber="84"/>
+    <functiondecl functionName="set_vertex" lineNumber="88"/>
+    <functiondecl functionName="set_normal" lineNumber="92"/>
+    <functiondecl functionName="set_aabb" lineNumber="96"/>
+    <functiondecl functionName="_update_pickable" lineNumber="120"/>
+    <functiondecl functionName="_set" lineNumber="127"/>
+    <functiondecl functionName="_get" lineNumber="146"/>
+    <functiondecl functionName="_get_property_list" lineNumber="174"/>
+    <functiondecl functionName="_set_property_pinned_points_indices" lineNumber="187"/>
+    <functiondecl functionName="_set_property_pinned_points_attachment" lineNumber="216"/>
+    <functiondecl functionName="_get_property_pinned_points" lineNumber="235"/>
+    <functiondecl functionName="_changed_callback" lineNumber="254"/>
+    <functiondecl functionName="_notification" lineNumber="264"/>
+    <functiondecl functionName="_bind_methods" lineNumber="321"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="390"/>
+    <functiondecl functionName="_update_physics_server" lineNumber="412"/>
+    <functiondecl functionName="_draw_soft_mesh" lineNumber="427"/>
+    <functiondecl functionName="prepare_physics_server" lineNumber="450"/>
+    <functiondecl functionName="become_mesh_owner" lineNumber="476"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="510"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="515"/>
+    <functiondecl functionName="set_collision_layer" lineNumber="518"/>
+    <functiondecl functionName="get_collision_layer" lineNumber="523"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="527"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="536"/>
+    <functiondecl functionName="set_collision_layer_bit" lineNumber="540"/>
+    <functiondecl functionName="get_collision_layer_bit" lineNumber="549"/>
+    <functiondecl functionName="set_parent_collision_ignore" lineNumber="553"/>
+    <functiondecl functionName="get_parent_collision_ignore" lineNumber="557"/>
+    <functiondecl functionName="set_pinned_points_indices" lineNumber="561"/>
+    <functiondecl functionName="get_pinned_points_indices" lineNumber="568"/>
+    <functiondecl functionName="get_collision_exceptions" lineNumber="572"/>
+    <functiondecl functionName="add_collision_exception_with" lineNumber="586"/>
+    <functiondecl functionName="remove_collision_exception_with" lineNumber="593"/>
+    <functiondecl functionName="get_simulation_precision" lineNumber="600"/>
+    <functiondecl functionName="set_simulation_precision" lineNumber="604"/>
+    <functiondecl functionName="get_total_mass" lineNumber="608"/>
+    <functiondecl functionName="set_total_mass" lineNumber="612"/>
+    <functiondecl functionName="set_linear_stiffness" lineNumber="616"/>
+    <functiondecl functionName="get_linear_stiffness" lineNumber="620"/>
+    <functiondecl functionName="set_areaAngular_stiffness" lineNumber="624"/>
+    <functiondecl functionName="get_areaAngular_stiffness" lineNumber="628"/>
+    <functiondecl functionName="set_volume_stiffness" lineNumber="632"/>
+    <functiondecl functionName="get_volume_stiffness" lineNumber="636"/>
+    <functiondecl functionName="get_pressure_coefficient" lineNumber="640"/>
+    <functiondecl functionName="set_pose_matching_coefficient" lineNumber="644"/>
+    <functiondecl functionName="get_pose_matching_coefficient" lineNumber="648"/>
+    <functiondecl functionName="set_pressure_coefficient" lineNumber="652"/>
+    <functiondecl functionName="get_damping_coefficient" lineNumber="656"/>
+    <functiondecl functionName="set_damping_coefficient" lineNumber="660"/>
+    <functiondecl functionName="get_drag_coefficient" lineNumber="664"/>
+    <functiondecl functionName="set_drag_coefficient" lineNumber="668"/>
+    <functiondecl functionName="get_point_transform" lineNumber="672"/>
+    <functiondecl functionName="pin_point_toggle" lineNumber="676"/>
+    <functiondecl functionName="pin_point" lineNumber="680"/>
+    <functiondecl functionName="is_point_pinned" lineNumber="689"/>
+    <functiondecl functionName="set_ray_pickable" lineNumber="693"/>
+    <functiondecl functionName="is_ray_pickable" lineNumber="699"/>
+    <functiondecl functionName="reset_softbody_pin" lineNumber="720"/>
+    <functiondecl functionName="_make_cache_dirty" lineNumber="728"/>
+    <functiondecl functionName="_update_cache_pin_points_datas" lineNumber="732"/>
+    <functiondecl functionName="_pin_point_on_physics_server" lineNumber="750"/>
+    <functiondecl functionName="_add_pinned_point" lineNumber="754"/>
+    <functiondecl functionName="_reset_points_offsets" lineNumber="782"/>
+    <functiondecl functionName="_remove_pinned_point" lineNumber="801"/>
+    <functiondecl functionName="_get_pinned_point" lineNumber="808"/>
+    <functiondecl functionName="_has_pinned_point" lineNumber="819"/>
+    <functiondecl functionName="prepare" lineNumber="44"/>
+    <functiondecl functionName="clear" lineNumber="67"/>
+    <functiondecl functionName="open" lineNumber="76"/>
+    <functiondecl functionName="close" lineNumber="80"/>
+    <functiondecl functionName="commit_changes" lineNumber="84"/>
+    <functiondecl functionName="set_vertex" lineNumber="88"/>
+    <functiondecl functionName="set_normal" lineNumber="92"/>
+    <functiondecl functionName="set_aabb" lineNumber="96"/>
+    <functiondecl functionName="_update_pickable" lineNumber="120"/>
+    <functiondecl functionName="_set" lineNumber="127"/>
+    <functiondecl functionName="_get" lineNumber="146"/>
+    <functiondecl functionName="_get_property_list" lineNumber="174"/>
+    <functiondecl functionName="_set_property_pinned_points_indices" lineNumber="187"/>
+    <functiondecl functionName="_set_property_pinned_points_attachment" lineNumber="216"/>
+    <functiondecl functionName="_get_property_pinned_points" lineNumber="235"/>
+    <functiondecl functionName="_changed_callback" lineNumber="254"/>
+    <functiondecl functionName="_notification" lineNumber="264"/>
+    <functiondecl functionName="_bind_methods" lineNumber="321"/>
+    <functiondecl functionName="get_configuration_warning" lineNumber="390"/>
+    <functiondecl functionName="_update_physics_server" lineNumber="412"/>
+    <functiondecl functionName="_draw_soft_mesh" lineNumber="427"/>
+    <functiondecl functionName="prepare_physics_server" lineNumber="450"/>
+    <functiondecl functionName="become_mesh_owner" lineNumber="476"/>
+    <functiondecl functionName="set_collision_mask" lineNumber="510"/>
+    <functiondecl functionName="get_collision_mask" lineNumber="515"/>
+    <functiondecl functionName="set_collision_layer" lineNumber="518"/>
+    <functiondecl functionName="get_collision_layer" lineNumber="523"/>
+    <functiondecl functionName="set_collision_mask_bit" lineNumber="527"/>
+    <functiondecl functionName="get_collision_mask_bit" lineNumber="536"/>
+    <functiondecl functionName="set_collision_layer_bit" lineNumber="540"/>
+    <functiondecl functionName="get_collision_layer_bit" lineNumber="549"/>
+    <functiondecl functionName="set_parent_collision_ignore" lineNumber="553"/>
+    <functiondecl functionName="get_parent_collision_ignore" lineNumber="557"/>
+    <functiondecl functionName="set_pinned_points_indices" lineNumber="561"/>
+    <functiondecl functionName="get_pinned_points_indices" lineNumber="568"/>
+    <functiondecl functionName="get_collision_exceptions" lineNumber="572"/>
+    <functiondecl functionName="add_collision_exception_with" lineNumber="586"/>
+    <functiondecl functionName="remove_collision_exception_with" lineNumber="593"/>
+    <functiondecl functionName="get_simulation_precision" lineNumber="600"/>
+    <functiondecl functionName="set_simulation_precision" lineNumber="604"/>
+    <functiondecl functionName="get_total_mass" lineNumber="608"/>
+    <functiondecl functionName="set_total_mass" lineNumber="612"/>
+    <functiondecl functionName="set_linear_stiffness" lineNumber="616"/>
+    <functiondecl functionName="get_linear_stiffness" lineNumber="620"/>
+    <functiondecl functionName="set_areaAngular_stiffness" lineNumber="624"/>
+    <functiondecl functionName="get_areaAngular_stiffness" lineNumber="628"/>
+    <functiondecl functionName="set_volume_stiffness" lineNumber="632"/>
+    <functiondecl functionName="get_volume_stiffness" lineNumber="636"/>
+    <functiondecl functionName="get_pressure_coefficient" lineNumber="640"/>
+    <functiondecl functionName="set_pose_matching_coefficient" lineNumber="644"/>
+    <functiondecl functionName="get_pose_matching_coefficient" lineNumber="648"/>
+    <functiondecl functionName="set_pressure_coefficient" lineNumber="652"/>
+    <functiondecl functionName="get_damping_coefficient" lineNumber="656"/>
+    <functiondecl functionName="set_damping_coefficient" lineNumber="660"/>
+    <functiondecl functionName="get_drag_coefficient" lineNumber="664"/>
+    <functiondecl functionName="set_drag_coefficient" lineNumber="668"/>
+    <functiondecl functionName="get_point_transform" lineNumber="672"/>
+    <functiondecl functionName="pin_point_toggle" lineNumber="676"/>
+    <functiondecl functionName="pin_point" lineNumber="680"/>
+    <functiondecl functionName="is_point_pinned" lineNumber="689"/>
+    <functiondecl functionName="set_ray_pickable" lineNumber="693"/>
+    <functiondecl functionName="is_ray_pickable" lineNumber="699"/>
+    <functiondecl functionName="reset_softbody_pin" lineNumber="720"/>
+    <functiondecl functionName="_make_cache_dirty" lineNumber="728"/>
+    <functiondecl functionName="_update_cache_pin_points_datas" lineNumber="732"/>
+    <functiondecl functionName="_pin_point_on_physics_server" lineNumber="750"/>
+    <functiondecl functionName="_add_pinned_point" lineNumber="754"/>
+    <functiondecl functionName="_reset_points_offsets" lineNumber="782"/>
+    <functiondecl functionName="_remove_pinned_point" lineNumber="801"/>
+    <functiondecl functionName="_get_pinned_point" lineNumber="808"/>
+    <functiondecl functionName="_has_pinned_point" lineNumber="819"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="ADD_GROUP"/>
+    <functioncall functionName="ADD_PROPERTY"/>
+    <functioncall functionName="ARRAY_COMPRESS_NORMAL"/>
+    <functioncall functionName="BOOL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_MSG"/>
+    <functioncall functionName="ERR_FAIL_NULL"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="FLOAT"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="INT"/>
+    <functioncall functionName="MeshInstance3D"/>
+    <functioncall functionName="NODE_PATH"/>
+    <functioncall functionName="NodePath"/>
+    <functioncall functionName="PACKED_INT32_ARRAY"/>
+    <functioncall functionName="PRIMITIVE_TRIANGLES"/>
+    <functioncall functionName="PROPERTY_HINT_LAYERS_3D_PHYSICS"/>
+    <functioncall functionName="PROPERTY_HINT_PROPERTY_OF_VARIANT_TYPE"/>
+    <functioncall functionName="PROPERTY_HINT_RANGE"/>
+    <functioncall functionName="PinnedPoint"/>
+    <functioncall functionName="PropertyInfo"/>
+    <functioncall functionName="RID"/>
+    <functioncall functionName="SoftBody3D"/>
+    <functioncall functionName="SoftBodyRenderingServerHandler"/>
+    <functioncall functionName="TTR"/>
+    <functioncall functionName="Transform"/>
+    <functioncall functionName="VECTOR3"/>
+    <functioncall functionName="_add_pinned_point"/>
+    <functioncall functionName="_draw_soft_mesh"/>
+    <functioncall functionName="_get_pinned_point"/>
+    <functioncall functionName="_get_property_pinned_points"/>
+    <functioncall functionName="_has_pinned_point"/>
+    <functioncall functionName="_make_cache_dirty"/>
+    <functioncall functionName="_pin_point_on_physics_server"/>
+    <functioncall functionName="_remove_pinned_point"/>
+    <functioncall functionName="_reset_points_offsets"/>
+    <functioncall functionName="_set_property_pinned_points_attachment"/>
+    <functioncall functionName="_set_property_pinned_points_indices"/>
+    <functioncall functionName="_update_cache_pin_points_datas"/>
+    <functioncall functionName="_update_physics_server"/>
+    <functioncall functionName="_update_pickable"/>
+    <functioncall functionName="add_change_receptor"/>
+    <functioncall functionName="add_collision_exception_with"/>
+    <functioncall functionName="add_surface_from_arrays"/>
+    <functioncall functionName="affine_inverse"/>
+    <functioncall functionName="append"/>
+    <functioncall functionName="append_array"/>
+    <functioncall functionName="arr_ret"/>
+    <functioncall functionName="become_mesh_owner"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="body"/>
+    <functioncall functionName="body_attach_object_instance_id"/>
+    <functioncall functionName="body_get_object_instance_id"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="buffer"/>
+    <functioncall functionName="call_deferred"/>
+    <functioncall functionName="callable_mp"/>
+    <functioncall functionName="cast_to"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="collision_layer"/>
+    <functioncall functionName="collision_mask"/>
+    <functioncall functionName="collision_object"/>
+    <functioncall functionName="commit_changes"/>
+    <functioncall functionName="connect"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="const_cast"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="copymem"/>
+    <functioncall functionName="disconnect"/>
+    <functioncall functionName="empty"/>
+    <functioncall functionName="exceptions"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="float"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="free"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_areaAngular_stiffness"/>
+    <functioncall functionName="get_axis"/>
+    <functioncall functionName="get_collision_exceptions"/>
+    <functioncall functionName="get_collision_layer"/>
+    <functioncall functionName="get_collision_layer_bit"/>
+    <functioncall functionName="get_collision_mask"/>
+    <functioncall functionName="get_collision_mask_bit"/>
+    <functioncall functionName="get_configuration_warning"/>
+    <functioncall functionName="get_damping_coefficient"/>
+    <functioncall functionName="get_drag_coefficient"/>
+    <functioncall functionName="get_global_transform"/>
+    <functioncall functionName="get_instance"/>
+    <functioncall functionName="get_instance_id"/>
+    <functioncall functionName="get_linear_stiffness"/>
+    <functioncall functionName="get_mesh"/>
+    <functioncall functionName="get_node"/>
+    <functioncall functionName="get_parent_collision_ignore"/>
+    <functioncall functionName="get_pose_matching_coefficient"/>
+    <functioncall functionName="get_pressure_coefficient"/>
+    <functioncall functionName="get_rid"/>
+    <functioncall functionName="get_simulation_precision"/>
+    <functioncall functionName="get_singleton"/>
+    <functioncall functionName="get_slicec"/>
+    <functioncall functionName="get_space"/>
+    <functioncall functionName="get_surface_count"/>
+    <functioncall functionName="get_total_mass"/>
+    <functioncall functionName="get_transform"/>
+    <functioncall functionName="get_volume_stiffness"/>
+    <functioncall functionName="get_world_3d"/>
+    <functioncall functionName="has_node"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="id"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="instance"/>
+    <functioncall functionName="instance_id"/>
+    <functioncall functionName="is_connected"/>
+    <functioncall functionName="is_editor_hint"/>
+    <functioncall functionName="is_empty"/>
+    <functioncall functionName="is_inside_tree"/>
+    <functioncall functionName="is_null"/>
+    <functioncall functionName="is_ray_pickable"/>
+    <functioncall functionName="is_ready"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="is_visible_in_tree"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="layer"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="mask"/>
+    <functioncall functionName="materials"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="mesh_owner"/>
+    <functioncall functionName="mesh_set_custom_aabb"/>
+    <functioncall functionName="mesh_surface_update_region"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="obj"/>
+    <functioncall functionName="offset"/>
+    <functioncall functionName="offset_normal"/>
+    <functioncall functionName="offset_vertices"/>
+    <functioncall functionName="open"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_areaAngular_stiffness"/>
+    <functioncall functionName="p_damping_coefficient"/>
+    <functioncall functionName="p_drag_coefficient"/>
+    <functioncall functionName="p_indices_size"/>
+    <functioncall functionName="p_item"/>
+    <functioncall functionName="p_layer"/>
+    <functioncall functionName="p_linear_stiffness"/>
+    <functioncall functionName="p_mask"/>
+    <functioncall functionName="p_mesh"/>
+    <functioncall functionName="p_name"/>
+    <functioncall functionName="p_node"/>
+    <functioncall functionName="p_parent_collision_ignore"/>
+    <functioncall functionName="p_pinned_points_indices"/>
+    <functioncall functionName="p_point_index"/>
+    <functioncall functionName="p_pose_matching_coefficient"/>
+    <functioncall functionName="p_pressure_coefficient"/>
+    <functioncall functionName="p_ray_pickable"/>
+    <functioncall functionName="p_simulation_precision"/>
+    <functioncall functionName="p_spatial_attachment_path"/>
+    <functioncall functionName="p_surface"/>
+    <functioncall functionName="p_total_mass"/>
+    <functioncall functionName="p_value"/>
+    <functioncall functionName="p_vector3"/>
+    <functioncall functionName="p_volume_stiffness"/>
+    <functioncall functionName="p_what"/>
+    <functioncall functionName="parent_collision_ignore"/>
+    <functioncall functionName="physics_body"/>
+    <functioncall functionName="physics_rid"/>
+    <functioncall functionName="pickable"/>
+    <functioncall functionName="pin"/>
+    <functioncall functionName="pin_point"/>
+    <functioncall functionName="pinned_point"/>
+    <functioncall functionName="pinned_points_cache_dirty"/>
+    <functioncall functionName="pinned_points_indices_size"/>
+    <functioncall functionName="point_index"/>
+    <functioncall functionName="pp"/>
+    <functioncall functionName="prepare"/>
+    <functioncall functionName="prepare_physics_server"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="r_ret"/>
+    <functioncall functionName="ray_pickable"/>
+    <functioncall functionName="remove"/>
+    <functioncall functionName="remove_collision_exception_with"/>
+    <functioncall functionName="rendering_server_handler"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="set_areaAngular_stiffness"/>
+    <functioncall functionName="set_as_toplevel"/>
+    <functioncall functionName="set_collision_layer"/>
+    <functioncall functionName="set_collision_layer_bit"/>
+    <functioncall functionName="set_collision_mask"/>
+    <functioncall functionName="set_collision_mask_bit"/>
+    <functioncall functionName="set_damping_coefficient"/>
+    <functioncall functionName="set_drag_coefficient"/>
+    <functioncall functionName="set_linear_stiffness"/>
+    <functioncall functionName="set_mesh"/>
+    <functioncall functionName="set_notify_transform"/>
+    <functioncall functionName="set_parent_collision_ignore"/>
+    <functioncall functionName="set_pose_matching_coefficient"/>
+    <functioncall functionName="set_pressure_coefficient"/>
+    <functioncall functionName="set_ray_pickable"/>
+    <functioncall functionName="set_simulation_precision"/>
+    <functioncall functionName="set_surface_material"/>
+    <functioncall functionName="set_total_mass"/>
+    <functioncall functionName="set_transform"/>
+    <functioncall functionName="set_volume_stiffness"/>
+    <functioncall functionName="simulation_started"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="sizeof"/>
+    <functioncall functionName="soft_body_add_collision_exception"/>
+    <functioncall functionName="soft_body_create"/>
+    <functioncall functionName="soft_body_get_areaAngular_stiffness"/>
+    <functioncall functionName="soft_body_get_collision_exceptions"/>
+    <functioncall functionName="soft_body_get_damping_coefficient"/>
+    <functioncall functionName="soft_body_get_drag_coefficient"/>
+    <functioncall functionName="soft_body_get_linear_stiffness"/>
+    <functioncall functionName="soft_body_get_point_global_position"/>
+    <functioncall functionName="soft_body_get_pose_matching_coefficient"/>
+    <functioncall functionName="soft_body_get_pressure_coefficient"/>
+    <functioncall functionName="soft_body_get_simulation_precision"/>
+    <functioncall functionName="soft_body_get_total_mass"/>
+    <functioncall functionName="soft_body_get_volume_stiffness"/>
+    <functioncall functionName="soft_body_move_point"/>
+    <functioncall functionName="soft_body_pin_point"/>
+    <functioncall functionName="soft_body_remove_all_pinned_points"/>
+    <functioncall functionName="soft_body_remove_collision_exception"/>
+    <functioncall functionName="soft_body_set_areaAngular_stiffness"/>
+    <functioncall functionName="soft_body_set_collision_layer"/>
+    <functioncall functionName="soft_body_set_collision_mask"/>
+    <functioncall functionName="soft_body_set_damping_coefficient"/>
+    <functioncall functionName="soft_body_set_drag_coefficient"/>
+    <functioncall functionName="soft_body_set_linear_stiffness"/>
+    <functioncall functionName="soft_body_set_mesh"/>
+    <functioncall functionName="soft_body_set_pose_matching_coefficient"/>
+    <functioncall functionName="soft_body_set_pressure_coefficient"/>
+    <functioncall functionName="soft_body_set_ray_pickable"/>
+    <functioncall functionName="soft_body_set_simulation_precision"/>
+    <functioncall functionName="soft_body_set_space"/>
+    <functioncall functionName="soft_body_set_total_mass"/>
+    <functioncall functionName="soft_body_set_transform"/>
+    <functioncall functionName="soft_body_set_volume_stiffness"/>
+    <functioncall functionName="soft_body_update_rendering_server"/>
+    <functioncall functionName="soft_mesh"/>
+    <functioncall functionName="space"/>
+    <functioncall functionName="spatial_attachment"/>
+    <functioncall functionName="spatial_attachment_path"/>
+    <functioncall functionName="surface"/>
+    <functioncall functionName="surface_arrays"/>
+    <functioncall functionName="surface_blend_arrays"/>
+    <functioncall functionName="surface_format"/>
+    <functioncall functionName="surface_get_arrays"/>
+    <functioncall functionName="surface_get_blend_shape_arrays"/>
+    <functioncall functionName="surface_get_format"/>
+    <functioncall functionName="surface_get_lods"/>
+    <functioncall functionName="surface_get_material"/>
+    <functioncall functionName="surface_lods"/>
+    <functioncall functionName="surface_set_material"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="this"/>
+    <functioncall functionName="to_int"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="update_configuration_warning"/>
+    <functioncall functionName="what"/>
+    <functioncall functionName="xform"/>
+  </FileInfo>
+</analyzerinfo>

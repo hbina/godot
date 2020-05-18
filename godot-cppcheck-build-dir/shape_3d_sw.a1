@@ -1,0 +1,910 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="309490665">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;MotionShape3DSW::shape&apos; is not initialized in the constructor." verbose="Member variable &apos;MotionShape3DSW::shape&apos; is not initialized in the constructor." cwe="398">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="467" column="2"/>
+            <symbol>MotionShape3DSW::shape</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;custom_bias&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;custom_bias&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="89" column="2"/>
+            <symbol>custom_bias</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;length&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;length&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="251" column="2"/>
+            <symbol>length</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;radius&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;radius&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="328" column="2"/>
+            <symbol>radius</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;radius&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;radius&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="709" column="11"/>
+            <symbol>radius</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;cell_size&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;cell_size&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1654" column="2"/>
+            <symbol>cell_size</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;is_concave&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;is_concave&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="113" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="85" column="15" info="Virtual function in base class"/>
+            <symbol>is_concave</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="115" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="131" column="17" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="75" column="17" info="Virtual function in base class"/>
+            <symbol>get_area</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="132" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="133" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="134" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="135" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="137" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="138" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="139" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="140" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="142" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="143" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="159" column="17" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="75" column="17" info="Virtual function in base class"/>
+            <symbol>get_area</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="160" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="161" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="162" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="163" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="165" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="166" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="167" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="169" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="171" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="172" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="186" column="17" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="75" column="17" info="Virtual function in base class"/>
+            <symbol>get_area</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="188" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="190" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="191" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="192" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="193" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="194" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="195" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="197" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="199" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="200" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="212" column="17" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="75" column="17" info="Virtual function in base class"/>
+            <symbol>get_area</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="214" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="216" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="217" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="218" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="219" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="220" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="221" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="223" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="225" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="226" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_area&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="242" column="17" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="75" column="17" info="Virtual function in base class"/>
+            <symbol>get_area</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="244" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="246" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="247" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="248" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="249" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="250" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="251" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="253" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="255" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="256" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="270" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="272" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="273" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="274" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="275" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="276" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="277" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="279" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="281" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="282" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="349" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="351" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="352" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="354" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="355" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="356" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="360" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="362" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="363" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="386" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="388" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="389" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="390" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="391" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="393" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="396" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="398" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="399" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="410" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="414" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="415" column="10" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="416" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="417" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="418" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="419" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="421" column="10" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="423" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="424" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_type&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="434" column="37" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="80" column="37" info="Virtual function in base class"/>
+            <symbol>get_type</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;project_range&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="436" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="87" column="15" info="Virtual function in base class"/>
+            <symbol>project_range</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_support&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="449" column="10" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="88" column="18" info="Virtual function in base class"/>
+            <symbol>get_support</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_supports&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="457" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="89" column="15" info="Virtual function in base class"/>
+            <symbol>get_supports</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_segment&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="458" column="7" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="91" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_segment</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;intersect_point&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="459" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="92" column="15" info="Virtual function in base class"/>
+            <symbol>intersect_point</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_closest_point_to&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="460" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="90" column="18" info="Virtual function in base class"/>
+            <symbol>get_closest_point_to</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_moment_of_inertia&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="462" column="10" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="93" column="18" info="Virtual function in base class"/>
+            <symbol>get_moment_of_inertia</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;set_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="464" column="15" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="95" column="15" info="Virtual function in base class"/>
+            <symbol>set_data</symbol>
+        </error>
+        <error id="missingOverride" severity="style" msg="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier." verbose="The function &apos;get_data&apos; overrides a function in a base class but is not marked with a &apos;override&apos; specifier.">
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="465" column="18" info="Function in derived class"/>
+            <location file0="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h" line="96" column="18" info="Virtual function in base class"/>
+            <symbol>get_data</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="72" column="2" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="70" column="54" info="Assignment &apos;E=owners.find(p_owner)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="71" column="16" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="cstyleCast" severity="style" msg="C-style pointer casting" verbose="C-style pointer casting detected. C++ offers four different kinds of casts as replacements: static_cast, const_cast, dynamic_cast and reinterpret_cast. A C-style cast could evaluate to any of those automatically, thus it is considered safer if the programmer explicitly states which kind of cast is expected. See also: https://www.securecoding.cert.org/confluence/display/cplusplus/EXP05-CPP.+Do+not+use+C-style+casts." cwe="398">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="45" column="24"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;min_d&apos; is assigned a value that is never used." verbose="Variable &apos;min_d&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="632" column="10"/>
+            <symbol>min_d</symbol>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:339:7" call-funcname="_cull_segment" call-argnr="1" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1220" col="17" call-argexpr="bvh->left" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1219" col="17" info="Assuming that condition 'bvh->left>=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:339:7" call-funcname="_cull_segment" call-argnr="1" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1222" col="17" call-argexpr="bvh->right" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1221" col="18" info="Assuming that condition 'bvh->right>=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:339:7" call-funcname="_cull_segment" call-argnr="1" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1248" col="15" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:339:7" call-funcname="_cull_segment" call-argnr="2" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1248" col="15" call-argexpr="&params" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:340:7" call-funcname="_cull" call-argnr="1" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1292" col="9" call-argexpr="bvh->left" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1290" col="17" info="Assuming that condition 'bvh->left>=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:340:7" call-funcname="_cull" call-argnr="1" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1297" col="9" call-argexpr="bvh->right" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1295" col="18" info="Assuming that condition 'bvh->right>=0' is not redundant"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:340:7" call-funcname="_cull" call-argnr="1" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1327" col="7" call-argexpr="0" call-argvaluetype="0" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:340:7" call-funcname="_cull" call-argnr="2" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1327" col="7" call-argexpr="&params" call-argvaluetype="7" call-argvalue="0"/><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp:1381:16" call-funcname="_volume_sw_build_bvh" call-argnr="3" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1512" col="48" call-argexpr="count" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1511" col="14" info="Assignment 'count=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:342:7" call-funcname="_fill_bvh" call-argnr="3" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1519" col="11" call-argexpr="idx" call-argvaluetype="0" call-argvalue="0">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1518" col="12" info="Assignment 'idx=0', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:378:7" call-funcname="_setup" call-argnr="2" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1642" col="8" call-argexpr="width" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1638" col="22" info="Assuming that condition 'width<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1633" col="15" info="Assignment 'width=d["width"]', assigned value is 0"/>
+</function-call><function-call call-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:378:7" call-funcname="_setup" call-argnr="3" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1642" col="8" call-argexpr="depth" call-argvaluetype="0" call-argvalue="0" warning="true">
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1639" col="22" info="Assuming that condition 'depth<=0' is not redundant"/>
+  <path file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1634" col="15" info="Assignment 'depth=d["depth"]', assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:192:15" my-argnr="3" my-argname="r_supports" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="281" col="3" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:342:7" my-argnr="1" my-argname="p_bvh_tree" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1440" col="26" value="0"/>
+    <unsafe-usage my-id="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.h:342:7" my-argnr="2" my-argname="p_bvh_array" file="/home/hbina/git/godot/servers/physics_3d/shape_3d_sw.cpp" line="1440" col="2" value="0"/>
+  </FileInfo>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="configure" lineNumber="41"/>
+    <functiondecl functionName="get_support" lineNumber="50"/>
+    <functiondecl functionName="add_owner" lineNumber="58"/>
+    <functiondecl functionName="remove_owner" lineNumber="68"/>
+    <functiondecl functionName="is_owner" lineNumber="78"/>
+    <functiondecl functionName="get_owners" lineNumber="83"/>
+    <functiondecl functionName="get_plane" lineNumber="98"/>
+    <functiondecl functionName="project_range" lineNumber="103"/>
+    <functiondecl functionName="get_support" lineNumber="110"/>
+    <functiondecl functionName="intersect_segment" lineNumber="115"/>
+    <functiondecl functionName="intersect_point" lineNumber="123"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="128"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="137"/>
+    <functiondecl functionName="_setup" lineNumber="142"/>
+    <functiondecl functionName="set_data" lineNumber="148"/>
+    <functiondecl functionName="get_data" lineNumber="153"/>
+    <functiondecl functionName="get_length" lineNumber="163"/>
+    <functiondecl functionName="get_slips_on_slope" lineNumber="168"/>
+    <functiondecl functionName="project_range" lineNumber="172"/>
+    <functiondecl functionName="get_support" lineNumber="179"/>
+    <functiondecl functionName="get_supports" lineNumber="187"/>
+    <functiondecl functionName="intersect_segment" lineNumber="203"/>
+    <functiondecl functionName="intersect_point" lineNumber="208"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="213"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="223"/>
+    <functiondecl functionName="_setup" lineNumber="228"/>
+    <functiondecl functionName="set_data" lineNumber="235"/>
+    <functiondecl functionName="get_data" lineNumber="241"/>
+    <functiondecl functionName="get_radius" lineNumber="257"/>
+    <functiondecl functionName="project_range" lineNumber="262"/>
+    <functiondecl functionName="get_support" lineNumber="274"/>
+    <functiondecl functionName="get_supports" lineNumber="279"/>
+    <functiondecl functionName="intersect_segment" lineNumber="285"/>
+    <functiondecl functionName="intersect_point" lineNumber="290"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="295"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="304"/>
+    <functiondecl functionName="_setup" lineNumber="310"/>
+    <functiondecl functionName="set_data" lineNumber="316"/>
+    <functiondecl functionName="get_data" lineNumber="321"/>
+    <functiondecl functionName="project_range" lineNumber="333"/>
+    <functiondecl functionName="get_support" lineNumber="345"/>
+    <functiondecl functionName="get_supports" lineNumber="355"/>
+    <functiondecl functionName="intersect_segment" lineNumber="442"/>
+    <functiondecl functionName="intersect_point" lineNumber="449"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="454"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="505"/>
+    <functiondecl functionName="_setup" lineNumber="514"/>
+    <functiondecl functionName="set_data" lineNumber="521"/>
+    <functiondecl functionName="get_data" lineNumber="526"/>
+    <functiondecl functionName="project_range" lineNumber="536"/>
+    <functiondecl functionName="get_support" lineNumber="548"/>
+    <functiondecl functionName="get_supports" lineNumber="559"/>
+    <functiondecl functionName="intersect_segment" lineNumber="589"/>
+    <functiondecl functionName="intersect_point" lineNumber="647"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="658"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="673"/>
+    <functiondecl functionName="_setup" lineNumber="684"/>
+    <functiondecl functionName="set_data" lineNumber="691"/>
+    <functiondecl functionName="get_data" lineNumber="699"/>
+    <functiondecl functionName="project_range" lineNumber="714"/>
+    <functiondecl functionName="get_support" lineNumber="733"/>
+    <functiondecl functionName="get_supports" lineNumber="759"/>
+    <functiondecl functionName="intersect_segment" lineNumber="829"/>
+    <functiondecl functionName="intersect_point" lineNumber="869"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="883"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="944"/>
+    <functiondecl functionName="_setup" lineNumber="955"/>
+    <functiondecl functionName="set_data" lineNumber="974"/>
+    <functiondecl functionName="get_data" lineNumber="979"/>
+    <functiondecl functionName="project_range" lineNumber="989"/>
+    <functiondecl functionName="get_support" lineNumber="1004"/>
+    <functiondecl functionName="get_supports" lineNumber="1022"/>
+    <functiondecl functionName="intersect_segment" lineNumber="1076"/>
+    <functiondecl functionName="intersect_point" lineNumber="1089"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="1094"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="1099"/>
+    <functiondecl functionName="get_faces" lineNumber="1109"/>
+    <functiondecl functionName="project_range" lineNumber="1127"/>
+    <functiondecl functionName="get_support" lineNumber="1148"/>
+    <functiondecl functionName="_cull_segment" lineNumber="1174"/>
+    <functiondecl functionName="intersect_segment" lineNumber="1226"/>
+    <functiondecl functionName="intersect_point" lineNumber="1261"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="1266"/>
+    <functiondecl functionName="_cull" lineNumber="1271"/>
+    <functiondecl functionName="cull" lineNumber="1302"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="1330"/>
+    <functiondecl functionName="_volume_sw_build_bvh" lineNumber="1381"/>
+    <functiondecl functionName="_fill_bvh" lineNumber="1436"/>
+    <functiondecl functionName="_setup" lineNumber="1465"/>
+    <functiondecl functionName="set_data" lineNumber="1524"/>
+    <functiondecl functionName="get_data" lineNumber="1529"/>
+    <functiondecl functionName="get_heights" lineNumber="1539"/>
+    <functiondecl functionName="get_width" lineNumber="1543"/>
+    <functiondecl functionName="get_depth" lineNumber="1547"/>
+    <functiondecl functionName="get_cell_size" lineNumber="1551"/>
+    <functiondecl functionName="project_range" lineNumber="1556"/>
+    <functiondecl functionName="get_support" lineNumber="1562"/>
+    <functiondecl functionName="intersect_segment" lineNumber="1568"/>
+    <functiondecl functionName="intersect_point" lineNumber="1573"/>
+    <functiondecl functionName="get_closest_point_to" lineNumber="1577"/>
+    <functiondecl functionName="cull" lineNumber="1582"/>
+    <functiondecl functionName="get_moment_of_inertia" lineNumber="1585"/>
+    <functiondecl functionName="_setup" lineNumber="1596"/>
+    <functiondecl functionName="set_data" lineNumber="1624"/>
+    <functiondecl functionName="get_data" lineNumber="1645"/>
+    <functioncall functionName="AABB"/>
+    <functioncall functionName="ABS"/>
+    <functioncall functionName="BoxShape3DSW"/>
+    <functioncall functionName="CapsuleShape3DSW"/>
+    <functioncall functionName="ConcavePolygonShape3DSW"/>
+    <functioncall functionName="ConcaveShape3DSW"/>
+    <functioncall functionName="ConvexPolygonShape3DSW"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_PRINT"/>
+    <functioncall functionName="Face3"/>
+    <functioncall functionName="FaceShape3DSW"/>
+    <functioncall functionName="HeightMapShape3DSW"/>
+    <functioncall functionName="MAX"/>
+    <functioncall functionName="MIN"/>
+    <functioncall functionName="MotionShape3DSW"/>
+    <functioncall functionName="Plane"/>
+    <functioncall functionName="PlaneShape3DSW"/>
+    <functioncall functionName="RayShape3DSW"/>
+    <functioncall functionName="SGN"/>
+    <functioncall functionName="SWAP"/>
+    <functioncall functionName="Shape3DSW"/>
+    <functioncall functionName="SphereShape3DSW"/>
+    <functioncall functionName="Variant"/>
+    <functioncall functionName="Vector3"/>
+    <functioncall functionName="_VolumeSW_BVH"/>
+    <functioncall functionName="_VolumeSW_BVH_CompareX"/>
+    <functioncall functionName="_VolumeSW_BVH_CompareY"/>
+    <functioncall functionName="_VolumeSW_BVH_CompareZ"/>
+    <functioncall functionName="_aabb"/>
+    <functioncall functionName="_cull"/>
+    <functioncall functionName="_cull_segment"/>
+    <functioncall functionName="_fill_bvh"/>
+    <functioncall functionName="_setup"/>
+    <functioncall functionName="_shape_changed"/>
+    <functioncall functionName="_volume_sw_build_bvh"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="aabb"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="all_inside"/>
+    <functioncall functionName="amnt"/>
+    <functioncall functionName="auxn"/>
+    <functioncall functionName="auxres"/>
+    <functioncall functionName="axis"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="br"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="build"/>
+    <functioncall functionName="bvh_arrayw"/>
+    <functioncall functionName="bvh_arrayw2"/>
+    <functioncall functionName="bvh_tree"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="callback"/>
+    <functioncall functionName="cell_size"/>
+    <functioncall functionName="closest"/>
+    <functioncall functionName="closest_edge"/>
+    <functioncall functionName="closest_vertex"/>
+    <functioncall functionName="collided"/>
+    <functioncall functionName="collision"/>
+    <functioncall functionName="collisions"/>
+    <functioncall functionName="configure"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="count"/>
+    <functioncall functionName="cross"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="depth"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="expand_to"/>
+    <functioncall functionName="f"/>
+    <functioncall functionName="face"/>
+    <functioncall functionName="face_index"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="fr"/>
+    <functioncall functionName="from"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_aabb"/>
+    <functioncall functionName="get_area"/>
+    <functioncall functionName="get_closest_point_to"/>
+    <functioncall functionName="get_closest_point_to_segment"/>
+    <functioncall functionName="get_faces"/>
+    <functioncall functionName="get_longest_axis_index"/>
+    <functioncall functionName="get_plane"/>
+    <functioncall functionName="get_support"/>
+    <functioncall functionName="get_supports"/>
+    <functioncall functionName="get_type"/>
+    <functioncall functionName="h"/>
+    <functioncall functionName="half_extents"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="height"/>
+    <functioncall functionName="heights"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="i_n"/>
+    <functioncall functionName="i_n2"/>
+    <functioncall functionName="ic"/>
+    <functioncall functionName="idx"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="inters"/>
+    <functioncall functionName="intersects"/>
+    <functioncall functionName="intersects_segment"/>
+    <functioncall functionName="is_inside"/>
+    <functioncall functionName="is_point_over"/>
+    <functioncall functionName="j"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="l"/>
+    <functioncall functionName="left"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="local_aabb"/>
+    <functioncall functionName="m"/>
+    <functioncall functionName="maxa"/>
+    <functioncall functionName="maxb"/>
+    <functioncall functionName="memdelete"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="merge_with"/>
+    <functioncall functionName="mesh"/>
+    <functioncall functionName="min_d"/>
+    <functioncall functionName="mina"/>
+    <functioncall functionName="minb"/>
+    <functioncall functionName="motion"/>
+    <functioncall functionName="n"/>
+    <functioncall functionName="neg"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="normal"/>
+    <functioncall functionName="normalize"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="nx"/>
+    <functioncall functionName="ofsb"/>
+    <functioncall functionName="origin"/>
+    <functioncall functionName="outside"/>
+    <functioncall functionName="p"/>
+    <functioncall functionName="p_aabb"/>
+    <functioncall functionName="p_begin"/>
+    <functioncall functionName="p_bias"/>
+    <functioncall functionName="p_bvh_array"/>
+    <functioncall functionName="p_bvh_tree"/>
+    <functioncall functionName="p_callback"/>
+    <functioncall functionName="p_cell_size"/>
+    <functioncall functionName="p_data"/>
+    <functioncall functionName="p_depth"/>
+    <functioncall functionName="p_elements"/>
+    <functioncall functionName="p_end"/>
+    <functioncall functionName="p_height"/>
+    <functioncall functionName="p_heights"/>
+    <functioncall functionName="p_idx"/>
+    <functioncall functionName="p_length"/>
+    <functioncall functionName="p_local_aabb"/>
+    <functioncall functionName="p_max"/>
+    <functioncall functionName="p_normal"/>
+    <functioncall functionName="p_owner"/>
+    <functioncall functionName="p_params"/>
+    <functioncall functionName="p_plane"/>
+    <functioncall functionName="p_point"/>
+    <functioncall functionName="p_radius"/>
+    <functioncall functionName="p_self"/>
+    <functioncall functionName="p_size"/>
+    <functioncall functionName="p_slips_on_slope"/>
+    <functioncall functionName="p_transform"/>
+    <functioncall functionName="p_userdata"/>
+    <functioncall functionName="p_vertices"/>
+    <functioncall functionName="p_width"/>
+    <functioncall functionName="params"/>
+    <functioncall functionName="point"/>
+    <functioncall functionName="pos"/>
+    <functioncall functionName="project"/>
+    <functioncall functionName="project_range"/>
+    <functioncall functionName="project_range_in_plane"/>
+    <functioncall functionName="ptr"/>
+    <functioncall functionName="ptrw"/>
+    <functioncall functionName="r_max"/>
+    <functioncall functionName="r_min"/>
+    <functioncall functionName="r_normal"/>
+    <functioncall functionName="r_result"/>
+    <functioncall functionName="radius"/>
+    <functioncall functionName="res"/>
+    <functioncall functionName="resize"/>
+    <functioncall functionName="result"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="right"/>
+    <functioncall functionName="s"/>
+    <functioncall functionName="segment_intersects_cylinder"/>
+    <functioncall functionName="segment_intersects_sphere"/>
+    <functioncall functionName="segment_intersects_triangle"/>
+    <functioncall functionName="set"/>
+    <functioncall functionName="sign"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="slips_on_slope"/>
+    <functioncall functionName="sort"/>
+    <functioncall functionName="split"/>
+    <functioncall functionName="src_face_count"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="to"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="userdata"/>
+    <functioncall functionName="v"/>
+    <functioncall functionName="valid"/>
+    <functioncall functionName="vert_support_idx"/>
+    <functioncall functionName="vertices"/>
+    <functioncall functionName="vr"/>
+    <functioncall functionName="vtx"/>
+    <functioncall functionName="width"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="xform"/>
+    <functioncall functionName="xform_inv"/>
+    <functioncall functionName="y"/>
+    <functioncall functionName="z"/>
+  </FileInfo>
+</analyzerinfo>

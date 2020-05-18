@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="652103453">
+        <error id="uninitMemberVar" severity="warning" msg="Member variable &apos;LineBuilder::texture_mode&apos; is not initialized in the constructor." verbose="Member variable &apos;LineBuilder::texture_mode&apos; is not initialized in the constructor." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/line_builder.cpp" line="95" column="14"/>
+            <symbol>LineBuilder::texture_mode</symbol>
+        </error>
+        <error id="unusedPrivateFunction" severity="style" msg="Unused private function: &apos;LineBuilder::strip_new_quad&apos;" verbose="Unused private function: &apos;LineBuilder::strip_new_quad&apos;" cwe="398">
+            <location file0="/home/hbina/git/godot/scene/2d/line_builder.cpp" file="/home/hbina/git/godot/scene/2d/line_builder.h" line="77" column="7"/>
+            <symbol>LineBuilder::strip_new_quad</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;default_color&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;default_color&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/scene/2d/line_builder.cpp" line="99" column="2"/>
+            <symbol>default_color</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;color0&apos; is assigned a value that is never used." verbose="Variable &apos;color0&apos; is assigned a value that is never used." cwe="563">
+            <location file="/home/hbina/git/godot/scene/2d/line_builder.cpp" line="337" column="10"/>
+            <symbol>color0</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="segment_intersection" lineNumber="43"/>
+    <functiondecl functionName="calculate_total_distance" lineNumber="72"/>
+    <functiondecl functionName="rotate90" lineNumber="80"/>
+    <functiondecl functionName="interpolate" lineNumber="85"/>
+    <functiondecl functionName="clear_output" lineNumber="112"/>
+    <functiondecl functionName="build" lineNumber="119"/>
+    <functiondecl functionName="strip_begin" lineNumber="439"/>
+    <functiondecl functionName="strip_new_quad" lineNumber="459"/>
+    <functiondecl functionName="strip_add_quad" lineNumber="492"/>
+    <functiondecl functionName="strip_add_tri" lineNumber="519"/>
+    <functiondecl functionName="strip_add_arc" lineNumber="543"/>
+    <functiondecl functionName="new_arc" lineNumber="572"/>
+    <functiondecl functionName="segment_intersection" lineNumber="43"/>
+    <functiondecl functionName="calculate_total_distance" lineNumber="72"/>
+    <functiondecl functionName="rotate90" lineNumber="80"/>
+    <functiondecl functionName="interpolate" lineNumber="85"/>
+    <functiondecl functionName="clear_output" lineNumber="112"/>
+    <functiondecl functionName="build" lineNumber="119"/>
+    <functiondecl functionName="strip_begin" lineNumber="439"/>
+    <functiondecl functionName="strip_new_quad" lineNumber="459"/>
+    <functiondecl functionName="strip_add_quad" lineNumber="492"/>
+    <functiondecl functionName="strip_add_tri" lineNumber="519"/>
+    <functiondecl functionName="strip_add_arc" lineNumber="543"/>
+    <functiondecl functionName="new_arc" lineNumber="572"/>
+    <functioncall functionName="CanvasItem"/>
+    <functioncall functionName="Color"/>
+    <functioncall functionName="DOWN"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="LINE_CAP_BOX"/>
+    <functioncall functionName="LINE_CAP_NONE"/>
+    <functioncall functionName="LINE_CAP_ROUND"/>
+    <functioncall functionName="LINE_JOINT_BEVEL"/>
+    <functioncall functionName="LINE_JOINT_ROUND"/>
+    <functioncall functionName="LINE_JOINT_SHARP"/>
+    <functioncall functionName="LINE_TEXTURE_STRETCH"/>
+    <functioncall functionName="LINE_TEXTURE_TILE"/>
+    <functioncall functionName="Line2D"/>
+    <functioncall functionName="LineBuilder"/>
+    <functioncall functionName="Math_PI"/>
+    <functioncall functionName="Node2D"/>
+    <functioncall functionName="Rect2"/>
+    <functioncall functionName="UP"/>
+    <functioncall functionName="Vector2"/>
+    <functioncall functionName="_interpolate_color"/>
+    <functioncall functionName="a"/>
+    <functioncall functionName="abs"/>
+    <functioncall functionName="angle_delta"/>
+    <functioncall functionName="angle_step"/>
+    <functioncall functionName="angle_to"/>
+    <functioncall functionName="b"/>
+    <functioncall functionName="c"/>
+    <functioncall functionName="calculate_total_distance"/>
+    <functioncall functionName="cend"/>
+    <functioncall functionName="center"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="clear_output"/>
+    <functioncall functionName="color"/>
+    <functioncall functionName="color0"/>
+    <functioncall functionName="color1"/>
+    <functioncall functionName="const"/>
+    <functioncall functionName="corner_pos_down"/>
+    <functioncall functionName="corner_pos_in"/>
+    <functioncall functionName="corner_pos_out"/>
+    <functioncall functionName="corner_pos_up"/>
+    <functioncall functionName="cos"/>
+    <functioncall functionName="current_distance0"/>
+    <functioncall functionName="default_color"/>
+    <functioncall functionName="dist"/>
+    <functioncall functionName="distance_required"/>
+    <functioncall functionName="distance_squared_to"/>
+    <functioncall functionName="distance_to"/>
+    <functioncall functionName="div"/>
+    <functioncall functionName="dot"/>
+    <functioncall functionName="down"/>
+    <functioncall functionName="dp"/>
+    <functioncall functionName="end_angle"/>
+    <functioncall functionName="f0"/>
+    <functioncall functionName="f1"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="get_color"/>
+    <functioncall functionName="get_color_at_offset"/>
+    <functioncall functionName="get_points_count"/>
+    <functioncall functionName="get_size"/>
+    <functioncall functionName="i"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="inner_normal0"/>
+    <functioncall functionName="inner_normal1"/>
+    <functioncall functionName="interpolate"/>
+    <functioncall functionName="interpolate_baked"/>
+    <functioncall functionName="joint_mode"/>
+    <functioncall functionName="length"/>
+    <functioncall functionName="lerp"/>
+    <functioncall functionName="new_arc"/>
+    <functioncall functionName="normalized"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="opposite_orientation"/>
+    <functioncall functionName="orientation"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="points"/>
+    <functioncall functionName="pos0"/>
+    <functioncall functionName="pos1"/>
+    <functioncall functionName="pos_down0"/>
+    <functioncall functionName="pos_down1"/>
+    <functioncall functionName="pos_up0"/>
+    <functioncall functionName="pos_up1"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="retrieve_curve"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="rotate90"/>
+    <functioncall functionName="round_precision"/>
+    <functioncall functionName="rpos"/>
+    <functioncall functionName="segment_intersection"/>
+    <functioncall functionName="sin"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="static_cast"/>
+    <functioncall functionName="strip_add_arc"/>
+    <functioncall functionName="strip_add_quad"/>
+    <functioncall functionName="strip_add_tri"/>
+    <functioncall functionName="strip_begin"/>
+    <functioncall functionName="t"/>
+    <functioncall functionName="tile_aspect"/>
+    <functioncall functionName="tmp"/>
+    <functioncall functionName="total_distance"/>
+    <functioncall functionName="tt"/>
+    <functioncall functionName="tt_begin"/>
+    <functioncall functionName="u1"/>
+    <functioncall functionName="up"/>
+    <functioncall functionName="uv_rect"/>
+    <functioncall functionName="uvx"/>
+    <functioncall functionName="uvx0"/>
+    <functioncall functionName="uvx1"/>
+    <functioncall functionName="vbegin"/>
+    <functioncall functionName="vend"/>
+    <functioncall functionName="vi"/>
+    <functioncall functionName="vi0"/>
+    <functioncall functionName="x"/>
+    <functioncall functionName="y"/>
+  </FileInfo>
+</analyzerinfo>

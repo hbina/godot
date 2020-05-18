@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<analyzerinfo checksum="2605011757">
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;transfer_mode&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;transfer_mode&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="376" column="2"/>
+            <symbol>transfer_mode</symbol>
+        </error>
+        <error id="useInitializationList" severity="performance" msg="Variable &apos;connection_status&apos; is assigned in constructor body. Consider performing initialization in initialization list." verbose="When an object of a class is created, the constructors of all member variables are called consecutively in the order the variables are declared, even if you don&apos;t explicitly write them to the initialization list. You could avoid assigning &apos;connection_status&apos; a value by passing the value to the constructor in the initialization list." cwe="398">
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="378" column="2"/>
+            <symbol>connection_status</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="327" column="19" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="324" column="20" info="Assignment &apos;E=peer_map.find(target_peer)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="325" column="23" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="328" column="20" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="324" column="20" info="Assignment &apos;E=peer_map.find(target_peer)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="325" column="23" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+        <error id="nullPointerRedundantCheck" severity="warning" msg="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." verbose="Either the condition &apos;!E&apos; is redundant or there is possible null pointer dereference: E." cwe="476" inconclusive="true">
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="329" column="10" info="Null pointer dereference"/>
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="324" column="20" info="Assignment &apos;E=peer_map.find(target_peer)&apos;, assigned value is 0"/>
+            <location file="/home/hbina/git/godot/modules/webrtc/webrtc_multiplayer.cpp" line="325" column="23" info="Assuming that condition &apos;!E&apos; is not redundant"/>
+            <symbol>E</symbol>
+        </error>
+  <FileInfo check="CheckUnusedFunctions">
+    <functiondecl functionName="_bind_methods" lineNumber="36"/>
+    <functiondecl functionName="set_transfer_mode" lineNumber="46"/>
+    <functiondecl functionName="get_transfer_mode" lineNumber="50"/>
+    <functiondecl functionName="set_target_peer" lineNumber="54"/>
+    <functiondecl functionName="get_packet_peer" lineNumber="59"/>
+    <functiondecl functionName="is_server" lineNumber="63"/>
+    <functiondecl functionName="poll" lineNumber="67"/>
+    <functiondecl functionName="_find_next_peer" lineNumber="145"/>
+    <functiondecl functionName="set_refuse_new_connections" lineNumber="176"/>
+    <functiondecl functionName="is_refusing_new_connections" lineNumber="180"/>
+    <functiondecl functionName="get_connection_status" lineNumber="184"/>
+    <functiondecl functionName="initialize" lineNumber="188"/>
+    <functiondecl functionName="get_unique_id" lineNumber="201"/>
+    <functiondecl functionName="_peer_to_dict" lineNumber="206"/>
+    <functiondecl functionName="has_peer" lineNumber="216"/>
+    <functiondecl functionName="get_peer" lineNumber="220"/>
+    <functiondecl functionName="get_peers" lineNumber="227"/>
+    <functiondecl functionName="add_peer" lineNumber="237"/>
+    <functiondecl functionName="remove_peer" lineNumber="272"/>
+    <functiondecl functionName="get_packet" lineNumber="286"/>
+    <functiondecl functionName="put_packet" lineNumber="304"/>
+    <functiondecl functionName="get_available_packet_count" lineNumber="347"/>
+    <functiondecl functionName="get_max_packet_size" lineNumber="359"/>
+    <functiondecl functionName="close" lineNumber="363"/>
+    <functioncall functionName="CH_ORDERED"/>
+    <functioncall functionName="CH_RELIABLE"/>
+    <functioncall functionName="CH_UNRELIABLE"/>
+    <functioncall functionName="CONNECTION_CONNECTED"/>
+    <functioncall functionName="CONNECTION_CONNECTING"/>
+    <functioncall functionName="CONNECTION_DISCONNECTED"/>
+    <functioncall functionName="ConnectedPeer"/>
+    <functioncall functionName="ConnectionState"/>
+    <functioncall functionName="DEFVAL"/>
+    <functioncall functionName="D_METHOD"/>
+    <functioncall functionName="Dictionary"/>
+    <functioncall functionName="E"/>
+    <functioncall functionName="ERR_BUG"/>
+    <functioncall functionName="ERR_CONTINUE"/>
+    <functioncall functionName="ERR_FAIL_COND"/>
+    <functioncall functionName="ERR_FAIL_COND_V"/>
+    <functioncall functionName="ERR_FAIL_COND_V_MSG"/>
+    <functioncall functionName="ERR_FAIL_V"/>
+    <functioncall functionName="ERR_INVALID_PARAMETER"/>
+    <functioncall functionName="ERR_UNAUTHORIZED"/>
+    <functioncall functionName="ERR_UNAVAILABLE"/>
+    <functioncall functionName="ERR_UNCONFIGURED"/>
+    <functioncall functionName="F"/>
+    <functioncall functionName="FAILED"/>
+    <functioncall functionName="GDCLASS"/>
+    <functioncall functionName="NetworkedMultiplayerPeer"/>
+    <functioncall functionName="Ref"/>
+    <functioncall functionName="Reference"/>
+    <functioncall functionName="STATE_CLOSED"/>
+    <functioncall functionName="STATE_CONNECTED"/>
+    <functioncall functionName="STATE_CONNECTING"/>
+    <functioncall functionName="STATE_DISCONNECTED"/>
+    <functioncall functionName="STATE_FAILED"/>
+    <functioncall functionName="STATE_NEW"/>
+    <functioncall functionName="TARGET_PEER_SERVER"/>
+    <functioncall functionName="TRANSFER_MODE_RELIABLE"/>
+    <functioncall functionName="VARIANT_ENUM_CAST"/>
+    <functioncall functionName="WebRTCMultiplayer"/>
+    <functioncall functionName="WebRTCPeerConnection"/>
+    <functioncall functionName="_find_next_peer"/>
+    <functioncall functionName="_peer_to_dict"/>
+    <functioncall functionName="add_peer"/>
+    <functioncall functionName="bind_method"/>
+    <functioncall functionName="break"/>
+    <functioncall functionName="cfg"/>
+    <functioncall functionName="ch"/>
+    <functioncall functionName="channels"/>
+    <functioncall functionName="clear"/>
+    <functioncall functionName="close"/>
+    <functioncall functionName="connected"/>
+    <functioncall functionName="connection"/>
+    <functioncall functionName="continue"/>
+    <functioncall functionName="create_data_channel"/>
+    <functioncall functionName="d"/>
+    <functioncall functionName="default"/>
+    <functioncall functionName="emit_signal"/>
+    <functioncall functionName="erase"/>
+    <functioncall functionName="false"/>
+    <functioncall functionName="find"/>
+    <functioncall functionName="for"/>
+    <functioncall functionName="front"/>
+    <functioncall functionName="get"/>
+    <functioncall functionName="get_available_packet_count"/>
+    <functioncall functionName="get_connection_state"/>
+    <functioncall functionName="get_packet"/>
+    <functioncall functionName="get_peer"/>
+    <functioncall functionName="get_peers"/>
+    <functioncall functionName="get_ready_state"/>
+    <functioncall functionName="has"/>
+    <functioncall functionName="has_peer"/>
+    <functioncall functionName="if"/>
+    <functioncall functionName="initialize"/>
+    <functioncall functionName="int"/>
+    <functioncall functionName="is_valid"/>
+    <functioncall functionName="itos"/>
+    <functioncall functionName="key"/>
+    <functioncall functionName="memnew"/>
+    <functioncall functionName="next"/>
+    <functioncall functionName="next_packet_peer"/>
+    <functioncall functionName="nullptr"/>
+    <functioncall functionName="out"/>
+    <functioncall functionName="override"/>
+    <functioncall functionName="p_buffer"/>
+    <functioncall functionName="p_buffer_size"/>
+    <functioncall functionName="p_enable"/>
+    <functioncall functionName="p_mode"/>
+    <functioncall functionName="p_peer"/>
+    <functioncall functionName="p_peer_id"/>
+    <functioncall functionName="p_self_id"/>
+    <functioncall functionName="p_server_compat"/>
+    <functioncall functionName="p_unreliable_lifetime"/>
+    <functioncall functionName="peer"/>
+    <functioncall functionName="poll"/>
+    <functioncall functionName="push_back"/>
+    <functioncall functionName="push_front"/>
+    <functioncall functionName="put_packet"/>
+    <functioncall functionName="r_buffer"/>
+    <functioncall functionName="r_buffer_size"/>
+    <functioncall functionName="refuse_connections"/>
+    <functioncall functionName="remove_peer"/>
+    <functioncall functionName="return"/>
+    <functioncall functionName="size"/>
+    <functioncall functionName="switch"/>
+    <functioncall functionName="target_peer"/>
+    <functioncall functionName="transfer_mode"/>
+    <functioncall functionName="true"/>
+    <functioncall functionName="value"/>
+    <functioncall functionName="while"/>
+  </FileInfo>
+</analyzerinfo>
