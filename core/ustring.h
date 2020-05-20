@@ -36,70 +36,42 @@
 #include "core/typedefs.h"
 #include "core/vector.h"
 
-template <class T>
-class CharProxy {
-	friend class CharString;
-	friend class String;
-
-	const int _index;
-	CowData<T> &_cowdata;
-	static const T _null = 0;
-
-	_FORCE_INLINE_ CharProxy(const int &p_index, CowData<T> &cowdata) :
-			_index(p_index),
-			_cowdata(cowdata) {}
-
-public:
-	_FORCE_INLINE_ operator T() const {
-		if (unlikely(_index == _cowdata.size()))
-			return _null;
-
-		return _cowdata.get(_index);
-	}
-
-	_FORCE_INLINE_ const T *operator&() const {
-		return _cowdata.ptr() + _index;
-	}
-
-	_FORCE_INLINE_ CharProxy<T> &operator=(const T &other) {
-		_cowdata.set(_index, other);
-		return *this;
-	}
-
-	_FORCE_INLINE_ CharProxy<T> &operator=(const CharProxy<T> &other) {
-		_cowdata.set(_index, other.operator T());
-		return *this;
-	}
-};
+#include <vector>
 
 class CharString {
 
-	CowData<char> _cowdata;
-	static const char _null;
+	std::vector<char> data;
 
 public:
-	_FORCE_INLINE_ char *ptrw() { return _cowdata.ptrw(); }
-	_FORCE_INLINE_ const char *ptr() const { return _cowdata.ptr(); }
-	_FORCE_INLINE_ int size() const { return _cowdata.size(); }
-	Error resize(int p_size) { return _cowdata.resize(p_size); }
-
-	_FORCE_INLINE_ char get(int p_index) const { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ void set(int p_index, const char &p_elem) { _cowdata.set(p_index, p_elem); }
-	_FORCE_INLINE_ const char &operator[](int p_index) const {
-		if (unlikely(p_index == _cowdata.size()))
-			return _null;
-
-		return _cowdata.get(p_index);
+	char *ptrw() { return data.data(); }
+	const char *ptr() const { return data.data(); }
+	int size() const { return data.size(); }
+	Error resize(int p_size) {
+		data.resize(p_size);
+		return OK;
 	}
-	_FORCE_INLINE_ CharProxy<char> operator[](int p_index) { return CharProxy<char>(p_index, _cowdata); }
-
-	_FORCE_INLINE_ CharString() {}
-	_FORCE_INLINE_ CharString(const CharString &p_str) { _cowdata._ref(p_str._cowdata); }
-	_FORCE_INLINE_ CharString operator=(const CharString &p_str) {
-		_cowdata._ref(p_str._cowdata);
+	// Unchecked getter/setter
+	char get(int p_index) const { return data[p_index]; }
+	void set(int p_index, const char &p_elem) { data[p_index] = p_elem; }
+	const char &operator[](std::size_t p_index) const {
+		CRASH_BAD_INDEX(p_index, data.size());
+		return data[p_index];
+	}
+	char &operator[](std::size_t p_index) {
+		CRASH_BAD_INDEX(p_index, data.size());
+		return data[p_index];
+	}
+	CharString() {}
+	CharString(const CharString &p_str) :
+			data(p_str.data) {}
+	CharString operator=(const CharString &p_str) {
+		if (this == &p_str) {
+			return *this;
+		}
+		data = p_str.data;
 		return *this;
 	}
-	_FORCE_INLINE_ CharString(const char *p_cstr) { copy_from(p_cstr); }
+	CharString(const char *p_cstr) { copy_from(p_cstr); }
 
 	CharString &operator=(const char *p_cstr);
 	bool operator<(const CharString &p_right) const;
@@ -116,8 +88,8 @@ typedef wchar_t CharType;
 
 struct StrRange {
 
-	const CharType *c_str;
-	int len;
+	const CharType *c_str = nullptr;
+	int len = 0;
 
 	StrRange(const CharType *p_c_str = nullptr, int p_len = 0) {
 		c_str = p_c_str;
@@ -127,9 +99,7 @@ struct StrRange {
 
 class String {
 
-	CowData<CharType> _cowdata;
-	static const CharType _null;
-
+	std::vector<CharType> data;
 	void copy_from(const char *p_cstr);
 	void copy_from(const CharType *p_cstr, const int p_clip_to = -1);
 	void copy_from(const CharType &p_char);
@@ -138,31 +108,25 @@ class String {
 	int _count(const String &p_string, int p_from, int p_to, bool p_case_insensitive) const;
 
 public:
-	enum {
-
-		npos = -1 ///<for "some" compatibility with std::string (npos is a huge value in std::string)
-	};
-
-	_FORCE_INLINE_ CharType *ptrw() { return _cowdata.ptrw(); }
-	_FORCE_INLINE_ const CharType *ptr() const { return _cowdata.ptr(); }
-
-	void remove(int p_index) { _cowdata.remove(p_index); }
-
-	_FORCE_INLINE_ void clear() { resize(0); }
-
-	_FORCE_INLINE_ CharType get(int p_index) const { return _cowdata.get(p_index); }
-	_FORCE_INLINE_ void set(int p_index, const CharType &p_elem) { _cowdata.set(p_index, p_elem); }
-	_FORCE_INLINE_ int size() const { return _cowdata.size(); }
-	Error resize(int p_size) { return _cowdata.resize(p_size); }
-
-	_FORCE_INLINE_ const CharType &operator[](int p_index) const {
-		if (unlikely(p_index == _cowdata.size()))
-			return _null;
-
-		return _cowdata.get(p_index);
+	CharType *ptrw() { return data.data(); }
+	const CharType *ptr() const { return data.data(); }
+	void remove(int p_index) { data.erase(std::next(std::begin(data), p_index)); }
+	void clear() { data.clear(); }
+	CharType get(int p_index) const { return data[p_index]; }
+	void set(int p_index, const CharType &p_elem) { data[p_index] = p_elem; }
+	int size() const { return data.size(); }
+	Error resize(int p_size) {
+		data.resize(p_size);
+		return OK;
 	}
-	_FORCE_INLINE_ CharProxy<CharType> operator[](int p_index) { return CharProxy<CharType>(p_index, _cowdata); }
-
+	const CharType &operator[](std::size_t p_index) const {
+		CRASH_BAD_INDEX(p_index, data.size());
+		return data[p_index];
+	}
+	CharType &operator[](std::size_t p_index) {
+		CRASH_BAD_INDEX(p_index, data.size());
+		return data[p_index];
+	}
 	bool operator==(const String &p_str) const;
 	bool operator!=(const String &p_str) const;
 	String operator+(const String &p_str) const;
@@ -194,7 +158,7 @@ public:
 	const CharType *c_str() const;
 	/* standard size stuff */
 
-	_FORCE_INLINE_ int length() const {
+	int length() const {
 		int s = size();
 		return s ? (s - 1) : 0; // length does not include zero
 	}
@@ -315,7 +279,7 @@ public:
 	Vector<uint8_t> sha1_buffer() const;
 	Vector<uint8_t> sha256_buffer() const;
 
-	_FORCE_INLINE_ bool empty() const { return length() == 0; }
+	bool empty() const { return length() == 0; }
 
 	// path functions
 	bool is_abs_path() const;
@@ -356,10 +320,14 @@ public:
 	 */
 	/*	String(CharType p_char);*/
 
-	_FORCE_INLINE_ String() {}
-	_FORCE_INLINE_ String(const String &p_str) { _cowdata._ref(p_str._cowdata); }
+	String() {}
+	String(const String &p_str) :
+			data(p_str.data) {}
 	String operator=(const String &p_str) {
-		_cowdata._ref(p_str._cowdata);
+		if (this == &p_str) {
+			return *this;
+		}
+		data = p_str.data;
 		return *this;
 	}
 
@@ -395,7 +363,7 @@ struct NaturalNoCaseComparator {
 };
 
 template <typename L, typename R>
-_FORCE_INLINE_ bool is_str_less(const L *l_ptr, const R *r_ptr) {
+bool is_str_less(const L *l_ptr, const R *r_ptr) {
 
 	while (true) {
 
@@ -438,7 +406,7 @@ String DTR(const String &);
 // Runtime translate for the public node API.
 String RTR(const String &);
 
-bool is_symbol(CharType c);
-bool select_word(const String &p_s, int p_col, int &r_beg, int &r_end);
+constexpr bool is_symbol(CharType c);
+constexpr bool select_word(const String &p_s, int p_col, int &r_beg, int &r_end);
 
 #endif // USTRING_H

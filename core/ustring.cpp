@@ -45,6 +45,7 @@
 
 #include <wchar.h>
 #include <cstdint>
+#include <algorithm>
 
 #ifndef NO_USE_STDLIB
 #include <stdio.h>
@@ -61,15 +62,11 @@
 #define IS_DIGIT(m_d) ((m_d) >= '0' && (m_d) <= '9')
 #define IS_HEX_DIGIT(m_d) (((m_d) >= '0' && (m_d) <= '9') || ((m_d) >= 'a' && (m_d) <= 'f') || ((m_d) >= 'A' && (m_d) <= 'F'))
 
-const char CharString::_null = 0;
-const CharType String::_null = 0;
-
-bool is_symbol(CharType c) {
+constexpr bool is_symbol(CharType c) {
 	return c != '_' && ((c >= '!' && c <= '/') || (c >= ':' && c <= '@') || (c >= '[' && c <= '`') || (c >= '{' && c <= '~') || c == '\t' || c == ' ');
 }
 
-bool select_word(const String &p_s, int p_col, int &r_beg, int &r_end) {
-
+constexpr bool select_word(const String &p_s, int p_col, int &r_beg, int &r_end) {
 	const String &s = p_s;
 	int beg = CLAMP(p_col, 0, s.length());
 	int end = beg;
@@ -101,25 +98,20 @@ bool select_word(const String &p_s, int p_col, int &r_beg, int &r_end) {
 /** STRING **/
 
 bool CharString::operator<(const CharString &p_right) const {
-
 	if (length() == 0) {
 		return p_right.length() != 0;
 	}
-
 	return is_str_less(get_data(), p_right.get_data());
 }
 
 CharString &CharString::operator+=(char p_char) {
-
 	resize(size() ? size() + 1 : 2);
 	set(length(), 0);
 	set(length() - 1, p_char);
-
 	return *this;
 }
 
 const char *CharString::get_data() const {
-
 	if (size())
 		return &operator[](0);
 	else
@@ -2517,7 +2509,8 @@ int String::find(const char *p_str, int p_from) const {
 }
 
 int String::find_char(const CharType &p_char, int p_from) const {
-	return _cowdata.find(p_char, p_from);
+	auto find = std::find(std::next(std::cbegin(data), p_from), std::cend(data), p_char);
+	return find == std::cend(data) ? -1 : std::distance(std::cbegin(data), std::cend(data));
 }
 
 int String::findmk(const Vector<String> &p_keys, int p_from, int *r_key) const {
